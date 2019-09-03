@@ -1,5 +1,5 @@
 ---
-title: Load data into memory using RevoScaleR rxImport - SQL Server Machine Learning
+title: Load data into memory using RevoScaleR rxImport
 description: Tutorial walkthrough on how to load data using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,9 +8,10 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Load data into memory using rxImport (SQL Server and RevoScaleR tutorial)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 

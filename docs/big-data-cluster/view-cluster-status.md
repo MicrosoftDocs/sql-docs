@@ -1,11 +1,11 @@
 ---
 title: View cluster status
 titleSuffix: SQL Server big data clusters
-description: This article explains how to view the status of a big data cluster using Azure Data Studio, notebooks, and mssqlctl commands.
+description: This article explains how to view the status of a big data cluster using Azure Data Studio, notebooks, and azdata commands.
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 06/27/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to access the service endpoints and view the status of a SQL Server big data cluster (preview). You can use both Azure Data Studio and **mssqlctl**, and this article covers both techniques.
+This article describes how to access the service endpoints and view the status of a SQL Server big data cluster (preview). You can use both Azure Data Studio and **azdata**, and this article covers both techniques.
 
 ## <a id="datastudio"></a> Use Azure Data Studio
 
@@ -81,9 +81,9 @@ You can directly click on these links. You are asked twice to provide your user 
 
 5. If you connected successfully, the rest of the notebook will show the output of each component of the big data cluster. When you want to re-run a certain code cell, hover over the code cell and click the **Run** icon.
 
-## Use mssqlctl
+## Use azdata
 
-You can also use [mssqlctl](deploy-install-mssqlctl.md) commands to view both endpoints and the cluster status.
+You can also use [azdata](deploy-install-azdata.md) commands to view both endpoints and the cluster status.
 
 ### Service endpoints
 
@@ -98,18 +98,18 @@ You can obtain the IP addresses of the external endpoints for the big data clust
    > [!TIP]
    > If you did not change the default name during deployment, use `-n mssql-cluster` in the previous command. **mssql-cluster** is the default name for the big data cluster.
 
-1. Log in to the big data cluster with [mssqlctl login](reference-mssqlctl.md). Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
+1. Log in to the big data cluster with [azdata login](reference-azdata.md). Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
 
    ```bash
-   mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
+   azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
    Specify the username and password that you configured for the controller (CONTROLLER_USERNAME and CONTROLLER_PASSWORD) during deployment.
 
-1. Run [mssqlctl bdc endpoint list](reference-mssqlctl-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
+1. Run [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
 
    ```bash
-   mssqlctl bdc endpoint list -o table
+   azdata bdc endpoint list -o table
    ```
 
    The following list shows sample output from this command:
@@ -132,14 +132,14 @@ You can obtain the IP addresses of the external endpoints for the big data clust
 
 ### View cluster status
 
-You can view the status of the cluster with the [mssqlctl bdc status show](reference-mssqlctl-bdc-status.md) command.
+You can view the status of the cluster with the [azdata bdc status show](reference-azdata-bdc-status.md) command.
 
 ```bash
-mssqlctl bdc status show -o table
+azdata bdc status show -o table
 ```
 
 > [!TIP]
-> To run the status commands, you must first log in with the **mssqlctl login** command, which was shown in the previous endpoints section.
+> To run the status commands, you must first log in with the **azdata login** command, which was shown in the previous endpoints section.
 
 The following shows sample output from this command:
 
@@ -156,7 +156,7 @@ Storage  default        Ready
 
 ### View pool status
 
-You can view the status of pools within the cluster with the [mssqlctl bdc pool status show](reference-mssqlctl-bdc-pool-status.md) command. To use this command, specify the type of pool with the `--kind` parameter. The pool types are:
+You can view the status of pools within the cluster with the [azdata bdc pool status show](reference-azdata-bdc-pool-status.md) command. To use this command, specify the type of pool with the `--kind` parameter. The pool types are:
 
 - compute
 - data
@@ -167,7 +167,7 @@ You can view the status of pools within the cluster with the [mssqlctl bdc pool 
 For example, the following command displays the pool status of the storage pool:
 
 ```bash
-mssqlctl bdc pool status show --kind storage
+azdata bdc pool status show --kind storage
 ```
 
 You should see text similar to the following output:
@@ -205,8 +205,8 @@ The `nodeMetricsUrl` and `sqlMetricsUrl` values link to a grafana dashboard for 
 
 ### View controller status
 
-You can view the controller status with the [mssqlctl bdc control status show](reference-mssqlctl-bdc-control-status.md) command. It provides similar links to the monitoring dashboards related to the controller nodes of the big data cluster.
+You can view the controller status with the [azdata bdc control status show](reference-azdata-bdc-control-status.md) command. It provides similar links to the monitoring dashboards related to the controller nodes of the big data cluster.
 
 ## Next steps
 
-For more information about big data clusters, see [What are SQL Server big data clusters](big-data-cluster-overview.md).
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

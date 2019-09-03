@@ -33,15 +33,20 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime**|UTC time indicating the start of the five-minute reporting interval.|  
 |end_time|**datetime**|UTC time indicating the end of the five-minute reporting interval.|  
-|database_name|**varchar**|Name of the user database.|  
-|sku|**varchar**|Service Tier of the database. The following are the possible values:<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />General Purpose<br /><br />Business Critical|  
+|database_name|**nvarchar(128)**|Name of the user database.|  
+|sku|**nvarchar(128)**|Service Tier of the database. The following are the possible values:<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />General Purpose<br /><br />Business Critical|  
 |storage_in_megabytes|**float**|Maximum storage size in megabytes for the time period, including database data, indexes, stored procedures, and metadata.|  
-|avg_cpu_percent|**numeric**|Average compute utilization in percentage of the limit of the service tier.|  
-|avg_data_io_percent|**numeric**|Average I/O utilization in percentage based on the limit of the service tier.|  
-|avg_log_write_percent|**numeric**|Average write resource utilization in percentage of the limit of the service tier.|  
+|avg_cpu_percent|**decimal(5,2)**|Average compute utilization in percentage of the limit of the service tier.|  
+|avg_data_io_percent|**decimal(5,2)**|Average I/O utilization in percentage based on the limit of the service tier.|  
+|avg_log_write_percent|**decimal(5,2)**|Average write resource utilization in percentage of the limit of the service tier.|  
 |max_worker_percent|**decimal(5,2)**|Maximum concurrent workers (requests) in percentage based on the limit of the database's service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent worker counts.|  
 |max_session_percent|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the database's service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent session counts.|  
-|dtu_limit|**int**|Current max database DTU setting for this database during this interval. |  
+|dtu_limit|**int**|Current max database DTU setting for this database during this interval. |
+|xtp_storage_percent|**decimal (5,2)**|Storage utilization for In-Memory OLTP in percentage of the limit of the service tier (at the end of the reporting interval). This includes memory used for storage of the following In-Memory OLTP objects: memory-optimized tables, indexes, and table variables. It also includes memory used for processing ALTER TABLE operations.<br /><br /> Returns 0 if In-Memory OLTP is not used in the database.|
+|avg_login_rate_percent|**decimal (5,2)**|Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
+|avg_instance_cpu_percent|**decimal (5,2)**|Average database CPU usage as a percentage of the SQL DB process.|
+|avg_instance_memory_percent|**decimal (5,2)**|Average database memory usage as a percentage of the SQL DB process.|
+|cpu_limit|**decimal (5,2)**|Number of vCores for this database during this interval. For databases using the DTU-based model, this column is NULL.|
 |allocated_storage_in_megabytes|**float**|The amount of formatted file space in MB made available for storing database data. Formatted file space is also referred to as data space allocated.  For more information, see: [File space management in SQL DB](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  

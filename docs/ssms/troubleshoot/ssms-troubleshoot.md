@@ -29,7 +29,7 @@ To capture diagnostic information to troubleshoot a crash or a hang of SSMS, fol
 
 3. Open the command prompt and run the following command.
 
-    ```command prompt
+    ```console
     <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
     ```
 
@@ -65,7 +65,7 @@ To capture diagnostic information to troubleshoot an OutOfMemoryException from S
 
 3. Open Command Prompt and run the following command.
 
-    ```command prompt
+    ```console
     <PathToProcDumpFolder>\procdump.exe -e 1 -f System.OutOfMemoryException -ma -w ssms.exe
     ```
 

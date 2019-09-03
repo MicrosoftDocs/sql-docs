@@ -46,7 +46,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  Is the name of the role to be created.  
   
  AUTHORIZATION *owner_name*  
- Is the database user or role that is to own the new role. If no user is specified, the role will be owned by the user that executes CREATE ROLE.  
+ Is the database user or role that is to own the new role. If no user is specified, the role will be owned by the user that executes CREATE ROLE. The owner of the role, or any member of an owning role can add or remove members of the role.
   
 ## Remarks  
  Roles are database-level securables. After you create a role, configure the database-level permissions of the role by using GRANT, DENY, and REVOKE. To add members to a database role, use [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). For more information, see [Database-Level Roles](../../relational-databases/security/authentication-access/database-level-roles.md).  

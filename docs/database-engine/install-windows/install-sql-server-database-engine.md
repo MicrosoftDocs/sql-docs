@@ -1,7 +1,7 @@
 ---
 title: "Install SQL Server Database Engine | Microsoft Docs"
 ms.custom: ""
-ms.date: 05/22/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -32,7 +32,17 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
   
 -   [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md) - is an optional component  
 
--   [Machine Learning Services (In-Database) with R and Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - is an optional component
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+-   [Machine Learning Services](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (R and Python) and [Language Extensions](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md) (Java) - is an optional component
+::: moniker-end
+
+::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+-   [Machine Learning Services (In-Database)](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (R and Python) - is an optional component
+::: moniker-end
+
+::: monikerRange=">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+-   [R Services (In-Database)](../../advanced-analytics/install/sql-r-services-windows-install.md) - is an optional component
+::: moniker-end
 
 -   Full-Text Search - is an optional component  
   

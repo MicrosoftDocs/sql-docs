@@ -262,7 +262,7 @@ manager: craigg
   
      Open your browser to the desired SharePoint site. For example http://\<servername>/sites/bi  
   
-2.  Click **Settings**![SharePoint Settings](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings").  
+2.  Click **Settings**![SharePoint Settings](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings").  
   
 3.  Click **Site settings**.  
   
@@ -379,7 +379,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
 ###  <a name="bkmk_configure_ECS"></a> Configure Excel Services and PowerPivot  
  If you want to view [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Power View reports in an Excel 2013 workbook in SharePoint, an Excel Services Application on the farm needs to be configured to use an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Server in SharePoint mode. Also, the application pool security account used by the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application, must be an administrator on the Analysis Services Server. For more information, see the following:  
   
--   The section "Configure Excel Services for Analysis Services integration" in [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+-   The section "Configure Excel Services for Analysis Services integration" in [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
   
 -   [Manage Excel Services data model settings (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
   

@@ -23,7 +23,7 @@ This document covers the interfaces provided by the SQL Server on Linux virtual 
 - SQL Server on Linux does not support named instances so references to instance name have been removed. 
 - The shared library is implemented in libsqlvdi.so installed at /opt/mssql/lib/libsqlvdi.so
 
-This document is an addendum to **vbackup.chm** that details the Windows VDI Specification. Download the [Windows VDI Specification](https://www.microsoft.com/download/details.aspx?id=17282).
+This document is an addendum to **vbackup.chm** that details the MS SQL Server VDI Specifications on Windows. Download the [SQL VDI Specification on Windows](https://www.microsoft.com/download/details.aspx?id=17282).
 
 Also review the sample VDI backup solution on the [SQL Server Samples GitHub repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
 

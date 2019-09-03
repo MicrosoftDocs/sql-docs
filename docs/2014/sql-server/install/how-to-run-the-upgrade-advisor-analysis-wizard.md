@@ -25,11 +25,11 @@ manager: craigg
   
 2.  On the **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components** page, enter the name of the server to scan in the **Server name** box, and then click **Detect**. Use the following guidelines for the server name:  
   
-    -   To scan non-clustered instances, enter the computer name.  
+    -   To scan nonclustered instances, enter the computer name.  
   
     -   To scan clustered instances, enter the virtual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] name.  
   
-    -   To scan non-clustered components that are installed on a node of a cluster, enter the node name.  
+    -   To scan nonclustered components that are installed on a node of a cluster, enter the node name.  
   
     > [!WARNING]  
     >  Upgrade Advisor does not support connecting to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that is not set to use the standard port (1433) for client connections. If you want to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that does not use the standard port (1433), create an alias using the IP address and the port. For more information about configuring client protocols and creating an alias for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances, see [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  

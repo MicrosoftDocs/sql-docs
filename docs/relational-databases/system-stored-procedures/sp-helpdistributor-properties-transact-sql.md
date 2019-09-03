@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_helpdistributor_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns Distributor properties. This stored procedure is executed at the Distributor on the distribution database.  
   

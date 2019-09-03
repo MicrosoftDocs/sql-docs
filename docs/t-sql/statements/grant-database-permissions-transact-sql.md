@@ -252,7 +252,7 @@ GO
 
 ```sql
 USE AdventureWorks2012;
-GRANT CONTROL ON DATABASE:AdventureWorks2012 TO Sarah;
+GRANT CONTROL ON DATABASE::AdventureWorks2012 TO Sarah;
 GO
 ```
 

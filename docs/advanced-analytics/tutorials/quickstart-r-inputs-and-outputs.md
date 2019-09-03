@@ -1,5 +1,5 @@
 ---
-title: Quickstart for working with inputs and outputs in R - SQL Server Machine Learning
+title: Quickstart for working with inputs and outputs in R
 description: In this quickstart for R script in SQL Server, learn how to structure inputs and outputs to the sp_execute_external_script system stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,9 +8,10 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Quickstart: Handle inputs and outputs using R in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This quickstart shows how to handle inputs and outputs when using R in SQL Server Machine Learning Services or R Services.
 

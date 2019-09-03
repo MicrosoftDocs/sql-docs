@@ -1,10 +1,10 @@
 ---
 title: "CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: 07/09/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.technology: machine-learning
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE EXTERNAL LIBRARY"
@@ -31,7 +31,7 @@ Uploads R, Python, or Java package files to a database from the specified byte s
 > In SQL Server 2017, R language and Windows platform are supported. R, Python, and external languages on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4 and later.
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current"
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 > [!NOTE]
 > In Azure SQL Database, you can use **sqlmlutils** to install a library. For details, see [Add a package with sqlmlutils](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils).
 ::: moniker-end
@@ -120,7 +120,6 @@ WITH ( LANGUAGE = 'R' )
 <file_spec> ::=  
 {  
     (CONTENT = <library_bits>)  
-    [, PLATFORM = WINDOWS ])  
 }  
 
 <library_bits> :: =  
@@ -172,13 +171,6 @@ Specifies the platform for the content of the library. The value defaults to the
 In SQL Server 2017, Windows is the only supported platform.
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-**PLATFORM = WINDOWS**
-
-Specifies the platform for the content of the library. The value defaults to the host platform on which SQL Server is running. Therefore, the user doesn't have to specify the value. It is required in case where multiple platforms are supported, or the user needs to specify a different platform.
-In Azure SQL Database, Windows is the only supported platform.
-::: moniker-end
-
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **PLATFORM**
 
@@ -203,7 +195,7 @@ R is supported in Azure SQL Database.
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **language**
 
-Specifies the language of the package. The value can be `R`, `Python`, or the name of a [created external language](create-external-language-transact-sql.md).
+Specifies the language of the package. The value can be `R`, `Python`, or the name of an external language (see [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
 ::: moniker-end
 
 ## Remarks

@@ -1,5 +1,5 @@
 ---
-title: Set up a data science client for Python development - SQL Server Machine Learning
+title: Set up a data science client for Python development
 description: Set up a Python local environment (Jupyter Notebook or PyCharm) for remote connections to SQL Server Machine Learning Services with Python.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,9 +8,10 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Set up a data science client for Python development on SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Python integration is available starting in SQL Server 2017 or later when you include the Python option in a [Machine Learning Services (In-Database) installation](../install/sql-machine-learning-services-windows-install.md). 
 
@@ -44,9 +45,9 @@ An installation script adds three Microsoft-specific libraries to the Python cli
 
 1. Download an installation script.
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py) installs version 9.2.1 of the Microsoft Python packages. This version corresponds to a default SQL Server 2017 instance. 
+  + [https://aka.ms/mls-py](https://aka.ms/mls-py) installs version 9.2.1 of the Microsoft Python packages. This version corresponds to a default SQL Server instance. 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) installs version 9.3 of the Microsoft Python packages. This version is a better choice if your remote SQL Server 2017 instance is [bound to Machine Learning Server 9.3](../install/upgrade-r-and-python.md).
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) installs version 9.3 of the Microsoft Python packages. This version is a better choice if your remote SQL Server instance is [bound to Machine Learning Server 9.3](../install/upgrade-r-and-python.md).
 
 2. Open a PowerShell window with elevated administrator permissions (right-click **Run as administrator**).
 
@@ -101,7 +102,7 @@ Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run s
 
 3. Enter `import revoscalepy` and run the command to load one of the Microsoft-specific libraries.
 
-4. Enter and run `print(revoscalepy.__version__)` to return the version information. You should see 9.2.1 or 9.3.0. You can use either of these versions with [revoscalepy on the server](../package-management/installed-package-information.md). 
+4. Enter and run `print(revoscalepy.__version__)` to return the version information. You should see 9.2.1 or 9.3.0. You can use either of these versions with [revoscalepy on the server](../package-management/r-package-information.md).
 
 4. Enter a more complex series of statements. This example generates summary statistics using [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) over a local data set. Other functions get the location of the sample data and create a data source object for a local .xdf file.
 

@@ -1,5 +1,5 @@
 ---
-title: Run custom R functions on SQL Server using RevoScaleR rxExec - SQL Server Machine Learning
+title: Run custom R functions on SQL Server using RevoScaleR rxExec
 description: Tutorial walkthrough on how to run custom R script on SQL Server using RevoScaleR functions.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,9 +8,10 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Run custom R functions on SQL Server using rxExec
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 You can run custom R functions in the context of SQL Server by passing your function via [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec), assuming that any libraries your script requires are also installed on the server and those libraries are compatible with the base distribution of R. 
 
@@ -20,7 +21,7 @@ In this tutorial, you will use simulated data to demonstrate execution of a cust
 
 ## Prerequisites
 
-+ [SQL Server 2017 Machine Learning Services (with R)](../install/sql-machine-learning-services-windows-install.md) or [SQL Server 2016 R Services (in-Database)](../install/sql-r-services-windows-install.md)
++ [SQL Server Machine Learning Services (with R)](../install/sql-machine-learning-services-windows-install.md) or [SQL Server 2016 R Services (in-Database)](../install/sql-r-services-windows-install.md)
   
 + [Database permissions](../security/user-permission.md) and a SQL Server database user login
 
@@ -141,7 +142,7 @@ To run an arbitrary function in the context of a remote SQL Server, call the **r
 
 Although this exercise is simplistic, it demonstrates an important mechanism for integrating arbitrary R functions in R script running on SQL Server. To summarize the key points that make this technique possible:
 
-+ SQL Server must be configured for machine learning and R integration: [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R feature, or [SQL Server 2016 R Services (in-Database)](../install/sql-r-services-windows-install.md).
++ SQL Server must be configured for machine learning and R integration: [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R feature, or [SQL Server 2016 R Services (in-Database)](../install/sql-r-services-windows-install.md).
 
 + Open-source or third-party libraries used in your function, including any dependencies, must be installed on SQL Server. For more information, see [Install new R packages](../r/install-additional-r-packages-on-sql-server.md).
 

@@ -1,11 +1,11 @@
 ---
 title: Mount ADLS Gen2 for HDFS tiering
 titleSuffix: How to mount ADLS Gen2
-description: This article explains how to configure HDFS tiering to mount an external Azure Data Lake Storage file system into HDFS on a SQL Server 2019 big data cluster (preview).
+description: This article explains how to configure HDFS tiering to mount an external Azure Data Lake Storage file system into HDFS on a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 06/27/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -19,7 +19,7 @@ The following sections provide an example of how to configure HDFS tiering with 
 
 - [Deployed big data cluster](deployment-guidance.md)
 - [Big data tools](deploy-big-data-tools.md)
-  - **mssqlctl**
+  - **azdata**
   - **kubectl**
 
 ## <a id="load"></a> Load data into Azure Data Lake Storage
@@ -99,17 +99,17 @@ Now that you have set the MOUNT_CREDENTIALS environment variable for access keys
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
-1. Log in with **mssqlctl** using the external IP address of the controller endpoint with your cluster username and password:
+1. Log in with **azdata** using the external IP address of the controller endpoint with your cluster username and password:
 
    ```bash
-   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
+   azdata login -e https://<IP-of-controller-svc-external>:30080/
    ```
 1. Set environment variable MOUNT_CREDENTIALS (scroll up for instructions)
 
-1. Mount the remote HDFS storage in Azure using **mssqlctl bdc storage-pool mount create**. Replace the placeholder values before running the following command:
+1. Mount the remote HDFS storage in Azure using **azdata bdc hdfs mount create**. Replace the placeholder values before running the following command:
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
+   azdata bdc hdfs mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
@@ -122,23 +122,31 @@ If mounted successfully, you should be able to query the HDFS data and run Spark
 To list the status of all mounts in your big data cluster, use the following command:
 
 ```bash
-mssqlctl bdc storage-pool mount status
+azdata bdc hdfs mount status
 ```
 
 To list the status of a mount at a specific path in HDFS, use the following command:
 
 ```bash
-mssqlctl bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
+```
+
+## Refresh a mount
+
+The following example refreshes the mount.
+
+```bash
+azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Delete the mount
 
-To delete the mount, use the **mssqlctl bdc storage-pool mount delete** command, and specify the mount path in HDFS:
+To delete the mount, use the **azdata bdc hdfs mount delete** command, and specify the mount path in HDFS:
 
 ```bash
-mssqlctl bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## Next steps
 
-For more information about SQL Server 2019 big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

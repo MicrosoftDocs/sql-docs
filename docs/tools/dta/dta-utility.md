@@ -171,7 +171,7 @@ dta -d AdventureWorks2012 ...
  Specifies that filtered indexes be considered for new recommendations. For more information, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 **-fc**  
- Specifies that columnstore indexes be considered for new recommendations. DTA will consider both clustered and non-clustered columnstore indexes. For more information, see    
+ Specifies that columnstore indexes be considered for new recommendations. DTA will consider both clustered and nonclustered columnstore indexes. For more information, see    
 [Columnstore index recommendations in Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  

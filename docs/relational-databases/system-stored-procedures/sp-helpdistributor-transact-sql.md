@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_helpdistributor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Lists information about the Distributor, distribution database, working directory, and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent user account. This stored procedure is executed at the Publisher on the publication database or any database.  
   

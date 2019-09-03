@@ -34,7 +34,7 @@ helpviewer_keywords:
   - "views [SQL Server], indexed views"
   - "maximum number of columns per view"
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: XiaoyuL-Preview  
+author: XiaoyuMSFT  
 ms.author: xiaoyul
 monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
@@ -90,7 +90,7 @@ When MIN/MAX aggregates are used in the SELECT list of materialized view definit
  
 - FOR_APPEND is required.  For example:
   ```sql 
-  CREATE MATRIALIZED VIEW mv_test2  
+  CREATE MATERIALIZED VIEW mv_test2  
   WITH (distribution = hash(i_category_id), FOR_APPEND)  
   AS
   SELECT MAX(i.i_rec_start_date) as max_i_rec_start_date, MIN(i.i_rec_end_date) as min_i_rec_end_date, i.i_item_sk, i.i_item_id, i.i_category_id
@@ -114,11 +114,10 @@ ALTER TABLE SWITCH is not supported on tables that are referenced in materialize
 
 |Scenario|New columns to add to materialized view|Comment|  
 |-----------------|---------------|-----------------|
-|COUNT_BIG() | is missing in the SELECT list of an materialized view definition |COUNT_BIG (*) |Automatically added by materialized view creation.  No user action is required.|
+|COUNT_BIG() is missing in the SELECT list of an materialized view definition| COUNT_BIG (*) |Automatically added by materialized view creation.  No user action is required.|
 |SUM(a) is specified by users in the SELECT list of an materialized view definition AND ‘a’ is a nullable expression |COUNT_BIG (a) |Users need to add the expression ‘a’ manually in the materialized view definition.|
 |AVG(a) is specified by users in the SELECT list of an materialized view definition where ‘a’ is an expression.|SUM(a), COUNT_BIG(a)|Automatically added by materialized view creation.  No user action is required.|
-|STDEV(a) is specified by users in the SELECT list of an materialized view definition where ‘a’ is an expression.|SUM(a),  
-COUNT_BIG(a) SUM(square(a))|Automatically added by materialized view creation.  No user action is required. |
+|STDEV(a) is specified by users in the SELECT list of an materialized view definition where ‘a’ is an expression.|SUM(a), COUNT_BIG(a), SUM(square(a))|Automatically added by materialized view creation.  No user action is required. |
 | | | |
 
 Once created, materialized views are visible within SQL Server Management Studio under the views folder of the Azure SQL Data Warehouse instance.

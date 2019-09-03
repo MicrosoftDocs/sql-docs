@@ -46,7 +46,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Database-level principals
   
-- Database User (There are 11 types of users. For more information, see [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md).)
+- Database User (There are 12 types of users. For more information, see [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md).)
 - Database Role
 - Application Role
   

@@ -5,13 +5,15 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Install SQL Server 2019 Language Extensions (Java) on Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Language Extensions are an add-on to the database engine. Although you can [install the database engine and Language Extensions concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
 
@@ -21,9 +23,9 @@ Package location for the Java extensions is in the SQL Server Linux source repos
 
 Language Extensions is also supported on Linux containers. We do not provide pre-built containers with Language Extensions, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-## Uninstall previous CTP
+## Uninstall previous CTP version
 
-The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 3.1. Side-by-side installation of multiple versions is not supported.
+The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling the CTP version to remove all previous packages before installing RC 1. Side-by-side installation of multiple versions is not supported.
 
 ### 1. Confirm package installation
 
@@ -33,7 +35,7 @@ You might want to check for the existence of a previous installation as a first 
 ls /opt/microsoft/mssql/bin
 ```
 
-### 2. Uninstall previous CTP 2.x packages
+### 2. Uninstall previous CTP packages
 
 Uninstall at the lowest package level. Any upstream package dependent on a lower-level package is automatically uninstalled.
 
@@ -47,7 +49,7 @@ Commands for removing packages appear in the following table.
 | SLES	| `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu	| `sudo apt-get remove msssql-server-extensibility-java`|
 
-### 3. Proceed with CTP 3.1 install
+### 3. Install Release Candidate 1 (RC 1)
 
 Install at the highest package level using the instructions in this article for your operating system.
 
@@ -77,14 +79,14 @@ On an internet-connected device, packages are downloaded and installed independe
 
 | Package name | Applies-to | Description |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | All languages | Extensibility framework used to run Java code. |
-|mssql-server-extensibility-java | Java | Java extension for loading a Java execution environment. There are no additional libraries or packages for Java. |
+|mssql-server-extensibility  | All languages | Extensibility framework used for the Java language extension |
+|mssql-server-extensibility-java | Java | Extensibility framework used for the Java language extension and includes a supported Java runtime |
 
 <a name="RHEL"></a>
 
 ## Install Language Extensions
 
-You can install Language Extensions and Java on Linux by installing **mssql-server-extensibility-java**. When you install **mssql-server-extensibility-java**, the package automatically installs JRE 8 if it is not already installed. It will also add the JVM path to an environment variable called JRE_HOME.
+You can install Language Extensions and Java on Linux by installing **mssql-server-extensibility-java**. When you install **mssql-server-extensibility-java**, the package automatically installs JRE 11 if it is not already installed. It will also add the JVM path to an environment variable called JRE_HOME.
 
 > [!Note]
 > On an internet-connected server, package dependencies are downloaded and installed as part of the main package installation. If your server is not connected to the internet, see more details in the [offline setup](#offline-install).
@@ -278,7 +280,7 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## Limitations in CTP releases
+## Limitations in the RC 1 release
 
 Language Extensions and Java extensibility on Linux is still under active development. The following features are not yet enabled in the preview version.
 
@@ -287,7 +289,7 @@ Language Extensions and Java extensibility on Linux is still under active develo
 
 ### Resource governance
 
-There is parity between Linux and Windows for [Resource governance](../t-sql/statements/create-external-resource-pool-transact-sql.md) for external resource pools, but the statistics for [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) currently have different units on Linux. Units will align in an upcoming CTP.
+There is parity between Linux and Windows for [Resource governance](../t-sql/statements/create-external-resource-pool-transact-sql.md) for external resource pools, but the statistics for [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) currently have different units on Linux. 
  
 | Column name   | Description | Value on Linux | 
 |---------------|--------------|---------------|

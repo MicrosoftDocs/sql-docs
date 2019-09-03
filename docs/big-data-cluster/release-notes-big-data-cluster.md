@@ -1,23 +1,75 @@
 ---
 title: Release notes
 titleSuffix: SQL Server big data clusters
-description: This article describes the latest updates and known issues for SQL Server 2019 big data clusters (preview). 
+description: This article describes the latest updates and known issues for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview). 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Release notes for big data clusters on SQL Server
+# Release notes for SQL Server Big Data Clusters
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article lists the updates and know issues for the most recent releases of SQL Server big data clusters.
+This article lists the updates and know issues for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+## <a id="rc"></a> Release candidate (August)
+
+The following sections describe the new features and known issues for big data clusters in SQL Server 2019 release candidate.
+
+### What's New
+
+|New feature or update | Details |
+|:---|:---|
+|SQL Server Always On Availability Group |When you deploy a SQL Server Big Data Cluster, you can configure the deployment to create an availability group to provide:<br/><br/>- High availability <br/><br/>- Read-scale out <br/><br/>- Scale-out data insertion into data pool<br/><br>See [Deploy with high availability](../big-data-cluster/deployment-high-availability.md). |
+|`azdata` |Simplified installation for the tool with [installation manager](./deploy-install-azdata-linux-package.md)<br/><br/>[`azdata notebook` command](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status` command](./reference-azdata-bdc-status.md) |
+|Azure Data Studio|[Download the Release Candidate build of Azure Data Studio](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Added troubleshooting notebooks through SQL Server 2019 guide Jupyter Book.<br/><br/>Added controller login experience.<br/><br/>Added controller dashboard to view service endpoints, view cluster health status, and access troubleshooting notebooks.<br/><br/>Improved notebook cell output/editing performance.|
+| &nbsp; | &nbsp; |
+
+### Known issues
+
+SQL Server 2019 Big Data Clusters release candidate refresh build number is `15.0.1900.47`.
+
+## <a id="ctp32"></a> CTP 3.2 (July)
+
+The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 3.2.
+
+### What's New
+
+|New feature or update | Details |
+|:---|:---|
+|Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. <br/><br/> See [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).|
+|`azdata` |CTP 3.2 introduces `azdata` - a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. `azdata` replaces `mssqlctl`. See [Install `azdata`](deploy-install-azdata.md). |
+|PolyBase |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources. In previous CTP releases, columns in the external data source was bound based on the ordinal position only and the names specified in the EXTERNAL TABLE definition was not used. |
+|HDFS tiering refresh |Introducing refresh functionality for HDFS tiering so that an existing mount can be refreshed for the latest snapshot of the remote data. See [HDFS tiering](hdfs-tiering.md) |
+|Notebook-based troubleshooting |CTP 3.2 introduces Jupyter notebooks to assist with [deployment](deploy-notebooks.md) and [discovery, diagnosis, and troubleshooting](manage-notebooks.md) for components in a SQL Server big data cluster. |
+| &nbsp; | &nbsp; |
+
+### Known issues
+
+The following sections describe the known issues and limitations with this release.
+
+#### PolyBase
+
+- Push-down of TOP clause when the count is > 1000 is not supported in this release. All rows will be read from the remote data source in such cases. (Fixed in release candidate)
+
+- Push-down of colocated joins to external data sources is not supported in this release. For example, push-down of two data pool tables of ROUND_ROBIN distribution type will get the data to SQL Master instance or Compute Pool instance to perform the join operation.
+
+#### Compute Pool
+
+- Big data cluster deployment only supports compute pool with one instance. (Fixed in release candidate)
+
+#### Storage Pool
+
+- Querying parquet files in storage pool does not support certain data types.
+
+- MAP and LIST parent columns, as well as parent columns without an attached type, cannot be queried. It will return an error.
+
+- REPEATED nodes cannot be queried and it might return wrong results.
 
 ## <a id="ctp31"></a> CTP 3.1 (June)
 
@@ -27,7 +79,7 @@ The following sections describe the new features and known issues for big data c
 
 | New feature or update | Details |
 |:---|:---|
-| `mssqlctl` command changes | `mssqlctl cluster` commands have been renamed to `mssqlctl bdc`. For more information, see the [`mssqlctl` reference](reference-mssqlctl.md). |
+| `mssqlctl` command changes | `mssqlctl cluster` commands have been renamed to `mssqlctl bdc`. For more information, see the [`mssqlctl` reference](reference-azdata.md). |
 | New `mssqlctl` status commands and removal of the Cluster Administration Portal. | The Cluster Administration Portal is removed in this release. New status commands have been added to `mssqlctl` that complement existing monitoring commands. |
 | Spark compute pools | Create additional nodes to increase Spark compute power without having to scale up storage. In addition, you can start storage pool nodes that aren't used for Spark. Spark and storage are decoupled. For more information, see [Configure storage without spark](deployment-custom-configuration.md#sparkstorage). |
 | MSSQL Spark connector | Support for read/write to data pool external tables. Previous releases supported read/write to MASTER instance tables only. For more information, see [How to read and write to SQL Server from Spark using the MSSQL Spark Connector](spark-mssql-connector.md). |
@@ -52,7 +104,7 @@ The following sections describe the known issues and limitations with this relea
 - Upgrading a big data data cluster from a previous release is not supported.
 
    > [!IMPORTANT]
-   > You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-upgrade.md).
+   > You must backup your data and then delete your existing big data cluster (using the previous version of **azdata**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-upgrade.md).
 
 - After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
 
@@ -121,7 +173,7 @@ The following sections describe the new features and known issues for big data c
 
 | New feature or update | Details |
 |:---|:---|
-| **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](../big-data-cluster/reference-mssqlctl.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
+| **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](reference-azdata.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
 | Storage enhancements | Support for different storage configurations for logs and data. Also, the number of persistent volume claims for a big data cluster has been reduced. |
 | Multiple compute pool instances | Support for multiple compute pool instances. |
 | New pool behavior and capabilities | The compute pool is now used by default for storage pool and data pool operations in a **ROUND_ROBIN** distribution only. The data pool can now use a new **REPLICATED** distribution type, which means that the same data is present on all the data pool instances. |
@@ -156,7 +208,7 @@ The following sections describe the known issues and limitations with this relea
 - Upgrading a big data data cluster from a previous release is not supported.
 
    > [!IMPORTANT]
-   > You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-upgrade.md).
+   > You must backup your data and then delete your existing big data cluster (using the previous version of **azdata**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-upgrade.md).
 
 - After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
 
@@ -221,9 +273,9 @@ The following sections describe the new features and known issues for big data c
 | New feature or update | Details |
 |:---|:---|
 | Deployment profiles | Use default and customized [deployment configuration JSON files](deployment-guidance.md#configfile) for big data cluster deployments instead of environment variables. |
-| Prompted deployments | `mssqlctl cluster create` now prompts for any necessary settings for default deployments. |
+| Prompted deployments | `azdata cluster create` now prompts for any necessary settings for default deployments. |
 | Service endpoint and pod name changes | The following external endpoints have changed names:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
-| **mssqlctl** improvements | Use **mssqlctl** to [list external endpoints](deployment-guidance.md#endpoints) and check the version of **mssqlctl** with the `--version` parameter. |
+| **azdata** improvements | Use **azdata** to [list external endpoints](deployment-guidance.md#endpoints) and check the version of **azdata** with the `--version` parameter. |
 | Offline install | Guidance for offline big data cluster deployments. |
 | HDFS tiering improvements | S3 tiering, mount caching, and OAuth support for ADLS Gen2. |
 | New `mssql` Spark-SQL Server connector | |
@@ -237,7 +289,7 @@ The following sections describe the known issues and limitations with this relea
 - Upgrading a big data data cluster from a previous release is not supported.
 
    > [!IMPORTANT]
-   > You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-upgrade.md).
+   > You must backup your data and then delete your existing big data cluster (using the previous version of **azdata**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-upgrade.md).
 
 - After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
 
@@ -324,7 +376,7 @@ The following sections describe the known issues and limitations with this relea
 - Upgrading a big data data cluster from a previous release is not supported.
 
    > [!IMPORTANT]
-   > You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-upgrade.md).
+   > You must backup your data and then delete your existing big data cluster (using the previous version of **azdata**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-upgrade.md).
 
 - After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
 
@@ -362,7 +414,7 @@ If you use kubeadm to deploy Kubernetes on multiple machines, the cluster admini
 
 #### Delete cluster fails
 
-When you attempt to delete a cluster with **mssqlctl**, it fails with the following error:
+When you attempt to delete a cluster with **azdata**, it fails with the following error:
 
 ```
 2019-03-26 20:38:11.0614 UTC | INFO | Deleting cluster ...
@@ -376,7 +428,7 @@ Makefile:203: recipe for target 'deploy-clean' failed
 make: *** [deploy-clean] Error 2
 ```
 
-A new Python Kubernetes client (version 9.0.0) changed the delete namespaces API, which currently breaks **mssqlctl**. This only happens if you have a newer Kubernetes python client installed. You can work around this problem by directly deleting the cluster using **kubectl** (`kubectl delete ns <ClusterName>`), or you can install the older version using `sudo pip install kubernetes==8.0.1`.
+A new Python Kubernetes client (version 9.0.0) changed the delete namespaces API, which currently breaks **azdata**. This only happens if you have a newer Kubernetes python client installed. You can work around this problem by directly deleting the cluster using **kubectl** (`kubectl delete ns <ClusterName>`), or you can install the older version using `sudo pip install kubernetes==8.0.1`.
 
 #### <a id="externaltablesctp24"></a> External tables
 
@@ -439,14 +491,14 @@ The following sections describe the new features and known issues for big data c
 
 | New feature or update | Details |
 | :---------- | :------ |
-| Submit Spark jobs on big data clusters in IntelliJ. | [Submit Spark jobs on SQL Server big data clusters in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| Common CLI for application deployment and cluster management. | [How to deploy an app on SQL Server 2019 big data cluster (preview)](big-data-cluster-create-apps.md) |
-| VS Code extension to deploy applications to a big data cluster. | [How to use VS Code to deploy applications to SQL Server big data clusters](app-deployment-extension.md) |
-| Changes to the **mssqlctl** tool command usage. | For more details see the [known issues for mssqlctl](#mssqlctlctp23). |
+| Submit Spark jobs on big data clusters in IntelliJ. | [Submit Spark jobs on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
+| Common CLI for application deployment and cluster management. | [How to deploy an app on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
+| VS Code extension to deploy applications to a big data cluster. | [How to use VS Code to deploy applications to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
+| Changes to the **azdata** tool command usage. | For more details see the [known issues for azdata](#azdatactp23). |
 | Use Sparklyr in big data cluster | [Use Sparklyr in SQL Server 2019 big data cluster](sparklyr-from-RStudio.md) |
 | Mount external HDFS-compatible storage into big data cluster with **HDFS tiering**. | See [HDFS tiering](hdfs-tiering.md). |
 | New unified connection experience for the SQL Server master instance and the HDFS/Spark Gateway. | See [SQL Server master instance and the HDFS/Spark Gateway](connect-to-big-data-cluster.md). |
-| Deleting a cluster with **mssqlctl cluster delete** now deletes only the objects in the namespace that were part of the big data cluster. | The namespace is not deleted. However, in earlier releases this command did delete the entire namespace. |
+| Deleting a cluster with **azdata cluster delete** now deletes only the objects in the namespace that were part of the big data cluster. | The namespace is not deleted. However, in earlier releases this command did delete the entire namespace. |
 | _Security_ endpoint names have been changed and consolidated. | **service-security-lb** and **service-security-nodeport** have been consolidated into the **endpoint-security** endpoint. |
 | _Proxy_ endpoint names have been changed and consolidated. | **service-proxy-lb** and **service-proxy-nodeport** have been consolidated into the **endpoint-service-proxy** endpoint. |
 | _Controller_ endpoint names have been changed and consolidated. | **service-mssql-controller-lb** and **service-mssql-controller-nodeport** have been consolidated into the **endpoint-controller** enpoint. |
@@ -461,7 +513,7 @@ The following sections describe the known issues and limitations with this relea
 - Upgrading a big data data cluster from a previous release is not supported.
 
    > [!IMPORTANT]
-   > You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-upgrade.md).
+   > You must backup your data and then delete your existing big data cluster (using the previous version of **azdata**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-upgrade.md).
 
 - The **ACCEPT_EULA** environment variable must be "yes" or "Yes" to accept the EULA. Previous releases permitted "y" and "Y" but these are no longer accepted and will cause the deployment to fail.
 
@@ -501,17 +553,17 @@ If you use kubeadm to deploy Kubernetes on multiple machines, the cluster admini
       KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
       ```
 
-#### <a id="mssqlctlctp23"></a> mssqlctl
+#### <a id="azdatactp23"></a> azdata
 
-- The **mssqlctl** tool changed from a verb-noun command ordering to a noun-verb order. For example, `mssqlctl create cluster` is now `mssqlctl cluster create`.
+- The **azdata** tool changed from a verb-noun command ordering to a noun-verb order. For example, `azdata create cluster` is now `azdata cluster create`.
 
-- The `--name` parameter is now required when creating a cluster with `mssqlctl cluster create`.
+- The `--name` parameter is now required when creating a cluster with `azdata cluster create`.
 
    ```bash
-   mssqlctl cluster create --name <cluster_name>
+   azdata cluster create --name <cluster_name>
    ```
 
-- For important information about upgrading to the latest version of big data clusters and **mssqlctl**, see [Upgrade to a new release](deployment-upgrade.md).
+- For important information about upgrading to the latest version of big data clusters and **azdata**, see [Upgrade to a new release](deployment-upgrade.md).
 
 #### External tables
 
@@ -561,7 +613,7 @@ The following sections describe the new features and known issues for big data c
 
 - Cluster Admin Portal accessed with `/portal` (**https://\<ip-address\>:30777/portal**).
 - Master pool service name changed from `service-master-pool-lb` and `service-master-pool-nodeport` to `endpoint-master-pool`.
-- New version of **mssqlctl** and updated images.
+- New version of **azdata** and updated images.
 - Miscellaneous bug fixes and improvements.
 
 ### Known issues
@@ -629,12 +681,12 @@ The following sections describe the new features and known issues for big data c
 ### New features
 
 - [Deploy Python and R apps](big-data-cluster-create-apps.md) in a big data cluster.
-- New version of **mssqlctl** and updated images. 
+- New version of **azdata** and updated images. 
 - Miscellaneous bug fixes and improvements.
 
 ### Known issues
 
-The following sections provide known issues for SQL Server big data clusters in CTP 2.1.
+The following sections provide known issues for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in CTP 2.1.
 
 #### Deployment
 
@@ -692,7 +744,7 @@ The following sections describe the new features and known issues for big data c
 
 ### New features
 
-- Simple deployment experience using mssqlctl management tool
+- Simple deployment experience using azdata management tool
 - Native notebook experience in Azure Data Studio
 - Query HDFS files via Storage Instance of SQL Server
 - Data virtualization via master to SQL Server, Oracle, MongoDB, and HDFS
@@ -704,12 +756,12 @@ The following sections describe the new features and known issues for big data c
 - Volume mounting to storage classes
 - Queries over data pools from master
 - Show plan for distributed queries in SSMS
-- Pip package for mssqlctl management tool
+- Pip package for azdata management tool
 - Built-in deployment engine through controller service
 
 ### Known issues
 
-The following sections provide known issues for SQL Server big data clusters in CTP 2.0.
+The following sections provide known issues for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in CTP 2.0.
 
 #### Deployment
 
@@ -759,4 +811,4 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 ## Next steps
 
-For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

@@ -49,7 +49,7 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ## Remarks  
   
 ## Permissions  
- Requires the **EXECUTE** permission on the database, and **INSERT**, **UPDATE**, and **DELETE** permission on the query store catalog views.  
+ Requires the **ALTER** permission on the database.
   
 ## Examples  
  The following example returns information about the queries in the query store.  

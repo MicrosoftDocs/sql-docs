@@ -9,7 +9,7 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-author: XiaoyuL-Preview 
+author: XiaoyuMSFT 
 ms.author: xiaoyul
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
@@ -27,7 +27,6 @@ Shows the storage space used result set caching for an Azure [!INCLUDE[ssSDW](..
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
-
 ## Remarks
 
 The `DBCC SHOWRESULTCACHESPACEUSED` command doesn't take any parameters and returns the space used by the database where the command is run.
@@ -43,6 +42,16 @@ Users can manually empty the result set cache for a database by turning OFF the 
 
 Requires VIEW SERVER STATE permission.
   
+## Result Sets  
+  
+|Column|Data Type|Description|  
+|------------|---------------|-----------------|  
+|reserved_space|bigint|Total space used for the database, in KB. This number will change as the cached result set increases.|  
+|data_space|bigint|Space used for data, in KB.|  
+|index_space|bigint|Space used for indexes, in KB.|  
+|unused_space|bigint|Space that is part of the reserved space and not used, in KB.|  
+
+
 ## See also
 
 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>

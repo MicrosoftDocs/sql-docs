@@ -94,6 +94,8 @@ RECONFIGURE
  The RECONFIGURE statement updates some options dynamically; other options require a server stop and restart. For example, the **min server memory** and **max server memory** server memory options are updated dynamically in the [!INCLUDE[ssDE](../../includes/ssde-md.md)]; therefore, you can change them without restarting the server. By contrast, reconfiguring the running value of the **fill factor** option requires restarting the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  After running RECONFIGURE on a configuration option, you can see whether the option has been updated dynamically by executing **sp_configure'***option_name***'**. The values in the **run_value** and **config_value** columns should match for a dynamically updated option. You can also check to see which options are dynamic by looking at the **is_dynamic** column of the **sys.configurations** catalog view.  
+ 
+ The change is also written to the SQL Server error log.
   
 > [!NOTE]  
 >  If a specified *value* is too high for an option, the **run_value** column reflects the fact that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] has defaulted to dynamic memory rather than use a setting that is not valid.  

@@ -1,5 +1,5 @@
 ---
-title: microsoftml Python package - SQL Server Machine Learning Services
+title: microsoftml Python package
 description: Introduces the Microsoft machine learning algorithms and models for Python, as related to SQL Server machine learning workloads.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,9 +8,10 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # microsoftml (Python module in SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **microsoftml** is a Python35-compatible module from Microsoft providing high-performance machine learning algorithms. It includes functions for training and transformations, scoring, text and image analysis, and feature extraction for deriving values from existing data.
 
@@ -24,7 +25,7 @@ The **microsoftml** library is distributed in multiple Microsoft products, but u
 
 The **microsoftml** module is based on Python 3.5 and available only when you install one of the following Microsoft products or downloads:
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 or later](https://docs.microsoft.com/machine-learning-server/)
 + [Python client libraries for a data science client](setup-python-client-tools-sql.md)
 

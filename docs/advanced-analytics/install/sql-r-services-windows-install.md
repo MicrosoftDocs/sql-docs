@@ -1,5 +1,5 @@
 ---
-title: Install SQL Server 2016 R Services (In-Database) - SQL Server Machine Learning
+title: Install SQL Server 2016 R Services (In-Database)
 description: Add R programming language support to a database engine on SQL Server 2016 R Services on Windows.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,13 +8,14 @@ ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article explains how to install and configure **SQL Server 2016 R Services**. If you have SQL Server 2016, install this feature to enable execution of R code in SQL Server.
 
-In SQL Server 2017, R integration is offered in [Machine Learning Services](../r/r-server-standalone.md), reflecting the addition of Python. If you want R integration and have SQL Server 2017 installation media, see [Install SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) to add the feature. 
+In SQL Server 2017, R integration is offered in [Machine Learning Services](../r/r-server-standalone.md), reflecting the addition of Python. If you want R integration and have SQL Server 2017 installation media, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) to add the feature. 
 
 <a name="bkmk_prereqs"> </a> 
 
@@ -22,7 +23,7 @@ In SQL Server 2017, R integration is offered in [Machine Learning Services](../r
 
 + A database engine instance is required. You cannot install just R, although you can add it incrementally to an existing instance.
 
-+ For business continuity, [Always On Availabilty Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for R Services. You have to install R Services, and configure packages, on each node.
++ For business continuity, [Always On Availability Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for R Services. You have to install R Services, and configure packages, on each node.
 
 + Do not install R Services on a failover cluster. The security mechanism used for isolating R processes is not compatible with a Windows Server failover cluster environment.
 

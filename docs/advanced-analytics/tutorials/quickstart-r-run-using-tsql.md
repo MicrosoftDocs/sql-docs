@@ -1,5 +1,5 @@
 ---
-title: Quickstart for a "Hello World" basic R code execution in T-SQL - SQL Server Machine Learning
+title: Quickstart for a "Hello World" basic R code execution in T-SQL
 description: Quickstart for R script in SQL Server. Learn the basics of calling R script using the sp_execute_external_script system stored procedure in a hello-world exercise.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,9 +8,10 @@ ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Quickstart: "Hello world" R script in SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this quickstart, you learn key concepts by running a "Hello World" R script inT-SQL, with an introduction to the **sp_execute_external_script** system stored procedure. 
 

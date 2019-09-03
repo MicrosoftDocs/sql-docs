@@ -1,10 +1,10 @@
 ---
 title: "ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 07/09/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.technology: machine-learning
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER EXTERNAL LIBRARY"
@@ -26,7 +26,7 @@ Modifies the content of an existing external package library.
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4 and later.
+> In SQL Server 2017, R language and Windows platform are supported. R, Python, and external languages on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4 and later.
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current"
@@ -73,7 +73,7 @@ WITH ( LANGUAGE = <language> )
 {
       'R'
     | 'Python'
-    | 'Java'
+    | <external_language>
 }
 ```
 ::: moniker-end
@@ -109,7 +109,7 @@ WITH ( LANGUAGE = 'R' )
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-## Syntax for Azure SQL Server Database
+## Syntax for Azure SQL Database
 
 ```text
 CREATE EXTERNAL LIBRARY library_name  
@@ -121,7 +121,6 @@ WITH ( LANGUAGE = 'R' )
 <file_spec> ::=  
 {  
     (CONTENT = <library_bits>)  
-    [, PLATFORM = WINDOWS ])  
 }  
 
 <library_bits> :: =  
@@ -170,13 +169,6 @@ Specifies the platform for the content of the library. This value is required wh
 In SQL Server 2017, Windows is the only supported platform.
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-**PLATFORM = WINDOWS**
-
-Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform.
-In Azure SQL Database, Windows is the only supported platform.
-::: moniker-end
-
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **PLATFORM**
 
@@ -199,7 +191,7 @@ Specifies the language of the package. R is supported in Azure SQL Database.
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **language**
 
-Specifies the language of the package. The value can be **R**, **Python**, or **Java**.
+Specifies the language of the package. The value can be **R**, **Python**, or the name of an external language (see [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
 ::: moniker-end
 
 ## Remarks

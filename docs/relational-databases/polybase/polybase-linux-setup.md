@@ -1,14 +1,14 @@
 ---
-title: Install PolyBase on Linux | Microsoft Docs
-description: This article describes how to install SQL Server Full-Text Search on Linux.
+title: Install PolyBase on Linux
+titlesuffix: SQL Server
+description: This article describes how to install SQL Server PolyBase on Linux.
 author: aboke 
 ms.author: aboke 
-ms.date: 4/12/2019
+ms.date: 7/22/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
-ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 ---
 # Install PolyBase on Linux
 
@@ -17,10 +17,10 @@ ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 The following steps install [PolyBase](../../relational-databases/search/full-text-search.md) (**mssql-server-polybase**) on Linux. PolyBase enables you to run external queries against remote data sources. 
 
 >[!NOTE]
-> Before installing Polybase, first [install SQL Server](../../linux/sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when installing the **mssql-server-polybase** package.
-
+> Before installing Polybase, first [install SQL Server 2019 preview](../../linux/sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when installing the **mssql-server-polybase** package.
+>
+> PolyBase is not supported on SQL Server 2017 for Linux.
 > Scale-out for PolyBase on Linux is currently unavailable.
-
 
 Install PolyBase for your operating system:
 
@@ -148,8 +148,6 @@ sudo systemctl restart mssql-server
 >After installation, you must [enable the PolyBase feature](#enable).
 
 ## Next steps
-
-### Supported external data sources on Linux
 
 PolyBase on Linux can access the following data sources. Follow the provided links for more information on how to create an external table from these sources on PolyBase is enabled. 
 

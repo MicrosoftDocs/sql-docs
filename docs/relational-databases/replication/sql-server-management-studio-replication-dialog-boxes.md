@@ -10,9 +10,10 @@ ms.topic: conceptual
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # SQL Server Management Studio Replication Dialog Boxes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   This section includes information on a number of replication dialog boxes that are available in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [Snapshot Agent Security](../../relational-databases/replication/snapshot-agent-security.md)  

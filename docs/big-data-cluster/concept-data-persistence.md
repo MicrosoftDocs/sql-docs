@@ -5,7 +5,7 @@ description: Learn about how data persistence works in a SQL Server 2019 big dat
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -43,7 +43,7 @@ Similar to other customizations, you can specify storage settings in the cluster
 Deployment of big data cluster will use persistent storage to store data, metadata and logs for various components. You can customize the size of the persistent volume claims created as part of the deployment. As a best practice, we recommend to use storage classes with a *Retain* [reclaim policy](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
 
 > [!NOTE]
-> In CTP 3.1, you can't modify storage configuration setting post deployment. Also, only `ReadWriteOnce` access mode for the whole cluster is supported.
+> In CTP 3.2, you can't modify storage configuration setting post deployment. Also, only `ReadWriteOnce` access mode for the whole cluster is supported.
 
 > [!WARNING]
 > Running without persistent storage can work in a test environment, but it could result in a non-functional cluster. Upon pod restarts, cluster metadata and/or user data will be lost permanently. We do not recommend to run in this configuration. 
@@ -55,12 +55,12 @@ Deployment of big data cluster will use persistent storage to store data, metada
 AKS comes with [two built-in storage classes](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **default** and **managed-premium** along with dynamic provisioner for them. You can specify either of those or create your own storage class  for deploying big data cluster with persistent storage enabled. By default, the built in cluster configuration file for aks *aks-dev-test* comes with persistent storage configurations to use **default** storage class.
 
 > [!WARNING]
-> Persistent volumes created with the built-in storage classes **default** and **managed-premium** have a reclaim policy of *Delete*. So at the time the you delete the SQL Server big data cluster, persistent volume claims get deleted and then persistent volumes as well. You can create custom storage classes using **azure-disk** privioner with a *Retain* reclaim policy as shown in  [this](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) article.
+> Persistent volumes created with the built-in storage classes **default** and **managed-premium** have a reclaim policy of *Delete*. So at the time the you delete the SQL Server big data cluster, persistent volume claims get deleted and then persistent volumes as well. You can create custom storage classes using **azure-disk** privioner with a *Retain* reclaim policy as shown in  [this](https://docs.microsoft.com/azure/aks/concepts-storage#storage-classes) article.
 
 
 ## Minikube storage class
 
-Minikube comes with a built-in storage class called **standard** along with a dynamic provisioner for it. The built in configuration file for minikube *minikube-dev-test* has the storage configuration settings in the control plane spec. The same settings will be applied to all pools specs. You can also customize a copy of this file and use it for your big data cluster deployment on minikube. You can manually edit the custom file and change the size of the persistent volumes claims for specific pools to accommodate the workloads you want to run. Or, see [Configure storage](#config-samples) section for examples on how to do edits using *mssqlctl* commands.
+Minikube comes with a built-in storage class called **standard** along with a dynamic provisioner for it. The built in configuration file for minikube *minikube-dev-test* has the storage configuration settings in the control plane spec. The same settings will be applied to all pools specs. You can also customize a copy of this file and use it for your big data cluster deployment on minikube. You can manually edit the custom file and change the size of the persistent volumes claims for specific pools to accommodate the workloads you want to run. Or, see [Configure storage](#config-samples) section for examples on how to do edits using *azdata* commands.
 
 ## Kubeadm storage classes
 
@@ -72,68 +72,64 @@ Kubeadm does not come with a built-in storage class. You must create your own st
 
 ## Customize storage configurations for each pool
 
-For all customizations, you must first create a copy of the built in configuration file you want to use. For example, the following command creates a copy of the *aks-dev-test* deployment configuration file in a subdirectory named `custom`:
+For all customizations, you must first create a copy of the built in configuration file you want to use. For example, the following command creates a copy of the *aks-dev-test* deployment configuration files in a subdirectory named `custom`:
 
 ```bash
-mssqlctl bdc config init --source aks-dev-test --target custom
+azdata bdc config init --source aks-dev-test --target custom
 ```
 
-Then, you can customize your config file either by editing it manually, or you can use **mssqlctl bdc config section set** command. This set command uses a combination of jsonpath and jsonpatch libraries to provide ways to edit your config file.
+This creates two files, **bdc.json** and **control.json** that can be customized by either editing them manually, or you can use **azdata bdc config** command. You can use a combination of jsonpath and jsonpatch libraries to provide ways to edit your config files.
 
-### Configure size
+
+### <a id="config-samples"></a> Configure storage class name and/or claims size
 
 By default, the size of the persistent volume claims provisioned for each of the pods provisioned in the cluster is 10 GB. You can update this value to accommodate the workloads you are running in a custom configuration file before cluster deployment.
 
-The following example only updates the size of persistent volume claims for data stored in the storage pool to 100Gi. Note that storage section must exist in the configuration file for the storage pool before you run this command:
+The following example updates the size of persistent volume claims size to 32Gi in the **control.jsaon**. If not overridden at pool level, this setting will be applied to all pools:
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=100Gi"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.size=100Gi"
 ```
 
-The following example updates the size of persistent volume claims for all pools to 32Gi:
+Following example shows how to modify the storage class for the **control.json** file:
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.storage.data.size=32Gi"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.className=<yourStorageClassName>"
 ```
 
-### <a id="config-samples"></a> Configure storage class
-
-Following example shows how to modify the storage class for the control plane:
-
-```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.storage.data.className=<yourStorageClassName>"
-```
-
-Another option is to manually edit the custom configuration file or to use jsonpatch like in the following example that changes the storage class for Storage pool. Create a *patch.json*
- file with this content:
+Another option is to manually edit the custom configuration file or to use json patch like in the following example that changes the storage class for Storage pool. Create a *patch.json* file with this content:
 
 ```json
 {
   "patch": [
     {
-      "op": "add",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
+      "op": "replace",
+      "path": "$.spec.resources.storage-0.spec",
       "value": {
-          "data": {
-            "className": "default",
-            "accessMode": "ReadWriteOnce",
-            "size": "100Gi"
-          },
-          "logs": {
-            "className": "default",
-            "accessMode": "ReadWriteOnce",
-            "size": "32Gi"
-          }
+        "type":"Storage",
+        "replicas":2,
+        "storage":{
+            "data":{
+                    "size": "100Gi",
+                    "className": "myStorageClass",
+                    "accessMode":"ReadWriteOnce"
+                    },
+            "logs":{
+                    "size":"32Gi",
+                    "className":"myStorageClass",
+                    "accessMode":"ReadWriteOnce"
+                    }
+                }
+            }
         }
-      }
-  ]
+    ]
 }
 ```
 
-Apply the patch file. Use **mssqlctl bdc config section set** command to apply the changes in the JSON patch file. The following example applies the patch.json file to a target deployment configuration file custom.json.
+Apply the patch file. Use **azdata bdc config patch** command to apply the changes in the JSON patch file. The following example applies the patch.json file to a target deployment configuration file custom.json.
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -p ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 ```
 
 ## Next steps

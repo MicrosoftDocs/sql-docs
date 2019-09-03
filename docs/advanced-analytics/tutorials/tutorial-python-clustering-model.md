@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Perform clustering in Python"
-description: In this four-part tutorial series, you'll perform clustering of customers in a SQL database using Python with SQL Server Machine Learning Services.
+title: "Categorizing customers using k-means clustering"
+description: In this four-part tutorial series, you'll perform clustering of customers, using the K-Means algorithm, in a SQL database using Python with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -12,11 +12,13 @@ ms.reviewer: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
-# Tutorial: Perform clustering in Python with SQL Server Machine Learning Services
+# Tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this four-part tutorial series, you'll use Python to develop and deploy a K-Means clustering model in [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) to cluster customer data.
 
-In part one of this series, you'll set up the prerequisites for the tutorial and then import a sample dataset to a SQL database. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services.
+In part one of this series, you'll set up the prerequisites for the tutorial and then restore a sample dataset to a SQL database. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services.
 
 In parts two and three of this series, you'll develop some Python scripts in an Azure Data Studio notebook to analyze and prepare your data and train a machine learning model. Then, in part four, you'll run those Python scripts inside a SQL database using stored procedures.
 
@@ -26,7 +28,7 @@ K-Means clustering is an *unsupervised learning* algorithm that looks for patter
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-> * Import a sample database into a SQL Server instance
+> * Restore a sample database into a SQL Server instance
 
 In [part two](tutorial-python-clustering-model-prepare-data.md), you'll learn how to prepare the data from a SQL database to perform clustering.
 
@@ -63,28 +65,23 @@ In [part four](tutorial-python-clustering-model-deploy.md), you'll learn how to 
   pip install sklearn
   ```
 
-## Import the sample database
+## Restore the sample database
 
 The sample dataset used in this tutorial has been saved to a **.bak** database backup file for you to download and use. This dataset is derived from the [tpcx-bb](http://www.tpc.org/tpcx-bb/default.asp) dataset provided by the [Transaction Processing Performance Council (TPC)](http://www.tpc.org/default.asp).
 
-1. Download the file [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak) to the SQL Server backup folder. For the default database instance, the folder is:
+1. Download the file [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak).
 
-   `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\`
+1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
 
-1. Open Azure Data Studio, connect to your SQL Server instance, and open a new query window.
+   * Import from the **tpcxbb_1gb.bak** file you downloaded
+   * Name the target database "tpcxbb_1gb"
 
-1. Run the following commands to restore the database.
+1. You can verify that the dataset exists after you have restored the database by querying the **dbo.customer** table:
 
-   ```sql
-   USE master;
-   GO
-
-   RESTORE DATABASE tpcxbb_1gb
-   FROM DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\tpcxbb_1gb.bak'
-   WITH MOVE 'tpcxbb_1gb' TO 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\tpcxbb_1gb.mdf'
-      , MOVE 'tpcxbb_1gb_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\tpcxbb_1gb.ldf';
-   GO
-   ```
+    ```sql
+    USE tpcxbb_1gb;
+    SELECT * FROM [dbo].[customer];
+    ```
 
 ## Clean up resources
 
@@ -94,7 +91,7 @@ If you're not going to continue with this tutorial, delete the tpcxbb_1gb databa
 
 In part one of this tutorial series, you completed these steps:
 
-* Import a sample database into a SQL Server instance
+* Restore a sample database into a SQL Server instance
 
 To prepare the data for the machine learning model, follow part two of this tutorial series:
 

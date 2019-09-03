@@ -63,15 +63,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversio
   
 #### To delete a push subscription to a snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Specify **@publication** and **@subscriber**. Specify a value of **all** for **@article**. (Optional) If the Distributor cannot be accessed, specify a value of **1** for **@ignore_distributor** to delete the subscription without removing related objects at the Distributor.  
+1.  At the Publisher on the publication database, execute [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Specify **\@publication** and **\@subscriber**. Specify a value of **all** for **\@article**. (Optional) If the Distributor cannot be accessed, specify a value of **1** for **\@ignore_distributor** to delete the subscription without removing related objects at the Distributor.  
   
 2.  At the Subscriber on the subscription database, execute [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) to remove replication metadata in the subscription database.  
   
 #### To delete a push subscription to a merge publication  
   
-1.  At the Publisher, execute [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md), specifying **@publication**, **@subscriber** and **@subscriber_db**. (Optional) If the Distributor cannot be accessed, specify a value of **1** for **@ignore_distributor** to delete the subscription without removing related objects at the Distributor.  
+1.  At the Publisher, execute [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md), specifying **\@publication**, **\@subscriber** and **\@subscriber_db**. (Optional) If the Distributor cannot be accessed, specify a value of **1** for **\@ignore_distributor** to delete the subscription without removing related objects at the Distributor.  
   
-2.  At the Subscriber on the subscription database, execute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md). Specify **@publisher**, **@publisher_db**, and **@publication**. This removes merge metadata from the subscription database.  
+2.  At the Subscriber on the subscription database, execute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md). Specify **\@publisher**, **\@publisher_db**, and **\@publication**. This removes merge metadata from the subscription database.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example deletes a push subscription to a transactional publication.  

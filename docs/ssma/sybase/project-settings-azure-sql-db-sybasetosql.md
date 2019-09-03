@@ -30,7 +30,7 @@ The value should be specified in 'm:ss' format (for example, '4:45' or '0:50').
   
 **Azure SQL DB Server Suffix**  
   
-Specifies a Azure SQL DB server suffix  
+Specifies an Azure SQL DB server suffix  
   
 **Default Value**: 'database.windows.net'.  
   

@@ -104,7 +104,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Mirrored backups|Yes|No|No|No|
 |Hot add memory and CPU|Yes|No|No|No|
 |Encrypted backup|Yes|Yes|No|No|
-|Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|
+|Hybrid backup to Azure (backup to URL)|Yes|Yes|No|No|
   
 <sup>1</sup> On Enterprise edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes. 
 

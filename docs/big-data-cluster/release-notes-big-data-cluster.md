@@ -5,22 +5,34 @@ description: This article describes the latest updates and known issues for [!IN
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Release notes for big data clusters on SQL Server
+# Release notes for SQL Server Big Data Clusters
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article lists the updates and know issues for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+## <a id="rc"></a> Release candidate (August)
 
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
+The following sections describe the new features and known issues for big data clusters in SQL Server 2019 release candidate.
+
+### What's New
+
+|New feature or update | Details |
+|:---|:---|
+|SQL Server Always On Availability Group |When you deploy a SQL Server Big Data Cluster, you can configure the deployment to create an availability group to provide:<br/><br/>- High availability <br/><br/>- Read-scale out <br/><br/>- Scale-out data insertion into data pool<br/><br>See [Deploy with high availability](../big-data-cluster/deployment-high-availability.md). |
+|`azdata` |Simplified installation for the tool with [installation manager](./deploy-install-azdata-linux-package.md)<br/><br/>[`azdata notebook` command](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status` command](./reference-azdata-bdc-status.md) |
+|Azure Data Studio|[Download the Release Candidate build of Azure Data Studio](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Added troubleshooting notebooks through SQL Server 2019 guide Jupyter Book.<br/><br/>Added controller login experience.<br/><br/>Added controller dashboard to view service endpoints, view cluster health status, and access troubleshooting notebooks.<br/><br/>Improved notebook cell output/editing performance.|
+| &nbsp; | &nbsp; |
+
+### Known issues
+
+SQL Server 2019 Big Data Clusters release candidate refresh build number is `15.0.1900.47`.
 
 ## <a id="ctp32"></a> CTP 3.2 (July)
 
@@ -43,13 +55,13 @@ The following sections describe the known issues and limitations with this relea
 
 #### PolyBase
 
-- Push-down of TOP clause when the count is > 1000 is not supported in this release. All rows will be read from the remote data source in such cases.
+- Push-down of TOP clause when the count is > 1000 is not supported in this release. All rows will be read from the remote data source in such cases. (Fixed in release candidate)
 
 - Push-down of colocated joins to external data sources is not supported in this release. For example, push-down of two data pool tables of ROUND_ROBIN distribution type will get the data to SQL Master instance or Compute Pool instance to perform the join operation.
 
 #### Compute Pool
 
-- Big data cluster deployment only supports compute pool with one instance.
+- Big data cluster deployment only supports compute pool with one instance. (Fixed in release candidate)
 
 #### Storage Pool
 

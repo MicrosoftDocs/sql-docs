@@ -48,10 +48,10 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 `[ @destination_db = ] 'destination_db'`
  Is the name of the destination database. *destination_db* is **sysname**, with a default of NULL. If NULL, all the subscriptions from that Subscriber are dropped.  
   
-`[ @ignore_distributor = ] ignore_distributor`
+`[ @ignore_distributor = ] ignore_distributor`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @reserved = ] 'reserved'`
+`[ @reserved = ] 'reserved'`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

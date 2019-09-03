@@ -201,19 +201,19 @@ monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversio
   
     1.  Re-create the publication at database **B**. Go to step b.  
   
-    2.  Re-create the subscription at database **B** to the publication at database **A**, specifying that the subscription should be initialized with a backup (a value of **initialize with backup** for the **@sync_type** parameter of [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). Go to step c.  
+    2.  Re-create the subscription at database **B** to the publication at database **A**, specifying that the subscription should be initialized with a backup (a value of **initialize with backup** for the **\@sync_type** parameter of [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). Go to step c.  
   
-    3.  Re-create the subscription at database **A** to the publication at database **B**, specifying that the Subscriber already has the data (a value of **replication support only** for the **@sync_type** parameter of [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). Go to step 8.  
+    3.  Re-create the subscription at database **A** to the publication at database **B**, specifying that the Subscriber already has the data (a value of **replication support only** for the **\@sync_type** parameter of [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). Go to step 8.  
   
 8.  Run the Distribution Agents to synchronize the subscriptions at databases **A** and **B**. If there are any identity columns in published tables, go to step 9. If not, go to step 10.  
   
 9. After the restore, the identity range that you assigned for each table in database **A** would also be used in database **B**. Make sure that the restored database **B** has received all changes from the failed database **B** that were propagated to database **A** and database **C**; and then reseed the identity range for each table.  
   
-    1.  Execute [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) at database **B** and retrieve the output parameter **@request_id**. Go to step b.  
+    1.  Execute [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) at database **B** and retrieve the output parameter **\@request_id**. Go to step b.  
   
     2.  By default, the Distribution Agent is set to run continuously; therefore, tokens should be sent to all nodes automatically. If the Distribution Agent is not running in continuous mode, run the agent. For more information, see [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Go to step c.  
   
-    3.  Execute [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), providing the **@request_id** value retrieved in step b. Wait until all nodes indicate they have received the peer request. Go to step d.  
+    3.  Execute [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), providing the **\@request_id** value retrieved in step b. Wait until all nodes indicate they have received the peer request. Go to step d.  
   
     4.  Use [DBCC CHECKIDENT](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md) to reseed each table in database **B** to make sure that an appropriate range is used. Go to step 10.  
   
@@ -225,11 +225,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversio
   
     1.  Stop all activity on published tables in the peer-to-peer topology. Go to step b.  
   
-    2.  Execute [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) at database **B** and retrieve the output parameter **@request_id**. Go to step c.  
+    2.  Execute [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) at database **B** and retrieve the output parameter **\@request_id**. Go to step c.  
   
     3.  By default, the Distribution Agent is set to run continuously; therefore, tokens should be sent to all nodes automatically. If the Distribution Agent is not running in continuous mode, run the agent. Go to step d.  
   
-    4.  Execute [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), providing the **@request_id** value retrieved in step b. Wait until all nodes indicate they have received the peer request. Go to step e.  
+    4.  Execute [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), providing the **\@request_id** value retrieved in step b. Wait until all nodes indicate they have received the peer request. Go to step e.  
   
     5.  Re-create the subscription at database **B** to the publication at database **C**, specifying that the Subscriber already has the data. Go to step b.  
   
@@ -239,7 +239,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversio
   
     1.  At database **B**, query the [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) table to retrieve the log sequence number (LSN) of the most recent transaction that database **B** has received from database **C**.  
   
-    2.  Re-create the subscription at database **B** to the publication at database **C**, specifying that the subscription should be initialized based on LSN (a value of **initialize from lsn** for the **@sync_type** parameter of [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). Go to step b.  
+    2.  Re-create the subscription at database **B** to the publication at database **C**, specifying that the subscription should be initialized based on LSN (a value of **initialize from lsn** for the **\@sync_type** parameter of [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). Go to step b.  
   
     3.  Re-create the subscription at database **C** to the publication at database **B**, specifying that the Subscriber already has the data. Go to step 13.  
   

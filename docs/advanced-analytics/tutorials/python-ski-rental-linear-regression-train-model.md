@@ -3,7 +3,7 @@ title: 'Python tutorial: Train model (linear regression)'
 description: In this tutorial you will use Python and linear regression in SQL Server Machine Learning Services to predict the number of ski rentals. You'll train a linear regression model in Python. 
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/27/2019
+ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph

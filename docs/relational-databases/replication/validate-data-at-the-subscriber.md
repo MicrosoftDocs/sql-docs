@@ -102,7 +102,7 @@ Transactional and merge replication allow you to validate that data at the Subsc
 
 #### All articles 
   
-1.  At the Publisher on the publication database, execute [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Specify **@publication** and one of the following values for **@rowcount_only**:  
+1.  At the Publisher on the publication database, execute [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Specify **\@publication** and one of the following values for **\@rowcount_only**:  
   
     -   **1** - rowcount check only (the default)    
     -   **2** - rowcount and binary checksum.  
@@ -114,7 +114,7 @@ Transactional and merge replication allow you to validate that data at the Subsc
   
 #### Single article  
   
-1.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Specify **@publication**, the name of the article for **@article**, and one of the following values for **@rowcount_only**:  
+1.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Specify **\@publication**, the name of the article for **\@article**, and one of the following values for **\@rowcount_only**:  
   
     -   **1** - Rowcount check only (the default)    
     -   **2** - Rowcount and binary checksum.  
@@ -128,9 +128,9 @@ Transactional and merge replication allow you to validate that data at the Subsc
 #### Single subscriber 
   
 1.  At the Publisher on the publication database, open an explicit transaction using [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md).    
-2.  At the Publisher on the publication database, execute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Specify the publication for **@publication**, the name of the Subscriber for **@subscriber**, and the name of the subscription database for **@destination_db**.    
+2.  At the Publisher on the publication database, execute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Specify the publication for **\@publication**, the name of the Subscriber for **\@subscriber**, and the name of the subscription database for **\@destination_db**.    
 3.  (Optional) Repeat step 2 for each subscription being validated.    
-4.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Specify **@publication**, the name of the article for **@article**, and one of the following values for **@rowcount_only**:    
+4.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Specify **\@publication**, the name of the article for **\@article**, and one of the following values for **\@rowcount_only**:    
     -   **1** - Rowcount check only (the default)    
     -   **2** - Rowcount and binary checksum.  
   
@@ -208,7 +208,7 @@ Transactional and merge replication allow you to validate that data at the Subsc
     3.  View information on the **Synchronization History** tab in the **Last message of the selected session** text area.  
 
 ### Using Transact-SQL
-1.  At the Publisher on the publication database, execute [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Specify **@publication**, the name of the Subscriber for **@subscriber**, the name of the subscription database for **@subscriber_db**, and one of the following values for **@level**:   
+1.  At the Publisher on the publication database, execute [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Specify **\@publication**, the name of the Subscriber for **\@subscriber**, the name of the subscription database for **\@subscriber_db**, and one of the following values for **\@level**:   
     -   **1** - Rowcount-only validation.    
     -   **3** - Rowcount binary checksum validation.  
   
@@ -235,7 +235,7 @@ Transactional and merge replication allow you to validate that data at the Subsc
     3.  View information on the **Synchronization History** tab in the **Last message of the selected session** text area. 
   
 ### Using Transact-SQL
-1.  At the Publisher on the publication database, execute [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Specify **@publication** and one of the following values for **@level**:    
+1.  At the Publisher on the publication database, execute [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Specify **\@publication** and one of the following values for **\@level**:    
     -   **1** - Rowcount-only validation.   
     -   **3** - Rowcount binary checksum validation.  
   

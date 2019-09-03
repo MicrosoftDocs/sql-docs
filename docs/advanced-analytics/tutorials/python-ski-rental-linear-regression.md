@@ -1,6 +1,6 @@
 ---
 title: 'Python tutorial: Ski rentals (linear regression)'
-description: 
+description: In this tutorial you will use Python and linear regression in SQL Server Machine Learning Services to predict the number of ski rentals. 
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/27/2019
@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In this four-part tutorial series, you will use Python and linear regression in [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) to predict the number of ski rentals. We use a [Python notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md), but you can also use your own Python-integrated development environment (IDE).
+In this four-part tutorial series, you will use Python and linear regression in [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) to predict the number of ski rentals. The tutorial use a [Python notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md), but you can also use your own Python integrated development environment (IDE).
 
 Imagine you own a ski rental business and you want to predict the number of rentals that you'll have on a future date. This information will help you get your stock, staff, and facilities ready.
 

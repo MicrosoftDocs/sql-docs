@@ -321,7 +321,7 @@ The list of all supported USE HINT names can be queried using the dynamic manage
 > [!IMPORTANT] 
 > Some USE HINT hints may conflict with trace flags enabled at the global or session level, or database scoped configuration settings. In this case, the query level hint (USE HINT) always takes precedence. If a USE HINT conflicts with another query hint, or a trace flag enabled at the query level (such as by QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will generate an error when trying to execute the query. 
 
- USE PLAN N'**_xml\_plan_**'     
+USE PLAN N'_xml\_plan_'  
  Forces the query optimizer to use an existing query plan for a query that is specified by **'**_xml\_plan_**'**. USE PLAN can't be specified with INSERT, UPDATE, MERGE, or DELETE statements.  
   
 TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ] ] **)**

@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Prepare data to perform clustering in Python"
+title: "Tutorial: Prepare data to categorize customers in Python"
 description: In part two of this four-part tutorial series, you'll prepare the data from a SQL Server database to perform clustering in Python with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -12,9 +12,11 @@ ms.reviewer: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
-# Tutorial: Prepare data to perform clustering in Python with SQL Server Machine Learning Services
+# Tutorial: Prepare data to categorize customers in Python with SQL Server Machine Learning Services
 
-In part two of this four-part tutorial series, you'll import and prepare the data from a SQL database using Python. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+In part two of this four-part tutorial series, you'll restore and prepare the data from a SQL database using Python. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services.
 
 In this article, you'll learn how to:
 
@@ -22,7 +24,7 @@ In this article, you'll learn how to:
 > * Separate customers along different dimensions using Python
 > * Load the data from the SQL database into a Python data frame
 
-In [part one](python-clustering-model.md), you installed the prerequisites and imported the sample database.
+In [part one](python-clustering-model.md), you installed the prerequisites and restored the sample database.
 
 In [part three](python-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in Python.
 

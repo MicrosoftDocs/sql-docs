@@ -37,7 +37,18 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
     You can also use your own Python IDE, such as a Jupyter notebook or [Visual Studio Code](https://code.visualstudio.com/docs) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql). 
 
-* revoscalepy package - See [revoscalepy](../python/ref-py-revoscalepy.md) for options to install this package locally.
+* [revoscalepy](../python/ref-py-revoscalepy.md) package - The **revoscalepy** package is included in SQL Server Machine Learning Services. To use the package on a client computer, see [Set up a data science client for Python development](../python/setup-python-client-tools-sql.md) for options to install this package locally.
+
+  If you're using a Python notebook in Azure Data Studio, follow these additional steps to use **revoscalepy**:
+
+  1. Open Azure Data Studio
+  1. From the **File** menu, select **Preferences** and then **Settings**
+  1. Expand **Extensions** and select **Notebook configuration**
+  1. Under **Python Path**, enter the path where you installed the libraries (for example, `C:\path-to-python-for-mls`)
+  1. Make sure **Use Existing Python** is checked
+  1. Restart Azure Data Studio
+
+  If you're using a different Python IDE, follow similar steps for your IDE.
 
 * SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is.md). You can also use [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
 

@@ -1,7 +1,7 @@
 ---
 title: "Query Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "09/01/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -210,19 +210,19 @@ For more information, see [WITH common_table_expression &#40;Transact-SQL&#41;](
 NO_PERFORMANCE_SPOOL    
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-Prevents a spool operator from being added to query plans (except for the plans when spool is required to guarantee valid update semantics). The spool operator may reduce performance in some scenarios. For example, the spool uses tempdb and tempdb contention can occur if there are many concurrent queries running with the spool operations.  
+Prevents a spool operator from being added to query plans (except for the plans when spool is required to guarantee valid update semantics). The spool operator may reduce performance in some scenarios. For example, the spool uses tempdb, and tempdb contention can occur if there are many concurrent queries running with the spool operations.  
   
-OPTIMIZE FOR ( _@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
+OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
 Instructs the query optimizer to use a particular value for a local variable when the query is compiled and optimized. The value is used only during query optimization, and not during query execution.  
   
-_@variable\_name_  
+_&#x40;variable\_name_  
 Is the name of a local variable used in a query, to which a value may be assigned for use with the OPTIMIZE FOR query hint.  
   
 _UNKNOWN_  
 Specifies that the query optimizer uses statistical data instead of the initial value to determine the value for a local variable during query optimization.  
   
-_literal\_constant_  
-Is a literal constant value to be assigned _@variable\_name_ for use with the OPTIMIZE FOR query hint. _literal\_constant_ is used only during query optimization, and not as the value of _@variable\_name_ during query execution. _literal\_constant_ can be of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type that can be expressed as a literal constant. The data type of _literal\_constant_ must be implicitly convertible to the data type that _@variable\_name_ references in the query.  
+_literal_constant_  
+Is a literal constant value to be assigned _@variable_name_ for use with the OPTIMIZE FOR query hint. _literal\_constant_ is used only during query optimization, and not as the value of _@variable\_name_ during query execution. _literal\_constant_ can be of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type that can be expressed as a literal constant. The data type of _literal\_constant_ must be implicitly convertible to the data type that _@variable\_name_ references in the query.  
   
 OPTIMIZE FOR can counteract the optimizer's default parameter detection behavior. Also use OPTIMIZE FOR when you create plan guides. For more information, see [Recompile a Stored Procedure](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   

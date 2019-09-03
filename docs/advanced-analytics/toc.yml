@@ -91,7 +91,7 @@
         href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-train-model.md
       - name: 4 - Deploy model
         href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-deploy-model.md
-    - name: Categorizing customers (K-Means clustering)
+    - name: Categorizing customers (k-means clustering)
       items:
       - name: 1 - Introduction
         href: ../advanced-analytics/tutorials/tutorial-python-clustering-model.md

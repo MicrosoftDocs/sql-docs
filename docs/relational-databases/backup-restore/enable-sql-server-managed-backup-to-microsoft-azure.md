@@ -84,13 +84,13 @@ For more information about storage accounts, see [About Azure Storage Accounts](
 * * *
 
 > [!NOTE]
-> These steps can also be accomplished using the [Azure Management Portal](https://manage.windowsazure.com/).
+> These steps can also be accomplished using the [Azure portal](https://portal.azure.com/).
 
 The output will contain either the URL to the container and/or the SAS token. The following is an example:  
   
   `https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl`
   
-If the URL is included, seperate it from the SAS token at the question mark (do not include the question mark). For example, the previous output would result in the following two values.  
+If the URL is included, separate it from the SAS token at the question mark (do not include the question mark). For example, the previous output would result in the following two values.  
   
 |||  
 |-|-|  
@@ -154,7 +154,7 @@ Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more 
         @parameter_value = '<email1;email2>'  
         ```  
   
-7.  **View backup files in the Azure Storage Account:** Connect to the storage account from SQL Server Management Studio or the Azure Management Portal. You will see any backup files in the container you specified. Note that you might see a database and a log backup within 5 minutes of enabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the database.  
+7.  **View backup files in the Azure Storage Account:** Connect to the storage account from SQL Server Management Studio or the Azure portal. You will see any backup files in the container you specified. Note that you might see a database and a log backup within 5 minutes of enabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the database.  
   
 8.  **Monitor the Health Status:**  You can monitor through e-mail notifications you configured previously, or actively monitor the events logged. The following are some example Transact-SQL Statements used to view the events:  
   

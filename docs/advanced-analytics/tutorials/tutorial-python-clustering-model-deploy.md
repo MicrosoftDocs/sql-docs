@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Deploy a clustering model in Python"
+title: "Tutorial: Deploy a model in Python to categorize customers"
 description: In part four of this four-part tutorial series, you'll deploy a clustering model in Python with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -12,7 +12,7 @@ ms.reviewer: davidph
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
-# Tutorial: Deploy a clustering model in Python with SQL Server Machine Learning Services
+# Tutorial: Deploy a model in Python to categorize customers with SQL Server Machine Learning Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

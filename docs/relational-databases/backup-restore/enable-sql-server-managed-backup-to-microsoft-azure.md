@@ -28,58 +28,58 @@ The process requires an Azure account. If you already have an account, go to the
 
 For more information about storage accounts, see [About Azure Storage Accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). 
 
-#### [Az](#tab/az)
+#### [Azure CLI](#tab/az)
 
 1. Sign in to your Azure account.
 
-    ```powershell
+    ```azurecli-interactive
     az login
     ```
   
 1. Create an Azure storage account. If you already have a storage account, go to the next step. The following command creates a storage account named `<backupStorage>` in the East US region.  
   
-    ```powershell  
+    ```azurecli-interactive
     az storage account create -n <backupStorage> -l "eastus" --resource-group <resourceGroup>
     ```  
     
 1. Create a blob container named `<backupContainer>` for the backup files.
   
-    ```powershell
+    ```azurecli-interactive
     $keys = az storage account keys list --account-name <backupStorage> --resource-group <resourceGroup> | ConvertFrom-Json
     az storage container create --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value 
     ```  
   
 1. Generate a Shared Access Signature (SAS) to access the container. The following command creates a SAS token for the `<backupContainer>` blob container that expires in one year.  
   
-    ```powershell  
+    ```azurecli-interactive 
     az storage container generate-sas --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value
     ```
 
-#### [AzureRm](#tab/azurerm)
+#### [Azure PowerShell](#tab/azurerm)
 
 1. The following command logs in to your Azure account.
 
-    ```powershell
+    ```azurepowershell-interactive
     Connect-AzAccount
     Set-AzContext -SubscriptionId "<subscriptionId>"
     ```
   
 1. Create an Azure storage account. If you already have a storage account, go to the next step. The following command creates a storage account named `<backupStorage>` in the East US region.  
   
-    ```powershell  
+    ```azurepowershell-interactive
     New-AzureStorageAccount -StorageAccountName <backupStorage> -Location "EAST US"  
     ```   
   
 1. Create a blob container named `<backupContainer>` for the backup files.  
   
-    ```powershell  
+    ```azurepowershell-interactive
     $context = New-AzureStorageContext -StorageAccountName <backupStorage> -StorageAccountKey (Get-AzureStorageKey -StorageAccountName <backupStorage>).Primary  
     New-AzureStorageContainer -Name <backupContainer> -Context $context  
     ```  
   
 1. Generate a Shared Access Signature (SAS) to access the container. The following command creates a SAS token for the `<backupContainer>` blob container that expires in one year.
   
-    ```powershell  
+    ```azurepowershell-interactive 
     New-AzureStorageContainerSASToken -Name <backupContainer> -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context 
     ```
 

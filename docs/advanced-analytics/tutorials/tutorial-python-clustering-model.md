@@ -12,7 +12,7 @@ ms.reviewer: davidph
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
-# Categorizing customers using k-means clustering with SQL Server Machine Learning Services
+# Tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

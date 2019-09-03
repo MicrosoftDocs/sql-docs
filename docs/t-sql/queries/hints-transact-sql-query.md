@@ -1,7 +1,7 @@
 ---
 title: "Query Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "09/02/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -210,19 +210,19 @@ For more information, see [WITH common_table_expression &#40;Transact-SQL&#41;](
 NO_PERFORMANCE_SPOOL    
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-Prevents a spool operator from being added to query plans (except for the plans when spool is required to guarantee valid update semantics). The spool operator may reduce performance in some scenarios. For example, the spool uses tempdb and tempdb contention can occur if there are many concurrent queries running with the spool operations.  
+Prevents a spool operator from being added to query plans (except for the plans when spool is required to guarantee valid update semantics). The spool operator may reduce performance in some scenarios. For example, the spool uses tempdb, and tempdb contention can occur if there are many concurrent queries running with the spool operations.  
   
-OPTIMIZE FOR ( _@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
+OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
 Instructs the query optimizer to use a particular value for a local variable when the query is compiled and optimized. The value is used only during query optimization, and not during query execution.  
   
-_@variable\_name_  
+_\@variable\_name_  
 Is the name of a local variable used in a query, to which a value may be assigned for use with the OPTIMIZE FOR query hint.  
   
 _UNKNOWN_  
 Specifies that the query optimizer uses statistical data instead of the initial value to determine the value for a local variable during query optimization.  
   
 _literal\_constant_  
-Is a literal constant value to be assigned _@variable\_name_ for use with the OPTIMIZE FOR query hint. _literal\_constant_ is used only during query optimization, and not as the value of _@variable\_name_ during query execution. _literal\_constant_ can be of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type that can be expressed as a literal constant. The data type of _literal\_constant_ must be implicitly convertible to the data type that _@variable\_name_ references in the query.  
+Is a literal constant value to be assigned _\@variable\_name_ for use with the OPTIMIZE FOR query hint. _literal\_constant_ is used only during query optimization, and not as the value of _\@variable\_name_ during query execution. _literal\_constant_ can be of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type that can be expressed as a literal constant. The data type of _literal\_constant_ must be implicitly convertible to the data type that _\@variable\_name_ references in the query.  
   
 OPTIMIZE FOR can counteract the optimizer's default parameter detection behavior. Also use OPTIMIZE FOR when you create plan guides. For more information, see [Recompile a Stored Procedure](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   
@@ -321,7 +321,7 @@ The list of all supported USE HINT names can be queried using the dynamic manage
 > [!IMPORTANT] 
 > Some USE HINT hints may conflict with trace flags enabled at the global or session level, or database scoped configuration settings. In this case, the query level hint (USE HINT) always takes precedence. If a USE HINT conflicts with another query hint, or a trace flag enabled at the query level (such as by QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will generate an error when trying to execute the query. 
 
- USE PLAN N**'**_xml\_plan_**'**     
+USE PLAN N'_xml\_plan_'  
  Forces the query optimizer to use an existing query plan for a query that is specified by **'**_xml\_plan_**'**. USE PLAN can't be specified with INSERT, UPDATE, MERGE, or DELETE statements.  
   
 TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ] ] **)**
@@ -362,7 +362,7 @@ TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ]
   
 You can specify INDEX, FORCESCAN, and FORCESEEK table hints as query hints for a query that doesn't have any existing table hints. You can also use them to replace existing INDEX, FORCESCAN, or FORCESEEK hints in the query, respectively. 
 
-Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query hints unless the query already has a WITH clause specifying the table hint. In this case, a matching hint must also be specified as a query hint. Specify the matching hint as a query hint by using TABLE HINT in the OPTION clause. This specification preserves the query's semantics. For example, if the query contains the table hint NOLOCK, the OPTION clause in the **@hints** parameter of the plan guide must also contain the NOLOCK hint. See Example K. 
+Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query hints unless the query already has a WITH clause specifying the table hint. In this case, a matching hint must also be specified as a query hint. Specify the matching hint as a query hint by using TABLE HINT in the OPTION clause. This specification preserves the query's semantics. For example, if the query contains the table hint NOLOCK, the OPTION clause in the **\@hints** parameter of the plan guide must also contain the NOLOCK hint. See Example K. 
 
 Error 8072 occurs in a couple of scenarios. One is when you specify a table hint other than INDEX, FORCESCAN, or FORCESEEK by using TABLE HINT in the OPTION clause without a matching query hint. The second scenario is the other way around. This error indicates the OPTION clause can cause the semantics of the query to change, and the query fails.  
   

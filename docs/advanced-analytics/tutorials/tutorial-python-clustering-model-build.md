@@ -14,6 +14,8 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 # Tutorial: Build a clustering model in Python with SQL Server Machine Learning Services
 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 In part three of this four-part tutorial series, you'll build a K-Means model in Python to perform clustering. In the next part of this series, you'll deploy this model in a SQL database with SQL Server Machine Learning Services.
 
 In this article, you'll learn how to:

@@ -14,6 +14,8 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 # Categorizing customers using k-means clustering with SQL Server Machine Learning Services
 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 In this four-part tutorial series, you'll use Python to develop and deploy a K-Means clustering model in [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) to cluster customer data.
 
 In part one of this series, you'll set up the prerequisites for the tutorial and then restore a sample dataset to a SQL database. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services.

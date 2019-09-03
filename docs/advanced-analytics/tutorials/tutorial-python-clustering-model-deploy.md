@@ -14,6 +14,8 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 # Tutorial: Deploy a clustering model in Python with SQL Server Machine Learning Services
 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 In part four of this four-part tutorial series, you'll deploy a clustering model, developed in Python, into a SQL database using SQL Server Machine Learning Services.
 
 In order to perform clustering on a regular basis, as new customers are registering, you need to be able call the Python script from any App. To do that, you can deploy the Python script in SQL Server by putting the Python script inside a SQL stored procedure in the database. Because your model executes in the SQL database, it can easily be trained against data stored in the database.

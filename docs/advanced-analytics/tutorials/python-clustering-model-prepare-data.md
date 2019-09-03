@@ -22,15 +22,15 @@ In this article, you'll learn how to:
 > * Separate customers along different dimensions using Python
 > * Load the data from the SQL database into a Python data frame
 
-In [part one](tutorial-python-clustering-model.md), you installed the prerequisites and imported the sample database.
+In [part one](python-clustering-model.md), you installed the prerequisites and imported the sample database.
 
-In [part three](tutorial-python-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in Python.
+In [part three](python-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in Python.
 
-In [part four](tutorial-python-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in Python based on new data.
+In [part four](python-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in Python based on new data.
 
 ## Prerequisites
 
-* Part two of this tutorial assumes you have fulfilled the prerequisites of [**part one**](tutorial-python-clustering-model.md).
+* Part two of this tutorial assumes you have fulfilled the prerequisites of [**part one**](python-clustering-model.md).
 
 ## Separate customers
 
@@ -147,4 +147,4 @@ In part two of this tutorial series, you completed these steps:
 To create a machine learning model that uses this customer data, follow part three of this tutorial series:
 
 > [!div class="nextstepaction"]
-> [Tutorial: Create a predictive model in Python with SQL Server Machine Learning Services](tutorial-python-clustering-model-build.md)
+> [Tutorial: Create a predictive model in Python with SQL Server Machine Learning Services](python-clustering-model-build.md)

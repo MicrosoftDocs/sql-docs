@@ -20,15 +20,13 @@ ms.author: mikeray
 > [!IMPORTANT]  
 >  If you also want to enable advanced options or use a custom schedule, configure those settings first before enabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. For more information, see [Configure Advanced Options for SQL Server Managed Backup to Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## Enable and Configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with Default Settings  
-  
-#### Create the Azure Blob Container
+## Create the Azure Blob Container
 
 The process requires an Azure account. If you already have an account, go to the next step. Otherwise, you can get started with a [free trial](https://azure.microsoft.com/pricing/free-trial/) or explore [purchase options](https://azure.microsoft.com/pricing/purchase-options/).
 
 For more information about storage accounts, see [About Azure Storage Accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). 
 
-#### [Azure CLI](#tab/az)
+#### [Azure CLI](#tab/azure-cli)
 
 1. Sign in to your Azure account.
 
@@ -55,7 +53,7 @@ For more information about storage accounts, see [About Azure Storage Accounts](
     az storage container generate-sas --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value
     ```
 
-#### [Azure PowerShell](#tab/azurerm)
+#### [PowerShell](#tab/azure-powershell)
 
 1. The following command logs in to your Azure account.
 
@@ -67,20 +65,20 @@ For more information about storage accounts, see [About Azure Storage Accounts](
 1. Create an Azure storage account. If you already have a storage account, go to the next step. The following command creates a storage account named `<backupStorage>` in the East US region.  
   
     ```azurepowershell-interactive
-    New-AzureStorageAccount -StorageAccountName <backupStorage> -Location "EAST US"  
+    New-AzStorageAccount -StorageAccountName <backupStorage> -Location "EAST US" -ResourceGroupName <resourceGroup> -SkuName Standard_GRS
     ```   
   
 1. Create a blob container named `<backupContainer>` for the backup files.  
   
     ```azurepowershell-interactive
-    $context = New-AzureStorageContext -StorageAccountName <backupStorage> -StorageAccountKey (Get-AzureStorageKey -StorageAccountName <backupStorage>).Primary  
-    New-AzureStorageContainer -Name <backupContainer> -Context $context  
+    $context = New-AzStorageContext -StorageAccountName <backupStorage> -StorageAccountKey (Get-AzStorageAccountKey -Name <backupStorage> -ResourceGroupName <resourceGroup>).Value[0]  
+    New-AzStorageContainer -Name <backupContainer> -Context $context  
     ```  
   
 1. Generate a Shared Access Signature (SAS) to access the container. The following command creates a SAS token for the `<backupContainer>` blob container that expires in one year.
   
     ```azurepowershell-interactive 
-    New-AzureStorageContainerSASToken -Name <backupContainer> -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context 
+    New-AzStorageContainerSASToken -Name <backupContainer> -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context 
     ```
 
 * * *
@@ -102,7 +100,7 @@ If the URL is included, seperate it from the SAS token at the question mark (do 
   
 Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more information about SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
-#### Enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+## Enable Managed Backup to Azure
   
 1.  **Create a SQL Credential for the SAS URL:** Use the SAS token to create a SQL Credential for the blob container URL. In SQL Server Management Studio, use the following Transact-SQL query to create the credential for your blob container URL based on the following example:  
   
@@ -136,7 +134,7 @@ Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more 
   
 5.  **Review Extended Event Default Configuration:** Review the Extended Event settings by running the following transact-SQL statement.  
   
-    ```  
+    ```sql
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
     ```  
   
@@ -150,14 +148,13 @@ Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more 
   
     3.  **Enable e-mail notifications to receive backup errors and warnings:** From the query window, run the following Transact-SQL statements:  
   
-        ```  
+        ```sql
         EXEC msdb.managed_backup.sp_set_parameter  
         @parameter_name = 'SSMBackup2WANotificationEmailIds',  
         @parameter_value = '<email1;email2>'  
-  
         ```  
   
-7.  **View backup files in the Microsoft Azure Storage Account:** Connect to the storage account from SQL Server Management Studio or the Azure Management Portal. You will see any backup files in the container you specified. Note that you might see a database and a log backup within 5 minutes of enabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the database.  
+7.  **View backup files in the Azure Storage Account:** Connect to the storage account from SQL Server Management Studio or the Azure Management Portal. You will see any backup files in the container you specified. Note that you might see a database and a log backup within 5 minutes of enabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the database.  
   
 8.  **Monitor the Health Status:**  You can monitor through e-mail notifications you configured previously, or actively monitor the events logged. The following are some example Transact-SQL Statements used to view the events:  
   
@@ -182,15 +179,13 @@ Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more 
   
     SELECT * from @eventresult  
     WHERE event_type LIKE '%admin%'  
-  
     ```  
   
     ```sql  
     -- to enable debug events  
     USE msdb;  
     GO  
-             EXEC managed_backup.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
-  
+    EXEC managed_backup.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
     ```  
   
     ```sql  
@@ -208,4 +203,4 @@ Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more 
 The steps described in this section are specifically for configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first time on the database. You can modify the existing configurations using the same system stored procedures and provide the new values.  
   
 ## See also  
- [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [SQL Server Managed Backup to Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  

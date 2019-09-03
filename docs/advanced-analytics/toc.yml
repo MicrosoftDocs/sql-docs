@@ -81,6 +81,26 @@
     items:
     - name: Python tutorials
       href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
+    - name: Ski rental (linear regression)
+      items:
+      - name: 1 - Introduction
+        href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression.md
+      - name: 2 - Prepare data
+        href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-prepare-data.md
+      - name: 3 - Train model
+        href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-train-model.md
+      - name: 4 - Deploy model
+        href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-deploy-model.md
+    - name: Categorizing customers (k-means clustering)
+      items:
+      - name: 1 - Introduction
+        href: ../advanced-analytics/tutorials/tutorial-python-clustering-model.md
+      - name: 2 - Prepare the data
+        href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-prepare-data.md
+      - name: 3 - Create the model
+        href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-build.md
+      - name: 4 - Deploy the model
+        href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-deploy.md
     - name: Create a Python model using revoscalepy
       href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
     - name: Python for SQL developers
@@ -185,6 +205,8 @@
   items:
   - name: Connect
     items:
+    - name: Loopback connection
+      href: ../advanced-analytics/connect/loopback-connection.md
     - name: Connect to OLAP from R
       items:
       - name: Use data from OLAP cubes in R
@@ -240,9 +262,9 @@
       - name: Install R packages
         href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
       - name: Create a miniCRAN repo
-        href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
+        href: ../advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md
       - name: Tips for using R packages
-        href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
+        href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
   - name: Administration
     items:
     - name: Manage integration

@@ -1,13 +1,18 @@
 {
     "redirections": [
-         {
-            "source_path": "docs/big-data-cluster/reference-azdata-sql.md",
-            "redirect_url": "/sql/big-data-cluster/reference-azdata",
-            "redirect_document_id": false
-        },  
         {
-            "source_path": "docs/big-data-cluster/reference-azdata-notebook.md",
-            "redirect_url": "/sql/big-data-cluster/reference-azdata",
+            "source_path": "docs/big-data-cluster/deploy-install-azdata-installer.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/system-catalog-views/sys-sql-feature-restrictions.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/feature-restrictions.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
             "redirect_document_id": false
         },
         {
@@ -1557,7 +1562,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/create-a-local-package-repository-using-minicran.md",
-            "redirect_url": "/sql/advanced-analytics/r/create-a-local-package-repository-using-minicran",
+            "redirect_url": "/sql/advanced-analytics/package-management/create-a-local-package-repository-using-minicran",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/create-a-local-package-repository-using-minicran.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/create-a-local-package-repository-using-minicran",
             "redirect_document_id": false
         },
         {
@@ -1827,7 +1837,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/packages-installed-in-user-libraries.md",
-            "redirect_url": "/sql/advanced-analytics/r/packages-installed-in-user-libraries",
+            "redirect_url": "/sql/advanced-analytics/package-management/tips-for-using-r-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/packages-installed-in-user-libraries.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/tips-for-using-r-packages",
             "redirect_document_id": false
         },
         {
@@ -13903,6 +13918,36 @@
         {
             "source_path": "docs/analysis-services/multidimensional-models-adomd-net-server/index.md",
             "redirect_url": "/bi-reference/adomd/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-ag-kubernetes.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-connect.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-create-deployment.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-manage.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-deploy.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/indexes/columnstore-indexes-defragmentation.md",
+            "redirect_url": "/sql/relational-databases/indexes/reorganize-and-rebuild-indexes",
             "redirect_document_id": false
         }
     ]

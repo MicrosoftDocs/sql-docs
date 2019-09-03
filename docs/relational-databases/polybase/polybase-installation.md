@@ -23,8 +23,6 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
    
 - Microsoft .NET Framework 4.5.  
 
-- Oracle Java SE Runtime Environment (JRE). Versions 7 (starting from 7.51) and 8 are supported. [JRE](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) and [Server JRE](https://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) both work. Go to [Java SE downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html). If JRE isn't present, the installer fails. JRE9 and JRE10 aren't supported.
-
 - Minimum memory: 4 GB. 
    
 - Minimum hard-disk space: 2 GB.

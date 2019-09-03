@@ -42,6 +42,9 @@ To install Ubuntu 16.04 on your own machine, go to [http://releases.ubuntu.com/x
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
+> [!NOTE]
+> Ubuntu 18.04 is not yet officially supported, but running SQL Server is possible with [modifications](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/).
+
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 

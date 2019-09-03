@@ -1,17 +1,17 @@
 ---
 title: Create and export Spark machine learning models with MLeap 
 titleSuffix: SQL Server big data clusters
-description: Use PySpark to train and create machine learning models with Spark on SQL Server big data clusters (preview). Export with MLeap, and then score the model with Java in SQL Server.
+description: Use PySpark to train and create machine learning models with Spark on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (preview). Export with MLeap, and then score the model with Java in SQL Server.
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 07/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Create, export, and score Spark machine learning models on SQL Server big data clusters
+# Create, export, and score Spark machine learning models on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 The following sample shows how to build a model with [Spark ML](https://spark.apache.org/docs/latest/ml-guide.html), export the model to [MLeap](http://mleap-docs.combust.ml/), and score the model in SQL Server with its [Java Language Extension](../language-extensions/language-extensions-overview.md). This is done in the context of a SQL Server 2019 big data cluster.
 
@@ -63,4 +63,4 @@ After building the sample, you can use Transact-SQL to call the Java application
 
 ## Next steps
 
-For more information about big data clusters, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md)
+For more information about big data clusters, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)

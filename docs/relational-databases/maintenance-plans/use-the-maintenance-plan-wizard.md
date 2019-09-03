@@ -361,12 +361,12 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      Specify the folder to contain the automatically created database files. This option is disabled if you selected URL as the backup destination.  
   
      **SQL Credential**  
-     Select a SQL Credential used to authenticate to Windows Azure Storage. If you do not have an existing SQL Credential you can use, click the **Create** button to create a new SQL Credential.  
+     Select a SQL Credential used to authenticate to Azure Storage. If you do not have an existing SQL Credential you can use, click the **Create** button to create a new SQL Credential.  
   
     > **IMPORTANT!** The dialog that opens when you click **Create** requires a management certificate or the publishing profile for the subscription. If you do not have access to the management certificate or publishing profile, you can create a SQL Credential by specifying the storage account name and access key information using Transact-SQL or SQL Server Management Studio. See the sample code in the [Create a Credential](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) topic to create a credential using Transact-SQL. Alternatively, using SQL Server Management Studio, from the database engine instance, right-click **Security**, select **New**, and select **Credential**. Specify the storage account name for **Identity** and the access key in the **Password** field.  
   
      **Azure storage container**  
-     Specify the name of the Windows Azure storage container  
+     Specify the name of the Azure storage container  
   
      **URL prefix:**  
      This is automatically generated based on the storage account information stored in the SQL Credential, and Azure storage container name you specified. We recommend that you do not edit the information in this field unless you are using a domain that uses a format other than **\<storage account>.blob.core.windows.net**.  

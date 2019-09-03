@@ -261,7 +261,7 @@ EXEC sp_addlinkedserver
 ```  
   
 ### G. Add a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as a Linked Server For Use With Distributed Queries on Cloud and On-Premise Databases  
- You can add a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as a linked server and then use it with distributed queries that span the on-premises and cloud databases. This is a component for database hybrid solutions spanning on-premises corporate networks and the Windows Azure cloud.  
+ You can add a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as a linked server and then use it with distributed queries that span the on-premises and cloud databases. This is a component for database hybrid solutions spanning on-premises corporate networks and the Azure cloud.  
   
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] box product contains the distributed query feature, which allows you to write queries to combine data from local data sources and data from remote sources (including data from non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data sources) defined as linked servers. Every [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (except the virtual master) can be added as an individual linked server and then used directly in your database applications as any other database.  
   
@@ -271,7 +271,7 @@ EXEC sp_addlinkedserver
   
 ```  
 ------ Configure the linked server  
--- Add one Windows Azure SQL DB as Linked Server  
+-- Add one Azure SQL DB as Linked Server  
 EXEC sp_addlinkedserver  
 @server='myLinkedServer', -- here you can specify the name of the linked server  
 @srvproduct='',       

@@ -84,13 +84,13 @@ Initial snapshots can be programmatically created either by creating and running
 
 1.  Create a snapshot, transactional, or merge publication. For more information, see [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify **@publication** and the following parameters:  
+2.  Execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify **\@publication** and the following parameters:  
   
     -   **The @job_login, which specifies** the Windows Authentication credentials under which the Snapshot Agent runs at the Distributor.  
   
     -   **The @job_password**, which is the password for the supplied Windows credentials.  
   
-    -   (Optional) A value of **0** for **@publisher_security_mode** if the agent will use SQL Server Authentication when connecting to the Publisher. In this case, you must also specify the SQL Server Authentication login information for **@publisher_login** and **@publisher_password**.  
+    -   (Optional) A value of **0** for **\@publisher_security_mode** if the agent will use SQL Server Authentication when connecting to the Publisher. In this case, you must also specify the SQL Server Authentication login information for **\@publisher_login** and **\@publisher_password**.  
   
     -   (Optional) A synchronization schedule for the Snapshot Agent job. For more information, see [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -99,7 +99,7 @@ Initial snapshots can be programmatically created either by creating and running
   
 3.  Add articles to the publication. For more information, see [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-4.  At the Publisher on the publication database, execute [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md), specifying the value of **@publication** from step 1.  
+4.  At the Publisher on the publication database, execute [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md), specifying the value of **\@publication** from step 1.  
   
 ## Apply a snapshot  
 

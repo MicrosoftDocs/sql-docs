@@ -91,9 +91,7 @@
         href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-train-model.md
       - name: 4 - Deploy model
         href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-deploy-model.md
-    - name: Create a Python model using revoscalepy
-      href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
-    - name: Customer clustering (K-Means)
+    - name: Categorizing customers (K-Means clustering)
       items:
       - name: 1 - Introduction
         href: ../advanced-analytics/tutorials/tutorial-python-clustering-model.md
@@ -103,6 +101,8 @@
         href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-build.md
       - name: 4 - Deploy the model
         href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-deploy.md
+    - name: Create a Python model using revoscalepy
+      href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
     - name: Python for SQL developers
       items:
       - name: 1 - Introduction

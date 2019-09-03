@@ -27,7 +27,7 @@ In this article, you'll learn how to:
 > * Perform clustering in SQL Server
 > * Use the clustering information
 
-In [part one](tutorial-python-clustering-model.md), you installed the prerequisites and imported the sample database.
+In [part one](tutorial-python-clustering-model.md), you installed the prerequisites and restored the sample database.
 
 In [part two](tutorial-python-clustering-model-prepare-data.md), you learned how to prepare the data from a SQL database to perform clustering.
 

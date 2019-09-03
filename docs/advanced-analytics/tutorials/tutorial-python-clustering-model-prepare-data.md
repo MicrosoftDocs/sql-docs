@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 # Tutorial: Prepare data to perform clustering in Python with SQL Server Machine Learning Services
 
-In part two of this four-part tutorial series, you'll import and prepare the data from a SQL database using Python. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services.
+In part two of this four-part tutorial series, you'll restore and prepare the data from a SQL database using Python. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services.
 
 In this article, you'll learn how to:
 
@@ -22,7 +22,7 @@ In this article, you'll learn how to:
 > * Separate customers along different dimensions using Python
 > * Load the data from the SQL database into a Python data frame
 
-In [part one](tutorial-python-clustering-model.md), you installed the prerequisites and imported the sample database.
+In [part one](tutorial-python-clustering-model.md), you installed the prerequisites and restored the sample database.
 
 In [part three](tutorial-python-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in Python.
 

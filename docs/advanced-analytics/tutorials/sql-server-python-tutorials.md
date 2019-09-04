@@ -3,7 +3,7 @@ title: Python tutorials
 description: This article describes the Python tutorials for SQL Server Machine Learning Services. Learn how to run Python scripts. Build, train, and deploy Python models to SQL Server. Learn about remote and local compute contexts. Explore the Microsoft Python packages for data science and machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/16/2019
+ms.date: 09/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph

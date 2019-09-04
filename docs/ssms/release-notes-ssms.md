@@ -101,9 +101,11 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 
 - SSMS 18.0 redraw issues when switching between multiple query windows. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042). A workaround for this issue is to disable hardware acceleration under **Tools** > **Options**.
 
-- There is a limitation on the size of the data you see from SSMS results shown in grid, text, or file.
+- There's a limitation on the size of the data you see from SSMS results shown in grid, text, or file.
 
-You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team. 
+You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
+
+- There's an issue with the delete failing for an Azure SQL Database in Object Explorer, but it actually succeeds. The task shows an inaccurate error message.
 
 ## Previous SSMS releases
 

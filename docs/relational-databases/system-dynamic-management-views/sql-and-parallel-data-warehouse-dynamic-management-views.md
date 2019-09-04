@@ -61,7 +61,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 ## [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Catalog Views
  The following dynamic management views apply to [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] only:
  
- [sys.dm_workload_management_workload_groups_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-groups-stats-transact-sql.md) (Preview)
+ [sys-dm_workload_management_workload_groups_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) (Preview)
   
 ## [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Dynamic Management Views  
  The following dynamic management views apply to [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] only:  

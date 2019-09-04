@@ -109,63 +109,59 @@ This action installs:
 
 1. On the **Database Server** page, fill the **SQL Server instance**, and then choose the **Authentication type**. Select **Test Connection** to confirm that you can connect to the database using the credentials for the authentication type you chose. Select **Next**.
 
-\***
-
    > [!NOTE]
-   > - SQL Server instance for managed instance like "xxxxxxx.xxxxxxx.database.windows.net"
-   > - For managed instance, we support **"SQL Server Account"** and **"Current User – Active Directory Integrated"** authentication type.
-   > - When you select **Current User – Active Directory Integrated** as the authentication type, **User name** box is read-only and displays the name of the Windows user account that is logged on to the computer. If you are running SQL Server 2019 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine (VM), the **User name** box displays the VM name and the user name for the local administrator account on the VM.
+   > - A SQL Server instance looks like `xxxxxxx.xxxxxxx.database.windows.net`.
+   > - For managed instance, choose from **"SQL Server Account"** and **"Current User – Active Directory Integrated"** authentication types.
+   > - When you select **Current User – Active Directory Integrated** as the authentication type, the **User name** field is read-only and displays the name of the Windows user account that is logged on to the computer. If you are running SQL Server 2019 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine (VM), the **User name** box displays the VM name and the user name for the local administrator account on the VM.
 
-   Please ensure your authentication contains **"sysadmin"** rule for managed instance.
+   Your authentication must contain the **"sysadmin"** rule for managed instances.
    ![mds-SQLServer2019-Config-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "mds-SQLServer2019-Config-MI_CreateDBConnect")  
 
-1. Type a name in the **Database name** field. Optionally, to select a Windows collation, clear the **SQL Server default collation** checkbox and click one or more of the available options such as **Case-sensitive**. Click **Next**.
+1. Type a name in the **Database name** field. Optionally, to select a Windows collation, clear the **SQL Server default collation** checkbox and select one or more of the available options. For example, **Case-sensitive**. Select **Next**.
 
     ![mds-SQLServer2019-Config-MI-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "mds-SQLServer2019-Config-MI_CreatedDBName")
 
-1. In the **User name** field, specify the Windows account of the user that will be the default Super User for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. A Super User has access to all functional areas and can add, delete, and update all models.
+1. In the **User name** field, specify the Windows account of the default super user for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. A super user has access to all functional areas and can add, delete, and update all models.
 
     ![mds-SQLServer2019-Config-MI-CreateDBUserName](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "mds-SQLServer2019-Config-MI_createDBUserName")
 
-1. Click **Next** to view a summary of the settings for the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database, and then click **Next** again to create the database. The **Progress and Finish** page appears.
+1. Select **Next** to view a summary of the settings for the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database. Select  **Next** again to create the database. You'll see the **Progress and Finish** page.
 
-1. When the database is created and configured, click **Finish**.
+1. When the database is created and configured, select **Finish**.
 
-    For more information about the settings in the **Create Database Wizard**, see [Create Database Wizard &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
+   For more information about the settings in the **Create Database Wizard**, see [Create Database Wizard &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
 
-1. On the **Database Configuration** page in the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], click **Select Database**.
+1. On the **Database Configuration** page in the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], choose **Select Database**.
 
-1. Click **Connect**, select the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database that you created in Step 8, and then click **OK**.
+1. Select **Connect**, choose the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database that you just created, and then select **OK**.
 
     ![mds-SQLServer2019-Config-MI-connectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "mds-SQLServer2019-Config-MI_connectDBName")
 
-1. In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], and click **Web Configuration** in the left pane.
+1. In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], select **Web Configuration** in the left pane.
 
-1. In the **Website** list box, click **Default Web Site**, and then click **Create** to create a Web application.
+1. In the **Website** list box, choose **Default Web Site**, and then select **Create** to create a web application.
 ![mds-SQLServer2019-Config-MI-WebConfiguration](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "mds-SQLServer2019-Config-MI_WebConfiguration")
 
-    > [!NOTE] 
-    > When you select **Default Web Site**, you must create a Web application. If you select **Create new website** in the list box, the application is automatically created.
+    > [!NOTE]
+    > When you select **Default Web Site**, you must create a web application. If you select **Create new website** in the list box, the application is automatically created.
 
-1. In the **Application Pool** section, enter a different user name, enter the password, and then click OK.
+1. In the **Application Pool** section, enter a different user name, enter the password, and then select **OK**.
 ![mds-SQLServer2019-Config-MI-CreateWebApplication](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "mds-SQLServer2019-Config-MI_CreateWebApplication")
 
-    > [!NOTE]
-    > You need ensure the user can access the database with Active Directory Integrated authentication that you just created. Or you need change the connection in web.config later.
+   > [!NOTE]
+   > Make sure that the user can access the database with the Active Directory Integrated authentication that you recently created. Alternatively, you can change the connection in `web.config` later.
 
-1. For more information about the **Create Web Application** dialog box, see [Create Web Application Dialog Box &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).
+   For more information about the **Create Web Application** dialog box, see [Create Web Application Dialog Box &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).
 
-1. On the **Web Configuration** page in the **Web application** box, click the application you've created, and then click **Select** in the **Associate Application with Database** section.
+1. On the **Web Configuration** pane in the **Web application** window, select the application you've created, and then choose **Select** in the **Associate Application with Database** section.
 
-1. Click **Connect**, select the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database that you want to associate with the Web application, and then click **OK**.
+1. Select **Connect** and choose the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database that you want to associate with the web application. Select **OK**.
 
-    You've finished setting up the Website. The **Web Configuration** page now displays the Website you selected, Web application you created, and the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database associated with the application.
+   You've finished setting up the Website. The **Web Configuration** page now displays the website you selected, web application you created, and the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database associated with the application.
 
-    ![mds-SQLServer2019-Config-MI-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "mds-SQLServer2019-Config-MI_WebConfigSelectDB")
+   ![mds-SQLServer2019-Config-MI-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "mds-SQLServer2019-Config-MI_WebConfigSelectDB")
 
-1. Click **Apply**. The **Configuration Complete** message box displays. Click **OK** in the message box to launch the web application. The web site address is http://server name/web application/.
-
-\***
+1. Select **Apply**. You'll see the **Configuration Complete** message. Select **OK** in the message box to launch the web application. The web site address is `http://server name/web application/`.
 
 ## Configure authentication
 

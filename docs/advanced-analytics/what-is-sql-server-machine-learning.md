@@ -71,6 +71,13 @@ You can use open-source packages and frameworks, in addition to Microsoft's ente
 | R | [sqlrutils](r/ref-r-sqlrutils.md) | A mechanism to use R scripts in a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an [R development environment](r/set-up-a-data-science-client.md). |
 | R | [Microsoft R Open](https://mran.microsoft.com/rro) | Microsoft R Open (MRO) is the enhanced distribution of R from Microsoft. It is a complete open-source platform for statistical analysis and data science. It is based on and 100% compatible with R, and includes additional capabilities for improved performance and reproducibility. |
 
+For more information on installed packages and how to install other packages, see:
+
++ [Get Python package information](package-management/python-package-information.md)
++ [Install Python packages with sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md)
++ [Get R package information](package-management/r-package-information.md)
++ [Install new R packages with sqlmlutils](package-management/install-additional-r-packages-on-sql-server.md).
+
 ## How do I get started with Machine Learning Services?
 
 1. [Install SQL Server Machine Learning Services](install/sql-machine-learning-services-windows-install.md)

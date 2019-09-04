@@ -25,15 +25,15 @@ In this article, you'll learn how to:
 > * Perform clustering
 > * Analyze the results
 
-In [part one](tutorial-python-clustering-model.md), you installed the prerequisites and restored the sample database.
+In [part one](python-clustering-model.md), you installed the prerequisites and restored the sample database.
 
-In [part two](tutorial-python-clustering-model-prepare-data.md), you learned how to prepare the data from a SQL database to perform clustering.
+In [part two](python-clustering-model-prepare-data.md), you learned how to prepare the data from a SQL database to perform clustering.
 
-In [part four](tutorial-python-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in Python based on new data.
+In [part four](python-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in Python based on new data.
 
 ## Prerequisites
 
-* Part three of this tutorial assumes you have fulfilled the prerequisites of [**part one**](tutorial-python-clustering-model.md), and completed the steps in [**part two**](tutorial-python-clustering-model-prepare-data.md).
+* Part three of this tutorial assumes you have fulfilled the prerequisites of [**part one**](python-clustering-model.md), and completed the steps in [**part two**](python-clustering-model-prepare-data.md).
 
 ## Define the number of clusters
 
@@ -124,7 +124,7 @@ cluster
 3        48516.023845    0.136277    0.078346       0.044497   4.271237
 ```
 
-The four cluster means are given using the variables defined in [part one](tutorial-python-clustering-model-prepare-data.md#separate-customers):
+The four cluster means are given using the variables defined in [part one](python-clustering-model-prepare-data.md#separate-customers):
 
 * *orderRatio* = return order ratio (total number of orders partially or fully returned versus the total number of orders)
 * *itemsRatio* = return item ratio (total number of items returned versus the number of items purchased)
@@ -154,4 +154,4 @@ In part three of this tutorial series, you completed these steps:
 To deploy the machine learning model you've created, follow part four of this tutorial series:
 
 > [!div class="nextstepaction"]
-> [Tutorial: Deploy a clustering model in Python with SQL Server Machine Learning Services](tutorial-python-clustering-model-deploy.md)
+> [Tutorial: Deploy a clustering model in Python with SQL Server Machine Learning Services](python-clustering-model-deploy.md)

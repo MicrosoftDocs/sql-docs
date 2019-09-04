@@ -95,7 +95,7 @@ For updating resource level configurations like instances in a pool, you will up
 }
 ``` 
 
-Similarly for changing the settings of a signle service within a specific resource. For example, if you want to change the Spark memory settings only for the Spark component in the Storage pool, you will udpate the **storage-0** resource with a **settings** section for **spark** service in the **bdc.json** configuration file.
+Similarly for changing the settings of a single service within a specific resource. For example, if you want to change the Spark memory settings only for the Spark component in the Storage pool, you will udpate the **storage-0** resource with a **settings** section for **spark** service in the **bdc.json** configuration file.
 ```json
 "resources":{
     ...
@@ -239,7 +239,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 ## <a id="storage"></a> Configure storage
 
-You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage pool and updates the size of the persistent volume claim for storing data to 100Gb. 
+You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage and data pools and updates the size of the persistent volume claim for storing data to 500Gb for HDFS (storage pool) and 100Gb for data pool. 
 First create a patch.json file as below that includes the new *storage* section, in addition to *type* and *replicas*
 
 ```json
@@ -253,13 +253,33 @@ First create a patch.json file as below that includes the new *storage* section,
         "replicas": 2,
         "storage": {
           "data": {
-            "size": "100Gi",
-            "className": "myStorageClass",
+            "size": "500Gi",
+            "className": "myHDFSStorageClass",
             "accessMode": "ReadWriteOnce"
           },
           "logs": {
             "size": "32Gi",
-            "className": "myStorageClass",
+            "className": "myHDFSStorageClass",
+            "accessMode": "ReadWriteOnce"
+          }
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "path": "spec.resources.data-0.spec",
+      "value": {
+        "type": "Data",
+        "replicas": 2,
+        "storage": {
+          "data": {
+            "size": "100Gi",
+            "className": "myDataStorageClass",
+            "accessMode": "ReadWriteOnce"
+          },
+          "logs": {
+            "size": "32Gi",
+            "className": "myDataStorageClass",
             "accessMode": "ReadWriteOnce"
           }
         }

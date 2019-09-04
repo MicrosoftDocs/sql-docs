@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes how to use functions in the [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) package to install new Python packages to an instance of SQL Server Machine Learning Services. The packages you install can be used in Python scripts running in-database using the T-SQL [sp-execute-external-script-transact-sql](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) statement.
+This article describes how to use functions in the [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) package to install new Python packages to an instance of SQL Server Machine Learning Services. The packages you install can be used in Python scripts running in-database using the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL statement.
 
 For more information about package location and installation paths, see [Get Python package information](../package-management/python-package-information.md).
 

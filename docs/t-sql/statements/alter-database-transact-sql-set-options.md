@@ -2903,7 +2903,8 @@ SET
 
 <option_spec>::=
 {
-    <db_encryption_option>
+    <auto_option>
+  | <db_encryption_option>
   | <query_store_options>
   | <result_set_caching>
   | <snapshot_option>
@@ -2920,7 +2921,7 @@ SET
     ENCRYPTION { ON | OFF }
 }
 
-<query_store_options> ::=
+<query_store_option> ::=
 {
     QUERY_STORE
     {
@@ -2929,7 +2930,7 @@ SET
     }
 }
 
-<result_set_caching_option_list> ::=
+<result_set_caching_option> ::=
 {
     RESULT_SET_CACHING { ON | OFF }
 }
@@ -2980,7 +2981,7 @@ For more information about database encryption, see Transparent Data Encryption,
 When encryption is enabled at the database level, all filegroups will be encrypted. Any new filegroups will inherit the encrypted property. If any filegroups in the database are set to READ ONLY, the database encryption operation will fail.
 You can see the encryption state of the database as well as the state of the encryption scan by using the sys.dm_database_encryption_keys dynamic management view.
 
-**\<query_store_options> ::=**
+**\<query_store_option> ::=**
 
 ON | OFF   
 Controls if the query store is enabled in this data warehouse.     
@@ -2994,7 +2995,7 @@ Disables the query store. OFF is the default value.
 > [!NOTE]
 > For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], you must execute `ALTER DATABASE SET QUERY_STORE` from the user database. Executing the statement from another data warehouse instance is not supported.
 
-**\<result_set_caching_options> ::=**   
+**\<result_set_caching_option> ::=**   
 **Applies to**: Azure SQL Data Warehouse (preview)
 
 This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data Warehouse storage. A new column, is_result_set_caching_on, is introduced in `sys.databases` to show the result cache setting for a database.  

@@ -1,6 +1,6 @@
 ---
-title: "Host a MDS database on a managed instance | Microsoft Docs"
-description: This article describes how to configure a Master Data Service database on a managed instance.
+title: "Host a Master Data Services database on a managed instance | Microsoft Docs"
+description: This article describes how to configure a Master Data Service (MDS) database on a managed instance.
 ms.custom: ""
 ms.date: "07/01/2019"
 ms.prod: sql
@@ -14,7 +14,7 @@ ms.author: lle
 manager: craigg
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Host a MDS database on managed instance
+# Host an MDS database on managed instance
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -63,14 +63,14 @@ To prepare, you need to create and configure an Azure SQL Database managed insta
           -  Request Filtering
           -  Windows Authentication
           > [!NOTE]
-          > Do not install WebDAV Publishing
+          > Don't install WebDAV Publishing
 
         - Features:
            - .NET Framework 3.5 (includes .NET 2.0 and 3.0)
            - .NET Framework 4.5 Advanced Services
            - ASP.NET 4.5
            - WCF Services
-           - HTTP Activation [Note: This is required.]
+           - HTTP Activation (required)
            - TCP Port Sharing
            - Windows Process Activation Service
            - Process Model
@@ -78,7 +78,7 @@ To prepare, you need to create and configure an Azure SQL Database managed insta
            - Configuration APIs
            - Dynamic Content Compression
 
-## Install and configure a MDS web application
+## Install and configure an MDS web application
 
 Next, you install and configure [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].
 
@@ -107,7 +107,7 @@ This action installs:
 
 1. Select **Create Database**, and then select **Next** in the **Create Database Wizard**.
 
-1. On the **Database Server** page, fill the **SQL Server instance**, and then choose the **Authentication type**. Select **Test Connection** to confirm that you can connect to the database using the credentials for the authentication type you chose. Select **Next**.
+1. On the **Database Server** page, fill the **SQL Server instance**, and then choose the **Authentication type**. Select **Test Connection** to confirm that you can use your credentials to connect to the database via the chosen authentication type. Select **Next**.
 
    > [!NOTE]
    > - A SQL Server instance looks like `xxxxxxx.xxxxxxx.database.windows.net`.
@@ -133,7 +133,7 @@ This action installs:
 
 1. On the **Database Configuration** page in the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], choose **Select Database**.
 
-1. Select **Connect**, choose the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database that you just created, and then select **OK**.
+1. Select **Connect**, choose the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database and then select **OK**.
 
     ![mds-SQLServer2019-Config-MI-connectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "mds-SQLServer2019-Config-MI_connectDBName")
 
@@ -210,7 +210,7 @@ To fix this issue, you need upgrade the database version:
 
    ![mds-SQLServer2019-Config-MI-ConnectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "mds-SQLServer2019-Config-MI_ConnectDBName")
 
-1. Select **Upgrade Database…**.
+1. Select **Upgrade Database…** .
 
    ![mds-SQLServer2019-Config-MI-SelectUpgradeDB](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "mds-SQLServer2019-Config-MI_SelectUpgradeDB")
 

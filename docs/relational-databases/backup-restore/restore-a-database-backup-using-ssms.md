@@ -206,29 +206,29 @@ The two examples below perform a restore of `Sales` from a backup located in the
 
 #### E1.   Restore a striped backup over an existing database and a shared access signature exists.
 A stored access policy has been created with read, write, delete, and list rights.  A shared access signature that is associated with the stored access policy was created for the container `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.  The steps are mostly the same if a SQL Server credential already exists.  The database `Sales` currently exists on the server.  The backup files are `Sales_stripe1of2_20160601.bak` and `Sales_stripe2of2_20160601.bak`.  
-*  
-7.	Select `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from the **Azure storage container:** drop-down list if the SQL Server credential already exists, else manually enter the name of the container, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`. 
-8.	Enter the shared access signature in the **Shared Access Signature:** rich-text box.
-9.	Click **OK** and the **Locate Backup File in Microsoft Azure** dialog box opens.
-10.	Expand **Containers** and navigate to `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-11.	Hold ctrl and select files `Sales_stripe1of2_20160601.bak` and `Sales_stripe2of2_20160601.bak`.
-12.	Click **OK**.
-13.	Click **OK** to return to the **General** page.
-14.	Click **Options** in the **Select a page** pane.
-15.	Under the **Restore** options section, check **Overwrite the existing database (WITH REPLACE)**.
-16.	Under the **Tail-log backup** section, uncheck **Take tail-log backup before restore**.
-17.	Under the **Server connections** section, check **Close existing connections to destination database**.
-18.	Click **OK**.
+
+1.	Select `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from the **Azure storage container:** drop-down list if the SQL Server credential already exists, else manually enter the name of the container, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`. 
+1. Enter the shared access signature in the **Shared Access Signature:** rich-text box.
+1. Click **OK** and the **Locate Backup File in Microsoft Azure** dialog box opens.
+1. Expand **Containers** and navigate to `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+1. Hold ctrl and select files `Sales_stripe1of2_20160601.bak` and `Sales_stripe2of2_20160601.bak`.
+1. Click **OK**.
+1. Click **OK** to return to the **General** page.
+1. Click **Options** in the **Select a page** pane.
+1. Under the **Restore** options section, check **Overwrite the existing database (WITH REPLACE)**.
+1. Under the **Tail-log backup** section, uncheck **Take tail-log backup before restore**.
+1. Under the **Server connections** section, check **Close existing connections to destination database**.
+1. Click **OK**.
 
 #### E2.   A shared access signature does not exist
 In this example the `Sales` database does not currently exist on the server.
-7.	Click **Add** and the **Connect to a Microsoft Subscription** dialog box will open.  
-8.	Complete the **Connect to a Microsoft Subscription** dialog box and then click **OK** to return the **Select a Backup File Location** dialog box.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) for additional information.
-9.	Click **OK** in the **Select a Backup File Location** dialog box and the **Locate Backup File in Microsoft Azure** dialog box opens.
-10.	Expand **Containers** and navigate to `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-11.	Select the backup file and then click **OK**.
-12.	Click **OK** to return to the **General** page.
-13.	Click **OK**.
+1. Click **Add** and the **Connect to a Microsoft Subscription** dialog box will open.  
+1. Complete the **Connect to a Microsoft Subscription** dialog box and then click **OK** to return the **Select a Backup File Location** dialog box.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) for additional information.
+1. Click **OK** in the **Select a Backup File Location** dialog box and the **Locate Backup File in Microsoft Azure** dialog box opens.
+1. Expand **Containers** and navigate to `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+1. Select the backup file and then click **OK**.
+1. Click **OK** to return to the **General** page.
+1. Click **OK**.
 
 #### F.	Restore local backup to Microsoft Azure storage (URL)
 The `Sales` database will be restored to the Microsoft Azure storage container `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from a backup located at `E:\MSSQL\BAK`.  The SQL Server credential for the Azure container has already been created.  A SQL Server credential for the destination container must already exist as it cannot be created through the **Restore** task.  The `Sales` database does not currently exist on the server.

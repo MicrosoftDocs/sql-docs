@@ -49,10 +49,10 @@ ms.author: mikeray
   
 3.  **Backup the database:** Specify the encryption algorithm and certificate to use. Copy and paste the following example into the query window and click **Execute**.  
 
-   ```sql  
-   BACKUP DATABASE [MyTestDB]  
-   TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
-   WITH  
+    ```
+    BACKUP DATABASE [MyTestDB]  
+    TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
+    WITH  
       COMPRESSION,  
       ENCRYPTION   
        (  
@@ -60,8 +60,8 @@ ms.author: mikeray
        SERVER CERTIFICATE = MyTestDBBackupEncryptCert  
        ),  
       STATS = 10  
-   GO
-   ```  
+    GO
+    ```  
   
  For an example of encrypting a backup protected by an EKM, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   

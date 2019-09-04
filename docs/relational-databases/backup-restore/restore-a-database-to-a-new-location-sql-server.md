@@ -34,7 +34,7 @@ ms.author: mikeray
   
 -   Under the full or bulk-logged recovery model, before you can restore a database, you must back up the active transaction log. For more information, see [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
 
--   To restore an encrypted database, **you must have access to the certificate or asymmetric key used to encrypt the database!** Without that certificate or asymmetric key, you cannot retore the database. You must retain that certificate used to encrypt the database encryption key for as long as you need the backup! For more information, see [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+-   To restore an encrypted database, **you must have access to the certificate or asymmetric key used to encrypt the database!** Without that certificate or asymmetric key, you cannot restore the database. You must retain that certificate used to encrypt the database encryption key for as long as you need the backup! For more information, see [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
 ###  <a name="Recommendations"></a> Recommendations  
   

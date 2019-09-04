@@ -95,7 +95,7 @@ For updating resource level configurations like instances in a pool, you will up
 }
 ``` 
 
-Similarly for changing the settings of a single service within a specific resource. For example, if you want to change the Spark memory settings only for the Spark component in the Storage pool, you will udpate the **storage-0** resource with a **settings** section for **spark** service in the **bdc.json** configuration file.
+Similarly for changing the settings of a single service within a specific resource. For example, if you want to change the Spark memory settings only for the Spark component in the Storage pool, you will update the **storage-0** resource with a **settings** section for **spark** service in the **bdc.json** configuration file.
 ```json
 "resources":{
     ...

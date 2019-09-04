@@ -26,13 +26,15 @@ ms.author: mikeray
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-```  
+```sql
 EXEC msdb.managed_backup.sp_backup_config_basic  
                 @database_name = 'TestDB'   
                 ,@enable_backup = 0;  
-GO  
-  
-```  
+GO
+```
+
+> [!NOTE]
+> You might also need to set the `@container_url` parameter depending on your configuration.
   
 ##  <a name="DatabaseAllDisable"></a> Disable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for all the databases on the Instance  
  The following procedure is for when you want to disable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration settings from all the databases that currently have [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] enabled on the instance.  The configuration settings like the storage URL, retention, and the SQL Credential will remain in the metadata and can be used if [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is enabled for the database at a later time. If you want to just pause [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] services temporarily, you can use the master switch explained in the later sections of this topic.  
@@ -45,7 +47,7 @@ GO
   
 3.  Copy and paste the following example into the query window and click **Execute**. The following example identifies if [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is configured at the instance level and all the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] enabled databases on the instance, and executes the system stored procedure **sp_backup_config_basic** to disable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
-```  
+```sql
 -- Create a working table to store the database names  
 Declare @DBNames TABLE  
   
@@ -94,12 +96,11 @@ SELECT db_name
   
  To review the configuration settings for all the databases on the instance, use the following query:  
   
-```  
+```sql
 Use msdb;  
 GO  
 SELECT * FROM managed_backup.fn_backup_db_config (NULL);  
 GO  
-  
 ```  
   
 ##  <a name="InstanceDisable"></a> Disable Default [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] settings for the Instance  
@@ -113,11 +114,10 @@ GO
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql
     EXEC msdb.managed_backup.sp_backup_config_basic  
                     @enable_backup = 0;  
-    GO  
-  
+    GO
     ```  
   
 ##  <a name="InstancePause"></a> Pause [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] at the Instance Level  
@@ -131,12 +131,11 @@ GO
   
 3.  Copy and paste the following example into the query window and then click **Execute**  
   
-```  
+```sql
 Use msdb;  
 GO  
 EXEC managed_backup.sp_backup_master_switch @new_state=0;  
-Go  
-  
+Go
 ```  
   
 #### To resume [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Using Transact-SQL  
@@ -147,12 +146,11 @@ Go
   
 3.  Copy and paste the following example into the query window and then click **Execute**.  
   
-```  
+```sql
 Use msdb;  
 Go  
 EXEC managed_backup.sp_backup_master_switch @new_state=1;  
 GO  
-  
 ```  
   
 ## See Also  

@@ -66,7 +66,7 @@ Big data cluster name, used for kubernetes namespaces.
 #### `--config-profile -c`
 Big data cluster config profile, used for deploying the cluster: ['aks-dev-test', 'kubeadm-prod', 'minikube-dev-test', 'kubeadm-dev-test']
 #### `--accept-eula -a`
-Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at https://aka.ms/azdata-eula and https://go.microsoft.com/fwlink/?LinkId=2002534.
+Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at https://go.microsoft.com/fwlink/?LinkId=2002534.
 #### `--node-label -l`
 Big data cluster node label, used to designate what nodes to deploy to.
 #### `--force -f`

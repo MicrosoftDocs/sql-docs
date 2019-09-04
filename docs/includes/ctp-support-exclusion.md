@@ -5,7 +5,7 @@ SQL Server 2019 release candidate (RC) enables the following scenarios:
 - Side-by-side installation. Install instances of SQL Server 2019 RC with instances of SQL Server 2012 through SQL Server 2017, or other instances SQL Server 2019 CTP 3.0 or higher.
    >[!NOTE]
    >While side-by-side is not blocked with SQL Server 2008 and 2008 R2, there are no commonly supported Windows Operating system versions between them and SQL Server 2019.
-- In-place upgrade. Upgrade instances of SQL Server 2019 RC from instances of SQL Server 2012 through SQL Server 2017 and SQL Server CTP 3.0. Upgrade from a SQL Server 2019 CTP below 3.0 is not supported, a new installation must be performed.
+- In-place upgrade. Upgrade to SQL Server 2019 RC from instances of SQL Server 2012 through SQL Server 2017 and SQL Server CTP 3.0. Upgrade from a SQL Server 2019 CTP below 3.0 is not supported, a new installation must be performed.
    >[!NOTE]
    >While in-place upgrade from SQL Server 2008 and 2008 R2 is not blocked, there are no commonly supported Windows Operating system versions between them and SQL Server 2019.
 

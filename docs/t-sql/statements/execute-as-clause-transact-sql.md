@@ -54,7 +54,7 @@ Queues
   
 ```  
   
--- Windows Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
   
 { EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }   

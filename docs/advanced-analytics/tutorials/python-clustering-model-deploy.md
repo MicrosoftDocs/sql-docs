@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Deploy a clustering model in Python"
+title: "Tutorial: Deploy a model in Python to categorize customers"
 description: In part four of this four-part tutorial series, you'll deploy a clustering model in Python with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -12,7 +12,9 @@ ms.reviewer: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
-# Tutorial: Deploy a clustering model in Python with SQL Server Machine Learning Services
+# Tutorial: Deploy a model in Python to categorize customers with SQL Server Machine Learning Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In part four of this four-part tutorial series, you'll deploy a clustering model, developed in Python, into a SQL database using SQL Server Machine Learning Services.
 
@@ -27,15 +29,15 @@ In this article, you'll learn how to:
 > * Perform clustering in SQL Server
 > * Use the clustering information
 
-In [part one](tutorial-python-clustering-model.md), you installed the prerequisites and imported the sample database.
+In [part one](python-clustering-model.md), you installed the prerequisites and restored the sample database.
 
-In [part two](tutorial-python-clustering-model-prepare-data.md), you learned how to prepare the data from a SQL database to perform clustering.
+In [part two](python-clustering-model-prepare-data.md), you learned how to prepare the data from a SQL database to perform clustering.
 
-In [part three](tutorial-python-clustering-model-build.md), you learned how to create and train a K-Means clustering model in Python.
+In [part three](python-clustering-model-build.md), you learned how to create and train a K-Means clustering model in Python.
 
 ## Prerequisites
 
-* Part four of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](tutorial-python-clustering-model.md), and completed the steps in [**part two**](tutorial-python-clustering-model-prepare-data.md) and [**part three**](tutorial-python-clustering-model-build.md).
+* Part four of this tutorial series assumes you have fulfilled the prerequisites of [**part one**](python-clustering-model.md), and completed the steps in [**part two**](python-clustering-model-prepare-data.md) and [**part three**](python-clustering-model-build.md).
 
 ## Create a stored procedure that generates the model
 
@@ -150,7 +152,7 @@ SELECT * FROM py_customer_clusters;
 
 Because you stored the clustering procedure in the database, it can perform clustering efficiently against customer data stored in the same database. You can execute the procedure whenever your customer data is updated and use the updated clustering information.
 
-Suppose you want to send a promotional email to customers in cluster 0, the group that was inactive (you can see how the four clusters were described in [part three](tutorial-python-clustering-model-build.md#analyze-the-results) of this tutorial). The following code selects the email addresses of customers in cluster 0.
+Suppose you want to send a promotional email to customers in cluster 0, the group that was inactive (you can see how the four clusters were described in [part three](python-clustering-model-build.md#analyze-the-results) of this tutorial). The following code selects the email addresses of customers in cluster 0.
 
 ```sql
 USE [tpcxbb_1gb]

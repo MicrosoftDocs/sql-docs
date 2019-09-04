@@ -76,7 +76,7 @@ AS
 BEGIN  
    -- Show who is running the stored procedure  
    SELECT SYSTEM_USER 'system Login'  
-   , USER AS 'Database Login'  
+   , USER AS 'Database User'  
    , NAME AS 'Context'  
    , TYPE  
    , USAGE   
@@ -211,7 +211,7 @@ AS
 BEGIN  
    -- Shows who is running the stored procedure  
    SELECT SYSTEM_USER 'system Login'  
-   , USER AS 'Database Login'  
+   , USER AS 'Database User'  
    , NAME AS 'Context'  
    , TYPE  
    , USAGE   

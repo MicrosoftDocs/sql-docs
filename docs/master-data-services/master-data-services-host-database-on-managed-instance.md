@@ -14,11 +14,11 @@ ms.author: lle
 manager: craigg
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Host an MDS database on managed instance
+# Host an MDS database on a managed instance
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  This article covers how to configure a Master Data Services (MDS) database on managed instance.
+  This article covers how to configure a Master Data Services (MDS) database on a managed instance.
   
 ## Preparation
 
@@ -37,7 +37,7 @@ To prepare, you need to create and configure an Azure SQL Database managed insta
 1. Install a Point-to-Site connection certificate and VPN to ensure that the machine can access the SQL Database managed instance. Refer to [Configure a Point-to-Site connection to a VNet using native Azure certificate authentication: Azure portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) for instructions.
 
 1. Install the following Roles and Features:
-   - **Roles:**
+   - Roles:
           - Internet Information Services
           - Web Management Tools
           - IIS Management Console
@@ -111,10 +111,11 @@ This action installs:
 
    > [!NOTE]
    > - A SQL Server instance looks like `xxxxxxx.xxxxxxx.database.windows.net`.
-   > - For managed instance, choose from **"SQL Server Account"** and **"Current User – Active Directory Integrated"** authentication types.
+   > - For a managed instance, choose from **"SQL Server Account"** and **"Current User – Active Directory Integrated"** authentication types.
    > - When you select **Current User – Active Directory Integrated** as the authentication type, the **User name** field is read-only and displays the name of the Windows user account that is logged on to the computer. If you are running SQL Server 2019 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine (VM), the **User name** box displays the VM name and the user name for the local administrator account on the VM.
 
    Your authentication must contain the **"sysadmin"** rule for managed instances.
+
    ![mds-SQLServer2019-Config-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "mds-SQLServer2019-Config-MI_CreateDBConnect")  
 
 1. Type a name in the **Database name** field. Optionally, to select a Windows collation, clear the **SQL Server default collation** checkbox and select one or more of the available options. For example, **Case-sensitive**. Select **Next**.

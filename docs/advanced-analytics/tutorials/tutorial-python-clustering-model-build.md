@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Build a clustering model in Python"
+title: "Tutorial: Build a model in Python to categorize customers"
 description: In part three of this four-part tutorial series, you'll build a K-Means model to perform clustering in Python with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -12,7 +12,9 @@ ms.reviewer: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
-# Tutorial: Build a clustering model in Python with SQL Server Machine Learning Services
+# Tutorial: Build a model in Python to categorize customers with SQL Server Machine Learning Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In part three of this four-part tutorial series, you'll build a K-Means model in Python to perform clustering. In the next part of this series, you'll deploy this model in a SQL database with SQL Server Machine Learning Services.
 
@@ -23,7 +25,7 @@ In this article, you'll learn how to:
 > * Perform clustering
 > * Analyze the results
 
-In [part one](tutorial-python-clustering-model.md), you installed the prerequisites and imported the sample database.
+In [part one](tutorial-python-clustering-model.md), you installed the prerequisites and restored the sample database.
 
 In [part two](tutorial-python-clustering-model-prepare-data.md), you learned how to prepare the data from a SQL database to perform clustering.
 

@@ -85,6 +85,7 @@ DMA replaces all previous versions of SQL Server Upgrade Advisor and should be u
 - SQL Server 2017 on Windows and Linux
 - Azure SQL Database
 - Azure SQL Database Managed Instance
+- SQL server running on an Azure Virtual Machine
 
 ## See also
 [Assess your SQL Server Migration](../dma/dma-assesssqlonprem.md)     

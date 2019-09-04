@@ -103,16 +103,16 @@ This action installs:
 
    ![mds-SQLServer2019-Config-MI-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "mds-SQLServer2019-Config-MI_P2SVPNConnect")
 
-1. Open the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], and then select **Database Configuration** in the left pane.
+1. Open the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] and then select **Database Configuration** in the left pane.
 
-1. Select **Create Database**, and then select **Next** in the **Create Database Wizard**.
+1. Select **Create Database** to open the **Create Database Wizard**. Select **Next**.
 
-1. On the **Database Server** page, fill the **SQL Server instance**, and then choose the **Authentication type**. Select **Test Connection** to confirm that you can use your credentials to connect to the database via the chosen authentication type. Select **Next**.
+1. On the **Database Server** page, complete the **SQL Server instance** field, and then choose the **Authentication type**. Select **Test Connection** to confirm that you can use your credentials to connect to the database via the chosen authentication type. Select **Next**.
 
    > [!NOTE]
    > - A SQL Server instance looks like `xxxxxxx.xxxxxxx.database.windows.net`.
    > - For a managed instance, choose from **"SQL Server Account"** and **"Current User – Active Directory Integrated"** authentication types.
-   > - When you select **Current User – Active Directory Integrated** as the authentication type, the **User name** field is read-only and displays the name of the Windows user account that is logged on to the computer. If you are running SQL Server 2019 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine (VM), the **User name** box displays the VM name and the user name for the local administrator account on the VM.
+   > - If you select **Current User – Active Directory Integrated** as the authentication type, the **User name** field is read-only and displays the currently signed-on Windows user account. If you are running SQL Server 2019 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine (VM), the **User name** field displays the VM name and the user name for the local administrator account on the VM.
 
    Your authentication must contain the **"sysadmin"** rule for managed instances.
 
@@ -128,7 +128,7 @@ This action installs:
 
 1. Select **Next** to view a summary of the settings for the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database. Select  **Next** again to create the database. You'll see the **Progress and Finish** page.
 
-1. When the database is created and configured, select **Finish**.
+1. After the database is created and configured, select **Finish**.
 
    For more information about the settings in the **Create Database Wizard**, see [Create Database Wizard &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
 
@@ -144,7 +144,7 @@ This action installs:
 ![mds-SQLServer2019-Config-MI-WebConfiguration](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "mds-SQLServer2019-Config-MI_WebConfiguration")
 
     > [!NOTE]
-    > When you select **Default Web Site**, you must create a web application. If you select **Create new website** in the list box, the application is automatically created.
+    > If you select **Default Web Site**, you'll need to separately create a web application. If you choose **Create new website** in the list box, the application is automatically created.
 
 1. In the **Application Pool** section, enter a different user name, enter the password, and then select **OK**.
 ![mds-SQLServer2019-Config-MI-CreateWebApplication](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "mds-SQLServer2019-Config-MI_CreateWebApplication")
@@ -158,7 +158,7 @@ This action installs:
 
 1. Select **Connect** and choose the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database that you want to associate with the web application. Select **OK**.
 
-   You've finished setting up the Website. The **Web Configuration** page now displays the website you selected, web application you created, and the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database associated with the application.
+   You've finished setting up the website. The **Web Configuration** page now displays the website you selected, web application you created, and the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database associated with the application.
 
    ![mds-SQLServer2019-Config-MI-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "mds-SQLServer2019-Config-MI_WebConfigSelectDB")
 
@@ -205,7 +205,7 @@ To fix this issue, you need upgrade the database version:
 
 1. Open the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], and then select  **Database Configuration** in the left pane.
 
-1. On the **Database Configuration** page in the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], select **Select Database**.
+1. On the **Database Configuration** page in the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], choose **Select Database**.
 
 1. Choose the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database that you associated with the web application. Select **Connect**, and then select **OK**.
 
@@ -219,7 +219,7 @@ To fix this issue, you need upgrade the database version:
 
    ![mds-SQLServer2019-Config-MI-UpgradeDBWizard](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "mds-SQLServer2019-Config-MI_UpgradeDBWizard")
 
-1. Select **Finish** when all tasks are complete.
+1. Select **Finish** after all tasks are complete.
 
 ## See Also
 

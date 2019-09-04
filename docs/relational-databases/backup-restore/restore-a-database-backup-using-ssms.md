@@ -102,27 +102,27 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
     
 8. To view or select the advanced options, on the **Options** page, in the **Restore options** panel, you can select any of the following options, if appropriate for your situation:    
 
-  1. **WITH** options (not required):    
+   1. **WITH** options (not required):    
     
-    - **Overwrite the existing database (WITH REPLACE)**    
+     - **Overwrite the existing database (WITH REPLACE)**    
     
-    - **Preserve the replication settings (WITH KEEP_REPLICATION)**    
+     - **Preserve the replication settings (WITH KEEP_REPLICATION)**    
     
-    - **Restrict access to the restored database (WITH RESTRICTED_USER)**    
+     - **Restrict access to the restored database (WITH RESTRICTED_USER)**    
     
-  2. Select an option for the **Recovery state** box. This box determines the state of the database after the restore operation.    
+   2. Select an option for the **Recovery state** box. This box determines the state of the database after the restore operation.    
     
-    - **RESTORE WITH RECOVERY** is the default behavior which leaves the database ready for use by rolling back the uncommitted transactions. Additional transaction logs cannot be restored. Select this option if you are restoring all of the necessary backups now.    
+     - **RESTORE WITH RECOVERY** is the default behavior which leaves the database ready for use by rolling back the uncommitted transactions. Additional transaction logs cannot be restored. Select this option if you are restoring all of the necessary backups now.    
     
-    - **RESTORE WITH NORECOVERY** which leaves the database non-operational, and does not roll back the uncommitted transactions. Additional transaction logs can be restored. The database cannot be used until it is recovered.    
+     - **RESTORE WITH NORECOVERY** which leaves the database non-operational, and does not roll back the uncommitted transactions. Additional transaction logs can be restored. The database cannot be used until it is recovered.    
     
-    - **RESTORE WITH STANDBY** which leaves the database in read-only mode. It undoes uncommitted transactions, but saves the undo actions in a standby file so that recovery effects can be reverted.    
+     - **RESTORE WITH STANDBY** which leaves the database in read-only mode. It undoes uncommitted transactions, but saves the undo actions in a standby file so that recovery effects can be reverted.    
     
-  3. **Take tail-log backup before restore.** Not all restore scenarios require a tail-log backup.  For more information, see **Scenarios That Require a Tail-Log Backup** from [Tail-Log Backups (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
+   3. **Take tail-log backup before restore.** Not all restore scenarios require a tail-log backup.  For more information, see **Scenarios That Require a Tail-Log Backup** from [Tail-Log Backups (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
   
-  4. Restore operations may fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and the database are closed. This check box sets the database to single user mode before performing the restore operations, and sets the database to multi-user mode when complete.    
+   4. Restore operations may fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and the database are closed. This check box sets the database to single user mode before performing the restore operations, and sets the database to multi-user mode when complete.    
   
-  5. Select **Prompt before restoring each backup** if you wish to be prompted between each restore operation. This is not usually necessary unless the database is large and you wish to monitor the status of the restore operation.    
+   5. Select **Prompt before restoring each backup** if you wish to be prompted between each restore operation. This is not usually necessary unless the database is large and you wish to monitor the status of the restore operation.    
     
 For more information about these restore options, see [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).    
     

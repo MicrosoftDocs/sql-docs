@@ -65,8 +65,8 @@ When this check box is selected, status messages from the provider (such as the 
 **Disconnect after the query executes**
 When this check box is selected, the connection to SQL Server is terminated after the query completes. This option is cleared by default.
 
-**Reset to Default**
-Resets all values on this page to the original default values.
-
 **Show completion time**
 Allows you to print the time at which the query execution completed either after the query results or in the messages tab.
+
+**Reset to Default**
+Resets all values on this page to the original default values.

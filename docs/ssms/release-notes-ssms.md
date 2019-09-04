@@ -9,7 +9,7 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ""
-ms.date: 07/31/2019
+ms.date: 09/04/2019
 ---
 # Release notes for SQL Server Management Studio (SSMS)
 
@@ -103,9 +103,9 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 
 - There's a limitation on the size of the data you see from SSMS results shown in grid, text, or file.
 
-You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
-
 - There's an issue with the delete failing for an Azure SQL Database in Object Explorer, but it actually succeeds. The task shows an inaccurate error message.
+
+You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
 ## Previous SSMS releases
 

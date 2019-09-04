@@ -30,11 +30,11 @@ In this article, you'll learn how to:
 > [!div class="checklist"]
 > * Restore a sample database into a SQL Server instance
 
-In [part two](tutorial-python-clustering-model-prepare-data.md), you'll learn how to prepare the data from a SQL database to perform clustering.
+In [part two](python-clustering-model-prepare-data.md), you'll learn how to prepare the data from a SQL database to perform clustering.
 
-In [part three](tutorial-python-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in Python.
+In [part three](python-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in Python.
 
-In [part four](tutorial-python-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in Python based on new data.
+In [part four](python-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in Python based on new data.
 
 ## Prerequisites
 
@@ -96,4 +96,4 @@ In part one of this tutorial series, you completed these steps:
 To prepare the data for the machine learning model, follow part two of this tutorial series:
 
 > [!div class="nextstepaction"]
-> [Tutorial: Prepare data to perform clustering in Python with SQL Server Machine Learning Services](tutorial-python-clustering-model-prepare-data.md)
+> [Tutorial: Prepare data to perform clustering in Python with SQL Server Machine Learning Services](python-clustering-model-prepare-data.md)

@@ -160,7 +160,7 @@ Look for Launchpad in the `Binn` folder for the instance. For example, in a defa
 
 ### 9. Remote compute contexts are blocked by a firewall in SQL Server instances that are running on Azure virtual machines
 
-If you have installed [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] on a Windows Azure virtual machine, you might not be able to use compute contexts that require the use of the virtual machine's workspace. The reason is that, by default, the firewall on Azure virtual machines includes a rule that blocks network access for local R user accounts.
+If you have installed [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] on an Azure virtual machine, you might not be able to use compute contexts that require the use of the virtual machine's workspace. The reason is that, by default, the firewall on Azure virtual machines includes a rule that blocks network access for local R user accounts.
 
 As a workaround, on the Azure VM, open **Windows Firewall with Advanced Security**, select **Outbound Rules**, and disable the following rule: **Block network access for R local user accounts in SQL Server instance MSSQLSERVER**. You can also leave the rule enabled, but change the security property to **Allow if secure**.
 
@@ -519,7 +519,7 @@ wget 'https://bootstrap.pypa.io/get-pip.py'
 
 **Recommendation**
 
-Use [sqlmlutils](https://github.com/microsoft/sqlmlutils/tree/master/Python) or [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md) to install Python packages.
+See [Install Python packages with sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md).
 
 **Applies to:** SQL Server 2019 on Linux
 

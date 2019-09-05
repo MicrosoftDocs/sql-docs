@@ -26,7 +26,7 @@
     href: security-best-practices-with-contained-databases.md
   - name: Migrate to a Partially Contained Database
     href: migrate-to-a-partially-contained-database.md
-- name: SQL Server Data Files in Windows Azure
+- name: SQL Server Data Files in Azure
   href: sql-server-data-files-in-microsoft-azure.md
 - name: Database Files and Filegroups
   href: database-files-and-filegroups.md

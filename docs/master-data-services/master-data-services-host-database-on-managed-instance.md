@@ -102,7 +102,7 @@ This installs [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], assemblies
 
 **Setting up the Database and Website**
 
-1. Connect the Windows Azure Virtual Network to ensure that you can connect to the managed instance.
+1. Connect the Azure Virtual Network to ensure that you can connect to the managed instance.
 
     ![mds-SQLServer2019-Config-MI-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "mds-SQLServer2019-Config-MI_P2SVPNConnect")  
 

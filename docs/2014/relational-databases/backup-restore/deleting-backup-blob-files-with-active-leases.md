@@ -12,7 +12,7 @@ ms.author: mikeray
 manager: craigg
 ---
 # Deleting Backup Blob Files with Active Leases
-  When backing up to or restoring from Windows Azure storage, SQL Server acquires an infinite lease in order to lock exclusive access to the blob. When the backup or restore process is successfully completed, the lease is released. If a backup or restore fails, the backup process attempts to clean up any invalid blob. However, if the backup fails due to prolonged or sustained network connectivity failure, the backup  process may not be able gain access to the blob and the blob may remain orphaned. This means that the blob cannot be written to or deleted until the lease is released. This topic describes how to release the lease and deleting the blob..  
+  When backing up to or restoring from Azure storage, SQL Server acquires an infinite lease in order to lock exclusive access to the blob. When the backup or restore process is successfully completed, the lease is released. If a backup or restore fails, the backup process attempts to clean up any invalid blob. However, if the backup fails due to prolonged or sustained network connectivity failure, the backup  process may not be able gain access to the blob and the blob may remain orphaned. This means that the blob cannot be written to or deleted until the lease is released. This topic describes how to release the lease and deleting the blob..  
   
  For more information on the types of leases, read this [article](https://go.microsoft.com/fwlink/?LinkId=275664).  
   
@@ -53,9 +53,9 @@ manager: craigg
  Tips on running this script  
   
 > [!WARNING]  
->  If a backup to Windows Azure Blob storage service is running at the same time as this script, the backup can fail since this script will break the lease that the backup is trying to acquire at the same time. We recommend running this script during a maintenance windows or when no backups are expected to run.  
+>  If a backup to Azure Blob storage service is running at the same time as this script, the backup can fail since this script will break the lease that the backup is trying to acquire at the same time. We recommend running this script during a maintenance windows or when no backups are expected to run.  
   
-1.  When you run this script, you will be prompted to provide values for the storage account, storage key, container, and the windows azure storage assembly path and name parameters. The path of the storage is assembly is the installation directory of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The file name for the storage assembly is Microsoft.WindowsAzure.Storage.dll. Following is an example of the prompts and values entered:  
+1.  When you run this script, you will be prompted to provide values for the storage account, storage key, container, and the Azure storage assembly path and name parameters. The path of the storage is assembly is the installation directory of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The file name for the storage assembly is Microsoft.WindowsAzure.Storage.dll. Following is an example of the prompts and values entered:  
   
     ```  
     cmdlet  at command pipeline position 1  

@@ -20,7 +20,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # sp_send_dbmail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Sends an e-mail message to the specified recipients. The message may include a query result set, file attachments, or both. When mail is successfully placed in the Database Mail queue, **sp_send_dbmail** returns the **mailitem_id** of the message. This stored procedure is in the **msdb** database.  
   
@@ -116,6 +116,9 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 `[ @file_attachments = ] 'file_attachments'`
  Is a semicolon-delimited list of file names to attach to the e-mail message. Files in the list must be specified as absolute paths. The attachments list is of type **nvarchar(max)**. By default, Database Mail limits file attachments to 1 MB per file.  
+ 
+ > [!IMPORTANT]
+ > This parameter is not available in Azure SQL Managed Instance because it cannot access local file system.
   
 `[ @query = ] 'query'`
  Is a query to execute. The results of the query can be attached as a file, or included in the body of the e-mail message. The query is of type **nvarchar(max)**, and can contain any valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. Note that the query is executed in a separate session, so local variables in the script calling **sp_send_dbmail** are not available to the query.  

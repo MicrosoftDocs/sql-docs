@@ -1,5 +1,27 @@
+---
+title: "Accelerated database recovery | Microsoft Docs"
+ms.custom: ""
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ""
+ms.technology: backup-restore
+ms.topic: conceptual
+helpviewer_keywords: 
+  - "accelerated database recovery [SQL Server], recovery-only"
+  - "database recovery [SQL Server]"
+author: mashamsft
+ms.author: mathoma
+ms.reviewer: kfarlee
+monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+---
+# Manage accelerated database recovery
+
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 ## Enabling and controlling ADR
-ADR is off by default in <SS2019>, and can be controlled using DDL syntax:
+
+ADR is off by default in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], and can be controlled using DDL syntax:
 ```sql
 ALTER DATABASE [DB] SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 [(PERSISTENT_VERSION_STORE_FILEGROUP = { filegroup name }) ];

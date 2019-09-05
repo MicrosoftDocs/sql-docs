@@ -28,7 +28,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 The following section explains what database role you must grant to users so they can create or execute jobs by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## Granting Access to SQL Server Agent  
-To use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, users must be a member of one or more of the following fixed database roles:  
+To use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, users must be a member of one or more of the following [fixed database roles](https://docs.microsoft.com/en-us/sql/ssms/agent/sql-server-agent-fixed-database-roles):  
   
 -   **SQLAgentUserRole**  
   

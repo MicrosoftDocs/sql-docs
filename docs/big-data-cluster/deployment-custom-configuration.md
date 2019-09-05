@@ -16,7 +16,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Starting from a pre-defined set of configuration profiles that are built-in in the azdata management tool, you can easily modify the default settings to better suit your BDC workload requirements. Starting with the release candidate release, the structure of the configuration files was updated to enable you to granularly update settings per each service of the resource. 
+Starting from a pre-defined set of configuration profiles that are built into the azdata management tool, you can easily modify the default settings to better suit your BDC workload requirements. Starting with the release candidate release, the structure of the configuration files was updated to enable you to granularly update settings per each service of the resource. 
 
 You can also set resource level configurations or update the configurations for all services in a resource. Here is a summary of the structure for **bdc.json**:
 
@@ -95,7 +95,7 @@ For updating resource level configurations like instances in a pool, you will up
 }
 ``` 
 
-Similarly for changing the settings of a single service within a specific resource. For example, if you want to change the Spark memory settings only for the Spark component in the Storage pool, you will udpate the **storage-0** resource with a **settings** section for **spark** service in the **bdc.json** configuration file.
+Similarly for changing the settings of a single service within a specific resource. For example, if you want to change the Spark memory settings only for the Spark component in the Storage pool, you will update the **storage-0** resource with a **settings** section for **spark** service in the **bdc.json** configuration file.
 ```json
 "resources":{
     ...
@@ -239,7 +239,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 ## <a id="storage"></a> Configure storage
 
-You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage and data pools and updates the size of the persistent volume claim for storing data to 500Gb for HDFS (storage pool) and 100Gb for data pool. 
+You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage and data pools and updates the size of the persistent volume claim for storing data to 500 Gb for HDFS (storage pool) and 100 Gb for data pool. 
 First create a patch.json file as below that includes the new *storage* section, in addition to *type* and *replicas*
 
 ```json
@@ -314,7 +314,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 You can control pod placement on Kubernetes nodes that have specific resources to accommodate various types of workload requirements. For example, you might want to ensure the storage pool resource pods are placed on nodes with more storage, or SQL Server master instances are placed on nodes that have higher CPU and memory resources. In this case, you will first build a heterogeneous Kubernetes cluster with different types of hardware and then [assign node labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) accordingly. At the time of deploying big data cluster, you can specify same labels at pool level in the cluster deployment configuration file. Kubernetes will then take care of  affinitizing the pods on nodes that match the specified labels. The specific label key that needs to be added to the nodes in the kubernetes cluster is **mssql-cluster-wide**. The value of this label itself can be any string that you choose.
 
-The following example shows how to edit a custom configuration file to include a node label setting for the SQL Server master instance, Compute Pool, Data Pool & Storage Pool. Note that there is no *nodeLabel* key in the built in configurations so you will need to either edit a custom configuration file manually or create a patch file and apply it to the custom configuration file. The SQL Server Master instance pod will be deployed on a node that contain a label **mssql-cluster-wide** with value **bdc-master**. The Compute Pool and Data Pool pods will be deployed on nodes that contain a label **mssql-cluster-wide** with value **bdc-sql**. The Storage Pool pods will be deployed on nodes that contain a label **mssql-cluster-wide** with value **bdc-storage**.
+The following example shows how to edit a custom configuration file to include a node label setting for the SQL Server master instance, Compute Pool, Data Pool & Storage Pool. There is no *nodeLabel* key in the built-in configurations so you will need to either edit a custom configuration file manually or create a patch file and apply it to the custom configuration file. The SQL Server Master instance pod will be deployed on a node that contains a label **mssql-cluster-wide** with value **bdc-master**. The Compute Pool and Data Pool pods will be deployed on nodes that contain a label **mssql-cluster-wide** with value **bdc-sql**. The Storage Pool pods will be deployed on nodes that contain a label **mssql-cluster-wide** with value **bdc-storage**.
 
 Create a file named **patch.json** in your current directory with the following contents:
 

@@ -34,11 +34,12 @@ This article describes the Python tutorials for [SQL Server Machine Learning Ser
 
 | Tutorial | Description |
 |-|-|
-| [Predict ski rental with linear regression](python-ski-rental-linear-regression.md) | In this tutorial you will use Python and linear regressionto predict the number of ski rentals. It uses notebooks in Azure Data Studio for preparing data and training the model, as well as T-SQL for model deployment. |
+| [Predict ski rental with linear regression](python-ski-rental-linear-regression.md) | Use Python and linear regression to predict the number of ski rentals. It uses notebooks in Azure Data Studio for preparing data and training the model, as well as T-SQL for model deployment. |
+| [Categorizing customers using k-means clustering](python-clustering-model.md) | Use Python to develop and deploy a K-Means clustering model to categorize customers. It uses notebooks in Azure Data Studio for preparing data and training the model, as well as T-SQL for model deployment. |
 | [Tutorial: Create a model using revoscalepy](use-python-revoscalepy-to-create-model.md) | Demonstrates how to run code from a remote Python terminal, using SQL Server compute context. You should be somewhat familiar with Python tools and environments. Sample code is provided that creates a model using **rxLinMod**, from the new **revoscalepy** library. |
 | [Tutorial: Learn in-Database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md) | This end-to-end walkthrough demonstrates the process of building a complete Python solution using T-SQL stored procedures. All Python code is included.|
 
-## See also
+## Next steps
 
++ [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)
 + [Python extension to SQL Server](../concepts/extension-python.md)
-+ [SQL Server Machine Learning Services tutorials](machine-learning-services-tutorials.md)

@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Python tutorials for SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes the Python quickstarts and tutorials for [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 
+This article describes the Python tutorials and quickstarts for [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
 
 + Learn how to run Python scripts.
 + Build, train, and deploy Python models to SQL Server.
@@ -21,7 +21,18 @@ This article describes the Python quickstarts and tutorials for [SQL Server Mach
 
 <a name="bkmk_pythontutorials"></a>
 
+## Python tutorials
+
+| Tutorial | Description |
+|-|-|
+| [Predict ski rental with linear regression](python-ski-rental-linear-regression.md) | Use Python and linear regression to predict the number of ski rentals. Use notebooks in Azure Data Studio for preparing data and training the model, and T-SQL for model deployment. |
+| [Categorizing customers using k-means clustering](python-clustering-model.md) | Use Python to develop and deploy a K-Means clustering model to categorize customers. Use notebooks in Azure Data Studio for preparing data and training the model, and T-SQL for model deployment. |
+| [Create a model using revoscalepy](use-python-revoscalepy-to-create-model.md) | Demonstrates how to run code from a remote Python client using SQL Server as compute context. The tutorial creates a model using **rxLinMod** from the **revoscalepy** library. |
+| [Python data analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md) | This end-to-end walkthrough demonstrates the process of building a complete Python solution using T-SQL. |
+
 ## Python quickstarts
+
+If you are new to SQL Server Machine Learning Services, you can also try the Python quickstarts.
 
 | Quickstart | Description |
 |-|-|
@@ -29,15 +40,6 @@ This article describes the Python quickstarts and tutorials for [SQL Server Mach
 | [Handle inputs and outputs using Python in SQL Server](quickstart-python-inputs-and-outputs.md) | Learn how to handle inputs and outputs for Python in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
 | [Python data structures in SQL Server](quickstart-python-data-structures.md) | Shows how SQL Server uses the Python pandas package to handle data structures. |
 | [Train and use your first model](quickstart-python-train-score-in-tsql.md) | Explains how to create, train, and use a Python model to predict new data. |
-
-## Python tutorials
-
-| Tutorial | Description |
-|-|-|
-| [Predict ski rental with linear regression](python-ski-rental-linear-regression.md) | Use Python and linear regression to predict the number of ski rentals. It uses notebooks in Azure Data Studio for preparing data and training the model, as well as T-SQL for model deployment. |
-| [Categorizing customers using k-means clustering](python-clustering-model.md) | Use Python to develop and deploy a K-Means clustering model to categorize customers. It uses notebooks in Azure Data Studio for preparing data and training the model, as well as T-SQL for model deployment. |
-| [Create a model using revoscalepy](use-python-revoscalepy-to-create-model.md) | Demonstrates how to run code from a remote Python client using SQL Server as compute context. The tutorial creates a model using **rxLinMod** from the **revoscalepy** library. |
-| [Python data analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md) | This end-to-end walkthrough demonstrates the process of building a complete Python solution using T-SQL. |
 
 ## Next steps
 

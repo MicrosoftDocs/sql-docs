@@ -14,6 +14,13 @@ ms.author: "Shamikg"
 # What's New in SSMA for SAP ASE (SybaseToSQL)
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
 
+## SSMA v8.4
+
+The v8.4 release of SSMA for SAP ASE is enhanced with targeted fixes that are designed to address accessibility issues and fix a bug related to max index columns (to allow 32 instead of 16) for SQL Server 2016 and later versions.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
+
 ## SSMA v8.3
 
 The v8.3 release of SSMA for SAP ASE is enhanced with targeted fixes that are designed to improve quality and conversion metrics. In addition, this release of SSMA for SAP ASE provides fixes that:

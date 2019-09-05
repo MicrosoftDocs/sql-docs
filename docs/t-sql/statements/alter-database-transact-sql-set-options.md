@@ -727,9 +727,6 @@ Disables the query store. OFF is the default value.
 CLEAR         
 Remove the contents of the query store.
 
-> [!NOTE]
-> For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], you must execute `ALTER DATABASE SET QUERY_STORE` from the user database. Executing the statement from another data warehouse instance is not supported.
-
 OPERATION_MODE { READ_ONLY | READ_WRITE }         
 Describes the operation mode of the query store. 
 
@@ -2906,20 +2903,43 @@ SET
 
 <option_spec>::=
 {
-<RESULT_SET_CACHING>
-|<snapshot_option>
+    <auto_option>
+  | <db_encryption_option>
+  | <query_store_options>
+  | <result_set_caching>
+  | <snapshot_option>
 }
 ;
 
-<RESULT_SET_CACHING>::=
+<auto_option> ::=
 {
-RESULT_SET_CACHING {ON | OFF}
+    AUTO_CREATE_STATISTICS { OFF | ON }
 }
 
-<snapshot_option>::=
+<db_encryption_option> ::=
 {
-READ_COMMITTED_SNAPSHOT {ON | OFF }
+    ENCRYPTION { ON | OFF }
 }
+
+<query_store_option> ::=
+{
+    QUERY_STORE
+    {
+          = OFF
+        | = ON
+    }
+}
+
+<result_set_caching_option> ::=
+{
+    RESULT_SET_CACHING { ON | OFF }
+}
+
+<snapshot_option> ::=
+{
+    READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 
 ```
@@ -2930,8 +2950,53 @@ READ_COMMITTED_SNAPSHOT {ON | OFF }
 
 Is the name of the database to be modified.
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-**Applies to** Azure SQL Data Warehouse (preview)
+**<auto_option> ::=**
+
+Controls automatic options.
+
+AUTO_CREATE_STATISTICS { ON | OFF }
+ON
+The Query Optimizer creates statistics on single columns in query predicates, as necessary, to improve query plans and query performance. These single-column statistics are created when the Query Optimizer compiles queries. The single-column statistics are created only on columns that are not already the first column of an existing statistics object.
+
+The default is ON. We recommend that you use the default setting for most databases.
+
+OFF
+The Query Optimizer doesn't create statistics on single columns in query predicates when it is compiling queries. Setting this option to OFF can cause suboptimal query plans and degraded query performance.
+You can determine this option's status by examining the is_auto_create_stats_on column in the sys.databases catalog view. You can also determine the status by examining the IsAutoCreateStatistics property of the DATABASEPROPERTYEX function.
+For more information, see the section "Using the Database-Wide Statistics Options" in Statistics.
+
+**<db_encryption_option> ::=**
+
+Controls the database encryption state.
+
+ENCRYPTION { ON | OFF }
+ON
+Sets the database to be encrypted.
+
+OFF
+Sets the database to not be encrypted.
+
+For more information about database encryption, see Transparent Data Encryption, and Transparent Data Encryption with Azure SQL Database.
+
+When encryption is enabled at the database level, all filegroups will be encrypted. Any new filegroups will inherit the encrypted property. If any filegroups in the database are set to READ ONLY, the database encryption operation will fail.
+You can see the encryption state of the database as well as the state of the encryption scan by using the sys.dm_database_encryption_keys dynamic management view.
+
+**\<query_store_option> ::=**
+
+ON | OFF   
+Controls if the query store is enabled in this data warehouse.     
+
+ON         
+Enables the query store.
+
+OFF         
+Disables the query store. OFF is the default value.
+
+> [!NOTE]
+> For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], you must execute `ALTER DATABASE SET QUERY_STORE` from the user database. Executing the statement from another data warehouse instance is not supported.
+
+**\<result_set_caching_option> ::=**   
+**Applies to**: Azure SQL Data Warehouse (preview)
 
 This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data Warehouse storage. A new column, is_result_set_caching_on, is introduced in `sys.databases` to show the result cache setting for a database.  
 
@@ -2949,9 +3014,22 @@ Specifies that query result sets returned from this database will not be cached 
 command|Like|%DWResultCacheDb%|
 | | |
 
+### Remarks
 
-<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
-**Applies to** Azure SQL Data Warehouse (preview)
+Cached result set is reused for a query if all of the following requirements are all met:
+
+1. The user executing the query has access to all the tables referenced in the query.
+1. There is an exact match between the new query and the previous query that generated the result set cache.
+1. There is no data or schema changes in the tables where the cached result set was generated from.  
+
+Once result set caching is turned ON for a database, results are cached for all queries until the cache is full, except for queries with non-deterministic functions such as DateTime.Now().   Queries with large result sets (for example, > 1 million rows) may experience slower performance during the first run when the result cache is being created.
+
+**<snapshot_option> ::=**
+
+Calculates the transaction isolation level.
+
+READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**Applies to**: Azure SQL Data Warehouse (preview)
 
 ON
 Enables the READ_COMMITTED_SNAPSHOT option at the database level.
@@ -2963,19 +3041,6 @@ Turning READ_COMMITTED_SNAPSHOT ON or OFF for a database will kill all open conn
 
 In a database with READ_COMMITTED_SNAPSHOT enabled, queries may experience slower performance due to the scan of versions if multiple data versions are present. Long open transactions can also cause increase in the size of the database if there are data changes by these transactions which blocks the cleanup of versions.  
 
-
-
-
-## Remarks
-
-Cached result set is reused for a query if all of the following requirements are all met:
-
-1. The user executing the query has access to all the tables referenced in the query.
-1. There is an exact match between the new query and the previous query that generated the result set cache.
-1. There is no data or schema changes in the tables where the cached result set was generated from.  
-
-Once result set caching is turned ON for a database, results are cached for all queries until the cache is full, except for queries with non-deterministic functions such as DateTime.Now().   Queries with large result sets (for example, > 1 million rows) may experience slower performance during the first run when the result cache is being created.
-
 ## Permissions
 
 To set RESULT_SET_CACHING option, a user needs server-level principal login (the one created by the provisioning process) or be a member of the `dbmanager` database role.  
@@ -2984,28 +3049,90 @@ To set READ_COMMITTED_SNAPSHOT option, a user needs ALTER permission on the data
 
 ## Examples
 
-### Enable result set caching for a database
+### A. Enabling the query store
+
+The following example enables the query store and configures query store parameters.
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### B. Enabling the query store with wait statistics
+
+The following example enables the query store and configures query store parameters.
+
+```sql
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### C. Enabling the query store with custom capture policy options
+
+The following example enables the query store and configures query store parameters.
+
+```sql
+ALTER DATABASE AdventureWorksDW 
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
+### D. Enable result set caching for a database
+
+```sql
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING ON;
 ```
 
-### Disable result set caching for a database
+### D. Disable result set caching for a database
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING OFF;
 ```
 
-### Check result set caching setting for a database
+### D. Check result set caching setting for a database
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### Check for number of queries with result set cache hit and cache miss
+### D. Check for number of queries with result set cache hit and cache miss
 
 ```sql
 SELECT  
@@ -3025,7 +3152,7 @@ s.request_id else null end)
      ON s.request_id = r.request_id) A;
 ```
 
-### Check for result set cache hit or cache miss for a query
+### D. Check for result set cache hit or cache miss for a query
 
 ```sql
 If
@@ -3037,7 +3164,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### Check for all queries with result set cache hits
+### D. Check for all queries with result set cache hits
 
 ```sql
 SELECT *  
@@ -3046,6 +3173,7 @@ WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
 ### Enable Read_Committed_Snapshot option for a database
+
 ```sql
 ALTER DATABASE MyDatabase  
 SET READ_COMMITTED_SNAPSHOT ON
@@ -3061,3 +3189,4 @@ SET READ_COMMITTED_SNAPSHOT ON
 - [SQL Data Warehouse language elements](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
+

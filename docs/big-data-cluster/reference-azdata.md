@@ -54,7 +54,7 @@ Account user. If you do not want to use this arg, you may set the environment va
 #### `--controller-endpoint -e`
 Cluster controller endpoint "https://host:port". If you do not want to use this arg, you may use the kube config on your machine. Please ensure the config is located at the default location of <user home>/.kube/config or use the KUBECONFIG env var.
 #### `--accept-eula -a`
-Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at https://aka.ms/azdata-eula.
+Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. 
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

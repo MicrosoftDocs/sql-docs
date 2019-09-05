@@ -21,7 +21,17 @@ This article describes the Python tutorials for [SQL Server Machine Learning Ser
 
 <a name="bkmk_pythontutorials"></a>
 
-## Python quickstarts and tutorials
+## Python quickstarts
+
+| Quickstart | Description |
+|------|-------------|
+| [Hello World in Python and SQL Server](quickstart-python-run-using-t-sql.md) | Learn the basics of how to call Python in T-SQL. |
+| [Handle inputs and outputs using Python in SQL Server](quickstart-python-inputs-and-outputs.md) | Learn how to handle inputs and outputs for Python in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
+| [Python data structures in SQL Server](quickstart-python-data-structures.md) | Shows how SQL Server uses the Python **pandas** package to handle data structures. |
+| [Train and use your first model](quickstart-python-train-score-in-tsql.md) | Explains how to create, train, and use a Python model to predict new data. |
+
+## Python tutorials
+
 
 | Link | Description |
 |------|-------------|

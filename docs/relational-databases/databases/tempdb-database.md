@@ -236,7 +236,7 @@ There are some limitations with this implementation that are important to note:
     COMMIT TRAN
     ```
 3. Queries against memory-optimized tables do not support locking and isolation hints, so queries against memory-optimized TempDB catalog views will not honor locking and isolation hints. As with other system catalog views in SQL Server, all transactions against system views will be in READ COMMITTED (or in this case READ COMMITTED SNAPSHOT) isolation.
-4. There may be some issues with columnstore indexes on temporary tables when memory-optimized tempdb metadata is enabled. For this preview release, it is best to avoid columnstore indexes on temporary tables when using memory-optimized tempdb metadata.
+4. [Columnstore indexes](../indexes/columnstore-indexes-overview.md) cannot be created on temporary tables when memory-optimized tempdb metadata is enabled.
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -247,6 +247,8 @@ You can verify whether or not TempDB is memory-optimized by using the following 
 ```
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
+
+If the server fails to start for any reason after enabling Memory-Optimized TempDB Metadata, you can bypass the feature by starting the SQL Server with [minimal configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) using the **-f** startup option. This will enable you to disable the feature and then restart SQL Server in normal mode.
 
 ## Capacity Planning for tempdb in SQL Server
 

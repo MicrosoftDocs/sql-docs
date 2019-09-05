@@ -1,7 +1,7 @@
 ---
 title: "What's New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2019"
+ms.date: "09/06/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: ssma

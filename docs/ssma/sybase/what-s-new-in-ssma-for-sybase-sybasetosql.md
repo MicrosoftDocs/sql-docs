@@ -10,8 +10,8 @@ ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: "HJToland3"
 ms.author: "Shamikg"
 ---
-
 # What's New in SSMA for SAP ASE (SybaseToSQL)
+
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
 
 ## SSMA v8.4
@@ -28,9 +28,6 @@ The v8.3 release of SSMA for SAP ASE is enhanced with targeted fixes that are de
 * Address accessibility issues
 * Add basic support for 'hierarchyid' type in SQL Server
 
-> [!IMPORTANT]
-> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
-
 ## SSMA v8.2
 
 The v8.2 release of SSMA for SAP ASE is enhanced with a targeted set of fixes designed to improve quality and conversion metrics, as well as fixes for:
@@ -41,9 +38,6 @@ The v8.2 release of SSMA for SAP ASE is enhanced with a targeted set of fixes de
 
 > [!NOTE]
 > A known issue with auto-update may cause the failure of an update from SSMA v8.1 to v8.2. If you encounter this error, please download the new version and install it manually.
-
-> [!IMPORTANT]
-> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
 
 ## SSMA v8.1
 

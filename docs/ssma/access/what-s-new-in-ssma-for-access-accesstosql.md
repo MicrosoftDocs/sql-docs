@@ -15,6 +15,7 @@ ms.author: "Shamikg"
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.  
 
 ## SSMA v8.4
+
 The v8.4 release of SSMA for Access is enhanced with targeted fixes that are designed to address accessibility issues and fix a bug related to max index columns (to allow 32 instead of 16) for SQL Server 2016 and later versions.
 
 > [!IMPORTANT]

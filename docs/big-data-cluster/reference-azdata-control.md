@@ -42,7 +42,7 @@ Control plane name, used for kubernetes namespaces.
 #### `--config-profile -c`
 Cluster config profile, used for deploying the cluster: ['aks-dev-test', 'kubeadm-prod', 'minikube-dev-test', 'kubeadm-dev-test']
 #### `--accept-eula -a`
-Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at https://aka.ms/azdata-eula.
+Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. 
 #### `--node-label -l`
 Node label, used to designate what nodes to deploy to.
 #### `--force -f`

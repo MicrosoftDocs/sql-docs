@@ -521,6 +521,26 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/advanced-analytics/tutorials/tutorial-python-clustering-model.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/python-clustering-model",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/tutorial-python-clustering-model-prepare-data.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/python-clustering-model-prepare-data",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/tutorial-python-clustering-model-build.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/python-clustering-model-build",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/tutorial-python-clustering-model-deploy.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/python-clustering-model-deploy",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/advanced-analytics/java/extension-java.md",
             "redirect_url": "/sql/language-extensions/language-extensions-overview",
             "redirect_document_id": false

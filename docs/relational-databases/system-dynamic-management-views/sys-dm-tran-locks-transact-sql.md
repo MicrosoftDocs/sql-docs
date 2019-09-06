@@ -333,7 +333,7 @@ SELECT resource_type, resource_associated_entity_id,
 ```  
 SELECT object_name(object_id), *  
     FROM sys.partitions  
-    WHERE hobt_id=<resource_associated_entity_id>  
+    WHERE object_id=<resource_associated_entity_id>  
 ```  
   
  The following query will show blocking information.  

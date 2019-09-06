@@ -2,7 +2,7 @@
 title: "Installing SSMA for DB2 Client (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
-ms.date: "09/06/2019"
+ms.date: "09/07/2019"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -28,7 +28,7 @@ This topic provides the installation prerequisites and instructions for installi
   
 ## Prerequisites
 
-SSMA is designed to work with DB2 on z/OS version 9.0 and 10.0 or DB2 on LUW version 9.8 and 10.1 or later versions and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 and later versions.  
+SSMA is designed to work with DB2 on z/OS version 9.0 and 10.0 or DB2 on LUW version 9.8 and 10.1 or later versions and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 or later versions.  
   
 Before you install SSMA, make sure that the computer meets the following requirements:  
   

@@ -46,8 +46,8 @@ Before you install SSMA, make sure that the computer meets the following require
   
 ## Microsoft OLEDB Provider for DB2  
 
-To download the OLEDB provider for DB2 version 5.0, go to [OLEDB provider for DB2 version 6.0](https://www.microsoft.com/download/details.aspx?id=55992). 
-  
+To download the OLEDB provider for DB2 version 6.0, go to [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
+
 SSMA is a Web download. To download the latest version, see the [SQL Server Migration Assistant download page](https://aka.ms/ssmafordb2).  
   
 After you download the latest version, extract the installation files so you can install SSMA.  

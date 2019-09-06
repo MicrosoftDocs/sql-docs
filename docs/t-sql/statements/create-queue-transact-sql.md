@@ -27,7 +27,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # CREATE QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Creates a new queue in a database. Queues store messages. When a message arrives for a service, [!INCLUDE[ssSB](../../includes/sssb-md.md)] puts the message on the queue associated with the service.  
   

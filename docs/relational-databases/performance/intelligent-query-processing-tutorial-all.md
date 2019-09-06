@@ -17,6 +17,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 The following code demonstrates `APPROXIMATE_COUNT_DISTINCT`:
 
-[!code-sql[](../../sql-server-samples/samples/features/intelligent-query-processing/Intelligent%20QP%20Demos%20WideWorldImportersDW%20Public%20Preview%20-%20APPROX_COUNT_DISTINCT.sql?highlight=2,5)]
+[!code-sql[](~/sql-server-samples/samples/features/intelligent-query-processing/Intelligent%20QP%20Demos%20WideWorldImportersDW%20Public%20Preview%20-%20APPROX_COUNT_DISTINCT.sql?highlight=2,5)]
 
 ## See Also

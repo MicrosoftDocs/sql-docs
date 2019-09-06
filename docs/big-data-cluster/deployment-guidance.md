@@ -148,6 +148,10 @@ The following environment variables are used for security settings that are not 
 | **DOCKER_PASSWORD** | Optional |The password to access the above private repository. |
 
 These environment variables must be set prior to calling **azdata bdc create**. If any variable is not set, you are prompted for it.
+> [!TIP]
+> As of RC1, we suggest that the same password is used for Controller, SA and Knox, so that experience when connecting with Azure Data Studio remains smooth.
+>Also, do not change the SA password after deployment.
+>These guidelines are specific to RC1 and will be updated with later builds.
 
 The following example shows how to set the environment variables for Linux (bash) and Windows (PowerShell):
 

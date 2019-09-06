@@ -162,7 +162,7 @@ WHERE object_name LIKE '%External Scripts%'
 | Counter | Description |
 |---------|-------------|
 | Total Executions | Number of external processes started by local or remote calls. |
-| Parallel Executions | Number of times that a script included the _@parallel_ specification and that [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] was able to generate and use a parallel query plan. |
+| Parallel Executions | Number of times that a script included the _\@parallel_ specification and that [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] was able to generate and use a parallel query plan. |
 | Streaming Executions | Number of times that the streaming feature has been invoked. |
 | SQL CC Executions | Number of external scripts run where the call was instantiated remotely and SQL Server was used as the compute context. |
 | Implied Auth. Logins | Number of times that an ODBC loopback call was made using implied authentication; that is, the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] executed the call on behalf of the user sending the script request. |

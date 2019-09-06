@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-This function converts an **int** ASCII code to a character value.
+Returns the single-byte character with the specified integer code, as defined by the character set and encoding of the default collation of the current database.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,10 +44,10 @@ CHAR ( integer_expression )
   
 ## Arguments  
 *integer_expression*  
-An integer from 0 through 255. `CHAR` returns a `NULL` value for integer expressions outside this range, or when then integer expresses only the first byte of a double-byte character.
+An integer from 0 through 255. `CHAR` returns a `NULL` value for integer expressions outside this range, or when no one character matches exactly the integer by both codepoint value and encoded value. Many common character sets share ASCII as a sub-set and will return the same character for integer values in the range 0 through 127.
 
 > [!NOTE]
-> Some non-European character sets, such as [Shift Japanese Industrial Standards](https://www.wikipedia.org/wiki/Shift_JIS), include characters than can be represented in a single-byte coding scheme, but require multibyte encoding. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
+> Some character sets, such as [Unicode](https://en.wikipedia.org/wiki/Unicode#Mapping_and_encodings) and [Shift Japanese Industrial Standards](https://www.wikipedia.org/wiki/Shift_JIS), have multibyte encodings than can represent some characters in a single-byte, but require as many as four for others. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
   
 ## Return types
 **char(1)**
@@ -177,8 +177,8 @@ single_byte_representing_complete_character single_byte_representing_complete_ch
 ｼ                                           ｼ                                         
 ```
 
-### F. Using CHAR to return multibyte characters  
-This example uses the an integer and hex values in the valid range for ASCII. However, the CHAR function returns NULL because the parameter represents only the first byte of a multibyte character.
+### F. CHAR inability to return multibyte characters
+This example uses the an integer and hex values in the valid range for ASCII. However, the CHAR function returns NULL because the parameter matches the first byte of a number of multibyte characters in the collation, but no single complete character.
   
 ```sql
 SELECT CHAR(129) AS first_byte_of_double_byte_character, 
@@ -194,6 +194,46 @@ first_byte_of_double_byte_character first_byte_of_double_byte_character
 NULL                                NULL                                         
 ```
   
+### G. Using CONVERT instead of CHAR to return legacy multibyte characters
+This example relies on the default codepage of the current database to map a two-byte legacy codepoint to a single character.
+
+```sql
+CREATE DATABASE [multibyte-char-context]
+  COLLATE Japanese_CI_AI
+GO
+USE [multibyte-char-context]
+GO
+SELECT NCHAR(0x266a) AS [eighth-note]
+  , CONVERT(CHAR(2), 0x81f4) AS [context-dependent-convert]
+  , CAST(0x81f4 AS CHAR(2)) AS [context-dependent-cast]
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+eighth-note context-dependent-convert context-dependent-cast
+----------- ------------------------- ----------------------
+♪           ♪                         ♪
+```
+
+### H. Using NCHAR instead of CHAR to return UTF-8 characters
+This example highlights the distinction between Unicode codepoints and Unicode encodings.
+Unlike classic character sets, UTF-8 bytes representing a given character are not synonymous with that character's codepoint.
+The character set associated with UTF-8 is Unicode, thus UTF-8 codepoints have the same identity as other Unicode encodings such as that used by NCHAR and NVARCHAR, differing only in encoded binary representation.
+
+```sql
+SELECT NCHAR(0x266a) AS [beamed-eighth-note]
+  , CONVERT(VARCHAR(4), NCHAR(0x266b) COLLATE Latin1_General_100_CI_AI_UTF8) AS [utf-8 beamed-eight-notes]
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+beamed-eighth-note utf-8 beamed-eight-notes
+------------------ ------------------------
+♫                  ♫
+```
+
 ## See also
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  

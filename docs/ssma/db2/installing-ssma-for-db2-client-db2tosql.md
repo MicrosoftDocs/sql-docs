@@ -14,7 +14,7 @@ ms.author: "Shamikg"
 
 The SSMA client consists of the program files that perform the following tasks:  
   
-- Connect to an DB2 database.  
+- Connect to a DB2 database.  
   
 - Connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -46,7 +46,7 @@ Before you install SSMA, make sure that the computer meets the following require
   
 ## Microsoft OLEDB Provider for DB2  
 
-To download the OLEDB provider for DB2 version 5.0, please go to [OLEDB provider for DB2 version 6.0](https://www.microsoft.com/download/details.aspx?id=55992). 
+To download the OLEDB provider for DB2 version 5.0, go to [OLEDB provider for DB2 version 6.0](https://www.microsoft.com/download/details.aspx?id=55992). 
   
 SSMA is a Web download. To download the latest version, see the [SQL Server Migration Assistant download page](https://aka.ms/ssmafordb2).  
   
@@ -58,7 +58,7 @@ To install the SSMA client:
   
 2. On the **Welcome** page, select **Next**.  
   
-   If you do not have the prerequisites installed, a message will appear that indicates that you must first install required components. Make sure that you have installed all prerequisites, and then run the installation program again.  
+   If you don't have the prerequisites installed, a message will appear indicating that you must first install required components. Make sure that you've installed all prerequisites, and then run the installation program again.  
   
 3. Read the End User License Agreement. If you agree, select **I accept the terms in the license agreement**, and then select **Next**.  
   

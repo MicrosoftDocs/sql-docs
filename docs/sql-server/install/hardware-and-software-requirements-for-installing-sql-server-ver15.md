@@ -48,50 +48,45 @@ ms.author: mathoma
 # Hardware and Software Requirements for Installing SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The article lists the minimum hardware and software requirements to install and run [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] on the Windows operating system. 
+The article lists the minimum hardware and software requirements to install and run [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] on the Windows operating system.
 
 [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] introduced support for [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] on Linux. For information, see [Hardware and Software Requirements for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux](../../linux/sql-server-linux-setup.md#system). 
 
-  
 **Try it out:**  
   
--   Download SQL Server from the [**Evaluation Center**.](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 
+-   Download SQL Server from the [**Evaluation Center**.](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-rc) 
   
+<!-- 
 -   Spin up a Virtual Machine with [**SQL Server 2017**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) already installed.  
+-->
   
 **The following considerations apply to all editions:**  
   
--   We recommend that you run [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on computers with the NTFS or ReFS file formats. Installing [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on a computer with FAT32 file system is supported but not recommended as it is less secure than the NTFS or ReFS file systems.  
-  
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will block installations on read-only, mapped, or compressed drives.  
   
--   Installation fails if you launch setup through Remote Desktop Connection with the media on a local resource in the RDC client. To install remotely the media must be on a network share or local to the physical or virtual machine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media may be either on a network share, a mapped drive, a local drive, or presented as an ISO to a virtual machine.  
-  
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] installation requires installing  .NET 4.6.1 as a prerequisite. .NET 4.6.1 will be automatically installed by setup when [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is selected.  
-  
+-   Installation fails if you launch setup through Remote Desktop Connection with the media on a local resource in the RDC client. To install remotely the media must be on a network share or local to the physical or virtual machine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media may be either on a network share, a mapped drive, a local drive, or presented as an ISO to a virtual machine.
+-   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup support files  
-  
--   For minimum version requirements to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on [!INCLUDE[win8srv](../../includes/win8srv-md.md)] or [!INCLUDE[win8](../../includes/win8-md.md)], see [Installing SQL Server on Windows Server 2012 or Windows 8](https://support.microsoft.com/kb/2681562).  
-  
+
 ##  <a name="hwswr"></a> Hardware and Software Requirements  
 The following requirements apply to all installations:  
   
 |Component|Requirement|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 and later require [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 for the Database Engine, Master Data Services, or  Replication. SQL Server setup automatically installs [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. You can also manually install [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] from [Microsoft .NET Framework 4.6 (Web Installer) for Windows](https://support.microsoft.com/kb/3045560).<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] requires .NET Framework 4.6.2. Available from [Download Center](https://www.microsoft.com/download/details.aspx?id=53344)<br/><br/> For more information, recommendations, and guidance about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 see [.NET Framework Deployment Guide for Developers](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)], and [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] require [KB2919355](https://support.microsoft.com/kb/2919355) before installing [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
-|Network Software|Supported operating systems for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, TCP/IP, and VIA.<br/><br/> **Note:** VIA protocol is not supported on failover clusters. Clients or applications running on the same node of the failover cluster as the SQL Server instance, can use Shared Memory protocol to connect to SQL Server using its local pipe address. However this type of connection is not cluster-aware and will fail after an instance failover. It is therefore not recommended and should only be used in very specific scenarios.<br/><br/> **Important:** The VIA protocol is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> For more information about Network Protocols and Network Libraries, see [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
+|Operating system|Windows 10 TH1 1507 or greater<br/><br>Windows Server 2016 or greater<br/><br/>
+|.NET Framework|Minimum operating systems includes minimum .NET framework.|  
+|Network Software|Supported operating systems for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, and TCP/IP.<br/><br/> |  
 |Hard Disk|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requires a minimum of 6 GB of available hard-disk space.<br/><br/> Disk space requirements will vary with the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] components you install. For more information, see [Hard Disk Space Requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) later in this article. For information on supported storage types for data files, see [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
-|Drive|A DVD drive, as appropriate, is required for installation from disc.|  
 |Monitor|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requires Super-VGA (800x600) or higher resolution monitor.|  
 |Internet|Internet functionality requires Internet access (fees may apply).|  
-  
+
 > [!NOTE]
 > Running [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on a virtual machine will be slower than running natively because of the overhead of virtualization.  
-  
+
 > [!IMPORTANT]
 > There are additional hardware and software requirements for the PolyBase feature. For more information, see [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
   
@@ -108,63 +103,21 @@ The following requirements apply to all installations:
 > Installation of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] is supported on x64 processors only. It is no longer supported on x86 processors.  
   
  \* The minimum memory required for installing the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] component in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) is 2 GB of RAM, which is different from the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] minimum memory requirement. For information about installing DQS, see [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
-  
- **WOW64 Support:**  
-  
- WOW64 (Windows 32-bit on Windows 64-bit) is a feature of 64-bit editions of Windows that enables 32-bit applications to run natively in 32-bit mode. Applications function in 32-bit mode, even though the underlying operating system is a 64-bit operating system. WOW64 is not supported for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] installations. However, Management Tools are supported in WOW64.  
-
 
 **Server Core Support:**
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-
 Installing SQL Server 2019 on Server Core mode is supported by the following editions of Windows Server:
 
-|                              |                                |
-| :------------------------    | :------------------------------|
-| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
-| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
-   | &nbsp; | &nbsp; |
-
-::: moniker-end
-
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
-
-Installing SQL Server 2016 and 2017 on Server Core mode is supported by the following editions of Windows Server:
-
-|                              |                                |
-| :------------------------    | :------------------------------|
-| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
-| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
-| Windows Server 2012 R2 Standard | Windows Server 2012 R2  Datacenter|
-| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
-| Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
-| Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
-   | &nbsp; | &nbsp; |
-::: moniker-end
+|                              |
+| :------------------------    |
+| Windows Server 2019 Core | 
+| Windows Server 2016 Core |
+| &nbsp; | 
 
 For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
 
-  
-### Features Supported on 32-bit Client Operating Systems  
- Windows client operating systems, for example Windows 10 and Windows 8.1 are available as 32-bit or 64-bit architectures.   All SQL Server features are supported on 64-bit client operating systems. On supported 32-bit client operating systems Microsoft supports the following features:  
-  
--   Data Quality Client
--   Client Tools Connectivity
--   Integration Services
--   Client Tools Backwards Compatibility
--   Client Tools SDK
--   Documentation Components
--   Distributed Replay Components
--   Distributed Replay Controller
--   Distributed Replay Client
--   SQL Client Connectivity SDK
-  
- [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] and later server operating systems are not available as 32-bit architectures. All supported server operating systems are only available as 64-bit. All features are supported on 64-bit server operating systems.  
-  
 ###  <a name="TOP_Principal"></a> OS Compatibility   
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
 The following table shows which editions of SQL Server 2019 are compatible with which versions of Windows:  
   
 
@@ -177,47 +130,8 @@ The following table shows which editions of SQL Server 2019 are compatible with 
 | Windows Server 2016 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2016 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | &nbsp; | &nbsp; |
-::: moniker-end
-
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
-
-The following table shows which editions of SQL Server 2016 and 2017 are compatible with which versions of Windows:  
-  
-| SQL Server edition:               | Enterprise | Developer | Standard | Web | Express |  
-| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
-| Windows Server 2019 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2019 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2019 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2016 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2016 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2016 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2012 R2 Datacenter |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2012 R2 Standard   |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2012 R2 Essentials |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2012 R2 Foundation |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2012 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2012 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2012 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2012 Foundation    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows 10 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   |
-| Windows 10 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
-| Windows 10 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
-| Windows 10 Home                   |    No      |    Yes    |    Yes   | No  |   Yes   |
-| Windows 8.1 Enterprise            |    No      |    Yes    |    Yes   | No  |   Yes   |
-| Windows 8.1 Pro                   |    No      |    Yes    |    Yes   | No  |   Yes   |
-| Windows 8.1 Enterprise            |    No      |    Yes    |    Yes   | No  |   Yes   |
-| Windows 8 Pro                     |    No      |    Yes    |    Yes   | No  |   Yes   |
-| Windows 8                         |    No      |    Yes    |    Yes   | No  |   Yes   | 
-
-> [!NOTE]  
-> Exceptions to the operating system support noted in this section are the following Business Intelligence features for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and earlier, which can be installed on Windows Server 2008 R2 SP1 or later:  
->  
->-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
->-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint products  
-::: moniker-end
 
 
-  
 ##  <a name="CrossLanguageSupport"></a> Cross-Language Support  
  For more information about cross-language support and considerations for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in localized languages, see [Local Language Versions in SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md).  
   

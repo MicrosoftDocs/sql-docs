@@ -20,7 +20,7 @@ ms.author: "sstein"
 ---
 # sp_add_jobstep (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Adds a step (operation) to a SQL Agent job.  
   

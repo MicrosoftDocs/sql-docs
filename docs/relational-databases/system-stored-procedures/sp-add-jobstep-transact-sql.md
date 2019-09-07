@@ -20,11 +20,14 @@ ms.author: "sstein"
 ---
 # sp_add_jobstep (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Adds a step (operation) to a job.  
+  Adds a step (operation) to a SQL Agent job.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+  > [!IMPORTANT]  
+  > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent job types are supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
   
 ## Syntax  
   

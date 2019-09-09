@@ -22,7 +22,7 @@ If the application does not request encryption, the [!INCLUDE[jdbcNoVersion](../
 > [!NOTE]  
 > Make sure the value passed to **serverName** exactly matches the Common Name (CN) or DNS name in the Subject Alternate Name (SAN) in the server certificate for an SSL connection to succeed.  
 >
-> For more information about how to configure SSL for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the Encrypting Connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] topic in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+> For more information about how to configure SSL for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Enable Encrypted Connections to the Database Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).  
   
 ## Remarks
 

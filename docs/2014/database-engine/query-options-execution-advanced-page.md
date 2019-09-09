@@ -16,7 +16,7 @@ ms.date: "09/03/2019"
 
 # Query Options Execution (Advanced Page)
 
-  A variety of options are available using the**SET** statement. Use this page to specify a**SET** option to run Microsoft SQL Server queries. For detailed information on each of these options, see SQL Server Books Online.
+  A variety of options are available using the **SET** statement. Use this page to specify a **SET** option to run Microsoft SQL Server queries. For detailed information on each of these options, see SQL Server Books Online.
   
 **SET NOCOUNT**
 Doesn't return the count of the number of rows, as a message with the result set. This option is cleared by default.
@@ -74,7 +74,7 @@ Allows you to print the time at which the query execution completed either after
 
   * Host Guardian Service – an attestation protocol using Windows Host Guardian Service (HGS).
 
-For more information, see [Always Encrypted with secure enclaves](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) and [Secure Enclave Attestation](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation).
+For more information, see [Always Encrypted with secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) and [Secure Enclave Attestation](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation).
 
 **Reset to Default**
 Resets all values on this page to the original default values.

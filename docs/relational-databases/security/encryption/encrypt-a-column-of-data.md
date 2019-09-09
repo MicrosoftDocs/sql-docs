@@ -71,7 +71,7 @@ Always back up your database master key. For more information on database master
   
     -- Create a column in which to store the encrypted data.  
     ALTER TABLE Sales.CreditCard   
-        ADD CardNumber_Encrypted varbinary(128);   
+        ADD CardNumber_Encrypted varbinary(160);   
     GO  
   
     -- Open the symmetric key with which to encrypt the data.  

@@ -38,7 +38,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 #### To delete an article from a snapshot or transactional publication  
   
-1.  Execute [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) to delete an article, specified by **@article**, from a publication, specified by **@publication**. Specify a value of **1** for **@force_invalidate_snapshot**.  
+1.  Execute [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) to delete an article, specified by **\@article**, from a publication, specified by **\@publication**. Specify a value of **1** for **\@force_invalidate_snapshot**.  
   
 2.  (Optional) To remove the published object from the database entirely, execute the `DROP <objectname>` command at the Publisher on the publication database.  
 
@@ -46,12 +46,12 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 
 #### To delete an article from a merge publication  
   
-1.  Execute [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) to delete an article, specified by **@article**, from a publication, specified by **@publication**. If necessary, specify a value of **1** for **@force_invalidate_snapshot** and a value of **1** for **@force_reinit_subscription**.  
+1.  Execute [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) to delete an article, specified by **\@article**, from a publication, specified by **\@publication**. If necessary, specify a value of **1** for **\@force_invalidate_snapshot** and a value of **1** for **\@force_reinit_subscription**.  
   
 2.  (Optional) To remove the published object from the database entirely, execute the `DROP <objectname>` command at the Publisher on the publication database.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
- The following example deletes an article from a transactional publication. Because this change invalidates the existing snapshot, a value of **1** is specified for the **@force_invalidate_snapshot** parameter.  
+ The following example deletes an article from a transactional publication. Because this change invalidates the existing snapshot, a value of **1** is specified for the **\@force_invalidate_snapshot** parameter.  
   
 ```  
 DECLARE @publication AS sysname;  
@@ -68,7 +68,7 @@ EXEC sp_droparticle
 GO  
 ```  
   
- The following example deletes two articles from a merge publication. Because these changes invalidate the existing snapshot, a value of **1** is specified for the **@force_invalidate_snapshot** parameter.  
+ The following example deletes two articles from a merge publication. Because these changes invalidate the existing snapshot, a value of **1** is specified for the **\@force_invalidate_snapshot** parameter.  
   
 ```  
 DECLARE @publication AS sysname;  

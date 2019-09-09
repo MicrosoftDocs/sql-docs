@@ -302,6 +302,10 @@ At this point both instances of SQL Server are configured to run with the databa
    sudo yum install mssql-server-ha
    ```
 
+## Configure fencing agent
+
+A STONITH device provides a fencing agent. [Setting up Pacemaker on Red Hat Enterprise Linux in Azure](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices) provides an example of how to create a STONITH device for this cluster in Azure. Modify the instructions for your environment.
+
 ## Create the cluster 
 
 1. On one of the nodes, create the cluster.

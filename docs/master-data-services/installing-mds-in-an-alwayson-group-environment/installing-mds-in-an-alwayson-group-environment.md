@@ -188,7 +188,7 @@ For more detailed information about WSFC, see [Failover Clusters](https://techne
 
 This section covers the following tasks.
 
-1. [Enable SQL Server Always On Availability Group](#enable-sql-server-always-on-availability-group-on-every-sql-server-instance).
+1. [Enable SQL Server Always On Availability Group](#enable-sql-server-always-on-availability-groups-on-every-sql-server-instance).
 
 2. [Create an Availability Group](#create-an-availability-group).
 

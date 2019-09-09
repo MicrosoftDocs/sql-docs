@@ -229,9 +229,9 @@ The following table lists all Windows collations supported in [!INCLUDE[ssCurren
 |Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Lithuanian_Classic|Lithuanian_Classic|
 |Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Macedonian|Macedonian|
 
-<sup>1</sup>Unicode-only Windows collations can only be applied to column-level or expression-level data. They cannot be used as server or database collations.
+<sup>1</sup> Unicode-only Windows collations can only be applied to column-level or expression-level data. They cannot be used as server or database collations.
 
-<sup>2</sup>Like the Chinese (Taiwan) collation, Chinese (Macao) uses the rules of Simplified Chinese; unlike Chinese (Taiwan), it uses code page 950.
+<sup>2</sup> Like the Chinese (Taiwan) collation, Chinese (Macao) uses the rules of Simplified Chinese; unlike Chinese (Taiwan), it uses code page 950.
 
 ## See Also
 

@@ -37,9 +37,6 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 # Editions and supported features of SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-> [!div class="nextstepaction"]
-> [Please share your feedback about the SQL Docs hub page!](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
-
 This topic provides details of features supported by the various editions of SQL Server 2017. 
 
 For information about older versions, see:
@@ -160,7 +157,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Hot add memory and CPU|Yes|No|No|No|No|
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
-|Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|
+|Hybrid backup to Azure (backup to URL)|Yes|Yes|No|No|No|
 |Read-scale availability group|Yes|Yes|No|No|No|No|
 |Minimum replica commit availability group|Yes|Yes|Yes|No|No|No|
   

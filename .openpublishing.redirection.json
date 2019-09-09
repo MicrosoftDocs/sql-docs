@@ -1,13 +1,18 @@
 {
     "redirections": [
-         {
-            "source_path": "docs/big-data-cluster/reference-azdata-sql.md",
-            "redirect_url": "/sql/big-data-cluster/reference-azdata",
-            "redirect_document_id": false
-        },  
         {
-            "source_path": "docs/big-data-cluster/reference-azdata-notebook.md",
-            "redirect_url": "/sql/big-data-cluster/reference-azdata",
+            "source_path": "docs/big-data-cluster/deploy-install-azdata-installer.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/system-catalog-views/sys-sql-feature-restrictions.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/feature-restrictions.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
             "redirect_document_id": false
         },
         {
@@ -513,6 +518,26 @@
         {
             "source_path": "docs/advanced-analytics/package-management/installed-package-information.md",
             "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/tutorial-python-clustering-model.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/python-clustering-model",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/tutorial-python-clustering-model-prepare-data.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/python-clustering-model-prepare-data",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/tutorial-python-clustering-model-build.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/python-clustering-model-build",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/tutorial-python-clustering-model-deploy.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/python-clustering-model-deploy",
             "redirect_document_id": true
         },
         {
@@ -1557,7 +1582,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/create-a-local-package-repository-using-minicran.md",
-            "redirect_url": "/sql/advanced-analytics/r/create-a-local-package-repository-using-minicran",
+            "redirect_url": "/sql/advanced-analytics/package-management/create-a-local-package-repository-using-minicran",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/create-a-local-package-repository-using-minicran.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/create-a-local-package-repository-using-minicran",
             "redirect_document_id": false
         },
         {
@@ -1827,7 +1857,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/packages-installed-in-user-libraries.md",
-            "redirect_url": "/sql/advanced-analytics/r/packages-installed-in-user-libraries",
+            "redirect_url": "/sql/advanced-analytics/package-management/tips-for-using-r-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/packages-installed-in-user-libraries.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/tips-for-using-r-packages",
             "redirect_document_id": false
         },
         {

@@ -5,7 +5,7 @@ description: Reference article for azdata app template commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,9 +13,9 @@ ms.technology: big-data-cluster
 
 # azdata app template
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
 
-The following article provides reference for the **app template** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
+This article is a reference article for **azdata**. 
 
 ## Commands
 |     |     |
@@ -25,8 +25,7 @@ The following article provides reference for the **app template** commands in th
 ## azdata app template list
 Fetch supported templates under the specified [URL] github repository.
 ```bash
-azdata app template list [--url -u] 
-                         
+azdata app template list 
 ```
 ### Examples
 Fetch all templates under the default template repository location.
@@ -37,9 +36,6 @@ Fetch all templates under a different repository location.
 ```bash
 azdata app template list --url https://github.com/diffrent/templates.git
 ```
-### Optional Parameters
-#### `--url -u`
-Specify a different template repository location. Default: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -54,9 +50,7 @@ Increase logging verbosity. Use --debug for full debug logs.
 ## azdata app template pull
 Download supported templates under the specified [URL] github repository.
 ```bash
-azdata app template pull [--name -n] 
-                         [--url -u]  
-                         [--destination -d]
+azdata app template pull 
 ```
 ### Examples
 Download all templates under the default template repository location.
@@ -69,16 +63,8 @@ azdata app template list --url https://github.com/diffrent/templates.git
 ```
 Download individual template by name.
 ```bash
-azdata app template pull --name ssis            
+azdata app template pull --name ssis
 ```
-### Optional Parameters
-#### `--name -n`
-Template name. For a full list off supported template namesrun `azdata app template list`
-#### `--url -u`
-Specify a different template repository location. Default: https://github.com/Microsoft/SQLBDC-AppDeploy.git
-#### `--destination -d`
-Where to place the application skeleton template.
-`./templates`
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -93,4 +79,6 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](deploy-install-azdata.md).
+- For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
+
+- For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

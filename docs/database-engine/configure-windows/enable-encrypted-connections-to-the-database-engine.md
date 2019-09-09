@@ -1,7 +1,7 @@
 ---
 title: "Enable Encrypted Connections to the Database Engine | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/09/2019"
+ms.date: "08/29/2019"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
@@ -11,12 +11,15 @@ helpviewer_keywords:
   - "connections [SQL Server], encrypted"
   - "SSL [SQL Server]"
   - "Secure Sockets Layer (SSL)"
+  - "TLS [SQL Server]"
+  - "Transport Layer Security (TLS)"
   - "encryption [SQL Server], connections"
   - "cryptography [SQL Server], connections"
   - "certificates [SQL Server], installing"
   - "requesting encrypted connections"
   - "installing certificates"
   - "security [SQL Server], encryption"
+  - "TLS certificates"
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
@@ -25,7 +28,24 @@ ms.author: vanto
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic describes how to enable encrypted connections for an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] by specifying a certificate for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. The server computer must have a certificate provisioned, and the client machine must be set up to trust the certificate's root authority. Provisioning is the process of installing a certificate by importing it into Windows.  
-  
+
+## Transport Layer Security (TLS)
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can use Transport Layer Security (TLS) to encrypt data that is transmitted across a network between an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a client application. The TLS encryption is performed within the protocol layer and is available to all supported [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients.
+TLS can be used for server validation when a client connection requests encryption. If the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on a computer that has been assigned a certificate from a public certification authority, identity of the computer and the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is vouched for by the chain of certificates that lead to the trusted root authority. Such server validation requires that the computer on which the client application is running be configured to trust the root authority of the certificate that is used by the server. Encryption with a self-signed certificate is possible and is described in the following section, but a self-signed certificate offers only limited protection.
+The level of encryption used by TLS, 40-bit or 128-bit, depends on the version of the Microsoft Windows operating system that is running on the application and database computers.
+
+> [!WARNING]
+> Usage of 40-bit encryption level is considered unsafe.
+
+> [!WARNING]
+> TLS connections that are encrypted by using a self-signed certificate do not provide strong security. They are susceptible to man-in-the-middle attacks. You should not rely on TLS using self-signed certificates in a production environment or on servers that are connected to the Internet.
+
+Enabling TLS encryption increases the security of data transmitted across networks between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and applications. However, when all traffic between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a client application is encrypted using TLS, the following additional processing is required:
+-  An extra network roundtrip is required at connect time.
+-  Packets sent from the application to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be encrypted by the client TLS stack and decrypted by the server TLS stack.
+-  Packets sent from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the application must be encrypted by the server TLS stack and decrypted by the client TLS stack.
+
+## Remarks
  The certificate must be issued for **Server Authentication**. The name of the certificate must be the fully qualified domain name (FQDN) of the computer.  
   
  Certificates are stored locally for the users on the computer. To install a certificate for use by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must be running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager with an account that has local administrator privileges.
@@ -33,28 +53,37 @@ ms.author: vanto
  The client must be able to verify the ownership of the certificate used by the server. If the client has the public key certificate of the certification authority that signed the server certificate, no further configuration is necessary. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows includes the public key certificates of many certification authorities. If the server certificate was signed by a public or private certification authority for which the client does not have the public key certificate, you must install the public key certificate of the certification authority that signed the server certificate.  
   
 > [!NOTE]  
-> To use encryption with a failover cluster, you must install the server certificate with the fully qualified DNS name of the virtual server on all nodes in the failover cluster. For example, if you have a two-node cluster, with nodes named test1.*\<your company>*.com and test2.*\<your company>*.com, and you have a virtual server named virtsql, you need to install a certificate for virtsql.*\<your company>*.com on both nodes. You can set the value of the **ForceEncryption** option to **Yes**.
+> To use encryption with a failover cluster, you must install the server certificate with the fully qualified DNS name of the virtual server on all nodes in the failover cluster. For example, if you have a two-node cluster, with nodes named ***test1.\*\<your company>\*.com*** and ***test2.\*\<your company>\*.com***, and you have a virtual server named ***virtsql***, you need to install a certificate for ***virtsql.\*\<your company>\*.com*** on both nodes. You can set the value of the **ForceEncryption** option on the **Protocols for virtsql** property box of **SQL Server Network Configuration** to **Yes**.
 
 > [!NOTE]
-> When creating encrypted connections for an Azure Search indexer to SQL Server on an Azure VM, see [Configure a connection from an Azure Search indexer to SQL Server on an Azure VM](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
+> When creating encrypted connections for an Azure Search indexer to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on an Azure VM, see [Configure a connection from an Azure Search indexer to SQL Server on an Azure VM](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
 
 ## Certificate Requirements
-
-For SQL Server to load an SSL certificate, the certificate must meet the following conditions:
+For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to load a TLS certificate, the certificate must meet the following conditions:
 
 - The certificate must be in either the local computer certificate store or the current user certificate store.
-- The SQL Server Service Account must have the necessary permission to access the SSL certificate.
+
+- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Account must have the necessary permission to access the TLS certificate.
+
 - The current system time must be after the **Valid from** property of the certificate and before the Valid to property of the certificate.
+
 - The certificate must be meant for server authentication. This requires the **Enhanced Key Usage** property of the certificate to specify **Server Authentication (1.3.6.1.5.5.7.3.1)**.
+
 - The certificate must be created by using the **KeySpec** option of **AT_KEYEXCHANGE**. Usually, the certificate's key usage property (**KEY_USAGE**) will also include key encipherment (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).
-- The **Subject** property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer. If SQL Server is running on a failover cluster, the common name must match the host name or FQDN of the virtual server and the certificates must be provisioned on all nodes in the failover cluster.
-- SQL Server 2008 R2 and the SQL Server 2008 R2 Native Client support wildcard certificates. Other clients might not support wildcard certificates. For more information, see the client documentation and [KB258858](http://support.microsoft.com/kb/258858).
 
-## To provision (install) a certificate on the server  
+- The **Subject** property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  is running on a failover cluster, the common name must match the host name or FQDN of the virtual server and the certificates must be provisioned on all nodes in the failover cluster.
 
-> [!NOTE]
-> Refer to [Certificate Management (SQL Server Configuration Manager)](manage-certificates.md) to add a certificate on a single server.
-  
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and the [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) support wildcard certificates. SNAC has since been deprecated and replaced with the [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) and [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Other clients might not support wildcard certificates. For more information, see the client documentation and [KB 258858](http://support.microsoft.com/kb/258858).       
+  Wildcard certificate cannot be selected by using the SQL Server Configuration Manager. To use a wildcard certificate, you must edit the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` registry key, and enter the thumbprint of the certificate, without spaces, to the **Certificate** value.  
+
+  > [!WARNING]  
+  > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
+
+## To provision (install) a certificate on a single server  
+With [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], certificate management is integrated into the SQL Server Configuration Manager. SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] can be used with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Refer to [Certificate Management (SQL Server Configuration Manager)](../../database-engine/configure-windows/manage-certificates.md) to add a certificate on a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+
+If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], and SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] is not available, follow these steps:
+
 1. On the **Start** menu, click **Run**, and in the **Open** box, type **MMC** and click **OK**.  
   
 2. In the MMC console, on the **File** menu, click **Add/Remove Snap-in**.  
@@ -71,14 +100,14 @@ For SQL Server to load an SSL certificate, the certificate must meet the followi
   
 8. In the **Certificates** snap-in, expand **Certificates**, expand **Personal**, and then right-click **Certificates**, point to **All Tasks**, and then click **Import**.  
 
-9. Right-click the imported certificate, point to **All Tasks**, and then click **Manage Private Keys**. In the **Security** dialog box, add read permission for the user account used by the SQL Server service account.  
+9. Right-click the imported certificate, point to **All Tasks**, and then click **Manage Private Keys**. In the **Security** dialog box, add read permission for the user account used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account.  
   
 10. Complete the **Certificate Import Wizard**, to add a certificate to the computer, and close the MMC console. For more information about adding a certificate to a computer, see your Windows documentation.  
   
 ## To provision (install) a certificate across multiple servers
+With [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], certificate management is integrated into the SQL Server Configuration Manager. SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] can be used with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Refer to [Certificate Management (SQL Server Configuration Manager)](../../database-engine/configure-windows/manage-certificates.md) to add a certificate in a Failover Cluster configuration or in an Availability Group configuration.
 
-> [!NOTE]
-> Refer to [Certificate Management (SQL Server Configuration Manager)](manage-certificates.md) to add a certificate across multiple servers.
+If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], and SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] is not available, follow the steps in section [To provision (install) a certificate on a single server](#to-provision-install-a-certificate-on-a-single-server) for every server.
 
 ## To export the server certificate  
   
@@ -99,20 +128,13 @@ For SQL Server to load an SSL certificate, the certificate must meet the followi
 > [!NOTE]
 > To ensure secure connectivity between client and server, configure the client to request encrypted connections. More details are explained [later in this article](#to-configure-the-client-to-request-encrypted-connections).
 
-### Wildcard Certificates
-
-Beginning with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client support wildcard certificates. Other clients might not support wildcard certificates. For more information, see the client documentation. Wildcard certificate cannot be selected by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. To use a wildcard certificate, you must edit the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` registry key, and enter the thumbprint of the certificate, without spaces, to the **Certificate** value.  
-
-> [!WARNING]  
-> [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
-
 ## To configure the client to request encrypted connections  
 
 1. Copy either the original certificate or the exported certificate file to the client computer.  
   
 2. On the client computer, use the **Certificates** snap-in to install either the root certificate or the exported certificate file.  
   
-3. In the console pane, right-click **SQL Server Native Client Configuration**, and then click **Properties**.  
+3. Using SQL Server Configuration Manager, right-click **SQL Server Native Client Configuration**, and then click **Properties**.  
   
 4. On the **Flags** page, in the **Force protocol encryption** box, click **Yes**.  
   
@@ -123,7 +145,11 @@ Beginning with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [
 2. In the **Connect to Server** dialog box, complete the connection information, and then click **Options**.  
   
 3. On the **Connection Properties** tab, click **Encrypt connection**.  
-  
-## See Also
 
-[TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)
+## Internet Protocol Security (IPSec)
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data can be encrypted during transmission by using IPSec. IPSec is provided by the client and server operating systems and requires no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuration. For information about IPSec, see your Windows or networking documentation.
+
+## See Also
+[TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
+[Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
+[SQL Server Encryption](../../relational-databases/security/encryption/sql-server-encryption.md)

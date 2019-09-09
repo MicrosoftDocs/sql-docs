@@ -133,9 +133,9 @@ The following table lists all Windows collations supported in [!INCLUDE[ssCurren
 |Amharic (Ethiopia)|Latin1_General_100_|Not available|
 |Armenian (Armenia)|Cyrillic_General_100_|Not available|
 |Assamese (India)|Assamese_100_ <sup>1</sup>|Not available|
+|Bangla (Bangladesh)|Bengali_100_<sup>1</sup>|Not available|
 |Bashkir (Russia)|Bashkir_100_|Not available|
 |Basque (Basque)|Latin1_General_100_|Not available|
-|Bengali (Bangladesh)|Bengali_100_<sup>1</sup>|Not available|
 |Bengali (India)|Bengali_100_<sup>1</sup>|Not available|
 |Bosnian (Bosnia and Herzegovina, Cyrillic)|Bosnian_Cyrillic_100_|Not available|
 |Bosnian (Bosnia and Herzegovina, Latin)|Bosnian_Latin_100_|Not available|
@@ -181,7 +181,7 @@ The following table lists all Windows collations supported in [!INCLUDE[ssCurren
 |Norwegian (Bokmål, Norway)|Norwegian_100_|Not available|
 |Norwegian (Nynorsk, Norway)|Norwegian_100_|Not available|
 |Occitan (France)|French_100_|Not available|
-|Oriya (India)|Indic_General_100_<sup>1</sup>|Not available|
+|Odia (India)|Indic_General_100_<sup>1</sup>|Not available|
 |Pashto (Afghanistan)|Pashto_100_<sup>1</sup>|Not available|
 |Persian (Iran)|Persian_100_|Not available|
 |Punjabi (India)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
@@ -220,7 +220,7 @@ The following table lists all Windows collations supported in [!INCLUDE[ssCurren
 |Welsh (United Kingdom)|Welsh_100_|Not available|
 |Wolof (Senegal)|French_100_|Not available|
 |Xhosa/isiXhosa (South Africa)|Latin1_General_100_|Not available|
-|Yakut (Russia)|Yakut_100_|Not available|
+|Sakha (Russia)|Yakut_100_|Not available|
 |Yi (PRC)|Latin1_General_100_|Not available|
 |Yoruba (Nigeria)|Latin1_General_100_|Not available|
 |Zulu/isiZulu (South Africa)|Latin1_General_100_|Not available|
@@ -231,7 +231,7 @@ The following table lists all Windows collations supported in [!INCLUDE[ssCurren
 
 <sup>1</sup>Unicode-only Windows collations can only be applied to column-level or expression-level data. They cannot be used as server or database collations.
 
-<sup>2</sup>Like the Chinese (Taiwan) collation, Chinese (Macau) uses the rules of Simplified Chinese; unlike Chinese (Taiwan), it uses code page 950.
+<sup>2</sup>Like the Chinese (Taiwan) collation, Chinese (Macao) uses the rules of Simplified Chinese; unlike Chinese (Taiwan), it uses code page 950.
 
 ## See Also
 

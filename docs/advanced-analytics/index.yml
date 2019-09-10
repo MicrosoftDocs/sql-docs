@@ -31,18 +31,20 @@ landingContent:
         links:
           - text: How to Execute R/Python in SQL Server with Machine Learning Services
             url: https://www.youtube.com/watch?v=ACejZ9optCQ
-          - text: linktext2
-            url: file2.md
 
   # Card (optional)
-  - title: Get started
+  - title: Get started with Python
     linkLists:
-      - linkListType: linkListType
+      - linkListType: quickstart
         links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
+          - text: Run a "Hello world" Python script on SQL Server
+            url: quickstart-python-run-using-t-sql.md
+          - text: Handle inputs and outputs
+            url: quickstart-python-inputs-and-outputs.md
+          - text: Python data structures in SQL Server
+            url: quickstart-python-data-structures.md
+          - text: Train and use your first model
+            url: quickstart-python-train-score-in-tsql.md
       - linkListType: linkListType
         links:
           - text: linktext1

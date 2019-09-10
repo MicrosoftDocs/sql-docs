@@ -1,76 +1,83 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
+
 title: SQL Server Machine Learning Services (Python and R) Documentation
+summary: Learn how to use SQL Server Machine Learning Services to run Python and R scripts on relational data. Tutorials, code examples, installation guides, and other documentation show you how.
+
 metadata:
-  title: SQL Server Machine Learning Services (Python, R) Documentation - Tutorials, quickstarts, and install guides | Microsoft Docs
-  titleSuffix: ''
+  title: SQL Server Machine Learning Services (Python, R) Documentation - Tutorials, quickstarts, and install guides
   description: Learn how to use SQL Server Machine Learning Services to run Python and R scripts on relational data. Tutorials, code examples, installation guides, and other documentation show you how.
   ms.prod: sql
   ms.technology: machine-learning
-  ms.topic: landing-page
+  ms.topic: landing-page 
   author: dphansen
   ms.author: davidph
-  ms.date: 08/01/2019
-abstract:
-  description: Learn how to use SQL Server Machine Learning Services for running Python and R scripts on relational data. Tutorials, code examples, installation guides, and other documentation show you how.
-  aside:
-    image:
-      alt: 
-      height: 124
-      src: media/index/video.png
-      width: 250  
-    title: Watch video (3:00)
-    href: https://www.youtube.com/watch?v=ACejZ9optCQ
-    width: 250  
+  ms.date: 09/10/2019 
 
-sections:   
-- title: 5-Minute Quickstarts
-  items:
-  - type: paragraph
-    text: 'After you <a href="install/sql-machine-learning-services-windows-install">install SQL Server Machine Learning Services</a>, you can get started using these quickstarts:'
-  - type: list
-    style: unordered
-    items:
-      - html: 'Run a "Hello world" script <a href="tutorials/quickstart-python-run-using-t-sql">in Python</a> or <a href="tutorials/quickstart-r-run-using-tsql">in R</a>'
-      - html: 'Create a predictive model <a href="tutorials/quickstart-python-train-score-in-tsql">in Python</a> or <a href="tutorials/quickstart-r-create-predictive-model">in R</a>'
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
-- title: Step-by-Step Tutorials
-  items:
-  - type: paragraph
-    text: 'Learn how to explore data, do feature engineering, train and deploy models, and make predictions:'
-  - type: list
-    style: unordered
-    items:
-    - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">Use Python in T-SQL</a>: Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)'
-    - html: '<a href="tutorials/sqldev-in-database-r-for-sql-developers">Use R in T-SQL</a>: Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)'
-    - html: '<a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">Use Machine Learning Services in R tools</a>: Explore data, create graphs and plots, perform feature engineering, train and deploy models, and make predictions (six-part series)'
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: About [service]
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is [service]?
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
 
-- title: Solutions
-  items:
-  - type: paragraph
-    text: 'Find <a href="tutorials/data-science-scenarios-and-solution-templates">templates to help you build machine learning solutions</a> on SQL Server.'
+  # Card (optional)
+  - title: Get started
+    linkLists:
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
 
-- title: Reference
-  items:
-  - type: paragraph
-    text: 'Use both open source packages and frameworks, and Microsoft Python and R packages in SQL Server Machine Learning Services:'
-  - type: list
-    style: unordered
-    items:
-    - html: '<a href="python/ref-py-revoscalepy">revoscalepy in Python</a>: Distributed and parallel processing for Python tasks: data transformation, exploration, visualization, statistical and predictive analytics'
-    - html: '<a href="python/ref-py-microsoftml">microsoftml in Python</a>: Functions based on Microsoft AI algorithms for Python'
-    - html: '<a href="r/ref-r-revoscaler">RevoScaleR in R</a>: Distributed and parallel processing for R tasks: data transformation, exploration, visualization, statistical and predictive analytics'
-    - html: '<a href="r/ref-r-microsoftml">MicrosoftML in R</a>: Functions based on Microsoft AI algorithms for R'
-    - html: '<a href="r/ref-r-olapr">olapR in R</a>: Imports data from OLAP cubes'
-    - html: '<a href="r/ref-r-sqlrutils">sqlRUtils in R</a>: Helper functions for encapsulating R and T-SQL'
+  # Card
+  - title: cardtitle3
+    linkLists:
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
 
-- title: Other Machine Learning Technologies
-  items:
-  - type: list
-    style: unordered
-    items:
-    - html: '<a href="/azure/sql-database/sql-database-machine-learning-services-overview">Azure SQL Database Machine Learning Services<a>'
-    - html: '<a href="/azure/machine-learning/">Azure Machine Learning</a>'
-    - html: '<a href="/dotnet/machine-learning/">ML.NET</a>'
-    - html: '<a href="/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning">What are the machine learning products at Microsoft?</a>'
-    
+  # Card
+  - title: cardtitle4
+    linkLists:
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md

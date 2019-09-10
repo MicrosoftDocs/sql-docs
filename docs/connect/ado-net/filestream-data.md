@@ -189,5 +189,4 @@ The complete documentation for FILESTREAM is located in the following sections i
 ## See also
 
 - [SQL Server Data Types and ADO.NET](sql-server-data-types.md)
-- [Code Access Security and ADO.NET](code-access-security.md)	*TODO*
 - [SQL Server Binary and Large-Value Data](sql-server-binary-and-large-value-data.md)

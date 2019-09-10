@@ -156,5 +156,3 @@ private static void OpenSqlConnection()
 ## See also
 
 - [SQL Server and ADO.NET](index.md)
-- [Connection Strings](connection-strings.md)	*TODO*
-- [Connecting to a Data Source](connecting-to-a-data-source.md)	*TODO*

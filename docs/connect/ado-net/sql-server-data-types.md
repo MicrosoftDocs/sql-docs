@@ -14,8 +14,6 @@ ms.author: genemi
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 SQL Server and the .NET are based on different type systems, which can result in potential data loss. To preserve data integrity, the Microsoft SqlClient Data Provider for SQL Server (<xref:Microsoft.Data.SqlClient>) provides typed accessor methods for working with SQL Server data. You can use the enumerations in the <xref:System.Data.SqlDbType> classes to specify <xref:Microsoft.Data.SqlClient.SqlParameter> data types.  
-
- For more information and a table that describes the data type mappings between SQL Server and .NET data types, see [SQL Server Data Type Mappings](sql-server-data-type-mappings.md).  *TODO*
   
  SQL Server 2008 introduces new data types that are designed to meet business needs to work with date and time, structured, semi-structured, and unstructured data. These are documented in SQL Server 2008 Books Online.  
   
@@ -58,7 +56,6 @@ SQL Server and the .NET are based on different type systems, which can result in
  Describes the `DbType` enumeration and all of its members.  
   
 ## See also
-- [SQL Server Data Type Mappings](sql-server-data-type-mappings.md)	*TODO*
-- [Configuring Parameters and Parameter Data Types](configuring-parameters-and-parameter-data-types.md)	*TODO*
+
 - [Table-Valued Parameters](table-valued-parameters.md)
 - [SQL Server Binary and Large-Value Data](sql-server-binary-and-large-value-data.md)

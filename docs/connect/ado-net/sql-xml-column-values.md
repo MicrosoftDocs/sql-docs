@@ -24,7 +24,7 @@ SQL Server supports the `xml` data type, and developers can retrieve result sets
 > [!NOTE]
 >  The **AdventureWorks** sample database is not installed by default when you install SQL Server. You can install it by running SQL Server Setup.  
   
- [!code-csharp[DataWorks SqlClient.GetXmlDataReader#1](../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetXmlDataReader/CS/source.cs#1)]	*TODO*
+ [!code-csharp[DataWorks SqlClient.GetXmlDataReader#1](../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetXmlDataReader/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetXmlDataReader#1](../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetXmlDataReader/VB/source.vb#1)]  
   
 ## See also

@@ -27,7 +27,7 @@ User-defined types (UDTs) allow a developer to extend the server's scalar type s
 1. [CLR User-Defined Types](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## Retrieving UDT Schemas Using GetSchema  
- The <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> method of <xref:Microsoft.Data.SqlClient.SqlConnection> returns database schema information in a <xref:System.Data.DataTable>. For more information, see [SQL Server Schema Collections](sql-server-schema-collections.md).  *TODO*
+ The <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> method of <xref:Microsoft.Data.SqlClient.SqlConnection> returns database schema information in a <xref:System.Data.DataTable>.
   
 ### GetSchemaTable Column Values for UDTs  
  The <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> method of a <xref:Microsoft.Data.SqlClient.SqlDataReader> returns a <xref:System.Data.DataTable> that describes column metadata. The following table describes the differences in the column metadata for large UDTs between SQL Server 2005 and SQL Server 2008.  
@@ -133,7 +133,4 @@ End Using
   
 ## See also
 
-- [Configuring Parameters and Parameter Data Types](configuring-parameters-and-parameter-data-types.md)	*TODO*
-- [Retrieving Database Schema Information](retrieving-database-schema-information.md)	*TODO*
-- [SQL Server Data Type Mappings](sql-server-data-type-mappings.md)	*TODO*
 - [SQL Server Binary and Large-Value Data](sql-server-binary-and-large-value-data.md)

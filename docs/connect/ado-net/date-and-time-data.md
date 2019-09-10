@@ -104,7 +104,7 @@ You can specify the data type of a <xref:Microsoft.Data.SqlClient.SqlParameter> 
 ### Creating Parameters  
  You can create a <xref:Microsoft.Data.SqlClient.SqlParameter> object by using its constructor, or by adding it to a <xref:Microsoft.Data.SqlClient.SqlCommand>.<xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> collection by calling the `Add` method of the <xref:Microsoft.Data.SqlClient.SqlParameterCollection>. The `Add` method will take as input either constructor arguments or an existing parameter object.  
   
- The next sections in this topic provide examples of how to specify date and time parameters. For additional examples of working with parameters, see [Configuring Parameters and Parameter Data Types](configuring-parameters-and-parameter-data-types.md) and [DataAdapter Parameters](dataadapter-parameters.md).  *TODO*
+ The next sections in this topic provide examples of how to specify date and time parameters.
   
 ### Date Example  
  The following code fragment demonstrates how to specify a `date` parameter.  
@@ -244,6 +244,4 @@ command.Parameters.AddWithValue( _
   
 ## See also
 
-- [SQL Server Data Type Mappings](sql-server-data-type-mappings.md)	*TODO*
-- [Configuring Parameters and Parameter Data Types](configuring-parameters-and-parameter-data-types.md)	*TODO*
 - [SQL Server Data Types and ADO.NET](sql-server-data-types.md)

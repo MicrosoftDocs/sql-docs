@@ -71,7 +71,7 @@ string connectionString = "Data Source=MSSQL1;" +
  MARS operations are not thread-safe.  
   
 ### Connection Pooling  
- MARS-enabled connections are pooled like any other connection. If an application opens two connections, one with MARS enabled and one with MARS disabled, the two connections are in separate pools. For more information, see [SQL Server Connection Pooling (ADO.NET)](sql-server-connection-pooling.md).  *TODO*
+ MARS-enabled connections are pooled like any other connection. If an application opens two connections, one with MARS enabled and one with MARS disabled, the two connections are in separate pools.
   
 ### SQL Server Batch Execution Environment  
  When a connection is opened, a default environment is defined. This environment is then copied into a logical MARS session.  

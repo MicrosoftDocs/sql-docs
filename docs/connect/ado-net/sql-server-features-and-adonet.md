@@ -49,5 +49,4 @@ The topics in this section discuss features in SQL Server that are targeted at d
 ## See also
 
 - [SQL Server Data Operations in ADO.NET](sql-server-data-operations.md)
-- [Retrieving and Modifying Data in ADO.NET](retrieving-and-modifying-data.md)	*TODO*
 - [SQL Server and ADO.NET](index.md)

@@ -74,7 +74,7 @@ The following steps show how to create a patch file that includes these settings
 1. Clone your targeted profile
 
     ```bash
-    azdata config init --source aks-dev-test --target custom-aks
+    azdata bdc config init --source aks-dev-test --target custom-aks
     ```
 
 1. Apply the patch file to your custom profile

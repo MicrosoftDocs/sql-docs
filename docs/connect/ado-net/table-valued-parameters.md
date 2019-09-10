@@ -278,4 +278,3 @@ insertCommand.ExecuteNonQuery()
 ## See also
 
 - [SQL Server Data Operations in ADO.NET](sql-server-data-operations.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

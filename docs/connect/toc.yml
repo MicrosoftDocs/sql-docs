@@ -182,8 +182,6 @@
       href: ../connect/ado-net/sqlclient-support-for-high-availability-disaster-recovery.md
     - name: SqlClient Support for LocalDB
       href: ../connect/ado-net/sqlclient-support-for-localdb.md
-  - name: LINQ to SQL
-    href: ../connect/ado-net/linq/index.md
 
 - name: JDBC
   items:

@@ -19,10 +19,10 @@ ms.author: genemi
 Before the introduction of Multiple Active Result Sets (MARS), developers had to use either multiple connections or server-side cursors to solve certain scenarios. In addition, when multiple connections were used in a transactional situation, bound connections (with **sp_getbindtoken** and **sp_bindsession**) were required. The following scenarios show how to use a MARS-enabled connection instead of multiple connections.  
   
 ## Using Multiple Commands with MARS  
- The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with two <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.  
+ The following Console application demonstrates how to use two <xref:Microsoft.Data.SqlClient.SqlDataReader> objects with two <xref:Microsoft.Data.SqlClient.SqlCommand> objects and a single <xref:Microsoft.Data.SqlClient.SqlConnection> object with MARS enabled.  
   
 ### Example  
- The example opens a single connection to the **AdventureWorks** database. Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created. As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.  
+ The example opens a single connection to the **AdventureWorks** database. Using a <xref:Microsoft.Data.SqlClient.SqlCommand> object, a <xref:Microsoft.Data.SqlClient.SqlDataReader> is created. As the reader is used, a second <xref:Microsoft.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:Microsoft.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.  
   
 > [!NOTE]
 >  The following example uses the sample **AdventureWorks** database included with SQL Server. The connection string provided in the sample code assumes that the database is installed and available on the local computer. Modify the connection string as necessary for your environment.  
@@ -33,7 +33,7 @@ Option Explicit On
   
 Imports System  
 Imports System.Data  
-Imports System.Data.SqlClient  
+Imports Microsoft.Data.SqlClient  
 Module Module1  
   Sub Main()  
     ' By default, MARS is disabled when connecting  
@@ -98,7 +98,7 @@ End Module
 ```csharp  
 using System;  
 using System.Data;  
-using System.Data.SqlClient;  
+using Microsoft.Data.SqlClient;  
   
 class Class1  
 {  
@@ -170,7 +170,7 @@ static void Main()
  MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation. This feature eliminates the need for an application to deal with connection-busy errors. In addition, MARS can replace the user of server-side cursors, which generally consume more resources. Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.  
   
 ### Example  
- The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled. The first command object retrieves a list of vendors whose credit rating is 5. The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor. Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>. A calculation is performed to determine what the new **OnOrderQty** should be. The third command object is then used to update the **ProductVendor** table with the new value. This entire process takes place within a single transaction, which is rolled back at the end.  
+ The following Console application demonstrates how to use two <xref:Microsoft.Data.SqlClient.SqlDataReader> objects with three <xref:Microsoft.Data.SqlClient.SqlCommand> objects and a single <xref:Microsoft.Data.SqlClient.SqlConnection> object with MARS enabled. The first command object retrieves a list of vendors whose credit rating is 5. The second command object uses the vendor ID provided from a <xref:Microsoft.Data.SqlClient.SqlDataReader> to load the second <xref:Microsoft.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor. Each product record is visited by the second <xref:Microsoft.Data.SqlClient.SqlDataReader>. A calculation is performed to determine what the new **OnOrderQty** should be. The third command object is then used to update the **ProductVendor** table with the new value. This entire process takes place within a single transaction, which is rolled back at the end.  
   
 > [!NOTE]
 >  The following example uses the sample **AdventureWorks** database included with SQL Server. The connection string provided in the sample code assumes that the database is installed and available on the local computer. Modify the connection string as necessary for your environment.  
@@ -181,7 +181,7 @@ Option Explicit On
   
 Imports System  
 Imports System.Data  
-Imports System.Data.SqlClient  
+Imports Microsoft.Data.SqlClient  
   
 Module Module1  
   
@@ -291,7 +291,7 @@ using System;
 using System.Collections.Generic;  
 using System.Text;  
 using System.Data;  
-using System.Data.SqlClient;  
+using Microsoft.Data.SqlClient;  
   
 class Program  
 {  
@@ -407,5 +407,4 @@ private static string GetConnectionString()
   
 ## See also
 
-- [Multiple Active Result Sets (MARS)](../../connect/ado-net/multiple-active-result-sets-mars.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Multiple Active Result Sets (MARS)](multiple-active-result-sets-mars.md)

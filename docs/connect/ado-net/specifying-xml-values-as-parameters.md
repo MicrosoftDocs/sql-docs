@@ -24,7 +24,7 @@ If a query requires a parameter whose value is an XML string, developers can sup
 > [!NOTE]
 >  The **AdventureWorks** sample database is not installed by default when you install SQL Server. You can install it by running SQL Server Setup.  
   
- The example prepares a <xref:System.Data.SqlClient.SqlCommand> object to insert a row in the new table. A saved file provides the XML data needed for the **SalesInfo** column.  
+ The example prepares a <xref:Microsoft.Data.SqlClient.SqlCommand> object to insert a row in the new table. A saved file provides the XML data needed for the **SalesInfo** column.  
   
  To create the file needed for the example to run, create a new text file in the same folder as your project. Name the file MyTestStoreData.xml. Open the file in Notepad and copy and paste the following text:  
   
@@ -45,7 +45,7 @@ If a query requires a parameter whose value is an XML string, developers can sup
   
 ```vb  
 Imports System  
-Imports System.Data.SqlClient  
+Imports Microsoft.Data.SqlClient  
 Imports System.Data.SqlTypes  
 Imports System.Xml  
   
@@ -104,7 +104,7 @@ End Module
 ```csharp  
 using System;  
 using System.Data;  
-using System.Data.SqlClient;  
+using Microsoft.Data.SqlClient;  
 using System.Xml;  
 using System.Data.SqlTypes;  
   
@@ -165,5 +165,4 @@ class Class1
 ## See also
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [XML Data in SQL Server](../../connect/ado-net/xml-data-in-sql-server.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [XML Data in SQL Server](xml-data-in-sql-server.md)

@@ -39,4 +39,4 @@ SQL Server provides functions to encrypt and decrypt data using a certificate, a
 - [Server and Database Roles in SQL Server](../../connect/ado-net/server-and-database-roles-in-sql-server.md)
 - [Ownership and User-Schema Separation in SQL Server](../../connect/ado-net/ownership-and-user-schema-separation-in-sql-server.md)
 - [Authorization and Permissions in SQL Server](../../connect/ado-net/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+*TODO*

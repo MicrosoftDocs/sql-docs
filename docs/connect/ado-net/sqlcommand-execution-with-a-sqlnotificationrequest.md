@@ -17,7 +17,7 @@ ms.author: genemi
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-A <xref:System.Data.SqlClient.SqlCommand> can be configured to generate a notification when data changes after it has been fetched from the server and the result set would be different if the query were executed again. This is useful for scenarios where you want to use custom notification queues on the server or when you do not want to maintain live objects.
+A <xref:Microsoft.Data.SqlClient.SqlCommand> can be configured to generate a notification when data changes after it has been fetched from the server and the result set would be different if the query were executed again. This is useful for scenarios where you want to use custom notification queues on the server or when you do not want to maintain live objects.
 
 ## Creating the Notification Request
 
@@ -28,13 +28,13 @@ When the command with the associated notification is executed, any changes to th
 How you poll the SQL Server queue and interpret the message is specific to your application. The application is responsible for polling the queue and reacting based on the contents of the message.
 
 > [!NOTE]
-> When using SQL Server notification requests with <xref:System.Data.SqlClient.SqlDependency>, create your own queue name instead of using the default service name.
+> When using SQL Server notification requests with <xref:Microsoft.Data.SqlClient.SqlDependency>, create your own queue name instead of using the default service name.
 
 There are no new client-side security elements for <xref:System.Data.Sql.SqlNotificationRequest>. This is primarily a server feature, and the server has created special privileges that users must have to request a notification.
 
 ### Example
 
-The following code fragment demonstrates how to create a <xref:System.Data.Sql.SqlNotificationRequest> and associate it with a <xref:System.Data.SqlClient.SqlCommand>.
+The following code fragment demonstrates how to create a <xref:System.Data.Sql.SqlNotificationRequest> and associate it with a <xref:Microsoft.Data.SqlClient.SqlCommand>.
 
 ```vb
 ' Assume connection is an open SqlConnection.
@@ -78,5 +78,4 @@ command.ExecuteReader();
 
 ## See also
 
-- [Query Notifications in SQL Server](../../connect/ado-net/query-notifications-in-sql-server.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Query Notifications in SQL Server](query-notifications-in-sql-server.md)

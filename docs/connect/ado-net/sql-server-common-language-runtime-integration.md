@@ -47,5 +47,4 @@ SQL Server 2005 introduced the integration of the common language runtime (CLR) 
   
 ## See also
 
-- [SQL Server and ADO.NET](../../connect/ado-net/index.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server and ADO.NET](index.md)

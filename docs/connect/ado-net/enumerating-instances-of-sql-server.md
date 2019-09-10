@@ -59,7 +59,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
  Listed servers may or may not have additional information such as `IsClustered` and version. This is dependent on how the list was obtained. Servers listed through the SQL Server browser service will have more details than those found through the Windows infrastructure, which will list only the name.  
   
 > [!NOTE]
->  Server enumeration is only available when running in full-trust. Assemblies running in a partially-trusted environment will not be able to use it, even if they have the <xref:System.Data.SqlClient.SqlClientPermission> Code Access Security (CAS) permission.  
+>  Server enumeration is only available when running in full-trust. Assemblies running in a partially-trusted environment will not be able to use it, even if they have the <xref:Microsoft.Data.SqlClient.SqlClientPermission> Code Access Security (CAS) permission.  
   
  SQL Server provides information for the <xref:System.Data.Sql.SqlDataSourceEnumerator> through the use of an external Windows service named SQL Browser. This service is enabled by default, but administrators may turn it off or disable it, making the server instance invisible to this class.  
   
@@ -129,5 +129,4 @@ class Program
   
 ## See also
 
-- [SQL Server and ADO.NET](../../connect/ado-net/index.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server and ADO.NET](index.md)

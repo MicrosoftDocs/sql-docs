@@ -25,7 +25,7 @@ Asynchronous operations in ADO.NET allow you to initiate time-consuming database
   
 ```vb  
 Imports System  
-Imports System.Data.SqlClient  
+Imports Microsoft.Data.SqlClient  
   
 Module Module1  
   
@@ -102,7 +102,7 @@ End Module
 ```csharp  
 using System;  
 using System.Data;  
-using System.Data.SqlClient;  
+using Microsoft.Data.SqlClient;  
   
 class Class1  
 {  
@@ -195,5 +195,4 @@ class Class1
   
 ## See also
 
-- [Asynchronous Operations](../../connect/ado-net/asynchronous-operations.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Asynchronous Operations](asynchronous-operations.md)

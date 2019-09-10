@@ -79,7 +79,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  A snapshot transaction always uses optimistic concurrency control, withholding any locks that would prevent other transactions from updating rows. If a snapshot transaction attempts to commit an update to a row that was changed after the transaction began, the transaction is rolled back, and an error is raised.  
   
 ## Working with Snapshot Isolation in ADO.NET  
- Snapshot isolation is supported in ADO.NET by the <xref:System.Data.SqlClient.SqlTransaction> class. If a database has been enabled for snapshot isolation but is not configured for READ_COMMITTED_SNAPSHOT ON, you must initiate a <xref:System.Data.SqlClient.SqlTransaction> using the **IsolationLevel.Snapshot** enumeration value when calling the <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> method. This code fragment assumes that connection is an open <xref:System.Data.SqlClient.SqlConnection> object.  
+ Snapshot isolation is supported in ADO.NET by the <xref:Microsoft.Data.SqlClient.SqlTransaction> class. If a database has been enabled for snapshot isolation but is not configured for READ_COMMITTED_SNAPSHOT ON, you must initiate a <xref:Microsoft.Data.SqlClient.SqlTransaction> using the **IsolationLevel.Snapshot** enumeration value when calling the <xref:Microsoft.Data.SqlClient.SqlConnection.BeginTransaction%2A> method. This code fragment assumes that connection is an open <xref:Microsoft.Data.SqlClient.SqlConnection> object.  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  
@@ -146,6 +146,5 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## See also
 
-- [SQL Server and ADO.NET](../../connect/ado-net/index.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server and ADO.NET](index.md)
 - [Transaction Locking and Row Versioning Guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

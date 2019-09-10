@@ -72,7 +72,7 @@ SQL Server supports two authentication modes, Windows authentication mode and mi
  SQL Server provides Windows password policy mechanisms for SQL Server logins when it is running on Windows Server 2003 or later versions. Password complexity policies are designed to deter brute force attacks by increasing the number of possible passwords. SQL Server can apply the same complexity and expiration policies used in Windows Server 2003 to passwords used inside SQL Server.  
   
 > [!IMPORTANT]
->  Concatenating connection strings from user input can leave you vulnerable to a connection string injection attack. Use the <xref:System.Data.SqlClient.SqlConnectionStringBuilder> to create syntactically valid connection strings at run time.  
+>  Concatenating connection strings from user input can leave you vulnerable to a connection string injection attack. Use the <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> to create syntactically valid connection strings at run time.  *TODO*
   
 ## External Resources  
  For more information, see the following resources.  
@@ -83,5 +83,5 @@ SQL Server supports two authentication modes, Windows authentication mode and mi
   
 ## See also
 
-- [Application Security Scenarios in SQL Server](../../connect/ado-net/application-security-scenarios-in-sql-server.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Application Security Scenarios in SQL Server](application-security-scenarios-in-sql-server.md)
+*TODO*

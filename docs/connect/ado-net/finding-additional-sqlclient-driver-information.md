@@ -22,7 +22,7 @@ For more information about the Microsoft SqlClient Data Provider for SQL Server 
   
 |Resource|Description|  
 |--------------|-----------------|  
-|[.Net CoreFX GitHub Repository](https://github.com/dotnet/corefx)|This repo contains the library implementation for .NET Core. It also includes System.Data.SqlClient source code.|
+|[.Net CoreFX GitHub Repository](https://github.com/dotnet/corefx)|This repo contains the library implementation for .NET Core.|
 |[Microsoft SqlClient Data Provider for SQL Server GitHub Repository](https://github.com/dotnet/SqlClient)|This repo contains the source code for the SqlClient driver.|  
 |[.NET API Browser](https://docs.microsoft.com/dotnet/api/)|This site contains .NET API information for the driver.|  
   

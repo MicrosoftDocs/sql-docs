@@ -66,7 +66,7 @@ NOTE: The connection string for server name is geared toward Azure SQL Database,
 ```csharp
 using System;  // C#  
 using CG = System.Collections.Generic;  
-using QC = System.Data.SqlClient;  
+using QC = Microsoft.Data.SqlClient;  
 using TD = System.Threading;  
 	
 namespace RetryAdo2  

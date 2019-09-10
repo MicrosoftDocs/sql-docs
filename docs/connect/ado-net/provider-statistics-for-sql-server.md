@@ -16,15 +16,15 @@ ms.author: genemi
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Starting with the .NET Framework version 2.0, the .NET Framework Data Provider for SQL Server supports run-time statistics. You must enable statistics by setting the <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> property of the <xref:System.Data.SqlClient.SqlConnection> object to `True` after you have a valid connection object created. After statistics are enabled, you can review them as a "snapshot in time" by retrieving an <xref:System.Collections.IDictionary> reference via the <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> method of the <xref:System.Data.SqlClient.SqlConnection> object. You enumerate through the list as a set of name/value pair dictionary entries. These name/value pairs are unordered. At any time, you can call the <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> method of the <xref:System.Data.SqlClient.SqlConnection> object to reset the counters. If statistic gathering has not been enabled, an exception is not generated. In addition, if <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> is called without <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> having been called first, the values retrieved are the initial values for each entry. If you enable statistics, run your application for a while, and then disable statistics, the values retrieved will reflect the values collected up to the point where statistics were disabled. All statistical values gathered are on a per-connection basis.  
+Starting with the .NET Framework version 2.0 and .NET Core version 1.0, the Microsoft SqlClient Data Provider for SQL Server supports run-time statistics. You must enable statistics by setting the <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> property of the <xref:Microsoft.Data.SqlClient.SqlConnection> object to `True` after you have a valid connection object created. After statistics are enabled, you can review them as a "snapshot in time" by retrieving an <xref:System.Collections.IDictionary> reference via the <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> method of the <xref:Microsoft.Data.SqlClient.SqlConnection> object. You enumerate through the list as a set of name/value pair dictionary entries. These name/value pairs are unordered. At any time, you can call the <xref:Microsoft.Data.SqlClient.SqlConnection.ResetStatistics%2A> method of the <xref:Microsoft.Data.SqlClient.SqlConnection> object to reset the counters. If statistic gathering has not been enabled, an exception is not generated. In addition, if <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> is called without <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> having been called first, the values retrieved are the initial values for each entry. If you enable statistics, run your application for a while, and then disable statistics, the values retrieved will reflect the values collected up to the point where statistics were disabled. All statistical values gathered are on a per-connection basis.  
   
 ## Statistical Values Available  
- Currently there are 18 different items available from the Microsoft SQL Server provider. The number of items available can be accessed via the **Count** property of the <xref:System.Collections.IDictionary> interface reference returned by <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. All of the counters for provider statistics use the common language runtime <xref:System.Int64> type (**long** in C# and Visual Basic), which is 64 bits wide. The maximum value of the **int64** data type, as defined by the **int64.MaxValue** field, is ((2^63)-1)). When the values for the counters reach this maximum value, they should no longer be considered accurate. This means that **int64.MaxValue**-1((2^63)-2) is effectively the greatest valid value for any statistic.  
+ Currently there are 18 different items available from the Microsoft SQL Server provider. The number of items available can be accessed via the **Count** property of the <xref:System.Collections.IDictionary> interface reference returned by <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. All of the counters for provider statistics use the common language runtime <xref:System.Int64> type (**long** in C# and Visual Basic), which is 64 bits wide. The maximum value of the **int64** data type, as defined by the **int64.MaxValue** field, is ((2^63)-1)). When the values for the counters reach this maximum value, they should no longer be considered accurate. This means that **int64.MaxValue**-1((2^63)-2) is effectively the greatest valid value for any statistic.  
   
 > [!NOTE]
 >  A dictionary is used for returning provider statistics because the number, names and order of the returned statistics may change in the future. Applications should not rely on a specific value being found in the dictionary, but should instead check whether the value is there and branch accordingly.  
   
- The following table describes the current statistical values available. Note that the key names for the individual values are not localized across regional versions of the Microsoft .NET Framework.  
+ The following table describes the current statistical values available. Note that the key names for the individual values are not localized across regional versions of the Microsoft .NET Framework and .NET Core.  
   
 |Key Name|Description|  
 |--------------|-----------------|  
@@ -40,7 +40,7 @@ Starting with the .NET Framework version 2.0, the .NET Framework Data Provider f
 |`NetworkServerTime`|Returns the cumulative amount of time (in milliseconds) that the provider spent waiting for replies from the server once the application has started using the provider and has enabled statistics.|  
 |`PreparedExecs`|Returns the number of prepared commands executed through the connection once the application has started using the provider and has enabled statistics.|  
 |`Prepares`|Returns the number of statements prepared through the connection once the application has started using the provider and has enabled statistics.|  
-|`SelectCount`|Returns the number of SELECT statements executed through the connection once the application has started using the provider and has enabled statistics. This includes FETCH statements to retrieve rows from cursors, and the count for SELECT statements is updated when the end of a <xref:System.Data.SqlClient.SqlDataReader> is reached.|  
+|`SelectCount`|Returns the number of SELECT statements executed through the connection once the application has started using the provider and has enabled statistics. This includes FETCH statements to retrieve rows from cursors, and the count for SELECT statements is updated when the end of a <xref:Microsoft.Data.SqlClient.SqlDataReader> is reached.|  
 |`SelectRows`|Returns the number of rows selected once the application has started using the provider and has enabled statistics. This counter reflects all the rows generated by SQL statements, even those that were not actually consumed by the caller. For example, closing a data reader before reading the entire result set would not affect the count. This includes the rows retrieved from cursors through FETCH statements.|  
 |`ServerRoundtrips`|Returns the number of times the connection sent commands to the server and got a reply back once the application has started using the provider and has enabled statistics.|  
 |`SumResultSets`|Returns the number of result sets that have been used once the application has started using the provider and has enabled statistics. For example this would include any result set returned to the client. For cursors, each fetch or block-fetch operation is considered an independent result set.|  
@@ -59,7 +59,7 @@ Option Strict On
 Imports System  
 Imports System.Collections  
 Imports System.Data  
-Imports System.Data.SqlClient  
+Imports Microsoft.Data.SqlClient  
   
 Module Module1  
   
@@ -129,7 +129,7 @@ using System;
 using System.Collections;  
 using System.Collections.Generic;  
 using System.Data;  
-using System.Data.SqlClient;  
+using Microsoft.Data.SqlClient;  
   
 namespace CS_Stats_Console_GetValue  
 {  
@@ -215,7 +215,7 @@ Option Strict On
 Imports System  
 Imports System.Collections  
 Imports System.Data  
-Imports System.Data.SqlClient  
+Imports Microsoft.Data.SqlClient  
   
 Module Module1  
   Sub Main()  
@@ -277,7 +277,7 @@ using System.Collections;
 using System.Collections.Generic;  
 using System.Text;  
 using System.Data;  
-using System.Data.SqlClient;  
+using Microsoft.Data.SqlClient;  
   
 namespace CS_Stats_Console_GetAll  
 {  
@@ -343,5 +343,4 @@ namespace CS_Stats_Console_GetAll
   
 ## See also
 
-- [SQL Server and ADO.NET](../../connect/ado-net/index.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server and ADO.NET](index.md)

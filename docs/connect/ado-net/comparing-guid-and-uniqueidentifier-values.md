@@ -51,4 +51,3 @@ Sorted SqlGuids:
 ## See also
 
 - [SQL Server Data Types and ADO.NET](sql-server-data-types.md)
-- [ADO.NET Overview](https://docs.microsoft.com/dotnet/framework/data/adonet/ado-net-overview)

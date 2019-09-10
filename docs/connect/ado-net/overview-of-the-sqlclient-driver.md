@@ -15,7 +15,7 @@ ms.author: genemi
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
- The Microsoft SqlClient Data Provider for SQL Server is a .NET Framework data provider is used for connecting to a database, executing commands, and retrieving results.  
+ The Microsoft SqlClient Data Provider for SQL Server is a .NET Framework and .NET Core data provider used for connecting to a database, executing commands, and retrieving results.  
   
  The topics in this section provide a general overview of the SqlClient driver.
   
@@ -23,7 +23,7 @@ ms.author: genemi
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Introduction to Microsoft.Data.SqlClient Namespace](introduction-to-microsoft-data-sqlclient-namespace.md)|Introduction page for Microsoft.Data.SqlClient Namespace.|  
+|[Introduction to Microsoft.Data.SqlClient Namespace](introduction-to-microsoft-data-sqlclient-namespace.md)|Introduction page for the Microsoft.Data.SqlClient namespace.|  
 |[Download Microsoft SqlClient Data Provider for SQL Server](download-microsoft-sqlclient-data-provider-for-sql-server.md)|Download page for ADO.NET and Microsoft SqlClient Data Provider for SQL Server.|  
 |[SqlClient Driver Support Lifecycle](sqlclient-driver-support-lifecycle.md)|Page that contains product support lifecycle information.|  
 |[Finding Additional SqlClient Driver information](finding-additional-sqlclient-driver-information.md)|Page that contains useful information regarding the driver.|  

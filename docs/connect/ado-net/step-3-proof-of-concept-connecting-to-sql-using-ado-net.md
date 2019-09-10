@@ -29,7 +29,7 @@ The method **SqlConnection.Open** is used to connect to your SQL database.
 ```csharp
 // C# , ADO.NET  
 using System;
-using QC = System.Data.SqlClient;  // System.Data.dll  
+using QC = Microsoft.Data.SqlClient;  // System.Data.dll  
   
 namespace ProofOfConcept_SQL_CSharp  
 {  
@@ -72,7 +72,7 @@ The method SqlCommand.ExecuteReader:
 ```csharp
 using System;  // C# , ADO.NET  
 using DT = System.Data;            // System.Data.dll  
-using QC = System.Data.SqlClient;  // System.Data.dll  
+using QC = Microsoft.Data.SqlClient;  // System.Data.dll  
   
 namespace ProofOfConcept_SQL_CSharp  
 {  
@@ -160,7 +160,7 @@ This example demonstrates how to:
 ```csharp
 using System;  // C# , ADO.NET  
 using DT = System.Data;            // System.Data.dll  
-using QC = System.Data.SqlClient;  // System.Data.dll  
+using QC = Microsoft.Data.SqlClient;  // System.Data.dll  
   
 namespace ProofOfConcept_SQL_CSharp  
 {  

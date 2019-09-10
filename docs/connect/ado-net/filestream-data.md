@@ -17,13 +17,13 @@ ms.author: genemi
 The FILESTREAM storage attribute is for binary (BLOB) data stored in a varbinary(max) column. Before FILESTREAM, storing binary data required special handling. Unstructured data, such as text documents, images and video, is often stored outside of the database, making it difficult to manage.
 
 > [!NOTE]
-> You must install the .NET Framework 3.5 SP1 (or later) to work with FILESTREAM data using SqlClient.
+> You must install the .NET Framework 3.5 SP1 (or later) or .NET Core to work with FILESTREAM data using SqlClient.
 
 Specifying the FILESTREAM attribute on a varbinary(max) column causes SQL Server to store the data on the local NTFS file system instead of in the database file. Although it is stored separately, you can use the same Transact-SQL statements that are supported for working with varbinary(max) data that is stored in the database.
 
 ## SqlClient Support for FILESTREAM
 
-The .NET Framework Data Provider for SQL Server, <xref:System.Data.SqlClient>, supports reading and writing to FILESTREAM data using the <xref:System.Data.SqlTypes.SqlFileStream> class defined in the <xref:System.Data.SqlTypes> namespace. `SqlFileStream` inherits from the <xref:System.IO.Stream> class, which provides methods for reading and writing to streams of data. Reading from a stream transfers data from the stream into a data structure, such as an array of bytes. Writing transfers the data from the data structure into a stream.
+The Microsoft SqlClient Data Provider for SQL Server, <xref:Microsoft.Data.SqlClient>, supports reading and writing to FILESTREAM data using the <xref:System.Data.SqlTypes.SqlFileStream> class defined in the <xref:System.Data.SqlTypes> namespace. `SqlFileStream` inherits from the <xref:System.IO.Stream> class, which provides methods for reading and writing to streams of data. Reading from a stream transfers data from the stream into a data structure, such as an array of bytes. Writing transfers the data from the data structure into a stream.
 
 ### Creating the SQL Server Table
 
@@ -53,7 +53,7 @@ The sample also demonstrates how to write data to a FILESTREAM by using the Seek
 
 ```csharp
 using System;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Data;
 using System.IO;
@@ -188,5 +188,6 @@ The complete documentation for FILESTREAM is located in the following sections i
 
 ## See also
 
-- [SQL Server Data Types and ADO.NET](../../connect/ado-net/sql-server-data-types.md)
-- [SQL Server Binary and Large-Value Data](../../connect/ado-net/sql-server-binary-and-large-value-data.md)
+- [SQL Server Data Types and ADO.NET](sql-server-data-types.md)
+- [Code Access Security and ADO.NET](code-access-security.md)	*TODO*
+- [SQL Server Binary and Large-Value Data](sql-server-binary-and-large-value-data.md)

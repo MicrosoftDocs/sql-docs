@@ -15,7 +15,7 @@ ms.author: genemi
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-ADO.NET is the core data access technology for .NET languages. Use the System.Data.SqlClient namespace to access SQL Server, or providers from other suppliers to access their stores. Use System.Data.Odbc or System.Data.Oledb to access data from .NET languages using other data access technologies. Use System.Data.Dataset when you need an offline data cache in client applications. It also provides local persistence and XML capabilities that can be useful in web services.  
+ADO.NET is the core data access technology for .NET languages. Use the Microsoft.Data.SqlClient namespace to access SQL Server, or providers from other suppliers to access their stores. Use System.Data.Odbc or System.Data.Oledb to access data from .NET languages using other data access technologies. Use System.Data.Dataset when you need an offline data cache in client applications. It also provides local persistence and XML capabilities that can be useful in web services.  
   
 ## Getting Started  
 * [Step 1: Configure development environment for ADO.NET development](step-1-configure-development-environment-for-ado-net-development.md)  
@@ -25,14 +25,13 @@ ADO.NET is the core data access technology for .NET languages. Use the System.Da
   
 ## Documentation  
 * [ADO.NET Overview](https://msdn.microsoft.com/library/e80y5yhx.aspx)
-* [Getting Started](getting-started-with-the-sqlclient-driver.md)  
+* [Getting Started with the SqlClient Driver](getting-started-with-the-sqlclient-driver.md)  
 * [Overview of the SqlClient Driver](overview-of-the-sqlclient-driver.md)  
 * [Security](sql-server-security.md)
 * [Data Types](sql-server-data-types.md)
 * [Binary and Large-Value Data](sql-server-binary-and-large-value-data.md)
 * [Data Operations](sql-server-data-operations.md)
 * [Features](sql-server-features-and-adonet.md)
-* [LINQ to SQL](linq/index.md)
   
 ## Community  
 * [ADO.NET Managed Providers Forum](https://social.msdn.microsoft.com/Forums/adodotnetdataproviders/threads/)  

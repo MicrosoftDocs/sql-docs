@@ -17,11 +17,11 @@ ms.author: genemi
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-A <xref:System.Data.SqlClient.SqlDependency> object can be associated with a <xref:System.Data.SqlClient.SqlCommand> in order to detect when query results differ from those originally retrieved. You can also assign a delegate to the `OnChange` event, which will fire when the results change for an associated command. You must associate the <xref:System.Data.SqlClient.SqlDependency> with the command before you execute the command. The `HasChanges` property of the <xref:System.Data.SqlClient.SqlDependency> can also be used to determine if the query results have changed since the data was first retrieved.
+A <xref:Microsoft.Data.SqlClient.SqlDependency> object can be associated with a <xref:Microsoft.Data.SqlClient.SqlCommand> in order to detect when query results differ from those originally retrieved. You can also assign a delegate to the `OnChange` event, which will fire when the results change for an associated command. You must associate the <xref:Microsoft.Data.SqlClient.SqlDependency> with the command before you execute the command. The `HasChanges` property of the <xref:Microsoft.Data.SqlClient.SqlDependency> can also be used to determine if the query results have changed since the data was first retrieved.
 
 ## Security Considerations
 
-The dependency infrastructure relies on a <xref:System.Data.SqlClient.SqlConnection> that is opened when <xref:System.Data.SqlClient.SqlDependency.Start%2A> is called in order to receive notifications that the underlying data has changed for a given command. The ability for a client to initiate the call to `SqlDependency.Start` is controlled through the use of <xref:System.Data.SqlClient.SqlClientPermission> and code access security attributes.
+The dependency infrastructure relies on a <xref:Microsoft.Data.SqlClient.SqlConnection> that is opened when <xref:Microsoft.Data.SqlClient.SqlDependency.Start%2A> is called in order to receive notifications that the underlying data has changed for a given command. The ability for a client to initiate the call to `SqlDependency.Start` is controlled through the use of <xref:Microsoft.Data.SqlClient.SqlClientPermission> and code access security attributes. For more information, see [Enabling Query Notifications](enabling-query-notifications.md) and [Code Access Security and ADO.NET](code-access-security.md).	*TODO*
 
 ### Example
 
@@ -29,7 +29,7 @@ The following steps illustrate how to declare a dependency, execute a command, a
 
 1. Initiate a `SqlDependency` connection to the server.
 
-2. Create <xref:System.Data.SqlClient.SqlConnection> and <xref:System.Data.SqlClient.SqlCommand> objects to connect to the server and define a Transact-SQL statement.
+2. Create <xref:Microsoft.Data.SqlClient.SqlConnection> and <xref:Microsoft.Data.SqlClient.SqlCommand> objects to connect to the server and define a Transact-SQL statement.
 
 3. Create a new `SqlDependency` object, or use an existing one, and bind it to the `SqlCommand` object. Internally, this creates a <xref:System.Data.Sql.SqlNotificationRequest> object and binds it to the command object as needed. This notification request contains an internal identifier that uniquely identifies this `SqlDependency` object. It also starts the client listener if it is not already active.
 
@@ -130,5 +130,4 @@ void Termination()
 
 ## See also
 
-- [Query Notifications in SQL Server](../../connect/ado-net/query-notifications-in-sql-server.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Query Notifications in SQL Server](query-notifications-in-sql-server.md)

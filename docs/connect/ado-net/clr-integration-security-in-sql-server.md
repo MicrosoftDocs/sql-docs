@@ -22,10 +22,11 @@ Microsoft SQL Server provides the integration of the common language runtime (CL
   
 |Resource|Description|  
 |--------------|-----------------|  
-|[Code Access Security](https://docs.microsoft.com/dotnet/framework/misc/code-access-security)|Contains topics describing CAS in the .NET Framework.|  
+|[Code Access Security](https://docs.microsoft.com/dotnet/framework/misc/code-access-security)|Contains topics describing CAS in the .NET Framework.|	*TODO*
 |[CLR Integration Security](/sql/relational-databases/clr-integration/security/clr-integration-security)|Discusses the security model for managed code executing inside of SQL Server.|  
   
 ## See also
 
 - [Application Security Scenarios in SQL Server](../../connect/ado-net/application-security-scenarios-in-sql-server.md)
 - [SQL Server Common Language Runtime Integration](../../connect/ado-net/sql-server-common-language-runtime-integration.md)
+*TODO*

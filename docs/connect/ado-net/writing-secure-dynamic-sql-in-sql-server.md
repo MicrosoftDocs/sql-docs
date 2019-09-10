@@ -40,7 +40,7 @@ SQL Injection is the process by which a malicious user enters Transact-SQL state
   
 - Do not accept the following strings in fields from which file names can be constructed: AUX, CLOCK$, COM1 through COM8, CON, CONFIG$, LPT1 through LPT8, NUL, and PRN.  
   
-- Use <xref:System.Data.SqlClient.SqlParameter> objects with stored procedures and commands to provide type checking and length validation.  
+- Use <xref:Microsoft.Data.SqlClient.SqlParameter> objects with stored procedures and commands to provide type checking and length validation.  *TODO*
   
 - Use <xref:System.Text.RegularExpressions.Regex> expressions in client code to filter invalid characters.  
   
@@ -49,9 +49,9 @@ SQL Injection is the process by which a malicious user enters Transact-SQL state
   
  SQL Server has methods for granting users access to data using stored procedures and user-defined functions that execute dynamic SQL.  
   
-- Using impersonation with the Transact-SQL EXECUTE AS clause, as described in [Customizing Permissions with Impersonation in SQL Server](../../connect/ado-net/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Using impersonation with the Transact-SQL EXECUTE AS clause, as described in [Customizing Permissions with Impersonation in SQL Server](customizing-permissions-with-impersonation-in-sql-server.md).  
   
-- Signing stored procedures with certificates, as described in [Signing Stored Procedures in SQL Server](../../connect/ado-net/signing-stored-procedures-in-sql-server.md).  
+- Signing stored procedures with certificates, as described in [Signing Stored Procedures in SQL Server](signing-stored-procedures-in-sql-server.md).  
   
 ### EXECUTE AS  
  The EXECUTE AS clause replaces the permissions of the caller with that of the user specified in the EXECUTE AS clause. Nested stored procedures or triggers execute under the security context of the proxy user. This can break applications that rely on row-level security or require auditing. Some functions that return the identity of the user return the user specified in the EXECUTE AS clause, not the original caller. Execution context is reverted to the original caller only after execution of the procedure or when a REVERT statement is issued.  
@@ -71,9 +71,9 @@ SQL Injection is the process by which a malicious user enters Transact-SQL state
   
 ## See also
 
-- [Overview of SQL Server Security](../../connect/ado-net/overview-of-sql-server-security.md)
-- [Application Security Scenarios in SQL Server](../../connect/ado-net/application-security-scenarios-in-sql-server.md)
-- [Managing Permissions with Stored Procedures in SQL Server](../../connect/ado-net/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Signing Stored Procedures in SQL Server](../../connect/ado-net/signing-stored-procedures-in-sql-server.md)
-- [Customizing Permissions with Impersonation in SQL Server](../../connect/ado-net/customizing-permissions-with-impersonation-in-sql-server.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Overview of SQL Server Security](overview-of-sql-server-security.md)
+- [Application Security Scenarios in SQL Server](application-security-scenarios-in-sql-server.md)
+- [Managing Permissions with Stored Procedures in SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Signing Stored Procedures in SQL Server](signing-stored-procedures-in-sql-server.md)
+- [Customizing Permissions with Impersonation in SQL Server](customizing-permissions-with-impersonation-in-sql-server.md)
+*TODO*

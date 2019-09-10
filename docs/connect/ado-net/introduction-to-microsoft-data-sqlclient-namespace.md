@@ -13,7 +13,7 @@ ms.author: genemi
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-This page describes how Microsoft.Data.SqlClient namespace offers additional functionality over the existing System.Data.SqlClient namespace.
+This page describes how the Microsoft.Data.SqlClient namespace offers additional functionality over the existing System.Data.SqlClient namespace.
   
 ## Release notes
 All release notes are available on the [GitHub Repository](https://github.com/dotnet/SqlClient/tree/master/release-notes).
@@ -23,18 +23,22 @@ All release notes are available on the [GitHub Repository](https://github.com/do
 ### New features over .NET Framework 4.7.2 System.Data.SqlClient
 
 Data Classification - Available in Azure SQL Database and Microsoft SQL Server 2019 since CTP 2.0.
+
 UTF-8 support - Available in Microsoft SQL Server SQL Server 2019 since CTP 2.3.
 
 ### New features over .NET Core 2.2 System.Data.SqlClient
 
 Data Classification - Available in Azure SQL Database and Microsoft SQL Server 2019 since CTP 2.0.
+
 UTF-8 support - Available in Microsoft SQL Server SQL Server 2019 since CTP 2.3.
+
 Always Encrypted with Enclaves - Always Encrypted is available in Microsoft SQL Server 2016 and higher. Enclave support was introduced in Microsoft Sql Server 2019 CTP 2.0.
+
 Authentication - Active Directory Password authentication mode.
 
 ### Data Classification
 
-Data Classification brings a new set of APIs exposing read-only Data Sensitivity and Classification information about objects retrieved via SqlDataReader when the underlying source supports the feature and contains metadata about [data sensitivity and classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017):
+Data Classification brings a new set of APIs exposing read-only Data Sensitivity and Classification information about objects retrieved via SqlDataReader when the underlying source supports the feature and contains metadata about [data sensitivity and classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
 
 ```C#
 public class SqlDataReader

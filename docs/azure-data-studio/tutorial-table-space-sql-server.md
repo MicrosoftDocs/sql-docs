@@ -92,4 +92,4 @@ In this tutorial, you learned how to:
 To learn how to build a custom insight widget, complete the next tutorial:
 
 > [!div class="nextstepaction"]
-> [Build a custom insight widget](tutorial-build-custom-insight-sql-server.md).
+> [Build a custom insight widget](tutorial-build-custom-insight-sql-server.md)

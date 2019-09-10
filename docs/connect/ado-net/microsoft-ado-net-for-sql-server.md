@@ -27,7 +27,6 @@ ADO.NET is the core data access technology for .NET languages. Use the Microsoft
 * [ADO.NET Overview](https://msdn.microsoft.com/library/e80y5yhx.aspx)
 * [Getting Started with the SqlClient Driver](getting-started-with-the-sqlclient-driver.md)  
 * [Overview of the SqlClient Driver](overview-of-the-sqlclient-driver.md)  
-* [Security](sql-server-security.md)
 * [Data Types](sql-server-data-types.md)
 * [Binary and Large-Value Data](sql-server-binary-and-large-value-data.md)
 * [Data Operations](sql-server-data-operations.md)

@@ -23,7 +23,7 @@ The way a SQL Server big data cluster consumes these persistent volumes is by us
 
 ## Configure big data cluster storage settings
 
-Similar to other customizations, you can specify storage settings in the cluster configuration files at deployment time for each pool and the control plane. If there are no storage configuration settings in the pool specifications, then the control plane storage settings will be used. This is a sample of the storage configuration section that you can include in the spec:
+Similar to other customizations, you can specify storage settings in the cluster configuration files at deployment time for each pool in the **bdc.json** configuration file and for the control services in the **control.json** file. If there are no storage configuration settings in the pool specifications, then the control storage settings will be used **for all other components**, including SQL Server master (**master** resource), HDFS (**storage-0** resource) or data pool. This is a sample of the storage configuration section that you can include in the spec:
 
 ```json
     "storage": 

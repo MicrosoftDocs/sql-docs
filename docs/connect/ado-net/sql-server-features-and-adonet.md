@@ -34,9 +34,6 @@ The topics in this section discuss features in SQL Server that are targeted at d
  [Database Mirroring in SQL Server](database-mirroring-in-sql-server.md)  
  Describes database mirroring functionality.  
   
- [SQL Server Common Language Runtime Integration](sql-server-common-language-runtime-integration.md)  
- Describes how data can be accessed from within a common language runtime (CLR) database object in SQL Server.  
-  
  [Query Notifications in SQL Server](query-notifications-in-sql-server.md)  
  Describes how .NET applications can request notification from SQL Server when data has changed.  
   

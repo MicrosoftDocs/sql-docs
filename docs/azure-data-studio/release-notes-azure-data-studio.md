@@ -31,6 +31,11 @@ September 10, 2019 &nbsp; / &nbsp; version: 1.11.0
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
 | &nbsp; | &nbsp; |
 
+### Known Issues
+- Notebooks
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
+
+
 ## August 2019
 
 August 15, 2019 &nbsp; / &nbsp; version: 1.10.0 

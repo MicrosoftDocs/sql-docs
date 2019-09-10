@@ -717,7 +717,7 @@ Run one of the following commands if SQL Server does not have access to persiste
  
 **Grant the root group r/w access to the DB files**
 
-Grant the root group permissions to the following directories so that the non-root SQL Server container has access to database files
+Grant the root group permissions to the following directories so that the non-root SQL Server container has access to database files.
 ```bash
 chgroup -R 0 <database file dir>
 chmod -R g=u <database file dir>

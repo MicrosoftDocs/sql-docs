@@ -57,7 +57,7 @@ Values of **float** are truncated when they are converted to any integer type.
   
 When you want to convert from **float** or **real** to character data, using the STR string function is usually more useful than CAST( ). This is because STR enables more control over formatting. For more information, see [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md) and [Functions &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md).
   
-Prior to [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)], conversion of literal **float** values that use scientific notation to **decimal** or **numeric** is restricted to values of precision 17 digits only. Any value less than 5E-18 rounds down to 0. This is no longer a restriction as of [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)].
+Prior to [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)], conversion of **float** values to **decimal** or **numeric** is restricted to values of precision 17 digits only. Any **float** value less than 5E-18 (when set using either the scientific notation of 5E-18 or the decimal notation of 0.0000000000000000050000000000000005) rounds down to 0. This is no longer a restriction as of [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)].
   
 ## See also
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

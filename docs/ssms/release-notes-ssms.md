@@ -105,6 +105,8 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 
 - There's an issue with receiving an error when deleting an Azure SQL Database in Object Explorer, but it actually succeeds. The task shows an inaccurate error message.
 
+- Default language for SQL logins may display as Arabic in the Login Properties dialog, regardless of the actual default language set for the login. To view the actual default language for a given login, use T-SQL to select the login's **default_language_name** from **master.sys.server_principles**.
+
 You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
 ## Previous SSMS releases

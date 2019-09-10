@@ -66,14 +66,14 @@ Review the requirements and run procedures in the [quickstart](quickstart-instal
 docker run --name sqlenterprise \
       -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       -e 'MSSQL_PID=Enterprise' -p 1433:1433 \
-      -d store/microsoft/mssql-server-linux:2017-latest
+      -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
 ```PowerShell
 docker run --name sqlenterprise `
       -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       -e "MSSQL_PID=Enterprise" -p 1433:1433 `
-      -d "store/microsoft/mssql-server-linux:2017-latest"
+      -d "mcr.microsoft.com/mssql/server:2017-latest"
  ```
 
 > [!IMPORTANT]
@@ -440,7 +440,7 @@ docker exec -it <Container ID or name> /opt/mssql-tools/bin/sqlcmd `
    -Q 'SELECT @@VERSION'
 ```
 
-You can also identify the SQL Server version and build number for a target docker container image. The following command displays the SQL Server version and build information for the **microsoft/mssql-server-linux:2017-latest** image. It does this by running a new container with an environment variable **PAL_PROGRAM_INFO=1**. The resulting container instantly exits, and the `docker rm` command removes it.
+You can also identify the SQL Server version and build number for a target docker container image. The following command displays the SQL Server version and build information for the **mcr.microsoft.com/mssql/server:2017-latest** image. It does this by running a new container with an environment variable **PAL_PROGRAM_INFO=1**. The resulting container instantly exits, and the `docker rm` command removes it.
 
 ```bash
 sudo docker run -e PAL_PROGRAM_INFO=1 --name sqlver \

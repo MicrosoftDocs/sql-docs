@@ -222,7 +222,7 @@ The character set associated with UTF-8 is Unicode, thus UTF-8 codepoints have t
 
 ```sql
 SELECT NCHAR(0x266a) AS [beamed-eighth-note]
-  , CONVERT(VARCHAR(4), NCHAR(0x266b) COLLATE Latin1_General_100_CI_AI_UTF8) AS [utf-8 beamed-eight-notes]
+  , CONVERT(VARCHAR(4), NCHAR(0x266b) COLLATE Latin1_General_100_CI_AI_SC_UTF8) AS [utf-8 beamed-eight-notes]
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]

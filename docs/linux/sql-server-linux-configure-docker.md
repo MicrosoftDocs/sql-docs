@@ -643,6 +643,105 @@ cat errorlog
 > [!TIP]
 > If you mounted a host directory to **/var/opt/mssql** when you created your container, you can instead look in the **log** subdirectory on the mapped path on the host.
 
+## <a id="buildnonrootcontainer"></a> Build and run SQL Server containers as a non-root user
+Follow the steps below to build a SQL Server container that starts up as the `mssql`(non-root) user.
+ 
+
+1. Download the [sample dockerfile for non-root SQL Server Container](https://raw.githubusercontent.com/microsoft/mssql-docker/master/linux/preview/examples/mssql-server-linux-non-root/Dockerfile) and save it as `dockerfile`
+ 
+2. Run the following command in the context of the dockerfile directory to build the non-root SQL Server container
+```bash
+cd <path to dockerfile>
+docker build -t 2017-latest-non-root .
+```
+ 
+3. Start the container
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword@" --cap-add SYS_PTRACE --name sql1 -p 1433:1433 -d 2017-latest-non-root
+```
+ 
+4. Check that the container is running as non-root user
+
+docker exec into the container.
+```bash
+docker exec -it sql1 bash
+```
+ 
+Run `whoami` which will return the user running within the container.
+ 
+```bash
+whoami
+```
+ 
+
+## <a id="nonrootuser"></a> Run container as a different non-root user
+To run the SQL Server container as a different non-root user, add the -u flag to the docker run command. The non-root container has the restriction that it must run as part of the root group unless a volume is mounted to /var/opt/mssql that the non-root user can access. The root group doesn’t grant any extra root permissions to the non-root user.
+ 
+**Run as a user with a UID 4000**
+ 
+You can start SQL Server with a custom UID. For example, the command below starts SQL Server with UID 4000:
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u 4000:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+ 
+**Run as a user on your host machine**
+ 
+You can start SQL Server with an exisiting user on the host machine with the following command:
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u $(id -u myusername):0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+ 
+**Run as a different user and group**
+ 
+You can start SQL Server with a custom user and group. In this example, the mounted volume has permissions configured for the user or group on the host machine.
+ 
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+ 
+## <a id="storagepermissions"></a> Configure persistent storage permissions for non-root containers
+To allow the non-root user to access DB files that are on mounted volumes, ensure that the user/group you run the container under can touch the persistent file storage.  
+
+You can get the current ownership of the database files with this command.
+ 
+```bash
+ls -ll <database file dir>
+```
+
+Run one of the following commands if SQL Server does not have access to persisted database files.
+ 
+ 
+**Grant the root group r/w access to the DB files**
+
+Add the following files to root group so SQL Server container has access to database files
+```bash
+chgroup -R 0 <database file dir>
+chmod -R g=u <database file dir>
+```
+ 
+**Set the non-root user as the owner of the files.**
+
+This can be the default non-root user, or any other non-root user you’d like to specify.
+```bash
+chown -R <UID>:0 <database file dir>
+```
+ 
+**Run the container as the root user, to grant all file permissions automatically**
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -u 0:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+
+ 
+## <a id="changefilelocation"></a> Change the default file location
+
+Add the `MSSQL_DATA_DIR` variable to change your data directory in your `docker run` command, then mount a volume to that location that your container’s user has access to.
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+
+
 ## Next steps
 
 Get started with SQL Server 2017 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md).

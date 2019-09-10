@@ -375,6 +375,10 @@ A STONITH device provides a fencing agent. [Setting up Pacemaker on Red Hat Ente
     pcsd: active/enabled
    ```
 
+## Configure fencing agent
+
+A STONITH device provides a fencing agent. [Setting up Pacemaker on Red Hat Enterprise Linux in Azure](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices) provides an example of how to create a STONITH device for this cluster in Azure. Modify the instructions for your environment.
+
 ## Additional resources
 
 * [Cluster from Scratch](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) guide from Pacemaker

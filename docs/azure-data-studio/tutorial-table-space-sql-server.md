@@ -59,15 +59,15 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
         },
     ```
 
-The **dashboard.database.widgets** section should look similar to the following image:
+   The **dashboard.database.widgets** section should look similar to the following image:
 
-   ![Search settings](./media/tutorial-table-space-sql-server/insight-table-space.png)
+    ![Search settings](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
 6. Press **Ctrl+S** to save the settings.
 
 7. Open database dashboard by right-clicking **TutorialDB** and click **Manage**.
 
-8. View the *table space* insight widget as shown in the following image: 
+8. View the *table space* insight widget as shown in the following image:
 
    ![Widget](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
 

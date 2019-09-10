@@ -9,7 +9,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
-ms.date: "09/10/2019"
+ms.date: "09/11/2019"
 ---
 
 # Release notes for Azure Data Studio

@@ -685,6 +685,9 @@ You can start SQL Server with a custom UID. For example, the command below start
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u 4000:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
  
+> [!Warning]
+> Ensure that the SQL Server container has a named user such as 'mssql' or 'root' or SQLCMD will not be able to run within the container. You can check if the SQL Server container is running as a named user by running `whoami` within the container.
+ 
 **Run as a user on your host machine**
  
 You can start SQL Server with an exisiting user on the host machine with the following command:
@@ -714,7 +717,7 @@ Run one of the following commands if SQL Server does not have access to persiste
  
 **Grant the root group r/w access to the DB files**
 
-Add the following files to root group so SQL Server container has access to database files
+Grant the root group permissions to the following directories so that the non-root SQL Server container has access to database files
 ```bash
 chgroup -R 0 <database file dir>
 chmod -R g=u <database file dir>
@@ -722,9 +725,9 @@ chmod -R g=u <database file dir>
  
 **Set the non-root user as the owner of the files.**
 
-This can be the default non-root user, or any other non-root user you’d like to specify.
+This can be the default non-root user, or any other non-root user you’d like to specify. In this example, we set UID 10001 as the non-root user.
 ```bash
-chown -R <UID>:0 <database file dir>
+chown -R 10001:0 <database file dir>
 ```
  
 **Run the container as the root user, to grant all file permissions automatically**

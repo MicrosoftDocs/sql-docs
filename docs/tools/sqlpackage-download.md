@@ -39,7 +39,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
 ## Get sqlpackage .NET Core (preview) for Windows
 
 1. Download [sqlpackage for Windows](https://go.microsoft.com/fwlink/?linkid=2102979).
-2. To extract the file by right clicking on the file in Windows Explorer, and selecting 'Extract All...', and select the target directorya.
+2. To extract the file by right clicking on the file in Windows Explorer, and selecting 'Extract All...', and select the target directory.
 3. Open a new Terminal windows, can cd to the location where sqlpackage was exracted:
 
    **.zip Installation:**

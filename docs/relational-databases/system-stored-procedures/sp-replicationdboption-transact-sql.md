@@ -63,7 +63,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## Remarks  
  **sp_replicationdboption** is used in snapshot replication, transactional replication, and merge replication.  
   
- This procedure creates or drops specific replication system tables, security accounts, and so on, depending on the options given. Sets the corresponding **is_published** (transacational or snapshot replication), **is_subscribed**, **is_merge_published** (merge replication), or **is_distributor** bits in the **master.databases** system table and creates the necessary system tables.  
+ This procedure creates or drops specific replication system tables, security accounts, and so on, depending on the options given. Sets the corresponding **is_published** (transacational or snapshot replication), **is_merge_published** (merge replication), or **is_distributor** bits in the **master.databases** system table and creates the necessary system tables.  
   
  To disable publishing, the publication database must be online. If a database snapshot exists for the publication database, it must be dropped before disabling publishing. A database snapshot is a read-only offline copy of a database, and is not related to a replication snapshot. For more information, see [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   

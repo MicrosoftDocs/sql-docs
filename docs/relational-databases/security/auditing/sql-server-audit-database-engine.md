@@ -138,7 +138,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 ### Data Definition Language Statements  
  You can use the following DDL statements to create, alter, and drop audit specifications:  
   
-|DDL statements|Description|  
+|DDL statements|Description| 
+|-|-|  
 |[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|Changes the ownership of a securable.|  
 |[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|Alters a database audit specification object using the SQL Server Audit feature.|  
 |[ALTER SERVER AUDIT](../../../t-sql/statements/alter-server-audit-transact-sql.md)|Alters a server audit object using the SQL Server Audit feature.|  

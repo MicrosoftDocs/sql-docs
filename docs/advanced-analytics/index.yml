@@ -19,18 +19,18 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
   # Card (optional)
-  - title: About [service]
+  - title: About SQL Server Machine Learning Services
     linkLists:
       - linkListType: overview
         links:
-          - text: What is [service]?
-            url: file1.md
-          - text: linktext2
-            url: file2.md
-      - linkListType: linkListType
+          - text: What is Machine Learning Services (Python and R)?
+            url: what-is-sql-server-machine-learning.md
+          - text: What's new?
+            url: what-s-new-in-sql-server-machine-learning-services.md
+      - linkListType: video
         links:
-          - text: linktext1
-            url: file1.md
+          - text: How to Execute R/Python in SQL Server with Machine Learning Services
+            url: https://www.youtube.com/watch?v=ACejZ9optCQ
           - text: linktext2
             url: file2.md
 

@@ -91,7 +91,7 @@ Fixed #3959 Azure Data Studio tries to shutdown notebook server twice after clos
 
 #### Known issues
 * On opening a Notebook the install python dialog will appear. Canceling this install will result in the Kernels and Attach To dropdowns not showing expected values. The workaround is to complete the Python installation.
-* When a notebook is opened with a kernel that is not supported, the kernels and _attach to_ dropdowns will cause Azure Data Studio to hang. You will need to close Azure Data Studio and ensure you use a kernel that is supported (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
+* When a notebook is opened with a kernel that is not supported, the kernels and _attach to_ dropdowns will cause Azure Data Studio to stop responding. You will need to close Azure Data Studio and ensure you use a kernel that is supported (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
 * Spark UI link fails when using PySpark3 or other Spark kernels against the SQL Server endpoint. As a workaround please click on Spark UI from the Dashboard, or connect using the SQL Server big data cluster connection type as this will have the correct Spark UI hyperlink
 
 ### Extensibility improvements

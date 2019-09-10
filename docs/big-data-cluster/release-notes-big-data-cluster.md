@@ -162,7 +162,7 @@ The following sections describe the known issues and limitations with this relea
 
 #### Kibana logs dashboards
 
-- Between Aris CTP 3.0 and 3.1, the Kibana version was upgraded from 6.3.1 to 7.0.1.  This has made the Edge browser incompatible with Kibana. Users will see a blank page when loading the current version of the Kibana dashboards in Edge. See [here]( https://www.elastic.co/support/matrix#matrix_browse) for supported browsers for Kibana.rs 
+- Between Aris CTP 3.0 and 3.1, the Kibana version was upgraded from 6.3.1 to 7.0.1.  This has made the Microsoft Edge browser incompatible with Kibana. Users will see a blank page when loading the current version of the Kibana dashboards in Microsoft Edge. See [here]( https://www.elastic.co/support/matrix#matrix_browse) for supported browsers for Kibana.rs 
 
 
 ## <a id="ctp30"></a> CTP 3.0 (May)

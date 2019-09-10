@@ -18,7 +18,6 @@ metadata:
 landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
-  # Card (optional)
   - title: About SQL Server Machine Learning Services
     linkLists:
       - linkListType: overview
@@ -32,7 +31,6 @@ landingContent:
           - text: How to Execute R/Python in SQL Server with Machine Learning Services
             url: https://www.youtube.com/watch?v=ACejZ9optCQ
 
-  # Card (optional)
   - title: Get started with Python
     linkLists:
       - linkListType: quickstart
@@ -45,41 +43,10 @@ landingContent:
             url: quickstart-python-data-structures.md
           - text: Train and use your first model
             url: quickstart-python-train-score-in-tsql.md
-      - linkListType: linkListType
+      - linkListType: tutorial
         links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
+          - text: Predict ski rental with linear regression
+            url: python-ski-rental-linear-regression.md
+          - text: Categorizing customers using k-means clustering
+            url: python-clustering-model.md
 
-  # Card
-  - title: cardtitle3
-    linkLists:
-      - linkListType: linkListType
-        links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
-      - linkListType: linkListType
-        links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
-
-  # Card
-  - title: cardtitle4
-    linkLists:
-      - linkListType: linkListType
-        links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
-      - linkListType: linkListType
-        links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md

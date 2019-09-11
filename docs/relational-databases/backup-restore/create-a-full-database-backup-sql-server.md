@@ -21,7 +21,7 @@ ms.reviewer: carlrab
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This topic describes how to create a full database backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell (Windows only).
+This topic describes how to create a full database backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.
 
 For information on SQL Server backup to the Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
@@ -121,11 +121,11 @@ In this example, the `SQLTestDB` database will be backed up to disk at the defau
 3. Click **OK**.
 4. When the backup completes successfully, click **OK** to close the Microsoft SQL Server Management Studio dialog box.
 
-![Take SQL backup](media/quickstart-backup-restore-database/backup-db-ssms.png) 
+![Take SQL backup](media/quickstart-backup-restore-database/backup-db-ssms.png)
 
 ### B. Full back up to disk to non-default location
 
-In this example, the `SQLTestDB` database will be backed up to disk at a location of your choice. 
+In this example, the `SQLTestDB` database will be backed up to disk at a location of your choice.
 
 1. After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in **Object Explorer**, expand the server tree.
 2. Expand **Databases**, right-click `SQLTestDB`, point to **Tasks**, and then click **Back Up...**.
@@ -215,7 +215,7 @@ The example below performs a full database backup of `SQLTestDB` to the Microsof
 
    Basic backup set WITH options:
 
-   - **{ COMPRESSION | NO_COMPRESSION }**: In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later only, specifies whether [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) is performed on this backup, overriding the server-level default. 
+   - **{ COMPRESSION | NO_COMPRESSION }**: In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later only, specifies whether [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) is performed on this backup, overriding the server-level default.
    - **ENCRYPTION (ALGORITHM, SERVER CERTIFICATE |ASYMMETRIC KEY)**: In SQL Server 2014 or later only, specify the encryption algorithm to use, and the Certificate or Asymmetric key to use to secure the encryption.
    - **DESCRIPTION** **=** { **'**_text_**'** | **@**_text\_variable_ }: Specifies the free-form text that describes the backup set. The string can have a maximum of 255 characters.
    - **NAME = { *backup_set_name* | **@**_backup\_set\_name\_var_ }**: Specifies the name of the backup set. Names can have a maximum of 128 characters. If NAME is not specified, it is blank.
@@ -315,33 +315,44 @@ BACKUP DATABASE SQLTestDB
 GO
 ```
 
-## <a name="PowerShellProcedure"></a> Using PowerShell (Windows only)
+## <a name="PowerShellProcedure"></a> Using PowerShell 
 
 Use the **Backup-SqlDatabase** cmdlet. To explicitly indicate that this is a full database backup, specify the **-BackupAction** parameter with its default value, **Database**. This parameter is optional for full database backups.
 
-## Powershell Examples (Windows only)
+## Powershell Examples
 
-### A. Full local backup (Windows only)
+### A. Full local backup
 
-The following example creates a full database backup of the `MyDB` database to the default backup location of the server instance `Computer\Instance`. Optionally, this example specifies **-BackupAction Database**.
+The following example creates a full database backup of the `SQLTestDB` database to the default backup location of the server instance `Computer\Instance`. Optionally, this example specifies **-BackupAction Database**. For the full syntax and additional examples, see [Backup-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/backup-sqldatabase).
+
+> [!NOTE]
+> These examples require the SqlServer module. To determine if it is installed, run `Get-Module -Name SqlServer`. To install this module, run `Install-Module -Name SqlServer` in an administrator session of PowerShell. For more information, see [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).
 
 ```powershell
-Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Database
+$credential=Get-Credential
+Backup-SqlDatabase -ServerInstance Computer[\Instance] -Database SQLTestDB -BackupAction Database -Credential $credential
 ```
 
-### B. Full backup to Microsoft Azure (Windows only)
+> [!IMPORTANT]
+> If you are opening a PowerShell window from within SQL Server Management Studio to connect to a Windows installation of SQL Server, you can omit the credential portion of this example as your credential in SSMS is automatically used to establish the connection between PowerShell and your SQL Server instance.
 
-The following example creates a full backup of the database `Sales` on the `MyServer` instance to the Microsoft Azure Blob Storage service. A stored access policy has been created with read, write, and list rights. The SQL Server credential, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, was created using a Shared Access Signature that is associated with the Stored Access Policy. The PowerShell command uses the **BackupFile** parameter to specify the location (URL) and the backup file name.
+### B. Full backup to Microsoft Azure
+
+The following example creates a full backup of the database `SQLTestDB` on the `MyServer` instance to the Microsoft Azure Blob Storage service. A stored access policy has been created with read, write, and list rights. The SQL Server credential, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, was created using a Shared Access Signature that is associated with the Stored Access Policy. The PowerShell command uses the **BackupFile** parameter to specify the location (URL) and the backup file name.
 
 ```powershell
-import-module sqlps;
+$credential=Get-Credential;
 $container = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer';
-$FileName = 'Sales.bak';
-$database = 'Sales';
-$BackupFile = $container + '/' + $FileName ;
+$fileName = 'SQLTestDB.bak';
+$server = "MyServer"
+$database = 'SQLTestDB';
+$backupFile = $container + '/' + $fileName ;
 
-Backup-SqlDatabase -ServerInstance "MyServer" -Database $database -BackupFile $BackupFile;
+Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential;
 ```
+
+> [!IMPORTANT]
+> If you are opening a PowerShell window from within SQL Server Management Studio to connect to a Windows installation of SQL Server, you can omit the credential portion of this example as your credential in SSMS is automatically used to establish the connection between PowerShell and your SQL Server instance.
 
 > [!IMPORTANT]
 > To set up and use the SQL Server PowerShell provider, see [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)

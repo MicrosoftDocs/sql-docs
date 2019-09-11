@@ -99,7 +99,11 @@ When a database is created or modified, you can use the COLLATE clause of the CR
 You cannot change the collation of system databases except by changing the collation for the server.    
     
 The database collation is used for all metadata in the database, and is the default for all string columns, temporary objects, variable names, and any other strings used in the database. When you change the collation of a user database, there can be collation conflicts when queries in the database access temporary tables. Temporary tables are always stored in the **tempdb** system database, which uses the collation for the instance. Queries that compare character data between the user database and **tempdb** may fail if the collations cause a conflict in evaluating the character data. You can resolve this by specifying the COLLATE clause in the query. For more information, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).    
-    
+
+> [!NOTE]
+> Collation cannot be changed after database has been created on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+
 #### Column-level collations    
 When you create or alter a table, you can specify collations for each character-string column by using the COLLATE clause. If no collation is specified, the column is assigned the default collation of the database.    
     

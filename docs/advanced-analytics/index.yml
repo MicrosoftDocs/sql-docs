@@ -68,7 +68,7 @@ landingContent:
             url: tutorials/quickstart-r-predict-from-model.md
       - linkListType: tutorial
         links:
-          - text: Predict ski rental with linear regression
-            url: python-ski-rental-linear-regression.md
-          - text: Categorizing customers using k-means clustering
-            url: python-clustering-model.md
+          - text: Use R in T-SQL
+            url: tutorials/sqldev-in-database-r-for-sql-developers.md
+          - text: Use Machine Learning Services in R tools
+            url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md

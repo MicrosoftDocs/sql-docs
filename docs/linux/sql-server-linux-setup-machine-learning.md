@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: machine-learning
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server 2019 Machine Learning Services (R, Python) on Linux
+# Install SQL Server Machine Learning Services (R, Python) on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

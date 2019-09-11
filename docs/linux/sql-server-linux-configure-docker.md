@@ -656,10 +656,14 @@ cd <path to dockerfile>
 docker build -t 2017-latest-non-root .
 ```
  
-3. Start the container
+3. Start the container.
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword@" --cap-add SYS_PTRACE --name sql1 -p 1433:1433 -d 2017-latest-non-root
 ```
+
+> [!NOTE]
+> The `--cap-add SYS_PTRACE` flag is required for non-root SQL Server containers to generate dumps for troubleshooting purposes.
+ 
  
 4. Check that the container is running as non-root user
 
@@ -675,7 +679,7 @@ whoami
 ```
  
 
-## <a id="nonrootuser"></a> Run container as a different non-root user
+## <a id="nonrootuser"></a> Run container as a different non-root user on the host
 To run the SQL Server container as a different non-root user, add the -u flag to the docker run command. The non-root container has the restriction that it must run as part of the root group unless a volume is mounted to /var/opt/mssql that the non-root user can access. The root group doesn’t grant any extra root permissions to the non-root user.
  
 **Run as a user with a UID 4000**
@@ -687,6 +691,14 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PT
  
 > [!Warning]
 > Ensure that the SQL Server container has a named user such as 'mssql' or 'root' or SQLCMD will not be able to run within the container. You can check if the SQL Server container is running as a named user by running `whoami` within the container.
+
+**Run the non-root container as the root user**
+
+You can run the non-root container as the root user if required. This would also grant all file permissions automatically to the container becuase it is higher privilege.
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -u 0:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
  
 **Run as a user on your host machine**
  
@@ -730,11 +742,6 @@ This can be the default non-root user, or any other non-root user you’d like t
 chown -R 10001:0 <database file dir>
 ```
  
-**Run the container as the root user, to grant all file permissions automatically**
-
-```bash
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -u 0:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
-```
 
  
 ## <a id="changefilelocation"></a> Change the default file location

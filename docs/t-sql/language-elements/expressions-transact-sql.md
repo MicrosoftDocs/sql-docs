@@ -122,7 +122,25 @@ GO
 ```  
   
  The expression `1+2` evaluates to `3` in each row in the result set. Although the expression `ProductID` generates a unique value in each result set row, each row only has one value for `ProductID`.  
-  
+ 
+- Azure SQL Data Warehouse allocates a fixed maximum amount of memory to each thread so no thread can use up all the memory.  Some of this memory is used for storing queries’ expressions.  If a query has too many expressions and its required memory exceeds the internal limit, the engine will not execute it.  To avoid this problem, users can change the query into multiple queries with smaller number of expressions in each. For example, you have 1000 lines of similar expressions in the WHERE clause:
+
+```sql
+DELETE FROM dbo.MyTable 
+WHERE
+(c1 = '0000001' AND c2 = 'A000001') or
+(c1 = '0000002' AND c2 = 'A000001') or
+...
+
+```
+Change this query to:
+
+```sql
+DELETE FROM dbo.MyTable WHERE (c1 = '0000001' AND c2 = 'A000001');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000002' AND c2 = 'A000001');
+...
+```
+
 ## See Also  
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   

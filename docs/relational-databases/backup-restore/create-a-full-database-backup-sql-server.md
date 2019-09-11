@@ -354,9 +354,6 @@ Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $back
 > [!IMPORTANT]
 > If you are opening a PowerShell window from within SQL Server Management Studio to connect to a Windows installation of SQL Server, you can omit the credential portion of this example as your credential in SSMS is automatically used to establish the connection between PowerShell and your SQL Server instance.
 
-> [!IMPORTANT]
-> To set up and use the SQL Server PowerShell provider, see [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)
-
 ## <a name="RelatedTasks"></a> Related Tasks
 
 - [Back Up a Database (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)

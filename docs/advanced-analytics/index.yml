@@ -22,7 +22,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: What is Machine Learning Services (Python and R)?
+          - text: What is Machine Learning Services (Python, R)?
             url: what-is-sql-server-machine-learning.md
           - text: What's new?
             url: what-s-new-in-sql-server-machine-learning-services.md
@@ -36,17 +36,39 @@ landingContent:
       - linkListType: quickstart
         links:
           - text: Run a "Hello world" Python script on SQL Server
-            url: quickstart-python-run-using-t-sql.md
+            url: tutorials/quickstart-python-run-using-t-sql.md
           - text: Handle inputs and outputs
-            url: quickstart-python-inputs-and-outputs.md
+            url: tutorials/quickstart-python-inputs-and-outputs.md
           - text: Python data structures in SQL Server
-            url: quickstart-python-data-structures.md
+            url: tutorials/quickstart-python-data-structures.md
           - text: Train and use your first model
-            url: quickstart-python-train-score-in-tsql.md
+            url: tutorials/quickstart-python-train-score-in-tsql.md
+      - linkListType: tutorial
+        links:
+          - text: Predict ski rental with linear regression
+            url: tutorials/python-ski-rental-linear-regression.md
+          - text: Categorizing customers using k-means clustering
+            url: tutorials/python-clustering-model.md
+
+  - title: Get started with R
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Run a "Hello world" R script on SQL Server
+            url: tutorials/quickstart-r-run-using-tsql.md
+          - text: Handle inputs and outputs
+            url: tutorials/quickstart-r-inputs-and-outputs.md
+          - text: R data structures in SQL Server
+            url: tutorials/quickstart-r-data-types-and-objects.md
+          - text: Use R functions
+            url: tutorials/quickstart-r-functions.md
+          - text: Create a predictive model
+            url: tutorials/quickstart-r-create-predictive-models.md
+          - text: Predict from a model
+            url: tutorials/quickstart-r-predict-from-model.md
       - linkListType: tutorial
         links:
           - text: Predict ski rental with linear regression
             url: python-ski-rental-linear-regression.md
           - text: Categorizing customers using k-means clustering
             url: python-clustering-model.md
-

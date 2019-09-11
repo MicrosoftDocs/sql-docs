@@ -334,7 +334,7 @@ Backup-SqlDatabase -ServerInstance Computer[\Instance] -Database SQLTestDB -Back
 ```
 
 > [!IMPORTANT]
-> If you are opening a PowerShell window from within SQL Server Management Studio to connect to a Windows installation of SQL Server, you can omit the credential portion of this example as your credential in SSMS is automatically used to establish the connection between PowerShell and your SQL Server instance.
+> If you are opening a PowerShell window from within SQL Server Management Studio to connect to an installation of SQL Server, you can omit the credential portion of this example as your credential in SSMS is automatically used to establish the connection between PowerShell and your SQL Server instance.
 
 ### B. Full backup to Microsoft Azure
 

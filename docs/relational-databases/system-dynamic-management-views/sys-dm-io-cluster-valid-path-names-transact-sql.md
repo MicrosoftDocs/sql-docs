@@ -30,9 +30,9 @@ ms.author: sstein
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**path_name**|**Nvarchar(512)**|Volume mount point or drive path that can be used as a root directory for database and log files. Is not nullable.|  
-|**cluster_owner_node**|**Nvarchar(64)**|Current owner of the drive. For cluster shared volumes (CSV), the owner is the node which is hosting the MetaData Server. Is not nullable.|  
-|**is_cluster_shared_volume**|**Bit**|Returns 1 if the drive on which this path is located is a cluster shared volume; otherwise, returns 0.|  
+|**path_name**|**nvarchar(512)**|Volume mount point or drive path that can be used as a root directory for database and log files. Is not nullable.|  
+|**cluster_owner_node**|**nvarchar(64)**|Current owner of the drive. For cluster shared volumes (CSV), the owner is the node which is hosting the MetaData Server. Is not nullable.|  
+|**is_cluster_shared_volume**|**bit**|Returns 1 if the drive on which this path is located is a cluster shared volume; otherwise, returns 0.|  
   
 ## Remarks  
  A SQL Server failover cluster instance (FCI) must use shared storage between all nodes of the FCI for data and log file storage. The disks listed in this view are those that are in the cluster resource group associated with the instance and are the only disks that can be used for data or log file storage.  

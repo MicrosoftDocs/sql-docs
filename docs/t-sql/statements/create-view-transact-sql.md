@@ -159,7 +159,7 @@ OR ALTER
   
  If a view depends on a table or view that was dropped, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] produces an error message when anyone tries to use the view. If a new table or view is created and the table structure does not change from the previous base table to replace the one dropped, the view again becomes usable. If the new table or view structure changes, the view must be dropped and re-created.  
   
- If a view is not created with the SCHEMABINDING clause, run sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) when changes are made to the objects underlying the view that affect the definition of the view. Otherwise, the view might produce unexpected results when it is queried.  
+ If a view is not created with the SCHEMABINDING clause, run [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) when changes are made to the objects underlying the view that affect the definition of the view. Otherwise, the view might produce unexpected results when it is queried.  
   
  When a view is created, information about the view is stored in the following catalog views: [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), and [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). The text of the CREATE VIEW statement is stored in the [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) catalog view.  
   

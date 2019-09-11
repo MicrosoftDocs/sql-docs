@@ -143,8 +143,8 @@ In this example, the `SQLTestDB` database will be backed up to disk at a locatio
 In this example, the `SQLTestDB` database will be backed up with encryption to the default backup location.
 
 1. After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in **Object Explorer**, expand the server tree.
-2. Expand **Databases**, right-click `SQLTestDB`, and click **New Query** to open a query window with a connection to your `SQLTestDB` database.
-3. Execute the following commands to create a [**database master key**](../../relational-databases/security/encryption/create-a-database-master-key.md) and a [**certificate**](../../t-sql/statements/create-certificate-transact-sql.md) within your `SQLTestDB` database.
+2. Expand **Databases**, right-click `master`, and click **New Query** to open a query window with a connection to your `SQLTestDB` database.
+3. Execute the following commands to create a [**database master key**](../../relational-databases/security/encryption/create-a-database-master-key.md) and a [**certificate**](../../t-sql/statements/create-certificate-transact-sql.md) within the `master` database.  
 
     ```sql
     -- Create the database master key
@@ -152,7 +152,6 @@ In this example, the `SQLTestDB` database will be backed up with encryption to t
 
     -- Create the certificate
     CREATE CERTIFICATE MyCertificate
-    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'
     WITH SUBJECT = 'test of backup encryption',
     EXPIRY_DATE = '20201031';
     ```

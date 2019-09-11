@@ -18,14 +18,24 @@ metadata:
 landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
-  - title: About SQL Server Machine Learning Services
+  - title: About Machine Learning Services
     linkLists:
       - linkListType: overview
         links:
           - text: What is Machine Learning Services (Python, R)?
             url: what-is-sql-server-machine-learning.md
-          - text: What's new?
+      - linkListType: whats-new
+        links:
+          - text: What's new in Machine Learning Services?
             url: what-s-new-in-sql-server-machine-learning-services.md
+      - linkListType: architecture
+        links:
+          - text: Extensibility framework
+            url: concepts/extensibility-framework.md
+          - text: Python extension
+            url: concepts/extension-python.md
+          - text: R extension
+            url: concepts/extension-r.md
       - linkListType: video
         links:
           - text: How to Execute R/Python in SQL Server with Machine Learning Services
@@ -60,15 +70,26 @@ landingContent:
             url: tutorials/quickstart-r-inputs-and-outputs.md
           - text: R data structures in SQL Server
             url: tutorials/quickstart-r-data-types-and-objects.md
-          - text: Use R functions
-            url: tutorials/quickstart-r-functions.md
           - text: Create a predictive model
             url: tutorials/quickstart-r-create-predictive-models.md
-          - text: Predict from a model
-            url: tutorials/quickstart-r-predict-from-model.md
       - linkListType: tutorial
         links:
           - text: Use R in T-SQL
             url: tutorials/sqldev-in-database-r-for-sql-developers.md
           - text: Use Machine Learning Services in R tools
             url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+
+  - title: Install Machine Learning Services
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Install SQL Server Machine Learning Services on Windows
+            url: install/sql-machine-learning-services-windows-install.md
+          - text: Install SQL Server Machine Learning Services on Linux
+            url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
+      - linkListType: get-started
+        links:
+          - text: Set up a Python client
+            url: python/setup-python-client-tools-sql.md
+          - text: Set up an R client
+            url: r/set-up-a-data-science-client.md

@@ -25,7 +25,7 @@ This topic describes how to create a full database backup in [!INCLUDE[ssCurrent
 
 For information on SQL Server backup to the Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
-## <a name="Restrictions"></a> Limitations and Restrictions
+## <a name="Restrictions"></a> Limitations and restrictions
 
 - The BACKUP statement is not allowed in an explicit or implicit transaction.
 - Backups created by more recent version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -65,7 +65,7 @@ BACKUP DATABASE and BACKUP LOG permissions default to members of the **sysadmin*
    > [!IMPORTANT]
    > You must perform at least one full database backup before you can perform a differential or a transaction log backup.
 6. Under **Backup component**, select **Database**.
-7. In the **Destination** section, review the default location for the backup file (in the ../mssql/data folder). To backup to a differnt device, change the selection using the **Back up to** drop-down list. To stripe the backup set across multiple files for increased backup speed, click **Add** to add additional backup objects and/or destinations. To remove a backup destination, select it and click **Remove**. To view the contents of an existing backup destination, select it and click **Contents**.
+7. In the **Destination** section, review the default location for the backup file (in the ../mssql/data folder). To backup to a different device, change the selection using the **Back up to** drop-down list. To stripe the backup set across multiple files for increased backup speed, click **Add** to add additional backup objects and/or destinations. To remove a backup destination, select it and click **Remove**. To view the contents of an existing backup destination, select it and click **Contents**.
 8. (Optionally) Review the other available settings under the **Media Options** and **Backup Options** pages. For more information about the various backup options, see [General page](back-up-database-general-page.md), [Media options page](back-up-database-media-options-page.md), and [Backup options page](back-up-database-backup-options-page.md).
 9. Click **OK** to initiate the backup.
 10. When the backup completes successfully, click **OK** to close the Microsoft SQL Server Management Studio dialog box.
@@ -165,7 +165,7 @@ In this example, the `SQLTestDB` database will be backed up with encryption to t
 
 ![Encrypted backup](media/create-a-full-database-backup-sql-server/encrypted-backup.png)
 
-### **D. Back up to the Azure Blob storage service**
+### D. Back up to the Azure Blob storage service
 
 The example below performs a full database backup of `SQLTestDB` to the Microsoft Azure Blob storage service. This example assumes that you already have a storage account with a blob container. This example creates a shared access signature for you; this example fails of the container has an existing shared access signature. If you do not have an Azure blob container in a storage account, create one before continuing. For more information, see [Create a general purpose storage account](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) and [Create a container](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
@@ -265,7 +265,7 @@ SELECT * FROM SQLTest
 GO
 ```
 
-### **A. Back up to a disk device**
+### A. Back up to a disk device
 
 The following example backs up the complete `SQLTestDB` database to disk, by using `FORMAT` to create a new media set.
 
@@ -280,7 +280,7 @@ TO DISK = 'c:\tmp\SQLTestDB.bak'
 GO
 ```
 
-#### **B. Back up to a tape device**
+#### B. Back up to a tape device
 
  The following example backs up the complete `SQLTestDB` database to tape, appending the backup to the previous backups.
 
@@ -294,7 +294,7 @@ BACKUP DATABASE SQLTestDB
 GO
 ```
 
-#### **C. Back up to a logical tape device**
+#### C. Back up to a logical tape device
 
 The following example creates a logical backup device for a tape drive. The example then backs up the complete SQLTestDB database to that device.
 
@@ -314,7 +314,7 @@ BACKUP DATABASE SQLTestDB
 GO
 ```
 
-## <a name="PowerShellProcedure"></a> Using PowerShell 
+## <a name="PowerShellProcedure"></a> Using PowerShell
 
 Use the **Backup-SqlDatabase** cmdlet. To explicitly indicate that this is a full database backup, specify the **-BackupAction** parameter with its default value, **Database**. This parameter is optional for full database backups.
 

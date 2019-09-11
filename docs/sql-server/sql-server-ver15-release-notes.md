@@ -128,6 +128,16 @@ The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Release candidate
 
+## Master Data Service notification email contains broken link
+
+- **Issue and customer impact**: The notification email from Master Data Services (MDS) contains a broken link. The link navigates to a page that returns an error like the following message:
+
+   `The view 'Index' or its master was not found or no view engine supports the searched locations.`
+
+- **Workaround**: Open the MDS portal and go to the resource manually.
+
+- **Applies to**: SQL Server 2019 release candidate.
+
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

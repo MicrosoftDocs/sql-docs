@@ -177,7 +177,7 @@ single_byte_representing_complete_character single_byte_representing_complete_ch
 ```
 
 ### F. CHAR inability to return multibyte characters
-This example uses the an integer and hex values in the valid range for ASCII. However, the CHAR function returns NULL because the parameter matches the first byte of a number of multibyte characters in the collation, but no single complete character.
+This example uses integer and hex values in the valid range for ASCII. However, the CHAR function returns NULL because the parameter matches the first byte of a number of multibyte characters in the collation, but no single complete character.
   
 ```sql
 SELECT CHAR(129) AS first_byte_of_double_byte_character, 

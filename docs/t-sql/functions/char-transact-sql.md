@@ -202,9 +202,9 @@ CREATE DATABASE [multibyte-char-context]
 GO
 USE [multibyte-char-context]
 GO
-SELECT NCHAR(0x266a) AS [eighth-note]
-  , CONVERT(CHAR(2), 0x81f4) AS [context-dependent-convert]
-  , CAST(0x81f4 AS CHAR(2)) AS [context-dependent-cast]
+SELECT NCHAR(0x266A) AS [eighth-note]
+  , CONVERT(CHAR(2), 0x81F4) AS [context-dependent-convert]
+  , CAST(0x81F4 AS CHAR(2)) AS [context-dependent-cast]
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -216,21 +216,37 @@ eighth-note context-dependent-convert context-dependent-cast
 ```
 
 ### H. Using NCHAR instead of CHAR to return UTF-8 characters
-This example highlights the distinction between Unicode codepoints and Unicode encodings.
-Unlike classic character sets, UTF-8 bytes representing a given character are not synonymous with that character's codepoint.
-The character set associated with UTF-8 is Unicode, thus UTF-8 codepoints have the same identity as other Unicode encodings such as that used by NCHAR and NVARCHAR, differing only in encoded binary representation.
+This example highlights the distinction the Unicode standard makes between a character's _code point_ and the _code unit sequence_ under a given _encoding form_.
+The binary code assigned to a character in a classic character set is its only numeric identifier.
+In contrast, the UTF-8 byte sequence associated with a character is an algorithmic encoding of its assigned numeric identifier: the code point.
+UTF-8 `CHAR` and UTF-16 `NCHAR` are different _encoding forms_ using 8-bit and 16-bit _code units_, of the same character set: the Unicode Character Database.
 
 ```sql
-SELECT NCHAR(0x266a) AS [beamed-eighth-note]
-  , CONVERT(VARCHAR(4), NCHAR(0x266b) COLLATE Latin1_General_100_CI_AI_SC_UTF8) AS [utf-8 beamed-eight-notes]
+; WITH uni(c) AS (
+    -- BMP character
+    SELECT NCHAR(0x266B)
+    UNION ALL
+    -- supplementary character, collation-independent construction
+    SELECT CONVERT(NVARCHAR(2), 0x3CD8b5DF)
+  ),
+  enc(u16c, u8c) AS (
+    SELECT c, CONVERT(VARCHAR(4), c COLLATE Latin1_General_100_CI_AI_SC_UTF8)
+    FROM uni
+  )
+  SELECT u16c AS [music note]
+    , u8c AS [music note (UTF-8)]
+    , CONVERT(VARBINARY(4), u16c) AS [UTF-16LE bytes]
+    , CONVERT(VARBINARY(4), u8c)  AS [UTF-8 bytes]
+  FROM enc
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
 ```
-beamed-eighth-note utf-8 beamed-eight-notes
------------------- ------------------------
-♫                  ♫
+music note music note (UTF-8) UTF-16LE bytes UTF-8 bytes
+---------- ------------------ -------------- -----------
+♫          ♫                  0x6B26         0xE299AB
+🎵         🎵                 0x3CD8B5DF     0xF09F8EB5
 ```
 
 ## See also

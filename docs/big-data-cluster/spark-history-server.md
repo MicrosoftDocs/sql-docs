@@ -22,7 +22,7 @@ This article provides guidance on how to use extended Spark History Server to de
 The Spark history server user experience from open source is enhanced with information, which includes job-specific data and interactive visualization of job graph and data flows for big data cluster. 
 
 ### Open the Spark History Server Web UI by URL
-Open the Spark History Server by browsing to the following URL, replace `<Ipaddress>` and `<Port>` with big data cluster specific information. More information can be referred to: [Deploy SQL Server big data cluster](quickstart-big-data-cluster-deploy.md)
+Open the Spark History Server by browsing to the following URL, replace `<Ipaddress>` and `<Port>` with big data cluster specific information. Note that in a basic authentication (username/password) big data cluster setup, you must provide user **root** when prompted to login to gateway (Knox) endpoints. More information can be referred to: [Deploy SQL Server big data cluster](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory

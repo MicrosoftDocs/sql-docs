@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Quickstart: Using R functions
+# Quickstart: Use R functions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 If you completed the previous quickstarts, you're familiar with basic operations and ready for something more complex, such as statistical functions. Advanced statistical functions that are complicated to implement in T-SQL can be done in R with only a single line of code.

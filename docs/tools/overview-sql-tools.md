@@ -1,7 +1,8 @@
 ---
-title: "SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse | Microsoft Docs"
+title: "SQL query and management tools for SQL Server, Azure SQL (Azure SQL databases, Azure SQL managed instances, SQL virtual machines), and Azure SQL data warehouse | Microsoft Docs"
+description: "SQL query and management tools for SQL Server, Azure SQL (Azure SQL database, Azure SQL managed instance, SQL virtual machines), and Azure SQL data warehouse"
 ms.custom: ""
-ms.date: "11/19/2018"
+ms.date: "09/11/2019"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -12,16 +13,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
-# SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse
+# SQL query and management tools for SQL Server, Azure SQL (Azure SQL database, Azure SQL managed instance, SQL virtual machines), and Azure SQL data warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 To manage (query, monitor, etc.) your database you need a tool. While your databases can be running in the cloud, on Windows, or on [Linux](../linux/sql-server-linux-overview.md), your tool doesn't need to run on the same platform as the database. 
 
 There are many database tools available, so this article provides descriptions and pointers to some of the available tools for working with your SQL databases. If you need help deciding which tool you need, see [Which tool should I use?](#which-tool-should-i-choose).
 
+For additional information, and to download a tool, select the links in the Tool column in the following tables. To download SQL Server, see [Install SQL Server](../database-engine/install-windows/install-sql-server.md). 
+
 ## GUI tools to manage databases  
 
-The following are the main graphical user interface (GUI) tools:
+The following tools provide a graphical user interface (GUI):
 
 | Tool | Description | Runs on |
 |:--|:--|:--|

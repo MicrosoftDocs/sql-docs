@@ -223,7 +223,7 @@ To fix this issue, you need upgrade the database version:
 
 1. Select **Finish** after all tasks are complete.
 
-## See Also
+## See also
 
 - [Master Data Services Database](../master-data-services/master-data-services-database.md)
 - [Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)

@@ -100,3 +100,16 @@ landingContent:
         links:
           - text: Security for the externsibility framework
             url: /concepts/security.md
+
+  - title: Package management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Get Python package information
+            url: package-management/python-package-information.md
+          - text: Install Python packages with sqlmlutils
+            url: package-management/install-additional-python-packages-on-sql-server.md
+          - text: Get R package information
+            url: package-management/r-package-information.md
+          - text: Install new R packages with sqlmlutils
+            url: package-management/install-additional-r-packages-on-sql-server.md

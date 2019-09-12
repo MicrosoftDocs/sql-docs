@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 
-author: DBArgenis
-ms.author: argenisf
+author: briancarrig
+ms.author: brcarrig
 ---
 # Hybrid Buffer Pool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -37,46 +37,45 @@ To prepare, you need to create and configure an Azure SQL Database managed insta
 1. Install a Point-to-Site connection certificate and VPN to ensure that the machine can access the SQL Database managed instance. Refer to [Configure a Point-to-Site connection to a VNet using native Azure certificate authentication: Azure portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) for instructions.
 
 1. Install the following Roles and Features:
-        - Roles:
-            - Internet Information Services
-            - Web Management Tools
-            - IIS Management Console
-            -  World Wide Web Services
-            -  Application Development
-            -  .NET Extensibility 3.5
-            -  .NET Extensibility 4.5
-            -  ASP.NET 3.5
-            -  ASP.NET 4.5
-            -  ISAPI Extensions
-            -  ISAPI Filters
-            -  Common HTTP Features
-            -  Default Document
-            -  Directory Browsing
-            -  HTTP Errors
-            -  Static Content
-            -  Health and Diagnostics
-            -  HTTP Logging
-            -  Request Monitor
-            -  Performance
-            -  Static Content Compression
-            -  Security
-            -  Request Filtering
-            -  Windows Authentication
-            > [!NOTE]
-            > Don't install WebDAV Publishing
-
-      - Features:
-           - .NET Framework 3.5 (includes .NET 2.0 and 3.0)
-           - .NET Framework 4.5 Advanced Services
-           - ASP.NET 4.5
-           - WCF Services
-           - HTTP Activation (required)
-           - TCP Port Sharing
-           - Windows Process Activation Service
-           - Process Model
-           - .NET Environment
-           - Configuration APIs
-           - Dynamic Content Compression
+   - Roles:
+     - Internet Information Services
+     - Web Management Tools
+     - IIS Management Console
+     - World Wide Web Services
+     - Application Development
+     - .NET Extensibility 3.5
+     - .NET Extensibility 4.5
+     - ASP.NET 3.5
+     - ASP.NET 4.5
+     - ISAPI Extensions
+     - ISAPI Filters
+     - Common HTTP Features
+     - Default Document
+     - Directory Browsing
+     - HTTP Errors
+     - Static Content
+     - Health and Diagnostics
+     - HTTP Logging
+     - Request Monitor
+     - Performance
+     - Static Content Compression
+     - Security
+     - Request Filtering
+     - Windows Authentication
+       > [!NOTE]
+       > Don't install WebDAV Publishing
+   - Features:
+     - .NET Framework 3.5 (includes .NET 2.0 and 3.0)
+     - .NET Framework 4.5 Advanced Services
+     - ASP.NET 4.5
+     - WCF Services
+     - HTTP Activation (required)
+     - TCP Port Sharing
+     - Windows Process Activation Service
+     - Process Model
+     - .NET Environment
+     - Configuration APIs
+     - Dynamic Content Compression
 
 ## Install and configure an MDS web application
 

@@ -1,76 +1,111 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: SQL Server Machine Learning Services (Python and R) Documentation
+### YamlMime:Landing
+
+title: SQL Server Machine Learning Services (Python and R) documentation
+summary: Learn how to use SQL Server Machine Learning Services to run Python and R scripts on relational data. Tutorials, code examples, installation guides, and other documentation show you how.
+
 metadata:
-  title: SQL Server Machine Learning Services (Python, R) Documentation - Tutorials, quickstarts, and install guides | Microsoft Docs
-  titleSuffix: ''
+  title: SQL Server Machine Learning Services (Python, R) documentation - Tutorials, quickstarts, and install guides
   description: Learn how to use SQL Server Machine Learning Services to run Python and R scripts on relational data. Tutorials, code examples, installation guides, and other documentation show you how.
   ms.prod: sql
   ms.technology: machine-learning
-  ms.topic: landing-page
+  ms.topic: landing-page 
   author: dphansen
   ms.author: davidph
-  ms.date: 08/01/2019
-abstract:
-  description: Learn how to use SQL Server Machine Learning Services for running Python and R scripts on relational data. Tutorials, code examples, installation guides, and other documentation show you how.
-  aside:
-    image:
-      alt: 
-      height: 124
-      src: media/index/video.png
-      width: 250  
-    title: Watch video (3:00)
-    href: https://www.youtube.com/watch?v=ACejZ9optCQ
-    width: 250  
+  ms.date: 09/12/2019 
 
-sections:   
-- title: 5-Minute Quickstarts
-  items:
-  - type: paragraph
-    text: 'After you <a href="install/sql-machine-learning-services-windows-install">install SQL Server Machine Learning Services</a>, you can get started using these quickstarts:'
-  - type: list
-    style: unordered
-    items:
-      - html: 'Run a "Hello world" script <a href="tutorials/quickstart-python-run-using-t-sql">in Python</a> or <a href="tutorials/quickstart-r-run-using-tsql">in R</a>'
-      - html: 'Create a predictive model <a href="tutorials/quickstart-python-train-score-in-tsql">in Python</a> or <a href="tutorials/quickstart-r-create-predictive-model">in R</a>'
+landingContent:
+  - title: About Machine Learning Services
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is SQL Server Machine Learning Services (Python and R)?
+            url: what-is-sql-server-machine-learning.md
+      - linkListType: whats-new
+        links:
+          - text: What's new in Machine Learning Services?
+            url: what-s-new-in-sql-server-machine-learning-services.md
+      - linkListType: video
+        links:
+          - text: How to Execute R/Python in SQL Server with Machine Learning Services
+            url: https://www.youtube.com/watch?v=ACejZ9optCQ
 
-- title: Step-by-Step Tutorials
-  items:
-  - type: paragraph
-    text: 'Learn how to explore data, do feature engineering, train and deploy models, and make predictions:'
-  - type: list
-    style: unordered
-    items:
-    - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">Use Python in T-SQL</a>: Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)'
-    - html: '<a href="tutorials/sqldev-in-database-r-for-sql-developers">Use R in T-SQL</a>: Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)'
-    - html: '<a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">Use Machine Learning Services in R tools</a>: Explore data, create graphs and plots, perform feature engineering, train and deploy models, and make predictions (six-part series)'
+  - title: Get started with Python
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Run a "Hello world" Python script on SQL Server
+            url: tutorials/quickstart-python-run-using-t-sql.md
+          - text: Handle inputs and outputs
+            url: tutorials/quickstart-python-inputs-and-outputs.md
+          - text: Python data structures in SQL Server
+            url: tutorials/quickstart-python-data-structures.md
+          - text: Train and use your first model
+            url: tutorials/quickstart-python-train-score-in-tsql.md
+      - linkListType: tutorial
+        links:
+          - text: Predict ski rental with linear regression
+            url: tutorials/python-ski-rental-linear-regression.md
+          - text: Categorizing customers using k-means clustering
+            url: tutorials/python-clustering-model.md
 
-- title: Solutions
-  items:
-  - type: paragraph
-    text: 'Find <a href="tutorials/data-science-scenarios-and-solution-templates">templates to help you build machine learning solutions</a> on SQL Server.'
+  - title: Get started with R
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Run a "Hello world" R script on SQL Server
+            url: tutorials/quickstart-r-run-using-tsql.md
+          - text: Handle inputs and outputs
+            url: tutorials/quickstart-r-inputs-and-outputs.md
+          - text: R data structures in SQL Server
+            url: tutorials/quickstart-r-data-types-and-objects.md
+          - text: Create a predictive model
+            url: tutorials/quickstart-r-create-predictive-model.md
+      - linkListType: tutorial
+        links:
+          - text: Use R in T-SQL
+            url: tutorials/sqldev-in-database-r-for-sql-developers.md
+          - text: Use Machine Learning Services in R tools
+            url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
 
-- title: Reference
-  items:
-  - type: paragraph
-    text: 'Use both open source packages and frameworks, and Microsoft Python and R packages in SQL Server Machine Learning Services:'
-  - type: list
-    style: unordered
-    items:
-    - html: '<a href="python/ref-py-revoscalepy">revoscalepy in Python</a>: Distributed and parallel processing for Python tasks: data transformation, exploration, visualization, statistical and predictive analytics'
-    - html: '<a href="python/ref-py-microsoftml">microsoftml in Python</a>: Functions based on Microsoft AI algorithms for Python'
-    - html: '<a href="r/ref-r-revoscaler">RevoScaleR in R</a>: Distributed and parallel processing for R tasks: data transformation, exploration, visualization, statistical and predictive analytics'
-    - html: '<a href="r/ref-r-microsoftml">MicrosoftML in R</a>: Functions based on Microsoft AI algorithms for R'
-    - html: '<a href="r/ref-r-olapr">olapR in R</a>: Imports data from OLAP cubes'
-    - html: '<a href="r/ref-r-sqlrutils">sqlRUtils in R</a>: Helper functions for encapsulating R and T-SQL'
+  - title: Install Machine Learning Services
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Install Machine Learning Services on Windows
+            url: install/sql-machine-learning-services-windows-install.md
+          - text: Install Machine Learning Services on Linux
+            url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
+      - linkListType: how-to-guide
+        links:
+          - text: Set up a Python client
+            url: python/setup-python-client-tools-sql.md
+          - text: Set up an R client
+            url: r/set-up-a-data-science-client.md
 
-- title: Other Machine Learning Technologies
-  items:
-  - type: list
-    style: unordered
-    items:
-    - html: '<a href="/azure/sql-database/sql-database-machine-learning-services-overview">Azure SQL Database Machine Learning Services<a>'
-    - html: '<a href="/azure/machine-learning/">Azure Machine Learning</a>'
-    - html: '<a href="/dotnet/machine-learning/">ML.NET</a>'
-    - html: '<a href="/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning">What are the machine learning products at Microsoft?</a>'
-    
+  - title: Architecture and security
+    linkLists:
+      - linkListType: architecture
+        links:
+          - text: Extensibility framework
+            url: concepts/extensibility-framework.md
+          - text: Python extension
+            url: concepts/extension-python.md
+          - text: R extension
+            url: concepts/extension-r.md
+      - linkListType: concept
+        links:
+          - text: Security for the externsibility framework
+            url: /concepts/security.md
+
+  - title: Manage Python and R packages
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Get Python package information
+            url: package-management/python-package-information.md
+          - text: Install Python packages with sqlmlutils
+            url: package-management/install-additional-python-packages-on-sql-server.md
+          - text: Get R package information
+            url: package-management/r-package-information.md
+          - text: Install new R packages with sqlmlutils
+            url: package-management/install-additional-r-packages-on-sql-server.md

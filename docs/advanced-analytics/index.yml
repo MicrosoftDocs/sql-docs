@@ -71,7 +71,7 @@ landingContent:
           - text: R data structures in SQL Server
             url: tutorials/quickstart-r-data-types-and-objects.md
           - text: Create a predictive model
-            url: tutorials/quickstart-r-create-predictive-models.md
+            url: tutorials/quickstart-r-create-predictive-model.md
       - linkListType: tutorial
         links:
           - text: Use R in T-SQL

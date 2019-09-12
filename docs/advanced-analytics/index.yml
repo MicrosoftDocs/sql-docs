@@ -86,7 +86,7 @@ landingContent:
           - text: Set up an R client
             url: r/set-up-a-data-science-client.md
 
-  - title: Architecture and security
+  - title: Learn about the architecture and security
     linkLists:
       - linkListType: architecture
         links:
@@ -101,7 +101,7 @@ landingContent:
           - text: Security for the externsibility framework
             url: /concepts/security.md
 
-  - title: Package management
+  - title: Manage Python and R packages
     linkLists:
       - linkListType: how-to-guide
         links:

@@ -11,13 +11,9 @@ metadata:
   ms.topic: landing-page 
   author: dphansen
   ms.author: davidph
-  ms.date: 09/10/2019 
-
-# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+  ms.date: 09/12/2019 
 
 landingContent:
-# Cards and links should be based on top customer tasks or top subjects
-# Start card title with a verb
   - title: About Machine Learning Services
     linkLists:
       - linkListType: overview

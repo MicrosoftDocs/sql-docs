@@ -62,10 +62,10 @@ To uninstall SQL Server from Windows 10, Windows Server 2016, Windows Server 201
 
 1. To begin the removal process navigate to **Settings** from the Start menu and then choose **Apps**. 
 1. Search for `sql` in the search box. 
-1. Select **Microsoft SQL Server (Version) (Bit)**. For example, `Microsoft SQL Server 2017 (64-bit)`
+1. Select **Microsoft SQL Server (Version) (Bit)**. For example, `Microsoft SQL Server 2017 (64-bit)`.
 1. Select **Uninstall**.
  
-    ![Uninstall SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server.png)
+    ![Uninstall SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-10.png)
 
 1. Select **Remove** on the SQL Server dialog pop-up to launch the Microsoft SQL Server installation wizard. 
 
@@ -103,14 +103,11 @@ To uninstall SQL Server from Windows 10, Windows Server 2016, Windows Server 201
 
   
 ## In the event of failure  
-  
-1.  If the removal process does not complete successfully, attempt to fix the problem that caused the removal to fail. The following articles can help you understand the cause of the failed removal:  
-  
-    -   [How to identify SQL Server 2008 setup issues in the setup log files](https://support.microsoft.com/kb/955396/en-us). Though this article is specifically for SQL Server 2008, the process to identify issues is the same for every version of SQL Server. 
-  
-    -   [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
-2.  If you are unable to fix the cause of the uninstallation failure, you can contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support. In some cases, such as unintentional deletion of important files, reinstalling the operating system may be required before reinstalling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the computer.  
+
+If the removal process fails, review the [SQL Server setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) to determine the root cause. 
+
+The KB article [How to identify SQL Server 2008 setup issues in the setup log files](https://support.microsoft.com/kb/955396/en-us) can assist in the investigation. Though it is for SQL Server 2008, the methodology described is applicable to every version of SQL Server. 
+
   
 ## See Also  
  [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

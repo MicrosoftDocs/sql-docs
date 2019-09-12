@@ -123,13 +123,14 @@ GO
   
  The expression `1+2` evaluates to `3` in each row in the result set. Although the expression `ProductID` generates a unique value in each result set row, each row only has one value for `ProductID`.  
  
-- Azure SQL Data Warehouse allocates a fixed maximum amount of memory to each thread so no thread can use up all the memory.  Some of this memory is used for storing queries’ expressions.  If a query has too many expressions and its required memory exceeds the internal limit, the engine will not execute it.  To avoid this problem, users can change the query into multiple queries with smaller number of expressions in each. For example, you have 1000 lines of similar expressions in the WHERE clause:
+- Azure SQL Data Warehouse allocates a fixed maximum amount of memory to each thread so no thread can use up all the memory.  Some of this memory is used for storing queries’ expressions.  If a query has too many expressions and its required memory exceeds the internal limit, the engine will not execute it.  To avoid this problem, users can change the query into multiple queries with smaller number of expressions in each. For example, you have a query with a long list of expressions in the WHERE clause: 
 
 ```sql
 DELETE FROM dbo.MyTable 
 WHERE
 (c1 = '0000001' AND c2 = 'A000001') or
-(c1 = '0000002' AND c2 = 'A000001') or
+(c1 = '0000002' AND c2 = 'A000002') or
+(c1 = '0000003' AND c2 = 'A000003') or
 ...
 
 ```
@@ -137,7 +138,8 @@ Change this query to:
 
 ```sql
 DELETE FROM dbo.MyTable WHERE (c1 = '0000001' AND c2 = 'A000001');
-DELETE FROM dbo.MyTable WHERE (c1 = '0000002' AND c2 = 'A000001');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000002' AND c2 = 'A000002');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000003' AND c2 = 'A000003');
 ...
 ```
 

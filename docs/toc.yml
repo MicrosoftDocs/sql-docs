@@ -1645,7 +1645,7 @@
         href: relational-databases/tables/use-column-sets.md
       - name: Table-Valued Parameters
         href: relational-databases/tables/use-table-valued-parameters-database-engine.md
-    - name: Microsoft Edge constraints
+    - name: Edge constraints
       href: relational-databases/tables/graph-edge-constraints.md
       items:
       - name: Create

@@ -45,6 +45,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   **TRUNCATE TABLE** is not supported while **SYSTEM_VERSIONING** is **ON**  
   
+-   Temporal tables cannot be created as or altered to be node or edge tables.
+  
 -   Direct modification of the data in a history table is not permitted.  
   
 -   **ON DELETE CASCADE** and **ON UPDATE CASCADE** are not permitted on the current table. In other words, when temporal table is referencing table in the foreign key relationship (corresponding to *parent_object_id* in sys.foreign_keys) CASCADE options are not allowed. To work around this limitation, use application logic or after triggers to maintain consistency on delete in primary key table (corresponding to  *referenced_object_id* in sys.foreign_keys). If primary key table is temporal and referencing table is non-temporal, there's no such  limitation. 

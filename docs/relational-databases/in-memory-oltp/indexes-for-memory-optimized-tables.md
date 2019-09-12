@@ -1,7 +1,7 @@
 ---
 title: "Indexes for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/02/2019"
+ms.date: "09/16/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-All memory-optimized tables must have at least one index, because it is the indexes that connect the rows together. On a memory-optimized table, every index is also memory-optimized. There are several ways in which an index on a memory-optimized index differs from a traditional index on a disk-base table:  
+All memory-optimized tables must have at least one index, because it is the indexes that connect the rows together. On a memory-optimized table, every index is also memory-optimized. There are several ways in which an index on a memory-optimized table differs from a traditional index on a disk-base table:  
 
 - Data rows are not stored on pages, so there is no collection of pages or extents, no partitions or allocation units that can be referenced to get all the pages for a table. There is the concept of index pages for one of the available types of indexes, but they are stored differently than indexes for disk-based tables. They do not accrue the traditional type of fragmentation within a page, so they have no fillfactor.
 - Changes made to indexes on memory-optimized tables during data manipulation are never written to disk. Only the data rows, and changes to the data, are written to the transaction log. 
@@ -53,6 +53,7 @@ To be declared with the default DURABILITY = SCHEMA\_AND_DATA, the memory-optimi
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
     ```
+
 > [!NOTE]  
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] have a limit of 8 indexes per memory-optimized table or table type. 
 > Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], there is no longer a limit on the number of indexes specific to memory-optimized tables and table types.

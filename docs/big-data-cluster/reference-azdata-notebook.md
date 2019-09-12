@@ -56,6 +56,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for mor
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata notebook run
 This command creates a temporary directory and executes the given notebook within it as the working directory.
+>[!NOTE] azdata v15.0.1900: run command supported for Python 3 notebooks only.
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
@@ -76,7 +77,7 @@ The file path to the notebook to run.
 #### `--output-path`
 Directory path to use for notebook output.  Notebook with output data and any notebook generated files are generated relative to this directory.
 #### `--output-html`
-Optional flag indicatingg whether to additionally convert the output notebook to HTML format.  Creates a second output file.
+Optional flag indicating whether to additionally convert the output notebook to HTML format.  Creates a second output file.
 #### `--arguments -a`
 Optional list of notebook arguments to inject into the notebook execution.  Encoded as a JSON dictionary.  Example: '{"name":"value", "name2":"value2"}'
 #### `--interactive -i`

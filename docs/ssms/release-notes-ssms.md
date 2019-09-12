@@ -8,8 +8,9 @@ ms.topic: conceptual
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
 ms.custom: ""
-ms.date: 09/04/2019
+ms.date: 09/20/2019
 ---
 # Release notes for SQL Server Management Studio (SSMS)
 
@@ -35,13 +36,58 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## SSMS 18.2
+## SSMS 18.3
 
-Download: [Download SSMS 18.2](download-sql-server-management-studio-ssms.md)  
+Download: [Download SSMS 18.3](download-sql-server-management-studio-ssms.md)  
+Build number: 15.0.18161.0  
+Release date: September 19, 2019
+
+SSMS 18.3 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+
+18.3 is an update to 18.2 with the following new items and bug fixes.
+
+## What's new in 18.3
+
+| New item | Details |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Data Classification | Add Data Classification information to column properties UI (*Information Type*, *Information Type Id*, *Sensitivity Label*, and *Sensitivity Label Id* are not exposed in the SSMS UI). |
+| Intellisense/Editor | Updated support for features recently added to SQL Server 2019 (e.g. "ALTER SERVER CONFIGURATION"). |
+| SMO/Scripting | Added support for Support scripting of Azure SQL DW unique constraint. |
+| SMO/Scripting | Data Classification  - Added support for SQL version 10 (SQL 2008) and higher.  - Added new sensitivity attribute 'rank' for SQL version 15 (SQL 2019) and higher and Azure SQL DB. |
+
+## Bug fixes in 18.3
+
+| New Item 	| Details 	|
+|----------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| Analysis Services | Fix scaling issue in MDX Query Editor. |
+| Database Deployment to SQL Azure | Fixed an issue (in DacFx) which was causing this feature not to work. |
+| General SSMS | Fixed an issue which was causing SSMS to crash when using the sorting feature in the XEvent viewer. |
+| General SSMS | Fixed long outstanding issues where SSMS Restore database may hang indefinitely.  See UserVoice items for more details:  - [Restore Database - Select Backup Devices Slow to Load](https://feedback.azure.com/forums/908035/suggestions/32899099/)  - [SSMS 2016 very slow in the database restore dialogs](https://feedback.azure.com/forums/908035/suggestions/32900767/)  - [Restoring database is slow](https://feedback.azure.com/forums/908035/suggestions/32900224/)  - [Restore Database from Device HANGS on clicking "..."](https://feedback.azure.com/forums/908035/suggestions/34281658/) |
+| General SSMS | Fixed an issue where the default language for all logins was shown as Arabic.  See UserVoice item for more details:  [SSMS 18.2 default language display bug](https://feedback.azure.com/forums/908035/suggestions/38236363) |
+| General SSMS | Fixed the hard to see the dialog for *Query Options* (when the user right-clicks on the T-SQL editor window) by making it resizable. |
+| General SSMS | The *Completion time* message visible in the Result Grid/File (introduced in SSMS 18.2) is now configurable under Tools > Options >  Query Execution > SQL Server > Advanced > Show completion time. |
+| General SSMS | In the connection dialog, replaced *Active Directory - Password* and *Active Directory - Integrated* with *Azure Active Directory - Password* and *Azure Active Directory - Integrated*, respectively. |
+| Import flat file | Fixed the issue where Import Flat File was not importing all data by letting the user choose between a simple or rich data type detection.  See UserVoice item for more details:  [SSMS Import Flat File fails to import all data](https://feedback.azure.com/forums/908035/suggestions/38096989) |
+| Integration Services | Add new operation type *StartNonCatalogExecution* for SSIS Operation report. |
+| SMO/Scripting | Fixed an issue which was causing SMO to throw errors when fetching properties when **SMO.Server.SetDefaultInitFields(true)** was being used. |
+| Query Store UI | Fixed an issue where the Y-axis did not scale when *Execution Count* Metric was selected in *Tracked Query* View. |
+| Vulnerability Assessment | Disabled clearing and approving baseline for Azure SQL DBs. |
+
+### Known issues (18.3)
+
+- AzureDTExecConfigUI cannot be popped up when clicking the button in SSMS.
+
+You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
+
+## Previous SSMS releases
+
+Download previous SSMS versions by clicking the title links in the following sections:
+
+## ![download](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
+
+Release number: 18.2  
 Build number: 15.0.18142.0  
 Release date: July 25, 2019
-
-SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 
 18.2 is an update to 18.1 with the following new items and bug fixes.
 
@@ -107,12 +153,6 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 
 - Default language for SQL logins may display as Arabic in the Login Properties dialog, regardless of the actual default language set for the login. To view the actual default language for a given login, use T-SQL to select the login's **default_language_name** from **master.sys.server_principles**.
 
-You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
-
-## Previous SSMS releases
-
-Download previous SSMS versions by clicking the title links in the following sections:
-
 ## ![download](../ssdt/media/download.png) [SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
 
 - Release number: 18.1  
@@ -120,8 +160,6 @@ Download previous SSMS versions by clicking the title links in the following sec
 - Release date: June 11, 2019  
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
-
-SSMS 18.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 
 18.1 is a small update to 18.0 with the following new item and bug fixes.
 

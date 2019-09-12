@@ -21,9 +21,6 @@ ms.author: mathoma
 
   This article describes how to uninstall a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By following the steps in this article, you also prepare the system so that you can reinstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-  >[!IMPORTANT]
-  > To uninstall an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must be a local administrator with permission to log on as a service.  
-  
  > [!NOTE]
  > To uninstall a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster, use the Remove Node functionality provided by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup to remove each node individually. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
 
@@ -42,13 +39,14 @@ ms.author: mathoma
   
 The files that you must save include the following database files:  
 
-| master.mdf  | mastlog.ldf| model.mdf | modellog.ldf| 
-| :---------- | :--------- |:--------- | :--------- |
-| msdbdata.mdf| msdblog.ldf| Mssqlsystemresource.mdf | |Mssqlsustemresource.ldf |
-| Tempdb.mdf | Templog.ldf|  ReportServer[$InstanceName] | ReportServer[$InstanceName]TempDB| 
 
-  > [!NOTE]
-  > The ReportServer databases are included with SQL Server Reporting Services.   
+    | :---------- | :--------- |:--------- | :--------- |
+    | master.mdf  | mastlog.ldf| model.mdf | modellog.ldf| 
+    | msdbdata.mdf| msdblog.ldf| Mssqlsystemresource.mdf | Mssqlsustemresource.ldf |
+    | Tempdb.mdf | Templog.ldf|  ReportServer[$InstanceName] | ReportServer[$InstanceName]TempDB| 
+
+   > [!NOTE]
+   > The ReportServer databases are included with SQL Server Reporting Services.   
 
 2.  **Delete the local security groups.** Before you uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], delete the local security groups for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components.  
   
@@ -58,24 +56,55 @@ The files that you must save include the following database files:
   
 ## Uninstall 
 
-1.  To begin the uninstall process, go to **Control Panel** and then **Programs and Features** on Windows 2012 / 2012 R2, and **Add or remove programs** on Windows 10 / Server 2016 +.
-  
-2.  Right-click **Microsoft SQL Server (Version) (Bit)** and select **Uninstall**. On Windows 2012 / 2012 R2, select **Remove** on the dialog window that appears . This starts the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard.  For example, for SQL Server 2017, you would uninstall **Microsoft SQL Server 2017 (64-bit)**. 
-  
-    ![Uninstall SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server.png)
-  
-3.  On the **Select Instance** page, use the drop-down box to specify an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to remove, or specify the option to remove only the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared features and management tools. To continue, select **Next**.  
-  
-4.  On the **Select Features** page, specify the features to remove from the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-5.  On the **Ready to Remove** page, review the list of components and features that will be uninstalled. Click **Remove** to begin uninstalling  
+# [Windows 10 / 2016 +](#tab/Windows10)
+
+To uninstall SQL Server from Windows 10, Windows Server 2016, Windows Server 2019, and greater, follow these steps: 
+
+1. To begin the removal process navigate to **Settings** from the Start menu and then choose **Apps**. 
+1. Search for `sql` in the search box. 
+1. Select **Microsoft SQL Server (Version) (Bit)**. For example, `Microsoft SQL Server 2017 (64-bit)`
+1. Select **Uninstall**.
  
-6. Refresh the **Programs and Features** window to verify the SQL Server instance has been removed successfully, and determine which, if any, SQL Server components still exist. Remove these components from this window as well, if you so choose. 
+    ![Uninstall SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server.png)
+
+1. Select **Remove** on the SQL Server dialog pop-up to launch the Microsoft SQL Server installation wizard. 
+
+    ![Remove SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2017.png)
+  
+1.  On the **Select Instance** page, use the drop-down box to specify an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to remove, or specify the option to remove only the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared features and management tools. To continue, select **Next**.  
+  
+1.  On the **Select Features** page, specify the features to remove from the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+1.  On the **Ready to Remove** page, review the list of components and features that will be uninstalled. Click **Remove** to begin uninstalling  
+ 
+1. Refresh the **Programs and Features** window to verify the SQL Server instance has been removed successfully, and determine which, if any, SQL Server components still exist. Remove these components from this window as well, if you so choose. 
+
+# [Windows 2012 / 2012 R2](#tab/windows2012)
+
+
+1. To begin the removal process, navigate to the **Control Panel** and then select **Programs and Features**.
+1. Right-click **Microsoft SQL Server (Version) (Bit)** and select **Uninstall**. For example, `Microsoft SQL Server 2012 (64-bit)`.  
+  
+    ![Uninstall SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-2012.png)
+
+1. Select **Remove** on teh SQL Server dialog pop-up to launch the Microsoft SQL Server installation wizard. 
+
+    ![Remove SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2012.png)
+  
+1.  On the **Select Instance** page, use the drop-down box to specify an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to remove, or specify the option to remove only the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared features and management tools. To continue, select **Next**.  
+  
+1.  On the **Select Features** page, specify the features to remove from the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+1.  On the **Ready to Remove** page, review the list of components and features that will be uninstalled. Click **Remove** to begin uninstalling  
+ 
+1. Refresh the **Programs and Features** window to verify the SQL Server instance has been removed successfully, and determine which, if any, SQL Server components still exist. Remove these components from this window as well, if you so choose. 
+
+---
 
   
 ## In the event of failure  
   
-1.  If the uninstallation process does not complete successfully, attempt to fix the problem that caused the uninstallation to fail. The following articles can help you understand the cause of the failed uninstallation:  
+1.  If the removal process does not complete successfully, attempt to fix the problem that caused the removal to fail. The following articles can help you understand the cause of the failed removal:  
   
     -   [How to identify SQL Server 2008 setup issues in the setup log files](https://support.microsoft.com/kb/955396/en-us). Though this article is specifically for SQL Server 2008, the process to identify issues is the same for every version of SQL Server. 
   

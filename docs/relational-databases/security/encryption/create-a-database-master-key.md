@@ -34,11 +34,11 @@ Requires CONTROL permission on the database.
 3. Expand **System Databases**, right-click `master` and then click **New Query**.
 4. Copy and paste the following example into the query window and click **Execute**.
 
-  ```sql
-    -- Creates the master key.
-    -- The key is encrypted using the password "23987hxJ#KL95234nl0zBe."  
-    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';  
+   ```sql
+     -- Creates the master key.
+     -- The key is encrypted using the password "23987hxJ#KL95234nl0zBe."  
+     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';  
 
-    ```
+   ```
 
 For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).

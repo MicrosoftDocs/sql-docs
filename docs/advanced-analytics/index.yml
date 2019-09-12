@@ -22,7 +22,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: What is Machine Learning Services (Python, R)?
+          - text: What is SQL Server Machine Learning Services (Python and R)?
             url: what-is-sql-server-machine-learning.md
       - linkListType: whats-new
         links:
@@ -75,9 +75,9 @@ landingContent:
     linkLists:
       - linkListType: get-started
         links:
-          - text: Install SQL Server Machine Learning Services on Windows
+          - text: Install Machine Learning Services on Windows
             url: install/sql-machine-learning-services-windows-install.md
-          - text: Install SQL Server Machine Learning Services on Linux
+          - text: Install Machine Learning Services on Linux
             url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
       - linkListType: how-to-guide
         links:
@@ -86,7 +86,7 @@ landingContent:
           - text: Set up an R client
             url: r/set-up-a-data-science-client.md
 
-  - title: Learn about architecture and security
+  - title: Architecture and security
     linkLists:
       - linkListType: architecture
         links:

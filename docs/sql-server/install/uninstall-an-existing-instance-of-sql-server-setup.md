@@ -77,7 +77,7 @@ To uninstall SQL Server from Windows 10, Windows Server 2016, Windows Server 201
   
 1.  On the **Ready to Remove** page, review the list of components and features that will be uninstalled. Click **Remove** to begin uninstalling  
  
-1. Refresh the **Programs and Features** window to verify the SQL Server instance has been removed successfully, and determine which, if any, SQL Server components still exist. Remove these components from this window as well, if you so choose. 
+1. Refresh the **Apps and Features** window to verify the SQL Server instance has been removed successfully, and determine which, if any, SQL Server components still exist. Remove these components from this window as well, if you so choose. 
 
 # [Windows 2008 - 2012 R2](#tab/windows2012)
 

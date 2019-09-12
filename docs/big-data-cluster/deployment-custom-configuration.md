@@ -122,7 +122,7 @@ Similarly for changing the settings of a single service within a specific resour
 }
 ```
 
-If you want to apply same configurations for a service associated with multiple resources, you will update the corresponding **settings** in the **services** section. For example, if you would like to set same same settings for Spark across both storage pool and Spark pools, you will update the **settings** section in the **spark** service section in the **bdc.json** configuration file.
+If you want to apply same configurations for a service associated with multiple resources, you will update the corresponding **settings** in the **services** section. For example, if you would like to set same settings for Spark across both storage pool and Spark pools, you will update the **settings** section in the **spark** service section in the **bdc.json** configuration file.
 
 ```json
 "services": {
@@ -629,7 +629,7 @@ azdata bdc config patch --config-file control.json --patch-file elasticsearch-pa
 ```
 
 > [!IMPORTANT]
-> We recommend as a best practice to manually update the **max_map_count** setting manually on each host int he Kubernetes cluster as per instructions in [this article](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
+> We recommend as a best practice to manually update the **max_map_count** setting manually on each host in the Kubernetes cluster as per instructions in [this article](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
 ## Next steps
 
 For more information about using configuration files in big data cluster deployments, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).

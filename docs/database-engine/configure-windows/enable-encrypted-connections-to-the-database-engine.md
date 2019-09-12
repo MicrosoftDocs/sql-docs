@@ -28,6 +28,9 @@ ms.author: vanto
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic describes how to enable encrypted connections for an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] by specifying a certificate for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. The server computer must have a certificate provisioned, and the client machine must be set up to trust the certificate's root authority. Provisioning is the process of installing a certificate by importing it into Windows.  
+  
+> [!IMPORTANT]
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], Secure Sockets Layer (SSL) has been discontinued. Use Transport Layer Security (TLS) instead.
 
 ## Transport Layer Security (TLS)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can use Transport Layer Security (TLS) to encrypt data that is transmitted across a network between an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a client application. The TLS encryption is performed within the protocol layer and is available to all supported [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients.

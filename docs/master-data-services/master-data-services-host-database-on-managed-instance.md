@@ -64,6 +64,7 @@ To prepare, you need to create and configure an Azure SQL Database managed insta
      - Windows Authentication
        > [!NOTE]
        > Don't install WebDAV Publishing
+
    - Features:
      - .NET Framework 3.5 (includes .NET 2.0 and 3.0)
      - .NET Framework 4.5 Advanced Services
@@ -119,11 +120,11 @@ This action installs:
 
 1. Type a name in the **Database name** field. Optionally, to select a Windows collation, clear the **SQL Server default collation** check box and select one or more of the available options. For example, **Case-sensitive**. Select **Next**.
 
-    ![mds-SQLServer2019-Config-MI-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "mds-SQLServer2019-Config-MI_CreatedDBName")
+   ![mds-SQLServer2019-Config-MI-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "mds-SQLServer2019-Config-MI_CreatedDBName")
 
 1. In the **User name** field, specify the Windows account of the default super user for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. A super user has access to all functional areas and can add, delete, and update all models.
 
-    ![mds-SQLServer2019-Config-MI-CreateDBUserName](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "mds-SQLServer2019-Config-MI_createDBUserName")
+   ![mds-SQLServer2019-Config-MI-CreateDBUserName](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "mds-SQLServer2019-Config-MI_createDBUserName")
 
 1. Select **Next** to view a summary of the settings for the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database. Select  **Next** again to create the database. You'll see the **Progress and Finish** page.
 
@@ -135,18 +136,20 @@ This action installs:
 
 1. Select **Connect**, choose the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database and then select **OK**.
 
-    ![mds-SQLServer2019-Config-MI-connectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "mds-SQLServer2019-Config-MI_connectDBName")
+   ![mds-SQLServer2019-Config-MI-connectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "mds-SQLServer2019-Config-MI_connectDBName")
 
 1. In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], select **Web Configuration** in the left pane.
 
 1. In the **Website** list box, choose **Default Web Site**, and then select **Create** to create a web application.
-![mds-SQLServer2019-Config-MI-WebConfiguration](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "mds-SQLServer2019-Config-MI_WebConfiguration")
 
-    > [!NOTE]
-    > If you select **Default Web Site**, you'll need to separately create a web application. If you choose **Create new website** in the list box, the application is automatically created.
+   ![mds-SQLServer2019-Config-MI-WebConfiguration](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "mds-SQLServer2019-Config-MI_WebConfiguration")
+
+   > [!NOTE]
+   > If you select **Default Web Site**, you'll need to separately create a web application. If you choose **Create new website** in the list box, the application is automatically created.
 
 1. In the **Application Pool** section, enter a different user name, enter the password, and then select **OK**.
-![mds-SQLServer2019-Config-MI-CreateWebApplication](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "mds-SQLServer2019-Config-MI_CreateWebApplication")
+
+   ![mds-SQLServer2019-Config-MI-CreateWebApplication](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "mds-SQLServer2019-Config-MI_CreateWebApplication")
 
    > [!NOTE]
    > Make sure that the user can access the database with the Active Directory Integrated authentication that you recently created. Alternatively, you can change the connection in `web.config` later.

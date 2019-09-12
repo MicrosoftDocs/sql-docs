@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: SQL Server Machine Learning Services (Python and R) Documentation
+title: SQL Server Machine Learning Services (Python and R) documentation
 summary: Learn how to use SQL Server Machine Learning Services to run Python and R scripts on relational data. Tutorials, code examples, installation guides, and other documentation show you how.
 
 metadata:
-  title: SQL Server Machine Learning Services (Python, R) Documentation - Tutorials, quickstarts, and install guides
+  title: SQL Server Machine Learning Services (Python, R) documentation - Tutorials, quickstarts, and install guides
   description: Learn how to use SQL Server Machine Learning Services to run Python and R scripts on relational data. Tutorials, code examples, installation guides, and other documentation show you how.
   ms.prod: sql
   ms.technology: machine-learning

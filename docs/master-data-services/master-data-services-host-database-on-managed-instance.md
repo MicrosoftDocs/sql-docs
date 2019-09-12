@@ -37,35 +37,35 @@ To prepare, you need to create and configure an Azure SQL Database managed insta
 1. Install a Point-to-Site connection certificate and VPN to ensure that the machine can access the SQL Database managed instance. Refer to [Configure a Point-to-Site connection to a VNet using native Azure certificate authentication: Azure portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) for instructions.
 
 1. Install the following Roles and Features:
-   - Roles:
-          - Internet Information Services
-          - Web Management Tools
-          - IIS Management Console
-          -  World Wide Web Services
-          -  Application Development
-          -  .NET Extensibility 3.5
-          -  .NET Extensibility 4.5
-          -  ASP.NET 3.5
-          -  ASP.NET 4.5
-          -  ISAPI Extensions
-          -  ISAPI Filters
-          -  Common HTTP Features
-          -  Default Document
-          -  Directory Browsing
-          -  HTTP Errors
-          -  Static Content
-          -  Health and Diagnostics
-          -  HTTP Logging
-          -  Request Monitor
-          -  Performance
-          -  Static Content Compression
-          -  Security
-          -  Request Filtering
-          -  Windows Authentication
-          > [!NOTE]
-          > Don't install WebDAV Publishing
+        - Roles:
+            - Internet Information Services
+            - Web Management Tools
+            - IIS Management Console
+            -  World Wide Web Services
+            -  Application Development
+            -  .NET Extensibility 3.5
+            -  .NET Extensibility 4.5
+            -  ASP.NET 3.5
+            -  ASP.NET 4.5
+            -  ISAPI Extensions
+            -  ISAPI Filters
+            -  Common HTTP Features
+            -  Default Document
+            -  Directory Browsing
+            -  HTTP Errors
+            -  Static Content
+            -  Health and Diagnostics
+            -  HTTP Logging
+            -  Request Monitor
+            -  Performance
+            -  Static Content Compression
+            -  Security
+            -  Request Filtering
+            -  Windows Authentication
+            > [!NOTE]
+            > Don't install WebDAV Publishing
 
-        - Features:
+      - Features:
            - .NET Framework 3.5 (includes .NET 2.0 and 3.0)
            - .NET Framework 4.5 Advanced Services
            - ASP.NET 4.5
@@ -118,7 +118,7 @@ This action installs:
 
    ![mds-SQLServer2019-Config-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "mds-SQLServer2019-Config-MI_CreateDBConnect")  
 
-1. Type a name in the **Database name** field. Optionally, to select a Windows collation, clear the **SQL Server default collation** checkbox and select one or more of the available options. For example, **Case-sensitive**. Select **Next**.
+1. Type a name in the **Database name** field. Optionally, to select a Windows collation, clear the **SQL Server default collation** check box and select one or more of the available options. For example, **Case-sensitive**. Select **Next**.
 
     ![mds-SQLServer2019-Config-MI-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "mds-SQLServer2019-Config-MI_CreatedDBName")
 
@@ -162,7 +162,7 @@ This action installs:
 
    ![mds-SQLServer2019-Config-MI-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "mds-SQLServer2019-Config-MI_WebConfigSelectDB")
 
-1. Select **Apply**. You'll see the **Configuration Complete** message. Select **OK** in the message box to launch the web application. The web site address is `http://server name/web application/`.
+1. Select **Apply**. You'll see the **Configuration Complete** message. Select **OK** in the message box to launch the web application. The website address is `http://server name/web application/`.
 
 ## Configure authentication
 

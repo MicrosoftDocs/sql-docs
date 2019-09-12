@@ -28,14 +28,6 @@ landingContent:
         links:
           - text: What's new in Machine Learning Services?
             url: what-s-new-in-sql-server-machine-learning-services.md
-      - linkListType: architecture
-        links:
-          - text: Extensibility framework
-            url: concepts/extensibility-framework.md
-          - text: Python extension
-            url: concepts/extension-python.md
-          - text: R extension
-            url: concepts/extension-r.md
       - linkListType: video
         links:
           - text: How to Execute R/Python in SQL Server with Machine Learning Services
@@ -81,15 +73,30 @@ landingContent:
 
   - title: Install Machine Learning Services
     linkLists:
-      - linkListType: deploy
+      - linkListType: get-started
         links:
           - text: Install SQL Server Machine Learning Services on Windows
             url: install/sql-machine-learning-services-windows-install.md
           - text: Install SQL Server Machine Learning Services on Linux
             url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
-      - linkListType: get-started
+      - linkListType: how-to-guide
         links:
           - text: Set up a Python client
             url: python/setup-python-client-tools-sql.md
           - text: Set up an R client
             url: r/set-up-a-data-science-client.md
+
+  - title: Learn about architecture and security
+    linkLists:
+      - linkListType: architecture
+        links:
+          - text: Extensibility framework
+            url: concepts/extensibility-framework.md
+          - text: Python extension
+            url: concepts/extension-python.md
+          - text: R extension
+            url: concepts/extension-r.md
+      - linkListType: concept
+        links:
+          - text: Security for the externsibility framework
+            url: /concepts/security.md

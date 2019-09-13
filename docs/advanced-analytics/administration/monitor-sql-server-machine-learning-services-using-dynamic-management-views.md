@@ -1,10 +1,9 @@
 ---
-title: Monitor R and Python script execution using dynamic management views (DMVs)
-description: Use dynamic management views (DMVs) to monitor R and Python external script execution in SQL Server Machine Learning Services.
+title: Monitor Python and R script execution using DMVs
+description: Use dynamic management views (DMVs) to monitor Python and R external script execution in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 10/29/2018  
+ms.date: 09/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -13,18 +12,18 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Use dynamic management views (DMVs) to monitor the execution of external scripts (R and Python), resources used, diagnose problems, and tune performance in SQL Server Machine Learning Services.
+Use dynamic management views (DMVs) to monitor the execution of external scripts (Python and R), resources used, diagnose problems, and tune performance in SQL Server Machine Learning Services.
 
 In this article, you will find the DMVs that are specific for SQL Server Machine Learning Services. You will also find example queries that show:
 
 + Settings and configuration options for machine learning
-+ Active sessions running external R or Python scripts
-+ Execution statistics for the external runtime for R and Python
++ Active sessions running external Python or scripts
++ Execution statistics for the external runtime for Python and R
 + Performance counters for external scripts
 + Memory usage for the OS, SQL Server, and external resource pools
 + Memory configuration for SQL Server and external resource pools
 + Resource Governor resource pools, including external resource pools
-+ Installed packages for R and Python
++ Installed packages for Python and R
 
 For more general information about DMVs, see [System Dynamic Management Views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
 

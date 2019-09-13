@@ -1,7 +1,7 @@
 ---
 title: "Create a Full Database Backup (SQL Server) | Microsoft Docs"
 ms.custom: "sqlfreshmay19"
-ms.date: "09/11/2019"
+ms.date: "09/12/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -143,18 +143,20 @@ In this example, the `SQLTestDB` database will be backed up to disk at a locatio
 In this example, the `SQLTestDB` database will be backed up with encryption to the default backup location.
 
 1. After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in **Object Explorer**, expand the server tree.
-2. Expand **Databases**, right-click `master`, and click **New Query** to open a query window with a connection to your `SQLTestDB` database.
+2. Expand **Databases**, expand **System Databases**, right-click `master`, and click **New Query** to open a query window with a connection to your `SQLTestDB` database.
 3. Execute the following commands to create a [**database master key**](../../relational-databases/security/encryption/create-a-database-master-key.md) and a [**certificate**](../../t-sql/statements/create-certificate-transact-sql.md) within the `master` database.  
 
-    ```sql
-    -- Create the database master key
-    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';
+   ```sql
+   -- Create the master key
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';  
 
-    -- Create the certificate
-    CREATE CERTIFICATE MyCertificate
-    WITH SUBJECT = 'test of backup encryption',
-    EXPIRY_DATE = '20201031';
-    ```
+   -- If the master key already exists, open it in the same session that you create the certificate (see next step)
+   OPEN MASTER KEY DECRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe'
+
+   -- Create the certificate encrypted by the master key
+   CREATE CERTIFICATE MyCertificate
+   WITH SUBJECT = 'Backup Cert', EXPIRY_DATE = '20201031';  
+   ```
 
 4. In **Object Explorer**, in the **Databases** node, right-click `SQLTestDB`, point to **Tasks**, and then click **Back Up...**.
 5. On the **Media Options** page, in the **Overwrite media** section select **Back up to a new media set, and erase all existing backup sets**.

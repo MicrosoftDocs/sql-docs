@@ -2,7 +2,7 @@
 title: "Install SQL Server Integration Services (SSIS) | Microsoft Docs"
 description: Learn how to install Microsoft SQL Server Integration Services (SSIS) and how to get other downloads for SSIS
 ms.custom: ""
-ms.date: "07/03/2018"
+ms.date: "09/13/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -84,45 +84,53 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
 - **Integration Services (SSIS)**. Install SSIS with the SQL Server Setup wizard. Selecting SSIS installs the following things:
 
-    - Support for the SSIS Catalog on the SQL Server Database Engine.
+  - Support for the SSIS Catalog on the SQL Server Database Engine.
 
-    - Optionally, the SSIS Scale Out feature, which consists of a Master and Workers.
+  - Optionally, the SSIS Scale Out feature, which consists of a Master and Workers.
 
-    - 32-bit and 64-bit SSIS components.
+  - 32-bit and 64-bit SSIS components.
 
-    - Installing SSIS does **NOT** install the tools required to design and develop SSIS packages.
+  - Installing SSIS does **NOT** install the tools required to design and develop SSIS packages.
 
 - **SQL Server Database Engine**. Install the Database Engine with the SQL Server Setup wizard. Selecting the Database Engine lets you create and host the SSIS Catalog database, `SSISDB`, to store, manage, run, and monitor SSIS packages.
 
 - **SQL Server Data Tools (SSDT)**. To download and install SSDT, see [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). Installing SSDT lets you design and deploy SSIS packages. SSDT installs the following things:
 
-    - The SSIS package design and development tools, including SSIS Designer.
+  - The SSIS package design and development tools, including SSIS Designer.
 
-    - 32-bit SSIS components only.
+  - 32-bit SSIS components only.
 
-    - A limited version of Visual Studio (if a Visual Studio edition isn't already installed).
+  - A limited version of Visual Studio (if a Visual Studio edition isn't already installed).
 
-    - Visual Studio Tools for Applications (VSTA), the script editor used by the SSIS Script Task and Script Component.
+  - Visual Studio Tools for Applications (VSTA), the script editor used by the SSIS Script Task and Script Component.
 
-    - SSIS wizards including the Deployment Wizard and the Package Upgrade Wizard.
+  - SSIS wizards including the Deployment Wizard and the Package Upgrade Wizard.
 
-    - SQL Server Import and Export Wizard.
+  - SQL Server Import and Export Wizard.
 
-- **Integration Services Feature Pack for Azure**. To download and install the Feature Pack, see [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798). Installing the Feature Pack lets your packages connect to storage and analytics services in the Azure cloud, including the following services:
+    With VS 2019 we have discontinued the SSDT standalone installer and now users can get the SSIS designer extension from the [VS market place](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
 
-    - Azure Blob Storage.
+## Integration Services (SSIS) Scale Out
 
-    - Azure HDInsight.
+You can set up Integration Services (SSIS) for [Scale Out](../scale-out/walkthrough-set-up-integration-services-scale-out.md).
 
-    - Azure Data Lake Store.
+- **Integration Services Feature Pack for Azure**. To download and install the Feature Pack, see [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://docs.microsoft.com/en-us/sql/integration-services/azure-feature-pack-for-integration-services-ssis?view=sql-server-2017). Installing the Feature Pack lets your packages connect to storage and analytics services in the Azure cloud, including the following services:
 
-    - Azure SQL Data Warehouse.
+  - Azure Blob Storage.
+
+  - Azure HDInsight.
+
+  - Azure Data Lake Store.
+
+  - Azure SQL Data Warehouse.
+
+  - Azure Data Lake Storage (Gen2).
 
 - **Optional additional components**. You can optionally download additional third-party components from the SQL Server Feature Package.
 
-    - Microsoft® Connector for SAP BW for Microsoft SQL Server®. To get these components, see [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
+  - Microsoft® Connector for SAP BW for Microsoft SQL Server®. To get these components, see [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 
-    - Microsoft Connector Version 5.0 for Oracle by Attunity and Microsoft Connector Version 5.0 for Teradata by Attunity. To get these components, see [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179).
+  - Microsoft Connector Version 5.0 for Oracle by Attunity and Microsoft Connector Version 5.0 for Teradata by Attunity. To get these components, see [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179).
 
 ## Nest steps
 

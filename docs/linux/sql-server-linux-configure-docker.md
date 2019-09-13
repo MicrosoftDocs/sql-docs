@@ -1,7 +1,7 @@
 ---
 title: Configuration options for SQL Server on Docker
 description: Explore different ways of using and interacting with SQL Server 2017 and 2019 preview container images in Docker. This includes persisting data, copying files, and troubleshooting.
-author: vin-yu 
+author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
 ms.date: 01/17/2019
@@ -141,7 +141,7 @@ Starting with SQL Server 2017 preview, the [SQL Server command-line tools](sql-s
 
 ## Run multiple SQL Server containers
 
-Docker provides a way to run multiple SQL Server containers on the same host machine. This is the approach for scenarios that require multiple instances of SQL Server on the same host. Each container must expose itself on a different port.
+Docker provides a way to run multiple SQL Server containers on the same host machine. Use this approach for scenarios that require multiple instances of SQL Server on the same host. Each container must expose itself on a different port.
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -190,7 +190,7 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 
 ## <a id="customcontainer"></a> Create a customized container
 
-It is possible to create your own [Dockerfile](https://docs.docker.com/engine/reference/builder/#usage) to create a customized SQL Server container. For more information, see [a demo that combines SQL Server and a Node application](https://github.com/twright-msft/mssql-node-docker-demo-app). If you do create your own Dockerfile, be aware of the foreground process, because this process controls the life of the container. If it exits, the container will shutdown. For example, if you want to run a script and start SQL Server, make sure that the SQL Server process is the right-most command. All other commands are run in the background. This is illustrated in the following command inside a Dockerfile:
+It is possible to create your own [Dockerfile](https://docs.docker.com/engine/reference/builder/#usage) to create a customized SQL Server container. For more information, see [a demo that combines SQL Server and a Node application](https://github.com/twright-msft/mssql-node-docker-demo-app). If you do create your own Dockerfile, be aware of the foreground process, because this process controls the life of the container. If it exits, the container will shutdown. For example, if you want to run a script and start SQL Server, make sure that the SQL Server process is the right-most command. All other commands are run in the background. The following command illustrates this inside a Dockerfile:
 
 ```bash
 /usr/src/app/do-my-sql-commands.sh & /opt/mssql/bin/sqlservr
@@ -345,13 +345,13 @@ docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
 ## <a id="tz"></a> Configure the timezone
 
-To run SQL Server in a Linux container with a specific timezone, configure the **TZ** environment variable. To find the right timezone value, run the **tzselect** command from a Linux bash prompt:
+To run SQL Server in a Linux container with a specific timezone, configure the `TZ` environment variable. To find the right timezone value, run the `tzselect` command from a Linux bash prompt:
 
 ```bash
 tzselect
 ```
 
-After selecting the timezone, **tzselect** displays output similar to the following:
+After selecting the timezone, `tzselect` displays output similar to the following:
 
 ```bash
 The following information has been given:
@@ -696,7 +696,7 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PT
 
 **Run the non-root container as the root user**
 
-You can run the non-root container as the root user if required. This would also grant all file permissions automatically to the container becuase it is higher privilege.
+You can run the non-root container as the root user if required. This would also grant all file permissions automatically to the container because it is higher privilege.
 
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -u 0:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
@@ -704,7 +704,7 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -u 0:0 -p 1433:1
  
 **Run as a user on your host machine**
  
-You can start SQL Server with an exisiting user on the host machine with the following command:
+You can start SQL Server with an existing user on the host machine with the following command:
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u $(id -u myusername):0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```

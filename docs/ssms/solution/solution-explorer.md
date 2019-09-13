@@ -1,10 +1,7 @@
 ---
 title: "Solution Explorer | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,8 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 author: "markingmyname"
 ms.author: "maghan"
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "01/19/2017"
 ---
+
 # Solution Explorer
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 The Solution Explorer pane in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides containers called projects for managing items such as database scripts, queries, data connections, and files. One or more projects that are related to each other can be combined in a container called a solution.  
   

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "SQL Server Management Studio for Analysis Services"
 ms.custom: ""
 ms.date: 09/11/2019
-#Customer intent: As a database admin, I want to manage my databases so that I can monitor, track, and maintain the databases for my users.
+#Customer intent: As a database admin, I want to manage my databases so that I can monitor, track, and maintain the databases for my users. 
 ---
 
 # What is SQL Server Management Studio (SSMS)?
@@ -39,7 +39,7 @@ ms.date: 09/11/2019
 |How to use **Template Explorer** to build and manage files of boilerplate text that you use to speed the development of queries and scripts.|[Template Explorer](../ssms/template/template-explorer.md)|  
 |How to use the deprecated **Solution Explorer** to build projects used to manage administration items such as scripts and queries.|[Solution Explorer](../ssms/solution/solution-explorer.md)|  
 |How to use the visual design tools included in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|How to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|
+|How to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors](scripting/query-and-text-editors-sql-server-management-studio.md)
 
 ## SQL Server Management Studio for Business Intelligence
 

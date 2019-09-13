@@ -94,7 +94,7 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
 - **SQL Server Database Engine**. Install the Database Engine with the SQL Server Setup wizard. Selecting the Database Engine lets you create and host the SSIS Catalog database, `SSISDB`, to store, manage, run, and monitor SSIS packages.
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 
 - **SQL Server Data Tools (SSDT)**. To download and install SSDT, see [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). Installing SSDT lets you design and deploy SSIS packages. SSDT installs the following things:
 
@@ -112,7 +112,7 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2019||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2019||=sqlallproducts-allversions"
 
 - **SQL Server Data Tools (SSDT)**. We've discontinued the SSDT standalone installer for SSIS 2019. For SSIS 2019, you now can get the SSIS designer extension from the [VS market place](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
 

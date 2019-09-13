@@ -72,7 +72,7 @@ If you're using the Setup Wizard to install [!INCLUDE[ssISnoversion](../../inclu
 
 ### Installing a dedicated server for ETL processes
 
-To use a dedicated server for extraction, transformation, and loading (ETL) processes, install a local instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] when you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] typically stores packages in an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and relies on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for scheduling those packages. If the ETL server does not have an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], you have to schedule or run packages from a server that does have an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. As a result, the packages aren't running on the ETL server, but instead on the server from which they're started. As a result, the resources of the dedicated ETL server aren't being used as intended. Furthermore, the resources of other servers may be strained by the running ETL processes
+To use a dedicated server for extraction, transformation, and loading (ETL) processes, install a local instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] when you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] typically stores packages in an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and relies on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for scheduling those packages. If the ETL server doesn't have an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], you have to schedule or run packages from a server that does have an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. As a result, the packages aren't running on the ETL server, but instead on the server from which they're started. As a result, the resources of the dedicated ETL server aren't being used as intended. Furthermore, the resources of other servers may be strained by the running ETL processes
 
 ### Configuring SSIS event logging
 
@@ -114,7 +114,7 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
 ::: moniker range=">=sql-server-2019||=sqlallproducts-allversions"
 
-- **SQL Server Data Tools (SSDT)**. We have discontinued the SSDT standalone installer and now users can get the SSIS designer extension from [VS market place](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
+- **SQL Server Data Tools (SSDT)**. We've discontinued the SSDT standalone installer for SSIS 2019. For SSIS 2019, you now can get the SSIS designer extension from the [VS market place](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
 
 ::: moniker-end
 

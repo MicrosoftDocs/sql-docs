@@ -102,7 +102,7 @@ Now that you have set the MOUNT_CREDENTIALS environment variable for access keys
 1. Log in with **azdata** using the external IP address of the controller endpoint with your cluster username and password:
 
    ```bash
-   azdata login -e https://<IP-of-controller-svc-external>:30080/
+   azdata login -e https://<IP-of-controller-svc-external>:30080
    ```
 1. Set environment variable MOUNT_CREDENTIALS (scroll up for instructions)
 

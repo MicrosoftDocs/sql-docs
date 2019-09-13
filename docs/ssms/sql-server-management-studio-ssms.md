@@ -64,13 +64,13 @@ For more information about how to use [!INCLUDE[ssManStudioFull](../includes/ssm
 
 Use SQL Server Management Studio to enable Reporting Services features, administer the server and databases, and manage roles and jobs.
 
-You manage shared schedules by using the Shared Schedules folder, and manage report server databases (ReportServer, ReportServerTempdb). You also create a RSExecRole in the Master system database when you move a report server database to a new or different SQL Server Database Engine ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). For more information about these tasks, see the following topics:  
+You manage shared schedules by using the Shared Schedules folder, and manage report server databases (ReportServer, ReportServerTempdb). You also create a RSExecRole in the Master system database when you move a report server database to a new or different SQL Server Database Engine ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). For more information about these tasks, see the following articles:  
 
 - [Reporting Services in SSMS](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
 - [Administer a Report Server Database](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
 - [Create the RSExecRole](../reporting-services/security/create-the-rsexecrole.md)
 
-You also manage the server by enabling and configuring various features, setting server defaults, and managing roles and jobs. For more information about these tasks, see the following topics:
+You also manage the server by enabling and configuring various features, setting server defaults, and managing roles and jobs. For more information about these tasks, see the following articles:
 
 - [Set Report Server Properties](../reporting-services/tools/set-report-server-properties-management-studio.md)
 - [Create, Delete, or Modify a Role](../reporting-services/security/role-definitions-create-delete-or-modify.md)

@@ -95,8 +95,6 @@ For more information about different locale with previous versions, reference [I
 - [Install non-English language versions of SSMS](install-other-languages.md)
 - [Connect to and query a SQL Server instance](tutorials/connect-query-sql-server.md)
 - [Writing Transact-SQL Statements](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
-- [Developing and Implementing Using SQL Server Data Tools](https://docs.microsoft.com/analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt)
-- [Reporting Services in SQL Server Data Tools](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

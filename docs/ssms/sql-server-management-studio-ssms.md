@@ -66,9 +66,9 @@ Use SQL Server Management Studio to enable Reporting Services features, administ
 
 You manage shared schedules by using the Shared Schedules folder, and manage report server databases (ReportServer, ReportServerTempdb). You also create a RSExecRole in the Master system database when you move a report server database to a new or different SQL Server Database Engine ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). For more information about these tasks, see the following topics:  
 
-- [Management Studio How-to](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
-- [Administering a Report Server Database](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
-- [How to: Create the RSExecRole](../reporting-services/security/create-the-rsexecrole.md)
+- [Reporting Services in SSMS](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
+- [Administer a Report Server Database](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
+- [Create the RSExecRole](../reporting-services/security/create-the-rsexecrole.md)
 
 You also manage the server by enabling and configuring various features, setting server defaults, and managing roles and jobs. For more information about these tasks, see the following topics:
 

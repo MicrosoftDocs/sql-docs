@@ -1172,7 +1172,7 @@ DEFAULT 'New Position - title not formalized yet'
 In addition to constants, DEFAULT definitions can include functions. Use the following example to get the current date for an entry.
 
 ```sql
-DEFAULT (getdate())
+DEFAULT (GETDATE())
 ```
 
 A niladic-function scan can also improve data integrity. To keep track of the user that inserted a row, use the niladic-function for USER. Do not enclose the niladic-functions with parentheses.
@@ -1223,9 +1223,9 @@ CREATE TABLE dbo.PurchaseOrderDetail
     RejectedQty float NULL,
     DueDate datetime NULL,
     rowguid uniqueidentifier ROWGUIDCOL NOT NULL
-        CONSTRAINT DF_PurchaseOrderDetail_rowguid DEFAULT (newid()),
+        CONSTRAINT DF_PurchaseOrderDetail_rowguid DEFAULT (NEWID()),
     ModifiedDate datetime NOT NULL
-        CONSTRAINT DF_PurchaseOrderDetail_ModifiedDate DEFAULT (getdate()),
+        CONSTRAINT DF_PurchaseOrderDetail_ModifiedDate DEFAULT (GETDATE()),
     LineTotal AS ((UnitPrice*OrderQty)),
     StockedQty AS ((ReceivedQty-RejectedQty)),
     CONSTRAINT PK_PurchaseOrderDetail_PurchaseOrderID_LineNumber
@@ -1281,8 +1281,8 @@ CREATE TABLE dbo.Globally_Unique_Data
     GUID UNIQUEIDENTIFIER
         CONSTRAINT Guid_Default DEFAULT
         NEWSEQUENTIALID() ROWGUIDCOL,
-    Employee_Name varchar(60)
-    CONSTRAINT Guid_PK PRIMARY KEY (guid)
+    Employee_Name VARCHAR(60)
+    CONSTRAINT Guid_PK PRIMARY KEY (GUID)
 );
 ```
 
@@ -1292,8 +1292,8 @@ The following example shows the use of an expression (`(low + high)/2`) for calc
 ```sql
 CREATE TABLE dbo.mytable
 (
-    low int,
-    high int,
+    low INT,
+    high INT,
     myavg AS (low + high)/2
 );
 ```
@@ -1304,7 +1304,7 @@ The following example creates a table with one column defined as user-defined ty
 ```sql
 CREATE TABLE UDTypeTable
 (
-    u utf8string,
+    u UTF8STRING,
     ustr AS u.ToString() PERSISTED
 );
 ```
@@ -1315,8 +1315,8 @@ The following example uses the `USER_NAME()` function in the `myuser_name` colum
 ```sql
 CREATE TABLE dbo.mylogintable
 (
-    date_in datetime,
-    user_id int,
+    date_in DATETIME,
+    user_id INT,
     myuser_name AS USER_NAME()
 );
 ```
@@ -1327,9 +1327,9 @@ The following example creates a table that has a `FILESTREAM` column `Photo`. If
 ```sql
 CREATE TABLE dbo.EmployeePhoto
 (
-    EmployeeId int NOT NULL PRIMARY KEY,
-    Photo varbinary(max) FILESTREAM NULL,
-    MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL UNIQUE DEFAULT NEWID()
+    EmployeeId INT NOT NULL PRIMARY KEY,
+    Photo VARBINARY(MAX) FILESTREAM NULL,
+    MyRowGuidColumn UNIQUEIDENTIFIER NOT NULL ROWGUIDCOL UNIQUE DEFAULT NEWID()
 );
 ```
 
@@ -1339,8 +1339,8 @@ The following example creates a table that uses row compression.
 ```sql
 CREATE TABLE dbo.T1
 (
-    c1 int,
-    c2 nvarchar(200)
+    c1 INT,
+    c2 NVARCHAR(200)
 )
 WITH (DATA_COMPRESSION = ROW);
 ```
@@ -1355,8 +1355,8 @@ This example creates a table that has a sparse column.
 ```sql
 CREATE TABLE dbo.T1
 (
-    c1 int PRIMARY KEY,
-    c2 varchar(50) SPARSE NULL
+    c1 INT PRIMARY KEY,
+    c2 VARCHAR(50) SPARSE NULL
 );
 ```
 
@@ -1365,9 +1365,9 @@ This example creates a table that has two sparse columns and a column set named 
 ```sql
 CREATE TABLE T1
 (
-    c1 int PRIMARY KEY,
-    c2 varchar(50) SPARSE NULL,
-    c3 int SPARSE NULL,
+    c1 INT PRIMARY KEY,
+    c2 VARCHAR(50) SPARSE NULL,
+    c3 INT SPARSE NULL,
     CSet XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 );
 ```

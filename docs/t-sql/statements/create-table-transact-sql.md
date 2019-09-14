@@ -932,10 +932,10 @@ Prefix local temporary table names with single number sign (#*table_name*), and 
 
 ```sql
 CREATE TABLE #MyTempTable (
-  col1 INT PRIMARY KEY
+    col1 INT PRIMARY KEY
 );
 
-INSERT INTO #MyTempTable 
+INSERT INTO #MyTempTable
 VALUES (1);
 ```
 
@@ -956,17 +956,17 @@ A local temporary table created within a stored procedure or trigger can have th
 ```sql
 CREATE PROCEDURE dbo.Test2
 AS
-    CREATE TABLE #t(x INT PRIMARY KEY);
+    CREATE TABLE #t (x INT PRIMARY KEY);
     INSERT INTO #t VALUES (2);
     SELECT Test2Col = x FROM #t;
 GO
 
 CREATE PROCEDURE dbo.Test1
 AS
-    CREATE TABLE #t(x INT PRIMARY KEY);
+    CREATE TABLE #t (x INT PRIMARY KEY);
     INSERT INTO #t VALUES (1);
     SELECT Test1Col = x FROM #t;
- EXEC Test2;
+    EXEC Test2;
 GO
 
 CREATE TABLE #t(x INT PRIMARY KEY);
@@ -1128,16 +1128,16 @@ Any user can create temporary tables in tempdb.
 The following example shows the column definition for a PRIMARY KEY constraint with a clustered index on the `EmployeeID` column of the `Employee` table. Because a constraint name is not specified, the system supplies the constraint name.
 
 ```sql
-CREATE TABLE dbo.Employee (EmployeeID int
-PRIMARY KEY CLUSTERED);
+CREATE TABLE dbo.Employee (
+    EmployeeID INT PRIMARY KEY CLUSTERED
+);
 ```
 
 ### B. Using FOREIGN KEY constraints
 A FOREIGN KEY constraint is used to reference another table. Foreign keys can be single-column keys or multicolumn keys. This following example shows a single-column FOREIGN KEY constraint on the `SalesOrderHeader` table that references the `SalesPerson` table. Only the REFERENCES clause is required for a single-column FOREIGN KEY constraint.
 
 ```sql
-SalesPersonID int NULL
-REFERENCES SalesPerson(SalesPersonID)
+SalesPersonID INT NULL REFERENCES SalesPerson(SalesPersonID)
 ```
 
 You can also explicitly use the FOREIGN KEY clause and restate the column attribute. Note that the column name does not have to be the same in both tables.
@@ -1149,16 +1149,16 @@ FOREIGN KEY (SalesPersonID) REFERENCES SalesPerson(SalesPersonID)
 Multicolumn key constraints are created as table constraints. In the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, the `SpecialOfferProduct` table includes a multicolumn PRIMARY KEY. The following example shows how to reference this key from another table; an explicit constraint name is optional.
 
 ```sql
-CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail FOREIGN KEY
- (ProductID, SpecialOfferID)
-REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)
+CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail
+    FOREIGN KEY (ProductID, SpecialOfferID)
+    REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)
 ```
 
 ### C. Using UNIQUE constraints
 UNIQUE constraints are used to enforce uniqueness on nonprimary key columns. The following example enforces a restriction that the `Name` column of the `Product` table must be unique.
 
 ```sql
-Name nvarchar(100) NOT NULL
+Name NVARCHAR(100) NOT NULL
 UNIQUE NONCLUSTERED
 ```
 
@@ -1191,16 +1191,19 @@ CHECK (CreditRating >= 1 and CreditRating <= 5)
 This example shows a named constraint with a pattern restriction on the character data entered into a column of a table.
 
 ```sql
-CONSTRAINT CK_emp_id CHECK (emp_id LIKE
-'[A-Z][A-Z][A-Z][1-9][0-9][0-9][0-9][0-9][FM]'
-OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]')
+CONSTRAINT CK_emp_id CHECK (
+    emp_id LIKE '[A-Z][A-Z][A-Z][1-9][0-9][0-9][0-9][0-9][FM]'
+    OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]'
+)
 ```
 
 This example specifies that the values must be within a specific list or follow a specified pattern.
 
 ```sql
-CHECK (emp_id IN ('1389', '0736', '0877', '1622', '1756')
-OR emp_id LIKE '99[0-9][0-9]')
+CHECK (
+    emp_id IN ('1389', '0736', '0877', '1622', '1756')
+    OR emp_id LIKE '99[0-9][0-9]'
+)
 ```
 
 ### F. Showing the complete table definition
@@ -1237,8 +1240,11 @@ The following example creates a table with an `xml` column that is typed to XML 
 
 ```sql
 CREATE TABLE HumanResources.EmployeeResumes
-   (LName nvarchar(25), FName nvarchar(25),
-    Resume xml( DOCUMENT HumanResources.HRResumeSchemaCollection) );
+(
+    LName nvarchar(25),
+    FName nvarchar(25),
+    Resume xml(DOCUMENT HumanResources.HRResumeSchemaCollection)
+);
 ```
 
 ### H. Creating a partitioned table
@@ -1246,16 +1252,16 @@ The following example creates a partition function to partition a table or index
 
 ```sql
 CREATE PARTITION FUNCTION myRangePF1 (int)
-    AS RANGE LEFT FOR VALUES (1, 100, 1000) ;
+    AS RANGE LEFT FOR VALUES (1, 100, 1000);
 GO
 
 CREATE PARTITION SCHEME myRangePS1
     AS PARTITION myRangePF1
-    TO (test1fg, test2fg, test3fg, test4fg) ;
+    TO (test1fg, test2fg, test3fg, test4fg);
 GO  
   
 CREATE TABLE PartitionTable (col1 int, col2 char(10))
-    ON myRangePS1 (col1) ;
+    ON myRangePS1 (col1);
 GO
 ```
 
@@ -1271,11 +1277,13 @@ The following example creates a table with a `uniqueidentifier` column. The exam
 
 ```sql
 CREATE TABLE dbo.Globally_Unique_Data
-    (guid uniqueidentifier
+(
+    GUID UNIQUEIDENTIFIER
         CONSTRAINT Guid_Default DEFAULT
         NEWSEQUENTIALID() ROWGUIDCOL,
     Employee_Name varchar(60)
-    CONSTRAINT Guid_PK PRIMARY KEY (guid) );
+    CONSTRAINT Guid_PK PRIMARY KEY (guid)
+);
 ```
 
 ### J. Using an expression for a computed column
@@ -1283,7 +1291,11 @@ The following example shows the use of an expression (`(low + high)/2`) for calc
 
 ```sql
 CREATE TABLE dbo.mytable
-    ( low int, high int, myavg AS (low + high)/2 ) ;
+(
+    low int,
+    high int,
+    myavg AS (low + high)/2
+);
 ```
 
 ### K. Creating a computed column based on a user-defined type column
@@ -1291,7 +1303,10 @@ The following example creates a table with one column defined as user-defined ty
 
 ```sql
 CREATE TABLE UDTypeTable
-    ( u utf8string, ustr AS u.ToString() PERSISTED ) ;
+(
+    u utf8string,
+    ustr AS u.ToString() PERSISTED
+);
 ```
 
 ### L. Using the USER_NAME function for a computed column
@@ -1299,7 +1314,11 @@ The following example uses the `USER_NAME()` function in the `myuser_name` colum
 
 ```sql
 CREATE TABLE dbo.mylogintable
-    ( date_in datetime, user_id int, myuser_name AS USER_NAME() ) ;
+(
+    date_in datetime,
+    user_id int,
+    myuser_name AS USER_NAME()
+);
 ```
 
 ### M. Creating a table that has a FILESTREAM column
@@ -1307,12 +1326,11 @@ The following example creates a table that has a `FILESTREAM` column `Photo`. If
 
 ```sql
 CREATE TABLE dbo.EmployeePhoto
-    (
-     EmployeeId int NOT NULL PRIMARY KEY
-    ,Photo varbinary(max) FILESTREAM NULL
-    ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL
-        UNIQUE DEFAULT NEWID()
-    );
+(
+    EmployeeId int NOT NULL PRIMARY KEY,
+    Photo varbinary(max) FILESTREAM NULL,
+    MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL UNIQUE DEFAULT NEWID()
+);
 ```
 
 ### N. Creating a table that uses row compression
@@ -1320,7 +1338,10 @@ The following example creates a table that uses row compression.
 
 ```sql
 CREATE TABLE dbo.T1
-(c1 int, c2 nvarchar(200) )
+(
+    c1 int,
+    c2 nvarchar(200)
+)
 WITH (DATA_COMPRESSION = ROW);
 ```
 
@@ -1333,18 +1354,22 @@ This example creates a table that has a sparse column.
 
 ```sql
 CREATE TABLE dbo.T1
-    (c1 int PRIMARY KEY,
-    c2 varchar(50) SPARSE NULL ) ;
+(
+    c1 int PRIMARY KEY,
+    c2 varchar(50) SPARSE NULL
+);
 ```
 
 This example creates a table that has two sparse columns and a column set named `CSet`.
 
 ```sql
 CREATE TABLE T1
-    (c1 int PRIMARY KEY,
+(
+    c1 int PRIMARY KEY,
     c2 varchar(50) SPARSE NULL,
     c3 int SPARSE NULL,
-    CSet XML COLUMN_SET FOR ALL_SPARSE_COLUMNS ) ;
+    CSet XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
+);
 ```
 
 ### P. Creating a system-versioned disk-based temporal table
@@ -1363,7 +1388,7 @@ CREATE TABLE Department
     ParentDepartmentNumber char(10) NULL,
     SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
     SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
 WITH (SYSTEM_VERSIONING = ON);
 ```
@@ -1371,7 +1396,7 @@ WITH (SYSTEM_VERSIONING = ON);
 This example creates a new temporal table linked to an existing history table.
 
 ```sql
---Existing table
+-- Existing table
 CREATE TABLE Department_History
 (
     DepartmentNumber char(10) NOT NULL,
@@ -1381,6 +1406,7 @@ CREATE TABLE Department_History
     SysStartTime datetime2 NOT NULL,
     SysEndTime datetime2 NOT NULL
 );
+
 --Temporal table
 CREATE TABLE Department
 (
@@ -1392,10 +1418,7 @@ CREATE TABLE Department
     SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
     PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
 )
-WITH
-    (SYSTEM_VERSIONING = ON
-        (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON )
-    );
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON));
 ```
 
 ### Q. Creating a system-versioned memory-optimized temporal table
@@ -1406,8 +1429,9 @@ The following example shows how to create a system-versioned memory-optimized te
 This example creates a new temporal table linked to a new history table.
 
 ```sql
-CREATE SCHEMA History
+CREATE SCHEMA History;
 GO
+
 CREATE TABLE dbo.Department
 (
     DepartmentNumber char(10) NOT NULL PRIMARY KEY NONCLUSTERED,
@@ -1419,16 +1443,17 @@ CREATE TABLE dbo.Department
     PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
 )
 WITH
-    (
-        MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA,
-            SYSTEM_VERSIONING = ON ( HISTORY_TABLE = History.DepartmentHistory )
-    );
+(
+    MEMORY_OPTIMIZED = ON,
+    DURABILITY = SCHEMA_AND_DATA,
+    SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.DepartmentHistory)
+);
 ```
 
 This example creates a new temporal table linked to an existing history table.
 
 ```sql
---Existing table
+-- Existing table
 CREATE TABLE Department_History
 (
     DepartmentNumber char(10) NOT NULL,
@@ -1438,7 +1463,8 @@ CREATE TABLE Department_History
     SysStartTime datetime2 NOT NULL,
     SysEndTime datetime2 NOT NULL
 );
---Temporal table
+
+-- Temporal table
 CREATE TABLE Department
 (
     DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,
@@ -1450,9 +1476,9 @@ CREATE TABLE Department
     PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
 )
 WITH
-    (SYSTEM_VERSIONING = ON
-        (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON )
-    );
+(
+    SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON)
+);
 ```
 
 ### R. Creating a table with encrypted columns
@@ -1461,19 +1487,17 @@ The following example creates a table with two encrypted columns. For more infor
 ```sql
 CREATE TABLE Customers (
     CustName nvarchar(60)
-        ENCRYPTED WITH
-            (
-             COLUMN_ENCRYPTION_KEY = MyCEK,
-             ENCRYPTION_TYPE = RANDOMIZED,
-             ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
-            ),
+        ENCRYPTED WITH (
+            COLUMN_ENCRYPTION_KEY = MyCEK,
+            ENCRYPTION_TYPE = RANDOMIZED,
+            ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
+        ),
     SSN varchar(11) COLLATE Latin1_General_BIN2
-        ENCRYPTED WITH
-            (
-             COLUMN_ENCRYPTION_KEY = MyCEK,
-             ENCRYPTION_TYPE = DETERMINISTIC ,
-             ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
-            ),
+        ENCRYPTED WITH (
+            COLUMN_ENCRYPTION_KEY = MyCEK,
+            ENCRYPTION_TYPE = DETERMINISTIC ,
+            ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
+        ),
     Age int NULL
 );
 ```
@@ -1493,22 +1517,22 @@ CREATE TABLE t1
 The following shows how to use NONCLUSTERED inline for disk-based tables:
 
 ```sql
-CREATE TABLE t1 
+CREATE TABLE t1
 (
-    c1 int, 
+    c1 int,
     INDEX ix_1 NONCLUSTERED (c1)
 );
 
-CREATE TABLE t2 
+CREATE TABLE t2
 (
-    c1 int, 
+    c1 int,
     c2 int INDEX ix_1 NONCLUSTERED
 );
 
-CREATE TABLE t3 
+CREATE TABLE t3
 (
-    c1 int, 
-    c2 int, 
+    c1 int,
+    c2 int,
     INDEX ix_1 NONCLUSTERED (c1,c2)
 );
 ```
@@ -1542,13 +1566,14 @@ Session A creates a global temp table ##test in [!INCLUDE[ssSDSfull](../../inclu
 
 ```sql
 CREATE TABLE ##test (
-    a int, 
+    a int,
     b int
 );
-INSERT INTO ##test 
-VALUES (1,1);
 
---Obtain object ID for temp table ##test
+INSERT INTO ##test
+VALUES (1, 1);
+
+-- Obtain object ID for temp table ##test
 SELECT OBJECT_ID('tempdb.dbo.##test') AS 'Object ID';
 ```
 
@@ -1559,13 +1584,14 @@ SELECT OBJECT_ID('tempdb.dbo.##test') AS 'Object ID';
 ```
 
 Obtain global temp table name for a given object ID 1253579504 in tempdb (2)
+
 ```sql
 SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
-```
+```sql
 ##test
 ```
 
@@ -1577,7 +1603,7 @@ SELECT * FROM ##test
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
-```
+```sql
 1,1
 ```
 
@@ -1586,6 +1612,7 @@ Session C connects to another database in [!INCLUDE[ssSDSfull](../../includes/ss
 ```sql
 SELECT * FROM ##test
 ```
+
 Which generates the following error:
 
 ```
@@ -1596,9 +1623,9 @@ Invalid object name '##test'
 Addressing system object in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tempdb from current user database testdb1
 
 ```sql
-SELECT * FROM tempdb.sys.objects
-SELECT * FROM tempdb.sys.columns
-SELECT * FROM tempdb.sys.database_files
+SELECT * FROM tempdb.sys.objects;
+SELECT * FROM tempdb.sys.columns;
+SELECT * FROM tempdb.sys.database_files;
 ```
 
 ## See Also

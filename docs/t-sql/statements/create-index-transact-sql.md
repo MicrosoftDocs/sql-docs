@@ -976,7 +976,7 @@ GO
 
 -- Create view with schemabinding
 IF OBJECT_ID ('Sales.vOrders', 'view') IS NOT NULL
-  DROP VIEW Sales.vOrders ;
+  DROP VIEW Sales.vOrders;
 GO
 
 CREATE VIEW Sales.vOrders

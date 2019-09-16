@@ -295,9 +295,9 @@ CURRENT
 Runs the action in the current database. `CURRENT` is not supported for all options in all contexts. If `CURRENT` fails, provide the database name.
 
 **\<accelerated_database_recovery> ::=**
-**Applies to SQL Server 2019 CTP 2.3 or later**
+**Applies to SQL Server 2019**
 
-Enables [accelerated database recovery](https://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery/) per-database on SQL Server 2019 CTP 2.3 or later.
+Enables [accelerated database recovery](https://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery/) per-database on SQL Server 2019 or later.
 
 **\<auto_option> ::=**
 
@@ -780,7 +780,7 @@ ALL
 Captures all queries. ALL is the default configuration value. This is the default configuration value starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
 
 AUTO
-Capture relevant queries based on execution count and resource consumption. This is the default configuration value starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0.
+Capture relevant queries based on execution count and resource consumption. This is the default configuration value starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
 
 NONE
 Stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.

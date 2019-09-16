@@ -78,7 +78,7 @@ You can understand the steps even if you decide not to perform them. The demonst
 - Advanced
 
 
-The text and supporting screenshots can become slightly inexact when the SSMS UI is tweaked over the months or years. Yet the screenshots remain effective for explanation if the discrepancies or only minor.
+The text and supporting screenshots can become slightly inexact when the SSMS UI is tweaked over the months or years. Yet the screenshots remain effective for explanation if the discrepancies are only minor.
 
 
 1. Connect with SSMS.
@@ -114,7 +114,7 @@ The text and supporting screenshots can become slightly inexact when the SSMS UI
 
 9. In the upper-left, click the **Data Storage** page.
 
-10. In the **Targets** area, click **Click here to a target**.
+10. In the **Targets** area, click **Click here to add a target**.
     - In the **Type** drop-down list, choose **event_file**.
     - This means the event data will be stored in a file that we can view.
 

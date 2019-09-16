@@ -29,7 +29,7 @@ ms.date: 09/11/2019
 - [**Download SQL Server Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
 - [**Download Visual Studio**](https://www.visualstudio.com/downloads/)
 
-![SSMS intro screen](media/download-sql-server-management-studio-ssms/what-is-ssms.png)
+![SSMS](media/sql-server-management-studio-ssms/ssms.png)
 
 ## SQL Server Management Studio components  
   

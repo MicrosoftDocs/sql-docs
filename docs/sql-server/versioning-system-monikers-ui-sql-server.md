@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.reviewer: ""
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-previousversions||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Versioning system for SQL documentation
 
@@ -154,10 +154,13 @@ The versioning system is fully implemented for SQL Server version 2016 onward.
 
 - _2012 and earlier:_ &nbsp; The versioning system is not used for SQL Server 2012 or earlier versions.
     - The special moniker of **SQL Server - older** is meant to hide almost all articles. The rare exceptions are a couple of articles that customers of older versions might need once.
+    - [Previous versions of SQL Server, 2012-2005](../toc/previous-versions-sql-server.md)
 
 - _2014:_ &nbsp; The versioning system is half implemented for SQL Server 2014. You can choose SQL Server 2014 in the versioning control, and it works. Yet internally the files for 2014 are dedicated to just 2014, the same way the files for 2008 are dedicated to just 2008.
+    - [SQL Server 2014 documentation](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
 
 - _2016 and later:_ &nbsp; The versioning system is fully implemented for SQL Server 2016 and later versions.
+    - [Welcome to SQL Server documentation 2016 and later](/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016)
 
 ## See also
 

@@ -40,7 +40,7 @@ manager: craigg
  [Developing with ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **International Considerations**  
- [Globalization scenarios for Analysis Services Multiidimensional](https://docs.microsoft.com/analysis-services/globalization-scenarios-for-analysis-services-multiidimensional)  
+ [Globalization scenarios for Analysis Services Multiidimensional](../../globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
 ## See Also  
  [Technical Reference &#40;SSAS&#41;](../../powershell/technical-reference-ssas.md)  

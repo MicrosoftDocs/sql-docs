@@ -5,7 +5,7 @@ description: Reference article for azdata bdc control status commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,24 +13,38 @@ ms.technology: big-data-cluster
 
 # azdata bdc control status
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-The following article provides reference for the **bdc control status** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
+This article is a reference article for **azdata**. 
 
 ## Commands
 |     |     |
 | --- | --- |
-[azdata bdc control status show](#azdata-bdc-control-status-show) | Control status.
+[azdata bdc control status show](#azdata-bdc-control-status-show) | Control service status.
 ## azdata bdc control status show
-Control status.
+Control service status.
 ```bash
-azdata bdc control status show 
+azdata bdc control status show [--resource -r] 
+                               [--all -a]
 ```
 ### Examples
-Get status of control.
+Get status of service.
 ```bash
 azdata bdc control status show
 ```
+Get status of control service with all instances.
+```bash
+azdata bdc control status show --all
+```
+Get status of the control resource within the control service.
+```bash
+azdata bdc control status show --resource control
+```
+### Optional Parameters
+#### `--resource -r`
+Get this resource in this service.
+#### `--all -a`
+Show all the instances of each resource within the service.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -45,4 +59,6 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).
+- For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
+
+- For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

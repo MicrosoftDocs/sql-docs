@@ -1,5 +1,5 @@
 ---
-title: "Connect to Windows Azure Storage (Restore) | Microsoft Docs"
+title: "Connect to Azure Storage (Restore) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---
-# Connect to Windows Azure Storage (Restore)
-  The dialog box allows you to specify the connection to Windows Azure storage account information in order to retrieve the files storage in the Windows Azure storage account. After specifying the required information, click **Connect** to establish the connection to Windows Azure storage.  
+# Connect to Azure Storage (Restore)
+  The dialog box allows you to specify the connection to Azure storage account information in order to retrieve the files storage in the Azure storage account. After specifying the required information, click **Connect** to establish the connection to Azure storage.  
   
-## Windows Azure Storage Account  
+## Azure Storage Account  
  **Storage account**  
- Select, type or paste the name of the Windows Azure storage account you want to use. The drop down box lists the accounts previously used.  
+ Select, type or paste the name of the Azure storage account you want to use. The drop down box lists the accounts previously used.  
   
  **Account key**  
- Specify the Windows Azure storage account access key.  
+ Specify the Azure storage account access key.  
   
  **Use secure endpoints (HTTPS)** check box  
- Select this option to make a secure connection to Windows Azure storage - recommended.  
+ Select this option to make a secure connection to Azure storage - recommended.  
   
  **Save account key** check box  
  Select this check box if you want SQL Server to remember the access key for this storage account.  

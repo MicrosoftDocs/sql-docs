@@ -110,7 +110,7 @@ ALTER USER userName
  LOGIN **=**_loginName_  
  Re-maps a user to another login by changing the user's Security Identifier (SID) to match the login's SID.  
   
- If the ALTER USER statement is the only statement in a SQL batch, Windows Azure SQL Database supports the WITH LOGIN clause. If the ALTER USER statement is not the only statement in a SQL batch or is executed in dynamic SQL, the WITH LOGIN clause is not supported.  
+ If the ALTER USER statement is the only statement in a SQL batch, Azure SQL Database supports the WITH LOGIN clause. If the ALTER USER statement is not the only statement in a SQL batch or is executed in dynamic SQL, the WITH LOGIN clause is not supported.  
   
  NAME **=**_newUserName_  
  Specifies the new name for this user. *newUserName* must not already occur in the current database.  

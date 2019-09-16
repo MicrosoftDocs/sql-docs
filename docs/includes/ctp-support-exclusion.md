@@ -1,17 +1,17 @@
 ## Enabled deployment scenarios
 
-CTP 3.2 enables the following scenarios:
+SQL Server 2019 release candidate (RC) enables the following scenarios:
 
-- Side-by-side installation. Install instances of SQL Server 2019 CTP 3.2 with instances of SQL Server 2012 through SQL Server 2017, or other instances SQL Server 2019 CTP 3.0 or higher.
+- Side-by-side installation. Install instances of SQL Server 2019 RC with instances of SQL Server 2012 through SQL Server 2017, or other instances SQL Server 2019 CTP 3.0 or higher.
    >[!NOTE]
    >While side-by-side is not blocked with SQL Server 2008 and 2008 R2, there are no commonly supported Windows Operating system versions between them and SQL Server 2019.
-- In-place upgrade. Upgrade instances of SQL Server 2019 CTP 3.2 from instances of SQL Server 2012 through SQL Server 2017 and SQL Server CTP 3.0. Upgrade from a SQL Server 2019 CTP below 3.0 is not supported, a new installation must be performed.
+- In-place upgrade. Upgrade to SQL Server 2019 RC from instances of SQL Server 2012 through SQL Server 2017 and SQL Server CTP 3.0. Upgrade from a SQL Server 2019 CTP below 3.0 is not supported, a new installation must be performed.
    >[!NOTE]
    >While in-place upgrade from SQL Server 2008 and 2008 R2 is not blocked, there are no commonly supported Windows Operating system versions between them and SQL Server 2019.
 
 ## Support
 
-SQL Server 2019 CTP 3.2 is preview software. It is not publicly supported for operations. Customers who are in the [SQL Early Adopter Program](http://aka.ms/sqleap), may have support to run SQL Server 2019 CTP 3.2 by special agreement, in consultation with Microsoft.
+SQL Server 2019 RC is preview software. It is not publicly supported for operations. Customers who are in the [SQL Early Adopter Program](http://aka.ms/sqleap), may have support to run SQL Server 2019 RC by special agreement, in consultation with Microsoft.
 
 Limited support for customers not in the early adoption program may be found at one of the following locations:
 

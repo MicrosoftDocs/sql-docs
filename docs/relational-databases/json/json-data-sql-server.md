@@ -289,10 +289,10 @@ SET @jsonVariable = N'[
           }  
        }  
   ]'
-  
-INSERT INTO SalesReport  
+
+--INSERT INTO <sampleTable>  
 SELECT SalesOrderJsonData.*  
-FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')  
+FROM OPENJSON (@jsonVariable, N'$')  
            WITH (  
               Number   varchar(200) N'$.Order.Number',   
               Date     datetime     N'$.Order.Date',  

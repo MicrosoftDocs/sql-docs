@@ -97,7 +97,7 @@ A comma-separated list of headers that the server will expose to clients. The de
 **AccessControlMaxAge**
 Specifies the number of seconds the results of the preflight request can be cached. The default value is 600 (10 minutes).
 
-**AllowedResourceExtensionsForUpload**
+**AllowedResourceExtensionsForUpload (Power BI Report Server & Reporting Services 2017 and later only)**
 Set of extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
 
 **RestrictedResourceMimeTypeForUpload**

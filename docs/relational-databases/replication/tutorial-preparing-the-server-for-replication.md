@@ -229,8 +229,6 @@ If your SQL Server Management Studio instance is running with administrative rig
 
    ![View of all four accounts in Object Explorer](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
    
- 6. Repeat steps 1-4 on the subscriber for the distribution agent and the merge agent, changing the machine name to that of the subscriber. 
-  
   
 For more information, see:
 - [Configure distribution](../../relational-databases/replication/configure-distribution.md) 

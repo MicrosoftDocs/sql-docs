@@ -3,7 +3,7 @@ title: SQL Server 2019 extension (preview)
 titleSuffix: Azure Data Studio
 description: SQL Server 2019 Preview extension for Azure Data Studio
 ms.custom: "seodec18"
-ms.date: "06/25/2019"
+ms.date: "09/11/2019"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -23,9 +23,9 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
    |Platform|Download|Release date|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|June 25, 2019 |0.14.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|June 25, 2019 |0.14.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|June 25, 2019 |0.14.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|September 11, 2019 |0.16.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|September 11, 2019 |0.16.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|September 11, 2019 |0.16.0
 
 1. In Azure Data Studio choose **Install Extension from VSIX Package** from the **File** menu and select the downloaded .vsix file.
 
@@ -36,6 +36,17 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 1. After reloading, the extension will install dependencies. You can see the progress in the Output window, and it could take several minutes.
 
 1. After the dependencies finish installing, close and reopen Azure Data Studio. The **SQL Server big data cluster** connection type is not available until you restart Azure Data Studio.
+
+## Changes in release 0.16
+* Create External Table wizard:
+  * Improved error handling when loading tables and views on object mapping page.
+
+## Changes in release 0.15
+* Create External Table wizard:
+  * Reduced time taken to load table and column information on the object mapping page.
+  * Fixed a bug with loading existing database scoped credentials on the connection details page.
+* Create External Table from CSV Files Wizard:
+  * Increased default sample size used for PROSE parsing.
 
 ## Changes in release 0.14.1
 * Support for CTP 3.1 data source support
@@ -84,7 +95,7 @@ Fixed #3959 Azure Data Studio tries to shutdown notebook server twice after clos
 
 #### Known issues
 * On opening a Notebook the install python dialog will appear. Canceling this install will result in the Kernels and Attach To dropdowns not showing expected values. The workaround is to complete the Python installation.
-* When a notebook is opened with a kernel that is not supported, the kernels and _attach to_ dropdowns will cause Azure Data Studio to hang. You will need to close Azure Data Studio and ensure you use a kernel that is supported (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
+* When a notebook is opened with a kernel that is not supported, the kernels and _attach to_ dropdowns will cause Azure Data Studio to stop responding. You will need to close Azure Data Studio and ensure you use a kernel that is supported (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
 * Spark UI link fails when using PySpark3 or other Spark kernels against the SQL Server endpoint. As a workaround please click on Spark UI from the Dashboard, or connect using the SQL Server big data cluster connection type as this will have the correct Spark UI hyperlink
 
 ### Extensibility improvements

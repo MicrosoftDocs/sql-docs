@@ -40,7 +40,7 @@ For links to videos and other training resources to help you learn [!INCLUDE[ssM
 - To work in the Web application, Silverlight 5 must be installed on the client computer. If you do not have the required version of Silverlight, you will be prompted to install it when you navigate to an area of the Web application that requires it. You can install Silverlight 5 from **[here](https://www.microsoft.com/silverlight/)**.
 
 ## [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine
-By default, when you spin up a Azure Virtual Machine with [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] already installed, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] is also installed. 
+By default, when you spin up an Azure Virtual Machine with [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] already installed, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] is also installed. 
 
 You're next step is to install Internet Information Services (IIS). See the [Installing and Configuring IIS](#InstallIIS) section. 
 

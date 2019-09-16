@@ -10,29 +10,26 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 04/26/2019
+ms.date: 08/20/2019
 ms.author: aliceku
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Common errors for transparent data encryption with customer-managed keys in Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-This article describes the requirements for using transparent data encryption (TDE) with customer-managed keys in Azure Key Vault and how to identify and resolve common errors.
+This article describes how to identify and resolve Azure Key Vault key access issues that caused a database configured to use [transparent data encryption (TDE) with customer-managed keys in Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql) to become inaccessible.
 
-## Requirements
+## Introduction
+When TDE is configured to use a customer managed key in Azure Key Vault, continuous access to this TDE Protector is required for the database to stay online.  If the logical SQL server loses access to the customer managed TDE protector in Azure Key Vault, a database will deny all connections and appear inaccessible in the Azure portal.
 
-To troubleshoot TDE with a customer-managed TDE protector in Key Vault, these requirements must be met:
+For the first 48 hours, if the underlying Azure Key vault key access issue is resolved, the database will auto-heal and come online automatically.  This means that for all intermittent and temporary network outage scenarios, no user action is required, and the database will come online automatically.  In most cases, user action is required to resolve the underlying key vault key access issue. 
 
-- The logical SQL Server instance and the key vault must be in the same region.
-- The logical SQL Server instance identity provided by Azure Active Directory (Azure AD), the AppId in Azure Key Vault, must be a tenant in the original subscription. If the server was moved to a different subscription than where it was created, the server identity (the AppId) must be re-created.
-- The key vault must be up and running. To learn how to check the key vault status, see [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview). To sign up for notifications, read about [action groups](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups).
-- In a geo-disaster recovery scenario, both key vaults must contain the same key material for a failover to work.
-- The logical server must have an Azure AD identity (an AppId) to authenticate to the key vault.
-- The AppId must have access to the key vault, and it must have the Get, Wrap, and Unwrap permissions to the keys that were selected as TDE protectors.
+If an inaccessible database is no longer needed, it can be deleted immediately to stop incurring costs.  All other actions on the database are not permitted until access to the Azure Key Vault key has been restored and the database is back online.   Changing the TDE option from customer managed to service managed keys on the server is also not supported while a database encrypted with customer managed keys is inaccessible. This is necessary to protect the data from unauthorized access while permissions to the TDE Protector have been revoked. 
 
-For more information, see [Guidelines for configuring TDE with Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
+After a database has been inaccessible for more than 48 hours, it will no longer auto-heal.  If the required Azure Key Vault key access has been restored, you must re-validate the access manually to bring the database back online.  Bringing the database back online after it was inaccessible for more than 48 hours can take a significant amount of time depending on the size of the database and currently requires a support ticket. Once the database is back online, previously configured settings such as the geo-link if Geo-DR was configured, PITR history, and tags will be lost.  Therefore, we recommend implementing a notification system using [Action Groups](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) that allows to address the underlying key vault issues within 48 hours. 
 
-## Common misconfigurations
+
+## Common errors causing databases to become inaccessible
 
 Most issues that occur when you use TDE with Key Vault are caused by one of the following misconfigurations:
 
@@ -40,10 +37,11 @@ Most issues that occur when you use TDE with Key Vault are caused by one of the 
 
 - The key vault was accidentally deleted.
 - The firewall was configured for Azure Key Vault, but it doesn't allow access to Microsoft services.
+- An intermittent network error causes the key vault to be unavailable.
 
 ### No permissions to access the key vault or the key doesn't exist
 
-- The key was accidentally deleted.
+- The key was accidentally deleted, disabled or the key expired.
 - The logical SQL Server instance AppId was accidentally deleted.
 - The logical SQL Server instance was moved to a different subscription. A new AppId must be created if the logical server is moved to a different subscription.
 - Permissions granted to the AppId for the keys aren't sufficient (they don't include Get, Wrap, and Unwrap).
@@ -83,7 +81,7 @@ In the Azure portal, go to the key vault, and then go to **Access policies**. Co
 To learn more, see [Assign an Azure AD identity to your server](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
-> If the logical SQL Server instance was moved to a new subscription after the initial configuration of TDE with Key Vault, repeat the step to configure the Azure AD identity to create a new AppId. Then, add the AppId to the key vault and assign the correct permissions to the key. 
+> If the logical SQL Server instance was moved to a new tenant after the initial configuration of TDE with Key Vault, repeat the step to configure the Azure AD identity to create a new AppId. Then, add the AppId to the key vault and assign the correct permissions to the key. 
 >
 
 ### Missing key vault
@@ -158,8 +156,82 @@ Confirm that the logical SQL Server instance has permissions to the key vault an
 - If the AppId is present, ensure that the AppID has the following key permissions: Get, Wrap, and Unwrap.
 - If the AppId isn't present, add it by using the **Add New** button. 
 
+## Getting TDE status from the Activity log
+
+To allow for monitoring of the database status due to Azure Key Vault key access issues, the following events will be logged to the [Activity Log](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) for the resource ID based on the Azure Resource Manager URL and Subscription+Resourcegroup+ServerName+DatabseName: 
+
+**Event when the service loses access to the Azure Key Vault key**
+
+EventName: MakeDatabaseInaccessible 
+
+Status: Started 
+
+Description: Database has lost access to Azure key vault key and is now inaccessible: <error message>   
+
+ 
+
+**Event when the 48-hour wait time for self-healing begins** 
+
+EventName: MakeDatabaseInaccessible 
+
+Status: InProgress 
+
+Description: Database is waiting for Azure key vault key access to be reestablished by user within 48 hours.   
+
+ 
+
+**Event when the database has automatically come back online**
+
+EventName: MakeDatabaseAccessible 
+
+Status: Succeeded 
+
+Description: Database access to Azure key vault key has been reestablished and database is now online. 
+
+ 
+
+**Event when the issue wasn’t resolved within 48 hours and Azure Key Vault key access has to be validated manually** 
+
+EventName: MakeDatabaseInaccessible 
+
+Status: Succeeded 
+
+Description: Database is inaccessible and requires user to resolve Azure key vault errors and reestablish access to Azure key vault key using Re-validate key. 
+
+ 
+
+**Event when db comes online after manual key re-validation**
+
+EventName: MakeDatabaseAccessible 
+
+Status: Succeeded 
+
+Description: Database access to Azure key vault key has been reestablished and database is now online. 
+
+ 
+
+**Event when re-validation of Azure Key Vault key access has succeeded and the db is coming back online**
+
+EventName: MakeDatabaseAccessible 
+
+Status: Started 
+
+Description: Restoring database access to Azure key vault key has started. 
+
+ 
+
+**Event when re-validation of Azure Key Vault key access has failed**
+
+EventName: MakeDatabaseAccessible 
+
+Status: Failed 
+
+Description: Restoring database access to Azure key vault key has failed. 
+
+
 ## Next steps
 
-- Review the [guidelines for configuring TDE with Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
 - Learn about [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview).
-- Get a refresh of how to [assign an Azure AD identity to your server](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
+- Set up [Action Groups](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) to receive notifications and alerts based on your preferences, e.g. Email/SMS/Push/Voice, Logic App, Webhook, ITSM, or Automation Runbook. 
+
+

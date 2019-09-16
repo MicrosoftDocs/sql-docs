@@ -85,7 +85,7 @@ GO
 
 
 ## Create a SQL Server Credential
-A SQL Server credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server. Here, SQL Server backup and restore processes use credentials to authenticate with the Windows Azure Blob storage service. The Credential stores the name of the storage account and the storage account **access key** values. Once the credential is created, it must be specified in the WITH CREDENTIAL option when issuing the BACKUP/RESTORE statements. For more information about credentials, see [Credentials](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
+A SQL Server credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server. Here, SQL Server backup and restore processes use credentials to authenticate with the Azure Blob storage service. The Credential stores the name of the storage account and the storage account **access key** values. Once the credential is created, it must be specified in the WITH CREDENTIAL option when issuing the BACKUP/RESTORE statements. For more information about credentials, see [Credentials](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
 
   > [!IMPORTANT]
   > The requirements for creating a SQL Server credential described below are specific to SQL Server backup processes ([SQL Server Backup to URL](backup-restore/sql-server-backup-to-url.md), and [SQL Server Managed Backup to Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server uses the storage account name and access key information when accessing Azure storage to write or read backups.
@@ -114,8 +114,8 @@ Using the access key you saved, create the SQL Server credential following the s
 
 1. Execute the statement to create the credential. 
 
-## Back up database to the Windows Azure Blob Storage Service
-In this section, you will use a T-SQL statement to perform a full database backup to the Windows Azure Blob Storage service. 
+## Back up database to the Azure Blob Storage Service
+In this section, you will use a T-SQL statement to perform a full database backup to the Azure Blob Storage service. 
 
 1. Connect to your SQL Server using SQL Server Management Studio. 
 1. Select the **SQLTestDB** database and open a **New Query** window. 
@@ -133,7 +133,7 @@ In this section, you will use a T-SQL statement to perform a full database backu
 1. Execute the statement to back up your SQLTestDB database to URL. 
 
  
-## Restore database from Windows Azure Blob Storage Service
+## Restore database from Azure Blob Storage Service
 In this section, you will use a T-SQL statement to restore the full database backup. 
 
 1. Connect to your SQL Server using SQL Server Management Studio. 

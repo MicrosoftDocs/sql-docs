@@ -1,7 +1,7 @@
-- name: SQL Server Machine Learning Services Documentation
+- name: SQL Server Machine Learning Services documentation
   href: ../advanced-analytics/index.yml
 
-- name: Welcome to SQL Server >>
+- name: Welcome to SQL Server >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 
 - name: Overview
@@ -17,7 +17,7 @@
     href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
 - name: Install
   items:
-  - name: Differences in SQL Server 2019
+  - name: Isolation changes in SQL Server 2019
     href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
   - name: Install ML Services on Windows
     href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
@@ -77,20 +77,30 @@
       href: ../advanced-analytics/tutorials/quickstart-r-predict-from-model.md
 - name: Tutorials
   items:
-  - name: Tutorials overview
-    href: ../advanced-analytics/tutorials/machine-learning-services-tutorials.md
-  - name: Sample data
-    items:
-    - name: Airline data set
-      href: ../advanced-analytics/tutorials/demo-data-airlinedemo-in-sql.md
-    - name: Iris data set
-      href: ../advanced-analytics/tutorials/demo-data-iris-in-sql.md
-    - name: NYC Taxi data set
-      href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
   - name: Python
     items:
     - name: Python tutorials
       href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
+    - name: Ski rental (linear regression)
+      items:
+      - name: 1 - Introduction
+        href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression.md
+      - name: 2 - Prepare data
+        href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-prepare-data.md
+      - name: 3 - Train model
+        href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-train-model.md
+      - name: 4 - Deploy model
+        href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-deploy-model.md
+    - name: Categorize customers (k-means clustering)
+      items:
+      - name: 1 - Introduction
+        href: ../advanced-analytics/tutorials/python-clustering-model.md
+      - name: 2 - Prepare the data
+        href: ../advanced-analytics/tutorials/python-clustering-model-prepare-data.md
+      - name: 3 - Create the model
+        href: ../advanced-analytics/tutorials/python-clustering-model-build.md
+      - name: 4 - Deploy the model
+        href: ../advanced-analytics/tutorials/python-clustering-model-deploy.md
     - name: Create a Python model using revoscalepy
       href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
     - name: Python for SQL developers
@@ -169,7 +179,15 @@
         href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: 15. Send custom R using rxExec
         href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
-- name: Samples >
+  - name: Sample data
+    items:
+    - name: Airline data set
+      href: ../advanced-analytics/tutorials/demo-data-airlinedemo-in-sql.md
+    - name: Iris data set
+      href: ../advanced-analytics/tutorials/demo-data-iris-in-sql.md
+    - name: NYC Taxi data set
+      href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
+- name: Samples >>
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions
   href: ../advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md
@@ -187,6 +205,8 @@
   items:
   - name: Connect
     items:
+    - name: Loopback connection
+      href: ../advanced-analytics/connect/loopback-connection.md
     - name: Connect to OLAP from R
       items:
       - name: Use data from OLAP cubes in R
@@ -229,34 +249,22 @@
       href: ../advanced-analytics/sql-native-scoring.md
   - name: Package management
     items:
-    - name: Default packages
-      href: ../advanced-analytics/package-management/default-packages.md
-    - name: Get package information
-      href: ../advanced-analytics/package-management/installed-package-information.md
-    - name: Install new R packages
-      items:
-      - name: Install R package
-        href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
-      - name: Use T-SQL
-        href: ../advanced-analytics/r/install-r-packages-tsql.md
-      - name: Use package managers
-        href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
-      - name: Use RevoScaleR
-        items:
-        - name: Install using RevoScaleR
-          href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
-        - name: Enable remote R package management
-          href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
-        - name: Synchronize R packages
-          href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
-      - name: Create a miniCRAN repo
-        href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
-      - name: Tips for using R packages
-        href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
     - name: Install new Python packages
       items:
-      - name: Use package managers
-        href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
+      - name: Get Python package information
+        href: ../advanced-analytics/package-management/python-package-information.md
+      - name: Install Python packages
+        href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
+    - name: Install new R packages
+      items:
+      - name: Get R package information
+        href: ../advanced-analytics/package-management/r-package-information.md
+      - name: Install R packages
+        href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
+      - name: Create a miniCRAN repo
+        href: ../advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md
+      - name: Tips for using R packages
+        href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
   - name: Administration
     items:
     - name: Manage integration
@@ -325,7 +333,7 @@
       href: ../advanced-analytics/r/ref-r-sqlrutils.md
 - name: Resources
   items:
-  - name: Release notes >>
+  - name: Release notes >
     href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
   - name: Troubleshooting
     items:

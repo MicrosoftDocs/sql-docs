@@ -102,7 +102,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >
 ```  
   
 ```  
--- Windows Azure SQL Database Syntax   
+-- Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)   
   
 ALTER TRIGGER schema_name. trigger_name   

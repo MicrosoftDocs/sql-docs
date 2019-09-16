@@ -16,7 +16,7 @@ ms.technology: linux
 
 Learn how to configure a SQL Server instance on Kubernetes in Azure Kubernetes Service (AKS), with persistent storage for high availability (HA). The solution provides resiliency. If the SQL Server instance fails, Kubernetes automatically re-creates it in a new pod. Kubernetes also provides resiliency against a node failure.
 
-This tutorial demonstrates how to configure a highly available SQL Server instance in a container on AKS. You can also create [Always On availability groups for SQL Server containers](sql-server-ag-kubernetes.md). To compare the two different Kubernetes solutions, see [High availability for SQL Server containers](sql-server-linux-container-ha-overview.md).
+This tutorial demonstrates how to configure a highly available SQL Server instance in a container on AKS.
 
 > [!div class="checklist"]
 > * Create an SA password

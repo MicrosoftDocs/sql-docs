@@ -1,7 +1,7 @@
 ---
-title: "Spatial Data Types Sample for MSSQL JDBC Driver | Microsoft Docs"
+title: "Spatial data types sample for MSSQL JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/30/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,7 +10,7 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ---
-# Spatial Data Types Sample
+# Spatial data types sample
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -89,7 +89,7 @@ public class SpatialDataTypes {
 }
 ```
 
-## See Also  
+## See also  
 
-[Working with JDBC Data Types](../../connect/jdbc/working-with-data-types-jdbc.md)  
+[Working with JDBC data types](../../connect/jdbc/working-with-data-types-jdbc.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server privacy supplement | Microsoft Docs"
+title: "SQL Servern 2019 privacy supplement | Microsoft Docs"
 ms.date: 09/20/2019
 ms.prod: sql
 ms.reviewer: "mikeray"

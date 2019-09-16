@@ -70,23 +70,23 @@ For more information about modifying the snapshot folder location properties, se
   
 #### To enable FTP snapshot delivery for a snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Specify **@publication**, a value of **true** for **@enabled_for_internet**, and appropriate values for the following parameters:  
+1.  At the Publisher on the publication database, execute [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Specify `@publication`, a value of **true** for `@enabled_for_internet`, and appropriate values for the following parameters:  
   
-    -   **@ftp_address** - the address of the FTP server used to deliver the snapshot.  
+    -   `@ftp_address` - the address of the FTP server used to deliver the snapshot.  
   
-    -   (Optional) **@ftp_port** - the port used by the FTP server.  
+    -   (Optional) `@ftp_port` - the port used by the FTP server.  
   
-    -   (Optional) **@ftp_subdirectory** - the subdirectory of the default FTP directory assigned to an FTP login. For example, if the FTP server root is \\\ftpserver\home and you want snapshots to be stored at \\\ftpserver\home\snapshots, specify **\snapshots\ftp** for **@ftp_subdirectory** (replication appends 'ftp' to the snapshot folder path when it creates snapshot files).  
+    -   (Optional) `@ftp_subdirectory` - the subdirectory of the default FTP directory assigned to an FTP login. For example, if the FTP server root is \\\ftpserver\home and you want snapshots to be stored at \\\ftpserver\home\snapshots, specify **\snapshots\ftp** for `@ftp_subdirectory` (replication appends 'ftp' to the snapshot folder path when it creates snapshot files).  
   
-    -   (Optional) **@ftp_login** - a login account used when connecting to the FTP server.  
+    -   (Optional) `@ftp_login` - a login account used when connecting to the FTP server.  
   
-    -   (Optional) **@ftp_password** - the password for the FTP login.  
+    -   (Optional) `@ftp_password` - the password for the FTP login.  
   
      This creates a publication that uses FTP. For more information, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### To enable FTP snapshot delivery for a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Specify **@publication**, a value of **true** for **@enabled_for_internet** and appropriate values for the following parameters:  
+1.  At the Publisher on the publication database, execute [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Specify `@publication`, a value of **true** for **@enabled_for_internet** and appropriate values for the following parameters:  
   
     -   **@ftp_address** - the address of the FTP server used to deliver the snapshot.  
   

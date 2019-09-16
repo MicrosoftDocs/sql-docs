@@ -18,10 +18,10 @@ Download and install the latest .NET Framework release and macOS and Linux previ
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2102893)|September 6, 2019|18.3|15.0.4532.1|
-|macOS .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102894)|September 6, 2019| 18.3|15.0.4532.1|
-|Linux .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102978)|September 6, 2019| 18.3|15.0.4532.1|
-|Windows .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102979)|September 6, 2019| 18.3|15.0.4532.1|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2102893)|September 13, 2019|18.3.1|15.0.4538.1|
+|macOS .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102894)|September 13, 2019| 18.3.1|15.0.4538.1|
+|Linux .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102978)|September 13, 2019| 18.3.1|15.0.4538.1|
+|Windows .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102979)|September 13, 2019| 18.3.1|15.0.4538.1|
 
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
 
@@ -40,7 +40,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
 
 1. Download [sqlpackage for Windows](https://go.microsoft.com/fwlink/?linkid=2102979).
 2. To extract the file by right clicking on the file in Windows Explorer, and selecting 'Extract All...', and select the target directory.
-3. Open a new Terminal windows, can cd to the location where sqlpackage was exracted:
+3. Open a new Terminal window and cd to the location where sqlpackage was extracted:
 
    **.zip Installation:**
 

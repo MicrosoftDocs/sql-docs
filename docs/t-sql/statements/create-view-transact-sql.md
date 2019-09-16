@@ -239,11 +239,11 @@ FROM Tn;
   
 1.  The select `list`  
   
-    -   All columns in the member tables must be selected in the column list of the view definition.  
+    -   In the column list of the view definition, select all columns in the member tables.  
   
-    -   The columns in the same ordinal position of each `select list` must be of the same type, including collations. It is not sufficient for the columns to be implicitly convertible types, as is generally the case for UNION.  
+    -   Ensure that the columns in the same ordinal position of each `select list` are of the same type, including collations. It is not sufficient for the columns to be implicitly convertible types, as is generally the case for UNION.  
   
-         Also, at least one column (for example `<col>`) must appear in all the select lists in the same ordinal position. This `<col>` is defined in a way that the member tables `T1, ..., Tn` have CHECK constraints `C1, ..., Cn` defined on `<col>`, respectively.  
+         Also, at least one column (for example `<col>`) must appear in all the select lists in the same ordinal position. Define `<col>` in a way that the member tables `T1, ..., Tn` have CHECK constraints `C1, ..., Cn` defined on `<col>`, respectively.  
   
          Constraint `C1` defined on table `T1` must be of the following form:  
   
@@ -274,7 +274,7 @@ FROM Tn;
   
     -   It cannot be a computed, identity, default, or **timestamp** column.  
   
-    -   If there is more than one constraint on the same column in a member table, the Database Engine ignores all the constraints and does not consider them when determining whether the view is a partitioned view. To meet the conditions of the partitioned view, there is only one partitioning constraint on the partitioning column.  
+    -   If there is more than one constraint on the same column in a member table, the Database Engine ignores all the constraints and does not consider them when determining whether the view is a partitioned view. To meet the conditions of the partitioned view, ensure that there is only one partitioning constraint on the partitioning column.  
   
     -   There are no restrictions on the updatability of the partitioning column.  
   
@@ -290,14 +290,14 @@ FROM Tn;
   
     -   The member tables have all PRIMARY KEY constraints on the same number of columns.  
   
-    -   All member tables in the view must have the same ANSI padding setting. This can be set by using either the **user options** option in **sp_configure** or the SET statement.  
+    -   All member tables in the view have the same ANSI padding setting. This can be set by using either the **user options** option in **sp_configure** or the SET statement.  
   
 ## Conditions for Modifying Data in Partitioned Views  
  The following restrictions apply to statements that modify data in partitioned views:  
   
--   The INSERT statement must supply values for all the columns in the view, even if the underlying member tables have a DEFAULT constraint for those columns or if they allow for null values. For those member table columns that have DEFAULT definitions, the statements cannot explicitly use the keyword DEFAULT.  
+-   The INSERT statement supplies values for all the columns in the view, even if the underlying member tables have a DEFAULT constraint for those columns or if they allow for null values. For those member table columns that have DEFAULT definitions, the statements cannot explicitly use the keyword DEFAULT.  
   
--   The value being inserted into the partitioning column must satisfy at least one of the underlying constraints; otherwise, the insert action will fail with a constraint violation.  
+-   The value being inserted into the partitioning column satisfies at least one of the underlying constraints; otherwise, the insert action will fail with a constraint violation.  
   
 -   UPDATE statements cannot specify the DEFAULT keyword as a value in the SET clause, even if the column has a DEFAULT value defined in the corresponding member table.  
   
@@ -334,7 +334,7 @@ FROM Tn;
 ## Considerations for Replication  
  To create partitioned views on member tables that are involved in replication, the following considerations apply:  
   
--   If the underlying tables are involved in merge replication or transactional replication with updating subscriptions, the **uniqueidentifier** column must also be included in the select list.  
+-   If the underlying tables are involved in merge replication or transactional replication with updating subscriptions, ensure that the **uniqueidentifier** column is also included in the select list. 
   
      Any INSERT actions into the partitioned view must provide a NEWID() value for the **uniqueidentifier** column. Any UPDATE actions against the **uniqueidentifier** column must supply NEWID() as the value because the DEFAULT keyword cannot be used.  
   

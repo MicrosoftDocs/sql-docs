@@ -63,6 +63,7 @@ In this example you will see how to execute an [INSERT](../../../t-sql/statement
 
 #Sample insert query
 cursor.execute("INSERT SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate) OUTPUT INSERTED.ProductID VALUES ('SQL Server Express New 20', 'SQLEXPRESS New 20', 0, 0, CURRENT_TIMESTAMP )") 
+cnxn.commit()
 row = cursor.fetchone()
 
 while row: 

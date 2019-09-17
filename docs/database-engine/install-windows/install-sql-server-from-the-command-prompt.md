@@ -155,7 +155,7 @@ Use the following guidelines to develop installation commands that have correct 
 
 |**Parameter** | **Values** | **Description**| 
 | :---------   | :--------- |  :--------------|
-| `/ACTION = ` </br> **Required**  | - **Install** </br> - **PrepareImage** </br> - **CompleteImage** </br> - **Upgrade** </br> - **Repair** </br> - **Rebuilddatabase** </br> - **Unintall** </br> - **PrepareFailoverCluster** </br> - **InstallFailoverCluster** </br> - **CompleteFailoverCluster** </br> - **AddNode** </br> - **RemoveNode** | Determines the SQL Server workflow, such as intalling SQL Server, preparing a Sysprep image, or preparing a failover cluster for a SQL Server installation.  |
+| `/ACTION = ` </br> **Required**  | Install, PrepareImage, CompleteImage, Upgrade, Repair, Rebuilddatabase, Uninstall, PrepareFailoverCluster, , InstallFailoverCluster, CompleteFailoverCluster, AddNode, RemoveNode | Determines the SQL Server workflow, such as installing SQL Server, preparing a Sysprep image, or preparing a failover cluster for a SQL Server installation.  |
 | `/IACCEPTPYTHONLICENSETERMS` </br> **Required with /Q or /QS parameter** | Blank | Only used during a quiet installation that includes the Anaconda Python package. Required to acknowledge acceptance of Python license terms.|
 | `/IACCEPTROPENLICENSETERMS` </br> **Required with /Q or /QS parameter** | Blank |Only used during a quiet installation that includes R Services. Required to acknowledge acceptance of R Open license terms.|.
 | `/ENU` </br> **Optional**| Blank  Use this parameter to install the English version of SQL Server on a localized operating system when the installation media includes language packs for both English and the language corresponding to the operating system.|
@@ -200,7 +200,9 @@ Use the following guidelines to develop installation commands that have correct 
 
 
 
-
+|**Parameter** | **Values** | **Description**| 
+| :---------   | :--------- |  :--------------|
+| `/ACTION = ` </br> **Required**  | - **Install** </br> - **PrepareImage** </br> - **CompleteImage** </br> - **Upgrade** </br> - **Repair** </br> - **Rebuilddatabase** </br> - **Uninstall** </br> - **PrepareFailoverCluster** </br> - **InstallFailoverCluster** </br> - **CompleteFailoverCluster** </br> - **AddNode** </br> - **RemoveNode** | Determines the SQL Server workflow, such as intalling SQL Server, preparing a Sysprep image, or preparing a failover cluster for a SQL Server installation.  |
 
 
 

@@ -196,7 +196,7 @@ Services. Required to acknowledge acceptance of R Open license terms.|.
 |**Parameter** | **Values** | **Description** |
 | :---------   | :--------- | :--------------|
 | `/SUPPRESSPRIVACYSTATEMENTNOTICE` <br /> Optional <br /> Workflow: **I** | Blank | Only used for installation. Suppresses the privacy notice statement. By using this flag, you are agreeing with the [privacy notice](../../sql-server/sql-server-privacy.md).|
-| `/IACCEPTSQLSERVERLICENSETERMS` <br /> Optional <br /> Workflow: **I** | Blank | Required only when the /Q or /QS parameter is specified for unattended installations. | Only used for installation. Required to acknowledge acceptance of the license terms. |
+| `/IACCEPTSQLSERVERLICENSETERMS` <br /> **Required with /Q or /QS parameter** <br /> Workflow: **I** | Blank |  Only used for installation. Required to acknowledge acceptance of the license terms. |
 | `/ENABLERANU` <br /> Optional <br /> Workflow: **I** | Blank | Enables run-as credentials for SQL Server Express installations.| 
 | `/INSTALLSQLDATADIR =` <br /> Optional | `<file path>` | Specifies the data directory for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data files. Default values:<br /><br /> For WOW mode on 64-bit: `%Program Files(x86)%\Microsoft SQL Server\`<br /><br /> For all other installations: `%Program Files%\Microsoft SQL Server\` | 
 | `/SAPWD = ` <br /> **Required when /SECURITYMODE=SQL** | `<complex password>` | Specifies the password for the SQL Server **SA** account.

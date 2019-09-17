@@ -1,7 +1,7 @@
 ---
 title: "Collation and Unicode Support | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/26/2019
+ms.date: 09/16/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -99,7 +99,11 @@ When a database is created or modified, you can use the COLLATE clause of the CR
 You cannot change the collation of system databases except by changing the collation for the server.    
     
 The database collation is used for all metadata in the database, and is the default for all string columns, temporary objects, variable names, and any other strings used in the database. When you change the collation of a user database, there can be collation conflicts when queries in the database access temporary tables. Temporary tables are always stored in the **tempdb** system database, which uses the collation for the instance. Queries that compare character data between the user database and **tempdb** may fail if the collations cause a conflict in evaluating the character data. You can resolve this by specifying the COLLATE clause in the query. For more information, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).    
-    
+
+> [!NOTE]
+> Collation cannot be changed after database has been created on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+
 #### Column-level collations    
 When you create or alter a table, you can specify collations for each character-string column by using the COLLATE clause. If no collation is specified, the column is assigned the default collation of the database.    
     
@@ -216,7 +220,12 @@ The following table compares the behavior of some string functions and string op
 |[Match One Character Wildcard](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [Wildcard - Character(s) Not to Match](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|Supplementary characters are supported for all wildcard operations.|Supplementary characters are not supported for these wildcard operations. Other wildcard operators are supported.|    
     
 ## <a name="GB18030"></a> GB18030 Support    
-GB18030 is a separate standard used in the People's Republic of China for encoding Chinese characters. In GB18030, characters can be 1, 2, or 4 bytes in length. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides support for GB18030-encoded characters by recognizing them when they enter the server from a client-side application and converting and storing them natively as Unicode characters. After they are stored in the server, they are treated as Unicode characters in any subsequent operations. You can use any Chinese collation, preferably the latest 100 version. All _100 level collations support linguistic sorting with GB18030 characters. If the data includes supplementary characters (surrogate pairs), you can use the SC collations available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to improve searching and sorting.    
+GB18030 is a separate standard used in the People's Republic of China for encoding Chinese characters. In GB18030, characters can be 1, 2, or 4 bytes in length. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides support for GB18030-encoded characters by recognizing them when they enter the server from a client-side application and converting and storing them natively as Unicode characters. After they are stored in the server, they are treated as Unicode characters in any subsequent operations. 
+
+You can use any Chinese collation, preferably the latest 100 version. All \_100 level collations support linguistic sorting with GB18030 characters. If the data includes supplementary characters (surrogate pairs), you can use the SC collations available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to improve searching and sorting.    
+
+> [!NOTE]
+> Ensure your client tools such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] use the Dengxian font to correctly display strings containing GB18030-encoded characters.
     
 ## <a name="Complex_script"></a> Complex Script Support    
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can support inputting, storing, changing, and displaying complex scripts. Complex scripts include the following types:    

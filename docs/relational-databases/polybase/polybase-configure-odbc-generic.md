@@ -75,7 +75,7 @@ The following Transact-SQL commands are used in this section:
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-    We recommend creating statistics on external table columns especially the ones used for joins, filters and aggregates,for optimal query performance.
+For optimal query performance, we recommend creating statistics on external table columns especially the ones used for joins, filters, and aggregates.
 
     ```sql
     CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 

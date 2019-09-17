@@ -129,7 +129,7 @@ The [Agent XPs Server Configuration Option](../../database-engine/configure-wind
     GO  
     -- Attaches the RunOnce schedule to the job HistoryCleanupTask_1.   
     EXEC sp_attach_schedule  
-       @job_name = N'HistoryCleanupTask_1'  
+       @job_name = N'HistoryCleanupTask_1',  
        @schedule_name = N'RunOnce' ;   
     GO  
   

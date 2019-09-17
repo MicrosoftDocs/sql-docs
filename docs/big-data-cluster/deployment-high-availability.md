@@ -37,7 +37,7 @@ To deploy SQL Server master in an availability group:
 
 The following steps show how to create a patch file that includes these settings and how to apply it to either `aks-dev-test` or `kubeadm-dev-test` configuration profiles. These steps walk through an example on how to patch the `aks-dev-test` profile to add the HA attributes.For a deployment on a kubeadm cluster, similar patch would apply, but make sure you are using *NodePort* for the **serviceType** in the  **endpoints** section.
 
-1. Create a `ha-patch.json` file
+1. Create a `patch.json` file
 
     ```json
     {
@@ -74,7 +74,7 @@ The following steps show how to create a patch file that includes these settings
 1. Clone your targeted profile
 
     ```bash
-    azdata config init --source aks-dev-test --target custom-aks
+    azdata bdc config init --source aks-dev-test --target custom-aks
     ```
 
 1. Apply the patch file to your custom profile

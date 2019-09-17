@@ -527,6 +527,66 @@
             href: relational-databases/backup-restore/select-backup-device.md
           - name: Connect to Azure Storage
             href: relational-databases/backup-restore/connect-to-microsoft-azure-storage-restore.md
+      - name: VDI reference
+        items:
+          - name: VDI Overview
+            href: relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface.md
+          - name: IClientVirtualDevice
+            items:
+            - name: CompleteCommand
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-completecommand.md
+            - name: GetCommand
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-getcommand.md
+          - name: IClientVirtualDeviceSet2
+            items:  
+            - name: Close
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-close.md
+            - name: CreateEx
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-createex.md
+            - name: GetBufferHandle
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getbufferhandle.md
+            - name: GetConfiguration
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getconfiguration.md
+            - name: MapBufferHandle
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-mapbufferhandle.md
+            - name: OpenDevice
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-opendevice.md
+            - name: OpenInSecondaryEx
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-openinsecondaryex.md
+            - name: SignalAbort
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-signalabort.md
+          - name: IServerVirtualDevice
+            items:
+            - name: CloseDevice
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-closedevice.md
+            - name: SendCommand
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-sendcommand.md
+          - name: IServerVirtualDeviceSet2
+            items:
+            - name: AllocateBuffer
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-allocatebuffer.md
+            - name: BeginConfiguration
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-beginconfiguration.md
+            - name: Close
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-close.md
+            - name: EndConfiguration
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-endconfiguration.md
+            - name: ExecuteCompletionAgent
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-executecompletionagent.md
+            - name: FreeBuffer
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-freebuffer.md
+            - name: GetConfiguration
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-getconfiguration.md
+            - name: IsSharedBuffer
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-issharedbuffer.md
+            - name: Open
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-open.md
+            - name: OpenDevice
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-opendevice.md
+            - name: RequestBuffers
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-requestbuffers.md
+            - name: SignalAbort
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-signalabort.md
   - name: Always On availability groups
     href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
     items:

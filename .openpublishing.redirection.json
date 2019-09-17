@@ -346,6 +346,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md",
+            "redirect_url": "/sql/advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/advanced-analytics/r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md",
             "redirect_url": "/sql/advanced-analytics/r/ref-r-sqlrutils",
             "redirect_document_id": true

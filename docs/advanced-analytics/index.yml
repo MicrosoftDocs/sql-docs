@@ -94,7 +94,7 @@ landingContent:
             url: concepts/extension-r.md
       - linkListType: concept
         links:
-          - text: Security for the externsibility framework
+          - text: Security for the extensibility framework
             url: concepts/security.md
 
   - title: Manage Python and R packages

@@ -168,11 +168,11 @@ Use the following guidelines to develop installation commands that have correct 
 | `/INDICATEPROGRESS` </br> **Optional** | Blank | Specifies that the verbose Setup log file is piped to the console.| 
 | `/INSTALLSHAREDDIR = ` </br> **Optional** | A file path. Default is `%Program Files%\Microsoft SQL Server`|  Specifies a nondefault installation directory for 64-bit shared components. Cannot be set to `%Program Files(x86)%\Microsoft SQL Server`. 
 | `/INSTALLSHAREDWOWDIR = ` </br> **Optional** | A fail path. Default is `%Program Files(x86)%\Microsoft SQL Server`  | Specifies a nondefault installation directory for 32-bit shared components. Supported only on a 64-bit system. Cannot be set to `%Program Files%\Microsoft SQL Server`. 
-| `/INSTANCEDIR =` </br> **Optional** | A file path.  | Specifies a nondefault installation directory for instance-specific components. | 
+| `/INSTANCEDIR =` </br> **Optional** | A file path. | Specifies a nondefault installation directory for instance-specific components. | 
 | `/INSTANCEID = ` </br> **Optional** | A string value.  Specifies a nondefault value for an [InstanceID](#InstanceID).| 
-| `/INSTANCENAME = ` </br>| A string value. | **Required** | Specifies a SQL Server instance name. | 
+| `/INSTANCENAME = ` </br> **Required**| A string value. | Specifies a SQL Server instance name. | 
 | `/PID = ` </br> **Optional**| A string value. | Specifies the product key for the edition of SQL Server. If this parameter is not specified, Evaluation is used. |
-| `Q`, `/QUIET` </br> **Optional**| Blank  Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations. The /Q parameter overrides the input of the /QS parameter.| 
+| `Q`, `/QUIET` </br> **Optional**| Blank | Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations. The /Q parameter overrides the input of the /QS parameter.| 
 | `/QS`, `/QUIETSIMPLE` </br> **Optional**| Blank | Specifies that Setup runs and shows progress through the UI, but does not accept any input or show any error messages. | 
 | `UIMODE`</br>
 

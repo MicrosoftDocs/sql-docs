@@ -1,5 +1,5 @@
 ---
-title: Monitor Python and R script execution using custom reports in Management Studio
+title: Monitor Python and R script execution using custom reports in SSMS
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/17/2019
@@ -8,10 +8,12 @@ author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Monitor Machine Learning Services using custom reports in Management Studio
+# Monitor Python and R script execution using custom reports in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-To make it easier to manage instance used for machine learning, the product team has provided a number of sample custom reports that you can add to SQL Server Management Studio. In these reports, you can view details such as:
+Use custom reports in SQL Server Management Studio (SSMS) to monitor the execution of external scripts (Python and R), resources used, diagnose problems, and tune performance in SQL Server Machine Learning Services.
+
+In these reports, you can view details such as:
 
 - Active R or Python sessions
 - Configuration settings for the instance

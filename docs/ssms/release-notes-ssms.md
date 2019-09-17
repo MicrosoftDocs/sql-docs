@@ -50,10 +50,14 @@ SSMS 18.3 is the latest general availability (GA) release of SSMS. If you need a
 
 | New item | Details |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Data Classification | Add Data Classification information to column properties UI (*Information Type*, *Information Type Id*, *Sensitivity Label*, and *Sensitivity Label Id* are not exposed in the SSMS UI). |
-| Intellisense/Editor | Updated support for features recently added to SQL Server 2019 (e.g. "ALTER SERVER CONFIGURATION"). |
+| Data Classification | Add Data Classification information to column properties UI (*Information Type*, *Information Type ID*, *Sensitivity Label*, and *Sensitivity Label ID* are not exposed in the SSMS UI). |
+| Intellisense/Editor | Updated support for features recently added to SQL Server 2019 (for example, "ALTER SERVER CONFIGURATION"). | 
 | SMO/Scripting | Added support for Support scripting of Azure SQL DW unique constraint. |
-| SMO/Scripting | Data Classification  - Added support for SQL version 10 (SQL 2008) and higher.  - Added new sensitivity attribute 'rank' for SQL version 15 (SQL 2019) and higher and Azure SQL DB. |
+| SMO/Scripting | Data Classification </br> - Added support for SQL version 10 (SQL 2008) and higher. </br> - Added new sensitivity attribute 'rank' for SQL version 15 (SQL 2019) and higher and Azure SQL DB. |
+| SMO/Scripting | Added versioning to ruleset format for SQL Assessment API. |
+| SMO/Scripting | Added new checks for SQL Assessment API. |
+| SMO/Scripting | Added support for Azure SQL Database Managed Instance for SQL Assessment API. |
+| SMO/Scripting | Updated default view of SQL Assessment cmdlets to display results as a table. |
 
 ## Bug fixes in 18.3
 
@@ -62,18 +66,18 @@ SSMS 18.3 is the latest general availability (GA) release of SSMS. If you need a
 | Analysis Services | Fix scaling issue in MDX Query Editor.|
 | Analysis Services | Fixed an issue in XEvent UI that prevents the users from being able to create a new session. |
 | Database Deployment to SQL Azure | Fixed an issue (in DacFx) which was causing this feature not to work.|
-| General SSMS | Fixed an issue which was causing SSMS to crash when using the sorting feature in the XEvent viewer. |
+| General SSMS | Fixed an issue, which was causing SSMS to crash when using the sorting feature in the XEvent viewer. |
 | General SSMS | Fixed long outstanding issues where SSMS Restore database may hang indefinitely. </br></br> See UserVoice items for more details:  </br> [Restore Database - Select Backup Devices Slow to Load](https://feedback.azure.com/forums/908035/suggestions/32899099/).  </br> [SSMS 2016 very slow in the database restore dialogs](https://feedback.azure.com/forums/908035/suggestions/32900767/). </br> [Restoring database is slow](https://feedback.azure.com/forums/908035/suggestions/32900224/).  </br> [Restore Database from Device HANGS on clicking "..."](https://feedback.azure.com/forums/908035/suggestions/34281658/).  |
 | General SSMS | Fixed an issue where the default language for all logins was shown as Arabic. </br></br> See UserVoice item for more details: [SSMS 18.2 default language display bug](https://feedback.azure.com/forums/908035/suggestions/38236363). |
 | General SSMS | Fixed the hard to see the dialog for *Query Options* (when the user right-clicks on the T-SQL editor window) by making it resizable.|
 | General SSMS | The *Completion time* message visible in the Result Grid/File (introduced in SSMS 18.2) is now configurable under Tools > Options >  Query Execution > SQL Server > Advanced > Show completion time. |
 | General SSMS | In the connection dialog, replaced *Active Directory - Password* and *Active Directory - Integrated* with *Azure Active Directory - Password* and *Azure Active Directory - Integrated*, respectively. |
-| General SSMS | Fixed an issue that prevents users from being able to use SSMS to configure auditing on SQL Azure Managed Instances when located in a TZ with negative UTC offset. |
+| General SSMS | Fixed an issue that prevents users from being able to use SSMS to configure auditing on SQL Azure-Managed Instances when located in a TZ with negative UTC offset. |
 | General SSMS | Fixing an issue in XEvent UI where hovering over the grid was causing rows to be selected. </br></br> See UserVoice item for more details: [SSMS Extended Events UI Selects Actions on Hover](https://feedback.azure.com/forums/908035/suggestions/38262124). |
 | Import flat file | Fixed the issue where Import Flat File was not importing all data by letting the user choose between a simple or rich data type detection.</br></br> See UserVoice item for more details: [SSMS Import Flat File fails to import all data](https://feedback.azure.com/forums/908035/suggestions/38096989). |
 | Integration Services | Add new operation type *StartNonCatalogExecution* for SSIS Operation report.|
-| SMO/Scripting | Fixed an issue which was causing SMO to throw errors when fetching properties when **SMO.Server.SetDefaultInitFields(true)** was being used.|
-| Query Store UI | Fixed an issue where the Y-axis did not scale when *Execution Count* Metric was selected in *Tracked Query* View. |
+| SMO/Scripting | Fixed an issue, which was causing SMO to throw errors when fetching properties when **SMO.Server.SetDefaultInitFields(true)** was being used.|
+| Query Store UI | Fixed an issue where the Y-axis did not scales when *Execution Count* Metric was selected in *Tracked Query* View. |
 | Vulnerability Assessment | Disabled clearing and approving baseline for Azure SQL DBs.|
 
 ### Known issues (18.3)
@@ -197,7 +201,7 @@ Release date: July 25, 2019
 | Intellisense/editor | Reduced SMO-based query traffic to Azure SQL databases for IntelliSense. |
 | Intellisense/editor | Fixed grammatical error in the tooltip displayed when typing T-SQL to create a user. Also, fixed the error message to disambiguate between users and logins. |
 | Log Viewer | Fixed an issue where SSMS always opens the current server (or agent) log, even if double-clicking an older archive sign in the Object Explorer. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37633648) for more details. |
-| SSMS setup | Fixed the issue that was causing SSMS set up to fail when the setup log path contained spaces. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37496110) for more details. |
+| SSMS setup | Fixed the issue that was causing SSMS setup to fail when the setup log path contained spaces. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37496110) for more details. |
 | SSMS setup | Fixed an issue where SSMS was exiting immediately after showing the splash screen. </br> See these sites for more details: [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37502512), [SSMS Refuses to Start](https://dba.stackexchange.com/questions/238609/ssms-refuses-to-start), and [Database Administrators](https://dba.stackexchange.com/questions/237086/sql-server-management-studio-18-wont-open-only-splash-screen-pops-up). |
 | Object explorer | Lifted restriction on enabling *start PowerShell* when connected to SQL on Linux. |
 | Object explorer | Fixed an issue that was causing SSMS to crash when trying to expand the Polybase/Scale-out Group node (when connected to a compute node). |

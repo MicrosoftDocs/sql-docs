@@ -40,15 +40,15 @@ SSMS is free!
 
 **SSMS 18.3 is now available, and is the latest general availability (GA) version of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.2](https://go.microsoft.com/fwlink/?linkid=2103531)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.2](https://go.microsoft.com/fwlink/?linkid=2103679)**
 
-SSMS 18.2 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.2 upgrades it to 18.2. If you have an older *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.2.
+SSMS 18.3 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.3 upgrades it to 18.3. If you have an older *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.3.
 
 **Version Information**
 
 - Release number: 18.3  
-- Build number: 15.0.18161.0  
-- Release date: July 25, 2019  
+- Build number: 15.0.18174.0  
+- Release date: September 19, 2019  
 
 If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [UserVoice](https://aka.ms/sqlfeedback).
 
@@ -56,12 +56,12 @@ The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earl
 
 If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**
 
-## Available languages (SSMS 18.2)
+## Available languages (SSMS 18.3)
 
 This release of SSMS can be installed in the following languages:
 
 SQL Server Management Studio 18.2:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2103531&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2103531&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2103531&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2103531&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2103531&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2103531&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2103531&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2103531&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2103531&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2103531&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2103531&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x40a)
 
 > [!NOTE]
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
@@ -79,9 +79,9 @@ For details about what's new in this release, see [the SSMS release notes](relea
 
 ## Supported SQL offerings (SSMS 18.3)
 
-* This version of SSMS works with all [supported versions of SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure SQL Data Warehouse.
-* Additionally, SSMS 18.x can be installed side by side with SSMS 17.x, SSMS 16.x, or SQL Server 2014 SSMS and earlier.
-* SQL Server Integration Services (SSIS) - SSMS version 17.x or later doesn't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side by side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
+- This version of SSMS works with all [supported versions of SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure SQL Data Warehouse.
+- Additionally, SSMS 18.x can be installed side by side with SSMS 17.x, SSMS 16.x, or SQL Server 2014 SSMS and earlier.
+- SQL Server Integration Services (SSIS) - SSMS version 17.x or later doesn't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side by side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
 
 ## Supported operating systems (SSMS 18.3)
 

@@ -39,7 +39,7 @@ GeneMi. 2019/04/02.
 ## SSMS 18.3
 
 Download: [Download SSMS 18.3](download-sql-server-management-studio-ssms.md)  
-Build number: 15.0.18161.0  
+Build number: 15.0.18174.0  
 Release date: September 19, 2019
 
 SSMS 18.3 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
@@ -57,25 +57,28 @@ SSMS 18.3 is the latest general availability (GA) release of SSMS. If you need a
 
 ## Bug fixes in 18.3
 
-| New Item 	| Details 	|
-|----------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| Analysis Services | Fix scaling issue in MDX Query Editor. |
-| Database Deployment to SQL Azure | Fixed an issue (in DacFx) which was causing this feature not to work. |
+| New Item | Details |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Analysis Services | Fix scaling issue in MDX Query Editor.|
+| Analysis Services | Fixed an issue in XEvent UI that prevents the users from being able to create a new session. |
+| Database Deployment to SQL Azure | Fixed an issue (in DacFx) which was causing this feature not to work.|
 | General SSMS | Fixed an issue which was causing SSMS to crash when using the sorting feature in the XEvent viewer. |
-| General SSMS | Fixed long outstanding issues where SSMS Restore database may hang indefinitely.  See UserVoice items for more details:  - [Restore Database - Select Backup Devices Slow to Load](https://feedback.azure.com/forums/908035/suggestions/32899099/)  - [SSMS 2016 very slow in the database restore dialogs](https://feedback.azure.com/forums/908035/suggestions/32900767/)  - [Restoring database is slow](https://feedback.azure.com/forums/908035/suggestions/32900224/)  - [Restore Database from Device HANGS on clicking "..."](https://feedback.azure.com/forums/908035/suggestions/34281658/) |
-| General SSMS | Fixed an issue where the default language for all logins was shown as Arabic.  See UserVoice item for more details:  [SSMS 18.2 default language display bug](https://feedback.azure.com/forums/908035/suggestions/38236363) |
-| General SSMS | Fixed the hard to see the dialog for *Query Options* (when the user right-clicks on the T-SQL editor window) by making it resizable. |
+| General SSMS | Fixed long outstanding issues where SSMS Restore database may hang indefinitely.  See UserVoice items for more details:  </br>- [Restore Database - Select Backup Devices Slow to Load](https://feedback.azure.com/forums/908035/suggestions/32899099/).  </br>- [SSMS 2016 very slow in the database restore dialogs](https://feedback.azure.com/forums/908035/suggestions/32900767/). </br>- [Restoring database is slow](https://feedback.azure.com/forums/908035/suggestions/32900224/).  </br>- [Restore Database from Device HANGS on clicking "..."](https://feedback.azure.com/forums/908035/suggestions/34281658/).  |
+| General SSMS | Fixed an issue where the default language for all logins was shown as Arabic.  See UserVoice item for more details: [SSMS 18.2 default language display bug](https://feedback.azure.com/forums/908035/suggestions/38236363). |
+| General SSMS | Fixed the hard to see the dialog for *Query Options* (when the user right-clicks on the T-SQL editor window) by making it resizable.|
 | General SSMS | The *Completion time* message visible in the Result Grid/File (introduced in SSMS 18.2) is now configurable under Tools > Options >  Query Execution > SQL Server > Advanced > Show completion time. |
 | General SSMS | In the connection dialog, replaced *Active Directory - Password* and *Active Directory - Integrated* with *Azure Active Directory - Password* and *Azure Active Directory - Integrated*, respectively. |
-| Import flat file | Fixed the issue where Import Flat File was not importing all data by letting the user choose between a simple or rich data type detection.  See UserVoice item for more details:  [SSMS Import Flat File fails to import all data](https://feedback.azure.com/forums/908035/suggestions/38096989) |
-| Integration Services | Add new operation type *StartNonCatalogExecution* for SSIS Operation report. |
-| SMO/Scripting | Fixed an issue which was causing SMO to throw errors when fetching properties when **SMO.Server.SetDefaultInitFields(true)** was being used. |
+| General SSMS | Fixed an issue that prevents users from being able to use SSMS to configure auditing on SQL Azure Managed Instances when located in a TZ with negative UTC offset. |
+| General SSMS | Fixing an issue in XEvent UI where hovering over the grid was causing rows to be selected. See UserVoice item for more details: [SSMS Extended Events UI Selects Actions on Hover](https://feedback.azure.com/forums/908035/suggestions/38262124). |
+| Import flat file | Fixed the issue where Import Flat File was not importing all data by letting the user choose between a simple or rich data type detection.  See UserVoice item for more details:  [SSMS Import Flat File fails to import all data](https://feedback.azure.com/forums/908035/suggestions/38096989). |
+| Integration Services | Add new operation type *StartNonCatalogExecution* for SSIS Operation report.|
+| SMO/Scripting | Fixed an issue which was causing SMO to throw errors when fetching properties when **SMO.Server.SetDefaultInitFields(true)** was being used.|
 | Query Store UI | Fixed an issue where the Y-axis did not scale when *Execution Count* Metric was selected in *Tracked Query* View. |
-| Vulnerability Assessment | Disabled clearing and approving baseline for Azure SQL DBs. |
+| Vulnerability Assessment | Disabled clearing and approving baseline for Azure SQL DBs.|
 
 ### Known issues (18.3)
 
-- AzureDTExecConfigUI cannot be popped up when clicking the button in SSMS.
+- AzureDTExecConfigUI doesn't appear when selected in SSMS.
 
 You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
@@ -149,7 +152,7 @@ Release date: July 25, 2019
 
 - There's a limitation on the size of the data you see from SSMS results shown in grid, text, or file.
 
-- There's an issue with receiving an error when deleting an Azure SQL Database in Object Explorer, but it actually succeeds. The task shows an inaccurate error message.
+- There's an issue with receiving an error when deleting an Azure SQL Database in Object Explorer, but it actually succeeds.
 
 - Default language for SQL logins may display as Arabic in the Login Properties dialog, regardless of the actual default language set for the login. To view the actual default language for a given login, use T-SQL to select the login's **default_language_name** from **master.sys.server_principles**.
 
@@ -219,7 +222,9 @@ Release date: July 25, 2019
 
 - The *Group connections* and *Single-server connections* color options under the Options -> Text Editor -> Editor Tab and Status Bar -> Status Bar Layout and Colors do not persist after closing SSMS 18.1. After you reopen SSMS, the Status Bar Layout and Colors option revert to default (white).
 
-- There is a limitation on the size of the data you see from SSMS results shown in grid, text, or file
+- There is a limitation on the size of the data you see from SSMS results shown in grid, text, or file.
+
+- Database Diagram created from SSMS running on machine A cannot be modified from machine B (SSMS crashes). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
 
 ## ![download](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
 
@@ -487,6 +492,8 @@ Deprecated / Removed Features
 - You might encounter an issue installing version 18.0, where you cannot run SQL Server Management Studio. If you encounter this issue, please follow the steps from the [SSMS2018 - Installed, but will not run](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) article.
 
 - There is a limitation on the size of the data you see from SSMS results shown in grid, text, or file
+
+- There are redraw issues when switching between multiple query windows. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042) for more details. A workaround for this issue is to disable hardware acceleration under Tools > Options.
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 

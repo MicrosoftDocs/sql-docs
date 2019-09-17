@@ -95,7 +95,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Security for the externsibility framework
-            url: /concepts/security.md
+            url: concepts/security.md
 
   - title: Manage Python and R packages
     linkLists:

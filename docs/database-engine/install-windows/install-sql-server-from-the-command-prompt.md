@@ -162,8 +162,8 @@ Use the following guidelines to develop installation commands that have correct 
 | `/UpdateEnabled` </br> **Optional** | Blank |  Specify whether SQL Server setup should discover and include product updates. The valid values are True and False or 1 and 0. By default, SQL Server setup will include updates that are found. |
 | `/UpdateSource =` </br> **Optional** | MU, or `<path to file>` | Specify the location where SQL Server setup will obtain product updates. The valid values are "MU" to search Microsoft Update, a valid folder path, a relative path such as `.\MyUpdates` or a UNC share. By default, SQL Server setup will search Microsoft Update or a Windows Update Service through the Windows Server Update Services.|
 | `/CONFIGURATIONFILE = ` </br> **Optional** | `<path to file>` | Specifies the [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) to use.|
-| `/FEATURES = ` </br> **Required** | SQL, SQLEngine, Replication, FullText, DQ, Polybase, AdvancedAnalytics, SQL_INST_MR, SQL_INST_MPY, AS, RS, RS_SHP, RS_SHPWFE, DQC, IS, MDS, SQL_SHARED_MPY, SQL_SHARED_MR, Toos, BC, Conn, DREPLAY_CTLR, DREPLAY_CLT, SNAC_SDK, SDK, LocalDB | Selects the feature to modify. For a detailed list, see [Feature parameters](#a-namefeaturea-feature-parameters).  |
-| `/ROLE = ` </br> **Optional** | SP_AS_ExistingFarm, SPI_AS_NewFarm, AllFeatures_WithDefaults | Used to install a preconfigured selection of features. For more information, see [Role parameters](#a-nameroleparametersa-role-parameters). | 
+| `/FEATURES = ` </br> **Required** | `SQL`, `SQLEngine`, `Replication`, `FullText`, `DQ`, `Polybase`, `AdvancedAnalytics`, `SQL_INST_MR`, `SQL_INST_MPY`, `AS`, `RS`, `RS_SHP`, `RS_SHPWFE`, `DQC`, `IS`, `MDS`, `SQL_SHARED_MPY`, `SQL_SHARED_MR`, `Tools`, `BC`, `Conn`, `DREPLAY_CTLR`, `DREPLAY_CLT`, `SNAC_SDK`, `SDK`, `LocalDB` | Selects the feature to modify. For a detailed list, see [Feature parameters](#a-namefeaturea-feature-parameters).  |
+| `/ROLE = ` </br> **Optional** | `SP_AS_ExistingFarm`, `SPI_AS_NewFarm`, `AllFeatures_WithDefaults` | Used to install a preconfigured selection of features. For more information, see [Role parameters](#a-nameroleparametersa-role-parameters). | 
 | `/HELP`, `/?` </br> | Blank | 
 | `/INDICATEPROGRESS` </br> **Optional** | Blank | Specifies that the verbose Setup log file is piped to the console.| 
 | `/INSTALLSHAREDDIR = ` </br> **Optional** | A file path. Default is `%Program Files%\Microsoft SQL Server`|  Specifies a nondefault installation directory for 64-bit shared components. Cannot be set to `%Program Files(x86)%\Microsoft SQL Server`. 
@@ -189,11 +189,11 @@ Use the following guidelines to develop installation commands that have correct 
 
 |**Parameter** | **Values**  **Description**| 
 | :---------   | :--------- | :--------------|
-| `/PBENGSVCACCOUNT=` </br> **Optional** | A string value. Default is **NT Authority\NETWORK SERVICE** |  Specifies the account for the Polybase engine service. | 
+| `/PBENGSVCACCOUNT=` </br> **Optional** | A string value. Default is `NT Authority\NETWORK SERVICE` |  Specifies the account for the Polybase engine service. | 
 | `/PBDMSSVCPASSWORD = ` </br> **Optional**| A string value. | Specifies the password for the Polybase engine service account.| 
 | `/PBENGSVCSTARTUPTYPE = ` </br> **Optional** | Automatic (default), disabled, manual. | Specifies the startup mode for the PolyBase engine service. | 
 | `/PBPORTRANGE = ` </br> **Optional** | Numeric value - numeric value | Specifies a port range with at least 6 ports for PolyBase services. Example: `/PBPORTRANGE=16450-16460`| 
-| `/PBSCALEOUT` </br> **Optional** | True, False Specifies if the SQL Server Database Engine instance will be used as a part of PolyBase Scale-out computational group. Use this option if you are configuring a PolyBase Scale-out computational group including the head node. | 
+| `/PBSCALEOUT` </br> **Optional** | `True`, `False` | Specifies if the SQL Server Database Engine instance will be used as a part of PolyBase Scale-out computational group. Use this option if you are configuring a PolyBase Scale-out computational group including the head node. | 
 
 
 

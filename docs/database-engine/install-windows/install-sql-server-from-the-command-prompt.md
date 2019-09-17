@@ -168,26 +168,26 @@ The following values are used to describe the workflow the specified parameter a
 | :---------   | :--------- |  :--------------|
 | `/ACTION = ` <br /> **Required** <br /> Workflow: **All** | `Install`, `PrepareImage`, `CompleteImage`, `Upgrade`, `Repair`, `Rebuilddatabase`, `Uninstall`, `PrepareFailoverCluster`, `InstallFailoverCluster`, `CompleteFailoverCluster`, `AddNode`, `RemoveNode` | Determines the SQL Server workflow, such as installing SQL Server, preparing a Sysprep image, or preparing a failover cluster for a SQL Server installation.  |
 Services. Required to acknowledge acceptance of R Open license terms.|.
-| `/ENU` <br /> Optional <br /> Workflow: **I** | Blank  | Use this parameter to install the English version of SQL Server on a localized operating system when the installation media includes language packs for both English and the language corresponding to the operating system.|
+| `/ENU` <br /> Optional <br /> Workflow: **I**, **S** | Blank  | Use this parameter to install the English version of SQL Server on a localized operating system when the installation media includes language packs for both English and the language corresponding to the operating system.|
 | `/UpdateEnabled` <br /> Optional <br /> Workflow: **I** | Blank |  Specify whether SQL Server setup should discover and include product updates. The valid values are True and False or 1 and 0. By default, SQL Server setup will include updates that are found. |
 | `/UpdateSource =` <br /> Optional <br /> Workflow: **I**, **Up**, **Rp**, **Un**, **FC** | `MU`, or `<file path>` | Specify the location where SQL Server setup will obtain product updates. The valid values are "MU" to search Microsoft Update, a valid folder path, a relative path such as `.\MyUpdates` or a UNC share. By default, SQL Server setup will search Microsoft Update or a Windows Update Service through the Windows Server Update Services.|
-| `/CONFIGURATIONFILE = ` <br /> Optional <br /> Workflow: **I** | `<file path>` | Specifies the [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) to use.|
-| `/ERRORREPORTING` <br /> Optional <br /> Workflow: **I** | `0`, `1` | Prior to SQL Server 2016, manages errors sent to Microsoft. For information about SQL Server 2016 and greater, see [error reporting](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md) and the [SQL Server privacy supplement](../../sql-server/sql-server-privacy.md).| 
+| `/CONFIGURATIONFILE = ` <br /> Optional <br /> Workflow: **I**, **S** | `<file path>` | Specifies the [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) to use.|
+| `/ERRORREPORTING` <br /> Optional <br /> Workflow: **I**, **S** | `0`, `1` | Prior to SQL Server 2016, manages errors sent to Microsoft. For information about SQL Server 2016 and greater, see [error reporting](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md) and the [SQL Server privacy supplement](../../sql-server/sql-server-privacy.md).| 
 | `/FEATURES = ` <br /> **Required** <br /> Workflow: **I** | `SQL`, `SQLEngine`, `Replication`, `FullText`, `DQ`, `Polybase`, `AdvancedAnalytics`, `SQL_INST_MR`, `SQL_INST_MPY`, `AS`, `RS`, `RS_SHP`, `RS_SHPWFE`, `DQC`, `IS`, `MDS`, `SQL_SHARED_MPY`, `SQL_SHARED_MR`, `Tools`, `BC`, `Conn`, `DREPLAY_CTLR`, `DREPLAY_CLT`, `SNAC_SDK`, `SDK`, `LocalDB` | Selects the feature to modify. For a detailed list, see [Feature parameters](#a-namefeaturea-feature-parameters).  |
 | `/ROLE = ` <br /> Optional <br /> Workflow: **I** | `SP_AS_ExistingFarm`, `SPI_AS_NewFarm`, `AllFeatures_WithDefaults` | Used to install a preconfigured selection of features. For more information, see [Role parameters](#a-nameroleparametersa-role-parameters). | 
-| `/HELP`, `/?` <br /> | Blank | 
-| `/INDICATEPROGRESS` <br /> Optional <br /> Workflow: **I** | Blank | Specifies that the verbose Setup log file is piped to the console.| 
-| `/INSTALLSHAREDDIR = ` <br /> Optional <br /> Workflow: **I** | `<file path>` | Specifies a nondefault installation directory for 64-bit shared components. <br /> Default is `%Program Files%\Microsoft SQL Server`. <br /> Cannot be set to `%Program Files(x86)%\Microsoft SQL Server`. 
+| `/HELP`, `/?` <br /> Workflow: **I**, **S** | Blank | 
+| `/INDICATEPROGRESS` <br /> Optional <br /> Workflow: **I**, **S**,  | Blank | Specifies that the verbose Setup log file is piped to the console.| 
+| `/INSTALLSHAREDDIR = ` <br /> Optional <br /> Workflow: **I**, **S** | `<file path>` | Specifies a nondefault installation directory for 64-bit shared components. <br /> Default is `%Program Files%\Microsoft SQL Server`. <br /> Cannot be set to `%Program Files(x86)%\Microsoft SQL Server`. 
 | `/INSTALLSHAREDWOWDIR = ` <br /> Optional <br /> Workflow: **I** | A fail path. Default is `%Program Files(x86)%\Microsoft SQL Server`  | Specifies a nondefault installation directory for 32-bit shared components. Supported only on a 64-bit system. Cannot be set to `%Program Files%\Microsoft SQL Server`. 
-| `/INSTANCEDIR =` <br /> Optional <br /> Workflow: **I** | `<file path>` | Specifies a nondefault installation directory for instance-specific components. | 
-| `/INSTANCEID = ` <br /> Optional <br /> Workflow: **I** | A string value.  Specifies a nondefault value for an [InstanceID](#InstanceID).| 
+| `/INSTANCEDIR =` <br /> Optional <br /> Workflow: **I**, **S** | `<file path>` | Specifies a nondefault installation directory for instance-specific components. | 
+| `/INSTANCEID = ` <br /> Optional <br /> Workflow: **I**, **S**  | A string value.  Specifies a nondefault value for an [InstanceID](#InstanceID).| 
 | `/INSTANCENAME = ` <br /> **Required**| A string value. | Specifies a SQL Server instance name. | 
-| `/PID = ` <br /> Optional <br /> Workflow: **I**| A string value. | Specifies the product key for the edition of SQL Server. If this parameter is not specified, Evaluation is used. |
-| `Q`, `/QUIET` <br /> Optional| Blank | Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations. The /Q parameter overrides the input of the /QS parameter.| 
-| `/QS`, `/QUIETSIMPLE` <br /> Optional <br /> Workflow: **I** | Blank | Specifies that Setup runs and shows progress through the UI, but does not accept any input or show any error messages. | 
+| `/PID = ` <br /> Optional <br /> Workflow: **I**, **S**| A string value. | Specifies the product key for the edition of SQL Server. If this parameter is not specified, Evaluation is used. |
+| `Q`, `/QUIET` <br /> Optional <br /> Workflow: **I**, **S** | Blank | Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations. The /Q parameter overrides the input of the /QS parameter.| 
+| `/QS`, `/QUIETSIMPLE` <br /> Optional <br /> Workflow: **I**, **S** | Blank | Specifies that Setup runs and shows progress through the UI, but does not accept any input or show any error messages. | 
 | `UIMODE = `<br /> Optional <br /> Workflow: **I** | `Normal`, `AutoAdvance` | Specifies whether to present only the minimum number of dialog boxes during setup. <br />                **/UIMode** can only be used with the **/ACTION=INSTALL** and **UPGRADE** parameters. Supported values:<br /><br /> **/UIMODE=Normal** is the default for non-Express editions and presents all setup dialog boxes for the selected features.<br /><br /> **/UIMODE=AutoAdvance** is the default for Express editions and skips nonessential dialog boxes.<br /><br /> Note that the **UIMode** setting cannot be used with the **/Q** or **/QS** parameters. | 
 | `/SQMREPORTING = ` <br /> Optional <br /> Workflow: **I** | 0, 1 | Prior to SQL Server 2016, specifies feature usage reporting for SQL Server. To manage error reporting for SQL Server 2016 and greater, see [Configure diagnostic data collection](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md). | 
-| `/HIDECONSOLE` <br /> Optional <br /> Workflow: **I** | Blank | Specifies that the console window is hidden or closed.| 
+| `/HIDECONSOLE` <br /> Optional <br /> Workflow: **I**, **S** | Blank | Specifies that the console window is hidden or closed.| 
 
 
 
@@ -196,7 +196,7 @@ Services. Required to acknowledge acceptance of R Open license terms.|.
 |**Parameter** | **Values** | **Description** |
 | :---------   | :--------- | :--------------|
 | `/SUPPRESSPRIVACYSTATEMENTNOTICE` <br /> Optional <br /> Workflow: **I** | Blank | Only used for installation. Suppresses the privacy notice statement. By using this flag, you are agreeing with the [privacy notice](../../sql-server/sql-server-privacy.md).|
-| `/IACCEPTSQLSERVERLICENSETERMS` <br /> **Required with /Q or /QS parameter** <br /> Workflow: **I** | Blank |  Only used for installation. Required to acknowledge acceptance of the license terms. |
+| `/IACCEPTSQLSERVERLICENSETERMS` <br /> **Required with /Q or /QS parameter** <br /> Workflow: **I**, **S** | Blank |  Only used for installation. Required to acknowledge acceptance of the license terms. |
 | `/ENABLERANU` <br /> Optional <br /> Workflow: **I** | Blank | Enables run-as credentials for SQL Server Express installations.| 
 | `/INSTALLSQLDATADIR =` <br /> Optional | `<file path>` | Specifies the data directory for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data files. Default values:<br /><br /> For WOW mode on 64-bit: `%Program Files(x86)%\Microsoft SQL Server\`<br /><br /> For all other installations: `%Program Files%\Microsoft SQL Server\` | 
 | `/SAPWD = ` <br /> **Required when /SECURITYMODE=SQL** | `<complex password>` | Specifies the password for the SQL Server **SA** account.
@@ -251,49 +251,49 @@ Services. Required to acknowledge acceptance of R Open license terms.|.
 ## Integration Services
 | :---------   | :--------- | :--------------|
 |**Parameter** | **Values** | **Description** |
-| `/ISSVCACCOUNT = ` <br /> **Required** | `<account name>` | Specifies the account for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].<br /><br /> Default value: `NT AUTHORITY\NETWORK SERVICE`. | 
-| `/ISSVCPASSWORD = `<br /> **Required**  | `<complex password>` | Specifies the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] password. | 
+| `/ISSVCACCOUNT = ` <br /> **Required** <br /> Workflow: **I** | `<account name>` | Specifies the account for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].<br /><br /> Default value: `NT AUTHORITY\NETWORK SERVICE`. | 
+| `/ISSVCPASSWORD = `<br /> **Required** <br /> Workflow: **I**  | `<complex password>` | Specifies the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] password. | 
 | `/ISSVCStartupType = `| `automatic`, `disabled`, `manual` | Specifies the [startup](#Service-Account-Parameters) mode for the Integration Services service. | 
 
 ## Polybase
 
 |**Parameter** | **Values** | **Description**|
 | :---------   | :--------- | :--------------|
-| `/PBENGSVCACCOUNT=` <br /> Optional | `<account name>` | Specifies the account for the Polybase engine service. Default is `NT Authority\NETWORK SERVICE`. | 
-| `/PBDMSSVCPASSWORD = ` <br /> Optional| `<complex password>` | Specifies the password for the Polybase engine service account.| 
-| `/PBENGSVCSTARTUPTYPE = ` <br /> Optional | Automatic (default), disabled, manual. | Specifies the [startup](#Service-Account-Parameters) mode for the PolyBase engine service. | 
-| `/PBPORTRANGE = ` <br /> Optional | Numeric value - numeric value | Specifies a port range with at least 6 ports for PolyBase services. Example: `/PBPORTRANGE=16450-16460`| 
-| `/PBSCALEOUT` <br /> Optional | `True`, `False` | Specifies if the SQL Server Database Engine instance will be used as a part of PolyBase Scale-out computational group. Use this option if you are configuring a PolyBase Scale-out computational group including the head node. | 
+| `/PBENGSVCACCOUNT=` <br /> Optional <br /> Workflow: **I**, **S** | `<account name>` | Specifies the account for the Polybase engine service. Default is `NT Authority\NETWORK SERVICE`. | 
+| `/PBDMSSVCPASSWORD = ` <br /> Optional <br /> Workflow: **I**, **S** | `<complex password>` | Specifies the password for the Polybase engine service account.| 
+| `/PBENGSVCSTARTUPTYPE = ` <br /> Optional <br /> Workflow: **I**, **S** | Automatic (default), disabled, manual. | Specifies the [startup](#Service-Account-Parameters) mode for the PolyBase engine service. | 
+| `/PBPORTRANGE = ` <br /> Optional <br /> Workflow: **I**, **S** | Numeric value - numeric value | Specifies a port range with at least 6 ports for PolyBase services. Example: `/PBPORTRANGE=16450-16460`| 
+| `/PBSCALEOUT` <br /> Optional <br /> Workflow: **I**, **S** | `True`, `False` | Specifies if the SQL Server Database Engine instance will be used as a part of PolyBase Scale-out computational group. Use this option if you are configuring a PolyBase Scale-out computational group including the head node. | 
 
 ## Miscellaneous parameters
 
 ### SQL Server Agent
 
 |**Parameter** | **Values** | **Description** |
-| `/AGTSVCACCOUNT = ` <br /> **Required** | `<account name>` | Specifies the [account](#Service-Account-Parameters) for the SQL Server Agent service. |
-| `/AGTSVCPASSWORD = ` <br /> **Required** | `<complex password>` | Specifies the password for the SQL Server agent service account. 
-| `/AGTSVCSTARTUPTYPE = ` <br /> Optional | `automatic`, `disabled`, `manual` | Specifies the [startup](#Service-Account-Parameters) mode for the SQL Server Agent service. | 
+| `/AGTSVCACCOUNT = ` <br /> **Required** <br /> Workflow: **I** | `<account name>` | Specifies the [account](#Service-Account-Parameters) for the SQL Server Agent service. |
+| `/AGTSVCPASSWORD = ` <br /> **Required** <br /> Workflow: **I** | `<complex password>` | Specifies the password for the SQL Server agent service account. 
+| `/AGTSVCSTARTUPTYPE = ` <br /> Optional <br /> Workflow: **I** | `automatic`, `disabled`, `manual` | Specifies the [startup](#Service-Account-Parameters) mode for the SQL Server Agent service. | 
 
 ### SQL Server Browser
 
 |**Parameter** | **Values** | **Description**|
 | :---------   | :--------- | :--------------|
-| `/BROWSERSVCSTARTUPTYPE = ` <br /> Optional | `automatic`, `disabled`, `manual` |  Specifies the [startup](#Service-Account-Parameters) mode for SQL Server Browser service.| 
+| `/BROWSERSVCSTARTUPTYPE = ` <br /> Optional <br /> Workflow: **I** | `automatic`, `disabled`, `manual` |  Specifies the [startup](#Service-Account-Parameters) mode for SQL Server Browser service.| 
 
 ### Network configuration 
 
 |**Parameter** | **Values** | **Description**|
 | :---------   | :--------- | :--------------|
-| `/NPENABLED = ` <br /> Optional | `0`, `1` | Specifies the state of the Named Pipes protocol for the SQL Server service. 0 disables the Named Pipes protocol, while 1 enables it. | 
-| `/TCPENABLED = ` <br /> Optional | `0`, `1` | Specifies the state of the TCP protocol for the SQL Server service. 0 disables the TCP protocol, while 1 enables it. | 
+| `/NPENABLED = ` <br /> Optional <br /> Workflow: **I** | `0`, `1` | Specifies the state of the Named Pipes protocol for the SQL Server service. 0 disables the Named Pipes protocol, while 1 enables it. | 
+| `/TCPENABLED = ` <br /> Optional <br /> Workflow: **I** | `0`, `1` | Specifies the state of the TCP protocol for the SQL Server service. 0 disables the TCP protocol, while 1 enables it. | 
 
 ## Reporting services
 |**Parameter** | **Values** | **Description**|
 | :---------   | :--------- | :--------------|
-| `/RSINSTALLMODE = ` <br /> Optional | `SharePointFilesOnlyMode`, `DefaultNativeMode`, `FilesOnlyMode` | Specifies the Install mode for Reporting Services. <br /><br /> If the installation includes the SQL Server[!INCLUDE[ssDE](../../includes/ssde-md.md)], the default RSINSTALLMODE is DefaultNativeMode.<br /><br /> If the installation does not include the SQL Server[!INCLUDE[ssDE](../../includes/ssde-md.md)], the default RSINSTALLMODE is FilesOnlyMode.<br /><br /> If you choose DefaultNativeMode but the installation does not include the SQL Server[!INCLUDE[ssDE](../../includes/ssde-md.md)], the installation will automatically change the RSINSTALLMODE to FilesOnlyMode.| 
-| `/RSSVCACCOUNT = ` <br /> **Required** | `<account name>` | Specifies the startup account for Reporting Services.| 
-| `/RSSVCPASSWORD - ` <br /> **Required** | `<complex password>` | Specifies the password for the startup account for the Reporting Services service. | 
-| `/RSSVCStartupType = ` <br /> Optional | `automatic`, `disabled`, `manual` | Specifies the [startup](#Service-Account-Parameters) mode for Reporting Services. | 
+| `/RSINSTALLMODE = ` <br /> Optional <br /> Workflow: **I** | `SharePointFilesOnlyMode`, `DefaultNativeMode`, `FilesOnlyMode` | Specifies the Install mode for Reporting Services. <br /><br /> If the installation includes the SQL Server[!INCLUDE[ssDE](../../includes/ssde-md.md)], the default RSINSTALLMODE is DefaultNativeMode.<br /><br /> If the installation does not include the SQL Server[!INCLUDE[ssDE](../../includes/ssde-md.md)], the default RSINSTALLMODE is FilesOnlyMode.<br /><br /> If you choose DefaultNativeMode but the installation does not include the SQL Server[!INCLUDE[ssDE](../../includes/ssde-md.md)], the installation will automatically change the RSINSTALLMODE to FilesOnlyMode.| 
+| `/RSSVCACCOUNT = ` <br /> **Required** <br /> Workflow: **I** | `<account name>` | Specifies the startup account for Reporting Services.| 
+| `/RSSVCPASSWORD - ` <br /> **Required** <br /> Workflow: **I** | `<complex password>` | Specifies the password for the startup account for the Reporting Services service. | 
+| `/RSSVCStartupType = ` <br /> Optional <br /> Workflow: **I** | `automatic`, `disabled`, `manual` | Specifies the [startup](#Service-Account-Parameters) mode for Reporting Services. | 
 
 
 ## Machine Learning Services
@@ -302,20 +302,20 @@ Services. Required to acknowledge acceptance of R Open license terms.|.
 | :---------   | :--------- | :--------------|
 | `/IACCEPTPYTHONLICENSETERMS` <br /> **Required with /Q or /QS parameter** <br /> Workflow: **I** | Blank | Only used during a quiet installation that includes the Anaconda Python package. Required to acknowledge acceptance of Python license terms.|
 | `/IACCEPTROPENLICENSETERMS` <br /> **Required with /Q or /QS parameter** <br /> Workflow: **I** | Blank | Only used during a quiet installation that includes R 
-| `/MPYCACHEDIRECTORY` | Reserved for future use. | Use %TEMP% to store Python .CAB files for installation on a computer that does not have an internet connection.| 
-| `/MRCACHEDIRECTORY = ` | `<file path>` | Use this parameter to specify the Cache directory for Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (Standalone), or R feature support in SQL Server 2017 Machine Learning Services or Machine Learning Server (Standalone). This setting is typically used when installing R components from the [command line on a computer without Internet access](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access). | 
-| `SQL_INSTA_JAVA` <br /> Optional | Blank | Starting with SQL Server 2019, specifies installing Java with Language Extensions. If /SQL_INST_JAVA is provided without the /SQLJAVADIR parameter, it's assumed you want to install the Zulu Open JRE that is provided by the installation media.| 
-| `SQLJAVADIR = ` <br /> Optional | Starting with SQL Server 2019, specifies the path for the already-installed JRE or JDK. | 
+| `/MPYCACHEDIRECTORY` <br /> Workflow: **I** | Reserved for future use. | Use %TEMP% to store Python .CAB files for installation on a computer that does not have an internet connection.| 
+| `/MRCACHEDIRECTORY = ` <br /> Workflow: **I** | `<file path>` | Use this parameter to specify the Cache directory for Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (Standalone), or R feature support in SQL Server 2017 Machine Learning Services or Machine Learning Server (Standalone). This setting is typically used when installing R components from the [command line on a computer without Internet access](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access). | 
+| `SQL_INSTA_JAVA` <br /> Optional <br /> Workflow: **I** | Blank | Starting with SQL Server 2019, specifies installing Java with Language Extensions. If /SQL_INST_JAVA is provided without the /SQLJAVADIR parameter, it's assumed you want to install the Zulu Open JRE that is provided by the installation media.| 
+| `SQLJAVADIR = ` <br /> Optional <br /> Workflow: **I** | Starting with SQL Server 2019, specifies the path for the already-installed JRE or JDK. | 
 
 ## Filestream 
 
 |**Parameter** | **Values** | **Description**|
 | :---------   | :--------- | :--------------|
-| `/FILESTREAMLEVEL = ` <br /> Optional | `0`, `1`, `2`, `3` |Specifies the access level for the FILESTREAM feature. Supported values:<br /><br /> 0 =Disable FILESTREAM support for this instance. (Default value)<br /><br /> 1=Enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] access.<br /><br /> 2=Enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] and file I/O streaming access. (Not valid for cluster scenarios)<br /><br /> 3=Allow remote clients to have streaming access to FILESTREAM data.|  
-| `/FILESTREAMSHARENAME = ` <br /> Optional <br /> **Required when FILESTREAMLEVEL is greater than 1.** | String value. | Specifies the name of the windows share in which the FILESTREAM data will be stored.|  
+| `/FILESTREAMLEVEL = ` <br /> Optional <br /> Workflow: **I** | `0`, `1`, `2`, `3` |Specifies the access level for the FILESTREAM feature. Supported values:<br /><br /> 0 =Disable FILESTREAM support for this instance. (Default value)<br /><br /> 1=Enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] access.<br /><br /> 2=Enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] and file I/O streaming access. (Not valid for cluster scenarios)<br /><br /> 3=Allow remote clients to have streaming access to FILESTREAM data.|  
+| `/FILESTREAMSHARENAME = ` <br /> Optional <br /> **Required when FILESTREAMLEVEL is greater than 1.** <br /> Workflow: **I** | String value. | Specifies the name of the windows share in which the FILESTREAM data will be stored.|  
 |SQL Server Full Text| 
-| `/FTSVCACCOUNT = ` <br /> Optional | `<account name>` | Specifies the account for Full-Text filter launcher service.<br /><br /> This parameter is ignored in [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] or higher. ServiceSID is used to help secure the communication between SQL Server and Full-text Filter Daemon. If the values are not provided, the Full-text Filter Launcher Service is disabled. You have to use SQL Server Control Manager to change the service account and enable full-text functionality.<br /><br /> Default value: Local Service Account. | 
-| `/FTSVCPASSWORD = ` <br /> Optional | `<complex password>` | Specifies the password for the Full-Text filter launcher service.<br /><br /> This parameter is ignored in [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] or higher.|
+| `/FTSVCACCOUNT = ` <br /> Optional <br /> Workflow: **I** | `<account name>` | Specifies the account for Full-Text filter launcher service.<br /><br /> This parameter is ignored in [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] or higher. ServiceSID is used to help secure the communication between SQL Server and Full-text Filter Daemon. If the values are not provided, the Full-text Filter Launcher Service is disabled. You have to use SQL Server Control Manager to change the service account and enable full-text functionality.<br /><br /> Default value: Local Service Account. | 
+| `/FTSVCPASSWORD = ` <br /> Optional <br /> Workflow: **I** | `<complex password>` | Specifies the password for the Full-Text filter launcher service.<br /><br /> This parameter is ignored in [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] or higher.|
 
 
 ##  Service Account Parameters  

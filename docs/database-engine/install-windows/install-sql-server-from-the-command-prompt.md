@@ -155,18 +155,22 @@ Use the following guidelines to develop installation commands that have correct 
 
 |**Parameter** | **Values** |**Required**| **Description**| 
 | :---------   | :--------- | :--------- | :--------------|
-| `/ACTION = `  | - **Install** </br> - **PrepareImage** </br> - **CompleteImage** </br> - **Upgrade** </br> -**Repair** </br> --**Rebuilddatabase** </br> **Unintall** </br> **PrepareFailoverCluster** </br> **InstallFailoverCluster** </br> **CompleteFailoverCluster** </br> **AddNode** </br>**RemoveNode** | Required | Used to install SQL Server. </br> Used to prepare a Sysprep image. </br> Used to complete a Sysprep image. </br> Used to upgrade the version of SQL Server. </br> Used to upgrade the [edition](../../sql-server/editions-and-components-of-sql-server-2017.md#sql-server-editions) of SQL Server. </br> Repairs SQL Server. </br> Used to rebuild the system databases. </br> Uninstalls SQL Server.  </br> Installs SQL Server as part of a failover cluster. </br> Prepares the failover cluster for SQL Server installation. </br> Completes the installation of SQL Server once the cluster has been prepared. </br> Adds a node to a failover cluster. </br> Removes a node from a failover cluster. |
-| `/IACCEPTPYTHONLICENSETERMS` | Blank | Required only when the /Q or /QS parameter is specified for unattended installations that include the Anaconda Python package. | Only used when Python is being installed. Required to acknowledge acceptance of the license terms.|
-| `/IACCEPTROPENLICENSETERMS` | Blank | Required only when the /Q or /QS parameter is specified for unattended installations that include the Anaconda Python package. | Only used when R Server is being installed. |
+| `/ACTION = `  | - **Install** </br> - **PrepareImage** </br> - **CompleteImage** </br> - **Upgrade** </br> -**Repair** </br> --**Rebuilddatabase** </br> - **Unintall** </br> - **PrepareFailoverCluster** </br> - **InstallFailoverCluster** </br> - **CompleteFailoverCluster** </br> - **AddNode** </br> - **RemoveNode** | **Required** | - Installs SQL Server. </br> - Prepares a Sysprep image. </br> - Used to complete a Sysprep image. </br> - Upgrades the version of SQL Server. </br> - Upgrades the [edition](../../sql-server/editions-and-components-of-sql-server-2017.md#sql-server-editions) of SQL Server. </br> - Repairs SQL Server. </br> - Rebuilds the system databases. </br> - Uninstalls SQL Server.  </br> - Installs SQL Server as part of a failover cluster. </br> - Prepares the failover cluster for SQL Server installation. </br> - Completes the installation of SQL Server once the cluster has been prepared. </br> - Adds a node to a failover cluster. </br> - Removes a node from a failover cluster. |
+| `/IACCEPTPYTHONLICENSETERMS` | Blank | Required with /Q or /QS parameter. | Only used during a quiet installation that includes the Anaconda Python package. Required to acknowledge acceptance of Python license terms.|
+| `/IACCEPTROPENLICENSETERMS` | Blank | Required with /Q or /QS parameter. |Only used during a quiet installation that includes R Services. Required to acknowledge acceptance of R Open license terms.|.
 | `/ENU` | Blank | Optional | Use this parameter to install the English version of SQL Server on a localized operating system when the installation media includes language packs for both English and the language corresponding to the operating system.|
 | `/UpdateEnabled` | Blank | Optional | Specify whether SQL Server setup should discover and include product updates. The valid values are True and False or 1 and 0. By default, SQL Server setup will include updates that are found. |
-| `/UpdateSource` | Optional | Specify the location where SQL Server setup will obtain product updates. The valid values are "MU" to search Microsoft Update, a valid folder path, a relative path such as `.\MyUpdates` or a UNC share. By default, SQL Server setup will search Microsoft Update or a Windows Update Service through the Windows Server Update Services.|
+| `/UpdateSource=` | MU, or `<path to file>` | Optional | Specify the location where SQL Server setup will obtain product updates. The valid values are "MU" to search Microsoft Update, a valid folder path, a relative path such as `.\MyUpdates` or a UNC share. By default, SQL Server setup will search Microsoft Update or a Windows Update Service through the Windows Server Update Services.|
 | `/CONFIGURATIONFILE = ` | `<path to file>` | Optional |  Specifies the [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) to use.|
 | `/FEATURES = ` | SQL, SQLEngine, Replication, FullText, DQ, Polybase, AdvancedAnalytics, SQL_INST_MR, SQL_INST_MPY, AS, RS, RS_SHP, RS_SHPWFE, DQC, IS, MDS, SQL_SHARED_MPY, SQL_SHARED_MR, Toos, BC, Conn, DREPLAY_CTLR, DREPLAY_CLT, SNAC_SDK, SDK, LocalDB | Required | Selects the feature to modify. For a detailed list, see [Feature parameters](#a-namefeaturea-feature-parameters).  |
 | `/ROLE = ` | SP_AS_ExistingFarm, SPI_AS_NewFarm, AllFeatures_WithDefaults | Optional | Used to install a preconfigured selection of features. For more information, see [Role parameters](#a-nameroleparametersa-role-parameters). | 
 | `/HELP`, `/?` | Blank | 
 | `/INDICATEPROGRESS` | Blank | Optional | Specifies that the verbose Setup log file is piped to the console.| 
-| `/INSTALLSHAREDDIR = `| Default is `%Program Files%\Microsoft SQL Server`| Optional | Specifies a nondefault installation directory for 64-bit shared components. Cannot be set to `%Program Files(x86)%\Microsoft SQL Server`. 
+| `/INSTALLSHAREDDIR = `| A file path. Default is `%Program Files%\Microsoft SQL Server`| Optional | Specifies a nondefault installation directory for 64-bit shared components. Cannot be set to `%Program Files(x86)%\Microsoft SQL Server`. 
+| `/INSTALLSHAREDWOWDIR = ` | A fail path. Default is `%Program Files(x86)%\Microsoft SQL Server` | Optional | Specifies a nondefault installation directory for 32-bit shared components. Supported only on a 64-bit system. Cannot be set to `%Program Files%\Microsoft SQL Server`. 
+| `/INSTANCEDIR =` | A file path. | Optional | Specifies a nondefault installation directory for instance-specific components. | 
+| `/INSTANCEID = ` | A string value. | Optional | Specifies a nondefault value for an [InstanceID](#InstanceID).| 
+| `/INSTANCENAME = ` | A string value. | **Required** | Specifies a SQL Server instance name. | 
 
 
 
@@ -177,6 +181,14 @@ Use the following guidelines to develop installation commands that have correct 
 | /SUPPRESSPRIVACYSTATEMENTNOTICE | Blank | Optional | Only used for installation. Suppresses the privacy notice statement. By using this flag, you are agreeing with the [privacy notice](../../sql-server/sql-server-privacy.md).| 
 | /IACCEPTSQLSERVERLICENSETERMS | Blank | Required only when the /Q or /QS parameter is specified for unattended installations. | Only used for installation. Required to acknowledge acceptance of the license terms. | 
 
+
+## Polybase
+
+|**Parameter** | **Values** |**Required**| **Description**| 
+| :---------   | :--------- | :--------- | :--------------|
+| `/PBENGSVCACCOUNT=` | A string value. Default is **NT Authority\NETWORK SERVICE** | Optional |  Specifies the account for the Polybase engine service. | 
+| `/PBDMSSVCPASSWORD = `| A string value. | Optional | Specifies the password for the Polybase engine service account.| 
+| `/PBENGSVCSTARTUPTYPE` | Automatic (default), disabled, manual. | Optional | Specifies the startup mode for the PolyBase engine service. `-
 
 
 

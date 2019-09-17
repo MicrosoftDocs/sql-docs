@@ -153,18 +153,16 @@ Use the following guidelines to develop installation commands that have correct 
 
 ## SQL Server setup control
 
-Workflow legend:
+The following values are used to describe the workflow the specified parameter applies to:
+- **I**: Installing SQL Server and associated components.  
+- **S**:  Syspreping an image for SQL Server installation. 
+- **Up**: Upgrading SQL Server and associated components. 
+- **Rp** : Reparing SQL Server and associated components. 
+- **Rb** : Rebuilding the system databases. 
+- **Un**: Uninstalling SQL Server and associated components. 
+- **FC**: Failover cluster preparation and SQL Server installation to a failover cluster instance. 
+- **All**: Used in all aforementioned workflows. 
 
-|**Flag** | **Definition**|
-| :-------| :--------- |
-| **I** | Install | 
-| **S** | Sysprep | 
-| **Up** | Upgrade | 
-| **Rp** | Repair | 
-| **Rb**  | Rebuild system databases| 
-| **Un**  | Uninstall | 
-| **FC**  | Failover cluster instance | 
-| **All** | Used for all work flows| 
 
 |**Parameter** | **Values** | **Description**| 
 | :---------   | :--------- |  :--------------|
@@ -190,6 +188,7 @@ Workflow legend:
 | `UIMODE = `<br /> Optional | `Normal`, `AutoAdvance` | Specifies whether to present only the minimum number of dialog boxes during setup. <br />                **/UIMode** can only be used with the **/ACTION=INSTALL** and **UPGRADE** parameters. Supported values:<br /><br /> **/UIMODE=Normal** is the default for non-Express editions and presents all setup dialog boxes for the selected features.<br /><br /> **/UIMODE=AutoAdvance** is the default for Express editions and skips nonessential dialog boxes.<br /><br /> Note that the **UIMode** setting cannot be used with the **/Q** or **/QS** parameters. | 
 | `/SQMREPORTING = ` <br /> Optional | 0, 1 | Prior to SQL Server 2016, specifies feature usage reporting for SQL Server. To manage error reporting for SQL Server 2016 and greater, see [Configure diagnostic data collection](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md). | 
 | `/HIDECONSOLE` <br /> Optional | Blank | Specifies that the console window is hidden or closed.| 
+
 
 
 ## Database engine control
@@ -218,14 +217,10 @@ Workflow legend:
 | `/SQLUSERDBLOGDIR = ` <br /> Optional  | `<file path>` | Specifies the directory for the log files for user databases.<br /><br /> Default value: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` | 
 | `/SQLMAXDOP = ` <br /> Optional | Numeric value. | Specifies the max degree of parallelism, which determines how many processors a single statement can utilize during the execution of a single statement. Only available starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. <br /><br /> If ommitted on unattended (silent) installations, value will be default, which align withs the [max degree of parallelism guidelines](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines). | 
 | `/USESQLRECOMMENDEDMEMORYLIMITS` <br /> Optional | Blank | Specifies that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will use calculated recommended values that align with the [server memory configuration guidelines](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually) for a standalone [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. <br /><br /> If /USESQLRECOMMENDEDMEMORYLIMITS, /SQLMINMEMORY, and /SQLMAXMEMORY are omitted on unattended (silent) installs, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will use the default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory configuration. | 
+| `/SQLMINMEMORY = ` <br /> Optional | Numeric value in MB | Specifies the Min Server Memory configuration. Only available starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].<br /><br /> Default value: 0.<br /><br /> **Note:** This parameter cannot be used with /USESQLRECOMMENDEDMEMORYLIMITS. <br /><br /> If /USESQLRECOMMENDEDMEMORYLIMITS, /SQLMINMEMORY, and /SQLMAXMEMORY are omitted on unattended (silent) installs, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will use the default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory configuration.|
+| `/SQLMAXMEMORY = ` <br /> Optional| Numeric value in MB. |  Specifies the Max Server Memory configuration. Only available starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].<br /><br /> Default value: calculated recommended value that aligns with the [server memory configuration guidelines](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually) for a standalone [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.<br /><br /> **Note:** This parameter cannot be used with /USESQLRECOMMENDEDMEMORYLIMITS. <br /><br /> If /USESQLRECOMMENDEDMEMORYLIMITS, /SQLMINMEMORY, and /SQLMAXMEMORY are omitted on unattended (silent) installs, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will use the default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory configuration. | 
 
 
-## SQL Server Agent
-
-|**Parameter** | **Values** | **Description** |
-| `/AGTSVCACCOUNT = ` <br /> **Required** | `<account name>` | Specifies the [account](#Service-Account-Parameters) for the SQL Server Agent service. |
-| `/AGTSVCPASSWORD = ` <br /> **Required** | `<complex password>` | Specifies the password for the SQL Server agent service account. 
-| `/AGTSVCSTARTUPTYPE = ` <br /> Optional | `automatic`, `disabled`, `manual` | Specifies the [startup](#Service-Account-Parameters) mode for the SQL Server Agent service. | 
 
 
 
@@ -250,11 +245,6 @@ Workflow legend:
 | `/PASSPHRASE = `<br /> **Required for SPI_AS_NewFarm** | Specifies a passphrase that is used to add additional application servers or Web front end servers to a SharePoint farm.<br /><br /> This parameter is used only for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that are installed through /ROLE = SPI_AS_NEWFARM. | 
 | `/FARMADMINIPORT = ` <br /> **Required for SPI_AS_NewFarm**| Specifies a port used to connect to the SharePoint Central Administration web application.<br /><br /> This parameter is used only for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that are installed through /ROLE = SPI_AS_NEWFARM. |
 
-## SQL Server Browser
-|**Parameter** | **Values** | **Description**|
-| :---------   | :--------- | :--------------|
-| `/BROWSERSVCSTARTUPTYPE = ` <br /> Optional | `automatic`, `disabled`, `manual` |  Specifies the [startup](#Service-Account-Parameters) mode for SQL Server Browser service.| 
-
 
 ## Polybase
 
@@ -265,6 +255,31 @@ Workflow legend:
 | `/PBENGSVCSTARTUPTYPE = ` <br /> Optional | Automatic (default), disabled, manual. | Specifies the [startup](#Service-Account-Parameters) mode for the PolyBase engine service. | 
 | `/PBPORTRANGE = ` <br /> Optional | Numeric value - numeric value | Specifies a port range with at least 6 ports for PolyBase services. Example: `/PBPORTRANGE=16450-16460`| 
 | `/PBSCALEOUT` <br /> Optional | `True`, `False` | Specifies if the SQL Server Database Engine instance will be used as a part of PolyBase Scale-out computational group. Use this option if you are configuring a PolyBase Scale-out computational group including the head node. | 
+
+
+
+## SQL Server Agent
+
+|**Parameter** | **Values** | **Description** |
+| `/AGTSVCACCOUNT = ` <br /> **Required** | `<account name>` | Specifies the [account](#Service-Account-Parameters) for the SQL Server Agent service. |
+| `/AGTSVCPASSWORD = ` <br /> **Required** | `<complex password>` | Specifies the password for the SQL Server agent service account. 
+| `/AGTSVCSTARTUPTYPE = ` <br /> Optional | `automatic`, `disabled`, `manual` | Specifies the [startup](#Service-Account-Parameters) mode for the SQL Server Agent service. | 
+
+## SQL Server Browser
+
+|**Parameter** | **Values** | **Description**|
+| :---------   | :--------- | :--------------|
+| `/BROWSERSVCSTARTUPTYPE = ` <br /> Optional | `automatic`, `disabled`, `manual` |  Specifies the [startup](#Service-Account-Parameters) mode for SQL Server Browser service.| 
+
+## Filestream 
+
+|**Parameter** | **Values** | **Description**|
+| :---------   | :--------- | :--------------|
+| `/FILESTREAMLEVEL = ` <br /> Optional | `0`, `1`, `2`, `3` |Specifies the access level for the FILESTREAM feature. Supported values:<br /><br /> 0 =Disable FILESTREAM support for this instance. (Default value)<br /><br /> 1=Enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] access.<br /><br /> 2=Enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] and file I/O streaming access. (Not valid for cluster scenarios)<br /><br /> 3=Allow remote clients to have streaming access to FILESTREAM data.|  
+| `/FILESTREAMSHARENAME = ` <br /> Optional <br /> **Required when FILESTREAMLEVEL is greater than 1.** | String value. | Specifies the name of the windows share in which the FILESTREAM data will be stored.|  
+|SQL Server Full Text| 
+| `/FTSVCACCOUNT = ` <br /> Optional | `<account name>` | Specifies the account for Full-Text filter launcher service.<br /><br /> This parameter is ignored in [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] or higher. ServiceSID is used to help secure the communication between SQL Server and Full-text Filter Daemon. If the values are not provided, the Full-text Filter Launcher Service is disabled. You have to use SQL Server Control Manager to change the service account and enable full-text functionality.<br /><br /> Default value: Local Service Account. | 
+
 
 ##  Service Account Parameters  
  You can configure the SQL Server services by using a built-in account, local account, or domain account. 

@@ -891,7 +891,7 @@ CREATE TABLE #Test (C1 NVARCHAR(10), C2 NVARCHAR(50), C3 DATETIME);
 GO
 
 CREATE UNIQUE INDEX AK_Index ON #Test (C2)
-    WITH (IGNORE_DUP_KEY = ON);
+  WITH (IGNORE_DUP_KEY = ON);
 GO
 
 INSERT INTO #Test VALUES (N'OC', N'Ounces', GETDATE());
@@ -924,7 +924,7 @@ CREATE TABLE #Test (C1 NVARCHAR(10), C2 NVARCHAR(50), C3 DATETIME);
 GO
 
 CREATE UNIQUE INDEX AK_Index ON #Test (C2)
-    WITH (IGNORE_DUP_KEY = OFF);
+  WITH (IGNORE_DUP_KEY = OFF);
 GO
 
 INSERT INTO #Test VALUES (N'OC', N'Ounces', GETDATE());
@@ -971,7 +971,7 @@ The following example creates a view and an index on that view. Two queries are 
 -- Set the options to support indexed views
 SET NUMERIC_ROUNDABORT OFF;
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT,
-    QUOTED_IDENTIFIER, ANSI_NULLS ON;
+  QUOTED_IDENTIFIER, ANSI_NULLS ON;
 GO
 
 -- Create view with schemabinding

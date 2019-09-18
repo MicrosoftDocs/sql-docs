@@ -172,6 +172,19 @@ GO
   
 > [!NOTE]  
 >  The **LISTENER_URL** specifies the listener for each availability group along with the database mirroring endpoint of the availability group. In this example, that is port `5022` (not port `60173` used to create the listener). If you are using a load balancer, for instance in Azure, [add a load balancing rule for the distributed availability group port](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Add the rule for the listener port, in addition to the SQL Server instance port. 
+
+### Cancel automatic seeding to forwarder
+If it is necessary to cancel the initialization of the forwarder before the two availability groups are synchronized, ALTER the distributed availability group by setting the forwarder's SEEDING_MODE parameter to MANUAL and immediately cancel the seeding. Run the command on the global primary: 
+
+```sql
+-- Cancel off automatic seeding​, connect to global primary but specify DAG AG2
+ALTER AVAILABILITY GROUP [distributedag] ​  
+   MODIFY ​ 
+   AVAILABILITY GROUP ON ​ 
+   'ag2' WITH ​ 
+   ( ​ SEEDING_MODE = MANUAL ​ ); ​  
+```
+
   
 ## Join distributed availability group on second cluster  
  Then join the distributed availability group on the second WSFC.  
@@ -208,11 +221,11 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 Only manual failover is supported at this time. To manually fail over a distributed availability group:
 
-1. To ensure that no data is lost, set the distributed availability group to synchronous commita.
+1. To ensure that no data is lost, set the distributed availability group to synchronous commit.
 1. Wait until the distributed availability group is synchronized.
 1. On the global primary replica, set the distributed availability group role to `SECONDARY`.
 1. Test failover readiness.
-1. Failover the primary availability group.
+1. Fail over the primary availability group.
 
 The following Transact-SQL examples demonstrate the detailed steps to fail over the distributed availability group named `distributedag`:
 

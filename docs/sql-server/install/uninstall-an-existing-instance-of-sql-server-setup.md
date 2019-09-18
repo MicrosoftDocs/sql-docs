@@ -39,7 +39,7 @@ ms.author: mathoma
   
    The files that you must save include the following database files:  
 
-  
+   |             |            |           |            |
    | :---------- | :--------- |:--------- | :--------- |
    | master.mdf  | mastlog.ldf| model.mdf | modellog.ldf| 
    | msdbdata.mdf| msdblog.ldf| Mssqlsystemresource.mdf | Mssqlsustemresource.ldf |
@@ -106,7 +106,7 @@ To uninstall SQL Server from Windows Server 2008, Windows Server 2012 and Window
 
 If the removal process fails, review the [SQL Server setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) to determine the root cause. 
 
-The KB article [How to identify SQL Server 2008 setup issues in the setup log files](https://support.microsoft.com/kb/955396/en-us) can assist in the investigation. Though it is for SQL Server 2008, the methodology described is applicable to every version of SQL Server. 
+The KB article [How to identify SQL Server setup issues in the setup log files](https://support.microsoft.com/kb/955396/en-us) can assist in the investigation. Though it is for SQL Server 2008, the methodology described is applicable to every version of SQL Server. 
 
   
 ## See Also  

@@ -60,7 +60,7 @@ ms.author: mikeray
 - You can backup to multiple block blobs to get better backup and restore performance, and support larger database backup.
 - [Block blob](https://azure.microsoft.com/pricing/details/storage/blobs/) is cheaper than [page blob](https://azure.microsoft.com/pricing/details/storage/page-blobs/). 
 
-Backup of a large database to blob storage is subject to the limitations listed in [M[anaged instance T-SQL differences, limitations, and known issues](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
+Backup of a large database to blob storage is subject to the limitations listed in [Managed instance T-SQL differences, limitations, and known issues](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
 
  If the database is too large, either:
 - Use backup compression

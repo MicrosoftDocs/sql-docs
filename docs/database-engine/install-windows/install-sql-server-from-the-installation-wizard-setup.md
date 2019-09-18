@@ -126,7 +126,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
     > [!NOTE]
     > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], select the **Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service** check box to allow the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service account to use [database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md).
   
-     Use the **Server Configuration - Collation** page to specify nondefault collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Collations and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md).  
+1. Use the **Server Configuration - Collation** page to specify non-default collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Collations and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 1. Use the **Database Engine Configuration - Server Configuration** page to specify the following options:  
   

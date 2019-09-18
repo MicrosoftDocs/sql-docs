@@ -46,7 +46,7 @@ The **azdata app describe** command provides detailed information about the app 
 Describe your app by running a command similar to the following example:
 
 ```bash
-azdata app describe --name addpy --version v1
+azdata app describe --name add-app --version v1
 ```
 
 ```json

@@ -18,9 +18,10 @@ Download and install the latest .NET Framework release and macOS and Linux previ
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2087429)|April 15, 2019|18.2|15.0.4384.2|
-|macOS .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2087247)|April 15, 2019 | 18.2 |15.0.4384.2|
-|Linux .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2087431)|April 15, 2019 | 18.2 |15.0.4384.2|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2102893)|September 13, 2019|18.3.1|15.0.4538.1|
+|macOS .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102894)|September 13, 2019| 18.3.1|15.0.4538.1|
+|Linux .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102978)|September 13, 2019| 18.3.1|15.0.4538.1|
+|Windows .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102979)|September 13, 2019| 18.3.1|15.0.4538.1|
 
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
 
@@ -30,14 +31,26 @@ For details about the latest release, see the [release notes](release-notes-sqlp
 
 This release of sqlpackage includes a standard Windows installer experience, and a .zip: 
 
-1. Download and run the [DacFramework.msi installer for Windows](https://go.microsoft.com/fwlink/?linkid=2087429).
+1. Download and run the [DacFramework.msi installer for Windows](https://go.microsoft.com/fwlink/?linkid=2102893).
 2. Open a new Command Prompt window, and run sqlpackage.exe
     - sqlpackage is installed to the ```C:\Program Files\Microsoft SQL Server\150\DAC\bin``` folder
     - Installing the x86 version on a x64 machine, sqlpackage is installed to the ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin``` folder
 
-## Get sqlpackage (preview) for macOS
+## Get sqlpackage .NET Core (preview) for Windows
 
-1. Download [sqlpackage for macOS](https://go.microsoft.com/fwlink/?linkid=2087247).
+1. Download [sqlpackage for Windows](https://go.microsoft.com/fwlink/?linkid=2102979).
+2. To extract the file by right clicking on the file in Windows Explorer, and selecting 'Extract All...', and select the target directory.
+3. Open a new Terminal window and cd to the location where sqlpackage was extracted:
+
+   **.zip Installation:**
+
+   ```bash
+   sqlpackage
+   ```
+
+## Get sqlpackage .NET Core (preview) for macOS
+
+1. Download [sqlpackage for macOS](https://go.microsoft.com/fwlink/?linkid=2102894).
 2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
 
    **.zip Installation:**
@@ -50,9 +63,9 @@ This release of sqlpackage includes a standard Windows installer experience, and
    sqlpackage
    ```
 
-## Get sqlpackage (preview) for Linux
+## Get sqlpackage .NET Core (preview) for Linux
 
-1. Download [sqlpackage for Linux](https://go.microsoft.com/fwlink/?linkid=2087431) by using one of the installers or the tar.gz archive:
+1. Download [sqlpackage for Linux](https://go.microsoft.com/fwlink/?linkid=2102978) by using one of the installers or the tar.gz archive:
 2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
 
    **.zip Installation:**

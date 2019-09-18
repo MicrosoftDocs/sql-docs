@@ -9,7 +9,7 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ""
-ms.date: 07/31/2019
+ms.date: 09/04/2019
 ---
 # Release notes for SQL Server Management Studio (SSMS)
 
@@ -101,9 +101,13 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 
 - SSMS 18.0 redraw issues when switching between multiple query windows. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042). A workaround for this issue is to disable hardware acceleration under **Tools** > **Options**.
 
-- There is a limitation on the size of the data you see from SSMS results shown in grid, text, or file.
+- There's a limitation on the size of the data you see from SSMS results shown in grid, text, or file.
 
-You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team. 
+- There's an issue with receiving an error when deleting an Azure SQL Database in Object Explorer, but it actually succeeds. The task shows an inaccurate error message.
+
+- Default language for SQL logins may display as Arabic in the Login Properties dialog, regardless of the actual default language set for the login. To view the actual default language for a given login, use T-SQL to select the login's **default_language_name** from **master.sys.server_principles**.
+
+You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
 ## Previous SSMS releases
 

@@ -96,7 +96,10 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  Four-part names for function base objects are not supported.  
   
- Synonyms can be created, dropped and referenced in dynamic SQL.  
+ Synonyms can be created, dropped and referenced in dynamic SQL.
+ 
+ > [!NOTE]
+ > Synonyms are database-specific and cannot be accessed by other databases.
   
 ## Permissions  
  To create a synonym in a given schema, a user must have CREATE SYNONYM permission and either own the schema or have ALTER SCHEMA permission.  

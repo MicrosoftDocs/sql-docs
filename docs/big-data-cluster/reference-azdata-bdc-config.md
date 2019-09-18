@@ -52,7 +52,7 @@ Config profile source: ['aks-dev-test', 'kubeadm-prod', 'minikube-dev-test', 'ku
 #### `--force -f`
 Force overwrite of the target file.
 #### `--accept-eula -a`
-Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at https://aka.ms/azdata-eula.
+Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. 
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -87,7 +87,7 @@ Default config profile: ['aks-dev-test', 'kubeadm-prod', 'minikube-dev-test', 'k
 What config type you would like to see.
 `cluster`
 #### `--accept-eula -a`
-Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at https://aka.ms/azdata-eula.
+Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. 
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

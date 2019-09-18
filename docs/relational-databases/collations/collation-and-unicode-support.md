@@ -1,7 +1,7 @@
 ---
 title: "Collation and Unicode Support | Microsoft Docs"
 ms.custom: ""
-ms.date: 09/16/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -110,12 +110,12 @@ Each collation is combined as a series of suffixes to define case, accent, width
 
 -  [Binary collations](#Binary-collations)
 
--  [SQL Server collations](#SQL-Server-collations)
+-  [SQL Server collations](#SQL-collations)
     
-#### Windows collations    
+#### <a name="Windows-collations"></a> Windows collations    
 Windows collations define rules for storing character data that are based on an associated Windows system locale. For a Windows collation, comparison of non-Unicode data is implemented by using the same algorithm as Unicode data. The base Windows collation rules specify which alphabet or language is used when dictionary sorting is applied, and the code page that is used to store non-Unicode character data. Both Unicode and non-Unicode sorting are compatible with string comparisons in a particular version of Windows. This provides consistency across data types within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and it also lets developers sort strings in their applications by using the same rules that are used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md).    
     
-#### Binary collations    
+#### <a name="Binary-collations"></a> Binary collations    
 Binary collations sort data based on the sequence of coded values that are defined by the locale and data type. They are case sensitive. A binary collation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] defines the locale and the ANSI code page that is used. This enforces a binary sort order. Because they are relatively simple, binary collations help improve application performance. For non-Unicode data types, data comparisons are based on the code points that are defined in the ANSI code page. For Unicode data types, data comparisons are based on the Unicode code points. For binary collations on Unicode data types, the locale is not considered in data sorts. For example, **Latin_1_General_BIN** and **Japanese_BIN** yield identical sorting results when they are used on Unicode data. For more information, see [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md).   
     
 There are two types of binary collations in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
@@ -124,7 +124,7 @@ There are two types of binary collations in [!INCLUDE[ssNoVersion](../../include
 
 -  The newer **BIN2** collations, which implement pure code-point comparison. In a **BIN2** collation all characters are sorted according to their code points. Because the Intel platform is a little endian architecture, Unicode code characters are always stored byte-swapped.     
     
-#### SQL Server collations    
+#### <a name="SQL-collations"></a> SQL Server collations    
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collations (SQL_\*) provide sort order compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The dictionary sorting rules for non-Unicode data are incompatible with any sorting routine that is provided by Windows operating systems. However, sorting Unicode data is compatible with a particular version of Windows sorting rules. Because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collations use different comparison rules for non-Unicode and Unicode data, you see different results for comparisons of the same data, depending on the underlying data type. For more information, see [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md). 
 
 During [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup, the default installation collation setting is determined by the operating system (OS) locale. The server-level collation can either be changed during setup, or by changing the OS locale before installation. The default collation is set to the oldest available version that is associated with each specific locale. This is due to backwards compatibility reasons. Therefore, this is not always the recommended collation. To take full advantage of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features, change the default installation settings to use Windows collations. For example, for the OS locale **English (United States)** (code page 1252), the default collation during setup is **SQL_Latin1_General_CP1_CI_AS** and can be changed to its closest Windows collation counterpart **Latin1_General_100_CI_AS_SC**.
@@ -146,7 +146,7 @@ Setting collations are supported at the following levels of an instance of [!INC
 
 -  [Expression-level collations](#Expression-level-collations)
 
-#### Server-level collations   
+#### <a name="Server-level-collations"></a> Server-level collations   
 The default server collation is determined during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup, and also becomes the default collation of the system databases and all user databases. 
 
 The following table shows the default collation designations determined by the operating system (OS) locale, including the respective Windows and SQL Language Code Identifiers (LCID):
@@ -385,7 +385,7 @@ To query the server for all available collations, use the following `fn_helpcoll
 SELECT * FROM sys.fn_helpcollations();
 ```
     
-#### Database-level collations    
+#### <a name="Database-level-collations"></a> Database-level collations    
 When a database is created or modified, you can use the COLLATE clause of the CREATE DATABASE or ALTER DATABASE statement to specify the default database collation. If no collation is specified, the database is assigned the server collation.    
     
 You cannot change the collation of system databases except by changing the collation for the server.    
@@ -410,7 +410,7 @@ The current collation of a database can be retrieved by using a statement simila
 SELECT CONVERT (VARCHAR(50), DATABASEPROPERTYEX('database_name','collation'));
 ```
 
-#### Column-level collations    
+#### <a name="Column-level-collations"></a> Column-level collations    
 When you create or alter a table, you can specify collations for each character-string column by using the COLLATE clause. If no collation is specified, the column is assigned the default collation of the database.    
 
 The collation of a column can be changed by using an `ALTER TABLE` statement similar to the following:
@@ -419,7 +419,7 @@ The collation of a column can be changed by using an `ALTER TABLE` statement sim
 ALTER TABLE myTable ALTER COLUMN mycol NVARCHAR(10) COLLATE Greek_CS_AI;
 ```
     
-#### Expression-level collations    
+#### <a name="Expression-level-collations"></a> Expression-level collations    
 Expression-level collations are set when a statement is run, and they affect the way a result set is returned. This enables ORDER BY sort results to be locale-specific. Use a COLLATE clause such as the following to implement expression-level collations:    
     
 ```sql    

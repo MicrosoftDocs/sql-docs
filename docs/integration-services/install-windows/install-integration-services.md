@@ -2,7 +2,7 @@
 title: "Install SQL Server Integration Services (SSIS) | Microsoft Docs"
 description: Learn how to install Microsoft SQL Server Integration Services (SSIS) and how to get other downloads for SSIS
 ms.custom: ""
-ms.date: "09/13/2019"
+ms.date: "09/19/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -86,15 +86,13 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
   - Support for the SSIS Catalog on the SQL Server Database Engine.
 
-  - Optionally, the SSIS Scale Out feature, which consists of a Master and Workers.
+  - Optionally, the [Scale Out feature](../scale-out/walkthrough-set-up-integration-services-scale-out.md), which consists of a Master and Workers.
 
   - 32-bit and 64-bit SSIS components.
 
   - Installing SSIS does **NOT** install the tools required to design and develop SSIS packages.
 
 - **SQL Server Database Engine**. Install the Database Engine with the SQL Server Setup wizard. Selecting the Database Engine lets you create and host the SSIS Catalog database, `SSISDB`, to store, manage, run, and monitor SSIS packages.
-
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 
 - **SQL Server Data Tools (SSDT)**. To download and install SSDT, see [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). Installing SSDT lets you design and deploy SSIS packages. SSDT installs the following things:
 
@@ -110,17 +108,7 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
   - SQL Server Import and Export Wizard.
 
-::: moniker-end
-
-::: moniker range=">=sql-server-2019||=sqlallproducts-allversions"
-
-- **SQL Server Data Tools (SSDT)**. We've discontinued the SSDT standalone installer for SSIS 2019. For SSIS 2019, you now can get the SSIS designer extension from the [VS market place](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
-
-::: moniker-end
-
-## Integration Services (SSIS) Scale Out
-
-You can set up Integration Services (SSIS) for [Scale Out](../scale-out/walkthrough-set-up-integration-services-scale-out.md).
+- **SQL Server Data Tools (SSDT)**. We've discontinued the SSDT standalone installer for Visual Studio 2019. For Visual Studio 2019, you now can get the SSIS designer extension from the [VS market place](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
 
 - **Integration Services Feature Pack for Azure**. To download and install the Feature Pack, see [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://docs.microsoft.com/en-us/sql/integration-services/azure-feature-pack-for-integration-services-ssis?view=sql-server-2017). Installing the Feature Pack lets your packages connect to storage and analytics services in the Azure cloud, including the following services:
 

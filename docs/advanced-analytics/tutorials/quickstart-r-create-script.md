@@ -13,7 +13,7 @@ ms.reviewer: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
-# Create and run simple R scripts in a SQL Server instance with SQL Server Machine Learning Services
+# Quickstart: Create and run simple R scripts with SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this quickstart, you'll create and run a set of simple R scripts using [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md). You'll learn how to wrap a well-formed R script in the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) and execute the script in a SQL Server instance.
@@ -232,7 +232,7 @@ The output is from `installed.packages()` in R and is returned as a result set.
 
 **Results**
 
-![Installed packages in R](./media/r-installed-packages.png)
+![Installed packages in R](./media/rsql-installed-packages.png) 
 
 ## Next steps
 

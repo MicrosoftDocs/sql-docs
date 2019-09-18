@@ -298,7 +298,7 @@ Runs the action in the current database. `CURRENT` is not supported for all opti
 **\<accelerated_database_recovery> ::=**
 **Applies to SQL Server 2019**
 
-Enables [accelerated database recovery](../../relational-databases/accelerated-database-recovery-management.md) (ADR) per-database on SQL Server 2019 CTP 2.3 or later. ADR is off by default in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Using this syntax, you can optionally designate a specific filegroup for the Persistent Version Store (PVS) data.  If no filegroup is specified, the PVS will be stored in the PRIMARY filegroup. For examples and more information, see [Accelerated database recovery](../../relational-databases/accelerated-database-recovery-management.md).
+Enables [accelerated database recovery](../../relational-databases/accelerated-database-recovery-management.md) (ADR) per-database on SQL Server 2019 CTP 2.3 or later. ADR is off by default in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Using this syntax, you can optionally designate a specific filegroup for the Persistent Version Store (PVS) data.  If no filegroup is specified, the PVS will be stored in the PRIMARY filegroup. For examples and more information, see [Accelerated database recovery](../../relational-databases/accelerated-database-recovery-management.md).
 
 **\<auto_option> ::=**
 

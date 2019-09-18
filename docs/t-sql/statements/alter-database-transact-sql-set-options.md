@@ -296,7 +296,7 @@ CURRENT
 Runs the action in the current database. `CURRENT` is not supported for all options in all contexts. If `CURRENT` fails, provide the database name.
 
 **\<accelerated_database_recovery> ::=**
-**Applies to SQL Server 2019 CTP 2.3 or later**
+**Applies to SQL Server 2019**
 
 Enables [accelerated database recovery](../../relational-databases/accelerated-database-recovery-management.md) (ADR) per-database on SQL Server 2019 CTP 2.3 or later. ADR is off by default in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Using this syntax, you can optionally designate a specific filegroup for the Persistent Version Store (PVS) data.  If no filegroup is specified, the PVS will be stored in the PRIMARY filegroup. For examples and more information, see [Accelerated database recovery](../../relational-databases/accelerated-database-recovery-management.md).
 
@@ -781,7 +781,7 @@ ALL
 Captures all queries. ALL is the default configuration value. This is the default configuration value starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
 
 AUTO
-Capture relevant queries based on execution count and resource consumption. This is the default configuration value starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0.
+Capture relevant queries based on execution count and resource consumption. This is the default configuration value starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
 
 NONE
 Stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.

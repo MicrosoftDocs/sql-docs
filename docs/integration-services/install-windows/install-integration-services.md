@@ -110,7 +110,7 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
 - **SQL Server Data Tools (SSDT)**. We've discontinued the SSDT standalone installer for Visual Studio 2019. For Visual Studio 2019, you now can get the SSIS designer extension from the [VS market place](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
 
-- **Integration Services Feature Pack for Azure**. To download and install the Feature Pack, see [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://docs.microsoft.com/en-us/sql/integration-services/azure-feature-pack-for-integration-services-ssis?view=sql-server-2017). Installing the Feature Pack lets your packages connect to storage and analytics services in the Azure cloud, including the following services:
+- **Integration Services Feature Pack for Azure**. To download and install the Feature Pack, see [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://docs.microsoft.com/sql/integration-services/azure-feature-pack-for-integration-services-ssis?view=sql-server-2017). Installing the Feature Pack lets your packages connect to storage and analytics services in the Azure cloud, including the following services:
 
   - Azure Blob Storage.
 

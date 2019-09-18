@@ -54,10 +54,10 @@ SSMS 18.3 is the latest general availability (GA) release of SSMS. If you need a
 | Intellisense/Editor | Updated support for features recently added to SQL Server 2019 (for example, "ALTER SERVER CONFIGURATION"). | 
 | SMO/Scripting | Added support for Support scripting of Azure SQL DW unique constraint. |
 | SMO/Scripting | Data Classification </br> - Added support for SQL version 10 (SQL 2008) and higher. </br> - Added new sensitivity attribute 'rank' for SQL version 15 (SQL 2019) and higher and Azure SQL DB. |
-| SMO/Scripting | Added versioning to ruleset format for SQL Assessment API. |
-| SMO/Scripting | Added new checks for SQL Assessment API. |
-| SMO/Scripting | Added support for Azure SQL Database Managed Instance for SQL Assessment API. |
-| SMO/Scripting | Updated default view of SQL Assessment cmdlets to display results as a table. |
+| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added versioning to ruleset format. |
+| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added new checks. |
+| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added support for Azure SQL Database Managed Instance. |
+| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Updated default view of cmdlets to display results as a table. |
 
 ## Bug fixes in 18.3
 
@@ -83,6 +83,10 @@ SSMS 18.3 is the latest general availability (GA) release of SSMS. If you need a
 ### Known issues (18.3)
 
 - AzureDTExecConfigUI doesn't appear when selected in SSMS.
+
+- Database Diagram created from SSMS running on machine A cannot be modified from machine B (SSMS crashes). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
+
+- There are redraw issues when switching between multiple query windows. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042) for more details. A workaround for this issue is to disable hardware acceleration under Tools > Options.
 
 You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
@@ -140,7 +144,7 @@ Release date: July 25, 2019
 | SQL Agent | Fixed an issue that when Adding, inserting, editing, or removing job steps, was causing focus to be reset the first row instead of the active row. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/38070892) for more details. |
 | SMO/Scripting | Fixed an issue where *CREATE OR ALTER* was not scripting objects that had extended properties on them. See [UserVoice](https://feedback.azure.com/forums/908035-sql-server/suggestions/37236748) for more details. |
 | SMO/Scripting | Fixed an issue where SSMS wasn't able to script CREATE EXTERNAL LIBRARY correctly. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37868089) for more details. |
-| SMO/Scripting |  Fixed an issue where trying to run the *Generate Scripts* against a database with a few thousand tables (was causing the progress dialog to appear to be stuck. |
+| SMO/Scripting | Fixed an issue where trying to run the *Generate Scripts* against a database with a few thousand tables (was causing the progress dialog to appear to be stuck. |
 | SMO/Scripting | Fixed an issue where scripting of *External Table* on SQL 2019 did not work. |
 | SMO/Scripting | Fixed an issue where scripting of *External Data Source* on SQL 2019 did not work. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/34295080) for more details. |
 | SMO/Scripting | Fixed an issue where * extended properties* on columns weren't scripted when targeting Azure SQL DB. See [stackoverflow](https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio) for more details. |
@@ -152,7 +156,7 @@ Release date: July 25, 2019
 
 - Database Diagram created from on an SSMS running on machine A cannot be modified from machine B (it would crash SSMS). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
 
-- SSMS 18.0 redraw issues when switching between multiple query windows. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042). A workaround for this issue is to disable hardware acceleration under **Tools** > **Options**.
+- There are redraw issues when switching between multiple query windows. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042). A workaround for this issue is to disable hardware acceleration under **Tools** > **Options**.
 
 - There's a limitation on the size of the data you see from SSMS results shown in grid, text, or file.
 

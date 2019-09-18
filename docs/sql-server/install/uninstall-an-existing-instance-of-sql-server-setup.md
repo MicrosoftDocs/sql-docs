@@ -48,11 +48,10 @@ ms.author: mathoma
    > [!NOTE]
    > The ReportServer databases are included with SQL Server Reporting Services.   
 
-2.  **Delete the local security groups.** Before you uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], delete the local security groups for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components.  
+ 
+1.  **Stop all**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **services.** We recommend that you stop all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services before you uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components. Active connections can prevent successful uninstallation.  
   
-3.  **Stop all**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **services.** We recommend that you stop all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services before you uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components. Active connections can prevent successful uninstallation.  
-  
-4.  **Use an account that has the appropriate permissions.** Log on to the server by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account or by using an account that has equivalent permissions. For example, you can log on to the server by using an account that is a member of the local Administrators group.  
+1.  **Use an account that has the appropriate permissions.** Log on to the server by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account or by using an account that has equivalent permissions. For example, you can log on to the server by using an account that is a member of the local Administrators group.  
   
 ## Uninstall 
 

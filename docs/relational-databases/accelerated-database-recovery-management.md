@@ -41,14 +41,15 @@ ALTER DATABASE [MyDatabase] SET ACCELERATED_DATABASE_RECOVERY = ON;
 GO
 ```
 
-In this case, when the PVS filegroup is not specified, the PRIMARY filegroup is used to hold the PVS.
+In this case, when the PVS filegroup is not specified, the PRIMARY filegroup holds the PVS data.
 
 ### To enable ADR and specify that the PVS should be stored in the [VersionStoreFG] filegroup
+
+Before running this script, create the filegroup.
 
 ```sql
 ALTER DATABASE [MyDatabase] SET ACCELERATED_DATABASE_RECOVERY = ON
 (PERSISTENT_VERSION_STORE_FILEGROUP = [VersionStoreFG])
-
 ```
 
 ### To disable the ADR feature
@@ -58,7 +59,7 @@ ALTER DATABASE [MyDatabase] SET ACCELERATED_DATABASE_RECOVERY = OFF;
 GO
 ```
 
-Even after the ADR feature is disabled, there will be versions stored in the Persistent Version Store that are still needed to restore the database until the versions have been preserved.
+Even after the ADR feature is disabled, there will be versions stored in the Persistent Version Store that are still needed by the system for logical revert.
 
 ### To change the location of the PVS to a different filegroup
 
@@ -89,10 +90,26 @@ FROM sys.dm_tran_persistent_version_store_stats where database_id = [MyDatabaseI
 
 When the value of persistent_version_store_size_kb is 0, you can re-enable the ADR feature, configuring the PVS to be located in the new filegroup.
 
-#### Turn on ADR specifying the new location.
+#### Turn on ADR specifying the new location for PVS
 
 ```sql
 ALTER DATABASE [MyDatabase] SET ACCELERATED_DATABASE_RECOVERY = ON
 (PERSISTENT_VERSION_STORE_FILEGROUP = [VersionStoreFG])
-
 ```
+
+## Troubleshooting
+
+Query `sys.dm_tran_persistent_version_store_stats` to check PVS sizes.
+
+Check `% of DB` size. Also note the difference from typical size.
+
+PVS is considered large if it's significantly larger than baseline or if it is close to 50% of the size of the database. 
+
+1. Retrieve `oldest_active_transaction_id` and check whether this transaction has been active for a really long time by querying `sys.dm_tran_database_transactions` based on the transaction id.
+
+   Active transactions prevent cleaning up PVS.
+
+1. If the database is part of an availability group, check the `secondary_low_water_mark`. This is the same as the `low_water_mark_for_ghosts` reported by `sys.dm_hadr_database_replica_states`. Query `sys.dm_hadr_database_replica_states` to see whether one of the replicas is holding this value behind, since this will also prevent PVS cleanup.
+1. Check `min_transaction_timestamp` (or `online_index_min_transaction_timestamp` if the online PVS is holding up) and based on that check `sys.dm_tran_active_snapshot_database_transactions` for the column `transaction_sequence_num` to find the session that has the old snapshot transaction holding up PVS cleanup.
+1. If none of the above applies, then it means that the cleanup is held by aborted transactions. Check the last time the `aborted_version_cleaner_last_start_time`  and `aborted_version_cleaner_last_end_time` to see if the aborted transaction cleanup has completed. The `oldest_aborted_transaction_id` should be moving higher after the aborted transaction cleanup completes.
+1. If the aborted transaction hasn’t completed successfully recently, check the errorlog for messages reporting `VersionCleaner` issues.

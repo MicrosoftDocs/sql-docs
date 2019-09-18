@@ -93,7 +93,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
  Installing a new instance of SQL Server at the command prompt enables you to specify the features to install and how they should be configured. You can also specify silent, basic, or full interaction with the Setup user interface.  
 
-To install from the command prompt, open an administrative command prompt and navigate to where setup.exe is located within the setup media. Run the `setup.exe` command, along with the required and optional parameters that accomplish what you're trying to do:
+To install from the command prompt, open an administrative command prompt and navigate to where setup.exe is located within the [SQL Server setup media](https://www.microsoft.com/sql-server/sql-server-downloads). Run the `setup.exe` command, along with the required and optional parameters that accomplish what you're trying to do:
 
 `C:\SQLMedia\SQLServer2019> setup.exe /[Option] /[Option] = {value}`
 
@@ -109,7 +109,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION=in
 /ASSYSADMINACCOUNTS="MyDomain\MyAccount"
 ```
 
-To view a list of all possible commnds within the console, run the help flag:
+To view a list of all possible commnds within the console, run the executable with the /help flag: 
 
 ```console
 C:\SQLMedia\SQLServer2019> setup.exe /help

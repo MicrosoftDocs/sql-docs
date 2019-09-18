@@ -27,14 +27,13 @@ For more information on reports in SQL Server Management Studio, see [Custom rep
 
 ## How to install the reports
 
-The reports are designed using SQL Server Reporting Services, but can be used directly from SQL Server Management Studio, even if Reporting Services is not installed on your instance. 
+The reports are designed using SQL Server Reporting Services, but can be used directly from SQL Server Management Studio. Reporting Services does not have to be installed on your SQL Server instance.
 
 To use these reports:
 
-* Download the RDL files from the GitHub repository for SQL Server product samples.
-* Add the files to the custom reports folder used by SQL Server Management Studio.
-* Open the reports in SQL Server Management Studio.
-
+1. Download the RDL files from the GitHub repository for SQL Server product samples.
+2. Add the files to the custom reports folder used by SQL Server Management Studio.
+3. Open the reports in SQL Server Management Studio.
 
 ### Step 1. Download the reports
 

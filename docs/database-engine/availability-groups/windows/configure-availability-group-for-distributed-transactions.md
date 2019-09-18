@@ -54,16 +54,16 @@ CREATE AVAILABILITY GROUP MyAG
       )
    FOR DATABASE DB1, DB2
    REPLICA ON
-      Server1 WITH (
+      'Server1' WITH (
          ENDPOINT_URL = 'TCP://SERVER1.corp.com:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = AUTOMATIC  
-         )
-      Server2 WITH (
+         ),
+      'Server2' WITH (
          ENDPOINT_URL = 'TCP://SERVER2.corp.com:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = AUTOMATIC  
-         )
+         );
 ```
 
 >[!NOTE]

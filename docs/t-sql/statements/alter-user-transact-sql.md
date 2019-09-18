@@ -527,13 +527,13 @@ These remarks apply to authenticating as Windows users that have been federated 
 - In all migration cases, the roles and permissions of Windows users or groups will automatically be transferred to the new Azure AD users or groups.
 - A new syntax extension, **FROM EXTERNAL PROVIDER** is available for altering Windows users and groups from SQL on-premises to Azure AD users and groups. The Windows domain must be federated with Azure AD and all Windows domain members must exist in Azure AD when using this extension. The **FROM EXTERNAL PROVIDER** syntax applies to managed instance and should be used in case Windows users don't have logins and need to be mapped to Azure AD logins.
   - In this case, the allowable userName can be:
-          - A Widows user (_domain\user_).
-          - A Windows group (_MyWidnowsGroup_).
-          - A Windows alias (_MyWindowsAlias_).
+    - A Widows user (_domain\user_).
+    - A Windows group (_MyWidnowsGroup_).
+    - A Windows alias (_MyWindowsAlias_).
   - The outcome of the ALTER command replaces the old userName with the corresponding name that is found in Azure AD based on the original SID of the old userName. The altered name is replaced and stored in the metadata of the database:
-          - (_domain\user_) will be replaced with Azure AD user@domain.com.
-          - (_domain\\MyWidnowsGroup_) will be replaced with Azure AD group.
-          - (_MyWindowsAlias_) will remain unchanged but the SID of this user will be checked in Azure AD.
+    - (_domain\user_) will be replaced with Azure AD user@domain.com.
+    - (_domain\\MyWidnowsGroup_) will be replaced with Azure AD group.
+    - (_MyWindowsAlias_) will remain unchanged but the SID of this user will be checked in Azure AD.
 
 > [!NOTE]
 > If the SID of the original user converted to objectID cannot be found in Azure AD, the ALTER USER command will fail.

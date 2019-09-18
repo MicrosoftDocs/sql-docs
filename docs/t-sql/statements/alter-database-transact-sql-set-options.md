@@ -104,6 +104,7 @@ SET
 <accelerated_database_recovery> ::=
 {
 ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+[(PERSISTENT_VERSION_STORE_FILEGROUP = { filegroup name }) ];
 }
 
 <auto_option> ::=
@@ -297,7 +298,7 @@ Runs the action in the current database. `CURRENT` is not supported for all opti
 **\<accelerated_database_recovery> ::=**
 **Applies to SQL Server 2019 CTP 2.3 or later**
 
-Enables [accelerated database recovery](https://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery/) per-database on SQL Server 2019 CTP 2.3 or later.
+Enables [accelerated database recovery](../../relational-databases/accelerated-database-recovery-management.md) (ADR) per-database on SQL Server 2019 CTP 2.3 or later. ADR is off by default in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Using this syntax, you can optionally designate a specific filegroup for the Persistent Version Store (PVS) data.  If no filegroup is specified, the PVS will be stored in the PRIMARY filegroup. For examples and more information, see [Accelerated database recovery](../../relational-databases/accelerated-database-recovery-management.md).
 
 **\<auto_option> ::=**
 

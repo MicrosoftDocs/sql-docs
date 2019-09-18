@@ -37,14 +37,7 @@ To use these reports:
 
 ### Step 1. Download the reports
 
-1. Open the GitHub repository that contains [SQL Server product samples](https://github.com/Microsoft/sql-server-samples), and download the sample reports. 
-
-    + [SSMS custom reports](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)
-
-    > [!NOTE]
-    > The reports can be used with either SQL Server 2017 Machiine Learning Services, or SQL Server 2016 R Services.
-
-2. To download the samples, you can also log into GitHub and make a local fork of the samples. 
+Download the [SSMS Custom Reports](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) for SQL Server Machine Learning Services from GitHub.
 
 ### Step 2. Copy the reports to Management Studio
 

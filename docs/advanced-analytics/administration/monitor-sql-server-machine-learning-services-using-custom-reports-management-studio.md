@@ -15,15 +15,15 @@ Use custom reports in SQL Server Management Studio (SSMS) to monitor the executi
 
 In these reports, you can view details such as:
 
-- Active R or Python sessions
+- Active Python or R sessions
 - Configuration settings for the instance
 - Execution statistics for machine learning jobs
 - Extended events for R Services
-- R or Python packages installed on the current instance
+- Python or R packages installed on the current instance
 
-This article explains how to install and use the custom reports provided specifically for machine learning. 
+This article explains how to install and use the custom reports provided for SQL Server Machine Learning Services.
 
-For a general introduction to reports in Management Studio, see [Custom reports in Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
+For more information on reports in SQL Server Management Studio, see [Custom reports in Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
 
 ## How to install the reports
 

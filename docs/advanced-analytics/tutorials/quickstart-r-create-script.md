@@ -14,8 +14,9 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 ---
 
 # Create and run simple R scripts in a SQL Server instance with SQL Server Machine Learning Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In this quickstart, you'll create and run a set of simple R scripts using [SQL Server Machine Learning Services](..\what-is-sql-server-machine-learning.md). You'll learn how to wrap a well-formed R script in the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) and execute the script in a SQL Server instance.
+In this quickstart, you'll create and run a set of simple R scripts using [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md). You'll learn how to wrap a well-formed R script in the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) and execute the script in a SQL Server instance.
 
 ## Prerequisites
 
@@ -28,6 +29,7 @@ In this quickstart, you'll create and run a set of simple R scripts using [SQL S
 ## Run a simple script
 
 To run an R script, you'll pass it as an argument to the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+This system stored procedure starts the R runtime in the context of SQL Server, passes data to R, manages R user sessions securely, and returns any results to the client.
 
 In the following steps, you'll run this example R script in your SQL Server instance:
 
@@ -56,10 +58,6 @@ print(c(c, d))
     '
     ```
 
-   > [!NOTE]
-   > If you're an administrator, you can run external code automatically. You can grant permission to other users using the command:
-   <br>**GRANT EXECUTE ANY EXTERNAL SCRIPT TO** *\<username\>*.
-
 2. The correct result is calculated and the R `print` function returns the result to the **Messages** window.
 
    It should look something like this.
@@ -83,7 +81,7 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-Inputs to this stored procedure include:
+Inputs to the `sp_execute_external_script` stored procedure include:
 
 | | |
 |-|-|
@@ -101,8 +99,6 @@ The command outputs the following text:
 ## Use inputs and outputs
 
 By default, `sp_execute_external_script` accepts a single dataset as input, which typically you supply in the form of a valid SQL query. It then returns a single R data frame as output.
-
-Only one input dataset can be passed as a parameter, and you can return only one dataset. However, you can call other datasets from inside your R code and you can return outputs of other types in addition to the dataset. You can also add the OUTPUT keyword to any parameter to have it returned with the results.
 
 For now, let's use the default input and output variables of `sp_execute_external_script`: **InputDataSet** and **OutputDataSet**.
 
@@ -131,7 +127,7 @@ For now, let's use the default input and output variables of `sp_execute_externa
 
     **Results**
 
-    ![Contents of the RTestData table](./media/sql-database-quickstart-r-create-script/select-rtestdata.png)
+    ![Contents of the RTestData table](./media/select-rtestdata.png)
 
 1. Run the following R script. It retrieves the data from the table using the `SELECT` statement, passes it through the R runtime, and returns the data as a data frame. The `WITH RESULT SETS` clause defines the schema of the returned data table for SQL, adding the column name *NewColName*.
 
@@ -144,7 +140,7 @@ For now, let's use the default input and output variables of `sp_execute_externa
 
     **Results**
 
-    ![Output from R script that returns data from a table](./media/sql-database-quickstart-r-create-script/r-output-rtestdata.png)
+    ![Output from R script that returns data from a table](./media/r-output-rtestdata.png)
 
 1. Now let's change the names of the input and output variables. The default input and output variable names are **InputDataSet** and **OutputDataSet**, this script changes the names to **SQL_in** and **SQL_out**:
 
@@ -157,7 +153,7 @@ For now, let's use the default input and output variables of `sp_execute_externa
     WITH RESULT SETS(([NewColName] INT NOT NULL));
     ```
 
-    Note that R is case-sensitive. The input and output variables used in the R script (**SQL_out**, **SQL_in**) need to match the values defined with `@input_data_1_name` and `@output_data_1_name`, including case.
+    Note that R is case-sensitive. The input and output variables used in the R script (**SQL_out**, **SQL_in**) need to match the names defined with `@input_data_1_name` and `@output_data_1_name`, including case.
 
    > [!TIP]
    > Only one input dataset can be passed as a parameter, and you can return only one dataset. However, you can call other datasets from inside your R code and you can return outputs of other types in addition to the dataset. You can also add the OUTPUT keyword to any parameter to have it returned with the results.
@@ -178,7 +174,7 @@ For now, let's use the default input and output variables of `sp_execute_externa
 
     **Results**
 
-    ![Query results using @script as input](./media/sql-database-quickstart-r-create-script/r-data-generated-output.png)
+    ![Query results using @script as input](./media/r-data-generated-output.png)
 
 ## Check R version
 
@@ -236,7 +232,7 @@ The output is from `installed.packages()` in R and is returned as a result set.
 
 **Results**
 
-![Installed packages in R](./media/sql-database-quickstart-r-create-script/r-installed-packages.png)
+![Installed packages in R](./media/r-installed-packages.png)
 
 ## Next steps
 

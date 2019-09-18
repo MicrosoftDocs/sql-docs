@@ -14,13 +14,14 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 ---
 
 # Create and train a predictive model in R with SQL Server Machine Learning Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this quickstart, you'll create and train a predictive model using R, save the model to a table in your SQL Server instance, then use the model to predict values from new data using [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
-The model you'll use in this quickstart is a simple regression model that predicts the stopping distance of a car based on speed. You'll use the **cars** dataset included with R, because it's small and easy to understand.
+The model you'll use in this quickstart is a simple generalized linear model (GLM) that predicts probability that a vehicle has been fitted with a manual transmission. You'll use the **mtcars** dataset included with R.
 
 > [!TIP]
-> Many datasets, small and large, are included with the R runtime. To get a list of datasets installed with R, type `library(help="datasets")` from an R command prompt.
+> If you need a refresher on linear models, try this tutorial which describes the process of fitting a model using rxLinMod: [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model.md)
 
 ## Prerequisites
 
@@ -30,208 +31,181 @@ The model you'll use in this quickstart is a simple regression model that predic
 
 * You also need a tool for running SQL queries. You can run the R scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
-## Create and train a predictive model
+## Create the model
 
-The car speed data in the **cars** dataset contains two columns, both numeric: **dist** and **speed**. The data includes multiple stopping observations at different speeds. From this data, you'll create a linear regression model that describes the relationship between car speed and the distance required to stop a car.
+To create the model, you need to create source data for training, create the model and train it using the data, then store the model in a SQL database where it can be used to generate predictions with new data.
 
-The requirements of a linear model are simple:
-- Define a formula that describes the relationship between the dependent variable *speed* and the independent variable *distance*.
-- Provide input data to use in training the model.
-
-> [!TIP]
-> If you need a refresher on linear models, try this tutorial which describes the process of fitting a model using rxLinMod: [Fitting Linear Models](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-linear-model)
-
-In the following steps you'll set up the training data, create a regression model, train it using the training data, then save the model to a SQL table.
+### Create the source data
 
 1. Open **SQL Server Management Studio** and connect to your SQL Server instance.
 
-1. Create the **CarSpeed** table to save the training data.
-
-    ```sql
-    CREATE TABLE dbo.CarSpeed (
-        speed INT NOT NULL
-        , distance INT NOT NULL
-        )
-    GO
-    
-    INSERT INTO dbo.CarSpeed (
-        speed
-        , distance
-        )
-    EXECUTE sp_execute_external_script @language = N'R'
-        , @script = N'car_speed <- cars;'
-        , @input_data_1 = N''
-        , @output_data_1_name = N'car_speed'
-    GO
-    ```
-
-1. Create a regression model using `rxLinMod`.
-
-   To build the model you define the formula inside the R code and then pass the training data **CarSpeed** as an input parameter.
-
-    ```sql
-    DROP PROCEDURE IF EXISTS generate_linear_model;
-    GO
-    CREATE PROCEDURE generate_linear_model
-    AS
-    BEGIN
-      EXECUTE sp_execute_external_script
-      @language = N'R'
-      , @script = N'
-    lrmodel <- rxLinMod(formula = distance ~ speed, data = CarsData);
-    trained_model <- data.frame(payload = as.raw(serialize(lrmodel, connection=NULL)));
-    '
-      , @input_data_1 = N'SELECT [speed], [distance] FROM CarSpeed'
-      , @input_data_1_name = N'CarsData'
-      , @output_data_1_name = N'trained_model'
-      WITH RESULT SETS ((model VARBINARY(max)));
-    END;
-    GO
-    ```
-
-     The first argument to rxLinMod is the *formula* parameter, which defines distance as dependent on speed. The input data is stored in the variable `CarsData`, which is populated by the SQL query.
-
-1. Create a table where you store the model so you can use it later for prediction. 
-
-   The output of an R package that creates a model is usually a **binary object**, so the table must have a column of **VARBINARY(max)** type.
-
-    ```sql
-    CREATE TABLE dbo.stopping_distance_models (
-        model_name VARCHAR(30) NOT NULL DEFAULT('default model') PRIMARY KEY
-        , model VARBINARY(max) NOT NULL
-        );
-    ```
-
-1. Now call the stored procedure, generate the model, and save it to a table.
+1. Create a table to save the training data.
 
    ```sql
-   INSERT INTO dbo.stopping_distance_models (model)
-   EXECUTE generate_linear_model;
+   CREATE TABLE dbo.MTCars(
+       mpg decimal(10, 1) NOT NULL,
+       cyl int NOT NULL,
+       disp decimal(10, 1) NOT NULL,
+       hp int NOT NULL,
+       drat decimal(10, 2) NOT NULL,
+       wt decimal(10, 3) NOT NULL,
+       qsec decimal(10, 2) NOT NULL,
+       vs int NOT NULL,
+       am int NOT NULL,
+       gear int NOT NULL,
+       carb int NOT NULL
+   );
    ```
 
-   Note that if you run this code a second time, you get this error:
+1. Insert the data from the built-in dataset `mtcars`.
 
-   ```text
-   Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object bo.stopping_distance_models
+   ```SQL
+   INSERT INTO dbo.MTCars
+   EXEC sp_execute_external_script @language = N'R'
+       , @script = N'MTCars <- mtcars;'
+       , @input_data_1 = N''
+       , @output_data_1_name = N'MTCars';
    ```
 
-   One option to avoid this error is to update the name for each new model. For example, you could change the name to something more descriptive, and include the model type, the day you created it, and so forth.
+   > [!TIP]
+   > Many datasets, small and large, are included with the R runtime. To get a list of datasets installed with R, type `library(help="datasets")` from an R command prompt.
 
-   ```sql
-   UPDATE dbo.stopping_distance_models
-   SET model_name = 'rxLinMod ' + FORMAT(GETDATE(), 'yyyy.MM.HH.mm', 'en-gb')
-   WHERE model_name = 'default model'
-   ```
+### Create and train the model
 
-## View the table of coefficients
+The car speed data contains two columns, both numeric, horsepower (`hp`) and weight (`wt`). From this data, you'll create a generalized linear model (GLM) that estimates the probability that a vehicle has been fitted with a manual transmission.
 
-Generally, the output of R from the stored procedure [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) is limited to a single data frame. However, you can return outputs of other types, such as scalars, in addition to the data frame.
-
-For example, suppose you want to train a model but immediately view the table of coefficients from the model. To do so, you create the table of coefficients as the main result set, and output the trained model in a SQL variable. You can immediately re-use the model by calling the variable, or you can save the model to a table as shown here.
+To build the model, you define the formula inside your R code, and pass the data as an input parameter.
 
 ```sql
-DECLARE @model VARBINARY(max)
-    , @modelname VARCHAR(30)
-
-EXECUTE sp_execute_external_script @language = N'R'
-    , @script = N'
-speedmodel <- rxLinMod(distance ~ speed, CarsData)
-modelbin <- serialize(speedmodel, NULL)
-OutputDataSet <- data.frame(coefficients(speedmodel));
-'
-    , @input_data_1 = N'SELECT [speed], [distance] FROM CarSpeed'
-    , @input_data_1_name = N'CarsData'
-    , @params = N'@modelbin varbinary(max) OUTPUT'
-    , @modelbin = @model OUTPUT
-WITH RESULT SETS(([Coefficient] FLOAT NOT NULL));
-
--- Save the generated model
-INSERT INTO dbo.stopping_distance_models (
-    model_name
-    , model
-    )
-VALUES (
-    'latest model'
-    , @model
-    )
+DROP PROCEDURE IF EXISTS generate_GLM;
+GO
+CREATE PROCEDURE generate_GLM
+AS
+BEGIN
+    EXEC sp_execute_external_script
+    @language = N'R'
+    , @script = N'carsModel <- glm(formula = am ~ hp + wt, data = MTCarsData, family = binomial);
+        trained_model <- data.frame(payload = as.raw(serialize(carsModel, connection=NULL)));'
+    , @input_data_1 = N'SELECT hp, wt, am FROM MTCars'
+    , @input_data_1_name = N'MTCarsData'
+    , @output_data_1_name = N'trained_model'
+    WITH RESULT SETS ((model VARBINARY(max)));
+END;
+GO
 ```
 
-**Results**
++ The first argument to `glm` is the *formula* parameter, which defines `am` as dependent on `hp + wt`.
++ The input data is stored in the variable `MTCarsData`, which is populated by the SQL query. If you don't assign a specific name to your input data, the default variable name would be _InputDataSet_.
 
-![Trained model with additional output](./media/sql-database-quickstart-r-train-score-model/r-train-model-with-additional-output.png)
+### Store the model in the SQL database
+
+Next, store the model in a SQL database so you can use it for prediction or retrain it. 
+
+1. Create a table to store the model.
+
+   The output of an R package that creates a model is usually a binary object. Therefore, the table where you store the model must provide a column of **varbinary(max)** type.
+
+   ```sql
+   CREATE TABLE GLM_models (
+       model_name varchar(30) not null default('default model') primary key,
+       model varbinary(max) not null
+   );
+   ```
+
+1. Run the following Transact-SQL statement to call the stored procedure, generate the model, and save it to the table you created.
+
+   ```sql
+   INSERT INTO GLM_models(model)
+   EXEC generate_GLM;
+   ```
+
+   > [!TIP]
+   > If you run this code a second time, you get this error: "Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models". One option for avoiding this error is to update the name for each new model. For example, you could change the name to something more descriptive, and include the model type, the day you created it, and so forth.
+
+     ```sql
+     UPDATE GLM_models
+     SET model_name = 'GLM_' + format(getdate(), 'yyyy.MM.HH.mm', 'en-gb')
+     WHERE model_name = 'default model'
+     ```
 
 ## Score new data using the trained model
 
 *Scoring* is a term used in data science to mean generating predictions, probabilities, or other values based on new data fed into a trained model. You'll use the model you created in the previous section to score predictions against new data.
 
-Did you notice that the original training data stops at a speed of 25 miles per hour? That's because the original data was based on an experiment from 1920! You might wonder, how long would it take an automobile from the 1920s to stop if it could get going as fast as 60 mph or even 100 mph? To answer this question, you can provide some new speed values to your model.
+### Create a table of new data
 
-1. Create a table with new speed data.
+First, create a table with new data.
 
-   ```sql
-    CREATE TABLE dbo.NewCarSpeed (
-        speed INT NOT NULL
-        , distance INT NULL
-        )
-    GO
-    
-    INSERT dbo.NewCarSpeed (speed)
-    VALUES (40)
-        , (50)
-        , (60)
-        , (70)
-        , (80)
-        , (90)
-        , (100)
-   ```
+```sql
+CREATE TABLE dbo.NewMTCars(
+	hp INT NOT NULL
+	, wt DECIMAL(10,3) NOT NULL
+	, am INT NULL
+)
+GO
 
-2. Predict stopping distance from these new speed values.
+INSERT INTO dbo.NewMTCars(hp, wt)
+VALUES (110, 2.634)
 
-   Because your model is based on the **rxLinMod** algorithm provided as part of the **RevoScaleR** package, you call the [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) function, rather than the generic R `predict` function.
+INSERT INTO dbo.NewMTCars(hp, wt)
+VALUES (72, 3.435)
 
-   This example script:
-   - Uses a SELECT statement to get a single model from the table
-   - Passes it as an input parameter
-   - Calls the `unserialize` function on the model
-   - Applies the `rxPredict` function with appropriate arguments to the model
-   - Provides the new input data
+INSERT INTO dbo.NewMTCars(hp, wt)
+VALUES (220, 5.220)
 
-   > [!TIP]
-   > For real-time scoring, see [Serialization functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) provided by RevoScaleR.
+INSERT INTO dbo.NewMTCars(hp, wt)
+VALUES (120, 2.800)
+GO
+```
 
-   ```sql
-    DECLARE @speedmodel VARBINARY(max) = (
-            SELECT model
-            FROM dbo.stopping_distance_models
-            WHERE model_name = 'latest model'
-            );
-    
-    EXECUTE sp_execute_external_script @language = N'R'
-        , @script = N'
-    current_model <- unserialize(as.raw(speedmodel));
-    new <- data.frame(NewCarData);
-    predicted.distance <- rxPredict(current_model, new);
-    str(predicted.distance);
-    OutputDataSet <- cbind(new, ceiling(predicted.distance));
-    '
-        , @input_data_1 = N'SELECT speed FROM [dbo].[NewCarSpeed]'
-        , @input_data_1_name = N'NewCarData'
-        , @params = N'@speedmodel varbinary(max)'
-        , @speedmodel = @speedmodel
-    WITH RESULT SETS((
-                new_speed INT
-                , predicted_distance INT
-                ));
-   ```
+### Predict manual transmission
 
-   **Results**
+To get predictions based on your model, write a SQL script that does the following:
 
-   ![Result set for predicting stopping distance](./media/sql-database-quickstart-r-train-score-model/r-predict-stopping-distance-resultset.png)
+1. Gets the model you want
+1. Gets the new input data
+1. Calls an R prediction function that is compatible with that model
+
+Over time, the table might contain multiple R models, all built using different parameters or algorithms, or trained on different subsets of data. In this example, we'll use the model named `default model`.
+
+```sql
+DECLARE @glmmodel varbinary(max) = 
+    (SELECT model FROM dbo.GLM_models WHERE model_name = 'default model');
+
+EXEC sp_execute_external_script
+    @language = N'R'
+    , @script = N'
+            current_model <- unserialize(as.raw(glmmodel));
+            new <- data.frame(NewMTCars);
+            predicted.am <- predict(current_model, new, type = "response");
+            str(predicted.am);
+            OutputDataSet <- cbind(new, predicted.am);
+            '
+    , @input_data_1 = N'SELECT hp, wt FROM dbo.NewMTCars'
+    , @input_data_1_name = N'NewMTCars'
+    , @params = N'@glmmodel varbinary(max)'
+    , @glmmodel = @glmmodel
+WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3)));
+```
+
+The script above performs the following steps:
+
++ Use a SELECT statement to get a single model from the table, and pass it as an input parameter.
+
++ After retrieving the model from the table, call the `unserialize` function on the model.
+
++ Apply the `predict` function with appropriate arguments to the model, and provide the new input data.
 
 > [!NOTE]
-> In this example script, the `str` function is added during the testing phase to check the schema of data being returned from R. You can remove the statement later.
+> In the example, the `str` function is added during the testing phase, to check the schema of data being returned from R. You can remove the statement later.
 >
-> The column names used in the R script are not necessarily passed to the stored procedure output. Here the WITH RESULTS clause defines some new column names.
+> The column names used in the R script are not necessarily passed to the stored procedure output. Here the WITH RESULTS clause is used to define some new column names.
+
+**Results**
+
+![Result set for predicting properbility of manual transmission](./media/r-predict-am-resultset.png)
+
+It's also possible to use the [PREDICT (Transact-SQL)](../../t-sql/queries/predict-transact-sql.md) statement to generate a predicted value or score based on a stored model.
 
 ## Next steps
 

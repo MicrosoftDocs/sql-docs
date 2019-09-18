@@ -100,7 +100,7 @@ To install from the command prompt, open an administrative command prompt and na
 The following example installs the SQL Server database engine, SQL Server Analysis Services, SQL Server Integration Services, and SQL Server tools in quiet mode:
 
 ```console
-C:\SQLMedia\SQLServer2019> setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION=install /PID=<validpid> /FEATURES=SQL,AS,IS,Tools
+C:\SQLMedia\SQLServer2019> setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /PID="<validpid>" /FEATURES=SQL,AS,IS,Tools
 /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="MyDomain\MyAccount"
 /SQLSVCPASSWORD="************" /SQLSYSADMINACCOUNTS="MyDomain\MyAccount "
 /AGTSVCACCOUNT="MyDomain\MyAccount" /AGTSVCPASSWORD="************"

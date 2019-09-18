@@ -1,6 +1,6 @@
 ---
 title: "Configure a distributed availability group"
-description: "Describes how to create and configure a distributed Always On availability group. " 
+description: "Describes how to create and configure an Always On distributed availability group. " 
 ms.custom: "seodec18"
 ms.date: "08/17/2017"
 ms.prod: sql
@@ -11,7 +11,7 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 ---
-# Configure a distributed Always On availability group  
+# Configure an Always On distributed availability group  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 To create a distributed availability group, you must two availability groups each with its own listener. You then combine these availability groups into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example doesn't cover all of the details of creating availability groups and listeners; instead, it focuses on highlighting the key requirements.
@@ -177,7 +177,7 @@ GO
 If it is necessary to cancel the initialization of the forwarder before the two availability groups are synchronized, ALTER the distributed availability group by setting the forwarder's SEEDING_MODE parameter to MANUAL and immediately cancel the seeding. Run the command on the global primary: 
 
 ```sql
--- Cancel off automatic seeding​, connect to global primary but specify DAG AG2
+-- Cancel automatic seeding​.  Connect to global primary but specify DAG AG2
 ALTER AVAILABILITY GROUP [distributedag] ​  
    MODIFY ​ 
    AVAILABILITY GROUP ON ​ 

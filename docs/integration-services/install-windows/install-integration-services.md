@@ -29,6 +29,8 @@ ms.author: janinez
 
  This article highlights important considerations that you should know before you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Information in this article helps you evaluate your installation options so that your selection results in a successful installation.
 
+![Install integration Services](install-integration-services/install-integration-services-sql-setup.png)
+
 ## Get ready to install Integration Services
 
 Before you install [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], review the following information:
@@ -67,8 +69,6 @@ If you're using the Setup Wizard to install [!INCLUDE[ssISnoversion](../../inclu
 
 > [!NOTE]
 > Some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components that you can select for installation on the **Feature Selection** page of the Setup Wizard install a partial subset of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components. These components are useful for specific tasks, but the functionality of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is limited. For example, the **Database Engine Services** option installs the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components required for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard. To ensure a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you must select **Integration Services** on the **Feature Selection** page.
-
-![Install integration Services](install-integration-services/install-integration-services-sql-setup.png)
 
 ### Installing a dedicated server for ETL processes
 

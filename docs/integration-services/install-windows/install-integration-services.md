@@ -43,7 +43,7 @@ You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCL
 
 - You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on a computer that has no previous instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-- You can install [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] side by side with an existing instance of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
+- You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] side by side with an existing instance of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
 When you upgrade to the latest version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on a computer that has an earlier version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] already installed, the current version is installed side by side with the earlier version.
 

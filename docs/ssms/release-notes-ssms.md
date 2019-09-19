@@ -150,7 +150,7 @@ SSMS 18.1 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Fixed an issue where SSMS wasn't honoring the Intellisense settings from *Tools/Options* in the SQL editor window. |
 | General SSMS | Fixed an issue where SSMS wasn't honoring the Help settings (online vs. offline). |
 | High DPI | Fixed layout of controls in error dialogs for unsupported query options. |
-| High DPI | Fixed layout of controls in *New Availability Group* page which on some localized version of SSMS. |
+| High DPI | Fixed layout of controls in *New Availability Group* page which is on some localized version of SSMS. |
 | High DPI | Fixed layout of *New Job Schedule* page. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37632094) for more details. |
 | Import flat file | Fixed in an issue where rows could be silently lost during the import.|
 | Intellisense/editor | Reduced SMO-based query traffic to Azure SQL databases for IntelliSense. |

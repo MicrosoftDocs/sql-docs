@@ -1,4 +1,4 @@
-- name: SQL Server Machine Learning Services Documentation
+- name: SQL Server Machine Learning Services documentation
   href: ../advanced-analytics/index.yml
 
 - name: Welcome to SQL Server >
@@ -61,20 +61,14 @@
       href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
   - name: R
     items:
-    - name: Verify R exists in SQL Server
-      href: ../advanced-analytics/tutorials/quickstart-r-verify.md
-    - name: Hello World in R and SQL
-      href: ../advanced-analytics/tutorials/quickstart-r-run-using-tsql.md
-    - name: Handle inputs and outputs
-      href: ../advanced-analytics/tutorials/quickstart-r-inputs-and-outputs.md
+    - name: Create R scripts
+      href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
+    - name: Train and score a model
+      href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
     - name: Handle data types and objects
       href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-    - name: Using R functions
+    - name: Write R functions
       href: ../advanced-analytics/tutorials/quickstart-r-functions.md
-    - name: Create a predictive model
-      href: ../advanced-analytics/tutorials/quickstart-r-create-predictive-model.md
-    - name: Predict from model
-      href: ../advanced-analytics/tutorials/quickstart-r-predict-from-model.md
 - name: Tutorials
   items:
   - name: Python

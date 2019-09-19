@@ -242,10 +242,8 @@ Here is a sample output from the init command that you will see in the folder
 
 ```
 hello.py
-README.md
 run-spec.yaml
 spec.yaml
-
 ```
 
 ## Describe an app

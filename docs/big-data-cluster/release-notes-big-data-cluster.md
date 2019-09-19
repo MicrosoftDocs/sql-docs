@@ -32,7 +32,9 @@ The following sections describe the new features and known issues for big data c
 
 ### Known issues
 
-SQL Server 2019 Big Data Clusters release candidate refresh build number is `15.0.1900.47`.
+* SQL Server 2019 Big Data Clusters release candidate refresh build number is `15.0.1900.47`.
+
+* The "kubeadm-prod" deployment profile is not supported in SQL Server 2019 Big Data Clusters release candidate with the above build number. Instead, use "kubeadm-dev-test" profile for Kubeadm deployments.
 
 ## <a id="ctp32"></a> CTP 3.2 (July)
 

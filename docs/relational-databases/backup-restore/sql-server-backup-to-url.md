@@ -60,8 +60,11 @@ ms.author: mikeray
 - You can backup to multiple block blobs to get better backup and restore performance, and support larger database backup.
 - [Block blob](https://azure.microsoft.com/pricing/details/storage/blobs/) is cheaper than [page blob](https://azure.microsoft.com/pricing/details/storage/page-blobs/). 
 
-When you backup to block blob, the maximum block size you can specify is 4MB. The maximum size of a single block blob file is 4MB * 50000 = 195GB. If your database is larger than 195GB, we recommend you:
+Backup of a large database to blob storage is subject to the limitations listed in [Managed instance T-SQL differences, limitations, and known issues](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
+
+ If the database is too large, either:
 - Use backup compression
+   or
 - Backup to multiple block blobs
 
 ###  <a name="Blob"></a> Microsoft Azure Blob storage service  

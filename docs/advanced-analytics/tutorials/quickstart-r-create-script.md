@@ -239,7 +239,7 @@ The output is from `installed.packages()` in R and is returned as a result set.
 To create a machine learning model using R in SQL Server, follow this quickstart:
 
 > [!div class="nextstepaction"]
-> [Create and train a predictive model in R with SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
+> [Create and score a predictive model in R with SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
 
 For more information on SQL Server Machine Learning Services, see the following articles.
 

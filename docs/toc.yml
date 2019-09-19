@@ -6497,6 +6497,12 @@
   items:
   - name: Manage
     items:
+    - name: Accelerated Database Recovery
+      items:
+      - name: Overview
+        href: relational-databases/accelerated-database-recovery-concepts.md
+      - name: Management
+        href: relational-databases/accelerated-database-recovery-management.md
     - name: Central Management Servers
       href: relational-databases/administer-multiple-servers-using-central-management-servers.md
     - name: Configuration Manager

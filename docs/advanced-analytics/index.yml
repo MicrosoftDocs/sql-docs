@@ -53,13 +53,11 @@ landingContent:
       - linkListType: quickstart
         links:
           - text: Run a "Hello world" R script on SQL Server
-            url: tutorials/quickstart-r-run-using-tsql.md
-          - text: Handle inputs and outputs
-            url: tutorials/quickstart-r-inputs-and-outputs.md
+            url: tutorials/quickstart-r-create-script.md
           - text: R data structures in SQL Server
             url: tutorials/quickstart-r-data-types-and-objects.md
           - text: Create a predictive model
-            url: tutorials/quickstart-r-create-predictive-model.md
+            url: tutorials/quickstart-r-train-score-model.md
       - linkListType: tutorial
         links:
           - text: Use R in T-SQL

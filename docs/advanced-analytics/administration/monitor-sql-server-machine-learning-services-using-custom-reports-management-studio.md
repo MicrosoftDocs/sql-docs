@@ -45,19 +45,19 @@ To use these reports:
     
    `C:\Users\user_name\Documents\SQL Server Management Studio\Custom Reports`
 
-   However, you can specify a different folder, or create subfolders.
+   You can also specify a different folder, or create subfolders.
 
 3. Copy the *.RDL files you downloaded to the custom reports folder.
 
 ### Step 3. Run the reports
 
 4. In Management Studio, right-click the **Databases** node for the instance where you want to run the reports.
-5. Click **Reports**, and then click **Custom Reports**.
-6. In the **Open File** dialog box, locate the custom reports folder.
-7. Select one of the RDL files you downloaded, and then click **Open**.
 
-> [!IMPORTANT]
-> On some computers, such as those with display devices with high DPI or greater than 1080p resolution, or in some remote desktop sessions, these reports cannot be used. There is a bug in the report viewer control in SSMS that crashes the report.
+5. Click **Reports**, and then click **Custom Reports**.
+
+6. In the **Open File** dialog box, locate the custom reports folder.
+
+7. Select one of the RDL files you downloaded, and then click **Open**.
 
 ## Report list
 

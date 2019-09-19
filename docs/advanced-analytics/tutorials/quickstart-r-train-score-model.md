@@ -18,22 +18,22 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 In this quickstart, you'll create and train a predictive model using R, save the model to a table in your SQL Server instance, then use the model to predict values from new data using [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
-The model you'll use in this quickstart is a simple generalized linear model (GLM) that predicts probability that a vehicle has been fitted with a manual transmission. You'll use the **mtcars** dataset included with R.
+The model you'll use in this quickstart is a simple generalized linear model (GLM) that predicts the probability that a vehicle has been fitted with a manual transmission. You'll use the **mtcars** dataset included with R.
 
 > [!TIP]
-> If you need a refresher on linear models, try this tutorial which describes the process of fitting a model using rxLinMod: [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model.md)
+> If you need a refresher on linear models, try this tutorial which describes the process of fitting a model using rxLinMod:  [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model)
 
 ## Prerequisites
 
-* This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R language installed.
+- This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R language installed.
 
   Your SQL Server instance can be in an Azure virtual machine or on-premises. Just be aware that the external scripting feature is disabled by default, so you might need to [enable external scripting](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) and verify that **SQL Server Launchpad service** is running before you start.
 
-* You also need a tool for running SQL queries that contain R scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- You also need a tool for running SQL queries that contain R scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## Create the model
 
-To create the model, you need to create source data for training, create the model and train it using the data, then store the model in a SQL database where it can be used to generate predictions with new data.
+To create the model, you'll create source data for training, create the model and train it using the data, then store the model in a SQL database where it can be used to generate predictions with new data.
 
 ### Create the source data
 
@@ -72,7 +72,7 @@ To create the model, you need to create source data for training, create the mod
 
 ### Create and train the model
 
-The car speed data contains two columns, both numeric, horsepower (`hp`) and weight (`wt`). From this data, you'll create a generalized linear model (GLM) that estimates the probability that a vehicle has been fitted with a manual transmission.
+The car speed data contains two columns, both numeric: horsepower (`hp`) and weight (`wt`). From this data, you'll create a generalized linear model (GLM) that estimates the probability that a vehicle has been fitted with a manual transmission.
 
 To build the model, you define the formula inside your R code, and pass the data as an input parameter.
 
@@ -94,8 +94,8 @@ END;
 GO
 ```
 
-+ The first argument to `glm` is the *formula* parameter, which defines `am` as dependent on `hp + wt`.
-+ The input data is stored in the variable `MTCarsData`, which is populated by the SQL query. If you don't assign a specific name to your input data, the default variable name would be _InputDataSet_.
+- The first argument to `glm` is the *formula* parameter, which defines `am` as dependent on `hp + wt`.
+- The input data is stored in the variable `MTCarsData`, which is populated by the SQL query. If you don't assign a specific name to your input data, the default variable name would be _InputDataSet_.
 
 ### Store the model in the SQL database
 
@@ -190,11 +190,11 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 The script above performs the following steps:
 
-+ Use a SELECT statement to get a single model from the table, and pass it as an input parameter.
+- Use a SELECT statement to get a single model from the table, and pass it as an input parameter.
 
-+ After retrieving the model from the table, call the `unserialize` function on the model.
+- After retrieving the model from the table, call the `unserialize` function on the model.
 
-+ Apply the `predict` function with appropriate arguments to the model, and provide the new input data.
+- Apply the `predict` function with appropriate arguments to the model, and provide the new input data.
 
 > [!NOTE]
 > In the example, the `str` function is added during the testing phase, to check the schema of data being returned from R. You can remove the statement later.
@@ -209,8 +209,12 @@ It's also possible to use the [PREDICT (Transact-SQL)](../../t-sql/queries/predi
 
 ## Next steps
 
+To learn about handling R data types in SQL Server, follow this quickstart:
+
+> [!div class="nextstepaction"]
+> [Handle data types and objects using R in SQL Server Machine Learning Services](quickstart-r-data-types-and-objects.md)
+
 For more information on SQL Server Machine Learning Services, see the following articles.
 
+- [Write advanced R functions with SQL Server Machine Learning Services](quickstart-r-functions.md)
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)
-- [Write advanced R functions in SQL Server Machine Learning Services](../r/r-functions.md)
-- [Work with R and SQL data in SQL Server Machine Learning Services](../r/r-data-issues.md)

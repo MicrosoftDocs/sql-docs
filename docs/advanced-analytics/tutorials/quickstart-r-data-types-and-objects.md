@@ -20,18 +20,18 @@ In this quickstart, you'll learn about common issues that occur when moving data
 
 Common issues to know up front include:
 
-* Data types sometimes don't match
-* Implicit conversions might take place
-* Cast and convert operations are sometimes required
-* R and SQL use different data objects
+- Data types sometimes don't match
+- Implicit conversions might take place
+- Cast and convert operations are sometimes required
+- R and SQL use different data objects
 
 ## Prerequisites
 
-* This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R language installed.
+- This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R language installed.
 
   Your SQL Server instance can be in an Azure virtual machine or on-premises. Just be aware that the external scripting feature is disabled by default, so you might need to [enable external scripting](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) and verify that **SQL Server Launchpad service** is running before you start.
 
-* You also need a tool for running SQL queries that contain R scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- You also need a tool for running SQL queries that contain R scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## Always return a data frame
 
@@ -176,7 +176,7 @@ execute sp_execute_external_script
 Now R returns a single value as the result.
 
 **Results**
-    
+
 |Col1|
 |---|
 |1542|
@@ -209,7 +209,7 @@ EXECUTE sp_execute_external_script
 To fill out the data frame, R repeats the elements retrieved from RTestData as many times as needed to match the number of elements in the array `df1`.
 
 **Results**
-    
+
 |*Col2*|*Col3*|
 |----|----|
 |1|1|
@@ -245,7 +245,7 @@ SELECT ReportingDate
 ```
 
 > [!NOTE]
-> 
+>
 > You can use any version of AdventureWorks, or create a different query using a database of your own. The point is to try to handle some data that contains text, datetime and numeric values.
 
 Now, try pasting this query as the input to the stored procedure.
@@ -278,17 +278,17 @@ STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M20
 STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 16950 16950
 ```
 
-* The datetime column has been processed using the R data type, **POSIXct**.
-* The text column "ProductSeries" has been identified as a **factor**, meaning a categorical variable. String values are handled as factors by default. If you pass a string to R, it is converted to an integer for internal use, and then mapped back to the string on output.
+- The datetime column has been processed using the R data type, **POSIXct**.
+- The text column "ProductSeries" has been identified as a **factor**, meaning a categorical variable. String values are handled as factors by default. If you pass a string to R, it is converted to an integer for internal use, and then mapped back to the string on output.
 
 ### Summary
 
 From even these short examples, you can see the need to check the effects of data conversion when passing SQL queries as input. Because some SQL Server data types are not supported by R, consider these ways to avoid errors:
 
-* Test your data in advance and verify columns or values in your schema that could be a problem when passed to R code.
-* Specify columns in your input data source individually, rather than using `SELECT *`, and know how each column will be handled.
-* Perform explicit casts as necessary when preparing your input data, to avoid surprises.
-* Avoid passing columns of data (such as GUIDS or rowguids) that cause errors and aren't useful for modeling.
+- Test your data in advance and verify columns or values in your schema that could be a problem when passed to R code.
+- Specify columns in your input data source individually, rather than using `SELECT *`, and know how each column will be handled.
+- Perform explicit casts as necessary when preparing your input data, to avoid surprises.
+- Avoid passing columns of data (such as GUIDS or rowguids) that cause errors and aren't useful for modeling.
 
 For more information on supported and unsupported data types, see [R libraries and data types](../r/r-libraries-and-data-types.md).
 
@@ -296,7 +296,12 @@ For information about the performance impact of run-time conversion of strings t
 
 ## Next steps
 
+To learn about writing advanced R functions in SQL Server, follow this quickstart:
+
+> [!div class="nextstepaction"]
+> [Write advanced R functions with SQL Server Machine Learning Services](quickstart-r-functions.md)
+
 For more information on SQL Server Machine Learning Services, see the following articles.
 
-* [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)
-* [Write advanced R functions in SQL Server Machine Learning Services](../r/r-functions.md)
+- [Handle data types and objects using R in SQL Server Machine Learning Services](quickstart-r-data-types-and-objects.md)
+- [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

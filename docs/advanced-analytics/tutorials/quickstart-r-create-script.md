@@ -20,11 +20,11 @@ In this quickstart, you'll create and run a set of simple R scripts using [SQL S
 
 ## Prerequisites
 
-* This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R language installed.
+- This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R language installed.
 
   Your SQL Server instance can be in an Azure virtual machine or on-premises. Just be aware that the external scripting feature is disabled by default, so you might need to [enable external scripting](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) and verify that **SQL Server Launchpad service** is running before you start.
 
-* You also need a tool for running SQL queries that contain R scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- You also need a tool for running SQL queries that contain R scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## Run a simple script
 
@@ -58,7 +58,7 @@ print(c(c, d))
     '
     ```
 
-2. The correct result is calculated and the R `print` function returns the result to the **Messages** window.
+1. The correct result is calculated and the R `print` function returns the result to the **Messages** window.
 
    It should look something like this.
 
@@ -243,6 +243,6 @@ To create a machine learning model using R in SQL Server, follow this quickstart
 
 For more information on SQL Server Machine Learning Services, see the following articles.
 
+- [Handle data types and objects using R in SQL Server Machine Learning Services](quickstart-r-data-types-and-objects.md)
+- [Write advanced R functions with SQL Server Machine Learning Services](quickstart-r-functions.md)
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)
-- [Write advanced R functions in SQL Server Machine Learning Services](../r/r-functions.md)
-- [Work with R and SQL data in SQL Server Machine Learning Services](../r/r-data-issues.md)

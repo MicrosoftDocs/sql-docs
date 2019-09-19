@@ -16,15 +16,15 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Quickstart: Write advanced R functions with SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes how to embed R mathematical and utility functions in a SQL stored procedure with SQL Server Machine Learning Services. Advanced statistical functions that are complicated to implement in T-SQL can be done in R with only a single line of code.
+This quickstart describes how to embed R mathematical and utility functions in a SQL stored procedure with SQL Server Machine Learning Services. Advanced statistical functions that are complicated to implement in T-SQL can be done in R with only a single line of code.
 
 ## Prerequisites
 
-* This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R language installed.
+- This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R language installed.
 
   Your SQL Server instance can be in an Azure virtual machine or on-premises. Just be aware that the external scripting feature is disabled by default, so you might need to [enable external scripting](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) and verify that **SQL Server Launchpad service** is running before you start.
 
-* You also need a tool for running SQL queries that contain R scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- You also need a tool for running SQL queries that contain R scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## Create a stored procedure to generate random numbers
 
@@ -69,11 +69,11 @@ EXEC sp_execute_external_script @language = N'R'
 WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ```
 
-+ The first line defines each of the SQL input parameters that are required when the stored procedure is executed.
+- The first line defines each of the SQL input parameters that are required when the stored procedure is executed.
 
-+ The line beginning with `@params` defines all variables used by the R code, and the corresponding SQL data types.
+- The line beginning with `@params` defines all variables used by the R code, and the corresponding SQL data types.
 
-+ The lines that immediately follow map the SQL parameter names to the corresponding R variable names.
+- The lines that immediately follow map the SQL parameter names to the corresponding R variable names.
 
 Now that you've wrapped the R function in a stored procedure, you can easily call the function and pass in different values, like this:
 
@@ -105,7 +105,6 @@ For an example, see this tutorial: [Create Data Features](../tutorials/walkthrou
 
 ## Next steps
 
-For more information on SQL Server Machine Learning Services, see the following articles.
+For more information on SQL Server Machine Learning Services, see:
 
-* [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)
-* [Work with R and SQL data in SQL Server Machine Learning Services](../r/r-data-issues.md)
+- [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

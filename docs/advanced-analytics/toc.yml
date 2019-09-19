@@ -62,9 +62,9 @@
   - name: R
     items:
     - name: Create R scripts
-      href: quickstart-r-create-script.md
+      href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
     - name: Train and score a model
-      href: quickstart-r-train-score-model.md
+      href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
     - name: Handle data types and objects
       href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
     - name: Use R functions

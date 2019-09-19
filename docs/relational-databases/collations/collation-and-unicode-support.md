@@ -99,7 +99,8 @@ Each collation is combined as a series of suffixes to define case, accent, width
 |\_CS_AS_KS_WS <sup>2</sup>|Case-sensitive, accent-sensitive, kana-sensitive, width-sensitive|
 |\_CS_AS_WS <sup>2</sup>|Case-sensitive, accent-sensitive, kana-insensitive, width-sensitive|
 
-<sup>1</sup> If Binary or Binary-code point is selected, the Case-sensitive (\_CS), Accent-sensitive (\_AS), Kana-sensitive (\_KS), and Width-sensitive (\WS) options are not available.       
+<sup>1</sup> If Binary or Binary-code point is selected, the Case-sensitive (\_CS), Accent-sensitive (\_AS), Kana-sensitive (\_KS), and Width-sensitive (\_WS) options are not available.    
+
 <sup>2</sup> Adding the UTF-8 option (\_UTF8) enables encoding Unicode data using UTF-8. For more information, see the [UTF-8 Support](#utf8) section in this page. 
 
 ### <a name="Collation_sets"></a> Collation sets
@@ -463,9 +464,9 @@ If you store character data that reflects multiple languages in [!INCLUDE[ssNoVe
 
 Alternatively, starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], if a UTF-8 enabled collation (\_UTF8) is used, then previously non-Unicode data types (**char** and **varchar**) become Unicode (UTF-8) data types. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] does not change the behavior of previously existing Unicode (UTF-16) data types (**nchar**, **nvarchar**, and **ntext**). See [Storage differences between UTF-8 and UTF-16](#storage_differences) for further details.
 
+### Unicode considerations
 Significant limitations are associated with non-Unicode data types. This is because a non-Unicode computer is limited to use of a single code page. You might experience performance gain by using Unicode because fewer code-page conversions are required. Unicode collations must be selected individually at the database, column, or expression level because they are not supported at the server level.    
 
-### Unicode considerations
 When you move data from a server to a client, your server collation might not be recognized by older client drivers. This can occur when you move data from a Unicode server to a non-Unicode client. Your best option might be to upgrade the client operating system so that the underlying system collations are updated. If the client has database client software installed, you might consider applying a service update to the database client software.    
     
 > [!TIP]

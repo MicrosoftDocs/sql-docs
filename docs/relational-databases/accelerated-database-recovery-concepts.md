@@ -53,7 +53,7 @@ Without ADR, database recovery in SQL Server follows the [ARIES](https://people.
 
 Based on this design, the time it takes the database engine to recover from an unexpected restart is (roughly) proportional to the size of the longest active transaction in the system at the time of the crash. Recovery requires a rollback of all incomplete transactions. The length of time required is proportional to the work that the transaction has performed and the time it has been active. Therefore, the SQL Server recovery process can take a long time in the presence of long running transactions (such as large bulk insert operations or index build operations against a large table).
 
-Also, cancelling, or rolling back, a large transaction based on this design can also take a long time as it is using the same undo recovery phase as described above.
+Also, canceling, or rolling back, a large transaction based on this design can also take a long time as it is using the same undo recovery phase as described above.
 
 In addition, the database engine cannot truncate the transaction log when there are long running transactions because their corresponding log records are needed for the recovery and rollback processes. As a result, some transaction logs grow very large and consume huge amounts of drive space.
 

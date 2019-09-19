@@ -4993,7 +4993,7 @@ The table contains error message numbers and the description, which is the text 
 |	11297	|	16	|	No	|	A corrupted message has been received. The private variable data segment offset is incorrect.	|
 |	11298	|	16	|	No	|	A corrupted message has been received. The public variable data segment offset is incorrect.	|
 |	11299	|	10	|	No	|	A corrupted message has been received. An unsequenced message had a non-zero sequence number. This occurred in the message with Conversation ID '%.*ls', Initiator: %d, and Message sequence number: %I64d.	|
-|	11300	|	10	|	Yes	|	Error wile committing a readonly or a TEMPDB XDES, Shutting down the server.	|
+|	11300	|	10	|	Yes	|	Error while committing a readonly or a TEMPDB XDES, Shutting down the server.	|
 |	11301	|	10	|	Yes	|	Error while performing transaction notification for object %p event %d.	|
 |	11302	|	10	|	Yes	|	Error during rollback. shutting down database (location: %d).	|
 |	11303	|	10	|	Yes	|	Error releasing reserved log space: %ls space %I64d, code %d, state %d.	|

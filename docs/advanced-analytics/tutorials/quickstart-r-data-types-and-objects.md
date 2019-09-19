@@ -301,7 +301,6 @@ To learn about writing advanced R functions in SQL Server, follow this quickstar
 > [!div class="nextstepaction"]
 > [Write advanced R functions with SQL Server Machine Learning Services](quickstart-r-functions.md)
 
-For more information on SQL Server Machine Learning Services, see the following articles.
+For more information on SQL Server Machine Learning Services, see:
 
-- [Handle data types and objects using R in SQL Server Machine Learning Services](quickstart-r-data-types-and-objects.md)
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

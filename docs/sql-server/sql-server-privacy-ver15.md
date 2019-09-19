@@ -115,7 +115,7 @@ Data received from an organization, or generated from their use of the product.
 -	Does not contain content.
 
 ### Examples of organization identifiable information
--	Organization Account Name
+-	Organization Name (example: Microsoft Corp.)
 
 ### Permitted usage scenarios
 |Scenario  |Access Restrictions  |Retention Requirements|

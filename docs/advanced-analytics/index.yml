@@ -37,7 +37,7 @@ landingContent:
             url: tutorials/quickstart-python-run-using-t-sql.md
           - text: Handle inputs and outputs
             url: tutorials/quickstart-python-inputs-and-outputs.md
-          - text: Python data structures in SQL Server
+          - text: Use Python data structures in SQL Server
             url: tutorials/quickstart-python-data-structures.md
           - text: Train and use your first model
             url: tutorials/quickstart-python-train-score-in-tsql.md
@@ -53,13 +53,13 @@ landingContent:
       - linkListType: quickstart
         links:
           - text: Run a "Hello world" R script on SQL Server
-            url: tutorials/quickstart-r-run-using-tsql.md
+            url: tutorials/quickstart-r-create-script.md
           - text: Handle inputs and outputs
-            url: tutorials/quickstart-r-inputs-and-outputs.md
-          - text: R data structures in SQL Server
+            url: tutorials/quickstart-r-create-script.md#use-inputs-and-outputs
+          - text: Use R data structures in SQL Server
             url: tutorials/quickstart-r-data-types-and-objects.md
-          - text: Create a predictive model
-            url: tutorials/quickstart-r-create-predictive-model.md
+          - text: Train and use your first model
+            url: tutorials/quickstart-r-train-score-model.md
       - linkListType: tutorial
         links:
           - text: Use R in T-SQL

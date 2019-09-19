@@ -4185,8 +4185,12 @@
       href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
     - name: Usage and diagnostic data collection
       items:
-      - name: Privacy supplement
-        href: sql-server/sql-server-privacy.md
+      - name: SQL Server Privacy supplement
+        items:
+        - name: SQL Server 2017 and prior
+          href: sql-server/sql-server-privacy.md
+        - name: SQL Server 2019
+          href: sql-server/sql-server-privacy-ver15.md
       - name: Configure SQL Server usage and diagnostic data
         href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
       - name: Configure tools usage and diagnostic data

@@ -542,11 +542,11 @@ These remarks apply to authenticating as Windows users that have been federated 
 `select * from sys.database_principals`
   - Check the user's indicated type `U` or `X`.
 - When NAME is used to migrate Windows users to Azure AD users, the following restrictions apply:
-          - A valid LOGIN must be specified.
-          - The NAME will be checked in AAD and can only be:
-            - The name of the LOGIN.
-            - An alias (the name can't exist in Azure AD).
-          - In all other cases, the syntax will fail.
+  - A valid LOGIN must be specified.
+  - The NAME will be checked in Azure AD and can only be:
+    - The name of the LOGIN.
+    - An alias - the name can't exist in Azure AD.
+  - In all other cases, the syntax will fail.
   
 ## Security
   
@@ -600,7 +600,7 @@ GO
 
 ### D. Map the user in the database to an Azure AD login after migration
 
-The following example remaps the user, `westus/joe` to an Azure AD login, `joe@westus.com`. This example is for logins that already exist in the managed instance. This needs to be performed after you have completed a database migration to managed instance, and want to use the Azure AD login.
+The following example remaps the user, `westus/joe` to an Azure AD user, `joe@westus.com`. This example is for logins that already exist in the managed instance. This needs to be performed after you have completed a database migration to managed instance, and want to use the Azure AD login to authenticate.
 
 ```sql
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com
@@ -608,7 +608,7 @@ ALTER USER [westus/joe] WITH LOGIN = joe@westus.com
 
 ### E. Map the user in the database to a non-existent Azure AD login in managed instance
 
-The following example remaps the user, `westus/joe` without a login, to an Azure AD login, `joe@westus.com`. The federated user must exist in Azure AD.
+The following example remaps the user, `westus/joe` without a login, to an Azure AD user, `joe@westus.com`. The federated user must exist in Azure AD.
 
 ```sql
 ALTER USER [westus/joe] FROM EXTERNAL PROVIDER

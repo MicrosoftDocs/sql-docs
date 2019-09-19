@@ -115,13 +115,11 @@ Data received from an organization, or generated from their use of the product.
 -	Does not contain content.
 
 ### Examples of organization identifiable information
--	Subscription ID 
 -	Organization Account Name
 
 ### Permitted usage scenarios
 |Scenario  |Access Restrictions  |Retention Requirements|
 |---------|---------|---------|
-| This data does not leave the user machine via Usage and Diagnostic Data. | -|-|
 | Microsoft may collect generic usage data of SQL Server instances running in Azure Virtual Machines for the express purpose of giving customers optional benefits within Azure for using SQL Server within Azure Virtual Machines. | Microsoft can expose data to the customer, such as through the Azure Portal, to help customers running SQL Server in Azure Virtual Machines to access benefits specific to running SQL Server in Azure. | Min 90 days - Max 3 years |
 
 ## System metadata

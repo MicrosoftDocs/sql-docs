@@ -1,5 +1,5 @@
 ---
-title: "SQL Servern 2019 privacy supplement | Microsoft Docs"
+title: "SQL Server 2019 privacy supplement | Microsoft Docs"
 ms.date: 09/20/2019
 ms.prod: sql
 ms.reviewer: "mikeray"
@@ -120,7 +120,7 @@ Data received from an organization, or generated from their use of the product.
 ### Permitted usage scenarios
 |Scenario  |Access Restrictions  |Retention Requirements|
 |---------|---------|---------|
-| Microsoft may collect generic usage data of SQL Server instances running in Azure Virtual Machines for the express purpose of giving customers optional benefits within Azure for using SQL Server within Azure Virtual Machines. | Microsoft can expose data to the customer, such as through the Azure Portal, to help customers running SQL Server in Azure Virtual Machines to access benefits specific to running SQL Server in Azure. | Min 90 days - Max 3 years |
+| Microsoft may collect generic usage data of SQL Server instances running in Azure Virtual Machines for the express purpose of giving customers optional benefits within Azure for using SQL Server within Azure Virtual Machines. | Microsoft can expose data to the customer, such as through the Azure portal, to help customers running SQL Server in Azure Virtual Machines to access benefits specific to running SQL Server in Azure. | Min 90 days - Max 3 years |
 
 ## System metadata
 
@@ -128,7 +128,7 @@ Data generated in the course of running the server.  The data does not contain c
 
 ### Examples of system metadata
 
-The following are considered system metadata when they do not inlcude customer content, object metadata, customer access control data, or EUII:
+The following are considered system metadata when they do not include customer content, object metadata, customer access control data, or EUII:
 
 - Database GUID
 - Hash of machine name
@@ -141,7 +141,7 @@ The following are considered system metadata when they do not inlcude customer c
 - Event names and error codes
 - Hardware settings and identification such as OEM Manufacturer
 
-Microsoft does examine application name values set by other programs that use SQL Server (example: Sharepoint or 3rd party packaged programs and includes this information in System Metadata sent to Microsoft when Usage Data is enabled). Customers should not place personal data, such as end-user identifiable information, in System Metadata fields or create applications designed to store personal data in these fields. 
+Microsoft does examine application name values set by other programs that use SQL Server (example: Sharepoint or third party packaged programs and includes this information in System Metadata sent to Microsoft when Usage Data is enabled). Customers should not place personal data, such as end-user identifiable information, in System Metadata fields or create applications designed to store personal data in these fields. 
 
 ### Permitted usage scenarios
 

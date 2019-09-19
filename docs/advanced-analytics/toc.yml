@@ -67,7 +67,7 @@
       href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
     - name: Handle data types and objects
       href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-    - name: Use R functions
+    - name: Write R functions
       href: ../advanced-analytics/tutorials/quickstart-r-functions.md
 - name: Tutorials
   items:

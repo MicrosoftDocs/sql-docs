@@ -36,7 +36,7 @@ For example, the following R code returns 100 numbers on a mean of 50, given a s
 as.data.frame(rnorm(100, mean = 50, sd = 3));
 ```
 
-To call this line of R from T-SQL, run `sp_execute_external_script` and add the R function in the R script parameter, like this:
+To call this line of R from T-SQL, add the R function in the R script parameter of `sp_execute_external_script`, like this:
 
 ```sql
 EXEC sp_execute_external_script

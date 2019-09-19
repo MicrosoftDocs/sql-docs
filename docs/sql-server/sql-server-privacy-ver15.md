@@ -141,7 +141,7 @@ The following are considered system metadata when they do not include customer c
 - Event names and error codes
 - Hardware settings and identification such as OEM Manufacturer
 
-Microsoft does examine application name values set by other programs that use SQL Server (example: Sharepoint or third party packaged programs and includes this information in System Metadata sent to Microsoft when Usage Data is enabled). Customers should not place personal data, such as end-user identifiable information, in System Metadata fields or create applications designed to store personal data in these fields. 
+Microsoft does examine application name values set by other programs that use SQL Server (example: Sharepoint or third-party packaged programs and includes this information in System Metadata sent to Microsoft when Usage Data is enabled). Customers should not place personal data, such as end-user identifiable information, in System Metadata fields or create applications designed to store personal data in these fields. 
 
 ### Permitted usage scenarios
 

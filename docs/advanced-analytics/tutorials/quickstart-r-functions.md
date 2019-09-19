@@ -1,5 +1,5 @@
 ---
-title: Quickstart: Write advanced R functions
+title: Write advanced R functions
 titleSuffix: SQL Server Machine Learning Services
 description: In this quickstart, learn how to write an R function for advanced statistical computation with SQL Server Machine Learning Services.
 ms.prod: sql

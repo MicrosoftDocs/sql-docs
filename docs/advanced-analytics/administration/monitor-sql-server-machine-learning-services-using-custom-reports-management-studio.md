@@ -37,25 +37,24 @@ To use these reports:
 
 ### Step 1. Download the reports
 
-Download the [SSMS Custom Reports](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) for SQL Server Machine Learning Services from GitHub.
+1. Download the [SSMS Custom Reports](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) for SQL Server Machine Learning Services from GitHub.
 
 ### Step 2. Copy the reports to Management Studio
 
-3. Locate the custom reports folder used by SQL Server Management Studio. By default, custom reports are stored in this folder:
+2. Locate the custom reports folder used by SQL Server Management Studio. By default, custom reports are stored in this folder (where **user_name** is your Windows user name):
     
    `C:\Users\user_name\Documents\SQL Server Management Studio\Custom Reports`
 
    However, you can specify a different folder, or create subfolders.
 
-4. Copy the *.RDL files to the custom reports folder.
-
+3. Copy the *.RDL files you downloaded to the custom reports folder.
 
 ### Step 3. Run the reports
 
-5. In Management Studio, right-click the **Databases** node for the instance where you want to run the reports.
-6. Click **Reports**, and then click **Custom Reports**.
-7. In the **Open File** dialog box, locate the custom reports folder.
-8. Select one of the RDL files you downloaded, and then click **Open**.
+4. In Management Studio, right-click the **Databases** node for the instance where you want to run the reports.
+5. Click **Reports**, and then click **Custom Reports**.
+6. In the **Open File** dialog box, locate the custom reports folder.
+7. Select one of the RDL files you downloaded, and then click **Open**.
 
 > [!IMPORTANT]
 > On some computers, such as those with display devices with high DPI or greater than 1080p resolution, or in some remote desktop sessions, these reports cannot be used. There is a bug in the report viewer control in SSMS that crashes the report.

@@ -65,7 +65,7 @@ Even after the ADR feature is disabled, there will be versions stored in the per
 
 You may need to move the location of the PVS to a different filegroup for a variety of reasons. For example, PVS may require more space, or faster storage.
 
-Changing the location of the PVS is a three step process.
+Changing the location of the PVS is a three-step process.
 
 1. Turn the ADR feature off.
 

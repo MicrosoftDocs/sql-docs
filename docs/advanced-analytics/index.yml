@@ -40,7 +40,7 @@ landingContent:
           - text: Use Python data structures in SQL Server
             url: tutorials/quickstart-python-data-structures.md
           - text: Train and use your first model
-            url: tutorials/quickstart-python-train-score-in-tsql.md
+            url: tutorials/quickstart-python-train-score-model.md
       - linkListType: tutorial
         links:
           - text: Predict ski rental with linear regression

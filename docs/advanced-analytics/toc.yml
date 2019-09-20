@@ -272,7 +272,7 @@
     - name: Monitor
       items:
       - name: Monitor using SSMS reports
-        href: ../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md
+        href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md
       - name: Monitor using DMVs
         href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
       - name: Extended events

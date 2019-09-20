@@ -1,25 +1,29 @@
 ---
-title: Quickstart for working with data structures in Python
-description: In this quickstart for Python script in SQL Server, learn how use data structures with the sp_execute_external_script system stored procedure.
+title: Work with Python and SQL data types and objects
+titleSuffix: SQL Server Machine Learning Services
+description: In this quickstart, learn how to work with data types and data objects in Python and SQL Server with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 01/04/2019  
+ms.date: 09/17/2019  
 ms.topic: quickstart
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
+ms.reviewer: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Quickstart: Python data structures in SQL Server
+# Quickstart: Handle data types and objects using Python in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This quickstart shows how to use data structures when using Python in SQL Server Machine Learning Services.
 
-SQL Server relies on the Python **pandas** package, which is great for working with tabular data. However, you cannot pass a scalar from Python to SQL Server and expect it to "just work". In this quickstart, we'll review some basic data type definitions, to prepare you for additional issues that you might run across when passing tabular data between Python and SQL Server.
+SQL Server relies on the Python **pandas** package, which is great for working with tabular data. However, you cannot pass a scalar from Python to SQL Server and expect it to "just work". In this quickstart, you'll review some basic data type definitions, to prepare you for additional issues that you might run across when passing tabular data between Python and SQL Server.
+
+Concepts to know up front include:
 
 + A data frame is a table with _multiple_ columns.
-+ A single column of a DataFrame, is a list-like object called a Series.
-+ A single value is a cell of a data frame and has to be called by index.
++ A single column of a data frame is a list-like object called a series.
++ A single value of a data frame is called a cell and is accessed by index.
 
 How would you expose the single result of a calculation as a data frame, if a data.frame requires a tabular structure? One answer is to represent the single scalar value as a series, which is easily converted to a data frame. 
 

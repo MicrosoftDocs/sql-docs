@@ -63,33 +63,15 @@ To use these reports:
 
 The [SSMS Custom Reports repository in GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) includes the following reports:
 
-- **ML Services - Active Sessions**
-
-    Use this report to view the users who are currently connected to the SQL Server instance and running a Python or R script. 
-  
-- **ML Services - Configuration**
-
-    This report can be used to view the installation settings of Machine Learning Services and properties of the Python or R runtime. 
-
-- **ML Services - Configure Instance**
-
-    This report can help you configure Machine Learning Services.
-
-- **ML Services - Execution Statistics**
-
-    This report can be used to view the execution statistics of Machine Learning services. For example, you can get the total number of external scripts executions, number of parallel executions and frequently used RevoScaleR functions.
-
-- **ML Services - Extended Events**
-
-    This report can be used to view the extended events that are available to get more insights into external scripts execution.
-
-- **ML Services - Packages**
-
-    This report lists the R or Python packages installed on the SQL Server instance and properties like version, name.
-
-- **ML Services - Resource Usage**
-
-    This report can be used to view the CPU, Memory, IO consumption of SQL Server, and external scripts execution. You can also view the memory setting for external resource pools.
+| Report | Description |
+|-|-|
+| Active Sessions | Users who are currently connected to the SQL Server instance and running a Python or R script. |
+| Configuration | Installation settings of Machine Learning Services and properties of the Python or R runtime. |
+| Configure Instance | Configure Machine Learning Services. |
+| Execution Statistics | Execution statistics of Machine Learning services. For example, you can get the total number of external scripts executions and number of parallel executions. |
+| Extended Events | Extended events that are available to get more insights into external scripts execution. |
+| Packages | List the R or Python packages installed on the SQL Server instance and their properties, such as version and name. |
+| Resource Usage | View the CPU, Memory, IO consumption of SQL Server, and external scripts execution. You can also view the memory setting for external resource pools. |
 
 ## See also
 

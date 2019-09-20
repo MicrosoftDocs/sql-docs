@@ -1,7 +1,7 @@
 ---
 title: "Monitoring Performance By Using the Query Store | Microsoft Docs"
 ms.custom: ""
-ms.date: 04/23/2019
+ms.date: 09/19/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -60,14 +60,22 @@ For more syntax options related to the query store, see [ALTER DATABASE SET Opti
 ## <a name="About"></a> Information in the Query Store  
  Execution plans for any specific query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] typically evolve over time due to a number of different reasons such as statistics changes, schema changes, creation/deletion of indexes, etc. The procedure cache (where cached query plans are stored) only stores the latest execution plan. Plans also get evicted from the plan cache due to memory pressure. As a result, query performance regressions caused by execution plan changes can be non-trivial and time consuming to resolve.  
   
- Since the query store retains multiple execution plans per query, it can enforce policies to direct the query processor to use a specific execution plan for a query. This is referred to as plan forcing. Plan forcing in Query Store is provided by using a mechanism similar to the [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) query hint, but it does not require any change in user applications. Plan forcing can resolve a query performance regression caused by a plan change in a very short period of time.  
+ Since the query store retains multiple execution plans per query, it can enforce policies to direct the Query Processor to use a specific execution plan for a query. This is referred to as plan forcing. Plan forcing in Query Store is provided by using a mechanism similar to the [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) query hint, but it does not require any change in user applications. Plan forcing can resolve a query performance regression caused by a plan change in a very short period of time.  
 
 > [!NOTE]
 > Query Store collects plans for DML Statements such as SELECT, INSERT, UPDATE, DELETE, MERGE, and BULK INSERT.
 
- **Wait stats** are another source of information that helps to troubleshoot performance in SQL Server. For a long time, wait statistics were available only on instance level, which made it hard to backtrack it to the actual query. In SQL Server 2017 and Azure SQL Database we added another dimension in Query Store that tracks wait stats. 
+> [!NOTE]  
+> Query Store does not collect data for natively compiled stored procedures by default. Use [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) to enable data collection for natively compiled stored procedures.
 
- Common scenarios for using the Query Store feature are:  
+**Wait stats** are another source of information that helps to troubleshoot performance in the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] . For a long time, wait statistics were available only on instance level, which made it hard to backtrack it to the actual query. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Query Store includes a dimension that tracks wait stats. The following example enables the Query Store to collect wait stats.
+
+```sql
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE = ON ( WAIT_STATS_CAPTURE_MODE = ON );
+```
+
+Common scenarios for using the Query Store feature are:  
   
 -   Quickly find and fix a plan performance regression by forcing the previous query plan. Fix queries that have recently regressed in performance due to execution plan changes.  
 -   Determine the number of times a query was executed in a given time window, assisting a DBA in troubleshooting performance resource problems.  
@@ -95,7 +103,7 @@ INNER JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
  
-##  <a name="Regressed"></a> Use the Regressed Queries Feature  
+##  <a name="Regressed"></a> Use the Regressed Queries feature  
 After enabling the query store, refresh the database portion of the Object Explorer pane to add the **Query Store** section.  
   
 ![SQL Server 2016 Query Store tree in SSMS Object Explorer](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016 Query Store tree in SSMS Object Explorer")   ![SQL Server 2017 Query Store tree in SSMS Object Explorer](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017 Query Store tree in SSMS Object Explorer") 
@@ -107,9 +115,9 @@ Select a plan to see the graphical query plan. Buttons are available to view the
   
 To force a plan, select a query and plan, and then click **Force Plan**. You can only force plans that were saved by the query plan feature and are still retained in the query plan cache.
 
-##  <a name="Waiting"></a> Finding wait queries
+##  <a name="Waiting"></a> Finding waiting queries
+Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], wait statistics per query over time are available in Query Store. 
 
-Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], wait statistics per query over time are available in Query Store. 
 In Query Store, wait types are combined into **wait categories**. The mapping of wait categories to wait types is available in [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
 
 Select **Query Wait Statistics** to open the **Query Wait Statistics** pane in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 or higher. The Query Wait Statistics pane shows you a bar chart containing the top wait categories in the Query Store. Use the drop down at the top to select an aggregate criteria for the wait time: avg, max, min, std dev, and **total** (default).
@@ -135,7 +143,7 @@ Here are some examples how you can get more insights into your workload before a
 |High SOS_SCHEDULER_YIELD waits per database|High CPU waits in Query Store for specific queries|Find the top CPU consuming queries in Query Store. Among them, identify the queries for which high CPU trend correlates with high CPU waits for the affected queries. Focus on optimizing those queries - there could be a plan regression, or perhaps a missing index.|
 
 ##  <a name="Options"></a> Configuration Options 
-The following options are available to configure query store parameters.
+The following options are available to configure Query Store parameters.
 
 *OPERATION_MODE*  
 Can be **READ_WRITE** (default) or READ_ONLY.  

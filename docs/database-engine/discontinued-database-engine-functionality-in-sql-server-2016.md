@@ -24,6 +24,7 @@ helpviewer_keywords:
   - "user instance timeout"
   - "sp_dropalias"
   - "COMPUTE"
+  - "SSL"
   - "WITH APPEND"
   - "sys.database_principal_aliases"
   - "sp_dboption"
@@ -48,6 +49,8 @@ ms.author: mikeray
 - ActiveX subsystem is discontinued. Use command line or PowerShell scripts instead.
 
 - Startup parameters **-h** and **-g**. For more information, see [Database Engine Service Startup Options](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
+
+- Secure Sockets Layer (SSL) encryption is discontinued. Use Transport Layer Security (TLS) instead. For more information, see [Enable Encrypted Connections to the Database Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
   
 ## Previous Versions  
   

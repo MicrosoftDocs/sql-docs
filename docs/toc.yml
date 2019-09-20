@@ -66,7 +66,11 @@
       - name: Install big data tools
         href: big-data-cluster/deploy-big-data-tools.md
       - name: Install azdata
-        href: big-data-cluster/deploy-install-azdata.md
+        items:
+        - name: With Linux package manager
+          href: big-data-cluster/deploy-install-azdata-linux-package.md
+        - name: With pip
+          href: big-data-cluster/deploy-install-azdata.md
     - name: Deploy
       items:
       - name: Deployment guidance
@@ -79,6 +83,8 @@
         href: big-data-cluster/concept-data-persistence.md
       - name: Offline deployments
         href: big-data-cluster/deploy-offline.md
+      - name: Deploy with high availability
+        href: big-data-cluster/deployment-high-availability.md
       - name: Kubernetes clusters
         items:
         - name: Azure Kubernetes Service
@@ -171,6 +177,8 @@
         href: big-data-cluster/cluster-troubleshooting-commands.md
       - name: Manage with notebook
         href: big-data-cluster/manage-notebooks.md
+      - name: Manage with controller dashboard
+        href: big-data-cluster/manage-with-controller-dashboard.md
     - name: Notebooks
       items:
       - name: Notebooks overview
@@ -198,7 +206,15 @@
     - name: azdata reference
       items:
       - name: azdata
-        href: big-data-cluster/reference-azdata.md
+        items:
+        - name: azdata
+          href: big-data-cluster/reference-azdata.md
+        - name: control
+          href: big-data-cluster/reference-azdata-control.md
+        - name: notebook
+          href: big-data-cluster/reference-azdata-notebook.md
+        - name: sql
+          href: big-data-cluster/reference-azdata-sql.md
       - name: App Deploy
         items:
         - name: app
@@ -209,6 +225,10 @@
         items:
         - name: bdc
           href: big-data-cluster/reference-azdata-bdc.md
+        - name: bdc app
+          href: big-data-cluster/reference-azdata-bdc-app.md
+        - name: bdc app status
+          href: big-data-cluster/reference-azdata-bdc-app-status.md
         - name: bdc config
           href: big-data-cluster/reference-azdata-bdc-config.md
         - name: bdc control
@@ -219,10 +239,16 @@
           href: big-data-cluster/reference-azdata-bdc-debug.md
         - name: bdc endpoint
           href: big-data-cluster/reference-azdata-bdc-endpoint.md
+        - name: bdc gateway
+          href: big-data-cluster/reference-azdata-bdc-gateway.md
+        - name: bdc gateway status
+          href: big-data-cluster/reference-azdata-bdc-gateway-status.md
         - name: bdc hdfs
           href: big-data-cluster/reference-azdata-bdc-hdfs.md
         - name: bdc hdfs mount
           href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
+        - name: bdc hdfs status
+          href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
         - name: bdc pool
           href: big-data-cluster/reference-azdata-bdc-pool.md
         - name: bdc pool status
@@ -235,6 +261,10 @@
           href: big-data-cluster/reference-azdata-bdc-spark-session.md        
         - name: bdc spark statement
           href: big-data-cluster/reference-azdata-bdc-spark-statement.md        
+        - name: bdc spark status
+          href: big-data-cluster/reference-azdata-bdc-spark-status.md        
+        - name: bdc sql
+          href: big-data-cluster/reference-azdata-bdc-sql.md
         - name: bdc status
           href: big-data-cluster/reference-azdata-bdc-status.md
 - name: Business continuity
@@ -261,9 +291,9 @@
         items:
         - name: Backup To URL
           href: relational-databases/backup-restore/sql-server-backup-to-url.md
-        - name: Backup To Azure Blob Storage (PowerShell)
+        - name: Backup To Azure blob storage
           href: relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
-        - name: Delete backup blog files
+        - name: Delete backup log files
           href: relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
         - name: Restore
           href: relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md
@@ -497,6 +527,66 @@
             href: relational-databases/backup-restore/select-backup-device.md
           - name: Connect to Azure Storage
             href: relational-databases/backup-restore/connect-to-microsoft-azure-storage-restore.md
+      - name: VDI reference
+        items:
+          - name: VDI Overview
+            href: relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface.md
+          - name: IClientVirtualDevice
+            items:
+            - name: CompleteCommand
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-completecommand.md
+            - name: GetCommand
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-getcommand.md
+          - name: IClientVirtualDeviceSet2
+            items:  
+            - name: Close
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-close.md
+            - name: CreateEx
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-createex.md
+            - name: GetBufferHandle
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getbufferhandle.md
+            - name: GetConfiguration
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getconfiguration.md
+            - name: MapBufferHandle
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-mapbufferhandle.md
+            - name: OpenDevice
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-opendevice.md
+            - name: OpenInSecondaryEx
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-openinsecondaryex.md
+            - name: SignalAbort
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-signalabort.md
+          - name: IServerVirtualDevice
+            items:
+            - name: CloseDevice
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-closedevice.md
+            - name: SendCommand
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-sendcommand.md
+          - name: IServerVirtualDeviceSet2
+            items:
+            - name: AllocateBuffer
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-allocatebuffer.md
+            - name: BeginConfiguration
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-beginconfiguration.md
+            - name: Close
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-close.md
+            - name: EndConfiguration
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-endconfiguration.md
+            - name: ExecuteCompletionAgent
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-executecompletionagent.md
+            - name: FreeBuffer
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-freebuffer.md
+            - name: GetConfiguration
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-getconfiguration.md
+            - name: IsSharedBuffer
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-issharedbuffer.md
+            - name: Open
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-open.md
+            - name: OpenDevice
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-opendevice.md
+            - name: RequestBuffers
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-requestbuffers.md
+            - name: SignalAbort
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-signalabort.md
   - name: Always On availability groups
     href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
     items:
@@ -2512,7 +2602,7 @@
       items:
       - name: Components
         href: relational-databases/native-client/applications/components-of-sql-server-native-client.md
-      - name: Connecting to a Windows Azure
+      - name: Connecting to Azure SQL using native client
         href: relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
       - name: ConnectionValidSharedMemory function in dbmslpcn.dll Shared Memory
         href: relational-databases/native-client/applications/connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md
@@ -4095,8 +4185,12 @@
       href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
     - name: Usage and diagnostic data collection
       items:
-      - name: Privacy supplement
-        href: sql-server/sql-server-privacy.md
+      - name: SQL Server Privacy supplement
+        items:
+        - name: SQL Server 2017 and prior
+          href: sql-server/sql-server-privacy.md
+        - name: SQL Server 2019
+          href: sql-server/sql-server-privacy-ver15.md
       - name: Configure SQL Server usage and diagnostic data
         href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
       - name: Configure tools usage and diagnostic data
@@ -6407,6 +6501,12 @@
   items:
   - name: Manage
     items:
+    - name: Accelerated Database Recovery
+      items:
+      - name: Overview
+        href: relational-databases/accelerated-database-recovery-concepts.md
+      - name: Management
+        href: relational-databases/accelerated-database-recovery-management.md
     - name: Central Management Servers
       href: relational-databases/administer-multiple-servers-using-central-management-servers.md
     - name: Configuration Manager
@@ -8105,8 +8205,6 @@
       items:
       - name: SQL injection
         href: relational-databases/security/sql-injection.md
-      - name: Feature restrictions
-        href: relational-databases/security/feature-restrictions.md
       - name: TRUSTWORTHY database property
         href: relational-databases/security/trustworthy-database-property.md
       - name: Password policy
@@ -8117,8 +8215,6 @@
         href: relational-databases/security/row-level-security.md
       - name: Dynamic Data Masking
         href: relational-databases/security/dynamic-data-masking.md
-      - name: Static Data Masking
-        href: relational-databases/security/static-data-masking.md
       - name: Certificates & asymmetric keys
         href: relational-databases/security/sql-server-certificates-and-asymmetric-keys.md
     - name: Authentication Access
@@ -12107,8 +12203,6 @@
         href: relational-databases/system-catalog-views/sys-server-principals-transact-sql.md
       - name: sys.server_role_members
         href: relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md
-      - name: sys.sql_feature_restrictions
-        href: relational-databases/system-catalog-views/sys-sql-feature-restrictions.md
       - name: sys.sql_logins
         href: relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md
       - name: sys.symmetric_keys

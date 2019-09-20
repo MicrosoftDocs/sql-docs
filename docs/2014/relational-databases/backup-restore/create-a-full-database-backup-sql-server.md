@@ -20,7 +20,7 @@ manager: craigg
   This topic describes how to create a full database backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.  
   
 > [!NOTE]  
->  For information on SQL Server backup to the Windows Azure Blob storage service, see, [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  For information on SQL Server backup to the Azure Blob storage service, see, [SQL Server Backup and Restore with Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **In This Topic**  
   
@@ -128,7 +128,7 @@ manager: craigg
          For this option, enter a name in the **New media set name** text box, and, optionally, describe the media set in the **New media set description** text box.  
   
         > [!IMPORTANT]  
-        >  This option is disabled if you selected **URL** in the **General** page. These actions are not supported when backing up to Windows Azure storage.  
+        >  This option is disabled if you selected **URL** in the **General** page. These actions are not supported when backing up to Azure storage.  
   
 14. In the **Reliability** section, optionally check:  
   

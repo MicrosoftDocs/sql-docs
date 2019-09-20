@@ -1,7 +1,7 @@
 ---
 title: "SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/24/2018"
+ms.date: "09/12/2019"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -336,7 +336,7 @@ SQL Server Version  |Redistributable Install Link
   
 5.  **Open your Azure Key Vault key in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
-     If you imported an asymmetric key as described in Part II, open the key by providing your key name in the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] script.  
+     Whether you created a new key, or imported an asymmetric key as described in Part II, you will need to open the key. Open the key by providing your key name in the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] script.  
   
     -   Replace `CONTOSO_KEY` with the name you'd like the key to have in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

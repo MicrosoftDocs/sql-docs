@@ -1,6 +1,6 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -34,15 +34,12 @@ The following sections provide an overview of these features.
 
 | New feature or update | Details |
 |:---|:---|
-| Scalable big data solution | [Deploy scalable clusters](../big-data-cluster/deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes <br/><br/> Read, write, and process big data from Transact-SQL or Spark<br/><br/> Easily combine and analyze high-value relational data with high-volume big data<br/><br/>Query external data sources<br/><br/>Store big data in HDFS managed by SQL Server<br/><br/>Query data from multiple external data sources through the cluster<br/><br/> Use the data for AI, machine learning, and other analysis tasks<br/><br/> Deploy and run applications in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/>|
+| Scalable big data solution | [Deploy scalable clusters](../big-data-cluster/deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes <br/><br/> Read, write, and process big data from Transact-SQL or Spark<br/><br/> Easily combine and analyze high-value relational data with high-volume big data<br/><br/>Query external data sources<br/><br/>Store big data in HDFS managed by SQL Server<br/><br/>Query data from multiple external data sources through the cluster<br/><br/> Use the data for AI, machine learning, and other analysis tasks<br/><br/> Deploy and run applications in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/><br/> SQL Server master instance databases use Always On Availability Group<br/>|
 | &nbsp; | &nbsp; |
 
 For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]](../big-data-cluster/big-data-cluster-overview.md).
 
 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) announcement archive](what-s-new-in-sql-server-ver15-prerelease.md) contains a list of features announced and changed for all previous CTP releases of this feature.
-
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## Database engine
 
@@ -50,7 +47,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 
 |New feature or update | Details |
 |:---|:---|
-|Index encrypted columns|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+|Always Encrypted with secure enclaves|Expands upon Always Encrypted with in-place encryption and rich computations by enabling computations on plaintext data inside a server-side secure enclave. In-place encryption improves the performance and the reliability of cryptographic operations (encrypting columns, rotating columns encryption keys, etc.) as it avoids moving data out of the database. Support for rich computations (pattern matching and comparison operations) unlocks Always Encrypted to a much broader set of scenarios and applications that demand sensitive data protection, while also requiring richer functionality in Transact-SQL queries. See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Suspend and resume initial scan for Transparent Data Encryption (TDE)|See [Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume).|
 |Certificate management in SQL Server Configuration Manager|See [Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md).|
 | &nbsp; | &nbsp; |
@@ -85,7 +82,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 
 |New feature or update | Details |
 |:---|:---|
-|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. This supports applications extending to a global scale, where the requirement of providing global multilingual database applications and services is critical to meet customer demands, and specific market regulations. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate enables UTF-8 support for Polybase external tables, and for Always Encrypted.|
+|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. This supports applications extending to a global scale, where the requirement of providing global multilingual database applications and services is critical to meet customer demands, and specific market regulations. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate enables UTF-8 support for Polybase external tables, and for Always Encrypted.|
 | &nbsp; | &nbsp; |
 
 ### PolyBase

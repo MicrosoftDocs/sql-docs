@@ -5,7 +5,7 @@ description: Learn how to deploy [!INCLUDE[big-data-clusters-2019](../includes/s
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -34,7 +34,7 @@ Before deploying a SQL Server 2019 big data cluster, first [install the big data
 
 ## <a id="prereqs"></a> Kubernetes prerequisites
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] require a minimum Kubernetes version of at least v1.10 for both server and client (kubectl).
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] require a minimum Kubernetes version of at least v1.13 for both server and client (kubectl).
 
 > [!NOTE]
 > Note that the client and server Kubernetes versions should be within +1 or -1 minor version. For more information, see [Kubernetes release notes and version skew SKU policy)](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -72,7 +72,7 @@ The following sections provide more details on how to configure your big data cl
 
 ## <a id="configfile"></a> Default configurations
 
-Big data cluster deployment options are defined in JSON configuration files. There are three standard deployment profiles with default settings for dev/test environments:
+Big data cluster deployment options are defined in JSON configuration files. You can start your customization of the cluster deployment from the built-in deployment profiles with default settings for dev/test environments:
 
 | Deployment profile | Kubernetes environment |
 |---|---|
@@ -110,16 +110,16 @@ It is also possible to customize your own deployment configuration profile. You 
    ```
 
    azdata
-   > The `--target` specifies a directory that contains the configuration files, **cluster.json** and **control.json**, based on the `--source` parameter.
+   > The `--target` specifies a directory that contains the configuration files, **bdc.json** and **control.json**, based on the `--source` parameter.
 
 1. To customize settings in your deployment configuration profile, you can edit the deployment configuration file in a tool that is good for editing JSON files, such as VS Code. For scripted automation, you can also edit the custom deployment profile using **azdata bdc config** command. For example, the following command alters a custom deployment profile to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
 
    ```bash
-   azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
+   azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.name=test-cluster"
    ```
    
-> [!TIP]
-> You can also pass in the cluster name at deployment time using the *--name* parameter for *azdata create bdc* command. The parameters in the command have precedence over the values in the configuration files.
+   > [!TIP]
+   > You can also pass in the cluster name at deployment time using the *--name* parameter for *azdata create bdc* command. The parameters in the command have precedence over the values in the configuration files.
 
    > A useful tool for finding JSON paths is the [JSONPath Online Evaluator](https://jsonpath.com/).
 
@@ -142,7 +142,7 @@ The following environment variables are used for security settings that are not 
 | **CONTROLLER_USERNAME** | Required |The username for the cluster administrator. |
 | **CONTROLLER_PASSWORD** | Required |The password for the cluster administrator. |
 | **MSSQL_SA_PASSWORD** | Required |The password of SA user for SQL master instance. |
-| **KNOX_PASSWORD** | Required |The password for Knox user. |
+| **KNOX_PASSWORD** | Required |The password for Knox **root** user. Note than in a basic authentication setup only user supported for Knox is **root**.|
 | **ACCEPT_EULA**| Required for first use of `azdata`| Requires no value. When set as an environment variable, it applies EULA to both SQL Server and `azdata`. If not set as environment variable, you can include `--accept-eula` in the first use of `azdata` command.|
 | **DOCKER_USERNAME** | Optional | The username to access the container images in case they are stored in a private repository. See the [Offline deployments](deploy-offline.md) topic for more details on how to use a private Docker repository for big data cluster deployment.|
 | **DOCKER_PASSWORD** | Optional |The password to access the above private repository. |
@@ -164,6 +164,10 @@ SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
 ```
+
+> [!NOTE]
+> You must use **root** user for Knox gateway with the above password. **root** is the only user supported for in this basic authentication (username/password) setup. For SQL Server master, username provisioned to be used with the above password is **sa**.
+
 
 After setting the environment variables, you must run `azdata bdc create` to trigger the deployment. This example uses the cluster configuration profile created above:
 
@@ -271,7 +275,7 @@ minikube ip
 After deployment, you can check the status of the cluster with the [azdata bdc status show](reference-azdata-bdc-status.md) command.
 
 ```bash
-azdata bdc status show -o table
+azdata bdc status show
 ```
 
 > [!TIP]
@@ -280,22 +284,119 @@ azdata bdc status show -o table
 The following shows sample output from this command:
 
 ```output
-Kind     Name           State
--------  -------------  -------
-BDC      mssql-cluster  Ready
-Control  default        Ready
-Master   default        Ready
-Compute  default        Ready
-Data     default        Ready
-Storage  default        Ready
+Bdc: ready                                                                                                                                                                                                          Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Services: ready                                                                                                                                                                                                     Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Servicename    State    Healthstatus    Details
+
+ sql            ready    healthy         -
+ hdfs           ready    healthy         -
+ spark          ready    healthy         -
+ control        ready    healthy         -
+ gateway        ready    healthy         -
+ app            ready    healthy         -
+
+
+ Sql Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ master          ready    healthy         StatefulSet master is healthy
+ compute-0       ready    healthy         StatefulSet compute-0 is healthy
+ data-0          ready    healthy         StatefulSet data-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Hdfs Services: ready                                                                                                                                                                                                Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ nmnode-0        ready    healthy         StatefulSet nmnode-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+
+
+ Spark Services: ready                                                                                                                                                                                               Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Control Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ controldb       ready    healthy         -
+ control         ready    healthy         -
+ metricsdc       ready    healthy         DaemonSet metricsdc is healthy
+ metricsui       ready    healthy         ReplicaSet metricsui is healthy
+ metricsdb       ready    healthy         StatefulSet metricsdb is healthy
+ logsui          ready    healthy         ReplicaSet logsui is healthy
+ logsdb          ready    healthy         StatefulSet logsdb is healthy
+ mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
+
+
+ Gateway Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ gateway         ready    healthy         StatefulSet gateway is healthy
+
+
+ App Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ appproxy        ready    healthy         ReplicaSet appproxy is healthy
 ```
 
-In to this summary status, you can also get more detailed status with the following commands:
+You can also get more detailed status with the following commands:
 
-- [azdata bdc control status](reference-azdata-bdc-control-status.md)
-- [azdata bdc pool status](reference-azdata-bdc-pool-status.md)
+- [azdata bdc control status show](reference-azdata-bdc-control-status.md) will return health status for all components associated with the control management service
+```
+azdata bdc control status show
+```
+Sample output:
+```output
+Control: ready                                                                                                                                                                                                      Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Resources: ready                                                                                                                                                                                                    Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
 
-The output from these commands contain URLs to Kibana and Grafana dashboards for more detailed analysis.
+ controldb       ready    healthy         -
+ control         ready    healthy         -
+ metricsdc       ready    healthy         DaemonSet metricsdc is healthy
+ metricsui       ready    healthy         ReplicaSet metricsui is healthy
+ metricsdb       ready    healthy         StatefulSet metricsdb is healthy
+ logsui          ready    healthy         ReplicaSet logsui is healthy
+ logsdb          ready    healthy         StatefulSet logsdb is healthy
+ mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
+```
+
+- **azdata bdc sql status show** will return health status for all resources that have a SQL Server service
+```
+azdata bdc sql status show
+```
+Sample output:
+```output
+Sql: ready                                                                                                                                                                                                          Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Resources: ready                                                                                                                                                                                                    Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ master          ready    healthy         StatefulSet master is healthy
+ compute-0       ready    healthy         StatefulSet compute-0 is healthy
+ data-0          ready    healthy         StatefulSet data-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+```
+
+> [!IMPORTANT]
+> When using **--all** parameter the output from these commands contain URLs to Kibana and Grafana dashboards for more detailed analysis.
 
 In addition to using **azdata**, you can also use Azure Data Studio to find both endpoints and status information. For more information about viewing cluster status with **azdata** and Azure Data Studio, see [How to view the status of a big data cluster](view-cluster-status.md).
 

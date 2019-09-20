@@ -13,7 +13,7 @@ ms.author: "jroth"
 ---
 # Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
-This tutorial helps you understand how to write backups to and restore from the Azure Blob Storage Service.  The article explains how to create an Azure Blob Container, writing a backup to the blob service, and then performing a simple restore.
+This tutorial helps you understand how to write backups to and restore from the Azure Blob Storage Service.  The article explains how to create an Azure Blob Container, write a backup to the blob service, and then performing a simple restore.
   
 ## Prerequisites  
 To complete this tutorial, you must be familiar with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup and restore concepts and T-SQL syntax.  The prerequisites for this tutorial vary if you're running your workload on-premises, or within an Azure SQL Database managed instance. 
@@ -34,7 +34,6 @@ To use this tutorial, you need an Azure storage account, an Azure SQL Database m
 - Create an [Azure storage account](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Create a [managed instance](/azure/sql-database/sql-database-managed-instance-get-started). 
 - Configure connectivity to your managed instance by either [creating an Azure SQL virtual machine](/azure/sql-database/sql-database-managed-instance-configure-vm) or establishing a [point-to-site connection](/azure/sql-database/sql-database-managed-instance-configure-p2s). 
-
 
 
 ## Create Azure Blob Container
@@ -94,7 +93,17 @@ SELECT * FROM SQLTest
 GO
 ```
 
+### Managed instance
+All new databases created on a managed instance have TDE automatically enabled. Creating a copy-only backup of an encrypted database is not currently supported. As such, for the purpose of this tutorial, disable TDE encryption for the newly created database. This is not recommended against a production database where TDE encryption is a requirement.
 
+To disable TDE, run the following Transact-SQL command: 
+
+```sql
+USE master;
+GO
+ALTER DATABASE SQLTestDB SET ENCRYPTION OFF;
+GO
+```
 
 ## Back up database
 In this step, you will backup the database `SQLTest` to your Azure Blob storage account using either the GUI within SQL Server Management Studio, or Transact-SQL (T-SQL). 
@@ -161,7 +170,6 @@ NAME = N'SQLTestDB-Full Database Backup',
 NOSKIP, NOREWIND, NOUNLOAD,  STATS = 10
 GO
 ```
-
 ---
 
 ## Restore database 
@@ -212,8 +220,6 @@ GO
 ```
 
 
-
-
 ### Managed instance
 To restore your managed instance database from Azure blob storage, modify the following Transact-SQL command to use your own storage account and then run it within a new query window: 
 
@@ -224,6 +230,18 @@ URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_ba
 
 GO
 ```
+
+Once your database has been restored, you can reenable TDE encryption by running the following Transact-SQL command:
+
+```sql
+USE master;
+GO
+ALTER DATABASE SQLTestDB SET ENCRYPTION ON;
+GO
+```
+
+
+
 ---
 
 ## See also 

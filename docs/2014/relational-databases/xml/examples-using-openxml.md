@@ -685,7 +685,7 @@ AS
 DECLARE @t varchar(500)  
 DECLARE @id varchar(5)  
   
-/* Temporary Edge table */  
+/* Temporary edge table */  
 SELECT *   
 INTO #TempEdge   
 FROM OPENXML(@xmldoc, @xpath)  

@@ -36,7 +36,7 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## SSMS 18.3 
+## SSMS 18.3
 
 Download: [Download SSMS 18.3](download-sql-server-management-studio-ssms.md)  
 Build number: 15.0.18178.0  

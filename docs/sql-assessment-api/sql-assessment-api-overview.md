@@ -53,21 +53,37 @@ An assessment is performed against a chosen SQL Server object. In the default ru
 
 Go through the examples below to get started.
 
-1. Get a list of available checks for the local instance to familiarize yourself with the checks. In this example, we're using a path implemented with the [Windows PowerShell SQL Server provider](../powershell/sql-server-powershell-provider.md) to pass the instance object to the Get-SqlAssessmentItem cmdlet.
+1. Get a list of available checks for the local default instance to familiarize yourself with the checks. In this example, we're piping the output of the Get-SqlInstance cmdlet to the Get-SqlAssessmentItem cmdlet to pass the instance object to it.
 
     ```powershell
-    CD SQLSERVER:\SQL\localhost\default
-    Get-SqlAssessmentItem
+    Get-SqlInstance -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-2. Get a list of available checks for all databases of the instance. Here, we're putting the output of the Get-SqlDatabase cmdlet into a variable so further get Get-SqlAssessmentItem results for each database.
+2. Get a list of available checks for all databases of the instance. Here, we're using the Get-Item cmdlet and a path implemented with the Windows Powershel SQL Server provider to get a list of the databases, and then piping it to the Get-SqlDatabase cmdlet.
 
     ```powershell
-    $databases = Get-SqlDatabase -ServerInstance 'localhost'
-    Get-SqlAssessmentItem $databases
+    Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
+    ```
+    
+    Also, you can use the Get-SqlDatabase cmdlet to do the same.
+
+    ```powershell
+    Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-3. Invoke assessment for the instance and save the results to a SQL table. In this example, we're piping the output of the Get-SqlInstance cmdlet to the Invoke-SqlAssessment cmdlet, which results are piped to the Write-SqlTableData cmdlet.
+3. Get a list of available checks for all databases of the instance. Here, we're using the Get-Item cmdlet and a path implemented with the Windows Powershel SQL Server provider to get a list of the databases, and then piping it to the Get-SqlDatabase cmdlet.
+
+    ```powershell
+    Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
+    ```
+    
+    Also, you can use the Get-SqlDatabase cmdlet to do the same.
+
+    ```powershell
+    Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
+    ```
+
+4. Invoke assessment for an instance and save the results to a SQL table. In this example, we're piping the output of the Get-SqlInstance cmdlet to the Invoke-SqlAssessment cmdlet, which results are piped to the Write-SqlTableData cmdlet. Note that the Invoke-Assessment cmdlet is run with the `-FlattenOutput` parameter this example. This parameter makes the output suitable for the Write-SqlTableData cmdlet. The latter will raise an error if you omit the parameter.
 
     ```powershell
     Get-SqlInstance -ServerInstance 'localhost' |
@@ -75,7 +91,7 @@ Go through the examples below to get started.
     Write-SqlTableData -ServerInstance 'localhost' -DatabaseName SQLAssessmentDemo -SchemaName Assessment -TableName Results -Force
     ```
 
-4. Invoke assessment for the databases and save the results to the same table. In this example, we're using the Get-SqlDatabase cmdlet to pass all databases to the Invoke-SqlAssessment cmdlet.
+    Now let's invoke an assessment for all databases of the instance and add the results to the same table.
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' |

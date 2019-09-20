@@ -59,7 +59,7 @@ To use these reports:
 
 7. Select one of the RDL files you downloaded, and then click **Open**.
 
-## Report list
+## Reports
 
 The [SSMS Custom Reports repository in GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) includes the following reports:
 
@@ -73,8 +73,7 @@ The [SSMS Custom Reports repository in GitHub](https://github.com/Microsoft/sql-
 | Packages | List the R or Python packages installed on the SQL Server instance and their properties, such as version and name. |
 | Resource Usage | View the CPU, Memory, IO consumption of SQL Server, and external scripts execution. You can also view the memory setting for external resource pools. |
 
-## See also
+## Next steps
 
-[Monitoring services](managing-and-monitoring-r-solutions.md)
-
-[Extended events for R Services](extended-events-for-sql-server-r-services.md)
+- [Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)](monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)
+- [Extended events for R Services](../r/extended-events-for-sql-server-r-services.md)

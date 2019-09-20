@@ -19,7 +19,7 @@ When using the R and Python features in SQL Server Machine Learning Services, th
 
 Traditionally, integration of data science solutions has meant extensive recoding to support performance and integration. SQL Server Machine Learning Services simplifies this task because R and Python code can be run in SQL Server and called using stored procedures. For more information about the mechanics of embedding code in stored procedures, see:
 
-+ [Quickstart: "Hello world" R script in SQL Server](../../advanced-analytics/tutorials//quickstart-r-run-using-tsql.md)
++ [Create and run simple R scripts in SQL Server](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
 A more comprehensive example of deploying R code into production by using stored procedures can be found at [Tutorial: R data analytics for SQL developers](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)

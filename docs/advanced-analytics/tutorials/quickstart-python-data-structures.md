@@ -37,166 +37,170 @@ This example does some simple math and converts a scalar into a series.
 
 1. A series requires an index, which you can assign manually, as shown here, or programmatically.
 
-    ```sql
-    execute sp_execute_external_script 
-    @language = N'Python', 
-    @script = N'
-    a = 1
-    b = 2
-    c = a/b
-    print(c)
-    s = pandas.Series(c, index =["simple math example 1"])
-    print(s)
-    '
-    ```
+   ```sql
+   EXECUTE sp_execute_external_script @language = N'Python'
+       , @script = N'
+   a = 1
+   b = 2
+   c = a/b
+   print(c)
+   s = pandas.Series(c, index =["simple math example 1"])
+   print(s)
+   '
+   ```
 
-2. Because the series hasn't been converted to a data.frame, the values are returned in the Messages window, but you can see that the results are in a more tabular format.
+   Because the series hasn't been converted to a data.frame, the values are returned in the Messages window, but you can see that the results are in a more tabular format.
 
-    **Results**
+   **Results**
 
-    ```text
-    STDOUT message(s) from external script: 
-    0.5
-    simple math example 1    0.5
-    dtype: float64
-    ```
+   ```text
+   STDOUT message(s) from external script: 
+   0.5
+   simple math example 1    0.5
+   dtype: float64
+   ```
 
-3. To increase the length of the series, you can add new values, using an array. 
+1. To increase the length of the series, you can add new values, using an array. 
 
-    ```sql
-    execute sp_execute_external_script 
-    @language = N'Python', 
-    @script = N'
-    a = 1
-    b = 2
-    c = a/b
-    d = a*b
-    s = pandas.Series([c,d])
-    print(s)
-    '
-    ```
+   ```sql
+   EXECUTE sp_execute_external_script @language = N'Python'
+       , @script = N'
+   a = 1
+   b = 2
+   c = a/b
+   d = a*b
+   s = pandas.Series([c,d])
+   print(s)
+   '
+   ```
 
-    If you do not specify an index, an index is generated that has values starting with 0 and ending with the length of the array.
+   If you do not specify an index, an index is generated that has values starting with 0 and ending with the length of the array.
 
-    **Results**
+   **Results**
 
-    ```text
-    STDOUT message(s) from external script: 
-    0    0.5
-    1    2.0
-    dtype: float64
-    ```
+   ```text
+   STDOUT message(s) from external script: 
+   0    0.5
+   1    2.0
+   dtype: float64
+   ```
 
-4. If you increase the number of **index** values, but don't add new **data** values, the data values are repeated to fill the series.
+1. If you increase the number of **index** values, but don't add new **data** values, the data values are repeated to fill the series.
 
-    ```sql
-    execute sp_execute_external_script 
-    @language = N'Python', 
-    @script = N'
-    a = 1
-    b = 2
-    c = a/b
-    s = pandas.Series(c, index =["simple math example 1", "simple math example 2"])
-    print(s)
-    '
-    ```
+   ```sql
+   EXECUTE sp_execute_external_script @language = N'Python'
+       , @script = N'
+   a = 1
+   b = 2
+   c = a/b
+   s = pandas.Series(c, index =["simple math example 1", "simple math example 2"])
+   print(s)
+   '
+   ```
 
-    **Results**
+   **Results**
 
-    ```text
-    STDOUT message(s) from external script: 
-    0.5
-    simple math example 1    0.5
-    simple math example 2    0.5
-    dtype: float64
-    ```
+   ```text
+   STDOUT message(s) from external script: 
+   0.5
+   simple math example 1    0.5
+   simple math example 2    0.5
+   dtype: float64
+   ```
 
 ## Convert series to data frame
 
-Having converted our scalar math results to a tabular structure, we still need to convert them to a format that SQL Server can handle. 
+Having converted the scalar math results to a tabular structure, you still need to convert them to a format that SQL Server can handle.
 
 1. To convert a series to a data.frame, call the pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) method.
 
-    ```sql
-    execute sp_execute_external_script 
-    @language = N'Python', 
-    @script = N'
-    import pandas as pd
-    a = 1
-    b = 2
-    c = a/b
-    d = a*b
-    s = pandas.Series([c,d])
-    print(s)
-    df = pd.DataFrame(s)
-    OutputDataSet = df
-    '
-    WITH RESULT SETS (( ResultValue float ))
-    ```
+   ```sql
+   EXECUTE sp_execute_external_script @language = N'Python'
+       , @script = N'
+   import pandas as pd
+   a = 1
+   b = 2
+   c = a/b
+   d = a*b
+   s = pandas.Series([c,d])
+   print(s)
+   df = pd.DataFrame(s)
+   OutputDataSet = df
+   '
+   WITH RESULT SETS((ResultValue FLOAT))
+   ```
 
-2. The result is shown below. Even if you use the index to get specific values from the data.frame, the index values aren't part of the output.
+   The result is shown below. Even if you use the index to get specific values from the data.frame, the index values aren't part of the output.
 
-    **Results**
+   **Results**
 
-    |ResultValue|
-    |------|
-    |0.5|
-    |2|
+   |ResultValue|
+   |------|
+   |0.5|
+   |2|
 
 ## Output values into data.frame
 
-Let's see how conversion to a data.frame works with our two series containing the results of simple math operations. The first has an index of sequential values generated by Python. The second uses an arbitrary index of string values.
+Now you'll output specific values from two series of math results in a data.frame. The first has an index of sequential values generated by Python. The second uses an arbitrary index of string values.
 
-1. This example gets a value from the series that uses an integer index.
+1. The following example gets a value from the series using an integer index.
 
-    ```sql
-    EXECUTE sp_execute_external_script 
-    @language = N'Python', 
-    @script = N'
-    import pandas as pd
-    a = 1
-    b = 2
-    c = a/b
-    d = a*b
-    s = pandas.Series([c,d])
-    print(s)
-    df = pd.DataFrame(s, index=[1])
-    OutputDataSet = df
-    '
-    WITH RESULT SETS (( ResultValue float ))
-    ```
+   ```sql
+   EXECUTE sp_execute_external_script @language = N'Python'
+       , @script = N'
+   import pandas as pd
+   a = 1
+   b = 2
+   c = a/b
+   d = a*b
+   s = pandas.Series([c,d])
+   print(s)
+   df = pd.DataFrame(s, index=[1])
+   OutputDataSet = df
+   '
+   WITH RESULT SETS((ResultValue FLOAT))
+   ```
 
-    Remember that the auto-generated index starts at 0. Try using an out of range index value and see what happens.
+   **Results**
 
-2. Now let's get a single value from the other data frame that has a string index. 
+   |ResultValue|
+   |------|
+   |2.0|
 
-    ```sql
-    EXECUTE sp_execute_external_script 
-    @language = N'Python', 
-    @script = N'
-    import pandas as pd
-    a = 1
-    b = 2
-    c = a/b
-    s = pandas.Series(c, index =["simple math example 1", "simple math example 2"])
-    print(s)
-    df = pd.DataFrame(s, index=["simple math example 1"])
-    OutputDataSet = df
-    '
-    WITH RESULT SETS (( ResultValue float ))
-    ```
+   Remember that the auto-generated index starts at 0. Try using an out of range index value and see what happens.
 
-    **Results**
+1. Now get a single value from the other data frame using a string index.
 
-    |ResultValue|
-    |------|
-    |0.5|
+   ```sql
+   EXECUTE sp_execute_external_script @language = N'Python'
+       , @script = N'
+   import pandas as pd
+   a = 1
+   b = 2
+   c = a/b
+   s = pandas.Series(c, index =["simple math example 1", "simple math example 2"])
+   print(s)
+   df = pd.DataFrame(s, index=["simple math example 1"])
+   OutputDataSet = df
+   '
+   WITH RESULT SETS((ResultValue FLOAT))
+   ```
 
-    If you try to use a numeric index to get a value from this series, you get an error.
+   **Results**
+
+   |ResultValue|
+   |------|
+   |0.5|
+
+   If you try to use a numeric index to get a value from this series, you get an error.
 
 ## Next steps
 
 Next, you'll build a predictive model using Python in SQL Server.
 
 > [!div class="nextstepaction"]
-> [Create, train, and use a Python model with stored procedures in SQL Server](quickstart-python-train-score-in-tsql.md)
+> [Create and score a predictive model in Python](quickstart-python-train-score-model.md)
+
+For more information on SQL Server Machine Learning Services, see:
+
+- [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

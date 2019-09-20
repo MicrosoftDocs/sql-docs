@@ -59,8 +59,7 @@ The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15
 - **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] excludes support for the following components, features, and scenarios:
   - SQL Server Analysis Services
   - SQL Server Reporting Services
-  - Always On availability groups on Kubernetes
-
+ 
 - **Workaround**: None. Exclusion applies to all customers, including participants in SQL Early Adopter Program.
 
 - **Applies to**: Release candidate

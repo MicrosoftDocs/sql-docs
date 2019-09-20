@@ -47,7 +47,7 @@ SSMS 18.3 is the latest general availability (GA) version of SSMS. If you have a
 **Version Information**
 
 - Release number: 18.3  
-- Build number: 15.0.18174.0  
+- Build number: 15.0.18178.0  
 - Release date: September 19, 2019  
 
 If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [UserVoice](https://aka.ms/sqlfeedback).

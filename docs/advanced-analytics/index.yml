@@ -34,9 +34,9 @@ landingContent:
       - linkListType: quickstart
         links:
           - text: Run a "Hello world" Python script on SQL Server
-            url: tutorials/quickstart-python-run-using-t-sql.md
+            url: tutorials/quickstart-python-create-script.md
           - text: Handle inputs and outputs
-            url: tutorials/quickstart-python-inputs-and-outputs.md
+            url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
           - text: Use Python data structures in SQL Server
             url: tutorials/quickstart-python-data-structures.md
           - text: Train and use your first model

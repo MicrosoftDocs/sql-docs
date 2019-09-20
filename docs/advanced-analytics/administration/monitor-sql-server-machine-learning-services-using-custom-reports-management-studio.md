@@ -61,39 +61,35 @@ To use these reports:
 
 ## Report list
 
-The product samples repository in GitHub currently includes the following reports:
+The [SSMS Custom Reports repository in GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) includes the following reports:
 
-+ **ML Services - Active Sessions**
+- **ML Services - Active Sessions**
 
-  Use this report to view the users who are currently connected to the SQL Server instance and running machine learning jobs. 
+    Use this report to view the users who are currently connected to the SQL Server instance and running a Python or R script. 
   
-+ **ML Services - Configuration**
+- **ML Services - Configuration**
 
-  Use this report to view the configuration of the external script runtime and related services. The report will indicate whether a restart is required, and will check for required network protocols. 
-  
-  Implied authentication is required for machine learning tasks that run in SQL Server as a compute context. To verify that implied authentication is configured, the report verifies whether a database login exists for the group SQLRUserGroup.
+    This report can be used to view the installation settings of Machine Learning Services and properties of the Python or R runtime. 
 
- + **ML Services - Configure Instance** 
+- **ML Services - Configure Instance**
 
-   This report is intended to help you configure machine learning. You can also run this report to fix configuration errors found in the preceding report.
- 
-+ **ML Services - Execution Statistics**
+    This report can help you configure Machine Learning Services.
 
-  Use this report to view execution statistics for machine learning jobs. For example, you can get the total number of R scripts that were executed, the number of parallel executions, and the most frequently used RevoScaleR functions. Click **View SQL Script** to get the complete T-SQL code behind this report.
+- **ML Services - Execution Statistics**
 
-  Currently the report monitors only statistics for RevoScaleR package functions.
+    This report can be used to view the execution statistics of Machine Learning services. For example, you can get the total number of external scripts executions, number of parallel executions and frequently used RevoScaleR functions.
 
-+ **ML Services - Extended Events**
+- **ML Services - Extended Events**
 
-  Use this report to view a list of the extended events that are available for monitoring tasks related to external script runtimes. Click **View SQL Script** to get the complete T-SQL code behind this report.
+    This report can be used to view the extended events that are available to get more insights into external scripts execution.
 
-+ **ML Services - Packages**
+- **ML Services - Packages**
 
-  Use this report to view a list of the R or Python packages installed on the SQL Server instance.
+    This report lists the R or Python packages installed on the SQL Server instance and properties like version, name.
 
-+ **ML Services - Resource Usage**
+- **ML Services - Resource Usage**
 
-  Use this report to view consumption of CPU, memory, and I/O resources by external script execution. You can also view the memory setting of external resource pools.
+    This report can be used to view the CPU, Memory, IO consumption of SQL Server, and external scripts execution. You can also view the memory setting for external resource pools.
 
 ## See also
 

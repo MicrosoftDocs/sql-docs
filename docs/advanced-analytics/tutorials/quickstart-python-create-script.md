@@ -257,5 +257,5 @@ To create a machine learning model using Python in SQL Server, follow this quick
 
 For more information on SQL Server Machine Learning Services, see the following articles.
 
-- [Python data structures in SQL Server](quickstart-python-data-structures.md)
+- [Handle data types and objects using Python in SQL Server Machine Learning Services](quickstart-python-data-structures.md)
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

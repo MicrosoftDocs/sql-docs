@@ -180,9 +180,8 @@ A final benefit is that processes can be modified using parameters. In this exer
 To learn about handling Python data types in SQL Server, follow this quickstart:
 
 > [!div class="nextstepaction"]
-> [Handle data types and objects using Python in SQL Server Machine Learning Services](quickstart-python-data-types-and-objects.md)
+> [Handle data types and objects using Python in SQL Server Machine Learning Services](quickstart-python-data-structures.md)
 
-For more information on SQL Server Machine Learning Services, see the following articles.
+For more information on SQL Server Machine Learning Services, see:
 
-- [Write advanced Python functions with SQL Server Machine Learning Services](quickstart-python-functions.md)
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

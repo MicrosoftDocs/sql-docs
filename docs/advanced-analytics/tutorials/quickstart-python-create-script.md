@@ -138,7 +138,7 @@ For now, let's use the default input and output variables of `sp_execute_externa
 
     **Results**
 
-    ![Output from Python script that returns data from a table](./media/r-output-pythontestdata.png)
+    ![Output from Python script that returns data from a table](./media/python-output-pythontestdata.png)
 
 1. Now let's change the names of the input and output variables. The default input and output variable names are **InputDataSet** and **OutputDataSet**, this script changes the names to **SQL_in** and **SQL_out**:
 
@@ -253,6 +253,5 @@ To create a machine learning model using Python in SQL Server, follow this quick
 
 For more information on SQL Server Machine Learning Services, see the following articles.
 
-- [Handle data types and objects using Python in SQL Server Machine Learning Services](quickstart-python-data-types-and-objects.md)
-- [Write advanced Python functions with SQL Server Machine Learning Services](quickstart-python-functions.md)
+- [Python data structures in SQL Server](quickstart-python-data-structures.md)
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

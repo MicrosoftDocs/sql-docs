@@ -44,7 +44,7 @@ SSMS is free!
 
 SSMS 18.3 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.3 upgrades it to 18.3. If you have an older *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.3.
 
-**Version Information** 
+**Version Information**
 
 - Release number: 18.3  
 - Build number: 15.0.18178.0  

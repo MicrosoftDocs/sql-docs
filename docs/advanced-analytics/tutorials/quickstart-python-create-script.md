@@ -83,10 +83,10 @@ Inputs to the `sp_execute_external_script` stored procedure include:
 
 | | |
 |-|-|
-| @language | defines the language extension to call, in this case, Python |
-| @script | defines the commands passed to the Python runtime. Your entire Python script must be enclosed in this argument, as Unicode text. You could also add the text to a variable of type **nvarchar** and then call the variable |
+| @language | defines the language extension to call, in this case Python |
+| @script | defines the commands passed to the Python runtime<br>Your entire Python script must be enclosed in this argument, as Unicode text. You could also add the text to a variable of type **nvarchar** and then call the variable |
 | @input_data_1 | data returned by the query, passed to the Python runtime, which returns the data to SQL Server as a data frame |
-|WITH RESULT SETS | clause defines the schema of the returned data table for SQL Server, adding "Hello World" as the column name, **int** for the data type |
+|WITH RESULT SETS | clause defines the schema of the returned data table for SQL Server, in this case adding "Hello World" as the column name and **int** for the data type |
 
 The command outputs the following text:
 
@@ -140,12 +140,12 @@ For now, let's use the default input and output variables of `sp_execute_externa
 
     ![Output from Python script that returns data from a table](./media/python-output-pythontestdata.png)
 
-1. Now let's change the names of the input and output variables. The default input and output variable names are **InputDataSet** and **OutputDataSet**, this script changes the names to **SQL_in** and **SQL_out**:
+1. Now change the names of the input and output variables. The default input and output variable names are **InputDataSet** and **OutputDataSet**, the following script changes the names to **SQL_in** and **SQL_out**:
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
-        , @script = N' SQL_out = SQL_in;'
-        , @input_data_1 = N' SELECT 12 as Col;'
+        , @script = N'SQL_out = SQL_in;'
+        , @input_data_1 = N'SELECT 12 as Col;'
         , @input_data_1_name  = N'SQL_in'
         , @output_data_1_name = N'SQL_out'
     WITH RESULT SETS(([NewColName] INT NOT NULL));
@@ -156,24 +156,38 @@ For now, let's use the default input and output variables of `sp_execute_externa
    > [!TIP]
    > Only one input dataset can be passed as a parameter, and you can return only one dataset. However, you can call other datasets from inside your Python code and you can return outputs of other types in addition to the dataset. You can also add the OUTPUT keyword to any parameter to have it returned with the results.
 
-1. You also can generate values just using the Python script with no input data (`@input_data_1` is set to blank).
+1. You can also generate values just using the Python script with no input data (`@input_data_1` is set to blank).
 
    The following script outputs the text "hello" and "world".
 
-    ```sql
-    EXECUTE sp_execute_external_script @language = N'Python'
-        , @script = N'
-    import pandas as pd
-    mytextvariable = pandas.Series(["hello", " ", "world"]);
-    OutputDataSet = pd.DataFrame(mytextvariable);
-    '
-        , @input_data_1 = N''
-    WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
-    ```
+   ```sql
+   EXECUTE sp_execute_external_script @language = N'Python'
+       , @script = N'
+   import pandas as pd
+   mytextvariable = pandas.Series(["hello", " ", "world"]);
+   OutputDataSet = pd.DataFrame(mytextvariable);
+   '
+       , @input_data_1 = N''
+   WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
+   ```
 
-    **Results**
+   **Results**
 
-    ![Query results using @script as input](./media/python-data-generated-output.png)
+   ![Query results using @script as input](./media/python-data-generated-output.png)
+
+> [!NOTE]
+> Python uses leading spaces to group statements. So when the imbedded Python script spans multiple lines, as in the preceding script, don't try to indent the Python commands to be in line with the SQL commands. For example, this script will produce an error:
+
+  ```text
+  EXECUTE sp_execute_external_script @language = N'Python'
+      , @script = N'
+      import pandas as pd
+      mytextvariable = pandas.Series(["hello", " ", "world"]);
+      OutputDataSet = pd.DataFrame(mytextvariable);
+      '
+      , @input_data_1 = N''
+  WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
+  ```
 
 ## Check Python version
 
@@ -205,9 +219,11 @@ To see a list of which Python packages are installed, including version, run the
 
 ```SQL
 EXECUTE sp_execute_external_script @language = N'Python'
-    , @script = N'import pip
+    , @script = N'
+import pip
 for i in pip.get_installed_distributions():
-    print(i)';
+    print(i)
+'
 GO
 ```
 
@@ -216,7 +232,7 @@ The output is from `pip.get_installed_distributions()` in Python and returned as
 **Results**
 
 ```text
-STDOUT message(s) from external script: 
+STDOUT message(s) from external script:
 xlwt 1.2.0
 XlsxWriter 0.9.6
 xlrd 1.0.0
@@ -229,19 +245,7 @@ unicodecsv 0.14.1
 traitlets 4.3.2
 tornado 4.4.2
 toolz 0.8.2
-testpath 0.3
-tables 3.2.2
-sympy 1.0
-statsmodels 0.8.0
-sqlparse 0.1.19
-SQLAlchemy 1.1.9
-snowballstemmer 1.2.1
-six 1.10.0
-simplegeneric 0.8.1
-seaborn 0.7.1
-scipy 0.19.0
-scikit-learn 0.18.1
-...
+. . .
 ```
 
 ## Next steps

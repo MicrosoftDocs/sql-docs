@@ -23,7 +23,7 @@ author: dnethi
 ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: ""
-ms.date: 09/20/2019
+ms.date: 09/24/2019
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -48,7 +48,7 @@ SSMS 18.3 is the latest general availability (GA) version of SSMS. If you have a
 
 - Release number: 18.3  
 - Build number: 15.0.18178.0  
-- Release date: September 19, 2019  
+- Release date: September 23, 2019  
 
 If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [UserVoice](https://aka.ms/sqlfeedback).
 

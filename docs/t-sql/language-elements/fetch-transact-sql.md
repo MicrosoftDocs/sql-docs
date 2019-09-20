@@ -58,11 +58,11 @@ FETCH
  LAST  
  Returns the last row in the cursor and makes it the current row.  
   
- ABSOLUTE { *n*| @*nvar*}  
- If *n* or @*nvar* is positive, returns the row *n* rows from the front of the cursor and makes the returned row the new current row. If *n* or @*nvar* is negative, returns the row *n* rows before the end of the cursor and makes the returned row the new current row. If *n* or @*nvar* is 0, no rows are returned. *n* must be an integer constant and @*nvar* must be **smallint**, **tinyint**, or **int**.  
+ ABSOLUTE { *n*| \@*nvar*}  
+ If *n* or \@*nvar* is positive, returns the row *n* rows from the front of the cursor and makes the returned row the new current row. If *n* or \@*nvar* is negative, returns the row *n* rows before the end of the cursor and makes the returned row the new current row. If *n* or \@*nvar* is 0, no rows are returned. *n* must be an integer constant and \@*nvar* must be **smallint**, **tinyint**, or **int**.  
   
- RELATIVE { *n*| @*nvar*}  
- If *n* or @*nvar* is positive, returns the row *n* rows beyond the current row and makes the returned row the new current row. If *n* or @*nvar* is negative, returns the row *n* rows prior to the current row and makes the returned row the new current row. If *n* or @*nvar* is 0, returns the current row. If `FETCH RELATIVE` is specified with *n* or @*nvar* set to negative numbers or 0 on the first fetch done against a cursor, no rows are returned. *n* must be an integer constant and @*nvar* must be **smallint**, **tinyint**, or **int**.  
+ RELATIVE { *n*| \@*nvar*}  
+ If *n* or \@*nvar* is positive, returns the row *n* rows beyond the current row and makes the returned row the new current row. If *n* or \@*nvar* is negative, returns the row *n* rows prior to the current row and makes the returned row the new current row. If *n* or \@*nvar* is 0, returns the current row. If `FETCH RELATIVE` is specified with *n* or \@*nvar* set to negative numbers or 0 on the first fetch done against a cursor, no rows are returned. *n* must be an integer constant and \@*nvar* must be **smallint**, **tinyint**, or **int**.  
   
  GLOBAL  
  Specifies that *cursor_name* refers to a global cursor.  

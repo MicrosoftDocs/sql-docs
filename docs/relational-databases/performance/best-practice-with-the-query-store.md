@@ -223,11 +223,13 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
 
 > [!NOTE]
 > The above graphic may feature different shapes for specific query plans, with the following meanings for each possible status:<br />  
+> 
 > |Shape|Meaning|  
 > |-------------------|-------------|
 > |Circle|Query Completed (Regular Execution successfully finished)|
 > |Square|Cancelled (Client initiated aborted execution)|
 > |Triangle|Failed (Exception aborted execution)|
+> 
 > Also, the size of the shape reflects query execution count within the specified time interval, increasing in size with a higher number of executions.  
 
 -   You may conclude that your query is missing an index for optimal execution. This information is surfaced within the query execution plan. Create the missing index and check the query performance using the Query Store.  

@@ -40,7 +40,7 @@ SSMS is free!
 
 **SSMS 18.3 is now available, and is the latest general availability (GA) version of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.3](https://go.microsoft.com/fwlink/?linkid=2103679)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.3](https://go.microsoft.com/fwlink/?linkid=2104251)**
 
 SSMS 18.3 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.3 upgrades it to 18.3. If you have an older *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.3.
 
@@ -61,7 +61,7 @@ If a computer contains side-by-side installations of SSMS, verify you start the 
 This release of SSMS can be installed in the following languages:
 
 SQL Server Management Studio 18.2:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2103679&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x40a)
 
 > [!NOTE]
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).

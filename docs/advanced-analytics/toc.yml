@@ -49,26 +49,22 @@
   items:
   - name: Python
     items:
-    - name: Verify Python exists in SQL Server
-      href: ../advanced-analytics/tutorials/quickstart-python-verify.md
-    - name: Hello World in Python and SQL
-      href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
-    - name: Handle inputs and outputs
-      href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
-    - name: Python data structures and SQL
+    - name: Create Python scripts
+      href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
+    - name: Handle data types and objects
       href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-    - name: Train and use your first model
-      href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
+    - name: Train and score a model
+      href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
   - name: R
     items:
     - name: Create R scripts
       href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-    - name: Train and score a model
-      href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
     - name: Handle data types and objects
       href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
     - name: Write R functions
       href: ../advanced-analytics/tutorials/quickstart-r-functions.md
+    - name: Train and score a model
+      href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
 - name: Tutorials
   items:
   - name: Python

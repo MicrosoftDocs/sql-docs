@@ -68,11 +68,12 @@ When this check box is selected, the connection to SQL Server is terminated afte
 **Show completion time**
 Allows you to print the time at which the query execution completed either after the query results or in the messages tab.
 
-**Attestation protocol for VBS enclaves for Always Encrypted** Allows you to set an attestation protocol for Virtualization Based Security (VBS) enclaves used by Always Encrypted with secure enclaves. 
+**Attestation protocol for VBS enclaves for Always Encrypted**
+Allows you to set an attestation protocol for Virtualization Based Security (VBS) enclaves used by always Encrypted with secure enclaves.
 
-  The current supported attestation protocols are:
+The current supported attestation protocols are:
 
-  * Host Guardian Service – an attestation protocol using Windows Host Guardian Service (HGS).
+* Host Guardian Service - an attestation protocol using Windows Host Guardian Service (HGS).
 
 For more information, see [Always Encrypted with secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) and [Secure Enclave Attestation](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation).
 

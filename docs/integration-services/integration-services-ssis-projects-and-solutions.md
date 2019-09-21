@@ -64,7 +64,7 @@ ms.author: janinez
   
 |Folder|Description|  
 |------------|-----------------|
-|Connection Managers|Contains Project Connection Managers. For more information, see [Integration Services (SSIS) Connections](integration-services-ssis-connections.md).|
+|Connection Managers|Contains Project Connection Managers. For more information, see [Integration Services (SSIS) Connections](../integration-services/connection-manager/integration-services-ssis-connections.md).|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Packages|Contains packages. For more information, see [Integration Services &#40;SSIS&#41; Packages](../integration-services/integration-services-ssis-packages.md).|  
 |Package Parts|Contains Package Parts that can be reused or imported. For more information, see [Reuse Control Flow across Packages by Using Control Flow Package Parts](reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)
 |Miscellaneous|Contains files other than package files.|  
@@ -131,9 +131,9 @@ ms.author: janinez
   
 8.  Click **Next** to switch to the **Select Source** page.  
   
-9. If you are importing from an **.ispac** file, type the path including file name in the **Path** text box. Click **Browse** to navigate to the folder where you want the solution to be stored and type file name in the **File name** text box, and click **Open**.  
+9. If you're importing from an **.ispac** file, type the path including file name in the **Path** text box. Click **Browse** to navigate to the folder where you want the solution to be stored and type file name in the **File name** text box, and click **Open**.  
   
-     If you are importing from an **Integration Services Catalog**, type the database instance name in the **Server name** text box or click **Browse** and select the database instance that contains the catalog.  
+     If you're importing from an **Integration Services Catalog**, type the database instance name in the **Server name** text box or click **Browse** and select the database instance that contains the catalog.  
   
      Click **Browse** next to **Path** text box, expand folder in the catalog, select the project you want to import, and click **OK**.  
   
@@ -206,7 +206,7 @@ You can copy objects within an [!INCLUDE[ssISnoversion](../includes/ssisnoversio
   
 4.  Right-click the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project to copy to and click **Paste**.  
   
-     The items are automatically copied to the correct folder. If you copy items to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that are not packages, the items are copied to the **Miscellaneous** folder.  
+     The items are automatically copied to the correct folder. If you copy items to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that aren't packages, the items are copied to the **Miscellaneous** folder.  
 
 ## Next steps
 

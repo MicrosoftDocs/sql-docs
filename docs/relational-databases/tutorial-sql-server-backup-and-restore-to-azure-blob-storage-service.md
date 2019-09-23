@@ -110,7 +110,7 @@ In this step, you will backup the database `SQLTest` to your Azure Blob storage 
 
 # [SSMS](#tab/SSMS)
 
-1. Expand the **Databases** node within **Object Explorer** of [SQL Server Management Studio(SSMS)](./ssms/download-sql-server-management-studio-ssms.md).
+1. Expand the **Databases** node within **Object Explorer** of [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 1. Right-click your new `SQLTest` database, hover over **Tasks** and then select **Back up...** to launch the **Back Up Database** wizard. 
 1. Select **URL** from the **Back up to** drop-down, and then select **Add** to launch the **Select Backup Destination** dialog box. 
 

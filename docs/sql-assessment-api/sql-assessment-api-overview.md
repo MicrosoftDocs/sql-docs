@@ -13,7 +13,7 @@ ms.date: 07/26/2019
 
 # SQL Assessment API (Public Preview)
 
-SQL Assessment API provides a mechanism to evaluate the configuration of your SQL Server for best practices. The API is delivered with a ruleset containing best practice rules suggested by SQL Server Team. This ruleset will be enhancing with the release of new versions but at the same time, the API is built with the intent to give a highly customizable and extensible solution. So, users can tune the default rules and create their own ones.
+SQL Assessment API provides a mechanism to evaluate the configuration of your SQL Server for best practices. The API is delivered with a ruleset containing best practice rules suggested by SQL Server Team. This ruleset is enhancing with the release of new versions but at the same time, the API is built with the intent to give a highly customizable and extensible solution. So, users can tune the default rules and create their own ones.
 
 SQL Assessment API is useful when you want to make sure your SQL Server configuration is in line with recommended best practices. After an initial assessment, configuration stability can be tracked by regularly scheduled assessments.
 
@@ -83,7 +83,7 @@ Go through the examples below to get started.
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-4. Invoke assessment for the instance and save the results to a SQL table. In this example, we're piping the output of the Get-SqlInstance cmdlet to the Invoke-SqlAssessment cmdlet, which results are piped to the Write-SqlTableData cmdlet. Note that the Invoke-Assessment cmdlet is run with the `-FlattenOutput` parameter in this example. This parameter makes the output suitable for the Write-SqlTableData cmdlet. The latter will raise an error if you omit the parameter.
+4. Invoke assessment for the instance and save the results to a SQL table. In this example, we're piping the output of the Get-SqlInstance cmdlet to the Invoke-SqlAssessment cmdlet, which results are piped to the Write-SqlTableData cmdlet. Note that the Invoke-Assessment cmdlet is run with the `-FlattenOutput` parameter in this example. This parameter makes the output suitable for the Write-SqlTableData cmdlet. The latter raises an error if you omit the parameter.
 
     ```powershell
     Get-SqlInstance -ServerInstance 'localhost' |

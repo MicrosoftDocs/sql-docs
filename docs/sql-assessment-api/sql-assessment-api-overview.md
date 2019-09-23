@@ -53,7 +53,7 @@ An assessment is performed against a chosen SQL Server object. In the default ru
 
 Go through the examples below to get started.
 
-1. Get a list of available checks for the local default instance to familiarize yourself with the checks. In this example, we're piping the output of the Get-SqlInstance cmdlet to the Get-SqlAssessmentItem cmdlet to pass the instance object to it.
+1. Get a list of available checks for a local default instance to familiarize yourself with the checks. In this example, we're piping the output of the Get-SqlInstance cmdlet to the Get-SqlAssessmentItem cmdlet to pass the instance object to it.
 
     ```powershell
     Get-SqlInstance -ServerInstance 'localhost' | Get-SqlAssessmentItem
@@ -83,7 +83,7 @@ Go through the examples below to get started.
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-4. Invoke assessment for an instance and save the results to a SQL table. In this example, we're piping the output of the Get-SqlInstance cmdlet to the Invoke-SqlAssessment cmdlet, which results are piped to the Write-SqlTableData cmdlet. Note that the Invoke-Assessment cmdlet is run with the `-FlattenOutput` parameter this example. This parameter makes the output suitable for the Write-SqlTableData cmdlet. The latter will raise an error if you omit the parameter.
+4. Invoke assessment for the instance and save the results to a SQL table. In this example, we're piping the output of the Get-SqlInstance cmdlet to the Invoke-SqlAssessment cmdlet, which results are piped to the Write-SqlTableData cmdlet. Note that the Invoke-Assessment cmdlet is run with the `-FlattenOutput` parameter in this example. This parameter makes the output suitable for the Write-SqlTableData cmdlet. The latter will raise an error if you omit the parameter.
 
     ```powershell
     Get-SqlInstance -ServerInstance 'localhost' |

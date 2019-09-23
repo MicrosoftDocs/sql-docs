@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service | Microsoft Docs"
+title: "Tutorial: SQL Server Back up and Restore to Azure Blob Storage Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/09/2018"
 ms.prod: sql
@@ -11,9 +11,9 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: "rothja"
 ms.author: "jroth"
 ---
-# Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service
+# Tutorial: SQL Server Back up and Restore to Azure Blob Storage Service
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
-This tutorial helps you understand how to write backups to and restore from the Azure Blob Storage Service.  The article explains how to create an Azure Blob Container, write a backup to the blob service, and then perfor a simple restore.
+This tutorial helps you understand how to write backups to and restore from the Azure Blob Storage Service.  The article explains how to create an Azure Blob Container, write a backup to the blob service, and then perform a restore.
   
 ## Prerequisites  
 To complete this tutorial, you must be familiar with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup and restore concepts and T-SQL syntax.  The prerequisites for this tutorial vary if you're running your workload on-premises, or within an Azure SQL Database managed instance. 
@@ -106,24 +106,24 @@ GO
 ```
 
 ## Back up database
-In this step, you will backup the database `SQLTest` to your Azure Blob storage account using either the GUI within SQL Server Management Studio, or Transact-SQL (T-SQL). 
+In this step, you will back up the database `SQLTest` to your Azure Blob storage account using either the GUI within SQL Server Management Studio, or Transact-SQL (T-SQL). 
 
 # [SSMS](#tab/SSMS)
 
 1. Expand the **Databases** node within **Object Explorer** of [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 1. Right-click your new `SQLTest` database, hover over **Tasks** and then select **Back up...** to launch the **Back Up Database** wizard. 
-1. Select **URL** from the **Back up to** drop-down, and then select **Add** to launch the **Select Backup Destination** dialog box. 
+1. Select **URL** from the **Back up to** drop down, and then select **Add** to launch the **Select Backup Destination** dialog box. 
 
    ![Back up to URL](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
-1. Select **New container** on the **Select Backup Destination** dialog box to launch the **Connect to a Microsoft Subscription** window. If this step was done previously, then instead of creating a new container, select the existing container from the drop down and skip to step 10. 
+1. Select **New container** on the **Select Backup Destination** dialog box to launch the **Connect to a Microsoft Subscription** window. If this step was done previously, then instead of creating a new container, select the existing container from the drop-down and skip to step 10. 
 
    ![Backup destination](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
 
-1. Sign in to the Azure portal by selecting **Sign In...** and then proceed through the sign in process. 
+1. Sign in to the Azure portal by selecting **Sign In...** and then proceed through the sign-in process. 
 1. Select your **subscription** from the drop-drown. 
 1. Select your **storage account** from the drop-down. 
-1. Select the container you created previously from the drop down. 
+1. Select the container you created previously from the drop-down. 
 1. Select **Create Credential** to generate your *Shared Access Signature (SAS)*. Save this value as you will need it for the restore. 
 
    ![Create credential](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)

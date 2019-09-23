@@ -122,7 +122,7 @@ This is a common error displayed in the **Status** message field of the CDC Inst
 
 ![Oracle error](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-error.png)
 
-```
+`
 "ERROR","computername","ERROR","UNEXPECTED",
 "ORACDC508E:Oracle method OCIStmtExecute failed with error: ORA-00942: table or view does not exist ","source","",""
 
@@ -134,7 +134,7 @@ This is a common error displayed in the **Status** message field of the CDC Inst
 
 "ERROR","computername","ERROR","UNEXPECTED",
 "ORACDC414E:The Engine component failed with return code 1.","engine","",""
-```
+`
 
 This happens when the Oracle account connecting from the CDC instance to the Oracle server does not have permission to see system log views. 
 

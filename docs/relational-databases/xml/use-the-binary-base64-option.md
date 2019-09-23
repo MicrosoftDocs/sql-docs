@@ -12,6 +12,7 @@ helpviewer_keywords:
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 author: MightyPen
 ms.author: genemi
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ---
 # Use the BINARY BASE64 Option
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -21,14 +22,14 @@ ms.author: genemi
   
  For example, in a SELECT query, casting any column to a binary large object (BLOB) makes it a temporary entity in that it loses its associated table name and column name. This causes AUTO mode queries to generate an error, because it does not know where to put this value in the XML hierarchy. For example:  
   
-```  
+```sql
 CREATE TABLE MyTable (Col1 int PRIMARY KEY, Col2 binary)  
 INSERT INTO MyTable VALUES (1, 0x7);  
 ```  
   
  This query produces an error, because of the casting to a binary large object (BLOB):  
   
-```  
+```sql
 SELECT Col1,  
 CAST(Col2 as image) as Col2  
 FROM MyTable  
@@ -37,7 +38,7 @@ FOR XML AUTO;
   
  The solution is to add the BINARY BASE64 option to the FOR XML clause. If you remove the casting, the query produces the results as expected:  
   
-```  
+```sql
 SELECT Col1,  
 CAST(Col2 as image) as Col2  
 FROM MyTable  
@@ -46,7 +47,7 @@ FOR XML AUTO, BINARY BASE64;
   
  This is the result:  
   
-```  
+```console
 <MyTable Col1="1" Col2="Bw==" />  
 ```  
   

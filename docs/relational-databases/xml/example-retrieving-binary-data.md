@@ -1,7 +1,7 @@
 ---
 title: "Example: Retrieving Binary Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "09/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -12,6 +12,7 @@ helpviewer_keywords:
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
 author: MightyPen
 ms.author: genemi
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ---
 # Example: Retrieving Binary Data
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -19,7 +20,7 @@ ms.author: genemi
   
 ## Example  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductPhotoID, ThumbNailPhoto  
@@ -31,7 +32,7 @@ GO
   
  This is the result:  
   
-```  
+```console
 <row ProductModelID="1" ThumbNailPhoto="base64 encoded binary data"/>  
 ```  
   

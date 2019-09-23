@@ -108,7 +108,7 @@ The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15
 
 ## SQL Server Configuration Manager may not start
 
-- **Issue and customer impact**: SQL Server Configuration Manager (SSCM) does not start on a machine without VCRuntime 140. When starting SSCM, the user may see the following dialog: 
+- **Issue and customer impact**: SQL Server Configuration Manager (SSCM) doesn't start on a machine without the VCRuntime 140 (VCRUNTIME140.dll) file. When starting SSCM, the user may see the following dialog: 
 
 
   `MMC could not create the snap-in. The snap-in might not have been installed correctly.`

@@ -16,11 +16,11 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>
 ---
 # Use the BINARY BASE64 Option
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 If the BINARY BASE64 option is specified in the query, the binary data is returned in base64 encoding format.
 
-If the BINARY BASE64 option is not specified in the query, then by default, AUTO mode supports URL encoding of binary data. A reference to a relative URL to the virtual root of the database is returned. This refers to the database where the query was executed. The returned reference can be used to access the actual binary data in subsequent operations. This access is achieved by using the SQLXML ISAPI dbobject query. The query must provide enough information to identify the image. Such information might include the columns of the primary key.
+If the BINARY BASE64 option is not specified in the query, then by default, AUTO mode supports URL encoding of binary data. A reference to a relative URL to the virtual root of the database is returned. This reference is to the database where the query was executed. The returned reference can be used to access the actual binary data in subsequent operations. This access is achieved by using the SQLXML ISAPI dbobject query. The query must provide enough information to identify the image. Such information might include the columns of the primary key.
 
 ## Column alias
 
@@ -33,34 +33,34 @@ In a SELECT query, casting any column to a binary large object (BLOB) makes the 
 For example, consider the following table with its one row.
 
 ```sql
-CREATE TABLE MyTable (Col1 int PRIMARY KEY, Col2 binary)  
-INSERT INTO MyTable VALUES (1, 0x7);  
-```  
+CREATE TABLE MyTable (Col1 int PRIMARY KEY, Col2 binary)
+INSERT INTO MyTable VALUES (1, 0x7);
+```
 
-The following query produces an error, which is caused by the casting to a binary large object (BLOB):  
-  
+The following query produces an error, which is caused by the casting to a binary large object (BLOB):
+
 ```sql
-SELECT Col1,  
-CAST(Col2 as image) as Col2  
-FROM MyTable  
-FOR XML AUTO;  
-```  
-  
+SELECT Col1,
+CAST(Col2 as image) as Col2
+FROM MyTable
+FOR XML AUTO;
+```
+
 The solution is to add the BINARY BASE64 option to the FOR XML clause. If you remove the casting, the query produces good results.
-  
+
 ```sql
-SELECT Col1,  
-CAST(Col2 as image) as Col2  
-FROM MyTable  
-FOR XML AUTO, BINARY BASE64;  
-```  
-  
+SELECT Col1,
+CAST(Col2 as image) as Col2
+FROM MyTable
+FOR XML AUTO, BINARY BASE64;
+```
+
 Expect the following good result:
-  
+
 ```console
-<MyTable Col1="1" Col2="Bw==" />  
-```  
-  
+<MyTable Col1="1" Col2="Bw==" />
+```
+
 ## See Also
 
 [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)

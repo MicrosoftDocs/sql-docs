@@ -16,28 +16,28 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>
 ---
 # Example: Retrieving Binary Data
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-The following query returns the product photo stored in a **varbinary(max)** type column. The `BINARY BASE64` option is specified in the query to return the binary data in base64-encoded format.  
-  
-## Example  
-  
+The following query returns the product photo stored in a **varbinary(max)** type column. The `BINARY BASE64` option is specified in the query to return the binary data in base64-encoded format.
+
+## Example
+
 ```sql
-USE AdventureWorks2012;  
-GO  
-SELECT ProductPhotoID, ThumbNailPhoto  
-FROM Production.ProductPhoto  
-WHERE ProductPhotoID=1  
-FOR XML RAW, BINARY BASE64 ;  
-GO  
-```  
-  
+USE AdventureWorks2012;
+GO
+SELECT ProductPhotoID, ThumbNailPhoto
+FROM Production.ProductPhoto
+WHERE ProductPhotoID=1
+FOR XML RAW, BINARY BASE64 ;
+GO
+```
+
 Expect the following result:
-  
+
 ```console
-<row ProductModelID="1" ThumbNailPhoto="base64 encoded binary data"/>  
-```  
-  
+<row ProductModelID="1" ThumbNailPhoto="base64 encoded binary data"/>
+```
+
 ## See Also
 
 [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)

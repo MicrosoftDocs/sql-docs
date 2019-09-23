@@ -34,7 +34,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Syntax  
   
 ```  
-  
 sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]  
 ```  
   
@@ -56,7 +55,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## Examples  
  The following example returns information about the queries in the query store.  
   
-```  
+```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
 JOIN sys.query_store_query AS Qry  
@@ -67,7 +66,7 @@ JOIN sys.query_store_query_text AS Txt
   
  After you identify the query_id and plan_id that you want to force, use the following example to force the query to use a plan.  
   
-```  
+```sql  
 EXEC sp_query_store_force_plan 3, 3;  
 ```  
   
@@ -78,6 +77,7 @@ EXEC sp_query_store_force_plan 3, 3;
  [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)  
+ [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)       
+ [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)    
   
   

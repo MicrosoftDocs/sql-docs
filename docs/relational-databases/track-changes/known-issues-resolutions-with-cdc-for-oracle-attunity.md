@@ -14,7 +14,7 @@ ms.author: mathoma
 
 This topic lists the top issues and known resolutions when viewing a change data capture (CDC) instance in the Oracle CDC Designer configuration tool. This tool is part of the Change Data Capture for Oracle by Attunity that is included starting with SQL Server 2012. 
 
-## Known issues
+## Bug fixes
 Before spending too much time troubleshooting, it is important to use the latest builds of CDC for Oracle by Attunity to avoid known issues such as tehse:
 
 ### SQL Server 2017
@@ -123,13 +123,17 @@ This is a common error displayed in the **Status** message field of the CDC Inst
 ![Oracle error](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-error.png)
 
 ```
-"ERROR","computername","ERROR","UNEXPECTED","ORACDC508E:Oracle method OCIStmtExecute failed with error: ORA-00942: table or view does not exist ","source","",""
+"ERROR","computername","ERROR","UNEXPECTED",
+"ORACDC508E:Oracle method OCIStmtExecute failed with error: ORA-00942: table or view does not exist ","source","",""
 
-"ERROR","computername","RUNNING","IDLE","ORACDC518E:Failed to verify archive log mode.","source","",""
+"ERROR","computername","RUNNING","IDLE",
+"ORACDC518E:Failed to verify archive log mode.","source","",""
 
-"ERROR","computername","ERROR","UNEXPECTED","ORACDC517E:Oracle Call Interface (OCI) method failed: ORA-00942: table or view does not exist .","source","",""
+"ERROR","computername","ERROR","UNEXPECTED",
+"ORACDC517E:Oracle Call Interface (OCI) method failed: ORA-00942: table or view does not exist .","source","",""
 
-"ERROR","computername","ERROR","UNEXPECTED","ORACDC414E:The Engine component failed with return code 1.","engine","",""
+"ERROR","computername","ERROR","UNEXPECTED",
+"ORACDC414E:The Engine component failed with return code 1.","engine","",""
 ```
 
 This happens when the Oracle account connecting from the CDC instance to the Oracle server does not have permission to see system log views. 

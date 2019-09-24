@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 05/22/2019
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -38,8 +38,9 @@ This statement enables several database configuration settings at the **individu
 - Enable or disable collection of execution statistics for natively compiled T-SQL modules.
 - Enable or disable online by default options for DDL statements that support the `ONLINE =` syntax.
 - Enable or disable resumable by default options for DDL statements that support the `RESUMABLE =` syntax.
-- Enable or disable the auto-drop functionality of global temporary tables.
 - Enable or disable [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) features.
+- Enable or disable accelerated plan forcing.
+- Enable or disable the auto-drop functionality of global temporary tables.
 - Enable or disable the [lightweight query profiling infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
 - Enable or disable the new `String or binary data would be truncated` error message.
 - Enable or disable collection of last actual execution plan in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
@@ -76,6 +77,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | ACCELERATED_PLAN_FORCING = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
@@ -163,7 +165,7 @@ INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Allows you to enable or disable Interleaved execution for multi-statement table valued functions at the database or statement scope while still maintaining database compatibility level 140 and higher. Interleaved execution is a feature that is part of Adaptive query processing in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information, please refer to [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md).
+Allows you to enable or disable Interleaved execution for multi-statement table-valued functions at the database or statement scope while still maintaining database compatibility level 140 and higher. Interleaved execution is a feature that is part of Adaptive query processing in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information, please refer to [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md).
 
 > [!NOTE]
 > For database compatibility level 130 or lower, this database scoped configuration has no effect.
@@ -282,11 +284,20 @@ Allows you to enable or disable table variable deferred compilation at the datab
 > [!NOTE]
 > For database compatibility level 140 or lower, this database scoped configuration has no effect.
 
+ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
+
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+
+Enables an optimized mechanism for query plan forcing, applicable to all forms of plan forcing, such as [Query Store Force Plan](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed), [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction), or the [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md#use-plan) query hint. The default is ON.
+
+> [!NOTE]
+> It is not recommended to disable accelerated plan forcing.
+
 GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 **Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (feature is in public preview)
 
-Allows setting the auto drop functionality for [global temporary tables](create-table-transact-sql.md). The default is ON, which means that the global temporary tables are automatically dropped when not in use by any session. When set to OFF, global temporary tables need to be explicitly dropped using a DROP TABLE statement or will be automatically dropped on server restart.
+Allows setting the auto-drop functionality for [global temporary tables](../../t-sql/statements/create-table-transact-sql.md#temporary-tables). The default is ON, which means that the global temporary tables are automatically dropped when not in use by any session. When set to OFF, global temporary tables need to be explicitly dropped using a DROP TABLE statement or will be automatically dropped on server restart.
 
 - With [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single databases and elastic pools, this option can be set in the individual user databases of the SQL Database server.
 - In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance, this option is set in `TempDB` and the setting of the individual user databases has no effect.
@@ -319,7 +330,7 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) (feature is in public preview)
 
-Allows you to enable or disable collection of the last query plan statistics (equivalent to an actual execution plan) in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
+Allows you to enable or disable colection of the last query plan statistics (equivalent to an actual execution plan) in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 
 ## <a name="Permissions"></a> Permissions
 

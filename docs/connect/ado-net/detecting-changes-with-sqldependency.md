@@ -31,7 +31,7 @@ The following steps illustrate how to declare a dependency, execute a command, a
 
 2. Create <xref:Microsoft.Data.SqlClient.SqlConnection> and <xref:Microsoft.Data.SqlClient.SqlCommand> objects to connect to the server and define a Transact-SQL statement.
 
-3. Create a new `SqlDependency` object, or use an existing one, and bind it to the `SqlCommand` object. Internally, this creates a <xref:System.Data.Sql.SqlNotificationRequest> object and binds it to the command object as needed. This notification request contains an internal identifier that uniquely identifies this `SqlDependency` object. It also starts the client listener if it is not already active.
+3. Create a new `SqlDependency` object, or use an existing one, and bind it to the `SqlCommand` object. Internally, this creates a <xref:Microsoft.Data.Sql.SqlNotificationRequest> object and binds it to the command object as needed. This notification request contains an internal identifier that uniquely identifies this `SqlDependency` object. It also starts the client listener if it is not already active.
 
 4. Subscribe an event handler to the `OnChange` event of the `SqlDependency` object.
 

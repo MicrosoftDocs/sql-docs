@@ -21,7 +21,7 @@ Applications that consume query notifications have a common set of requirements.
   
 - Ensure that the user ID used to connect to the database has the necessary permissions.  
   
-- Use a <xref:Microsoft.Data.SqlClient.SqlCommand> object to execute a valid SELECT statement with an associated notification object—either <xref:Microsoft.Data.SqlClient.SqlDependency> or <xref:System.Data.Sql.SqlNotificationRequest>.  
+- Use a <xref:Microsoft.Data.SqlClient.SqlCommand> object to execute a valid SELECT statement with an associated notification object—either <xref:Microsoft.Data.SqlClient.SqlDependency> or <xref:Microsoft.Data.Sql.SqlNotificationRequest>.  
   
 - Provide code to process the notification if the data being monitored changes.  
   
@@ -74,7 +74,7 @@ CREATE SERVICE ContactChangeNotifications
  [!code-vb[DataWorks SqlNotification.Perms#1](../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlNotification.Perms/VB/source.vb#1)]  
   
 ## Choosing a Notification Object  
- The query notifications API provides two objects to process notifications: <xref:Microsoft.Data.SqlClient.SqlDependency> and <xref:System.Data.Sql.SqlNotificationRequest>.
+ The query notifications API provides two objects to process notifications: <xref:Microsoft.Data.SqlClient.SqlDependency> and <xref:Microsoft.Data.Sql.SqlNotificationRequest>.
   
 ### Using SqlDependency  
  To use <xref:Microsoft.Data.SqlClient.SqlDependency>, Service Broker must be enabled for the SQL Server database being used, and users must have permissions to receive notifications. Service Broker objects, such as the notification queue, are predefined.  
@@ -82,7 +82,7 @@ CREATE SERVICE ContactChangeNotifications
  In addition, <xref:Microsoft.Data.SqlClient.SqlDependency> automatically launches a worker thread to process notifications as they are posted to the queue; it also parses the Service Broker message, exposing the information as event argument data. <xref:Microsoft.Data.SqlClient.SqlDependency> must be initialized by calling the `Start` method to establish a dependency to the database. This is a static method that needs to be called only once during application initialization for each database connection required. The `Stop` method should be called at application termination for each dependency connection that was made.  
   
 ### Using SqlNotificationRequest  
- In contrast, <xref:System.Data.Sql.SqlNotificationRequest> requires you to implement the entire listening infrastructure yourself. In addition, all the supporting Service Broker objects such as the queue, service, and message types supported by the queue must be defined. This manual approach is useful if your application requires special notification messages or notification behaviors, or if your application is part of a larger Service Broker application.  
+ In contrast, <xref:Microsoft.Data.Sql.SqlNotificationRequest> requires you to implement the entire listening infrastructure yourself. In addition, all the supporting Service Broker objects such as the queue, service, and message types supported by the queue must be defined. This manual approach is useful if your application requires special notification messages or notification behaviors, or if your application is part of a larger Service Broker application.  
   
 ## See also
 

@@ -89,7 +89,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 - You cannot use ALTER TABLE statements to modify the design of table-valued parameters.  
   
 ## Configuring a SqlParameter Example  
- <xref:Microsoft.Data.SqlClient> supports populating table-valued parameters from <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> or <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.SqlServer.Server.SqlDataRecord> objects. You must specify a type name for the table-valued parameter by using the <xref:Microsoft.Data.SqlClient.SqlParameter.TypeName%2A> property of a <xref:Microsoft.Data.SqlClient.SqlParameter>. The `TypeName` must match the name of a compatible type previously created on the server. The following code fragment demonstrates how to configure <xref:Microsoft.Data.SqlClient.SqlParameter> to insert data.  
+ <xref:Microsoft.Data.SqlClient> supports populating table-valued parameters from <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> or <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.Data.SqlClient.Server.SqlDataRecord> objects. You must specify a type name for the table-valued parameter by using the <xref:Microsoft.Data.SqlClient.SqlParameter.TypeName%2A> property of a <xref:Microsoft.Data.SqlClient.SqlParameter>. The `TypeName` must match the name of a compatible type previously created on the server. The following code fragment demonstrates how to configure <xref:Microsoft.Data.SqlClient.SqlParameter> to insert data.  
  
 In the following example, the `addedCategories` variable contains a <xref:System.Data.DataTable>. To see how the variable is populated, see the examples in the next section, [Passing a Table-Valued Parameter to a Stored Procedure](#passing).
 

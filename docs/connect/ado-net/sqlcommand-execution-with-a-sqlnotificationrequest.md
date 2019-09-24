@@ -21,7 +21,7 @@ A <xref:Microsoft.Data.SqlClient.SqlCommand> can be configured to generate a not
 
 ## Creating the Notification Request
 
-You can use a <xref:System.Data.Sql.SqlNotificationRequest> object to create the notification request by binding it to a `SqlCommand` object. Once the request is created, you no longer need the `SqlNotificationRequest` object. You can query the queue for any notifications and respond appropriately. Notifications can occur even if the application is shut down and subsequently restarted.
+You can use a <xref:Microsoft.Data.Sql.SqlNotificationRequest> object to create the notification request by binding it to a `SqlCommand` object. Once the request is created, you no longer need the `SqlNotificationRequest` object. You can query the queue for any notifications and respond appropriately. Notifications can occur even if the application is shut down and subsequently restarted.
 
 When the command with the associated notification is executed, any changes to the original result set trigger sending a message to the SQL Server queue that was configured in the notification request.
 
@@ -30,11 +30,11 @@ How you poll the SQL Server queue and interpret the message is specific to your 
 > [!NOTE]
 > When using SQL Server notification requests with <xref:Microsoft.Data.SqlClient.SqlDependency>, create your own queue name instead of using the default service name.
 
-There are no new client-side security elements for <xref:System.Data.Sql.SqlNotificationRequest>. This is primarily a server feature, and the server has created special privileges that users must have to request a notification.
+There are no new client-side security elements for <xref:Microsoft.Data.Sql.SqlNotificationRequest>. This is primarily a server feature, and the server has created special privileges that users must have to request a notification.
 
 ### Example
 
-The following code fragment demonstrates how to create a <xref:System.Data.Sql.SqlNotificationRequest> and associate it with a <xref:Microsoft.Data.SqlClient.SqlCommand>.
+The following code fragment demonstrates how to create a <xref:Microsoft.Data.Sql.SqlNotificationRequest> and associate it with a <xref:Microsoft.Data.SqlClient.SqlCommand>.
 
 ```vb
 ' Assume connection is an open SqlConnection.

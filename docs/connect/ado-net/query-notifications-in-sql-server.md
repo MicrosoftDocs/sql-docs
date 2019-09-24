@@ -55,8 +55,8 @@ Built upon the Service Broker infrastructure, query notifications allow applicat
  Demonstrates configuring a <xref:Microsoft.Data.SqlClient.SqlCommand> object to work with a query notification.  
   
 ## Reference  
- <xref:System.Data.Sql.SqlNotificationRequest>  
- Describes the <xref:System.Data.Sql.SqlNotificationRequest> class and all of its members.  
+ <xref:Microsoft.Data.Sql.SqlNotificationRequest>  
+ Describes the <xref:Microsoft.Data.Sql.SqlNotificationRequest> class and all of its members.  
   
  <xref:Microsoft.Data.SqlClient.SqlDependency>  
  Describes the <xref:Microsoft.Data.SqlClient.SqlDependency> class and all of its members.  

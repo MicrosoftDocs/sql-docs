@@ -1,6 +1,6 @@
 ---
 title: SQL Server Assessment API
-description: Describing what is the SQL Server Assessment APIs.
+description: Describing what is the SQL Server Assessment API.
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual

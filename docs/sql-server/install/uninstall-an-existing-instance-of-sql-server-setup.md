@@ -37,16 +37,16 @@ ms.author: mathoma
   
 1.  **Back up your data.** Either create [full backups](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) of all databases, including system databases, or manually copy the .mdf and .ldf files to a separate location. The **master** database contains all system level information for the server, such as logins, and schemas. The **msdb** database contains job information such as SQL Server agent jobs, backup history, and maintenance plans. For more information about system databases see [System databases](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md). 
   
-   The files that you must save include the following database files:  
+    The files that you must save include the following database files:  
 
-   |             |            |           |            |
-   | :---------- | :--------- |:--------- | :--------- |
-   | master.mdf  | mastlog.ldf| model.mdf | modellog.ldf| 
-   | msdbdata.mdf| msdblog.ldf| Mssqlsystemresource.mdf | Mssqlsustemresource.ldf |
-   | Tempdb.mdf | Templog.ldf|  ReportServer[$InstanceName] | ReportServer[$InstanceName]TempDB| 
+    |             |            |           |            |
+    | :---------- | :--------- |:--------- | :--------- |
+    | master.mdf  | mastlog.ldf| model.mdf | modellog.ldf| 
+    | msdbdata.mdf| msdblog.ldf| Mssqlsystemresource.mdf | Mssqlsustemresource.ldf |
+    | Tempdb.mdf | Templog.ldf|  ReportServer[$InstanceName] | ReportServer[$InstanceName]TempDB| 
 
-   > [!NOTE]
-   > The ReportServer databases are included with SQL Server Reporting Services.   
+    > [!NOTE]
+    > The ReportServer databases are included with SQL Server Reporting Services.   
 
  
 1.  **Stop all**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **services.** We recommend that you stop all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services before you uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components. Active connections can prevent successful uninstallation.  

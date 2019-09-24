@@ -145,7 +145,25 @@ ALTER AVAILABILITY GROUP [ag2]
     ADD LISTENER 'ag2-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
 GO  
 ```  
-  
+
+> [!NOTE]
+>  If you are using a Azure Load Balancer, the client access point parameters ProbePort and OverrideAddressMatch need to be updated on the secondary WSFC.  ProbePort needs to be the port used for the load balancer probe (example, 59999).  This is required for communication between the primary and secondary AGs.
+
+  ### Add parameters to client access point
+   On the primary replica in the second WSFC, open a PowerShell session to execute the following commands
+
+    # List cluster resources and get the name of the ResourceType = IP Address in the AG group (ag2)
+    Get-ClusterResources
+
+    # Update the ProbePort Adapter (Using Probe Port 59999)
+    Get-ClusterResource "<Name of IP Address ResourceType>" | Set-ClusterParameter ProbePort 59999
+    
+    # Update the OverrideAddressMatch Parameter
+    Get-ClusterResource "<Name of IP Address ResourceType>" | Set-ClusterParameter OverrideAddressMatch 1
+
+    # Check that changes have been applied (validate this on the first WSFC)
+    Get-ClusterResource "<Name of IP Address ResourceType>" | Get-ClusterParameter
+
 ## Create distributed availability group on first cluster  
  On the first WSFC, create a distributed availability group (named `distributedag` in this example). Use the **CREATE AVAILABILITY GROUP** command with the **DISTRIBUTED** option. The **AVAILABILITY GROUP ON** parameter specifies the member availability groups `ag1` and `ag2`.  
   

@@ -286,6 +286,26 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/advanced-analytics/tutorials/quickstart-python-verify.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-python-create-script",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-python-create-script",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-python-create-script",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-python-train-score-model",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/advanced-analytics/tutorials/rtsql-create-a-predictive-model-r.md",
             "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-predictive-model",
             "redirect_document_id": true

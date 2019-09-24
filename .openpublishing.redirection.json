@@ -286,6 +286,26 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/advanced-analytics/tutorials/quickstart-python-verify.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-python-create-script",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-python-create-script",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-python-create-script",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-python-train-score-model",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/advanced-analytics/tutorials/rtsql-create-a-predictive-model-r.md",
             "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-predictive-model",
             "redirect_document_id": true
@@ -319,6 +339,31 @@
             "source_path": "docs/advanced-analytics/tutorials/rtsql-working-with-inputs-and-outputs.md",
             "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-inputs-and-outputs",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "sql/advanced-analytics/tutorials/quickstart-r-verify.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-script",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sql/advanced-analytics/tutorials/quickstart-r-run-using-tsql.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-script",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "sql/advanced-analytics/tutorials/quickstart-r-inputs-and-outputs.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-script",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sql/advanced-analytics/tutorials/quickstart-r-create-predictive-model.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-train-score-model",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "sql/advanced-analytics/tutorials/quickstart-r-predict-from-model.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-train-score-model",
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/advanced-analytics/r/configuration-sql-server-r-services.md",

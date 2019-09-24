@@ -143,7 +143,7 @@ The following environment variables are used for security settings that are not 
 | **CONTROLLER_PASSWORD** | Required |The password for the cluster administrator. |
 | **MSSQL_SA_PASSWORD** | Required |The password of SA user for SQL master instance. |
 | **KNOX_PASSWORD** | Required |The password for Knox **root** user. Note than in a basic authentication setup only user supported for Knox is **root**.|
-| **ACCEPT_EULA**| Required for first use of `azdata`| Requires no value. When set as an environment variable, it applies EULA to both SQL Server and `azdata`. If not set as environment variable, you can include `--accept-eula` in the first use of `azdata` command.|
+| **ACCEPT_EULA**| Required for first use of `azdata`| Set to "yes". When set as an environment variable, it applies EULA to both SQL Server and `azdata`. If not set as environment variable, you can include `--accept-eula=yes` in the first use of `azdata` command.|
 | **DOCKER_USERNAME** | Optional | The username to access the container images in case they are stored in a private repository. See the [Offline deployments](deploy-offline.md) topic for more details on how to use a private Docker repository for big data cluster deployment.|
 | **DOCKER_PASSWORD** | Optional |The password to access the above private repository. |
 
@@ -156,6 +156,7 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export ACCEPT_EULA=yes
 ```
 
 ```PowerShell

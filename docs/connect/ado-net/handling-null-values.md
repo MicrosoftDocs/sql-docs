@@ -110,8 +110,7 @@ WHERE TerritoryID IN (1, 2, 3)
 ### Example  
  The following code example creates a <xref:System.Data.DataTable> with two columns defined as <xref:System.Data.SqlTypes.SqlInt32> and <xref:System.Data.SqlTypes.SqlString>. The code adds one row of known values, one row of null values and then iterates through the <xref:System.Data.DataTable>, assigning the values to variables and displaying the output in the console window.  
   
- [!code-csharp[DataWorks SqlTypes.IsNull#1](../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTypes.IsNull/CS/source.cs#1)]
- [!code-vb[DataWorks SqlTypes.IsNull#1](../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTypes.IsNull/VB/source.vb#1)]  
+ [!code-csharp[DataWorks SqlInt32_IsNull#1](../../../sqlclient/doc/samples/SqlInt32_IsNull.cs#1)]
   
  This example displays the following results:  
   
@@ -125,8 +124,7 @@ isColumnNull=True, ID=Null, Description=Null
   
  The following example demonstrates the difference in results between the `SqlString.Equals` method and the `String.Equals` method when each is passed a pair of null values and then a pair of empty strings.  
   
- [!code-csharp[DataWorks SqlTypes.CompareNulls#1](../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTypes.CompareNulls/CS/source.cs#1)]
- [!code-vb[DataWorks SqlTypes.CompareNulls#1](../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTypes.CompareNulls/VB/source.vb#1)]  
+ [!code-csharp[DataWorks SqlString_Equals#1](../../../sqlclient/doc/samples/SqlString_Equals.cs#1)]
   
  The code produces the following output:  
   

@@ -109,8 +109,7 @@ SqlTransaction sqlTran =
 > [!NOTE]
 >  The following examples use the same connection string with connection pooling turned off. If a connection is pooled, resetting its isolation level does not reset the isolation level at the server. As a result, subsequent connections that use the same pooled inner connection start with their isolation levels set to that of the pooled connection. An alternative to turning off connection pooling is to set the isolation level explicitly for each connection.  
   
- [!code-csharp[DataWorks SnapshotIsolation.Demo#1](../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.Demo/CS/source.cs#1)]
- [!code-vb[DataWorks SnapshotIsolation.Demo#1](../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.Demo/VB/source.vb#1)]  
+ [!code-csharp[DataWorks Isolation_Snapshot.Demo#1](../../../sqlclient/doc/samples/Isolation_Snapshot.cs#1)]
   
 ### Example  
  The following example demonstrates the behavior of snapshot isolation when data is being modified. The code performs the following actions:  
@@ -129,8 +128,7 @@ SqlTransaction sqlTran =
   
 - Executes clean-up code to turn off snapshot isolation in **AdventureWorks** and delete the **TestSnapshotUpdate** table.  
   
- [!code-csharp[DataWorks SnapshotIsolation.DemoUpdate#1](../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/CS/source.cs#1)]
- [!code-vb[DataWorks SnapshotIsolation.DemoUpdate#1](../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/VB/source.vb#1)]  
+ [!code-csharp[DataWorks Isolation_Snapshot1#1](../../../sqlclient/doc/samples/Isolation_Snapshot1.cs#1)]
   
 ### Using Lock Hints with Snapshot Isolation  
  In the previous example, the first transaction selects data, and a second transaction updates the data before the first transaction is able to complete, causing an update conflict when the first transaction tries to update the same row. You can reduce the chance of update conflicts in long-running snapshot transactions by supplying lock hints at the beginning of the transaction. The following SELECT statement uses the UPDLOCK hint to lock the selected rows:  

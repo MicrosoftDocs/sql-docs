@@ -23,5 +23,4 @@ ADO.NET 2.0 introduced enhanced type support for the `DataSet` through the  <xre
 ## Example  
  The following example creates a <xref:System.Data.DataTable> object, explicitly defining the <xref:System.Data.DataColumn> data types by using <xref:System.Data.SqlTypes> instead of CLR types. The code fills the <xref:System.Data.DataTable> with data from the Sales.SalesOrderDetail table in the AdventureWorks database in SQL Server. The output displayed in the console window shows the data type of each column, and the values retrieved from SQL Server.  
   
- [!code-csharp[DataWorks SqlTypes.GetTypeAW#1](../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTypes.GetTypeAW/CS/source.cs#1)]
- [!code-vb[DataWorks SqlTypes.GetTypeAW#1](../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTypes.GetTypeAW/VB/source.vb#1)]  
+ [!code-csharp[DataWorks DataColumn_DataType#1](../../../sqlclient/doc/samples/DataColumn_DataType.cs#1)]

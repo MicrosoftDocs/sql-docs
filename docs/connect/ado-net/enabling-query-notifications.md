@@ -70,8 +70,7 @@ CREATE SERVICE ContactChangeNotifications
   
  The following code creates a <xref:Microsoft.Data.SqlClient.SqlClientPermission> object, setting the <xref:System.Security.Permissions.PermissionState> to <xref:System.Security.Permissions.PermissionState.Unrestricted>. The <xref:System.Security.CodeAccessPermission.Demand%2A> will force a <xref:System.Security.SecurityException> at run time if all callers higher in the call stack have not been granted the permission.  
   
- [!code-csharp[DataWorks SqlNotification.Perms#1](../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlNotification.Perms/CS/source.cs#1)]
- [!code-vb[DataWorks SqlNotification.Perms#1](../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlNotification.Perms/VB/source.vb#1)]  
+ [!code-csharp[DataWorks SqlClientPermission_Demand#1](../../../sqlclient/doc/samples/SqlClientPermission_Demand.cs#1)]
   
 ## Choosing a Notification Object  
  The query notifications API provides two objects to process notifications: <xref:Microsoft.Data.SqlClient.SqlDependency> and <xref:Microsoft.Data.Sql.SqlNotificationRequest>.

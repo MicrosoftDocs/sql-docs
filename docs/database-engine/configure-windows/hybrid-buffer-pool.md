@@ -70,10 +70,8 @@ By default, hybrid buffer pool is set to enable at the database scope.
 The following example returns the current status, of the hybrid buffer pool system configuration, for an instance of SQL Server.
 
 ```sql
-SELECT *
-FROM sys.configurations
-WHERE
-    name = 'hybrid_buffer_pool';
+SELECT * FROM
+sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
 The following example returns two tables:

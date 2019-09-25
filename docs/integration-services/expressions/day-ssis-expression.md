@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "DAY function"
   - "dates [Integration Services], DAY"
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # DAY (SSIS Expression)
 

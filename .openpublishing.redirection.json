@@ -367,12 +367,17 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/configuration-sql-server-r-services.md",
-            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md",
-            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/managing-and-monitoring-r-solutions.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
             "redirect_document_id": false
         },
         {
@@ -1092,17 +1097,17 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/monitoring-r-services.md",
-            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/advanced-analytics/python/monitoring-python-services.md",
-            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/advanced-analytics/python/managing-and-monitoring-python-solutions.md",
-            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
             "redirect_document_id": false
         },
         {
@@ -1877,7 +1882,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/managing-and-monitoring-r-solutions.md",
-            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
             "redirect_document_id": false
         },
         {

@@ -29,13 +29,15 @@ AND p.name = 'SQLSatellite';
 
 For more information on how to use extended events, see [Extended Events Tools](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools).
 
-## Additional events specific to machine learning components
+## Additional events specific to Machine Learning Services
 
-Additional extended events are available for components that are related to and used by SQL Server Machine Learning Services, such as the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], and BXLServer, the satellite process that starts the R runtime. These additional extended events are fired from the external processes, and thus must be captured using an external utility.
+Additional extended events are available for components that are related to and used by SQL Server Machine Learning Services, such as the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], and BXLServer, and the satellite process that starts the Pyrthon or R runtime. These additional extended events are fired from the external processes, and therefore must be captured using an external utility.
 
 For more information about how to do this, see the section, [Collecting events from external processes](#bkmk_externalevents).
 
-##  <a name="bkmk_xeventtable"></a> Table of extended events
+<a name="bkmk_xeventtable"></a> 
+
+## Table of extended events
 
 |Event|Description|Notes|  
 |-----------|-----------------|---------|  

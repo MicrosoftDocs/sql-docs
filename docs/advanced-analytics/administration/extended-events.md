@@ -71,20 +71,22 @@ For more information about how to do this, see the section, [Collecting events f
 |launchpad_resume_sent|Fires when launchpad has launched the satellite and sent a resume message to SQL Server.|Fired only from Launchpad. See instructions on collecting events from launchpad.exe.|  
 |satellite_data_chunk_sent|Fires when the satellite connection finishes sending a single data chunk.|Contains information about the number of columns, number of rows, number of packets, and time elapsed sending the chunk.|  
 |satellite_sessionId_mismatch|Message's session id is not expected||  
-  
-###  <a name="bkmk_externalevents"></a> Collecting events from external processes
+
+<a name="bkmk_externalevents"></a>
+
+### Collecting events from external processes
 
 SQL Server Machine Learning Services starts some services that run outside of the SQL Server process. To capture events related to these external processes, you must create an events trace configuration file and place the file in the same directory as the executable for the process.  
   
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
-    To capture events related to the Launchpad, place the *.config* file in the Binn directory for the SQL Server instance.  In a default installation, this would be:
+    To capture events related to the Launchpad, place the *.config* file in the Binn directory for the SQL Server instance. In a default installation, this would be:
 
     `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
   
 + **BXLServer** is the satellite process that supports SQL extensibility with external script languages, such as R or Python. A separate instance of BxlServer is launched for each external language instance.
   
-    To capture events related to BXLServer, place the *.config* file in the R or Python installation directory.  In a default installation, this would be:
+    To capture events related to BXLServer, place the *.config* file in the R or Python installation directory. In a default installation, this would be:
      
     **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
@@ -169,6 +171,7 @@ The following example shows the definition of an event trace for the BXLServer e
 + Place the *.config* file in the same directory as the BXLServer executable.
 + This file must be named `bxlserver.xevents.xml`.
 
-## See also
+## Next steps
 
-[Custom Management Studio Reports for Machine Learning Services](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)
+- [Monitor Python and R script execution using custom reports in SQL Server Management Studio](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
+- [Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)

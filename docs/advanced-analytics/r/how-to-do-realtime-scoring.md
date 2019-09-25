@@ -79,7 +79,7 @@ To use a model with either of the fast scoring options, save the model using a s
 
 **Using SQL**
 
-From SQL code, you can train the model using [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), and directly insert the trained models into a table, in a column of type **varbinary(max)**. For a simple example, see [Create a preditive model in R](../tutorials/rtsql-create-a-predictive-model-r.md)
+From SQL code, you can train the model using [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), and directly insert the trained models into a table, in a column of type **varbinary(max)**. For a simple example, see [Create a preditive model in R](../tutorials/quickstart-r-train-score-model.md)
 
 **Using R**
 

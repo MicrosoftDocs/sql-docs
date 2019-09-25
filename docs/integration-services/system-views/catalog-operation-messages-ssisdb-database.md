@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "catalog.operation_messages view [Integration Services]"
   - "operation_messages view [Integration Services]"
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.operation_messages (SSISDB Database)
 

@@ -60,7 +60,7 @@ Is the unique programmatic identifier (PROGID) of the OLE DB provider that corre
 > [!NOTE]
 > To access a mirrored database, a connection string must contain the database name. This name is necessary to enable failover attempts by the data access provider. The database can be specified in the **@provstr** or **@catalog** parameter. Optionally, the connection string can also supply a failover partner name.  
   
-[ @catalog = ] *\'catalog\'*
+[ @catalog = ] *\'catalog\'*       
  Is the catalog to be used when a connection is made to the OLE DB provider. *catalog* is **sysname**, with a default of NULL. *catalog* is passed as the DBPROP_INIT_CATALOG property to initialize the OLE DB provider. When the linked server is defined against an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], catalog refers to the default database to which the linked server is mapped.  
   
 ## Return Code Values  
@@ -101,7 +101,7 @@ Is the unique programmatic identifier (PROGID) of the OLE DB provider that corre
 >  When a linked server is created by using **sp_addlinkedserver**, a default self-mapping is added for all local logins. For non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] providers, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authenticated logins may be able to gain access to the provider under the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. Administrators should consider using `sp_droplinkedsrvlogin <linkedserver_name>, NULL` to remove the global mapping.  
   
 ## Permissions  
- The `sp_addlinkedserver` statement requires the `ALTER ANY LINKED SERVER` permission. (The SSMS **New Linked Server** dialog box is implemented in a way that requires membership in the `sysadmin` fixed server role.)  
+ The `sp_addlinkedserver` statement requires the `ALTER ANY LINKED SERVER` permission. (The [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **New Linked Server** dialog box is implemented in a way that requires membership in the `sysadmin` fixed server role.)  
   
 ## Examples  
   

@@ -1,6 +1,6 @@
 ---
-title: Extended events for monitoring Python and R scripts
-description: 
+title: Monitor Python and R scripts with extended events
+description: Learn how to use extended events to monitor and troubleshooting operations related to the SQL Server Machine Learning Services, SQL Server Launchpad, and Python or R jobs external scripts.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/24/2019
@@ -9,7 +9,7 @@ author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Extended events for monitoring Python and R scripts in SQL Server
+# Monitor Python and R scripts with extended events in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Learn how to use extended events to monitor and troubleshooting operations related to the SQL Server Machine Learning Services, SQL Server Launchpad, and Python or R jobs external scripts.

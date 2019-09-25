@@ -268,7 +268,7 @@
         - name: Extended events
           href: ../advanced-analytics/administration/extended-events.md
         - name: Extended events PREDICT T-SQL
-          href: ../advanced-analytics/xe-event-predict-tsql.md
+          href: ../advanced-analytics/administration/extended-events-predict-tsql.md
     - name: Scale script execution
       href: ../advanced-analytics/administration/modify-user-account-pool.md
     - name: Resource governor

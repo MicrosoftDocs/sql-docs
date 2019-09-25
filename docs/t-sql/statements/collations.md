@@ -30,7 +30,7 @@ Defines a collation of a database or table column, or a collation cast operation
 
 ## Syntax
 
-```
+```sql
 COLLATE { <collation_name> | database_default }
 <collation_name> :: =
     { Windows_collation_name } | { SQL_collation_name }
@@ -124,7 +124,7 @@ GO
 
 Here are the results from the first query.
 
-```
+```output
 Place
 -------------
 California
@@ -135,7 +135,7 @@ Colima
 
 Here are the results from the second query.
 
-```
+```output
 Place
 -------------
 California

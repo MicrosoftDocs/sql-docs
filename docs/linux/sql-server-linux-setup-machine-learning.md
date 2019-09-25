@@ -1,25 +1,31 @@
 ---
-title: Install SQL Server Machine Learning Services (R, Python) on Linux
-description: Learn how to install SQL Server Machine Learning Services (R, Python) on Red Hat, Ubuntu, and SUSE.
+title: Install SQL Server Machine Learning Services (Python, R) on Linux
+description: 'Learn how to install SQL Server Machine Learning Services (Python and R) on Linux: Red Hat, Ubuntu, and SUSE.'
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server Machine Learning Services (R, Python) on Linux
+# Install SQL Server Machine Learning Services (Python and R) on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[SQL Server Machine Learning Services](../advanced-analytics/index.yml) runs on Linux operating systems starting in this preview release of SQL Server 2019. Follow the steps in this article to install the machine learning extensions for R and Python.
+This article explains how to install [SQL Server Machine Learning Services](../advanced-analytics/index.yml) on Linux. You can use Machine Learning Services to execute Python and R scripts in-database.
 
-Machine learning and programming extensions are an add-on to the database engine. Although you can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
+The following Linux distributions are supported:
 
-Package location for the R and Python extensions is in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
+- Red Hat Enterprise Linux (RHEL)
+- SUSE Linux Enterprise Server (SLES)
+- Ubuntu
+
+Machine Learning Services are a feature add-on to the database engine. Although you can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
+
+Package location for the Python and R extensions is in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
 
 Machine Learning Services is also supported on Linux containers. We do not provide pre-built containers with Machine Learning Services, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
@@ -46,8 +52,8 @@ Commands for removing packages appear in the following table.
 
 | Platform	| Package removal command(s) | 
 |-----------|----------------------------|
-| RHEL	| `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
-| SLES	| `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
+| Red Hat	| `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
+| SUSE	| `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
 | Ubuntu	| `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
@@ -68,7 +74,7 @@ For each OS-specific set of installation instructions, *highest package level* i
 
 2. Run install commands using the package managers and syntax for your operating system: 
 
-   + [RedHat](#RHEL)
+   + [Red Hat](#RHEL)
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
@@ -122,7 +128,7 @@ dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
 ```
 
-#### MRO on RHEL
+#### MRO on Red Hat
 
 ```bash
 # Import the Microsoft repository key
@@ -137,6 +143,7 @@ rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rp
 # Update packages on your system (optional)
 yum update
 ```
+
 #### MRO on SUSE
 
 ```bash

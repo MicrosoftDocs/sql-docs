@@ -57,7 +57,7 @@ WHERE KeyCol = 124
  Delimited identifiers
  Are enclosed in double quotation marks (") or brackets ([ ]). Identifiers that comply with the rules for the format of identifiers might not be delimited. For example:
 
-```
+```sql
 SELECT *
 FROM [TableX]         --Delimiter is optional.
 WHERE [KeyCol] = 124  --Delimiter is optional.

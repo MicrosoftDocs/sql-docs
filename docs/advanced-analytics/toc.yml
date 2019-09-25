@@ -266,7 +266,7 @@
       - name: Extended events
         items:
         - name: Extended events
-          href: ../advanced-analytics/r/extended-events-for-sql-server-r-services.md
+          href: ../advanced-analytics/administration/extended-events.md
         - name: Extended events PREDICT T-SQL
           href: ../advanced-analytics/xe-event-predict-tsql.md
     - name: Scale script execution

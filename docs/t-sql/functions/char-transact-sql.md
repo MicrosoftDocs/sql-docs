@@ -224,29 +224,30 @@ UTF-8 `CHAR` and UTF-16 `NCHAR` are different _encoding forms_ using 8-bit and 1
 ```sql
 ; WITH uni(c) AS (
     -- BMP character
-    SELECT NCHAR(0x266B)
+    SELECT NCHAR(9835)
     UNION ALL
-    -- supplementary character, collation-independent construction
-    SELECT CONVERT(NVARCHAR(2), 0x3CD8b5DF)
+    -- non-BMP supplementary character or, under legacy collation, NULL
+    SELECT NCHAR(127925)
   ),
   enc(u16c, u8c) AS (
     SELECT c, CONVERT(VARCHAR(4), c COLLATE Latin1_General_100_CI_AI_SC_UTF8)
     FROM uni
   )
-  SELECT u16c AS [music note]
-    , u8c AS [music note (UTF-8)]
+  SELECT u16c AS [Music note]
+    , u8c AS [Music note (UTF-8)]
+    , UNICODE(u16c) AS [Code Point]
     , CONVERT(VARBINARY(4), u16c) AS [UTF-16LE bytes]
     , CONVERT(VARBINARY(4), u8c)  AS [UTF-8 bytes]
   FROM enc
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] Generated under a `_SC` collation with supplementary character support.
 
 ```
-music note music note (UTF-8) UTF-16LE bytes UTF-8 bytes
----------- ------------------ -------------- -----------
-♫          ♫                  0x6B26         0xE299AB
-🎵         🎵                 0x3CD8B5DF     0xF09F8EB5
+Music note Music note (UTF-8) Code Point  UTF-16LE bytes UTF-8 bytes
+---------- ------------------ ----------- -------------- -----------
+♫          ♫                  9835        0x6B26         0xE299AB
+🎵         🎵                 127925      0x3CD8B5DF     0xF09F8EB5
 ```
 
 ## See also

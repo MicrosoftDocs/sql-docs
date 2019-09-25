@@ -111,27 +111,24 @@ SQL Server 2014, and older versions including SQL Server 2005, have documentatio
 
 ## Other members of the SQL Server family
 
-### Cloud service members of the SQL Server family
+| Name | Https URL root |
+| :--- | :------------- |
+| Azure SQL Database single database | [https://docs.microsoft.com/azure/sql-database/](/azure/sql-database/) |
+| Azure SQL Database managed instance | [https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance](/azure/sql-database/sql-database-managed-instance) |
+| SQL Server on a virtual machine (VM) | [https://docs.microsoft.com/azure/virtual-machines/windows/sql/](/azure/virtual-machines/windows/sql/) |
+| SQL Data Warehouse | [https://docs.microsoft.com/azure/sql-data-warehouse/](/azure/sql-data-warehouse/) |
+| Analytics Platform System (APS) | [https://docs.microsoft.com/sql/analytics-platform-system/](../analytics-platform-system/) <br/><br/> Note: APS hosts SQL Server [Parallel Data Warehouse (PDW)](../analytics-platform-system/parallel-data-warehouse-overview.md), which is the software that runs the massively parallel processing (MPP) data warehouse. |
+| SQL Server on Linux | [https://docs.microsoft.com/sql/linux/](../linux/) |
+| &nbsp; | &nbsp; |
 
-- Azure SQL Database
-  - [https://docs.microsoft.com/azure/sql-database/](/azure/sql-database/) 
-&nbsp;
-- SQL Server on a virtual machine (VM)
-  - [https://docs.microsoft.com/azure/virtual-machines/windows/sql/](azure/virtual-machines/windows/sql/)
-&nbsp;
-- SQL Data Warehouse
-  - [https://docs.microsoft.com/azure/sql-data-warehouse/](/azure/sql-data-warehouse/)
+### Cousins of SQL Server
 
-### Cloud cousins of SQL Server
-
-- PostgreSQL database
-  - [https://docs.microsoft.com/azure/postgresql/](/azure/postgresql/)
-&nbsp;
-- MySQL database
-  - [https://docs.microsoft.com/azure/mysql/](/azure/mysql/)
-&nbsp;
-- NoSQL: &nbsp; Azure Cosmos DB
-  - [https://docs.microsoft.com/azure/cosmos-db/](/azure/cosmos-db/)
+| Name | Https URL root |
+| :--- | :------------- |
+| PostgreSQL database | [https://docs.microsoft.com/azure/postgresql/](/azure/postgresql/) |
+| MySQL database | [https://docs.microsoft.com/azure/mysql/](/azure/mysql/) |
+| NoSQL: &nbsp; Azure Cosmos DB | [https://docs.microsoft.com/azure/cosmos-db/](/azure/cosmos-db/) |
+| &nbsp; | &nbsp; |
 
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
 ## Migrate and move data, in version 2016

@@ -117,8 +117,8 @@ SQL Server 2014, and older versions including SQL Server 2005, have documentatio
 | Azure SQL Database managed instance | [https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance](/azure/sql-database/sql-database-managed-instance) |
 | SQL Server on a virtual machine (VM) | [https://docs.microsoft.com/azure/virtual-machines/windows/sql/](/azure/virtual-machines/windows/sql/) |
 | SQL Data Warehouse | [https://docs.microsoft.com/azure/sql-data-warehouse/](/azure/sql-data-warehouse/) |
-| Analytics Platform System (APS) | [https://docs.microsoft.com/sql/analytics-platform-system/](../analytics-platform-system/) <br/><br/> Note: APS hosts SQL Server [Parallel Data Warehouse (PDW)](../analytics-platform-system/parallel-data-warehouse-overview.md), which is the software that runs the massively parallel processing (MPP) data warehouse. |
-| SQL Server on Linux | [https://docs.microsoft.com/sql/linux/](../linux/) |
+| Analytics Platform System (APS) | [https://docs.microsoft.com/sql/analytics-platform-system/](../analytics-platform-system/index.md) <br/><br/> _Note:_ APS hosts SQL Server [Parallel Data Warehouse (PDW)](../analytics-platform-system/parallel-data-warehouse-overview.md), which is the software that runs the massively parallel processing (MPP) data warehouse. |
+| SQL Server on Linux | [https://docs.microsoft.com/sql/linux/](../linux/index.md) |
 | &nbsp; | &nbsp; |
 
 ### Cousins of SQL Server

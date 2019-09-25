@@ -411,6 +411,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/advanced-analytics/administration/modify-user-account-pool.md",
+            "redirect_url": "/sql/advanced-analytics/administration/scale-concurrent-execution-external-scripts",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/advanced-analytics/r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md",
             "redirect_url": "/sql/advanced-analytics/r/ref-r-sqlrutils",
             "redirect_document_id": true

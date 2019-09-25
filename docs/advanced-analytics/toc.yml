@@ -257,8 +257,6 @@
         href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
   - name: Administration
     items:
-    - name: Manage integration
-      href: ../advanced-analytics/r/managing-and-monitoring-r-solutions.md
     - name: Monitor
       items:
       - name: Monitor using SSMS reports

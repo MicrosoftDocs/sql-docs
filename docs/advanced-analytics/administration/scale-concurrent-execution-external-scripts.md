@@ -7,14 +7,14 @@ ms.date: 09/25/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Scale concurrent execution of external scripts in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-As part of the installation process for [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], a new Windows *user account pool* is created to support execution of tasks by the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. The purpose of these worker accounts is to isolate concurrent execution of external scripts by different SQL users.
+Learn about worker accounts for SQL Server Machine Learning Services and how to change the default configuration to scale the number of concurrent execution of external scripts.
 
-This article describes the default configuration and capacity for the worker accounts, and how to change the default configuration to scale the number of concurrent execution of external scripts in SQL Server Machine Learning Services.
+As part of the installation process for Machine Learning Services, a new Windows *user account pool* is created to support execution of tasks by the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. The purpose of these worker accounts is to isolate concurrent execution of external scripts by different SQL Server users.
 
 ## Worker account group
 
@@ -60,7 +60,7 @@ The resources that can be used by Python or R scripts are governed by SQL Server
 
 ## See also
 
-For additional information about configuring capacity, see these articles:
+For additional information about monitoring SQL Server Machine Learning Services, see these articles:
 
-- [SQL Server configuration for R Services](../../advanced-analytics/r/sql-server-configuration-r-services.md)
-- [Performance case study for R Services](../../advanced-analytics/r/performance-case-study-r-services.md)
+- [Monitor Python and R script execution using custom reports in SQL Server Management Studio](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
+- [Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)

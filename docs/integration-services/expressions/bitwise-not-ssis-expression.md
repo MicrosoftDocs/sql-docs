@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "bitwise NOT (~)"
   - "~ (bitwise NOT)"
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # ~ (Bitwise Not) (SSIS Expression)
 

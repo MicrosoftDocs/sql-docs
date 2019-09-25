@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "scheduling packages [Integration Services]"
   - "SQL Server Agent [Integration Services]"
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # SQL Server Agent Jobs for Packages
 

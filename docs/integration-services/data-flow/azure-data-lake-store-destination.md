@@ -11,8 +11,8 @@ f1_keywords:
   - "SQL13.DTS.DESIGNER.AFPADLSDEST.F1"
   - "sql14.dts.designer.afpadlsdest.f1"
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Azure Data Lake Store Destination
 

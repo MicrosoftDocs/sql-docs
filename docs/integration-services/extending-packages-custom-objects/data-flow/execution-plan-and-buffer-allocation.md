@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "data flow components [Integration Services], execution plans"
   - "execution plans [Integration Services]"
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Execution Plan and Buffer Allocation
 

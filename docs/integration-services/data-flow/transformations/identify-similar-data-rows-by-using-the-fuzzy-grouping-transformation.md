@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "similar data rows [Integration Services]"
   - "fuzzy matches"
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Identify Similar Data Rows by Using the Fuzzy Grouping Transformation
 

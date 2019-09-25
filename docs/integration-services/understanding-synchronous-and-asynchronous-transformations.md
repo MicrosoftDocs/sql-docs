@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data flow components [Integration Services], synchronous and asynchronous"
   - "synchronous transformations [Integration Services]"
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Understanding Synchronous and Asynchronous Transformations
 

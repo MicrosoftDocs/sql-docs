@@ -320,36 +320,39 @@ GO
 
 Use the **Backup-SqlDatabase** cmdlet. To explicitly indicate that this is a full database backup, specify the **-BackupAction** parameter with its default value, **Database**. This parameter is optional for full database backups.
 
-## Powershell Examples
+### A. Full backup (local)
 
-### A. Full local backup
+The following example creates a full database backup of the `<myDatabase>` database to the default backup location of the server instance `Computer\Instance`. Optionally, this example specifies **-BackupAction Database**.
 
-The following example creates a full database backup of the `SQLTestDB` database to the default backup location of the server instance `Computer\Instance`. Optionally, this example specifies **-BackupAction Database**. For the full syntax and additional examples, see [Backup-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/backup-sqldatabase).
+For the full syntax and additional examples, see [Backup-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/backup-sqldatabase).
 
 > [!NOTE]
-> These examples require the SqlServer module. To determine if it is installed, run `Get-Module -Name SqlServer`. To install this module, run `Install-Module -Name SqlServer` in an administrator session of PowerShell. For more information, see [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).
+> These examples require the SqlServer module. To determine if it is installed, run `Get-Module -Name SqlServer`. To install this module, run `Install-Module -Name SqlServer` in an administrator session of PowerShell.
+>
+> For more information, see [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).
 
 ```powershell
-$credential=Get-Credential
-Backup-SqlDatabase -ServerInstance Computer[\Instance] -Database SQLTestDB -BackupAction Database -Credential $credential
+$credential = Get-Credential
+
+Backup-SqlDatabase -ServerInstance Computer[\Instance] -Database <myDatabase> -BackupAction Database -Credential $credential
 ```
 
 > [!IMPORTANT]
 > If you are opening a PowerShell window from within SQL Server Management Studio to connect to an installation of SQL Server, you can omit the credential portion of this example as your credential in SSMS is automatically used to establish the connection between PowerShell and your SQL Server instance.
 
-### B. Full backup to Microsoft Azure
+### B. Full backup to Azure
 
-The following example creates a full backup of the database `SQLTestDB` on the `MyServer` instance to the Microsoft Azure Blob Storage service. A stored access policy has been created with read, write, and list rights. The SQL Server credential, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, was created using a Shared Access Signature that is associated with the Stored Access Policy. The PowerShell command uses the **BackupFile** parameter to specify the location (URL) and the backup file name.
+The following example creates a full backup of the database `<myDatabase>` on the `<myServer>` instance to the Azure Blob Storage service. A stored access policy has been created with read, write, and list rights. The SQL Server credential, `https://<myStorageAccount>.blob.core.windows.net/<myContainer>`, was created using a Shared Access Signature that is associated with the Stored Access Policy. The PowerShell command uses the **BackupFile** parameter to specify the location (URL) and the backup file name.
 
 ```powershell
-$credential=Get-Credential;
-$container = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer';
-$fileName = 'SQLTestDB.bak';
-$server = "MyServer"
-$database = 'SQLTestDB';
-$backupFile = $container + '/' + $fileName ;
+$credential = Get-Credential
+$container = 'https://<myStorageAccount>blob.core.windows.net/<myContainer>'
+$fileName = '<myDatabase>.bak'
+$server = '<myServer>'
+$database = '<myDatabase>
+$backupFile = $container + '/' + $fileName
 
-Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential;
+Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential
 ```
 
 > [!IMPORTANT]

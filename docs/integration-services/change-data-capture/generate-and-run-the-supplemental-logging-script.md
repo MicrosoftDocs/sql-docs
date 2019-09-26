@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "supLog"
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Generate and Run the Supplemental Logging Script
 

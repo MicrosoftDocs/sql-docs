@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.dts.designer.afpblobdltask.f1"
   - "sql14.dts.designer.afpblobdltask.f1"
 ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Azure Blob Download Task
 

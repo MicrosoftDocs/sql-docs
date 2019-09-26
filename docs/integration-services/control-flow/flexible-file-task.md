@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPEXTFILETASK.F1"
   - "SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1"
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Flexible File Task
 

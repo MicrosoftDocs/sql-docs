@@ -72,13 +72,13 @@ Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the **PASSWORD
 
 1. In the **Destination** section, review the default location for the backup file (in the ../mssql/data folder).
 
- To backup to a different device, change the selection using the **Back up to** drop-down list. To stripe the backup set across multiple files for increased backup speed, click **Add** to add additional backup objects and/or destinations.
+  To backup to a different device, change the selection using the **Back up to** drop-down list. To stripe the backup set across multiple files for increased backup speed, click **Add** to add additional backup objects and/or destinations.
  
- To remove a backup destination, select it and click **Remove**. To view the contents of an existing backup destination, select it and click **Contents**.
+  To remove a backup destination, select it and click **Remove**. To view the contents of an existing backup destination, select it and click **Contents**.
 
 1. (optional) Review the other available settings under the **Media Options** and **Backup Options** pages.
 
- For more information about the various backup options, see [General page](back-up-database-general-page.md), [Media options page](back-up-database-media-options-page.md), and [Backup options page](back-up-database-backup-options-page.md).
+  For more information about the various backup options, see [General page](back-up-database-general-page.md), [Media options page](back-up-database-media-options-page.md), and [Backup options page](back-up-database-backup-options-page.md).
 
 1. Click **OK** to initiate the backup.
 
@@ -213,9 +213,7 @@ If you do not have an Azure blob container in a storage account, create one befo
 
 1. Click **Add** and the **Select Backup Destination** dialog box will open.
 
-1. If you have previously registered the Azure storage container that you wish to use with SQL Server Management Studio, select it.
-
-1. Otherwise, click **New container** to register a new container.
+1. If you have previously registered the Azure storage container that you wish to use with SQL Server Management Studio, select it. Otherwise, click **New container** to register a new container.
 
 1. In the **Connect to a Microsoft Subscription** dialog box, sign in to your account.
 
@@ -233,7 +231,7 @@ If you do not have an Azure blob container in a storage account, create one befo
 
 1. Click **OK** to close the **Select a backup destination** dialog box.
 
-1. CLick **OK** to initiate the backup.
+1. Click **OK** to initiate the backup.
 
 1. When the backup completes successfully, click **OK** to close the SQL Server Management Studio dialog box.
 
@@ -270,7 +268,7 @@ By default, `BACKUP` appends the backup to an existing media set, preserving exi
 
 Alternatively, to format the backup media, use the **FORMAT** option:
 
- FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media\_name\_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } ]
+ FORMAT [ **,** MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } ]
 
  Use the **FORMAT** clause when you are using media for the first time or you want to overwrite all existing data. Optionally, assign the new media a media name and description.
 
@@ -372,7 +370,9 @@ Use the **Backup-SqlDatabase** cmdlet. To explicitly indicate that this is a ful
 > [!IMPORTANT]
 > If you are opening a PowerShell window from within SQL Server Management Studio to connect to an installation of SQL Server, you can omit the credential portion of this example as your credential in SSMS is automatically used to establish the connection between PowerShell and your SQL Server instance.
 
-### A. Full backup (local)
+### Examples
+
+#### A. Full backup (local)
 
 The following example creates a full database backup of the `<myDatabase>` database to the default backup location of the server instance `Computer\Instance`. Optionally, this example specifies **-BackupAction Database**.
 
@@ -384,7 +384,7 @@ $credential = Get-Credential
 Backup-SqlDatabase -ServerInstance Computer[\Instance] -Database <myDatabase> -BackupAction Database -Credential $credential
 ```
 
-### B. Full backup to Azure
+#### B. Full backup to Azure
 
 The following example creates a full backup of the database `<myDatabase>` on the `<myServer>` instance to the Azure Blob Storage service. A stored access policy has been created with read, write, and list rights. The SQL Server credential, `https://<myStorageAccount>.blob.core.windows.net/<myContainer>`, was created using a Shared Access Signature that is associated with the Stored Access Policy. The PowerShell command uses the **BackupFile** parameter to specify the location (URL) and the backup file name.
 

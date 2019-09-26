@@ -11,9 +11,9 @@ ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
 ---
-# SQL Server 2019 extension (preview)
+# SQL Server 2019 extension for Azure Data Studio (preview)
 
-The SQL Server 2019 extension (preview) provides preview support for new features and tools shipping in support of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This includes preview support for [SQL Server 2019 big data clusters](../big-data-cluster/big-data-cluster-overview.md), an integrated [notebook experience](../big-data-cluster/notebooks-guidance.md), and a PolyBase [Create External Table wizard](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
+The SQL Server 2019 extension for Azure Data Studio (preview) provides preview support for new features and tools shipping in support of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This includes preview support for [SQL Server 2019 big data clusters](../big-data-cluster/big-data-cluster-overview.md), an integrated [notebook experience](../big-data-cluster/notebooks-guidance.md), and a PolyBase [Create External Table wizard](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
 
 ## Install the SQL Server 2019 extension (preview)
 
@@ -138,58 +138,3 @@ A number of improvements that help extenders were added in this release
 * Block use of Create External Data wizard if PolyBase is not enabled or running in the target server.
 * Spelling and naming fixes related to SQL Server 2019 and Create External Data.
 * Removed a large number of errors from the Azure Data Studio debug console.
-
-##  SQL Server 2019 Big Data Cluster support
-
-* Click **Add Connection** in *Object Explorer* and choose **SQL Server big data cluster** as the connection type.
-
-   > [!TIP]
-   > If you do not see the **SQL Server big data cluster** connection type, restart Azure Data Studio.
-
-* Enter the host name or IP address of the cluster endpoint plus the username & password used to connect.
-* Optionally, include a friendly display name in the **Name** field.
-* Click **Connect** and you can then launch common tasks from the Dashboard, browse **HDFS** in Object Explorer, and run in-context tasks from there.
-* To submit a Spark job against the cluster, right-click on the server node in *Object Explorer* and choose **Submit Spark Job** to bring up the submission dialog.
-* To open a Notebook, see the next section.
-
-For details, see [Big Data Clusters](../big-data-cluster/big-data-cluster-overview.md).
-
-
-## Azure Data Studio Notebooks
-
-* Open a notebook in one of the following ways:
-  * Open a new notebook from the *Command Palette*.
-  * Open the HDFS Object Explorer tree for a SQL Server 2019 big data cluster and either:
-    * Right click on the server node and choose **New Jupyter Notebook**.
-    * Right click on a CSV file, and choose **Analyze in Notebook**.
-  * Open an existing .ipynb file from the **File** menu or file explorer *(.ipynb files must be upgraded to version 4 or higher to load properly)*
-* Choose a kernel. For local notebook execution, choose Python 3. For remote execution, choose PySpark or Spark | Scala.
-* Choose a SQL Server big data cluster endpoint to connect to if executing remotely (this is not necessary for local development with Python 3).
-* Add code or markdown cells via the buttons in the notebook header. Remove cells with the trash can icon to the left of each cell.
-* Run cells with the play button for code cells, and toggle markdown editing and preview with the eye icon
-
-## PolyBase Create External Table Wizard
-
-* From a SQL Server 2019 instance the *Create External Table Wizard* can be opened in three ways:
-  * Right click on a server, choose **Manage**, click on the tab for SQL Server 2019 (Preview), and choose **Create External Table**.
-  * With a SQL Server 2019 instance selected in *Object Explorer*, bring up *Create External Wizard* via the *Command Palette*.
-  * Right click on a SQL Server 2019 database in *Object Explorer* and choose **Create External Table**.
-* In this version of the extension, external tables may be created to access remote SQL Server and Oracle tables.
-
-  > [!NOTE]
-  > While the External Table functionality is a SQL 2019 feature, the remote SQL Server may be running an earlier version of SQL Server.
-
-* Choose whether you are accessing SQL Server or Oracle on the first page of the wizard and continue.
-* You will be prompted to create a Database Master Key if one has not already been created (passwords of insufficient complexity will be blocked).
-* Create a data source connection and named credential for the remote server.
-* Choose which objects to map to your new external table.
-* Choose **Generate Script** or **Create** to finish the wizard.
-* After creation of the external table, it immediately appears in the object tree of the database where it was created.
-
-
-## Known Issues
-
-* If password is not saved when creating a connection, some actions such as submitting Spark Job may not succeed.
-* Existing .ipynb notebooks must be upgraded to version 4 or higher to load contents in the viewer.
-* Running the **Reinstall Notebook Dependencies** command may show 2 tasks in the tasks view, one of which fails. This does not cause installation to fail
-* Choosing **Add New Connection** in a Notebook and clicking cancel will cause **Select Connection** to be shown, even if you were already connected.

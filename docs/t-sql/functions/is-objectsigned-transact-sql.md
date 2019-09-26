@@ -38,20 +38,20 @@ IS_OBJECTSIGNED (
  **'OBJECT'**  
  The type of securable class.  
   
- *@object_id*  
- The object_id of the object being tested. *@object_id* is type **int**.  
+ *\@object_id*  
+ The object_id of the object being tested. *\@object_id* is type **int**.  
   
- *@class*  
+ *\@class*  
  The class of the object:  
   
 -   'certificate'  
   
 -   'asymmetric key'  
   
- *@class* is **sysname**.  
+ *\@class* is **sysname**.  
   
- *@thumbprint*  
- The SHA thumbprint of the object. *@thumbprint* is type **varbinary(32)**.  
+ *\@thumbprint*  
+ The SHA thumbprint of the object. *\@thumbprint* is type **varbinary(32)**.  
   
 ## Returned Types  
  **int**  

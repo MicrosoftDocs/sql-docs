@@ -96,6 +96,7 @@ FROM dbo.t1 where c1 < 3
 GROUP BY c1  
 ```
 Selecting from the materialized view returns two rows.
+
 |c1|total_number|
 |--------|--------| 
 |1|1| 
@@ -124,12 +125,14 @@ END
 ```
 
 Selecting from the materialized view returns the same result as before.  
+
 |c1|total_number|
 |--------|--------| 
 |1|1| 
 |2|1|
 
-Run DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1").  100 rows were added to the materialized view (total_row - base_view_rows) and the overhead_ratio increased. 
+Run DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1").  In the output below, 100 rows were added to the materialized view (total_row - base_view_rows) and the overhead_ratio increased. 
+
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
 |--------|--------|--------|--------|  
 |587149137|2|102 |51.00000000000000000 |
@@ -141,6 +144,8 @@ ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
 go
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
 ```
+Output
+
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
 |--------|--------|--------|--------|  
 |587149137|2|2 |1.00000000000000000 |

@@ -111,11 +111,11 @@ ms.author: "mathoma"
   
 #### To delete a partition  
   
-1.  At the Publisher on the publication database, execute [sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md). Specify the name of the publication for **@publication** and the parameterized value that defines the partition for one of the following:  
+1.  At the Publisher on the publication database, execute [sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md). Specify the name of the publication for `@publication` and the parameterized value that defines the partition for one of the following:  
   
-    -   **@suser_sname** - when the parameterized filter is defined by the value returned by [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md).  
+    -   `@suser_sname` - when the parameterized filter is defined by the value returned by [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md).  
   
-    -   **@host_name** - when the parameterized filter is defined by the value returned by [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
+    -   `@host_name` - when the parameterized filter is defined by the value returned by [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
   
      This also removes the snapshot job and any snapshot files for the partition.  
   

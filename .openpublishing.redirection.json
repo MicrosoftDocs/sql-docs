@@ -416,6 +416,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/advanced-analytics/administration/resource-governance.md",
+            "redirect_url": "/sql/advanced-analytics/administration/resource-governor",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/advanced-analytics/r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md",
             "redirect_url": "/sql/advanced-analytics/r/ref-r-sqlrutils",
             "redirect_document_id": true

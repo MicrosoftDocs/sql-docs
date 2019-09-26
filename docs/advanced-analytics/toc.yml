@@ -274,7 +274,7 @@
     - name: Resource governor
       items:
       - name: Use resource governor
-        href: ../advanced-analytics/administration/resource-governance.md
+        href: ../advanced-analytics/administration/resource-governor.md
       - name: Create a resource pool
         href: ../advanced-analytics/administration/how-to-create-a-resource-pool.md
   - name: Security

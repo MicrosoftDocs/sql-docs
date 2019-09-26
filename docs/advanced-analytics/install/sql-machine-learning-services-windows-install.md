@@ -5,13 +5,13 @@ description: This article explains how to install SQL Server Machine Learning Se
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/20/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server Machine Learning Services on Windows
+# Install SQL Server Machine Learning Services (Python and R) on Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -290,7 +290,7 @@ To install and manage R packages, you can set up user groups to share packages o
 
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
-+ [Tutorial: Run R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutorial: Run R in T-SQL](../tutorials/quickstart-r-create-script.md)
 + [Tutorial: In-database analytics for R developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:

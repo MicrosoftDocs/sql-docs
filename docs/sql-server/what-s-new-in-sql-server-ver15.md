@@ -71,11 +71,12 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Resumable online rowstore index build | See [Perform Index Operations Online](../relational-databases/indexes/perform-index-operations-online.md). |
 | &nbsp; | &nbsp; |
 
-### In memory databases
+### In-memory database
 
 |New feature or update | Details |
 |:---|:---|
-|DDL control for hybrid buffer pool |With [hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md), database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|
+|Hybrid buffer pool| New feature of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required. See [Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md).|
+|Memory-optimized `tempdb` metadata| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new feature that is part of the [In-Memory Database](../relational-databases/in-memory-database.md) feature family, memory-optimized `tempdb` metadata, which effectively removes this bottleneck and unlocks a new level of scalability for `tempdb` heavy workloads. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the system tables involved in managing temp table metadata can be moved into latch-free non-durable memory-optimized tables. See [Memory-Optimized `tempdb` Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 | &nbsp; | &nbsp; |
 
 ### Unicode support
@@ -93,13 +94,6 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Support for UTF-8 character encoding|Support UTF-8 character with external tables. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).|
 | &nbsp; | &nbsp; |
 
-### Server settings
-
-|New feature or update | Details |
-|:---|:---|
-|Hybrid buffer pool| New feature of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required. See [Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md).|
-| &nbsp; | &nbsp; |
-
 ### Performance monitoring
 
 |New feature or update | Details |
@@ -111,6 +105,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |`sys.dm_exec_query_plan_stats` |New DMF returns the equivalent of the last known actual execution plan for most queries. See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
 |`LAST_QUERY_PLAN_STATS` | New database scoped configuration to enable `sys.dm_exec_query_plan_stats`. See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |`query_post_execution_plan_profile` | Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. See [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).|
+|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | New DMF returns information about a page in a database. See [sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ### Language extensions
@@ -141,7 +136,6 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Resource governance| The configurable value for the `REQUEST_MAX_MEMORY_GRANT_PERCENT` option of `CREATE WORKLOAD GROUP` and `ALTER WORKLOAD GROUP` has been changed from an integer to a float data type, to allow more granular control of memory limits. See [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) and [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Reduced recompilations for workloads| Improves using temporary tables across multiple scopes. See [Reduced recompilations for workloads](../relational-databases/tables/tables.md#ctp23) |
 |Indirect checkpoint scalability |See [Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
-|Memory-optimized `tempdb` metadata| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new feature that is part of the [In-Memory Database](../relational-databases/in-memory-database.md) feature family, memory-optimized `tempdb` metadata, which effectively removes this bottleneck and unlocks a new level of scalability for `tempdb` heavy workloads. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the system tables involved in managing temp table metadata can be moved into latch-free non-durable memory-optimized tables. See [Memory-Optimized `tempdb` Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 |Concurrent PFS updates|[PFS pages](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) are special pages within a database file that SQL Server uses to help locate free space when allocating space for an object. Page latch contention on PFS pages is something that is commonly associated with [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), but it can also occur on user databases when there are many concurrent object allocation threads. This improvement changes the way that concurrency is managed with PFS updates so that they can be updated under a shared latch, rather than an exclusive latch. This behavior is on by default in all databases (including `tempdb`) starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
 |Row mode memory grant feedback |Expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators. This can automatically correct excessive grants that result in wasted memory and reduced concurrency, and correct insufficient memory grants that cause expensive spills to disk. See [Row mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
 |Table variable deferred compilation|Improves plan quality and overall performance for queries that reference table variables. During optimization and initial compilation, this feature propagates cardinality estimates that are based on actual table variable row counts. This accurate row count information optimizes downstream plan operations. See [Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |

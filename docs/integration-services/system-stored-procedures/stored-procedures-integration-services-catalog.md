@@ -10,8 +10,8 @@ ms.topic: "language-reference"
 helpviewer_keywords: 
   - "stored procedures [Integration Services]"
 ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Stored Procedures (Integration Services Catalog)
 

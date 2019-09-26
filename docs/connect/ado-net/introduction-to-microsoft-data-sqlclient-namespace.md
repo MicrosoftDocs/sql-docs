@@ -38,7 +38,7 @@ Authentication - Active Directory Password authentication mode.
 
 ### Data Classification
 
-Data Classification brings a new set of APIs exposing read-only Data Sensitivity and Classification information about objects retrieved via SqlDataReader when the underlying source supports the feature and contains metadata about [data sensitivity and classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
+Data Classification brings a new set of APIs exposing read-only Data Sensitivity and Classification information about objects retrieved via SqlDataReader when the underlying source supports the feature and contains metadata about [data sensitivity and classification](../../../relational-databases/security/sql-data-discovery-and-classification.md).
 
 ```C#
 public class SqlDataReader
@@ -78,13 +78,13 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### UTF-8 support
 
-UTF-8 support does not require any application code changes. These SqlClient changes simply optimize the communication between the client and server when the server supports UTF-8 and the underlying column collation is UTF-8. See the UTF-8 section under [What's new in SQL Server 2019 preview](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15?view=sqlallproducts-allversions#utf-8-support-ctp-23).
+UTF-8 support does not require any application code changes. These SqlClient changes simply optimize the communication between the client and server when the server supports UTF-8 and the underlying column collation is UTF-8. See the UTF-8 section under [What's new in SQL Server 2019 preview](../../../sql-server/what-s-new-in-sql-server-ver15.md).
 
 ### Always Encrypted with Enclaves
 
 In general, existing documentation which uses System.Data.SqlClient on .NET Framework **and built-in column master key store providers** should now work with .NET Core, too.
 
- [Develop using Always Encrypted with .NET Framework Data Provider](https://docs.microsoft.com/sql/relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider?view=sql-server-2017)
+ [Develop using Always Encrypted with .NET Framework Data Provider](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
  [Always Encrypted: Protect sensitive data and store encryption keys in the Windows certificate store](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
 

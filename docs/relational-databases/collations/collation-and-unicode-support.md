@@ -75,7 +75,7 @@ The behavior associated with these various options is described in the following
 |Binary-code point (\_BIN2)<sup>1</sup> | Sorts and compares data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables based on Unicode code points for Unicode data. For non-Unicode data, Binary-code point uses comparisons that are identical to those for binary sorts.<br/><br/> The advantage of using a Binary-code point sort order is that no data resorting is required in applications that compare sorted [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data. As a result, a Binary-code point sort order provides simpler application development and possible performance increases. For more information, see the [Binary collations](#Binary-collations) section in this article.|
 |UTF-8 (\_UTF8)|Enables UTF-8 encoded data to be stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If this option isn't selected, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the default non-Unicode encoding format for the applicable data types. For more information, see the [UTF-8 Support](#utf8) section in this article.| 
 
-<sup>1</sup> If Binary or Binary-code point is selected, the Case-sensitive (\_CS), Accent-sensitive (\_AS), Kana-sensitive (\_KS), and Width-sensitive (\WS) options aren't available.      
+<sup>1</sup> If Binary or Binary-code point is selected, the Case-sensitive (\_CS), Accent-sensitive (\_AS), Kana-sensitive (\_KS), and Width-sensitive (\_WS) options are not available.      
 
 #### Examples of collation options
 Each collation is combined as a series of suffixes to define case-, accent-, width-, or kana-sensitivity. The following examples describe sort order behavior for various combinations of suffixes.

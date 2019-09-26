@@ -384,11 +384,11 @@ SELECT * FROM sys.fn_helpcollations();
 ```
     
 #### <a name="Database-level-collations"></a> Database-level collations    
-When you create or modify a database, you can use the COLLATE clause of the CREATE DATABASE or ALTER DATABASE statement to specify the default database collation. If no collation is specified, the database is assigned the server collation.    
+When you create or modify a database, you can use the `COLLATE` clause of the `CREATE DATABASE` or `ALTER DATABASE` statement to specify the default database collation. If no collation is specified, the database is assigned the server collation.    
     
 You can change the collation of system databases only by changing the collation for the server.
     
-The database collation is used for all metadata in the database, and the collation is the default for all string columns, temporary objects, variable names, and any other strings used in the database. When you change the collation of a user database, there can be collation conflicts when queries in the database access temporary tables. Temporary tables are always stored in the *tempdb* system database, which uses the collation for the instance. Queries that compare character data between the user database and *tempdb* might fail if the collations cause a conflict in evaluating the character data. You can resolve this issue by specifying the COLLATE clause in the query. For more information, see [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md).    
+The database collation is used for all metadata in the database, and the collation is the default for all string columns, temporary objects, variable names, and any other strings used in the database. When you change the collation of a user database, there can be collation conflicts when queries in the database access temporary tables. Temporary tables are always stored in the *tempdb* system database, which uses the collation for the instance. Queries that compare character data between the user database and *tempdb* might fail if the collations cause a conflict in evaluating the character data. You can resolve this issue by specifying the `COLLATE` clause in the query. For more information, see [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md).    
 
 > [!NOTE]
 > You can't change the collation after the database has been created on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -409,7 +409,7 @@ SELECT CONVERT (VARCHAR(50), DATABASEPROPERTYEX('database_name','collation'));
 ```
 
 #### <a name="Column-level-collations"></a> Column-level collations    
-When you create or alter a table, you can specify collations for each character-string column by using the COLLATE clause. If you don't specify a collation, the column is assigned the default collation of the database.    
+When you create or alter a table, you can specify collations for each character-string column by using the `COLLATE` clause. If you don't specify a collation, the column is assigned the default collation of the database.    
 
 You can change the collation of a column by using an `ALTER TABLE` statement that's similar to the following:
 
@@ -418,7 +418,7 @@ ALTER TABLE myTable ALTER COLUMN mycol NVARCHAR(10) COLLATE Greek_CS_AI;
 ```
     
 #### <a name="Expression-level-collations"></a> Expression-level collations    
-Expression-level collations are set when a statement is run, and they affect the way a result set is returned. This enables ORDER BY sort results to be locale-specific. To implement expression-level collations, use a COLLATE clause such as the following:    
+Expression-level collations are set when a statement is run, and they affect the way a result set is returned. This enables `ORDER BY` sort results to be locale-specific. To implement expression-level collations, use a `COLLATE` clause such as the following:    
     
 ```sql    
 SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;    
@@ -516,7 +516,7 @@ But the Unicode Consortium has established 16 additional "planes" of characters,
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] extends supplementary character support to the **char** and **varchar** data types with the new UTF-8 enabled collations ([\_UTF8](#utf8)). These data types are also capable of representing the full Unicode character range.   
 
 > [!NOTE]
-> Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], all new **\_140** collations automatically support supplementary characters.
+> Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], all new \_140 collations automatically support supplementary characters.
 
 If you use supplementary characters:    
     
@@ -603,9 +603,9 @@ The following table lists the encoding storage bytes for each character range an
 <sup>2</sup> The code point range for [supplementary characters](#Supplementary_Characters).
 
 > [!TIP]   
-> It's common to think, in [CHAR(*n*) and VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) or in [NCHAR(*n*) and NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), that *n* defines the number of characters. This is because, in the example of a CHAR(10) column, 10 ASCII characters in the range 0–127 can be stored by using a collation such as Latin1_General_100_CI_AI, because each character in this range uses only 1 byte.
+> It's common to think, in [CHAR(*n*) and VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) or in [NCHAR(*n*) and NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), that *n* defines the number of characters. This is because, in the example of a CHAR(10) column, 10 ASCII characters in the range 0–127 can be stored by using a collation such as **Latin1_General_100_CI_AI**, because each character in this range uses only 1 byte.
 >    
-> However, in [CHAR(*n*) and VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), *n* defines the string size in **bytes** (0–8,000), and in [NCHAR(*n*) and NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), *n* defines the string size in **byte-pairs** (0–4,000). *n* never defines numbers of characters that can be stored.
+> However, in [CHAR(*n*) and VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), *n* defines the string size in *bytes* (0–8,000), and in [NCHAR(*n*) and NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), *n* defines the string size in *byte-pairs* (0–4,000). *n* never defines numbers of characters that can be stored.
 
 As you've just seen, choosing the appropriate Unicode encoding and data type might give you significant storage savings or increase your current storage footprint, depending on the character set in use. For example, when you use a Latin collation that's UTF-8 enabled, such as **Latin1_General_100_CI_AI_SC_UTF8**, a `CHAR(10)` column stores 10 bytes and can hold 10 ASCII characters in the range 0–127. But it can hold only 5 characters in the range 128–2047 and only 3 characters in the range 2048–65535. By comparison, because a `NCHAR(10)` column stores 10 byte-pairs (20 bytes), it can hold 10 characters in the range 0–65535.  
 

@@ -34,7 +34,7 @@ ms.author: "mathoma"
 2.  For a new publication, execute [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) at the Publisher on the publication database. Specify a value of **true** for **allow_initialize_from_backup**. For more information, see [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
     > [!WARNING]  
-    >  To avoid missing subscriber data, when using **sp_addpublication** with `@allow_initialize_from_backup = N'true'`, always use `@immediate_sync = N'true'`.  
+    >  To avoid missing subscriber data, when using **sp_addpublication** or **sp_changepublication** with `@allow_initialize_from_backup = N'true'`, always use `@immediate_sync = N'true'`.  
   
 3.  Create a backup of the publication database using the [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md) statement.  
   

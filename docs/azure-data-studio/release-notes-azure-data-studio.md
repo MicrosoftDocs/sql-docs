@@ -9,12 +9,32 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
-ms.date: "08/15/2019"
+ms.date: "09/11/2019"
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## September 2019
+
+September 10, 2019 &nbsp; / &nbsp; version: 1.11.0 
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Enable SQLCMD Mode | Query editor now supports toggling of SQLCMD mode to write and edit queries as SQLCMD scripts |
+| Community Extension: Query Editor Boost | Query Editor Boost is an open source extension focused on enhancing the Azure Data Studio query editor for users who are frequently writing queries. &bull; &nbsp; Save the current query as a snippet <br/>&bull; &nbsp; Switch databases using Ctrl+U <br/> &bull; &nbsp; New Query from template <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/dzsquared/query-editor-boost) |
+| Notebook Improvements | &bull; &nbsp; Performance improvements for supporting larger notebook files <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed) |
+| Visual Studio Code August Release Merge 1.38 | Latest improvements can be found [here](https://code.visualstudio.com/updates/v1_38). |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
+| &nbsp; | &nbsp; |
+
+### Known Issues
+- Notebooks
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
+
 
 ## August 2019
 

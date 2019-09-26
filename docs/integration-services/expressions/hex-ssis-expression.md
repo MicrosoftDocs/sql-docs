@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "hexadecimal data"
   - "HEX function"
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # HEX (SSIS Expression)
 

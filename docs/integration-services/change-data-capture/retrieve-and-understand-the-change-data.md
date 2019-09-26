@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],retrieving data"
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Retrieve and Understand the Change Data
 

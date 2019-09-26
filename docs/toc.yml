@@ -291,9 +291,9 @@
         items:
         - name: Backup To URL
           href: relational-databases/backup-restore/sql-server-backup-to-url.md
-        - name: Backup To Azure Blob Storage (PowerShell)
+        - name: Backup To Azure blob storage
           href: relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
-        - name: Delete backup blog files
+        - name: Delete backup log files
           href: relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
         - name: Restore
           href: relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md
@@ -527,6 +527,66 @@
             href: relational-databases/backup-restore/select-backup-device.md
           - name: Connect to Azure Storage
             href: relational-databases/backup-restore/connect-to-microsoft-azure-storage-restore.md
+      - name: VDI reference
+        items:
+          - name: VDI Overview
+            href: relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface.md
+          - name: IClientVirtualDevice
+            items:
+            - name: CompleteCommand
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-completecommand.md
+            - name: GetCommand
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-getcommand.md
+          - name: IClientVirtualDeviceSet2
+            items:  
+            - name: Close
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-close.md
+            - name: CreateEx
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-createex.md
+            - name: GetBufferHandle
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getbufferhandle.md
+            - name: GetConfiguration
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getconfiguration.md
+            - name: MapBufferHandle
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-mapbufferhandle.md
+            - name: OpenDevice
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-opendevice.md
+            - name: OpenInSecondaryEx
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-openinsecondaryex.md
+            - name: SignalAbort
+              href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-signalabort.md
+          - name: IServerVirtualDevice
+            items:
+            - name: CloseDevice
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-closedevice.md
+            - name: SendCommand
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-sendcommand.md
+          - name: IServerVirtualDeviceSet2
+            items:
+            - name: AllocateBuffer
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-allocatebuffer.md
+            - name: BeginConfiguration
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-beginconfiguration.md
+            - name: Close
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-close.md
+            - name: EndConfiguration
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-endconfiguration.md
+            - name: ExecuteCompletionAgent
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-executecompletionagent.md
+            - name: FreeBuffer
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-freebuffer.md
+            - name: GetConfiguration
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-getconfiguration.md
+            - name: IsSharedBuffer
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-issharedbuffer.md
+            - name: Open
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-open.md
+            - name: OpenDevice
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-opendevice.md
+            - name: RequestBuffers
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-requestbuffers.md
+            - name: SignalAbort
+              href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-signalabort.md
   - name: Always On availability groups
     href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
     items:
@@ -1710,6 +1770,8 @@
         href: relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md
       - name: Work with
         href: relational-databases/track-changes/work-with-change-data-sql-server.md
+      - name: Troubleshoot
+        href: relational-databases/track-changes/known-issues-resolutions-with-cdc-for-oracle-attunity.md
     - name: Change tracking
       href: relational-databases/track-changes/about-change-tracking-sql-server.md
       items:
@@ -4125,8 +4187,12 @@
       href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
     - name: Usage and diagnostic data collection
       items:
-      - name: Privacy supplement
-        href: sql-server/sql-server-privacy.md
+      - name: SQL Server Privacy supplement
+        items:
+        - name: SQL Server 2017 and prior
+          href: sql-server/sql-server-privacy.md
+        - name: SQL Server 2019
+          href: sql-server/sql-server-privacy-ver15.md
       - name: Configure SQL Server usage and diagnostic data
         href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
       - name: Configure tools usage and diagnostic data
@@ -6437,6 +6503,12 @@
   items:
   - name: Manage
     items:
+    - name: Accelerated Database Recovery
+      items:
+      - name: Overview
+        href: relational-databases/accelerated-database-recovery-concepts.md
+      - name: Management
+        href: relational-databases/accelerated-database-recovery-management.md
     - name: Central Management Servers
       href: relational-databases/administer-multiple-servers-using-central-management-servers.md
     - name: Configuration Manager
@@ -8145,8 +8217,6 @@
         href: relational-databases/security/row-level-security.md
       - name: Dynamic Data Masking
         href: relational-databases/security/dynamic-data-masking.md
-      - name: Static Data Masking
-        href: relational-databases/security/static-data-masking.md
       - name: Certificates & asymmetric keys
         href: relational-databases/security/sql-server-certificates-and-asymmetric-keys.md
     - name: Authentication Access

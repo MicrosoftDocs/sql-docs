@@ -54,17 +54,6 @@ The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15
     - Microsoft .NET Framework 4.6.2. Available from [Download Center](https://www.microsoft.com/download/details.aspx?id=53344).
     - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
 
-## <a name = "release-notes"></a>Features excluded from support
-
-- **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] excludes support for the following components, features, and scenarios:
-  - SQL Server Analysis Services
-  - SQL Server Reporting Services
-  - Always On availability groups on Kubernetes
-
-- **Workaround**: None. Exclusion applies to all customers, including participants in SQL Early Adopter Program.
-
-- **Applies to**: Release candidate
-
 ## Updated compiler
 
 - **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] is built with an updated compiler. CTP 2.1 had a known issue where results for floating point and other conversion scenarios may have returned a different value than previous versions because of the updated compiler. CTP 2.2 includes work to ensure that the affected scenarios return the same results as previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As of the release candidate release we do not know any remaining issues. Please report any result anomalies compared to [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](https://aka.ms/sqlfeedback) immediately.
@@ -127,6 +116,16 @@ The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15
 - **Workaround**: None
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Release candidate
+
+## Master Data Service notification email contains broken link
+
+- **Issue and customer impact**: The notification email from Master Data Services (MDS) contains a broken link. The link navigates to a page that returns an error like the following message:
+
+   `The view 'Index' or its master was not found or no view engine supports the searched locations.`
+
+- **Workaround**: Open the MDS portal and go to the resource manually.
+
+- **Applies to**: SQL Server 2019 release candidate.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sequence execution options [Integration Services]"
   - "containers [Integration Services], precedence constraints"
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Precedence Constraints
 

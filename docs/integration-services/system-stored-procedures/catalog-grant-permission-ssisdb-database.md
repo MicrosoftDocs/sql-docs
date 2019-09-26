@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "grant_permission stored procedure [Integration Services]"
   - "catalog.grant_permission stored procedure [Integration Services]"
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.grant_permission (SSISDB Database)
 

@@ -52,6 +52,7 @@ SSMS 18.3 is the latest general availability (GA) release of SSMS. If you need a
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Data Classification | Add Data Classification information to column properties UI (*Information Type*, *Information Type ID*, *Sensitivity Label*, and *Sensitivity Label ID* are not exposed in the SSMS UI). |
 | Intellisense/Editor | Updated support for features recently added to SQL Server 2019 (for example, "ALTER SERVER CONFIGURATION"). | 
+| Integration Services | Add a new selection menu itemr `Tools > Migrate to Azure > Configure Azure-enabled DTExec` that will invoke SSIS package executions on Azure-SSIS Integration Runtime as Execute SSIS Package activities in ADF pipelines. |
 | SMO/Scripting | Added support for Support scripting of Azure SQL DW unique constraint. |
 | SMO/Scripting | Data Classification </br> - Added support for SQL version 10 (SQL 2008) and higher. </br> - Added new sensitivity attribute 'rank' for SQL version 15 (SQL 2019) and higher and Azure SQL DB. |
 | SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added versioning to ruleset format. |
@@ -81,8 +82,6 @@ SSMS 18.3 is the latest general availability (GA) release of SSMS. If you need a
 | Vulnerability Assessment | Disabled clearing and approving baseline for Azure SQL DBs.|
 
 ### Known issues (18.3)
-
-- AzureDTExecConfigUI doesn't appear when selected in SSMS.
 
 - Database Diagram created from SSMS running on machine A cannot be modified from machine B (SSMS crashes). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
 

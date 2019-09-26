@@ -118,7 +118,10 @@ If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssS
   
 2. Complete the **Certificate Export Wizard**, storing the certificate file in a convenient location.  
   
-## To configure the server to force encrypted connections  
+## To configure the server to force encrypted connections
+
+> [!IMPORTANT]
+> The SQL Server Service Account must have read permissions on the certicate used to force encryption on the SQL Server. For a non-privileged service account, read permissions will need to be added to the certificate. Failure to do so can cause the SQL Server service restart to fail.
   
 1. In **SQL Server Configuration Manager**, expand **SQL Server Network Configuration**, right-click **Protocols for** _\<server instance>_, and then select**Properties**.  
   

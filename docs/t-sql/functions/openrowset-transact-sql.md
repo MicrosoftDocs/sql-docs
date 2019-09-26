@@ -222,15 +222,17 @@ FIELDQUOTE **=** 'field_quote'
 Specifies a character that will be used as the quote character in the CSV file. If not specified, the quote character (") will be used as the quote character as defined in the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
   
 ## Remarks  
- `OPENROWSET` can be used to access remote data from OLE DB data sources only when the **DisallowAdhocAccess** registry option is explicitly set to 0 for the specified provider, and the Ad Hoc Distributed Queries advanced configuration option is enabled. When these options are not set, the default behavior does not allow for ad hoc access.  
+`OPENROWSET` always inherits the instance collation, irrespective of collation set for columns.
+
+`OPENROWSET` can be used to access remote data from OLE DB data sources only when the **DisallowAdhocAccess** registry option is explicitly set to 0 for the specified provider, and the Ad Hoc Distributed Queries advanced configuration option is enabled. When these options are not set, the default behavior does not allow for ad hoc access.  
   
- When accessing remote OLE DB data sources, the login identity of trusted connections is not automatically delegated from the server on which the client is connected to the server that is being queried. Authentication delegation must be configured.  
+When accessing remote OLE DB data sources, the login identity of trusted connections is not automatically delegated from the server on which the client is connected to the server that is being queried. Authentication delegation must be configured.  
   
- Catalog and schema names are required if the OLE DB provider supports multiple catalogs and schemas in the specified data source. Values for _catalog_ and )_schema_ can be omitted when the OLE DB provider does not support them. If the provider supports only schema names, a two-part name of the form _schema_**.**_object_ must be specified. If the provider supports only catalog names, a three-part name of the form _catalog_**.**_schema_**.**_object_ must be specified. Three-part names must be specified for pass-through queries that use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider. For more information, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+Catalog and schema names are required if the OLE DB provider supports multiple catalogs and schemas in the specified data source. Values for _catalog_ and )_schema_ can be omitted when the OLE DB provider does not support them. If the provider supports only schema names, a two-part name of the form _schema_**.**_object_ must be specified. If the provider supports only catalog names, a three-part name of the form _catalog_**.**_schema_**.**_object_ must be specified. Three-part names must be specified for pass-through queries that use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider. For more information, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
- `OPENROWSET` does not accept variables for its arguments.  
+`OPENROWSET` does not accept variables for its arguments.    
   
- Any call to `OPENDATASOURCE`, `OPENQUERY`, or `OPENROWSET` in the `FROM` clause is evaluated separately and independently from any call to these functions used as the target of the update, even if identical arguments are supplied to the two calls. In particular, filter or join conditions applied on the result of one of those calls have no effect on the results of the other.  
+Any call to `OPENDATASOURCE`, `OPENQUERY`, or `OPENROWSET` in the `FROM` clause is evaluated separately and independently from any call to these functions used as the target of the update, even if identical arguments are supplied to the two calls. In particular, filter or join conditions applied on the result of one of those calls have no effect on the results of the other.  
   
 ## Using OPENROWSET with the BULK Option  
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] enhancements support the OPENROWSET(BULK...) function:  

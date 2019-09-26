@@ -244,6 +244,7 @@ Any call to `OPENDATASOURCE`, `OPENQUERY`, or `OPENROWSET` in the `FROM` clause 
      `FROM OPENROWSET(BULK...) AS table_alias`  
   
      `FROM OPENROWSET(BULK...) AS table_alias(column_alias,...n)`  
+	 
 > [!IMPORTANT]  
 > Failure to add the `AS <table_alias>` will result in the error:    
 > Msg 491, Level 16, State 1, Line 20    
@@ -282,7 +283,7 @@ Any call to `OPENDATASOURCE`, `OPENQUERY`, or `OPENROWSET` in the `FROM` clause 
   
 ### A. Using OPENROWSET with SELECT and the SQL Server OLE DB Driver  
  The following example uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver to access the `HumanResources.Department` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database on the remote server `Seattle1`. 
- A `SELECT` statement is used to define the row set returned. The provider string contains the `Server` and `Trusted_Connection` keywords. These keywords are recognized by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider.  
+ A `SELECT` statement is used to define the row set returned. The provider string contains the `Server` and `Trusted_Connection` keywords. These keywords are recognized by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver.  
   
 ```sql  
 SELECT a.*  

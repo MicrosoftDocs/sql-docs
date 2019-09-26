@@ -31,9 +31,9 @@ ms.author: mikeray
   For more information, see [Configure a Server to Listen on a Specific TCP Port &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### Clustering  
- If you hide a clustered named instance or Alwayson Instance, cluster service may not be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This will cause the cluster instance's **IsAlive** check to fail and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will go offline. 
+ If you hide a clustered instance or availability group name, cluster service may not be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This will cause the cluster instance **IsAlive** check to fail and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will go offline. 
  
- We recommend that you create an alias in all the nodes of the clustered instance to reflect the static port that you configured for the instance.  For Eg. on a two node Always on AG, On node one, create an alias called nodetwo\instancename. On node two, create an alias called nodeone\instance name.   You might not be able to failover if Alias are not added. 
+To avoid this, create an alias in all the nodes of the clustered instance or all instances that host availability group replicas to reflect the static port that you configured for the instance.  For example, on an availability group with two replicas, on node-one, create an alias for the instance on node-two - `node-two\instancename`. On node-two, create an alias called `node-one\instancename`. The aliases are required for succesfull failover. 
  
  For more information, see [Create or Delete a Server Alias for Use by a Client &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   

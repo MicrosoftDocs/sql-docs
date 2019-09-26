@@ -42,7 +42,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  *certificate_ID*  
  Is the ID of a certificate in the current database. *certificate_ID* is **int**.  
   
- *@cleartext*  
+ *\@cleartext*  
  Is a variable of type **nvarchar**, **char**, **varchar**, or **nchar** that contains data that will be signed.  
   
  **'** *password* **'**  

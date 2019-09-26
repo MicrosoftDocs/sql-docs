@@ -1,5 +1,5 @@
 ---
-title: "Create a Full Database Backup (SQL Server) | Microsoft Docs"
+title: "Create a Full Database Backup | Microsoft Docs"
 ms.custom: "sqlfreshmay19"
 ms.date: "09/12/2019"
 ms.prod: sql
@@ -17,19 +17,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: carlrab
 ---
-# Create a Full Database Backup (SQL Server)
+# Create a Full Database Backup
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This topic describes how to create a full database backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.
 
-For information on SQL Server backup to the Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
+For information on SQL Server backup to the Azure Blob storage service, see [SQL Server Backup and Restore with Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ## <a name="Restrictions"></a> Limitations and restrictions
 
-- The BACKUP statement is not allowed in an explicit or implicit transaction.
+- The `BACKUP` statement is not allowed in an explicit or implicit transaction.
 - Backups created by more recent version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-- For an overview of, and deeper dive into, backup concepts and tasks, see [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md) before proceeding.
+
+For an overview of, and deeper dive into, backup concepts and tasks, see [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md) before proceeding.
 
 ## <a name="Recommendations"></a> Recommendations
 
@@ -39,44 +40,59 @@ For information on SQL Server backup to the Azure Blob storage service, see [SQL
 
 ## <a name="Security"></a> Security
 
-TRUSTWORTHY is set to OFF on a database backup. For information about how to set TRUSTWORTHY to ON, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).
+**TRUSTWORTHY** is set to OFF on a database backup. For information about how to set **TRUSTWORTHY** to ON, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the **PASSWORD** and **MEDIAPASSWORD** options are discontinued for creating backups. You can still restore backups created with passwords.
 
 ## <a name="Permissions"></a> Permissions
 
-BACKUP DATABASE and BACKUP LOG permissions default to members of the **sysadmin** fixed server role and the **db_owner** and **db_backupoperator** fixed database roles.
+`BACKUP DATABASE` and `BACKUP LOG` permissions default to members of the **sysadmin** fixed server role and the **db_owner** and **db_backupoperator** fixed database roles.
 
- Ownership and permission problems on the backup device's physical file can interfere with a backup operation. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service must be able to read and write to the device which means that the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs **must** have write permissions to the backup device. However, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does not check file access permissions. As a result, problems on the backup device's physical file may not appear until the physical resource is accessed when the backup or restore is attempted.
+ Ownership and permission problems on the backup device's physical file can interfere with a backup operation. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service must be able to read and write to the device which means that the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs must have write permissions to the backup device. However, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does not check file access permissions. As a result, problems on the backup device's physical file may not appear until the physical resource is accessed when the backup or restore is attempted.
 
 ## <a name="SSMSProcedure"></a> Using SQL Server Management Studio
 
 > [!NOTE]
 > When you specify a backup task by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can generate the corresponding [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) script by clicking the **Script** button and selecting a script destination.
 
-### Back up a database
-
 1. After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in **Object Explorer**, expand the server tree.
-2. Expand **Databases**, and either select a user database or expand **System Databases** and select a system database.
-3. Right-click the database that you wish to backup, point to **Tasks**, and then click **Back Up...**.
-4. In the **Back Up Database** dialog box, the database that you selected appears in the drop-down list (which you can change to any other database on the server).
-5. In the **Backup type** drop-down list, select the desired backup type - the default is **Full**.
+
+1. Expand **Databases**, and either select a user database or expand **System Databases** and select a system database.
+
+1. Right-click the database that you wish to backup, point to **Tasks**, and then click **Back Up...**.
+
+1. In the **Back Up Database** dialog box, the database that you selected appears in the drop-down list (which you can change to any other database on the server).
+
+1. In the **Backup type** drop-down list, select the desired backup type - the default is **Full**.
 
    > [!IMPORTANT]
    > You must perform at least one full database backup before you can perform a differential or a transaction log backup.
-6. Under **Backup component**, select **Database**.
-7. In the **Destination** section, review the default location for the backup file (in the ../mssql/data folder). To backup to a different device, change the selection using the **Back up to** drop-down list. To stripe the backup set across multiple files for increased backup speed, click **Add** to add additional backup objects and/or destinations. To remove a backup destination, select it and click **Remove**. To view the contents of an existing backup destination, select it and click **Contents**.
-8. (Optionally) Review the other available settings under the **Media Options** and **Backup Options** pages. For more information about the various backup options, see [General page](back-up-database-general-page.md), [Media options page](back-up-database-media-options-page.md), and [Backup options page](back-up-database-backup-options-page.md).
-9. Click **OK** to initiate the backup.
-10. When the backup completes successfully, click **OK** to close the Microsoft SQL Server Management Studio dialog box.
+   
+1. Under **Backup component**, select **Database**.
+
+1. In the **Destination** section, review the default location for the backup file (in the ../mssql/data folder).
+
+ To backup to a different device, change the selection using the **Back up to** drop-down list. To stripe the backup set across multiple files for increased backup speed, click **Add** to add additional backup objects and/or destinations.
+ 
+ To remove a backup destination, select it and click **Remove**. To view the contents of an existing backup destination, select it and click **Contents**.
+
+1. (optional) Review the other available settings under the **Media Options** and **Backup Options** pages.
+
+ For more information about the various backup options, see [General page](back-up-database-general-page.md), [Media options page](back-up-database-media-options-page.md), and [Backup options page](back-up-database-backup-options-page.md).
+
+1. Click **OK** to initiate the backup.
+
+1. When the backup completes successfully, click **OK** to close the SQL Server Management Studio dialog box.
 
 ### Additional information
 
 - After creating a full database backup, you can create a [differential database backup](create-a-differential-database-backup-sql-server.md) or a [transaction log backup](back-up-a-transaction-log-sql-server.md).
-- Optionally, you can select the **Copy-only backup** checkbox to create a copy-only backup. A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups. For more information, see [Copy-Only Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md). A copy-only backup is not available for the **Differential** backup type.
+
+- (optional) You can select the **Copy-only backup** checkbox to create a copy-only backup. A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups. For more information, see [Copy-Only Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md). A copy-only backup is not available for the **Differential** backup type.
+
 - The **Overwrite media** option is disabled on the **Media Options** page if you are backing up to a URL.
 
-## SSMS Examples
+### Examples
 
 For the following examples, create a test database with the following Transact-SQL code:
 
@@ -97,7 +113,6 @@ CREATE TABLE SQLTest
    );
 GO
 
-
 USE [SQLTestDB]
 GO
 
@@ -112,39 +127,51 @@ SELECT * FROM SQLTest
 GO
 ```
 
-### A. Full back up to disk to default location
+#### A. Full back up to disk to default location
 
 In this example, the `SQLTestDB` database will be backed up to disk at the default backup location.
 
 1. After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in **Object Explorer**, expand the server tree.
-2. Expand **Databases**, right-click `SQLTestDB`, point to **Tasks**, and then click **Back Up...**.
-3. Click **OK**.
-4. When the backup completes successfully, click **OK** to close the Microsoft SQL Server Management Studio dialog box.
+
+1. Expand **Databases**, right-click `SQLTestDB`, point to **Tasks**, and then click **Back Up...**.
+
+1. Click **OK**.
+
+1. When the backup completes successfully, click **OK** to close the SQL Server Management Studio dialog box.
 
 ![Take SQL backup](media/quickstart-backup-restore-database/backup-db-ssms.png)
 
-### B. Full back up to disk to non-default location
+#### B. Full back up to disk to non-default location
 
 In this example, the `SQLTestDB` database will be backed up to disk at a location of your choice.
 
 1. After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in **Object Explorer**, expand the server tree.
-2. Expand **Databases**, right-click `SQLTestDB`, point to **Tasks**, and then click **Back Up...**.
-3. On the **General** page in the **Destination** section select **Disk** from the **Back up to:** drop-down list.
-4. Select **Remove** until all existing backup files have been removed.
-5. Select **Add** and the **Select Backup Destination** dialog box will open.
-6. Enter a valid path and file name in the **File name** text box and use **.bak** as the extension to simplify the classification of this file.
-7. Click **OK** and then click **OK** again to initiate the backup.
-8. When the backup completes successfully, click **OK** to close the Microsoft SQL Server Management Studio dialog box.
+
+1. Expand **Databases**, right-click `SQLTestDB`, point to **Tasks**, and then click **Back Up...**.
+
+1. On the **General** page in the **Destination** section select **Disk** from the **Back up to:** drop-down list.
+
+1. Select **Remove** until all existing backup files have been removed.
+
+1. Select **Add** and the **Select Backup Destination** dialog box will open.
+
+1. Enter a valid path and file name in the **File name** text box and use **.bak** as the extension to simplify the classification of this file.
+
+1. Click **OK** and then click **OK** again to initiate the backup.
+
+1. When the backup completes successfully, click **OK** to close the SQL Server Management Studio dialog box.
 
 ![Change DB location](media/create-a-full-database-backup-sql-server/change-db-location.png)
 
-### C. Create an encrypted backup
+#### C. Create an encrypted backup
 
 In this example, the `SQLTestDB` database will be backed up with encryption to the default backup location.
 
 1. After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in **Object Explorer**, expand the server tree.
-2. Expand **Databases**, expand **System Databases**, right-click `master`, and click **New Query** to open a query window with a connection to your `SQLTestDB` database.
-3. Execute the following commands to create a [**database master key**](../../relational-databases/security/encryption/create-a-database-master-key.md) and a [**certificate**](../../t-sql/statements/create-certificate-transact-sql.md) within the `master` database.  
+
+1. Expand **Databases**, expand **System Databases**, right-click `master`, and click **New Query** to open a query window with a connection to your `SQLTestDB` database.
+
+1. Execute the following commands to create a [**database master key**](../../relational-databases/security/encryption/create-a-database-master-key.md) and a [**certificate**](../../t-sql/statements/create-certificate-transact-sql.md) within the `master` database.  
 
    ```sql
    -- Create the master key
@@ -158,81 +185,99 @@ In this example, the `SQLTestDB` database will be backed up with encryption to t
    WITH SUBJECT = 'Backup Cert', EXPIRY_DATE = '20201031';  
    ```
 
-4. In **Object Explorer**, in the **Databases** node, right-click `SQLTestDB`, point to **Tasks**, and then click **Back Up...**.
-5. On the **Media Options** page, in the **Overwrite media** section select **Back up to a new media set, and erase all existing backup sets**.
-6. On the **Backup Options** page in the **Encryption** section select the **Encrypt backup** check box.
-7. From the Algorithm drop-down list, select **AES 256**.
-8. From the **Certificate or Asymmetric key** drop-down list select `MyCertificate`.
-9. Select **OK**.
+1. In **Object Explorer**, in the **Databases** node, right-click `SQLTestDB`, point to **Tasks**, and then click **Back Up...**.
+
+1. On the **Media Options** page, in the **Overwrite media** section select **Back up to a new media set, and erase all existing backup sets**.
+
+1. On the **Backup Options** page in the **Encryption** section select the **Encrypt backup** check box.
+
+1. From the Algorithm drop-down list, select **AES 256**.
+
+1. From the **Certificate or Asymmetric key** drop-down list select `MyCertificate`.
+
+1. Select **OK**.
 
 ![Encrypted backup](media/create-a-full-database-backup-sql-server/encrypted-backup.png)
 
-### D. Back up to the Azure Blob storage service
+#### D. Back up to the Azure Blob storage service
 
-The example below performs a full database backup of `SQLTestDB` to the Microsoft Azure Blob storage service. This example assumes that you already have a storage account with a blob container. This example creates a shared access signature for you; this example fails of the container has an existing shared access signature. If you do not have an Azure blob container in a storage account, create one before continuing. For more information, see [Create a general purpose storage account](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) and [Create a container](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+The example below performs a full database backup of `SQLTestDB` to the Azure Blob storage service. This example assumes that you already have a storage account with a blob container. This example creates a shared access signature for you; this example fails of the container has an existing shared access signature.
+
+If you do not have an Azure blob container in a storage account, create one before continuing. For more information, see [Create a general purpose storage account](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) and [Create a container](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in **Object Explorer**, expand the server tree.
-2. Expand **Databases**, right-click `SQLTestDB`, point to **Tasks**, and then click **Back Up...**.
-3. On the **General** page in the **Destination** section select **URL** from the **Back up to:** drop-down list.
-4. Click **Add** and the **Select Backup Destination** dialog box will open.
-5. If you have previously registered the Azure storage container that you wish to use with SQL Server Management Studio, select it.
-6. Otherwise, click **New container** to register a new container.
-7. In the **Connect to a Microsoft Subscription** dialog box, sign in to your account.
-8. In the **Select Storage Account** drop-down text box, select your storage account.
-9. In the **Select Blob Container** drop-down text box, select your blob container.
-10. In the **Shared Access Policy Expiration** drop-down calendar box, select an expiration date for the shared access policy that you create in this example.
-11. Click **Create Credential** to generate a shared access signature and credential in SQL Server Management Studio.
-12. Click **OK** close the **Connect to a Microsoft Subscription** dialog box.
-13. In the **Backup File** text box, modify the name of the backup file (optional).
-14. Click **OK** to close the **Select a backup destination** dialog box.
-15. CLick **OK** to initiate the backup.
-16. When the backup completes successfully, click **OK** to close the Microsoft SQL Server Management Studio dialog box.
+
+1. Expand **Databases**, right-click `SQLTestDB`, point to **Tasks**, and then click **Back Up...**.
+
+1. On the **General** page in the **Destination** section select **URL** from the **Back up to:** drop-down list.
+
+1. Click **Add** and the **Select Backup Destination** dialog box will open.
+
+1. If you have previously registered the Azure storage container that you wish to use with SQL Server Management Studio, select it.
+
+1. Otherwise, click **New container** to register a new container.
+
+1. In the **Connect to a Microsoft Subscription** dialog box, sign in to your account.
+
+1. In the **Select Storage Account** drop-down text box, select your storage account.
+
+1. In the **Select Blob Container** drop-down text box, select your blob container.
+
+1. In the **Shared Access Policy Expiration** drop-down calendar box, select an expiration date for the shared access policy that you create in this example.
+
+1. Click **Create Credential** to generate a shared access signature and credential in SQL Server Management Studio.
+
+1. Click **OK** close the **Connect to a Microsoft Subscription** dialog box.
+
+1. In the **Backup File** text box, modify the name of the backup file (optional).
+
+1. Click **OK** to close the **Select a backup destination** dialog box.
+
+1. CLick **OK** to initiate the backup.
+
+1. When the backup completes successfully, click **OK** to close the SQL Server Management Studio dialog box.
 
 ## <a name="TsqlProcedure"></a> Using Transact-SQL
 
-### Create a full database backup
+Create a full database backup by executing the `BACKUP DATABASE` statement to create the full database backup, specifying:
 
-1. Execute the BACKUP DATABASE statement to create the full database backup, specifying:
+- The name of the database to back up.
+- The backup device where the full database backup is written.
 
-   - The name of the database to back up.
-   - The backup device where the full database backup is written.
+The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for a full database backup is:
 
-   The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for a full database backup is:
+ BACKUP DATABASE *database*
+ TO *backup_device* [ **,**...*n* ]
+ [ WITH *with_options* [ **,**...*o* ] ] ;
 
-   ```
-   BACKUP DATABASE *database*
-   TO *backup_device* [ **,**...*n* ]
-   [ WITH *with_options* [ **,**...*o* ] ] ;
-   ```
+|Option|Description|
+|------------|-----------------|
+|*database*|Is the database that is to be backed up.|
+|*backup_device* [ **,**...*n* ]|Specifies a list of from 1 to 64 backup devices to use for the backup operation. You can specify a physical backup device, or you can specify a corresponding logical backup device, if already defined. To specify a physical backup device, use the DISK or TAPE option:<br /><br /> { DISK &#124; TAPE } **=**_physical\_backup\_device\_name_<br /><br /> For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|
+|WITH *with_options* [ **,**...*o* ]|Optionally, specifies one or more additional options, *o*. For information about some of the basic with options, see step 2.|
+|||
 
-    |Option|Description|
-    |------------|-----------------|
-    |*database*|Is the database that is to be backed up.|
-    |*backup_device* [ **,**...*n* ]|Specifies a list of from 1 to 64 backup devices to use for the backup operation. You can specify a physical backup device, or you can specify a corresponding logical backup device, if already defined. To specify a physical backup device, use the DISK or TAPE option:<br /><br /> { DISK &#124; TAPE } **=**_physical\_backup\_device\_name_<br /><br /> For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|
-    |WITH *with_options* [ **,**...*o* ]|Optionally, specifies one or more additional options, *o*. For information about some of the basic with options, see step 2.|
-    |||
+Optionally, specify one or more **WITH** options. A few basic **WITH** options are described here. For information about all the **WITH** options, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).
 
-2. Optionally, specify one or more WITH options. A few basic WITH options are described here. For information about all the WITH options, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).
+Basic backup set **WITH** options:
 
-   Basic backup set WITH options:
+- **{ COMPRESSION | NO_COMPRESSION }**: In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later only, specifies whether [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) is performed on this backup, overriding the server-level default.
+- **ENCRYPTION (ALGORITHM, SERVER CERTIFICATE | ASYMMETRIC KEY)**: In SQL Server 2014 or later only, specify the encryption algorithm to use, and the Certificate or Asymmetric key to use to secure the encryption.
+- **DESCRIPTION** **=** { **'**_text_**'** | **@**_text\_variable_ }: Specifies the free-form text that describes the backup set. The string can have a maximum of 255 characters.
+- **NAME = { *backup_set_name* | **@**_backup\_set\_name\_var_ }**: Specifies the name of the backup set. Names can have a maximum of 128 characters. If NAME is not specified, it is blank.
 
-   - **{ COMPRESSION | NO_COMPRESSION }**: In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later only, specifies whether [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) is performed on this backup, overriding the server-level default.
-   - **ENCRYPTION (ALGORITHM, SERVER CERTIFICATE |ASYMMETRIC KEY)**: In SQL Server 2014 or later only, specify the encryption algorithm to use, and the Certificate or Asymmetric key to use to secure the encryption.
-   - **DESCRIPTION** **=** { **'**_text_**'** | **@**_text\_variable_ }: Specifies the free-form text that describes the backup set. The string can have a maximum of 255 characters.
-   - **NAME = { *backup_set_name* | **@**_backup\_set\_name\_var_ }**: Specifies the name of the backup set. Names can have a maximum of 128 characters. If NAME is not specified, it is blank.
+By default, `BACKUP` appends the backup to an existing media set, preserving existing backup sets. To explicitly specify this, use the `NOINIT` option. For information about appending to existing backup sets, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).
 
-   By default, BACKUP appends the backup to an existing media set, preserving existing backup sets. To explicitly specify this, use the `NOINIT` option. For information about appending to existing backup sets, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).
+Alternatively, to format the backup media, use the **FORMAT** option:
 
-   Alternatively, to format the backup media, use the FORMAT option:
+ FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media\_name\_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } ]
 
-   FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media\_name\_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } ]
+ Use the **FORMAT** clause when you are using media for the first time or you want to overwrite all existing data. Optionally, assign the new media a media name and description.
 
-   Use the FORMAT clause when you are using media for the first time or you want to overwrite all existing data. Optionally, assign the new media a media name and description.
+ > [!IMPORTANT]
+ > Use extreme caution when you are using the **FORMAT** clause of the `BACKUP` statement because this destroys any backups that were previously stored on the backup media.
 
-   > [!IMPORTANT]
-   > Use extreme caution when you are using the FORMAT clause of the BACKUP statement because this destroys any backups that were previously stored on the backup media.
-
-## <a name="TsqlExample"></a> Transact-SQL Examples
+### <a name="TsqlExample"></a> Examples
 
 For the following examples, create a test database with the following Transact-SQL code:
 
@@ -252,7 +297,6 @@ CREATE TABLE SQLTest (
 )
 GO
 
-
 USE [SQLTestDB]
 GO
 
@@ -267,7 +311,7 @@ SELECT * FROM SQLTest
 GO
 ```
 
-### A. Back up to a disk device
+#### A. Back up to a disk device
 
 The following example backs up the complete `SQLTestDB` database to disk, by using `FORMAT` to create a new media set.
 
@@ -320,25 +364,25 @@ GO
 
 Use the **Backup-SqlDatabase** cmdlet. To explicitly indicate that this is a full database backup, specify the **-BackupAction** parameter with its default value, **Database**. This parameter is optional for full database backups.
 
+> [!NOTE]
+> These examples require the SqlServer module. To determine if it is installed, run `Get-Module -Name SqlServer`. To install this module, run `Install-Module -Name SqlServer` in an administrator session of PowerShell.
+>
+> For more information, see [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).
+
+> [!IMPORTANT]
+> If you are opening a PowerShell window from within SQL Server Management Studio to connect to an installation of SQL Server, you can omit the credential portion of this example as your credential in SSMS is automatically used to establish the connection between PowerShell and your SQL Server instance.
+
 ### A. Full backup (local)
 
 The following example creates a full database backup of the `<myDatabase>` database to the default backup location of the server instance `Computer\Instance`. Optionally, this example specifies **-BackupAction Database**.
 
 For the full syntax and additional examples, see [Backup-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/backup-sqldatabase).
 
-> [!NOTE]
-> These examples require the SqlServer module. To determine if it is installed, run `Get-Module -Name SqlServer`. To install this module, run `Install-Module -Name SqlServer` in an administrator session of PowerShell.
->
-> For more information, see [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).
-
 ```powershell
 $credential = Get-Credential
 
 Backup-SqlDatabase -ServerInstance Computer[\Instance] -Database <myDatabase> -BackupAction Database -Credential $credential
 ```
-
-> [!IMPORTANT]
-> If you are opening a PowerShell window from within SQL Server Management Studio to connect to an installation of SQL Server, you can omit the credential portion of this example as your credential in SSMS is automatically used to establish the connection between PowerShell and your SQL Server instance.
 
 ### B. Full backup to Azure
 
@@ -355,10 +399,7 @@ $backupFile = $container + '/' + $fileName
 Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential
 ```
 
-> [!IMPORTANT]
-> If you are opening a PowerShell window from within SQL Server Management Studio to connect to an installation of SQL Server, you can omit the credential portion of this example as your credential in SSMS is automatically used to establish the connection between PowerShell and your SQL Server instance.
-
-## <a name="RelatedTasks"></a> Related Tasks
+## <a name="RelatedTasks"></a> Related tasks
 
 - [Back Up a Database (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 - [Create a Differential Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)

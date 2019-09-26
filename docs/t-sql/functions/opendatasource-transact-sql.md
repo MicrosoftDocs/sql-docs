@@ -82,7 +82,7 @@ Any call to `OPENDATASOURCE`, `OPENQUERY`, or `OPENROWSET` in the `FROM` clause 
 ## Examples  
 
 ### A. Using OPENDATASOURCE with SELECT and the SQL Server OLE DB Driver  
- The following example uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver to access the `HumanResources.Department` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database on the remote server `Seattle1`. 
+ The following example uses the [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) to access the `HumanResources.Department` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database on the remote server `Seattle1`. 
  A `SELECT` statement is used to define the row set returned. The provider string contains the `Server` and `Trusted_Connection` keywords. These keywords are recognized by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver.  
   
 ```sql  
@@ -92,7 +92,13 @@ ORDER BY GroupName, Name;
 ``` 
 
 ### B. Using OPENDATASOURCE with SELECT and the SQL Server OLE DB Provider  
-The following example creates an ad hoc connection to the `Payroll` instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on server `London`, and queries the `AdventureWorks2012.HumanResources.Employee` table. (Use SQLNCLI and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will redirect to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider.)  
+The following example creates an ad hoc connection to the `Payroll` instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on server `London`, and queries the `AdventureWorks2012.HumanResources.Employee` table. 
+
+> [!NOTE] 
+> Using SQLNCLI will redirect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the latest version of SQL Server Native Client OLE DB Provider. The OLE DB provider is expected to be registered with the specified PROGID in the registry. 
+
+> [!IMPORTANT]  
+> SQL Server Native Client OLE DB provider (SQLNCLI) remains deprecated and it is not recommended to use it for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
   
 ```  
 SELECT *  

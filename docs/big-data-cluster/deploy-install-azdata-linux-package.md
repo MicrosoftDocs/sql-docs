@@ -42,7 +42,7 @@ At this time, there are no package managers to install `azdata` on other operati
 2. Download and install the signing key:
 
     ```bash
-    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add –
+    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add 
     ```
 
 3. Add the `azdata` repository information:

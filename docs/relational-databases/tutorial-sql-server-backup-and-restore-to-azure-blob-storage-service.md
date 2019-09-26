@@ -122,7 +122,10 @@ In this step, you will back up the database `SQLTest` to your Azure Blob storage
 
 
 # [Transact-SQL](#tab/tsql)
-The backup command will differ between an on-premises instance  and a managed instance, since managed instances only support copy-only ad hoc back ups. 
+The backup command will differ between an on-premises instance and a managed instance, since managed instances only support copy-only ad hoc back ups. 
+
+  > [!IMPORTANT]
+  > You will still need to follow the steps in the GUI section to create a credential and generate the SAS key before being able to successfully back up the database using Transact-SQL. 
 
 
 ### On-premises
@@ -212,15 +215,6 @@ USE [master]
 RESTORE DATABASE [SQLTestDB] FROM 
 URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_backup_2019_09_20_012223.bak'
 
-GO
-```
-
-Once your database has been restored, you can reenable TDE encryption by running the following Transact-SQL command:
-
-```sql
-USE master;
-GO
-ALTER DATABASE SQLTestDB SET ENCRYPTION ON;
 GO
 ```
 

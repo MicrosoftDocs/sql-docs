@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: SQL Server Back up and Restore to Azure Blob Storage Service | Microsoft Docs"
+title: "Tutorial: SQL Server back up and restore to Azure Blob storage service | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/09/2018"
 ms.prod: sql
@@ -11,34 +11,25 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: "rothja"
 ms.author: "jroth"
 ---
-# Tutorial: SQL Server Back up and Restore to Azure Blob Storage Service
+# Tutorial: SQL Server back up and restore to Azure Blob storage service
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 This tutorial helps you understand how to write backups to and restore from the Azure Blob Storage Service.  The article explains how to create an Azure Blob Container, write a backup to the blob service, and then perform a restore.
   
 ## Prerequisites  
 To complete this tutorial, you must be familiar with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup and restore concepts and T-SQL syntax.  The prerequisites for this tutorial vary if you're running your workload on-premises, or within an Azure SQL Database managed instance. 
 
-### On-premises
-To use this tutorial, you need an Azure storage account, SQL Server Management Studio (SSMS), and access to a server that's running SQL Server. Additionally, the account used to issue the BACKUP and RESTORE commands should be in the **db_backupoperator** database role with **alter any credential** permissions. 
+To use this tutorial, you need an Azure storage account, SQL Server Management Studio (SSMS), and access to a either server that's running SQL Server or an Azure SQL Database managed instance. Additionally, the account used to issue the BACKUP and RESTORE commands should be in the **db_backupoperator** database role with **alter any credential** permissions. 
 
 - Get a free [Azure Account](https://azure.microsoft.com/offers/ms-azr-0044p/).
 - Create an [Azure storage account](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) or deploy a [managed instance](/azure/sql-database/sql-database-managed-instance-get-started) with connectivity established through an [Azure SQL virtual machine](/azure/sql-database/sql-database-managed-instance-configure-vm) or [point-to-site](/azure/sql-database/sql-database-managed-instance-configure-p2s).
 - Assign the user account to the role of [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) and grant [alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) permissions. 
 
 [!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-### Managed instance 
-To use this tutorial, you need an Azure storage account, an Azure SQL Database managed instance, and SQL Server Management Studio configured to connect to the managed instance. Additionally, the account used to issue the BACKUP and RESTORE commands should be in the **db_backupoperator** database role with **alter any credential** permissions. 
 
-- Get a free [Azure Account](https://azure.microsoft.com/offers/ms-azr-0044p/).
-- Create an [Azure storage account](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
-- Create a [managed instance](/azure/sql-database/sql-database-managed-instance-get-started). 
-- Configure connectivity to your managed instance by either [creating an Azure SQL virtual machine](/azure/sql-database/sql-database-managed-instance-configure-vm) or establishing a [point-to-site connection](/azure/sql-database/sql-database-managed-instance-configure-p2s). 
-
-
-## Create Azure Blob Container
+## Create Azure Blob container
 A container provides a grouping of a set of blobs. All blobs must be in a container. A storage account can contain an unlimited number of containers, but must have at least one container. A container can store an unlimited number of blobs. 
 
 To create a Container, follow these steps:
@@ -78,6 +69,10 @@ CREATE TABLE SQLTest (
 )
 GO
 
+IF SERVERPROPERTY('EngineEditionId') = '8'
+    ALTER DATABASE SQLTestDB SET ENCRYPTION OFF;
+
+
 
 USE [SQLTestDB]
 GO
@@ -93,17 +88,6 @@ SELECT * FROM SQLTest
 GO
 ```
 
-### Managed instance
-All new databases created on a managed instance have TDE automatically enabled. Creating a copy-only backup of an encrypted database is not currently supported. As such, for the purpose of this tutorial, disable TDE encryption for the newly created database. This is not recommended against a production database where TDE encryption is a requirement.
-
-To disable TDE, run the following Transact-SQL command: 
-
-```sql
-USE master;
-GO
-ALTER DATABASE SQLTestDB SET ENCRYPTION OFF;
-GO
-```
 
 ## Back up database
 In this step, you will back up the database `SQLTest` to your Azure Blob storage account using either the GUI within SQL Server Management Studio, or Transact-SQL (T-SQL). 

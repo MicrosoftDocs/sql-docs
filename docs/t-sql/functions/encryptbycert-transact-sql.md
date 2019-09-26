@@ -41,7 +41,7 @@ The ID of a certificate in the database. **int**.
 _cleartext_  
 A string of data that will be encrypted with the certificate.  
   
-**@cleartext**  
+**\@cleartext**  
 A variable of one of the following types that contains data that will be encrypted with the public key of the certificate:
 
 * **nvarchar** 

@@ -71,7 +71,7 @@ OPENROWSET
  Is a character string that represents the friendly name (or PROGID) of the OLE DB provider as specified in the registry. *provider_name* has no default value.  
  
  > [!IMPORTANT]
- > The previous Microsoft OLE DB Provider for SQL Server (SQLOLEDB) and SQL Server Native Client OLE DB provider (SQLNCLI) remain deprecated and it is not recommended to use either for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
+ > The previous Microsoft OLE DB Provider for SQL Server (SQLOLEDB) and SQL Server Native Client OLE DB provider (SQLNCLI) remain deprecated and it is not recommended to use either for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
   
  '*datasource*'  
  Is a string constant that corresponds to a particular OLE DB data source. *datasource* is the DBPROP_INIT_DATASOURCE property to be passed to the IDBProperties interface of the provider to initialize the provider. Typically, this string includes the name of the database file, the name of a database server, or a name that the provider understands to locate the database or databases.  
@@ -299,7 +299,7 @@ FROM OPENROWSET('MSOLEDBSQL', 'Server=Seattle1;Database=AdventureWorks2016;Trust
  A `SELECT` statement is used to define the row set returned. The provider string contains the `Server` and `Trusted_Connection` keywords. These keywords are recognized by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider.  
  
 > [!IMPORTANT]
-> The SQL Server Native Client OLE DB provider (SQLNCLI) remains deprecated and it is not recommended to use either for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
+> The SQL Server Native Client OLE DB provider (SQLNCLI) remains deprecated and it is not recommended to use either for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
  
 ```sql  
 SELECT a.*  

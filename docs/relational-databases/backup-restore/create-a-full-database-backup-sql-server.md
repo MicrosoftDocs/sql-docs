@@ -72,13 +72,13 @@ Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the **PASSWORD
 
 1. In the **Destination** section, review the default location for the backup file (in the ../mssql/data folder).
 
-  To backup to a different device, change the selection using the **Back up to** drop-down list. To stripe the backup set across multiple files for increased backup speed, click **Add** to add additional backup objects and/or destinations.
+   To backup to a different device, change the selection using the **Back up to** drop-down list. To stripe the backup set across multiple files for increased backup speed, click **Add** to add additional backup objects and/or destinations.
  
-  To remove a backup destination, select it and click **Remove**. To view the contents of an existing backup destination, select it and click **Contents**.
+   To remove a backup destination, select it and click **Remove**. To view the contents of an existing backup destination, select it and click **Contents**.
 
 1. (optional) Review the other available settings under the **Media Options** and **Backup Options** pages.
 
-  For more information about the various backup options, see [General page](back-up-database-general-page.md), [Media options page](back-up-database-media-options-page.md), and [Backup options page](back-up-database-backup-options-page.md).
+   For more information about the various backup options, see [General page](back-up-database-general-page.md), [Media options page](back-up-database-media-options-page.md), and [Backup options page](back-up-database-backup-options-page.md).
 
 1. Click **OK** to initiate the backup.
 

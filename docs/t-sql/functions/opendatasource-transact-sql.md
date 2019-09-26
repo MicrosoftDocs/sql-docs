@@ -42,7 +42,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
  Is the name registered as the PROGID of the OLE DB provider used to access the data source. *provider_name* is a **char** data type, with no default value.  
 
  > [!IMPORTANT]
- > The previous Microsoft OLE DB Provider for SQL Server (SQLOLEDB) and SQL Server Native Client OLE DB provider (SQLNCLI) remain deprecated and it is not recommended to use either for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server) (MSOLEDBSQL) which will be updated with the most recent server features.
+ > The previous Microsoft OLE DB Provider for SQL Server (SQLOLEDB) and SQL Server Native Client OLE DB provider (SQLNCLI) remain deprecated and it is not recommended to use either for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
  
  '*init_string*'  
  Is the connection string passed to the IDataInitialize interface of the destination provider. The provider string syntax is based on keyword-value pairs separated by semicolons, such as: **'**_keyword1_=_value_ **;** _keyword2_=_value_**'**.  

@@ -44,7 +44,7 @@ OPENROWSET
    | 'provider_string' }
    , {   [ catalog. ] [ schema. ] object
        | 'query'
-     }   
+     }
    | BULK 'data_file' ,
        { FORMATFILE = 'format_file_path' [ <bulk_options> ]
        | SINGLE_BLOB | SINGLE_CLOB | SINGLE_NCLOB }
@@ -237,8 +237,8 @@ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] enhancements support t
 
    `OPENROWSET` with the `BULK` option requires a correlation name, also known as a range variable or alias, in the `FROM` clause. Column aliases can be specified. If a column alias list is not specified, the format file must have column names. Specifying column aliases overrides the column names in the format file, such as:
 
-    - `FROM OPENROWSET(BULK...) AS table_alias`
-    - `FROM OPENROWSET(BULK...) AS table_alias(column_alias,...n)`
+  - `FROM OPENROWSET(BULK...) AS table_alias`
+  - `FROM OPENROWSET(BULK...) AS table_alias(column_alias,...n)`
 
   > [!IMPORTANT]
   > Failure to add the `AS <table_alias>` will result in the error:
@@ -395,13 +395,12 @@ OPENROWSET (BULK N'D:\data.csv', FORMATFILE =
 SELECT *
 FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
     FORMATFILE = N'D:\XChange\test-csv.fmt',
-    FIRSTROW=2, 
+    FIRSTROW=2,
     FORMAT='CSV') AS cars;
 ```
 
 > [!IMPORTANT]
 > Azure SQL Database does not support reading from Windows files.
-
 
 ### H. Accessing data from a CSV file without a format file
 
@@ -413,15 +412,16 @@ SELECT * FROM OPENROWSET(
 
 ```sql
 select *
-from openrowset('MSDASQL'
-				,'Driver={Microsoft Access Text Driver (*.txt, *.csv)}'
-				,'select * from E:\Tlog\TerritoryData.csv') 
+from openrowset
+   (  'MSDASQL'
+     ,'Driver={Microsoft Access Text Driver (*.txt, *.csv)}'
+     ,'select * from E:\Tlog\TerritoryData.csv')
 ;
 ```
 
 > [!IMPORTANT]
 >
-> - The ODBC driver should be 64-bit. Open the **Drivers** tab of the [OBDC Data Sources](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) application in Windows to verify this. There is 32-bit `Microsoft Text Driver (*.txt, *.csv)` that will not work with a 64-bit version of sqlservr.exe. 
+> - The ODBC driver should be 64-bit. Open the **Drivers** tab of the [OBDC Data Sources](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) application in Windows to verify this. There is 32-bit `Microsoft Text Driver (*.txt, *.csv)` that will not work with a 64-bit version of sqlservr.exe.
 > - Azure SQL Database does not support reading from Windows files.
 
 ### I. Accessing data from a file stored on Azure Blob storage
@@ -437,7 +437,43 @@ SELECT * FROM OPENROWSET(
 ```
 
 For complete `OPENROWSET` examples including configuring the credential and external data source, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
- 
+
+### J. Importing into a table from a file stored on Azure Blob storage
+
+The following example shows how to use the OPENROWSET command to load data from a csv file in an Azure Blob storage location on which you have created a SAS key. The Azure Blob storage location is configured as an external data source. This requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
+
+```sql
+--> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+--> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
+ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+ SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+
+ -- NOTE: Make sure that you don't have a leading ? in SAS token, and
+ -- that you have at least read permission on the object that should be loaded srt=o&sp=r, and
+ -- that expiration period is valid (all dates are in UTC time)
+
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/invoices'
+          , CREDENTIAL= MyAzureBlobStorageCredential --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+
+INSERT INTO achievements with (TABLOCK) (id, description)
+SELECT * FROM OPENROWSET(
+   BULK  'csv/achievements.csv',
+   DATA_SOURCE = 'MyAzureBlobStorage',
+   FORMAT ='CSV',
+   FORMATFILE='csv/achievements-c.xml',
+   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
+    ) AS DataFile;
+```
+
+> [!IMPORTANT]
+> Azure SQL Database does not support reading from Windows files.
+
 ### Additional Examples
 
 For additional examples that show using `INSERT...SELECT * FROM OPENROWSET(BULK...)`, see the following topics:

@@ -210,7 +210,7 @@ By default, all the data in the data file is sent to the server as a single tran
 TABLOCK
 Specifies that a table-level lock is acquired for the duration of the bulk-import operation. A table can be loaded concurrently by multiple clients if the table has no indexes and TABLOCK is specified. By default, locking behavior is determined by the table option **table lock on bulk load**. Holding a lock for the duration of the bulk-import operation reduces lock contention on the table, in some cases can significantly improve performance. For information about performance considerations, see "Remarks," later in this topic.
 
-For columnstore index. the locking behaviour is different because it is internally divided into multiple rowsets.Each thread loads data exclusively into each rowset by taking a X lock on the rowset allowing parallel data load with concurrent data load sessions. The use of TABLOCK option will cause thread to take an X lock on the table (unlike BU lock for traditional rowsets) which will prevent other concurrent threads to load data concurrently.
+For columnstore index. the locking behavior is different because it is internally divided into multiple rowsets.Each thread loads data exclusively into each rowset by taking a X lock on the rowset allowing parallel data load with concurrent data load sessions. The use of TABLOCK option will cause thread to take an X lock on the table (unlike BU lock for traditional rowsets) which will prevent other concurrent threads to load data concurrently.
 
 ### Input file format options
 
@@ -528,9 +528,9 @@ For complete `BULK INSERT` examples including configuring the credential and ext
 ## See Also
 
 - [Bulk Import and Export of Data &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)
- [bcp Utility](../../tools/bcp-utility.md)
- [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
- [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)
- [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
- [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)
+- [bcp Utility](../../tools/bcp-utility.md)
+- [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
+- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
+- [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)
+- [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
+- [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)

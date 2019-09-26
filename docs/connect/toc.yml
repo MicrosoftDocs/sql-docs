@@ -39,95 +39,112 @@
       href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
     - name: Finding Additional SqlClient Driver information
       href: ../connect/ado-net/finding-additional-sqlclient-driver-information.md
-  - name: SQL Server Data Types and ADO.NET
-    href: ../connect/ado-net/sql-server-data-types.md
+  - name: SQL Server and ADO.NET
+    href: ../connect/ado-net/sql/index.md
     items:
-    - name: SqlTypes and the DataSet
-      href: ../connect/ado-net/sqltypes-and-the-dataset.md
-    - name: Handling Null Values
-      href: ../connect/ado-net/handling-null-values.md
-    - name: Comparing GUID and uniqueidentifier Values
-      href: ../connect/ado-net/comparing-guid-and-uniqueidentifier-values.md
-    - name: Date and Time Data
-      href: ../connect/ado-net/date-and-time-data.md
-    - name: Large UDTs
-      href: ../connect/ado-net/large-udts.md
-    - name: XML Data in SQL Server
-      href: ../connect/ado-net/xml-data-in-sql-server.md
+    - name: SQL Server Security
+      href: ../connect/ado-net/sql/sql-server-security.md
       items:
-      - name: SQL XML Column Values
-        href: ../connect/ado-net/sql-xml-column-values.md
-      - name: Specifying XML Values as Parameters
-        href: ../connect/ado-net/specifying-xml-values-as-parameters.md
-  - name: SQL Server Binary and Large-Value Data
-    href: ../connect/ado-net/sql-server-binary-and-large-value-data.md
-    items:
-    - name: Modifying Large-Value (max) Data in ADO.NET
-      href: ../connect/ado-net/modifying-large-value-max-data.md
-    - name: FILESTREAM Data
-      href: ../connect/ado-net/filestream-data.md
-    - name: Inserting an Image from a File
-      href: ../connect/ado-net/inserting-an-image-from-a-file.md
-  - name: SQL Server Data Operations in ADO.NET
-    href: ../connect/ado-net/sql-server-data-operations.md
-    items:
-    - name: Bulk Copy Operations in SQL Server
-      href: ../connect/ado-net/bulk-copy-operations-in-sql-server.md
+      - name: Authentication in SQL Server
+        href: ../connect/ado-net/sql/authentication-in-sql-server.md
+      - name: Application Security Scenarios in SQL Server
+        href: ../connect/ado-net/sql/application-security-scenarios-in-sql-server.md
+        items:
+        - name: Writing Secure Dynamic SQL in SQL Server
+          href: ../connect/ado-net/sql/writing-secure-dynamic-sql-in-sql-server.md
+      - name: SQL Server Express Security
+        href: ../connect/ado-net/sql/sql-server-express-security.md
+    - name: SQL Server Data Types and ADO.NET
+      href: ../connect/ado-net/sql/sql-server-data-types.md
       items:
-      - name: Bulk Copy Example Setup
-        href: ../connect/ado-net/bulk-copy-example-setup.md
-      - name: Single Bulk Copy Operations
-        href: ../connect/ado-net/single-bulk-copy-operations.md
-      - name: Multiple Bulk Copy Operations
-        href: ../connect/ado-net/multiple-bulk-copy-operations.md
-      - name: Transaction and Bulk Copy Operations
-        href: ../connect/ado-net/transaction-and-bulk-copy-operations.md
-    - name: Multiple Active Result Sets (MARS)
-      href: ../connect/ado-net/multiple-active-result-sets-mars.md
+      - name: SqlTypes and the DataSet
+        href: ../connect/ado-net/sql/sqltypes-and-the-dataset.md
+      - name: Handling Null Values
+        href: ../connect/ado-net/sql/handling-null-values.md
+      - name: Comparing GUID and uniqueidentifier Values
+        href: ../connect/ado-net/sql/comparing-guid-and-uniqueidentifier-values.md
+      - name: Date and Time Data
+        href: ../connect/ado-net/sql/date-and-time-data.md
+      - name: Large UDTs
+        href: ../connect/ado-net/sql/large-udts.md
+      - name: XML Data in SQL Server
+        href: ../connect/ado-net/sql/xml-data-in-sql-server.md
+        items:
+        - name: SQL XML Column Values
+          href: ../connect/ado-net/sql/sql-xml-column-values.md
+        - name: Specifying XML Values as Parameters
+          href: ../connect/ado-net/sql/specifying-xml-values-as-parameters.md
+    - name: SQL Server Binary and Large-Value Data
+      href: ../connect/ado-net/sql/sql-server-binary-and-large-value-data.md
       items:
-      - name: Enabling Multiple Active Result Sets
-        href: ../connect/ado-net/enabling-multiple-active-result-sets.md
-      - name: Manipulating Data
-        href: ../connect/ado-net/manipulating-data.md
-    - name: Asynchronous Operations
-      href: ../connect/ado-net/asynchronous-operations.md
+      - name: Modifying Large-Value (max) Data in ADO.NET
+        href: ../connect/ado-net/sql/modifying-large-value-max-data.md
+      - name: FILESTREAM Data
+        href: ../connect/ado-net/sql/filestream-data.md
+      - name: Inserting an Image from a File
+        href: ../connect/ado-net/sql/inserting-an-image-from-a-file.md
+    - name: SQL Server Data Operations in ADO.NET
+      href: ../connect/ado-net/sql/sql-server-data-operations.md
       items:
-      - name: Windows Applications Using Callbacks
-        href: ../connect/ado-net/windows-applications-using-callbacks.md
-      - name: ASP.NET Applications Using Wait Handles
-        href: ../connect/ado-net/aspnet-apps-using-wait-handles.md
-      - name: Polling in Console Applications
-        href: ../connect/ado-net/polling-in-console-applications.md
-    - name: Table-Valued Parameters
-      href: ../connect/ado-net/table-valued-parameters.md
-  - name: SQL Server Features and ADO.NET
-    href: ../connect/ado-net/sql-server-features-and-adonet.md
-    items:
-    - name: Enumerating Instances of SQL Server (ADO.NET)
-      href: ../connect/ado-net/enumerating-instances-of-sql-server.md
-    - name: Provider Statistics for SQL Server
-      href: ../connect/ado-net/provider-statistics-for-sql-server.md
-    - name: SQL Server Express User Instances
-      href: ../connect/ado-net/sql-server-express-user-instances.md
-    - name: Database Mirroring in SQL Server
-      href: ../connect/ado-net/database-mirroring-in-sql-server.md
-    - name: Query Notifications in SQL Server
-      href: ../connect/ado-net/query-notifications-in-sql-server.md
+      - name: Bulk Copy Operations in SQL Server
+        href: ../connect/ado-net/sql/bulk-copy-operations-in-sql-server.md
+        items:
+        - name: Bulk Copy Example Setup
+          href: ../connect/ado-net/sql/bulk-copy-example-setup.md
+        - name: Single Bulk Copy Operations
+          href: ../connect/ado-net/sql/single-bulk-copy-operations.md
+        - name: Multiple Bulk Copy Operations
+          href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
+        - name: Transaction and Bulk Copy Operations
+          href: ../connect/ado-net/sql/transaction-and-bulk-copy-operations.md
+      - name: Multiple Active Result Sets (MARS)
+        href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
+        items:
+        - name: Enabling Multiple Active Result Sets
+          href: ../connect/ado-net/sql/enabling-multiple-active-result-sets.md
+        - name: Manipulating Data
+          href: ../connect/ado-net/sql/manipulating-data.md
+      - name: Asynchronous Operations
+        href: ../connect/ado-net/sql/asynchronous-operations.md
+        items:
+        - name: Windows Applications Using Callbacks
+          href: ../connect/ado-net/sql/windows-applications-using-callbacks.md
+        - name: ASP.NET Applications Using Wait Handles
+          href: ../connect/ado-net/sql/aspnet-apps-using-wait-handles.md
+        - name: Polling in Console Applications
+          href: ../connect/ado-net/sql/polling-in-console-applications.md
+      - name: Table-Valued Parameters
+        href: ../connect/ado-net/sql/table-valued-parameters.md
+    - name: SQL Server Features and ADO.NET
+      href: ../connect/ado-net/sql/sql-server-features-and-adonet.md
       items:
-      - name: Enabling Query Notifications
-        href: ../connect/ado-net/enabling-query-notifications.md
-      - name: SqlDependency in an ASP.NET Application
-        href: ../connect/ado-net/sqldependency-in-an-aspnet-app.md
-      - name: Detecting Changes with SqlDependency
-        href: ../connect/ado-net/detecting-changes-with-sqldependency.md
-      - name: SqlCommand Execution with a SqlNotificationRequest
-        href: ../connect/ado-net/sqlcommand-execution-with-a-sqlnotificationrequest.md
-    - name: Snapshot Isolation in SQL Server
-      href: ../connect/ado-net/snapshot-isolation-in-sql-server.md
-    - name: SqlClient Support for High Availability, Disaster Recovery
-      href: ../connect/ado-net/sqlclient-support-for-high-availability-disaster-recovery.md
-    - name: SqlClient Support for LocalDB
-      href: ../connect/ado-net/sqlclient-support-for-localdb.md
+      - name: Enumerating Instances of SQL Server (ADO.NET)
+        href: ../connect/ado-net/sql/enumerating-instances-of-sql-server.md
+      - name: Provider Statistics for SQL Server
+        href: ../connect/ado-net/sql/provider-statistics-for-sql-server.md
+      - name: SQL Server Express User Instances
+        href: ../connect/ado-net/sql/sql-server-express-user-instances.md
+      - name: Database Mirroring in SQL Server
+        href: ../connect/ado-net/sql/database-mirroring-in-sql-server.md
+      - name: The Context Connection
+        href: ../connect/ado-net/sql/the-context-connection.md
+      - name: Query Notifications in SQL Server
+        href: ../connect/ado-net/sql/query-notifications-in-sql-server.md
+        items:
+        - name: Enabling Query Notifications
+          href: ../connect/ado-net/sql/enabling-query-notifications.md
+        - name: SqlDependency in an ASP.NET Application
+          href: ../connect/ado-net/sql/sqldependency-in-an-aspnet-app.md
+        - name: Detecting Changes with SqlDependency
+          href: ../connect/ado-net/sql/detecting-changes-with-sqldependency.md
+        - name: SqlCommand Execution with a SqlNotificationRequest
+          href: ../connect/ado-net/sql/sqlcommand-execution-with-a-sqlnotificationrequest.md
+      - name: Snapshot Isolation in SQL Server
+        href: ../connect/ado-net/sql/snapshot-isolation-in-sql-server.md
+      - name: SqlClient Support for High Availability, Disaster Recovery
+        href: ../connect/ado-net/sql/sqlclient-support-for-high-availability-disaster-recovery.md
+      - name: SqlClient Support for LocalDB
+        href: ../connect/ado-net/sql/sqlclient-support-for-localdb.md
 
 - name: JDBC
   items:

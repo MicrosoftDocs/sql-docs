@@ -112,8 +112,7 @@ Output:
 |--------|--------|--------|--------|  
 |587149137|2|2 |1.00000000000000000 |
 
-
-Update the base table.  This query updates the same column and row 100 times to the same value.  The materialized view data does not change.
+Update the base table.  This query updates the same column in the same row 100 times to the same value.  The materialized view content does not change.
 ```sql
 DECLARE @p int
 SELECT @p = 1
@@ -131,13 +130,13 @@ Selecting from the materialized view returns the same result as before.
 |1|1| 
 |2|1|
 
-Run DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1").  In the output below, 100 rows were added to the materialized view (total_row - base_view_rows) and the overhead_ratio increased. 
+Below is the output from DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1").  100 rows are added to the materialized view (total_row - base_view_rows) and its overhead_ratio is increased. 
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
 |--------|--------|--------|--------|  
 |587149137|2|102 |51.00000000000000000 |
 
-After rebuilding the materialized view, the overhead ratio reduced.  
+After rebuilding the materialized view, all tracking rows for incremental data changes are eliminated and the view overhead ratio is reduced.  
 
 ```sql
 ALTER MATERIALIZED VIEW dbo.MV1 REBUILD

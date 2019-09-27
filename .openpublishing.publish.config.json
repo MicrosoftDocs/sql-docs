@@ -56,9 +56,7 @@
       "path_to_root": "sqlclient",
       "url": "https://github.com/dotnet/sqlclient",
       "branch": "master",
-      "branch_mapping": {
-        "live": "live"
-      }
+      "branch_mapping": {}
     },
     {
       "path_to_root": "_themes.pdf",

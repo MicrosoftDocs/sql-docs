@@ -57,8 +57,7 @@ ms.author: "mikeray"
 |Columns per index key||32|If the table contains one or more XML indexes, the clustering key of the user table is limited to 31 columns because the XML column is added to the clustering key of the primary XML index. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you can include nonkey columns in a nonclustered index to avoid the limitation of a maximum of 32 key columns. For more information, see [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|  
 |Columns per foreign key||32||  
 |Columns per primary key||32||  
-|Columns per nonwide table||1,024||  
-|Columns per wide table||30,000||  
+|Columns per table||1,024|Tables that include sparse column sets include up to 30,000 columns. See [sparse column sets](../relational-databases/tables/use-column-sets.md).|  
 |Columns per SELECT statement||4,096||  
 |Columns per INSERT statement||4,096||  
 |Connections per client||Maximum value of configured connections||  
@@ -93,7 +92,6 @@ ms.author: "mikeray"
 |Statistics on non-indexed columns||30,000|| 
 |Tables per SELECT statement||Limited only by available resources||  
 |Triggers per table||Limited by number of objects in a database|Database objects include objects such as tables, views, stored procedures, user-defined functions, triggers, rules, defaults, and constraints. The sum of the number of all objects in a database cannot exceed 2,147,483,647.|  
-|Columns per UPDATE statement (Wide Tables)||4096||  
 |User connections||32,767||  
 |XML indexes||249||  
   

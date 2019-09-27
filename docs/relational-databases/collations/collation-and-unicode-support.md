@@ -431,7 +431,7 @@ A locale is a set of information that's associated with a location or a culture.
 A code page is an ordered set of characters of a given script in which a numeric index, or code point value, is associated with each character. A Windows code page is typically referred to as a *character set* or a *charset*. Code pages are used to provide support for the character sets and keyboard layouts that are used by different Windows system locales.     
  
 ###  <a name="Sort_Order_Defn"></a> Sort order    
-Sort order specifies how data values are sorted. The order affects the results of data comparison. You can sort data by using collations, and you can optimize it by using indexes.    
+Sort order specifies how data values are sorted. The order affects the results of data comparison. Data is sorted by using collations, and it can be optimized by using indexes.    
     
 ##  <a name="Unicode_Defn"></a> Unicode support    
 Unicode is a standard for mapping code points to characters. Because it's designed to cover all the characters of all the languages of the world, you don't need different code pages to handle different sets of characters.

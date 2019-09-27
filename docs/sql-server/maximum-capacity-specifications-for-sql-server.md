@@ -60,7 +60,7 @@ ms.author: "mikeray"
 |Columns per `SELECT` statement||4,096||  
 |Columns per table||1,024|Tables that include sparse column sets include up to 30,000 columns. See [sparse column sets](../relational-databases/tables/use-column-sets.md).|  
 |Columns per `UPDATE` statement||4,096|Different limits apply to [sparse column sets](../relational-databases/tables/use-column-sets.md).|  
-|Columns per view||1024||  
+|Columns per view||1,024||  
 |Connections per client||Maximum value of configured connections||  
 |Database size||524,272 terabytes||  
 |Databases per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  

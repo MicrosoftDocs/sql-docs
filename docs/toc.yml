@@ -4174,7 +4174,11 @@
     href: sql-server/install/planning-a-sql-server-installation.md
     items:
     - name: Hardware & Software Requirements
-      href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
+      items:
+      - name: SQL Server 2019
+        href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
+      - name: SQL Server 2017 & prior
+        href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
     - name: Security Considerations
       href: sql-server/install/security-considerations-for-a-sql-server-installation.md
     - name: Network Protocols & Network Libraries

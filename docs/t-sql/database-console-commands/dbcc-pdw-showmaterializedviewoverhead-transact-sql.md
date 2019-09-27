@@ -38,7 +38,7 @@ Is the name of the materialized view.
 
 ## Remarks
 
-To keep materialized views refreshed with incremental changes in the base tables, the data warehouse engine adds tracking rows to each view to apply those changes. Selecting from a materialized view includes scanning the view's clustered columnstore structure and applying any incremental changes.  The tracking rows (TOTAL_ROWS - BASE_VIEW_ROWS) do not get eliminated until users REBUILD the materialized view.  
+To keep materialized views refreshed with incremental changes in the base tables, the data warehouse engine adds tracking rows to each view to reflect those changes. Selecting from a materialized view includes scanning the view's clustered columnstore structure and applying any incremental changes.  The tracking rows (TOTAL_ROWS - BASE_VIEW_ROWS) do not get eliminated until users REBUILD the materialized view.  
 
 The overhead_ratio is calculated as TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS).  If it's high, SELECT performance will degrade.  Users can rebuild the materialized view to reduce its overhead ratio.
 
@@ -61,16 +61,6 @@ Output:
 |1234|1|3 |3.0 |
 
 </br>
-
-|OBJECT_ID |BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|4567|0|0|0.0|
-
-</br>
-
-|OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|789|0|2|2.0|
 
 ### B. This example shows how the materialized view overhead increases as data changes in base tables
 

@@ -29,7 +29,7 @@ In this tutorial, you use a sample bash deployment script to deploy a single nod
 - Update existing packages using commands below to ensure that the OS image is up-to-date.
 
    ``` bash
-   sudo apt update&&apt upgrade -y
+   sudo apt update && sudo apt upgrade -y
    sudo systemctl reboot
    ```
 

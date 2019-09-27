@@ -12943,6 +12943,8 @@
         href: relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md
       - name: sys.dm_os_dispatcher_pools
         href: relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql.md
+      - name: sys.dm_os_enumerate_fixed_drives
+        href: relational-databases/system-dynamic-management-views/sys-dm-os-enumerate-fixed-drives.md
       - name: sys.dm_os_host_info
         href: relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md
       - name: sys.dm_os_hosts

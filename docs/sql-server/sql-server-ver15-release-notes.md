@@ -21,7 +21,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] is the latest public release of [!INCLUDE[SQL Server 2019](../includes/ssnoversion-md.md)].
 
-Complete details about support and licensing for release candidate software are in the `License Terms` folder on the installation media.
+Complete details about licensing are in `License Terms` folder on the installation media.
 
 ## Documentation
 
@@ -51,9 +51,9 @@ The latest build number for SQL Server 2019 is `15.0.1900.25`.
   > [!Note]
   > There is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SQL Server Data Tools (SSDT). The latest [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) version 18 supports choice of UTF-8 enabled collations in the UI.
  
-- **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
+- **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. 
 
-- **Applies to**: All CTP releases.
+- **Applies to**: RTM
 
 ## Master Data Service notification email contains broken link
 
@@ -63,7 +63,7 @@ The latest build number for SQL Server 2019 is `15.0.1900.25`.
 
 - **Workaround**: Open the MDS portal and go to the resource manually.
 
-- **Applies to**: SQL Server 2019 release candidate.
+- **Applies to**: RTM
 
 ## See also
 

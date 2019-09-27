@@ -41,17 +41,10 @@ The latest build number for SQL Server 2019 is `15.0.1900.25`.
 
 ## UTF-8 collations
 
-- **Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are in use:
-
-  - In-memory OLTP
-  - External Table for PolyBase ([!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC 1)
-  - Always Encrypted (Up to [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC 1)
-  - Linked Servers (up to [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2)
+- **Issue and customer impact**: UTF-8 enabled collations cannot be used with in-memory OLTP. 
 
   > [!Note]
   > There is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SQL Server Data Tools (SSDT). The latest [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) version 18 supports choice of UTF-8 enabled collations in the UI.
- 
-- **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. 
 
 - **Applies to**: RTM
 

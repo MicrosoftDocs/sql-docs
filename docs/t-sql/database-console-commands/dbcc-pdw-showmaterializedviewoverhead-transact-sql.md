@@ -48,7 +48,7 @@ Requires VIEW DATABASE STATE permission.
 
 ## Examples  
 
-### A. This example returns the delta space used for a materialized view.
+### A. This example returns the overhead ratio of a materialized view.
 
 ```sql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )

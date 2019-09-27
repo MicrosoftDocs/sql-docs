@@ -109,6 +109,9 @@ You can use the max degree of parallelism option to limit the number of processo
 
 To set this option at the instance level, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
+> [!NOTE]
+> In Azure SQL Database, the server-level **max degree of parallelism** configuration is always set to 0. MAXDOP can be configured for each database as described in the current article. For recommendations on configuring MAXDOP optimally, see the [Additional Resources](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources) section.
+
 > [!TIP]
 > To accomplish this at the query level, add the **MAXDOP** [query hint](../../t-sql/queries/hints-transact-sql-query.md).
 

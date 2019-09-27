@@ -55,11 +55,12 @@ ms.author: "mikeray"
 |Columns in GROUP BY, ORDER BY||Limited only by number of bytes||  
 |Columns or expressions in a GROUP BY WITH CUBE or WITH ROLLUP statement||10||  
 |Columns per index key||32|If the table contains one or more XML indexes, the clustering key of the user table is limited to 31 columns because the XML column is added to the clustering key of the primary XML index. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you can include nonkey columns in a nonclustered index to avoid the limitation of a maximum of 32 key columns. For more information, see [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|  
-|Columns per foreign key||32||  
-|Columns per primary key||32||  
+|Columns per foreign key or primary key||32||  
+|Columns per `INSERT` statement||4,096||  
+|Columns per `SELECT` statement||4,096||  
 |Columns per table||1,024|Tables that include sparse column sets include up to 30,000 columns. See [sparse column sets](../relational-databases/tables/use-column-sets.md).|  
-|Columns per SELECT statement||4,096||  
-|Columns per INSERT statement||4,096||  
+|Columns per `UPDATE` statement||4,096|Different limits apply to [sparse column sets](../relational-databases/tables/use-column-sets.md).|  
+|Columns per view||1024||  
 |Connections per client||Maximum value of configured connections||  
 |Database size||524,272 terabytes||  
 |Databases per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  

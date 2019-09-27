@@ -265,9 +265,7 @@ To install the Oracle Client tools you can do the following.
  Multivalue parameters are supported by this extension. Macros can be specified in a query by using the EXECUTE command in query mode TEXT.  
   
  For more information, see [Teradata Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
-  
- You can also create models based on Teradata. For more information, see the following white paper on the Teradata site: [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
-  
+ 
  [Return to Data sources table](#DataSourcesTable)  
   
 ###  <a name="SharePointList"></a> SharePoint List Data Extension  

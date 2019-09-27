@@ -17,7 +17,7 @@ ms.author: maggies
  Use the information in this topic to build a data source. For step-by-step instructions, see [Add and Verify a Data Connection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Connection String  
- Contact your database administrator for connection information and for the credentials to use to connect to the data source. The following connection string example specifies a Teradata database on the server specified with an IP address:  
+ Contact your database administrator for connection information and for the credentials to use to connect to the data source. The following connection string example specifies a Teradata data source on the server specified with an IP address:  
   
 ```  
 data source=<IP Address>  
@@ -34,7 +34,7 @@ data source=<IP Address>
   
   
 ##  <a name="Remarks"></a> Remarks  
- Before you can connect a Teradata data source, the system administrator must have installed the version of the .NET Data Provider for Teradata that supports retrieving data from the Teradata database. This data provider must be installed on the same computer as Report Builder and also on the report server.  
+ Before you can connect a Teradata data source, the system administrator must have installed the version of the .NET Data Provider for Teradata that supports retrieving data from Teradata. This data provider must be installed on the same computer as Report Builder and also on the report server.  
   
  Not all report delivery modes are supported by this data provider. Delivering reports through data-driven subscriptions is not supported for this data processing extension. For more information, see [Use an External Data Source for Subscriber Data &#40;Data-Driven Subscription&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   

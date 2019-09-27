@@ -240,13 +240,13 @@ To install the Oracle Client tools you can do the following.
  [Return to Data sources table](#DataSourcesTable)  
   
 ###  <a name="Teradata"></a> Teradata Data Processing Extension  
- When you select data source type **Teradata**, you are selecting a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension that extends the .NET Framework Data Provider for Teradata. To retrieve report data from a Teradata database, the system administrator must install the .NET Framework Data Provider for Teradata on the report authoring client to edit and preview reports on the client and on the report server to view published reports.  
+ When you select data source type **Teradata**, you are selecting a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension that extends the .NET Framework Data Provider for Teradata. To retrieve report data from Teradata, the system administrator must install the .NET Framework Data Provider for Teradata on the report authoring client to edit and preview reports on the client and on the report server to view published reports.  
   
  For report server projects, there is not a graphical query designer available for this extension. You must use the text-based query designer to create queries.  
   
  The following table shows which versions of the .NET Data Provider for Teradata are supported for defining a data source in a report definition in [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]:  
   
-|[!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] version|Teradata database version|.NET Framework Data Provider for Teradata version|  
+|[!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] version|Teradata version|.NET Framework Data Provider for Teradata version|  
 |-----------------------------------|-------------------------------|-------------------------------------------------------|    
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|12.00|12.00.01|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|6.20|12.00.01|  
@@ -266,7 +266,7 @@ To install the Oracle Client tools you can do the following.
   
  For more information, see [Teradata Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
   
- You can also create models based on a Teradata database. For more information, see the following white paper on the Teradata site: [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
+ You can also create models based on Teradata. For more information, see the following white paper on the Teradata site: [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
   
  [Return to Data sources table](#DataSourcesTable)  
   

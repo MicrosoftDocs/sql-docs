@@ -1,7 +1,7 @@
 ---
 title: "OPENROWSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/25/2019"
+ms.date: "09/26/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -325,7 +325,7 @@ FROM Northwind.dbo.Customers AS c
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support reading from Windows files.
 
 ### D. Using OPENROWSET to bulk insert file data into a varbinary(max) column
 
@@ -400,7 +400,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support reading from Windows files.
 
 ### H. Accessing data from a CSV file without a format file
 
@@ -457,7 +457,7 @@ CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
 
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH ( TYPE = BLOB_STORAGE,
-          LOCATION = 'https://****************.blob.core.windows.net/invoices'
+          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
           , CREDENTIAL= MyAzureBlobStorageCredential --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
 );
 
@@ -496,8 +496,8 @@ For additional examples that show using `INSERT...SELECT * FROM OPENROWSET(BULK.
 - [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)
 - [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)
 - [Rowset Functions &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
- [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)
- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)
+- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
+- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
+- [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)
+- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
+- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "installing Integration Services"
   - "Setup [Integration Services]"
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 
 # Install Integration Services (SSIS)

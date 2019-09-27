@@ -14,7 +14,9 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 Learn how to use [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) to manage CPU, physical IO, and memory resources allocation for Python and R workloads in SQL Server Machine Learning Services.
 
-Machine learning algorithms in Python and R are typically compute intensive. Depending on your workload priorities, you might need to increase or decrease the resources available for Machine Learning Services. 
+Machine learning algorithms in Python and R are typically compute intensive. Depending on your workload priorities, you might need to increase or decrease the resources available for Machine Learning Services.
+
+For more general information, see [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).
 
 > [!NOTE] 
 > Resource Governor is an Enterprise Edition feature.

@@ -421,6 +421,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/advanced-analytics/administration/how-to-create-a-resource-pool.md",
+            "redirect_url": "/sql/advanced-analytics/administration/create-external-resource-pool",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/advanced-analytics/r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md",
             "redirect_url": "/sql/advanced-analytics/r/ref-r-sqlrutils",
             "redirect_document_id": true

@@ -115,7 +115,7 @@ OPENROWSET
  '*data_file*'  
  Is the full path of the data file whose data is to be copied into the target table.   
  **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the data_file can be in Azure blob storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+Starting with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the data_file can be in Azure blob storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 > [!IMPORTANT]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support reading from Windows files.
@@ -208,7 +208,7 @@ FORMAT **=** 'CSV'
 Specifies a comma separated values file compliant to the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
 
  FORMATFILE ='*format_file_path*'  
-  **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the format_file_path can be in Azure blob storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
+  **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Starting with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the format_file_path can be in Azure blob storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
   
   Specifies the full path of a format file. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports two types of format files: XML and non-XML.  
   
@@ -228,7 +228,7 @@ Specifies a character that will be used as the quote character in the CSV file. 
   
 When accessing remote OLE DB data sources, the login identity of trusted connections is not automatically delegated from the server on which the client is connected to the server that is being queried. Authentication delegation must be configured.  
   
-Catalog and schema names are required if the OLE DB provider supports multiple catalogs and schemas in the specified data source. Values for _catalog_ and )_schema_ can be omitted when the OLE DB provider does not support them. If the provider supports only schema names, a two-part name of the form _schema_**.**_object_ must be specified. If the provider supports only catalog names, a three-part name of the form _catalog_**.**_schema_**.**_object_ must be specified. Three-part names must be specified for pass-through queries that use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider. For more information, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+Catalog and schema names are required if the OLE DB provider supports multiple catalogs and schemas in the specified data source. Values for _catalog_ and )_schema_ can be omitted when the OLE DB provider does not support them. If the provider supports only schema names, a two-part name of the form _schema_**.**_object_ must be specified. If the provider supports only catalog names, a three-part name of the form _catalog_**.**_schema_**.**_object_ must be specified. Three-part names must be specified for pass-through queries that use the SQL Server OLE DB provider. For more information, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 `OPENROWSET` does not accept variables for its arguments.    
   
@@ -237,7 +237,7 @@ Any call to `OPENDATASOURCE`, `OPENQUERY`, or `OPENROWSET` in the `FROM` clause 
 ## Using OPENROWSET with the BULK Option  
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] enhancements support the OPENROWSET(BULK...) function:  
   
--   A FROM clause that is used with `SELECT` can call `OPENROWSET(BULK...)` instead of a table name, with full `SELECT` functionality.  
+-   A `FROM` clause that is used with `SELECT` can call `OPENROWSET(BULK...)` instead of a table name, with full `SELECT` functionality.  
   
      `OPENROWSET` with the `BULK` option requires a correlation name, also known as a range variable or alias, in the `FROM` clause. Column aliases can be specified. If a column alias list is not specified, the format file must have column names. Specifying column aliases overrides the column names in the format file, such as:  
   
@@ -282,7 +282,7 @@ Any call to `OPENDATASOURCE`, `OPENQUERY`, or `OPENROWSET` in the `FROM` clause 
 ## Examples  
   
 ### A. Using OPENROWSET with SELECT and the SQL Server OLE DB Driver  
- The following example uses the [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) to access the `HumanResources.Department` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database on the remote server `Seattle1`. 
+ The following example uses the [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) to access the `HumanResources.Department` table in the AdventureWorks2016 database on the remote server `Seattle1`. 
  A `SELECT` statement is used to define the row set returned. The provider string contains the `Server` and `Trusted_Connection` keywords. These keywords are recognized by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver.  
   
 ```sql  
@@ -294,7 +294,7 @@ FROM OPENROWSET('MSOLEDBSQL', 'Server=Seattle1;Database=AdventureWorks2016;Trust
 ```  
 
 ### B. Using OPENROWSET with SELECT and the deprecated SQL Server Native Client OLE DB Provider  
- The following example uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider to access the `HumanResources.Department` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database on the remote server `Seattle1`. 
+ The following example uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider to access the `HumanResources.Department` table in the AdventureWorks2016 database on the remote server `Seattle1`. 
  Use SQLNCLI and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will redirect to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider. 
  A `SELECT` statement is used to define the row set returned. The provider string contains the `Server` and `Trusted_Connection` keywords. These keywords are recognized by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider.  
  
@@ -305,7 +305,7 @@ FROM OPENROWSET('MSOLEDBSQL', 'Server=Seattle1;Database=AdventureWorks2016;Trust
 SELECT a.*  
 FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Database=AdventureWorks2012;Trusted_Connection=Yes;',  
      'SELECT GroupName, Name, DepartmentID  
-      FROM AdventureWorks2012.HumanResources.Department  
+      FROM AdventureWorks2016.HumanResources.Department  
       ORDER BY GroupName, Name') AS a;  
 ```  
   

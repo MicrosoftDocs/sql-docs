@@ -100,7 +100,7 @@ The following example creates an ad hoc connection to the `Payroll` instance of 
 > [!IMPORTANT]  
 > SQL Server Native Client OLE DB provider (SQLNCLI) remains deprecated and it is not recommended to use it for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
   
-```  
+```sql  
 SELECT *  
 FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source=London\Payroll;Integrated Security=SSPI')  
@@ -110,7 +110,7 @@ FROM OPENDATASOURCE('SQLNCLI',
 ### C. Using the Microsoft OLE DB Provider for Jet   
  The following example creates an ad hoc connection to an Excel spreadsheet in the 1997 - 2003 format.  
   
-```  
+```sql  
 SELECT * FROM OPENDATASOURCE('Microsoft.Jet.OLEDB.4.0',  
 	'Data Source=C:\DataFolder\Documents\TestExcel.xls;Extended Properties=EXCEL 5.0')...[Sheet1$] ;  
 ```  

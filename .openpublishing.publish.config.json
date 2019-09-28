@@ -53,14 +53,6 @@
       }
     },
     {
-      "path_to_root": "sqlclient",
-      "url": "https://github.com/dotnet/sqlclient",
-      "branch": "master",
-      "branch_mapping": {
-        "live": "live"
-      }
-    },
-    {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
       "branch": "master"

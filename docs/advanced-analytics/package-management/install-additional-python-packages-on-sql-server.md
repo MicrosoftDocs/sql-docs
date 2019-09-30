@@ -1,133 +1,139 @@
 ---
-title: Install new Python language packages
-description: Add new Python packages to SQL Server Machine Learning Services (In-Database), and Machine Learning Server (Standalone).
+title: Install Python packages with pip
+description: Learn how to use Python pip to install new Python packages on an instance of SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 06/16/2019
+ms.date: 08/22/2019
 ms.topic: conceptual
-author: dphansen
-ms.author: davidph
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+author: garyericson
+ms.author: garye
+ms.reviewer: davidph
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 ---
-# Install new Python packages on SQL Server
+
+# Install Python packages with sqlmlutils
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes how to install new Python packages on an instance of SQL Server Machine Learning Services. In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
+This article describes how to use functions in the [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) package to install new Python packages to an instance of SQL Server Machine Learning Services. The packages you install can be used in Python scripts running in-database using the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL statement.
 
-For more information about package location and installation paths, see [Get R or Python package information](../package-management/installed-package-information.md).
+For more information about package location and installation paths, see [Get Python package information](../package-management/python-package-information.md).
+
+> [!NOTE]
+> The standard Python `pip install` command is not recommended for adding Python packages on SQL Server. Instead, use **sqlmlutils** as described in this article.
 
 ## Prerequisites
 
-+ [SQL Server Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md) with the Python language option. 
++ You must have [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) installed with the Python language option.
 
-+ Packages must be Python 3.5-compliant and run on Windows. 
++ Install [python](https://www.python.org/) on the client computer you use to connect to SQL Server. You also may want a Python development environment such as [Visual Studio Code](https://code.visualstudio.com/download) with the [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python). 
 
-+ Administrative access to the server is required to install packages.
++ Install [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) or [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) on the client computer you use to connect to SQL Server. You can use other database management or query tools, but this article assumes Azure Data Studio or SSMS.
 
-## Considerations
+### Other considerations
 
-Before adding packages, consider whether the package is a good fit for the SQL Server environment. Typically a database server is a shared asset accommodating multiple workloads. If you add packages that put too much computational pressure on the server, performance will suffer. 
++ Packages must be Python 3.5-compliant and run on Windows.
 
-Additionally, Some popular Python packages (like Flask) perform tasks, such as web development, that are better suited for a standalone environment. We recommend that you use Python in-database for tasks that benefit from tight integration with the database engine, such as machine learning,  rather than tasks that simply query the database.
++ The Python package library is located in the Program Files folder of your SQL Server instance and, by default, installing in this folder requires administrator permissions. For more information, see [Package library location](../package-management/python-package-information.md#default-python-library-location).
 
-Database servers are frequently locked down. In many cases, Internet access is blocked entirely. For packages with a long list of dependencies, you will need to identify these dependencies in advance and be willing to install each one manually.
++ Package installation is per instance. If you have multiple instances of Machine Learning Services, you must add the package to each one.
 
-## Add a new Python package
++ Before adding a package, consider whether the package is a good fit for the SQL Server environment.
 
-For this example, we assume that you want to install a new package directly on the SQL Server computer.
+  + We recommend that you use Python in-database for tasks that benefit from tight integration with the database engine, such as machine learning, rather than tasks that simply query the database.
 
-Package installation is per instance. If you have multiple instances of Machine Learning Services, you must add the package to each one.
+  + If you add packages that put too much computational pressure on the server, performance will suffer.
 
-The package installed in this example is [CNTK](https://docs.microsoft.com/cognitive-toolkit/), a framework for deep learning from Microsoft that supports customization, training, and sharing of different types of neural networks.
+  + On a hardened SQL Server environment, you might want to avoid the following:
+    + Packages that require network access
+    + Packages that require elevated file system access
+    + Packages used for web development or other tasks that don't benefit by running inside SQL Server
 
-### Step 1. Download the Windows version of the Python package
+## Install sqlmlutils on the client computer
 
-+ If you are installing Python packages on a server with no internet access, you must download the WHL file to a different computer and then copy it to the server.
+To use **sqlmlutils**, you first need to install it on the client computer that you use to connect to SQL Server.
 
-    For example, on a separate computer, you can download the WHL file from this site [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl), and then copy the file `cntk-2.1-cp35-cp35m-win_amd64.whl` to a local folder on the SQL Server computer.
+1. Download the latest **sqlmlutils** zip file from https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist to the client computer. Don't unzip the file.
 
-+ SQL Server 2017 uses Python 3.5. 
+1. Open a **Command Prompt** and run the following command to install the **sqlmlutils** package. Substitute the full path to the **sqlmlutils** zip file you downloaded - this example assumes the downloaded file is `c:\temp\sqlmlutils_0.6.0.zip`.
 
-> [!IMPORTANT]
-> Make sure that you get the Windows version of the package. If the file ends in .gz, it's probably not the right version.
+   ```console
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.6.0.zip
+   ```
 
-This page contains downloads for multiple platforms and for multiple Python versions: [Set up CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
+## Add a Python package on SQL Server
 
-### Step 2. Open a Python command prompt
+In the following example, you'll add the [text-tools](https://pypi.org/project/text-tools/) package to SQL Server.
 
-Locate the default Python library location used by SQL Server. If you have installed multiple instances, locate the PYTHON_SERVICE folder for the instance where you want to add the package.
+### Add the package online
 
-For example, if Machine Learning Services has been installed using defaults, and machine learning is enabled on the default instance, the path would be as follows:
+If the client computer you use to connect to SQL Server has Internet access, you can use **sqlmlutils** to find the **text-tools** package and any dependencies over the Internet, and then install the package to a SQL Server instance remotely.
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
+1. On the client computer, open **Python** or a Python environment.
 
-Open the Python command prompt associated with the instance.
+1. Use the following commands to install the **text-tools** package. Substitute your own SQL Server database connection information.
 
-> [!TIP]
-> For future debugging and testing, you might want to set up a Python environment specific to the instance library.
+   ```python
+   import sqlmlutils
+   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+   sqlmlutils.SQLPackageManager(connection).install("text-tools")
+   ```
 
-### Step 3. Install the package using pip
+### Add the package offline
 
-+ If you are accustomed to using the Python command line, use PIP.exe to install new packages. You can find the **pip** installer in the `Scripts` subfolder. 
+If the client computer you use to connect to SQL Server doesn't have an Internet connection, you can use **pip** on a computer with Internet access to download the package and any dependent packages to a local folder. You then copy the folder to the client computer where you can install the package offline.
 
-  SQL Server Setup does not add Scripts to the system path. If you get an error that `pip` is not recognized as an internal or external command, you can add the Scripts folder to the PATH variable in Windows.
+#### On a computer with Internet access
 
-  The full path of the **Scripts** folder in a default installation is as follows:
+1. Open a **Command Prompt** and run the following command to create a local folder that contains the **text-tools** package. This example creates the folder `c:\temp\text-tools`.
 
-    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
+   ```console
+   pip download text-tools -d c:\temp\text-tools
+   ```
 
-+ If you are using Visual Studio 2017, or Visual Studio 2015 with the Python extensions, you can run `pip install` from the **Python Environments** window. Click **Packages**, and in the text box, provide the name or location of the package to install. You don't need to type `pip install`; it is filled in for you automatically. 
+1. Copy the `text-tools` folder to the client computer. The following example assumes you copied it to `c:\temp\packages\text-tools`.
 
-    - If the computer has Internet access, provide the name of the package, or the URL of a specific package and version. 
-    
-    For example, to install the version of CNTK that is supported for Windows and Python 3.5, specify the download URL: `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
+#### On the client computer
 
-    - If the computer does not have internet access, you must download the WHL file before beginning installation. Then, specify the local file path and name. For example, paste the following path and file to install the WHL file downloaded from the site: 
-    `"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
+Use **sqlmlutils** to install each package (WHL file) you find in the local folder that **pip** created. It doesn't matter in what order you install the packages.
 
-You might be prompted to elevate permissions to complete the install.
+In this example, **text-tools** has no dependencies, so there is only one file from the `text-tools` folder for you to install. In contrast, a package such as **scikit-plot** has 11 dependencies, so you would find 12 files in the folder (the **scikit-plot** package and the 11 dependent packages), and you would install each of them.
 
-As installation progresses, you can see status messages in the command prompt window:
-
-```python
-pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl
-Collecting cntk==2.1 from https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl
-  Downloading https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl (34.1MB)
-    100% |################################| 34.1MB 13kB/s
-...
-Installing collected packages: cntk
-Successfully installed cntk-2.1
-```
-
-
-### Step 4. Load the package or its functions as part of your script
-
-When installation is complete, you can immediately begin using the package as described in the next step.
-
-For examples of deep learning using CNTK, see these tutorials: [Python API for CNTK](https://cntk.ai/pythondocs/tutorials.html)
-
-To use functions from the package in your script, insert the standard `import <package_name>` statement in the initial lines of the script:
+Run the following Python script. Substitute your own SQL Server database connection information, and the actual file path and name of the package. Repeat the `sqlmlutils.SQLPackageManager` statement for each package file in the folder.
 
 ```python
-import numpy as np
-import cntk as cntk
-cntk._version_
+import sqlmlutils
+connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
 ```
 
-## List installed packages using conda
+## Use the package in SQL Server
 
-There are different ways that you can get a list of installed packages. For example, you can view the installed packages in the **Python Environments** windows of Visual Studio.
+You can now use the package in a Python script in SQL Server. For example:
 
-If you are using the Python command line, you can use either **Pip** or the **conda** package manager, included with the Anaconda Python environment added by SQL Server setup.
+```python
+EXECUTE sp_execute_external_script
+  @language = N'Python',
+  @script = N'
+from text_tools.finders import find_best_string
+corpus = "Lorem Ipsum text"
+query = "Ipsum"
+first_match = find_best_string(query, corpus)
+print(first_match)
+  '
+```
 
-1. Go to C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
+## Remove the package from SQL Server
 
-1. Right-click **conda.exe** > **Run as administrator**, and enter `conda list` to return a list of packages installed in the current environment.
+If you would like to remove the **text-tools** package, use the following Python command on the client computer, using the same connection variable you defined earlier.
 
-1. Similarly, right-click **pip.exe** > **Run as administrator**, and enter `pip list` to return the same information. 
+```python
+sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
+```
 
-For more information about **conda** and how you can use it to create and manage multiple Python environments, see [Managing environments with conda](https://conda.io/docs/user-guide/tasks/manage-environments.html).
+## See also
 
-> [!Note]
-> SQL Server Setup does not add Pip or Conda to the system path and on a production SQL Server instance, keeping non-essential executables out of the path is a best practice. However, for development and test environments, you could add the Scripts folder to the system PATH environment variable to run both Pip and Conda on command from any location.
++ To view information about Python packages installed in SQL Server Machine Learning Services, see [Get Python package information](../package-management/python-package-information.md).
+
++ For information about installing R packages in SQL Server Machine Learning Services, see [Install new R packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md).

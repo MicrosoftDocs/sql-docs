@@ -37,8 +37,13 @@ ms.author: "mikeray"
 # Editions and supported features of SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-This topic provides details of features supported by the SQL Server editions. At this time, there are no changes to features supported by editions for SQL Server 2017.  
-  
+This topic provides details of features supported by the SQL Server editions.
+
+For information about older versions, see:
+
+* [SQL Server 2016](editions-and-components-of-sql-server-2016.md).  
+* [SQL Server 2014](http://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014).
+
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 The SQL Server Evaluation edition is available for a 180-day trial period.  
@@ -148,7 +153,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Hot add memory and CPU|Yes|No|No|No|No|
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
-|Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|  
+|Hybrid backup to Azure (backup to URL)|Yes|Yes|No|No|No|  
   
  <sup>1</sup> For more information on installing SQL Server on Server Core,  see [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
@@ -376,7 +381,7 @@ For information about the Business Intelligence Client features supported by the
 > [![Download SSMS](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**      
   
 ## See Also  
- [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ [Install SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
   
   

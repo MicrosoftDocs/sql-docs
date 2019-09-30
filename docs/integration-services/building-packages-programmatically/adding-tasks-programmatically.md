@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "tasks [Integration Services], packages"
   - "adding package tasks"
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Adding Tasks Programmatically
 

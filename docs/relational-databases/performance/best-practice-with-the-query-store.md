@@ -1,7 +1,7 @@
 ---
 title: "Best Practice with the Query Store | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/22/2019"
+ms.date: "08/21/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store, best practices"
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: julieMSFT
+author: pmasl
 ms.author: jrasnick
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -45,7 +45,13 @@ The default parameters are good enough to start, but you should monitor how Quer
   
  While Query Store collects queries, execution plans and statistics, its size in the database grows until this limit is reached. When that happens, Query Store automatically changes the operation mode to read-only and stops collecting new data, which means that your performance analysis is no longer accurate.  
   
- The default value in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] is 100 MB, and may not be sufficient if your workload generates large number of different queries and plans or if you want to keep query history for a longer period of time. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the default value is 1 GB. Keep track of current space usage and increase the Max Size (MB) to prevent Query Store from transitioning to read-only mode. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or execute the following script to get the latest information about Query Store size:  
+ The default value in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] is 100 MB, and may not be sufficient if your workload generates large number of different queries and plans or if you want to keep query history for a longer period of time. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the default value is 1 GB. Keep track of current space usage and increase the *Max Size* to prevent Query Store from transitioning to read-only mode. 
+ 
+> [!IMPORTANT] 
+> ***Max Size (MB)*** limit is not strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the ***Data Flush Interval***.       
+> If Query Store has breached the *Max Size* limit between storage size checks, it will transition to read-only mode. If *Size Based Cleanup Mode* is enabled, the cleanup mechanism to enforce the *Max Size* limit is also triggered. 
+ 
+ Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or execute the following script to get the latest information about Query Store size:  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -129,7 +135,7 @@ SET QUERY_STORE = ON
       CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
       DATA_FLUSH_INTERVAL_SECONDS = 900,
       QUERY_CAPTURE_MODE = AUTO,
-      MAX_STORAGE_SIZE_MB = 1024,
+      MAX_STORAGE_SIZE_MB = 1000,
       INTERVAL_LENGTH_MINUTES = 60
     );
 ```  
@@ -143,7 +149,8 @@ SET QUERY_STORE = ON
       OPERATION_MODE = READ_WRITE, 
       CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
       DATA_FLUSH_INTERVAL_SECONDS = 900,
-      MAX_STORAGE_SIZE_MB = 1024, 
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1000, 
       INTERVAL_LENGTH_MINUTES = 60,
       SIZE_BASED_CLEANUP_MODE = AUTO, 
       MAX_PLANS_PER_QUERY = 200,
@@ -151,7 +158,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-The following example sets the Query Capture mode to Auto and set other recommended options in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], and optionally sets the Custom capture policy with its defaults:  
+The following example sets the Query Capture mode to Auto and set other recommended options in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], and **optionally** sets the Custom capture policy with its defaults, instead of the new default Auto capture mode:  
 
 ```sql
 ALTER DATABASE [QueryStoreDB]  
@@ -160,7 +167,7 @@ SET QUERY_STORE = ON
       OPERATION_MODE = READ_WRITE, 
       CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
       DATA_FLUSH_INTERVAL_SECONDS = 900,
-      MAX_STORAGE_SIZE_MB = 1024, 
+      MAX_STORAGE_SIZE_MB = 1000, 
       INTERVAL_LENGTH_MINUTES = 60,
       SIZE_BASED_CLEANUP_MODE = AUTO, 
       MAX_PLANS_PER_QUERY = 200,
@@ -222,11 +229,13 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
 
 > [!NOTE]
 > The above graphic may feature different shapes for specific query plans, with the following meanings for each possible status:<br />  
+> 
 > |Shape|Meaning|  
 > |-------------------|-------------|
 > |Circle|Query Completed (Regular Execution successfully finished)|
 > |Square|Cancelled (Client initiated aborted execution)|
 > |Triangle|Failed (Exception aborted execution)|
+> 
 > Also, the size of the shape reflects query execution count within the specified time interval, increasing in size with a higher number of executions.  
 
 -   You may conclude that your query is missing an index for optimal execution. This information is surfaced within the query execution plan. Create the missing index and check the query performance using the Query Store.  
@@ -283,7 +292,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 -   Finally, you should consider setting Query Capture Mode to Auto as it filters out queries that are usually less relevant for your workload.  
   
 ### Error State  
- To recover Query Store try explicitly setting the read-write mode and check actual state again.  
+ To recover the Query Store try explicitly setting the read-write mode and check the actual state again.  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -299,9 +308,9 @@ FROM sys.database_query_store_options;
   
  If the problem persists, it indicates corruption of the Query Store data is persisted on the disk.
  
- Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], Query Store can be recovered by executing the **sp_query_store_consistency_check** stored procedure within the affected database. For [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you will need to clear the data from the Query Store as shown below.
+ Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], Query Store can be recovered by executing the **sp_query_store_consistency_check** stored procedure within the affected database. The Query Store must be disabled before attempting the recovery operation. For [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you will need to clear the data from the Query Store as shown below.
  
- If that did not help, you can try to clear Query Store before requesting read-write mode.  
+ If the recovery was unsuccessful, you can try clearing the Query Store before setting the read-write mode.  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -330,7 +339,8 @@ FROM sys.database_query_store_options;
 |Custom|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a CUSTOM capture mode under the `ALTER DATABASE SET QUERY_STORE` command. When enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine tune data collection in a specific server.<br /><br />The new custom settings define what happens during the internal capture policy time threshold: a time boundary during which the configurable conditions are evaluated and if any are true, the query is eligible to be captured by Query Store. For more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 
 > [!NOTE]
-> Cursors, queries inside Stored Procedures, and Natively compiled queries are always captured when the query capture mode is set to All, Auto, or Custom.
+> Cursors, queries inside Stored Procedures, and natively compiled queries are always captured when the query capture mode is set to All, Auto, or Custom. 
+> To capture natively compiled queries, enable collection of per query statistics using [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
 
 ## Keep the most relevant data in Query Store  
  Configure the Query Store to contain only the relevant data and it will run continuously providing great troubleshooting experience with a minimal impact on your regular workload.  
@@ -392,7 +402,7 @@ If you rename a database, plan forcing will fail which will cause recompilation 
  
 The global trace flags 7745 and 7752 can be used to improve availability of databases using Query Store. For more information, refer to [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
--  Trace flag 7745 will prevent the default behavior where Query Store writes data to disk before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be shut down. This means that Query Store data that has been collected but not been yet persisted to disk will be lost. 
+-  Trace flag 7745 will prevent the default behavior where Query Store writes data to disk before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be shut down. This means that Query Store data that has been collected but not been yet persisted to disk will be lost, up to time window defined with `DATA_FLUSH_INTERVAL_SECONDS`. 
   
 -  Trace flag 7752 enables asynchronous load of Query Store. This allows a database to become online and queries to be executed before the Query Store has been fully recovered. The default behavior is to do a synchronous load of Query Store. The default behavior prevents queries from executing before the Query Store has been recovered but also prevents any queries from being missed in the data collection.
 

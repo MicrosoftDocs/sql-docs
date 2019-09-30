@@ -1,7 +1,7 @@
 ---
-title: "Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance | Microsoft Docs"
+title: "Quick Survey 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance | Microsoft Docs"
 ms.custom: ""
-ms.date: 09/05/2017
+ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -13,6 +13,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Survey of Initial Areas in In-Memory OLTP
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
@@ -205,7 +206,7 @@ On Microsoft SQL Server, before you can create a memory-optimized table you must
   
 On Azure SQL Database, you need not and cannot create such a FILEGROUP.  
 
-The following sample T-SQL script enables a database for In-Memory OLTP and configures all recommended settings. It works with both SQL Server and Azure SQL Database: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql).
+The following sample T-SQL script enables a database for In-Memory OLTP and configures all recommended settings. It works with both SQL Server and Azure SQL Database: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql).
 
 Note that not all SQL Server features are supported for databases with a MEMORY_OPTIMIZED_DATA filegroup. For details on limitations see: [Unsupported SQL Server Features for In-Memory OLTP](unsupported-sql-server-features-for-in-memory-oltp.md)
   

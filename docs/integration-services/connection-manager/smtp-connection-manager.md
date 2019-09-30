@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SMTP connection manager [Integration Services]"
   - "connection managers [Integration Services], SMTP"
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # SMTP Connection Manager
 

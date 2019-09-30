@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Integration Services, data types"
   - "SQL Server Integration Services, data types"
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services Data Types
 

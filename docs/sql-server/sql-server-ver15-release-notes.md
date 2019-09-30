@@ -38,6 +38,10 @@ Complete details about support and licensing for release candidate software are 
 
 - **Issue and customer impact**: No offline content is available for SQL Server 2019 (15.x).
 
+## Build number
+
+The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15.0.1900.25`.  The build number for SQL Server 2019 RC used in big data clusters is `15.0.1900.47`.
+
 ## Hardware and software requirements
 
 - **Issue and customer impact**: Hardware and software requirements are still being reviewed and not final for the product release.
@@ -49,17 +53,6 @@ Complete details about support and licensing for release candidate software are 
     - Windows Server 2016 or later. For additional requirements, see [Requirements for Installing SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
     - Microsoft .NET Framework 4.6.2. Available from [Download Center](https://www.microsoft.com/download/details.aspx?id=53344).
     - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
-
-## <a name = "release-notes"></a>Features excluded from support
-
-- **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] excludes support for the following components, features, and scenarios:
-  - SQL Server Analysis Services
-  - SQL Server Reporting Services
-  - Always On availability groups on Kubernetes
-
-- **Workaround**: None. Exclusion applies to all customers, including participants in SQL Early Adopter Program.
-
-- **Applies to**: Release candidate
 
 ## Updated compiler
 
@@ -104,7 +97,7 @@ Complete details about support and licensing for release candidate software are 
 
 ## SQL Server Configuration Manager may not start
 
-- **Issue and customer impact**: SQL Server Configuration Manager (SSCM) does not start on a machine without VCRuntime 140. When starting SSCM, the user may see the following dialog: 
+- **Issue and customer impact**: SQL Server Configuration Manager (SSCM) doesn't start on a machine without the VCRuntime 140 (VCRUNTIME140.dll) file. When starting SSCM, the user may see the following dialog: 
 
 
   `MMC could not create the snap-in. The snap-in might not have been installed correctly.`
@@ -123,6 +116,16 @@ Complete details about support and licensing for release candidate software are 
 - **Workaround**: None
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Release candidate
+
+## Master Data Service notification email contains broken link
+
+- **Issue and customer impact**: The notification email from Master Data Services (MDS) contains a broken link. The link navigates to a page that returns an error like the following message:
+
+   `The view 'Index' or its master was not found or no view engine supports the searched locations.`
+
+- **Workaround**: Open the MDS portal and go to the resource manually.
+
+- **Applies to**: SQL Server 2019 release candidate.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

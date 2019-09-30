@@ -28,6 +28,9 @@ Also see [this](deployment-script-single-node-kubeadm.md) topic for a sample scr
    - 8 CPUs
    - 64 GB of memory
    - 100 GB of storage
+ 
+> [!Important] 
+> Before starting the big data cluster deployment, ensure the clocks are synchronized across all the Kubernetes nodes the deployment is targeting. The big data cluster has built-in health properties for various services that are time sensitive and clock skews can result in incorrect status.
 
 ## Prepare the machines
 
@@ -57,11 +60,11 @@ On each machine, there are several required prerequisites. In a bash terminal, r
 
    ```bash
    KUBE_DPKG_VERSION=1.15.0-00
-   sudo apt-get update && /
-   sudo apt-get install -y ebtables ethtool && /
-   sudo apt-get install -y docker.io && /
-   sudo apt-get install -y apt-transport-https && /
-   sudo apt-get install -y kubelet=$KUBE_DPKG_VERSION kubeadm=$KUBE_DPKG_VERSION kubectl=$KUBE_DPKG_VERSION && /
+   sudo apt-get update && \
+   sudo apt-get install -y ebtables ethtool && \
+   sudo apt-get install -y docker.io && \
+   sudo apt-get install -y apt-transport-https && \
+   sudo apt-get install -y kubelet=$KUBE_DPKG_VERSION kubeadm=$KUBE_DPKG_VERSION kubectl=$KUBE_DPKG_VERSION && \
    curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
    ```
  
@@ -121,7 +124,7 @@ After running the previous commands on each machine, choose one of the machines 
    kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
    helm init
    kubectl apply -f rbac.yaml
-   kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+   kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
    kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
    ```
 

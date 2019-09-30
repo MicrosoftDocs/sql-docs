@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 -   **sp_addpublication_snapshot**:  
   
-     You should now supply the Windows credentials as `@job_login**` and `@job_password**` when executing [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) to create the job under which the Snapshot Agent runs at the Distributor.  
+     You should now supply the Windows credentials as `@job_login` and `@job_password` when executing [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) to create the job under which the Snapshot Agent runs at the Distributor.  
   
 -   **sp_addpushsubscription_agent**:  
   

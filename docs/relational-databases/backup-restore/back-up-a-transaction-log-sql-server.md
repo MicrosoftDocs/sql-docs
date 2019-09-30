@@ -19,25 +19,22 @@ ms.author: mikeray
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to back up a transaction log in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.  
 
-##  <a name="Restrictions"></a> Limitations and restrictions  
+## Before You Begin
+### <a name="Restrictions"></a> Limitations and restrictions  
   
 The `BACKUP` statement is not allowed in an explicit or [implicit](../../t-sql/statements/set-implicit-transactions-transact-sql.md) transaction. An explicit transaction is one in which you explicitly define both the start and end of the transaction.
 
-##  <a name="Recommendations"></a> Recommendations  
+### <a name="Recommendations"></a> Recommendations  
   
 - If a database uses either the full or bulk-logged [recovery model](recovery-models-sql-server.md), you must back up the transaction log regularly enough to protect your data, and to prevent the [transaction log from filling](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md). This truncates the log and supports restoring the database to a specific point in time. 
   
-- By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and in the system event log. If you back up the log frequently, these success messages accumulate quickly, resulting in huge error logs, making finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226, if none of your scripts depend on those entries.
-
-   For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
+- By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and in the system event log. If you back up the log frequently, these success messages accumulate quickly, resulting in huge error logs, making finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226, if none of your scripts depend on those entries, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
-##  <a name="Permissions"></a> Permissions
+### <a name="Permissions"></a> Permissions
 
 The `BACKUP DATABASE` and `BACKUP LOG` permissions needed are granted by default to members of the **sysadmin** fixed server role, and the **db_owner** and **db_backupoperator** fixed database roles. Check for the correct permissions before you begin.
   
  Ownership and permission problems on the backup device's physical file can interfere with a backup operation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs must have write permissions. However, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does not check file access permissions. Permissions problems on the backup device's physical file may not become obvious to you until you attemt to access the [physical resource](backup-devices-sql-server.md) when you try to backup or restore. So again, check permissions before you begin.
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Using SQL Server Management Studio
 
@@ -53,9 +50,7 @@ The `BACKUP DATABASE` and `BACKUP LOG` permissions needed are granted by default
   
 1. In the **Backup type** list box, select **Transaction Log**.  
   
-1. (optional) Select **Copy Only Backup** to create a copy-only backup. A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups.
-
-   For more information, see [Copy-Only Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
+1. (optional) Select **Copy Only Backup** to create a copy-only backup. A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups, see [Copy-Only Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
     > [!NOTE]
     > When the **Differential** option is selected, you cannot create a copy-only backup.  
@@ -82,27 +77,23 @@ The `BACKUP DATABASE` and `BACKUP LOG` permissions needed are granted by default
   
     - **Back up to the existing media set**  
   
-         For this option, click either **Append to the existing backup set** or **Overwrite all existing backup sets**.
-         
-         For more information, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
+         For this option, click either **Append to the existing backup set** or **Overwrite all existing backup sets**, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
-         (optional) Select **Check media set name and backup set expiration** to cause the backup operation to verify the date and time at which the media set and backup set expire.  
+         - (optional) Select **Check media set name and backup set expiration** to cause the backup operation to verify the date and time at which the media set and backup set expire.  
   
-         (optional) Enter a name in the **Media set name** text box. If no name is specified, a media set with a blank name is created. If you specify a media set name, the media (tape or disk) is checked to see whether the actual name matches the name you enter here.  
+         - (optional) Enter a name in the **Media set name** text box. If no name is specified, a media set with a blank name is created. If you specify a media set name, the media (tape or disk) is checked to see whether the actual name matches the name you enter here.  
   
          If you leave the media name blank and check the box to check it against the media, success will equal the media name on the media also being blank.  
   
     - **Back up to a new media set, and erase all existing backup sets**  
   
-         For this option, enter a name in the **New media set name** text box, and, optionally, describe the media set in the **New media set description** text box.
-         
-         For more information, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
+         For this option, enter a name in the **New media set name** text box, and, optionally, describe the media set in the **New media set description** text box, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
 1. In the **Reliability** section, optionally, check:  
   
     - **Verify backup when finished**.  
   
-    - **Perform checksum before writing to media**, and (optional) **Continue on checksum error**.
+    - **Perform checksum before writing to media** and (optional) **Continue on checksum error**.
     
        For information on checksums, see [Possible Media Errors During Backup and Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
@@ -110,7 +101,7 @@ The `BACKUP DATABASE` and `BACKUP LOG` permissions needed are granted by default
   
     - For routine log backups, keep the default selection, **Truncate the transaction log by removing inactive entries**.  
   
-    - To back up the tail of the log (that is, the active log), check **Back up the tail of the log, and leave database in the restoring state**.  
+    - To back up the tail of the log (the active log), check **Back up the tail of the log, and leave database in the restoring state**.  
   
          A tail-log backup is taken after a failure to back up the tail of the log in order to prevent work loss. Back up the active log (a tail-log backup) both after a failure, before beginning to restore the database, or when failing over to a secondary database. Selecting this option is equivalent to specifying the NORECOVERY option in the BACKUP LOG statement of Transact-SQL.
          
@@ -136,9 +127,9 @@ The `BACKUP DATABASE` and `BACKUP LOG` permissions needed are granted by default
   
 Execute the BACKUP LOG statement to back up the transaction log, specifying the following:  
   
-    - The name of the database to which the transaction log that you want to back up belongs.  
+- The name of the database to which the transaction log that you want to back up belongs.  
   
-    - The backup device where the transaction log backup is written.  
+- The backup device where the transaction log backup is written.  
   
 > [!IMPORTANT]
 > This example uses the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, which uses the simple recovery model. To permit log backups, before taking a full database backup, the database was set to use the full recovery model.

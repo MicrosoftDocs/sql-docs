@@ -40,7 +40,7 @@ ms.author: mikeray
 ## Concepts and Requirements  
   
 ### Azure Storage Concepts  
- When using SQL Server Data Files in Windows Azure feature, you need to create a storage account and a container in Windows Azure. Then, you need to create a SQL Server credential, which includes information on the policy of the container as well as a shared access signature that is necessary to access the container.  
+ When using SQL Server Data Files in Azure feature, you need to create a storage account and a container in Azure. Then, you need to create a SQL Server credential, which includes information on the policy of the container as well as a shared access signature that is necessary to access the container.  
   
  In [Microsoft Azure](https://azure.microsoft.com), an [Azure storage](https://azure.microsoft.com/services/storage/) account represents the highest level of the namespace for accessing Blobs. A storage account can contain an unlimited number of containers, as long as their total size is below the storage limits. For the latest information on storage limits, see [Azure Subscription and Service Limits, Quotas, and Constraints](https://docs.microsoft.com/azure/azure-subscription-service-limits). A container provides a grouping of a set of [Blobs](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). All Blobs must be in a container. An account can contain an unlimited number of containers. Similarly, a container can store an unlimited number of Blobs as well. There are two types of blobs that can be stored in Azure Storage: block and page blobs. This new feature uses Page blobs, which are more efficient when ranges of bytes in a file are modified frequently. You can access Blobs using the following URL format: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
@@ -118,7 +118,7 @@ ON
  Use PowerShell cmdlets to store SQL Server data files in Azure Blob Storage service by referencing a Blob Storage URL path instead of a file path. Access Blobs using the following URL format: `https://storageaccount.blob.core.windows.net/<container>/<blob>` .  
   
 ### SQL Server object and performance counters support  
- Starting with SQL Server 2014, a new SQL Server object has been added to be used with SQL Server Data Files in Azure Storage feature. The new SQL Server object is called as [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) and it can be used by System Monitor to monitor activity when running SQL Server with Windows Azure Storage.  
+ Starting with SQL Server 2014, a new SQL Server object has been added to be used with SQL Server Data Files in Azure Storage feature. The new SQL Server object is called as [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) and it can be used by System Monitor to monitor activity when running SQL Server with Azure Storage.  
   
 ### SQL Server Management Studio support  
  SQL Server Management Studio allows you to use this feature via several dialog windows. For example, you can type the URL path of the storage container, such as > https://teststorageaccnt.blob.core.windows.net/testcontainer/ :

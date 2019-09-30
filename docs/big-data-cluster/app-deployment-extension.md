@@ -1,17 +1,17 @@
 ---
 title: App deployment extension
 titleSuffix: SQL Server big data clusters
-description: Deploy a Python or R script as an application on SQL Server 2019 big data clusters (preview). 
+description: Deploy a Python or R script as an application on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview). 
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 07/25/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# How to use Visual Studio Code to deploy applications to SQL Server big data clusters
+# How to use Visual Studio Code to deploy applications to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -194,9 +194,9 @@ To delete an app, just click the Trash can button next to the app in the `Deploy
 
 ## Next steps
 
-Explore how to integrate apps deployed on SQL Server big data clusters in your own applications at [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information. You can also refer to the additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy) to try with the extension.
+Explore how to integrate apps deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in your own applications at [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information. You can also refer to the additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy) to try with the extension.
 
-For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
 
 
 Our goal is to make this extension useful for you and we appreciate you feedback. Please send them to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](https://aka.ms/sqlfeedback).

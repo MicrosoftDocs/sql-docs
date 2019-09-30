@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "File System task [Integration Services]"
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # File System Task
 

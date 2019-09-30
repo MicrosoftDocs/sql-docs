@@ -1,4 +1,4 @@
-- name: SQL Server Machine Learning Services Documentation
+- name: SQL Server Machine Learning Services documentation
   href: ../advanced-analytics/index.yml
 
 - name: Welcome to SQL Server >
@@ -49,38 +49,48 @@
   items:
   - name: Python
     items:
-    - name: Verify Python exists in SQL Server
-      href: ../advanced-analytics/tutorials/quickstart-python-verify.md
-    - name: Hello World in Python and SQL
-      href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
-    - name: Handle inputs and outputs
-      href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
-    - name: Python data structures and SQL
+    - name: Create Python scripts
+      href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
+    - name: Handle data types and objects
       href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-    - name: Train and use your first model
-      href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
+    - name: Train and score a model
+      href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
   - name: R
     items:
-    - name: Verify R exists in SQL Server
-      href: ../advanced-analytics/tutorials/quickstart-r-verify.md
-    - name: Hello World in R and SQL
-      href: ../advanced-analytics/tutorials/quickstart-r-run-using-tsql.md
-    - name: Handle inputs and outputs
-      href: ../advanced-analytics/tutorials/quickstart-r-inputs-and-outputs.md
+    - name: Create R scripts
+      href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
     - name: Handle data types and objects
       href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-    - name: Using R functions
+    - name: Write R functions
       href: ../advanced-analytics/tutorials/quickstart-r-functions.md
-    - name: Create a predictive model
-      href: ../advanced-analytics/tutorials/quickstart-r-create-predictive-model.md
-    - name: Predict from model
-      href: ../advanced-analytics/tutorials/quickstart-r-predict-from-model.md
+    - name: Train and score a model
+      href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
 - name: Tutorials
   items:
   - name: Python
     items:
     - name: Python tutorials
       href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
+    - name: Ski rental (linear regression)
+      items:
+      - name: 1 - Introduction
+        href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression.md
+      - name: 2 - Prepare data
+        href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-prepare-data.md
+      - name: 3 - Train model
+        href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-train-model.md
+      - name: 4 - Deploy model
+        href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-deploy-model.md
+    - name: Categorize customers (k-means clustering)
+      items:
+      - name: 1 - Introduction
+        href: ../advanced-analytics/tutorials/python-clustering-model.md
+      - name: 2 - Prepare the data
+        href: ../advanced-analytics/tutorials/python-clustering-model-prepare-data.md
+      - name: 3 - Create the model
+        href: ../advanced-analytics/tutorials/python-clustering-model-build.md
+      - name: 4 - Deploy the model
+        href: ../advanced-analytics/tutorials/python-clustering-model-deploy.md
     - name: Create a Python model using revoscalepy
       href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
     - name: Python for SQL developers
@@ -185,6 +195,8 @@
   items:
   - name: Connect
     items:
+    - name: Loopback connection
+      href: ../advanced-analytics/connect/loopback-connection.md
     - name: Connect to OLAP from R
       items:
       - name: Use data from OLAP cubes in R
@@ -240,9 +252,9 @@
       - name: Install R packages
         href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
       - name: Create a miniCRAN repo
-        href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
+        href: ../advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md
       - name: Tips for using R packages
-        href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
+        href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
   - name: Administration
     items:
     - name: Manage integration

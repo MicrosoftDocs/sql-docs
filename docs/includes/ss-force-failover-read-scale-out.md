@@ -67,7 +67,7 @@ To manually fail over without data loss:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
-        SET REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1;
+        SET (REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1);
    ```
 
    This setting ensures that every active transaction is committed to the primary replica and at least one synchronous secondary replica. 

@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.hadoophivetask.f1"
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Hadoop Hive Task
 

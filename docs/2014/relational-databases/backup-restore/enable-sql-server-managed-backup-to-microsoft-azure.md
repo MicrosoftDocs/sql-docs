@@ -1,5 +1,5 @@
 ---
-title: "Setting up SQL Server Managed Backup to Windows Azure | Microsoft Docs"
+title: "Setting up SQL Server Managed Backup to Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/04/2016"
 ms.prod: "sql-server-2014"
@@ -11,7 +11,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---
-# Setting up SQL Server Managed Backup to Windows Azure
+# Setting up SQL Server Managed Backup to Azure
   This topic includes two tutorials:  
   
  Set up [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] at the database level, enable email notification, and monitor backup activity.  

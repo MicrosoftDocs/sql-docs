@@ -74,7 +74,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Neutral|Neutral|0000|  
 |Norwegial Bokmaal|nor|1044|  
 |Punjabi|pan|1094|  
-|Brazilian Portuguese|ptb|1046|  
+|Portuguese (Brazil)|ptb|1046|  
 |Portuguese|ptg|2070|  
 |Romanian|rom|1048|  
 |Slovak|sky|1051|  

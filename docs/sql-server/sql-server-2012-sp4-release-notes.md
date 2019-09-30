@@ -219,11 +219,11 @@ Previously, DACFx did not preserve the state (WITH CHECK/NOCHECK) of check const
   
 **Updates to SqlPackage.exe (DACFx command-line tool)**  
   
--   Extract DACPAC with data - Creates a database snapshot file (.dacpac) from a live SQL Server or Windows Azure SQL Database that contains data from user tables in addition to the database schema. These packages can be published to a new or existing SQL Server or Windows Azure SQL Database using the SqlPackage.exe Publish action. Data contained in package replaces the existing data in the target database.  
+-   Extract DACPAC with data - Creates a database snapshot file (.dacpac) from a live SQL Server or Azure SQL Database that contains data from user tables in addition to the database schema. These packages can be published to a new or existing SQL Server or Azure SQL Database using the SqlPackage.exe Publish action. Data contained in package replaces the existing data in the target database.  
   
--   Export BACPAC - Creates a logical backup file (.bacpac) of a live SQL Server or Windows Azure SQL Database containing the database schema and user data which can be used to migrate a database from on-premise SQL Server to Windows Azure SQL Database. Databases compatible with Azure can be exported and then later imported between supported versions of SQL Server.  
+-   Export BACPAC - Creates a logical backup file (.bacpac) of a live SQL Server or Azure SQL Database containing the database schema and user data which can be used to migrate a database from on-premise SQL Server to Azure SQL Database. Databases compatible with Azure can be exported and then later imported between supported versions of SQL Server.  
   
--   Import BACPAC - Import a .bacpac file to create a new or populate an empty SQL Server or Windows Azure SQL Database.  
+-   Import BACPAC - Import a .bacpac file to create a new or populate an empty SQL Server or Azure SQL Database.  
   
 Full SqlPackage.exe documentation on MSDN can be found [here](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx).  
   

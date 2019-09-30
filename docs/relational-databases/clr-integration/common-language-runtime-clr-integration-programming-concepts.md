@@ -17,7 +17,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Common Language Runtime (CLR) Integration Programming Concepts
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features the integration of the common language runtime (CLR) component of the .NET Framework for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. This means that you can now write stored procedures, triggers, user-defined types, user-defined functions, user-defined aggregates, and streaming table-valued functions, using any .NET Framework language, including [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET and [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
  The Microsoft.SqlServer.Server namespace includes core functionality for CLR programming in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, the Microsoft.SqlServer.Server namespace is documented in the .NET Framework SDK. This documentation is not included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  

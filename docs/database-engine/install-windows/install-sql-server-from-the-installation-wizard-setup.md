@@ -126,7 +126,11 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
     > [!NOTE]
     > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], select the **Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service** check box to allow the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service account to use [database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md).
   
-     Use the **Server Configuration - Collation** page to specify nondefault collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Collations and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md).  
+1. Use the **Server Configuration - Collation** page to specify non-default collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].    
+
+   The default installation setting is determined by the operating system (OS) locale. The server-level collation can either be changed during setup, or by changing the OS locale before installation. The default collation is set to the oldest available version that is associated with each specific locale. This is due to backwards compatibility reasons. Therefore, this is not always the recommended collation. To take full advantage of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features, change the default installation settings to use Windows collations. For example, for the OS locale **English (United States)** (code page 1252), the default collation during setup is **SQL_Latin1_General_CP1_CI_AS** and can be changed to its closest Windows collation counterpart **Latin1_General_100_CI_AS_SC**.
+
+   For more information, see [Collations and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 1. Use the **Database Engine Configuration - Server Configuration** page to specify the following options:  
   
@@ -307,6 +311,12 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
      For more information, see [Database Engine Configuration - Data Directories page](../../sql-server/install/instance-configuration.md#datadir).
 
      Use the **Database Engine Configuration - TempDB** page to configure the file size, number of files, nondefault installation directories, and file-growth settings for **tempdb**. For more information, see [Database Engine Configuration - TempDB page](../../sql-server/install/instance-configuration.md#tempdb).
+<<<<<<< HEAD
+  
+     Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP** page to specify your max degree of parallelism. This setting determines how many processors a single statement can use during execution. The recommended value is automatically calculated during installation. This page is only available in Setup starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. For more information, see the [Database Engine Configuration - MaxDOP page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
+
+     Use the **Database Engine Configuration - Memory** page to specify the **min server memory** and **max server memory** values that this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use after startup. You can use the default values, use the calculated recommended values, or manually specify your own values after you've chosen the **Recommended** option. This page is only available in Setup starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. For more information, see the [Database Engine Configuration - Memory page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
+=======
 
      Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP** page to specify your max degree of parallelism. This setting determines how many processors a single statement can use during execution. The recommended value is automatically calculated during installation. 
      
@@ -321,6 +331,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
     > This page is only available in Setup starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
     For more information, see the [Database Engine Configuration - Memory page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
+>>>>>>> 1d82c7efe18f86136247fb366df5030843199c19
 
      Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   

@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Documentation | Microsoft Docs"
-ms.date: "08/08/2019"
+ms.date: "09/24/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""
@@ -19,14 +19,11 @@ helpviewer_keywords:
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
-monikerRange: ">=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>= aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sql-server-previousversions||=sqlallproducts-allversions"
 ---
 # SQL Server Documentation
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [Please share your feedback about the SQL Docs hub page!](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
 SQL Server is a central part of the Microsoft data platform. SQL Server is an industry leader in operational database management systems (ODBMS). This documentation helps you install, configure, and use SQL Server on both Windows and Linux. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
@@ -110,6 +107,27 @@ SQL Server 2014, and older versions including SQL Server 2005, have documentatio
 |![Replication services](../sql-server/media/replication-services.png "Replication services")|**[Replication](../relational-databases/replication/sql-server-replication.md)**<br /><br /> Replication is a set of technologies for copying and distributing data and database objects from one database to another, and then synchronizing between databases to maintain consistency. By using replication, you can distribute data to different locations and to remote or mobile users by means of local and wide area networks, dial-up connections, wireless connections, and the Internet.|
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server Data Quality Services (DQS) provides you with a knowledge-driven data cleansing solution. DQS enables you to build a knowledge base, and then use that knowledge base to perform data correction and deduplication on your data, using both computer-assisted and interactive means. You can use cloud-based reference data services, and you can build a data management solution that integrates DQS with SQL Server Integration Services and Master Data Services.|
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solution for master data management. A solution built on [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] helps ensure that reporting and analysis is based on the right information. Using [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you create a central repository for your master data and maintain an auditable, securable record of that data as it changes over time.|
+| &nbsp; | &nbsp; |
+
+## Other members of the SQL Server family
+
+| Name | Https URL root |
+| :--- | :------------- |
+| Azure SQL Database single database | [https://docs.microsoft.com/azure/sql-database/](/azure/sql-database/) |
+| Azure SQL Database managed instance | [https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance](/azure/sql-database/sql-database-managed-instance) |
+| SQL Server on a virtual machine (VM) | [https://docs.microsoft.com/azure/virtual-machines/windows/sql/](/azure/virtual-machines/windows/sql/) |
+| SQL Data Warehouse | [https://docs.microsoft.com/azure/sql-data-warehouse/](/azure/sql-data-warehouse/) |
+| Analytics Platform System (APS) | [https://docs.microsoft.com/sql/analytics-platform-system/](../analytics-platform-system/index.md) <br/><br/> _Note:_ APS hosts SQL Server [Parallel Data Warehouse (PDW)](../analytics-platform-system/parallel-data-warehouse-overview.md), which is the software that runs the massively parallel processing (MPP) data warehouse. |
+| SQL Server on Linux | [https://docs.microsoft.com/sql/linux/](../linux/index.md) |
+| &nbsp; | &nbsp; |
+
+### Cousins of SQL Server
+
+| Name | Https URL root |
+| :--- | :------------- |
+| PostgreSQL database | [https://docs.microsoft.com/azure/postgresql/](/azure/postgresql/) |
+| MySQL database | [https://docs.microsoft.com/azure/mysql/](/azure/mysql/) |
+| NoSQL: &nbsp; Azure Cosmos DB | [https://docs.microsoft.com/azure/cosmos-db/](/azure/cosmos-db/) |
 | &nbsp; | &nbsp; |
 
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"

@@ -15,8 +15,8 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "bcp_bind function"
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # bcp_bind

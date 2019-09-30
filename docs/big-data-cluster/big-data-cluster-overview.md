@@ -104,5 +104,4 @@ The storage pool consists of storage pool pods comprised of SQL Server on Linux,
 
 ## Next steps
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is first available as a limited public preview through the SQL Server 2019
-Early Adoption Program. To request access, register [here](https://aka.ms/eapsignup), and specify your interest to try big data clusters. Microsoft will triage all requests and respond as soon as possible.
+For more information about deploying SQL Server Big Data Clusters, see [Get started with SQL Server Big Data Clusters](deploy-get-started.md).

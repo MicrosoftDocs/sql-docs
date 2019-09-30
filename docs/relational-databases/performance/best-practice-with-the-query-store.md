@@ -45,7 +45,13 @@ The default parameters are good enough to start, but you should monitor how Quer
   
  While Query Store collects queries, execution plans and statistics, its size in the database grows until this limit is reached. When that happens, Query Store automatically changes the operation mode to read-only and stops collecting new data, which means that your performance analysis is no longer accurate.  
   
- The default value in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] is 100 MB, and may not be sufficient if your workload generates large number of different queries and plans or if you want to keep query history for a longer period of time. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the default value is 1 GB. Keep track of current space usage and increase the Max Size (MB) to prevent Query Store from transitioning to read-only mode. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or execute the following script to get the latest information about Query Store size:  
+ The default value in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] is 100 MB, and may not be sufficient if your workload generates large number of different queries and plans or if you want to keep query history for a longer period of time. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the default value is 1 GB. Keep track of current space usage and increase the *Max Size* to prevent Query Store from transitioning to read-only mode. 
+ 
+> [!IMPORTANT] 
+> ***Max Size (MB)*** limit is not strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the ***Data Flush Interval***.       
+> If Query Store has breached the *Max Size* limit between storage size checks, it will transition to read-only mode. If *Size Based Cleanup Mode* is enabled, the cleanup mechanism to enforce the *Max Size* limit is also triggered. 
+ 
+ Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or execute the following script to get the latest information about Query Store size:  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -396,7 +402,7 @@ If you rename a database, plan forcing will fail which will cause recompilation 
  
 The global trace flags 7745 and 7752 can be used to improve availability of databases using Query Store. For more information, refer to [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
--  Trace flag 7745 will prevent the default behavior where Query Store writes data to disk before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be shut down. This means that Query Store data that has been collected but not been yet persisted to disk will be lost. 
+-  Trace flag 7745 will prevent the default behavior where Query Store writes data to disk before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be shut down. This means that Query Store data that has been collected but not been yet persisted to disk will be lost, up to time window defined with `DATA_FLUSH_INTERVAL_SECONDS`. 
   
 -  Trace flag 7752 enables asynchronous load of Query Store. This allows a database to become online and queries to be executed before the Query Store has been fully recovered. The default behavior is to do a synchronous load of Query Store. The default behavior prevents queries from executing before the Query Store has been recovered but also prevents any queries from being missed in the data collection.
 

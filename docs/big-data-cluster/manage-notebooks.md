@@ -21,37 +21,37 @@ Originally implemented as an open source project, [notebooks](notebooks-guidance
 
 You can use notebooks to deploy big data clusters for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-In addition to notebooks, users can view a collection of notebooks, which are called Jupyter Books. A Jupyter Book provides a table of contents to navigate a collection of notebooks so a user can easily find the notebook they need, whether to troubleshoot SQL Server or view cluster status.
+In addition to notebooks, users can view a collection of notebooks, which is called a Jupyter Book. A Jupyter Book provides a table of contents to help users navigate a collection of notebooks so they can easily find the notebook they need, whether they want to troubleshoot SQL Server or view cluster status.
 
 ## Prerequisites
 
-The following prerequisites are required to be able to launch the notebook:
+You need these prerequisites to launch a notebook:
 
-* Latest version of [Azure Data Studio Insiders build](https://aka.ms/azuredatastudio-rc)
-* [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] extension installed in Azure Data Studio
+* The latest version of [Azure Data Studio Insiders build](https://aka.ms/azuredatastudio-rc)
+* The [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] extension, installed in Azure Data Studio
 
-In addition to above, deploying SQL Server 2019 big data cluster also requires:
+In addition to those prerequisites, to deploy SQL Server 2019 Big Data Clusters, you also need:
 
 * [azdata](deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [Azure CLI](/cli/azure/install-azure-cli)
 
-## Accessing troubleshooting notebooks
+## Access troubleshooting notebooks
 There are three ways to access troubleshooting notebooks.
 
 ### Command Palette
-1. Click **View** then **Command Palette**
-2. Type "Jupyter Books: SQL Server 2019 Guide"
-3. This will open the Jupyter Books Viewlet with the Jupyter Book containing the TSG's related to SQL Server Big Data Clusters.
+1. Select **View** > **Command Palette**.
+2. Enter **Jupyter Books: SQL Server 2019 Guide**.
+
+The Jupyter Books viewlet with the Jupyter Book that contains the troubleshooting notebooks related to SQL Server Big Data Clusters will open.
 
 ### SQL Master Dashboard
-1. After installing Azure Data Studio Insiders, connect to a SQL Server big data cluster instance.
-2. After successfully connecting, right-click on your server name in the Connections viewlet and click **Manage.**
-3. On the dashboard, click **SQL Server Big Data Cluster.** Click **SQL Server 2019 guide** to open the Jupyter Book with the notebooks you need.
-    ![button](media/manage-notebooks/jupyter-book-button.png)
+1. After you install Azure Data Studio Insiders, connect to a SQL Server Big Data Clusters instance.
+2. After you're connected to the instance, right-click your server name in the Connections viewlet and select **Manage.**
+3. In the dashboard, select **SQL Server Big Data Cluster**. Select **SQL Server 2019 guide** to open the Jupyter Book that contains the notebooks you need.
+    ![Jupyter notebooks in the dashboard](media/manage-notebooks/jupyter-book-button.png)
 
-1. This will open the Jupyter Books viewlet with the TSG Jupyter Book already opened.
-4. Click on the notebook for the task you need to complete.
+1. Select the notebook for the task that you need to complete.
 
 ### Controller Dashboard
 1. In the **Connections** view, expand **SQL Server Big Data Clusters.**

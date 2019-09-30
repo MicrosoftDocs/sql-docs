@@ -42,64 +42,6 @@ If a query requires a parameter whose value is an XML string, developers can sup
 </StoreSurvey>  
 ```  
   
-```vb  
-Imports System  
-Imports Microsoft.Data.SqlClient  
-Imports System.Data.SqlTypes  
-Imports System.Xml  
-  
-Module Module1  
-    Sub Main()  
-  
-        Using connection As SqlConnection = New SqlConnection(GetConnectionString())  
-        connection.Open()  
-  
-        ' Create a sample table (dropping first if it already  
-        ' exists.)  
-        Dim commandNewTable As String = _  
-         "IF EXISTS (SELECT * FROM dbo.sysobjects " & _  
-         "WHERE id = object_id(N'[dbo].[XmlDataTypeSample]') " & _  
-         "AND OBJECTPROPERTY(id, N'IsUserTable') = 1) " & _  
-         "DROP TABLE [dbo].[XmlDataTypeSample];" & _  
-         "CREATE TABLE [dbo].[XmlDataTypeSample](" & _  
-         "[SalesID] [int] IDENTITY(1,1) NOT NULL, " & _  
-         "[SalesInfo] [xml])"  
-  
-        Dim commandAdd As New _  
-         SqlCommand(commandNewTable, connection)  
-        commandAdd.ExecuteNonQuery()  
-  
-        Dim commandText As String = _  
-         "INSERT INTO [dbo].[XmlDataTypeSample] " & _  
-           "([SalesInfo] ) " & _  
-           "VALUES(@xmlParameter )"  
-  
-        Dim command As New SqlCommand(commandText, connection)  
-  
-        ' Read the saved XML document as a   
-        ' SqlXml-data typed variable.  
-        Dim newXml As SqlXml = _  
-         New SqlXml(New XmlTextReader("MyTestStoreData.xml"))  
-  
-        ' Supply the SqlXml value for the value of the parameter.  
-        command.Parameters.AddWithValue("@xmlParameter", newXml)  
-  
-        Dim result As Integer = command.ExecuteNonQuery()  
-        Console.WriteLine(result & " row was added.")  
-        Console.WriteLine("Press Enter to continue.")  
-        Console.ReadLine()  
-    End Using  
-End Sub  
-  
-    Private Function GetConnectionString() As String  
-        ' To avoid storing the connection string in your code,              
-        ' you can retrieve it from a configuration file.   
-        Return "Data Source=(local);Integrated Security=SSPI;" & _  
-          "Initial Catalog=AdventureWorks"  
-    End Function  
-End Module  
-```  
-  
 ```csharp  
 using System;  
 using System.Data;  

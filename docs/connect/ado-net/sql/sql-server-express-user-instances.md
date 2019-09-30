@@ -88,19 +88,6 @@ Initial Catalog=Northwind;
   
  The following code fragment opens a new `SqlConnection`, displays the connection string in the console window, and then closes the connection when exiting the `using` code block.  
   
-```vb  
-Private Sub OpenSqlConnection()  
-    ' Retrieve the connection string.  
-    Dim connectionString As String = GetConnectionString()  
-  
-    Using connection As New SqlConnection(connectionString)  
-        connection.Open()  
-        Console.WriteLine("ConnectionString: {0}", _  
-           connection.ConnectionString)  
-    End Using  
-End Sub  
-```  
-  
 ```csharp  
 private static void OpenSqlConnection()  
 {  

@@ -23,21 +23,12 @@ SQL Server permits applications to find SQL Server instances within the current 
 ## Retrieving an Enumerator Instance  
  In order to retrieve the table containing information about the available SQL Server instances, you must first retrieve an enumerator, using the shared/static <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A> property:  
   
-```vb  
-Dim instance As System.Data.Sql.SqlDataSourceEnumerator = _  
-   System.Data.Sql.SqlDataSourceEnumerator.Instance  
-```  
-  
 ```csharp  
 System.Data.Sql.SqlDataSourceEnumerator instance =   
    System.Data.Sql.SqlDataSourceEnumerator.Instance  
 ```  
   
  Once you have retrieved the static instance, you can call the <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> method, which returns a <xref:System.Data.DataTable> containing information about the available servers:  
-  
-```vb  
-Dim dataTable As System.Data.DataTable = instance.GetDataSources()  
-```  
   
 ```csharp  
 System.Data.DataTable dataTable = instance.GetDataSources();  
@@ -64,34 +55,6 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
 ## Example  
  The following console application retrieves information about all of the visible SQL Server instances and displays the information in the console window.  
-  
-```vb  
-Imports System.Data.Sql  
-  
-Module Module1  
-  Sub Main()  
-    ' Retrieve the enumerator instance and then the data.  
-    Dim instance As SqlDataSourceEnumerator = _  
-     SqlDataSourceEnumerator.Instance  
-    Dim table As System.Data.DataTable = instance.GetDataSources()  
-  
-    ' Display the contents of the table.  
-    DisplayData(table)  
-  
-    Console.WriteLine("Press any key to continue.")  
-    Console.ReadKey()  
-  End Sub  
-  
-  Private Sub DisplayData(ByVal table As DataTable)  
-    For Each row As DataRow In table.Rows  
-      For Each col As DataColumn In table.Columns  
-        Console.WriteLine("{0} = {1}", col.ColumnName, row(col))  
-      Next  
-      Console.WriteLine("============================")  
-    Next  
-  End Sub  
-End Module  
-```  
   
 ```csharp  
 using System.Data.Sql;  

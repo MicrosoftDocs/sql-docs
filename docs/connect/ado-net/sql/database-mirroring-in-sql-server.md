@@ -44,10 +44,6 @@ Database mirroring in SQL Server allows you to keep a copy, or mirror, of a SQL 
   
  When a failover event occurs and the connection is switched to the mirror server, the **DataSource** property is updated to reflect the mirror name.  
   
-```vb  
-Dim activeServer As String = connection.DataSource  
-```  
-  
 ```csharp  
 string activeServer = connection.DataSource;  
 ```  

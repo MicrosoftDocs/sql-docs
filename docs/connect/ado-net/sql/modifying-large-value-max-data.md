@@ -111,13 +111,6 @@ GO
 ### Using GetSqlBytes to Retrieve Data  
  The `GetSqlBytes` method of the <xref:Microsoft.Data.SqlClient.SqlDataReader> can be used to retrieve the contents of a `varbinary(max)` column. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlCommand> object named `cmd` that selects `varbinary(max)` data from a table and a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data as <xref:System.Data.SqlTypes.SqlBytes>.  
   
-```vb  
-reader = cmd.ExecuteReader(CommandBehavior.CloseConnection)  
-While reader.Read()  
-    Dim bytes As SqlBytes = reader.GetSqlBytes(0)  
-End While  
-```  
-  
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
 while (reader.Read())  
@@ -127,14 +120,7 @@ while (reader.Read())
 ```  
   
 ### Using GetSqlChars to Retrieve Data  
- The `GetSqlChars` method of the <xref:Microsoft.Data.SqlClient.SqlDataReader> can be used to retrieve the contents of a `varchar(max)` or `nvarchar(max)` column. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlCommand> object named `cmd` that selects `nvarchar(max)` data from a table and a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data.  
-  
-```vb  
-reader = cmd.ExecuteReader(CommandBehavior.CloseConnection)  
-While reader.Read()  
-    Dim buffer As SqlChars = reader.GetSqlChars(0)  
-End While  
-```  
+ The `GetSqlChars` method of the <xref:Microsoft.Data.SqlClient.SqlDataReader> can be used to retrieve the contents of a `varchar(max)` or `nvarchar(max)` column. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlCommand> object named `cmd` that selects `nvarchar(max)` data from a table and a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data.   
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -147,13 +133,6 @@ while (reader.Read())
 ### Using GetSqlBinary to Retrieve Data  
  The `GetSqlBinary` method of a <xref:Microsoft.Data.SqlClient.SqlDataReader> can be used to retrieve the contents of a `varbinary(max)` column. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlCommand> object named `cmd` that selects `varbinary(max)` data from a table and a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data as a <xref:System.Data.SqlTypes.SqlBinary> stream.  
   
-```vb  
-reader = cmd.ExecuteReader(CommandBehavior.CloseConnection)  
-While reader.Read()  
-    Dim binaryStream As SqlBinary = reader.GetSqlBinary(0)  
-End While  
-```  
-  
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
 while (reader.Read())  
@@ -165,14 +144,6 @@ while (reader.Read())
 ### Using GetBytes to Retrieve Data  
  The `GetBytes` method of a <xref:Microsoft.Data.SqlClient.SqlDataReader> reads a stream of bytes from the specified column offset into a byte array starting at the specified array offset. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves bytes into a byte array. Note that, unlike `GetSqlBytes`, `GetBytes` requires a size for the array buffer.  
   
-```vb  
-While reader.Read()  
-    Dim buffer(4000) As Byte  
-    Dim byteCount As Integer = _  
-    CInt(reader.GetBytes(1, 0, buffer, 0, 4000))  
-End While  
-```  
-  
 ```csharp  
 while (reader.Read())  
 {  
@@ -183,16 +154,6 @@ while (reader.Read())
   
 ### Using GetValue to Retrieve Data  
  The `GetValue` method of a <xref:Microsoft.Data.SqlClient.SqlDataReader> reads the value from the specified column offset into an array. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves binary data from the first column offset, and then string data from the second column offset.  
-  
-```vb  
-While reader.Read()  
-    ' Read the data from varbinary(max) column  
-    Dim binaryData() As Byte = CByte(reader.GetValue(0))  
-  
-    ' Read the data from varchar(max) or nvarchar(max) column  
-    Dim stringData() As String = Cstr((reader.GetValue(1))  
-End While  
-```  
   
 ```csharp  
 while (reader.Read())  
@@ -207,13 +168,6 @@ while (reader.Read())
   
 ## Converting from Large Value Types to CLR Types  
  You can convert the contents of a `varchar(max)` or `nvarchar(max)` column using any of the string conversion methods, such as `ToString`. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data.  
-  
-```vb  
-While reader.Read()  
-    Dim str as String = reader(0).ToString()  
-    Console.WriteLine(str)  
-End While  
-```  
   
 ```csharp  
 while (reader.Read())  

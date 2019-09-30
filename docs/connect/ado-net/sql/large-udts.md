@@ -104,32 +104,6 @@ reader.close
 }  
 ```  
   
-```vb  
-Using connection As New SqlConnection( _  
-    connectionString, commandString)  
-    connection.Open()  
-    Dim command As New SqlCommand(commandString, connection)  
-    Dim reader As SqlDataReader  
-    reader = command.ExecuteReader  
-  
-    While reader.Read()  
-      ' Retrieve the value of the Primary Key column.  
-      Dim id As Int32 = reader.GetInt32(0)  
-  
-      ' Retrieve the value of the UDT.  
-      Dim udt As LargeUDT = CType(reader(1), LargeUDT)  
-  
-     ' You can also use GetSqlValue and GetValue.  
-     ' Dim udt As LargeUDT = CType(reader.GetSqlValue(1), LargeUDT)  
-     ' Dim udt As LargeUDT = CType(reader.GetValue(1), LargeUDT)  
-  
-      ' Print values.  
-      Console.WriteLine("ID={0} LargeUDT={1}", id, udt)  
-    End While  
-    reader.Close()  
-End Using  
-```  
-  
 ## See also
 
 - [SQL Server Binary and Large-Value Data](sql-server-binary-and-large-value-data.md)

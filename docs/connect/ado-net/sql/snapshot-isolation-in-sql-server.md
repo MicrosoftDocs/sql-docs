@@ -80,11 +80,6 @@ SET READ_COMMITTED_SNAPSHOT ON
 ## Working with Snapshot Isolation in ADO.NET  
  Snapshot isolation is supported in ADO.NET by the <xref:Microsoft.Data.SqlClient.SqlTransaction> class. If a database has been enabled for snapshot isolation but is not configured for READ_COMMITTED_SNAPSHOT ON, you must initiate a <xref:Microsoft.Data.SqlClient.SqlTransaction> using the **IsolationLevel.Snapshot** enumeration value when calling the <xref:Microsoft.Data.SqlClient.SqlConnection.BeginTransaction%2A> method. This code fragment assumes that connection is an open <xref:Microsoft.Data.SqlClient.SqlConnection> object.  
   
-```vb  
-Dim sqlTran As SqlTransaction = _  
-  connection.BeginTransaction(IsolationLevel.Snapshot)  
-```  
-  
 ```csharp  
 SqlTransaction sqlTran =   
   connection.BeginTransaction(IsolationLevel.Snapshot);  

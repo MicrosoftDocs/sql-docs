@@ -55,18 +55,6 @@ The simplest approach to performing a SQL Server bulk copy operation is to perfo
 > [!NOTE]
 >  The file path for the data source is relative to the server. The server process must have access to that path in order for the bulk copy operation to succeed.  
   
-```vb  
-Using connection As SqlConnection = New SqlConnection(connectionString)  
-Dim queryString As String = _  
-    "BULK INSERT Northwind.dbo.[Order Details] FROM " & _  
-    "'f:\mydata\data.tbl' WITH (FORMATFILE='f:\mydata\data.fmt' )"  
-connection.Open()  
-SqlCommand command = New SqlCommand(queryString, connection);  
-  
-command.ExecuteNonQuery()  
-End Using  
-```  
-  
 ```csharp  
 using (SqlConnection connection = New SqlConnection(connectionString))  
 {  

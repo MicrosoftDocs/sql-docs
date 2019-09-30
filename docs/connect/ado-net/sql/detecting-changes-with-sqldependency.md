@@ -42,44 +42,6 @@ If any user subsequently changes the underlying data, Microsoft SQL Server detec
 
 The following code fragment shows the design pattern you would use to create a sample application.
 
-```vb
-Sub Initialization()
-    ' Create a dependency connection.
-    SqlDependency.Start(connectionString, queueName)
-End Sub
-
-Sub SomeMethod()
-    ' Assume connection is an open SqlConnection.
-    ' Create a new SqlCommand object.
-    Using command As New SqlCommand( _
-      "SELECT ShipperID, CompanyName, Phone FROM dbo.Shippers", _
-      connection)
-
-        ' Create a dependency and associate it with the SqlCommand.
-        Dim dependency As New SqlDependency(command)
-        ' Maintain the refernce in a class member.
-        ' Subscribe to the SqlDependency event.
-        AddHandler dependency.OnChange, AddressOf OnDependencyChange
-
-        ' Execute the command.
-        Using reader = command.ExecuteReader()
-            ' Process the DataReader.
-        End Using
-    End Using
-End Sub
-
-' Handler method
-Sub OnDependencyChange(ByVal sender As Object, _
-    ByVal e As SqlNotificationEventArgs)
-    ' Handle the event (for example, invalidate this cache entry).
-End Sub
-
-Sub Termination()
-    ' Release the dependency
-    SqlDependency.Stop(connectionString, queueName)
-End Sub
-```
-
 ```csharp
 void Initialization()
 {

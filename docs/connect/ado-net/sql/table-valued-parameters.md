@@ -98,17 +98,7 @@ SqlCommand insertCommand = new SqlCommand(sqlInsert, connection);
 SqlParameter tvpParam = insertCommand.Parameters.AddWithValue("@tvpNewCategories", addedCategories);  
 tvpParam.SqlDbType = SqlDbType.Structured;  
 tvpParam.TypeName = "dbo.CategoryTableType";  
-```  
-  
-```vb  
-' Configure the command and parameter.  
-Dim insertCommand As New SqlCommand(sqlInsert, connection)  
-Dim tvpParam As SqlParameter = _  
-   insertCommand.Parameters.AddWithValue( _  
-  "@tvpNewCategories", addedCategories)  
-tvpParam.SqlDbType = SqlDbType.Structured  
-tvpParam.TypeName = "dbo.CategoryTableType"  
-```  
+```   
   
  You can also use any object derived from <xref:System.Data.Common.DbDataReader> to stream rows of data to a table-valued parameter, as shown in this fragment:  
   
@@ -118,16 +108,6 @@ SqlCommand insertCommand = new SqlCommand("usp_InsertCategories", connection);
 insertCommand.CommandType = CommandType.StoredProcedure;  
 SqlParameter tvpParam = insertCommand.Parameters.AddWithValue("@tvpNewCategories", dataReader);  
 tvpParam.SqlDbType = SqlDbType.Structured;  
-```  
-  
-```vb  
-' Configure the SqlCommand and table-valued parameter.  
-Dim insertCommand As New SqlCommand("usp_InsertCategories", connection)  
-insertCommand.CommandType = CommandType.StoredProcedure  
-Dim tvpParam As SqlParameter = _  
-  insertCommand.Parameters.AddWithValue("@tvpNewCategories", _  
-  dataReader)  
-tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
 ## <a name="passing"></a> Passing a Table-Valued Parameter to a Stored Procedure  
@@ -149,27 +129,6 @@ using (connection)
   // Execute the command.  
   insertCommand.ExecuteNonQuery();  
 }  
-```  
-  
-```vb  
-' Assumes connection is an open SqlConnection object.  
-Using connection  
-   '  Create a DataTable with the modified rows.  
-   Dim addedCategories As DataTable = _  
-     CategoriesDataTable.GetChanges(DataRowState.Added)  
-  
-  ' Configure the SqlCommand and SqlParameter.  
-   Dim insertCommand As New SqlCommand( _  
-     "usp_InsertCategories", connection)  
-   insertCommand.CommandType = CommandType.StoredProcedure  
-   Dim tvpParam As SqlParameter = _  
-     insertCommand.Parameters.AddWithValue( _  
-     "@tvpNewCategories", addedCategories)  
-   tvpParam.SqlDbType = SqlDbType.Structured  
-  
-   '  Execute the command.  
-   insertCommand.ExecuteNonQuery()  
-End Using  
 ```  
   
 ### Passing a Table-Valued Parameter to a Parameterized SQL Statement  
@@ -202,32 +161,6 @@ using (connection)
 }  
 ```  
   
-```vb  
-' Assumes connection is an open SqlConnection.  
-Using connection  
-  ' Create a DataTable with the modified rows.  
-  Dim addedCategories As DataTable = _  
-    CategoriesDataTable.GetChanges(DataRowState.Added)  
-  
-  ' Define the INSERT-SELECT statement.  
-  Dim sqlInsert As String = _  
-  "INSERT INTO dbo.Categories (CategoryID, CategoryName)" _  
-  & " SELECT nc.CategoryID, nc.CategoryName" _  
-  & " FROM @tvpNewCategories AS nc;"  
-  
-  ' Configure the command and parameter.  
-  Dim insertCommand As New SqlCommand(sqlInsert, connection)  
-  Dim tvpParam As SqlParameter = _  
-     insertCommand.Parameters.AddWithValue( _  
-    "@tvpNewCategories", addedCategories)  
-  tvpParam.SqlDbType = SqlDbType.Structured  
-  tvpParam.TypeName = "dbo.CategoryTableType"  
-  
-  ' Execute the query  
-  insertCommand.ExecuteNonQuery()  
-End Using  
-```  
-  
 ## Streaming Rows with a DataReader  
  You can also use any object derived from <xref:System.Data.Common.DbDataReader> to stream rows of data to a table-valued parameter. The following code fragment demonstrates retrieving data from an Oracle database by using an <xref:System.Data.OracleClient.OracleCommand> and an <xref:System.Data.OracleClient.OracleDataReader>. The code then configures a <xref:Microsoft.Data.SqlClient.SqlCommand> to invoke a stored procedure with a single input parameter. The <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> property of the <xref:Microsoft.Data.SqlClient.SqlParameter> is set to `Structured`. The <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> passes the `OracleDataReader` result set to the stored procedure as a table-valued parameter.  
   
@@ -251,27 +184,6 @@ OracleDataReader oracleReader = selectCommand.ExecuteReader(
   
  // Execute the command.  
  insertCommand.ExecuteNonQuery();  
-```  
-  
-```vb  
-' Assumes connection is an open SqlConnection.  
-' Retrieve data from Oracle.  
-Dim selectCommand As New OracleCommand( _  
-  "Select CategoryID, CategoryName FROM Categories;", _  
-  oracleConnection)  
-Dim oracleReader As OracleDataReader = _  
-  selectCommand.ExecuteReader(CommandBehavior.CloseConnection)  
-  
-' Configure SqlCommand and table-valued parameter.  
-Dim insertCommand As New SqlCommand("usp_InsertCategories", connection)  
-insertCommand.CommandType = CommandType.StoredProcedure  
-Dim tvpParam As SqlParameter = _  
-  insertCommand.Parameters.AddWithValue("@tvpNewCategories", _  
-  oracleReader)  
-tvpParam.SqlDbType = SqlDbType.Structured  
-  
-' Execute the command.  
-insertCommand.ExecuteNonQuery()  
 ```  
   
 ## See also

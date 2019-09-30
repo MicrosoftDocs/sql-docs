@@ -32,13 +32,6 @@ The example in this section shows how to use <xref:Microsoft.Data.SqlClient.SqlD
   
 3. Open the page's class module and add the following directives:  
   
-    ```vb  
-    Option Strict On  
-    Option Explicit On  
-  
-    Imports Microsoft.Data.SqlClient  
-    ```  
-  
     ```csharp  
     using Microsoft.Data.SqlClient;  
     using System.Web.Caching;  

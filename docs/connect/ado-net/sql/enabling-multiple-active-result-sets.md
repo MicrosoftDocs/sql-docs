@@ -25,13 +25,7 @@ Multiple Active Result Sets (MARS) is a feature that works with SQL Server to al
 > [!NOTE]
 >  The following connection strings use the sample **AdventureWorks** database included with SQL Server. The connection strings provided assume that the database is installed on a server named MSSQL1. Modify the connection string as necessary for your environment.  
   
- The MARS feature is disabled by default. It can be enabled by adding the "MultipleActiveResultSets=True" keyword pair to your connection string. "True" is the only valid value for enabling MARS. The following example demonstrates how to connect to an instance of SQL Server and how to specify that MARS should be enabled.  
-  
-```vb  
-Dim connectionString As String = "Data Source=MSSQL1;" & _  
-    "Initial Catalog=AdventureWorks;Integrated Security=SSPI;" & _  
-    "MultipleActiveResultSets=True"  
-```  
+ The MARS feature is disabled by default. It can be enabled by adding the "MultipleActiveResultSets=True" keyword pair to your connection string. "True" is the only valid value for enabling MARS. The following example demonstrates how to connect to an instance of SQL Server and how to specify that MARS should be enabled. 
   
 ```csharp  
 string connectionString = "Data Source=MSSQL1;" +   
@@ -40,12 +34,6 @@ string connectionString = "Data Source=MSSQL1;" +
 ```  
   
  You can disable MARS by adding the "MultipleActiveResultSets=False" keyword pair to your connection string. "False" is the only valid value for disabling MARS. The following connection string demonstrates how to disable MARS.  
-  
-```vb  
-Dim connectionString As String = "Data Source=MSSQL1;" & _  
-    "Initial Catalog=AdventureWorks;Integrated Security=SSPI;" & _  
-    "MultipleActiveResultSets=False"  
-```  
   
 ```csharp  
 string connectionString = "Data Source=MSSQL1;" +   

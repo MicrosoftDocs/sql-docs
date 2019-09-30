@@ -115,13 +115,6 @@ parameter.SqlDbType = SqlDbType.Date;
 parameter.Value = "2007/12/1";  
 ```  
   
-```vb  
-Dim parameter As New SqlParameter()  
-parameter.ParameterName = "@Date"  
-parameter.SqlDbType = SqlDbType.Date  
-parameter.Value = "2007/12/1"  
-```  
-  
 ### Time Example  
  The following code fragment demonstrates how to specify a `time` parameter.  
   
@@ -129,13 +122,6 @@ parameter.Value = "2007/12/1"
 SqlParameter parameter = new SqlParameter();  
 parameter.ParameterName = "@time";  
 parameter.SqlDbType = SqlDbType.Time;  
-parameter.Value = DateTime.Parse("23:59:59").TimeOfDay;  
-```  
-  
-```vb  
-Dim parameter As New SqlParameter()  
-parameter.ParameterName = "@Time"  
-parameter.SqlDbType = SqlDbType.Time  
 parameter.Value = DateTime.Parse("23:59:59").TimeOfDay;  
 ```  
   
@@ -149,13 +135,6 @@ parameter.SqlDbType = SqlDbType.DateTime2;
 parameter.Value = DateTime.Parse("1666-09-02 1:00:00");  
 ```  
   
-```vb  
-Dim parameter As New SqlParameter()  
-parameter.ParameterName = "@Datetime2"  
-parameter.SqlDbType = SqlDbType.DateTime2  
-parameter.Value = DateTime.Parse("1666-09-02 1:00:00");  
-```  
-  
 ### DateTimeOffSet Example  
  The following code fragment demonstrates how to specify a `DateTimeOffSet` parameter with a date, a time, and a time zone offset of 0.  
   
@@ -166,24 +145,12 @@ parameter.SqlDbType = SqlDbType.DateTimeOffSet;
 parameter.Value = DateTimeOffset.Parse("1666-09-02 1:00:00+0");  
 ```  
   
-```vb  
-Dim parameter As New SqlParameter()  
-parameter.ParameterName = "@DateTimeOffSet"  
-parameter.SqlDbType = SqlDbType.DateTimeOffSet  
-parameter.Value = DateTimeOffset.Parse("1666-09-02 1:00:00+0");  
-```  
-  
 ### AddWithValue  
  You can also supply parameters by using the `AddWithValue` method of a <xref:Microsoft.Data.SqlClient.SqlCommand>, as shown in the following code fragment. However, the `AddWithValue` method does not allow you to specify the <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> or <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> for the parameter.  
   
 ```csharp  
 command.Parameters.AddWithValue(   
     "@date", DateTimeOffset.Parse("16660902"));  
-```  
-  
-```vb  
-command.Parameters.AddWithValue( _  
-    "@date", DateTimeOffset.Parse("16660902"))  
 ```  
   
  The `@date` parameter could map to a `date`, `datetime`, or `datetime2` data type on the server. When working with the new `datetime` data types, you must explicitly set the parameter's <xref:System.Data.SqlDbType> property to the data type of the instance. Using <xref:System.Data.SqlDbType.Variant> or implicitly supplying parameter values can cause problems with backward compatibility with the `datetime` and `smalldatetime` data types.  

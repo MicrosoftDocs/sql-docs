@@ -35,26 +35,6 @@ There are no new client-side security elements for <xref:Microsoft.Data.Sql.SqlN
 
 The following code fragment demonstrates how to create a <xref:Microsoft.Data.Sql.SqlNotificationRequest> and associate it with a <xref:Microsoft.Data.SqlClient.SqlCommand>.
 
-```vb
-' Assume connection is an open SqlConnection.
-' Create a new SqlCommand object.
-Dim command As New SqlCommand( _
-  "SELECT ShipperID, CompanyName, Phone FROM dbo.Shippers", connection)
-
-' Create a SqlNotificationRequest object.
-Dim notifcationRequest As New SqlNotificationRequest()
-notificationRequest.id = "NotificationID"
-notificationRequest.Service = "mySSBQueue"
-
-' Associate the notification request with the command.
-command.Notification = notificationRequest
-' Execute the command.
-command.ExecuteReader()
-' Process the DataReader.
-' You can use Transact-SQL syntax to periodically poll the
-' SQL Server queue to see if you have a new message.
-```
-
 ```csharp
 // Assume connection is an open SqlConnection.
 // Create a new SqlCommand object.

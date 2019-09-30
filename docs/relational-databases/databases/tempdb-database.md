@@ -238,7 +238,8 @@ There are some limitations with this implementation that are important to note:
     COMMIT TRAN
     ```
 3. Queries against memory-optimized tables do not support locking and isolation hints, so queries against memory-optimized TempDB catalog views will not honor locking and isolation hints. As with other system catalog views in SQL Server, all transactions against system views will be in READ COMMITTED (or in this case READ COMMITTED SNAPSHOT) isolation.
-4. [Columnstore indexes](../indexes/columnstore-indexes-overview.md) cannot be created on temporary tables when memory-optimized tempdb metadata is enabled.
+4. [Columnstore indexes](../indexes/columnstore-indexes-overview.md) cannot be created on temporary tables when Memory-Optimized TempDB Metadata is enabled.
+5. Due to the limitation on columnstore indexes, use of the sp_estimate_data_compression_savings system stored procedure with the COLUMNSTORE or COLUMNSTORE_ARCHIVE data compression parameter is not supported when Memory-Optimized TempDB Metadata is enabled.
 
 > [!NOTE] 
 > These limitations only apply when referencing TempDB system views, you will be able to create a temp table in the same transaction as you access a memory-optimized table in a user database if desired.

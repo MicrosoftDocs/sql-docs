@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "sort attributes [Integration Services]"
   - "output columns [Integration Services]"
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Sort Data for the Merge and Merge Join Transformations
 

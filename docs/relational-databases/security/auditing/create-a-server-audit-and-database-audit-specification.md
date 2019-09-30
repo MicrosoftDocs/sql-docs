@@ -79,7 +79,7 @@ ms.author: vanto
      The name of the database audit specification. This is generated automatically when you create a new server audit specification but is editable.  
   
      **Audit**  
-     The name of an existing database audit. Either type in the name of the audit or select it from the list.  
+     The name of an existing server audit object. Either type in the name of the audit or select it from the list.  
   
      **Audit Action Type**  
      Specifies the database-level audit action groups and audit actions to capture. For the list of database-level audit action groups and audit actions and a description of the events they contain, see [SQL Server Audit Action Groups and Actions](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  

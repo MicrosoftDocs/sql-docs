@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],creating function"
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Create the Function to Retrieve the Change Data
 

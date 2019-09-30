@@ -10,8 +10,8 @@ ms.topic: "language-reference"
 helpviewer_keywords: 
   - "views [Integration Services]"
 ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Views (Integration Services Catalog)
 

@@ -37,10 +37,10 @@ sys.dm_exec_describe_first_result_set_for_object
 ```  
   
 ## Arguments  
- *@object_id*  
+ *\@object_id*  
  The @object_id of a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure or a [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger. @object_id is type **int**.  
   
- *@include_browse_information*  
+ *\@include_browse_information*  
  @include_browse_information is type **bit**. If set to 1, each query is analyzed as if it has a FOR BROWSE option on the query. Returns additional key columns and source table information.  
   
 ## Table Returned  

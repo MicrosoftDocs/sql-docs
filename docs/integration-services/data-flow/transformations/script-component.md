@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Script component [Integration Services], about Script component"
   - "Script component [Integration Services]"
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Script Component
 

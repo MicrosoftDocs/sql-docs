@@ -29,7 +29,7 @@ The way to failover depends on the Linux distribution. Follow the instructions f
 
 ## Manual Failover (RHEL or Ubuntu)
 
-To perform a manual failover, onn Red Hat Enterprise Linux (RHEL) or Ubuntu servers execute the following steps.
+To perform a manual failover on Red Hat Enterprise Linux (RHEL) or Ubuntu servers, execute the following steps.
 1.	Issue the following command: 
 
    ```bash

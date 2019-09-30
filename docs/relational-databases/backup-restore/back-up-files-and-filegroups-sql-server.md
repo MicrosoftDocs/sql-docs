@@ -19,7 +19,9 @@ ms.author: mikeray
 ---
 # Back Up Files and Filegroups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to back up files and filegroups in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell. When the database size and performance requirements make a full database backup impractical, you can create a file backup instead. A *file backup* contains all the data in one or more files (or filegroups). For more information about file backups, see [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) and [Differential Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
+  This topic describes how to back up files and filegroups in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell. When the database size and performance requirements make a full database backup impractical, you can create a file backup instead. A *file backup* contains all the data in one or more files (or filegroups).
+  
+For more information about file backups, see [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) and [Differential Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
 
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -27,21 +29,23 @@ ms.author: mikeray
   
 -   The BACKUP statement is not allowed in an explicit or implicit transaction.  
   
--   Under the simple recovery model, read/write files must all be backed up together. This helps make sure that the database can be restored to a consistent point in time. Instead of individually specifying each read/write file or filegroup, use the READ_WRITE_FILEGROUPS option. This option backs up all the read/write filegroups in the database. A backup that is created by specifying READ_WRITE_FILEGROUPS is known as a *partial backup*. For more information, see [Partial Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
+-   Under the simple recovery model, read/write files must all be backed up together. This helps make sure that the database can be restored to a consistent point in time. Instead of individually specifying each read/write file or filegroup, use the READ_WRITE_FILEGROUPS option. This option backs up all the read/write filegroups in the database. A backup that is created by specifying READ_WRITE_FILEGROUPS is known as a *partial backup*, see [Partial Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
 For more information about limitations and restrictions, see [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 ###  <a name="Recommendations"></a> Recommendations
   
--   By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and in the system event log. If you back up the log very frequently, these success messages accumulate quickly, resulting in huge error logs that can make finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226 if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
+By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and in the system event log. If you back up the log very frequently, these success messages accumulate quickly, resulting in huge error logs that can make finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226 if none of your scripts depend on those entries.
+
+For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 
 ##  <a name="Permissions"></a> Permissions
 
- BACKUP DATABASE and BACKUP LOG permissions default to members of the **sysadmin** fixed server role and the **db_owner** and **db_backupoperator** fixed database roles.  
+`BACKUP DATABASE` and `BACKUP LOG` permissions default to members of the **sysadmin** fixed server role and the **db_owner** and **db_backupoperator** fixed database roles.  
   
  Ownership and permission problems on the backup device's physical file can interfere with a backup operation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs must have write permissions. However, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does not check file access permissions. Such problems on the backup device's physical file may not appear until the physical resource is accessed when the backup or restore is attempted.
 
-## Back up files and filegroups using SSMS   
+## Using SQL Server Management Studio   
   
 1. After connecting to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
@@ -80,23 +84,29 @@ For more information about limitations and restrictions, see [Backup Overview &#
   
     - **Back up to the existing media set**  
   
-         For this option, click either **Append to the existing backup set** or **Overwrite all existing backup sets**. For information about backing up to an existing media set, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
+         For this option, click either **Append to the existing backup set** or **Overwrite all existing backup sets**. 
+         
+         For information about backing up to an existing media set, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
-         Optionally, select **Check media set name and backup set expiration** to cause the backup operation to verify the date and time at which the media set and backup set expire.  
+         (optional) Select **Check media set name and backup set expiration** to cause the backup operation to verify the date and time at which the media set and backup set expire.  
   
-         Optionally, enter a name in the **Media set name** text box. If no name is specified, a media set with a blank name is created. If you specify a media set name, the media (tape or disk) is checked to see whether the actual name matches the name that you enter here.  
+         (optional) Enter a name in the **Media set name** text box. If no name is specified, a media set with a blank name is created. If you specify a media set name, the media (tape or disk) is checked to see whether the actual name matches the name that you enter here.  
   
          If you leave the media name blank and check the box to check it against the media, success will equal the media name on the media also being blank.  
   
     - **Back up to a new media set, and erase all existing backup sets**  
   
-         For this option, enter a name in the **New media set name** text box, and, optionally, describe the media set in the **New media set description** text box. For more information about creating a new media set, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
+         For this option, enter a name in the **New media set name** text box, and, optionally, describe the media set in the **New media set description** text box.
+         
+         For more information about creating a new media set, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
-1. In the **Reliability** section, optionally check:  
+1. (optional) In the **Reliability** section, check:  
   
     - **Verify backup when finished**.  
   
-    - **Perform checksum before writing to media**, and, optionally, **Continue on checksum error**. For more information about checksums, see [Possible Media Errors During Backup and Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
+    - **Perform checksum before writing to media**, and (optional) **Continue on checksum error**.
+    
+         For more information about checksums, see [Possible Media Errors During Backup and Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
 1. If you are backing up to a tape drive (as specified in the **Destination** section of the **General** page), the **Unload the tape after backup** option is active. Clicking this option enables the **Rewind the tape before unloading** option.  
   
@@ -105,11 +115,9 @@ For more information about limitations and restrictions, see [Backup Overview &#
   
 1. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later versions support [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md). By default, whether a backup is compressed depends on the value of the **backup-compression default** server configuration option. However, regardless of the current server-level default, you can compress a backup by checking **Compress backup**, and you can prevent compression by checking **Do not compress backup**.  
   
-     **To view the current backup compression default**  
-  
-    - [View or Configure the backup compression default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
+     To view the current backup compression default, see [View or Configure the backup compression default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
 
-## Back up files and filegroups using T-SQL
+## Using Transact-SQL
   
 To create a file or filegroup backup, use a [BACKUP DATABASE <file_or_filegroup>](../../t-sql/statements/backup-transact-sql.md) statement. Minimally, this statement must specify the following:  
   
@@ -121,13 +129,13 @@ To create a file or filegroup backup, use a [BACKUP DATABASE <file_or_filegroup>
   
 The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for a file backup is:  
   
-  BACKUP DATABASE *database*  
+   BACKUP DATABASE *database*  
   
-  { FILE _=_*logical_file_name* | FILEGROUP _=_*logical_filegroup_name* } [ **,**...*f* ]  
+   { FILE _=_*logical_file_name* | FILEGROUP _=_*logical_filegroup_name* } [ **,**...*f* ]  
   
-  TO *backup_device* [ **,**...*n* ]  
+   TO *backup_device* [ **,**...*n* ]  
   
-  [ WITH *with_options* [ **,**...*o* ] ] ;  
+   [ WITH *with_options* [ **,**...*o* ] ] ;  
   
 |Option|Description|  
 |------------|-----------------|  
@@ -136,11 +144,13 @@ The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for a file backup i
 |FILEGROUP _=_*logical_filegroup_name*|Specifies the logical name of a filegroup to include in the file backup. Under the simple recovery model, a filegroup backup is allowed only for a read-only filegroup.|  
 |[ **,**...*f* ]|Is a placeholder that indicates that multiple files and filegroups may be specified. The number of files or filegroups is unlimited.|  
 |*backup_device* [ **,**...*n* ]|Specifies a list of from 1 to 64 backup devices to use for the backup operation. You can specify a physical backup device, or you can specify a corresponding logical backup device, if already defined. To specify a physical backup device, use the DISK or TAPE option:<br /><br /> { DISK &#124; TAPE } _=_*physical_backup_device_name*<br /><br /> For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
-|WITH *with_options* [ **,**...*o* ]|Optionally, specifies one or more additional options, such as DIFFERENTIAL.<br /><br /> Note: A differential file backup requires a full file backup as a base. For more information, see [Create a Differential Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).|  
+|WITH *with_options* [ **,**...*o* ]|Optionally, specifies one or more additional options, such as DIFFERENTIAL. A differential file backup requires a full file backup as a base. <br /><br />For more information, see [Create a Differential Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).|  
   
-Under the full recovery model, you must also back up the transaction log. To use a complete set of full file backups to restore a database, you must also have enough log backups to span all the file backups, from the start of the first file backup. For more information, see [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+Under the full recovery model, you must also back up the transaction log. To use a complete set of full file backups to restore a database, you must also have enough log backups to span all the file backups, from the start of the first file backup.
+
+For more information, see [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
-###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
+###  <a name="TsqlExample"></a> Examples
  The following examples back up one or more files of the secondary filegroups of the `Sales` database. This database uses the full recovery model and contains the following secondary filegroups:  
   
 -   A filegroup named `SalesGroup1` that has the files `SGrp1Fi1` and `SGrp1Fi2`.  
@@ -191,15 +201,15 @@ Set up and use the [SQL Server PowerShell Provider](../../relational-databases/s
   
 Use the **Backup-SqlDatabase** cmdlet and specify **Files** for the value of the **-BackupAction** parameter. Also, specify one of the following parameters:  
   
-    - To back up a specific file, specify the _-DatabaseFile_*String* parameter, where *String* is one or more database files to be backed up.  
+- To back up a specific file, specify the _-DatabaseFile_*String* parameter, where *String* is one or more database files to be backed up.  
   
-    - To back up all the files in a given filegroup, specify the _-DatabaseFileGroup_*String* parameter, where *String* is one or more database filegroups to be backed up.  
+- To back up all the files in a given filegroup, specify the _-DatabaseFileGroup_*String* parameter, where *String* is one or more database filegroups to be backed up.  
   
-     The following example creates a full file backup of every file in the secondary filegroups 'FileGroup1' and 'FileGroup2' in the `<myDatabase>` database. The backups are created on the default backup location of the server instance `Computer\Instance`.  
-  
-    ```powershell
-    Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -BackupAction Files -DatabaseFileGroup "FileGroup1","FileGroup2" 
-    ```
+The following example creates a full file backup of every file in the secondary filegroups 'FileGroup1' and 'FileGroup2' in the `<myDatabase>` database. The backups are created on the default backup location of the server instance `Computer\Instance`.  
+
+```powershell
+Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -BackupAction Files -DatabaseFileGroup "FileGroup1","FileGroup2" 
+```
   
 ## See also  
  [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   

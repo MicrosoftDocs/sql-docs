@@ -139,4 +139,4 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
 ## See also
 
 - [SQL Server and ADO.NET](index.md)
-- [Transaction Locking and Row Versioning Guide](../../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide)
+- [Transaction Locking and Row Versioning Guide](../../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md)

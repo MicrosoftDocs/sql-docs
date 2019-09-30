@@ -37,7 +37,7 @@ SQL Server has many features that support creating secure database applications.
 [Security Center for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 Describes security considerations for SQL Server and Azure SQL Database.
 
-[Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation)  
+[Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
 Describes security concerns to consider before installing SQL Server.
 
 ## See also

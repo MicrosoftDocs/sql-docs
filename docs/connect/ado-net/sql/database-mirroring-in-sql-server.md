@@ -1,6 +1,6 @@
 ---
 title: "Database Mirroring in SQL Server"
-ms.date: "08/15/2019"
+ms.date: "09/30/2019"
 dev_langs: 
   - "csharp"
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9

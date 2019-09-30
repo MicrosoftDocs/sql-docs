@@ -1,6 +1,6 @@
 ---
 title: "Enabling Multiple Active Result Sets"
-ms.date: "08/15/2019"
+ms.date: "09/30/2019"
 dev_langs: 
   - "csharp"
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2

@@ -1,6 +1,6 @@
 ---
 title: "Download Microsoft SqlClient Data Provider for SQL Server"
-ms.date: "08/15/2019"
+ms.date: "09/30/2019"
 dev_langs: 
   - "csharp"
   - "vb"

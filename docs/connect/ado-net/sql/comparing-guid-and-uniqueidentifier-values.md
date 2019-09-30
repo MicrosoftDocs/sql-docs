@@ -1,6 +1,6 @@
 ---
 title: "Comparing GUID and uniqueidentifier Values"
-ms.date: "08/15/2019"
+ms.date: "09/30/2019"
 dev_langs: 
   - "csharp"
 ms.assetid: aababd75-2335-43e3-ace8-4b7ae84191a8

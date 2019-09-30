@@ -1,6 +1,6 @@
 ---
 title: "ASP.NET Applications Using Wait Handles"
-ms.date: "08/15/2019"
+ms.date: "09/30/2019"
 dev_langs: 
   - "csharp"
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff

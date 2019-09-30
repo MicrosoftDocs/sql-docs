@@ -1,6 +1,6 @@
 ---
 title: "Asynchronous Operations"
-ms.date: "08/15/2019"
+ms.date: "09/30/2019"
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
 ms.prod: sql
 ms.prod_service: connectivity

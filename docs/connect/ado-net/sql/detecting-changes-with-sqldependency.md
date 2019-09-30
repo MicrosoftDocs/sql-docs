@@ -1,6 +1,6 @@
 ---
 title: "Detecting Changes with SqlDependency"
-ms.date: "08/15/2019"
+ms.date: "09/30/2019"
 dev_langs:
   - "csharp"
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4

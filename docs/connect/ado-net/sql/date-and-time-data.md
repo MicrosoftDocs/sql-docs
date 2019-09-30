@@ -1,6 +1,6 @@
 ---
 title: "Date and Time Data"
-ms.date: "08/15/2019"
+ms.date: "09/30/2019"
 dev_langs: 
   - "csharp"
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3

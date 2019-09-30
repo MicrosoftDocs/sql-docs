@@ -1,6 +1,6 @@
 ---
 title: "Bulk Copy Operations in SQL Server"
-ms.date: "08/15/2019"
+ms.date: "09/30/2019"
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
 ms.prod: sql
 ms.prod_service: connectivity

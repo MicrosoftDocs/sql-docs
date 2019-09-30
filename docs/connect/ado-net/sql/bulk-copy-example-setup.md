@@ -1,6 +1,6 @@
 ---
 title: "Bulk Copy Example Setup"
-ms.date: "08/15/2019"
+ms.date: "09/30/2019"
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
 ms.prod: sql
 ms.prod_service: connectivity

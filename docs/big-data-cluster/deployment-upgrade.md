@@ -32,6 +32,9 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
    > [!Important]
    > Use the version of `azdata` that matches your cluster. Do not delete an older cluster with the newer version of `azdata`.
 
+   > [!Note]
+   > Issuing a `azdata bdc delete` command will result in all objects created within the namespace identified with the big data cluster name to be deleted, but not the namespace itself. Namespace can be reused for subsequent deployments as long as it is empty and no other applications were created within.
+
 1. Prior to CTP 3.2, `azdata` was called `mssqlctl`. If you have any previous releases of `mssqlctl` or `azdata` installed, it is important to uninstall first before installing the latest version of `azdata`.
 
    For CTP 2.3 or higher, run the following command. Replace `ctp3.1` in the command with the version of `mssqlctl` that you are uninstalling. If the version is prior to CTP 3.1, add a dash before the version number (for example, `ctp-2.5`).

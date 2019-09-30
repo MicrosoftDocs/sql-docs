@@ -155,7 +155,7 @@ ms.author: "mathoma"
         > [!NOTE]  
         >  Before changing **enabled_for_het_sub** to **true**, you must drop any existing subscriptions to the publication. You cannot set **enabled_for_het_sub** to **true** when the publication also supports updating subscriptions. Changing **enabled_for_het_sub** will affect other publication properties. For more information, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
-3.  At the Publisher on the publication database, execute [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify `@publication`, `@subscriber`, a value of `**(default destination)**` for `@destination_db`, a value of **push** for `@subscription_type`, and a value of 3 for `@subscriber_type` (specifies an OLE DB provider).  
+3.  At the Publisher on the publication database, execute [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify `@publication`, `@subscriber`, a value of `(default destination)` for `@destination_db`, a value of **push** for `@subscription_type`, and a value of 3 for `@subscriber_type` (specifies an OLE DB provider).  
   
 4.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specify the following:  
   

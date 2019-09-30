@@ -172,7 +172,7 @@ At the Publisher on the publication database, execute [sp_addmergearticle &#40;T
   
 1.  To determine if error compensation is enabled for an article, execute [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) and note the value of **delete_tracking** in the result set. If this value is **0**, deletes are already being ignored.  
   
-2.  If the value from step 1 is **1**, execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) at the Publisher on the publication database. Specify a value of `**delete_tracking**` for `@property`, and a value of **false** for `@value`.  
+2.  If the value from step 1 is **1**, execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) at the Publisher on the publication database. Specify a value of `delete_tracking` for `@property`, and a value of **false** for `@value`.  
   
     > [!NOTE]  
     >  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  

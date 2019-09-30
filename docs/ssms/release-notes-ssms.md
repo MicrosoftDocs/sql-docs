@@ -36,7 +36,7 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## SSMS 18.3 
+## SSMS 18.3.1
 
 Download: [Download SSMS 18.3](download-sql-server-management-studio-ssms.md)  
 Build number: 15.0.18178.0  
@@ -46,7 +46,7 @@ SSMS 18.3 is the latest general availability (GA) release of SSMS. If you need a
 
 18.3 is an update to 18.2 with the following new items and bug fixes.
 
-## What's new in 18.3
+## What's new in 18.3.1
 
 | New item | Details |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -60,7 +60,7 @@ SSMS 18.3 is the latest general availability (GA) release of SSMS. If you need a
 | SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added support for Azure SQL Database Managed Instance. |
 | SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Updated default view of cmdlets to display results as a table. |
 
-## Bug fixes in 18.3
+## Bug fixes in 18.3.1
 
 | New Item | Details |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -81,7 +81,7 @@ SSMS 18.3 is the latest general availability (GA) release of SSMS. If you need a
 | Query Store UI | Fixed an issue where the Y-axis did not scales when *Execution Count* Metric was selected in *Tracked Query* View. |
 | Vulnerability Assessment | Disabled clearing and approving baseline for Azure SQL DBs.|
 
-### Known issues (18.3)
+### Known issues (18.3.1)
 
 - Database Diagram created from SSMS running on machine A cannot be modified from machine B (SSMS crashes). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
 

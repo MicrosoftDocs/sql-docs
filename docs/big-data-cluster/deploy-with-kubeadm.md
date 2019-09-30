@@ -28,6 +28,9 @@ Also see [this](deployment-script-single-node-kubeadm.md) topic for a sample scr
    - 8 CPUs
    - 64 GB of memory
    - 100 GB of storage
+ 
+> [!Important] 
+> Before starting the big data cluster deployment, ensure the clocks are synchronized across all the Kubernetes nodes the deployment is targeting. The big data cluster has built-in health properties for various services that are time sensitive and clock skews can result in incorrect status.
 
 ## Prepare the machines
 

@@ -127,13 +127,13 @@ To create a file or filegroup backup, use a [BACKUP DATABASE <file_or_filegroup>
   
 The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for a file backup is:  
   
-    BACKUP DATABASE *database*  
+  BACKUP DATABASE *database*  
   
-    { FILE _=_*logical_file_name* | FILEGROUP _=_*logical_filegroup_name* } [ **,**...*f* ]  
+  { FILE _=_*logical_file_name* | FILEGROUP _=_*logical_filegroup_name* } [ **,**...*f* ]  
   
-    TO *backup_device* [ **,**...*n* ]  
+  TO *backup_device* [ **,**...*n* ]  
   
-    [ WITH *with_options* [ **,**...*o* ] ] ;  
+  [ WITH *with_options* [ **,**...*o* ] ] ;  
   
 |Option|Description|  
 |------------|-----------------|  
@@ -209,7 +209,7 @@ The following example creates a full file backup of every file in the secondary 
 Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -BackupAction Files -DatabaseFileGroup "FileGroup1","FileGroup2" 
 ```
   
-## See also  
+## See Also  
  [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   

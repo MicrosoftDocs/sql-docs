@@ -209,8 +209,6 @@
         items:
         - name: azdata
           href: big-data-cluster/reference-azdata.md
-        - name: control
-          href: big-data-cluster/reference-azdata-control.md
         - name: notebook
           href: big-data-cluster/reference-azdata-notebook.md
         - name: sql

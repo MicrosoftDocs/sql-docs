@@ -13,7 +13,7 @@ ms.author: genemi
 ---
 # Single Bulk Copy Operations
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 The simplest approach to performing a SQL Server bulk copy operation is to perform a single operation against a database. By default, a bulk copy operation is performed as an isolated operation: the copy operation occurs in a non-transacted way, with no opportunity for rolling it back.  
   
@@ -47,7 +47,7 @@ The simplest approach to performing a SQL Server bulk copy operation is to perfo
 > [!IMPORTANT]
 >  This sample will not run unless you have created the work tables as described in [Bulk Copy Example Setup](bulk-copy-example-setup.md). This code is provided to demonstrate the syntax for using **SqlBulkCopy** only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL `INSERT … SELECT` statement to copy the data.  
   
- [!code-csharp[DataWorks SqlBulkCopy_WriteToServer#1](../../../sqlclient/doc/samples/SqlBulkCopy_WriteToServer.cs#1)]
+ [!code-csharp[DataWorks SqlBulkCopy_WriteToServer#1](../../../../sqlclient/doc/samples/SqlBulkCopy_WriteToServer.cs#1)]
   
 ## Performing a Bulk Copy Operation Using Transact-SQL and the Command Class  
  The following example illustrates how to use the <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> method to execute the BULK INSERT statement.  

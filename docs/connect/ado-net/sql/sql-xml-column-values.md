@@ -13,7 +13,7 @@ ms.author: genemi
 ---
 # SQL XML Column Values
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 SQL Server supports the `xml` data type, and developers can retrieve result sets including this type using standard behavior of the <xref:Microsoft.Data.SqlClient.SqlCommand> class. An `xml` column can be retrieved just as any column is retrieved (into a <xref:Microsoft.Data.SqlClient.SqlDataReader>, for example) but if you want to work with the content of the column as XML, you must use an <xref:System.Xml.XmlReader>.  
   
@@ -23,7 +23,7 @@ SQL Server supports the `xml` data type, and developers can retrieve result sets
 > [!NOTE]
 >  The **AdventureWorks** sample database is not installed by default when you install SQL Server. You can install it by running SQL Server Setup.  
   
- [!code-csharp[DataWorks SqlDataReader_GetSqlXml#1](../../../sqlclient/doc/samples/SqlDataReader_GetSqlXml.cs#1)]
+ [!code-csharp[DataWorks SqlDataReader_GetSqlXml#1](../../../../sqlclient/doc/samples/SqlDataReader_GetSqlXml.cs#1)]
   
 ## See also
 

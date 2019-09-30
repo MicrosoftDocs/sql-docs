@@ -11,7 +11,7 @@ ms.author: genemi
 ---
 # SqlClient Support for High Availability, Disaster Recovery
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 This topic discusses Microsoft SqlClient Data Provider for SQL Server support for high-availability, disaster recovery -- AlwaysOn Availability Groups.  AlwaysOn Availability Groups feature was added to SQL Server 2012. For more information about AlwaysOn Availability Groups, see SQL Server Books Online.  
   

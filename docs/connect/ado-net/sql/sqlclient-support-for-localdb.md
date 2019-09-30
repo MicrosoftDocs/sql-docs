@@ -11,7 +11,7 @@ ms.author: genemi
 ---
 # SqlClient Support for LocalDB
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 Beginning in SQL Server code name Denali, a lightweight version of SQL Server, called LocalDB, will be available. This topic discusses how to connect to a LocalDB database.  
   

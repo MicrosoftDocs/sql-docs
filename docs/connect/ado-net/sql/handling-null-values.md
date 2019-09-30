@@ -13,7 +13,7 @@ ms.author: genemi
 ---
 # Handling Null Values
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 A null value in a relational database is used when the value in a column is unknown or missing. A null is neither an empty string (for character or datetime data types) nor a zero value (for numeric data types). The ANSI SQL-92 specification states that a null must be the same for all data types, so that all nulls are handled consistently. The <xref:System.Data.SqlTypes> namespace provides null semantics by implementing the <xref:System.Data.SqlTypes.INullable> interface. Each of the data types in <xref:System.Data.SqlTypes> has its own `IsNull` property and a `Null` value that can be assigned to an instance of that data type.  
   
@@ -34,7 +34,7 @@ A null value in a relational database is used when the value in a column is unkn
 ## Nulls and SqlBoolean  
  Comparison between any <xref:System.Data.SqlTypes> will return a <xref:System.Data.SqlTypes.SqlBoolean>. The `IsNull` function for each `SqlType` returns a <xref:System.Data.SqlTypes.SqlBoolean> and can be used to check for null values. The following truth tables show how the AND, OR, and NOT operators function in the presence of a null value. (T=true, F=false, and U=unknown, or null.)  
   
- ![Truth Table](../../connect/ado-net/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
+ ![Truth Table](../media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### Understanding the ANSI_NULLS Option  
  <xref:System.Data.SqlTypes> provides the same semantics as when the ANSI_NULLS option is set on in SQL Server. All arithmetic operators (+, -, *, /, %), bitwise operators (~, &, &#124;), and most functions return null if any of the operands or arguments is null, except for the property `IsNull`.  
@@ -109,7 +109,7 @@ WHERE TerritoryID IN (1, 2, 3)
 ### Example  
  The following code example creates a <xref:System.Data.DataTable> with two columns defined as <xref:System.Data.SqlTypes.SqlInt32> and <xref:System.Data.SqlTypes.SqlString>. The code adds one row of known values, one row of null values and then iterates through the <xref:System.Data.DataTable>, assigning the values to variables and displaying the output in the console window.  
   
- [!code-csharp[DataWorks SqlInt32_IsNull#1](../../../sqlclient/doc/samples/SqlInt32_IsNull.cs#1)]
+ [!code-csharp[DataWorks SqlInt32_IsNull#1](../../../../sqlclient/doc/samples/SqlInt32_IsNull.cs#1)]
   
  This example displays the following results:  
   
@@ -123,7 +123,7 @@ isColumnNull=True, ID=Null, Description=Null
   
  The following example demonstrates the difference in results between the `SqlString.Equals` method and the `String.Equals` method when each is passed a pair of null values and then a pair of empty strings.  
   
- [!code-csharp[DataWorks SqlString_Equals#1](../../../sqlclient/doc/samples/SqlString_Equals.cs#1)]
+ [!code-csharp[DataWorks SqlString_Equals#1](../../../../sqlclient/doc/samples/SqlString_Equals.cs#1)]
   
  The code produces the following output:  
   

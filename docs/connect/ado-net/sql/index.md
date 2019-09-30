@@ -10,7 +10,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # SQL Server and ADO.NET
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 <xref:Microsoft.Data.SqlClient> provides access to versions of SQL Server, which encapsulates database-specific protocols. <xref:Microsoft.Data.SqlClient> includes a tabular data stream (TDS) parser to communicate directly with SQL Server.  
   
 > [!NOTE]

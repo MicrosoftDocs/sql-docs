@@ -13,7 +13,7 @@ ms.author: genemi
 ---
 # Windows Applications Using Callbacks
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 In most asynchronous processing scenarios, you want to start a database operation and continue running other processes without waiting for the database operation to complete. However, many scenarios require doing something once the database operation has ended. In a Windows application, for example, you may want to delegate the long-running operation to a background thread while allowing the user interface thread to remain responsive. However, when the database operation is complete, you want to use the results to populate the form. This type of scenario is best implemented with a callback.  
   

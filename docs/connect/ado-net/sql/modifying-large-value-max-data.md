@@ -13,7 +13,7 @@ ms.author: genemi
 ---
 # Modifying Large-Value (max) Data in ADO.NET
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 Large object (LOB) data types are those that exceed the maximum row size of 8 kilobytes (KB). SQL Server provides a `max` specifier for `varchar`, `nvarchar`, and `varbinary` data types to allow storage of values as large as 2^32 bytes. Table columns and Transact-SQL variables may specify `varchar(max)`, `nvarchar(max)`, or `varbinary(max)` data types. In .NET, the `max` data types can be fetched by a `DataReader`, and can also be specified as both input and output parameter values without any special handling. For large `varchar` data types, data can be retrieved and updated incrementally.  
   
@@ -180,7 +180,7 @@ while (reader.Read())
 ### Example  
  The following code retrieves the name and the `LargePhoto` object from the `ProductPhoto` table in the `AdventureWorks` database and saves it to a file. The assembly needs to be compiled with a reference to the <xref:System.Drawing> namespace.  The <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> method of the <xref:Microsoft.Data.SqlClient.SqlDataReader> returns a <xref:System.Data.SqlTypes.SqlBytes> object that exposes a `Stream` property. The code uses this to create a new `Bitmap` object, and then saves it in the Gif `ImageFormat`.  
   
- [!code-csharp[DataWorks SqlBytes_Stream#1](../../../sqlclient/doc/samples/SqlBytes_Stream.cs#1)]
+ [!code-csharp[DataWorks SqlBytes_Stream#1](../../../../sqlclient/doc/samples/SqlBytes_Stream.cs#1)]
   
 ## Using Large Value Type Parameters  
  Large value types can be used in <xref:Microsoft.Data.SqlClient.SqlParameter> objects the same way you use smaller value types in <xref:Microsoft.Data.SqlClient.SqlParameter> objects. You can retrieve large value types as <xref:Microsoft.Data.SqlClient.SqlParameter> values, as shown in the following example. The code assumes that the following GetDocumentSummary stored procedure exists in the AdventureWorks sample database. The stored procedure takes an input parameter named @DocumentID and returns the contents of the DocumentSummary column in the @DocumentSummary output parameter.  
@@ -201,7 +201,7 @@ WHERE   DocumentID=@DocumentID
 ### Example  
  The ADO.NET code creates <xref:Microsoft.Data.SqlClient.SqlConnection> and <xref:Microsoft.Data.SqlClient.SqlCommand> objects to execute the GetDocumentSummary stored procedure and retrieve the document summary, which is stored as a large value type. The code passes a value for the @DocumentID input parameter, and displays the results passed back in the @DocumentSummary output parameter in the Console window.  
   
- [!code-csharp[DataWorks SqlParameter_Value#1](../../../sqlclient/doc/samples/SqlParameter_Value.cs#1)]
+ [!code-csharp[DataWorks SqlParameter_Value#1](../../../../sqlclient/doc/samples/SqlParameter_Value.cs#1)]
   
 ## See also
 

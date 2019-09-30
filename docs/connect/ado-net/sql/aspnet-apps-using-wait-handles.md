@@ -13,7 +13,7 @@ ms.author: genemi
 ---
 # ASP.NET Applications Using Wait Handles
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 The callback and polling models for handling asynchronous operations are useful when your application is processing only one asynchronous operation at a time. The Wait models provide a more flexible way of processing multiple asynchronous operations. There are two Wait models, named for the <xref:System.Threading.WaitHandle> methods used to implement them: the Wait (Any) model and the Wait (All) model.  
   

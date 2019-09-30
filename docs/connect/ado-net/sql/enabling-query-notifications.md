@@ -12,6 +12,9 @@ author: MightyPen
 ms.author: genemi
 ---
 # Enabling Query Notifications
+
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 Applications that consume query notifications have a common set of requirements. Your data source must be correctly configured to support SQL query notifications, and the user must have the correct client-side and server-side permissions.  
   
  To use query notifications you must:  
@@ -69,7 +72,7 @@ CREATE SERVICE ContactChangeNotifications
   
  The following code creates a <xref:Microsoft.Data.SqlClient.SqlClientPermission> object, setting the <xref:System.Security.Permissions.PermissionState> to <xref:System.Security.Permissions.PermissionState.Unrestricted>. The <xref:System.Security.CodeAccessPermission.Demand%2A> will force a <xref:System.Security.SecurityException> at run time if all callers higher in the call stack have not been granted the permission.  
   
- [!code-csharp[DataWorks SqlClientPermission_Demand#1](../../../sqlclient/doc/samples/SqlClientPermission_Demand.cs#1)]
+ [!code-csharp[DataWorks SqlClientPermission_Demand#1](../../../../sqlclient/doc/samples/SqlClientPermission_Demand.cs#1)]
   
 ## Choosing a Notification Object  
  The query notifications API provides two objects to process notifications: <xref:Microsoft.Data.SqlClient.SqlDependency> and <xref:Microsoft.Data.Sql.SqlNotificationRequest>.

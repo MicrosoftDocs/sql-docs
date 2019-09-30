@@ -13,7 +13,7 @@ ms.author: genemi
 ---
 # Inserting an Image from a File
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source. BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.  
   
@@ -79,4 +79,4 @@ public static byte[] GetPhoto(string filePath)
   
 ## See also
 
-- [SQL Server Binary and Large-Value Data](../../connect/ado-net/sql-server-binary-and-large-value-data.md)
+- [SQL Server Binary and Large-Value Data](sql-server-binary-and-large-value-data.md)

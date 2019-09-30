@@ -13,7 +13,7 @@ ms.author: genemi
 ---
 # Transaction and Bulk Copy Operations
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 Bulk copy operations can be performed as isolated operations or as part of a multiple step transaction. This latter option enables you to perform more than one bulk copy operation within the same transaction, as well as perform other database operations (such as inserts, updates, and deletes) while still being able to commit or roll back the entire transaction.  
   
@@ -29,7 +29,7 @@ Bulk copy operations can be performed as isolated operations or as part of a mul
 > [!NOTE]
 >  This sample will not run unless you have created the work tables as described in [Bulk Copy Example Setup](bulk-copy-example-setup.md). This code is provided to demonstrate the syntax for using **SqlBulkCopy** only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL`INSERT … SELECT` statement to copy the data.  
   
- [!code-csharp[DataWorks SqlBulkCopyOpeions_Default#1](../../../sqlclient/doc/samples/SqlBulkCopyOptions_Default.cs#1)]
+ [!code-csharp[DataWorks SqlBulkCopyOpeions_Default#1](../../../../sqlclient/doc/samples/SqlBulkCopyOptions_Default.cs#1)]
   
 ## Performing a Dedicated Bulk Copy Operation in a Transaction  
  By default, a bulk copy operation is its own transaction. When you want to perform a dedicated bulk copy operation, create a new instance of <xref:Microsoft.Data.SqlClient.SqlBulkCopy> with a connection string, or use an existing <xref:Microsoft.Data.SqlClient.SqlConnection> object without an active transaction. In each scenario, the bulk copy operation creates, and then commits or rolls back the transaction.  
@@ -44,7 +44,7 @@ Bulk copy operations can be performed as isolated operations or as part of a mul
 > [!IMPORTANT]
 >  This sample will not run unless you have created the work tables as described in [Bulk Copy Example Setup](bulk-copy-example-setup.md). This code is provided to demonstrate the syntax for using **SqlBulkCopy** only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL`INSERT … SELECT` statement to copy the data.  
   
- [!code-csharp[DataWorks SqlBulkCopyOptions_UseInternalTransaction#1](../../../sqlclient/doc/samples/SqlBulkCopyOptions_UseInternalTransaction.cs#1)]
+ [!code-csharp[DataWorks SqlBulkCopyOptions_UseInternalTransaction#1](../../../../sqlclient/doc/samples/SqlBulkCopyOptions_UseInternalTransaction.cs#1)]
   
 ## Using Existing Transactions  
  You can specify an existing <xref:Microsoft.Data.SqlClient.SqlTransaction> object as a parameter in a <xref:Microsoft.Data.SqlClient.SqlBulkCopy> constructor. In this situation, the bulk copy operation is performed in an existing transaction, and no change is made to the transaction state (that is, it is neither committed nor aborted). This allows an application to include the bulk copy operation in a transaction with other database operations. However, if you do not specify a <xref:Microsoft.Data.SqlClient.SqlTransaction> object and pass a null reference, and the connection has an active transaction, an exception is thrown.  
@@ -56,7 +56,7 @@ Bulk copy operations can be performed as isolated operations or as part of a mul
 > [!IMPORTANT]
 >  This sample will not run unless you have created the work tables as described in [Bulk Copy Example Setup](bulk-copy-example-setup.md). This code is provided to demonstrate the syntax for using **SqlBulkCopy** only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL`INSERT … SELECT` statement to copy the data.  
   
- [!code-csharp[DataWorks SqlBulkCopy_ExternalTransaction#1](../../../sqlclient/doc/samples/SqlBulkCopy_ExternalTransaction.cs#1)]
+ [!code-csharp[DataWorks SqlBulkCopy_ExternalTransaction#1](../../../../sqlclient/doc/samples/SqlBulkCopy_ExternalTransaction.cs#1)]
   
 ## See also
 

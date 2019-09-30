@@ -6,7 +6,7 @@
       "build_source_folder": "docs",
       "build_output_subfolder": "sql",
       "locale": "en-us",
-	  "xref_query_tags": ["/uwp/api", "/dotnet"],
+      "xref_query_tags": ["/uwp/api", "/dotnet"],
       "monikers": [],
       "moniker_ranges": [
         "sql-server-2014",

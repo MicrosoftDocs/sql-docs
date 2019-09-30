@@ -22,9 +22,8 @@ ms.technology: big-data-cluster
 |[azdata sql](reference-azdata-sql.md) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL. |
 |[azdata app](reference-azdata-app.md) | Create, delete, run, and manage applications. |
 |[azdata bdc](reference-azdata-bdc.md) | Select, manage, and operate SQL Server Big Data Clusters. |
-|[azdata control](reference-azdata-control.md) | Create, delete, and manage control planes. |
-[azdata login](#azdata-login) | Log in to the cluster's controller endpoint.
-[azdata logout](#azdata-logout) | Log out of cluster.
+|[azdata login](#azdata-login) | Log in to the cluster's controller endpoint.
+|[azdata logout](#azdata-logout) | Log out of cluster.
 ## azdata login
 When your cluster is deployed, it will list the controller endpoint during deployment, which you should use to login.  If you do not know the controller endpoint, you may login by having your cluster's kube config on your system in the default location of <user home>/.kube/config or use the KUBECONFIG env var, i.e. export KUBECONFIG=path/to/.kube/config.
 ```bash
@@ -63,7 +62,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata logout

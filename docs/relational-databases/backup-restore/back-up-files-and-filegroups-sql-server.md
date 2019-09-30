@@ -27,19 +27,17 @@ For more information about file backups, see [Full File Backups &#40;SQL Server&
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   The BACKUP statement is not allowed in an explicit or implicit transaction.  
+- The BACKUP statement is not allowed in an explicit or implicit transaction.  
   
--   Under the simple recovery model, read/write files must all be backed up together. This helps make sure that the database can be restored to a consistent point in time. Instead of individually specifying each read/write file or filegroup, use the READ_WRITE_FILEGROUPS option. This option backs up all the read/write filegroups in the database. A backup that is created by specifying READ_WRITE_FILEGROUPS is known as a *partial backup*, see [Partial Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
+- Under the simple recovery model, read/write files must all be backed up together. This helps make sure that the database can be restored to a consistent point in time. Instead of individually specifying each read/write file or filegroup, use the READ_WRITE_FILEGROUPS option. This option backs up all the read/write filegroups in the database. A backup that is created by specifying READ_WRITE_FILEGROUPS is known as a *partial backup*, see [Partial Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
 For more information about limitations and restrictions, see [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 ###  <a name="Recommendations"></a> Recommendations
   
-By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and in the system event log. If you back up the log very frequently, these success messages accumulate quickly, resulting in huge error logs that can make finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226 if none of your scripts depend on those entries.
+By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and in the system event log. If you back up the log very frequently, these success messages accumulate quickly, resulting in huge error logs that can make finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226 if none of your scripts depend on those entries, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 
-For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
-
-##  <a name="Permissions"></a> Permissions
+###  <a name="Permissions"></a> Permissions
 
 `BACKUP DATABASE` and `BACKUP LOG` permissions default to members of the **sysadmin** fixed server role and the **db_owner** and **db_backupoperator** fixed database roles.  
   
@@ -63,11 +61,11 @@ For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/datab
   
 1. Either accept the default backup set name suggested in the **Name** text box, or enter a different name for the backup set.  
   
-1. Optionally, in the **Description** text box, enter a description of the backup set.  
+1. (optional) In the **Description** text box, enter a description of the backup set.  
   
 1. Specify when the backup set will expire:  
   
-    - To have the backup set expire after a specific number of days, click **After** (the default option). Then, enter the number of days after set creation that the set will expire. This value can be from 0 to 99999 days; a value of 0 days means that the backup set will never expire.  
+    - To have the backup set expire after a specific number of days, click **After** (the default option) and enter the number of days after set creation that the set will expire. This value can be from 0 to 99999 days; a value of 0 days means that the backup set will never expire.  
   
          The default value is set in the **Default backup media retention (in days)** option of the **Server Properties** dialog box (**Database Settings** page). To access this option, right-click the server name in Object Explorer and select properties; then select the **Database Settings** page.  
   
@@ -88,9 +86,9 @@ For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/datab
          
          For information about backing up to an existing media set, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
-         (optional) Select **Check media set name and backup set expiration** to cause the backup operation to verify the date and time at which the media set and backup set expire.  
+         - (optional) Select **Check media set name and backup set expiration** to cause the backup operation to verify the date and time at which the media set and backup set expire.  
   
-         (optional) Enter a name in the **Media set name** text box. If no name is specified, a media set with a blank name is created. If you specify a media set name, the media (tape or disk) is checked to see whether the actual name matches the name that you enter here.  
+         - (optional) Enter a name in the **Media set name** text box. If no name is specified, a media set with a blank name is created. If you specify a media set name, the media (tape or disk) is checked to see whether the actual name matches the name that you enter here.  
   
          If you leave the media name blank and check the box to check it against the media, success will equal the media name on the media also being blank.  
   
@@ -129,13 +127,13 @@ To create a file or filegroup backup, use a [BACKUP DATABASE <file_or_filegroup>
   
 The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for a file backup is:  
   
-   BACKUP DATABASE *database*  
+    BACKUP DATABASE *database*  
   
-   { FILE _=_*logical_file_name* | FILEGROUP _=_*logical_filegroup_name* } [ **,**...*f* ]  
+    { FILE _=_*logical_file_name* | FILEGROUP _=_*logical_filegroup_name* } [ **,**...*f* ]  
   
-   TO *backup_device* [ **,**...*n* ]  
+    TO *backup_device* [ **,**...*n* ]  
   
-   [ WITH *with_options* [ **,**...*o* ] ] ;  
+    [ WITH *with_options* [ **,**...*o* ] ] ;  
   
 |Option|Description|  
 |------------|-----------------|  
@@ -151,14 +149,14 @@ Under the full recovery model, you must also back up the transaction log. To use
 For more information, see [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 ###  <a name="TsqlExample"></a> Examples
- The following examples back up one or more files of the secondary filegroups of the `Sales` database. This database uses the full recovery model and contains the following secondary filegroups:  
+The following examples back up one or more files of the secondary filegroups of the `Sales` database. This database uses the full recovery model and contains the following secondary filegroups:  
   
--   A filegroup named `SalesGroup1` that has the files `SGrp1Fi1` and `SGrp1Fi2`.  
+- A filegroup named `SalesGroup1` that has the files `SGrp1Fi1` and `SGrp1Fi2`.  
   
--   A filegroup named `SalesGroup2` that has the files `SGrp2Fi1` and `SGrp2Fi2`.  
+- A filegroup named `SalesGroup2` that has the files `SGrp2Fi1` and `SGrp2Fi2`.  
   
 #### A. Create a file backup of two files  
- The following example creates a differential file backup of only the `SGrp1Fi2` file of the `SalesGroup1` and the `SGrp2Fi2` file of the `SalesGroup2` filegroup.  
+The following example creates a differential file backup of only the `SGrp1Fi2` file of the `SalesGroup1` and the `SGrp2Fi2` file of the `SalesGroup2` filegroup.  
   
 ```sql  
 --Backup the files in the SalesGroup1 secondary filegroup.  
@@ -170,7 +168,7 @@ GO
 ```  
   
 #### B. Create a full file backup of the secondary filegroups  
- The following example creates a full file backup of every file in both of the secondary filegroups.  
+The following example creates a full file backup of every file in both of the secondary filegroups.  
   
 ```sql  
 --Back up the files in SalesGroup1.  
@@ -182,7 +180,7 @@ GO
 ```  
   
 #### C. Create a differential file backup of the secondary filegroups  
- The following example creates a differential file backup of every file in both of the secondary filegroups.  
+The following example creates a differential file backup of every file in both of the secondary filegroups.  
   
 ```sql  
 --Back up the files in SalesGroup1.  

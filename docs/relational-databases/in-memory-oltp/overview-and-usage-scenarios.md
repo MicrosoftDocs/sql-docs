@@ -139,7 +139,7 @@ Before you can start using In-Memory OLTP, you need to create a MEMORY_OPTIMIZED
 
 You can use the script at the following location to create the filegroup in the default data folder, and configure the recommended settings:
 
-- [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+- [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
 
 The following script illustrates In-Memory OLTP objects you can create in your database:
 

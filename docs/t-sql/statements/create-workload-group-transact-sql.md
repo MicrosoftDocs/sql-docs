@@ -236,16 +236,19 @@ Sets the maximum amount of resources allocated per request.  value is an optiona
 
 *IMPORTANCE* = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>
 Specifies the default importance of a request for the workload group.  Importance is one of the following, with NORMAL being the default:
-•	LOW
-•	BELOW_NORMAL
-•	NORMAL (default)
-•	ABOVE_NORMAL
-•	HIGH
+- LOW
+- BELOW_NORMAL
+- NORMAL (default)
+- ABOVE_NORMAL
+- HIGH  
 
 Importance set at the workload group is a default importance for all requests in the workload group.  A user can also set importance at the classifier level, which can override the workload group importance setting.  This allows for differentiation of importance for requests within a workload group to get access to non-reserved resources quicker.  When the sum of min_percentage_resource across workload groups is less than 100, there are non-reserved resources that are assigned on a basis of importance.
 
 *QUERY_EXECUTION_TIMEOUT_SEC* = value</br>
 Specifies the maximum time, in seconds, that a query can execute before it is canceled.  value must be 0 or a positive integer.  The default setting for value is 0, which means unlimited.  The time spent waiting in the request queue is not counted towards query execution.
+
+## Remarks
+Workload groups corresponding to resource classes are created automatically for backward compatibility.  These system defined workload groups cannot be dropped.  An additional 8 user defined workload groups can be created.
 
 ## Effective Values
 

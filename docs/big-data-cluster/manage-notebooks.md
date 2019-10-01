@@ -56,13 +56,13 @@ The Jupyter Books viewlet with the Jupyter Book that contains the troubleshootin
 ### Controller Dashboard
 1. In the **Connections** view, expand **SQL Server Big Data Clusters.**
 2. Add controller endpoint details.
-3. After successful connection to controller, right-click on the endpoint and click **Manage.**
-4. After dashboard loads, click troubleshoot to launch the Jupyter Book TSG.
+3. After you're connected to the controller, right-click the endpoint and select **Manage**.
+4. After the dashboard loads, select **troubleshoot** to open the Jupyter Book troubleshooting guides.
 
 ## How to use troubleshooting notebooks
-1. Look through the existing Jupyter Book table of contents until you find the TSG that you need.
-1. All notebooks are optimized where user only needs to click on **Run Cells.** This will run each cell in the notebook individually until it is complete.
-1. If you run into an error, the Jupyter Book will suggest a notebook that you can run in order to fix the error. Follow the steps, then re-run the notebook.
+1. Find the troubleshooting guide that you need in the Jupyter Book table of contents.
+1. The notebooks are optimized, so you just need to select **Run Cells**. This action will run each cell in the notebook individually until the notebook is complete.
+1. If an error is found, the Jupyter Book will suggest a notebook that you can run to fix the error. Follow the steps, and then run the notebook again.
 
-## Next Steps
+## Next steps
 For more information about notebooks in Azure Data Studio, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).

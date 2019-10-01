@@ -582,6 +582,7 @@ END
 ### A.  Identify **bcp** utility version
 
 At a command prompt, enter the following command:
+
 ```
 bcp -v
 ```
@@ -590,22 +591,23 @@ bcp -v
 
 The following examples illustrate the **out** option on the `WideWorldImporters.Warehouse.StockItemTransactions` table.
 
-- **Basic**  
+- **Basic**
 This example creates a data file named `StockItemTransactions_character.bcp` and copies the table data into it using **character** format.
 
   At a command prompt, enter the following command:
+
   ```
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
- 
+
  - **Expanded**  
 This example creates a data file named `StockItemTransactions_native.bcp` and copies the table data into it using the **native** format.  The example also: specifies the maximum number of syntax errors, an error file, and an output file.
 
     At a command prompt, enter the following command:
     ```
     bcp WideWorldImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
-    ``` 
- 
+    ```
+
 Review `Error_out.log` and `Output_out.log`.  `Error_out.log` should be blank.  Compare the file sizes between `StockItemTransactions_character.bcp` and `StockItemTransactions_native.bcp`. 
 
 ### C. Copying table rows into a data file (with mixed-mode authentication)
@@ -615,29 +617,33 @@ The following example illustrates the **out** option on the `WideWorldImporters.
  The example assumes that you are using mixed-mode authentication, you must use the **-U** switch to specify your login ID. Also, unless you are connecting to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer, use the **-S** switch to specify the system name and, optionally, an instance name.  
 
 At a command prompt, enter the following command: \(The system will prompt you for your password.\)
-```  
+
+```
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
-```  
-  
+```
+
 ### D. Copying data from a file to a table
 
 The following examples illustrate the **in** option on the `WideWorldImporters.Warehouse.StockItemTransactions_bcp` table using files created above.
-  
-- **Basic**  
+
+- **Basic**
 This example uses the `StockItemTransactions_character.bcp` data file previously created.
 
   At a command prompt, enter the following command:
-  ```  
-  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
-  ```  
 
-- **Expanded**  
+  ```
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
+  ```
+
+- **Expanded**
 This example uses the `StockItemTransactions_native.bcp` data file previously created.  The example also: use the hint **TABLOCK**, specifies the batch size, the maximum number of syntax errors, an error file, and an output file.
   
-  At a command prompt, enter the following command:
-  ```  
-  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
-  ```    
+At a command prompt, enter the following command:
+
+```
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
+```
+
   Review `Error_in.log` and `Output_in.log`.
 
 ### E. Copying a specific column into a data file
@@ -645,36 +651,38 @@ This example uses the `StockItemTransactions_native.bcp` data file previously cr
 To copy a specific column, you can use the **queryout** option.  The following example copies only the `StockItemTransactionID` column of the `Warehouse.StockItemTransactions` table into a data file.
   
 At a command prompt, enter the following command:
-  
-```  
+
+```
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
-```  
-  
+```
+
 ### F. Copying a specific row into a data file
 
 To copy a specific row, you can use the **queryout** option. The following example copies only the row for the person named `Amy Trefl` from the `WideWorldImporters.Application.People` table into a data file `Amy_Trefl_c.bcp`.  Note: the **-d** switch is used identify the database.
   
-At a command prompt, enter the following command: 
-```  
+At a command prompt, enter the following command:
+
+```
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
-```  
-  
+```
+
 ### G. Copying data from a query to a data file
 
 To copy the result set from a Transact-SQL statement to a data file, use the **queryout** option.  The following example copies the names from the `WideWorldImporters.Application.People` table, ordered by full name, into the `People.txt` data file.  Note: the **-t** switch is used to create a comma-delimited file.
-  
+
 At a command prompt, enter the following command:
-```  
+
+```
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
-```  
-  
+```
+
 ### H. Creating format files
 
 The following example creates three different format files for the `Warehouse.StockItemTransactions` table in the `WideWorldImporters` database.  Review the contents of each created file.
-  
+
 At a command prompt, enter the following commands:
-  
-```  
+
+```
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -693,28 +701,23 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 ### I. Using a format file to bulk import with bcp
 
 To use a previously created format file when importing data into an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use the **-f** switch with the **in** option.  For example, the following command bulk copies the contents of a data file, `StockItemTransactions_character.bcp`, into a copy of the `Warehouse.StockItemTransactions_bcp` table by using the previously created format file, `StockItemTransactions_c.xml`.  Note: the **-L** switch is used to import only the first 100 records.
-  
+
 At a command prompt, enter the following command:
-```  
-bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
-```  
-  
+
+```
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
+```
+
 > [!NOTE]  
 >  Format files are useful when the data file fields are different from the table columns; for example, in their number, ordering, or data types. For more information, see [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
-  
+
 ### J. Specifying a code page
 
- The following partial code example shows bcp import while specifying a code page 65001:  
-  
-```  
+The following partial code example shows bcp import while specifying a code page 65001:
+
+```
 bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...  
-```  
-  
- The following partial code example shows bcp export while specifying a code page 65001:  
-  
-```  
-bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...  
-```  
+```
 
 ## Additional Examples
 

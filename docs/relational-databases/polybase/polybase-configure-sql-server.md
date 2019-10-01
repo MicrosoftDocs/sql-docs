@@ -43,28 +43,28 @@ The following Transact-SQL commands are used in this section:
 
 1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). The following example:
 
-  - Creates an external data source named `SQLServerInstance`.
-  - Identifies the external data source (`LOCATION = '<vendor>://<server>[:<port>]'`). In the example it points to a default instance of SQL Server.
-  - Identifies whether computation should be pushed to the source (`PUSHDOWN`). `PUSHDOWN` is `ON` by default.
+   - creates an external data source named `SQLServerInstance`.
+   - Identifies the external data source (`LOCATION = '<vendor>://<server>[:<port>]'`). In the example it points to a default instance of SQL Server.
+   - Identifies whether computation should be pushed to the source (`PUSHDOWN`). `PUSHDOWN` is `ON` by default.
 
-  Finally, the example uses the credential created previously.
+   Finally, the example uses the credential created previously.
 
-  ```sql
-  CREATE EXTERNAL DATA SOURCE SQLServerInstance
-      WITH ( LOCATION = 'sqlserver://SqlServer',
-       PUSHDOWN = ON,
-       CREDENTIAL = SQLServerCredentials);
-  ```
+    ```sql
+    CREATE EXTERNAL DATA SOURCE SQLServerInstance
+        WITH ( LOCATION = 'sqlserver://SqlServer',
+        PUSHDOWN = ON,
+        CREDENTIAL = SQLServerCredentials);
+    ```
 
-1. **Optional:** Create statistics on an external table.
-
-  [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+1. Optionally, create statistics on an external table.
 
   For optimal query performance, create statistics on external table columns, especially the ones used for joins filters and aggregates.
 
-  ```sql
-  CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN;
-  ```
+    ```sql
+    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN;
+    ```
+
+    [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 >[!IMPORTANT] 
 >Once you have created an external data source, you can use the [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) command to create a queryable table over that source.

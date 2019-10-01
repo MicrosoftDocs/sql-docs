@@ -4164,8 +4164,8 @@
       href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
     - name: Deprecated in SQL Server 2016
       href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-    - name: Discontinued functionality in SQL Server 2016
-      href: database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md
+    - name: Discontinued functionality in SQL Server
+      href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
     - name: Breaking changes in SQL Server 2017
       href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
     - name: Breaking changes in SQL Server 2016

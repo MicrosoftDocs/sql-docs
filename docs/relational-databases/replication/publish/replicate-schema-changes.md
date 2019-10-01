@@ -67,27 +67,27 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 #### To create a snapshot or transactional publication that does not replicate schema changes  
   
-1.  At the Publisher on the publication database, execute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), specifying a value of **0** for **@replicate_ddl**. For more information, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  At the Publisher on the publication database, execute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), specifying a value of `0` for `@replicate_ddl`. For more information, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### To create a merge publication that does not replicate schema changes  
   
-1.  At the Publisher on the publication database, execute [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), specifying a value of **0** for **@replicate_ddl**. For more information, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  At the Publisher on the publication database, execute [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), specifying a value of `0` for `@replicate_ddl`. For more information, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### To temporarily disable replicating schema changes for a snapshot or transactional publication  
   
-1.  For a publication with replication of schema changes, execute [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying a value of **replicate_ddl** for **@property** and a value of **0** for **@value**.  
+1.  For a publication with replication of schema changes, execute [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying a value of `replicate_ddl` for `@property` and a value of `0` for `@value`.  
   
 2.  Execute the DDL command on the published object.  
   
-3.  (Optional) Re-enable replicating schema changes by executing [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying a value of **replicate_ddl** for **@property** and a value of **1** for **@value**.  
+3.  (Optional) Re-enable replicating schema changes by executing [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying a value of `replicate_ddl` for `@property` and a value of `1` for `@value`.  
   
 #### To temporarily disable replicating schema changes for a merge publication  
   
-1.  For a publication with replication of schema changes, execute [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying a value of **replicate_ddl** for **@property** and a value of **0** for **@value**.  
+1.  For a publication with replication of schema changes, execute [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying a value of `replicate_ddl` for `@property` and a value of `0` for `@value`.  
   
 2.  Execute the DDL command on the published object.  
   
-3.  (Optional) Re-enable replicating schema changes by executing [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying a value of **replicate_ddl** for **@property** and a value of **1** for **@value**.  
+3.  (Optional) Re-enable replicating schema changes by executing [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying a value of `replicate_ddl` for `@property` and a value of `1` for `@value`.  
   
 ## See Also  
  [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)   

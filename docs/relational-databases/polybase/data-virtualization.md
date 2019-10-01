@@ -1,8 +1,8 @@
 ---
 title: Virtualize external data in SQL Server 2019 | Microsoft Docs
 description: This page details the steps for using the Create external table wizard for relational Data sources
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 ms.date: 07/24/2019
 ms.topic: conceptual

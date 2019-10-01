@@ -213,7 +213,7 @@ For more information on performance improvements in tempdb, see the following bl
 
 ## Memory-Optimized TempDB Metadata
 
-TempDB metadata contention has historically been a bottleneck to scalability for many workloads running on SQL Server. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new feature that is part of the [In-Memory Database](../in-memory-database.md) feature family, memory-optimized tempdb metadata, which effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the system tables involved in managing temp table metadata can be moved into latch-free non-durable memory-optimized tables.  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new feature that is part of the [In-Memory Database](../in-memory-database.md) feature family, memory-optimized tempdb metadata, which effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the system tables involved in managing temp table metadata can be moved into latch-free non-durable memory-optimized tables.In order to opt-in to this new feature, use the following script:
+TempDB metadata contention has historically been a bottleneck to scalability for many workloads running on SQL Server. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new feature that is part of the [In-Memory Database](../in-memory-database.md) feature family, memory-optimized tempdb metadata, which effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the system tables involved in managing temp table metadata can be moved into latch-free non-durable memory-optimized tables. In order to opt-in to this new feature, use the following script:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -238,7 +238,8 @@ There are some limitations with this implementation that are important to note:
     COMMIT TRAN
     ```
 3. Queries against memory-optimized tables do not support locking and isolation hints, so queries against memory-optimized TempDB catalog views will not honor locking and isolation hints. As with other system catalog views in SQL Server, all transactions against system views will be in READ COMMITTED (or in this case READ COMMITTED SNAPSHOT) isolation.
-4. [Columnstore indexes](../indexes/columnstore-indexes-overview.md) cannot be created on temporary tables when memory-optimized tempdb metadata is enabled.
+4. [Columnstore indexes](../indexes/columnstore-indexes-overview.md) cannot be created on temporary tables when Memory-Optimized TempDB Metadata is enabled.
+5. Due to the limitation on columnstore indexes, use of the sp_estimate_data_compression_savings system stored procedure with the COLUMNSTORE or COLUMNSTORE_ARCHIVE data compression parameter is not supported when Memory-Optimized TempDB Metadata is enabled.
 
 > [!NOTE] 
 > These limitations only apply when referencing TempDB system views, you will be able to create a temp table in the same transaction as you access a memory-optimized table in a user database if desired.

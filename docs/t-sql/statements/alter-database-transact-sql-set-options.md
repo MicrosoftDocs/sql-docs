@@ -755,6 +755,10 @@ Determines the frequency at which data written to the Query Store is persisted t
 MAX_STORAGE_SIZE_MB        
 Determines the space issued to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**.
 
+> [!NOTE]
+> MAX_STORAGE_SIZE_MB limit is not strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the DATA_FLUSH_INTERVAL_SECONDS option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).       
+> If Query Store has breached the MAX_STORAGE_SIZE_MB limit between storage size checks, it will transition to read-only mode. If SIZE_BASED_CLEANUP_MODE is enabled, the cleanup mechanism to enforce the MAX_STORAGE_SIZE_MB limit is also triggered. 
+
 INTERVAL_LENGTH_MINUTES        
 Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.
 
@@ -762,7 +766,7 @@ SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }
 Controls whether cleanup automatically activates when total amount of data gets close to maximum size.
 
 AUTO        
-Size-based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size-based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.This value is the default configuration value.
+Size-based cleanup will be automatically activated when size on disk reaches 90% of **MAX_STORAGE_SIZE_MB**. Size-based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **MAX_STORAGE_SIZE_MB**.This value is the default configuration value.
 
 OFF        
 Size-based cleanup won't be automatically activated.

@@ -63,17 +63,17 @@ GO
  **Specify the level of non-transactional access by using Transact-SQL**  
  -   When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) statement with the **NON_TRANSACTED_ACCESS** FILESTREAM option.  
   
-    ```sql  
-    CREATE DATABASE database_name  
-        WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
-    ```  
+```sql  
+CREATE DATABASE database_name  
+  WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
+```  
   
 -   When you **alter an existing database**, call the [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) statement with the **NON_TRANSACTED_ACCESS** FILESTREAM option.  
   
-    ```sql  
-    ALTER DATABASE database_name  
-        SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
-    ```  
+```sql  
+ALTER DATABASE database_name  
+  SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
+```  
   
  **Specify the level of non-transactional access by using SQL Server Management Studio**  
  You can specify the level of non-transactional access in the **FILESTREAM Non-transacted Access** field of the **Options** page of the **Database Properties** dialog box. For more information about this dialog box, see [Database Properties &#40;Options Page&#41;](../../relational-databases/databases/database-properties-options-page.md).  

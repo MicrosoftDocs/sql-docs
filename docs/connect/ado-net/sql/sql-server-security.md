@@ -6,8 +6,8 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
+author: v-kaywon
+ms.author: v-kaywon
 ---
 # SQL Server Security
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)

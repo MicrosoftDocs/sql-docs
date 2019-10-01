@@ -6,8 +6,8 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
+author: v-kaywon
+ms.author: v-kaywon
 ---
 # Query Notifications in SQL Server
 

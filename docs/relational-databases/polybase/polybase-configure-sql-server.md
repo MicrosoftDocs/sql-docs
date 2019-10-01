@@ -4,8 +4,8 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 ---
@@ -34,7 +34,7 @@ The following Transact-SQL commands are used in this section:
 - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
-1.  Create a database scoped credential for accessing the MongoDB source.
+1.  Create a database scoped credential for accessing the SQL Server source.
 
     ```sql
     /*  specify credentials to external data source
@@ -62,9 +62,10 @@ The following Transact-SQL commands are used in this section:
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-    We recommend creating statistics on external table columns, especially the ones used for joins, filters and aggregates, for optimal query performance.
-
     ```sql
+    /* We recommend creating statistics on external table columns, especially the ones used for joins, 
+    * filters and aggregates, for optimal query performance. 
+    */
     CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN;
     ```
 

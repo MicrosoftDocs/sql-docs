@@ -43,7 +43,7 @@ The following Transact-SQL commands are used in this section:
 
 1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). The following example:
 
-   - creates an external data source named `SQLServerInstance`.
+   - Creates an external data source named `SQLServerInstance`.
    - Identifies the external data source (`LOCATION = '<vendor>://<server>[:<port>]'`). In the example it points to a default instance of SQL Server.
    - Identifies whether computation should be pushed to the source (`PUSHDOWN`). `PUSHDOWN` is `ON` by default.
 

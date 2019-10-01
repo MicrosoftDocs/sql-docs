@@ -9,7 +9,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
-ms.date: "09/11/2019"
+ms.date: "10/03/2019"
 ---
 
 # Release notes for Azure Data Studio
@@ -18,7 +18,7 @@ ms.date: "09/11/2019"
 
 ## October 2019
 
-October 2, 2019 &nbsp; / &nbsp; version: 1.12.0 
+October 2, 2019 &nbsp; / &nbsp; version: 1.12.0
 
 &nbsp;
 

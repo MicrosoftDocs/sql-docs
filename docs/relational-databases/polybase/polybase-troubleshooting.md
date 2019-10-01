@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ""
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Monitor and troubleshoot PolyBase

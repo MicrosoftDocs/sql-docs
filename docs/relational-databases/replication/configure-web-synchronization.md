@@ -151,7 +151,7 @@ ms.author: "mathoma"
   
      For more information about the permissions that are required by agents, see [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
--   Specify the same domain account as the one the Merge Agent uses when you specify an account and password on the **Web Server Information** page of the New Subscription Wizard or when you specify values for the **@internet_url** and **@internet_login** parameters of [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). This account must have read permissions for the snapshot share.  
+-   Specify the same domain account as the one the Merge Agent uses when you specify an account and password on the **Web Server Information** page of the New Subscription Wizard or when you specify values for the `@internet_url` and `@internet_login` parameters of [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). This account must have read permissions for the snapshot share.  
   
 -   Each publication should use a separate virtual directory for IIS.  
   

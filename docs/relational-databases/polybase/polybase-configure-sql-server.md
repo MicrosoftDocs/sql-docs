@@ -50,11 +50,11 @@ The following Transact-SQL commands are used in this section:
   Finally, the example uses the credential created previously.
 
   ```sql
-    CREATE EXTERNAL DATA SOURCE SQLServerInstance
-    WITH ( LOCATION = 'sqlserver://SqlServer',
+  CREATE EXTERNAL DATA SOURCE SQLServerInstance
+      WITH ( LOCATION = 'sqlserver://SqlServer',
        PUSHDOWN = ON,
-    CREDENTIAL = SQLServerCredentials);
-    ```
+       CREDENTIAL = SQLServerCredentials);
+  ```
 
 1. **Optional:** Create statistics on an external table.
 

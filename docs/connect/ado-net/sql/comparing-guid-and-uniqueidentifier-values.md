@@ -25,7 +25,7 @@ The globally unique identifier (GUID) data type in SQL Server is represented by 
   
  Both <xref:System.Guid> and <xref:System.Data.SqlTypes.SqlGuid> have a `CompareTo` method for comparing different GUID values. However, `System.Guid.CompareTo` and `SqlTypes.SqlGuid.CompareTo` are implemented differently. <xref:System.Data.SqlTypes.SqlGuid> implements `CompareTo` using SQL Server behavior, in the last six bytes of a value are most significant. <xref:System.Guid> evaluates all 16 bytes. The following example demonstrates this behavioral difference. The first section of code displays unsorted <xref:System.Guid> values, and the second section of code shows the sorted <xref:System.Guid> values. The third section shows the sorted <xref:System.Data.SqlTypes.SqlGuid> values. The output is displayed beneath the code listing.  
   
- [!code-csharp[DataWorks SqlGuid#1](../../../../sqlclient/doc/samples/SqlGuid.cs#1)]
+ [!code-csharp[DataWorks SqlGuid#1](~/sqlclient/doc/samples/SqlGuid.cs#1)]
   
  This example produces the following results.  
   

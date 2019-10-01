@@ -60,14 +60,16 @@ The following Transact-SQL commands are used in this section:
 
   For optimal query performance, create statistics on external table columns, especially the ones used for joins filters and aggregates.
 
-    ```sql
-    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN;
-    ```
-
-    [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+  ```sql
+    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY)
+    WITH FULLSCAN;
+  ```
 
 >[!IMPORTANT] 
 >Once you have created an external data source, you can use the [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) command to create a queryable table over that source.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 
 ## SQL Server connector compatible types
 

@@ -292,7 +292,7 @@ go
 ```  
 
 
-The following script creates the filegroup for you and configures recommended database settings: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+The following script creates the filegroup for you and configures recommended database settings: [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
   
 For more information about `ALTER DATABASE ... ADD` for FILE and FILEGROUP, see:  
   

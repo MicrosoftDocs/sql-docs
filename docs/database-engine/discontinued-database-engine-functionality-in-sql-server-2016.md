@@ -42,11 +42,11 @@ ms.author: mikeray
 
 ## Discontinued Features in [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
 
-- `DISABLE_BATCH_MODE_ADAPTIVE_JOIN`
+- The following database scoped configuration options are discontinued:
 
-- `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`
-
-- `DISABLE_INTERLEAVED_EXECUTION_TVF`
+  - `DISABLE_BATCH_MODE_ADAPTIVE_JOIN`
+  - `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`
+  - `DISABLE_INTERLEAVED_EXECUTION_TVF`
 
 ## Discontinued Features in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   

@@ -50,7 +50,7 @@ monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproduc
   - `DISABLE_INTERLEAVED_EXECUTION_TVF`
 
 >[!NOTE]
->No features were discontinued in [!INCLUDE[ssSQLv15](../includes/sssqlv14-md.md)].
+>No features were discontinued in [!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)].
 
 ## Discontinued Features in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   

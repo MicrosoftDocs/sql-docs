@@ -1,7 +1,7 @@
 ---
 title: "ALTER USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2018"
+ms.date: "10/01/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -421,14 +421,23 @@ ALTER USER userName
     | DEFAULT_LANGUAGE = { NONE | <lcid> | <language name> | <language alias> }
     | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]
   
--- SQL Database managed instance syntax when connected to a federation member  
+-- Users or groups that are migrated or federated and synchronized with Azure AD have the following syntax
+
+    /** Applies to Windows users that were migrated and have the following user names:
+    - Windows user <domain\user>
+    - Windows group <domain\MyWindowsGroup>
+    - Windows alias <MyWindowsAlias>
+    **/
+
 ALTER USER userName  
      { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
 [;]  
   
 <set_item> ::=
      NAME = newUserName
+    | DEFAULT_SCHEMA = { schemaName | NULL }
     | LOGIN = loginName
+    | DEFAULT_LANGUAGE = { NONE | <lcid> | <language name> | <language alias> }
 ```
   
 ## Arguments
@@ -494,7 +503,10 @@ ALTER USER userName
   
  You can change the name of a user who is mapped to a Windows login or group only when the SID of the new user name matches the SID that is recorded in the database. This check helps prevent spoofing of Windows logins in the database.  
   
- The WITH LOGIN clause enables the remapping of a user to a different login. Users without a login, users mapped to a certificate, or users mapped to an asymmetric key can't be remapped with this clause. Only SQL users and Windows users (or groups) can be remapped. The WITH LOGIN clause can't be used to change the type of user, such as changing a Windows account to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
+ The WITH LOGIN clause enables the remapping of a user to a different login. Users without a login, users mapped to a certificate, or users mapped to an asymmetric key can't be remapped with this clause. Only SQL users and Windows users (or groups) can be remapped. The WITH LOGIN clause can't be used to change the type of user, such as changing a Windows account to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The only exception is when changing a Windows user to an Azure AD user.
+
+> [!NOTE]
+> The following rules do not apply to Windows users on managed instance as we do not support creating Windows logins on managed instance. The WITH LOGIN option can only be used if Azure AD logins are present.
   
  The name of the user will be automatically renamed to the login name if the following conditions are true.  
   
@@ -522,7 +534,7 @@ These remarks apply to authenticating as Windows users that have been federated 
 - For Azure AD authentication, the LOGIN parameter applies only to managed instance and can't be used with SQL DB.
 - To view logins for Azure AD Principals, use the following command:
 `select * from sys.server_principals`.
-    - Check the login's indicated type is `U` or `X`.
+    - Check the login's indicated type is `E` or `X`.
 - PASSWORD option can't be used for Azure AD users.
 - In all migration cases, the roles and permissions of Windows users or groups will automatically be transferred to the new Azure AD users or groups.
 - A new syntax extension, **FROM EXTERNAL PROVIDER** is available for altering Windows users and groups from SQL on-premises to Azure AD users and groups. The Windows domain must be federated with Azure AD and all Windows domain members must exist in Azure AD when using this extension. The **FROM EXTERNAL PROVIDER** syntax applies to managed instance and should be used in case Windows users don't have logins and need to be mapped to Azure AD logins.
@@ -540,7 +552,7 @@ These remarks apply to authenticating as Windows users that have been federated 
 
 - To view altered users, use the following command: 
 `select * from sys.database_principals`
-  - Check the user's indicated type `U` or `X`.
+  - Check the user's indicated type `E` or `X`.
 - When NAME is used to migrate Windows users to Azure AD users, the following restrictions apply:
   - A valid LOGIN must be specified.
   - The NAME will be checked in Azure AD and can only be:
@@ -620,6 +632,14 @@ The following example remaps the user name, `westus\joe` to `joe_alias`. The cor
 
 ```sql
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com, name= joe_alias  
+```
+
+### G. Map a Windows group that was migrated in managed instance to an Azure AD group
+
+The following example remaps the old on-premise group, `westus\mygroup` to an Azure AD group `mygroup` in the managed instance. The group must exist in Azure AD.
+
+```sql
+ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 ```
 
 ## See also

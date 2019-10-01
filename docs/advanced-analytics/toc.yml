@@ -257,28 +257,26 @@
         href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
   - name: Administration
     items:
-    - name: Manage integration
-      href: ../advanced-analytics/r/managing-and-monitoring-r-solutions.md
     - name: Monitor
       items:
       - name: Monitor using SSMS reports
-        href: ../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md
+        href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md
       - name: Monitor using DMVs
         href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
       - name: Extended events
         items:
-        - name: Extended events
-          href: ../advanced-analytics/r/extended-events-for-sql-server-r-services.md
-        - name: Extended events PREDICT T-SQL
-          href: ../advanced-analytics/xe-event-predict-tsql.md
+        - name: Monitor using extended events
+          href: ../advanced-analytics/administration/extended-events.md
+        - name: Monitor PREDICT T-SQL
+          href: ../advanced-analytics/administration/extended-events-predict-tsql.md
     - name: Scale script execution
-      href: ../advanced-analytics/administration/modify-user-account-pool.md
+      href: ../advanced-analytics/administration/scale-concurrent-execution-external-scripts.md
     - name: Resource governor
       items:
       - name: Use resource governor
-        href: ../advanced-analytics/administration/resource-governance.md
+        href: ../advanced-analytics/administration/resource-governor.md
       - name: Create a resource pool
-        href: ../advanced-analytics/administration/how-to-create-a-resource-pool.md
+        href: ../advanced-analytics/administration/create-external-resource-pool.md
   - name: Security
     items:
     - name: Give users permission

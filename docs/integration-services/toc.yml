@@ -1561,7 +1561,7 @@
   - name: The Oracle CDC Databases
     href: ../integration-services/change-data-capture/the-oracle-cdc-databases.md
   - name: Troubleshoot
-    href: relational-databases/track-changes/known-issues-resolutions-with-cdc-for-oracle-attunity.md
+    href: ../integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity.md
   - name: Change Data Capture Designer for Oracle by Attunity F1 Help Reference
     href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
     items:

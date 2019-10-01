@@ -31,7 +31,7 @@ For more information about how to use extended events, see [Extended Events Tool
 
 ## Additional events specific to Machine Learning Services
 
-Additional extended events are available for components that are related to and used by SQL Server Machine Learning Services, such as the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], and BXLServer, and the satellite process that starts the Pyrthon or R runtime. These additional extended events are fired from the external processes; therefore, they must be captured using an external utility.
+Additional extended events are available for components that are related to and used by SQL Server Machine Learning Services, such as the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], and BXLServer, and the satellite process that starts the Python or R runtime. These additional extended events are fired from the external processes; therefore, they must be captured using an external utility.
 
 For more information about how to do this, see the section, [Collecting events from external processes](#bkmk_externalevents).
 
@@ -49,7 +49,7 @@ For more information about how to do this, see the section, [Collecting events f
 |satellite_authentication_completion|Fires when authentication completes for a connection over TCP or Namedpipe.||  
 |satellite_authorization_completion|Fires when authorization completes for a connection over TCP or Namedpipe.||  
 |satellite_cleanup|Fires when satellite calls cleanup.|Fired only from external process. See instructions on collecting events from external processes.|  
-|satellite_data_chunk_sent|Fires when the satellite connection finishes sending a single data chunk.|The event reports the number of rows sent, the number of columns, the number of SNI packets usedm and time elapsed in milliseconds while sending the chunk. The information can help you understand how much time is spent passing different types of data, and how many packets are used.|  
+|satellite_data_chunk_sent|Fires when the satellite connection finishes sending a single data chunk.|The event reports the number of rows sent, the number of columns, the number of SNI packets used and time elapsed in milliseconds while sending the chunk. The information can help you understand how much time is spent passing different types of data, and how many packets are used.|  
 |satellite_data_receive_completion|Fires when all the required data by a query is received over the satellite connection.|Fired only from external process. See instructions on collecting events from external processes.|  
 |satellite_data_send_completion|Fires when all required data for a session is sent over the satellite connection.||  
 |satellite_data_send_start|Fires when data transmission starts.| Data transmission starts just before the first data chunk is sent.|  
@@ -70,7 +70,7 @@ For more information about how to do this, see the section, [Collecting events f
 |launchpad_launch_start|Fires when launchpad starts launching a satellite.|Fired only from Launchpad. See instructions on collecting events from launchpad.exe.|  
 |launchpad_resume_sent|Fires when launchpad has launched the satellite and sent a resume message to SQL Server.|Fired only from Launchpad. See instructions on collecting events from launchpad.exe.|  
 |satellite_data_chunk_sent|Fires when the satellite connection finishes sending a single data chunk.|Contains information about the number of columns, number of rows, number of packets, and time elapsed sending the chunk.|  
-|satellite_sessionId_mismatch|Message's session id is not expected||  
+|satellite_sessionId_mismatch|Message's session ID is not expected||  
 
 <a name="bkmk_externalevents"></a>
 

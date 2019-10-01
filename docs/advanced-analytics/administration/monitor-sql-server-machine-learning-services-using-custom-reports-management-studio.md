@@ -29,35 +29,29 @@ For more information on reports in SQL Server Management Studio, see [Custom rep
 
 The reports are designed using SQL Server Reporting Services, but can be used directly from SQL Server Management Studio. Reporting Services does not have to be installed on your SQL Server instance.
 
-To use these reports:
-
-1. Download the RDL files from the GitHub repository for SQL Server product samples.
-2. Add the files to the custom reports folder used by SQL Server Management Studio.
-3. Open the reports in SQL Server Management Studio.
-
-### Step 1. Download the reports
+To use these reports, follow these steps:
 
 1. Download the [SSMS Custom Reports](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) for SQL Server Machine Learning Services from GitHub.
 
-### Step 2. Copy the reports to Management Studio
+2. Copy the reports to Management Studio
 
-2. Locate the custom reports folder used by SQL Server Management Studio. By default, custom reports are stored in this folder (where **user_name** is your Windows user name):
-    
-   `C:\Users\user_name\Documents\SQL Server Management Studio\Custom Reports`
+    1. Locate the custom reports folder used by SQL Server Management Studio. By default, custom reports are stored in this folder (where **user_name** is your Windows user name):
 
-   You can also specify a different folder, or create subfolders.
+        `C:\Users\user_name\Documents\SQL Server Management Studio\Custom Reports`
 
-3. Copy the *.RDL files you downloaded to the custom reports folder.
+       You can also specify a different folder, or create subfolders.
 
-### Step 3. Run the reports
+    2. Copy the *.RDL files you downloaded to the custom reports folder.
 
-4. In Management Studio, right-click the **Databases** node for the instance where you want to run the reports.
+3. Run the reports in Management Studio
 
-5. Click **Reports**, and then click **Custom Reports**.
+    1. In Management Studio, right-click the **Databases** node for the instance where you want to run the reports.
 
-6. In the **Open File** dialog box, locate the custom reports folder.
+    2. Click **Reports**, and then click **Custom Reports**.
 
-7. Select one of the RDL files you downloaded, and then click **Open**.
+    3. In the **Open File** dialog box, locate the custom reports folder.
+
+    4. Select one of the RDL files you downloaded, and then click **Open**.
 
 ## Reports
 

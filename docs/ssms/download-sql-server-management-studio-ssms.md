@@ -40,15 +40,15 @@ SSMS is free!
 
 **SSMS 18.3.1 is now available, and is the latest general availability (GA) version of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.3](https://go.microsoft.com/fwlink/?linkid=2104251)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2104251)**
 
-SSMS 18.3.1 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.3.1 upgrades it to 18.3.1 If you have an older *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.3.
+SSMS 18.3.1 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.3.1 upgrades it to 18.3.1 If you have an older *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.3.1.
 
 **Version Information**
 
 - Release number: 18.3.1  
 - Build number: 15.0.18183.0  
-- Release date: October 01, 2019  
+- Release date: October 02, 2019  
 
 If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [UserVoice](https://aka.ms/sqlfeedback).
 

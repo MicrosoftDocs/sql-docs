@@ -111,7 +111,7 @@ ms.author: "mathoma"
   
 2.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define one or more related articles, which are also known as child articles, for the publication. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  At the Publisher on the publication database, execute [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Specify **@publication**, a unique name for this filter for **@filtername**, the name of the child article created in step 2 for **@article**, the name of the parent article being joined to for **@join_articlename**, and one of the following values for **@join_unique_key**:  
+3.  At the Publisher on the publication database, execute [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Specify `@publication`, a unique name for this filter for `@filtername`, the name of the child article created in step 2 for `@article`, the name of the parent article being joined to for `@join_articlename`, and one of the following values for `@join_unique_key`:  
   
     -   **0** - indicates a many-to-one or many-to-many join between the parent and child articles.  
   
@@ -120,7 +120,7 @@ ms.author: "mathoma"
      This defines a join filter between the two articles.  
   
     > [!CAUTION]  
-    >  Only set **@join_unique_key** to **1** if you have a constraint on the joining column in the underlying table for the parent article that guarantees uniqueness. If **@join_unique_key** is set to **1** incorrectly, non-convergence of data may occur.  
+    >  Only set `@join_unique_key` to **1** if you have a constraint on the joining column in the underlying table for the parent article that guarantees uniqueness. If `@join_unique_key` is set to **1** incorrectly, non-convergence of data may occur.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example defines an article for a merge publication, where the `SalesOrderDetail` table article is filtered against the `SalesOrderHeader` table that is itself filtered using a static row filter. For more information, see [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  

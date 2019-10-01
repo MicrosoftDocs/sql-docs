@@ -70,10 +70,10 @@ ALTER USER userName
  *userName*  
  Specifies the name by which the user is identified inside this database.  
   
- LOGIN **=**_loginName_  
+ LOGIN **=** _loginName_  
  Remaps a user to another login by changing the user's Security Identifier (SID) to match the login's SID.  
   
- NAME **=**_newUserName_  
+ NAME **=** _newUserName_  
  Specifies the new name for this user. *newUserName* must not already occur in the current database.  
   
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
@@ -103,7 +103,7 @@ ALTER USER userName
 > [!NOTE]  
 > This option may only be specified in a contained database and only for contained users.
   
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Suppresses cryptographic metadata checks on the server in bulk copy operations. This enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.  
@@ -262,12 +262,12 @@ ALTER USER userName
  *userName*  
  Specifies the name by which the user is identified inside this database.  
   
- LOGIN **=**_loginName_  
+ LOGIN **=** _loginName_  
  Remaps a user to another login by changing the user's Security Identifier (SID) to match the login's SID.  
   
  If the ALTER USER statement is the only statement in a SQL batch, Azure SQL Database supports the WITH LOGIN clause. If the ALTER USER statement isn't the only statement in a SQL batch or is executed in dynamic SQL, the WITH LOGIN clause isn't supported.  
   
- NAME **=**_newUserName_  
+ NAME **=** _newUserName_  
  Specifies the new name for this user. *newUserName* must not already occur in the current database.  
   
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
@@ -289,7 +289,7 @@ ALTER USER userName
 > [!NOTE]  
 > This option is available only for contained users.
   
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Suppresses cryptographic metadata checks on the server in bulk copy operations. This  enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.  
@@ -445,12 +445,12 @@ ALTER USER userName
  *userName*  
  Specifies the name by which the user is identified inside this database.  
   
- LOGIN **=**_loginName_  
+ LOGIN **=** _loginName_  
  Remaps a user to another login by changing the user's Security Identifier (SID) to match the login's SID.  
   
  If the ALTER USER statement is the only statement in a SQL batch, Azure SQL Database supports the WITH LOGIN clause. If the ALTER USER statement isn't the only statement in a SQL batch or is executed in dynamic SQL, the WITH LOGIN clause isn't supported.  
   
- NAME **=**_newUserName_  
+ NAME **=** _newUserName_  
  Specifies the new name for this user. *newUserName* must not already occur in the current database.  
   
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
@@ -464,7 +464,7 @@ ALTER USER userName
 > [!NOTE]  
 > This option is available only for contained users. For more information, see [Contained Databases](../../relational-databases/databases/contained-databases.md) and [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
   
- OLD_PASSWORD **=**_'oldpassword'_  
+ OLD_PASSWORD **=** _'oldpassword'_  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  The current user password that will be replaced by '*password*'. Passwords are case-sensitive. *OLD_PASSWORD* is required to change a password, unless you have **ALTER ANY USER** permission. Requiring *OLD_PASSWORD* prevents users with **IMPERSONATION** permission from changing the password.  
@@ -480,7 +480,7 @@ ALTER USER userName
 > [!NOTE]  
 > This option may only be specified in a contained database and only for contained users.
   
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Suppresses cryptographic metadata checks on the server in bulk copy operations. This enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.  
@@ -681,12 +681,12 @@ ALTER USER userName
  *userName*  
  Specifies the name by which the user is identified inside this database.  
   
- LOGIN **=**_loginName_  
+ LOGIN **=** _loginName_  
  Remaps a user to another login by changing the user's Security Identifier (SID) to match the login's SID.  
   
  If the ALTER USER statement is the only statement in a SQL batch, Azure SQL Database supports the WITH LOGIN clause. If the ALTER USER statement isn't the only statement in a SQL batch or is executed in dynamic SQL, the WITH LOGIN clause isn't supported.  
   
- NAME **=**_newUserName_  
+ NAME **=** _newUserName_  
  Specifies the new name for this user. *newUserName* must not already occur in the current database.  
   
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
@@ -795,12 +795,12 @@ ALTER USER userName
  *userName*  
  Specifies the name by which the user is identified inside this database.  
   
- LOGIN **=**_loginName_  
+ LOGIN **=** _loginName_  
  Remaps a user to another login by changing the user's Security Identifier (SID) to match the login's SID.  
   
  If the ALTER USER statement is the only statement in a SQL batch, Azure SQL Database supports the WITH LOGIN clause. If the ALTER USER statement isn't the only statement in a SQL batch or is executed in dynamic SQL, the WITH LOGIN clause isn't supported.  
   
- NAME **=**_newUserName_  
+ NAME **=** _newUserName_  
  Specifies the new name for this user. *newUserName* must not already occur in the current database.  
   
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  

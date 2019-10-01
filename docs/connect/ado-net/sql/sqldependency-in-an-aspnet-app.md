@@ -39,11 +39,11 @@ The example in this section shows how to use <xref:Microsoft.Data.SqlClient.SqlD
   
 4. Add the following code in the page's `Page_Load` event:  
   
-     [!code-csharp[DataWorks SqlDependency_Start#1](../../../../sqlclient/doc/samples/SqlDependency_Start.aspx.cs#1)]
+     [!code-csharp[DataWorks SqlDependency_Start#1](~/../sqlclient/doc/samples/SqlDependency_Start.cs#1)]
   
 5. Add two helper methods, `GetConnectionString` and `GetSQL`. The connection string defined uses integrated security. You will need to verify that the account you are using has the necessary database permissions and that the sample database, **AdventureWorks**, has notifications enabled.
   
-     [!code-csharp[DataWorks SqlDependency_Start#2](../../../../sqlclient/doc/samples/SqlDependency_Start_.aspx.cs#2)]
+     [!code-csharp[DataWorks SqlDependency_Start#2](~/../sqlclient/doc/samples/SqlDependency_Start.cs#2)]
   
 ### Testing the Application  
  The application caches the data displayed on the Web form and refreshes it every three minutes if there is no activity. If a change occurs to the database, the cache is refreshed immediately. Run the application from Visual Studio, which loads the page into the browser. The cache refresh time displayed indicates when the cache was last refreshed. Wait three minutes, and then refresh the page, causing a postback event to occur. Note that the time displayed on the page has changed. If you refresh the page in less than three minutes, the time displayed on the page will remain the same.  

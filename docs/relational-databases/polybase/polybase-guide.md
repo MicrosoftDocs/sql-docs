@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "Hadoop import, PolyBase overview"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ""
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # What is PolyBase?

@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "PolyBase, SQL objects"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ""
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # PolyBase Transact-SQL reference

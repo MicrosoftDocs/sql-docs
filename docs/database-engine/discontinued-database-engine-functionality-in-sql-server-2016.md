@@ -1,5 +1,5 @@
 ---
-title: "Discontinued Database Engine Functionality in SQL Server 2016 | Microsoft Docs"
+title: "Discontinued Database Engine Functionality in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: sql
@@ -35,11 +35,19 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# Discontinued Database Engine Functionality in SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# Discontinued Database Engine Functionality in SQL Server
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
-  
+  This topic describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)].  
+
+## Discontinued Features in [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
+
+- `DISABLE_BATCH_MODE_ADAPTIVE_JOIN`
+
+- `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`
+
+- `DISABLE_INTERLEAVED_EXECUTION_TVF`
+
 ## Discontinued Features in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.  

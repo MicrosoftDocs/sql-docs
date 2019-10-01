@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "remainder of division operation"
   - "modulo operator (%)"
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # (Modulo) (SSIS Expression)
 

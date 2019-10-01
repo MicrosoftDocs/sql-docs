@@ -62,6 +62,9 @@ Run the **kubectl** command to view the cluster configuration. Ensure that kubec
 kubectl config view
 ```
 
+> [!Important] 
+> If you are deploying on a multi node Kuberntes cluster that you bootstrapped using kubeadm, before starting the big data cluster deployment, ensure the clocks are synchronized across all the Kubernetes nodes the deployment is targeting. The big data cluster has built-in health properties for various services that are time sensitive and clock skews can result in incorrect status.
+
 After you have configured your Kubernetes cluster, you can proceed with the deployment of a new SQL Server big data cluster. If you are upgrading from a previous release, please see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
 ## <a id="deploy"></a> Deployment overview

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Reorganize Index task [Integration Services]"
   - "indexes [Integration Services]"
 ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Reorganize Index Task
 

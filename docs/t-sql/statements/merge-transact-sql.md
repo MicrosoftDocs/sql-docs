@@ -217,8 +217,8 @@ Specifies that all rows of *target_table, which match the rows returned by \<tab
 The MERGE statement can have, at most, two WHEN MATCHED clauses. If two clauses are specified, the first clause must be accompanied by an AND \<search_condition> clause. For any given row, the second WHEN MATCHED clause is only applied if the first isn't. If there are two WHEN MATCHED clauses, one must specify an UPDATE action and one must specify a DELETE action. When UPDATE is specified in the \<merge_matched> clause, and more than one row of \<table_source> matches a row in *target_table* based on \<merge_search_condition>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error. The MERGE statement can't update the same row more than once, or update and delete the same row.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-Specifies that a row is inserted into *target_table* for every row returned by \<table_source> ON \<merge_search_condition> that doesn't match a row in *target_table*, but satisfies an additional search condition, if present. The values to insert are specified by the \<merge_not_matched> clause. The MERGE statement can have only one WHEN NOT MATCHED clause.  
-  
+Specifies that a row is inserted into *target_table* for every row returned by \<table_source> ON \<merge_search_condition> that doesn't match a row in *target_table*, but satisfies an additional search condition, if present. The values to insert are specified by the \<merge_not_matched> clause. The MERGE statement can have only one WHEN NOT MATCHED [ BY TARGET ] clause.
+
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 Specifies that all rows of *target_table, which don't match the rows returned by \<table_source> ON \<merge_search_condition>, and that satisfy any additional search condition, are updated or deleted according to the \<merge_matched> clause.  
   

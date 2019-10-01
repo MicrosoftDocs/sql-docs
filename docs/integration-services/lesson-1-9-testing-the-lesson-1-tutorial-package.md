@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 1-9: Test the Lesson 1 package
 

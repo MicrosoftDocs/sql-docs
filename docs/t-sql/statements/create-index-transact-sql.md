@@ -372,7 +372,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Specifies whether to store temporary sort results in **tempdb**. The default is OFF.
+Specifies whether to store temporary sort results in **tempdb**. The default is OFF except for Azure SQL Database Hyperscale.For all index build operations in Hyperscale, SORT_IN_TEMPDB is always ON, regardless of the option specified unless resumable index rebuild is used.
 
 ON      
 The intermediate sort results that are used to build the index are stored in **tempdb**. This may reduce the time required to create an index if **tempdb** is on a different set of disks than the user database. However, this increases the amount of disk space that is used during the index build.

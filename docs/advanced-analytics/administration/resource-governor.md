@@ -1,21 +1,22 @@
 ---
-title: Resource governance for R and Python script execution
-description: Allocate RAM memory, CPU, and IO for R and Python workloads on SQL Server database engine instance.
+title: Manage Python and R workloads with Resource Governor
+description: Learn how to use Resource Governor to manage CPU, physical IO, and memory resources allocation for Python and R workloads in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 10/10/2018  
+ms.date: 10/01/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Resource governance for machine learning in SQL Server
+# Manage Python and R workloads with Resource Governor in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Data science and machine learning algorithms are computationally intensive. Depending on workload priorities, you might need to increase the resources available for data science, or decrease resourcing if R and Python script execution undermines the performance of other services running concurrently. 
+Learn how to use [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) to manage CPU, physical IO, and memory resources allocation for Python and R workloads in SQL Server Machine Learning Services.
 
-When you need to rebalance the distribution of system resources across multiple workloads, you can use [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) to allocate CPU, physical IO, and memory resources consumed by the external runtimes for R and Python. If you shift resource allocations, remember that you might need to also reduce the amount of memory reserved for other workloads and services. 
+Machine learning algorithms in Python and R are typically compute intensive. Depending on your workload priorities, you might need to increase or decrease the resources available for Machine Learning Services.
+
+For more general information, see [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).
 
 > [!NOTE] 
 > Resource Governor is an Enterprise Edition feature.
@@ -56,8 +57,7 @@ For an introduction to terminology and general concepts, see [Resource Governor 
 > [!NOTE]
 > Direct management of the Launchpad service by using Resource Governor is not supported. Launchpad is a trusted service that can only host launchers provided by Microsoft. Trusted launchers are explicitly configured to avoid consuming excessive resources.
   
-## See also
+## Next steps
 
-+ [Manage machine learning integration](../r/managing-and-monitoring-r-solutions.md)
-+ [Create a resource pool for machine learning](../r/how-to-create-a-resource-pool-for-r.md)
++ [Create a resource pool for machine learning](create-external-resource-pool.md)
 + [Resource Governor resource pools](../../relational-databases/resource-governor/resource-governor-resource-pool.md)

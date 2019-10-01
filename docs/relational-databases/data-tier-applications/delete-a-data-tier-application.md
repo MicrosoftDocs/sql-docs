@@ -146,7 +146,7 @@ ms.author: "sstein"
   
 ### Delete the DAC and leave the database
 
-The following example deletes a DAC named *<myApplication>* using the `Unmanage` method to delete the DAC but leave the database intact.  
+The following example deletes a DAC named `<myApplication>` using the `Unmanage` method to delete the DAC but leave the database intact.  
   
 ```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -171,7 +171,7 @@ $dacStore.Unmanage($dacName)
   
 ### Delete the DAC and detach the database
 
-The following example deletes a DAC named *<myApplication>* using the `Uninstall` method to delete the DAC and detach the database.  
+The following example deletes a DAC named `<myApplication>` using the `Uninstall` method to delete the DAC and detach the database.  
   
 ```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -196,7 +196,7 @@ $dacStore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMo
   
 ### Delete the DAC and drop the database
 
-The following example deletes a DAC named *<myApplication>* using the `Uninstall` method to delete the DAC and drop the database.  
+The following example deletes a DAC named `<myApplication>` using the `Uninstall` method to delete the DAC and drop the database.  
   
 ```powershell
 ## Set a SMO Server object to the default instance on the local computer.  

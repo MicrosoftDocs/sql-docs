@@ -49,6 +49,9 @@ monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproduc
   - `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`
   - `DISABLE_INTERLEAVED_EXECUTION_TVF`
 
+>[!NOTE]
+>No features were discontinued in [!INCLUDE[ssSQLv15](../includes/sssqlv14-md.md)].
+
 ## Discontinued Features in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.  

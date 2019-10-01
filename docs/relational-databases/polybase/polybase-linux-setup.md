@@ -2,8 +2,8 @@
 title: Install PolyBase on Linux
 titlesuffix: SQL Server
 description: This article describes how to install SQL Server PolyBase on Linux.
-author: "" 
-ms.author: mikeray 
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 7/22/2019
 ms.topic: conceptual
 ms.prod: sql

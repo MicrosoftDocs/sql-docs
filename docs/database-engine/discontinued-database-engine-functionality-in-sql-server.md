@@ -49,7 +49,7 @@ monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproduc
   - `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`
   - `DISABLE_INTERLEAVED_EXECUTION_TVF`
 
-For current configuration options, see [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
+For current configuration options, see [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 >[!NOTE]
 >No features were discontinued in [!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)].

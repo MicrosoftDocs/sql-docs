@@ -41,9 +41,15 @@ The following Transact-SQL commands are used in this section:
     WITH IDENTITY = 'username', SECRET = 'password';
     ```
 
-1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). The following example creates an external data source named `SQLServerInstance`. `LOCATION = '<vendor>://<server>[:<port>]'` identifies the external data source. In the example it points to a default instance of SQL Server. `PUSHDOWN` identifies whether computation should be pushed to the source. `PUSHDOWN` is `ON` by default. Finally, the example uses the credential created previously.
+1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). The following example:
 
-    ```sql
+  - Creates an external data source named `SQLServerInstance`.
+  - Identifies the external data source (`LOCATION = '<vendor>://<server>[:<port>]'`). In the example it points to a default instance of SQL Server.
+  - Identifies whether computation should be pushed to the source (`PUSHDOWN`). `PUSHDOWN` is `ON` by default.
+
+  Finally, the example uses the credential created previously.
+
+  ```sql
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
     WITH ( LOCATION = 'sqlserver://SqlServer',
        PUSHDOWN = ON,

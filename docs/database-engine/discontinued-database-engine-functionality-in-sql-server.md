@@ -36,12 +36,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Discontinued Database Engine Functionality in SQL Server
+# Discontinued database engine functionality in SQL Server
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)].  
 
-## Discontinued Features in [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
+## Discontinued features in [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
 
 - The following database scoped configuration options are discontinued:
 
@@ -52,10 +52,10 @@ monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproduc
 >[!NOTE]
 >No features were discontinued in [!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)].
 
-## Discontinued Features in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
-  
+## Discontinued features in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
+
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.  
-  
+
 - Compatibility level 90 is discontinued. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 - ActiveX subsystem is discontinued. Use command line or PowerShell scripts instead.
@@ -63,13 +63,12 @@ monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproduc
 - Startup parameters **-h** and **-g**. For more information, see [Database Engine Service Startup Options](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
 
 - Secure Sockets Layer (SSL) encryption is discontinued. Use Transport Layer Security (TLS) instead. For more information, see [Enable Encrypted Connections to the Database Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
-  
-## Previous Versions  
-  
+
+## Previous Versions
+
 - [Discontinued Database Engine Functionality in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
-## See Also  
- [Deprecated Database Engine Features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Deprecated Features in SQL Server Replication](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
-  
- 
+## See Also
+
+- [Deprecated Database Engine Features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
+- [Deprecated Features in SQL Server Replication](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)

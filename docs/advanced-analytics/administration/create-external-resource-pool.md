@@ -1,29 +1,30 @@
 ---
-title: How to create a resource pool for R and Python
-description: Define a SQL Server resource pool for R or Python processes on a SQL Server database engine instance.
+title: Create a resource pool for Python and R
+description: Learn how you can create and use a resource pool for managing Python and R workloads in SQL Server Machine Learning Services. 
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 07/30/2019
+ms.date: 10/01/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# How to create a resource pool for SQL Server Machine Learning Services
+# Create a resource pool for SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how you can create and use a resource pool specifically for managing R and Python machine learning workloads in SQL Server. It assumes that you have already installed and enabled the machine learning features, and want to reconfigure the instance to support more fine-grained management of the resources used by external process such as R or Python.
+Learn how you can create and use a resource pool for managing Python and R workloads in SQL Server Machine Learning Services. 
 
 The process includes multiple steps:
 
-1.  Review status of any existing resource pools. It is important that you understand what services are using existing resources.
-2.  Modify server resource pools.
-3.  Create a new resource pool for external processes.
-4.  Create a classification function to identify external script requests.
-5.  Verify that the new external resource pool is capturing R or Python jobs from the specified clients or accounts.
+1. Review status of any existing resource pools. It is important that you understand what services are using existing resources.
+2. Modify server resource pools.
+3. Create a new resource pool for external processes.
+4. Create a classification function to identify external script requests.
+5. Verify that the new external resource pool is capturing R or Python jobs from the specified clients or accounts.
 
-##  <a name="bkmk_ReviewStatus"></a> Review the status of existing resource pools
+<a name="bkmk_ReviewStatus"></a>
+
+##  Review the status of existing resource pools
   
 1.  Use a statement such as the following to check the resources allocated to the default pool for the server.
   
@@ -188,9 +189,9 @@ To verify that the changes have been made, you should check the configuration of
 
 For more information about managing server resources, see:
 
-+  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) 
++ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) 
 + [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
 For an overview of resource governance for machine learning, see:
 
-+  [Resource Governance for Machine Learning Services](../../advanced-analytics/r/resource-governance-for-r-services.md)
++ [Manage Python and R workloads with Resource Governor in SQL Server Machine Learning Services](resource-governor.md)

@@ -185,6 +185,31 @@ Controls the use of SET FMTONLY for metadata when connecting to SQL Server 2012 
 |No|(Default) Use sp_describe_first_result_set for metadata if available. |
 |Yes| Use SET FMTONLY for metadata. |
 
+
+## ClientCertificate
+
+Specifies the certificate to be used for authentication. The options are: 
+
+| Option Value | Description |
+|-|-|
+| sha1:`<hash_value>` | The ODBC driver uses SHA1 hash to locate a certificate in Windows Certificate Store |
+| subject:`<subject>` | The ODBC driver uses subject to locate a certificate in Windows Certificate Store |
+| file:`<file_location>`[,password:`<password>`] | The ODBC driver uses a certificate file. |
+
+In case if certificate is in PFX format and private key inside the PFX certificate is password protected, the password keyword is required. For certificates in PEM and DER formats ClientKey attribute is required
+
+
+## ClientKey
+
+Specifies a file location of the private key for PEM or DER certificates specified by the ClientCertificate attribute. Format: 
+
+| Option Value | Description |
+|-|-|
+| file:`<file_location>`[,password:`<password>`] | Specifies location of the private key file. |
+
+In case if private key file is password protected then password keyword is required. If the password contains any "," characters, an extra "," character is added immediately after each one. For example, if the password is "a,b,c", the escaped password present in the connection string is "a,,b,,c". 
+    
+
 ### SQL_COPT_SS_ACCESS_TOKEN
 
 Allows the use of an Azure Active Directory access token for authentication. See [Using Azure Active Directory](using-azure-active-directory.md) for more information.

@@ -179,7 +179,8 @@ single_byte_representing_complete_character single_byte_representing_complete_ch
 
 ### F. Using CHAR to return multibyte characters
 This example uses integer and hex values in the valid range for Extended ASCII. However, the CHAR function returns NULL because the parameter represents only the first byte of a multibyte character.
-Although `NCHAR(2)` supplementary characters can be composed this way, `CHAR(2)` double-byte characters cannot.
+`CHAR(2)` double-byte characters cannot be composed from constituent first and second `CHAR(1)` bytes in the way that
+`NCHAR(2)` supplementary characters can be composed from constituent high and low `NCHAR(1)` surrogates.
   
 ```sql
 SELECT CHAR(129) AS first_byte_of_double_byte_character, 

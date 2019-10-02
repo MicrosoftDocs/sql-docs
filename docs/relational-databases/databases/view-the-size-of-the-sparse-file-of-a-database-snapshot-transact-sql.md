@@ -30,8 +30,6 @@ ms.author: "sstein"
   
 1.  On the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
      Select the **is_sparse** column from either **sys.database_files** in the database snapshot or from **sys.master_files**. The value indicates whether the file is a sparse file, as follows:  
   
      1 = File is a sparse file.  

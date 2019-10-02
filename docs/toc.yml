@@ -209,8 +209,6 @@
         items:
         - name: azdata
           href: big-data-cluster/reference-azdata.md
-        - name: control
-          href: big-data-cluster/reference-azdata-control.md
         - name: notebook
           href: big-data-cluster/reference-azdata-notebook.md
         - name: sql
@@ -1770,8 +1768,6 @@
         href: relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md
       - name: Work with
         href: relational-databases/track-changes/work-with-change-data-sql-server.md
-      - name: Troubleshoot
-        href: relational-databases/track-changes/known-issues-resolutions-with-cdc-for-oracle-attunity.md
     - name: Change tracking
       href: relational-databases/track-changes/about-change-tracking-sql-server.md
       items:
@@ -4164,8 +4160,8 @@
       href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
     - name: Deprecated in SQL Server 2016
       href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-    - name: Discontinued functionality in SQL Server 2016
-      href: database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md
+    - name: Discontinued functionality in SQL Server
+      href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
     - name: Breaking changes in SQL Server 2017
       href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
     - name: Breaking changes in SQL Server 2016

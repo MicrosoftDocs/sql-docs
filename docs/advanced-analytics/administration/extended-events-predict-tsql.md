@@ -1,34 +1,21 @@
 ---
-title: Extended events for monitoring PREDICT statements
+title: Monitor PREDICT T-SQL with extended events
+description: Learn how to use extended events to monitor and troubleshooting PREDICT T-SQL statements in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 04/15/2018  
+ms.date: 09/24/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
+# Monitor PREDICT T-SQL statements with extended events in SQL Server Machine Learning Services
 
-# Extended events for monitoring PREDICT statements
-
-This article describes the extended events provided in SQL Server that you can use to monitor and analyze jobs that use [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) to perform real-time scoring in SQL Server.
-
-Real-time scoring generates scores from a machine learning model that has been stored in SQL Server. The PREDICT function does not require an external run-time such as R or Python, only a model that has been created using a specific binary format. For more information, see [Realtime scoring](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
-
-## Prerequisites
-
-For general information about extended events (sometimes called XEvents), and how to track events in a session, see these articles:
-
-+ [Extended Events concepts and architecture](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
-+ [Set up event capture in SSMS](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
-+ [Manage event sessions in the Object Explorer](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
+Learn how to use extended events to monitor and troubleshooting [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL statements in SQL Server Machine Learning Services.
 
 ## Table of extended events
 
-The following extended events are available in all versions of SQL Server that support the [T-SQL PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) statement, including SQL Server on Linux, and Azure SQL Database. 
-
-The T-SQL PREDICT statement was introduced in SQL Server 2017. 
+The following extended events are available in all versions of SQL Server that support the [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) T-SQL statement. 
 
 |name |object_type|description| 
 |----|----|----|
@@ -43,7 +30,9 @@ The T-SQL PREDICT statement was introduced in SQL Server 2017.
 To view a list of all columns returned for these events, run the following query in SQL Server Management Studio:
 
 ```sql
-SELECT * FROM sys.dm_xe_object_columns WHERE object_name LIKE `predict%'
+SELECT * 
+FROM sys.dm_xe_object_columns 
+WHERE object_name LIKE `predict%'
 ```
 
 ## Examples
@@ -80,3 +69,11 @@ FROM sys.dm_os_memory_objects
 WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 ```
 
+## Next steps
+
+For more information about extended events (sometimes called XEvents), and how to track events in a session, see these articles:
+
++ [Monitor Python and R scripts with extended events in SQL Server Machine Learning Services](extended-events.md)
++ [Extended Events concepts and architecture](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
++ [Set up event capture in SSMS](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
++ [Manage event sessions in the Object Explorer](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)

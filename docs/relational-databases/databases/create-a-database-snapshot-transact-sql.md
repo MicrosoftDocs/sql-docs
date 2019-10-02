@@ -93,8 +93,6 @@ AdventureWorks_snapshot_evening
   
 2.  Issue a CREATE DATABASE statement on the files using the AS SNAPSHOT OF clause. Creating a snapshot requires specifying the logical name of every database file of the source database. The syntax is as follows:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
      CREATE DATABASE *database_snapshot_name*  
   
      ON  

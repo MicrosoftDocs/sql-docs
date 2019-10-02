@@ -58,7 +58,7 @@ In this step, you need to make sure that all your client applications that query
   - If the certificate is stored in the *Local computer* certificate store location, the application's Windows identity must have permission to access the certificate.
 - If the new column master key is stored in Microsoft Azure Key Vault, the application must be implemented so that it can authenticate to Azure and has permission to access the key.
 
-For details, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+For details, see [Create and Store Column Master Keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 > [!NOTE]
 > At this point in the rotation, both the old column master key and the new column master key are valid and can be used to access the data.

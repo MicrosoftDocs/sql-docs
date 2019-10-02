@@ -88,13 +88,13 @@ To ensure Always Encrypted is effective in preventing these types of attacks, yo
 
 ## Next Steps
 
-- [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
+- [Create and Store Column Master Keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md)
 - [Provision Always Encrypted Keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
 - [Configure Always Encrypted using PowerShell](configure-always-encrypted-using-powershell.md)
 
 
 
-## Additional Resources
+## See Also
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted Wizard tutorial (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)

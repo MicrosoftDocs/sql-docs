@@ -52,7 +52,7 @@ For more information, see [Create and Store Column Master Keys (Always Encrypted
 ## Next Steps
 - [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
 - [Query Columns Protected with Always Encrypted using SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
-- 
+
 ## See Also  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
  - [Overview of Key Management for Always Encrypted](overview-of-key-management-for-always-encrypted.md) 

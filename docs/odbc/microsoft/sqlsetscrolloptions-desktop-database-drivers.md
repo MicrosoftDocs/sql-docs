@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 51d643ed-015b-4639-969a-9491d9875aca
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetScrollOptions (Desktop Database Drivers)
 Forward and static cursors are supported for SQL_CONCUR_READ_ONLY.  

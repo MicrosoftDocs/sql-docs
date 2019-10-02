@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: 10/18/2016
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.reportserver.serverproperties.advanced.f1"

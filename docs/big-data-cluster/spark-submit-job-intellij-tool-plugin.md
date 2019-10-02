@@ -4,19 +4,19 @@ titleSuffix: SQL Server big data clusters
 description: Submit Spark jobs on SQL Server big data clusters in Azure Toolkit for IntelliJ.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
-ms.date: 02/28/2019
+ms.reviewer: mikeray
+ms.date: 08/21/2019
 ms.topic: conceptual
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Submit Spark jobs on SQL Server big data clusters in IntelliJ
+# Submit Spark jobs on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in IntelliJ
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-One of the key scenarios for SQL Server big data clusters is the ability to submit Spark jobs. The Spark job submission feature allows you to submit a local Jar or Py files with references to SQL Server big data clusters. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
+One of the key scenarios for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is the ability to submit Spark jobs. The Spark job submission feature allows you to submit a local Jar or Py files with references to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
 
 ## Prerequisites
 
@@ -43,7 +43,7 @@ One of the key scenarios for SQL Server big data clusters is the ability to subm
 
     ![link Big Data cluster - context menu](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-contextmenu.png)
 
-## Create a Spark Scala application from HDInsight template
+## Create a Spark Scala application from Spark template
 
 1. Start IntelliJ IDEA, and then create a project. In the **New Project** dialog box, follow below steps: 
 
@@ -191,4 +191,4 @@ For convenience, you can see the script result by sending some code to the Local
    ![Send Selection To Spark Console](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## Next steps
-For more information on SQL Server big data cluster and related scenarios, see [What are SQL Server 2019 big data clusters](big-data-cluster-overview.md)?
+For more information on SQL Server big data cluster and related scenarios, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)?

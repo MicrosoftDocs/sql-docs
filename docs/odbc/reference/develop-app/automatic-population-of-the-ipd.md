@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Automatic Population of the IPD
 Some drivers are capable of setting the fields of the IPD after a parameterized query has been prepared. The descriptor fields are automatically populated with information about the parameter, including the data type, precision, scale, and other characteristics. This is equivalent to supporting **SQLDescribeParam**. This information can be particularly valuable to an application when it has no other way to discover it, such as when an ad hoc query is performed with parameters that the application does not know about.  

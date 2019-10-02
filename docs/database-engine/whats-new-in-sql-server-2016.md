@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # What's new in Database Engine - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ To review what is new in the other SQL Server components, see [What's New in SQL
 
 #### Try it out
 
-- To download [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![download](../analysis-services/media/download.png "download").
+- To download [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016).
 
 - Have an Azure account?  Then go **[Here](https://azure.microsoft.com/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.
 
@@ -95,7 +94,7 @@ For more details, see these topics in the [Columnstore Indexes Guide](../relatio
 
 - [Columnstore Indexes for Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)
 
-- [Columnstore Indexes Defragmentation](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)
+- [Reorganize and Rebuild Indexes](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
 
 ## Database scoped configurations
@@ -438,7 +437,7 @@ Download the latest [SQL Server Management Studio (SSMS)](../ssms/download-sql-s
 ### Upgrade Advisor
 SQL Server 2016 Upgrade Advisor Preview is a standalone tool that enables users of prior versions to run a set of upgrade rules against their SQL Server database to pinpoint breaking and behavior changes and deprecated features as well as providing help with the adoption of new features such as Stretch Database.
 
- You can download Upgrade Advisor Preview [here](https://www.microsoft.com/download/details.aspx?id=48119) or you can install it by using the Web Platform Installer.
+ You can download Upgrade Advisor Preview [here](https://docs.microsoft.com/sql/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades#how-to-install-and-run-upgrade-advisor) or you can install it by using the Web Platform Installer.
 
 ## See Also
 [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)

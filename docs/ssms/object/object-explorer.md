@@ -1,10 +1,7 @@
 ---
 title: "Object Explorer | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
@@ -24,11 +21,15 @@ helpviewer_keywords:
   - "filtering objects [SQL Server]"
   - "Object Explorer, about Object Explorer"
 ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "01/19/2017"
 ---
+
 # Object Explorer
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides features for managing objects in instances of the [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   

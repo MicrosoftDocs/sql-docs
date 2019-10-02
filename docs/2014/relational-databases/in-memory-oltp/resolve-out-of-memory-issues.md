@@ -63,7 +63,7 @@ manager: craigg
 ## Resolve impact of low memory or OOM conditions on the workload  
  Obviously, it is best to not get into a low memory or OOM (Out of Memory) situation. Good planning and monitoring can help avoid OOM situations. Still, the best planning does not always foresee what actually happens and you might end up with low memory or OOM. There are two steps to recovering from OOM:  
   
-1.  [Open a DAC (Dedicated Administrator Connection) ](#open-a-dac-dedicated-administrator-connection) 
+1.  [Open a DAC (Dedicated Administrator Connection)](#open-a-dac-dedicated-administrator-connection) 
   
 2.  [Take corrective action](#take-corrective-action) 
   

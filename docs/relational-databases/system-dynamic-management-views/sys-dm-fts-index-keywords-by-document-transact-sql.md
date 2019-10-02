@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "sys.dm_fts_index_keywords_by_document dynamic management function"
   - "full-text search [SQL Server], viewing keywords"
 ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: pmasl 
+ms.author: pelopes
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_index_keywords_by_document (Transact-SQL)

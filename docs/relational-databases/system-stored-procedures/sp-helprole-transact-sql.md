@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helprole (Transact-SQL)

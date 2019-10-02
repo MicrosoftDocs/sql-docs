@@ -2,7 +2,8 @@
 title: "sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/27/2019"
-ms.prod: 
+ms.prod: sql
+ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ""
 ms.technology: system-objects
@@ -19,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
 ---
 # sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-Returns snapshot at 15 seconds interval for last 30 minutes of resource pools stats for an Azure SQL Database.  
+Returns snapshot at 20 seconds interval for last 32 minutes (128 recs in total) of resource pools stats for an Azure SQL Database.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -96,7 +96,7 @@ Returns snapshot at 15 seconds interval for last 30 minutes of resource pools 
 
 ## Permissions
 
-This view requires VIEW DATABASE STATE permission.
+This view requires VIEW SERVER STATE permission.
 
 ## Remarks
 

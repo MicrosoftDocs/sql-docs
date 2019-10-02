@@ -8,11 +8,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # The Oracle CDC Databases
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   An Oracle CDC Instance is associated with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by the same name on the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. This database is called the Oracle CDC database (or the CDC database).  
   
  The CDC database is created and configured using the Oracle CDC Designer Console and it contains the following elements:  

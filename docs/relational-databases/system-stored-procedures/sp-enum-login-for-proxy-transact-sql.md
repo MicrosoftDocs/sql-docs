@@ -16,10 +16,10 @@ helpviewer_keywords:
   - "sp_enum_login_for_proxy"
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
-manager: craigg
-manager: craigg
+author: VanMSFT
 ---
 # sp_enum_login_for_proxy (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Lists associations between security principals and proxies.  
@@ -29,7 +29,6 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 sp_enum_login_for_proxy  
     [ @name = ] 'name'  
     [ @proxy_id = ] id,  
@@ -57,6 +56,7 @@ sp_enum_login_for_proxy
 |**proxy_name**|**sysname**|The name of the proxy.|  
 |**name**|**sysname**|Name of the security principal for the association.|  
 |**flags**|**int**|Type of the security principal.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login<br /><br /> **1** = Fixed system role<br /><br /> **2** = Database role in **msdb**|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## Remarks  
  When no parameters are provided, **sp_enum_login_for_proxy** lists information about all logins in the instance for every proxy.  
@@ -75,7 +75,7 @@ sp_enum_login_for_proxy
 ### A. Listing all associations  
  The following example lists all permissions established between logins and proxies in the current instance.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -86,7 +86,7 @@ GO
 ### B. Listing proxies for a specific login  
  The following example lists the proxies that the login `terrid` has access to.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

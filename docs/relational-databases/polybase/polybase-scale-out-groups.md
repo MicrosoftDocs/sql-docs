@@ -1,9 +1,7 @@
 ---
 title: "PolyBase scale-out groups | Microsoft Docs"
-ms.custom: ""
 ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -11,9 +9,9 @@ helpviewer_keywords:
   - "PolyBase, scale-out groups"
   - "scale-out PolyBase"
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # PolyBase scale-out groups

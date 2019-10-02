@@ -1,18 +1,16 @@
 ---
 title: "PolyBase Transact-SQL reference | Microsoft Docs"
-ms.custom: ""
 ms.date: 09/24/2018
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: reference
 helpviewer_keywords: 
   - "PolyBase, fundamentals"
   - "PolyBase, SQL statements"
   - "PolyBase, SQL objects"
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # PolyBase Transact-SQL reference
@@ -142,7 +140,7 @@ WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
 -- CREDENTIAL: The database scoped credential created above.  
   
 CREATE EXTERNAL DATA SOURCE AzureStorage with (  
-        TYPE = HADOOP,   
+        TYPE = BLOB_STORAGE,   
         LOCATION ='wasbs://<blob_container_name>@<azure_storage_account_name>.blob.core.windows.net',  
         CREDENTIAL = AzureStorageCredential  
 );  
@@ -313,7 +311,7 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
     );
 ```
 
-**4. Create Schema** 
+**3. Create Schema** 
 
 ```sql
      CREATE SCHEMA sqlserver;

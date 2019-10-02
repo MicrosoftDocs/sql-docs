@@ -11,7 +11,6 @@ ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 ---
 # Find Key Phrases in Documents with Semantic Search
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

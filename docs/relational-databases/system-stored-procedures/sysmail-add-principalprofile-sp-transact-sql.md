@@ -17,12 +17,11 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Grants permission for a database user or role to use a Database Mail profile.  
+  Grants permission for an msdb database principal to use a Database Mail profile. The database principal must map to a SQL Server authentication user, a Windows User, or a Windows Group.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -11,11 +11,14 @@ f1_keywords:
   - "sql13.dts.designer.afpsubscrconn.f1"
   - "sql14.dts.designer.afpsubscrconn.f1"
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Azure Subscription Connection Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The **Azure Subscription connection manager** enables an SSIS package to connect to an Azure subscription by using the values you specify for the properties: Azure Subscription ID and Management Certificate.  
   
  The **Azure Subscription connection manager** is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).

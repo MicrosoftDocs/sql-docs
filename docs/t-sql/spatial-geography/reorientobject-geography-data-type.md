@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ReorientObject method (geography)"
 ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # ReorientObject (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

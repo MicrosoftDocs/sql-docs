@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "GeomCollection geometry subtype [SQL Server]"
   - "geometry subtypes [SQL Server]"
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GeometryCollection

@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "ABS function"
   - "absolute positive value"
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # ABS (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the absolute, positive value of a numeric expression.  
   
 ## Syntax  

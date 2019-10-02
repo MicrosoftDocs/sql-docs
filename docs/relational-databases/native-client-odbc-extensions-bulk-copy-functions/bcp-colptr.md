@@ -15,9 +15,8 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "bcp_colptr function"
 ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # bcp_colptr

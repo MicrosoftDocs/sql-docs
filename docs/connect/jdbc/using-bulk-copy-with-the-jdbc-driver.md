@@ -1,7 +1,7 @@
 ---
-title: "Using Bulk Copy with the JDBC Driver | Microsoft Docs"
+title: "Using bulk copy with the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,9 +10,8 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
-# Using Bulk Copy with the JDBC Driver
+# Using bulk copy with the JDBC driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -560,7 +559,7 @@ public class BulkCopyExistingTransactions {
 }
 ```
 
-### Bulk Copy from a CSV File  
+### Bulk copy from a CSV file  
 
  The following application demonstrates how to load data using the SQLServerBulkCopy class. In this example, a CSV file is used to copy data exported from the Production.Product table in the SQL Server AdventureWorks database to a similar table in the database.  
   
@@ -789,6 +788,6 @@ Implementation Notes and Limitations:
 | Void setTimeWithTimezoneFormat(DateTimeForm atter dateTimeFormatter)                                   | Sets the format for parsing Time data from the file as java.sql.Types.TIME_WITH_TIMEZONE.           |
 | Void setTimeWithTimezoneFormat(String timeFormat)                                                      | Sets the format for parsing Time data from the file as java.sql.Types.TIME_WITH_TIMEZONE.           |
   
-## See Also  
+## See also  
 
-[Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

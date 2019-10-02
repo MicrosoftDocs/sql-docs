@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "sp_fulltext_service"
   - "Full-Text Search Upgrade Option"
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

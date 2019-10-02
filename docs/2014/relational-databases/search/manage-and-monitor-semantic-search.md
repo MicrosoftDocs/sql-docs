@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "semantic search [SQL Server], managing"
   - "semantic search [SQL Server], monitoring"
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Manage and Monitor Semantic Search

@@ -16,9 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_fts_index_keywords_position_by_document dynamic management view"
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: pmasl 
+ms.author: pelopes
 ---
 # sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

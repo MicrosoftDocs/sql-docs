@@ -2,7 +2,6 @@
 title: "Claims to Windows Token Service (c2WTS) and Reporting Services | Microsoft Docs"
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
 ms.topic: conceptual
@@ -45,7 +44,7 @@ If your environment will use Kerberos constrained delegation, then the SharePoin
 
     **As a best practice C2WTS should run under its own domain identity.**
 
-    * Create an Active Directory account and register the account as a managed account in SharePoint Server. To learn more about managed accounts, see [Managed Accounts in Sharepoint](https://blogs.technet.microsoft.com/wbaer/2010/04/11/managed-accounts-in-sharepoint-2010/)
+    * Create an Active Directory account and register the account as a managed account in SharePoint Server. To learn more about managed accounts, see [Managed Accounts in Sharepoint](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/)
    
     * Configure C2WTS Service to use the managed account through SharePoint Central Administration > Security > Configure Service Accounts > Windows Service - Claims to Windows Token Service
 
@@ -79,7 +78,7 @@ If your environment will use Kerberos constrained delegation, then the SharePoin
     * Select **Users or Computers...&#42;** and enter the account that hosts the service. For example, if a SQL Server is running under an account named *sqlservice*, enter `sqlservice`. 
 	  For the **Report Viewer web part**, this will be the service account for the Reporting Services (Native Mode) Instance.
 
-    * Select the service listing. This will show the SPNs that are available on that account. If you don't see the service listed on that account, it may be missing or placed on a different account. you can use the SetSPN utility to adjust SPNs. For the **Report Viewer web part**, you will see the http SPN configured in [Report Viewer web part configuration](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).
+    * Select the service listing. This will show the SPNs that are available on that account. If you don't see the service listed on that account, it may be missing or placed on a different account. you can use the SetSPN utility to adjust SPNs. For the **Report Viewer web part**, you will see the http SPN configured in [Report Viewer web part configuration](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
 
     * Select OK to get out of the dialogs.
 

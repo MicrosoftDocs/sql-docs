@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 781cf5a5-325e-4523-8633-d96d9e98277c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLRowCount (Cursor Library)
 > [!IMPORTANT]  

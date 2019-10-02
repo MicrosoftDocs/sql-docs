@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create and Store Column Master Keys (Always Encrypted)
@@ -103,6 +102,8 @@ To grant a user the *Read* permission for a certificate stored in the local mach
 7.  In the **Add/Remove Snap-in** dialog box, click **OK**.
 8.  From the **Certificates** snap-in, locate the certificate in the **Certificates > Personal** folder, right-click the Certificate, point to **All Tasks**, and then click **Manage Private Keys**.
 9.  In the **Security** dialog box, add read permission for a user account if needed.
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Creating Column Master Keys in Azure Key Vault
 

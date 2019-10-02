@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Prerequisites, Restrictions, and Recommendations for Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ manager: craigg
   
      The following PowerShell example sets the HostRecordTTL to 300 seconds for a Network Name resource named `SQL Network Name (SQL35)`.  
   
-    ```  
+    ```powershell
     Import-Module FailoverClusters  
   
     $nameResource = "SQL Network Name (SQL35)"  
@@ -263,7 +262,7 @@ manager: craigg
   
 -   **Maximum number of availability groups and availability databases per computer:** The actual number of databases and availability groups you can put on a computer (VM or physical) depends on the hardware and workload, but there is no enforced limit. Microsoft has tested up to 10 AGs and 100 DBs per physical machine, however this is not a binding limit. Depending on the hardware specification on the server and the workload, you can put a higher number of databases and availability groups on an instance of SQL Server. Signs of overloaded systems can include, but are not limited to, worker thread exhaustion, slow response times for availability group system views and DMVs, and/or stalled dispatcher system dumps. Please make sure to thoroughly test your environment with a production-like workload to ensure it can handle peak workload capacity within your application SLAs. When considering SLAs be sure to consider load under failure conditions as well as expected response times.  
   
--   **Do not use the Failover Cluster Manager to manipulate availability groups:**  
+-   **Do not use the Failover Cluster Manager to manipulate availability groups**. The state of a SQL Server Failover Cluster Instance (FCI) is shared between SQL Server and the Windows Failover Cluster (WSFC), with SQL Server keeping more detailed state information about the instances than the cluster cares about. The management model is that SQL Server must drive the transactions, and is responsible for keeping the cluster's view of the state in sync with SQL Server's view of state. If the state of the cluster is changed outside of SQL Server it is possible for the state to get out of sync between WSFC and SQL Server, which may lead to unpredictable behavior.
   
      For example:  
   

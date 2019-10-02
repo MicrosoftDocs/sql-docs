@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Column element"
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Column Element for Index (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

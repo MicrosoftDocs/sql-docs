@@ -14,9 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_reconcile_batch stored procedure"
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # sys.sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

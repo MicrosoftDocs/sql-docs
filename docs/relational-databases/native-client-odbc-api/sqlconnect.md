@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 6da74e3a-4388-4907-81cb-987389bae467
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLConnect

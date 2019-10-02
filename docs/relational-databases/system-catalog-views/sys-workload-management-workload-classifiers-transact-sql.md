@@ -2,7 +2,8 @@
 title: "sys.workload_management_workload_classifiers (Transact-SQL) | Microsoft Docs"
 ms.custom:
 ms.date: "05/01/2019"
-ms.prod: ""
+ms.prod: sql
+ms.technology: system-objects
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"
 ms.topic: "language-reference"
@@ -10,7 +11,6 @@ dev_langs:
   - "TSQL"
 author: "ronortloff"
 ms.author: "rortloff"
-manager: craigg
 monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # sys.workload_management_workload_classifiers (Transact-SQL)

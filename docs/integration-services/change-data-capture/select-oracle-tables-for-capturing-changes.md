@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "selOraTabDia"
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Select Oracle Tables for Capturing Changes
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use this dialog box to select the tables that are included in the CDC instance. The tables selected are added to the list in the **Select Tables and Columns** page of the New Instance wizard. You can do the following in this dialog box.  
   
  By default, no tables are included in the list of tables in this dialog box. You can select the check box at the top of the check box column to select all of the tables or search for specific tables.  

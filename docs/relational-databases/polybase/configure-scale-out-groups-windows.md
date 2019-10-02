@@ -1,21 +1,19 @@
 ---
-title: "Improve PolyBase scale-out groups on Windows | Microsoft Docs"
+title: "Configure PolyBase scale-out groups on Windows | Microsoft Docs"
 ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ""
-ms.custom: ""
 ms.technology: polybase
 ms.topic: "tutorial"
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
-# Improve PolyBase scale-out groups on Windows
+# Configure PolyBase scale-out groups on Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how to setup a [PolyBase scale-out group](polybase-scale-out-groups.md) on Windows. This creates a cluster of SQL Server instances to process large data sets from external data sources, such as Hadoop or Azure Blob Storage, in a scale-out fashion for better query performance.
+This article describes how to set up a [PolyBase scale-out group](polybase-scale-out-groups.md) on Windows. This creates a cluster of SQL Server instances to process large data sets from external data sources, such as Hadoop or Azure Blob Storage, in a scale-out fashion for better query performance.
 
 ## Prerequisites
   
@@ -36,6 +34,8 @@ The following steps summarize the process for creating a PolyBase scale-out grou
 4. Monitor nodes in the group using [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).
 
 5. Optional. Remove a compute node from  using [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Example walk-through
 

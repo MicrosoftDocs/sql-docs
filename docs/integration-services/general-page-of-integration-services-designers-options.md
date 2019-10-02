@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General"
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # General Page of Integration Services Designers Options
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **General** page of the **Integration Services Designers** page in the **Options** dialog box to specify the options for loading, displaying, and upgrading packages.  
   
  To open the **General** page, in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], on the **Tools** menu, click **Options**, expand **Business Intelligence Designers**, and select **Integration Services Designers**.  

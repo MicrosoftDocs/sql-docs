@@ -14,11 +14,14 @@ helpviewer_keywords:
   - "XML [Integration Services]"
   - "XML task [Integration Services]"
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # XML Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The XML task is used to work with XML data. Using this task, a package can retrieve XML documents, apply operations to the documents by using Extensible Stylesheet Language Transformations (XSLT) style sheets and XPath expressions, merge multiple documents, or validate, compare, and save the updated documents to files and variables.  
   
  This task enables an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to dynamically modify XML documents at run time. You can use the XML task for the following purposes:  

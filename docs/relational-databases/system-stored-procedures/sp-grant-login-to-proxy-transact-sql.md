@@ -16,10 +16,10 @@ helpviewer_keywords:
   - "sp_grant_login_to_proxy"
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
-manager: craigg
-manager: craigg
+author: VanMSFT
 ---
 # sp_grant_login_to_proxy (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Grants a security principal access to a proxy.  
@@ -30,7 +30,6 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 sp_grant_login_to_proxy   
      { [ @login_name = ] 'login_name'   
      | [ @fixed_server_role = ] 'fixed_server_role'   
@@ -66,7 +65,7 @@ sp_grant_login_to_proxy
 ## Examples  
  The following example allows the login `adventure-works\terrid` to use the proxy `Catalog application proxy`.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

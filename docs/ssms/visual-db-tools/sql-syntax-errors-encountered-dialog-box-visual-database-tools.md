@@ -11,9 +11,8 @@ f1_keywords:
   - "vdt.dlgbox.sqlsyntaxerrorsencountered"
   - "vdtsql.chm:69641"
 ms.assetid: bc9e5784-227e-4c5d-8084-24274fa6c14a
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # SQL Syntax Errors Encountered Dialog Box (Visual Database Tools)

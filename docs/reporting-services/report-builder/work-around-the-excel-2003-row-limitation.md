@@ -2,7 +2,7 @@
 title: "Work Around the Excel 2003 Row Limitation | Microsoft Docs"
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 
 

@@ -1,7 +1,7 @@
 ---
-title: "System Requirements for the JDBC Driver | Microsoft Docs"
+title: "System requirements for the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/16/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,9 +10,8 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
-# System Requirements for the JDBC Driver
+# System requirements for the JDBC driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   To access data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] by using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], you must have the following components installed on your computer:
@@ -20,7 +19,9 @@ manager: craigg
 - [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([download](download-microsoft-jdbc-driver-for-sql-server.md))
 - Java Runtime Environment
 
-## Java Runtime Environment Requirements  
+## Java Runtime Environment requirements  
+
+ Starting with the Microsoft JDBC Driver 7.4 for SQL Server, Java Development Kit (JDK) 12.0 and Java Runtime Environment (JRE) 12.0 are supported.
 
  Starting with the Microsoft JDBC Driver 7.2 for SQL Server, Java Development Kit (JDK) 11.0 and Java Runtime Environment (JRE) 11.0 are supported.
  
@@ -34,7 +35,32 @@ manager: craigg
   
  Starting with the [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], the JDBC driver support for Java Database Connectivity (JDBC) Spec API has been extended to include the JDBC 4.0 API. The JDBC 4.0 API was introduced as part of the Java Development Kit (JDK) 6.0 and Java Runtime Environment (JRE) 6.0. JDBC 4.0 is a superset of the JDBC 3.0 API.
   
- When you deploy the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] on Windows and UNIX operating systems, you must use the installation packages, *sqljdbc_\<version>_enu.exe*, and *sqljdbc_\<version>_enu.tar.gz*, respectively. For more information about how to deploy the JDBC Driver, see [Deploying the JDBC Driver](../../connect/jdbc/deploying-the-jdbc-driver.md) topic.  
+ When you deploy the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] on Windows and UNIX operating systems, you must use the installation packages, *sqljdbc_\<version>_enu.exe*, and *sqljdbc_\<version>_enu.tar.gz*, respectively. For more information about how to deploy the JDBC Driver, see [Deploying the JDBC driver](../../connect/jdbc/deploying-the-jdbc-driver.md) topic.  
+
+**Microsoft JDBC Driver 7.4 for SQL Server:**  
+
+  The JDBC Driver 7.4 includes three JAR class libraries in each installation package: **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar**, and **mssql-jdbc-7.4.1.jre12.jar**.
+
+  The JDBC Driver 7.4 is designed to work with and be supported by all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 12.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 12.0.
+  
+  The following summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 7.4 for SQL Server:  
+  
+  |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-7.4.1.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception.<br /><br /> New Features in 7.4 include: JDK 12 support, NTLM authentication, and useFmtOnly. |    
+|mssql-jdbc-7.4.1.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception.<br /><br /> New Features in 7.4 include: JDK 12 support, NTLM authentication, and useFmtOnly. |  
+|mssql-jdbc-7.4.1.jre12.jar|4.3|12|Requires a Java Runtime Environment (JRE) 12.0. Using JRE 11.0 or lower throws an exception.<br /><br /> New Features in 7.4 include: JDK 12 support, NTLM authentication, and useFmtOnly. |   
+
+
+  The JDBC Driver 7.4 is also available on the Maven Central Repository and can be added to a Maven project by adding the following code in the POM.XML:  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>7.4.1.jre11</version>
+</dependency>
+```
 
 **Microsoft JDBC Driver 7.2 for SQL Server:**  
 
@@ -160,18 +186,18 @@ The JDBC Driver 6.4 is also available on the Maven Central Repository and can be
 |---------|------------------|---------------------|-------------------------|   
 |sqljdbc41.jar|4|7|7 6 5|  
   
-## SQL Server Requirements  
+## SQL Server requirements  
  The JDBC driver supports connections to Azure SQL database and SQL Server. For Microsoft JDBC Driver 4.2 and 4.1 for SQL Server, support begins with SQL Server 2008.
   
-## Operating System Requirements  
+## Operating System requirements  
  The JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). However, only Sun Solaris, SUSE Linux, and Windows operating systems have officially been tested.  
   
-## Supported Languages  
- The JDBC driver supports all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column collations. For more information about the collations supported by the JDBC driver, see [International Features of the JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
+## Supported languages  
+ The JDBC driver supports all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column collations. For more information about the collations supported by the JDBC driver, see [International features of the JDBC driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
   
  For more information about collations, see "Working with Collations" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
-## See Also  
- [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## See also  
+ [Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

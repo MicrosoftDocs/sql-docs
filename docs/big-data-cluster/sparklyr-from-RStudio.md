@@ -4,8 +4,8 @@ titleSuffix: SQL Server big data clusters
 description: Connect to big data cluster using sparklyr from RStudio.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
-ms.date: 04/08/2019
+ms.reviewer: mikeray
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Sparklyr provides an R interface for Apache Spark. Sparklyr is a popular way for R developers to use Spark. This article describes how to use sparklyr in a SQL Server 2019 big data cluster (preview) using RStudio.
+Sparklyr provides an R interface for Apache Spark. Sparklyr is a popular way for R developers to use Spark. This article describes how to use sparklyr in a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] using RStudio.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ Install and configure **RStudio Desktop** with the following steps:
 
 1. After installation completes, run the following commands inside of RStudio Desktop to install the required packages:
 
-   ```RStudio Desktop
+   ```RStudioDesktop
    install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    install.packages("dplyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
@@ -44,7 +44,7 @@ You can use sparklyr to connect from a client to the big data cluster using Livy
 In RStudio, create an R script and connect to Spark as in the following example:
 
 > [!TIP]
-> For the `<USERNAME>` and `<PASSWORD>` values, use the username (such as root) and password you set during the big data cluster deployment. For the `<IP>` and `<PORT>` values, see the documentation on the [HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs).
+> For the `<USERNAME>` and `<PASSWORD>` values, use the username (such as root) and password you set during the big data cluster deployment. For the `<IP>` and `<PORT>` values, see the documentation on [connecting to a big data cluster](connect-to-big-data-cluster.md).
 
 ```r
 library(sparklyr)
@@ -85,4 +85,4 @@ iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Specie
 
 ## Next steps
 
-For more information about big data clusters, see [What are SQL Server 2019 big data clusters](big-data-cluster-overview.md).
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

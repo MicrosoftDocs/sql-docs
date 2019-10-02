@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 
 # SQL Server Express LocalDB
@@ -122,7 +121,7 @@ REM Gather information about the instance of LocalDB
 
 ### Connect to a shared instance of LocalDB
 
-To connect to a shared instance of LocalDB add `.\` (dot + backslash) to the connection string to reference the namespace reserved for shared instances. For example, to connect to a shared instance of LocalDB named `AppData` use a connection string such as `(localdb).AppData` as part of the connection string. A user connecting to a shared instance of LocalDB that they do not own must have a Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login.
+To connect to a shared instance of LocalDB add `\.\` (backslash + dot + backslash) to the connection string to reference the namespace reserved for shared instances. For example, to connect to a shared instance of LocalDB named `AppData` use a connection string such as `(localdb)\.\AppData` as part of the connection string. A user connecting to a shared instance of LocalDB that they do not own must have a Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login.
 
 ## Troubleshooting
 

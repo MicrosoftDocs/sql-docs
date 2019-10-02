@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # XML System Stored Procedures
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

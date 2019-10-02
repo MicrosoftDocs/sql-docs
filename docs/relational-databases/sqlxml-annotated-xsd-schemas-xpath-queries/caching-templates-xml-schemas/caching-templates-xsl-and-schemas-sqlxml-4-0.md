@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 80b4fa79-243f-442c-9f22-74ad66186501
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Caching Templates, XSL, and Schemas (SQLXML 4.0)

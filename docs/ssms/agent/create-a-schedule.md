@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], scheduling"
   - "schedules [SQL Server], jobs"
 ms.assetid: 8c7ef3b3-c06d-4a27-802d-ed329dc86ef3
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a Schedule

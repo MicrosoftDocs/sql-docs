@@ -19,7 +19,6 @@ ms.assetid: 156fcfa4-7304-4a5c-b96f-1c3e061e5df0
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_document_types (Transact-SQL)

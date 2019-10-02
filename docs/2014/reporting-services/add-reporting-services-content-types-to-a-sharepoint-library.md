@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
@@ -48,7 +47,7 @@ manager: kfile
   
 2.  Go to **Site settings**.  
   
-    -   In SharePoint 2013, click the **Settings** icon. ![SharePoint Settings](../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings")  
+    -   In SharePoint 2013, click the **Settings** icon. ![SharePoint Settings](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings")  
   
     -   In SharePoint 2010, click **Site Actions**, then click **Site Settings**.  
   

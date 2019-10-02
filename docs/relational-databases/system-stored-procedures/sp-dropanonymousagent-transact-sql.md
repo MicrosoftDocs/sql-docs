@@ -14,10 +14,10 @@ helpviewer_keywords:
   - "sp_dropanonymousagent"
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
-manager: craigg
-manager: craigg
+author: VanMSFT
 ---
 # sp_dropanonymousagent (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Drops an anonymous agent for replication monitoring at the distributor from the Publisher. This stored procedure is executed at the Publisher on any database.  
@@ -27,7 +27,6 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type  
 ```  
   

@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Data sync"
   - "SQL Database"
-  - "Windows Azure Training Kit"
+  - "Azure Training Kit"
   - "Database development"
   - "Database backup"
   - "Database connection management"
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "Backup and restore"
   - "Database import and export"
   - "SQL Data Sync"
-  - "Windows Azure Service Dashboard"
+  - "Azure Service Dashboard"
   - "SQL Server Management Studio"
   - "Database management"
   - "Database export"
@@ -30,7 +30,6 @@ helpviewer_keywords:
 ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Lifecycle Management
@@ -42,10 +41,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  To read the complete topic, see [Database Lifecycle Management (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## See Also  
- [Windows Azure Home Page](https://www.windowsazure.com/)   
- [Windows Azure Developer Center](https://www.windowsazure.com/develop/overview/)   
- [Windows Azure Manage Center](https://www.windowsazure.com/manage/overview/)   
- [Windows Azure Team Blog](https://www.windowsazure.com/community/blog/)   
- [Windows Azure Support Options](https://www.windowsazure.com/support/contact/)  
+ [Azure Home Page](https://www.windowsazure.com/)   
+ [Azure Developer Center](https://www.windowsazure.com/develop/overview/)   
+ [Azure Manage Center](https://www.windowsazure.com/manage/overview/)   
+ [Azure Team Blog](https://www.windowsazure.com/community/blog/)   
+ [Azure Support Options](https://www.windowsazure.com/support/contact/)  
   
   

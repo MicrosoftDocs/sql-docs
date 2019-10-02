@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,8 +95,10 @@ sp_detach_db [ @dbname= ] 'database_name'
 -   The database is a system database.  
   
 ## Obtaining Exclusive Access  
- Detaching a database requires exclusive access to the database. If the database that you want to detach is in use, before you can detach it, set the database to SINGLE_USER mode to obtain exclusive access.  
-  
+ Detaching a database requires exclusive access to the database. If the database that you want to detach is in use, before you can detach it, set the database to SINGLE_USER mode to obtain exclusive access.
+
+ Before you set the database to SINGLE_USER, verify that the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF. When this option is set to ON, the background thread that is used to update statistics takes a connection against the database, and you will be unable to access the database in single-user mode. For more information, see [set a database to single user mode](../databases/set-a-database-to-single-user-mode.md).
+
  For example, the following `ALTER DATABASE` statement obtains exclusive access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database after all current users disconnect from the database.  
   
 ```  

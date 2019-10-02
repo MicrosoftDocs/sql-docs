@@ -14,7 +14,6 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Tutorial: Use Azure Blob storage service with SQL Server 2016
 

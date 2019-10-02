@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "SQL graph, SELECT statement"
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT (Transact-SQL)

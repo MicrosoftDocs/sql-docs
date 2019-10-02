@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Overview of the Microsoft Drivers for PHP for SQL Server
 

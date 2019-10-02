@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "UNICODE function"
   - "Unicode [SQL Server], UNICODE function"
 ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # UNICODE (Transact-SQL)
@@ -36,14 +35,14 @@ UNICODE ( 'ncharacter_expression' )
 ```  
   
 ## Arguments  
- **'** *ncharacter_expression* **'**  
- Is an **nchar** or **nvarchar** expression.  
+**'** *ncharacter_expression* **'**  
+Is an **nchar** or **nvarchar** expression.  
   
 ## Return Types  
- **int**  
+**int**  
   
 ## Remarks  
- In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the UNICODE function returns a UCS-2 codepoint in the range 0 through 0xFFFF. Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], when using [Supplementary Character (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) enabled collations, UNICODE returns a UTF-16 codepoint in the range 0 through 0x10FFFF.  
+In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the UNICODE function returns a UCS-2 codepoint in the range 000000 through 00FFFF which is capable of representing the 65,535 characters in the Unicode Basic Multilingual Plane (BMP). Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], when using [Supplementary Character (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) enabled collations, UNICODE returns a UTF-16 codepoint in the range 000000 through 10FFFF. For more information on Unicode support in the [!INCLUDE[ssde_md](../../includes/ssde_md.md)], see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn). 
   
 ## Examples  
   
@@ -82,7 +81,7 @@ SET @nstring = N'Åkergatan 24';
 -- the actual Unicode character you are processing, and the UNICODE   
 -- value for this particular character.  
 PRINT 'Character #' + ' ' + 'Unicode Character' + ' ' + 'UNICODE Value';  
-WHILE @position <= DATALENGTH(@nstring)  
+WHILE @position <= LEN(@nstring)  
 -- While these are still characters in the character string,  
    BEGIN;  
    SELECT @position,   

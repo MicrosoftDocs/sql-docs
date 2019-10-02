@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "ELSE keyword"
   - "IF keyword"
 ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # IF...ELSE (Transact-SQL)
@@ -55,7 +54,7 @@ IF Boolean_expression
   
 ## Example  
   
-```  
+```sql
 IF DATENAME(weekday, GETDATE()) IN (N'Saturday', N'Sunday')
        SELECT 'Weekend';
 ELSE 
@@ -67,23 +66,20 @@ ELSE
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example uses `IF...ELSE` to determine which of two responses to show the user, based on the weight of an item in the `DimProduct` table.  
   
-```  
+```sql
 -- Uses AdventureWorksDW  
-  
+
 DECLARE @maxWeight float, @productKey integer  
 SET @maxWeight = 100.00  
 SET @productKey = 424  
-IF @maxWeight <= (SELECT Weight from DimProduct 
-                  WHERE ProductKey = @productKey)   
-    (SELECT @productKey AS ProductKey, EnglishDescription, Weight, 
-    'This product is too heavy to ship and is only available for pickup.' 
+IF @maxWeight <= (SELECT Weight from DimProduct WHERE ProductKey = @productKey)   
+    SELECT @productKey AS ProductKey, EnglishDescription, Weight, 'This product is too heavy to ship and is only available for pickup.' 
         AS ShippingStatus
-    FROM DimProduct WHERE ProductKey = @productKey);  
+    FROM DimProduct WHERE ProductKey = @productKey
 ELSE  
-    (SELECT @productKey AS ProductKey, EnglishDescription, Weight, 
-    'This product is available for shipping or pickup.' 
+    SELECT @productKey AS ProductKey, EnglishDescription, Weight, 'This product is available for shipping or pickup.' 
         AS ShippingStatus
-    FROM DimProduct WHERE ProductKey = @productKey);  
+    FROM DimProduct WHERE ProductKey = @productKey
 ```  
   
 ## See Also  
@@ -94,8 +90,3 @@ ELSE
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)
  [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
-  
-  
-
-
-

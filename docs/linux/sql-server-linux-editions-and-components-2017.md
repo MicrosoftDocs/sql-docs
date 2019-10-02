@@ -1,9 +1,7 @@
 ---
-title: "Editions and supported features of SQL Server 2017 ~ Linux | Microsoft Docs"
-ms.custom: "sql-linux"
-ms.date: "09/14/2017"
+title: "Editions and supported features of SQL Server 2017 ~ Linux"
+ms.date: 09/14/2017
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: linux
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -23,10 +21,9 @@ helpviewer_keywords:
   - "installing SQL Server, editions"
   - "editions [SQL Server], about edition options"
   - "Setup [SQL Server]"
-ms.assetid: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ---
 # Editions and supported features of SQL Server 2017 on Linux
 
@@ -107,7 +104,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Mirrored backups|Yes|No|No|No|
 |Hot add memory and CPU|Yes|No|No|No|
 |Encrypted backup|Yes|Yes|No|No|
-|Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|
+|Hybrid backup to Azure (backup to URL)|Yes|Yes|No|No|
   
 <sup>1</sup> On Enterprise edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes. 
 
@@ -121,7 +118,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |-------------|----------------|--------------|---------|------------------------| 
 |Columnstore <sup>1</sup>|Yes|Yes|Yes|Yes|  
 |Large object binaries in clustered columnstore indexes|Yes|Yes|Yes|Yes|  
-|Online non-clustered columnstore index rebuild|Yes|No|No|No|
+|Online nonclustered columnstore index rebuild|Yes|No|No|No|
 |In-Memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes|
 |Persistent Main Memory|Yes|Yes|Yes|Yes|
 |Table and index partitioning|Yes|Yes|Yes|Yes|  
@@ -158,15 +155,15 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
 |Feature|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
-|Dedicated admin connection|Yes|Yes|Yes|Yes with trace flag|Yes with trace flag|   
+|Dedicated admin connection|Yes|Yes|Yes|Yes with trace flag|   
 |PowerShell scripting support|Yes|Yes|Yes|Yes| 
 |Support for data-tier application component operations - extract, deploy, upgrade, delete|Yes|Yes|Yes|Yes| 
-|Policy automation (check on schedule and change)|Yes|Yes|Yes|No|No|   
-|Performance data collector|Yes|Yes|Yes|No|No| 
-|Standard performance reports|Yes|Yes|Yes|No|No| 
-|Plan guides and plan freezing for plan guides|Yes|Yes|Yes|No|No|   
+|Policy automation (check on schedule and change)|Yes|Yes|Yes|No|  
+|Performance data collector|Yes|Yes|Yes|No|
+|Standard performance reports|Yes|Yes|Yes|No|
+|Plan guides and plan freezing for plan guides|Yes|Yes|Yes|No| 
 |Direct query of indexed views (using NOEXPAND hint)|Yes|Yes|Yes|Yes| 
-|Automatic indexed views maintenance|Yes|Yes|Yes|No|No| 
+|Automatic indexed views maintenance|Yes|Yes|Yes|No|
 |Distributed partitioned views|Yes|No|No|No| 
 |Parallel indexed operations|Yes|No|No|No|  
 |Automatic use of indexed view by query optimizer|Yes|No|No|No| 
@@ -185,10 +182,10 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |MERGE & UPSERT capabilities|Yes|Yes|Yes|Yes|   
 |Date and Time datatypes|Yes|Yes|Yes|Yes|  
 |Internationalization support|Yes|Yes|Yes|Yes| 
-|Full-text and semantic search|Yes|Yes|Yes|Yes|No| 
-|Specification of language in query|Yes|Yes|Yes|Yes|No|   
-|Service Broker (messaging)|Yes|Yes|No (Client only)|No (Client only)|No (Client only)|   
-|Transact-SQL endpoints|Yes|Yes|Yes|No|No| 
+|Full-text and semantic search|Yes|Yes|Yes|Yes|
+|Specification of language in query|Yes|Yes|Yes|Yes|
+|Service Broker (messaging)|Yes|Yes|No (Client only)|No (Client only)|
+|Transact-SQL endpoints|Yes|Yes|Yes|No|
 |Graph|Yes|Yes|Yes|Yes|  
 
 

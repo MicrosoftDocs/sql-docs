@@ -7,7 +7,6 @@ ms.reviewer: ""
 ms.technology: native-client
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client, uninstalling"
@@ -21,7 +20,6 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], installing SQL Server Native Client"
   - "removing SQL Server Native Client"
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Installing SQL Server Native Client

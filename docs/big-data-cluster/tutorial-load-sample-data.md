@@ -2,34 +2,33 @@
 title: Load sample data
 titleSuffix: SQL Server big data clusters
 description: This tutorial demonstrates how to load sample data into a SQL Server big data cluster. The sample data includes relational data in the SQL Server master instance. It also includes HDFS data in the storage pool. This data supports other tutorials in this section.
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 04/23/2019
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # Tutorial: Load sample data into a SQL Server big data cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This tutorial explains how to use a script to load sample data into a SQL Server 2019 big data cluster (preview). Many of the other tutorials in the documentation use this sample data.
+This tutorial explains how to use a script to load sample data into a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Many of the other tutorials in the documentation use this sample data.
 
 > [!TIP]
-> You can find additional samples for SQL Server 2019 big data cluster (preview) in the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub repository. They are located in the **sql-server-samples/samples/features/sql-big-data-cluster/** path.
+> You can find additional samples for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] in the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub repository. They are located in the **sql-server-samples/samples/features/sql-big-data-cluster/** path.
 
 ## Prerequisites
 
 - [A deployed big data cluster](deployment-guidance.md)
 - [Big data tools](deploy-big-data-tools.md)
-   - **mssqlctl**
+   - **azdata**
    - **kubectl**
    - **sqlcmd**
    - **curl**
-
+ 
 ## <a id="sampledata"></a> Load sample data
 
 The following steps use a bootstrap script to download a SQL Server database backup and load the data into your big data cluster. For ease of use, these steps have been broken out into [Windows](#windows) and [Linux](#linux) sections.
@@ -66,7 +65,7 @@ The following steps describe how to use a Windows client to load the sample data
    | <KNOX_PASSWORD> | The password for the HDFS/Spark Gateway. |
 
    > [!TIP]
-   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**master-svc-external**) and Knox (**gateway-svc-external**).
+   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-big-data-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**master-svc-external**) and Knox (**gateway-svc-external**). The default name of a cluster is **mssql-cluster**.
 
 1. Run the bootstrap script.
 
@@ -102,7 +101,7 @@ The following steps describe how to use a Linux client to load the sample data i
    | <KNOX_PASSWORD> | The password for the HDFS/Spark Gateway. |
 
    > [!TIP]
-   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**master-svc-external**) and Knox (**gateway-svc-external**).
+   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-big-data-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**master-svc-external**) and Knox (**gateway-svc-external**). The default name of a cluster is **mssql-cluster**.
 
 1. Run the bootstrap script.
 

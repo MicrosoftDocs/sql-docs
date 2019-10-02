@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7c4833e3-ff0c-4313-9ab8-21379ceab656
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLColAttributes (Excel Driver)
 > [!NOTE]  

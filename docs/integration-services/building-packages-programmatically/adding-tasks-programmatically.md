@@ -14,11 +14,14 @@ helpviewer_keywords:
   - "tasks [Integration Services], packages"
   - "adding package tasks"
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Adding Tasks Programmatically
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Tasks can be added to the following types of objects in the run-time engine:  
   
 -   <xref:Microsoft.SqlServer.Dts.Runtime.Package>  

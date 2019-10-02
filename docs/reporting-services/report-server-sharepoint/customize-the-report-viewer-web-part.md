@@ -2,7 +2,7 @@
 title: "Customize the Report Viewer web part | Microsoft Docs"
 ms.date: 11/26/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server-sharepoint
 
 

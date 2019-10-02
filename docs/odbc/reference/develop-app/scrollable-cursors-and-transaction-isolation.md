@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Scrollable Cursors and Transaction Isolation
 The following table lists the factors governing the visibility of changes.  

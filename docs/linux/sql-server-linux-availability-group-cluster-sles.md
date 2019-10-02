@@ -2,13 +2,12 @@
 title: Configure SLES Cluster for SQL Server Availability Group
 titleSuffix: SQL Server
 description: Learn how to create availability group clusters for SQL Server on SUSE Linux Enterprise Server (SLES)
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ---
@@ -216,7 +215,11 @@ Resource level fencing ensures mainly that there is no data corruption during an
 
 Node level fencing ensures that a node does not run any resources. This is done by resetting the node and the Pacemaker implementation of it is called STONITH (which stands for "shoot the other node in the head"). Pacemaker supports a great variety of fencing devices, such as an uninterruptible power supply or management interface cards for servers.
 
-For more information, see [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/), [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html) and [SUSE HA documentation: Fencing and STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+For more information, see:
+
+- [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)
+- [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html)
+- [SUSE HA documentation: Fencing and STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)
 
 At cluster initialization time, STONITH is disabled if no configuration is detected. It can be enabled later by running following command:
 
@@ -226,7 +229,6 @@ sudo crm configure property stonith-enabled=true
   
 >[!IMPORTANT]
 >Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. SUSE does not provide fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
-
 
 ## Configure the cluster resources for SQL Server
 

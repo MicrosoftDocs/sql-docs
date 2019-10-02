@@ -1,7 +1,7 @@
 ---
 title: "FOR XML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
+ms.custom: "fresh2019may"
+ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ---
 # FOR XML (SQL Server)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-A SELECT query returns results as a rowset. You can optionally retrieve formal results of a SQL query as XML by specifying the FOR XML clause in the query. The FOR XML clause can be used in top-level queries and in sub queries. The top-level FOR XML clause can be used only in the SELECT statement. In sub queries, FOR XML can be used in the INSERT, UPDATE, and DELETE statements. It can also be used in assignment statements.
+A SELECT query returns results as a rowset. You can optionally retrieve formal results of a SQL query as XML by specifying the FOR XML clause in the query. The FOR XML clause can be used in top-level queries and in subqueries. The top-level FOR XML clause can be used only in the SELECT statement. In subqueries, FOR XML can be used in the INSERT, UPDATE, and DELETE statements. FOR XML can also be used in assignment statements.
 
 In a FOR XML clause, you specify one of these modes:
 
@@ -63,7 +62,7 @@ SELECT Cust.CustomerID,
 FROM Sales.Customer Cust 
 INNER JOIN Sales.SalesOrderHeader OrderHeader
 ON Cust.CustomerID = OrderHeader.CustomerID
-FOR XML AUTO
+FOR XML AUTO;
 ```
 
 ## The FOR XML Clause and Server Names
@@ -82,7 +81,7 @@ SELECT TOP 1 LastName
 
 **Local server**: &nbsp; When `ServerName` is a local server, the query returns the following text:
 
-```console
+```xml
 <AdventureWorks2012.Person.Person LastName="Achong" />  
 ```
 
@@ -90,7 +89,7 @@ SELECT TOP 1 LastName
 
 **Network server**: &nbsp; When `ServerName` is a network server, the query returns the following text:
 
-```console
+```xml
 <ServerName.AdventureWorks2012.Person.Person LastName="Achong" />
 ```
 
@@ -106,7 +105,7 @@ SELECT TOP 1 LastName
 
 Now the disambiguated query returns the following text:
 
-```console
+```xml
 <x LastName="Achong"/>
 ```
 

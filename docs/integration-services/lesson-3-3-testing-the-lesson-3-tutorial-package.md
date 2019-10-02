@@ -8,11 +8,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 3-3: Test the Lesson 3 tutorial package
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In this task, you run the **Lesson 3.dtsx** package. As the package runs, the **Log Events** window lists the log entries that SSIS writes to the log file by the log provider. After the package finishes execution, you can view the contents of the log file.  
   

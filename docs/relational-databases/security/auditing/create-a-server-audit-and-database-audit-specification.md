@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Create a Server Audit and Database Audit Specification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,9 @@ manager: craigg
 2.  Right-click the **Audits** folder and select **New Audit...**. For more information, see [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
 3.  When you are finished selecting options, click **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To create a database-level audit specification  
   
 1.  In Object Explorer, expand the database where you want to create an audit specification.  
@@ -78,7 +79,7 @@ manager: craigg
      The name of the database audit specification. This is generated automatically when you create a new server audit specification but is editable.  
   
      **Audit**  
-     The name of an existing database audit. Either type in the name of the audit or select it from the list.  
+     The name of an existing server audit object. Either type in the name of the audit or select it from the list.  
   
      **Audit Action Type**  
      Specifies the database-level audit action groups and audit actions to capture. For the list of database-level audit action groups and audit actions and a description of the events they contain, see [SQL Server Audit Action Groups and Actions](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  

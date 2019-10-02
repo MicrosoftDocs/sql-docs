@@ -1,5 +1,5 @@
 ---
-title: Tutorial for data scientists using R language - SQL Server Machine Learning
+title: Tutorial for data scientists using R language
 description: Tutorial showing how to create an end-to-end R solution for in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,10 +8,10 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Tutorial: SQL development for R data scientists
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this tutorial for data scientists, learn how to build end-to-end solution for predictive modeling based on R feature support in either SQL Server 2016 or SQL Server 2017. This tutorial uses a [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database on SQL Server. 
 
@@ -23,7 +23,7 @@ Because the walkthrough is designed to introduce R developers to [!INCLUDE[rsql_
 
 ## Prerequisites
 
-+ [SQL Server 2017 Machine Learning Services with R integration](../install/sql-machine-learning-services-windows-install.md#verify-installation) or [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
++ [SQL Server Machine Learning Services with R integration](../install/sql-machine-learning-services-windows-install.md#verify-installation) or [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
 + [Database permissions](../security/user-permission.md) and a SQL Server database user login
 

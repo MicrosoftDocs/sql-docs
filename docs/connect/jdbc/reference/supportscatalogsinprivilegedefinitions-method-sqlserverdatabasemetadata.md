@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: cc18f99e-c19f-4bd0-96ae-b9a6a0de1926
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # supportsCatalogsInPrivilegeDefinitions Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

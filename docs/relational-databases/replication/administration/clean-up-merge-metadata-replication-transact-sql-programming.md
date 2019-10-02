@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Clean Up Merge Metadata (Replication Transact-SQL Programming)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +24,7 @@ manager: craigg
   
 1.  At the Publisher on the publication database, execute [sp_mergemetadataretentioncleanup](../../../relational-databases/system-stored-procedures/sp-mergemetadataretentioncleanup-transact-sql.md).  
   
-2.  (Optional) Note the number of rows removed in step 1 from the [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md), and [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) system tables, returned respectively in the **@num_genhistory_rows**, **@num_contents_rows**, and **@num_tombstone_rows** output parameters.  
+2.  (Optional) Note the number of rows removed in step 1 from the [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md), and [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) system tables, returned respectively in the `@num_genhistory_rows`, `@num_contents_rows`, and `@num_tombstone_rows` output parameters.  
   
 3.  Repeat steps 1 and 2 at the Subscriber to clean up metadata on the subscription database.  
   

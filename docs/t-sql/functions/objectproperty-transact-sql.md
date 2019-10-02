@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "schema-scoped objects [SQL Server]"
   - "objects [SQL Server], schema-scoped"
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OBJECTPROPERTY (Transact-SQL)
@@ -110,6 +109,7 @@ OBJECTPROPERTY ( id , property )
 |IsUserTable|Table|User-defined table.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|View|View.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |OwnerId|Any schema-scoped object|Owner of the object.<br /><br /> **Note:**  The schema owner is not necessarily the object owner. For example, child objects (those where *parent_object_id* is nonnull) will always return the same owner ID as the parent.<br /><br /> Nonnull = The database user ID of the object owner.|  
+|SchemaId|Any schema-scoped object| Schema ID of the schema to which the object belongs.| 
 |TableDeleteTrigger|Table|Table has a DELETE trigger.<br /><br /> >1 = ID of first trigger with the specified type.|  
 |TableDeleteTriggerCount|Table|Table has the specified number of DELETE triggers.<br /><br /> >0 = The number of DELETE triggers.|  
 |TableFullTextMergeStatus|Table|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Whether a table that has a full-text index that is currently in merging.<br /><br /> 0 = Table does not have a full-text index, or the full-text index is not in merging.<br /><br /> 1 = The full-text index is in merging.|  

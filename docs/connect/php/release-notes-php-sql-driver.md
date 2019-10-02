@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Release Notes for the Microsoft Drivers for PHP for SQL Server
 

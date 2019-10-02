@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Reduce method"
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Reduce (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

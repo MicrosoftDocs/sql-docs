@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetConnectAttr Function
 **Conformance**  
@@ -33,7 +32,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetConnectAttr(  
      SQLHDBC       ConnectionHandle,  

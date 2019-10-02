@@ -10,11 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RIGHT function"
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # RIGHT (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the specified number of characters from the rightmost portion of the given character expression.  
   
 ## Syntax  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # RightsEnum
 Specifies the rights or permissions for a group or user on an object.  

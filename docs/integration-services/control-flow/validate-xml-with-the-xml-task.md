@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "XML validation"
   - "XML, validating"
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Validate XML with the XML Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Validate XML documents and get rich error output by enabling the **ValidationDetails** property of the XML Task.  
   
  The following screen shot shows the **XML Task Editor** with the settings required for XML validation with rich error output.  

@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # Functions (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +42,7 @@ FROM [TM_Decision_Tree].CONTENT
 ## Stored Procedures  
  You can use common language runtime programming languages to create stored procedures that extend the functionality of DMX. For example, a regression tree mining model returns coefficients, such as A, B, and so on, that describe the regression equation, but the model does not return the equation itself, such as A+Bx = y. However, you can write a stored procedure that uses the data mining model object to navigate the content schema, and to return the regression equation as an output. Therefore, a DMX statement can return a list of the regression equations as part of a query result.  
   
- **For More Information:** [Multidimensional Model Assemblies Management](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
+ **For More Information:** [Multidimensional Model Assemblies Management](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
   
 ## See Also  
  [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)   

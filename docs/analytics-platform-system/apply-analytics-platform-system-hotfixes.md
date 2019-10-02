@@ -2,7 +2,6 @@
 title: Apply Analytics Platform System hotfixes | Microsoft Docs
 description: This article discusses how to apply hotfixes to the Analytics Platform System software.  
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

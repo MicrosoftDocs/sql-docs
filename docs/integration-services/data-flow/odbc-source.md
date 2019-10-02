@@ -13,11 +13,14 @@ f1_keywords:
   - "sql13.ssis.designer.odbcsource.columns.f1"
   - "sql13.ssis.designer.odbcsource.errorhandling.f1"
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # ODBC Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The ODBC source extracts data from ODBC-supported database by using a database table, a view, or an SQL statement.  
   
  The ODBC source has the following data access modes for extracting data:  

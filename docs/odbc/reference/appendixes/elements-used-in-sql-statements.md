@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Elements Used in SQL Statements
 The following elements are used in the SQL statements listed previously.  

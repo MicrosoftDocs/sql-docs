@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Step 4: Connect resiliently to SQL with PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +55,7 @@ The [sqlsrv_query()](../../connect/php/sqlsrv-query.md) function can be used to 
                 sqlsrv_close( $conn); 
                 break;  
             } else {    
-                // [A.4] Check whether the error code is on the whitelist of transients.  
+                // [A.4] Check whether the error code is on the list of allowed transients.  
                 $isTransientError = false;  
                 $errorCode = '';
                 if (($errors = sqlsrv_errors()) != null) {

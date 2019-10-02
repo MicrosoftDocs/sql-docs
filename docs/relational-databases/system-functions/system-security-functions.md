@@ -12,7 +12,6 @@ dev_langs:
 ms.assetid: fa2c95df-1211-4330-adc6-9657e1a113e8
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # System Security Functions
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

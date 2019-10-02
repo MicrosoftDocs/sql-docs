@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## Arguments  
- [**@publication=**] **'***publication***'**  
+ [**\@publication=**] **'***publication***'**  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 `[ @subscriber = ] 'subscriber'`

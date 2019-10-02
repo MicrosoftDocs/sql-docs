@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Monitoring Database Mirroring (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -126,7 +125,7 @@ manager: craigg
      System administrators can use the **sp_dbmmonitorresults** system stored procedure to view and, optionally, to update the status table, if it has not been updated within the previous 15 seconds. This procedure calls the **sp_dbmmonitorupdate** procedure and returns one or more history rows, depending on the amount requested in the procedure call. For information about the status in its results set, see [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md).  
   
 #### Monitoring Database Mirroring Status (by dbm_monitor Members)  
- As mentioned, the first time **sp_dbmmonitorupdate** runs, it creates the **dbm_monitor** fixed database role in the **msdb** database. Members of the **dbm_monitor** fixed database role can view the existing mirroring status by using either Database Mirroring Monitor or the **sp_dbmmonitorresults** stored procedure. But these users cannot update the status table. To learn the age of the displayed status a user can look at the times in the **Principal log (***\<time>***)** and **Mirror log (***\<time>***)** labels on the **Status** page.  
+ As mentioned, the first time **sp_dbmmonitorupdate** runs, it creates the **dbm_monitor** fixed database role in the **msdb** database. Members of the **dbm_monitor** fixed database role can view the existing mirroring status by using either Database Mirroring Monitor or the **sp_dbmmonitorresults** stored procedure. But these users cannot update the status table. To learn the age of the displayed status a user can look at the times in the **Principal log (**_\<time>_**)** and **Mirror log (**_\<time>_**)** labels on the **Status** page.  
   
  Members of the **dbm_monitor** fixed database role depend on the **Database Mirroring Monitor Job** to update the status table at regular intervals. If the job does not exist or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is stopped, the status becomes increasingly stale and may no longer reflect the configuration of the mirroring session. For example, after a failover, the partners might appear to share the same role-principal or mirror, or the current principal server might be shown as the mirror, while the current mirror server is shown as the principal.  
   

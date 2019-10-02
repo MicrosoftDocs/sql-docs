@@ -10,11 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "REPLICATE function"
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # REPLICATE (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a character expression that is replicated a number of times. The *times* argument must evaluate to an integer.  
   
 > [!NOTE]  

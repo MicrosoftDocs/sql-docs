@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Change Resource Pool Settings
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +44,9 @@ manager: craigg
 4.  Click or double-click the cells in the row to be changed, and enter the new values.  
   
 5.  To save the changes, click **OK**  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="ChgRPTSQL"></a> Change Resource Pool Settings Using Transact-SQL  
  **To change resource pool settings by using [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   

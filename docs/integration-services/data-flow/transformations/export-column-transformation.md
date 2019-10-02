@@ -19,11 +19,14 @@ helpviewer_keywords:
   - "inserting data"
   - "truncate options [Integration Services]"
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Export Column Transformation
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Export Column transformation reads data in a data flow and inserts the data into a file. For example, if the data flow contains product information, such as a picture of each product, you could use the Export Column transformation to save the images to files.  
   
 ## Append and Truncate Options  

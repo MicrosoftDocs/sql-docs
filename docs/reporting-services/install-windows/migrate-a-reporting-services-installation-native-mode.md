@@ -1,11 +1,10 @@
 ---
 title: "Migrate a Reporting Services Installation (Native Mode) | Microsoft Docs"
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.date: 11/06/2018
 ---
 
@@ -33,9 +32,10 @@ This topic provides step-by-step instructions for migrating one of the following
 * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
 * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
-::: moniker-end
 
 For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode deployment, see [Migrate a Reporting Services Installation &#40;SharePoint Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
+
+::: moniker-end
   
  Migration is defined as moving application data files to a new SQL Server instance. The following are common reasons you must migrate your installation:  
   

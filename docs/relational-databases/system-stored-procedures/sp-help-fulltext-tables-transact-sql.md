@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_fulltext_tables"
 ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # sp_help_fulltext_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

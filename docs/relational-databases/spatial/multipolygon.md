@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "MultiPolygon geometry subtype [SQL Server]"
   - "geometry subtypes [SQL Server]"
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MultiPolygon
@@ -59,7 +58,9 @@ The second instance in the MultiPolygon is a LineString instance and not an acce
 1.  All of the instances comprising the **MultiPolygon** instance are valid **Polygon** instances. For valid **Polygon** instances, see [Polygon](../../relational-databases/spatial/polygon.md).  
   
 2.  None of the **Polygon** instances comprising the **MultiPolygon** instance overlap.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 The following example shows two valid **MultiPolygon** instances and one invalid **MultiPolygon** instance.  
   
 ```sql  

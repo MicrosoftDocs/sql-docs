@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "OR operator"
   - "AND, Criteria pane"
 ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Specify Multiple Search Conditions for Multiple Columns (Visual Database Tools)

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 40489bc5-3e2a-425e-892d-e0dc037f4d7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLBindParameter (Excel Driver)
 > [!NOTE]  

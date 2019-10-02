@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Copy Databases with Backup and Restore
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

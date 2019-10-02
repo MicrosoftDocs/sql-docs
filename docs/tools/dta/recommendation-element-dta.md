@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Recommendation element"
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Recommendation Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "mirTab"
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Generate Mirror Tables and CDC Capture Instances
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the Generate Mirror Tables page to generate the mirror tables for the tables you included in the CDC instance  
   
  Click **Run** to create the mirror tables. The progress for the creation of each table is displayed and a message is displayed to let you know whether each mirror table is completed successfully or with errors. If any errors occur, click **Details** to see a dialog box with an explanation of the error.  

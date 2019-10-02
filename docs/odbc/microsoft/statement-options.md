@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Statement Options
 > [!IMPORTANT]  

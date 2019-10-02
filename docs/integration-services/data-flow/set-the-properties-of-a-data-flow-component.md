@@ -10,11 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "components [Integration Services], properties"
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Set the Properties of a Data Flow Component
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   To set the properties of data flow components, which include sources, destinations, and transformations, use one of the following features:  
   
 -   The component editors that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides. These editors include only the custom properties of each data flow component.  

@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "RTRIM function"
   - "trailing blanks"
 ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # RTRIM (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a character expression after removing trailing spaces.  
   
 > [!NOTE]  

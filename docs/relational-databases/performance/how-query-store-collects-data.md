@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # How Query Store Collects Data
@@ -51,19 +50,26 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  The following diagram depicts points of integration explained above:  
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
-  
- To minimize I/O overhead, new data is captured in-memory. Writes operations are queued and flushed to disk afterwards. Query and plan information (Plan Store on diagram below) are flushed with minimal latency. The runtime statistics (Runtime Stats) are kept in memory for a period of time defined with the `DATA_FLUSH_INTERVAL_SECONDS` option of the `SET QUERY_STORE` statement. The SSMS Query Store dialog box allows you to enter **Data Flush Interval (Minutes)**, which it converts to seconds.  
+
+## Remarks
+ To minimize I/O overhead, new data is captured in-memory. Write operations are queued and flushed to disk afterwards. Query and plan information (Plan Store in diagram below) are flushed with minimal latency. The runtime statistics (Runtime Stats) are kept in memory for a period of time defined with the `DATA_FLUSH_INTERVAL_SECONDS` option of the `SET QUERY_STORE` statement. The [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box allows you to enter **Data Flush Interval (Minutes)**, which is internally converted to seconds.  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
- If the system crashes, Query Store can lose runtime data up to amount defined with `DATA_FLUSH_INTERVAL_SECONDS`. The default value of 900 seconds (15 minutes) is an optimal balance between query capture performance and data availability.  
-If the system is under memory pressure, runtime statistics can be flushed to disk earlier than defined with `DATA_FLUSH_INTERVAL_SECONDS`.  
-During the read of the Query Store data in-memory and on-disk data are unified transparently.
+ If the system crashes, or a shutdown occurs while using [trace flag 7745](../../relational-databases/performance/best-practice-with-the-query-store.md#Recovery), Query Store can lose runtime data that has been collected but not been yet persisted, up to time window defined with `DATA_FLUSH_INTERVAL_SECONDS`. The default value of 900 seconds (15 minutes) is a recommended balance between query capture performance and data availability.  
+ 
+ > [!IMPORTANT]  
+ > ***Max Size (MB)*** limit is not strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the ***Data Flush Interval***.        
+ > If Query Store has breached the *Max Size* limit between storage size checks, it will transition to read-only mode. If *Size Based Cleanup Mode* is enabled, the cleanup mechanism to enforce the *Max Size* limit is also triggered.  
+ 
+ > [!NOTE]
+ > If the system is under memory pressure, runtime statistics can be flushed to disk earlier than defined with `DATA_FLUSH_INTERVAL_SECONDS`.  
+ 
+ During the read of the Query Store data in-memory and on-disk data are unified transparently.
 If a session is terminated or the client application restarts or crashes, query statistics won't be recorded.  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
-  
 ## See Also  
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)   

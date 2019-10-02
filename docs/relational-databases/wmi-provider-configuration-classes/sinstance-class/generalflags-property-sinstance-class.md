@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # GeneralFlags Property (SInstance Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

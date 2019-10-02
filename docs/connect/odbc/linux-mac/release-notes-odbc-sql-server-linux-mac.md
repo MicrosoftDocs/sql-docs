@@ -7,7 +7,7 @@ ms.prod_service: connectivity
 ms.reviewer: "MightyPen"
 ms.technology: connectivity
 ms.topic: conceptual
-author: karinazhou
+author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
 ---
@@ -29,6 +29,15 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+## 17.4, August 2019
+
+| Feature added | Details |
+| :------------ | :------ |
+| Always Encrypted with Secure Enclaves. | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
+| Dynamic loading of OpenSSL | See [Programming Guidelines](programming-guidelines.md#bkmk-openssl). |
+| Configurable TCP Keep Alive settings. | See [Connecting to SQL Server](connection-string-keywords-and-data-source-names-dsns.md). |
+| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## 17.3, February 2019
 
@@ -121,6 +130,6 @@ The ODBC driver on SUSE Linux (Preview) supports 64-bit SUSE Linux Enterprise 11
 
 The ODBC driver on Linux supports [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. For more information, see [ODBC Driver on Linux Support for High Availability, Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-The ODBC driver on Linux supports connections to Microsoft Azure SQL Database. For more information, see [How to: Connect to Windows Azure SQL Database Using ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
+The ODBC driver on Linux supports connections to Microsoft Azure SQL Database. For more information, see [How to: Connect to Azure SQL Database Using ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
 
 The `-l` option (login timeout) has been added to `bcp`. For more information, see [Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

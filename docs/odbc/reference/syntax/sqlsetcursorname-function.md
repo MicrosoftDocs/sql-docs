@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetCursorName Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetCursorName(  
      SQLHSTMT      StatementHandle,  
@@ -83,7 +82,7 @@ SQLRETURN SQLSetCursorName(
   
  For another code example, see [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
-```  
+```cpp  
 #define NAME_LEN 50  
 #define PHONE_LEN 10  
   

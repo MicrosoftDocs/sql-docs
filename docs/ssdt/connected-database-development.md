@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL.DATA.TOOLS.SQLSERVEROBJECTEXPLORER"
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Connected Database Development
 This section describes features provided by SQL Server Data Tools for designing and querying a connected database.  

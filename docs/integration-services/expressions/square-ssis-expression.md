@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "SQUARE"
   - "square values"
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SQUARE (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the square of a numeric expression.  
   
 ## Syntax  

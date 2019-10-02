@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_fulltext_tables_cursor"
 ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_help_fulltext_tables_cursor (Transact-SQL)

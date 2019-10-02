@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Oracle Software Patches
 > [!IMPORTANT]  

@@ -1,7 +1,7 @@
 ---
 title: "ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/09/2018"
+ms.date: "07/26/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Modifies an external data source used to create an external table. The external data source can be Hadoop or Azure blob storage (WASB).
-  
+  Modifies an external data source used to create an external table. The external data source can be Hadoop or Azure blob storage (WASBS) for SQL SERVER and Azure blob storage (WASBS) or Azure Data Lake storage (ABFSS/ADL) for Azure SQL Data Warehouse. 
+
 ## Syntax  
-  
+
 ```  
 -- Modify an external data source
--- Applies to: SQL Server (2016 or later)
+-- Applies to: SQL Server (2016 or later) and APS
 ALTER EXTERNAL DATA SOURCE data_source_name SET
     {   
         LOCATION = 'server_name_or_IP' [,] |
@@ -44,52 +43,67 @@ ALTER EXTERNAL DATA SOURCE data_source_name
     SET
         LOCATION = 'https://storage_account_name.blob.core.windows.net'
         [, CREDENTIAL = credential_name ] 
-```  
-  
+
+-- Modify an external data source pointing to Azure Blob storage or Azure Data Lake storage
+-- Applies to: Azure SQL Data Warehouse
+ALTER EXTERNAL DATA SOURCE data_source_name
+    SET
+        [LOCATION = '<location prefix>://<location path>']
+        [, CREDENTIAL = credential_name ] 
+```
+
 ## Arguments  
  data_source_name
  Specifies the user-defined name for the data source. The name must be unique.
-  
+
  LOCATION = 'server_name_or_IP'
- Specifies the name of the server or an IP address.
-  
- RESOURCE_MANAGER_LOCATION = '\<IP address;Port>'
+ Provides the connectivity protocol and path to the external data source.
+
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (Does not apply to Azure SQL Data Warehouse)
  Specifies the Hadoop Resource Manager location. When specified, the query optimizer might choose to pre-process data for a PolyBase query by using Hadoop's computation capabilities. This is a cost-based decision. Called predicate pushdown, this can significantly reduce the volume of data transferred between Hadoop and SQL, and therefore improve query performance.
-  
+
  CREDENTIAL = Credential_Name
  Specifies the named credential. See  [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
-TYPE = BLOB_STORAGE   
+TYPE = [HADOOP | BLOB_STORAGE]   
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 For bulk operations only, `LOCATION` must be valid the URL to Azure Blob storage. Do not put **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL.
 The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
 
   
-  
+
 ## Remarks
  Only single source can be modified at a time. Concurrent requests to modify the same source cause one statement to wait. However, different sources can be modified at the same time. This statement can run concurrently with other statements.
-  
+
 ## Permissions  
  Requires ALTER ANY EXTERNAL DATA SOURCE permission.
  > [!IMPORTANT]  
- >  The ALTER ANY EXTERNAL DATA SOURCE  permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
+ > The ALTER ANY EXTERNAL DATA SOURCE  permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
 
-  
+
 ## Examples  
  The following example alters the location and resource manager location of an existing data source.
-  
+
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
      LOCATION = 'hdfs://10.10.10.10:8020',
      RESOURCE_MANAGER_LOCATION = '10.10.10.10:8032'
     ;
   
-```  
+```
 
  The following example alters the credential to connect to an existing data source.
-  
+
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
    CREDENTIAL = new_hadoop_user
     ;
+```
+
+ The following example alters the credential to a new LOCATION. This example is an external data source created for Azure SQL Data Warehouse. 
+
+```  
+ALTER EXTERNAL DATA SOURCE AzureStorage_west SET
+   LOCATION = 'wasbs://loadingdemodataset@updatedproductioncontainer.blob.core.windows.net',
+   CREDENTIAL = AzureStorageCredential
 ```

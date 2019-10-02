@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e8982e05-4984-4406-9760-285e8c028ddf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Ole Automation Procedures Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

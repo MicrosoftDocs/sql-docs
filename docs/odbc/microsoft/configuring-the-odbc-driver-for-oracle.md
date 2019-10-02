@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 0a5f827c-0b80-4627-85cb-f10292b9fb33
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Configuring the ODBC Driver for Oracle
 > [!IMPORTANT]  

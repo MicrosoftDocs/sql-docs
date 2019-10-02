@@ -13,11 +13,14 @@ helpviewer_keywords:
   - "uppercase characters [Integration Services]"
   - "lowercase characters"
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # LOWER (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a character expression after converting uppercase characters to lowercase characters.  
   
 ## Syntax  

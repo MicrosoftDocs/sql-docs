@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "annotated XDR schemas"
   - "schemas [SQLXML]"
 ms.assetid: 874c6dca-8a0c-4a2e-891c-ba6e326154d2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Annotated XDR Schemas (Deprecated in SQLXML 4.0)

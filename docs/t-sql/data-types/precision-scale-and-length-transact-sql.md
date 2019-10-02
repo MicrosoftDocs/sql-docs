@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Precision, scale, and Length (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,11 +29,11 @@ Precision is the number of digits in a number. Scale is the number of digits to 
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default maximum precision of **numeric** and **decimal** data types is 38. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default maximum is 28.
   
-Length for a numeric data type is the number of bytes that are used to store the number. Length for a character string or Unicode data type is the number of characters. The length for **binary**, **varbinary**, and **image** data types is the number of bytes. For example, an **int** data type can hold 10 digits, is stored in 4 bytes, and doesn't accept decimal points. The **int** data type has a precision of 10, a length of 4, and a scale of 0.
+Length for a numeric data type is the number of bytes that are used to store the number. For varchar and char, the length of a character string is the number of bytes. For nvarchar and nchar, the length of the character string is the number of byte-pairs. The length for **binary**, **varbinary**, and **image** data types is the number of bytes. For example, an **int** data type can hold 10 digits, is stored in 4 bytes, and doesn't accept decimal points. The **int** data type has a precision of 10, a length of 4, and a scale of 0.
   
-When concatenating two **char**, **varchar**, **binary**, or **varbinary** expressions, the length of the resulting expression is the sum of the lengths of the two source expressions, up to 8,000 characters.
+When concatenating two **char**, **varchar**, **binary**, or **varbinary** expressions, the length of the resulting expression is the sum of the lengths of the two source expressions, up to 8,000 bytes.
   
-When concatenating two **nchar** or **nvarchar** expressions, the length of the resulting expression is the sum of the lengths of the two source expressions, up to 4,000 characters.
+When concatenating two **nchar** or **nvarchar** expressions, the length of the resulting expression is the sum of the lengths of the two source expressions, up to 4,000 byte-pairs.
   
 When comparing two expressions of the same data type but different lengths by using UNION, EXCEPT, or INTERSECT, the resulting length is the longer of the two expressions.
   

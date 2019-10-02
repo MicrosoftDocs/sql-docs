@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 39f76bc7-94e6-4dbc-bfa5-d56f4430bb26
 author: markingmyname
@@ -67,7 +66,7 @@ manager: craigg
 |**(6)**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Server in SharePoint Mode. Configure the Excel Services Application **Data Model Settings** to use this server.|  
 |**(7)**|The SharePoint content, configuration, and service application databases.|  
   
- ![SharePoint Settings](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![SharePoint Settings](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ###  <a name="bkmk_powerpivot_sharepoint2013_1server"></a> PowerPivot for SharePoint 2013 Single Server Deployment  
  A single server deployment is useful for testing purposes but it is not recommended for production deployments.  
@@ -90,7 +89,7 @@ manager: craigg
   
  The installer package is available as part of the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] feature pack. The feature pack can be downloaded from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] download center at [Microsoft® SQL Server® 2014 PowerPivot® for Microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) ( HYPERLINK "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>).  
   
- ![SSAS PowerPivot Mode 2 Server Deployment](../../../2014/analysis-services/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot Mode 2 Server Deployment")  
+ ![SSAS PowerPivot Mode 2 Server Deployment](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot Mode 2 Server Deployment")  
   
 |||  
 |-|-|  
@@ -169,7 +168,7 @@ manager: craigg
   
 ## See Also  
  [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
- [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)   
+ [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)   
  [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

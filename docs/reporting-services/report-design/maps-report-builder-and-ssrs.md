@@ -2,7 +2,7 @@
 title: "Maps (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -69,7 +69,7 @@ ms.author: maggies
 -   **Map Gallery reports.** Spatial data is embedded in reports located in the map gallery. By default, the Map Gallery is installed in *\<drive>*:\Program Files\Microsoft SQL Server\Report Builder \MapGallery.  
   
     > [!NOTE]  
-    >  This [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mapping feature uses data from TIGER/Line Shapefiles provided courtesy of the U.S. Census Bureau ([https://www.census.gov/](https://www.census.gov/)). TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. TIGER/Line Shapefiles are available without charge from the U.S. Census Bureau. To obtain more information about the TIGER/Line Shapefiles go to [https://www.census.gov/geo/www/tiger](https://www.census.gov/geo/www/tiger). The boundary information in the TIGER/Line Shapefiles are for statistical data collection and tabulation purposes only; their depiction and designation for statistical purposes does not constitute a determination of jurisdictional authority or rights of ownership or entitlement and they are not legal land descriptions. Census TIGER and TIGER/Line are registered trademarks of the U.S. Bureau of the Census.  
+    >  This [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mapping feature uses data from TIGER/Line Shapefiles provided courtesy of the U.S. Census Bureau ([https://www.census.gov/](https://www.census.gov/)). TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. TIGER/Line Shapefiles are available without charge from the U.S. Census Bureau. To obtain more information about the TIGER/Line Shapefiles go to [TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html). The boundary information in the TIGER/Line Shapefiles are for statistical data collection and tabulation purposes only; their depiction and designation for statistical purposes does not constitute a determination of jurisdictional authority or rights of ownership or entitlement and they are not legal land descriptions. Census TIGER and TIGER/Line are registered trademarks of the U.S. Bureau of the Census.  
   
 -   **ESRI Shapefiles.** ESRI Shapefiles contain data that complies with the Environmental Systems Research Institute, Inc. (ESRI) Shapefile spatial data format. ESRI Shapefiles refer to a set of files. Data in the .shp file specifies the geographical or geometrical shapes. Data in the .dbf file provides attributes for the shapes. To view a map in design view or to run a map from the report server, both files must be in the same folder. When you add spatial data from a .shp file on your local file system, the spatial data is embedded in your report. To retrieve spatial data dynamically at run time, upload the Shapefiles to your report server, and then specify them as the source for spatial data. For more information, see [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814).  
   

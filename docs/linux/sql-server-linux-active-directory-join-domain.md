@@ -3,15 +3,13 @@ title: Join SQL Server on Linux to Active Directory
 titleSuffix: SQL Server
 description: 
 author: Dylan-MSFT
-ms.author: Dylan.Gray
-ms.reviewer: rothja
+ms.author: dygray
+ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ---
-
 # Join SQL Server on a Linux host to an Active Directory domain
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -134,7 +132,7 @@ This method joins the SQL Server host to an AD domain using **realmd** and **sss
 
 Use the following steps to join a SQL Server host to an Active Directory domain:
 
-1. Use [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.md) to join your host machine to your AD Domain. You must first install both the **realmd** and Kerberos client packages on the SQL Server host machine using your Linux distribution's package manager:
+1. Use [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) to join your host machine to your AD Domain. You must first install both the **realmd** and Kerberos client packages on the SQL Server host machine using your Linux distribution's package manager:
 
    **RHEL:**
 
@@ -174,7 +172,7 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
 
    SQL Server uses SSSD and NSS for mapping user accounts and groups to security identifiers (SIDs). SSSD must be configured and running for SQL Server to create AD logins successfully. **realmd** usually does this automatically as part of joining the domain, but in some cases, you must do this separately.
 
-   For more information, see how to [configure SSSD manually](https://access.redhat.com/articles/3023951), and [configure NSS to work with SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   For more information, see how to [configure SSSD manually](https://access.redhat.com/articles/3023951), and [configure NSS to work with SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
 1. Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user. The following example uses **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html), and [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) commands for this.
 

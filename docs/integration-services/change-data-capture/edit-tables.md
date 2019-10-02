@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "tabProps"
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Edit Tables
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Tables** tab to make changes to the tables and columns that you selected from the Oracle source database. This tab has the following elements:  
   
  **Table list**  

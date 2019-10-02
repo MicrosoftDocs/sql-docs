@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: "MashaMSFT"
 ms.author: mathoma
-manager: craigg
 ---
 # Distributed availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -230,7 +229,7 @@ An example of output from the second WSFC cluster that's participating in a dist
 
 ![Example output of the preceding query](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 
-### DMV to list Distribtued AG health
+### DMV to list Distributed AG health
 
 In SQL Server Management Studio, any status shown on the Dashboard and other areas are for local synchronization only within that availability group. To display the health of a distributed availability group, query the dynamic management views. The following example query extends and refines the previous query:
 

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7d148b56-9bbe-4e55-b31f-43f115705402
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Comparability for IRowsetFind

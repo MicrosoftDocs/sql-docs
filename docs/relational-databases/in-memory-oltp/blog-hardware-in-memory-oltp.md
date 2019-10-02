@@ -9,7 +9,6 @@ ms.technology: in-memory-oltp
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ---
 # Hardware considerations for In-Memory OLTP in SQL Server

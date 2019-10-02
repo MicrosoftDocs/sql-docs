@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: mightypen
@@ -85,18 +84,18 @@ manager: craigg
  
 -  Best suited for offloading historical read workloads to the cloud to support on-premises reporting applications 
  
--  Facilitate disaster recovery by separating the compute instance (an instance of SQL Server) and the data (SQL Server data files). This allows you to easily attach the database to another instance of SQL Server in an on-premises environment or in a Azure virtual machine in case of a disaster. 
+-  Facilitate disaster recovery by separating the compute instance (an instance of SQL Server) and the data (SQL Server data files). This allows you to easily attach the database to another instance of SQL Server in an on-premises environment or in an Azure virtual machine in case of a disaster. 
  
 #### <a name="migrate"></a> Migrate existing SQL Server databases to Azure Virtual Machines 
  The cloud computing brings some key benefits to enterprises, such as limitless virtualized resources are available for you on a pay-per-use basis, you can leverage publicly available cloud data centers rather than building out and manage data centers on your own, and therefore you can lower IT and hardware costs. 
  
  With [SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/azure/jj823132.aspx), you can move the existing on-premises applications to Azure with minimal or no code changes. Administrators and developers can still use the same development and administration tools that are available on-premises. 
  
- Moving a database from on-premises SQL Server to SQL Server running in a Azure Virtual Machine typically takes one of these paths: 
+ Moving a database from on-premises SQL Server to SQL Server running in an Azure Virtual Machine typically takes one of these paths: 
  
--  **Moving just the database:** There are several tools and techniques available to move existing on-premises databases to SQL Server in Azure Virtual Machines. For guidelines and recommendations on migration to SQL Server in Azure Virtual Machines, see [Getting Ready to Migrate to SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/dn133142.aspx) and also [Migrating to SQL Server in a Azure Virtual Machine](https://msdn.microsoft.com/library/jj156165.aspx). 
+-  **Moving just the database:** There are several tools and techniques available to move existing on-premises databases to SQL Server in Azure Virtual Machines. For guidelines and recommendations on migration to SQL Server in Azure Virtual Machines, see [Getting Ready to Migrate to SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/dn133142.aspx) and also [Migrating to SQL Server in an Azure Virtual Machine](https://msdn.microsoft.com/library/jj156165.aspx). 
  
-   In addition, starting with SQL Server 2014, a new wizard, [Deploy a SQL Server Database to a Microsoft Azure Virtual Machine](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) is available for you to deploy the database to another SQL Server instance running in a Azure Virtual Machine. 
+   In addition, starting with SQL Server 2014, a new wizard, [Deploy a SQL Server Database to a Microsoft Azure Virtual Machine](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) is available for you to deploy the database to another SQL Server instance running in an Azure Virtual Machine. 
  
 -  **Moving the entire virtual machine:** You can bring your own SQL Server virtual machines to Azure or create one by using the platform image. Then, you can upload and attach a data disk that already contains data to the virtual machine, or attach an empty disk to the machine. Having a SQL Server data instance on Azure Virtual Machines with attached data disks provides another persistent storage for your data files and application data. For comprehensive information and how-tos, see [SQL Server Deployment in Azure Virtual Machines](https://msdn.microsoft.com/library/dn133141.aspx). 
  

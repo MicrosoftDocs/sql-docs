@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 04/23/2019
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -39,8 +38,9 @@ This statement enables several database configuration settings at the **individu
 - Enable or disable collection of execution statistics for natively compiled T-SQL modules.
 - Enable or disable online by default options for DDL statements that support the `ONLINE =` syntax.
 - Enable or disable resumable by default options for DDL statements that support the `RESUMABLE =` syntax.
-- Enable or disable the auto-drop functionality of global temporary tables.
 - Enable or disable [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) features.
+- Enable or disable accelerated plan forcing.
+- Enable or disable the auto-drop functionality of global temporary tables.
 - Enable or disable the [lightweight query profiling infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
 - Enable or disable the new `String or binary data would be truncated` error message.
 - Enable or disable collection of last actual execution plan in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
@@ -65,8 +65,8 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
-    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
-    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
     | TSQL_SCALAR_UDF_INLINING = { ON | OFF }
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
@@ -77,12 +77,19 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | ACCELERATED_PLAN_FORCING = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
 }
 ```
+
+> [!IMPORTANT]
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], some option names have changed:      
+> -  `DISABLE_INTERLEAVED_EXECUTION_TVF` changed to `INTERLEAVED_EXECUTION_TVF`
+> -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` changed to `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
+> -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` changed to `BATCH_MODE_ADAPTIVE_JOINS`
 
 ## Arguments
 
@@ -107,6 +114,9 @@ Specifies the default MAXDOP setting that should be used for statements. 0 is th
 You can use the max degree of parallelism option to limit the number of processors to use in parallel plan execution. SQL Server considers parallel execution plans for queries, index data definition language (DDL) operations, parallel insert, online alter column, parallel stats collection, and static and keyset-driven cursor population.
 
 To set this option at the instance level, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+
+> [!NOTE]
+> In Azure SQL Database, the server-level **max degree of parallelism** configuration is always set to 0. MAXDOP can be configured for each database as described in the current article. For recommendations on configuring MAXDOP optimally, see the [Additional Resources](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources) section.
 
 > [!TIP]
 > To accomplish this at the query level, add the **MAXDOP** [query hint](../../t-sql/queries/hints-transact-sql-query.md).
@@ -164,10 +174,12 @@ INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Allows you to enable or disable Interleaved execution for multi-statement table valued functions at the database or statement scope while still maintaining database compatibility level 140 and higher. Interleaved execution is a feature that is part of Adaptive query processing in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information, please refer to [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md).
+Allows you to enable or disable Interleaved execution for multi-statement table-valued functions at the database or statement scope while still maintaining database compatibility level 140 and higher. Interleaved execution is a feature that is part of Adaptive query processing in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information, please refer to [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md).
 
 > [!NOTE]
 > For database compatibility level 130 or lower, this database scoped configuration has no effect.
+>
+> In SQL Server 2017 (14.x) only, the option INTERLEAVED_EXECUTION_TVF had the older name of **DISABLE**_INTERLEAVED_EXECUTION_TVF.
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}    
 
@@ -281,14 +293,25 @@ Allows you to enable or disable table variable deferred compilation at the datab
 > [!NOTE]
 > For database compatibility level 140 or lower, this database scoped configuration has no effect.
 
+ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
+
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+
+Enables an optimized mechanism for query plan forcing, applicable to all forms of plan forcing, such as [Query Store Force Plan](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed), [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction), or the [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md#use-plan) query hint. The default is ON.
+
+> [!NOTE]
+> It is not recommended to disable accelerated plan forcing.
+
 GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 **Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (feature is in public preview)
 
-Allows setting the auto drop functionality for [global temporary tables](create-table-transact-sql.md). The default is ON, which means that the global temporary tables are automatically dropped when not in use by any session. When set to OFF, global temporary tables need to be explicitly dropped using a DROP TABLE statement or will be automatically dropped on server restart.
+Allows setting the auto-drop functionality for [global temporary tables](../../t-sql/statements/create-table-transact-sql.md#temporary-tables). The default is ON, which means that the global temporary tables are automatically dropped when not in use by any session. When set to OFF, global temporary tables need to be explicitly dropped using a DROP TABLE statement or will be automatically dropped on server restart.
 
 - With [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single databases and elastic pools, this option can be set in the individual user databases of the SQL Database server.
 - In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance, this option is set in `TempDB` and the setting of the individual user databases has no effect.
+
+<a name="lqp"></a>
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
@@ -332,6 +355,11 @@ For 3-part name queries, the settings for the current database connection for th
 The `ALTER_DATABASE_SCOPED_CONFIGURATION` event is added as a DDL event that can be used to fire a DDL trigger, and is a child of the `ALTER_DATABASE_EVENTS` trigger group.
 
 Database scoped configuration settings will be carried over with the database, which means that when a given database is restored or attached, the existing configuration settings remain.
+
+Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], some option names have changed:      
+-  `DISABLE_INTERLEAVED_EXECUTION_TVF` changed to `INTERLEAVED_EXECUTION_TVF`
+-  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` changed to `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
+-  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` changed to `BATCH_MODE_ADAPTIVE_JOINS`
 
 ## Limitations and Restrictions
 

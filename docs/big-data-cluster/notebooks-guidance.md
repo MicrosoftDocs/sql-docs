@@ -2,14 +2,13 @@
 title: Run notebooks in Azure Data Studio
 titleSuffix: SQL Server big data clusters
 description: This article explains how to run Jupyter Notebooks in Azure Data Studio connected to a SQL Server 2019 big data cluster.
-author: achatter
-ms.author: jroth 
-manager: craigg
-ms.date: 03/27/2019
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # How to use notebooks in SQL Server 2019 preview
@@ -141,7 +140,13 @@ If you want to clear the results of all the executed cells in the Notebook,then 
 
 ### Save
 
-You can save the Notebook by **Ctrl+S** or clicking the **File > Save**, **File > Save As...** and **File > Save All** commands from the File menu and **File: Save** commands entered in the command palette.
+To save the notebook do one of the following.
+
+- Select Ctrl+S
+- Click **File** > **Save**
+- Click **File** > **Save As...**
+- Click **File** > **Save All** 
+- In the command palette, enter **File: Save** 
 
 ### Pyspark3/PySpark kernel
 

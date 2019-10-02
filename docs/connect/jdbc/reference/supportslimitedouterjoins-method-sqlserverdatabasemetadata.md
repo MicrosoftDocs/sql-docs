@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 06225a1a-a58d-4bff-b2ef-be303f051644
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # supportsLimitedOuterJoins Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -12,11 +12,14 @@ helpviewer_keywords:
   - "logical OR (||)"
   - "|| (logical OR)"
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # || (Logical OR) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Performs a logical OR operation. The expression evaluates to TRUE if one or both conditions are TRUE.  
   
 ## Syntax  

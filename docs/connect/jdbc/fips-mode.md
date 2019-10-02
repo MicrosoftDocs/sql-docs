@@ -1,17 +1,18 @@
 ---
-title: "FIPS Mode in JDBC | Microsoft Docs"
+title: "FIPS mode in JDBC | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/26/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: "craigg"
+ms.reviewer: genemi
 ms.technology: connectivity
 ms.topic: conceptual
-author: "David-Engel"
-ms.author: "v-daveng"
-manager: "kenvh"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: kenvh
 ---
-# FIPS Mode
+# FIPS mode
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 The Microsoft JDBC Driver for SQL Server supports running in JVMs configured to be *FIPS 140 Compliant*.
@@ -21,9 +22,9 @@ The Microsoft JDBC Driver for SQL Server supports running in JVMs configured to 
 - FIPS configured JVM
 - Appropriate SSL Certificate
 - Appropriate policy files
-- Appropriate Configuration Parameters
+- Appropriate Configuration parameters
 
-## FIPS Configured JVM
+## FIPS configured JVM
 
 Generally, applications can configure the `java.security` file to use FIPS compliant crypto providers. Please see the documentation specific to your JVM for how to configure FIPS 140 compliance.
 
@@ -31,10 +32,10 @@ To see the approved modules for FIPS Configuration, refer to [Validated Modules 
 
 Vendors may have some additional steps to configure a JVM with FIPS.
 
-## Appropriate SSL Certificate
+## Appropriate SSL certificate
 In order to connect to SQL Server in FIPS mode, a valid SSL Certificate is required. Install or import it into the Java Key Store on the client machine (JVM) where FIPS is enabled.
 
-### Importing SSL Certificate in Java KeyStore
+### Importing SSL certificate in Java keyStore
 For FIPS, most likely you need to import the certificate (.cert) in either PKCS or a provider-specific format.
 Use the following snippet to import the SSL certificate and store it in a working directory with the appropriate KeyStore format. _TRUST\_STORE\_PASSWORD_ is your password for Java KeyStore.
 
@@ -73,7 +74,7 @@ The following example is importing an Azure SSL Certificate in PKCS12 format wit
 ## Appropriate policy files
 For some FIPS Providers, unrestricted Policy jars are needed. In such cases, for Sun / Oracle, download the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files for [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) or [JRE 7](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html). 
 
-## Appropriate Configuration Parameters
+## Appropriate Configuration parameters
 To run the JDBC Driver in FIPS-compliant mode, configure connection properties as shown in following table. 
 
 #### Properties 

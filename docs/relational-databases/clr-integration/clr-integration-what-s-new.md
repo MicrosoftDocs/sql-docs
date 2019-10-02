@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # CLR Integration - What&#39;s New
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "HOST_NAME function"
   - "workstation names [SQL Server]"
 ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # HOST_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

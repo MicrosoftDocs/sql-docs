@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "administering Report Builder"
@@ -147,7 +146,7 @@ manager: kfile
   
  However, with additional configuration the report server is available to Report Builder users. You can add [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URLs to trusted sites. By default, Internet Explorer 7.0 or later runs in Protected Mode on Windows Vista, Windows Server 2008, and Windows 7. Protected Mode is a feature that blocks browser requests from reaching high-level processes that run on the same computer. You can disable protected mode for the report server applications by adding them as Trusted Sites. You must have administrator permission to make this change.  
   
- For more information about configuring [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Reporting Services Configuration Manager &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode) in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
+ For more information about configuring [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Reporting Services Configuration Manager &#40;del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
   
   
 ##  <a name="SampleDatabases"></a> SQL Server Sample Databases  

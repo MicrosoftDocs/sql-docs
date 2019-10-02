@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "HasM geography"
 ms.assetid: e752e97f-1619-437d-b962-48c188b4e94c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # HasM (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

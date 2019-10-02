@@ -1,13 +1,11 @@
 ---
-title: Overview of SQL Server on Linux | Microsoft Docs
+title: Overview of SQL Server on Linux
 description: This article describes how SQL Server runs on Linux and provides information on how to learn more.
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ---

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Unicode
 Unicode defines encoding for characters in many languages.  

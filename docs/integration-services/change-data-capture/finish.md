@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "finish"
 ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
-# Finish
+# Finish 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The **Finish** page summarizes the wizard process. Click **Finish** to close the wizard and generate all of the tables you defined in the Create CDC Instance wizard.  
   
 ## See Also  

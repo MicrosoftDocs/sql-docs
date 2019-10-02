@@ -15,11 +15,14 @@ helpviewer_keywords:
   - "Integration Services, backward compatibility"
   - "backward compatibility [Integration Services]"
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services Backward Compatibility
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This topic describes changes between versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. It covers features that are no longer available or are scheduled to be removed in a future release. It also describes changes to the product that are known to break, or to change the behavior of, an existing application that includes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] functionality.  
   
 ## Deprecated Integration Services Features in SQL Server 2016

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 1679bf9e-a2ef-4f90-8907-a002f7341a7d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Unexpected System Failures
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

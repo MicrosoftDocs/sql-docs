@@ -1,13 +1,13 @@
 ---
-title: Installation guidance for SQL Server on Linux | Microsoft Docs
+title: Installation guidance for SQL Server on Linux
+titleSuffix: SQL Server
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios. 
-author: rothja 
-ms.author: jroth 
-manager: craigg
-ms.date: 04/07/2018
+author: VanMSFT 
+ms.author: vanto
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
+ms.custom: "sqlfreshmay19"
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ---
@@ -34,8 +34,8 @@ SQL Server 2017 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Ente
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Get RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](https://www.ubuntu.com/download/server)
-| **Docker Engine** | 1.8+ | [Get Docker](https://www.docker.com/products/overview)
+| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
+| **Docker Engine** | 1.8+ | [Get Docker](https://www.docker.com/get-started)
 
 Microsoft also supports deploying and managing SQL Server containers by using OpenShift and Kubernetes.
 
@@ -65,9 +65,6 @@ If you use **Network File System (NFS)** remote shares in production, note the f
 
 When you install or upgrade SQL Server, you get the latest version of SQL Server from your configured Microsoft repository. The quickstarts use the SQL Server 2017 Cumulative Update **CU** repository. But you can instead configure the **GDR** repository or the **Preview (vNext)** repository. For more information on repositories and how to configure them, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
 
-> [!IMPORTANT]
-> If you previously installed a CTP or RC version of SQL Server 2017, you must remove the preview repository and register a General Availability (GA) one. For more information, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
-
 ## <a id="platforms"></a> Install SQL Server 2017
 
 You can install SQL Server 2017 on Linux from the command line. For step-by-step instructions, see one of the following quickstarts:
@@ -78,11 +75,11 @@ You can install SQL Server 2017 on Linux from the command line. For step-by-step
 - [Run on Docker](quickstart-install-connect-docker.md)
 - [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
+After installing, consider making additional configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
+
 ## <a id="sqlvnext"></a> Install SQL Server 2019 preview
 
 You can install SQL Server 2019 preview on Linux using the same quickstart links in the previous section. However, you must register the **Preview (vNext)** repository instead of the **CU** repository. The quickstarts provide instructions on how to do this.  
-
-After installing, consider making additional configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a id="upgrade"></a> Update SQL Server
 
@@ -214,6 +211,7 @@ After installation, you can also install or enable optional SQL Server features.
 - [SQL Server command-line tools](sql-server-linux-setup-tools.md)
 - [SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 - [SQL Server Full Text Search](sql-server-linux-setup-full-text-search.md)
+- [Machine Learning Services (R, Python)](sql-server-linux-setup-machine-learning.md)
 - [SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

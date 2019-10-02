@@ -40,16 +40,15 @@ helpviewer_keywords:
   - "databases [SQL Server], generating scripts"
   - "Publish Database Wizard"
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Generate and Publish Scripts Wizard
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   You can use the **Generate and Publish Scripts Wizard** to create scripts for transferring a database between instances of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. You can generate scripts for a database on an instance of the Database Engine in your local network, or from [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. The generated scripts can be run on another instance of the Database Engine or [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. You can also use the wizard to publish the contents of a database directly to a Web service created by using the Database Publishing Services. You can create scripts for an entire database, or limit it to specific objects.  
 
-For a more detailed Tutorial on using the Generate and Publish Scripts wizard, please see [Tutorial: Generate Scripts Wizard](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option).
+For a more detailed Tutorial on using the Generate and Publish Scripts wizard, please see [Tutorial: Generate Scripts Wizard](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
 
 
   
@@ -149,7 +148,7 @@ For a more detailed Tutorial on using the Generate and Publish Scripts wizard, p
   
 -   **Append to file** - When **True**, this script is added to the bottom of an existing script, specified on the **Set Scripting Options** page. When **False**, the new script overwrites a previous script. The default is **False**.  
   
--   **Continue scripting on error** - When **True**, scripting stops when an error occurs. When **False**, scripting continues. The default is **False**.  
+-   **Continue scripting on error** - When **False**, scripting stops when an error occurs. When **True**, scripting continues. The default is **False**.  
   
 -   **Convert UDDTs to base types** - When **True**, user-defined data types (UDDT) are converted into the underlying base data types that were used to create them. Use **True** when the UDDT does not exist in the database where the script will run. When **False**, UDDTs are used. The default is **False**.  
   

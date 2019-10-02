@@ -9,11 +9,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.configureflatfiledest.f1"
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configure Flat File Destination (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   If you selected a flat file destination, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Configure Flat File Destination** after you specify that you want to copy a table or after you provide a query. On this page, you specify formatting options for the destination flat file. Optionally, you review the mapping of individual columns and preview sample data.  
   
 ## Screen shot of the Configure Flat File Destination page  

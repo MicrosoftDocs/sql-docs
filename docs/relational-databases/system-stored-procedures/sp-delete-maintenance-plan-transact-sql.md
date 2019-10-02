@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_delete_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

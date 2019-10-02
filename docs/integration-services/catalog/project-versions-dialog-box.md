@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.isprojectprop.versions.f1"
 ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Project Versions Dialog Box
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Project Versions** dialog box to view versions of a project and to restore a previous version.  
   
  You can also view previous versions in the [catalog.object_versions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-object-versions-ssisdb-database.md) view, and use the [catalog.restore_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md) stored procedure to restore previous versions.  

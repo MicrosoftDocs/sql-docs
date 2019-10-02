@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Data Access Tracing with the ODBC Driver on Linux and macOS
 
@@ -25,6 +24,7 @@ To trace your application's ODBC behavior, edit the `odbcinst.ini` file's `[ODBC
 to the path of the file which is to contain the trace output; for example:
 
 ```ini
+[ODBC]
 Trace=Yes
 TraceFile=/home/myappuser/odbctrace.log
 ```

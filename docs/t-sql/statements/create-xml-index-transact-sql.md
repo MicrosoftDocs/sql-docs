@@ -27,7 +27,6 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
 ---
 # CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,10 +51,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 [ ; ]  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_name  
-}  
+{ database_name.schema_name.table_name | schema_name.table_name | table_name }
   
 <xml_index_option> ::=  
 {   

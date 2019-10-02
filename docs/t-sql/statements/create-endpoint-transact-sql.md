@@ -31,7 +31,6 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ FOR { TSQL | SERVICE_BROKER | DATABASE_MIRRORING } (
 <AS TCP_protocol_specific_arguments> ::=  
 AS TCP (  
   LISTENER_PORT = listenerPort  
-  [ [ , ] LISTENER_IP = ALL | ( 4-part-ip ) | ( "ip_address_v6" ) ]  
+  [ [ , ] LISTENER_IP = ALL | ( xx.xx.xx.xx IPv4 address ) | ( '__:__1' IPv6 address ) ]  
   
 )  
   
@@ -271,7 +270,7 @@ FOR DATABASE_MIRRORING (
 ### Creating a database mirroring endpoint  
  The following example creates a database mirroring endpoint. The endpoint uses port number `7022`, although any available port number would work. The endpoint is configured to use Windows Authentication using only Kerberos. The `ENCRYPTION` option is configured to the nondefault value of `SUPPORTED` to support encrypted or unencrypted data. The endpoint is being configured to support both the partner and witness roles.  
   
-```  
+```sql  
 CREATE ENDPOINT endpoint_mirroring  
     STATE = STARTED  
     AS TCP ( LISTENER_PORT = 7022 )  
@@ -281,6 +280,36 @@ CREATE ENDPOINT endpoint_mirroring
        ROLE=ALL);  
 GO  
 ```  
+
+### Create a new endpoint pointing to a specific IPv4 address and port
+
+```sql
+CREATE ENDPOINT ipv4_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = (10.0.75.1)
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public; -- Keep existing public permission on default endpoint for demo purpose
+GRANT CONNECT ON ENDPOINT::ipv4_endpoint_special
+TO login_name;
+```
+
+### Create a new endpoint pointing to a specific IPv6 address and port
+
+```sql
+CREATE ENDPOINT ipv6_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = ('::1')
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public;
+GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
+
+```
   
 ## See also  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   

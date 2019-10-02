@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 12be8011-b76c-45c1-8f55-7f46e0e374e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create and Access Tables in TempDB from Stored Procedures
@@ -20,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 For more details about memory-optimization of temp table and table variable scenarios see: [Faster temp table and table variable by using memory optimization](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
-  The following example shows how the use of a temp table with three columns (id, ProductID, Quantity) can be replaced using a table variable **@OrderQuantityByProduct** of type **dbo.OrderQuantityByProduct**:  
+  The following example shows how the use of a temp table with three columns (id, ProductID, Quantity) can be replaced using a table variable **\@OrderQuantityByProduct** of type **dbo.OrderQuantityByProduct**:  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

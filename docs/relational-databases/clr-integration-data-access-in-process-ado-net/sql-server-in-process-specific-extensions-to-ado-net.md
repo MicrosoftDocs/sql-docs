@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # SQL Server In-Process Specific Extensions to ADO.NET
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

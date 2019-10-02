@@ -35,7 +35,7 @@ You must have the following prerequisites to complete Report Builder tutorials:
 
 -   The [Tutorial: Creating Drillthrough and Main Reports (Report Builder)](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md) tutorial requires access to the Contoso Sales cube. See the tutorial for more information. 
   
-The report server administrator must grant you the necessary permissions on the report server, configure [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] folder locations, and configure Report Builder default options. For more information, see [Install and Uninstall Report Builder](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416).  
+The report server administrator must grant you the necessary permissions on the report server, configure [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] folder locations, and configure Report Builder default options. For more information, see [Install Report Builder](install-windows/install-report-builder.md).  
 
 ## Next steps
 

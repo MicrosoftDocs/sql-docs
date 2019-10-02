@@ -12,11 +12,14 @@ helpviewer_keywords:
   - "debugging [Integration Services], scripts"
   - "scripts [Integration Services], debugging"
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Debugging Script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You write the scripts that the Script task and Script component use, in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
   
  You set and script breakpoints in VSTA. You can manage breakpoints in VSTA, but you can also manage the breakpoints using the **Set Breakpoints** dialog box that [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer provides. For more information, see [Debugging Control Flow](../../integration-services/troubleshooting/debugging-control-flow.md).  

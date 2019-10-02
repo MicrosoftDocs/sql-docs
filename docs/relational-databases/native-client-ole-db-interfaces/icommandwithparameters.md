@@ -10,7 +10,6 @@ ms.topic: "reference"
 ms.assetid: 66644c70-def7-46d8-8c47-b883292a0288
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ICommandWithParameters

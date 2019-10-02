@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # CREATE WORKLOAD CLASSIFIER (Transact-SQL)
@@ -98,4 +97,4 @@ CREATE WORKLOAD CLASSIFIER wgcELTRole
 [DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)</br>
 Catalog view [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)</br>
 Catalog view [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
-[SQL Data Warehouse Classification](/azure/sql-data-warehouse/classification)
+[SQL Data Warehouse Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

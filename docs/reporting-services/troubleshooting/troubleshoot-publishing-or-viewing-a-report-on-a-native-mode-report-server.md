@@ -2,7 +2,7 @@
 title: "Troubleshoot Publishing or Viewing a Report on a Native Mode Report Server | Microsoft Docs"
 ms.date: 02/28/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: troubleshooting
 
 

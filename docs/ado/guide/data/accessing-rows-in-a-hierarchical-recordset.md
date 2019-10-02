@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Accessing Rows in a Hierarchical Recordset (Example)
 The following example shows the steps necessary to access rows in a hierarchical [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):

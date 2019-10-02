@@ -18,11 +18,14 @@ helpviewer_keywords:
   - "DTS [Integration Services], about Integration Services"
   - "data integration [Integration Services]"
   - "Data Transformation Services"
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SQL Server Integration Services
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a platform for building enterprise-level data integration and data transformations solutions. Use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to solve complex business problems by copying or downloading files, loading data warehouses, cleansing and mining data, and managing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects and data.
 

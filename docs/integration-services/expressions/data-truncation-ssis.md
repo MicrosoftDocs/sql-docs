@@ -13,11 +13,14 @@ helpviewer_keywords:
   - "expressions [Integration Services], data truncation"
   - "truncate options [Integration Services]"
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Truncation (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Converting values from one data type to another may cause values to be truncated.  
   
  Truncation can occur when:  

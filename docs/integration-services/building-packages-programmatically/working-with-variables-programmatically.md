@@ -20,11 +20,14 @@ helpviewer_keywords:
   - "custom variables [Integration Services]"
   - "variables [Integration Services], customizing"
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Working with Variables Programmatically
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Variables are a way to dynamically set values and control processes in packages, containers, tasks, and event handlers. Variables can also be used by precedence constraints to control the direction of the flow of data to different tasks. Variables have a variety of uses:  
   
 -   Update properties of a package at run time.  

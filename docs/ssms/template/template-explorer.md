@@ -1,10 +1,7 @@
 ---
 title: "Template Explorer | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
@@ -17,11 +14,15 @@ helpviewer_keywords:
   - "templates [Transact-SQL]"
   - "templates [SQL Server], Template Explorer"
 ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "01/19/2017"
 ---
+
 # Template Explorer
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a variety of templates. Templates are boilerplate files containing SQL scripts that help you create objects in a database. The first time the template explorer is opened, a copy of the templates are placed in the user's folder in C:\Users, under AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates.  
   

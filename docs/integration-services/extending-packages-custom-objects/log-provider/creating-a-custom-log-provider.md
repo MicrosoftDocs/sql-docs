@@ -13,11 +13,14 @@ dev_langs:
 helpviewer_keywords: 
   - "custom log providers [Integration Services], creating"
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Creating a Custom Log Provider
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] run-time environment has extensive logging capabilities. A log lets you capture events that occur during package execution. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includes a variety of log providers that enable logs to be created and stored in multiple formats, such as XML, text, database, or in the Windows event log. If one of these providers or output formats does not fit your needs, you can create a custom log provider.  
   
  The steps involved in creating a custom log provider are similar to the steps for creating any other custom object for [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  

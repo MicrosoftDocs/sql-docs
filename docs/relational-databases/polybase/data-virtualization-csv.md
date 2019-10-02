@@ -1,11 +1,10 @@
 ---
 title: Virtualize external data in SQL Server 2019 CTP 2.0 | Microsoft Docs
 description: This page details the steps for using the Create external table wizard for a CSV file
-author: Abiola
-ms.author: aboke
-ms.reviewer: jroth
-manager: craigg
-ms.date: 03/27/2019
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mikeray
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
@@ -21,18 +20,14 @@ SQL Server 2019 also allows the ability to virtualize data from a CSV file in HD
 Starting in CTP 2.4, the data pool and storage pool external data sources are no longer created by default in your big data cluster. Before using the wizard, create the default **SqlStoragePool** external data source in your target database with the following Transact-SQL query. Make sure that you first change the context of the query to your target database.
 
 ```sql
+-- Create default data sources for SQL Big Data Cluster
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+    CREATE EXTERNAL DATA SOURCE SqlDataPool
+    WITH (LOCATION = 'sqldatapool://controller-svc/default');
+
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-  BEGIN
-    IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-      WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-    ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-      WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-    ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
-      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-      WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
-  END
+    CREATE EXTERNAL DATA SOURCE SqlStoragePool
+    WITH (LOCATION = 'sqlhdfs://controller-svc/default');
 ```
 
 ## Launch the External Table wizard

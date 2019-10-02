@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_replshowcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns the commands for transactions marked for replication in readable format. **sp_replshowcmds** can be run only when client connections (including the current connection) are not reading replicated transactions from the log. This stored procedure is executed at the Publisher on the publication database.  
   

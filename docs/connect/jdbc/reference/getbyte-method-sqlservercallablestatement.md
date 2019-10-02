@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 4454c22a-5e6d-4edb-9ead-d623a174ce59
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getByte Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

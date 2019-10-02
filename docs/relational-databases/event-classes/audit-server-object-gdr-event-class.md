@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 117fedca-c1c4-469a-929a-9ea332c83d25
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Server Object GDR Event Class

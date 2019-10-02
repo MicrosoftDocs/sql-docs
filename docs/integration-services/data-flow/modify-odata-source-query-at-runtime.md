@@ -8,11 +8,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Provide an OData Source Query at Runtime
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  You can modify the OData Source query at runtime by adding an *expression* to the **[OData Source].[Query]** property of the Data Flow task.  
   
  The columns returned have to be the same columns that were returned at design time; otherwise, you get an error when the package is executed. Be sure to specify the same columns (in the same order) when using the $select query option. A safer alternative to using the $select option is to deselect the columns you don't want directly from the Source Component UI.  

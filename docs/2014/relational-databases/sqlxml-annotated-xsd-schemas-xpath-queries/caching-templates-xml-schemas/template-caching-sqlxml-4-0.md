@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "cache [SQLXML]"
   - "templates [SQLXML], caching"
 ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Template Caching (SQLXML 4.0)

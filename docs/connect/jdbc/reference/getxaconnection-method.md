@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: b2710613-78b1-438f-b996-c7ae6f34381a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getXAConnection Method ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

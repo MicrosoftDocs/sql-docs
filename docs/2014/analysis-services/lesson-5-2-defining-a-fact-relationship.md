@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
@@ -113,7 +112,7 @@ manager: craigg
      ![Dimensioning of Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensioning of Internet Sales-Sales Amount")  
   
 ## Next Task in Lesson  
- [Defining a Many-to-Many Relationship](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
+ [Defining a Many-to-Many Relationship](lesson-5-3-defining-a-many-to-many-relationship.md)  
   
 ## See Also  
  [Dimension Relationships](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

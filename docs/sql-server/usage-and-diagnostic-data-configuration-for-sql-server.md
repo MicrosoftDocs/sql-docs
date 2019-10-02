@@ -1,16 +1,15 @@
 ---
-title: Configure usage and diagnostic data collection for SQL Server | Microsoft Docs
+title: Configure usage and diagnostic data collection for SQL Server (CEIP) | Microsoft Docs
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: ""
 ms.technology: configuration
 ---
-# Configure usage and diagnostic data collection for SQL Server
+# Configure usage and diagnostic data collection for SQL Server (CEIP)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -50,6 +49,12 @@ For SQL Server on Linux refer to [Customer Feedback for SQL Server on Linux](htt
 
 > [!NOTE]
 > You can disable the sending of information to Microsoft only in paid versions of SQL Server.
+
+## Remarks
+ - Removing or disabling the SQL CEIP service is not supported. 
+ - Removing the SQL CEIP resources from the Cluster Group is not supported. 
+
+To opt out of the data collection, see [Turning local audit on or off](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off)
 
 ## Error and Usage Reporting application 
 
@@ -134,7 +139,7 @@ The procedure to turn this feature on or off is dependent on the OS version. To 
  
 - Windows Server 2016 and Windows 10
 
-    [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+    [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - Windows Server 2008 R2 and Windows 7
 
     [WER Settings](/windows/desktop/wer/wer-settings)

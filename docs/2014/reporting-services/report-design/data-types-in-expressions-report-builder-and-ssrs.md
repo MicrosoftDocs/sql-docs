@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
@@ -135,7 +134,7 @@ manager: kfile
   
  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database data types, see [Data Types &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql), and [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) in [SQL Server Books Online](https://go.microsoft.com/fwlink/?linkid=120955).  
   
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data types, see [Data Types in Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) in [SQL Server Books Online](https://go.microsoft.com/fwlink/?linkid=120955).  
+ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data types, see [Data Types in Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services) in [SQL Server Books Online](https://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## See Also  
  [Formatting Report Items &#40;Report Builder and SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  

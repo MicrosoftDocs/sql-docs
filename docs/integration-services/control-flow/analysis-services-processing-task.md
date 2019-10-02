@@ -15,11 +15,14 @@ helpviewer_keywords:
   - "Analysis Services Processing task"
   - "processing objects [Integration Services]"
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Analysis Services Processing Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Processing task processes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects such as tabular models, cubes, dimensions, and mining models.  
   
  When processing tabular models, keep the following in mind:  
@@ -114,7 +117,7 @@ manager: craigg
 |--------------|-----------------|  
 |**Object Name**|Lists the specified object names.|  
 |**Type**|Lists the types of the specified objects.|  
-|**Process Options**|Select a processing option in the list.<br /><br /> **Related Topics**: [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Process Options**|Select a processing option in the list.<br /><br /> **Related Topics**: [Processing a multidimensional model &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Settings**|Lists processing settings for the specified objects.|  
   
  **Add**  

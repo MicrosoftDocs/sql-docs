@@ -6,11 +6,14 @@ ms.prod: sql
 ms.prod_service: "integration-services"
 ms.custom: ""
 ms.technology: integration-services
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Deploy an SSIS project from the command prompt with ISDeploymentWizard.exe
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This quickstart demonstrates how to deploy an SSIS project from the command prompt by running the Integration Services Deployment Wizard, `ISDeploymentWizard.exe`.
 
 For more info about the Integration Services Deployment Wizard, see [Integration Services Deployment Wizard](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).

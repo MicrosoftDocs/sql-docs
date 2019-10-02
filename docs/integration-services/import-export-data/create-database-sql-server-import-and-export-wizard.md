@@ -9,11 +9,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.createdatabase.f1"
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Create Database (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 If you select **New** on the **Choose a Destination** page to create a new SQL Server destination database, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows the **Create Database** dialog box. On this page, you provide a name for the new database. Optionally you can also change the settings for the initial size and the automatic growth of the new database and its log file. 
 
 The **Create Database** dialog box in the wizard offers only the basic options that are available for creating a new SQL Server database. To see and configure all the options for a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to create the database, or to configure the database after the wizard creates it. 

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.database_firewall_rules (Azure SQL Database)
@@ -33,7 +32,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |id|**INTEGER**|The identifier of the database-level firewall setting.|  
 |name|**NVARCHAR(128)**|The name you chose to describe and distinguish the database-level firewall setting.|  
 |start_ip_address|**VARCHAR(45)**|The lowest IP address in the range of the database-level firewall setting. IP addresses equal to or greater than this can attempt to connect to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] instance. The lowest possible IP address is `0.0.0.0`.|  
-|end_ip_address|**VARCHAR(45)**|The highest IP address in the range of the firewall setting. IP addresses equal to or less than this can attempt to connect to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] instance. The highest possible IP address is `255.255.255.255`.<br /><br /> Note: Windows Azure connection attempts are allowed when both this field and the **start_ip_address** field equals `0.0.0.0`.|  
+|end_ip_address|**VARCHAR(45)**|The highest IP address in the range of the firewall setting. IP addresses equal to or less than this can attempt to connect to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] instance. The highest possible IP address is `255.255.255.255`.<br /><br /> Note: Azure connection attempts are allowed when both this field and the **start_ip_address** field equals `0.0.0.0`.|  
 |create_date|**DATETIME**|UTC date and time when the database-level firewall setting was created.|  
 |modify_date|**DATETIME**|UTC date and time when the database-level firewall setting was last modified.|  
   

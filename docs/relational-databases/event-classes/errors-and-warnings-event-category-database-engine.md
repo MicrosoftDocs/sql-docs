@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 249c19b5-af68-4433-80f6-337395176641
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Errors and Warnings Event Category (Database Engine)

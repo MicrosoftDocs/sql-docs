@@ -32,12 +32,10 @@ helpviewer_keywords:
 ms.assetid: 
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Editions and supported features of SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
-
 
 This topic provides details of features supported by the various editions of SQL Server 2017. 
 
@@ -57,19 +55,19 @@ For the latest release notes and what's new information, see the following:
 
 ### Try SQL Server!    
     
-> [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/) **[Download SQL Server 2017 from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
+> [![Download from Evaluation Center](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/) **[Download SQL Server 2017 from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
 
 <!---    
-> ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
+> ![Azure Virtual Machine small](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
 --->
 
-## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] editions  
+## SQL Server editions  
  The following table describes the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Definition|  
 |---------------------------------------|----------------|  
 |Enterprise|The premium offering, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition delivers comprehensive high-end datacenter capabilities with blazing-fast performance, unlimited virtualization<sup>1</sup> , and end-to-end business intelligence - enabling high service levels for mission-critical workloads and end user access to data insights.|  
-|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition delivers basic data management and business intelligence database for departments and small organizations to run their applications and supports common development tools for on-premise and cloud - enabling effective database management with minimal IT resources.|  
+|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition delivers basic data management and business intelligence database for departments and small organizations to run their applications and supports common development tools for on-premises and cloud - enabling effective database management with minimal IT resources.|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web edition is a low total-cost-of-ownership option for Web hosters and Web VAPs to provide scalability, affordability, and manageability capabilities for small to large scale Web properties.|  
 |Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer edition lets developers build any kind of application on top of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It includes all the functionality of Enterprise edition, but is licensed for use as a development and test system, not as a production server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer is an ideal choice for people who build and test applications.|  
 |Express editions|Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications. It is the best choice for independent software vendors, developers, and hobbyists building client applications. If you need more advanced database features, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express can be seamlessly upgraded to other higher end versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB is a lightweight version of Express that has all of its programmability features, runs in user mode and has a fast, zero-configuration installation and a short list of prerequisites.|  
@@ -151,7 +149,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Always On availability groups<sup>3</sup>|Yes|No|No|No|No|
 |Basic availability groups <sup>4</sup>|No|Yes|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|
-|Online indexing|Yes|No|No|No|No|
+|Online index create and rebuild|Yes|No|No|No|No|
 |Resumable online index rebuilds|Yes|No|No|No|No|
 |Online schema change|Yes|No|No|No|No|
 |Fast recovery|Yes|No|No|No|No|
@@ -159,8 +157,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Hot add memory and CPU|Yes|No|No|No|No|
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
-|Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|
-|Clusterless availability group|Yes|Yes|No|No|No|No|
+|Hybrid backup to Azure (backup to URL)|Yes|Yes|No|No|No|
+|Read-scale availability group|Yes|Yes|No|No|No|No|
 |Minimum replica commit availability group|Yes|Yes|Yes|No|No|No|
   
 
@@ -179,7 +177,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Columnstore <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|  
 |Large object binaries in clustered columnstore indexes|Yes|Yes|Yes|Yes|Yes|  
-|Online non-clustered columnstore index rebuild|Yes|No|No|No|No|
+|Online nonclustered columnstore index rebuild|Yes|No|No|No|No|
 |In-Memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes, <sup>2</sup>|Yes|
 |Stretch Database|Yes|Yes|Yes|Yes|Yes|
 |Persistent Main Memory|Yes|Yes|Yes|Yes|Yes|
@@ -189,9 +187,9 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Resource Governor|Yes|No|No|No|No|  
 |Partitioned Table Parallelism|Yes|No|No|No|No|
 |Multiple Filestream containers|Yes|Yes|Yes|Yes|Yes|
-|NUMA Aware and Large Page Memory and Buffer Array Allocation|Yes|No|No|No|No|
+|NUMA Aware Large Page Memory and Buffer Array Allocation|Yes|No|No|No|No|
 |Buffer Pool Extension|Yes|Yes|No|No|No|
-|IO Resource Governance|Yes|No|No|No|No|  
+|I/O Resource Governance|Yes|No|No|No|No|  
 |Read-Ahead|Yes|No|No|No|No|
 |Advanced Scanning|Yes|No|No|No|No|
 |Delayed Durability|Yes|Yes|Yes|Yes|Yes|
@@ -348,23 +346,23 @@ For info about SQL Server Integration Services (SSIS) features supported by the 
 
 ##  <a name="SSAS"></a> Analysis Services  
   
-For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md). 
+For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](https://docs.microsoft.com/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016). 
   
 ##  <a name="BIMD"></a> BI semantic model (Multi Dimensional)  
   
-For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](https://docs.microsoft.com/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016).
    
 ##  <a name="BIT"></a> BI semantic model (Tabular)  
   
-For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](https://docs.microsoft.com/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016).
   
 ##  <a name="PPSP"></a> Power Pivot for SharePoint  
   
-For information about the Power Pivot for SharePoint features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+For information about the Power Pivot for SharePoint features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](https://docs.microsoft.com/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016).
   
 ##  <a name="DM"></a> Data mining  
   
-For information about the Data Mining features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+For information about the Data Mining features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](https://docs.microsoft.com/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016).
   
 ##  <a name="SSRS"></a> Reporting Services  
   
@@ -372,7 +370,7 @@ For information about the Reporting Services features supported by the editions 
 
 ##  <a name="BIC"></a> Business intelligence clients  
 
-For information about the Business Intelligence Client features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) or [Reporting Services Features Supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+For information about the Business Intelligence Client features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](https://docs.microsoft.com/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016) or [Reporting Services Features Supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
 ##  <a name="SLS"></a> Spatial and location services  
   
@@ -397,7 +395,7 @@ For information about the Business Intelligence Client features supported by the
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|No|No| 
 |StreamInsight HA|StreamInsight Premium Edition|No|No|No|No|   
 
-> [![Download SSMS](../analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**     
+> [![Download SSMS](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**     
   
 ## Next steps 
  [Product Specifications for SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   

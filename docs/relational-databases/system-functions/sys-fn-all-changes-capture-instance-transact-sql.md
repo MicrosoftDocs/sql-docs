@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,9 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 1.  Run the stored procedure to generate the script to create the wrapper.  
   
 2.  Execute the script to actually create the wrapper function.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Wrapper functions enable users to systematically query for changes that occurred within an interval bounded by **datetime** values instead of by LSN values. The wrapper functions perform all the required conversions between the provided **datetime** values and the LSN values needed internally as arguments to the query functions. When the wrapper functions are used serially to process a stream of change data, they ensure that no data is lost or repeated provided that the following convention is followed: the @end_time value of the interval associated with one call is supplied as the @start_time value for the interval associated with the subsequent call.  
   
  By using the @closed_high_end_point parameter when you create the script, you can generate wrappers to support either a closed upper bound or an open upper bound on the specified query window. That is, you can decide whether entries that have a commit time equal to the upper bound of the extraction interval are to be included in the interval. By default, the upper bound is included.  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Shape APPEND Clause
 The shape command APPEND clause appends a column or columns to a **Recordset**. Frequently, these columns are chapter columns, which refer to a child **Recordset**.  

@@ -2,7 +2,6 @@
 title: Reserved database names - Parallel Data Warehouse | Microsoft Docs
 description: Reserved database names in Analytics Platform System Parallel Data Warehouse.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

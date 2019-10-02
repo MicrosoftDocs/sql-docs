@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Frequently Asked Questions for Replication Administrators
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The following questions and answers provide guidance on a variety of tasks faced by administrators of replicated databases.  
   
 ## Configuring Replication  
@@ -148,7 +148,7 @@ manager: craigg
   
 -   Specify that objects should not be dropped when the subscription is reinitialized. Prior to reinitialization, either:  
   
-    -   Execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) or [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of 'pre_creation_cmd' (**sp_changearticle**) or 'pre_creation_command' (**sp_changemergearticle**) for the parameter **@property** and a value of 'none', 'delete' or 'truncate' for the parameter **@value**.  
+    -   Execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) or [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of 'pre_creation_cmd' (**sp_changearticle**) or 'pre_creation_command' (**sp_changemergearticle**) for the parameter `@property` and a value of 'none', 'delete' or 'truncate' for the parameter `@value`.  
   
     -   In the **Article Properties - \<Article>** dialog box in the **Destination Object** section, select a value of **Keep existing object unchanged**, **Delete data. If article has a row filter, delete only data that matches the filter.** or **Truncate all data in the existing object** for the option **Action if name is in use**. For more information on accessing this dialog box, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   

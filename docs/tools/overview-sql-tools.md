@@ -1,29 +1,32 @@
 ---
-title: "SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/19/2018"
+title: "SQL query and management tools for SQL Server, Azure SQL (Azure SQL databases, Azure SQL managed instances, SQL virtual machines), and Azure SQL data warehouse | Microsoft Docs"
+description: "SQL query and management tools for SQL Server, Azure SQL (Azure SQL database, Azure SQL managed instance, SQL virtual machines), and Azure SQL data warehouse"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "09/11/2019"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
-# SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse
+
+# SQL query and management tools for SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-To manage (query, monitor, etc.) your database you need a tool. While your databases can be running in the cloud, on Windows, or on [Linux](../linux/sql-server-linux-overview.md), your tool doesn't need to run on the same platform as the database. 
+To manage (query, monitor, etc.) your database you need a tool. While your databases can be running in the cloud, on Windows, or on [Linux](../linux/sql-server-linux-overview.md), your tool doesn't need to run on the same platform as the database.
 
 There are many database tools available, so this article provides descriptions and pointers to some of the available tools for working with your SQL databases. If you need help deciding which tool you need, see [Which tool should I use?](#which-tool-should-i-choose).
 
+For additional information, and to download a tool, select the links in the Tool column in the following tables. To download SQL Server, see [Install SQL Server](../database-engine/install-windows/install-sql-server.md).
 
-## GUI tools to manage databases  
+## GUI tools to manage databases
 
-The following are the main graphical user interface (GUI) tools:
+The following tools provide a graphical user interface (GUI):
 
 | Tool | Description | Runs on |
 |:--|:--|:--|
@@ -31,7 +34,6 @@ The following are the main graphical user interface (GUI) tools:
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Use SQL Server Management Studio (SSMS) to query, design, and manage your SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. | **SSMS runs on Windows**.|
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Turn Visual Studio into a powerful development environment for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse.| **SSDT runs on Windows**.|
 | [Visual Studio Code](https://code.visualstudio.com/)| After installing Visual Studio Code, install the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) for developing Microsoft SQL Server, Azure SQL Database, and SQL Data Warehouse.| **Visual Studio Code runs on Windows, macOS, and Linux**.|
-
 
 ## Command line tools to manage databases
 
@@ -47,8 +49,6 @@ The following are the main command-line tools:
 |[**mssql-scripter (preview)**](https://github.com/Microsoft/mssql-scripter)|**mssql-scripter** is a multi-platform command line experience for scripting SQL Server databases|Windows, macOS, and Linux|
 |[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql-conf** configures SQL Server running on Linux.|Linux|
 
-
-
 ## Which tool should I choose?
 
 - Do you want to manage a SQL Server instance or database, in a light-weight editor on Windows, Linux or Mac? Choose [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md)
@@ -56,8 +56,6 @@ The following are the main command-line tools:
 - Do you want to create or maintain database code, including compile time validation, refactoring and designer support on Windows? Choose [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - Do you want to query SQL Server with a command-line tool that features IntelliSense, syntax high-lighting, and more? Choose [mssql-cli](mssql-cli.md)
 - Do you want to write T-SQL scripts in a light-weight editor on Windows, Linux or Mac? Choose [Visual Studio Code](https://code.visualstudio.com/) and the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
-
-
 
 ## Additional tools
 
@@ -70,4 +68,3 @@ The following are the main command-line tools:
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | The ssbdiagnose utility reports issues in Service Broker conversations or the configuration of Service Broker services. |
 
 If you're looking for additional tools that are not mentioned on this page, see [SQL Command Prompt Utilities](command-prompt-utility-reference-database-engine.md).
-

@@ -2,7 +2,7 @@
 title: "Planning a Report (Report Builder) | Microsoft Docs"
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -47,7 +47,7 @@ ms.author: maggies
   
 ## See Also  
  [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Reporting Services Concepts (SSRS)](../reporting-services-concepts-ssrs.md)
  [Report Builder Tutorials](../../reporting-services/report-builder-tutorials.md)  
   
   

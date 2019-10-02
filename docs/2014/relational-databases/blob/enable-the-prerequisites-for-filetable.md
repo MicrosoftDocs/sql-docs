@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], prerequisites"
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Enable the Prerequisites for FileTable

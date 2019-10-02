@@ -29,10 +29,49 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## 18.3.1 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2102893)|September 13, 2019|18.3.1|15.0.4538.1|
+|macOS .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102894)|September 13, 2019| 18.3.1|15.0.4538.1|
+|Linux .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102978)|September 13, 2019| 18.3.1|15.0.4538.1|
+|Windows .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102979)|September 13, 2019| 18.13.1|15.0.4538.1|
+
+### Features
+
+| Feature | Details |
+| :------ | :------ |
+| Azure SQL Data Warehouse (preview) | Add support to deploy to Azure SQL Data Warehouse. | 
+| Deployment | Add /p:DatabaseLockTimeout=(INT32 '60') parameter to sqlpackage. | 
+| Deployment | Add /p:LongRunningCommandTimeout=(INT32) parameter to sqlpackage. |
+| Export/Extract | Add /p:TempDirectoryForTableData=(STRING) parameter to sqlpackage. |
+| Deployment | Allow deployment contributors to be loaded from additional locations. Deployment contributors will be loaded from the same directory as the target .dacpac being deployed, the Extensions directory relative to the sqlpackage.exe binary, and the /p:AdditionalDeploymentContributorPaths=(STRING) parameter added to sqlpackage where additional directory locations can be specified. |
+| Deployment | Add support for OPTIMIZE_FOR_SEQUENTIAL_KEY. |
+| &nbsp; | &nbsp; |
+
+### Fixes
+
+| Fix | Details |
+| :-- | :------ |
+| Deployment | Fix to ignore automatic indexes so that they are not dropped on deployment. | 
+| Always Encrypted | Fix for handling Always Encrypted varchar columns. | 
+| Build/Deployment | Fix to resolve the nodes() method for xml column sets.| 
+| ScriptDom | Fix additional cases where the 'URL' string was interpreted as a top level token. | 
+| Graph | Fix generated TSQL for pseudo column references in constraints.  | 
+| Export | Generate random passwords that meet complexity requirements. | 
+| Deployment | Fix to honor command timeouts when retrieving constraints. | 
+| .NET Core (preview) | Fix diagnostic logging to a file. | 
+| .NET Core (preview) | Use streaming to export table data to support large tables. | 
+| &nbsp; | &nbsp; |
+
 ## 18.2 sqlpackage
 
-Release date: &nbsp; April 15, 2019  
-Build: &nbsp; 15.0.4384.2 
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2087429)|April 15, 2019|18.2|15.0.4384.2|
+|macOS .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2087247)|April 15, 2019 | 18.2 |15.0.4384.2|
+|Linux .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2087431)|April 15, 2019 | 18.2 |15.0.4384.2|
 
 ### Features
 
@@ -64,7 +103,7 @@ Preview release.
 | Feature | Details |
 | :------ | :------ |
 | Added support for UTF8 collations. | &nbsp; |
-| Enabled non-clustered columnstore indexes on an indexed view. | &nbsp; |
+| Enabled nonclustered columnstore indexes on an indexed view. | &nbsp; |
 | Moved to .NET Core 2.2. | &nbsp; |
 | Use memory backed storage for schema compare on .NET Core. | &nbsp; |
 | &nbsp; | &nbsp; |

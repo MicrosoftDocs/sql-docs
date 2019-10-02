@@ -12,11 +12,14 @@ helpviewer_keywords:
   - "add operator (+)"
   - "adding expressions"
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # + (Add) (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Adds two numeric expressions.  
   
 ## Syntax  

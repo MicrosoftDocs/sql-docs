@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: d514c622-2c0d-4f41-80d2-66add4d113b1
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Legal Notice (MySQLToSql)
 This documentation, including sample applications herein, is provided for information purposes only, and this documentation is provided without any warranties, either express or implied. Information in this documentation, including URL and other Internet Web site references, is subject to change without notice. The entire risk of the use or the results of the use of this documentation remains with the user.  

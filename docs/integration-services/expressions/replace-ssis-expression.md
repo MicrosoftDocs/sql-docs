@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "replacing string expression"
   - "REPLACE function"
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # REPLACE (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a character expression after replacing a character string within the expression with either a different character string or an empty string.  
   
 > [!NOTE]  

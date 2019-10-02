@@ -24,10 +24,9 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # GET CONVERSATION GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Returns the conversation group identifier for the next message to be received, and locks the conversation group for the conversation that contains the message. The conversation group identifier can be used to retrieve conversation state information before retrieving the message itself.  
   
@@ -44,9 +43,7 @@ manager: craigg
 [ ; ]  
   
 <queue> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ] queue_name  
-}  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }  
 ```  
   
 ## Arguments  

@@ -10,11 +10,14 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "custom connection managers [Integration Services], creating"
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Creating a Custom Connection Manager
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The steps that you must follow to create a custom connection manager are similar to the steps for creating any other custom object for [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
   
 -   Create a new class that inherits from the base class. For a connection manager, the base class is <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>.  

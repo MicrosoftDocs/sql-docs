@@ -13,11 +13,14 @@ helpviewer_keywords:
   - "mapping query parameters to variables [Integration Services]"
   - "variables [Integration Services], mapping parameters to"
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Map Query Parameters to Variables in a Data Flow Component
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   When you configure the OLE DB source to use parameterized queries, you can map the parameters to variables.  
   
  The OLE DB source uses parameterized queries to filter data when the source connects to a data source.  

@@ -2,7 +2,7 @@
 title: "Device Information Settings for Rendering Extensions (Reporting Services) | Microsoft Docs"
 ms.date: 09/15/2015
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 

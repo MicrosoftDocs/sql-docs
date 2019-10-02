@@ -1,11 +1,15 @@
-- name: SQL Server ++
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+- name: SQL Server >>
+  href: ../sql-server/sql-server-technical-documentation.md?&view=sql-server-2017&toc=../toc/toc.json
 
 - name: Overview of APS
   href: ../analytics-platform-system/home-analytics-platform-system-aps-pdw.md
 - name: What's new in APS
   href: ../analytics-platform-system/whats-new-analytics-platform-system.md
   items:
+  - name: APS CU7.5
+    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.5
+  - name: APS CU7.4
+    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.4
   - name: APS CU7.3
     href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.3
   - name: APS CU7.2

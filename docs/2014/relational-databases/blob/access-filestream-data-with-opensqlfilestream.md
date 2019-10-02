@@ -13,8 +13,8 @@ api_location:
 helpviewer_keywords: 
   - "OpenSqlFilestream"
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Access FILESTREAM Data with OpenSqlFilestream

@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Publication Information, All Subscriptions (Merge Publication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ manager: craigg
  The name of each subscription, in the form:*SubscriberName: SubscriptionDatabaseName*.  
   
  **Friendly Name**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. The description of each subscription. The description is entered in the **Subscription Properties** dialog box or specified with the **@description** parameter of [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) or [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Users often use the description as a "friendly name" or nickname for the subscription.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. The description of each subscription. The description is entered in the **Subscription Properties** dialog box or specified with the `@description` parameter of [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) or [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Users often use the description as a "friendly name" or nickname for the subscription.  
   
  **Performance**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. The performance rating for each subscription, based on the most recent measurements of delivery rate taken by Replication Monitor. The rating is determined by comparing individual subscription performance to the average historical performance of subscriptions to the publication that have the same connection type (dial-up or LAN). Replication Monitor displays a value after five synchronizations have occurred with 50 or more changes each over the same type of connection. If there have been less than five synchronizations with 50 or more changes or the most recent synchronization has less than 50 changes, this column is blank.  

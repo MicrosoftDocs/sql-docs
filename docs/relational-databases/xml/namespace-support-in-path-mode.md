@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Namespace Support in PATH Mode
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -2,7 +2,6 @@
 title: Remote table copy - Parallel Data Warehouse | Microsoft Docs
 description: Using remote table copy in Analytics Platform System Parallel Data Warehouse.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

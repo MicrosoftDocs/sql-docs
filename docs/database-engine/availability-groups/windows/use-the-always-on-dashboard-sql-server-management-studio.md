@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Use the Always On Availability Group dashboard (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -208,8 +207,7 @@ The **Availability replica** pane displays the following columns:
     -   For a secondary database, indicates that the database has not started log synchronization because of a connection issue, is being suspended, or is going through transition states during startup or a role switch.  
   
 -   **Synchronizing**:
--   
-     On a primary replica:   
+- On a primary replica:   
     - On a primary database, indicates that this database is ready to accept a scan request from a secondary database.  
     - On a secondary replica, indicates that there is active data movement going on for that secondary database. 
   

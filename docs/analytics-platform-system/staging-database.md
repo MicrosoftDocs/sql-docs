@@ -2,7 +2,6 @@
 title: Using a staging database - Parallel Data Warehouse | Microsoft Docs
 description: SQL Server Parallel Data Warehouse (PDW) uses a staging database to store data temporarily during the load process.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

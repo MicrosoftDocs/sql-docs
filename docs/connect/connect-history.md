@@ -6,10 +6,9 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daveng
-ms.reviewer: genemi
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.reviewer: ""
 ---
 # Driver history for Microsoft SQL Server
 
@@ -53,7 +52,7 @@ Introduced in 2009 as an open-source project, the Microsoft Drivers for PHP for 
 
 ### Microsoft Driver for Node.js for SQL Server
 
-The Microsoft Driver for Node.js for SQL Server allows Node.js applications on Microsoft Windows and Microsoft Windows Azure to access Microsoft SQL Server and Microsoft Windows Azure SQL Database. Development efforts are no longer being focused on this driver. It is not recommended to create new applications using the Microsoft Driver for Node.js for SQL Server.
+The Microsoft Driver for Node.js for SQL Server allows Node.js applications on Microsoft Windows and Microsoft Azure to access Microsoft SQL Server and Microsoft Azure SQL Database. Development efforts are no longer being focused on this driver. It is not recommended to create new applications using the Microsoft Driver for Node.js for SQL Server.
 
 For more information about the Microsoft Driver for Node.js for SQL Server, see [WindowsAzure / node-sqlserver](https://github.com/Azure/node-sqlserver).
 

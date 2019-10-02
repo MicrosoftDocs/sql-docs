@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "notifications,enable"
   - "notifications,disable"
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Enable or Disable Profiling Notifications in DQS
 

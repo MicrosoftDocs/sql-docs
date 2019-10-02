@@ -9,8 +9,8 @@ helpviewer_keywords:
   - "LineString geometry subtype [SQL Server]"
   - "geometry subtypes [SQL Server]"
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 ---
 # LineString

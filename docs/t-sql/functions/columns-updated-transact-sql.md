@@ -1,7 +1,7 @@
 ---
 title: "COLUMNS_UPDATED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/24/2017"
+ms.date: "07/25/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "column testing [SQL Server]"
   - "updated columns"
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,9 +108,10 @@ CREATE TRIGGER dbo.updEmployeeData
 ON dbo.employeeData   
 AFTER UPDATE AS  
 /* Check whether columns 2, 3 or 4 have been updated. If any or all  
-columns 2, 3 or 4 have been changed, create an audit record. The
-bitmask is: power(2, (2-1)) + power(2, (3-1)) + power(2, (4-1)) = 14. To test   
-whether all columns 2, 3, and 4 are updated, use = 14 instead of > 0  
+columns 2, 3 or 4 have been changed, create an audit record.
+The bitmask is: power(2, (2-1)) + power(2, (3-1)) + power(2, (4-1)) = 14.
+This bitmask translates into base_10 as: 1 + 4 + 9 = 14.
+To test whether all columns 2, 3, and 4 are updated, use = 14 instead of > 0  
 (below). */
   
    IF (COLUMNS_UPDATED() & 14) > 0  

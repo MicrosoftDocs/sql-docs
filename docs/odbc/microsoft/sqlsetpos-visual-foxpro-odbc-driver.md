@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ec8e5a9d-7aac-4e7f-a75f-cf670c036f33
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetPos (Visual FoxPro ODBC Driver)
 > [!NOTE]  

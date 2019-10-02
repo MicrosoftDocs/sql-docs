@@ -2,10 +2,10 @@
 title: Deployment configuration file reference
 titleSuffix: SQL Server big data clusters
 description: Reference for a big data cluster deployment configuration file.
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 04/23/2019
+author: mihaelablendea 
+ms.author: mihaelab
+ms.reviewer: mikeray
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -448,4 +448,4 @@ Use the following JSON file as a reference for the structure and settings in a b
 
 ## Next steps
 
-For more information on how to use and customize deployment configuration files, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md#configfile).
+For more information on how to use and customize deployment configuration files, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).

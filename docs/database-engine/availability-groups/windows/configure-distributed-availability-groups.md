@@ -1,6 +1,6 @@
 ---
 title: "Configure a distributed availability group"
-description: "Describes how to create and configure a distributed Always On availability group. " 
+description: "Describes how to create and configure an Always On distributed availability group. " 
 ms.custom: "seodec18"
 ms.date: "08/17/2017"
 ms.prod: sql
@@ -10,9 +10,8 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
-# Configure a distributed Always On availability group  
+# Configure an Always On distributed availability group  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 To create a distributed availability group, you must two availability groups each with its own listener. You then combine these availability groups into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example doesn't cover all of the details of creating availability groups and listeners; instead, it focuses on highlighting the key requirements.
@@ -76,10 +75,10 @@ GO
 ```  
   
 >[!NOTE]
->The preceding example uses direct seeding, where **SEEDING_MODE** is set to **AUTOMATIC** for both the replicas and the distributed availability group. This configuration sets the secondary replicas and secondary availability group to be automatically populated without requiring a manual backup and restore of primary database.  
+>The preceding example uses automatic seeding, where **SEEDING_MODE** is set to **AUTOMATIC** for both the replicas and the distributed availability group. This configuration sets the secondary replicas and secondary availability group to be automatically populated without requiring a manual backup and restore of primary database.  
   
 ### Join the secondary replicas to the primary availability group  
-Any secondary replicas must be joined to the availability group with **ALTER AVAILABILITY GROUP** with the **JOIN** option. Because direct seeding is used in this example, you must also call  **ALTER AVAILABILITY GROUP** with the **GRANT CREATE ANY DATABASE** option. This setting allows the availability group to create the database and begin seeding it automatically from the primary replica.  
+Any secondary replicas must be joined to the availability group with **ALTER AVAILABILITY GROUP** with the **JOIN** option. Because automatic seeding is used in this example, you must also call  **ALTER AVAILABILITY GROUP** with the **GRANT CREATE ANY DATABASE** option. This setting allows the availability group to create the database and begin seeding it automatically from the primary replica.  
   
 In this example, the following commands are run on the secondary replica, `server2`, to join the `ag1` availability group. The availability group is then permitted to create databases on the secondary.  
   
@@ -130,7 +129,7 @@ GO
 > The secondary availability group must use the same database mirroring endpoint (in this example port 5022). Otherwise, replication will stop after a local failover.  
   
 ### Join the secondary replicas to the secondary availability group  
- In this example, the following  commands are run on the secondary replica, `server4`, to join the `ag2` availability group. The availability group is then permitted to create databases on the secondary to support direct seeding.  
+ In this example, the following  commands are run on the secondary replica, `server4`, to join the `ag2` availability group. The availability group is then permitted to create databases on the secondary to support automatic seeding.  
   
 ```sql  
 ALTER AVAILABILITY GROUP [ag2] JOIN   
@@ -173,6 +172,19 @@ GO
   
 > [!NOTE]  
 >  The **LISTENER_URL** specifies the listener for each availability group along with the database mirroring endpoint of the availability group. In this example, that is port `5022` (not port `60173` used to create the listener). If you are using a load balancer, for instance in Azure, [add a load balancing rule for the distributed availability group port](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Add the rule for the listener port, in addition to the SQL Server instance port. 
+
+### Cancel automatic seeding to forwarder
+If it is necessary to cancel the initialization of the forwarder before the two availability groups are synchronized, ALTER the distributed availability group by setting the forwarder's SEEDING_MODE parameter to MANUAL and immediately cancel the seeding. Run the command on the global primary: 
+
+```sql
+-- Cancel automatic seeding​.  Connect to global primary but specify DAG AG2
+ALTER AVAILABILITY GROUP [distributedag] ​  
+   MODIFY ​ 
+   AVAILABILITY GROUP ON ​ 
+   'ag2' WITH ​ 
+   ( ​ SEEDING_MODE = MANUAL ​ ); ​  
+```
+
   
 ## Join distributed availability group on second cluster  
  Then join the distributed availability group on the second WSFC.  
@@ -209,11 +221,11 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 Only manual failover is supported at this time. To manually fail over a distributed availability group:
 
-1. To ensure that no data is lost, set the distributed availability group to synchronous commita.
+1. To ensure that no data is lost, set the distributed availability group to synchronous commit.
 1. Wait until the distributed availability group is synchronized.
 1. On the global primary replica, set the distributed availability group role to `SECONDARY`.
 1. Test failover readiness.
-1. Failover the primary availability group.
+1. Fail over the primary availability group.
 
 The following Transact-SQL examples demonstrate the detailed steps to fail over the distributed availability group named `distributedag`:
 

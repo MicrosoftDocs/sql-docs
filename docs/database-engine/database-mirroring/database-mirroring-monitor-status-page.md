@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Database Mirroring Monitor (Status Page)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +88,7 @@ manager: craigg
 -   **High safety with automatic failover (synchronous)**  
   
 ## Remarks  
- Members of the **dbm_monitor** fixed database role can view the existing mirroring status by using either Database Mirroring Monitor or the **sp_dbmmonitorresults** stored procedure. But these users cannot update the status table. They depend on the **Database Mirroring Monitor Job**to update the status table at regular intervals. To learn the age of the displayed status a user can look at the times in the **Principal log (***\<time>***)** and **Mirror log (***\<time>***)** labels.  
+ Members of the **dbm_monitor** fixed database role can view the existing mirroring status by using either Database Mirroring Monitor or the **sp_dbmmonitorresults** stored procedure. But these users cannot update the status table. They depend on the **Database Mirroring Monitor Job**to update the status table at regular intervals. To learn the age of the displayed status a user can look at the times in the **Principal log (**_\<time>_**)** and **Mirror log (**_\<time>_**)** labels.  
   
  If this job does not exist or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is stopped, the status becomes increasingly stale and may no longer reflect the configuration of the mirroring session. For example, after a failover, the partners might appear to share the same role-principal or mirror, or the current principal server might be shown as the mirror, while the current mirror server is shown as the principal.  
   

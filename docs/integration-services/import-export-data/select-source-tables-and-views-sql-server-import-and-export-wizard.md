@@ -9,11 +9,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.selectsourcetablesandviews.f1"
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Select Source Tables and Views (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   After you specify that you want to copy an entire table, or after you provide a query, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Select Source Tables and Views**. On this page, you select the existing tables and views that you want to copy. Then you map the source tables to new or existing destination tables. Optionally, you also review the mapping of individual columns and preview sample data.
 
 > [!TIP]

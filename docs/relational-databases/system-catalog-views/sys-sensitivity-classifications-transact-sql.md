@@ -6,9 +6,8 @@ ms.prod: sql
 ms.technology: t-sql
 ms.topic: "language-reference"
 ms.custom: ""
-ms.manager: craigg
-ms.author: arib
-author: vainolo
+ms.author: mibar
+author: barmichal
 f1_keywords:
   - "sys.sensitivity_classifications "
 dev_langs:
@@ -56,10 +55,14 @@ Returns a row for each classified item in the database.
 
 The following example returns a table listing the table name, column name, label, label ID, information type, information type ID for each classified column in the database.
 
+> [!NOTE]
+> Label is a keyword for Azure SQL Data Warehouse.
+
 ```sql
 SELECT
-    sys.all_objects.name AS TableName, sys.all_columns.name As ColumnName,
-    Label, Label_ID, Information_Type, Information_Type_ID
+    SCHEMA_NAME(sys.all_objects.schema_id) as SchemaName,
+    sys.all_objects.name AS [TableName], sys.all_columns.name As [ColumnName],
+    [Label], [Label_ID], [Information_Type], [Information_Type_ID]
 FROM
           sys.sensitivity_classifications
 left join sys.all_objects on sys.sensitivity_classifications.major_id = sys.all_objects.object_id

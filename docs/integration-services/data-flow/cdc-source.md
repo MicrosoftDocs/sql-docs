@@ -13,11 +13,14 @@ f1_keywords:
   - "sql13.ssis.designer.cdcsource.columns.f1"
   - "sql13.ssis.designer.cdcsource.errorhandling.f1"
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # CDC Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The CDC source reads a range of change data from [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] change tables and delivers the changes downstream to other SSIS components.  
   
  The range of change data read by the CDC source is called the CDC Processing Range and is determine by the CDC Control task that is executed before the current data flow starts. The CDC Processing Range is derived from the value of a package variable that maintains the state of the CDC processing for a group of tables.  

@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Extended events in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/10/2016"
+ms.date: "05/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -10,7 +10,6 @@ ms.topic: quickstart
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Quickstart: Extended events in SQL Server
@@ -79,7 +78,7 @@ You can understand the steps even if you decide not to perform them. The demonst
 - Advanced
 
 
-The text and supporting screenshots can become slightly inexact when the SSMS UI is tweaked over the months or years. Yet the screenshots remain effective for explanation if the discrepancies or only minor.
+The text and supporting screenshots can become slightly inexact when the SSMS UI is tweaked over the months or years. Yet the screenshots remain effective for explanation if the discrepancies are only minor.
 
 
 1. Connect with SSMS.
@@ -115,7 +114,7 @@ The text and supporting screenshots can become slightly inexact when the SSMS UI
 
 9. In the upper-left, click the **Data Storage** page.
 
-10. In the **Targets** area, click **Click here to a target**.
+10. In the **Targets** area, click **Click here to add a target**.
     - In the **Type** drop-down list, choose **event_file**.
     - This means the event data will be stored in a file that we can view.
 
@@ -547,10 +546,11 @@ The system views for extended events include:
     - CREATE EVENT SESSION clauses.
     - The SSMS UI controls.
 
+## Code examples can differ for Azure SQL Database
 
-<a name="appendix1"></a>
-## Appendix: SELECTs to ascertain permission owner in advance
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
+## <a name="appendix1"></a> Appendix: SELECTs to ascertain permission owner in advance
 
 The permissions mentioned in this article are:
 

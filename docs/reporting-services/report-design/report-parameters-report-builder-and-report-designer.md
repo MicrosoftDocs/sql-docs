@@ -2,7 +2,7 @@
 title: "Report Parameters (Report Builder and Report Designer) | Microsoft Docs"
 description: This topic describes the common uses for Reporting Services report parameters, the properties you can set, and much more.
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 ms.custom: seodec18
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.date: 12/06/2018
 
 # Report Parameters (Report Builder and Report Designer)
 
-::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -71,13 +71,13 @@ When you view a report that has parameters, the report viewer toolbar displays e
   
 1. **Parameters pane** The report viewer toolbar displays a prompt and default value for each parameter. You can customize the layout of parameters in the parameters pane. For more information, see [Customize the Parameters Pane in a Report &#40;Report Builder&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
-2. **@SalesDate parameter** The parameter @SalesDate is data type **DateTime**. The prompt Select the Date appears next to the text box. To modify the date, type a new date in the text box or use the calendar control.  
+2. **\@SalesDate parameter** The parameter @SalesDate is data type **DateTime**. The prompt Select the Date appears next to the text box. To modify the date, type a new date in the text box or use the calendar control.  
   
-3. **@ShowAll parameter** The parameter @ShowAll is data type **Boolean**. Use the radio buttons to specify **True** or **False**.  
+3. **\@ShowAll parameter** The parameter @ShowAll is data type **Boolean**. Use the radio buttons to specify **True** or **False**.  
   
 4. **Show or Hide Parameter Area handle** On the report viewer toolbar, click this arrow to show or hide the parameters pane.  
   
-5. **@CategoryQuota parameter** The parameter @CategoryQuota is data type **Float**, so it takes a numeric value.  @CategoryQuota is set to allow multiple values.  
+5. **\@CategoryQuota parameter** The parameter @CategoryQuota is data type **Float**, so it takes a numeric value.  @CategoryQuota is set to allow multiple values.  
   
 6. **View Report**  After you enter parameter values, click **View Report** to run the report. If all parameters have default values, the report runs automatically on first view.  
   
@@ -164,7 +164,7 @@ Create a parameter manually from the Report Data pane. You can configure report 
   
 -   For [!INCLUDE[tsql](../../includes/tsql-md.md)] queries, different data sources support different syntax for parameters. Support ranges from parameters that are identified in the query by position or by name. For more information, see topics for specific external data source types in [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md). In the relational query designer, you must select the parameter option for a filter to create a parameterized query. For more information, see [Relational Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
--   For queries that are based on a multidimensional data source such as Microsoft SQL Server Analysis Services, SAP NetWeaver BI, or Hyperion Essbase, you can specify whether to create a parameter based on a filter that you specify in the query designer. For more information, see the query designer topic in [Query Designers &#40;Report Builder&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) that corresponds to the data extension.  
+-   For queries that are based on a multidimensional data source such as Microsoft SQL Server Analysis Services, SAP NetWeaver BI, or Hyperion Essbase, you can specify whether to create a parameter based on a filter that you specify in the query designer. For more information, see the query designer topic in [Query Design Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md) that corresponds to the data extension.  
   
 ##  <a name="bkmk_Manage_Parameters"></a> Parameter Management for a Published Report  
  When you design a report, report parameters are saved in the report definition. When you publish a report, report parameters are saved and managed separately from the report definition.  

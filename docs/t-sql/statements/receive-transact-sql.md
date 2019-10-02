@@ -21,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # RECEIVE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Retrieves one or more messages from a queue. Depending on the retention setting for the queue, either removes the message from the queue or updates the status of the message in the queue.  
   
@@ -51,11 +50,7 @@ manager: craigg
 }     [ ,...n ]   
   
 <queue> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ]  
-        queue_name  
-}  
-  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
 ## Arguments  

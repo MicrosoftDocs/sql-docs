@@ -1,8 +1,7 @@
 ---
 title: "Compare Business Intelligence Capabilities In Different Microsoft Environments | Microsoft Docs"
 ms.prod: "sql-server-2014"
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies

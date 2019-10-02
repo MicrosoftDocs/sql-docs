@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Object Catalog Views (Transact-SQL)
 

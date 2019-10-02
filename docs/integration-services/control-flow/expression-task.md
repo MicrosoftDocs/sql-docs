@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.DTS.DESIGNER.EXPRESSIONTASK.F1"
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Expression Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Expression Task creates and evaluates expressions that set variable values at runtime, using the Expression Builder. When you edit the task, the [Expression Builder](../../integration-services/expressions/expression-builder.md) is launched.  
   
 ## Expression Examples  

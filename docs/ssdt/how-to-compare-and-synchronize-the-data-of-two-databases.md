@@ -12,9 +12,8 @@ f1_keywords:
   - "sql.data.tools.datacompare.watermark.f1"
   - "sql.data.tools.datacompare.connection.objectselection.f1"
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: Compare and Synchronize the Data of Two Databases
 You can compare the data that is contained in two databases. The databases that you compare are known as the *source* and the *target*.  

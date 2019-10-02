@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9653f2f8-ccfc-4220-99ef-601dc0fa641c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Using the ODBC Cursor Library
 > [!IMPORTANT]  

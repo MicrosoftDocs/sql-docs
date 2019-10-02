@@ -16,10 +16,10 @@ helpviewer_keywords:
   - "sp_enum_proxy_for_subsystems"
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
-manager: craigg
-manager: craigg
+author: VanMSFT
 ---
 # sp_enum_proxy_for_subsystem (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Lists permissions for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxies to access subsystems.  
@@ -29,7 +29,6 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 sp_enum_proxy_for_subsystem  
     [ @proxy_id = ] proxy_id,  
     [ @proxy_name = ] 'proxy_name',  
@@ -61,6 +60,7 @@ sp_enum_proxy_for_subsystem
 |**subsystem_name**|**sysname**|The name of the subsystem.|  
 |**proxy_id**|**int**|Proxy identification number.|  
 |**proxy_name**|**sysname**|The name of the proxy.|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## Remarks  
  When no parameters are provided, **sp_enum_proxy_for_subsystem** lists information about all proxies in the instance for every subsystem.  
@@ -79,7 +79,7 @@ sp_enum_proxy_for_subsystem
 ### A. Listing all associations  
  The following example lists all permissions established between proxies and subsystems for the current instance.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -90,7 +90,7 @@ GO
 ### B. Determining if a proxy has access to a specific subsystem  
  The following example returns a row if the proxy `Catalog application proxy` has access to the `ActiveScripting` subsystem. Otherwise, the example returns an empty result set.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

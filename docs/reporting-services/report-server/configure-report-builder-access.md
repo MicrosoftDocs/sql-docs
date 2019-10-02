@@ -1,13 +1,12 @@
 ---
 title: "Configure Report Builder Access | Microsoft Docs"
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.date: 03/14/2017
+ms.date: 06/06/2019
 ---
 
 # Configure Report Builder Access
@@ -23,29 +22,29 @@ Access to Report Builder depends on the following factors:
 
 ## Prerequisites
 
-Report Builder is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
+Report Builder is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
-The client computer must have the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 installed. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides the infrastructure for running [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] applications.  
+The client computer must have the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 or 4.6.1 installed for SSRS 2016 and 2017 respectively. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides the infrastructure for running [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] applications.  
 
-You must use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 or later.  
+You must use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 or later, or another modern browser.  
 
 Report Builder always runs in full trust; you cannot configure it to run in partial trust. In previous releases, it was possible to run Report Builder in partial trust, but that option is not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions.  
 
 ## Enabling and Disabling Report Builder  
 
-Report Builder is enabled by default. Report server administrators have the option of disabling the Report Builder feature by setting the report server system property **EnableReportDesignClientDownload** to **false**. Setting this property will disable Report Builder downloads for that report server.  
+Report Builder is enabled by default. Report server administrators have the option of disabling the Report Builder feature by setting the report server system property **ShowDownloadMenu** to **false**. Setting this property will disable Report Builder, Mobile Report Publisher, and Power BI Mobile downloads for that report server.  
 
-To set report server system properties, you can use Management Studio or script:  
+ To set report server system properties, you can use Management Studio or script:  	
 
-- To use Management Studio, connect to the report server and use the Advanced Server Properties page to set **EnableReportDesignClientDownload** to **false**. For more information about how to open this page, see [Set Report Server Properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+ - To use Management Studio, connect to the report server and use the Advanced Server Properties page to set **ShowDownloadMenu**to **false**. For more information about how to open this page, see [Set Report Server Properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  	
 
-- To view a sample script that sets a report server property, see [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
+ - To view a sample script that sets a report server property, see [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
 
-## Role Assignments Granting Report Builder Access on a Native Mode Report Server  
+## Role Assignments granting Report Builder access on a native mode Report Server  
 
 On a native mode report server, create user role assignments that include tasks for using Report Builder. You must be a Content Manager and System Administrator to create or modify role definitions and role assignments on items and at the site level.  
 
-The following instructions assume that you are using predefined roles. If you modified the role definitions or if you upgraded from SQL Server 2000, check the roles to verify they contain the necessary tasks. For more information about creating role assignments, see [Grant User Access to a Report Server &#40;Report Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+The following instructions assume that you are using predefined roles. If you modified the role definitions or if you upgraded from SQL Server 2000, check the roles to verify they contain the necessary tasks. For more information about creating role assignments, see [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md).
 
 After you create the role assignments, users will have permission to do the following:  
 
@@ -95,7 +94,7 @@ After you create the role assignments, users will have permission to do the foll
 
     3. In Name, type **Report Builder**.  
 
-    4. In Description, enter a description for the role so that users in Report Manager know what the role is for.  
+    4. In Description, enter a description for the role so that users in the web portal know what the role is for.  
 
     5. Add the following tasks: **Consume reports**, **View reports**, **View models**, **View resources**, **View folders**, and **Manage individual subscription**s.  
 
@@ -103,9 +102,10 @@ After you create the role assignments, users will have permission to do the foll
 
 #### To create role assignments that grant access to Report Builder  
 
-1. Start Report Manager.  
+1. Start the web portal.  
 
-2. Click **Site Settings**.  
+2. Click the gear icon on the top right of the web portal home page and select **Site Settings** from the drop down menu.  
+![the web portal gear icon and menu](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. Click **Security**.  
 
@@ -128,7 +128,7 @@ Otherwise, click **New Role Assignment**. In Group or user, enter a Windows doma
 
 11. Repeat to create or modify role assignments for additional users or groups.  
 
-## Permissions granting Report Builder access on a SharePoint Integrated Mode Report Server  
+## Permissions granting Report Builder access on a SharePoint integrated mode Report Server  
 
 On a SharePoint integrated mode report server, Report Builder access is granted to SharePoint users who have either Contribute or Full Control permission levels.  
 
@@ -145,5 +145,6 @@ The following table describes the authentication types supported by the report s
 - [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)
 - [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 - [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)
-- [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)- [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [The web portal of a report server (SSRS Native Mode)](../web-portal-ssrs-native-mode.md)
+- [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
 - [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)

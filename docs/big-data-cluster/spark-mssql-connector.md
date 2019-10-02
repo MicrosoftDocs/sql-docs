@@ -2,10 +2,10 @@
 title: Connect Spark to SQL Server
 titleSuffix: SQL Server big data clusters
 description: Learn how to use the MSSQL Spark Connector in Spark to read and write to SQL Server.
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 04/23/2019
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: shivsood
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,11 +15,22 @@ ms.technology: big-data-cluster
 
 A key big data usage pattern is high volume data processing in Spark, followed by writing the data to SQL Server for access to line-of-business applications. These usage patterns benefit from a connector that utilizes key SQL optimizations and provides an efficient write mechanism.
 
-With CTP2.5 Big Data Clusters provides a new MSSQL Spark connector that uses SQL Server bulk write APIs for a performant Spark to SQL write. This article provides an example of how to read and write to SQL Server from Spark by using the MSSQL Spark Connector. In this example, data is read from HDFS in a big data cluster, processed by Spark, and then written to the SQL Server master instance in the cluster using the new MSSQL Spark connector.
+This article provides an example of how to use the MSSQL Spark connector to read and write to the following locations within a big data cluster:
+
+1. The SQL Server master instance
+1. The SQL Server data pool
+
+   ![MSSQL Spark connector diagram](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+
+The sample performs the following tasks:
+
+- Read a file from HDFS and do some basic processing.
+- Write the dataframe to a SQL Server master instance as a SQL table and then read the table to a dataframe.
+- Write the dataframe to a SQL Server data pool as a SQL external table and then read the external table to a dataframe.
 
 ## MSSQL Spark Connector Interface
 
-MSSQL Spark Connector is based on Spark data source APIs and provides a familiar Spark JDBC connector interface. For interface parameters refer [Apache Spark documentation](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). The MSSQL Spark connector is referenced by the name **com.microsoft.sqlserver.jdbc.spark**.
+SQL Server 2019 preview provides the **MSSQL Spark connector** for big data clusters that uses SQL Server bulk write APIs for Spark to SQL writes. MSSQL Spark Connector is based on Spark data source APIs and provides a familiar Spark JDBC connector interface. For interface parameters refer [Apache Spark documentation](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). The MSSQL Spark connector is referenced by the name **com.microsoft.sqlserver.jdbc.spark**.
 
 The following table describes interface parameters that have changed or are new:
 
@@ -33,7 +44,7 @@ The connector uses SQL Server Bulk write APIs. Any bulk write parameters can be 
 
 - A [SQL Server big data cluster](deploy-get-started.md).
 
-- [Azure Data Studio](../azure-data-studio/download.md).
+- [Azure Data Studio](https://aka.ms/azdata-insiders).
 
 ## Create the target database
 
@@ -50,7 +61,9 @@ The connector uses SQL Server Bulk write APIs. Any bulk write parameters can be 
 
 1. Download [AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv) to your local machine.
 
-1. In Azure Data Studio, right-click on the HDFS folder in your big data cluster, and select **New directory**. Name the directory **spark_data**.
+1. Launch Azure Data Studio, and [connect to your big data cluster](connect-to-big-data-cluster.md).
+
+1. Right-click on the HDFS folder in your big data cluster, and select **New directory**. Name the directory **spark_data**.
 
 1. Right click on the **spark_data** directory, and select **Upload files**. Upload the **AdultCensusIncome.csv** file.
 
@@ -63,7 +76,7 @@ To demonstrate the use of the MSSQL Spark Connector with this data, you can down
 1. From a PowerShell or bash command line, run the following command to download the **mssql_spark_connector.ipynb** sample notebook:
 
    ```PowerShell
-   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/spark_to_sql/mssql_spark_connector.ipynb"
+   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
    ```
 
 1. In Azure Data Studio, open the sample notebook file. Verify that it is connected to your HDFS/Spark Gateway for your big data cluster.
@@ -72,4 +85,4 @@ To demonstrate the use of the MSSQL Spark Connector with this data, you can down
 
 ## Next steps
 
-For more information about big data clusters, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md)
+For more information about big data clusters, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)

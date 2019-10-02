@@ -1,8 +1,8 @@
 ---
 title: "Monitor Reporting Services Subscriptions | Microsoft Docs"
-ms.date: 03/07/2017
+ms.date: 06/12/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: subscriptions
 
 
@@ -24,25 +24,25 @@ ms.author: maggies
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode.|  
   
- **In this topic:**  
+ **In this article:**  
   
 -   [Native mode user interface](#bkmk_native_mode)  
   
--   [SharePoint Mode](#bkmk_sharepoint_mode)  
+-   [SharePoint mode](#bkmk_sharepoint_mode)  
   
 -   [Use PowerShell to monitor subscriptions](#bkmk_use_powershell)  
   
--   [Managing Inactive Subscriptions](#bkmk_manage_inactive)  
+-   [Managing inactive subscriptions](#bkmk_manage_inactive)  
   
 ##  <a name="bkmk_native_mode"></a> Native mode user interface  
- Individual [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] users can monitor the status of a subscription using the **My Subscriptions** page or the **Subscriptions** tab in Report Manager. Subscription pages include columns that indicate when the subscription was last run and the status of the subscription. Status messages are updated when the subscription is scheduled to process. If the trigger never occurs (for example, a report execution snapshot is never refreshed or a schedule never runs), the status message will not be updated.  
+ Individual [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] users can monitor the status of a subscription using the **My Subscriptions** page or the **Subscriptions** tab in the web portal. Subscription pages include columns that indicate when the subscription was last run and the status of the subscription. Status messages are updated when the subscription is scheduled to process. If the trigger never occurs (for example, a report execution snapshot is never refreshed or a schedule never runs), the status message will not be updated.  
   
  The following table describes the possible values for the **Status** column.  
   
 |Status|Description|  
 |------------|-----------------|  
 |New subscription|Appears when you first create the subscription.|  
-|Inactive|Appears when a subscription is cannot be processed. For more information, see "Managing Inactive Subscriptions" later in this topic.|  
+|Inactive|Appears when a subscription can't be processed. For more information, see "Managing Inactive Subscriptions" later in this article.|  
 |Done: \<*number*> processed of \<*number*> total; \<*number*> errors.|Shows the status of a data-driven subscription execution; this message is from the Scheduling and Delivery Processor.|  
 |\<*number*> processed|The number of notifications that the Scheduling and Delivery Processor successfully delivered or is no longer attempting to deliver. When a data-driven delivery completes, the number of processed notifications should equal the total number of generated notifications.|  
 |\<*number*> total|The total number of notifications generated for the last delivery for the subscription.|  
@@ -59,24 +59,24 @@ ms.author: maggies
   
  If a subscription cannot be delivered (for example, if the mail server is unavailable), the delivery extension retries the delivery. A configuration setting specifies the number of attempts to make. The default value is no retries. In some cases, the report might have been processed without data (for example, if the data source is offline), in which case text to that effect is provided in the body of the message.  
   
-### Native Mode Log Files  
+### Native mode log files  
  If an error occurs during delivery, an entry is made in the report server trace log.  
   
- Report server administrators can review the **reportserverservice_\*.log** files to determine subscription delivery status. For e-mail delivery, report server log files include a record of processing and deliveries to specific e-mail accounts. The following is the default location of the log files:  
+ Report server administrators can review the **ReportServerService_*.log** files to determine subscription delivery status. For e-mail delivery, report server log files include a record of processing and deliveries to specific e-mail accounts. The following is the default location of the log files:  
   
- `C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\LogFiles`  
+ `C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\LogFiles`  
   
  The following is an example log filename:  
   
- `ReportServerService__05_21_2014_00_05_07.log`  
+ `ReportServerService__05_21_2019_00_05_07.log`  
   
  The following is a trace log file example error message related to subscriptions:  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **Error sending email**. Exception: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **Error sending email**. Exception: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  The log file does not include information about whether the report was opened, or whether the delivery actually succeeded. Successful delivery means that there were no errors generated by the Scheduling and Delivery Processor, and that the report server connected to the mail server. If the e-mail resulted in an undeliverable message error in the user mailbox, that information will not be included in the log file. For more information about log files, see [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
-##  <a name="bkmk_sharepoint_mode"></a> SharePoint Mode  
+##  <a name="bkmk_sharepoint_mode"></a> SharePoint mode  
  To monitor a subscription in SharePoint mode: the subscription status can be monitored from the **Manage Subscriptions** page.  
   
 1.  browse to the document library that contains the report  
@@ -93,12 +93,12 @@ ms.author: maggies
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Date|Process|Area|Category|Level|Correlation|Message|  
-|5/21/2014 14:34:06:15|App Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Report Server Email Extension|Unexpected|(empty)|**Error sending email.** Exception: System.Net.Mail.SmtpException: Mailbox unavailable. The server response was: 5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|5/21/2019 14:34:06:15|App Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Report Server Email Extension|Unexpected|(empty)|**Error sending email.** Exception: System.Net.Mail.SmtpException: Mailbox unavailable. The server response was: 5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> Use PowerShell to monitor subscriptions  
- For example PowerShell scripts you can use to check the status of Native mode or SharePoint mode subscriptions, see [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
+ For example PowerShell scripts you can use to check the status of native mode or SharePoint mode subscriptions, see [Manage Subscription Owners and Run Subscription - PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
-##  <a name="bkmk_manage_inactive"></a> Managing Inactive Subscriptions  
+##  <a name="bkmk_manage_inactive"></a> Managing inactive subscriptions  
  If a subscription becomes inactive, you should either delete it or reactivate it by resolving the underlying conditions that prevent it from being processed. Subscriptions can become inactive if conditions occur that prevent processing. These conditions include:  
   
 -   Removing or uninstalling the delivery extension specified in the subscription.  
@@ -113,8 +113,8 @@ ms.author: maggies
   
  When conditions cause the subscription to become inactive, the subscription reflects this fact when the report server runs the subscription. If a subscription is scheduled to deliver a report every Friday at 2:00 A.M., and the delivery extension it uses was uninstalled on Monday at 9:00 A.M., the subscription will not reflect its inactive state until Friday at 2:00 A.M.  
   
-## See Also  
- [old_Create and Manage Subscriptions for Native Mode Report Servers](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+## See also  
+ [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC Driver on Linux and macOS Support for High Availability and Disaster Recovery
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

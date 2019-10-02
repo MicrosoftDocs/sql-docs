@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "client-side XML formatting"
   - "client-side-xml attribute"
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Client-side XML Formatting (SQLXML 4.0)

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Define and Modify a Parameterized Row Filter for a Merge Article
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +101,7 @@ manager: craigg
   
 #### To define a parameterized row filter for an article in a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify **@publication**, a name for the article for **@article**, the table being published for **@source_object**, the WHERE clause that defines the parameterized filter for **@subset_filterclause** (not including `WHERE`), and one of the following values for **@partition_options**, which describes the type of partitioning that will result from the parameterized row filter:  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify **\@publication**, a name for the article for **\@article**, the table being published for **\@source_object**, the WHERE clause that defines the parameterized filter for **\@subset_filterclause** (not including `WHERE`), and one of the following values for **\@partition_options**, which describes the type of partitioning that will result from the parameterized row filter:  
   
     -   **0** - Filtering for the article either is static or does not yield a unique subset of data for each partition (an "overlapping" partition).  
   
@@ -114,9 +113,9 @@ manager: craigg
   
 #### To change a parameterized row filter for an article in a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify **@publication**, **@article**, a value of **subset_filterclause** for **@property**, the expression that defines the parameterized filter for **@value** (not including `WHERE`), and a value of **1** for both **@force_invalidate_snapshot** and **@force_reinit_subscription**.  
+1.  At the Publisher on the publication database, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify **\@publication**, **\@article**, a value of **subset_filterclause** for **\@property**, the expression that defines the parameterized filter for **\@value** (not including `WHERE`), and a value of **1** for both **\@force_invalidate_snapshot** and **\@force_reinit_subscription**.  
   
-2.  If this change results in different partitioning behavior, then execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) again. Specify **@publication**, **@article**, a value of **partition_options** for **@property**, and the most appropriate partitioning option for **@value**, which can be one of the following:  
+2.  If this change results in different partitioning behavior, then execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) again. Specify **\@publication**, **\@article**, a value of **partition_options** for **\@property**, and the most appropriate partitioning option for **\@value**, which can be one of the following:  
   
     -   **0** - Filtering for the article either is static or does not yield a unique subset of data for each partition (an "overlapping" partition).  
   

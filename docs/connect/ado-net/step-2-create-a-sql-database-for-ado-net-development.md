@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: dd0f6329-d379-458e-aba1-7b0b9e7277ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Step 2: Create a SQL database for ADO.NET development
 

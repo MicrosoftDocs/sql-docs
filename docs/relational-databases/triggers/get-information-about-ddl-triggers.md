@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Information About DDL Triggers

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
@@ -176,7 +175,7 @@ manager: craigg
 14. On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
   
 ## Next Task in Lesson  
- [Defining the Unknown Member and Null Processing Properties](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [Defining the Unknown Member and Null Processing Properties](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
 ## See Also  
  [Define Attribute Relationships](multidimensional-models/attribute-relationships-define.md)   

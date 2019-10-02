@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "conjugating verbs [full-text search]"
   - "word breakers [full-text search]"
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure and Manage Word Breakers and Stemmers for Search

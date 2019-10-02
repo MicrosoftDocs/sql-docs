@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Working with User-Defined Types in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

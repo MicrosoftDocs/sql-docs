@@ -2,7 +2,8 @@
 title: "sys.dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/27/2019"
-ms.prod: 
+ms.prod: sql
+ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ""
 ms.technology: system-objects
@@ -19,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
 ---
 # sys.dm_user_db_resource_governance (Transact-SQL)
@@ -30,7 +30,7 @@ Returns resource governance configuration and capacity settings for an Azure SQL
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|int|ID of the database, unique within a Azure SQL Database server.|
+|**database_id**|int|ID of the database, unique within an Azure SQL Database server.|
 |**logical_database_guid**|uniqueidentifier|Logical guid for user database and stays through the life of a user database.  Rename or setting a database to a different SLO will not change the GUID. |
 |**physical_database_guid**|uniqueidentifier|Physical guid for a user database which stays through the life of the physical instance of the user database. Setting to a different SLO will cause this column to change.|
 |**server_name**|nvarchar|Logical server name.|

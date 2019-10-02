@@ -3,10 +3,9 @@ title: "Tutorial: Use AD authentication for SQL Server on Linux"
 titleSuffix: SQL Server
 description: This tutorial provides the configuration steps for AD authentication for SQL Server on Linux.
 author: Dylan-MSFT
-ms.author: Dylan.Gray
-ms.reviewer: rothja
+ms.author: dygray
+ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: craigg
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: "seodec18"
@@ -14,7 +13,6 @@ ms.technology: linux
 helpviewer_keywords: 
   - "Linux, AAD authentication"
 ---
-
 # Tutorial: Use Active Directory authentication with SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -97,7 +95,7 @@ To configure the SQL Server service keytab file:
 
    ```bash
    kinit user@CONTOSO.COM
-   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
+   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM
    ```
 
    > [!NOTE]
@@ -112,9 +110,9 @@ To configure the SQL Server service keytab file:
 1. Add keytab entries for each SPN using the following commands:
 
    ```bash
-   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac -sha1-96
+   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
    addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
-   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac -sha1-96
+   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
    addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
    ```
 
@@ -356,4 +354,4 @@ In this tutorial, we walked through how to set up Active Directory authenticatio
 Next, explore other security scenarios for SQL Server on Linux.
 
 > [!div class="nextstepaction"]
->[Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md)
+> [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md)

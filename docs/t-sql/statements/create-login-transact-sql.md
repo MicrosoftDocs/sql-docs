@@ -26,12 +26,13 @@ helpviewer_keywords:
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE LOGIN (Transact-SQL)
 
 Creates a login for SQL Server, SQL Database, SQL Data Warehouse, or Analytics Platform System databases. Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular version.
+
+CREATE LOGIN participates in transactions. If CREATE LOGIN is executed within a transaction and the transaction is rolled back, then login creation is rolled back. If executed within a transaction, the created login cannot be used until the transaction is committed.
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
@@ -318,7 +319,7 @@ SQL Server rules allow you create a SQL Server authentication login in the forma
 
 In SQL Database, login data required to authenticate a connection and server-level firewall rules is temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-For more information about SQL Database logins, see [Managing Databases and Logins in Windows Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+For more information about SQL Database logins, see [Managing Databases and Logins in Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## Permissions
 
@@ -625,7 +626,7 @@ SQL Server rules allow you create a SQL Server authentication login in the forma
 
 In SQL Data Warehouse, login data required to authenticate a connection and server-level firewall rules is temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-For more information about SQL Data Warehouse logins, see [Managing Databases and Logins in Windows Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+For more information about SQL Data Warehouse logins, see [Managing Databases and Logins in Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## Permissions
 

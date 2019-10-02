@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Active Geo-Replication - sp_wait_for_database_copy_sync

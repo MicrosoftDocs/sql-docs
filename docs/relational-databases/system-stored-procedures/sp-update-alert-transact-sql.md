@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -126,7 +125,7 @@ sp_update_alert
  Reserved.  
   
 `[ @performance_condition = ] 'performance_condition'`
- A value expressed in the format **'***itemcomparatorvalue***'**. *performance_condition* is **nvarchar(512)**, with a default of NULL, and consists of these elements.  
+ A value expressed in the format **'**_itemcomparatorvalue_**'**. *performance_condition* is **nvarchar(512)**, with a default of NULL, and consists of these elements.  
   
 |Format element|Description|  
 |--------------------|-----------------|  

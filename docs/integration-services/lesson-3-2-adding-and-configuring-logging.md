@@ -8,11 +8,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 3-2: Add and configure logging
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In this task, you enable logging for the data flow in the Lesson 3.dtsx package. Then, you configure a Text File log provider to log the PipelineExecutionPlan and PipelineExecuteTrees events. The Text Files log provider creates logs that are easy to view and transport. The simplicity of these log files makes these files useful during the basic testing phase of a package. You can also view the log entries in the **Log Events** window of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   

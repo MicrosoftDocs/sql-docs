@@ -1,7 +1,7 @@
 ---
-title: "Understanding XA Transactions | Microsoft Docs"
+title: "Understanding XA transactions | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/21/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,9 +10,8 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
-# Understanding XA Transactions
+# Understanding XA transactions
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -33,7 +32,7 @@ The classes for the distributed transaction implementation are as follows:
 > [!NOTE]  
 > XA distributed transaction connections default to the Read Committed isolation level.  
   
-## Guidelines and Limitations when Using XA Transactions  
+## Guidelines and limitations when using XA transactions  
 
 The following additional guidelines apply to tightly coupled transactions:  
 
@@ -47,7 +46,7 @@ The following additional guidelines apply to tightly coupled transactions:
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
     ```  
   
-## Configuration Instructions
+## Configuration instructions
 
 The following steps are required if you want to use XA data sources together with Microsoft Distributed Transaction Coordinator (MS DTC) for handling distributed transactions.  
 
@@ -64,7 +63,7 @@ The following steps are required if you want to use XA data sources together wit
 >
 > EXEC sp_sqljdbc_xa_uninstall
 
-### Running the MS DTC Service
+### Running the MS DTC service
 
 The MS DTC service should be marked **Automatic** in Service Manager to make sure that it is running when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is started. To enable MS DTC for XA transactions, you must follow these steps:  
   
@@ -84,7 +83,7 @@ On Windows Vista and later:
   
 7. Stop and then restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to make sure that it syncs up with the MS DTC changes.  
 
-### Configuring the JDBC Distributed Transaction Components  
+### Configuring the JDBC distributed transaction components  
 
 You can configure the JDBC driver distributed transaction components by following these steps:  
   
@@ -160,7 +159,7 @@ When you install a new version of the JDBC driver, you should also use sqljdbc_x
   
     The new DLL will be loaded when an extended procedure in sqljdbc_xa.dll is called. You don't need to restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to load the new definitions.  
   
-### Configuring the User-Defined Roles
+### Configuring the user-defined roles
 
 To grant permissions to a specific user to participate in distributed transactions with the JDBC driver, add the user to the SqlJDBCXAUser role. For example, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code to add a user named 'shelby' (SQL standard login user named 'shelby') to the SqlJDBCXAUser role:  
 
@@ -342,6 +341,6 @@ class XidImpl implements Xid {
 
 ```
 
-## See Also  
+## See also  
 
-[Performing Transactions with the JDBC Driver](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
+[Performing transactions with the JDBC driver](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

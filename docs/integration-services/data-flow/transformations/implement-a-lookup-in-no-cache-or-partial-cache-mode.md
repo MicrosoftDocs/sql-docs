@@ -13,11 +13,14 @@ helpviewer_keywords:
   - "lookups [Integration Services]"
   - "exact matches [Integration Services]"
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Implement a Lookup in No Cache or Partial Cache Mode
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You can configure the Lookup transformation to use the partial cache or no cache mode:  
   
 -   Partial cache  

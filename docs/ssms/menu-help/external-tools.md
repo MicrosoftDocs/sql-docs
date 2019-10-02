@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "External Tools dialog box"
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # External Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

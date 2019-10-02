@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "advanced"
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Edit the Advanced Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Advanced** tab to add special properties to the CDC instance.  
   
 #### To add advanced properties to the CDC instance  

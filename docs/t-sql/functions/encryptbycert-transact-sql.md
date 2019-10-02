@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "encryption [SQL Server], certificates"
   - "ENCRYPTBYCERT function"
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # ENCRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ The ID of a certificate in the database. **int**.
 _cleartext_  
 A string of data that will be encrypted with the certificate.  
   
-**@cleartext**  
+**\@cleartext**  
 A variable of one of the following types that contains data that will be encrypted with the public key of the certificate:
 
 * **nvarchar** 

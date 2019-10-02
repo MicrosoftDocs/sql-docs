@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
@@ -77,7 +76,7 @@ manager: craigg
   
 |Property|Description|  
 |--------------|-----------------|  
-|`Application Name`|Sets the name of the application associated with the connection. This value can be useful when monitoring tracing events, especially when you have several applications accessing the same databases. For example, adding Application Name='test' to a connection string causes 'test' to appear in a SQL Server Profiler trace, as shown in the following screenshot:<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Aliases for this property include `sspropinitAppName`, `AppName`. For more information, see [Use Application Name parameter when connecting to SQL Server](https://go.microsoft.com/fwlink/?LinkId=301699).|  
+|`Application Name`|Sets the name of the application associated with the connection. This value can be useful when monitoring tracing events, especially when you have several applications accessing the same databases. For example, adding Application Name='test' to a connection string causes 'test' to appear in a SQL Server Profiler trace, as shown in the following screenshot:<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Aliases for this property include `sspropinitAppName`, `AppName`. For more information, see [Use Application Name parameter when connecting to SQL Server](https://www.connectionstrings.com/use-application-name-sql-server/).|  
 |`AutoSyncPeriod`|Sets the frequency (in milliseconds) of client and server cache synchronization. ADOMD.NET provides client caching for frequently used objects that have minimal memory overhead. This helps reduce the number of round trips to the server. The default is 10000 milliseconds (or 10 seconds). When set to null or 0, automatic synchronization is turned off.|  
 |`Character Encoding`|Defines how characters are encoded on the request. Valid values are Default or UTF-8 (these are equivalent), and UTF-16|  
 |`CompareCaseSensitiveStringFlags`|Adjusts case-sensitive string comparisons for a specified locale. For more information about setting this property, see [CompareCaseSensitiveStringFlags Property](https://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx).|  

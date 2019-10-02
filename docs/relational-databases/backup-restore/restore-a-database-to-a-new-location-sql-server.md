@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Restore a Database to a New Location (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ manager: craigg
   
 -   Under the full or bulk-logged recovery model, before you can restore a database, you must back up the active transaction log. For more information, see [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
 
--   To restore an encrypted database, **you must have access to the certificate or asymmetric key used to encrypt the database!** Without that certificate or asymmetric key, you cannot retore the database. You must retain that certificate used to encrypt the database encryption key for as long as you need the backup! For more information, see [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+-   To restore an encrypted database, **you must have access to the certificate or asymmetric key used to encrypt the database!** Without that certificate or asymmetric key, you cannot restore the database. You must retain that certificate used to encrypt the database encryption key for as long as you need the backup! For more information, see [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
 ###  <a name="Recommendations"></a> Recommendations  
   
@@ -101,63 +100,65 @@ manager: craigg
      This statement also supports a number of WITH options. For more information, see [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
 2.  Use the [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) statement to restore the full database backup. By default, data and log files are restored to their original locations. To relocate a database, use the MOVE option to relocate each of the database files and to avoid collisions with existing files.  
+
+  The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for restoring the database to a new location and a new name is:  
   
-     The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for restoring the database to a new location and a new name is:  
+  RESTORE DATABASE *new_database_name*  
   
-     RESTORE DATABASE *new_database_name*  
+  FROM *backup_device* [ ,...*n* ]  
   
-     FROM *backup_device* [ ,...*n* ]  
+  [ WITH  
   
-     [ WITH  
+  {  
   
-     {  
+  [ **RECOVERY** | NORECOVERY ]  
   
-     [ **RECOVERY** | NORECOVERY ]  
+  [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
-     [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
+  [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
   
-     [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
+  }  
   
-     }  
+  ;  
   
-     ;  
+  > [!NOTE] 
+  > When preparing to relocate a database on a different disk, you should verify that sufficient space is available and identify any potential collisions with existing files. This involves using a [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) statement that specifies the same MOVE parameters that you plan to use in your RESTORE DATABASE statement.  
   
-    > **NOTE!** When preparing to relocate a database on a different disk, you should verify that sufficient space is available and identify any potential collisions with existing files. This involves using a [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) statement that specifies the same MOVE parameters that you plan to use in your RESTORE DATABASE statement.  
+  The following table describes arguments of this RESTORE statement in terms of restoring a database to a new location. For more information about these arguments, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-     The following table describes arguments of this RESTORE statement in terms of restoring a database to a new location. For more information about these arguments, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+  *new_database_name*  
+  The new name for the database.  
   
-     *new_database_name*  
-     The new name for the database.  
+  > [!NOTE]
+  > If you are restoring the database to a different server instance, you can use the original database name instead of a new name.  
   
-    >**NOTE:** If you are restoring the database to a different server instance, you can use the original database name instead of a new name.  
+  *backup_device* [ **,**...*n* ]  
+  Specifies a comma-separated list of from 1 to 64 backup devices from which the database backup is to be restored. You can specify a physical backup device, or you can specify a corresponding logical backup device, if defined. To specify a physical backup device, use the DISK or TAPE option:  
   
-     *backup_device* [ **,**...*n* ]  
-     Specifies a comma-separated list of from 1 to 64 backup devices from which the database backup is to be restored. You can specify a physical backup device, or you can specify a corresponding logical backup device, if defined. To specify a physical backup device, use the DISK or TAPE option:  
+  { DISK | TAPE } **=**_physical_backup_device_name_  
   
-     { DISK | TAPE } **=**_physical_backup_device_name_  
+  For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
-     For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+  { **RECOVERY** | NORECOVERY }  
+  If the database uses the full recovery model, you might need to apply transaction log backups after you restore the database. In this case, specify the NORECOVERY option.  
   
-     { **RECOVERY** | NORECOVERY }  
-     If the database uses the full recovery model, you might need to apply transaction log backups after you restore the database. In this case, specify the NORECOVERY option.  
+  Otherwise, use the RECOVERY option, which is the default.  
   
-     Otherwise, use the RECOVERY option, which is the default.  
+  FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
+  Identifies the backup set to be restored. For example, a *backup_set_file_number* of **1** indicates the first backup set on the backup medium and a *backup_set_file_number* of **2** indicates the second backup set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement.  
   
-     FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
-     Identifies the backup set to be restored. For example, a *backup_set_file_number* of **1** indicates the first backup set on the backup medium and a *backup_set_file_number* of **2** indicates the second backup set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement.  
+  When this option is not specified, the default is to use the first backup set on the backup device.  
   
-     When this option is not specified, the default is to use the first backup set on the backup device.  
+  For more information, see "Specifying a Backup Set," in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-     For more information, see "Specifying a Backup Set," in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+  MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
+  Specifies that the data or log file specified by *logical_file_name_in_backup* is to be restored to the location specified by *operating_system_file_name*. Specify a MOVE statement for every logical file you want to restore from the backup set to a new location.  
   
-     MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
-     Specifies that the data or log file specified by *logical_file_name_in_backup* is to be restored to the location specified by *operating_system_file_name*. Specify a MOVE statement for every logical file you want to restore from the backup set to a new location.  
-  
-    |Option|Description|  
-    |------------|-----------------|  
-    |*logical_file_name_in_backup*|Specifies the logical name of a data or log file in the backup set. The logical file name of a data or log file in a backup set matches its logical name in the database when the backup set was created.<br /><br /> <br /><br /> Note: To obtain a list of the logical files from the backup set, use [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).|  
-    |*operating_system_file_name*|Specifies a new location for the file specified by *logical_file_name_in_backup*. The file will be restored to this location.<br /><br /> Optionally, *operating_system_file_name* specifies a new file name for the restored file. This is necessary if you are creating a copy of an existing database on the same server instance.|  
-    |*n*|Is a placeholder indicating that you can specify additional MOVE statements.|  
+  |Option|Description|  
+  |------------|-----------------|  
+  |*logical_file_name_in_backup*|Specifies the logical name of a data or log file in the backup set. The logical file name of a data or log file in a backup set matches its logical name in the database when the backup set was created.<br /><br /> <br /><br /> Note: To obtain a list of the logical files from the backup set, use [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).|  
+  |*operating_system_file_name*|Specifies a new location for the file specified by *logical_file_name_in_backup*. The file will be restored to this location.<br /><br /> Optionally, *operating_system_file_name* specifies a new file name for the restored file. This is necessary if you are creating a copy of an existing database on the same server instance.|  
+  |*n*|Is a placeholder indicating that you can specify additional MOVE statements.|  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example creates a new database named `MyAdvWorks` by restoring a backup of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database, which includes two files: [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data and [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log. This database uses the simple recovery model. The [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database already exists on the server instance, so the files in the backup must be restored to a new location. The RESTORE FILELISTONLY statement is used to determine the number and names of the files in the database being restored. The database backup is the first backup set on the backup device.  

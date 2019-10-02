@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
@@ -112,6 +111,6 @@ manager: craigg
  [Defining Parent Attribute Properties in a Parent-Child Hierarchy](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
 ## See Also  
- [Deploying an Analysis Services Project](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+ [Deploying an Analysis Services Project](lesson-2-5-deploying-an-analysis-services-project.md)  
   
   

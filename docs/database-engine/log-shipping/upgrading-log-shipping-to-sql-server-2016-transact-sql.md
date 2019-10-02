@@ -11,11 +11,10 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrading Log Shipping to SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  When upgrading from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log shipping configuration to a new [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version, a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]service pack, or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]cumulative update, upgrading your log shipping servers in the appropriate order will preserve your log shipping disaster recovery solution.  
+  When upgrading from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log shipping configuration to a new [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version, a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service pack, or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cumulative update, upgrading your log shipping servers in the appropriate order will preserve your log shipping disaster recovery solution.  
   
 > [!NOTE]  
 >  [Backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) was introduced in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. An upgraded log shipping configuration uses the **backup compression default** server-level configuration option to control whether backup compression is used for the transaction log backup files. The backup compression behavior of log backups can be specified for each log shipping configuration. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  

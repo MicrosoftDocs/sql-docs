@@ -1,14 +1,12 @@
 ---
 title: "Frequently Asked Questions in PolyBase | Microsoft Docs"
-ms.custom: ""
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
-ms.reviewer: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mikeray
 ---
 
 # Frequently asked questions

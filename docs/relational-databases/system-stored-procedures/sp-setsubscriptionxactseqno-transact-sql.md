@@ -15,12 +15,11 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Used during troubleshooting to specify the log sequence number (LSN) of the next transaction to be applied by the Distribution Agent at the Subscriber, which enables the agent to skip a failed transaction. This stored procedure is executed at the Subscriber on the subscription database. Not supported for non-SQL Server Subscribers.  
+  Used during troubleshooting to specify the last delivered transaction using the log sequence number (LSN), allowing the Distribution Agent to begin delivering at the next transaction. Upon restarting, the Distribution Agent returns transactions greater than this watermark (LSN) from the Distribution database cache (msrepl_commands). This stored procedure is executed at the Subscriber on the subscription database. Not supported for non-SQL Server Subscribers.  
   
 > [!CAUTION]  
 >  Using this stored procedure incorrectly or specifying an incorrect LSN value can cause the Distribution Agent to revert changes that were already applied at the Subscriber or skip over all remaining changes.  
@@ -77,4 +76,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_setsubscriptionxactseqno**.  
   
-  
+## See more
+
+[Blog: How to skip a transaction](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  

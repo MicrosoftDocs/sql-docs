@@ -2,7 +2,7 @@
 title: "Importing HTML into a Report (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 description: Learn about using a text box to insert HTML-formatted text that you have retrieved from a field in your dataset into a report.
 ms.custom: seodec18

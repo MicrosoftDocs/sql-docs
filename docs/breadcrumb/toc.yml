@@ -18,7 +18,7 @@
 
     - name: ML
       href: /sql/advanced-analytics/
-      homepage: /sql/advanced-analytics/what-is-sql-server-machine-learning
+      homepage: /sql/advanced-analytics/
 
     - name: Connect
       href: /sql/connect/

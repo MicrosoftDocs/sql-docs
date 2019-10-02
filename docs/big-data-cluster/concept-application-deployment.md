@@ -1,15 +1,14 @@
 ---
 title: What is Application Deployment?
-titleSuffix: SQL Server 2019 big data clusters
-description: This article describes application deployment on a SQL Server 2019 big data cluster (preview).
-author: jterh 
-ms.author: jroth 
-manager: craigg
-ms.date: 03/26/2019
+titleSuffix: Big Data Clusters for SQL Server 2019
+description: This article describes application deployment on a Big Data Clusters for SQL Server 2019.
+author: jeroenterheerdt 
+ms.author: jterh
+ms.reviewer: mikeray
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # What is Application Deployment on a SQL Server 2019 big data cluster?
@@ -50,19 +49,19 @@ When an application is executed, the Kubernetes service for the application prox
 ## How to work with Application Deployment
 
 The two main interfaces for Application Deployment are: 
-- [Command line interface `mssqlctl`](big-data-cluster-create-apps.md)
+- [Command line interface `azdata`](big-data-cluster-create-apps.md)
 - [Visual Studio Code and Azure Data Studio extension](app-deployment-extension.md)
 
 It is also possible for an application to be executed using a RESTful web service. For more information, see [Consume applications on big data clusters](big-data-cluster-consume-apps.md).
 
 ## Next steps
 
-To learn more about how to create and run applications on SQL Server big data clusters, see the following:
+To learn more about how to create and run applications on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following:
 
-- [Deploy applications using mssqlctl](big-data-cluster-create-apps.md)
+- [Deploy applications using azdata](big-data-cluster-create-apps.md)
 - [Deploy applications using the App Deploy extension](app-deployment-extension.md)
 - [Consume applications on big data clusters](big-data-cluster-consume-apps.md)
 
-To learn more about the SQL Server big data clusters, see the following overview:
+To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following overview:
 
-- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

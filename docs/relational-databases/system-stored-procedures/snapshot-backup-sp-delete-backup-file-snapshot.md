@@ -12,7 +12,6 @@ dev_langs:
 ms.assetid: 5afe5530-a404-4fa5-af3c-bc7c3ca43ce6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_delete_backup_file_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

@@ -37,14 +37,14 @@ manager: craigg
 # Discontinued Database Engine Functionality in SQL Server 2014
   This topic describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-## Discontinued Features in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a> Discontinued Features in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  The following table lists features that were removed in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 |Category|Discontinued feature|Replacement|  
 |--------------|--------------------------|-----------------|  
 |Compatibility level|90 compatibility level|Databases must be set to at least compatibility level 100. When a database with a compatibility level of less than 100 is upgraded to [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], the compatibility level of the database is set to 100 during the upgrade operation.|  
   
-## Discontinued Features in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a> Discontinued Features in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  The following table lists features that were removed in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 |Category|Discontinued feature|Replacement|  
@@ -87,6 +87,6 @@ manager: craigg
 -   Fields added: target_kb, pages_kb  
   
 ## See Also  
- [Deprecated Database Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)  
+ [Deprecated Database Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

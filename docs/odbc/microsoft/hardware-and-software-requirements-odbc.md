@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Hardware and Software Requirements (ODBC)
 This topic lists requirements for using the ODBC Desktop Database Drivers.  

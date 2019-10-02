@@ -11,11 +11,14 @@ f1_keywords:
   - "sql13.dts.designer.resolvereferences.preview.F1"
   - "sql13.dts.designer.resolvereferences.mapper.F1"
 ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Resolve Column Reference Editor
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   When an input path is disconnected or if there are any unmapped columns in the path, an error icon is displayed beside the corresponding data path. To simplify the resolution of column reference errors, the Resolve References editor allows you to link unmapped output columns with unmapped input columns for all paths in the execution tree. The Resolve References editor will also highlight the paths to indicate which paths are being resolved.  
   
 > [!NOTE]  

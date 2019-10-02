@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Step 3: Proof of concept connecting to SQL using pyodbc
 
@@ -64,6 +63,7 @@ In this example you will see how to execute an [INSERT](../../../t-sql/statement
 
 #Sample insert query
 cursor.execute("INSERT SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate) OUTPUT INSERTED.ProductID VALUES ('SQL Server Express New 20', 'SQLEXPRESS New 20', 0, 0, CURRENT_TIMESTAMP )") 
+cnxn.commit()
 row = cursor.fetchone()
 
 while row: 

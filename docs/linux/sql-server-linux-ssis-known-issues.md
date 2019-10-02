@@ -1,14 +1,12 @@
 ---
-title: Limitations and known issues for SSIS on Linux | Microsoft Docs
+title: Limitations and known issues for SSIS on Linux
 description: This article describes limitations and known issues for SQL Server Integration Services (SSIS) on Linux computers
-author: leolimsft 
+author: lrtoyou1223 
 ms.author: lle 
-ms.reviewer: douglasl
-manager: craigg
+ms.reviewer: maghan
 ms.date: 06/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ---
 # Limitations and known issues for SSIS on Linux

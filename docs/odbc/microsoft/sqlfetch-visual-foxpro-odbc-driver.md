@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 6198a006-6f25-4328-8403-2aba29b7041f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLFetch (Visual FoxPro ODBC Driver)
 > [!NOTE]  

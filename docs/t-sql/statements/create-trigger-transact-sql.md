@@ -28,7 +28,6 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ms.reviewer: mathoma
 ---
 # CREATE TRIGGER (Transact-SQL)
@@ -500,7 +499,7 @@ FOR DROP_SYNONYM
 AS   
 IF (@@ROWCOUNT = 0)
 RETURN;
-   RAISERROR ('You must disable Trigger "safety" to drop synonyms!',10, 1)  
+   RAISERROR ('You must disable Trigger "safety" to remove synonyms!', 10, 1)  
    ROLLBACK  
 GO  
 DROP TRIGGER safety  

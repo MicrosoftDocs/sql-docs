@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Getting Started with Database Engine Permissions
@@ -23,29 +22,29 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Security Principals  
  Security principal is the official name of the identities that use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and that can be assigned permission to take actions. They are usually people or groups of people, but can be  other entities that pretend to be people. The security principals can be created and managed using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] listed, or by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
- Logins  
+##### Logins  
  Logins are individual user accounts for logging on to the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] support logins based on Windows authentication and logins based on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication. For information about the two types of logins, see [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md).  
   
- Fixed Server Roles  
+##### Fixed Server Roles  
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], fixed server roles are a set of pre-configured roles that provide convenient group of server-level permissions. Logins can be added to the roles using the `ALTER SERVER ROLE ... ADD MEMBER` statement. For more information, see [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] does not support the fixed server roles, but has two roles in the master database (`dbmanager` and `loginmanager`) that act like server roles.  
   
- User-defined Server Roles  
+##### User-defined Server Roles  
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you can create your own server roles and assign server-level permissions to them. Logins can be added to the server roles using the `ALTER SERVER ROLE ... ADD MEMBER` statement. For more information, see [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] does not support the user-defined server roles.  
   
- Database Users  
+##### Database Users  
  Logins are granted access to a database by creating a database user in a database and mapping that database user to login. Typically the database user name is the same as the login name, though it does not have to be the same. Each database user maps to a single login. A login can be mapped to only one user in a database, but can be mapped as a database user in several different databases.  
   
  Database users can also be created that do not have a corresponding login. These are called *contained database users*. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] encourages the use of contained database users because it makes it easier to move your database to a different server. Like a login, a contained database user can use either Windows authentication or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication. For more information, see [Contained Database Users - Making Your Database Portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
  There are 12 types of users with slight differences in how they authenticate, and who they represent. To see a list of users, see [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   
- Fixed Database Roles  
+##### Fixed Database Roles  
  Fixed database roles are a set of pre-configured roles that provide convenient group of database-level permissions. Database users and user-defined database roles can be added to the fixed database roles using the  `ALTER ROLE ... ADD MEMBER` statement. For more information, see [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
- User-defined Database Roles  
+##### User-defined Database Roles  
  Users with the `CREATE ROLE` permission can create new user-defined database roles to represent groups of users with common permissions. Typically permissions are granted or denied to the entire role, simplifying permissions management and monitoring. Database users can be added to the database roles by using the `ALTER ROLE ... ADD MEMBER` statement. For more information, see [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
- Other principals  
+##### Other principals  
  Additional security principals not discussed here include application roles, and logins and users based on certificates or asymmetric keys.  
   
  For a graphic showing the relationships between Windows users, Windows groups, logins, and database users, see [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md).  
@@ -60,7 +59,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 2.  Create Windows groups that represent the work units and the work functions.  
   
 3.  Add the Windows users to the Windows groups.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### If the person connecting will be connecting to many databases  
   
 1.  Create a login for the Windows groups. (If using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication, skip the Active Directory steps, and create [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication logins here.)  
@@ -223,7 +224,9 @@ JOIN sys.database_principals AS dRole
 ## Next Steps  
  For more topics to get you started, see:  
   
--   [Tutorial: Getting Started with the Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Creating a Database &#40;Tutorial&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
+-   [Tutorial: Getting Started with the Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
+
+-   [Creating a Database &#40;Tutorial&#41;](../../../t-sql/lesson-1-creating-database-objects.md)  
   
 -   [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   

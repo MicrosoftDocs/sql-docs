@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "SUBSTRING function"
   - "part of expression returned [Integration Services]"
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SUBSTRING (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the part of a character expression that starts at the specified position and has the specified length. The *position* parameter and the *length* parameter must evaluate to integers.  
   
 ## Syntax  

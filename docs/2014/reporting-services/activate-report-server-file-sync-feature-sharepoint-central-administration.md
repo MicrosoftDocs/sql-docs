@@ -1,7 +1,7 @@
 ---
 title: "Activate the Report Server File Sync Feature in SharePoint Central Administration | Microsoft Docs"
-ms.prod: "reporting-services-2014"
-ms.technology: "reporting-services-native"
+ms.prod: "sql-server-2014"
+ms.technology: "reporting-services"
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -10,7 +10,6 @@ ms.reviewer: ""
 ms.custom: ""
 ms.date: "03/06/2017"
 ---
-
 # Activate the Report Server File Sync Feature in SharePoint Central Administration
 
 The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report Server File Sync feature utilizes SharePoint event handlers to synchronize the report server catalog with items in document libraries. This feature is beneficial when users frequently upload published report items directly to SharePoint document libraries. If the file Sync feature isn't activated, content will still be synchronized but not as frequently.  

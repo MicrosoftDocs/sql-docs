@@ -12,11 +12,14 @@ helpviewer_keywords:
   - "remainder of division operation"
   - "modulo operator (%)"
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # (Modulo) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Provides the integer remainder after dividing the first numeric expression by the second one.  
   
 ## Syntax  

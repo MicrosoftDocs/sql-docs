@@ -1,8 +1,8 @@
 ---
 title: "Granting Permissions on a Native Mode Report Server | Microsoft Docs"
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: security
 
 
@@ -37,9 +37,9 @@ ms.author: maggies
   
 2.  Identify which users and groups require access to the report server, and at what level. Most users should be assigned to the **Browser** role or the **Report Builder** role. A smaller number of users should be assigned to the **Publisher** role. Very few users should be assigned to **Content Manager**.  
   
-3.  Use Report Manager to assign roles on the Home folder (this is the top-level folder of the report server folder hierarchy) for each user or group who requires access.  
+3.  Use the web portal to assign roles on the Home folder (this is the top-level folder of the report server folder hierarchy) for each user or group who requires access.  
   
-4.  At the site level, on the Site Settings page in Report Manager, create a system-level role assignment for each user and group using the predefined roles **System User** and **System Administrator**.  
+4.  At the site level, on the Site Settings page on the web portal, create a system-level role assignment for each user and group using the predefined roles **System User** and **System Administrator**.  
   
 5.  Create additional role assignments as needed for specific folders, reports, and other items. Avoid creating a large number of role assignments. If you create too many, it will be difficult to keep track of the different permission levels for each user.  
   
@@ -62,9 +62,9 @@ ms.author: maggies
 |Tool|Tasks|  
 |----------|-----------|  
 |Management Studio - Used to view, modify, create, and delete role definitions.|[Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|Report Manager - Used to assign users and groups to roles.|[Grant User Access to a Report Server &#40;Report Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Modify or Delete a Role Assignment &#40;Report Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|The web portal - Used to assign users and groups to roles.|[Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [Modify or Delete a Role Assignment](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
-## See Also  
+## See also  
  [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [Granting Permissions on Report Server Items on a SharePoint Site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)   

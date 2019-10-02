@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6ebaed8e-2e2b-4f6d-bf4b-bc25452de441
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Collation and CLR Integration Data Types
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

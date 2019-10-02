@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "logs [SQL Server], jobs"
   - "removing job step logs"
 ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Delete a Job Step Log

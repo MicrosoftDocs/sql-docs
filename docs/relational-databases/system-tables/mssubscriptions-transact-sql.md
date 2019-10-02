@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +46,8 @@ manager: craigg
 |**ss_cplt_seqno**|**varbinary(16)**|The sequence number used to signify the completion of the concurrent snapshot processing.|  
   
 ## See Also  
- [Replication Tables](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

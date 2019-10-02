@@ -18,11 +18,14 @@ helpviewer_keywords:
   - "flat files"
   - "Flat File source"
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Flat File Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Flat File source reads data from a text file. The text file can be in delimited, fixed width, or mixed format.  
   
 -   Delimited format uses column and row delimiters to define columns and rows.  

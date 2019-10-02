@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Indexes Collection (ADOX)
 Contains all [Index](../../../ado/reference/adox-api/index-object-adox.md) objects of a table.  

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 4ad50e54-8246-4012-bd88-4aaaaf7f0f77
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getBoolean Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

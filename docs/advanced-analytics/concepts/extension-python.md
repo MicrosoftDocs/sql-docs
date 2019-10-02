@@ -1,17 +1,17 @@
 ---
-title: Python programming language extension - SQL Server Machine Learning
-description: Learn about Python code execution and built-in Python libraries in SQL Server 2017 Machine Learning Services.
+title: Python programming language extension
+description: Learn about Python code execution and built-in Python libraries in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/05/2018
+ms.date: 09/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Python language extension in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 The Python extension is part of the SQL Server Machine Learning Services add-on to the relational database engine. It adds a Python execution environment, Anaconda distribution with the Python 3.5 runtime and interpreter, standard libraries and tools, and the Microsoft product libraries for Python: [revoscalepy](../python/ref-py-revoscalepy.md) for analytics at scale and [microsoftml](../python/ref-py-microsoftml.md) for machine learning algorithms. 
 
@@ -87,9 +87,11 @@ The following diagram summarizes the overall workflow when scripts are sent from
 8. SQL Satellite manages communication with SQL Server and cleanup of related job objects.
 9. SQL Server passes results back to the client.
 
-## See also
+## Next steps
 
 + [revoscalepy module in SQL Server](../python/ref-py-revoscalepy.md)
 + [revoscalepy function reference](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [Extensibility framework in SQL Server](extensibility-framework.md)
 + [R and machine learning extensions in SQL Server](extension-r.md)
++ [Get Python package information](../package-management/python-package-information.md)
++ [Install Python packages with sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md)

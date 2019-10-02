@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Example: Piecemeal Restore of Database (Full Recovery Model)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,14 +68,14 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
      At this point the primary and filegroups `A` and `C` are online. Files in filegroup `B` remain recovery pending, with the filegroup offline. Deferred transactions have been resolved, and log truncation occurs.  
   
 3.  Online restore of filegroup `B`.  
+
+   In the third restore sequence, the database administrator restores filegroup `B`. The backup of filegroup `B` was taken after the filegroup became read-only; therefore, it does not have to be rolled forward during recovery.  
   
-     In the third restore sequence, the database administrator restores filegroup `B`. The backup of filegroup `B` was taken after the filegroup became read-only; therefore, it does not have to be rolled forward during recovery.  
+   ```sql  
+   RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
+   ```  
   
-    ```  
-    RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
-    ```  
-  
-     All filegroups are now online.  
+   All filegroups are now online.  
   
 ## Additional Examples  
   

@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "dates [Integration Services], DATEPART"
   - "DATEPART function"
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # DATEPART (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns an integer representing a datepart of a date.  
   
 ## Syntax  

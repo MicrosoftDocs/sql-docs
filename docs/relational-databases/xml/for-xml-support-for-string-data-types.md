@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # FOR XML Support for String Data Types
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

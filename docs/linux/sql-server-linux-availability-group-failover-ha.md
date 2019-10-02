@@ -1,13 +1,12 @@
 ---
-title: Manage availability group failover - SQL Server on Linux | Microsoft Docs
+title: Manage availability group failover - SQL Server on Linux
 description: 
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 
 ---
@@ -38,7 +37,7 @@ Manually fail over in two steps.
 
    Second, [remove the location constraint](#removeLocConstraint).
 
-#### <a name="manualMove">Step 1. Manually fail over by moving availability group resource
+#### <a name="manualMove"></a> Step 1. Manually fail over by moving availability group resource
 
 To manually fail over an AG resource named *ag_cluster* to cluster node named *nodeName2*, run the appropriate command for your distribution:
 
@@ -57,7 +56,7 @@ To manually fail over an AG resource named *ag_cluster* to cluster node named *n
 >[!IMPORTANT]
 >After you manually fail over a resource, you need to remove a location constraint that is automatically added.
 
-#### <a name="removeLocConstraint"> Step 2. Remove the location constraint
+#### <a name="removeLocConstraint"> </a> Step 2. Remove the location constraint
 
 During a manual failover, the `pcs` command `move` or `crm` command `migrate` adds a location constraint for the resource to be placed on the new target node. To see the new constraint, run the following command after manually moving the resource:
 

@@ -7,11 +7,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Connect to an ODBC Data Source (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This topic shows you how to connect to an **ODBC** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard.
 
 You may have to download the ODBC driver you need from Microsoft or from a third party.
@@ -136,7 +139,7 @@ To build and test the connection string for your ODBC driver on your own compute
     TrustServerCertificate=No  
     DATABASE=WideWorldImporters    
     WSID=<local computer name>  
-    APP=Microsoft® Windows® Operating System  
+    APP=MicrosoftÂ® WindowsÂ® Operating System  
     Trusted_Connection=Yes  
     SERVER=localhost   
     ```

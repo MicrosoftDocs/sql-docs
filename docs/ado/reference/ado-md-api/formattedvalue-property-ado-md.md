@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # FormattedValue Property (ADO MD)
 Indicates the formatted display of a [cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) value.  

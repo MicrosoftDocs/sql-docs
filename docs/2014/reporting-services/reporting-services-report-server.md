@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "08/12/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [Reporting Services], extensions"
@@ -35,11 +34,11 @@ manager: kfile
   
 -   [Install SQL Server BI Features with SharePoint &#40;PowerPivot and Reporting Services&#41;](../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
   
- **Windows Azure**: For information on using [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] with Windows Azure Virtual Machines, see the following:  
+ **Azure**: For information on using [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] with Azure Virtual Machines, see the following:  
   
--   [SQL Server Business Intelligence in Windows Azure Virtual Machines](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx).  
+-   [SQL Server Business Intelligence in Azure Virtual Machines](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx).  
   
--   [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx).  
+-   [Use PowerShell to Create an Azure VM With a Native Mode Report Server](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx).  
   
 ##  <a name="bkmk_top"></a> In this topic  
   

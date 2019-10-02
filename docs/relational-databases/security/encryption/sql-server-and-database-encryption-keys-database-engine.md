@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: aliceku
 ms.author: aliceku
-manager: craigg
 ---
 # SQL Server and Database Encryption Keys (Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -20,13 +19,19 @@ manager: craigg
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], encryption keys include a combination of public, private, and symmetric keys that are used to protect sensitive data. The symmetric key is created during [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] initialization when you first start the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. The key is used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to encrypt sensitive data that is stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Public and private keys are created by the operating system and they are used to protect the symmetric key. A public and private key pair is created for each [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance that stores sensitive data in a database.  
   
 ## Applications for SQL Server and Database Keys  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] has two primary applications for keys: a *service master key* (SMK) generated on and for a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance, and a *database master key* (DMK) used for a database.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] has two primary applications for keys: a *service master key* (SMK) generated on and for a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance, and a *database master key* (DMK) used for a database.
+
+### Service master key
   
- The SMK is automatically generated the first time the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is started and is used to encrypt a linked server password, credentials, and the database master key. The SMK is encrypted by using the local computer key using the Windows Data Protection API (DPAPI). The DPAPI uses a key that is derived from the Windows credentials of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account and the computer's credentials. The service master key can only be decrypted by the service account under which it was created or by a principal that has access to the machine's credentials.  
+ The Service Master Key is the root of the SQL Server encryption hierarchy. The SMK is automatically generated the first time the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is started and is used to encrypt a linked server password, credentials, and the database master key. The SMK is encrypted by using the local machine key using the Windows Data Protection API (DPAPI). The DPAPI uses a key that is derived from the Windows credentials of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account and the computer's credentials. The service master key can only be decrypted by the service account under which it was created or by a principal that has access to the machine's credentials.
+
+The Service Master Key can only be opened by the Windows service account under which it was created or by a principal with access to both the service account name and its password.
+
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] uses the AES encryption algorithm to protect the service master key (SMK) and the database master key (DMK). AES is a newer encryption algorithm than 3DES used in earlier versions. After upgrading an instance of the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] the SMK and DMK should be regenerated in order to upgrade the master keys to AES. For more information about regenerating the SMK, see [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md) and [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md).
+
+### Database master key
   
- The database master key is a symmetric key that is used to protect the private keys of certificates and asymmetric keys that are present in the database. It can also be used to encrypt data, but it has length limitations that make it less practical for data than using a symmetric key.  
-  
- When it is created, the master key is encrypted by using the AES algorithm (for SQL Server 2017 and later) or the Triple DES algorithm (for earlier versions) and a user-supplied password. To enable the automatic decryption of the master key, a copy of the key is encrypted by using the SMK. It is stored in both the database where it is used and in the **master** system database.  
+ The database master key is a symmetric key that is used to protect the private keys of certificates and asymmetric keys that are present in the database. It can also be used to encrypt data, but it has length limitations that make it less practical for data than using a symmetric key. To enable the automatic decryption of the database master key, a copy of the key is encrypted by using the SMK. It is stored in both the database where it is used and in the **master** system database.  
   
  The copy of the DMK stored in the **master** system database is silently updated whenever the DMK is changed. However, this default can be changed by using the **DROP ENCRYPTION BY SERVICE MASTER KEY** option of the **ALTER MASTER KEY** statement. A DMK that is not encrypted by the service master key must be opened by using the **OPEN MASTER KEY** statement and a password.  
   

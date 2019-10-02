@@ -1,33 +1,36 @@
 ---
 title: Configure Kubernetes with kubeadm
 titleSuffix: SQL Server big data clusters
-description: Learn how to configure Kubernetes on multiple Ubuntu 16.04 or 18.04 machines (physical or virtual) for SQL Server 2019 big data cluster (preview) deployments.
-author: rothja 
-ms.author: jroth 
-manager: craigg
-ms.date: 02/28/2019
+description: Learn how to configure Kubernetes on multiple Ubuntu 16.04 or 18.04 machines (physical or virtual) for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments.
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # Configure Kubernetes on multiple machines for SQL Server big data cluster deployments
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article provides an example of how to use **kubeadm** to configure Kubernetes on multiple machines for SQL Server 2019 big data cluster (preview) deployments. In this example, multiple Ubuntu 16.04 or 18.04 LTS machines (physical or virtual) are the target. If you are deploying to a different Linux platform, you must alter some of the commands to match your system.  
+This article provides an example of how to use **kubeadm** to configure Kubernetes on multiple machines for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments. In this example, multiple Ubuntu 16.04 or 18.04 LTS machines (physical or virtual) are the target. If you are deploying to a different Linux platform, you must alter some of the commands to match your system.  
 
 > [!TIP] 
 > For sample scripts that configure Kubernetes, see [Create a Kubernetes cluster using Kubeadm on Ubuntu 16.04 LTS or 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
+Also see [this](deployment-script-single-node-kubeadm.md) topic for a sample script that automates a deployment of a single node kubeadm deployment on a VM and then deploys a default configuration of big data cluster on top of it.
 
 ## Prerequisites
 
 - Minimum of 3 Linux physical machines or virtual machines
 - Recommended configuration per machine:
    - 8 CPUs
-   - 32 GB of memory
+   - 64 GB of memory
    - 100 GB of storage
+ 
+> [!Important] 
+> Before starting the big data cluster deployment, ensure the clocks are synchronized across all the Kubernetes nodes the deployment is targeting. The big data cluster has built-in health properties for various services that are time sensitive and clock skews can result in incorrect status.
 
 ## Prepare the machines
 
@@ -56,12 +59,12 @@ On each machine, there are several required prerequisites. In a bash terminal, r
 1. Configure docker and Kubernetes prerequisites on the machine.
 
    ```bash
-   KUBE_DPKG_VERSION=1.11.3-00
-   sudo apt-get update && /
-   sudo apt-get install -y ebtables ethtool && /
-   sudo apt-get install -y docker.io && /
-   sudo apt-get install -y apt-transport-https && /
-   sudo apt-get install -y kubelet=$KUBE_DPKG_VERSION kubeadm=$KUBE_DPKG_VERSION kubectl=$KUBE_DPKG_VERSION && /
+   KUBE_DPKG_VERSION=1.15.0-00
+   sudo apt-get update && \
+   sudo apt-get install -y ebtables ethtool && \
+   sudo apt-get install -y docker.io && \
+   sudo apt-get install -y apt-transport-https && \
+   sudo apt-get install -y kubelet=$KUBE_DPKG_VERSION kubeadm=$KUBE_DPKG_VERSION kubectl=$KUBE_DPKG_VERSION && \
    curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
    ```
  
@@ -75,7 +78,7 @@ On each machine, there are several required prerequisites. In a bash terminal, r
 
 ## Configure the Kubernetes master
 
-After running the previous commands on each machine, choose one of the machines to be your Kubernetes master. Then fun the following commands on that machine.
+After running the previous commands on each machine, choose one of the machines to be your Kubernetes master. Then run the following commands on that machine.
 
 1. First, create an rbac.yaml file in your current directory with the following command. 
 
@@ -121,7 +124,7 @@ After running the previous commands on each machine, choose one of the machines 
    kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
    helm init
    kubectl apply -f rbac.yaml
-   kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+   kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
    kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
    ```
 

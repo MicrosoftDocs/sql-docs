@@ -13,7 +13,6 @@ apitype: "Assembly"
 ms.assetid:
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLServerException Constructor (java.lang.String, SQLState, DriverError, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

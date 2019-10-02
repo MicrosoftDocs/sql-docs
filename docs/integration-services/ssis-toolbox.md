@@ -12,11 +12,14 @@ f1_keywords:
   - "sql13.dts.designer.toolbox.F1"
   - "sql13.dts.designer.toolboxcommon.F1"
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SSIS Toolbox
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   All components installed on the local machine automatically appear in the **SSIS Toolbox**. When you install additional components, right-click inside the toolbox and then click **Refresh Toolbox** to add the components.  
  
  When you create a new SSIS project or open an existing project, the **SSIS Toolbox** displays automatically. You can also open the toolbox by clicking the toolbox button that is located in the top-right corner of the package design surface, or by clicking VIEW -> Other Windows -> SSIS Toolbox.

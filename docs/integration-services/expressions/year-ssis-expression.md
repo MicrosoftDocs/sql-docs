@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "dates [Integration Services], YEAR"
   - "YEAR function"
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # YEAR (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns an integer that represents the year datepart of a date.  
   
 ## Syntax  

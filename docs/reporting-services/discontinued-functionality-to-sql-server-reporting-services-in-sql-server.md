@@ -1,12 +1,11 @@
 ---
 title: Discontinued functionality
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT 
 ms.author: maggies
-manager: kfile
 ms.reviewer: ""
 ms.custom: seodec18
 ms.date: 04/26/2019

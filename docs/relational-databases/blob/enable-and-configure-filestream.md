@@ -3,18 +3,17 @@ title: "Enable and configure FILESTREAM | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: filestream
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], enabling"
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Enable and configure FILESTREAM
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Before you can start to use FILESTREAM, you must enable FILESTREAM on the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. This topic describes how to enable FILESTREAM by using SQL Server Configuration Manager.  
   
@@ -52,8 +51,9 @@ manager: craigg
 12. Click **Execute**.  
   
 13. Restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="best"></a> Best practices  
   
 ###  <a name="config"></a> Physical configuration and maintenance  
@@ -77,6 +77,7 @@ manager: craigg
 |RAID 5|Normal|Normal|Excellent|Performance is better than one disk or JBOD; and less than RAID 0 or RAID 5 with striping.|  
 |RAID 0|Excellent|Excellent|None||  
 |RAID 5 + striping|Excellent|Excellent|Excellent|Most expensive option.|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
 ###  <a name="database"></a> Physical database design  

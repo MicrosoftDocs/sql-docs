@@ -4,13 +4,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.reviewer: ""
-ms.prod: reporting-services-2014, sql-server-2014
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.prod_service: reporting-services-native, reporting-services-sharepoint 
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ---
-
 # Extensions for SQL Server Reporting Services (SSRS)
 
   The report server in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] uses extensions to modularize the types of input or output it accepts for authentication, data processing, report rendering, and report delivery. This makes it easy for existing [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installations to utilize new software standards in the industry, such as a new authentication scheme, or a custom data source type. The report server supports custom authentication extensions, data processing extensions, report processing extensions, rendering extensions, and delivery extensions, and the extensions that are available to the users are configurable in the RSReportServer.config configuration file. For example, you can limit the export formats the report viewer is allowed to use. A report server requires at least one authentication extension, data processing extension, and rendering extension. Delivery and report processing extensions are optional, but necessary if you want to support report distribution or custom controls.  

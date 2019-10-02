@@ -11,9 +11,8 @@ f1_keywords:
   - "sql13.swb.connecttoce.connectionproperties.f1"
   - "sql13.swb.connecttosqlserver.connectionproperties.f1"
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Connect to Server (Connection Properties Page) Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

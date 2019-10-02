@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
@@ -13,14 +12,14 @@ ms.author: mikeray
 manager: craigg
 ---
 # Lesson 3: Create a SQL Server Credential
-  In this lesson, you will create a credential to store security information used to access the Windows Azure storage account.  
+  In this lesson, you will create a credential to store security information used to access the Azure storage account.  
   
  A SQL Server credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server. The credential stores the URI path of the storage container and the shared access signature key values. For each storage container used by a data or log file, you must create a SQL Server Credential whose name matches the container path.  
   
  For general information about credentials, see [Credentials &#40;Database Engine&#41;](security/authentication-access/credentials-database-engine.md).  
   
 > [!IMPORTANT]  
->  The requirements for creating a SQL Server credential described below are specific to the [SQL Server Data Files in Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md) feature. For information on creating credentials for backup processes in Azure storage, see [Lesson 2: Create a SQL Server Credential](../tutorials/lesson-2-create-a-sql-server-credential.md).  
+>  The requirements for creating a SQL Server credential described below are specific to the [SQL Server Data Files in Azure](databases/sql-server-data-files-in-microsoft-azure.md) feature. For information on creating credentials for backup processes in Azure storage, see [Lesson 2: Create a SQL Server Credential](../tutorials/lesson-2-create-a-sql-server-credential.md).  
   
  To create a SQL Server Credential, follow these steps:  
   
@@ -54,6 +53,6 @@ manager: craigg
   
  **Next Lesson:**  
   
- [Lesson 4: Create a database in Windows Azure Storage](lesson-3-database-backup-to-url.md)  
+ [Lesson 4: Create a database in Azure Storage](lesson-3-database-backup-to-url.md)  
   
   

@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STPolyFromText method"
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STPolyFromText (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

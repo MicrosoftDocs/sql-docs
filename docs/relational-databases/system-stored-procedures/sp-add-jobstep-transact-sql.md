@@ -1,7 +1,7 @@
 ---
 title: "sp_add_jobstep (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -17,19 +17,21 @@ helpviewer_keywords:
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_add_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Adds a step (operation) to a job.  
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+
+  Adds a step (operation) to a SQL Agent job.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+  > [!IMPORTANT]  
+  > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent job types are supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+  
 ## Syntax  
   
-```  
-  
+```
 sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'   
      [ , [ @step_id = ] step_id ]   
      { , [ @step_name = ] 'step_name' }   
@@ -64,10 +66,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
 `[ @step_id = ] step_id`
- The sequence identification number for the job step. Step identification numbers start at **1** and increment without gaps. If a step is inserted in the existing sequence, the sequence numbers are adjusted automatically. A value is provided if *step_id* is not specified. *step_id*is **int**, with a default of NULL.  
+ The sequence identification number for the job step. Step identification numbers start at **1** and increment without gaps. If a step is inserted in the existing sequence, the sequence numbers are adjusted automatically. A value is provided if *step_id* is not specified. *step_id* is **int**, with a default of NULL.  
   
 `[ @step_name = ] 'step_name'`
- The name of the step. *step_name*is **sysname**, with no default.  
+ The name of the step. *step_name* is **sysname**, with no default.  
   
 `[ @subsystem = ] 'subsystem'`
  The subsystem used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to execute *command*. *subsystem* is **nvarchar(40)**, and can be one of these values.  
@@ -106,10 +108,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *parameters* is **ntext**, with a default of NULL.  
   
 `[ @cmdexec_success_code = ] code`
- The value returned by a **CmdExec** subsystem command to indicate that *command* executed successfully. *code*is **int**, with a default of **0**.  
+ The value returned by a **CmdExec** subsystem command to indicate that *command* executed successfully. *code* is **int**, with a default of **0**.  
   
 `[ @on_success_action = ] success_action`
- The action to perform if the step succeeds. *success_action*is **tinyint**, and can be one of these values.  
+ The action to perform if the step succeeds. *success_action* is **tinyint**, and can be one of these values.  
   
 |Value|Description (action)|  
 |-----------|----------------------------|  
@@ -119,10 +121,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**4**|Go to step *on_success_step_id*|  
   
 `[ @on_success_step_id = ] success_step_id`
- The ID of the step in this job to execute if the step succeeds and *success_action*is **4**. *success_step_id*is **int**, with a default of **0**.  
+ The ID of the step in this job to execute if the step succeeds and *success_action* is **4**. *success_step_id* is **int**, with a default of **0**.  
   
 `[ @on_fail_action = ] fail_action`
- The action to perform if the step fails. *fail_action*is **tinyint**, and can be one of these values.  
+ The action to perform if the step fails. *fail_action* is **tinyint**, and can be one of these values.  
   
 |Value|Description (action)|  
 |-----------|----------------------------|  
@@ -132,10 +134,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**4**|Go to step *on_fail_step_id*|  
   
 `[ @on_fail_step_id = ] fail_step_id`
- The ID of the step in this job to execute if the step fails and *fail_action*is **4**. *fail_step_id*is **int**, with a default of **0**.  
+ The ID of the step in this job to execute if the step fails and *fail_action* is **4**. *fail_step_id* is **int**, with a default of **0**.  
   
 `[ @server = ] 'server'`
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server*is **nvarchar(30)**, with a default of NULL.  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server* is **nvarchar(30)**, with a default of NULL.  
   
 `[ @database_name = ] 'database'`
  The name of the database in which to execute a [!INCLUDE[tsql](../../includes/tsql-md.md)] step. *database* is **sysname**, with a default of NULL, in which case the **master** database is used. Names that are enclosed in brackets ([ ]) are not allowed. For an ActiveX job step, the *database* is the name of the scripting language that the step uses.  
@@ -144,16 +146,16 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  The name of the user account to use when executing a [!INCLUDE[tsql](../../includes/tsql-md.md)] step. *user* is **sysname**, with a default of NULL. When *user* is NULL, the step runs in the job owner's user context on *database*.  SQL Server Agent will include this parameter only if the job owner is a SQL Server sysadmin. If so, the given Transact-SQL step will be executed in the context of the given SQL Server user name. If the job owner is not a SQL Server sysadmin, then the Transact-SQL step will always be executed in the context of the login that owns this job, and the @database_user_name parameter will be ignored.  
   
 `[ @retry_attempts = ] retry_attempts`
- The number of retry attempts to use if this step fails. *retry_attempts*is **int**, with a default of **0**, which indicates no retry attempts.  
+ The number of retry attempts to use if this step fails. *retry_attempts* is **int**, with a default of **0**, which indicates no retry attempts.  
   
 `[ @retry_interval = ] retry_interval`
- The amount of time in minutes between retry attempts. *retry_interval*is **int**, with a default of **0**, which indicates a **0**-minute interval.  
+ The amount of time in minutes between retry attempts. *retry_interval* is **int**, with a default of **0**, which indicates a **0**-minute interval.  
   
 `[ @os_run_priority = ] run_priority`
  Reserved.  
   
 `[ @output_file_name = ] 'file_name'`
- The name of the file in which the output of this step is saved. *file_name*is **nvarchar(200)**, with a default of NULL. *file_name*can include one or more of the tokens listed under *command*. This parameter is valid only with commands running on the [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], or [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] subsystems.  
+ The name of the file in which the output of this step is saved. *file_name* is **nvarchar(200)**, with a default of NULL. *file_name* can include one or more of the tokens listed under *command*. This parameter is valid only with commands running on the [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], or [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] subsystems.  
   
 `[ @flags = ] flags`
  Is an option that controls behavior. *flags* is **int**, and can be one of these values.  
@@ -208,14 +210,14 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  This example assumes that the `Weekly Sales Data Backup` job already exists.  
   
-```  
+```sql
 USE msdb;  
 GO  
 EXEC sp_add_jobstep  
     @job_name = N'Weekly Sales Data Backup',  
     @step_name = N'Set database to read only',  
     @subsystem = N'TSQL',  
-    @command = N'ALTER DATABASE SALES SET READ_ONLY',   
+    @command = N'ALTER DATABASE SALES SET READ_ONLY',
     @retry_attempts = 5,  
     @retry_interval = 5 ;  
 GO  

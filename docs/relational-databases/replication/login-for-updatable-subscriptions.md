@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Login for Updatable Subscriptions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ manager: craigg
   
 -   A linked server that replication creates; the connection is made with the credentials of the user making the change at the Subscriber.  
   
- The first two options can be specified in this wizard. The last option can only be specified using [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); specify a value of **1** for the parameter **@security_mode**.  
+ The first two options can be specified in this wizard. The last option can only be specified using [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); specify a value of **1** for the parameter `@security_mode`.  
   
 ## Options  
  **Create a linked server that connects using the following SQL Server Authentication login:**  

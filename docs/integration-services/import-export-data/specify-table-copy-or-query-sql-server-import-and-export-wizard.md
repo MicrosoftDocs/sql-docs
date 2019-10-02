@@ -9,11 +9,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.specifytablecopyorquery.f1"
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Specify Table Copy or Query (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   After you provide info about the destination for your data and about how to connect to it, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Specify Table Copy or Query**. On this page, you choose one of the following options.
 -   **Copy data from one or more tables or views**. You want to pick a table or tables from a list.
 -   **Write a query to specify the data to transfer**. You want to enter or paste in the text of a SQL query.

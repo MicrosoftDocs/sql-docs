@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Automatic tuning

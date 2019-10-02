@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "logical Not (!)"
   - "! (logical Not)"
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # ! (Logical Not) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Negates a Boolean operand.  
   
 > [!NOTE]  

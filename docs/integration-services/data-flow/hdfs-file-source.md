@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.hdfsfilesrc.f1"
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # HDFS File Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The HDFS File Source component enables an SSIS package to read data from a HDFS file. The supported file formats are Text and Avro. (ORC sources are not supported.)  
   
  To configure the HDFS File Source, drag and drop the HDFS File Source on the data flow designer and double-click the component to open the editor.  

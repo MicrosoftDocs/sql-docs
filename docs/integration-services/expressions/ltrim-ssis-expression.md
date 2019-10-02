@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "leading blanks"
   - "LTRIM function"
 ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # LTRIM (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a character expression after removing leading spaces.  
   
 > [!NOTE]  

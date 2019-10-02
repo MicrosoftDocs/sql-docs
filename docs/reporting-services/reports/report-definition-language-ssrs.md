@@ -2,7 +2,7 @@
 title: "Report Definition Language (SSRS) | Microsoft Docs"
 ms.date: 01/24/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reports
 
 

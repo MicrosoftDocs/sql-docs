@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Activity Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,9 @@ For columns included in the **Processes**, **Resource Waits**, **Data File I/O**
 2.  To sort a column, click the column name.  
   
 3.  To filter on one or more columns, click the drop-down arrow in the column heading, and then select a value.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## More information  
    
 |||  

@@ -12,9 +12,8 @@ keywords:
 f1_keywords: 
   - "DATABASE_SERVICE_OBJECTIVES_TSQL"
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: craigg
+author: stevestein
+ms.author: sstein
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.database_service_objectives (Azure SQL Database)
@@ -33,7 +32,7 @@ Returns the edition (service tier), service objective (pricing tier) and elastic
 |-----------------|---------------|-----------------|  
 |database_id|int|The ID of the database, unique within an instance of Azure SQL Database server. Joinable with [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edition|sysname|The service tier for the database or data warehouse: **Basic**, **Standard**, **Premium** or **Data Warehouse**.|  
-|service_objective|sysname|The pricing tier of the database. If the database is in an elastic pool, returns **ElasticPool**.<br /><br /> On the **Basic** tier, returns **Basic**.<br /><br /> **Single database in a standard service tier** returns one of the following: S0, S1, S2, S3, S4, S6, S7, S9 or S12.<br /><br /> **Single database in a premium tier** returns of the following: P1, P2, P4, P6, P11 or P15.<br /><br /> **SQL Data Warehouse** returns DW100 through DW30000c.|  
+|service_objective|sysname|The pricing tier of the database. If the database is in an elastic pool, returns **ElasticPool**.<br /><br /> On the **Basic** tier, returns **Basic**.<br /><br /> **Single database in a standard service tier** returns one of the following: S0, S1, S2, S3, S4, S6, S7, S9 or S12.<br /><br /> **Single database in a premium tier** returns of the following: P1, P2, P4, P6, P11 or P15.<br /><br /> **SQL Data Warehouse** returns DW100 through DW30000c.<br /><br /> For details, see [single databases](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [elastic pools](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [data warehouses](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)|  
 |elastic_pool_name|sysname|The name of the [elastic pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) that the database belongs to. Returns **NULL** if the database is a single database or a data warehoue.|  
   
 ## Permissions  

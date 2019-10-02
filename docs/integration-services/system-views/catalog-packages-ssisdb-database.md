@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "packages view [Integration Services]"
   - "catalog.packages view [Integration Services]"
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.packages (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Displays the details for all packages that appear in the **SSISDB** catalog.  

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Bulk-Load Data into Tables in a Merge Publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,6 +29,6 @@ manager: craigg
   
     -   Execute the bulk copy using the FIRE_TRIGGERS option.  
   
-    -   On the database into which data was inserted, execute [sp_addtabletocontents &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md). Specify the table name into which the data was inserted for **@table_name**.  
+    -   On the database into which data was inserted, execute [sp_addtabletocontents &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md). Specify the table name into which the data was inserted for `@table_name`.  
   
   

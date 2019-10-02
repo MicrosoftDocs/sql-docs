@@ -1,5 +1,5 @@
 ---
-title: Use R code profiling functions - SQL Server Machine Learning Services
+title: Use R code profiling functions
 description: Improve performance and get faster results on R computations on SQL Server by using R profiling functions to return information about internal function calls.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,10 +8,10 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Use R code profiling functions to improve performance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In addition to using SQL Server resources and tools to monitor R script execution, you can use performance tools provided by other R packages to get more information about internal function calls. 
 

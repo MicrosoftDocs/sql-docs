@@ -16,10 +16,10 @@ helpviewer_keywords:
   - "sp_grantlogin"
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
-manager: craigg
-manager: craigg
+author: VanMSFT
 ---
 # sp_grantlogin (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
@@ -32,7 +32,6 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 sp_grantlogin [@loginame=] 'login'  
 ```  
   
@@ -54,7 +53,7 @@ sp_grantlogin [@loginame=] 'login'
 ## Examples  
  The following example uses `CREATE LOGIN` to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for the Windows user `Corporate\BobJ.` This is the preferred method.  
   
-```  
+```sql
 CREATE LOGIN [Corporate\BobJ] FROM WINDOWS;  
 GO  
 ```  

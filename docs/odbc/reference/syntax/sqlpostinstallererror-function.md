@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLPostInstallerError Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 RETCODE SQLPostInstallerError(  
      DWORD    fErrorCode,  

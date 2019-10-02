@@ -50,24 +50,24 @@ ms.reviewer:
   
 ###  <a name="HowToCheckAccess"></a> How To: Check Whether Non-Transactional Access Is Enabled on Databases  
  Query the catalog view [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) and check the **non_transacted_access** and **non_transacted_access_desc** columns.  
-  
-```sql  
+
+```sql
 SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc  
     FROM sys.database_filestream_options;  
 GO  
-```  
-  
+```
+
 ###  <a name="HowToNTAccess"></a> How To: Enable Non-Transactional Access at the Database Level  
  The available levels of non-transactional access are FULL, READ_ONLY, and OFF.  
   
  **Specify the level of non-transactional access by using Transact-SQL**  
- -   When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) statement with the **NON_TRANSACTED_ACCESS** FILESTREAM option.  
-  
-```sql  
+ - When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) statement with the **NON_TRANSACTED_ACCESS** FILESTREAM option.
+
+```sql
 CREATE DATABASE database_name  
   WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
-```  
-  
+```
+
 -   When you **alter an existing database**, call the [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) statement with the **NON_TRANSACTED_ACCESS** FILESTREAM option.  
   
 ```sql  

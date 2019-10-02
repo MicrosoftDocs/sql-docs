@@ -49,7 +49,7 @@ Query Store works as a flight data recorder, constantly collecting compile and r
   
  The following diagram depicts the points of integration explained in the previous steps:
   
- ![Query Store process processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor") 
+ ![Query Store process](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor") 
 
 ## Remarks
  To minimize I/O overhead, new data is captured in-memory. Write operations are queued and flushed to disk afterwards. Query and plan information, shown as Plan Store in the following diagram, are flushed with minimal latency. The runtime statistics, shown as Runtime Stats, are kept in memory for a period of time defined with the `DATA_FLUSH_INTERVAL_SECONDS` option of the `SET QUERY_STORE` statement. You can use the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box to enter a value for **Data Flush Interval (Minutes)**, which is internally converted to seconds. 
@@ -62,10 +62,9 @@ Query Store works as a flight data recorder, constantly collecting compile and r
  > The **Max Size (MB)** limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the **Data Flush Interval** value. If Query Store has breached the maximum size limit between storage size checks, it transitions to read-only mode. If **Size Based Cleanup Mode** is enabled, the cleanup mechanism to enforce the maximum size limit is also triggered.
  
  > [!NOTE]
- > If the system is under memory pressure, runtime statistics can be flushed to disk earlier than defined with `DATA_FLUSH_INTERVAL_SECONDS`. 
+ > If the system is under memory pressure, runtime statistics can be flushed to disk earlier than defined with `DATA_FLUSH_INTERVAL_SECONDS`.
  
- During the read of the Query Store data, in-memory and on-disk data are unified transparently.
-If a session is terminated or the client application restarts or crashes, query statistics won't be recorded. 
+ During the read of the Query Store data, in-memory and on-disk data are unified transparently. If a session is terminated or the client application restarts or crashes, query statistics won't be recorded. 
   
  ![Query Store process plan information](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

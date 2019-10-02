@@ -28,6 +28,10 @@ When you restore a database, all encrypted data and all metadata for Always Encr
 
 If you restored the database on a different server or under a different name, you don't need to do anything special to enable the application to query the encrypted data in the target database, as the keys in both databases are the same.
 
+For detailed information about how to back up and restore a database, see:
+- [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
+- [Restore a database to a Managed Instance](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance-get-started-restore)
+- 
 ## Next Steps
 - [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
 

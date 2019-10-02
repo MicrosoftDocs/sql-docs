@@ -25,10 +25,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national identification numbers (for example, U.S. social security numbers), stored in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ( [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). As a result, Always Encrypted provides a separation between those who own the data (and can view it) and those who manage the data (but should have no access). By ensuring on-premises database administrators, cloud database operators, or other high-privileged, but unauthorized users, cannot access the encrypted data, Always Encrypted enables customers to confidently store sensitive data outside of their direct control. This allows organizations to store their data in Azure, to enable delegation of on-premises database administration to third parties, or to reduce security clearance requirements for their own DBA staff. 
 
- Always Encrypted provides confidential computing capabilities by enabling the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] to process some queries on encrypted data, while preserving the confidentiality of the data and providing the above security benefits. In [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], [!INCLUDE[sssSQLv14](../../../includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Always Encrypted supports equality comparison via deterministic encryption. See [Selecting Deterministic or Randomized Encryption](#selecting-deterministic-or-randomized-encryption). 
+ Always Encrypted provides confidential computing capabilities by enabling the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] to process some queries on encrypted data, while preserving the confidentiality of the data and providing the above security benefits. In [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], [!INCLUDE[sssSQLv14](../../../includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Always Encrypted supports equality comparison via deterministic encryption. See [Selecting Deterministic or Randomized Encryption](#selecting--deterministic-or-randomized-encryption). 
 
- > [!NOTE] 
- > In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], secure enclaves substantially extend confidential computing capabilities of Always Encrypted with pattern matching, other comparison operators and in-place encryption. See [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
+  > [!NOTE] 
+  > In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], secure enclaves substantially extend confidential computing capabilities of Always Encrypted with pattern matching, other comparison operators and in-place encryption. See [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
 
  Always Encrypted makes encryption transparent to applications. An Always Encrypted-enabled driver installed on the client computer achieves this by automatically encrypting and decrypting sensitive data in the client application. The driver encrypts the data in sensitive columns before passing the data to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)], and automatically rewrites queries so that the semantics to the application are preserved. Similarly, the driver transparently decrypts data, stored in encrypted database columns, contained in query results.  
   
@@ -60,7 +60,7 @@ The server computes the result set, and for any encrypted columns included in th
 
  A client driver interacts with a key store, containing a column master key, using a column master key store provider, which is a client-side software component that encapsulates a key store containing the column master key. Providers for common types of key stores are available in client side driver libraries from Microsoft or as standalone downloads. You can also implement your own provider. Always Encrypted capabilities, including built-in column master key store providers, vary by a driver library and its version. 
 
-For details of how to develop applications using Always Encrypted with particular client drivers, see [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
+For details of how to develop applications using Always Encrypted with particular client drivers, see [Develop Applications using Always Encrypted](always-encrypted-client-development.md).
 
 ## Remarks
 
@@ -144,6 +144,8 @@ Use the [Always Encrypted Wizard](../../../relational-databases/security/encrypt
 -   Queries can perform equality comparison on columns encrypted using deterministic encryption, but no other operations (for example, greater/less than, pattern matching using the LIKE operator, or arithmetical operations).  
   
 -   Queries on columns encrypted by using randomized encryption cannot perform operations on any of those columns. Indexing columns encrypted using randomized encryption is not supported.  
+ > [!NOTE] 
+ > [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), introduced in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], addresses the above limitation by enabling pattern matching, comparison operators and indexing on columns using randomized encryption.
 
 -   A column encryption key can have up to two different encrypted values, each encrypted with a different column master key. This facilitates column master key rotation.  
   

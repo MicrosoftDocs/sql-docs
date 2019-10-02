@@ -28,6 +28,13 @@ When you import the BACPAC into a database, the encrypted data from the BACPAC i
 
 If you have an application that is configured to query encrypted columns stored in the source database (the one you exported), you don't need to do anything special to enable the application to query the encrypted data in the target database, as the keys in both databases are the same.
 
+For detailed information about how to export and import a database, see:
+- [Export a Data-tier Application](../../data-tier-applications/export-a-data-tier-application.md)
+- [Import a BACPAC File to Create a New User Database](../../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)
+- [Export an Azure SQL database to a BACPAC file](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-export)
+- [Import a BACPAC file to a database in Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-import)
+- [SqlPackage.exe](../../../tools/sqlpackage.md)
+
 ## Permissions for migrating databases with encrypted columns
 
 You need *ALTER ANY COLUMN MASTER KEY* and *ALTER ANY COLUMN ENCRYPTION KEY* on the source database. You need *ALTER ANY COLUMN MASTER KEY*, *ALTER ANY COLUMN ENCRYPTION KEY*, *VIEW ANY COLUMN MASTER KEY DEFINITION*, and *VIEW ANY COLUMN ENCRYPTION DEFINITION* on the target database.

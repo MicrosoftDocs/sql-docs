@@ -144,7 +144,7 @@ The following example demonstrates filtering data based on encrypted values, and
 
 
 > [!NOTE]
-> Queries can perform equality comparisons on columns if they are encrypted using deterministic encryption. For more information, see [Selecting  Deterministic or Randomized Encryption](always-encrypted-database-engine.md#selecting-deterministic-or-randomized-encryption).
+> Queries can perform equality comparisons on columns if they are encrypted using deterministic encryption. For more information, see [Selecting Deterministic or Randomized Encryption](always-encrypted-database-engine.md#selecting-deterministic-or-randomized-encryption).
 
 ```
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";

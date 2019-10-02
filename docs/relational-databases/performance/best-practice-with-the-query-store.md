@@ -93,9 +93,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
- **Size Based Cleanup Mode**: Specifies whether automatic data cleanup takes place when Query Store data size approaches the limit.  
-  
- We strongly recommend that you activate size-based cleanup to make sure that Query Store always runs in read-write mode and collects the latest data.  
+ **Size Based Cleanup Mode**: Specifies whether automatic data cleanup takes place when Query Store data size approaches the limit. Activate size-based cleanup to make sure that Query Store always runs in read-write mode and collects the latest data.  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   

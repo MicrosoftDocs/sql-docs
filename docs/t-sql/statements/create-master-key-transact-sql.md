@@ -36,15 +36,6 @@ Creates a database master key in the master database.
 ## Syntax
 
 ```
--- Syntax for SQL Server and Parallel Data Warehouse
-
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password'
-[ ; ]
-```
-
-```
--- Syntax for Azure SQL Database and Azure SQL Data Warehouse
-
 CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 [ ; ]
 ```

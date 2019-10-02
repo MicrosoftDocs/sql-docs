@@ -3061,7 +3061,7 @@ Enables the READ_COMMITTED_SNAPSHOT option at the database level.
 OFF        
 Turn off READ_COMMITTED_SNAPSHOT option at the database level.
 
-Turning READ_COMMITTED_SNAPSHOT ON or OFF for a database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there is no active connection to the database except for the connection executing the ALTER DATABSE command.  The database does not have to be in single-user mode.  Changing READ_COMMITTED_SNAPSHOT setting at session level is not supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
+This command must be run while connected to the `master` database. Turning READ_COMMITTED_SNAPSHOT ON or OFF for a user database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there is no active connection to the database except for the connection executing the ALTER DATABSE command.  Pausing the database will also cancel all connections.  The database does not have to be in single-user mode.  Changing READ_COMMITTED_SNAPSHOT setting at session level is not supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
 
 In a database with READ_COMMITTED_SNAPSHOT enabled, queries may experience slower performance due to the scan of versions if multiple data versions are present. Long open transactions can also cause increase in the size of the database if there are data changes by these transactions which blocks the cleanup of versions.  
 

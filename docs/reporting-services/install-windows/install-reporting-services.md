@@ -1,6 +1,6 @@
 ---
-title: "Install SQL Server Reporting Services (2017 and later) | Microsoft Docs"
-ms.date: 12/20/2017
+title: "Install SQL Server Reporting Services | Microsoft Docs"
+ms.date: 10/02/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 
@@ -9,13 +9,21 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
-# Install SQL Server Reporting Services (2017 and later)
+# Install SQL Server Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 SQL Server Reporting Services installation involves server components for storing report items, rendering reports, and processing of subscription and other report services. 
 
-To download SQL Server 2017 Reporting Services, go to the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252).
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+Download [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) from the Microsoft Download Center.
+
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Download [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252) from the Microsoft Download Center.
+
+::: moniker-end
 
 > [!NOTE]
 > Looking for Power BI Report Server? See [Install Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).

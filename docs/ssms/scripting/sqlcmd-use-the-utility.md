@@ -243,13 +243,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  `C:\>sqlcmd -S ServerName -A`  
   
- `1> SELECT blocked FROM sys.dm_exec_requests WHERE blocked <> 0;`  
+ `1> SELECT session_id, blocking_session_id FROM sys.dm_exec_requests WHERE blocking_session_id <> 0;`  
   
  `2> GO`  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `spid   blocked`  
+ `session_id   blocking_session_id`  
   
  `------ -------`  
   

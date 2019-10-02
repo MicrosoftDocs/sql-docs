@@ -66,8 +66,6 @@ ms.author: mikeray
   
 3.  Determine additional temporary disk space for sorting.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
      Space requirements are shown for sorting in **tempdb** (with SORT_IN_TEMPDB set to ON) and sorting in the target location (with SORT_IN_TEMPDB set to OFF).  
   
     1.  When SORT_IN_TEMPDB is set to ON, **tempdb** must have sufficient disk space to hold the largest index (1 million * 200 bytes ~ 200 MB). Fill factor is not considered in the sorting operation.  

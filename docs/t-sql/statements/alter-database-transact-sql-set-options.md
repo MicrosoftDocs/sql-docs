@@ -2923,6 +2923,14 @@ SET
 }
 ;
 
+<<<<<<< HEAD
+<auto_option> ::=
+{
+    AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] }
+  | AUTO_UPDATE_STATISTICS { ON | OFF }
+  | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
+  | RESULT_SET_CACHING { ON | OFF}
+=======
 <option_spec>::=
 {
     <auto_option>
@@ -2954,7 +2962,12 @@ SET
 
 <result_set_caching_option> ::=
 {
+<<<<<<< HEAD
+RESULT_SET_CACHING {ON | OFF}
+>>>>>>> fcdadc64d1fcfcf63c9e197f87f0eea0b6796f73
+=======
     RESULT_SET_CACHING { ON | OFF }
+>>>>>>> 29f7adf1cf0e90e06e487c7764f7e2e03f754484
 }
 
 <snapshot_option> ::=
@@ -2971,6 +2984,66 @@ SET
 *database_name*        
 Is the name of the database to be modified.
 
+<<<<<<< HEAD
+<a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }         
+ON         
+The Query Optimizer creates statistics on single columns in query predicates, as necessary, to improve query plans and query performance. These single-column statistics are created when the Query Optimizer compiles queries. The single-column statistics are created only on columns that are not already the first column of an existing statistics object.
+
+The default is ON. We recommend that you use the default setting for most databases.
+
+OFF         
+The Query Optimizer doesn't create statistics on single columns in query predicates when it is compiling queries. Setting this option to OFF can cause suboptimal query plans and degraded query performance.
+
+You can determine this option's status by examining the is_auto_create_stats_on column in the sys.databases catalog view. You can also determine the status by examining the IsAutoCreateStatistics property of the DATABASEPROPERTYEX function.
+
+For more information, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).
+
+INCREMENTAL = ON | OFF         
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+Set AUTO_CREATE_STATISTICS to ON, and set INCREMENTAL to ON. This setting creates automatically created stats as incremental whenever incremental stats are supported. The default value is OFF. For more information, see [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
+
+<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }         
+ON         
+Specifies that the Query Optimizer updates statistics when they're used by a query and when they might be out-of-date. Statistics become out-of-date after insert, update, delete, or merge operations change the data distribution in the table or indexed view. The Query Optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.
+
+The Query Optimizer checks for out-of-date statistics before it compiles a query and it runs a cached query plan. The Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. The Query Optimizer determines this information before it compiles a query. Before executing a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.
+
+The AUTO_UPDATE_STATISTICS option applies to statistics created for indexes, single-columns in query predicates, and statistics that are created by using the CREATE STATISTICS statement. This option also applies to filtered statistics.
+
+The default is ON. We recommend that you use the default setting for most databases.
+
+Use the AUTO_UPDATE_STATISTICS_ASYNC option to specify whether the statistics are updated synchronously or asynchronously.
+
+OFF         
+Specifies that the Query Optimizer doesn't update statistics when they're used by a query. The Query Optimizer also doesn't update statistics when they might be out-of-date. Setting this option to OFF can cause suboptimal query plans and degraded query performance.
+
+You can determine this option's status by examining the is_auto_update_stats_on column in the sys.databases catalog view. You can also determine the status by examining the IsAutoUpdateStatistics property of the DATABASEPROPERTYEX function.
+
+For more information, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).
+
+<a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }         
+ON         
+Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are asynchronous. The Query Optimizer doesn't wait for statistics updates to complete before it compiles queries.
+
+Setting this option to ON has no effect unless AUTO_UPDATE_STATISTICS is set to ON.
+
+By default, the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF, and the Query Optimizer updates statistics synchronously.
+
+OFF         
+Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are synchronous. The Query Optimizer waits for statistics updates to complete before it compiles queries.
+
+Setting this option to OFF has no effect unless AUTO_UPDATE_STATISTICS is set to ON.
+
+You can determine this option's status by examining the is_auto_update_stats_async_on column in the sys.databases catalog view.
+
+For more information that describes when to use synchronous or asynchronous statistics updates, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).
+
+> [!Note]
+> While `RESULT_SET_CACHING` is being rolled out to all regions, please check the version deployed to your instance and the latest [Azure SQL DW release notes](/azure/sql-data-warehouse/release-notes-10-0-10106-0) for feature availability.
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
+**Applies to** Azure SQL Data Warehouse (preview)
+=======
 **<auto_option> ::=**        
 
 Controls automatic options.
@@ -3011,6 +3084,7 @@ Controls if the Query Store is enabled in this data warehouse.
 
 ON        
 Enables the Query Store.
+>>>>>>> 29f7adf1cf0e90e06e487c7764f7e2e03f754484
 
 OFF        
 Disables the Query Store. OFF is the default value.
@@ -3073,8 +3147,33 @@ To set READ_COMMITTED_SNAPSHOT option, a user needs ALTER permission on the data
 
 ## Examples
 
+<<<<<<< HEAD
+### Enable AUTO_UPDATE_STATISTICS for a database
+
+```sql
+ALTER DATABASE MyDatabase
+SET AUTO_UPDATE_STATISTICS ON
+```
+
+### Configure statistics to be automatically updated asynchronously for a database.
+
+```sql
+ALTER DATABASE MyDatabase
+SET AUTO_UPDATE_STATISTICS_ASYNC ON
+```
+
+### Check statistics setting for a database
+
+```sql
+SELECT name, is_auto_create_stats_on , is_auto_update_stats_on, is_auto_update_stats_async_on
+FROM sys.databases
+```
+
+### Enable result set caching for a database
+=======
 ### A. Enabling the Query Store
 The following example enables the Query Store.
+>>>>>>> 29f7adf1cf0e90e06e487c7764f7e2e03f754484
 
 ```sql
 ALTER DATABASE [database_name]

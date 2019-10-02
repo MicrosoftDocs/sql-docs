@@ -8,7 +8,7 @@ helpviewer_keywords:
    - "PolyBase, installation"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ""
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Install PolyBase on Windows
@@ -154,9 +154,8 @@ After installation, PolyBase must be enabled to access its features. To connect 
 
 ```sql
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
-RECONFIGURE [ WITH OVERRIDE ]  ;
+RECONFIGURE;
 ```
-The instance then must be restarted.
 
 
 ## Post-installation notes  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "sources [Integration Services], OLE DB"
   - "OLE DB source [Integration Services]"
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Extract Data by Using the OLE DB Source
 

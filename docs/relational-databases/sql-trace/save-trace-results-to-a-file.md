@@ -29,7 +29,7 @@ ms.author: "mathoma"
   
 -   Carry out query optimization  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] saves trace results to a file when a path and file name are specified for the **@tracefile** argument of the stored procedure **sp_trace_create**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] saves trace results to a file when a path and file name are specified for the **\@tracefile** argument of the stored procedure **sp_trace_create**.  
   
 > [!NOTE]  
 >  If a path is specified to the **sp_trace_create** stored procedure for saving the trace file, the directory must be accessible to the server. Also be aware that if a local directory is specified to **sp_trace_create**, it is a local directory on the server computer.  

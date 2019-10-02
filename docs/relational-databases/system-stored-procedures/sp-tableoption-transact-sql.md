@@ -63,7 +63,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  0 (success) or error number (failure)  
   
 ## Remarks  
- sp_tableoption can be used only to set option values for user-defined tables. To display table properties, use OBJECTPROPERTY.  
+ sp_tableoption can be used only to set option values for user-defined tables. To display table properties, use OBJECTPROPERTY or query sys.tables.  
   
  The text in row option in sp_tableoption can be enabled or disabled only on tables that contain text columns. If the table does not have a text column, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raises an error.  
   
@@ -94,7 +94,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
  To change a table from vardecimal storage format back to the normal decimal storage format, the database must be in SIMPLE recovery mode. Changing the recovery mode will break the log chain for backup purposes, therefore you should create a full database backup after removing the vardecimal storage format from a table.  
   
- If you are converting an existing LOB data type column (text, ntext, or image) to small-to-medium large value types (varchar(max), nvarchar(max), or varbinary(max)) , and most statements do not reference the large value type columns in your environment, consider changing **large_value_types_out_of_row** to **1** to gain optimal performance. When the **large_value_types_out_of_row** option value is changed, existing varchar(max), nvarchar(max), varbinary(max), and xml values are not immediately converted. The storage of the strings is changed as they are subsequently updated. Any new values inserted into a table are stored according to the table option in effect. For immediate results, either make a copy of the data and then repopulate the table after changing the **large_value_types_out_of_row** setting or update each small-to-medium large value types column to itself so that the storage of the strings is changed with the table option in effect. Consider rebuilding the indexes on the table after the update or repopulation to condense the table. 
+ If you are converting an existing LOB data type column (text, ntext, or image) to small-to-medium large value types (varchar(max), nvarchar(max), or varbinary(max)), and most statements do not reference the large value type columns in your environment, consider changing **large_value_types_out_of_row** to **1** to gain optimal performance. When the **large_value_types_out_of_row** option value is changed, existing varchar(max), nvarchar(max), varbinary(max), and xml values are not immediately converted. The storage of the strings is changed as they are subsequently updated. Any new values inserted into a table are stored according to the table option in effect. For immediate results, either make a copy of the data and then repopulate the table after changing the **large_value_types_out_of_row** setting or update each small-to-medium large value types column to itself so that the storage of the strings is changed with the table option in effect. Consider rebuilding the indexes on the table after the update or repopulation to condense the table. 
     
   
 ## Permissions  

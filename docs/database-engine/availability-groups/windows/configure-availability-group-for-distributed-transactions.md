@@ -33,6 +33,8 @@ In a distributed transaction, client applications work with Microsoft Distribute
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However when an availability group is not configured for distributed transactions, failover may not succeed in some situations. Specifically the new primary replica [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] instance may not be able to get the transaction outcome from DTC. To enable the [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] instance to get the outcome of in-doubt transactions from the DTC after failover, configure the availability group for distributed transactions. 
 
+DTC is not involved in availability group processing unless a database is also a member of a Failover Cluster. Within an availability group, the consistency between replicas is maintained by the availability group logic: The primary will not complete the commit and acknowledge the commit to the caller until the secondary has acknowledged that it has persisted the log records in durable storage. Only then does the Primary declare the transaction complete. In async mode, we do not wait for the secondary to ack, and there is explicitly the chance of the loss of a small amount of data.
+
 ## Prerequisites
 
 Before you configure an availability group to support distributed transactions, you must meet the following prerequisites:
@@ -45,6 +47,8 @@ Before you configure an availability group to support distributed transactions, 
 
 Configure an availability group to support distributed transactions. Set the availability group to allow each database to register as a resource manager. This article explains how to configure an availability group so that each database can be a resource manager in DTC.
 
+
+
 You can create an availability group for distributed transactions on  [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] or later. To create an availability group for distributed transactions, include `DTC_SUPPORT = PER_DB` in the availability group definition. The following script creates an availability group for distributed transactions. 
 
 ```sql
@@ -54,12 +58,12 @@ CREATE AVAILABILITY GROUP MyAG
       )
    FOR DATABASE DB1, DB2
    REPLICA ON
-      Server1 WITH (
+      'Server1' WITH (
          ENDPOINT_URL = 'TCP://SERVER1.corp.com:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = AUTOMATIC  
-         )
-      Server2 WITH (
+         ),
+      'Server2' WITH (
          ENDPOINT_URL = 'TCP://SERVER2.corp.com:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = AUTOMATIC  

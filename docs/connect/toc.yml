@@ -2414,14 +2414,14 @@
       href: ../connect/jdbc/validating-user-input.md
     - name: Application Security
       href: ../connect/jdbc/application-security.md
-    - name: Using SSL Encryption
+    - name: Using encryption
       href: ../connect/jdbc/using-ssl-encryption.md
       items:
-      - name: Understanding SSL Support
+      - name: Understanding encryption support
         href: ../connect/jdbc/understanding-ssl-support.md
-      - name: Connecting with SSL Encryption
+      - name: Connecting with encryption
         href: ../connect/jdbc/connecting-with-ssl-encryption.md
-      - name: Configuring the Client for SSL Encryption
+      - name: Configuring the client for encryption
         href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
     - name: FIPS Mode
       href: ../connect/jdbc/fips-mode.md

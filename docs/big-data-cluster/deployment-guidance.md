@@ -62,6 +62,9 @@ Run the **kubectl** command to view the cluster configuration. Ensure that kubec
 kubectl config view
 ```
 
+> [!Important] 
+> If you are deploying on a multi node Kuberntes cluster that you bootstrapped using kubeadm, before starting the big data cluster deployment, ensure the clocks are synchronized across all the Kubernetes nodes the deployment is targeting. The big data cluster has built-in health properties for various services that are time sensitive and clock skews can result in incorrect status.
+
 After you have configured your Kubernetes cluster, you can proceed with the deployment of a new SQL Server big data cluster. If you are upgrading from a previous release, please see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
 ## <a id="deploy"></a> Deployment overview
@@ -115,7 +118,7 @@ It is also possible to customize your own deployment configuration profile. You 
 1. To customize settings in your deployment configuration profile, you can edit the deployment configuration file in a tool that is good for editing JSON files, such as VS Code. For scripted automation, you can also edit the custom deployment profile using **azdata bdc config** command. For example, the following command alters a custom deployment profile to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
 
    ```bash
-   azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
+   azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.name=test-cluster"
    ```
    
    > [!TIP]
@@ -142,8 +145,8 @@ The following environment variables are used for security settings that are not 
 | **CONTROLLER_USERNAME** | Required |The username for the cluster administrator. |
 | **CONTROLLER_PASSWORD** | Required |The password for the cluster administrator. |
 | **MSSQL_SA_PASSWORD** | Required |The password of SA user for SQL master instance. |
-| **KNOX_PASSWORD** | Required |The password for Knox user. |
-| **ACCEPT_EULA**| Required for first use of `azdata`| Requires no value. When set as an environment variable, it applies EULA to both SQL Server and `azdata`. If not set as environment variable, you can include `--accept-eula` in the first use of `azdata` command.|
+| **KNOX_PASSWORD** | Required |The password for Knox **root** user. Note than in a basic authentication setup only user supported for Knox is **root**.|
+| **ACCEPT_EULA**| Required for first use of `azdata`| Set to "yes". When set as an environment variable, it applies EULA to both SQL Server and `azdata`. If not set as environment variable, you can include `--accept-eula=yes` in the first use of `azdata` command.|
 | **DOCKER_USERNAME** | Optional | The username to access the container images in case they are stored in a private repository. See the [Offline deployments](deploy-offline.md) topic for more details on how to use a private Docker repository for big data cluster deployment.|
 | **DOCKER_PASSWORD** | Optional |The password to access the above private repository. |
 
@@ -156,6 +159,7 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export ACCEPT_EULA=yes
 ```
 
 ```PowerShell
@@ -164,6 +168,10 @@ SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
 ```
+
+> [!NOTE]
+> You must use **root** user for Knox gateway with the above password. **root** is the only user supported for in this basic authentication (username/password) setup. For SQL Server master, username provisioned to be used with the above password is **sa**.
+
 
 After setting the environment variables, you must run `azdata bdc create` to trigger the deployment. This example uses the cluster configuration profile created above:
 

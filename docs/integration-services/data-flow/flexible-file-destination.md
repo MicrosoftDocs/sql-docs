@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.afpextfiledest.f1"
   - "sql14.dts.designer.afpextfiledest.f1"
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Flexible File Destination
 

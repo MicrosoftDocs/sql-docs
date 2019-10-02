@@ -26,6 +26,7 @@ Here are some of the capabilities that availability groups enable:
 1. An external endpoint is automatically provisioned for connecting to the AG databases. This endpoint `master-svc-external` plays the role of the AG listener.
 1. A second external endpoint is provisioned for read-only connections to the secondary replicas. 
 
+
 # Deploy
 
 To deploy SQL Server master in an availability group:
@@ -34,9 +35,9 @@ To deploy SQL Server master in an availability group:
 1. Specify the number of replicas for the AG (minimum is 3)
 1. Configure the details of the second external endpoint created for connections to the read-only secondary replicas
 
-The following steps show how to create a patch file that includes these settings and how to apply it to either `aks-dev-test` or `kubeadm-dev-test` configuration profiles. These steps walk through an example on how to patch the `aks-dev-test` profile to add the HA attributes.
+The following steps show how to create a patch file that includes these settings and how to apply it to either `aks-dev-test` or `kubeadm-dev-test` configuration profiles. These steps walk through an example on how to patch the `aks-dev-test` profile to add the HA attributes.For a deployment on a kubeadm cluster, similar patch would apply, but make sure you are using *NodePort* for the **serviceType** in the  **endpoints** section.
 
-1. Create a `ha-patch.json` file
+1. Create a `patch.json` file
 
     ```json
     {
@@ -73,7 +74,7 @@ The following steps show how to create a patch file that includes these settings
 1. Clone your targeted profile
 
     ```bash
-    azdata config init --source aks-dev-test --target custom-aks
+    azdata bdc config init --source aks-dev-test --target custom-aks
     ```
 
 1. Apply the patch file to your custom profile
@@ -97,6 +98,10 @@ azdata bdc endpoint list -e sql-server-master -o table
 `Description                           Endpoint             Name               Protocol`
 `------------------------------------  -------------------  -----------------  ----------`
 `SQL Server Master Instance Front-End  13.64.235.192,31433  sql-server-master  tds`
+
+> [!NOTE]
+> Failover events can occur during a distributed query execution that is accessing data from remote data sources like HDFS or data pool. As a best practice, applications should be designed to have connection retry logic in case of disconnects caused by failover.  
+>
 
 ### Connect to databases on the secondary replicas
 

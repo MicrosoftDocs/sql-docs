@@ -28,6 +28,9 @@ ms.author: vanto
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic describes how to enable encrypted connections for an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] by specifying a certificate for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. The server computer must have a certificate provisioned, and the client machine must be set up to trust the certificate's root authority. Provisioning is the process of installing a certificate by importing it into Windows.  
+  
+> [!IMPORTANT]
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], Secure Sockets Layer (SSL) has been discontinued. Use Transport Layer Security (TLS) instead.
 
 ## Transport Layer Security (TLS)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can use Transport Layer Security (TLS) to encrypt data that is transmitted across a network between an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a client application. The TLS encryption is performed within the protocol layer and is available to all supported [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients.
@@ -71,7 +74,7 @@ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to load a TLS cert
 
 - The certificate must be created by using the **KeySpec** option of **AT_KEYEXCHANGE**. Usually, the certificate's key usage property (**KEY_USAGE**) will also include key encipherment (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).
 
-- The **Subject** property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  is running on a failover cluster, the common name must match the host name or FQDN of the virtual server and the certificates must be provisioned on all nodes in the failover cluster.
+- The **Subject** property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer. When using the host name, the DNS suffix must be specified in the certificate. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  is running on a failover cluster, the common name must match the host name or FQDN of the virtual server and the certificates must be provisioned on all nodes in the failover cluster.
 
 - [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and the [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) support wildcard certificates. SNAC has since been deprecated and replaced with the [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) and [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Other clients might not support wildcard certificates. For more information, see the client documentation and [KB 258858](http://support.microsoft.com/kb/258858).       
   Wildcard certificate cannot be selected by using the SQL Server Configuration Manager. To use a wildcard certificate, you must edit the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` registry key, and enter the thumbprint of the certificate, without spaces, to the **Certificate** value.  
@@ -115,7 +118,10 @@ If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssS
   
 2. Complete the **Certificate Export Wizard**, storing the certificate file in a convenient location.  
   
-## To configure the server to force encrypted connections  
+## To configure the server to force encrypted connections
+
+> [!IMPORTANT]
+> The SQL Server Service Account must have read permissions on the certicate used to force encryption on the SQL Server. For a non-privileged service account, read permissions will need to be added to the certificate. Failure to do so can cause the SQL Server service restart to fail.
   
 1. In **SQL Server Configuration Manager**, expand **SQL Server Network Configuration**, right-click **Protocols for** _\<server instance>_, and then select**Properties**.  
   

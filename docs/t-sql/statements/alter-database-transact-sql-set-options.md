@@ -1228,7 +1228,7 @@ The plan cache is also flushed in the following scenarios.
 - You restore a database backup.
 - You detach a database.
 
-Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.
+Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.
 
 ## Examples
 
@@ -1411,7 +1411,7 @@ SET QUERY_STORE = ON
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 > [!NOTE]
-> Many database set options can be configured for the current session by using [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session-level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that don't explicitly provide other set option values.
+> Many database set options can be configured for the current session by using [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session-level set options override the **ALTER DATABASE SET** values. The database options described in the following sections are values that can be set for sessions that don't explicitly provide other set option values.
 
 ## Syntax
 
@@ -1592,7 +1592,7 @@ The database files are not automatically shrunk during periodic checks for unuse
 You can determine this option's status by examining the `is_auto_shrink_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `IsAutoShrink` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
 > [!NOTE]
-> The AUTO_SHRINK option isn't available in a Contained Database.
+> The AUTO_SHRINK option isn't available in a contained database.
 
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { **ON** | OFF }        
 ON        
@@ -1820,10 +1820,10 @@ SIZE_BASED_CLEANUP_MODE
 Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:
 
 OFF        
-Size based cleanup won't be automatically activated.
+Size-based cleanup won't be automatically activated.
 
 AUTO        
-Size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**. This is the default configuration value.
+Size-based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size-based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**. This is the default configuration value.
 
 SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
 
@@ -1837,7 +1837,7 @@ AUTO
 Capture relevant queries based on execution count and resource consumption. This is the default configuration value for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 NONE        
-Stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss to capture important queries.
+Stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.
 
 QUERY_CAPTURE_MODE is type **nvarchar**.
 
@@ -2207,7 +2207,7 @@ SET QUERY_STORE = ON
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 > [!NOTE]
-> Many database set options can be configured for the current session by using [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session-level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that don't explicitly provide other set option values.
+> Many database set options can be configured for the current session by using [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session-level set options override the **ALTER DATABASE SET** values. The database options described in the following sections are values that can be set for sessions that don't explicitly provide other set option values.
 
 ## Syntax
 
@@ -2556,10 +2556,10 @@ SIZE_BASED_CLEANUP_MODE
 Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:
 
 OFF        
-Size based cleanup won't be automatically activated.
+Size-based cleanup won't be automatically activated.
 
 AUTO        
-Size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**. This is the default configuration value.
+Size-based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size-based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**. This is the default configuration value.
 
 SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
 
@@ -2573,7 +2573,7 @@ AUTO
 Capture relevant queries based on execution count and resource consumption. This is the default configuration value for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 NONE        
-Stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss to capture important queries.
+Stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.
 
 QUERY_CAPTURE_MODE is type **nvarchar**.
 
@@ -3137,7 +3137,7 @@ Turn off the READ_COMMITTED_SNAPSHOT option at the database level.
 
 This command must be run while connected to the `master` database. Turning READ_COMMITTED_SNAPSHOT ON or OFF for a user database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there is no active connection to the database except for the connection executing the ALTER DATABSE command.  Pausing the database will also cancel all connections.  The database does not have to be in single-user mode. Changing READ_COMMITTED_SNAPSHOT setting at session level isn't supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
 
-In a database with READ_COMMITTED_SNAPSHOT enabled, queries may experience slower performance due to the scan of versions if multiple data versions are present. Long open transactions can also cause increase in the size of the database if there are data changes by these transactions which blocks the cleanup of versions.  
+In a database with READ_COMMITTED_SNAPSHOT enabled, queries may experience slower performance due to the scan of versions if multiple data versions are present. Long-open transactions can also cause an increase in the size of the database. This issue occurs if there are data changes by these transactions that block version cleanup.  
 
 ## Permissions
 

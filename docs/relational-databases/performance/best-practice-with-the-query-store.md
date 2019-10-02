@@ -20,12 +20,12 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   This article outlines the best practices for using Query Store with your workload.
   
 ##  <a name="SSMS"></a> Use the latest [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has a set of user interfaces designed for configuring Query Store as well as for consuming collected data about your workload. Download the latest version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [here](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has a set of user interfaces designed for configuring Query Store and for consuming collected data about your workload. Download the latest version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [here](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).  
   
  For a quick description on how to use Query Store in troubleshooting scenarios, see [Query Store @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
 ##  <a name="Insight"></a> Use Query Performance Insight in Azure SQL Database  
- If you run Query Store in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], you can use **Query Performance Insight** to analyze DTU consumption over time. While you can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to get detailed resource consumption for all your queries, such as CPU, memory, and I/O, Query Performance Insight gives you a quick and efficient way to determine their impact on overall DTU consumption for your database. For more information, see [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
+ If you run Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], you can use **Query Performance Insight** to analyze DTU consumption over time. While you can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to get detailed resource consumption for all your queries, such as CPU, memory, and I/O, Query Performance Insight gives you a quick and efficient way to determine their impact on overall DTU consumption for your database. For more information, see [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
 
 ##  Use Query Store with elastic pool databases
 You can use Query Store in all databases without concerns, in even densely packed pools. All issues related to excessive resource usage that might have occurred when Query Store was enabled for the large number of databases in the elastic pools have been resolved.
@@ -36,7 +36,7 @@ The default parameters are good enough to start, but you should monitor how Quer
   
  ![Query Store properties](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")  
   
- Here are guidelines to follow for setting parameter values:  
+ Here are guidelines to follow for setting parameter values:
   
  **Max Size (MB)**: Specifies the limit for the data space that Query Store takes inside your database. This is the most important setting that directly affects the operation mode of Query Store.  
   
@@ -45,8 +45,7 @@ The default parameters are good enough to start, but you should monitor how Quer
  The default value in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] is 100 MB. This size might not be sufficient if your workload generates a large number of different queries and plans or if you want to keep query history for a longer period of time. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the default value is 1 GB. Keep track of current space usage and increase the **Max Size (MB)** value to prevent Query Store from transitioning to read-only mode. 
  
 > [!IMPORTANT] 
-> The **Max Size (MB)** limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the **Data Flush Interval (Minutes)** option.
-> If Query Store has breached the maximum size limit between storage size checks, it transitions to read-only mode. If **Size Based Cleanup Mode** is enabled, the cleanup mechanism to enforce the maximum size limit is also triggered.
+> The **Max Size (MB)** limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the **Data Flush Interval (Minutes)** option. If Query Store has breached the maximum size limit between storage size checks, it transitions to read-only mode. If **Size Based Cleanup Mode** is enabled, the cleanup mechanism to enforce the maximum size limit is also triggered.
  
  Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or execute the following script to get the latest information about Query Store size:  
   
@@ -59,7 +58,7 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- The following script sets a new **Max Size (MB)** value:  
+ The following script sets a new value for **Max Size (MB)**:  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]  
@@ -87,7 +86,7 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);
   
  **Stale Query Threshold (Days)**: Time-based cleanup policy that controls the retention period of persisted runtime statistics and inactive queries. By default, Query Store is configured to keep the data for 30 days, which might be unnecessarily long for your scenario.  
   
- Avoid keeping historical data that you don't plan to use. This practice reduces changes to read-only status. The size of Query Store data as well as the time to detect and mitigate the issue will be more predictable. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or the following script to configure time-based cleanup policy:  
+ Avoid keeping historical data that you don't plan to use. This practice reduces changes to read-only status. The size of Query Store data and the time to detect and mitigate the issue will be more predictable. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or the following script to configure time-based cleanup policy:  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -180,7 +179,7 @@ SET QUERY_STORE = ON
   
  ![Query Store troubleshooting](../../relational-databases/performance/media/query-store-troubleshooting.png "query-store-troubleshooting")  
   
- Enable Query Store by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] as described in the previous section, or execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+ Enable Query Store by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], as described in the previous section, or execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
 ```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
@@ -192,8 +191,8 @@ It takes some time until Query Store collects the data set that accurately repre
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version|Execution metric|Statistic function|  
 |----------------------|----------------------|------------------------|  
-|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|CPU time, Duration, Execution count, Logical reads, Logical writes, Memory consumption, Physical reads, CLR time, Degree of Parallelism (DOP), and Row count|Average, Maximum, Minimum, Standard deviation, Total| 
-|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|CPU time, Duration, Execution count, Logical reads, Logical writes, Memory consumption, Physical reads, CLR time, Degree of Parallelism (DOP), Row count, Log memory, TempDB memory, and Wait times|Average, Maximum, Minimum, Standard Deviation, Total| 
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|CPU time, Duration, Execution count, Logical reads, Logical writes, Memory consumption, Physical reads, CLR time, Degree of parallelism (DOP), and Row count|Average, Maximum, Minimum, Standard Deviation, Total| 
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|CPU time, Duration, Execution count, Logical reads, Logical writes, Memory consumption, Physical reads, CLR time, Degree of parallelism, Row count, Log memory, TempDB memory, and Wait times|Average, Maximum, Minimum, Standard Deviation, Total| 
   
  The following graphic shows how to locate Query Store views:  
   
@@ -208,13 +207,13 @@ It takes some time until Query Store collects the data set that accurately repre
 |**Top Resource Consuming Queries**|Choose an execution metric of interest, and identify queries that had the most extreme values for a provided time interval. <br />Use this view to focus your attention on the most relevant queries that have the biggest impact to database resource consumption.|  
 |**Queries With Forced Plans**|Lists previously forced plans using Query Store. <br />Use this view to quickly access all currently forced plans.|  
 |**Queries With High Variation**|Analyze queries with high-execution variation as it relates to any of the available dimensions, such as Duration, CPU time, IO, and Memory usage, in the desired time interval.<br />Use this view to identify queries with widely variant performance that can be affecting user experience across your applications.|  
-|**Query Wait Statistics**|Analyze wait categories that are most active in a database and which queries contribute most to the selected wait category.<br />Use this view to analyze wait statistics and identify queries that might be affecting user experience across your applications.<br /><br />Applies to: Starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|**Query Wait Statistics**|Analyze wait categories that are most active in a database and which queries contribute most to the selected wait category.<br />Use this view to analyze wait statistics and identify queries that might be affecting user experience across your applications.<br /><br />Applies to: Starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|  
 |**Tracked Queries**|Track the execution of the most important queries in real time. Typically, you use this view when you have queries with forced plans and you want to make sure that query performance is stable.|
   
 > [!TIP]
 > For a detailed description of how to use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to identify the top resource-consuming queries and fix those that regressed due to the change of a plan choice, see [Query Store @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).
   
- When you identify a query with sub-optimal performance, your action depends on the nature of the problem.  
+ When you identify a query with suboptimal performance, your action depends on the nature of the problem.  
   
 -   If the query was executed with multiple plans and the last plan is significantly worse than the previous plan, you can use the plan forcing mechanism to force it. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tries to force the plan in the optimizer. If plan forcing fails, an XEvent is fired and the optimizer is instructed to optimize in the normal way.
   
@@ -225,9 +224,9 @@ It takes some time until Query Store collects the data set that accurately repre
     > 
     > |Shape|Meaning|  
     > |-------------------|-------------|
-    > |Circle|Query completed means a regular execution successfully finished|
-    > |Square|Cancelled means a client-initiated aborted execution|
-    > |Triangle|Failed means an exception aborted execution|
+    > |Circle|Query completed, which means that a regular execution successfully finished.|
+    > |Square|Cancelled, which means that a client-initiated aborted execution.|
+    > |Triangle|Failed, which means that an exception aborted execution.|
     > 
     > Also, the size of the shape reflects the query execution count within the specified time interval. The size increases with a higher number of executions.  
 
@@ -235,13 +234,13 @@ It takes some time until Query Store collects the data set that accurately repre
   
          ![Query Store show plan](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
   
-     If you run your workload on [!INCLUDE[ssSDS](../../includes/sssds-md.md)] sign up for [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Index Advisor to automatically receive index recommendations.
+     If you run your workload on [!INCLUDE[ssSDS](../../includes/sssds-md.md)], sign up for [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Index Advisor to automatically receive index recommendations.
   
 -   In some cases, you might enforce statistic recompilation if you see that the difference between the estimated and the actual number of rows in the execution plan is significant.
 -   Rewrite problematic queries, for example, to take advantage of query parameterization or to implement more optimal logic.
   
 ##  <a name="Verify"></a> Verify that Query Store collects query data continuously  
- Query Store can silently change the operations mode. Regularly monitor the state of Query Store to ensure that Query Store is operating, and to take action to avoid failures due to preventable causes. Execute the following query to determine the operation mode and view the most relevant parameters: 
+ Query Store can silently change the operation mode. Regularly monitor the state of Query Store to ensure that Query Store is operating, and to take action to avoid failures due to preventable causes. Execute the following query to determine the operation mode and view the most relevant parameters: 
   
 ```sql
 USE [QueryStoreDB];  
@@ -254,7 +253,7 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- The difference between the `actual_state_desc` and `desired_state_desc` indicates that a change of operations mode occurred automatically. The most common change is for Query Store to silently switch to read-only mode. In extremely rare circumstances, Query Store can end up in the ERROR state because of internal errors.  
+ The difference between the `actual_state_desc` and `desired_state_desc` indicates that a change of the operation mode occurred automatically. The most common change is for Query Store to silently switch to read-only mode. In extremely rare circumstances, Query Store can end up in the ERROR state because of internal errors.  
   
  When the actual state is read-only, use the **readonly_reason** column to determine the root cause. Typically, you find that Query Store transitioned to read-only mode because the size quota was exceeded. In that case, the **readonly_reason** is set to 65536. For other reasons, see [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).  
   
@@ -278,7 +277,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
   
 -   You can prevent silent changes of operation mode by applying best practices. Ensure that Query Store size is always below the maximally allowed value to dramatically reduce a chance of transitioning to read-only mode. Activate size-based policy as described in the [Configure Query Store](#Configure) section so that Query Store automatically cleans data when the size approaches the limit.
 -   To make sure that most recent data is retained, configure time-based policy to remove stale information regularly.
--   Finally, consider setting **QUERY_CAPTURE_MODE to AUTO because it filters out queries that are usually less relevant for your workload.
+-   Finally, consider setting **Query Store Capture Mode** to **Auto** because it filters out queries that are usually less relevant for your workload.
   
 ### ERROR state
  To recover Query Store, try explicitly setting the read-write mode and check the actual state again.
@@ -297,7 +296,7 @@ FROM sys.database_query_store_options;
   
  If the problem persists, it indicates that corruption of Query Store data is persisted on the disk.
  
- Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Query Store can be recovered by executing the **sp_query_store_consistency_check** stored procedure within the affected database. Query Store must be disabled before you attempt the recovery operation. For [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] you need to clear the data from Query Store as shown.
+ Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], Query Store can be recovered by executing the **sp_query_store_consistency_check** stored procedure within the affected database. Query Store must be disabled before you attempt the recovery operation. For [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you need to clear the data from Query Store as shown.
  
  If the recovery was unsuccessful, you can try clearing Query Store before you set the read-write mode.  
   
@@ -317,19 +316,18 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
-## Set the optimal query capture mode 
- Keep the most relevant data in Query Store. The following table describes typical scenarios for each Query Capture Mode:  
+## Set the optimal Query Store Capture Mode 
+ Keep the most relevant data in Query Store. The following table describes typical scenarios for each Query Store Capture Mode:  
   
 |Query Store Capture Mode|Scenario|  
 |------------------------|--------------|  
 |**All**|Analyze your workload thoroughly in terms of all queries' shapes and their execution frequencies and other statistics.<br /><br /> Identify new queries in your workload.<br /><br /> Detect if ad-hoc queries are used to identify opportunities for user or auto parameterization.<br /><br />Note: This is the default capture mode in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|
 |**Auto**|Focus your attention on relevant and actionable queries. An example is those queries that execute regularly or that have significant resource consumption.<br /><br />Note: Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], this is the default capture mode.|  
 |**None**|You've already captured the query set that you want to monitor in runtime and you want to eliminate the distractions that other queries might introduce.<br /><br /> None is suitable for testing and benchmarking environments.<br /><br /> None is also appropriate for software vendors who ship Query Store configuration configured to monitor their application workload.<br /><br /> None should be used with caution because you might miss the opportunity to track and optimize important new queries. Avoid using None unless you have a specific scenario that requires it.|  
-|**Custom**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a CUSTOM capture mode under the `ALTER DATABASE SET QUERY_STORE` command. When enabled, additional Query Store configurations are available under a new Query Store capture policy setting to fine-tune data collection in a specific server.<br /><br />The new custom settings define what happens during the internal capture policy time threshold. This is a time boundary during which the configurable conditions are evaluated and, if any are true, the query is eligible to be captured by Query Store. For more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
+|**Custom**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a Custom capture mode under the `ALTER DATABASE SET QUERY_STORE` command. When enabled, additional Query Store configurations are available under a new Query Store capture policy setting to fine-tune data collection in a specific server.<br /><br />The new custom settings define what happens during the internal capture policy time threshold. This is a time boundary during which the configurable conditions are evaluated and, if any are true, the query is eligible to be captured by Query Store. For more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 
 > [!NOTE]
-> Cursors, queries inside stored procedures, and natively compiled queries are always captured when the **Query Store Capture Mode** is set to **All**, **Auto**, or **Custom**. 
-> To capture natively compiled queries, enable collection of per-query statistics by using [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
+> Cursors, queries inside stored procedures, and natively compiled queries are always captured when Query Store Capture Mode is set to **All**, **Auto**, or **Custom**. To capture natively compiled queries, enable collection of per-query statistics by using [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
 
 ## Keep the most relevant data in Query Store  
 Configure Query Store to contain only the relevant data so that it runs continuously and provides a great troubleshooting experience with a minimal impact on your regular workload.  
@@ -337,14 +335,14 @@ The following table provides best practices:
   
 |Best practice|Setting|  
 |-------------------|-------------|  
-|Limit retained historical data.|Configure time-based policy to activate auto-cleanup.|  
+|Limit retained historical data.|Configure time-based policy to activate autocleanup.|  
 |Filter out nonrelevant queries.|Configure **Query Store Capture Mode** to **Auto**.|  
 |Delete less relevant queries when the maximum size is reached.|Activate size-based cleanup policy.|  
   
 ##  <a name="Parameterize"></a> Avoid using non-parameterized queries  
-Using non-parameterized queries when that isn't absolutely necessary isn't a best practice. An example is in the case of ad-hoc analysis. Cached plans can't be reused, which forces Query Optimizer to compile queries for every unique query text. For more information, see [Guidelines for using forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).  
+Using non-parameterized queries when that isn't necessary isn't a best practice. An example is in the case of ad-hoc analysis. Cached plans can't be reused, which forces Query Optimizer to compile queries for every unique query text. For more information, see [Guidelines for using forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).  
 
-Also, Query Store can rapidly exceed the size quota because of a potentially large number of different query texts and consequently a large number of different execution plans with similar shape. As a result, performance of your workload is sub-optimal, and Query Store might switch to read-only mode or constantly delete data to try to keep up with the incoming queries.  
+Also, Query Store can rapidly exceed the size quota because of a potentially large number of different query texts and consequently a large number of different execution plans with similar shape. As a result, performance of your workload is suboptimal, and Query Store might switch to read-only mode or constantly delete data to try to keep up with the incoming queries.  
   
 Consider the following options:  
 
@@ -354,7 +352,7 @@ Consider the following options:
 -   Apply [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) for the database or for a subset of queries if the number of different query plans isn't large.  
     -   Use a [plan guide](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md) to force parameterization only for the selected query.
     -   Configure forced parameterization by using the [parameterization database option](../../relational-databases/databases/database-properties-options-page.md#miscellaneous) command, if there are a small number of different query plans in your workload. An example is when the ratio between the count of distinct query_hash and the total number of entries in sys.query_store_query is much less than 1.  
--   Set the **Query Store Capture Mode** to **Auto** to automatically filter out ad-hoc queries with small resource consumption.  
+-   Set QUERY_CAPTURE_MODE to AUTO to automatically filter out ad-hoc queries with small resource consumption.  
   
 ##  <a name="Drop"></a> Avoid a DROP and CREATE pattern when you maintain containing objects
 Query Store associates query entry with a containing object, such as stored procedure, function, and trigger. When you re-create a containing object, a new query entry is generated for the same query text. This prevents you from tracking performance statistics for that query over time and using a plan forcing mechanism. To avoid this situation, use the `ALTER <object>` process to change a containing object definition whenever it's possible.  
@@ -392,7 +390,7 @@ The global trace flags 7745 and 7752 can be used to improve availability of data
    > Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], this behavior is controlled by the engine, and trace flag 7752 has no effect.
 
 > [!IMPORTANT]
-> If you're using Query Store for just-in-time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible.
+> If you're using Query Store for just-in-time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible.
 
 ## See also  
 - [ALTER DATABASE SET options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)     

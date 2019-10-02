@@ -1,5 +1,5 @@
 ---
-title: "Configure Always Encrypted Keys using PowerShell | Microsoft Docs"
+title: "Provision Always Encrypted Keys using PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019
 ms.prod: sql
@@ -7,11 +7,11 @@ ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Configure Always Encrypted Keys using PowerShell
+# Provision Always Encrypted Keys using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
     
@@ -30,7 +30,7 @@ Before running any steps that involves access to plaintext keys or the key store
 
 Task  |Article  |Accesses plaintext keys/key store  |Accesses database   
 ---------|---------|---------|---------
-Step 1. Create a column master key in a key store.<br><br>**Note:** The SqlServer PowerShell module doesn't support this step. To accomplish this task from a command-line, use the tools that are specific to your selected key store. |[Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | Yes | No     
+Step 1. Create a column master key in a key store.<br><br>**Note:** The SqlServer PowerShell module doesn't support this step. To accomplish this task from a command-line, use the tools that are specific to your selected key store. |[Create and Store Column Master Keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | Yes | No     
 Step 2.  Start a PowerShell environment and import the SqlServer PowerShell module.  |   [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    No    | No         
 Step 3.  Connect to your server and database.     |     [Connect to a Database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    No     | Yes         
 Step 4.  Create a *SqlColumnMasterKeySettings* object that contains information about the location of your column master key. SqlColumnMasterKeySettings is an object that exists in memory (in PowerShell). Use the cmdlet that is specific to your key store.   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)        |   No      | No         
@@ -184,7 +184,7 @@ For more information, see [Security Considerations for Key Management](overview-
 
 Task  |Article  |Accesses plaintext keys/key store  |Accesses database  
 ---------|---------|---------|---------
-Step 1. Create a column master key in a key store.<br><br>**Note:** The SqlServer module doesn't support this step. To accomplish this task from a command-line, you need to use the tools that are specific the type of your key store.     | [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    Yes    | No 
+Step 1. Create a column master key in a key store.<br><br>**Note:** The SqlServer module doesn't support this step. To accomplish this task from a command-line, you need to use the tools that are specific the type of your key store.     | [Create and Store Column Master Keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    Yes    | No 
 Step 2.  Start a PowerShell session and import the SqlServer module.      |     [Import the SqlServer module](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | No | No         
 Step 3.  Create a *SqlColumnMasterKeySettings* object that contains information about the location of your column master key. *SqlColumnMasterKeySettings* is an object that exists in memory (in PowerShell). Use the cmdlet that is specific to your key store. |      [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)   | No         | No         
 Step 4.  Authenticate to Azure, if your column master key is stored in Azure Key Vault |    [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |Yes|No         
@@ -269,15 +269,20 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```  
  
 ## Next Steps    
-
-- [Configure Column Encryption using PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)    
+- [Encrypt, Re-Encrypt or Decrypt Columns with Always Encrypted using PowerShell](configure-column-encryption-using-powershell.md)  
 - [Rotate Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-    
-## Additional Resources    
-    
-- [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-- [Always Encrypted (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
-- [Always Encrypted Blog](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
+- [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
 
+## Additional Resources    
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)    
+- [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+- [Create and Store Column Master Keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
+- [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
+- [Provision Always Encrypted Keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)
+- [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md)
+- [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)
+- [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md)
+- [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/drop-column-encryption-key-transact-sql.md) 
+- [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
+- [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)

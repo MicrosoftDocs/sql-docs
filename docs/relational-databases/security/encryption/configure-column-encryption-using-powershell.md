@@ -1,18 +1,18 @@
 ---
-title: "Configure Column Encryption using PowerShell | Microsoft Docs"
+title: "Encrypt, Re-Encrypt or Decrypt Columns with Always Encrypted using PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2017"
+ms.date: "10/01/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Configure Column Encryption using PowerShell
+# Encrypt, Re-Encrypt or Decrypt Columns with Always Encrypted using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 This article provides the steps for setting the target Always Encrypted configuration for database columns using the [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) cmdlet (in the *SqlServer* PowerShell module). The **Set-SqlColumnEncryption** cmdlet modifies both the schema of the target database as well as the data stored in the selected columns. The data stored in a column can be encrypted, re-encrypted, or decrypted, depending on the specified target encryption settings for the columns and the current encryption configuration.
@@ -142,10 +142,22 @@ for($i=0; $i -lt $tables.Count; $i++){
 Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -LogFileDirectory .
 ```
  
-
+## Next Steps
+- [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
+- [Query Columns Protected with Always Encrypted using SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- 
 ## Additional Resources
-- [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-- [Always Encrypted (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 
+
+## Next Steps
+- [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
+
+  ## See Also  
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [Overview of Key Management for Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
+ - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
+ - [Encrypt, Re-Encrypt or Decrypt Columns using Always Encrypted Wizard](always-encrypted-wizard.md)
+ - [Encrypt, Re-Encrypt or Decrypt Columns by Publishing a DAC Package](configure-always-encrypted-using-dacpac.md)
 
 

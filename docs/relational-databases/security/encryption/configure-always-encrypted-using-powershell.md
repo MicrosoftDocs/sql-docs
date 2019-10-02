@@ -1,14 +1,14 @@
 ---
 title: "Configure Always Encrypted using PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/26/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure Always Encrypted using PowerShell
@@ -49,11 +49,36 @@ Some of the Always Encrypted cmdlets work with data or metadata in the database 
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-### Using SQL Server PowerShell
+### Using Get-SqlDatabase
+The **Get-SqlDatabase** cmdlet allows you to connect to a database in SQL Server or in Azure SQL Database. It returns a database object, which you can then pass using the using the **InputObject** parameter of a cmdlet that connects to the database.
 
-This method works only for SQL Server (it is not supported in Azure SQL Database).
 
-With SQL Server PowerShell, you can navigate the paths using Windows PowerShell aliases similar to the commands you typically use to navigate file system paths. Once you navigate to the target instance and the database, the subsequent cmdlets target that database, as shown in the following example:
+```
+# Import the SqlServer module
+Import-Module "SqlServer"  
+
+# Connect to your database (Azure SQL database).
+$serverName = "<Azure SQL server name>.database.windows.net"
+$databaseName = "<database name>"
+$connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Authentication = Active Directory Integrated"
+$database = Get-SqlDatabase -ConnectionString $connStr
+
+# List column master keys for the specified database.
+Get-SqlColumnMasterKey -InputObject $database
+```
+
+Alternatively, you can use piping:
+
+
+```
+$database | Get-SqlColumnMasterKey
+```
+
+### Using SQL Server PowerShell Provider
+The [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md) exposes the hierarchy of SQL Server objects in paths similar to file system paths. With SQL Server PowerShell, you can navigate the paths using Windows PowerShell aliases similar to the commands you typically use to navigate file system paths. Once you navigate to the target instance and the database, the subsequent cmdlets target that database, as shown in the following example. 
+
+> [!NOTE]
+> This method of connecting to a database works only for SQL Server (it is not supported in Azure SQL Database).
 
 ```
 # Import the SqlServer module.
@@ -75,43 +100,11 @@ Import-Module "SqlServer"
 Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\yourdatabase
 ```
  
-### Using SMO
-
-This method works for both Azure SQL Database and SQL Server.
-With SMO, you can create an object of the [Database Class](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.database.aspx), and then pass the object using the **InputObject** parameter of a cmdlet that connects to the database.
-
-
-```
-# Import the SqlServer module
-Import-Module "SqlServer"  
-
-# Connect to your database (Azure SQL database).
-$serverName = "<Azure SQL server name>.database.windows.net"
-$databaseName = "<database name>"
-$connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Authentication = Active Directory Integrated"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName] 
-
-# List column master keys for the specified database.
-Get-SqlColumnMasterKey -InputObject $database
-```
-
-
-Alternatively, you can use piping:
-
-
-```
-$database | Get-SqlColumnMasterKey
-```
-
 ## Always Encrypted Tasks using PowerShell
 
 - [Configure Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md) 
 - [Rotate Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Configure Column Encryption using PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)
+- [Encrypt, Re-Encrypt or Decrypt Columns with Always Encrypted using PowerShell](configure-column-encryption-using-powershell.md)
 
 
 ##  <a name="aecmdletreference"></a> Always Encrypted Cmdlet Reference
@@ -143,9 +136,7 @@ The following PowerShell cmdlets are available for Always Encrypted:
 
 ## Additional Resources
 
-- [Always Encrypted (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Using Always Encrypted with .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Configure Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-
+- [Develop Applications using Always Encrypted](always-encrypted-client-development.md)

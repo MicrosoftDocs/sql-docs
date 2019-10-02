@@ -1,7 +1,8 @@
 ---
-title: "Always Encrypted (Database Engine) | Microsoft Docs"
+title: "Always Encrypted | Microsoft Docs"
+description: Overview of Always Encrypted that supports transparent client-side encryption and confidential computing in SQL Server and Azure SQL Database
 ms.custom: ""
-ms.date: "04/24/2017"
+ms.date: "10/01/2019"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,20 +14,26 @@ helpviewer_keywords:
   - "Always Encrypted, about"
   - "SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1"
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Always Encrypted (Database Engine)
+# Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national identification numbers (for example, U.S. social security numbers), stored in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ( [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). As a result, Always Encrypted provides a separation between those who own the data (and can view it) and those who manage the data (but should have no access). By ensuring on-premises database administrators, cloud database operators, or other high-privileged, but unauthorized users, cannot access the encrypted data, Always Encrypted enables customers to confidently store sensitive data outside of their direct control. This allows organizations to encrypt data at rest and in use for storage in Azure, to enable delegation of on-premises database administration to third parties, or to reduce security clearance requirements for their own DBA staff.  
-  
+ Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national identification numbers (for example, U.S. social security numbers), stored in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ( [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). As a result, Always Encrypted provides a separation between those who own the data (and can view it) and those who manage the data (but should have no access). By ensuring on-premises database administrators, cloud database operators, or other high-privileged, but unauthorized users, cannot access the encrypted data, Always Encrypted enables customers to confidently store sensitive data outside of their direct control. This allows organizations to store their data in Azure, to enable delegation of on-premises database administration to third parties, or to reduce security clearance requirements for their own DBA staff. 
+
+ Always Encrypted provides confidential computing capabilities by enabling the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] to process some queries on encrypted data, while preserving the confidentiality of the data and providing the above security benefits. In [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], [!INCLUDE[sssSQLv14](../../../includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Always Encrypted supports equality comparison via deterministic encryption. See [Selecting Deterministic or Randomized Encryption](#selecting-deterministic-or-randomized-encryption). 
+
+ > [!NOTE] 
+ > In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], secure enclaves substantially extend confidential computing capabilities of Always Encrypted with pattern matching, other comparison operators and in-place encryption. See [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
+
  Always Encrypted makes encryption transparent to applications. An Always Encrypted-enabled driver installed on the client computer achieves this by automatically encrypting and decrypting sensitive data in the client application. The driver encrypts the data in sensitive columns before passing the data to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)], and automatically rewrites queries so that the semantics to the application are preserved. Similarly, the driver transparently decrypts data, stored in encrypted database columns, contained in query results.  
   
- Always Encrypted is available in [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. (Prior to [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1, Always Encrypted was limited to the Enterprise Edition.) For a Channel 9 presentation that includes Always Encrypted, see [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted).  
+ Always Encrypted is available in all editions of [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], starting with [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] and all service tiers of [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. (Prior to [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1, Always Encrypted was limited to the Enterprise Edition.) For a Channel 9 presentation that includes Always Encrypted, see [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted).  
+
   
 ## Typical Scenarios  
   
@@ -104,6 +111,9 @@ For details on Always Encrypted cryptographic algorithms, see [Always Encrypted 
 |Creating new tables with encrypted columns|Yes|Yes|Yes|
 |Encrypting existing data in selected database columns|Yes|Yes|No|
 
+> [NOTE]
+> [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), introduced in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], does support encrypting existing data using Trasact-SQL. It also eliminates the need to move the data outside of the data for cryptographic operations.
+
 > [!NOTE]
 > Make sure you run key provisioning or data encryption tools in a secure environment, on a computer that is different from the computer hosting your database. Otherwise, sensitive data or the keys could leak to the server environment, which would reduce the benefits of the using Always Encrypted.  
 
@@ -180,9 +190,8 @@ The following features do not work on encrypted columns:
 
 Tool Requirements
 
-- SQL Server Management Studio can decrypt the results retrieved from encrypted columns if you connect with the *column encryption setting=enabled* in the **Additional Properties** tab of the **Connect to Server** dialog. Requires at least SQL Server Management Studio version 17 to insert, update, or filter encrypted columns. For connection strings to be used in client applicaitons, see [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
-
-- Encrypted connections from `sqlcmd` require at least version 13.1, which is available from the [Download Center](https://go.microsoft.com/fwlink/?LinkID=825643).
+- SQL Server Management Studio version 18 or higher is recommended to run queries that decrypt the results retrieved from encrypted columns or insert, update, or filter encrypted columns. 
+- Requires `sqlcmd` version 13.1 or higher, which is available from the [Download Center](https://go.microsoft.com/fwlink/?LinkID=825643).
 
   
 ## Database Permissions  
@@ -249,22 +258,21 @@ CREATE TABLE Customers (
 GO  
   
 ```  
-  
 ## See Also  
-[CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
-[CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
-[CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   
-[column_definition &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
-[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
-[sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
-[sys.column_master_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
-[sys.columns &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
-[Always Encrypted Wizard](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
-[Migrate Sensitive Data Protected by Always Encrypted](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)   
-[Always Encrypted &#40;client development&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)   
-[Always Encrypted Cryptography](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
-[Configure Always Encrypted using SSMS](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-[Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
-[sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
+- [Configure Always Encrypted using SSMS](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)   
+- [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
+- [Develop Applications using Always Encrypted](always-encrypted-client-development.md) 
+- [Encrypt, Re-Encrypt or Decrypt Columns using Always Encrypted Wizard](always-encrypted-wizard.md)
+- [Migrate Sensitive Data Protected by Always Encrypted](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)   
+- [Always Encrypted Cryptography](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
+- [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
+- [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
+- [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   
+- [column_definition &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
+- [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)  
+- [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
+- [sys.column_master_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
+- [sys.columns &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+- [sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   

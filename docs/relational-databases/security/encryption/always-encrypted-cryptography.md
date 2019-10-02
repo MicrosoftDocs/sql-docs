@@ -1,7 +1,7 @@
 ---
 title: "Always Encrypted Cryptography | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/26/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Always Encrypted, cryptography system"
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Always Encrypted Cryptography
@@ -169,10 +169,10 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|N/A (not supported)|  
   
 ## .NET Reference  
- For details about the algorithms, discussed in this document, see the **SqlAeadAes256CbcHmac256Algorithm.cs** and **SqlColumnEncryptionCertificateStoreProvider.cs** files in the [.NET Reference](https://referencesource.microsoft.com/).  
+ For details about the algorithms, discussed in this document, see the **SqlAeadAes256CbcHmac256Algorithm.cs**, **SqlColumnEncryptionCertificateStoreProvider.cs**, and **SqlColumnEncryptionCertificateStoreProvider.cs** files in the [.NET Reference](https://referencesource.microsoft.com/).  
   
 ## See Also  
- [Always Encrypted &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Always Encrypted &#40;client development&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [Develop Applications using Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

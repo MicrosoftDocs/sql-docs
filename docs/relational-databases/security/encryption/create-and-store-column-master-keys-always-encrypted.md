@@ -1,18 +1,18 @@
 ---
-title: "Create and Store Column Master Keys (Always Encrypted) | Microsoft Docs"
+title: "Create and Store Column Master Keys for Always Encrypted | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/01/2016"
+ms.date: "10/01/2019"
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Create and Store Column Master Keys (Always Encrypted)
+# Create and Store Column Master Keys for Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 *Column Master Keys* are key-protecting keys used in Always Encrypted to encrypt column encryption keys. Column master keys must be stored in a trusted key store, and the keys need to be accessible to applications that need to encrypt or decrypt data, and tools for configuring Always Encrypted and managing Always Encrypted keys.
@@ -35,18 +35,7 @@ There are two high-level categories of key stores to consider - *Local Key Store
 
 Always Encrypted enabled client drivers are SQL Server client drivers that have built-in support for incorporating Always Encrypted into your client applications. Always Encrypted enabled drivers include a few built-in providers for popular key stores. Note that some drivers also let you implement and register a custom column master key store provider, so that you can use any key store, even if there is no built-in provider for it. When deciding between a built-in provider and a custom provider consider that using a built-in provider typically means fewer changes to your applications (in some cases, only changing a database connection string is required).
 
-The available built-in providers depend on which driver, driver version, and operating system is selected.  Please consult Always Encrypted documentation for your specific driver to determine which key stores are supported out-of-the-box and if your driver supports custom key store providers.
-
-- [Develop Applications using Always Encrypted with the .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-
-
-### Supported Tools
-
-You can use [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) and the [SqlServer PowerShell module](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) to configure Always Encrypted and manage Always Encrypted keys. For a list of which key stores these tool support, see:
-
-- [Configure Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-- [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-
+The available built-in providers depend on which driver, driver version, and operating system is selected.  Please consult Always Encrypted documentation for your specific driver to determine which key stores are supported out-of-the-box and if your driver supports custom key store providers - [Develop Applications using Always Encrypted](../../../relational-databases/security/always-encrypted-client-development.md).
 
 ## Creating Column Master Keys in Windows Certificate Store    
 
@@ -76,7 +65,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 ### Create a self-signed certificate using SQL Server Management Studio (SSMS)
 
-For details, see [Configure Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md).
+For details, see [Provision Always Encrypted Keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 For a step-by-step tutorial that uses SSMS and stores Always Encrypted keys in the Windows Certificate Store, see [Always Encrypted Wizard tutorial (Windows Certificate Store)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).
 
 
@@ -109,7 +98,7 @@ To grant a user the *Read* permission for a certificate stored in the local mach
 
 Azure Key Vault helps safeguard cryptographic keys and secrets, and is a convenient option for storing column master keys for Always Encrypted, especially if your applications are hosted in Azure. To create a key in [Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), you need an [Azure subscription](https://azure.microsoft.com/free/) and an Azure Key Vault.
 
-#### Using PowerShell
+### Using PowerShell
 
 The following example creates a new Azure Key Vault and key, and then grants permissions to the desired user.
 
@@ -128,8 +117,9 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
-#### SQL Server Management Studio (SSMS)
+### Using SQL Server Management Studio (SSMS)
 
+For details on how to create a column master key in Azure Key Vault using SSMS, see [Provision Always Encrypted Keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 For a step-by-step tutorial that uses SSMS and stores Always Encrypted keys in an Azure Key Vault, see [Always Encrypted Wizard tutorial (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault).
 
 ### Making Azure Key Vault Keys Available to Applications and Users
@@ -191,8 +181,7 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 #### Using SQL Server Management Studio
 
-See [Provisioning Column Master using SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt757096.aspx#Anchor_2).
-
+See [Provision Always Encrypted Keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
 ### Making CNG Keys Available to Applications and Users
 
@@ -217,7 +206,7 @@ A column master key should be an asymmetric key (a public/private key pair), usi
 Consult the documentation for your HSM.
 
 #### Using SQL Server Management Studio (SSMS)
-See the Provisioning Column Master Keys section in Configuring Always Encrypted using SQL Server Management Studio.
+See [Provision Always Encrypted Keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
  
 ### Making CNG Keys Available to Applications and Users
@@ -225,17 +214,10 @@ Consult the documentation for your HSM and CSP, for how to configure the CSP on 
  
  
 ## Next Steps  
-  
-- [Configure Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [Rotate Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 - [Configure Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
+- [Configure Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
   
 ## Additional Resources  
-
-- [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Always Encrypted (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Develop Applications using Always Encrypted with .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Always Encrypted Blog](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
-    
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
 

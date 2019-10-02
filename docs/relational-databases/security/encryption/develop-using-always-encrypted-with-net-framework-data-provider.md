@@ -1,18 +1,18 @@
 ---
-title: "Develop using Always Encrypted with .NET Framework Data Provider | Microsoft Docs"
+title: "Using Always Encrypted with the .NET Framework Data Provider for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2016"
+ms.date: "10/01/2019"
 ms.prod: sql
 ms.prod_service: "security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Develop using Always Encrypted with .NET Framework Data Provider
+# Using Always Encrypted with the .NET Framework Data Provider for SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 This article provides information on how to develop .NET applications using [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) and the [.NET Framework Data Provider for SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx).
@@ -22,8 +22,8 @@ Always Encrypted allows client applications to encrypt sensitive data and never 
 
 ## Prerequisites
 
-- Configure Always Encrypted in your database. This involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you do not already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_5).
-- Make sure .NET Framework version 4.6 or higher is installed on your development machine. For details, see [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). You also need to make sure .NET Framework version 4.6 or higher is configured as the target .NET Framework version in your development environment. If you are using Visual Studio, please refer to [How to: Target a Version of the .NET Framework](https://msdn.microsoft.com/library/bb398202.aspx). 
+- Configure Always Encrypted in your database. This involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you do not already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](always-encrypted-database-engine.md#getting-started-with-always-encrypted).
+- Make sure .NET Framework version 4.6.1 or higher is installed on your development machine. For details, see [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). You also need to make sure .NET Framework version 4.6 or higher is configured as the target .NET Framework version in your development environment. If you are using Visual Studio, please refer to [How to: Target a Version of the .NET Framework](https://msdn.microsoft.com/library/bb398202.aspx). 
 
 > [!NOTE]
 > The level of support for Always Encrypted in particular versions of .NET Framework varies. Please, see the Always Encrypted API reference section below for details. 
@@ -144,7 +144,7 @@ The following example demonstrates filtering data based on encrypted values, and
 
 
 > [!NOTE]
-> Queries can perform equality comparisons on columns if they are encrypted using deterministic encryption. For more information, see the *Selecting Deterministic or Randomized encryption* section of [Always Encrypted (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
+> Queries can perform equality comparisons on columns if they are encrypted using deterministic encryption. For more information, see [Selecting  Deterministic or Randomized Encryption](always-encrypted-database-engine.md#selecting-deterministic-or-randomized-encryption).
 
 ```
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";
@@ -216,7 +216,7 @@ This section describes common categories of errors when querying encrypted colum
 
 ### Unsupported data type conversion errors
 
-Always Encrypted supports few conversions for encrypted data types. See [Always Encrypted (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) for a detailed list of supported type conversions. Do the following to avoid data type conversion errors:
+Always Encrypted supports few conversions for encrypted data types. See [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) for a detailed list of supported type conversions. Do the following to avoid data type conversion errors:
 
 - Set the types of parameters targeting encrypted columns, so the SQL Server data type of the parameter is either exactly the same as the type of the target column, or a conversion of the SQL Server data type of the parameter to the target type of the column is supported. You can enforce the desired mapping of .NET data types to specific SQL Server data types by using SqlParameter.SqlDbType Property.
 - Verify the precision and scale of parameters targeting columns of the decimal and numeric SQL Server data types is the same as the precision and scale configured for the target column.  
@@ -564,7 +564,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## See Also
 
-- [Always Encrypted (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted blog](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [SQL Database tutorial: Protect sensitive data with Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

@@ -34,7 +34,7 @@ SQL Server Query Store works much like a flight data recorder, constantly collec
 |**sys.query_store_runtime_stats_interval**|Query Store divides time into automatically generated time windows (intervals) and stores aggregated statistics on that interval for every executed plan. The size of the interval is controlled by the configuration option **Statistics Collection Interval** (in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) or `INTERVAL_LENGTH_MINUTES` using [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Aggregated runtime statistics for executed plans. All captured metrics are expressed in the form of four statistic functions: Average, Minimum, Maximum, and Standard Deviation.|  
   
- For more information on Query Store views, see the "Related views, functions, and procedures" section of [Monitor performance by using Query Store](monitoring-performance-by-using-the-query-store.md). 
+ For more information on Query Store views, see the "Related Views, Functions, and Procedures" section of [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md). 
   
 ## Query processing
  Query Store interacts with the query processing pipeline at the following key points:
@@ -64,13 +64,15 @@ SQL Server Query Store works much like a flight data recorder, constantly collec
  > [!NOTE]
  > If the system is under memory pressure, runtime statistics can be flushed to disk earlier than defined with `DATA_FLUSH_INTERVAL_SECONDS`.
  
- During the read of the Query Store data, in-memory and on-disk data are unified transparently. If a session is terminated or the client application restarts or crashes, query statistics won't be recorded. 
+ During the read of the Query Store data, in-memory and on-disk data are unified transparently. 
+ 
+ If a session is terminated or the client application restarts or crashes, query statistics won't be recorded. 
   
  ![Query Store process plan information](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
 ## See also
- [Monitor performance by using Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Monitoring performance by using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [Best practice with Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)  
- [Query Store catalog views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md) 
+ [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md) 
   
   

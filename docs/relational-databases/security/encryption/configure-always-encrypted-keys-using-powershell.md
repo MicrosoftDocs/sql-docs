@@ -273,7 +273,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 - [Rotate Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 - [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
 
-## Additional Resources    
+## Seel Also    
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)    
 - [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Create and Store Column Master Keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)

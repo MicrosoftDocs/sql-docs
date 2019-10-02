@@ -428,8 +428,8 @@ You can encrypt an existing plaintext column in-place using the [ALTER TABLE (Tr
 
 To encrypt a column using a key that isn't enclave-enabled, you need to use client-side tools, such as the Always Encrypted wizard in SSMS, or the Set-SqlColumnEncryption cmdlet in the SqlServer PowerShell module. For details, see:
 
-- [Always Encrypted Wizard](always-encrypted-wizard.md)
-- [Configure Column Encryption using PowerShell](configure-column-encryption-using-powershell.md)
+- [Encrypt, Re-Encrypt or Decrypt Columns using Always Encrypted Wizard](always-encrypted-wizard.md)
+- [Encrypt, Re-Encrypt or Decrypt Columns with Always Encrypted using PowerShell](configure-column-encryption-using-powershell.md)
 
 
 #### Prerequisites for encrypting an existing plaintext column in-place
@@ -540,8 +540,8 @@ You may also need to change the collation for string columns, using randomized e
 
 The process a column master key rotation is the same, regardless if either involved key is enclave-enabled. The details on how rotate the column master key is in the following articles:
 
-- [Rotate a column master key with SSMS](configure-always-encrypted-using-sql-server-management-studio.md)
-- [Rotating a column master key with PowerShell](rotate-always-encrypted-keys-using-powershell.md)
+- [Rotate Always Encrypted Keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
+- [Rotate Always Encrypted Keys using PowerShell](rotate-always-encrypted-keys-using-powershell.md)
 
 For your convenience, a sample PowerShell script for rotating a column master key is provided below.
 
@@ -738,7 +738,7 @@ GO
 The quickest way to try rich queries against your enclave-enabled columns is from an SSMS query window with Parameterization for Always Encrypted enabled. For details on this useful capability in SSMS, see:
 
 - [Parameterization for Always Encrypted - Using SSMS to Insert into, Update and Filter by Encrypted Columns](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
-- [Querying Encrypted Columns](configure-always-encrypted-using-sql-server-management-studio.md#querying-encrypted-columns)
+- [Query Columns Protected with Always Encrypted using SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 
 ### Prerequisites for issuing Rich Queries against encrypted columns using SSMS
 

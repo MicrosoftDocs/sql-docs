@@ -35,7 +35,7 @@ There are two high-level categories of key stores to consider - *Local Key Store
 
 Always Encrypted enabled client drivers are SQL Server client drivers that have built-in support for incorporating Always Encrypted into your client applications. Always Encrypted enabled drivers include a few built-in providers for popular key stores. Note that some drivers also let you implement and register a custom column master key store provider, so that you can use any key store, even if there is no built-in provider for it. When deciding between a built-in provider and a custom provider consider that using a built-in provider typically means fewer changes to your applications (in some cases, only changing a database connection string is required).
 
-The available built-in providers depend on which driver, driver version, and operating system is selected.  Please consult Always Encrypted documentation for your specific driver to determine which key stores are supported out-of-the-box and if your driver supports custom key store providers - [Develop Applications using Always Encrypted](../../../relational-databases/security/always-encrypted-client-development.md).
+The available built-in providers depend on which driver, driver version, and operating system is selected.  Please consult Always Encrypted documentation for your specific driver to determine which key stores are supported out-of-the-box and if your driver supports custom key store providers - [Develop Applications using Always Encrypted](always-encrypted-client-development.md).
 
 ## Creating Column Master Keys in Windows Certificate Store    
 
@@ -217,7 +217,7 @@ Consult the documentation for your HSM and CSP, for how to configure the CSP on 
 - [Configure Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 - [Configure Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
   
-## Additional Resources  
+## See Also 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
 

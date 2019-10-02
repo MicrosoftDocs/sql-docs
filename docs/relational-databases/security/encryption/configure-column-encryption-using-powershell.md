@@ -144,16 +144,8 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
  
 ## Next Steps
 - [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
-- [Query Columns Protected with Always Encrypted using SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
-- 
-## Additional Resources
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 
-
-## Next Steps
-- [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
-
-  ## See Also  
+## See Also  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
  - [Overview of Key Management for Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
  - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)

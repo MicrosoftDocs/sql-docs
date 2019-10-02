@@ -134,7 +134,7 @@ The following PowerShell cmdlets are available for Always Encrypted:
 
 
 
-## Additional Resources
+## See Also
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

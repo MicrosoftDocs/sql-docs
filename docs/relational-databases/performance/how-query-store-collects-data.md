@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # How Query Store collects data
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-Query Store works as a flight data recorder, constantly collecting compile and runtime information related to the queries and plans. Query-related data is persisted in the internal tables and presented to users through a set of views.
+Query Store works much like a flight data recorder, constantly collecting compile and runtime information related to queries and plans. Query-related data is persisted in the internal tables and presented to users through a set of views.
   
 ## Views 
  The following diagram shows Query Store views and their logical relationships, with compile time information presented as blue entities:
@@ -56,7 +56,7 @@ Query Store works as a flight data recorder, constantly collecting compile and r
   
  ![Query Store process plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan") 
   
- If the system crashes or a shutdown occurs while using [trace flag 7745](../../relational-databases/performance/best-practice-with-the-query-store.md#Recovery), Query Store can lose runtime data that has been collected but not yet persisted, up to a time window defined with `DATA_FLUSH_INTERVAL_SECONDS`. The default value of 900 seconds (15 minutes) is a recommended balance between query capture performance and data availability. 
+ If the system crashes or a shutdown occurs while using [trace flag 7745](../../relational-databases/performance/best-practice-with-the-query-store.md#Recovery), Query Store can lose runtime data that has been collected but not yet persisted, up to a time window defined with `DATA_FLUSH_INTERVAL_SECONDS`. We recommend the default value of 900 seconds (15 minutes) as a balance between query capture performance and data availability.
  
  > [!IMPORTANT] 
  > The **Max Size (MB)** limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the **Data Flush Interval** value. If Query Store has breached the maximum size limit between storage size checks, it transitions to read-only mode. If **Size Based Cleanup Mode** is enabled, the cleanup mechanism to enforce the maximum size limit is also triggered.

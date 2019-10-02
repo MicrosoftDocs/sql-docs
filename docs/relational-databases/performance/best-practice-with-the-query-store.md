@@ -217,22 +217,22 @@ It takes some time until Query Store collects the data set that accurately repre
   
 -   If the query was executed with multiple plans and the last plan is significantly worse than the previous plan, you can use the plan forcing mechanism to force it. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tries to force the plan in the optimizer. If plan forcing fails, an XEvent is fired and the optimizer is instructed to optimize in the normal way.
   
-         ![Query Store force plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
+       ![Query Store force plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
-    > [!NOTE]
-    > The previous graphic might feature different shapes for specific query plans, with the following meanings for each possible status:<br />  
-    > 
-    > |Shape|Meaning|  
-    > |-------------------|-------------|
-    > |Circle|Query completed, which means that a regular execution successfully finished.|
-    > |Square|Cancelled, which means that a client-initiated aborted execution.|
-    > |Triangle|Failed, which means that an exception aborted execution.|
-    > 
-    > Also, the size of the shape reflects the query execution count within the specified time interval. The size increases with a higher number of executions.  
+       > [!NOTE]
+       > The previous graphic might feature different shapes for specific query plans, with the following meanings for each possible status:<br />  
+       > 
+       > |Shape|Meaning|  
+       > |-------------------|-------------|
+       > |Circle|Query completed, which means that a regular execution successfully finished.|
+       > |Square|Cancelled, which means that a client-initiated aborted execution.|
+       > |Triangle|Failed, which means that an exception aborted execution.|
+       > 
+       > Also, the size of the shape reflects the query execution count within the specified time interval. The size increases with a higher number of executions.  
 
 -   You might conclude that your query is missing an index for optimal execution. This information is surfaced within the query execution plan. Create the missing index, and check the query performance by using  Query Store.  
   
-         ![Query Store show plan](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
+       ![Query Store show plan](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
   
      If you run your workload on [!INCLUDE[ssSDS](../../includes/sssds-md.md)], sign up for [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Index Advisor to automatically receive index recommendations.
   
@@ -321,7 +321,7 @@ FROM sys.database_query_store_options;
   
 |Query Store Capture Mode|Scenario|  
 |------------------------|--------------|  
-|**All**|Analyze your workload thoroughly in terms of all queries' shapes and their execution frequencies and other statistics.<br /><br /> Identify new queries in your workload.<br /><br /> Detect if ad-hoc queries are used to identify opportunities for user or auto parameterization.<br /><br />Note: This is the default capture mode in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|
+|**All**|Analyze your workload thoroughly in terms of all queries' shapes and their execution frequencies and other statistics.<br /><br /> Identify new queries in your workload.<br /><br /> Detect if ad-hoc queries are used to identify opportunities for user or auto parameterization.<br /><br />Note: This is the default capture mode in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
 |**Auto**|Focus your attention on relevant and actionable queries. An example is those queries that execute regularly or that have significant resource consumption.<br /><br />Note: Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], this is the default capture mode.|  
 |**None**|You've already captured the query set that you want to monitor in runtime and you want to eliminate the distractions that other queries might introduce.<br /><br /> None is suitable for testing and benchmarking environments.<br /><br /> None is also appropriate for software vendors who ship Query Store configuration configured to monitor their application workload.<br /><br /> None should be used with caution because you might miss the opportunity to track and optimize important new queries. Avoid using None unless you have a specific scenario that requires it.|  
 |**Custom**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a Custom capture mode under the `ALTER DATABASE SET QUERY_STORE` command. When enabled, additional Query Store configurations are available under a new Query Store capture policy setting to fine-tune data collection in a specific server.<br /><br />The new custom settings define what happens during the internal capture policy time threshold. This is a time boundary during which the configurable conditions are evaluated and, if any are true, the query is eligible to be captured by Query Store. For more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
@@ -354,7 +354,7 @@ Consider the following options:
     -   Configure forced parameterization by using the [parameterization database option](../../relational-databases/databases/database-properties-options-page.md#miscellaneous) command, if there are a small number of different query plans in your workload. An example is when the ratio between the count of distinct query_hash and the total number of entries in sys.query_store_query is much less than 1.  
 -   Set QUERY_CAPTURE_MODE to AUTO to automatically filter out ad-hoc queries with small resource consumption.  
   
-##  <a name="Drop"></a> Avoid a DROP and CREATE pattern when you maintain containing objects
+##  <a name="Drop"></a> Avoid a DROP and CREATE pattern for containing objects
 Query Store associates query entry with a containing object, such as stored procedure, function, and trigger. When you re-create a containing object, a new query entry is generated for the same query text. This prevents you from tracking performance statistics for that query over time and using a plan forcing mechanism. To avoid this situation, use the `ALTER <object>` process to change a containing object definition whenever it's possible.  
   
 ##  <a name="CheckForced"></a> Check the status of forced plans regularly
@@ -373,7 +373,7 @@ WHERE is_forced_plan = 1;
   
  For a full list of reasons, see [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). You can also use the **query_store_plan_forcing_failed** XEvent to track and troubleshoot plan forcing failures.  
   
-##  <a name="Renaming"></a> Avoid renaming databases if you have queries with forced plans  
+##  <a name="Renaming"></a> Avoid renaming databases for queries with forced plans  
 
 Execution plans reference objects by using three-part names like `database.schema.object`.
 
@@ -389,8 +389,8 @@ The global trace flags 7745 and 7752 can be used to improve availability of data
    > [!NOTE]
    > Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], this behavior is controlled by the engine, and trace flag 7752 has no effect.
 
-> [!IMPORTANT]
-> If you're using Query Store for just-in-time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible.
+   > [!IMPORTANT]
+   > If you're using Query Store for just-in-time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible.
 
 ## See also  
 - [ALTER DATABASE SET options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)     

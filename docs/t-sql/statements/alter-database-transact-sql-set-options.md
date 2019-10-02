@@ -1,6 +1,6 @@
 ---
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
-description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in a SQL Server, and Azure SQL Database.
+description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
 ms.custom: ""
 ms.date: 09/19/2019
 ms.prod: sql
@@ -409,7 +409,7 @@ FORCE_LAST_GOOD_PLAN = { ON | **OFF** }
 ON        
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new query plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan.
 
-If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new query plan. The statement will fail if Query Store isn't enabled or if Query Store isn't in *Read-Write* mode.
+If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new query plan. The statement will fail if the Query Store isn't enabled or if the Query Store isn't in *Read-Write* mode.
 
 OFF        
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view. The default value is OFF.
@@ -726,7 +726,7 @@ The current setting of this option can be determined by examining the `is_parame
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 ON | **OFF** | CLEAR [ ALL ]        
-Controls if the Query Store is enabled in this database, and also controls removing the contents of the Query Store. For more information, see [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md).
+Controls whether the Query Store is enabled in this database, and also controls removing the contents of the Query Store. For more information, see [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ON        
 Enables the Query Store.
@@ -757,7 +757,7 @@ Determines the space issued to the Query Store. MAX_STORAGE_SIZE_MB is type **bi
 
 > [!NOTE]
 > MAX_STORAGE_SIZE_MB limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the DATA_FLUSH_INTERVAL_SECONDS option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).       
-> If Query Store has breached the MAX_STORAGE_SIZE_MB limit between storage size checks, it will transition to read-only mode. If SIZE_BASED_CLEANUP_MODE is enabled, the cleanup mechanism to enforce the MAX_STORAGE_SIZE_MB limit is also triggered. 
+> If the Query Store has breached the MAX_STORAGE_SIZE_MB limit between storage size checks, it will transition to read-only mode. If SIZE_BASED_CLEANUP_MODE is enabled, the cleanup mechanism to enforce the MAX_STORAGE_SIZE_MB limit is also triggered. 
 
 INTERVAL_LENGTH_MINUTES        
 Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.
@@ -786,7 +786,7 @@ AUTO
 Capture relevant queries based on execution count and resource consumption. This is the default configuration value for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 NONE        
-Stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.
+Stop capturing new queries. The Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.
 
 CUSTOM        
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
@@ -807,13 +807,13 @@ STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }
 Defines the evaluation interval period to determine if a query should be captured. The default is 1 day, and it can be set from 1 hour to seven days. *number* is type **int**.
 
 EXECUTION_COUNT        
-Defines the number of times a query is executed over the evaluation period. The default is 30, which means that for the default Stale Capture Policy Threshold, a query must execute at least 30 times in one day to be persisted in Query Store. EXECUTION_COUNT is type **int**.
+Defines the number of times a query is executed over the evaluation period. The default is 30, which means that for the default Stale Capture Policy Threshold, a query must execute at least 30 times in one day to be persisted in the Query Store. EXECUTION_COUNT is type **int**.
 
 TOTAL_COMPILE_CPU_TIME_MS        
-Defines total elapsed compile CPU time used by a query over the evaluation period. The default is 1000 which means that for the default Stale Capture Policy Threshold, a query must have a total of at least one second of CPU time spent during query compilation in one day to be persisted in Query Store. TOTAL_COMPILE_CPU_TIME_MS is type **int**.
+Defines total elapsed compile CPU time used by a query over the evaluation period. The default is 1000 which means that for the default Stale Capture Policy Threshold, a query must have a total of at least one second of CPU time spent during query compilation in one day to be persisted in the Query Store. TOTAL_COMPILE_CPU_TIME_MS is type **int**.
 
 TOTAL_EXECUTION_CPU_TIME_MS        
-Defines total elapsed execution CPU time used by a query over the evaluation period. The default is 100 which means that for the default Stale Capture Policy Threshold, a query must have a total of at least 100 ms of CPU time spent during execution in one day to be persisted in Query Store. TOTAL_EXECUTION_CPU_TIME_MS is type **int**.
+Defines total elapsed execution CPU time used by a query over the evaluation period. The default is 100 which means that for the default Stale Capture Policy Threshold, a query must have a total of at least 100 ms of CPU time spent during execution in one day to be persisted in the Query Store. TOTAL_EXECUTION_CPU_TIME_MS is type **int**.
 
 **\<recovery_option> ::=**        
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -1169,7 +1169,7 @@ For more information about indirect checkpoints, see [Database Checkpoints](../.
 Specifies when to roll back incomplete transactions when the database is transitioned from one state to another. If the termination clause is omitted, the ALTER DATABASE statement waits indefinitely if there's any lock on the database. Only one termination clause can be specified, and it follows the SET clauses.
 
 > [!NOTE]
-> Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting Options](#SettingOptions) of the "Remarks" section of this article.
+> Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting options](#SettingOptions) of the "Remarks" section of this article.
 
 ROLLBACK AFTER *number* [SECONDS] | ROLLBACK IMMEDIATE        
 
@@ -1178,7 +1178,7 @@ Specifies whether to roll back after the specified number of seconds or immediat
 NO_WAIT        
 Specifies that the request will fail if the requested database state or option change can't complete immediately. Completing immediately means not waiting for transactions to commit or roll back on their own.
 
-## <a name="SettingOptions"></a> Setting Options
+## <a name="SettingOptions"></a> Setting options
 To retrieve current settings for database options, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 
 After you set a database option, the new setting takes effect immediately.
@@ -1676,7 +1676,7 @@ DEFAULT
 Inherits default settings from the server. In this case, options of enabling or disabling individual Automatic tuning features are defined at the server level.
 
 ON        
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new query plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new query plan. The statement will fail if Query Store isn't enabled or if it's not in *Read-Write* mode.
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new query plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new query plan. The statement will fail if the Query Store isn't enabled or if it's not in *Read-Write* mode.
 
 OFF        
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view. This is the default value.
@@ -1790,7 +1790,7 @@ The current setting of this option can be determined by examining the `is_parame
 **\<query_store_options> ::=**        
 
 ON | OFF | CLEAR [ ALL ]        
-Controls if the Query Store is enabled in this database, and also controls removing the contents of the Query Store.
+Controls whether the Query Store is enabled in this database, and also controls removing the contents of the Query Store.
 
 ON        
 Enables the Query Store.
@@ -1837,7 +1837,7 @@ AUTO
 Capture relevant queries based on execution count and resource consumption. This is the default configuration value for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 NONE        
-Stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.
+Stop capturing new queries. The Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.
 
 QUERY_CAPTURE_MODE is type **nvarchar**.
 
@@ -2060,7 +2060,7 @@ For more information about indirect checkpoints, see [Database Checkpoints](../.
 Specifies when to roll back incomplete transactions when the database is transitioned from one state to another. If the termination clause is omitted, the ALTER DATABASE statement waits indefinitely if there's any lock on the database. Only one termination clause can be specified, and it follows the SET clauses.
 
 > [!NOTE]
-> Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting Options](#SettingOptions) of the "Remarks" section of this article.
+> Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting options](#SettingOptions) of the "Remarks" section of this article.
 
 ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE        
 Specifies whether to roll back after the specified number of seconds or immediately.
@@ -2068,7 +2068,7 @@ Specifies whether to roll back after the specified number of seconds or immediat
 NO_WAIT        
 Specifies that the request will fail if the requested database state or option change can't complete immediately. Completing immediately means not waiting for transactions to commit or roll back on their own.
 
-## <a name="SettingOptions"></a> Setting Options
+## <a name="SettingOptions"></a> Setting options
 
 To retrieve current settings for database options, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 
@@ -2415,7 +2415,7 @@ Enables or disables `FORCE_LAST_GOOD_PLAN` [Automatic tuning](../../relational-d
 
 FORCE_LAST_GOOD_PLAN = { ON | **OFF** }        
 ON        
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new query plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new query plan. The statement will fail if Query Store isn't enabled or if it's not in *Read-Write* mode.
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new query plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new query plan. The statement will fail if the Query Store isn't enabled or if it's not in *Read-Write* mode.
 
 OFF        
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by query plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. Users can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view. This is the default value.
@@ -2526,7 +2526,7 @@ The current setting of this option can be determined by examining the `is_parame
 **\<query_store_options> ::=**        
 
 ON | OFF | CLEAR [ ALL ]        
-Controls if the Query Store is enabled in this database, and also controls removing the contents of the Query Store.
+Controls whether the Query Store is enabled in this database, and also controls removing the contents of the Query Store.
 
 ON        
 Enables the Query Store.
@@ -2573,7 +2573,7 @@ AUTO
 Capture relevant queries based on execution count and resource consumption. This is the default configuration value for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 NONE        
-Stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.
+Stop capturing new queries. The Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.
 
 QUERY_CAPTURE_MODE is type **nvarchar**.
 
@@ -2797,7 +2797,7 @@ Specifies whether to roll back after the specified number of seconds or immediat
 NO_WAIT        
 Specifies that the request will fail if the requested database state or option change can't complete immediately. Completing immediately means not waiting for transactions to commit or roll back on their own.
 
-## <a name="SettingOptions"></a> Setting Options
+## <a name="SettingOptions"></a> Setting options
 
 To retrieve current settings for database options, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 
@@ -3080,7 +3080,7 @@ You can see the encryption state of the database as well as the state of the enc
 **\<query_store_option> ::=**        
 
 ON | **OFF**        
-Controls if the Query Store is enabled in this data warehouse.
+Controls whether the Query Store is enabled in this data warehouse.
 
 ON        
 Enables the Query Store.

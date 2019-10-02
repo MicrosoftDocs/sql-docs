@@ -17,12 +17,12 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Best practice with Query Store
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  This article outlines the best practices for using Query Store with your workload.
+  This article outlines the best practices for using SQL Server Query Store with your workload.
   
 ##  <a name="SSMS"></a> Use the latest [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has a set of user interfaces designed for configuring Query Store and for consuming collected data about your workload. Download the latest version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [here](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).  
   
- For a quick description on how to use Query Store in troubleshooting scenarios, see [Query Store @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
+ For a quick description on how to use Query Store in troubleshooting scenarios, see [Query Store @Azure blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
 ##  <a name="Insight"></a> Use Query Performance Insight in Azure SQL Database  
  If you run Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], you can use **Query Performance Insight** to analyze DTU consumption over time. While you can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to get detailed resource consumption for all your queries, such as CPU, memory, and I/O, Query Performance Insight gives you a quick and efficient way to determine their impact on overall DTU consumption for your database. For more information, see [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
@@ -196,7 +196,7 @@ It takes some time until Query Store collects the data set that accurately repre
   
  The following graphic shows how to locate Query Store views:  
   
-     ![Query Store views](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Query Store views")  
+   ![Query Store views](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Query Store views")  
   
  The following table explains when to use each of the Query Store views:  
   
@@ -234,7 +234,7 @@ It takes some time until Query Store collects the data set that accurately repre
   
        ![Query Store show plan](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
   
-     If you run your workload on [!INCLUDE[ssSDS](../../includes/sssds-md.md)], sign up for [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Index Advisor to automatically receive index recommendations.
+ If you run your workload on [!INCLUDE[ssSDS](../../includes/sssds-md.md)], sign up for [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Index Advisor to automatically receive index recommendations.
   
 -   In some cases, you might enforce statistic recompilation if you see that the difference between the estimated and the actual number of rows in the execution plan is significant.
 -   Rewrite problematic queries, for example, to take advantage of query parameterization or to implement more optimal logic.

@@ -43,10 +43,11 @@ CHAR ( integer_expression )
   
 ## Arguments  
 *integer_expression*  
-An integer from 0 through 255. `CHAR` returns a `NULL` value for integer expressions outside this range, or when no one character matches exactly the integer by both codepoint value and encoded value. Many common character sets share ASCII as a sub-set and will return the same character for integer values in the range 0 through 127.
+An integer from 0 through 255. `CHAR` returns a `NULL` value for integer expressions outside this input range or not associated with a complete character compatible with the return type.
+Many common character sets share ASCII as a sub-set and will return the same character for integer values in the range 0 through 127.
 
 > [!NOTE]
-> Some character sets, such as [Unicode](https://en.wikipedia.org/wiki/Unicode#Mapping_and_encodings) and [Shift Japanese Industrial Standards](https://www.wikipedia.org/wiki/Shift_JIS), have multibyte encodings than can represent some characters in a single-byte, but require as many as four for others. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
+> Some character sets, such as [Unicode](https://en.wikipedia.org/wiki/Unicode#Mapping_and_encodings) and [Shift Japanese Industrial Standards](https://www.wikipedia.org/wiki/Shift_JIS), include characters that can be represented in a single-byte coding scheme, but require multibyte encoding. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
   
 ## Return types
 **char(1)**
@@ -176,8 +177,9 @@ single_byte_representing_complete_character single_byte_representing_complete_ch
 ｼ                                           ｼ                                         
 ```
 
-### F. CHAR inability to return multibyte characters
-This example uses integer and hex values in the valid range for ASCII. However, the CHAR function returns NULL because the parameter matches the first byte of a number of multibyte characters in the collation, but no single complete character.
+### F. Using CHAR to return multibyte characters
+This example uses integer and hex values in the valid range for Extended ASCII. However, the CHAR function returns NULL because the parameter represents only the first byte of a multibyte character.
+Although `NCHAR(2)` supplementary characters can be composed this way, `CHAR(2)` double-byte characters cannot.
   
 ```sql
 SELECT CHAR(129) AS first_byte_of_double_byte_character, 

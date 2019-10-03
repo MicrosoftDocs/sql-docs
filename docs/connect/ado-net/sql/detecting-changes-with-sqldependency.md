@@ -10,6 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 
 # Detecting Changes with SqlDependency

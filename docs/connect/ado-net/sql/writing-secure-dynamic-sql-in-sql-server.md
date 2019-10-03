@@ -8,19 +8,21 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 # Writing Secure Dynamic SQL in SQL Server
+
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 SQL Injection is the process by which a malicious user enters Transact-SQL statements instead of valid input. If the input is passed directly to the server without being validated and if the application inadvertently executes the injected code, the attack has the potential to damage or destroy data.  
   
- Any procedure that constructs SQL statements should be reviewed for injection vulnerabilities because SQL Server will execute all syntactically valid queries that it receives. Even parameterized data can be manipulated by a skilled and determined attacker. If you use dynamic SQL, be sure to parameterize your commands, and never include parameter values directly into the query string.  
+Any procedure that constructs SQL statements should be reviewed for injection vulnerabilities because SQL Server will execute all syntactically valid queries that it receives. Even parameterized data can be manipulated by a skilled and determined attacker. If you use dynamic SQL, be sure to parameterize your commands, and never include parameter values directly into the query string.  
   
 ## Anatomy of a SQL Injection Attack  
- The injection process works by prematurely terminating a text string and appending a new command. Because the inserted command may have additional strings appended to it before it is executed, the malefactor terminates the injected string with a comment mark "--". Subsequent text is ignored at execution time. Multiple commands can be inserted using a semicolon (;) delimiter.  
+The injection process works by prematurely terminating a text string and appending a new command. Because the inserted command may have additional strings appended to it before it is executed, the malefactor terminates the injected string with a comment mark "--". Subsequent text is ignored at execution time. Multiple commands can be inserted using a semicolon (;) delimiter.  
   
- As long as injected SQL code is syntactically correct, tampering cannot be detected programmatically. Therefore, you must validate all user input and carefully review code that executes constructed SQL commands in the server that you are using. Never concatenate user input that is not validated. String concatenation is the primary point of entry for script injection.  
+As long as injected SQL code is syntactically correct, tampering cannot be detected programmatically. Therefore, you must validate all user input and carefully review code that executes constructed SQL commands in the server that you are using. Never concatenate user input that is not validated. String concatenation is the primary point of entry for script injection.  
   
- Here are some helpful guidelines:  
+Here are some helpful guidelines:  
   
 - Never build Transact-SQL statements directly from user input; use stored procedures to validate user input.  
   
@@ -43,25 +45,25 @@ SQL Injection is the process by which a malicious user enters Transact-SQL state
 - Use <xref:System.Text.RegularExpressions.Regex> expressions in client code to filter invalid characters.  
   
 ## Dynamic SQL Strategies  
- Executing dynamically created SQL statements in your procedural code breaks the ownership chain, causing SQL Server to check the permissions of the caller against the objects being accessed by the dynamic SQL.  
+Executing dynamically created SQL statements in your procedural code breaks the ownership chain, causing SQL Server to check the permissions of the caller against the objects being accessed by the dynamic SQL.  
   
- SQL Server has methods for granting users access to data using stored procedures and user-defined functions that execute dynamic SQL.  
+SQL Server has methods for granting users access to data using stored procedures and user-defined functions that execute dynamic SQL.  
   
 - Using impersonation with the Transact-SQL EXECUTE AS clause.  
   
 - Signing stored procedures with certificates.  
   
 ### EXECUTE AS  
- The EXECUTE AS clause replaces the permissions of the caller with that of the user specified in the EXECUTE AS clause. Nested stored procedures or triggers execute under the security context of the proxy user. This can break applications that rely on row-level security or require auditing. Some functions that return the identity of the user return the user specified in the EXECUTE AS clause, not the original caller. Execution context is reverted to the original caller only after execution of the procedure or when a REVERT statement is issued.  
+The EXECUTE AS clause replaces the permissions of the caller with that of the user specified in the EXECUTE AS clause. Nested stored procedures or triggers execute under the security context of the proxy user. This can break applications that rely on row-level security or require auditing. Some functions that return the identity of the user return the user specified in the EXECUTE AS clause, not the original caller. Execution context is reverted to the original caller only after execution of the procedure or when a REVERT statement is issued.  
   
 ### Certificate Signing  
- When a stored procedure that has been signed with a certificate executes, the permissions granted to the certificate user are merged with those of the caller. The execution context remains the same; the certificate user does not impersonate the caller. Signing stored procedures requires several steps to implement. Each time the procedure is modified, it must be re-signed.  
+When a stored procedure that has been signed with a certificate executes, the permissions granted to the certificate user are merged with those of the caller. The execution context remains the same; the certificate user does not impersonate the caller. Signing stored procedures requires several steps to implement. Each time the procedure is modified, it must be re-signed.  
   
 ### Cross Database Access  
- Cross-database ownership chaining does not work in cases where dynamically created SQL statements are executed. You can work around this in SQL Server by creating a stored procedure that accesses data in another database and signing the procedure with a certificate that exists in both databases. This gives users access to the database resources used by the procedure without granting them database access or permissions.  
+Cross-database ownership chaining does not work in cases where dynamically created SQL statements are executed. You can work around this in SQL Server by creating a stored procedure that accesses data in another database and signing the procedure with a certificate that exists in both databases. This gives users access to the database resources used by the procedure without granting them database access or permissions.  
   
 ## External Resources  
- For more information, see the following resources.  
+For more information, see the following resources.  
   
 |Resource|Description|  
 |--------------|-----------------|  

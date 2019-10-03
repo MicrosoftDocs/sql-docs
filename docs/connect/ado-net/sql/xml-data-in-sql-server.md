@@ -8,6 +8,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 # XML Data in SQL Server
 
@@ -16,11 +17,11 @@ ms.author: v-kaywon
 SQL Server exposes the functionality of SQLXML inside the .NET. Developers can write applications that access XML data from an instance of SQL Server, bring the data into the .NET environment, process the data, and send the updates back to SQL Server. XML data can be used in several ways in SQL Server, including data storage, and as parameter values for retrieving data. The **SqlXml** class in the .NET provides the client-side support for working with data stored in an XML column within SQL Server. For more information, see "SQLXML Managed Classes" in SQL Server Books Online.  
   
 ## In This Section  
- [SQL XML Column Values](sql-xml-column-values.md)  
- Demonstrates how to retrieve and work with XML data retrieved from SQL Server.  
+[SQL XML Column Values](sql-xml-column-values.md)  
+Demonstrates how to retrieve and work with XML data retrieved from SQL Server.  
   
- [Specifying XML Values as Parameters](specifying-xml-values-as-parameters.md)  
- Demonstrates how to pass XML data as a parameter to a command.  
+[Specifying XML Values as Parameters](specifying-xml-values-as-parameters.md)  
+Demonstrates how to pass XML data as a parameter to a command.  
   
 ## See also
 

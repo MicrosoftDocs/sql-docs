@@ -8,8 +8,9 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-author: MightyPen
-ms.author: genemi
+author: v-kaywon
+ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 # Overview of the SqlClient Driver
 

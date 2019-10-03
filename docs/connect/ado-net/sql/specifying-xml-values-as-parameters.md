@@ -10,6 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 # Specifying XML Values as Parameters
 
@@ -18,14 +19,14 @@ ms.author: v-kaywon
 If a query requires a parameter whose value is an XML string, developers can supply that value using an instance of the **SqlXml** data type. There really are no tricks; XML columns in SQL Server accept parameter values in exactly the same way as other data types.  
   
 ## Example  
- The following console application creates a new table in the **AdventureWorks** database. The new table includes a column named **SalesID** and an XML column named **SalesInfo**.  
+The following console application creates a new table in the **AdventureWorks** database. The new table includes a column named **SalesID** and an XML column named **SalesInfo**.  
   
 > [!NOTE]
 >  The **AdventureWorks** sample database is not installed by default when you install SQL Server. You can install it by running SQL Server Setup.  
   
- The example prepares a <xref:Microsoft.Data.SqlClient.SqlCommand> object to insert a row in the new table. A saved file provides the XML data needed for the **SalesInfo** column.  
+The example prepares a <xref:Microsoft.Data.SqlClient.SqlCommand> object to insert a row in the new table. A saved file provides the XML data needed for the **SalesInfo** column.  
   
- To create the file needed for the example to run, create a new text file in the same folder as your project. Name the file MyTestStoreData.xml. Open the file in Notepad and copy and paste the following text:  
+To create the file needed for the example to run, create a new text file in the same folder as your project. Name the file MyTestStoreData.xml. Open the file in Notepad and copy and paste the following text:  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  

@@ -10,6 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 # Windows Applications Using Callbacks
 
@@ -17,14 +18,14 @@ ms.author: v-kaywon
 
 In most asynchronous processing scenarios, you want to start a database operation and continue running other processes without waiting for the database operation to complete. However, many scenarios require doing something once the database operation has ended. In a Windows application, for example, you may want to delegate the long-running operation to a background thread while allowing the user interface thread to remain responsive. However, when the database operation is complete, you want to use the results to populate the form. This type of scenario is best implemented with a callback.  
   
- You define a callback by specifying an <xref:System.AsyncCallback> delegate in the <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, or <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> method. The delegate is called when the operation is complete. You can pass the delegate a reference to the <xref:Microsoft.Data.SqlClient.SqlCommand> itself, making it easy to access the <xref:Microsoft.Data.SqlClient.SqlCommand> object and call the appropriate `End` method without having to use a global variable.  
+You define a callback by specifying an <xref:System.AsyncCallback> delegate in the <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, or <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> method. The delegate is called when the operation is complete. You can pass the delegate a reference to the <xref:Microsoft.Data.SqlClient.SqlCommand> itself, making it easy to access the <xref:Microsoft.Data.SqlClient.SqlCommand> object and call the appropriate `End` method without having to use a global variable.  
   
 ## Example  
- The following Windows application demonstrates the use of the <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> method, executing a Transact-SQL statement that includes a delay of a few seconds (emulating a long-running command).  
+The following Windows application demonstrates the use of the <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> method, executing a Transact-SQL statement that includes a delay of a few seconds (emulating a long-running command).  
   
- This example demonstrates a number of important techniques, including calling a method that interacts with the form from a separate thread. In addition, this example demonstrates how you must block users from concurrently executing a command multiple times, and how you must ensure that the form does not close before the callback procedure is called.  
+This example demonstrates a number of important techniques, including calling a method that interacts with the form from a separate thread. In addition, this example demonstrates how you must block users from concurrently executing a command multiple times, and how you must ensure that the form does not close before the callback procedure is called.  
   
- To set up this example, create a new Windows application. Place a <xref:System.Windows.Forms.Button> control and two <xref:System.Windows.Forms.Label> controls on the form (accepting the default name for each control). Add the following code to the form's class, modifying the connection string as necessary for your environment.  
+To set up this example, create a new Windows application. Place a <xref:System.Windows.Forms.Button> control and two <xref:System.Windows.Forms.Label> controls on the form (accepting the default name for each control). Add the following code to the form's class, modifying the connection string as necessary for your environment.  
   
 ```csharp  
 // Add these to the top of the class, if they're not already there:  

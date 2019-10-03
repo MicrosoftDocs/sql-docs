@@ -6,8 +6,9 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
+author: v-kaywon
+ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 # Introduction to Microsoft.Data.SqlClient Namespace
 
@@ -40,7 +41,7 @@ Authentication - Active Directory Password authentication mode.
 
 Data Classification brings a new set of APIs exposing read-only Data Sensitivity and Classification information about objects retrieved via SqlDataReader when the underlying source supports the feature and contains metadata about [data sensitivity and classification](../../relational-databases/security/sql-data-discovery-and-classification.md).
 
-```C#
+```csharp
 public class SqlDataReader
 {
     public Microsoft.Data.SqlClient.DataClassification.SensitivityClassification SensitivityClassification

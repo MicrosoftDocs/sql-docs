@@ -10,6 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 # Provider Statistics for SQL Server
 
@@ -18,12 +19,12 @@ ms.author: v-kaywon
 Starting with the .NET Framework version 2.0 and .NET Core version 1.0, the Microsoft SqlClient Data Provider for SQL Server supports run-time statistics. You must enable statistics by setting the <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> property of the <xref:Microsoft.Data.SqlClient.SqlConnection> object to `True` after you have a valid connection object created. After statistics are enabled, you can review them as a "snapshot in time" by retrieving an <xref:System.Collections.IDictionary> reference via the <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> method of the <xref:Microsoft.Data.SqlClient.SqlConnection> object. You enumerate through the list as a set of name/value pair dictionary entries. These name/value pairs are unordered. At any time, you can call the <xref:Microsoft.Data.SqlClient.SqlConnection.ResetStatistics%2A> method of the <xref:Microsoft.Data.SqlClient.SqlConnection> object to reset the counters. If statistic gathering has not been enabled, an exception is not generated. In addition, if <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> is called without <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> having been called first, the values retrieved are the initial values for each entry. If you enable statistics, run your application for a while, and then disable statistics, the values retrieved will reflect the values collected up to the point where statistics were disabled. All statistical values gathered are on a per-connection basis.  
   
 ## Statistical Values Available  
- Currently there are 18 different items available from the Microsoft SQL Server provider. The number of items available can be accessed via the **Count** property of the <xref:System.Collections.IDictionary> interface reference returned by <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. All of the counters for provider statistics use the common language runtime <xref:System.Int64> type (**long** in C# and Visual Basic), which is 64 bits wide. The maximum value of the **int64** data type, as defined by the **int64.MaxValue** field, is ((2^63)-1)). When the values for the counters reach this maximum value, they should no longer be considered accurate. This means that **int64.MaxValue**-1((2^63)-2) is effectively the greatest valid value for any statistic.  
+Currently there are 18 different items available from the Microsoft SQL Server provider. The number of items available can be accessed via the **Count** property of the <xref:System.Collections.IDictionary> interface reference returned by <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. All of the counters for provider statistics use the common language runtime <xref:System.Int64> type (**long** in C# and Visual Basic), which is 64 bits wide. The maximum value of the **int64** data type, as defined by the **int64.MaxValue** field, is ((2^63)-1)). When the values for the counters reach this maximum value, they should no longer be considered accurate. This means that **int64.MaxValue**-1((2^63)-2) is effectively the greatest valid value for any statistic.  
   
 > [!NOTE]
 >  A dictionary is used for returning provider statistics because the number, names and order of the returned statistics may change in the future. Applications should not rely on a specific value being found in the dictionary, but should instead check whether the value is there and branch accordingly.  
   
- The following table describes the current statistical values available. Note that the key names for the individual values are not localized across regional versions of the Microsoft .NET Framework and .NET Core.  
+The following table describes the current statistical values available. Note that the key names for the individual values are not localized across regional versions of the Microsoft .NET Framework and .NET Core.  
   
 |Key Name|Description|  
 |--------------|-----------------|  
@@ -47,7 +48,7 @@ Starting with the .NET Framework version 2.0 and .NET Core version 1.0, the Micr
 |`UnpreparedExecs`|Returns the number of unprepared statements executed through the connection once the application has started using the provider and has enabled statistics.|  
   
 ### Retrieving a Value  
- The following console application shows how to enable statistics on a connection, retrieve four individual statistic values, and write them out to the console window.  
+The following console application shows how to enable statistics on a connection, retrieve four individual statistic values, and write them out to the console window.  
   
 > [!NOTE]
 >  The following example uses the sample **AdventureWorks** database included with SQL Server. The connection string provided in the sample code assumes the database is installed and available on the local computer. Modify the connection string as necessary for your environment.  
@@ -132,7 +133,7 @@ namespace CS_Stats_Console_GetValue
 ```  
   
 ### Retrieving All Values  
- The following console application shows how to enable statistics on a connection, retrieve all available statistic values using the enumerator, and write them to the console window.  
+The following console application shows how to enable statistics on a connection, retrieve all available statistic values using the enumerator, and write them to the console window.  
   
 > [!NOTE]
 >  The following example uses the sample **AdventureWorks** database included with SQL Server. The connection string provided in the sample code assumes the database is installed and available on the local computer. Modify the connection string as necessary for your environment.  

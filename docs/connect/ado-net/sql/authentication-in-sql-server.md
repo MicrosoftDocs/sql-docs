@@ -1,6 +1,8 @@
 ---
 title: "Authentication in SQL Server"
 ms.date: "09/26/2019"
+dev_langs: 
+  - "csharp"
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 ms.prod: sql
 ms.prod_service: connectivity
@@ -8,8 +10,10 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 # Authentication in SQL Server
+
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 SQL Server supports two authentication modes, Windows authentication mode and mixed mode.  
   
@@ -20,9 +24,9 @@ SQL Server supports two authentication modes, Windows authentication mode and mi
 > [!IMPORTANT]
 > We recommend using Windows authentication wherever possible. Windows authentication uses a series of encrypted messages to authenticate users in SQL Server. When SQL Server logins are used, SQL Server login names and encrypted passwords are passed across the network, which makes them less secure.  
   
- With Windows authentication, users are already logged onto Windows and do not have to log on separately to SQL Server. The following `SqlConnection.ConnectionString` specifies Windows authentication without requiring users to provide a user name or password.  
+With Windows authentication, users are already logged onto Windows and do not have to log on separately to SQL Server. The following `SqlConnection.ConnectionString` specifies Windows authentication without requiring users to provide a user name or password.  
   
-```  
+```csharp
 "Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  
 ```  
   
@@ -30,7 +34,7 @@ SQL Server supports two authentication modes, Windows authentication mode and mi
 > Logins are distinct from database users. You must map logins or Windows groups to database users or roles in a separate operation. You then grant permissions to users or roles to access database objects.  
   
 ## Authentication Scenarios  
- Windows authentication is usually the best choice in the following situations:  
+Windows authentication is usually the best choice in the following situations:  
   
 - There is a domain controller.  
   
@@ -38,7 +42,7 @@ SQL Server supports two authentication modes, Windows authentication mode and mi
   
 - You are using an instance of SQL Server Express or LocalDB.  
   
- SQL Server logins are often used in the following situations:  
+SQL Server logins are often used in the following situations:  
   
 - If you have a workgroup.  
   
@@ -50,7 +54,7 @@ SQL Server supports two authentication modes, Windows authentication mode and mi
 > Specifying Windows authentication does not disable SQL Server logins. Use the ALTER LOGIN DISABLE Transact-SQL statement to disable highly-privileged SQL Server logins.  
   
 ## Login Types  
- SQL Server supports three types of logins:  
+SQL Server supports three types of logins:  
   
 - A local Windows user account or trusted domain account. SQL Server relies on Windows to authenticate the Windows user accounts.  
   
@@ -62,7 +66,7 @@ SQL Server supports two authentication modes, Windows authentication mode and mi
 > SQL Server provides logins created from certificates or asymmetric keys that are used only for code signing. They cannot be used to connect to SQL Server.  
   
 ## Mixed Mode Authentication  
- If you must use mixed mode authentication, you must create SQL Server logins, which are stored in SQL Server. You then have to supply the SQL Server user name and password at run time.  
+If you must use mixed mode authentication, you must create SQL Server logins, which are stored in SQL Server. You then have to supply the SQL Server user name and password at run time.  
   
 > [!IMPORTANT]
 > SQL Server installs with a SQL Server login named `sa` (an abbreviation of "system administrator"). Assign a strong password to the `sa` login and do not use the `sa` login in your application. The `sa` login maps to the `sysadmin` fixed server role, which has irrevocable administrative credentials on the whole server. There are no limits to the potential damage if an attacker gains access as a system administrator. All members of the Windows `BUILTIN\Administrators` group (the local administrator's group) are members of the `sysadmin` role by default, but can be removed from that role.  
@@ -71,7 +75,7 @@ SQL Server supports two authentication modes, Windows authentication mode and mi
 > Concatenating connection strings from user input can leave you vulnerable to a connection string injection attack. Use the <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> to create syntactically valid connection strings at run time. 
   
 ## External Resources  
- For more information, see the following resources.  
+For more information, see the following resources.  
   
 |Resource|Description|  
 |--------------|-----------------|  

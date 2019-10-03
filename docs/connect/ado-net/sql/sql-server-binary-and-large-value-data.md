@@ -8,6 +8,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 # SQL Server Binary and Large-Value Data
 
@@ -15,14 +16,14 @@ ms.author: v-kaywon
 
 SQL Server provides the `max` specifier, which expands the storage capacity of the `varchar`, `nvarchar`, and `varbinary` data types. `varchar(max)`, `nvarchar(max)`, and `varbinary(max)` are collectively called *large-value data types*. You can use the large-value data types to store up to 2^31-1 bytes of data.  
   
- SQL Server 2008 introduces the FILESTREAM attribute, which is not a data type, but rather an attribute that can be defined on a column, allowing large-value data to be stored on the file system instead of in the database.  
+SQL Server 2008 introduces the FILESTREAM attribute, which is not a data type, but rather an attribute that can be defined on a column, allowing large-value data to be stored on the file system instead of in the database.  
   
 ## In This Section  
- [Modifying Large-Value (max) Data in ADO.NET](modifying-large-value-max-data.md)  
- Describes how to work with the large-value data types.  
+[Modifying Large-Value (max) Data in ADO.NET](modifying-large-value-max-data.md)  
+Describes how to work with the large-value data types.  
   
- [FILESTREAM Data](filestream-data.md)  
- Describes how to work with large-value data stored in SQL Server 2008 with the FILESTREAM attribute.  
+[FILESTREAM Data](filestream-data.md)  
+Describes how to work with large-value data stored in SQL Server 2008 with the FILESTREAM attribute.  
   
 ## See also
 

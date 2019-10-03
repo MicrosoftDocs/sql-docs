@@ -10,6 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 # Modifying Large-Value (max) Data in ADO.NET
 
@@ -17,16 +18,16 @@ ms.author: v-kaywon
 
 Large object (LOB) data types are those that exceed the maximum row size of 8 kilobytes (KB). SQL Server provides a `max` specifier for `varchar`, `nvarchar`, and `varbinary` data types to allow storage of values as large as 2^32 bytes. Table columns and Transact-SQL variables may specify `varchar(max)`, `nvarchar(max)`, or `varbinary(max)` data types. In .NET, the `max` data types can be fetched by a `DataReader`, and can also be specified as both input and output parameter values without any special handling. For large `varchar` data types, data can be retrieved and updated incrementally.  
   
- The `max` data types can be used for comparisons, as Transact-SQL variables, and for concatenation. They can also be used in the DISTINCT, ORDER BY, GROUP BY clauses of a SELECT statement as well as in aggregates, joins, and subqueries.  
+The `max` data types can be used for comparisons, as Transact-SQL variables, and for concatenation. They can also be used in the DISTINCT, ORDER BY, GROUP BY clauses of a SELECT statement as well as in aggregates, joins, and subqueries.  
   
- The following table provides links to the documentation in SQL Server Books Online.  
+The following table provides links to the documentation in SQL Server Books Online.  
   
- **SQL Server Books Online**  
+**SQL Server Books Online**  
   
 - [Using Large-Value Data Types](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## Large-Value Type Restrictions  
- The following restrictions apply to the `max` data types, which do not exist for smaller data types:  
+The following restrictions apply to the `max` data types, which do not exist for smaller data types:  
   
 - A `sql_variant` cannot contain a large `varchar` data type.  
   
@@ -35,15 +36,15 @@ Large object (LOB) data types are those that exceed the maximum row size of 8 ki
 - Large `varchar` columns cannot be used as partitioning key columns.  
   
 ## Working with Large-Value Types in Transact-SQL  
- The Transact-SQL `OPENROWSET` function is a one-time method of connecting and accessing remote data. `OPENROWSET` can be referenced in the FROM clause of a query as though it were a table name. It can also be referenced as the target table of an INSERT, UPDATE, or DELETE statement.  
+The Transact-SQL `OPENROWSET` function is a one-time method of connecting and accessing remote data. `OPENROWSET` can be referenced in the FROM clause of a query as though it were a table name. It can also be referenced as the target table of an INSERT, UPDATE, or DELETE statement.  
   
- The `OPENROWSET` function includes the `BULK` rowset provider, which allows you to read data directly from a file without loading the data into a target table. This enables you to use `OPENROWSET` in a simple INSERT SELECT statement.  
+The `OPENROWSET` function includes the `BULK` rowset provider, which allows you to read data directly from a file without loading the data into a target table. This enables you to use `OPENROWSET` in a simple INSERT SELECT statement.  
   
- The `OPENROWSET BULK` option arguments provide significant control over where to begin and end reading data, how to deal with errors, and how data is interpreted. For example, you can specify that the data file be read as a single-row, single-column rowset of type `varbinary`, `varchar`, or `nvarchar`. For the complete syntax and options, see SQL Server Books Online.  
+The `OPENROWSET BULK` option arguments provide significant control over where to begin and end reading data, how to deal with errors, and how data is interpreted. For example, you can specify that the data file be read as a single-row, single-column rowset of type `varbinary`, `varchar`, or `nvarchar`. For the complete syntax and options, see SQL Server Books Online.  
   
- The following example inserts a photo into the ProductPhoto table in the AdventureWorks sample database. When using the `BULK OPENROWSET` provider, you must supply the named list of columns even if you aren't inserting values into every column. The primary key in this case is defined as an identity column, and may be omitted from the column list. Note that you must also supply a correlation name at the end of the `OPENROWSET` statement, which in this case is ThumbnailPhoto. This correlates with the column in the `ProductPhoto` table into which the file is being loaded.  
+The following example inserts a photo into the ProductPhoto table in the AdventureWorks sample database. When using the `BULK OPENROWSET` provider, you must supply the named list of columns even if you aren't inserting values into every column. The primary key in this case is defined as an identity column, and may be omitted from the column list. Note that you must also supply a correlation name at the end of the `OPENROWSET` statement, which in this case is ThumbnailPhoto. This correlates with the column in the `ProductPhoto` table into which the file is being loaded.  
   
-```  
+```sql
 INSERT Production.ProductPhoto (  
     ThumbnailPhoto,   
     ThumbnailPhotoFilePath,   
@@ -55,17 +56,17 @@ FROM OPENROWSET
 ```  
   
 ## Updating Data Using UPDATE .WRITE  
- The Transact-SQL UPDATE statement has new WRITE syntax for modifying the contents of `varchar(max)`, `nvarchar(max)`, or `varbinary(max)` columns. This allows you to perform partial updates of the data. The UPDATE .WRITE syntax is shown here in abbreviated form:  
+The Transact-SQL UPDATE statement has new WRITE syntax for modifying the contents of `varchar(max)`, `nvarchar(max)`, or `varbinary(max)` columns. This allows you to perform partial updates of the data. The UPDATE .WRITE syntax is shown here in abbreviated form:  
   
- UPDATE  
+UPDATE  
   
- { *\<object>* }  
+{ *\<object>* }  
   
- SET  
+SET  
   
- { *column_name* = { .WRITE ( *expression* , @Offset , @Length ) }  
+{ *column_name* = { .WRITE ( *expression* , @Offset , @Length ) }  
   
- The WRITE method specifies that a section of the value of the *column_name* will be modified. The expression is the value that will be copied to the *column_name*, the `@Offset` is the beginning point at which the expression will be written, and the `@Length` argument is the length of the section in the column.  
+The WRITE method specifies that a section of the value of the *column_name* will be modified. The expression is the value that will be copied to the *column_name*, the `@Offset` is the beginning point at which the expression will be written, and the `@Length` argument is the length of the section in the column.  
   
 |If|Then|  
 |--------|----------|  
@@ -78,9 +79,9 @@ FROM OPENROWSET
 >  Neither `@Offset` nor `@Length` can be a negative number.  
   
 ## Example  
- This Transact-SQL example updates a partial value in DocumentSummary, an `nvarchar(max)` column in the Document table in the AdventureWorks database. The word 'components' is replaced by the word 'features' by specifying the replacement word, the beginning location (offset) of the word to be replaced in the existing data, and the number of characters to be replaced (length). The example includes SELECT statements before and after the UPDATE statement to compare results.  
+This Transact-SQL example updates a partial value in DocumentSummary, an `nvarchar(max)` column in the Document table in the AdventureWorks database. The word 'components' is replaced by the word 'features' by specifying the replacement word, the beginning location (offset) of the word to be replaced in the existing data, and the number of characters to be replaced (length). The example includes SELECT statements before and after the UPDATE statement to compare results.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
 --View the existing value.  
@@ -106,10 +107,10 @@ GO
 ```  
   
 ## Working with Large-Value Types in ADO.NET  
- You can work with large value types in ADO.NET by specifying large value types as <xref:Microsoft.Data.SqlClient.SqlParameter> objects in a <xref:Microsoft.Data.SqlClient.SqlDataReader> to return a result set, or by using a <xref:Microsoft.Data.SqlClient.SqlDataAdapter> to fill a `DataSet`/`DataTable`. There is no difference between the way you work with a large value type and its related, smaller value data type.  
+You can work with large value types in ADO.NET by specifying large value types as <xref:Microsoft.Data.SqlClient.SqlParameter> objects in a <xref:Microsoft.Data.SqlClient.SqlDataReader> to return a result set, or by using a <xref:Microsoft.Data.SqlClient.SqlDataAdapter> to fill a `DataSet`/`DataTable`. There is no difference between the way you work with a large value type and its related, smaller value data type.  
   
 ### Using GetSqlBytes to Retrieve Data  
- The `GetSqlBytes` method of the <xref:Microsoft.Data.SqlClient.SqlDataReader> can be used to retrieve the contents of a `varbinary(max)` column. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlCommand> object named `cmd` that selects `varbinary(max)` data from a table and a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data as <xref:System.Data.SqlTypes.SqlBytes>.  
+The `GetSqlBytes` method of the <xref:Microsoft.Data.SqlClient.SqlDataReader> can be used to retrieve the contents of a `varbinary(max)` column. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlCommand> object named `cmd` that selects `varbinary(max)` data from a table and a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data as <xref:System.Data.SqlTypes.SqlBytes>.  
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -120,7 +121,7 @@ while (reader.Read())
 ```  
   
 ### Using GetSqlChars to Retrieve Data  
- The `GetSqlChars` method of the <xref:Microsoft.Data.SqlClient.SqlDataReader> can be used to retrieve the contents of a `varchar(max)` or `nvarchar(max)` column. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlCommand> object named `cmd` that selects `nvarchar(max)` data from a table and a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data.   
+The `GetSqlChars` method of the <xref:Microsoft.Data.SqlClient.SqlDataReader> can be used to retrieve the contents of a `varchar(max)` or `nvarchar(max)` column. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlCommand> object named `cmd` that selects `nvarchar(max)` data from a table and a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data.   
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -131,7 +132,7 @@ while (reader.Read())
 ```  
   
 ### Using GetSqlBinary to Retrieve Data  
- The `GetSqlBinary` method of a <xref:Microsoft.Data.SqlClient.SqlDataReader> can be used to retrieve the contents of a `varbinary(max)` column. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlCommand> object named `cmd` that selects `varbinary(max)` data from a table and a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data as a <xref:System.Data.SqlTypes.SqlBinary> stream.  
+The `GetSqlBinary` method of a <xref:Microsoft.Data.SqlClient.SqlDataReader> can be used to retrieve the contents of a `varbinary(max)` column. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlCommand> object named `cmd` that selects `varbinary(max)` data from a table and a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data as a <xref:System.Data.SqlTypes.SqlBinary> stream.  
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -142,7 +143,7 @@ while (reader.Read())
 ```  
   
 ### Using GetBytes to Retrieve Data  
- The `GetBytes` method of a <xref:Microsoft.Data.SqlClient.SqlDataReader> reads a stream of bytes from the specified column offset into a byte array starting at the specified array offset. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves bytes into a byte array. Note that, unlike `GetSqlBytes`, `GetBytes` requires a size for the array buffer.  
+The `GetBytes` method of a <xref:Microsoft.Data.SqlClient.SqlDataReader> reads a stream of bytes from the specified column offset into a byte array starting at the specified array offset. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves bytes into a byte array. Note that, unlike `GetSqlBytes`, `GetBytes` requires a size for the array buffer.  
   
 ```csharp  
 while (reader.Read())  
@@ -153,7 +154,7 @@ while (reader.Read())
 ```  
   
 ### Using GetValue to Retrieve Data  
- The `GetValue` method of a <xref:Microsoft.Data.SqlClient.SqlDataReader> reads the value from the specified column offset into an array. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves binary data from the first column offset, and then string data from the second column offset.  
+The `GetValue` method of a <xref:Microsoft.Data.SqlClient.SqlDataReader> reads the value from the specified column offset into an array. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves binary data from the first column offset, and then string data from the second column offset.  
   
 ```csharp  
 while (reader.Read())  
@@ -167,7 +168,7 @@ while (reader.Read())
 ```  
   
 ## Converting from Large Value Types to CLR Types  
- You can convert the contents of a `varchar(max)` or `nvarchar(max)` column using any of the string conversion methods, such as `ToString`. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data.  
+You can convert the contents of a `varchar(max)` or `nvarchar(max)` column using any of the string conversion methods, such as `ToString`. The following code fragment assumes a <xref:Microsoft.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data.  
   
 ```csharp  
 while (reader.Read())  
@@ -178,14 +179,14 @@ while (reader.Read())
 ```  
   
 ### Example  
- The following code retrieves the name and the `LargePhoto` object from the `ProductPhoto` table in the `AdventureWorks` database and saves it to a file. The assembly needs to be compiled with a reference to the <xref:System.Drawing> namespace.  The <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> method of the <xref:Microsoft.Data.SqlClient.SqlDataReader> returns a <xref:System.Data.SqlTypes.SqlBytes> object that exposes a `Stream` property. The code uses this to create a new `Bitmap` object, and then saves it in the Gif `ImageFormat`.  
+The following code retrieves the name and the `LargePhoto` object from the `ProductPhoto` table in the `AdventureWorks` database and saves it to a file. The assembly needs to be compiled with a reference to the <xref:System.Drawing> namespace.  The <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> method of the <xref:Microsoft.Data.SqlClient.SqlDataReader> returns a <xref:System.Data.SqlTypes.SqlBytes> object that exposes a `Stream` property. The code uses this to create a new `Bitmap` object, and then saves it in the Gif `ImageFormat`.  
   
- [!code-csharp[DataWorks SqlBytes_Stream#1](~/../sqlclient/doc/samples/SqlBytes_Stream.cs#1)]
+[!code-csharp[DataWorks SqlBytes_Stream#1](~/../sqlclient/doc/samples/SqlBytes_Stream.cs#1)]
   
 ## Using Large Value Type Parameters  
- Large value types can be used in <xref:Microsoft.Data.SqlClient.SqlParameter> objects the same way you use smaller value types in <xref:Microsoft.Data.SqlClient.SqlParameter> objects. You can retrieve large value types as <xref:Microsoft.Data.SqlClient.SqlParameter> values, as shown in the following example. The code assumes that the following GetDocumentSummary stored procedure exists in the AdventureWorks sample database. The stored procedure takes an input parameter named @DocumentID and returns the contents of the DocumentSummary column in the @DocumentSummary output parameter.  
+Large value types can be used in <xref:Microsoft.Data.SqlClient.SqlParameter> objects the same way you use smaller value types in <xref:Microsoft.Data.SqlClient.SqlParameter> objects. You can retrieve large value types as <xref:Microsoft.Data.SqlClient.SqlParameter> values, as shown in the following example. The code assumes that the following GetDocumentSummary stored procedure exists in the AdventureWorks sample database. The stored procedure takes an input parameter named @DocumentID and returns the contents of the DocumentSummary column in the @DocumentSummary output parameter.  
   
-```  
+```sql
 CREATE PROCEDURE GetDocumentSummary   
 (  
     @DocumentID int,  
@@ -199,9 +200,9 @@ WHERE   DocumentID=@DocumentID
 ```  
   
 ### Example  
- The ADO.NET code creates <xref:Microsoft.Data.SqlClient.SqlConnection> and <xref:Microsoft.Data.SqlClient.SqlCommand> objects to execute the GetDocumentSummary stored procedure and retrieve the document summary, which is stored as a large value type. The code passes a value for the @DocumentID input parameter, and displays the results passed back in the @DocumentSummary output parameter in the Console window.  
+The ADO.NET code creates <xref:Microsoft.Data.SqlClient.SqlConnection> and <xref:Microsoft.Data.SqlClient.SqlCommand> objects to execute the GetDocumentSummary stored procedure and retrieve the document summary, which is stored as a large value type. The code passes a value for the @DocumentID input parameter, and displays the results passed back in the @DocumentSummary output parameter in the Console window.  
   
- [!code-csharp[DataWorks SqlParameter_Value#1](~/../sqlclient/doc/samples/SqlParameter_Value.cs#1)]
+[!code-csharp[DataWorks SqlParameter_Value#1](~/../sqlclient/doc/samples/SqlParameter_Value.cs#1)]
   
 ## See also
 

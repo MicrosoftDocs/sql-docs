@@ -10,14 +10,15 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 # Enabling Query Notifications
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Applications that consume query notifications have a common set of requirements. Your data source must be correctly configured to support SQL query notifications, and the user must have the correct client-side and server-side permissions.  
+Applications that consume query notifications have a common set of requirements. Your data source must be correctly configured to support SQL query notifications and the user must have the correct client-side and server-side permissions.  
   
- To use query notifications you must:  
+To use query notifications you must:  
   
 - Enable query notifications for your database.  
   
@@ -28,9 +29,9 @@ Applications that consume query notifications have a common set of requirements.
 - Provide code to process the notification if the data being monitored changes.  
   
 ## Query Notifications Requirements  
- Query notifications are supported only for SELECT statements that meet a list of specific requirements. The following table provides links to the Service Broker and Query Notifications documentation in SQL Server Books Online.  
+Query notifications are supported only for SELECT statements that meet a list of specific requirements. The following table provides links to the Service Broker and Query Notifications documentation in SQL Server Books Online.  
   
- **SQL Server documentation**  
+**SQL Server documentation**  
   
 - [Creating a Query for Notification](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
@@ -51,13 +52,13 @@ Applications that consume query notifications have a common set of requirements.
 - [Developer's Guide (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## Enabling Query Notifications to Run Sample Code  
- To enable Service Broker on the **AdventureWorks** database by using SQL Server Management Studio, execute the following Transact-SQL statement:  
+To enable Service Broker on the **AdventureWorks** database by using SQL Server Management Studio, execute the following Transact-SQL statement:  
   
- `ALTER DATABASE AdventureWorks SET ENABLE_BROKER;`  
+`ALTER DATABASE AdventureWorks SET ENABLE_BROKER;`  
   
- For the query notification samples to run correctly, the following Transact-SQL statements must be executed on the database server.  
+For the query notification samples to run correctly, the following Transact-SQL statements must be executed on the database server.  
   
-```  
+```sql
 CREATE QUEUE ContactChangeMessages;  
   
 CREATE SERVICE ContactChangeNotifications  
@@ -66,24 +67,24 @@ CREATE SERVICE ContactChangeNotifications
 ```  
   
 ## Query Notifications Permissions  
- Users who execute commands requesting notification must have SUBSCRIBE QUERY NOTIFICATIONS database permission on the server.  
+Users who execute commands requesting notification must have SUBSCRIBE QUERY NOTIFICATIONS database permission on the server.  
   
- Client-side code that runs in a partial trust situation requires the <xref:Microsoft.Data.SqlClient.SqlClientPermission>.  
+Client-side code that runs in a partial trust situation requires the <xref:Microsoft.Data.SqlClient.SqlClientPermission>.  
   
- The following code creates a <xref:Microsoft.Data.SqlClient.SqlClientPermission> object, setting the <xref:System.Security.Permissions.PermissionState> to <xref:System.Security.Permissions.PermissionState.Unrestricted>. The <xref:System.Security.CodeAccessPermission.Demand%2A> will force a <xref:System.Security.SecurityException> at run time if all callers higher in the call stack have not been granted the permission.  
+The following code creates a <xref:Microsoft.Data.SqlClient.SqlClientPermission> object, setting the <xref:System.Security.Permissions.PermissionState> to <xref:System.Security.Permissions.PermissionState.Unrestricted>. The <xref:System.Security.CodeAccessPermission.Demand%2A> will force a <xref:System.Security.SecurityException> at run time if all callers higher in the call stack have not been granted the permission.  
   
- [!code-csharp[DataWorks SqlClientPermission_Demand#1](~/../sqlclient/doc/samples/SqlClientPermission_Demand.cs#1)]
+[!code-csharp[DataWorks SqlClientPermission_Demand#1](~/../sqlclient/doc/samples/SqlClientPermission_Demand.cs#1)]
   
 ## Choosing a Notification Object  
- The query notifications API provides two objects to process notifications: <xref:Microsoft.Data.SqlClient.SqlDependency> and <xref:Microsoft.Data.Sql.SqlNotificationRequest>.
+The query notifications API provides two objects to process notifications: <xref:Microsoft.Data.SqlClient.SqlDependency> and <xref:Microsoft.Data.Sql.SqlNotificationRequest>.
   
 ### Using SqlDependency  
- To use <xref:Microsoft.Data.SqlClient.SqlDependency>, Service Broker must be enabled for the SQL Server database being used, and users must have permissions to receive notifications. Service Broker objects, such as the notification queue, are predefined.  
+To use <xref:Microsoft.Data.SqlClient.SqlDependency>, Service Broker must be enabled for the SQL Server database being used, and users must have permissions to receive notifications. Service Broker objects, such as the notification queue, are predefined.  
   
- In addition, <xref:Microsoft.Data.SqlClient.SqlDependency> automatically launches a worker thread to process notifications as they are posted to the queue; it also parses the Service Broker message, exposing the information as event argument data. <xref:Microsoft.Data.SqlClient.SqlDependency> must be initialized by calling the `Start` method to establish a dependency to the database. This is a static method that needs to be called only once during application initialization for each database connection required. The `Stop` method should be called at application termination for each dependency connection that was made.  
+In addition, <xref:Microsoft.Data.SqlClient.SqlDependency> automatically launches a worker thread to process notifications as they are posted to the queue; it also parses the Service Broker message, exposing the information as event argument data. <xref:Microsoft.Data.SqlClient.SqlDependency> must be initialized by calling the `Start` method to establish a dependency to the database. This is a static method that needs to be called only once during application initialization for each database connection required. The `Stop` method should be called at application termination for each dependency connection that was made.  
   
 ### Using SqlNotificationRequest  
- In contrast, <xref:Microsoft.Data.Sql.SqlNotificationRequest> requires you to implement the entire listening infrastructure yourself. In addition, all the supporting Service Broker objects such as the queue, service, and message types supported by the queue must be defined. This manual approach is useful if your application requires special notification messages or notification behaviors, or if your application is part of a larger Service Broker application.  
+In contrast, <xref:Microsoft.Data.Sql.SqlNotificationRequest> requires you to implement the entire listening infrastructure yourself. In addition, all the supporting Service Broker objects such as the queue, service, and message types supported by the queue must be defined. This manual approach is useful if your application requires special notification messages or notification behaviors, or if your application is part of a larger Service Broker application.  
   
 ## See also
 

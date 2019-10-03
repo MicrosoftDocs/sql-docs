@@ -8,6 +8,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 # SQL Server Data Operations in ADO.NET
 
@@ -16,17 +17,17 @@ ms.author: v-kaywon
 This section describes SQL Server features and functionality that are specific to the Microsoft SqlClient Data Provider for SQL Server (<xref:Microsoft.Data.SqlClient>).  
   
 ## In This Section  
- [Bulk Copy Operations in SQL Server](bulk-copy-operations-in-sql-server.md)  
- Describes the bulk copy functionality for the .NET Data Provider for SQL Server.  
+[Bulk Copy Operations in SQL Server](bulk-copy-operations-in-sql-server.md)  
+Describes the bulk copy functionality for the .NET Data Provider for SQL Server.  
   
- [Multiple Active Result Sets (MARS)](multiple-active-result-sets-mars.md)  
- Describes how to have more than one <xref:Microsoft.Data.SqlClient.SqlDataReader> open on a connection when each instance of <xref:Microsoft.Data.SqlClient.SqlDataReader> is started from a separate command.  
+[Multiple Active Result Sets (MARS)](multiple-active-result-sets-mars.md)  
+Describes how to have more than one <xref:Microsoft.Data.SqlClient.SqlDataReader> open on a connection when each instance of <xref:Microsoft.Data.SqlClient.SqlDataReader> is started from a separate command.  
   
- [Asynchronous Operations](asynchronous-operations.md)  
- Describes how to perform asynchronous database operations by using an API that is modeled after the asynchronous model used by the .NET Framework.  
+[Asynchronous Operations](asynchronous-operations.md)  
+Describes how to perform asynchronous database operations by using an API that is modeled after the asynchronous model used by the .NET Framework.  
   
- [Table-Valued Parameters](table-valued-parameters.md)  
- Describes how to work with table-valued parameters, which were introduced in SQL Server 2008.  
+[Table-Valued Parameters](table-valued-parameters.md)  
+Describes how to work with table-valued parameters, which were introduced in SQL Server 2008.  
   
 ## See also
 

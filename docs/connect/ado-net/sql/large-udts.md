@@ -10,6 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 # Large UDTs
 
@@ -17,19 +18,19 @@ ms.author: v-kaywon
 
 User-defined types (UDTs) allow a developer to extend the server's scalar type system by storing common language runtime (CLR) objects in a SQL Server database. UDTs can contain multiple elements and can have behaviors, unlike the traditional alias data types, which consist of a single SQL Server system data type.  
   
- Previously, UDTs were restricted to a maximum size of 8 kilobytes. In SQL Server 2008, this restriction has been removed for UDTs that have a format of <xref:Microsoft.Data.SqlClient.Server.Format.UserDefined>.  
+Previously, UDTs were restricted to a maximum size of 8 kilobytes. In SQL Server 2008, this restriction has been removed for UDTs that have a format of <xref:Microsoft.Data.SqlClient.Server.Format.UserDefined>.  
   
- For the complete documentation for user-defined types, see the version of SQL Server Books Online for the version of SQL Server you are using.  
+For the complete documentation for user-defined types, see the version of SQL Server Books Online for the version of SQL Server you are using.  
   
- **SQL Server Books Online**  
+**SQL Server Books Online**  
   
 1. [CLR User-Defined Types](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## Retrieving UDT Schemas Using GetSchema  
- The <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> method of <xref:Microsoft.Data.SqlClient.SqlConnection> returns database schema information in a <xref:System.Data.DataTable>.
+The <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> method of <xref:Microsoft.Data.SqlClient.SqlConnection> returns database schema information in a <xref:System.Data.DataTable>.
   
 ### GetSchemaTable Column Values for UDTs  
- The <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> method of a <xref:Microsoft.Data.SqlClient.SqlDataReader> returns a <xref:System.Data.DataTable> that describes column metadata. The following table describes the differences in the column metadata for large UDTs between SQL Server 2005 and SQL Server 2008.  
+The <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> method of a <xref:Microsoft.Data.SqlClient.SqlDataReader> returns a <xref:System.Data.DataTable> that describes column metadata. The following table describes the differences in the column metadata for large UDTs between SQL Server 2005 and SQL Server 2008.  
   
 |SqlDataReader column|SQL Server 2005|SQL Server 2008 and later|  
 |--------------------------|---------------------|-------------------------------|  
@@ -44,9 +45,9 @@ User-defined types (UDTs) allow a developer to extend the server's scalar type s
 |`IsLong`|Varies|Varies|  
   
 ## SqlDataReader Considerations  
- The <xref:Microsoft.Data.SqlClient.SqlDataReader> has been extended beginning in SQL Server 2008 to support retrieving large UDT values. How large UDT values are processed by a <xref:Microsoft.Data.SqlClient.SqlDataReader> depends on the version of SQL Server you are using, as well as on the `Type System Version` specified in the connection string. For more information, see <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+The <xref:Microsoft.Data.SqlClient.SqlDataReader> has been extended beginning in SQL Server 2008 to support retrieving large UDT values. How large UDT values are processed by a <xref:Microsoft.Data.SqlClient.SqlDataReader> depends on the version of SQL Server you are using, as well as on the `Type System Version` specified in the connection string. For more information, see <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
- The following methods of <xref:Microsoft.Data.SqlClient.SqlDataReader> will return a <xref:System.Data.SqlTypes.SqlBinary> instead of a UDT when the `Type System Version` is set to SQL Server 2005:  
+The following methods of <xref:Microsoft.Data.SqlClient.SqlDataReader> will return a <xref:System.Data.SqlTypes.SqlBinary> instead of a UDT when the `Type System Version` is set to SQL Server 2005:  
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
@@ -58,16 +59,16 @@ User-defined types (UDTs) allow a developer to extend the server's scalar type s
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
- The following methods will return an array of `Byte[]` instead of a UDT when the `Type System Version` is set to SQL Server 2005:  
+The following methods will return an array of `Byte[]` instead of a UDT when the `Type System Version` is set to SQL Server 2005:  
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetValue%2A>  
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetValues%2A>  
   
- Note that no conversions are made for the current version of ADO.NET.  
+Note that no conversions are made for the current version of ADO.NET.  
   
 ## Specifying SqlParameters  
- The following <xref:Microsoft.Data.SqlClient.SqlParameter> properties have been extended to work with large UDTs.  
+The following <xref:Microsoft.Data.SqlClient.SqlParameter> properties have been extended to work with large UDTs.  
   
 |SqlParameter Property|Description|  
 |---------------------------|-----------------|  
@@ -76,7 +77,7 @@ User-defined types (UDTs) allow a developer to extend the server's scalar type s
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Size%2A>|Gets or sets the size of the parameter value to resolve. The default value is 0. The property can be an integer that represents the size of the parameter value. For large UDTs, it can be the actual size of the UDT, or -1 for unknown.|  
   
 ## Retrieving Data Example  
- The following code fragment demonstrates how to retrieve large UDT data. The `connectionString` variable assumes a valid connection to a SQL Server database and the `commandString` variable assumes a valid SELECT statement with the primary key column listed first.  
+The following code fragment demonstrates how to retrieve large UDT data. The `connectionString` variable assumes a valid connection to a SQL Server database and the `commandString` variable assumes a valid SELECT statement with the primary key column listed first.  
   
 ```csharp  
 using (SqlConnection connection = new SqlConnection(   

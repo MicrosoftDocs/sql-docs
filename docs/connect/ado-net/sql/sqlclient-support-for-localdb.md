@@ -8,6 +8,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 # SqlClient Support for LocalDB
 
@@ -16,9 +17,9 @@ ms.author: v-kaywon
 Beginning in SQL Server code name Denali, a lightweight version of SQL Server, called LocalDB, will be available. This topic discusses how to connect to a LocalDB database.  
   
 ## Remarks  
- For more information about LocalDB, including how to install LocalDB and configure your LocalDB instance, see SQL Server Books Online.  
+For more information about LocalDB, including how to install LocalDB and configure your LocalDB instance, see SQL Server Books Online.  
   
- To summarize what you can do with LocalDB:  
+To summarize what you can do with LocalDB:  
   
 - Create and start LocalDB instances with sqllocaldb.exe or your app.config file.  
   
@@ -28,16 +29,16 @@ Beginning in SQL Server code name Denali, a lightweight version of SQL Server, c
   
 - Specify a LocalDB instance in your connection string. For example, your instance name is `myInstance`, the connection string would include:  
   
-    ```  
-    server=(localdb)\\myInstance  
-    ```  
+```console
+server=(localdb)\\myInstance  
+```  
   
- `User Instance=True` is not allowed when connecting to a LocalDB database.  
+`User Instance=True` is not allowed when connecting to a LocalDB database.  
   
- You can download LocalDB from [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). If you will use sqlcmd.exe to modify data in your LocalDB instance, you will need sqlcmd from SQL Server 2012, which you can also get from the SQL Server 2012 Feature Pack.  
+You can download LocalDB from [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). If you will use sqlcmd.exe to modify data in your LocalDB instance, you will need sqlcmd from SQL Server 2012, which you can also get from the SQL Server 2012 Feature Pack.  
   
 ## Programmatically Create a Named Instance  
- An application can create a named instance and specify a database as follows:  
+An application can create a named instance and specify a database as follows:  
   
 - Specify the LocalDB instances to create in the app.config file, as follows.  The version number of the instance should be the same as the version number of your LocalDB installation.  
   

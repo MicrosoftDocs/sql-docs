@@ -8,6 +8,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
+ms.reviewer: rothja
 ---
 # Multiple Active Result Sets (MARS)
 
@@ -16,15 +17,15 @@ ms.author: v-kaywon
 Multiple Active Result Sets (MARS) is a feature that allows the execution of multiple batches on a single connection. In previous versions, only one batch could be executed at a time against a single connection. Executing multiple batches with MARS does not imply simultaneous execution of operations.  
   
 ## In This Section  
- [Enabling Multiple Active Result Sets](enabling-multiple-active-result-sets.md)  
- Discusses how to use MARS with SQL Server.  
+[Enabling Multiple Active Result Sets](enabling-multiple-active-result-sets.md)  
+Discusses how to use MARS with SQL Server.  
   
- [Manipulating Data](manipulating-data.md)  
- Provides examples of coding MARS applications.  
+[Manipulating Data](manipulating-data.md)  
+Provides examples of coding MARS applications.  
   
 ## Related Sections  
- [Asynchronous Operations](asynchronous-operations.md)  
- Provides details on using the new asynchronous features in .NET.  
+[Asynchronous Operations](asynchronous-operations.md)  
+Provides details on using the new asynchronous features in .NET.  
   
 ## See also
 

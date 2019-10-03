@@ -2923,14 +2923,6 @@ SET
 }
 ;
 
-<<<<<<< HEAD
-<auto_option> ::=
-{
-    AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] }
-  | AUTO_UPDATE_STATISTICS { ON | OFF }
-  | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
-  | RESULT_SET_CACHING { ON | OFF}
-=======
 <option_spec>::=
 {
     <auto_option>
@@ -2953,29 +2945,18 @@ SET
 
 <query_store_option> ::=
 {
-    QUERY_STORE
-    {
- = OFF
-        | = ON
-    }
+    QUERY_STORE { OFF |  ON }
 }
 
 <result_set_caching_option> ::=
 {
-<<<<<<< HEAD
-RESULT_SET_CACHING {ON | OFF}
->>>>>>> fcdadc64d1fcfcf63c9e197f87f0eea0b6796f73
-=======
-    RESULT_SET_CACHING { ON | OFF }
->>>>>>> 29f7adf1cf0e90e06e487c7764f7e2e03f754484
+    RESULT_SET_CACHING {ON | OFF}
 }
 
 <snapshot_option> ::=
 {
     READ_COMMITTED_SNAPSHOT {ON | OFF }
 }
-
-
 
 ```
 
@@ -2984,71 +2965,12 @@ RESULT_SET_CACHING {ON | OFF}
 *database_name*        
 Is the name of the database to be modified.
 
-<<<<<<< HEAD
-<a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }         
-ON         
-The Query Optimizer creates statistics on single columns in query predicates, as necessary, to improve query plans and query performance. These single-column statistics are created when the Query Optimizer compiles queries. The single-column statistics are created only on columns that are not already the first column of an existing statistics object.
-
-The default is ON. We recommend that you use the default setting for most databases.
-
-OFF         
-The Query Optimizer doesn't create statistics on single columns in query predicates when it is compiling queries. Setting this option to OFF can cause suboptimal query plans and degraded query performance.
-
-You can determine this option's status by examining the is_auto_create_stats_on column in the sys.databases catalog view. You can also determine the status by examining the IsAutoCreateStatistics property of the DATABASEPROPERTYEX function.
-
-For more information, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).
-
-INCREMENTAL = ON | OFF         
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-
-Set AUTO_CREATE_STATISTICS to ON, and set INCREMENTAL to ON. This setting creates automatically created stats as incremental whenever incremental stats are supported. The default value is OFF. For more information, see [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
-
-<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }         
-ON         
-Specifies that the Query Optimizer updates statistics when they're used by a query and when they might be out-of-date. Statistics become out-of-date after insert, update, delete, or merge operations change the data distribution in the table or indexed view. The Query Optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.
-
-The Query Optimizer checks for out-of-date statistics before it compiles a query and runs a cached query plan. The Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. The Query Optimizer determines this information before it compiles a query. Before running a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.
-
-The AUTO_UPDATE_STATISTICS option applies to statistics created for indexes, single-columns in query predicates, and statistics that are created by using the CREATE STATISTICS statement. This option also applies to filtered statistics.
-
-The default is ON. We recommend that you use the default setting for most databases.
-
-Use the AUTO_UPDATE_STATISTICS_ASYNC option to specify whether the statistics are updated synchronously or asynchronously.
-
-OFF         
-Specifies that the Query Optimizer doesn't update statistics when they're used by a query. The Query Optimizer also doesn't update statistics when they might be out-of-date. Setting this option to OFF can cause suboptimal query plans and degraded query performance.
-
-You can determine this option's status by examining the is_auto_update_stats_on column in the sys.databases catalog view. You can also determine the status by examining the IsAutoUpdateStatistics property of the DATABASEPROPERTYEX function.
-
-For more information, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).
-
-<a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }         
-ON         
-Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are asynchronous. The Query Optimizer doesn't wait for statistics updates to complete before it compiles queries.
-
-Setting this option to ON has no effect unless AUTO_UPDATE_STATISTICS is set to ON.
-
-By default, the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF, and the Query Optimizer updates statistics synchronously.
-
-OFF         
-Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are synchronous. The Query Optimizer waits for statistics updates to complete before it compiles queries.
-
-Setting this option to OFF has no effect unless AUTO_UPDATE_STATISTICS is set to ON.
-
-You can determine this option's status by examining the is_auto_update_stats_async_on column in the sys.databases catalog view.
-
-For more information that describes when to use synchronous or asynchronous statistics updates, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).
-
-> [!Note]
-> While `RESULT_SET_CACHING` is being rolled out to all regions, please check the version deployed to your instance and the latest [Azure SQL DW release notes](/azure/sql-data-warehouse/release-notes-10-0-10106-0) for feature availability.
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-**Applies to** Azure SQL Data Warehouse (preview)
-=======
 **<auto_option> ::=**        
 
 Controls automatic options.
 
 AUTO_CREATE_STATISTICS { **ON** | OFF }        
+
 ON        
 Query Optimizer creates statistics on single columns in query predicates, as necessary, to improve query plans and query performance. These single-column statistics are created when Query Optimizer compiles queries. The single-column statistics are created only on columns that are not already the first column of an existing statistics object.
 
@@ -3066,6 +2988,7 @@ For more information, see the section "Using the database-wide statistics option
 Controls the database encryption state.
 
 ENCRYPTION { ON | OFF }        
+
 ON        
 Sets the database to be encrypted.
 
@@ -3075,27 +2998,31 @@ Sets the database to not be encrypted.
 For more information about database encryption, see Transparent Data Encryption, and Transparent Data Encryption with Azure SQL Database.
 
 When encryption is enabled at the database level, all file groups will be encrypted. Any new file groups will inherit the encrypted property. If any file groups in the database are set to READ ONLY, the database encryption operation will fail.
+
 You can see the encryption state of the database as well as the state of the encryption scan by using the sys.dm_database_encryption_keys dynamic management view.
 
-**\<query_store_option> ::=**        
+**<query_store_option> ::=**        
 
-ON | **OFF**        
 Controls whether the Query Store is enabled in this data warehouse.
+
+QUERY_STORE { ON |  **OFF**  }
 
 ON        
 Enables the Query Store.
->>>>>>> 29f7adf1cf0e90e06e487c7764f7e2e03f754484
 
 OFF        
+
 Disables the Query Store. OFF is the default value.
 
 > [!NOTE]
 > For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], you must execute `ALTER DATABASE SET QUERY_STORE` from the user database. Executing the statement from another data warehouse instance isn't supported.
 
-**\<result_set_caching_option> ::=**        
+**<result_set_caching_option> ::=**        
 **Applies to**: Azure SQL Data Warehouse (preview)
 
-This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data Warehouse storage. A new column, is_result_set_caching_on, is introduced in [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to show the result cache setting for a database.  
+Controls whether query result is cached in the database.
+
+RESULT_SET_CACHING {ON | OFF}
 
 ON        
 Specifies that query result sets returned from this database will be cached in Azure SQL Data Warehouse storage.
@@ -3112,6 +3039,8 @@ command|Like|%DWResultCacheDb%|
 | | |
 
 ### Remarks
+This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data Warehouse storage. A new column, is_result_set_caching_on, is introduced in [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to show the result cache setting for a database.  
+
 Cached result set is reused for a query if all of the following requirements are all met:
 
 1. The user who's running the query has access to all the tables referenced in the query.
@@ -3123,11 +3052,11 @@ Once result set caching is turned ON for a database, results are cached for all 
 Queries with large result sets (for example, > 1 million rows) may experience slower performance during the first run when the result cache is being created.
 
 **<snapshot_option> ::=**        
+**Applies to**: Azure SQL Data Warehouse (preview)
 
-Calculates the transaction isolation level.
+Controls the transaction isolation level of a database.
 
 READ_COMMITTED_SNAPSHOT  { ON | **OFF** }        
-**Applies to**: Azure SQL Data Warehouse (preview)
 
 ON        
 Enables the READ_COMMITTED_SNAPSHOT option at the database level.
@@ -3135,7 +3064,8 @@ Enables the READ_COMMITTED_SNAPSHOT option at the database level.
 OFF        
 Turn off the READ_COMMITTED_SNAPSHOT option at the database level.
 
-This command must be run while connected to the `master` database. Turning READ_COMMITTED_SNAPSHOT ON or OFF for a user database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there's no active connection to the database except for the connection running the ALTER DATABSE command.  Pausing the database will also cancel all connections.  The database does not have to be in single-user mode. Changing READ_COMMITTED_SNAPSHOT setting at session level isn't supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
+### Remarks
+This command must be run while connected to the `master` database. Turning READ_COMMITTED_SNAPSHOT ON or OFF for a user database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there's no active connection to the database except for the connection running the ALTER DATABSE command.  The database does not have to be in single-user mode. Changing READ_COMMITTED_SNAPSHOT setting at session level isn't supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
 
 In a database with READ_COMMITTED_SNAPSHOT enabled, queries may experience slower performance due to the scan of versions if multiple data versions are present. Long-open transactions can also cause an increase in the size of the database. This issue occurs if there are data changes by these transactions that block version cleanup.  
 
@@ -3147,81 +3077,33 @@ To set the READ_COMMITTED_SNAPSHOT option, a user needs ALTER permission on the 
 
 ## Examples
 
-<<<<<<< HEAD
-### Enable AUTO_UPDATE_STATISTICS for a database
-
-```sql
-ALTER DATABASE MyDatabase
-SET AUTO_UPDATE_STATISTICS ON
-```
-
-### Configure statistics to be automatically updated asynchronously for a database.
-
-```sql
-ALTER DATABASE MyDatabase
-SET AUTO_UPDATE_STATISTICS_ASYNC ON
-```
-
 ### Check statistics setting for a database
 
 ```sql
-SELECT name, is_auto_create_stats_on , is_auto_update_stats_on, is_auto_update_stats_async_on
-FROM sys.databases
+SELECT name, is_auto_create_stats_on FROM sys.databases
 ```
-
-### Enable result set caching for a database
-=======
-### A. Enabling the Query Store
-The following example enables the Query Store.
->>>>>>> 29f7adf1cf0e90e06e487c7764f7e2e03f754484
+### Enable query store for a database
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON;
 ```
 
-### B. Enable result set caching for a database
+### Enable result set caching for a database
 
 ```sql
 ALTER DATABASE [database_name]
 SET RESULT_SET_CACHING ON;
 ```
 
-### C. Disable result set caching for a database
-
-```sql
-ALTER DATABASE [database_name]  
-SET RESULT_SET_CACHING OFF;
-```
-
-### D. Check result set caching setting for a database
+### Check result set caching setting for a database
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### E. Check for number of queries with result set cache hit and cache miss
-
-```sql
-SELECT  
-Queries=CacheHits+CacheMisses,
-CacheHits,
-CacheMisses
-CacheHitPct=CacheHits*1.0/(CacheHits+CacheMisses)
-FROM  
-(SELECT  
-CacheHits=count(distinct case when s.command like '%DWResultCacheDb%' and
-r.resource_class IS NULL and s.operation_type = 'ReturnOperation' and  
-s.step_index = 0 then s.request_id else null end) ,
-CacheMisses=count(distinct case when r.resource_class IS NOT NULL then  
-s.request_id else null end)
-     FROM sys.dm_pdw_request_steps s  
-     JOIN sys.dm_pdw_exec_requests r  
-     ON s.request_id = r.request_id) A;
-```
-
-### F. Check for result set cache hit or cache miss for a query
+### Check for result set cache hit or cache miss for a query
 
 ```sql
 If
@@ -3233,7 +3115,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### G. Check for all queries with result set cache hits
+### Check for all queries with result set cache hits
 
 ```sql
 SELECT *  
@@ -3241,7 +3123,7 @@ FROM sys.dm_pdw_request_steps
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
-### H. Enable the Read_Committed_Snapshot option for a database
+### Enable the Read_Committed_Snapshot option for a database
 
 ```sql
 ALTER DATABASE MyDatabase  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "C2WTS"
   - "WSS_WPG"
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Claims to Windows Token Service (C2WTS) and Reporting Services

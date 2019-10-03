@@ -1,5 +1,5 @@
 ---
-title: "Best practice with Query Store | Microsoft Docs"
+title: "Best practices with Query Store | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/21/2019"
 ms.prod: sql
@@ -14,7 +14,7 @@ author: pmasl
 ms.author: jrasnick
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Best practice with Query Store
+# Best practices with Query Store
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   This article outlines the best practices for using SQL Server Query Store with your workload.

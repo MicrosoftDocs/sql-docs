@@ -30,7 +30,7 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 The following sections provide an overview of these features.
 
-## Data Virtualization and [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
+## Data virtualization and [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
 Businesses today often preside over vast data estates that consist of a wide array of ever-growing data sets hosted in siloed data sources across the company. Gain near real-time insights from all your data with [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] which provide a complete environment to work with large sets of data, including Machine Learning and Artificial Intelligence capabilities.
 
@@ -46,7 +46,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 
 ## Intelligent Database
 
-### Intelligent Query Processing
+### Intelligent query processing
 
 |New feature or update | Details |
 |:---|:---|
@@ -67,7 +67,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | In-Memory OLTP support for Database Snapshots | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces support for creating [Database Snapshots](../relational-databases/databases/database-snapshots-sql-server.md) of databases that include memory-optimized filegroups. |
 | &nbsp; | &nbsp; |
 
-### Intelligent Performance
+### Intelligent performance
 
 |New feature or update | Details |
 |:---|:---|
@@ -93,7 +93,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | New DMF returns information about a page in a database. See [sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
-## Developer Experience
+## Developer experience
 
 ### Graph
 
@@ -138,7 +138,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Verbose truncation warnings | Truncation error message defaults to include table and column names, and truncated value. See [VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation).|
 | &nbsp; | &nbsp; |
 
-## Mission Critical Security
+## Mission critical security
 
 |New feature or update | Details |
 |:---|:---|
@@ -146,9 +146,9 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Certificate management in SQL Server Configuration Manager|See [Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md).|
 | &nbsp; | &nbsp; |
 
-## High Availability
+## High availability
 
-### Availability Groups
+### Availability groups
 
 |New feature or update | Details |
 |:---|:---|
@@ -163,7 +163,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Accelerated database recovery | Enable accelerated database recovery per-database. See [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
 | &nbsp; | &nbsp; |
 
-### Resumable Operations
+### Resumable operations
 
 |New feature or update | Details |
 |:---|:---|
@@ -180,7 +180,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |New parallelism setup options | Sets the *max degree of parallelism* server configuration during installation. For more information, see [Database Engine Configuration - MaxDOP page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) and the `SQLMAXDOP` parameter in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The default value will align with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
 | &nbsp; | &nbsp; |
 
-## Platform Choice
+## Platform choice
 
 ### <a id="sql-server-on-linux"></a>Linux
 
@@ -220,7 +220,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |New HTML controls| HTML controls replace all former Silverlight components. Silverlight dependency removed.|
 | &nbsp; | &nbsp; |
 
-## Analysis Services
+## SQL Server Analysis Services
 
 | New feature or update | Details |
 |:---|:---|

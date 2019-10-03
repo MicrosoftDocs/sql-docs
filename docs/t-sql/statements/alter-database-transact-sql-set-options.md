@@ -367,7 +367,7 @@ You can determine this option's status by examining the `is_auto_shrink_on` colu
 ON        
 Specifies that Query Optimizer updates statistics when they're used by a query and when they might be out-of-date. Statistics become out-of-date after insert, update, delete, or merge operations change the data distribution in the table or indexed view. Query Optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.
 
-Query Optimizer checks for out-of-date statistics before it compiles a query and it runs a cached query plan. Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. Query Optimizer determines this information before it compiles a query. Before executing a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.
+Query Optimizer checks for out-of-date statistics before it compiles a query and runs a cached query plan. Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. Query Optimizer determines this information before it compiles a query. Before running a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.
 
 The AUTO_UPDATE_STATISTICS option applies to statistics created for indexes, single-columns in query predicates, and statistics that are created by using the CREATE STATISTICS statement. This option also applies to filtered statistics.
 
@@ -500,7 +500,7 @@ ON
 OFF        
 Correlation statistics are not maintained.
 
-To set DATE_CORRELATION_OPTIMIZATION to ON, there must be no active connections to the database except for the connection that is executing the ALTER DATABASE statement. Afterwards, multiple connections are supported.
+To set DATE_CORRELATION_OPTIMIZATION to ON, there must be no active connections to the database except for the connection that's executing the ALTER DATABASE statement. Afterwards, multiple connections are supported.
 
 The current setting of this option can be determined by examining the `is_date_correlation_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
 
@@ -525,7 +525,7 @@ Can be used to resume a previously paused encryption scan.
 
 For more information about database encryption, see [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), and [Transparent Data Encryption with Azure SQL Database](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
-When encryption is enabled at the database level, all file groups will be encrypted. Any new file groups will inherit the encrypted property. If any file groups in the database are set to **READ ONLY**, the database encryption operation will fail.
+When encryption is enabled at the database level, all file groups will be encrypted. Any new file groups will inherit the encrypted property. If any file groups in the database are set to READ ONLY, the database encryption operation will fail.
 
 You can see the encryption state of the database as well as the state of the encryption scan by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
@@ -578,7 +578,7 @@ Specifies that only one user at a time can access the database. If you specify S
 
 The database remains in SINGLE_USER mode even if the user that set the option signs out. At that point, a different user, but only one, can connect to the database.
 
-Before you set the database to SINGLE_USER, verify the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF. When set to ON, the background thread used to update statistics takes a connection against the database, and you will be unable to access the database in single-user mode. To view the status of this option, query the `is_auto_update_stats_async_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. If the option is set to ON, perform the following tasks:
+Before you set the database to SINGLE_USER, verify the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF. When set to ON, the background thread used to update statistics takes a connection against the database, and you'll be unable to access the database in single-user mode. To view the status of this option, query the `is_auto_update_stats_async_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. If the option is set to ON, perform the following tasks:
 
 1. Set AUTO_UPDATE_STATISTICS_ASYNC to OFF.
 
@@ -763,7 +763,7 @@ INTERVAL_LENGTH_MINUTES
 Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.
 
 SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }        
-Controls whether cleanup automatically activates when total amount of data gets close to maximum size.
+Controls whether cleanup automatically activates when the total amount of data gets close to maximum size.
 
 AUTO        
 Size-based cleanup will be automatically activated when size on disk reaches 90% of **MAX_STORAGE_SIZE_MB**. Size-based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **MAX_STORAGE_SIZE_MB**.This value is the default configuration value.
@@ -974,12 +974,12 @@ The current setting of this option can be determined by examining the `snapshot_
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }        
 ON        
-Enables Read-Committed Snapshot option at the database level. When it's enabled, DML statements start generating row versions even when no transaction uses Snapshot Isolation. Once this option is enabled, the transactions specifying the read committed isolation level use row versioning instead of locking. All statements see a snapshot of data as it exists at the start of the statement when a transaction runs at the read committed isolation level.
+Enables Read-Committed Snapshot option at the database level. When it's enabled, DML statements start generating row versions even when no transaction uses Snapshot Isolation. Once this option is enabled, the transactions specifying the read committed isolation level use row versioning instead of locking. All statements see a snapshot of data as it exists at the start of the statement when a transaction runs at the READ COMMITTED isolation level.
 
 OFF        
 Turns off Read-Committed Snapshot option at the database level. Transactions specifying the READ COMMITTED isolation level use locking.
 
-To set READ_COMMITTED_SNAPSHOT ON or OFF, there must be no active connections to the database except for the connection executing the ALTER DATABASE command. However, the database doesn't have to be in single-user mode. You can't change the state of this option when the database is OFFLINE.
+To set READ_COMMITTED_SNAPSHOT ON or OFF, there must be no active connections to the database except for the connection running the ALTER DATABASE command. However, the database doesn't have to be in single-user mode. You can't change the state of this option when the database is OFFLINE.
 
 If you set READ_COMMITTED_SNAPSHOT in a READ_ONLY database, the setting will be kept when the database is later set to READ_WRITE.
 
@@ -1598,7 +1598,7 @@ You can determine this option's status by examining the `is_auto_shrink_on` colu
 ON        
 Specifies that Query Optimizer updates statistics when they're used by a query and when they might be out-of-date. Statistics become out-of-date after insert, update, delete, or merge operations change the data distribution in the table or indexed view. Query Optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.
 
-Query Optimizer checks for out-of-date statistics before it compiles a query and it runs a cached query plan. Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. Query Optimizer determines this information before it compiles a query. Before executing a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.
+Query Optimizer checks for out-of-date statistics before it compiles a query and runs a cached query plan. Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. Query Optimizer determines this information before it compiles a query. Before running a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.
 
 The AUTO_UPDATE_STATISTICS option applies to statistics created for indexes, single-columns in query predicates, and statistics that are created by using the CREATE STATISTICS statement. This option also applies to filtered statistics.
 
@@ -1640,10 +1640,10 @@ AUTO
 Setting the Automatic tuning value to AUTO will apply Azure configuration defaults for Automatic tuning.
 
 INHERIT        
-Using the value INHERIT will inherit the default configuration from the parent server. This is especially useful if you would like to customize Automatic tuning configuration on a parent server, and have all the databases on such server INHERIT these custom settings. Please note that in order for the inheritance to work, the three individual tuning options FORCE_LAST_GOOD_PLAN, CREATE_INDEX and DROP_INDEX need to be set to DEFAULT on databases.
+Using the INHERIT value inherits the default configuration from the parent server. This is especially useful if you would like to customize Automatic tuning configuration on a parent server, and have all the databases on such server INHERIT these custom settings. Please note that in order for the inheritance to work, the three individual tuning options FORCE_LAST_GOOD_PLAN, CREATE_INDEX and DROP_INDEX need to be set to DEFAULT on databases.
 
 CUSTOM        
-Using the value CUSTOM, you will need to manually custom configure each of the Automatic Tuning options available on databases.
+Using the CUSTOM value, you'll need to custom-configure each of the Automatic Tuning options available on databases.
 
 Enables or disables automatic index management `CREATE_INDEX` option of [Automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
@@ -1683,7 +1683,7 @@ The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query perfo
 
 **\<change_tracking_option> ::=**        
 
-Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this article.
+Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the [Examples](#examples) section later in this article.
 
 ON        
 Enables change tracking for the database. When you enable change tracking, you can also set the AUTO CLEANUP and CHANGE RETENTION options.
@@ -1727,7 +1727,7 @@ Controls the database encryption state.
 ENCRYPTION { ON | OFF }        
 Sets the database to be encrypted (ON) or not encrypted (OFF). For more information about database encryption, see [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), and [Transparent Data Encryption with Azure SQL Database](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
-When encryption is enabled at the database level, all file groups will be encrypted. Any new file groups will inherit the encrypted property. If any file groups in the database are set to **READ ONLY**, the database encryption operation will fail.
+When encryption is enabled at the database level, all file groups will be encrypted. Any new file groups will inherit the encrypted property. If any file groups in the database are set to READ ONLY, the database encryption operation will fail.
 
 You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
@@ -1817,7 +1817,7 @@ INTERVAL_LENGTH_MINUTES
 Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.
 
 SIZE_BASED_CLEANUP_MODE        
-Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:
+Controls whether cleanup will be automatically activated when the total amount of data gets close to maximum size.
 
 OFF        
 Size-based cleanup won't be automatically activated.
@@ -1869,12 +1869,12 @@ The current setting of this option can be determined by examining the `snapshot_
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }        
 ON        
-Enables Read-Committed Snapshot option at the database level. When it's enabled, DML statements start generating row versions even when no transaction uses Snapshot Isolation. Once this option is enabled, the transactions specifying the read committed isolation level use row versioning instead of locking. All statements see a snapshot of data as it exists at the start of the statement when a transaction runs at the read committed isolation level.
+Enables Read-Committed Snapshot option at the database level. When it's enabled, DML statements start generating row versions even when no transaction uses Snapshot Isolation. Once this option is enabled, the transactions specifying the READ COMMITTED isolation level use row versioning instead of locking. All statements see a snapshot of data as it exists at the start of the statement when a transaction runs at the READ COMMITTED isolation level.
 
 OFF        
 Turns off Read-Committed Snapshot option at the database level. Transactions specifying the READ COMMITTED isolation level use locking.
 
-To set READ_COMMITTED_SNAPSHOT ON or OFF, there must be no active connections to the database except for the connection executing the ALTER DATABASE command. However, the database doesn't have to be in single-user mode. You can't change the state of this option when the database is OFFLINE.
+To set READ_COMMITTED_SNAPSHOT ON or OFF, there must be no active connections to the database except for the connection running the ALTER DATABASE command. However, the database doesn't have to be in single-user mode. You can't change the state of this option when the database is OFFLINE.
 
 If you set READ_COMMITTED_SNAPSHOT in a READ_ONLY database, the setting will be kept when the database is later set to READ_WRITE.
 
@@ -2376,7 +2376,7 @@ You can determine this option's status by examining the `is_auto_shrink_on` colu
 ON        
 Specifies that Query Optimizer updates statistics when they're used by a query and when they might be out-of-date. Statistics become out-of-date after insert, update, delete, or merge operations change the data distribution in the table or indexed view. Query Optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.
 
-Query Optimizer checks for out-of-date statistics before it compiles a query and it runs a cached query plan. Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. Query Optimizer determines this information before it compiles a query. Before executing a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.
+Query Optimizer checks for out-of-date statistics before it compiles a query and runs a cached query plan. Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. Query Optimizer determines this information before it compiles a query. Before running a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.
 
 The AUTO_UPDATE_STATISTICS option applies to statistics created for indexes, single-columns in query predicates, and statistics that are created by using the CREATE STATISTICS statement. This option also applies to filtered statistics.
 
@@ -2422,7 +2422,7 @@ The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query perfo
 
 **\<change_tracking_option> ::=**        
 
-Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this article.
+Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the [Examples](#examples) section later in this article.
 
 ON        
 Enables change tracking for the database. When you enable change tracking, you can also set the AUTO CLEANUP and CHANGE RETENTION options.
@@ -2466,7 +2466,7 @@ Controls the database encryption state.
 ENCRYPTION { ON | **OFF** }        
 Sets the database to be encrypted (ON) or not encrypted (OFF). For more information about database encryption, see [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), and [Transparent Data Encryption with Azure SQL Database](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
-When encryption is enabled at the database level, all file groups will be encrypted. Any new file groups will inherit the encrypted property. If any file groups in the database are set to **READ ONLY**, the database encryption operation will fail.
+When encryption is enabled at the database level, all file groups will be encrypted. Any new file groups will inherit the encrypted property. If any file groups in the database are set to READ ONLY, the database encryption operation will fail.
 
 You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
@@ -2553,7 +2553,7 @@ INTERVAL_LENGTH_MINUTES
 Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.
 
 SIZE_BASED_CLEANUP_MODE        
-Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:
+Controls whether cleanup will be automatically activated when the total amount of data gets close to maximum size.
 
 OFF        
 Size-based cleanup won't be automatically activated.
@@ -2605,12 +2605,12 @@ The current setting of this option can be determined by examining the `snapshot_
 
 READ_COMMITTED_SNAPSHOT { ON | **OFF** }        
 ON        
-Enables the Read-Committed Snapshot option at the database level. When it's enabled, DML statements start generating row versions even when no transaction uses Snapshot Isolation. After this option is enabled, the transactions specifying the read committed isolation level use row versioning instead of locking. All statements see a snapshot of data as it exists at the start of the statement when a transaction runs at the read committed isolation level.
+Enables the Read-Committed Snapshot option at the database level. When it's enabled, DML statements start generating row versions even when no transaction uses Snapshot Isolation. After this option is enabled, the transactions specifying the READ COMMITTED isolation level use row versioning instead of locking. All statements see a snapshot of data as it exists at the start of the statement when a transaction runs at the READ COMMITTED isolation level.
 
 OFF        
 Turns off the Read-Committed Snapshot option at the database level. Transactions specifying the READ COMMITTED isolation level use locking.
 
-To set READ_COMMITTED_SNAPSHOT ON or OFF, there must be no active connections to the database except for the connection executing the ALTER DATABASE command. However, the database doesn't have to be in single-user mode. You can't change the state of this option when the database is OFFLINE.
+To set READ_COMMITTED_SNAPSHOT to ON or OFF, there must be no active connections to the database except for the connection running the ALTER DATABASE command. However, the database doesn't have to be in single-user mode. You can't change the state of this option when the database is OFFLINE.
 
 If you set READ_COMMITTED_SNAPSHOT in a READ_ONLY database, the setting will be kept when the database is later set to READ_WRITE.
 
@@ -3007,7 +3007,7 @@ Set AUTO_CREATE_STATISTICS to ON, and set INCREMENTAL to ON. This setting create
 ON         
 Specifies that the Query Optimizer updates statistics when they're used by a query and when they might be out-of-date. Statistics become out-of-date after insert, update, delete, or merge operations change the data distribution in the table or indexed view. The Query Optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.
 
-The Query Optimizer checks for out-of-date statistics before it compiles a query and it runs a cached query plan. The Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. The Query Optimizer determines this information before it compiles a query. Before executing a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.
+The Query Optimizer checks for out-of-date statistics before it compiles a query and runs a cached query plan. The Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. The Query Optimizer determines this information before it compiles a query. Before running a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.
 
 The AUTO_UPDATE_STATISTICS option applies to statistics created for indexes, single-columns in query predicates, and statistics that are created by using the CREATE STATISTICS statement. This option also applies to filtered statistics.
 
@@ -3114,7 +3114,7 @@ command|Like|%DWResultCacheDb%|
 ### Remarks
 Cached result set is reused for a query if all of the following requirements are all met:
 
-1. The user executing the query has access to all the tables referenced in the query.
+1. The user who's running the query has access to all the tables referenced in the query.
 1. There is an exact match between the new query and the previous query that generated the result set cache.
 1. There is no data or schema changes in the tables where the cached result set was generated from.  
 
@@ -3135,7 +3135,7 @@ Enables the READ_COMMITTED_SNAPSHOT option at the database level.
 OFF        
 Turn off the READ_COMMITTED_SNAPSHOT option at the database level.
 
-This command must be run while connected to the `master` database. Turning READ_COMMITTED_SNAPSHOT ON or OFF for a user database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there is no active connection to the database except for the connection executing the ALTER DATABSE command.  Pausing the database will also cancel all connections.  The database does not have to be in single-user mode. Changing READ_COMMITTED_SNAPSHOT setting at session level isn't supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
+This command must be run while connected to the `master` database. Turning READ_COMMITTED_SNAPSHOT ON or OFF for a user database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there's no active connection to the database except for the connection running the ALTER DATABSE command.  Pausing the database will also cancel all connections.  The database does not have to be in single-user mode. Changing READ_COMMITTED_SNAPSHOT setting at session level isn't supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
 
 In a database with READ_COMMITTED_SNAPSHOT enabled, queries may experience slower performance due to the scan of versions if multiple data versions are present. Long-open transactions can also cause an increase in the size of the database. This issue occurs if there are data changes by these transactions that block version cleanup.  
 

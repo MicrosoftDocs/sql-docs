@@ -417,7 +417,7 @@ The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query perfo
 **\<change_tracking_option> ::=**        
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
 
-Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this article.
+Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the "Examples" section later in this article.
 
 ON        
 Enables change tracking for the database. When you enable change tracking, you can also set the AUTO CLEANUP and CHANGE RETENTION options.
@@ -1683,7 +1683,7 @@ The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query perfo
 
 **\<change_tracking_option> ::=**        
 
-Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the [Examples](#examples) section later in this article.
+Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the "Examples" section later in this article.
 
 ON        
 Enables change tracking for the database. When you enable change tracking, you can also set the AUTO CLEANUP and CHANGE RETENTION options.
@@ -2422,7 +2422,7 @@ The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query perfo
 
 **\<change_tracking_option> ::=**        
 
-Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the [Examples](#examples) section later in this article.
+Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the "Examples" section later in this article.
 
 ON        
 Enables change tracking for the database. When you enable change tracking, you can also set the AUTO CLEANUP and CHANGE RETENTION options.

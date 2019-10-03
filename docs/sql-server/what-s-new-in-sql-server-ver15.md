@@ -46,7 +46,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 
 ## Intelligent Database
 
-### Intelligent query processing
+### Intelligent Query Processing
 
 |New feature or update | Details |
 |:---|:---|
@@ -58,7 +58,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | &nbsp; | &nbsp; |
 
 
-### In-memory database
+### In-Memory Database
 
 |New feature or update | Details |
 |:---|:---|
@@ -148,7 +148,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 
 ## High availability
 
-### Availability groups
+### Availability Groups
 
 |New feature or update | Details |
 |:---|:---|

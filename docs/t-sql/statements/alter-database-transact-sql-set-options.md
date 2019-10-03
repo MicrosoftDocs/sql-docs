@@ -3003,9 +3003,9 @@ You can see the encryption state of the database as well as the state of the enc
 
 **<query_store_option> ::=**        
 
-ON | **OFF**        
-
 Controls whether the Query Store is enabled in this data warehouse.
+
+QUERY_STORE { ON |  **OFF**  }
 
 ON        
 Enables the Query Store.
@@ -3020,7 +3020,9 @@ Disables the Query Store. OFF is the default value.
 **<result_set_caching_option> ::=**        
 **Applies to**: Azure SQL Data Warehouse (preview)
 
-This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data Warehouse storage. A new column, is_result_set_caching_on, is introduced in [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to show the result cache setting for a database.  
+Controls whether query result is cached in the database.
+
+RESULT_SET_CACHING {ON | OFF}
 
 ON        
 Specifies that query result sets returned from this database will be cached in Azure SQL Data Warehouse storage.
@@ -3037,6 +3039,8 @@ command|Like|%DWResultCacheDb%|
 | | |
 
 ### Remarks
+This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data Warehouse storage. A new column, is_result_set_caching_on, is introduced in [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to show the result cache setting for a database.  
+
 Cached result set is reused for a query if all of the following requirements are all met:
 
 1. The user who's running the query has access to all the tables referenced in the query.
@@ -3048,11 +3052,11 @@ Once result set caching is turned ON for a database, results are cached for all 
 Queries with large result sets (for example, > 1 million rows) may experience slower performance during the first run when the result cache is being created.
 
 **<snapshot_option> ::=**        
+**Applies to**: Azure SQL Data Warehouse (preview)
 
-Calculates the transaction isolation level.
+Controls the transaction isolation level of a database.
 
 READ_COMMITTED_SNAPSHOT  { ON | **OFF** }        
-**Applies to**: Azure SQL Data Warehouse (preview)
 
 ON        
 Enables the READ_COMMITTED_SNAPSHOT option at the database level.
@@ -3060,6 +3064,7 @@ Enables the READ_COMMITTED_SNAPSHOT option at the database level.
 OFF        
 Turn off the READ_COMMITTED_SNAPSHOT option at the database level.
 
+### Remarks
 This command must be run while connected to the `master` database. Turning READ_COMMITTED_SNAPSHOT ON or OFF for a user database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there's no active connection to the database except for the connection running the ALTER DATABSE command.  The database does not have to be in single-user mode. Changing READ_COMMITTED_SNAPSHOT setting at session level isn't supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
 
 In a database with READ_COMMITTED_SNAPSHOT enabled, queries may experience slower performance due to the scan of versions if multiple data versions are present. Long-open transactions can also cause an increase in the size of the database. This issue occurs if there are data changes by these transactions that block version cleanup.  

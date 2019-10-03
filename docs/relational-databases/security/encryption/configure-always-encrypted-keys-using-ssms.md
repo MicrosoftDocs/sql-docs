@@ -44,7 +44,7 @@ The **New Column Master Key** dialog allows you to generate a column master key 
    
     For more information about the above key stores, see [Create and Store Column Master Keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-::: monikerRange: ">=sql-server-2019||=sqlallproducts-allversions"
+::: monikerRange:">=sql-server-ver15||=sqlallproducts-allversions"
 
 5.  If your SQL Server instance is configured with a secure enclave, you can select the **Allow enclave computations** checkbox to make the master key enclave-enabled. See [Always Encrypted with secure enclaves](./always-encrypted-enclaves.md) for details.
 
@@ -58,7 +58,7 @@ The **New Column Master Key** dialog allows you to generate a column master key 
 
 Once you complete the dialog, SQL Server Management Studio creates metadata for your column master key in the database. The dialog achieves this by generating and issuing a [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) statement.
 
-::: monikerRange: ">=sql-server-2019||=sqlallproducts-allversions"
+::: monikerRange:">=sql-server-ver15||=sqlallproducts-allversions"
 
 If you are configuring an enclave-enabled column master key, SSMS also signs the metadata using the column master key. 
 
@@ -69,7 +69,7 @@ If you are configuring an enclave-enabled column master key, SSMS also signs the
 You need the *ALTER ANY COLUMN MASTER KEY* database permission in the database for the dialog to create a column master key. To use the dialog to create a new column master key or use an existing key in a key store create, you might require permissions on the key store or/and the key:
 - **Certificate Store - Local computer** - you must have Read access to the certificate that is used as a column master key, or be the administrator on the computer.
 - **Azure Key Vault** - you need the *get* and *list* permissions to select and use a key, the *create* permission to create a new key. 
-::: monikerRange: ">=sql-server-2019||=sqlallproducts-allversions"
+::: monikerRange:">=sql-server-ver15||=sqlallproducts-allversions"
 
 To configure an enclave-enabled column master key, you also need the *sign* permission to generate a signature of the key metadata.
 

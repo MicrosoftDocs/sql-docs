@@ -3077,7 +3077,7 @@ To set the READ_COMMITTED_SNAPSHOT option, a user needs ALTER permission on the 
 ```sql
 SELECT name, is_auto_create_stats_on FROM sys.databases
 ```
-### Enable result set caching for a database
+### Enable query store for a database
 
 ```sql
 ALTER DATABASE [database_name]
@@ -3089,13 +3089,6 @@ SET QUERY_STORE = ON;
 ```sql
 ALTER DATABASE [database_name]
 SET RESULT_SET_CACHING ON;
-```
-
-### Disable result set caching for a database
-
-```sql
-ALTER DATABASE [database_name]  
-SET RESULT_SET_CACHING OFF;
 ```
 
 ### Check result set caching setting for a database

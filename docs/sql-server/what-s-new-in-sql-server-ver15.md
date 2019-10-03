@@ -182,7 +182,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 
 ## Platform Choice
 
-### Linux
+### <a id="sql-server-on-linux"></a>Linux
 
 | New feature or update | Details |
 |:-----|:-----|

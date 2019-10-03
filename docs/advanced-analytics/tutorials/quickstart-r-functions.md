@@ -5,7 +5,7 @@ description: In this quickstart, learn how to write an R function for advanced s
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/17/2019  
+ms.date: 10/03/2019  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -39,7 +39,7 @@ as.data.frame(rnorm(100, mean = 50, sd = 3));
 To call this line of R from T-SQL, add the R function in the R script parameter of `sp_execute_external_script`, like this:
 
 ```sql
-EXEC sp_execute_external_script
+EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
          OutputDataSet <- as.data.frame(rnorm(100, mean = 50, sd =3));'
@@ -58,7 +58,7 @@ CREATE PROCEDURE MyRNorm (
     , @param3 INT
     )
 AS
-EXEC sp_execute_external_script @language = N'R'
+EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'
 	     OutputDataSet <- as.data.frame(rnorm(mynumbers, mymean, mysd));'
     , @input_data_1 = N'   ;'
@@ -78,7 +78,7 @@ WITH RESULT SETS(([Density] FLOAT NOT NULL));
 Now that you've wrapped the R function in a stored procedure, you can easily call the function and pass in different values, like this:
 
 ```sql
-EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
+EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
 
 ## Use R utility functions for troubleshooting
@@ -99,9 +99,7 @@ WITH RESULT SETS (([Col1] int not null));
 ```
 
 > [!TIP]
-> Many users like to use the system timing functions in R, such as `system.time` and `proc.time`, to capture the time used by R processes and analyze performance issues.
-
-For an example, see this tutorial: [Create Data Features](../tutorials/walkthrough-create-data-features.md). In this walkthrough, R timing functions are embedded in the solution to compare the performance of R functions vs. T-SQL functions for creating features from data.
+> Many users like to use the system timing functions in R, such as `system.time` and `proc.time`, to capture the time used by R processes and analyze performance issues. For an example, see the tutorial [Create Data Features](../tutorials/walkthrough-create-data-features.md) where R timing functions are embedded in the solution.
 
 ## Next steps
 

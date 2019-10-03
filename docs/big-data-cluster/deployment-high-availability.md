@@ -82,6 +82,11 @@ The following steps show how to create a patch file that includes these settings
     ```bash
     azdata bdc config patch -c custom-aks/bdc.json --patch-file patch.json
     ```
+1. Start cluster deployment using the cluster configuration profile created above
+
+    ```bash
+    azdata bdc create --config-profile custom-aks --accept-eula yes
+    ```
 
 ## Connect to SQL Server databases
 

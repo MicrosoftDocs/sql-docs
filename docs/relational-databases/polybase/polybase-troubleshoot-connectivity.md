@@ -19,7 +19,7 @@ You can use interactive diagnostics that have been built into PolyBase to help t
 
 This article serves as a guide to walk through the debugging process of such issues by leveraging these built-in diagnostics.
 
-> [!TIP}
+> [!TIP]
 > Instead of following the steps in this guide, you can choose to run the [HDFS Kerberos Tester](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/hdfs-kerberos-tester) to troubleshoot HDFS Kerberos connections for PolyBase, when you experience HDFS Kerberos failure while creating an external table in a Kerberos secured HDFS cluster.
 > This tool will assist in ruling out non-SQL Server issues, to help you concentrate on resolving HDFS Kerberos setup issues, namely identifying issues with username/password misconfigurations, and cluster Kerberos setup misconfigurations.      
 > This tool is completely independent from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It is available as a Jupyter Notebook and requires Azure Data Studio.

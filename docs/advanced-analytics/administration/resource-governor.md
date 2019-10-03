@@ -3,7 +3,7 @@ title: Manage Python and R workloads with Resource Governor
 description: Learn how to use Resource Governor to manage CPU, physical IO, and memory resources allocation for Python and R workloads in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -25,11 +25,11 @@ For more general information, see [Resource Governor](../../relational-databases
 
 By default, the external script runtimes for machine learning are limited to no more than 20% of total machine memory. It depends on your system, but in general, you might find this limit inadequate for serious machine learning tasks such as training a model or predicting on many rows of data. 
 
-## Use Resource Governor to control resourcing
+## Manage resources with Resource Governor
  
 By default, external processes use up to 20% of total host memory on the local server. You can modify the default resource pool to make server-wide changes, with R and Python processes utilizing whatever capacity you make available to external processes.
 
-Alternatively, you can construct custom *external resource pools*, with associated workload groups and classifiers, to determine resource allocation for requests originating from specific programs, hosts, or other criteria that you provide. An external resource pool is a type of resource pool introduced in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] to help manage the R and Python processes external to the database engine.
+Alternatively, you can create custom **external resource pools**, with associated workload groups and classifiers, to determine resource allocation for requests originating from specific programs, hosts, or other criteria that you provide. An external resource pool is a type of resource pool introduced in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] to help manage the R and Python processes external to the database engine.
 
 1. [Enable resource governance](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (it is off by default).
 

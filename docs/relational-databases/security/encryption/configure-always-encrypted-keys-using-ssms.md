@@ -30,9 +30,9 @@ For an overview of Always Encrypted key management, including best practice reco
 The **New Column Master Key** dialog allows you to generate a column master key or pick an existing key in a key store, and create column master key metadata for the created or selected key in the database.
 
 1.	Using **Object Explorer**, navigate to the **Security>Always Encrypted Keys** folder under your database.
-1.	Right click on the **Column Master Keys** folder and select **New Column Master Key...**. 
-1.	In the **New Column Master Key** dialog, enter the name of the column master key metadata object.
-1.	Select a key store:
+2.	Right click on the **Column Master Keys** folder and select **New Column Master Key...**. 
+3.	In the **New Column Master Key** dialog, enter the name of the column master key metadata object.
+4.	Select a key store:
     - **Certificate Store - Current User** - indicates the Current User certificate store location in the Windows Certificate Store, which is your personal store. 
     - **Certificate Store - Local computer** - indicates the Local computer certificate store location in the Windows Certificate Store. 
     - **Azure Key Vault** -  you will need to sign in to Azure (click **Sign in**). Once you sign in, you will be able to pick one of your Azure subscriptions and a key vault.
@@ -46,15 +46,15 @@ The **New Column Master Key** dialog allows you to generate a column master key 
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-1.  If your SQL Server instance is configured with a secure enclave, you can select the **Allow enclave computations** checkbox to make the master key enclave-enabled. See [Always Encrypted with secure enclaves](./always-encrypted-enclaves.md) for details.
+    If your SQL Server instance is configured with a secure enclave, you can select the **Allow enclave computations** checkbox to make the master key enclave-enabled. See [Always Encrypted with secure enclaves](./always-encrypted-enclaves.md) for details.
 
     > [!NOTE]
     > The **Allow enclave computations** checkbox does not appear if your SQL Server instance is not correctly configured with a secure enclave.
 
 ::: moniker-end
 
-1.	Pick an existing key in your key store, or click the **Generate Key** or **Generate Certificate** button, to create a key in the key store. 
-1.	Click **OK** and the new key will show up in the list. 
+5.	Pick an existing key in your key store, or click the **Generate Key** or **Generate Certificate** button, to create a key in the key store. 
+6.	Click **OK** and the new key will show up in the list. 
 
 Once you complete the dialog, SQL Server Management Studio creates metadata for your column master key in the database. The dialog achieves this by generating and issuing a [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) statement.
 

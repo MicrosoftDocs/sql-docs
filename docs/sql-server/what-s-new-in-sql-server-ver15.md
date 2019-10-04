@@ -132,6 +132,7 @@ Support businesses accross different countries and regions, where the requiremen
 | &nbsp; | &nbsp; |
 
 ### Error messages
+When an ETL process fails because the source and the destination don't have matching data types and/or length, troubleshooting used to be very time-consuming, especially in large datasets. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] allows faster insights into data truncation errors.
 
 |New feature or update | Details |
 |:---|:---|

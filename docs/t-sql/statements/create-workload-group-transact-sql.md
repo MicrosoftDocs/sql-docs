@@ -182,7 +182,7 @@ GO
 
 &nbsp;
 
-## SQL Data Warehouse
+## SQL Data Warehouse (Preview)
 
 Creates a workload group.  Workload groups are used to define the amount of resources that are allocated per request.  The workload group can be used for reserving or limiting resources for a classified request.  Workload groups can also be used limit the query execution time.  Once the statement completes, the settings are in effect.
 
@@ -287,5 +287,6 @@ The easiest way to understand the run-time values for your workload groups is to
 Requires CONTROL DATABASE permission
 
 ## See also
+[DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)
 
 ::: moniker-end

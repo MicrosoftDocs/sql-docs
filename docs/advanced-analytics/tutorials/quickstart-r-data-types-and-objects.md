@@ -303,4 +303,5 @@ To learn about writing advanced R functions in SQL Server, follow this quickstar
 
 For more information on SQL Server Machine Learning Services, see:
 
+- [Create and score a predictive model in R with SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

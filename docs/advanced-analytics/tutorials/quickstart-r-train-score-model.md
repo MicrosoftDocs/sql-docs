@@ -209,12 +209,6 @@ It's also possible to use the [PREDICT (Transact-SQL)](../../t-sql/queries/predi
 
 ## Next steps
 
-To learn about handling R data types in SQL Server, follow this quickstart:
-
-> [!div class="nextstepaction"]
-> [Handle data types and objects using R in SQL Server Machine Learning Services](quickstart-r-data-types-and-objects.md)
-
 For more information on SQL Server Machine Learning Services, see the following articles.
 
-- [Write advanced R functions with SQL Server Machine Learning Services](quickstart-r-functions.md)
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

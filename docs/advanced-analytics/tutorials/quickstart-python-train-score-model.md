@@ -23,9 +23,9 @@ You'll create and execute two stored procedures running in SQL. The first one us
 By completing this quickstart, you'll learn:
 
 > [!div class="checklist"]
-> * How to embed Python code in a stored procedure
-> * How to pass inputs to your code through inputs on the stored procedure
-> * How stored procedures are used to operationalize models
+> - How to embed Python code in a stored procedure
+> - How to pass inputs to your code through inputs on the stored procedure
+> - How stored procedures are used to operationalize models
 
 ## Prerequisites
 
@@ -177,11 +177,6 @@ Likewise, you can also leverage resourcing features of SQL Server, such as paral
 A final benefit is that the processes can be modified using parameters. In this exercise, Python code that created the model (named "Naive Bayes" in this example) was passed as an input to a second stored procedure calling the model in a scoring process. This exercise only uses one model, but you can imagine how parameterizing the model in a scoring task would make that script more useful.
 
 ## Next steps
-
-To learn about handling Python data types in SQL Server, follow this quickstart:
-
-> [!div class="nextstepaction"]
-> [Handle data types and objects using Python in SQL Server Machine Learning Services](quickstart-python-data-structures.md)
 
 For more information on SQL Server Machine Learning Services, see:
 

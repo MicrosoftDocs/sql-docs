@@ -105,6 +105,11 @@ For an example, see this tutorial: [Create Data Features](../tutorials/walkthrou
 
 ## Next steps
 
+To create a machine learning model using R in SQL Server, follow this quickstart:
+
+> [!div class="nextstepaction"]
+> [Create and score a predictive model in R with SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
+
 For more information on SQL Server Machine Learning Services, see:
 
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

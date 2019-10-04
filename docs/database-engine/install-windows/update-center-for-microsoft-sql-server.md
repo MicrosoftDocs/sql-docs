@@ -13,15 +13,11 @@ ms.author: tmichael
 mtps_version: v=MSDN.10
 ---
 
-# Update Center for Microsoft SQL Server
+# Latest updates for Microsoft SQL Server
 
-Find and manage updates in one place for your SQL Server Products. Use the RSS feed on this page with [Microsoft Update](http://www.update.microsoft.com/microsoftupdate/v6/vistadefault.aspx?ln=en-us) to automatically receive information about updates and to download the updates.
+Find and manage updates in one place for your SQL Server Products. Follow the [SQL Server Release Blog](https://aka.ms/sqlreleases) to  receive information about updates and to download the updates.
 
-### Applies to
-
-This page tracks all updates to all supported versions of SQL Server.
-
-For more information about which products are supported please consult the [Microsoft Product Lifecycle Page](http://support.microsoft.com/lifecycle/).
+This page tracks the latest updates to all supported versions of SQL Server. For more information about which products are supported please consult the [Microsoft Product Lifecycle Page](http://support.microsoft.com/lifecycle/).
 
 ### Latest updates
 
@@ -63,6 +59,3 @@ Each of the following links provides information for all of the applicable produ
   - [SQL Server DevCenter](http://msdn.microsoft.com/en-us/sqlserver/default.aspx)
   - [SQL Server TechCenter](http://technet.microsoft.com/en-us/sqlserver/default.aspx)
   - [SQL Server Product Information Center](http://www.microsoft.com/sqlserver/en/us/default.aspx)
-
-### Update Center blogs
-

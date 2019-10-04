@@ -333,14 +333,14 @@ SET PROCESS AFFINITY CPU=60 TO 200;
 #### D. Setting affinity to CPU 0 on a system that has two CPUs  
 The following example sets the affinity to `CPU=0` on a computer that has two CPUs. Before the following statement is executed, the internal affinity bitmask is 00.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION SET PROCESS AFFINITY CPU=0;  
 ```  
   
 #### E. Setting affinity to AUTO  
 The following example sets affinity to `AUTO`.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION  
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  

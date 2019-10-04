@@ -99,7 +99,7 @@ GO
 
 &nbsp;
 
-## SQL Data Warehouse
+## SQL Data Warehouse (Preview)
 
 Drops a workload group.  Once the statement completes, the settings are in effect.
 
@@ -138,5 +138,6 @@ SELECT c.name as classifier_name
 Requires CONTROL DATABASE permission
 
 ## See also
-
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
+ 
 ::: moniker-end

@@ -10,7 +10,7 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # Quickstart: Write advanced Python functions with SQL Server Machine Learning Services
@@ -86,29 +86,33 @@ Now that you've wrapped the Python function in a stored procedure, you can easil
 EXECUTE MyPyNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
 
-## Use R utility functions for troubleshooting
+## Use Python utility functions for troubleshooting
 
-The **utils** package, installed by default,  provides a variety of utility functions for investigating the current R environment. These functions can be useful if you're finding discrepancies in the way your R code performs in SQL Server and in outside environments.
+Python packages provide a variety of utility functions for investigating the current Python environment. These functions can be useful if you're finding discrepancies in the way your Python code performs in SQL Server and in outside environments.
 
-For example, you might use the R `memory.limit()` function to get memory for the current R environment. Because the `utils` package is installed but not loaded by default, you must use the `library()` function to load it first.
+For example, you might use system timing functions in the `time` package to measure the amount of time used by Python processes and analyze performance issues.
 
 ```sql
 EXECUTE sp_execute_external_script
-      @language = N'R'
+      @language = N'Python'
     , @script = N'
-        library(utils);
-        mymemory <- memory.limit();
-        OutputDataSet <- as.data.frame(mymemory);'
-    , @input_data_1 = N' ;'
-WITH RESULT SETS (([Col1] int not null));
+import pandas
+import time
+start_time = time.time()
+
+# Run Python processes
+
+elapsed_time = time.time() - start_time
+'
+    , @input_data_1 = N' ;';
 ```
 
-> [!TIP]
-> Many users like to use the system timing functions in R, such as `system.time` and `proc.time`, to capture the time used by R processes and analyze performance issues.
-
-For an example, see this tutorial: [Create Data Features](../tutorials/walkthrough-create-data-features.md). In this walkthrough, R timing functions are embedded in the solution to compare the performance of R functions vs. T-SQL functions for creating features from data.
-
 ## Next steps
+
+To create a machine learning model using Python in SQL Server, follow this quickstart:
+
+> [!div class="nextstepaction"]
+> [Quickstart: Create and score a predictive model in Python with SQL Server Machine Learning Services](quickstart-python-train-score-model.md)
 
 For more information on SQL Server Machine Learning Services, see:
 

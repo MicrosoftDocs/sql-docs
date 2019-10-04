@@ -145,6 +145,6 @@ GO
   
 -   When you enable or disable non-transactional access at the database level, the operation does not check whether the directory name has been specified or whether it is unique.  
   
--   When you drop a database that was enabled for FileTables, the database-level directory and all the directory stuctures of all the FileTables under it are removed.  
+-   When you drop a database that was enabled for FileTables, the database-level directory and all the directory structures of all the FileTables under it are removed.  
   
   

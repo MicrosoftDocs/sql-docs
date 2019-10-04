@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 6ae1017e-129b-4702-9ea7-00ac9b024062
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Microsoft SQL Server Reporting Services SharePoint Shared Service is Installed Side by Side (Upgrade Advisor)

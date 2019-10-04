@@ -42,6 +42,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 ## Intelligent Database
 
 ### Intelligent Query Processing
+With [Intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md) you know that critical parallel workloads improve when running at scale, while remaining adaptive to the constantly changing world of data. Intelligent Query Processing is available by default on the latest [Database Compatibility Level](../t-sql/statements/alter-database-transact-sql-compatibility-level.md#differences-between-compatibility-level-140-and-level-150) setting, delivering broad impact that improves the performance of existing workloads with minimal implementation effort.
 
 |New feature or update | Details |
 |:---|:---|
@@ -54,6 +55,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 
 
 ### In-Memory Database
+SQL Server’s In-Memory Database technologies allow you to deliver sub-millisecond response times over your databases.
 
 |New feature or update | Details |
 |:---|:---|
@@ -63,6 +65,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | &nbsp; | &nbsp; |
 
 ### Intelligent performance
+Intelligent performance provides better control over your database server, removing previously known resource bottlenecks to achieve new levels of scalability.
 
 |New feature or update | Details |
 |:---|:---|
@@ -75,6 +78,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | &nbsp; | &nbsp; |
 
 ### Monitoring
+Monitoring improvements unlock performance insights over any database workload, just when you need them.
 
 |New feature or update | Details |
 |:---|:---|
@@ -82,7 +86,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Custom capture policy for the Query Store|When enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine-tune data collection in a specific server. For more information, see [ALTER DATABASE SET Options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
 |`LIGHTWEIGHT_QUERY_PROFILING`|New database scoped configuration. See [`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp). |
 |`sys.dm_exec_requests` column `command` | Shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. See [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|
-|`sys.dm_exec_query_plan_stats` |New DMF returns the equivalent of the last known actual execution plan for most queries. See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
+|`sys.dm_exec_query_plan_stats` |New DMF returns the equivalent of the last known actual execution plan for all queries. See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
 |`LAST_QUERY_PLAN_STATS` | New database scoped configuration to enable `sys.dm_exec_query_plan_stats`. See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |`query_post_execution_plan_profile` | Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. See [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).|
 |`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | New DMF returns information about a page in a database. See [sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md).|
@@ -101,10 +105,11 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | &nbsp; | &nbsp; |
 
 ### Unicode support
+Support businesses accross different countries and regions, where the requirement of providing global multilingual database applications and services is critical to meet customer demands, and specific market regulations. 
 
 |New feature or update | Details |
 |:---|:---|
-|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. This supports applications extending to a global scale, where the requirement of providing global multilingual database applications and services is critical to meet customer demands, and specific market regulations. Support includes PolyBase external tables, and Always Encrypted. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] |
+|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. Support includes PolyBase external tables, and Always Encrypted. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] |
 | &nbsp; | &nbsp; |
 
 ### Language extensions

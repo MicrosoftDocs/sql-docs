@@ -5,7 +5,7 @@ description: In this quickstart, learn how to write an R function for advanced s
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/17/2019  
+ms.date: 10/04/2019  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye

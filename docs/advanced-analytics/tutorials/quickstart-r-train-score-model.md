@@ -5,7 +5,7 @@ description: Create a simple predictive model in R using SQL Server Machine Lear
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/17/2019  
+ms.date: 10/04/2019  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye

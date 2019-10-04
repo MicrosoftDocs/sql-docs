@@ -1,7 +1,7 @@
 ---
 title: "Hierarchical Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/03/2017"
+ms.date: "10/04/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -319,7 +319,7 @@ GO
   
   
 #### Example Using a Serializable Transaction  
- The **Org_BreadthFirst** index ensures that determining **@last_child** uses a range seek. In addition to other error cases an application might want to check, a duplicate key violation after the insert indicates an attempt to add multiple employees with the same id, and therefore **@last_child** must be recomputed. The following code uses a serializable transaction and a breadth-first index to compute the new node value:  
+ The **Org_BreadthFirst** index ensures that determining **@last_child** uses a range seek. In addition to other error cases an application might want to check, a duplicate key violation after the insert indicates an attempt to add multiple employees with the same id, and therefore **@last_child** must be recomputed. The following code computes the new node value within a serializable transaction:  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -337,9 +337,12 @@ DECLARE @last_child hierarchyid
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  
 BEGIN TRANSACTION   
   
-UPDATE Org_T2   
-SET @last_child = LastChild = EmployeeId.GetDescendant(LastChild,NULL)  
-WHERE EmployeeId = @mgrid  
+SELECT @last_child  =  EmployeeId.GetDescendant(LastChild,NULL)
+FROM Org_T2
+WHERE EmployeeId = @mgrid
+
+UPDATE Org_T2 SET LastChild = @last_child  WHERE EmployeeId = @mgrid
+
 INSERT Org_T2 (EmployeeId, EmployeeName)   
     VALUES(@last_child, @EmpName)  
 COMMIT  

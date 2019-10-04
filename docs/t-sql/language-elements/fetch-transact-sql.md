@@ -70,10 +70,10 @@ FETCH
  *cursor_name*  
  Is the name of the open cursor from which the fetch should be made. If both a global and a local cursor exist with *cursor_name* as their name, *cursor_name* to the global cursor if GLOBAL is specified and to the local cursor if GLOBAL is not specified.  
   
- @*cursor_variable_name*  
+ \@*cursor_variable_name*  
  Is the name of a cursor variable referencing the open cursor from which the fetch should be made.  
   
- INTO @*variable_name*[ ,...*n*]  
+ INTO \@*variable_name*[ ,...*n*]  
  Allows data from the columns of a fetch to be placed into local variables. Each variable in the list, from left to right, is associated with the corresponding column in the cursor result set. The data type of each variable must either match or be a supported implicit conversion of the data type of the corresponding result set column. The number of variables must match the number of columns in the cursor select list.  
   
 ## Remarks  

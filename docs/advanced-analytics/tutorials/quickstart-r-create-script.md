@@ -241,7 +241,7 @@ To learn how to use data structures when using R in SQL Server Machine Learning 
 > [!div class="nextstepaction"]
 > [Handle data types and objects using R in SQL Server Machine Learning Services](quickstart-r-data-types-and-objects.md)
 
-For more information on SQL Server Machine Learning Services, see the following articles.
+For more information on using R in SQL Server Machine Learning Services, see the following articles.
 
 - [Write advanced R functions with SQL Server Machine Learning Services](quickstart-r-functions.md)
 - [Create and score a predictive model in R with SQL Server Machine Learning Services](quickstart-r-train-score-model.md)

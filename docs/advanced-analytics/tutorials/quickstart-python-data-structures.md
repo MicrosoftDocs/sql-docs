@@ -203,7 +203,7 @@ To learn about writing advanced Python functions in SQL Server, follow this quic
 > [!div class="nextstepaction"]
 > [Write advanced Python functions with SQL Server Machine Learning Services](quickstart-python-functions.md)
 
-For more information on SQL Server Machine Learning Services, see:
+For more information on using Python in SQL Server Machine Learning Services, see:
 
 - [Create and score a predictive model in Python](quickstart-python-train-score-model.md)
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

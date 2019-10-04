@@ -255,7 +255,7 @@ To learn how to use data structures when using Python in SQL Server Machine Lear
 > [!div class="nextstepaction"]
 > [Handle data types and objects using Python in SQL Server Machine Learning Services](quickstart-python-data-structures.md)
 
-For more information on using Python in SQL Server Machine Learning Services, see the following articles.
+For more information on using Python in SQL Server Machine Learning Services, see the following articles:
 
 - [Write advanced Python functions with SQL Server Machine Learning Services](quickstart-python-functions.md)
 - [Create and score a predictive model in Python with SQL Server Machine Learning Services](quickstart-python-train-score-model.md)

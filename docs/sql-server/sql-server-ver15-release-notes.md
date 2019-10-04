@@ -41,12 +41,12 @@ The latest build number for SQL Server 2019 is `15.0.1900.25`.
 
 ## UTF-8 collations
 
-- **Issue and customer impact**: UTF-8 enabled collations cannot be used with in-memory OLTP. 
+- **Issue and customer impact**: UTF-8 enabled collations cannot be used with in-memory OLTP.
 
   > [!Note]
   > There is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SQL Server Data Tools (SSDT). The latest [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) version 18 supports choice of UTF-8 enabled collations in the UI.
 
-- **Applies to**: RTM
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
 
 ## Master Data Service notification email contains broken link
 
@@ -56,7 +56,7 @@ The latest build number for SQL Server 2019 is `15.0.1900.25`.
 
 - **Workaround**: Open the MDS portal and go to the resource manually.
 
-- **Applies to**: RTM
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
 
 ## See also
 

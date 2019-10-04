@@ -209,6 +209,6 @@ It's also possible to use the [PREDICT (Transact-SQL)](../../t-sql/queries/predi
 
 ## Next steps
 
-For more information on SQL Server Machine Learning Services, see the following articles.
+For more information on SQL Server Machine Learning Services, see:
 
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

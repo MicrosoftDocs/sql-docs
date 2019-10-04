@@ -20,7 +20,7 @@ ms.author: "mathoma"
   
 ### To set a trace filter  
   
-1.  If the trace is already running, execute **sp_trace_setstatus** by specifying **@status = 0** to stop the trace.  
+1.  If the trace is already running, execute **sp_trace_setstatus** by specifying `@status = 0` to stop the trace.  
   
 2.  Execute **sp_trace_setfilter** to configure the type of information to retrieve for the event being traced.  
 

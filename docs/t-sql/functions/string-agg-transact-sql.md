@@ -21,6 +21,12 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sql
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Concatenates the values of string expressions and places separator values between them. The separator is not added at the end of string.
+
+#### Compatibility level 140
+
+STRING_AGG requires the compatibility level to be at least 140. When the level is less than 140, SQL Server is unable to find the STRING_AGG function.
+
+To change the compatibility level of a database, refer to [View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

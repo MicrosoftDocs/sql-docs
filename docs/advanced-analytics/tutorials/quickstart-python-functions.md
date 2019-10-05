@@ -96,7 +96,6 @@ For example, you might use system timing functions in the `time` package to meas
 EXECUTE sp_execute_external_script
       @language = N'Python'
     , @script = N'
-import pandas
 import time
 start_time = time.time()
 

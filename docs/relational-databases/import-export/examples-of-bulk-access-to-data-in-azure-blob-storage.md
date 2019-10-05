@@ -47,14 +47,14 @@ SECRET = 'sv=2018-03-28&ss=b&srt=sco&sp=rwdlac&se=2019-08-31T02:25:19Z&st=2019-0
 
 ## Accessing data in a CSV file referencing an Azure blob storage location
 
-The following example uses an external data source pointing to an Azure storage account, named `newinvoices`.
+The following example uses an external data source pointing to an Azure storage account, named `MyAzureInvoices`.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH (
         TYPE = BLOB_STORAGE,
         LOCATION = 'https://newinvoices.blob.core.windows.net',
-        CREDENTIAL = 'UploadInvoices';
+        CREDENTIAL = UploadInvoices
     );
 ```
 

@@ -5,7 +5,7 @@ description: In this quickstart, learn how to write an R function for advanced s
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/03/2019  
+ms.date: 10/04/2019  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -102,6 +102,11 @@ WITH RESULT SETS (([Col1] int not null));
 > Many users like to use the system timing functions in R, such as `system.time` and `proc.time`, to capture the time used by R processes and analyze performance issues. For an example, see the tutorial [Create Data Features](../tutorials/walkthrough-create-data-features.md) where R timing functions are embedded in the solution.
 
 ## Next steps
+
+To create a machine learning model using R in SQL Server, follow this quickstart:
+
+> [!div class="nextstepaction"]
+> [Create and score a predictive model in R with SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
 
 For more information on SQL Server Machine Learning Services, see:
 

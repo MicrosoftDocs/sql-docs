@@ -58,7 +58,7 @@ After the data has been prepared, you can use it to train a model. You do this b
 
 Each stored procedure uses the input data you provide to create and train a logistic regression model. All Python code is wrapped in the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-To make it easier to retrain the model on new data, you wrap the call to sp_execute_exernal_script in another stored procedure, and pass in the new training data as a parameter. This section will walk you through that process.
+To make it easier to retrain the model on new data, you wrap the call to sp_execute_external_script in another stored procedure, and pass in the new training data as a parameter. This section will walk you through that process.
 
 ### PyTrainScikit
 

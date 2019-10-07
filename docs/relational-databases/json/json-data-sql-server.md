@@ -29,16 +29,19 @@ JSON functions in SQL Server enable you to combine NoSQL and relational concepts
 Here's an example of JSON text:
 
 ```json
-[{
+[
+  {
     "name": "John",
     "skills": ["SQL", "C#", "Azure"]
-}, {
+  },
+  {
     "name": "Jane",
     "surname": "Doe"
-}]
+  }
+]
 ```
 
-SQL Server built-in functions and operators enables you to do the following things with JSON data: 
+SQL Server built-in functions and operators enables you to do the following things with JSON data:
 
 - Parse JSON text and read or modify values.  
 - Transform arrays of JSON objects into table format.  
@@ -55,28 +58,27 @@ The next sections discuss the key capabilities that SQL Server provides with its
 
 ### Extract values from JSON text and use them in queries
 If you have JSON text that's stored in database tables, you can read or modify values in the JSON text by using the following built-in functions:  
-    
+
 - [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) tests whether a string contains valid JSON.
 - [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) extracts a scalar value from a JSON string.
 - [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) extracts an object or an array from a JSON string.
 - [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) changes a value in a JSON string.
 
-
 **Example**
-  
+
 In the following example, the query uses both relational and JSON data (stored in a column named `jsonCol`) from a table:  
   
 ```sql  
-SELECT Name,Surname,
- JSON_VALUE(jsonCol,'$.info.address.PostCode') AS PostCode,
- JSON_VALUE(jsonCol,'$.info.address."Address Line 1"')+' '
-  +JSON_VALUE(jsonCol,'$.info.address."Address Line 2"') AS Address,
- JSON_QUERY(jsonCol,'$.info.skills') AS Skills
+SELECT Name, Surname,
+  JSON_VALUE(jsonCol, '$.info.address.PostCode') AS PostCode,
+  JSON_VALUE(jsonCol, '$.info.address."Address Line 1"') + ' '
+  + JSON_VALUE(jsonCol, '$.info.address."Address Line 2"') AS Address,
+  JSON_QUERY(jsonCol,'$.info.skills') AS Skills
 FROM People
-WHERE ISJSON(jsonCol)>0
- AND JSON_VALUE(jsonCol,'$.info.address.Town')='Belgrade'
- AND Status='Active'
-ORDER BY JSON_VALUE(jsonCol,'$.info.address.PostCode')
+WHERE ISJSON(jsonCol) > 0
+  AND JSON_VALUE(jsonCol, '$.info.address.Town') = 'Belgrade'
+  AND Status = 'Active'
+ORDER BY JSON_VALUE(jsonCol, '$.info.address.PostCode')
 ```  
   
 Applications and tools see no difference between the values taken from scalar table columns and the values taken from JSON columns. You can use values from JSON text in any part of a Transact-SQL query (including WHERE, ORDER BY, or GROUP BY clauses, window aggregates, and so on). JSON functions use JavaScript-like syntax for referencing values inside JSON text.
@@ -118,8 +120,8 @@ FROM OPENJSON(@json)
         age int, dateOfBirth datetime2 '$.dob')  
 ```  
   
-**Results**  
-  
+**Results**
+
 |ID|firstName|lastName|age|dateOfBirth|  
 |--------|---------------|--------------|---------|-----------------|  
 |2|John|Smith|25||  

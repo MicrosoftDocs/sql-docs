@@ -5,7 +5,7 @@ description: Create and run simple Python scripts in a SQL Server instance with 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/17/2019  
+ms.date: 10/04/2019  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -250,12 +250,13 @@ toolz 0.8.2
 
 ## Next steps
 
-To create a machine learning model using Python in SQL Server, follow this quickstart:
+To learn how to use data structures when using Python in SQL Server Machine Learning Services, follow this quickstart:
 
 > [!div class="nextstepaction"]
-> [Create and score a predictive model in Python with SQL Server Machine Learning Services](quickstart-python-train-score-model.md)
+> [Handle data types and objects using Python in SQL Server Machine Learning Services](quickstart-python-data-structures.md)
 
-For more information on SQL Server Machine Learning Services, see the following articles.
+For more information on using Python in SQL Server Machine Learning Services, see the following articles:
 
-- [Handle data types and objects using Python in SQL Server Machine Learning Services](quickstart-python-data-structures.md)
+- [Write advanced Python functions with SQL Server Machine Learning Services](quickstart-python-functions.md)
+- [Create and score a predictive model in Python with SQL Server Machine Learning Services](quickstart-python-train-score-model.md)
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

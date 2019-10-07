@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "virtual directories [Reporting Services]"
 ms.assetid: 7d32b560-49d6-4558-b5d6-9127067f82d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Virtual directories are unspecified (Upgrade Advisor)

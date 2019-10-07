@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], installing"
   - "SQL Server Installation Wizard, Report Server Installation Options page"
 ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Reporting Services Configuration Options (SSRS)

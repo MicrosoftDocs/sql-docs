@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: This tutorial shows you how to use SQL Server Language Extensions and run Java code that search a string with regular expressions.
 author: dphansen
 ms.author: davidph 
-ms.date: 08/27/2019
+ms.date: 10/07/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -183,8 +183,6 @@ If you are using Windows, follow the steps below to create an external language 
 1. Create a .zip file containing the extension.
 
     As part of the SQL Server setup on Windows, the Java extension **.zip** file is installed in this location: `[SQL Server install path]\MSSQL\Binn\java-lang-extension.zip`. This zip file contains the **javaextension.dll**.
-
-    Compress the `javaextension.dll` into a **.zip** file. For example: `javaextension.zip`.
 
 2. Create an external language Java from the .zip file:
 

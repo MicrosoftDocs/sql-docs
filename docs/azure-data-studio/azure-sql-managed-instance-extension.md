@@ -73,7 +73,7 @@ On General-purpose service-tier, every database has a single (primary) replica, 
 
 Managed Instance extension shows the most relevant latest SQL Error log entries.
 
-![Managed instance log entries](media/azure-sql-mi-extension/ads-mi-tab2.png)
+![Managed instance log entries](media/azure-sql-mi-extension/ads-mi-tab4.png)
 
 Managed Instance emits a large number of log entries and most of them are internal/system information. Some log entries are showing physical database names (`GUID` values) instead of actual logical database names.
 

@@ -147,30 +147,34 @@ In the following example, the second object in the array has sub-array represent
 
 ```sql  
 DECLARE @json NVARCHAR(MAX);
-SET @json =  
-N'[  
-       { "id" : 2,"info": { "name": "John", "surname": "Smith" }, "age": 25 },  
-       { "id" : 5,"info": { "name": "Jane", "surname": "Smith", "skills": ["SQL", "C#", "Azure"] }, "dob": "2005-11-04T12:00:00" }  
- ]';
+SET @json = N'[  
+  {"id": 2, "info": {"name": "John", "surname": "Smith"}, "age": 25},
+  {"id": 5, "info": {"name": "Jane", "surname": "Smith", "skills": ["SQL", "C#", "Azure"]}, "dob": "2005-11-04T12:00:00"}  
+]';
 
 SELECT *  
 FROM OPENJSON(@json)  
-  WITH (id int 'strict $.id',  
-        firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',  
-        age int, dateOfBirth datetime2 '$.dob',
-	skills nvarchar(max) '$.info.skills' as json) 
-	outer apply openjson( skills ) 
-                     with ( skill nvarchar(8) '$' );
-```  
-**skills** array is returned in the first `OPENJSON` as original JSON text fragment and passed to another `OPENJSON` function using `APPLY` operator. The second `OPENJSON` function will parse JSON array and return string values as single column rowset that will be joined with the result of the first `OPENJSON`. 
+  WITH (
+    id INT 'strict $.id',
+    firstName NVARCHAR(50) '$.info.name',
+    lastName NVARCHAR(50) '$.info.surname',  
+    age INT,
+    dateOfBirth DATETIME2 '$.dob',
+    skills NVARCHAR(MAX) '$.info.skills' AS JSON
+  )
+OUTER APPLY OPENJSON(skills)
+  WITH (skill NVARCHAR(8) '$');
+```
+
+**skills** array is returned in the first `OPENJSON` as original JSON text fragment and passed to another `OPENJSON` function using `APPLY` operator. The second `OPENJSON` function will parse JSON array and return string values as single column rowset that will be joined with the result of the first `OPENJSON`.
 The result of this query is shown in the following table:
 
-**Results**  
-  
+**Results**
+
 |ID|firstName|lastName|age|dateOfBirth|skill|  
 |--------|---------------|--------------|---------|-----------------|----------|  
 |2|John|Smith|25|||  
-|5|Jane|Smith||2005-11-04T12:00:00|SQL| 
+|5|Jane|Smith||2005-11-04T12:00:00|SQL|
 |5|Jane|Smith||2005-11-04T12:00:00|C#|
 |5|Jane|Smith||2005-11-04T12:00:00|Azure|
 
@@ -186,31 +190,34 @@ Format SQL Server data or the results of SQL queries as JSON by adding the **FOR
 The following example uses PATH mode with the **FOR JSON** clause:  
   
 ```sql  
-SELECT id, firstName AS "info.name", lastName AS "info.surname", age, dateOfBirth as dob  
-FROM People  
+SELECT id, firstName AS "info.name", lastName AS "info.surname", age, dateOfBirth AS dob
+FROM People
 FOR JSON PATH;
-```  
-  
+```
+
 The **FOR JSON** clause formats SQL results as JSON text that can be provided to any app that understands JSON. The PATH option uses dot-separated aliases in the SELECT clause to nest objects in the query results.  
   
-**Results**  
+**Results**
   
 ```json  
-[{
-	"id": 2,
-	"info": {
-		"name": "John",
-		"surname": "Smith"
-	},
-	"age": 25
-}, {
-	"id": 5,
-	"info": {
-		"name": "Jane",
-		"surname": "Smith"
-	},
-	"dob": "2005-11-04T12:00:00"
-}] 
+[
+  {
+    "id": 2,
+    "info": {
+      "name": "John",
+      "surname": "Smith"
+    },
+    "age": 25
+  },
+  {
+    "id": 5,
+    "info": {
+      "name": "Jane",
+      "surname": "Smith"
+    },
+    "dob": "2005-11-04T12:00:00"
+ }
+]
 ```  
   
 For more information, see [Format query results as JSON with FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) and [FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md).  
@@ -271,43 +278,42 @@ If you must load JSON data from an external service into SQL Server, you can use
 ```sql  
 DECLARE @jsonVariable NVARCHAR(MAX);
 
-SET @jsonVariable = N'[  
-        {  
-          "Order": {  
-            "Number":"SO43659",  
-            "Date":"2011-05-31T00:00:00"  
-          },  
-          "AccountNumber":"AW29825",  
-          "Item": {  
-            "Price":2024.9940,  
-            "Quantity":1  
-          }  
-        },  
-        {  
-          "Order": {  
-            "Number":"SO43661",  
-            "Date":"2011-06-01T00:00:00"  
-          },  
-          "AccountNumber":"AW73565",  
-          "Item": {  
-            "Price":2024.9940,  
-            "Quantity":3  
-          }  
-       }  
-  ]';
+SET @jsonVariable = N'[
+  {
+    "Order": {  
+      "Number":"SO43659",  
+      "Date":"2011-05-31T00:00:00"  
+    },  
+    "AccountNumber":"AW29825",  
+    "Item": {  
+      "Price":2024.9940,  
+      "Quantity":1  
+    }  
+  },  
+  {  
+    "Order": {  
+      "Number":"SO43661",  
+      "Date":"2011-06-01T00:00:00"  
+    },  
+    "AccountNumber":"AW73565",  
+    "Item": {  
+      "Price":2024.9940,  
+      "Quantity":3  
+    }  
+  }
+]';
 
---INSERT INTO <sampleTable>  
-SELECT SalesOrderJsonData.*  
-FROM OPENJSON (@jsonVariable, N'$')  
-           WITH (  
-              Number   varchar(200) N'$.Order.Number',   
-              Date     datetime     N'$.Order.Date',  
-              Customer varchar(200) N'$.AccountNumber',   
-              Quantity int          N'$.Item.Quantity'  
-           )  
-  AS SalesOrderJsonData;  
-```  
-  
+-- INSERT INTO <sampleTable>  
+SELECT SalesOrderJsonData.*
+FROM OPENJSON (@jsonVariable, N'$')
+  WITH (
+    Number VARCHAR(200) N'$.Order.Number',
+    Date DATETIME N'$.Order.Date',
+    Customer VARCHAR(200) N'$.AccountNumber',
+    Quantity INT N'$.Item.Quantity'
+  ) AS SalesOrderJsonData;
+```
+
 You can provide the content of the JSON variable by an external REST service, send it as a parameter from a client-side JavaScript framework, or load it from external files. You can easily insert, update, or merge results from JSON text into a SQL Server table.
 
 ## Analyze JSON data with SQL queries  
@@ -315,17 +321,15 @@ If you must filter or aggregate JSON data for reporting purposes, you can use **
   
 ```sql  
 SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
-FROM   SalesOrderRecord AS Tab  
-          CROSS APPLY  
-     OPENJSON (Tab.json, N'$.Orders.OrdersArray')  
-           WITH (  
-              Number   varchar(200) N'$.Order.Number',   
-              Date     datetime     N'$.Order.Date',  
-              Customer varchar(200) N'$.AccountNumber',   
-              Quantity int          N'$.Item.Quantity'  
-           )  
-  AS SalesOrderJsonData  
-WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'  
+FROM SalesOrderRecord AS Tab
+CROSS APPLY OPENJSON (Tab.json, N'$.Orders.OrdersArray')
+  WITH (
+    Number VARCHAR(200) N'$.Order.Number',
+    Date DATETIME N'$.Order.Date',
+    Customer VARCHAR(200) N'$.AccountNumber',
+    Quantity INT N'$.Item.Quantity'
+  ) AS SalesOrderJsonData
+WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'
 ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified;
 ```  
   
@@ -343,11 +347,11 @@ For example, you might want to generate JSON output that's compliant with the OD
 This OData URL represents a request for the ProductID and ProductName columns for the product with `ID` 1. You can use **FOR JSON** to format the output as expected in SQL Server.  
   
 ```sql  
-SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
- AS '@odata.context',   
- ProductID, Name as ProductName   
+SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity' AS '@odata.context',
+  ProductID,
+  Name as ProductName
 FROM Production.Product  
-WHERE ProductID = 1  
+WHERE ProductID = 1
 FOR JSON AUTO;
 ```  
   

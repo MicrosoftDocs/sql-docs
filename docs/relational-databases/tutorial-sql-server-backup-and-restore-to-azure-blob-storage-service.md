@@ -39,25 +39,27 @@ To create a Container, follow these steps:
 1. Enter the name for the container and make note of the container name you specified. This information is used in the URL (path to backup file) in the T-SQL statements later in this quickstart. 
 1. Select **OK**. 
     
-    ![New container](media/quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
+    ![New container](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
   > [!NOTE]
   > Authentication to the storage account is required for SQL Server backup and restore even if you choose to create a public container. You can also create a container programatically using REST APIs. For more information, see [Create container](https://docs.microsoft.com/rest/api/storageservices/Create-Container)
 
 ## Create a test database 
-In this step, you create a test database using SQL Server Management Studio (SSMS). 
+In this step, create a test database using SQL Server Management Studio (SSMS). 
 
 1. Launch [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) and connect to your SQL Server instance.
 1. Open a **New Query** window. 
-1. Run the following Transact-SQL (T-SQL) code to create your test database. Refresh the **Databases** node in **Object Explorer** to see your new database. 
+1. Run the following Transact-SQL (T-SQL) code to create your test database. Refresh the **Databases** node in **Object Explorer** to see your new database. Newly created databases on an Azure SQL Database managed instance automatically have TDE enabled so you'll need to disable it to proceed. 
 
 ```sql
 USE [master]
 GO
 
+-- Create database
 CREATE DATABASE [SQLTestDB]
 GO
 
+-- Create table in database
 USE [SQLTestDB]
 GO
 CREATE TABLE SQLTest (
@@ -67,11 +69,7 @@ CREATE TABLE SQLTest (
 )
 GO
 
-IF SERVERPROPERTY('EngineEditionId') = '8'
-    ALTER DATABASE SQLTestDB SET ENCRYPTION OFF;
-
-
-
+-- Populate table 
 USE [SQLTestDB]
 GO
 
@@ -84,23 +82,27 @@ GO
 
 SELECT * FROM SQLTest
 GO
+
+-- Disable TDE for newly-created databases on a managed instance 
+USE [SQLTestDB];
+GO
+ALTER DATABASE [SQLTestDB] SET ENCRYPTION OFF;
+GO
 ```
 
+## Create credential
 
-## Back up database
-In this step, you will back up the database `SQLTest` to your Azure Blob storage account using either the GUI within SQL Server Management Studio, or Transact-SQL (T-SQL). 
-
-# [SSMS](#tab/SSMS)
+Use the GUI in SQL Server Management Studio to create the credential by following the steps below. Alternatively, you can create the credential [programmatically](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature) as well. 
 
 1. Expand the **Databases** node within **Object Explorer** of [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 1. Right-click your new `SQLTest` database, hover over **Tasks** and then select **Back up...** to launch the **Back Up Database** wizard. 
 1. Select **URL** from the **Back up to** drop down, and then select **Add** to launch the **Select Backup Destination** dialog box. 
 
-   ![Back up to URL](media/quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
+   ![Back up to URL](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
 1. Select **New container** on the **Select Backup Destination** dialog box to launch the **Connect to a Microsoft Subscription** window. If this step was done previously, then instead of creating a new container, select the existing container from the drop-down and skip to step 10. 
 
-   ![Backup destination](media/quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
+   ![Backup destination](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
 
 1. Sign in to the Azure portal by selecting **Sign In...** and then proceed through the sign-in process. 
 1. Select your **subscription** from the drop-drown. 
@@ -108,113 +110,121 @@ In this step, you will back up the database `SQLTest` to your Azure Blob storage
 1. Select the container you created previously from the drop-down. 
 1. Select **Create Credential** to generate your *Shared Access Signature (SAS)*. Save this value as you will need it for the restore. 
 
-   ![Create credential](media/quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)
+   ![Create credential](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)
 
 1. Select **OK** to close the **Connect to a Microsoft Subscription** window. This populates the *Azure storage container* value on the **Select Backup Destination** dialog box. Select **OK** to choose the selected storage container, and close the dialog box. 
+1. At this point, you can either skip ahead to step 4 in the next section to take the backup of the database, or close out the **Back up Database** wizard if you want to proceed with using Transact-SQL to back up the database instead. 
+
+
+## Back up database
+In this step, back up the database `SQLTest` to your Azure Blob storage account using either the GUI within SQL Server Management Studio, or Transact-SQL (T-SQL). 
+
+# [SSMS](#tab/SSMS)
+
+1. If the **Back Up Database** wizard is not already open, expand the **Databases** node within **Object Explorer** of [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
+1. Right-click your new `SQLTest` database, hover over **Tasks** and then select **Back up...** to launch the **Back Up Database** wizard. 
+1. Select **URL** from the **Back up to** drop down, and then select **Add** to launch the **Select Backup Destination** dialog box. 
+
+   ![Back up to URL](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
+
+1. Select the container you created in the previous step in the **Azure storage container** drop-down. 
+
+   ![Azure storage container](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/azure-storage-container.png)
+
 1. Select **OK** on the **Back Up Database** wizard to back up your database. 
-1. Select **OK** once your database is backed up successfully to close all backup related windows. 
+1. Select **OK** once your database is backed up successfully to close all backup-related windows. 
 
    > [!TIP]
    > You can script out the Transact-SQL behind this command by selecting **Script** at the top of the **Back Up Database** wizard: 
-   > ![Script command](media/quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
+   > ![Script command](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
 
 
 # [Transact-SQL](#tab/tsql)
-The backup command will differ between an on-premises instance and a managed instance, since managed instances only support copy-only ad hoc back ups. 
 
-  > [!IMPORTANT]
-  > You will still need to follow the steps in the SSMS GUI section to create a credential and generate the SAS key before being able to successfully back up the database using Transact-SQL. To programmatically create the credential and shared access storage key, see [Create stored access policy and shared access storage](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature).
+Back up your database using Transact-SQL by running the following command: 
 
-
-### On-premises
-
-To back up your on-premises database to Azure blob storage, modify the following Transact-SQL command to use your own storage account and then run it within a new query window: 
 
 ```sql
 USE [master]
 
 BACKUP DATABASE [SQLTestDB] 
-TO  URL = N'https://msfquickstartstorage.blob.core.windows.net/sql-backup/sqltestdb_backup_2019_09_19_225116.bak' 
-WITH NOFORMAT, NOINIT,  NAME = N'SQLTestDB-Full Database Backup', 
-NOSKIP, NOREWIND, NOUNLOAD,  STATS = 10
-GO
-```
-
-### Managed instance
-
-To back up your managed instance database to Azure blob storage, modify the following Transact-SQL command to use your own storage account and then run it within a new query window: 
-
-```sql
-USE [master]
-
-BACKUP DATABASE [SQLTestDB] 
-TO  URL = N'https://msfquickstartstorage.blob.core.windows.net/sql-backup/sqltestdb_backup_2019_09_19_223259.bak' 
-WITH  BLOCKSIZE = 65536,  MAXTRANSFERSIZE = 4194304,  
-COPY_ONLY, NOFORMAT, NOINIT,  
-NAME = N'SQLTestDB-Full Database Backup', 
-NOSKIP, NOREWIND, NOUNLOAD,  STATS = 10
+TO  URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_backup_2020_01_01_000001.bak' 
+WITH  COPY_ONLY, CHECKSUM
 GO
 ```
 
 ---
 
+## Delete database
+In this step, delete the database before performing the restore using the GUI in SQL Server Management studio, or with Transact-SQL.
+
+# [SSMS](#tab/SSMS)
+
+1. Expand the **Databases** node in **Object explorer**, right-click the SQLTestDB database, and select delete to launch the **Delete object** wizard. 
+1. On a managed instance, select **OK** to delete the database. On-premises, check the checkbox next to **Close existing connections** and then select **OK** to delete the database. 
+
+# [Transact-SQL](#tab/tsql)
+
+Delete the database by running the following Transact-SQL command:
+
+```sql
+USE [master]
+GO
+DROP DATABASE [SQLTestDB]
+GO
+
+-- If connections currently exist on-premises, you'll need to set the database into single user mode first
+USE [master]
+GO
+ALTER DATABASE [SQLTestDB] SET  SINGLE_USER WITH ROLLBACK IMMEDIATE
+GO
+USE [master]
+GO
+DROP DATABASE [SQLTestDB]
+GO
+```
+
+---
+
+
 ## Restore database 
-In this step, you will restore the database using either the GUI in SQL Server Management Studio, or with Transact-SQL. 
+In this step, restore the database using either the GUI in SQL Server Management Studio, or with Transact-SQL. 
 
 # [SSMS](#tab/SSMS)
 
 1. Right-click the **Databases** node in **Object Explorer** within SQL Server Management Studio and select **Restore Database**. 
 1. Select **Device** and then select the ellipses (...) to choose the device. 
 
-   ![Select restore device](media/quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-device.png)
+   ![Select restore device](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-device.png)
 
 1. Select **URL** from the **Backup media type** drop-down and select **Add** to add your device. 
 
-   ![Add backup device](media/quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service/add-backup-device.png)
+   ![Add backup device](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/add-backup-device.png)
 
 1. Select the container from the drop-down and then paste in the Shared Access Signature you saved when creating the credential. 
 1. Select **OK** to select the backup file location. 
 1. Expand **Containers** and select the container where your backup file exists. 
 1. Select the backup file you want to restore and then select **OK**. If no files are visible, then you may be using the wrong SAS key. You can regenerate the SAS key again by following the same steps as before to add the container. 
 
-   ![Select restore file](media/quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-file.png)
+   ![Select restore file](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-file.png)
 
 1. Select **OK** to close the **Select backup devices** dialog box. 
 1. Select **OK** to restore your database. 
 
+azure-storage-container.
 
 # [Transact-SQL](#tab/tsql)
-The restore command will differ between an on-premises instance and a managed instance since on-premises requires a tail-log backup. 
-
-### On-premises
 
 To restore your on-premises database from Azure Blob storage, modify the following Transact-SQL command to use your own storage account and then run it within a new query window: 
 
 ```sql
 USE [master]
 
-BACKUP LOG [SQLTestDB] 
-TO  URL = N'https://msfquickstartstorage.blob.core.windows.net/sql-backup/SQLTestDB_LogBackup_2019-09-20_01-49-46.bak' 
-WITH NOFORMAT, NOINIT,  
-NAME = N'SQLTestDB_LogBackup_2019-09-20_01-49-46', 
-NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5
-RESTORE DATABASE [SQLTestDB] 
-FROM  URL = N'https://msfquickstartstorage.blob.core.windows.net/sql-backup/sqltestdb_backup_2019_09_19_221153.bak'
-WITH  FILE = 1,  NOUNLOAD,  STATS = 5
-
-GO
-```
-
-### Managed instance
-To restore your managed instance database from Azure blob storage, modify the following Transact-SQL command to use your own storage account and then run it within a new query window: 
-
-```sql
 USE [master]
 RESTORE DATABASE [SQLTestDB] FROM 
-URL = N'https://msfquickstartstorage.blob.core.windows.net/sql-backup/sqltestdb_backup_2019_09_20_012223.bak'
-
-GO
+URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_backup_2020_01_01_000001.bak'
 ```
+
 ---
 
 

@@ -42,18 +42,20 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 ## Intelligent Database
 
 ### Intelligent Query Processing
+With [Intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md) you know that critical parallel workloads improve when running at scale, while remaining adaptive to the constantly changing world of data. Intelligent Query Processing is available by default on the latest [Database Compatibility Level](../t-sql/statements/alter-database-transact-sql-compatibility-level.md#differences-between-compatibility-level-140-and-level-150) setting, delivering broad impact that improves the performance of existing workloads with minimal implementation effort.
 
 |New feature or update | Details |
 |:---|:---|
 |Row mode memory grant feedback |Expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators. This can automatically correct excessive grants that result in wasted memory and reduced concurrency, and correct insufficient memory grants that cause expensive spills to disk. See [Row mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
-|Table variable deferred compilation|Improves plan quality and overall performance for queries that reference table variables. During optimization and initial compilation, this feature propagates cardinality estimates that are based on actual table variable row counts. This accurate row count information optimizes downstream plan operations. See [Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
-|Approximate query processing with `APPROX_COUNT_DISTINCT `|For scenarios when absolute precision isn't important, but responsiveness is critical, `APPROX_COUNT_DISTINCT` aggregates across large datasets using less resources than `COUNT(DISTINCT())` for superior concurrency. See [Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
 |Batch mode on rowstore|Batch mode on rowstore enables batch mode execution without requiring columnstore indexes. Batch mode execution uses CPU more efficiently during analytical workloads, but until [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] it was only used when a query included operations with columnstore indexes. However, some applications may use features that aren't supported with columnstore indexes, and therefore could not leverage batch mode. Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], batch mode is enabled on eligible analytical workloads whose queries include operations with any type of index (rowstore or columnstore). See [Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
 |Scalar UDF Inlining|Automatically transforms scalar UDFs into relational expressions and embeds them in the calling SQL query. This transformation improves the performance of workloads that take advantage of scalar UDFs. See [Scalar UDF Inlining](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
+|Table variable deferred compilation|Improves plan quality and overall performance for queries that reference table variables. During optimization and initial compilation, this feature propagates cardinality estimates that are based on actual table variable row counts. This accurate row count information optimizes downstream plan operations. See [Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
+|Approximate query processing with `APPROX_COUNT_DISTINCT `|For scenarios when absolute precision isn't important, but responsiveness is critical, `APPROX_COUNT_DISTINCT` aggregates across large datasets using less resources than `COUNT(DISTINCT())` for superior concurrency. See [Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
 | &nbsp; | &nbsp; |
 
 
 ### In-Memory Database
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] In-Memory Database technologies allow you to deliver sub-millisecond response times over your databases.
 
 |New feature or update | Details |
 |:---|:---|
@@ -63,6 +65,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | &nbsp; | &nbsp; |
 
 ### Intelligent performance
+Intelligent performance provides better control over your database server, removing previously known resource bottlenecks to achieve new levels of scalability.
 
 |New feature or update | Details |
 |:---|:---|
@@ -75,6 +78,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | &nbsp; | &nbsp; |
 
 ### Monitoring
+Monitoring improvements unlock performance insights over any database workload, just when you need them.
 
 |New feature or update | Details |
 |:---|:---|
@@ -82,7 +86,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Custom capture policy for the Query Store|When enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine-tune data collection in a specific server. For more information, see [ALTER DATABASE SET Options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
 |`LIGHTWEIGHT_QUERY_PROFILING`|New database scoped configuration. See [`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp). |
 |`sys.dm_exec_requests` column `command` | Shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. See [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|
-|`sys.dm_exec_query_plan_stats` |New DMF returns the equivalent of the last known actual execution plan for most queries. See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
+|`sys.dm_exec_query_plan_stats` |New DMF returns the equivalent of the last known actual execution plan for all queries. See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
 |`LAST_QUERY_PLAN_STATS` | New database scoped configuration to enable `sys.dm_exec_query_plan_stats`. See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |`query_post_execution_plan_profile` | Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. See [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).|
 |`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | New DMF returns information about a page in a database. See [sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md).|
@@ -101,10 +105,11 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | &nbsp; | &nbsp; |
 
 ### Unicode support
+Support businesses accross different countries and regions, where the requirement of providing global multilingual database applications and services is critical to meet customer demands, and specific market regulations. 
 
 |New feature or update | Details |
 |:---|:---|
-|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. This supports applications extending to a global scale, where the requirement of providing global multilingual database applications and services is critical to meet customer demands, and specific market regulations. Support includes PolyBase external tables, and Always Encrypted. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] |
+|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. Support includes PolyBase external tables, and Always Encrypted. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] |
 | &nbsp; | &nbsp; |
 
 ### Language extensions
@@ -127,6 +132,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | &nbsp; | &nbsp; |
 
 ### Error messages
+When an ETL process fails because the source and the destination don't have matching data types and/or length, troubleshooting used to be very time-consuming, especially in large datasets. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] allows faster insights into data truncation errors.
 
 |New feature or update | Details |
 |:---|:---|

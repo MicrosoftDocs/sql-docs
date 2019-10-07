@@ -79,7 +79,7 @@ Managed Instance emits a large number of log entries and most of them are intern
 
 Managed Instance extension filters-out unnecessary  log entries based on [Dimitri Furman method](https://blogs.msdn.microsoft.com/sqlcat/2018/05/04/azure-sql-db-managed-instance-sp_readmierrorlog/) and displays actual logical file names instead of physical names.
 
-## Reporting Problems
+## Reporting problems
 
 If you experience any problems with the Managed instance Extension, report the issue on [Extension GitHub project](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues).
 
@@ -87,7 +87,7 @@ If you experience any problems with the Managed instance Extension, report the i
 
 - [Jovan Popovic(MSFT)](https://github.com/jovanpop_msft) - [@jovanpop_msft](https://twitter.com/JovanPop_MSFT)
 
-## [Code of Conduct][conduct-md]
+## Code of conduct
 
 This project has adopted the [Microsoft Open Source Code of Conduct][conduct-code].
 For more information, see the [Code of Conduct FAQ][conduct-FAQ] or contact [opencode@microsoft.com][conduct-email] with any additional questions or comments.

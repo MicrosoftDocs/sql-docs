@@ -12,7 +12,7 @@ author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: alanyu
 ---
-# Managed Instance Support for Azure Data Studio
+# Managed Instance support for Azure Data Studio (Preview)
 
 This extension enables you to see some provides support in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). This extension provides the following features:
 - Showing properties of Managed instance (vCores, used storage)
@@ -32,7 +32,7 @@ get notified automatically about any future extension updates!
 
 This extension enables you to see technical characteristics of your Managed Instance and some resource usage.
 
-[!Managed instance properties](media/ads-mi-tab1.png)
+![Managed instance properties](media/ads-mi-tab1.png)
 
 On the first blade, you are able to see the following details:
 - Basic properties such as available number of vCores, memory, storage, current service-tier and hardware generation, and IO
@@ -45,7 +45,7 @@ characteristics like instance log write throughput, file IO/throughput character
 
 Managed Instance extension provides you some recommendations and alerts,
 
-[!Managed instance recommendations](media/ads-mi-tab2.png)
+![Managed instance recommendations](media/ads-mi-tab2.png)
 
 Some of the recommendations that are shown in this section are: 
 - Reaching storage space limit - you should either delete unnesecaary data or increase instance storage size because databases that reach storage limit might fail to process even read queries.
@@ -61,7 +61,7 @@ You should periodically review these recommendations and alerts and take some ac
 
 Managed instance extension enables you to see state of database replicas in your Managed instance.
 
-[!Managed instance replicas](media/ads-mi-tab3.png)
+![Managed instance replicas](media/ads-mi-tab3.png)
 
 On General-purpose service-tier, every database has single (primary) replica, while on Business Critical instance every database has one primary and three secondary replicas (one is used for read-only workloads). Here you can see are all replicas synchronized with primary. 
 
@@ -69,7 +69,7 @@ On General-purpose service-tier, every database has single (primary) replica, wh
 
 Managed Instance extension shows the most relevant latest SQL Error log entries that you can review.
 
-[!Managed instance log entries](media/ads-mi-tab2.png)
+![Managed instance log entries](media/ads-mi-tab2.png)
 
 Managed Instance emits a large number of log entries and most of them are internal/system information. Some log entries are showing physical database names (GUID values)
 instead of actual logical database names. Managed Instance extension filters-out unnecessary  log entries based on [Dimitri Furman method](https://blogs.msdn.microsoft.com/sqlcat/2018/05/04/azure-sql-db-managed-instance-sp_readmierrorlog/) and displays actual logical file names instead of physical names.

@@ -5,7 +5,7 @@ description: Create and run simple R scripts in a SQL Server instance with SQL S
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/17/2019  
+ms.date: 10/04/2019  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -236,13 +236,13 @@ The output is from `installed.packages()` in R and is returned as a result set.
 
 ## Next steps
 
-To create a machine learning model using R in SQL Server, follow this quickstart:
+To learn how to use data structures when using R in SQL Server Machine Learning Services, follow this quickstart:
 
 > [!div class="nextstepaction"]
-> [Create and score a predictive model in R with SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
+> [Handle data types and objects using R in SQL Server Machine Learning Services](quickstart-r-data-types-and-objects.md)
 
-For more information on SQL Server Machine Learning Services, see the following articles.
+For more information on using R in SQL Server Machine Learning Services, see the following articles:
 
-- [Handle data types and objects using R in SQL Server Machine Learning Services](quickstart-r-data-types-and-objects.md)
 - [Write advanced R functions with SQL Server Machine Learning Services](quickstart-r-functions.md)
+- [Create and score a predictive model in R with SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

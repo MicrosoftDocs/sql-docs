@@ -252,7 +252,7 @@ Disables automatic software partitioning of large NUMA hardware nodes into small
 
 **\<memory_optimized> ::=**
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
 ON <br>
 Enables all instance-level features that are part of the [In-Memory Database](../../relational-databases/in-memory-database.md) feature family. This currently includes [memory-optimized tempdb metadata](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) and [hybrid buffer pool](../../database-engine/configure-windows/hybrid-buffer-pool.md). Requires a restart to take effect.
@@ -278,9 +278,11 @@ This statement doesn't require a restart of [!INCLUDE[ssNoVersion](../../include
 This statement doesn't support DDL triggers.  
   
 ## Permissions  
-Requires ALTER SETTINGS permissions for the process affinity option. ALTER SETTINGS and VIEW SERVER STATE permissions for the diagnostic log and failover cluster property options, and CONTROL SERVER permission for the HADR cluster context option.  
-  
-Requires ALTER SERVER STATE permission for the buffer pool extension option.  
+Requires:
+- `ALTER SETTINGS` permissions for the process affinity option.
+- `ALTER SETTINGS` and `VIEW SERVER STATE` permissions for the diagnostic log and failover cluster property options.
+- `CONTROL SERVER` permission for the HADR cluster context option.  
+- `ALTER SERVER STATE` permission for the buffer pool extension option.  
   
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] resource DLL runs under the Local System account. As such, the Local System account must have read and write access to the specified path in the Diagnostic Log option.  
   
@@ -331,14 +333,14 @@ SET PROCESS AFFINITY CPU=60 TO 200;
 #### D. Setting affinity to CPU 0 on a system that has two CPUs  
 The following example sets the affinity to `CPU=0` on a computer that has two CPUs. Before the following statement is executed, the internal affinity bitmask is 00.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION SET PROCESS AFFINITY CPU=0;  
 ```  
   
 #### E. Setting affinity to AUTO  
 The following example sets affinity to `AUTO`.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION  
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  

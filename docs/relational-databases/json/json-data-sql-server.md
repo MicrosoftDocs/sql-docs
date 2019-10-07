@@ -88,13 +88,14 @@ For more information, see [Validate, query, and change JSON data with built-in f
 ### Change JSON values
 If you must modify parts of JSON text, you can use the [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) function to update the value of a property in a JSON string and return the updated JSON string. The following example updates the value of a property in a variable that contains JSON:  
   
-```sql  
+```sql
 DECLARE @json NVARCHAR(MAX);
-SET @json = '{"info":{"address":[{"town":"Belgrade"},{"town":"Paris"},{"town":"Madrid"}]}}';
-SET @json = JSON_MODIFY(@json,'$.info.address[1].town','London');
+SET @json = '{"info": {"address": [{"town": "Belgrade"}, {"town": "Paris"}, {"town":"Madrid"}]}}';
+SET @json = JSON_MODIFY(@json, '$.info.address[1].town', 'London');
 SELECT modifiedJson = @json;
-```  
-**Results**  
+```
+
+**Results**
 
 |modifiedJson|  
 |--------|  
@@ -106,20 +107,23 @@ You don't need a custom query language to query JSON in SQL Server. To query JSO
 The following example calls **OPENJSON** and transforms the array of objects that is stored in the `@json` variable to a rowset that can be queried with a standard SQL **SELECT** statement:  
   
 ```sql  
-DECLARE @json NVARCHAR(MAX)
-SET @json =  
-N'[  
-       { "id" : 2,"info": { "name": "John", "surname": "Smith" }, "age": 25 },  
-       { "id" : 5,"info": { "name": "Jane", "surname": "Smith" }, "dob": "2005-11-04T12:00:00" }  
- ]'  
-   
-SELECT *  
-FROM OPENJSON(@json)  
-  WITH (id int 'strict $.id',  
-        firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',  
-        age int, dateOfBirth datetime2 '$.dob')  
-```  
-  
+DECLARE @json NVARCHAR(MAX);
+SET @json = N'[
+  {"id": 2, "info": {"name": "John", "surname": "Smith"}, "age": 25},
+  {"id": 5, "info": {"name": "Jane", "surname": "Smith"}, "dob": "2005-11-04T12:00:00"}
+]';
+
+SELECT *
+FROM OPENJSON(@json)
+  WITH (
+    id INT 'strict $.id',
+    firstName NVARCHAR(50) '$.info.name',
+    lastName NVARCHAR(50) '$.info.surname',
+    age INT,
+    dateOfBirth DATETIME2 '$.dob'
+  );
+```
+
 **Results**
 
 |ID|firstName|lastName|age|dateOfBirth|  

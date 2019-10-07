@@ -1,7 +1,7 @@
 ---
-title: Azure SQL Managed Instance extension
+title: Azure SQL managed instance extension
 titleSuffix: Azure Data Studio
-description: Use Azure Data Studio with Azure SQL Managed instance
+description: Use Azure Data Studio with Azure SQL managed instance
 ms.custom: "seodec18"
 ms.date: "10/07/2019"
 ms.reviewer: "alayu; sstein"
@@ -12,36 +12,35 @@ author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: alanyu
 ---
-# Managed Instance support for Azure Data Studio (Preview)
+# Azure SQL managed instance dashboard for Azure Data Studio (Preview)
 
-This extension enables you to work with [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). This extension provides the following features:
+The Azure SQL managed instance extension provides a dashboard for working with a [Azure SQL managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). This extension provides the following features:
 
-- Showing properties of Managed instance (vCores, used storage).
-- Monitoring CPU and storage usage in past two hours.
-- Showing configuration warning and tuning recommendations.
-- Showing state of database replicas.
-- Showing filtered error logs.
+- Shows managed instance properties, including vCores and used storage
+- Monitors CPU and storage usage for previous two hours
+- Displays configuration warnings and tuning recommendations
+- Shows state of database replicas
+- Displays filtered error logs
 
 ## Installations
 
-You can install the official release of the Managed Instance extension by following the steps
+You can install the official release of the managed instance extension by following the steps
 in the [Azure Data Studio documentation](https://docs.microsoft.com/sql/azure-data-studio/extensions).
-In the Extensions pane, search for "Managed Instance" extension and install it there.  You will
-get notified automatically about any future extension updates!
+In the **Extensions** pane, search for the "managed instance" extension, and install it there. After it's installed, you'll get notified automatically about any future extension updates.
 
-Once you install the Managed Instance extension, you will see a `Managed Instance` tab in Azure Data Studio. On this tab, you can find information specific for Managed Instance.
+With the extension installed, you'll see a **Managed Instance** tab in Azure Data Studio. Here you can find information specific for your managed instance.
 
 ## Properties
 
-This extension enables you to see technical characteristics of your Managed Instance and some resource usage.
+The extension displays technical characteristics and some resource usage of your managed instance.
 
 ![Managed instance properties](media/azure-sql-mi-extension/ads-mi-tab1.png)
 
-On the first blade, you are able to see the following details:
+The first blade shows the following details:
 
-- **Basic properties** such as available number of vCores, memory, storage, current service-tier and hardware generation, and IO characteristics like instance log write throughput or file IO/throughput characteristics.
-- **Usage of the local SSD storage**. On General purpose service-tier only **TEMPDB** files are placed locally, while on Business-Critical tier all database files are placed on local SSD storage. In this section, you can see how much space on the local storage is used by Managed Instance.
-- **Usage of Azure Premium Disk Storage** - user and system database in General Purpose service-tier are placed on Azure Premium storage. Here you can find how much data you used, and what is remaining storage and number of files. On Business-Critical service tier this section is empty.
+- **Properties** - This displays basic information about your managed instance, including the available number of vCores, memory, and storage. You'll also see the current service-tier, hardware generation, and IO characteristics such as instance log write throughput or file I/O throughput characteristics.
+- **Local SSD storage** - On General purpose service-tier only **TEMPDB** files are placed locally, while on Business-Critical tier all database files are placed on local SSD storage. In this section, you can see how much space on the local storage is used by your managed instance.
+- **Azure Premium Disk Storage** - user and system database in General Purpose service-tier are placed on Azure Premium storage. Here you can find how much data you used, and what is remaining storage and number of files. On Business-Critical service tier this section is empty.
 - **Resource usage** that will show you how much storage and CPU your instance used in past two hours. Increase the instance size if you are reaching the limit.
 
 ## Recommendations

@@ -73,7 +73,7 @@ SELECT Name, Surname,
   JSON_VALUE(jsonCol, '$.info.address.PostCode') AS PostCode,
   JSON_VALUE(jsonCol, '$.info.address."Address Line 1"') + ' '
   + JSON_VALUE(jsonCol, '$.info.address."Address Line 2"') AS Address,
-  JSON_QUERY(jsonCol,'$.info.skills') AS Skills
+  JSON_QUERY(jsonCol, '$.info.skills') AS Skills
 FROM People
 WHERE ISJSON(jsonCol) > 0
   AND JSON_VALUE(jsonCol, '$.info.address.Town') = 'Belgrade'
@@ -216,7 +216,7 @@ The **FOR JSON** clause formats SQL results as JSON text that can be provided to
       "surname": "Smith"
     },
     "dob": "2005-11-04T12:00:00"
- }
+  }
 ]
 ```  
   
@@ -319,8 +319,8 @@ You can provide the content of the JSON variable by an external REST service, se
 ## Analyze JSON data with SQL queries  
 If you must filter or aggregate JSON data for reporting purposes, you can use **OPENJSON** to transform JSON to relational format. You can then use standard [!INCLUDE[tsql](../../includes/tsql-md.md)] and built-in functions to prepare the reports.  
   
-```sql  
-SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
+```sql
+SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date
 FROM SalesOrderRecord AS Tab
 CROSS APPLY OPENJSON (Tab.json, N'$.Orders.OrdersArray')
   WITH (
@@ -350,7 +350,7 @@ This OData URL represents a request for the ProductID and ProductName columns fo
 SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity' AS '@odata.context',
   ProductID,
   Name as ProductName
-FROM Production.Product  
+FROM Production.Product
 WHERE ProductID = 1
 FOR JSON AUTO;
 ```  

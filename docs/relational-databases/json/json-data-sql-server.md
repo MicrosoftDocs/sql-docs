@@ -37,9 +37,9 @@ Here's an example of JSON text:
     "surname": "Doe"
 }]
 ```
- 
-By using SQL Server built-in functions and operators, you can do the following things with JSON text: 
- 
+
+SQL Server built-in functions and operators enables you to do the following things with JSON data: 
+
 - Parse JSON text and read or modify values.  
 - Transform arrays of JSON objects into table format.  
 - Run any Transact-SQL query on the converted JSON objects.  

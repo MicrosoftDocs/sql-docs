@@ -423,7 +423,7 @@ Execution halted
 
 `data.table` as an `OutputDataSet` in R is supported in SQL Server 2017 Cumulative Update 14 (CU14) and later.
 
-### 21. Running a long script fails while installing a library
+### 21. Running a long script fails while installing a library 
 
 Running a long running external script session and having the dbo in parallel trying to install a library on a different database can terminate the script.
 
@@ -595,7 +595,7 @@ Then open a new DOS command shell prompt.
 
 **Applies to:** SQL Server 2019 on Windows
 
-### 8. Error when using sp_execute_external_script without libc++abo.so on Linux 
+### 8. Error when using sp_execute_external_script without libc++abo.so on Linux
 
 On a clean Ubuntu machine that does not have `libc++abi.so` installed, running a sp_execute_external_script (SPEES) query fails with a `No such file or directory` error.
 

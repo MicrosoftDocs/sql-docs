@@ -143,16 +143,16 @@ For more information, see [Convert JSON Data to Rows and Columns with OPENJSON (
 
 JSON documents may have sub-elements and hierarchical data that cannot be directly mapped into the standard relational columns. In this case, you can flatten JSON hierarchy by joining parent entity with sub-arrays.
 
-In the following example, the second object in the array has sub-array representing person skills. Every sub-object can be parsed using additional `OPENJSON` function call: 
+In the following example, the second object in the array has sub-array representing person skills. Every sub-object can be parsed using additional `OPENJSON` function call:
 
 ```sql  
-DECLARE @json NVARCHAR(MAX)
+DECLARE @json NVARCHAR(MAX);
 SET @json =  
 N'[  
        { "id" : 2,"info": { "name": "John", "surname": "Smith" }, "age": 25 },  
        { "id" : 5,"info": { "name": "Jane", "surname": "Smith", "skills": ["SQL", "C#", "Azure"] }, "dob": "2005-11-04T12:00:00" }  
- ]'  
-   
+ ]';
+
 SELECT *  
 FROM OPENJSON(@json)  
   WITH (id int 'strict $.id',  
@@ -160,7 +160,7 @@ FROM OPENJSON(@json)
         age int, dateOfBirth datetime2 '$.dob',
 	skills nvarchar(max) '$.info.skills' as json) 
 	outer apply openjson( skills ) 
-                     with ( skill nvarchar(8) '$' )
+                     with ( skill nvarchar(8) '$' );
 ```  
 **skills** array is returned in the first `OPENJSON` as original JSON text fragment and passed to another `OPENJSON` function using `APPLY` operator. The second `OPENJSON` function will parse JSON array and return string values as single column rowset that will be joined with the result of the first `OPENJSON`. 
 The result of this query is shown in the following table:
@@ -188,7 +188,7 @@ The following example uses PATH mode with the **FOR JSON** clause:
 ```sql  
 SELECT id, firstName AS "info.name", lastName AS "info.surname", age, dateOfBirth as dob  
 FROM People  
-FOR JSON PATH  
+FOR JSON PATH;
 ```  
   
 The **FOR JSON** clause formats SQL results as JSON text that can be provided to any app that understands JSON. The PATH option uses dot-separated aliases in the SELECT clause to nest objects in the query results.  
@@ -269,7 +269,7 @@ You can format information that's stored in files as standard JSON or line-delim
 If you must load JSON data from an external service into SQL Server, you can use **OPENJSON** to import the data into SQL Server instead of parsing the data in the application layer.  
   
 ```sql  
-DECLARE @jsonVariable NVARCHAR(MAX)
+DECLARE @jsonVariable NVARCHAR(MAX);
 
 SET @jsonVariable = N'[  
         {  
@@ -294,7 +294,7 @@ SET @jsonVariable = N'[
             "Quantity":3  
           }  
        }  
-  ]'
+  ]';
 
 --INSERT INTO <sampleTable>  
 SELECT SalesOrderJsonData.*  
@@ -326,7 +326,7 @@ FROM   SalesOrderRecord AS Tab
            )  
   AS SalesOrderJsonData  
 WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'  
-ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified  
+ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified;
 ```  
   
 You can use both standard table columns and values from JSON text in the same query. You can add indexes on the `JSON_VALUE(Tab.json, '$.Status')` expression to improve the performance of the query. For more information, see [Index JSON data](../../relational-databases/json/index-json-data.md).
@@ -348,7 +348,7 @@ SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products
  ProductID, Name as ProductName   
 FROM Production.Product  
 WHERE ProductID = 1  
-FOR JSON AUTO  
+FOR JSON AUTO;
 ```  
   
 The output of this query is JSON text that's fully compliant with the OData spec. Formatting and escaping are handled by SQL Server. SQL Server can also format query results in any format, such as OData JSON or GeoJSON.  

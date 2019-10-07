@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
-ms.date: 08/21/2019
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -105,7 +105,7 @@ The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15
 - **Workaround**:  Install the latest VC Runtime 2013 (x86):
 
   - [Verbose](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
-  - [Direct](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+  - [Direct](https://support.microsoft.com/help/4032938/update-for-visual-c-2013-redistributable-package)
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5.
 
@@ -126,6 +126,10 @@ The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15
 - **Workaround**: Open the MDS portal and go to the resource manually.
 
 - **Applies to**: SQL Server 2019 release candidate.
+
+## Machine Learning Services
+
+For issues in SQL Server Machine Learning Services, see [Known issues in SQL Server Machine Learning Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md).
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

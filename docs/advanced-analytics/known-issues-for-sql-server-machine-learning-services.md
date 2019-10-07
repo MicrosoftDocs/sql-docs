@@ -31,8 +31,8 @@ Set the environment variable `'MKL_CBWR'=AUTO` to ensure conditional numerical r
 
 2. Create a new User or System variable. 
 
-  + Set variable name to 'MKL_CBWR'.
-  + Set the 'Variable value' to 'AUTO'.
+   + Set variable name to 'MKL_CBWR'.
+   + Set the 'Variable value' to 'AUTO'.
 
 3. Restart R_SERVER. On SQL Server, you can restart SQL Server Launchpad Service.
 
@@ -74,9 +74,9 @@ The following example shows the commands with the default instance "MSSQL14.MSSQ
 If you try to install SQL Server 2016 R Services or SQL Server Machine Learning Services on a domain controller, setup fails, with these errors:
 
 > *An error occurred during the setup process of the feature*
-> 
+>
 > *Cannot find group with identity*
-> 
+>
 > *Component error code: 0x80131509*
 
 The failure occurs because, on a domain controller, the service cannot create the 20 local accounts required to run machine learning. In general, we do not recommend installing SQL Server on a domain controller. For more information, see [Support bulletin 2032911](https://support.microsoft.com/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
@@ -176,7 +176,7 @@ If upgrade is not feasible, as a workaround, use  a SQL login to run remote R jo
 
 ### 11. Performance limits when libraries used by SQL Server are called from other tools
 
-It is possible to call the machine learning libraries that are installed for SQL Server from an external application, such as RGui. Doing so might be the most convenient way to accomplish certain tasks, such as installing new packages, or running ad hoc tests on very short code samples. However, outside of SQL Server, performance might be limited. 
+It is possible to call the machine learning libraries that are installed for SQL Server from an external application, such as RGui. Doing so might be the most convenient way to accomplish certain tasks, such as installing new packages, or running ad hoc tests on very short code samples. However, outside of SQL Server, performance might be limited.
 
 For example, even if you are using the Enterprise Edition of SQL Server, R runs in single-threaded mode when you run your R code by using external tools. To get the benefits of performance in SQL Server, initiate a SQL Server connection and use [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to call the external script runtime.
 
@@ -289,8 +289,8 @@ If you use an R command to clear your workspace of objects while running R code 
 
 As a workaround, avoid indiscriminate clearing of variables and other objects while you're running R in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Although clearing the workspace is common when working in the R console, it can have unintended consequences.
 
-* To delete specific variables, use the R `remove` function: for example, `remove('name1', 'name2', ...)`
-* If there are multiple variables to delete, save the names of temporary variables to a list and perform periodic garbage collection.
++ To delete specific variables, use the R `remove` function: for example, `remove('name1', 'name2', ...)`
++ If there are multiple variables to delete, save the names of temporary variables to a list and perform periodic garbage collection.
 
 ### 8. Restrictions on data that can be provided as input to an R script
 
@@ -404,7 +404,7 @@ Ordered factors are treated the same as factors in all RevoScaleR analysis funct
 
 Using `data.table` as an `OutputDataSet` in R is not supported in SQL Server 2017 Cumulative Update 13 (CU13) and earlier. The following message might appear:
 
-```
+``` text
 Msg 39004, Level 16, State 20, Line 2
 A 'R' script error occurred during execution of 
 'sp_execute_external_script' with HRESULT 0x80004004.
@@ -423,7 +423,7 @@ Execution halted
 
 `data.table` as an `OutputDataSet` in R is supported in SQL Server 2017 Cumulative Update 14 (CU14) and later.
 
-### 21. Running a long script fails while installing a library 
+### 21. Running a long script fails while installing a library
 
 Running a long running external script session and having the dbo in parallel trying to install a library on a different database can terminate the script.
 
@@ -472,7 +472,7 @@ This section contains known issues that are specific to running Python on SQL Se
 
 If you installed the pretrained models in an early release of SQL Server 2017, the complete path to the trained model file might be too long for Python to read. This limitation is fixed in a later service release.
 
-There are several potential workarounds: 
+There are several potential workarounds:
 
 + When you install the pretrained models, choose a custom location.
 + If possible, install the SQL Server instance under a custom installation path with a shorter path, such as C:\SQL\MSSQL14.MSSQLSERVER.
@@ -530,9 +530,9 @@ This issue has been fixed in SQL Server 2017 Cumulative Update 3 (CU3).
 Beginning with SQL Server 2017 Cumulative Update 12 (CU12), numeric, decimal and money data types in WITH RESULT SETS are unsupported when using Python with `sp_execute_external_script`. The following messages might appear:
 
 > *[Code: 39004, SQL State: S1000]  A 'Python' script error occurred during execution of'sp_execute_external_script' with HRESULT 0x80004004.*
-
+>
 > *[Code: 39019, SQL State: S1000]  An external script error occurred:*
-> 
+>
 > *SqlSatelliteCall error: Unsupported type in output schema. Supported types: bit, smallint, int, datetime, smallmoney, real and float. char, varchar are partially supported.*
 
 This has been fixed in SQL Server 2017 Cumulative Update 14 (CU14).

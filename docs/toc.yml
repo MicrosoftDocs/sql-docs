@@ -8371,7 +8371,7 @@
       - name: PowerShell extension
         href: azure-data-studio/powershell-extension.md        
       - name: Managed Instance extension (preview)
-        href: azure-data-studio/azure-sql-managed-instance-extension.md
+        href: azure-data-studio/azure-sql-managed-instance-extension.md        
       - name: SandDance extension (preview)
         href: azure-data-studio/sanddance-extension.md
     - name: Extension Authoring

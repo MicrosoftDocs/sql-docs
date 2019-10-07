@@ -95,7 +95,7 @@ GO
 Use the GUI in SQL Server Management Studio to create the credential by following the steps below. Alternatively, you can create the credential [programmatically](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature) as well. 
 
 1. Expand the **Databases** node within **Object Explorer** of [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
-1. Right-click your new `SQLTest` database, hover over **Tasks** and then select **Back up...** to launch the **Back Up Database** wizard. 
+1. Right-click your new `SQLTestDB` database, hover over **Tasks** and then select **Back up...** to launch the **Back Up Database** wizard. 
 1. Select **URL** from the **Back up to** drop down, and then select **Add** to launch the **Select Backup Destination** dialog box. 
 
    ![Back up to URL](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
@@ -108,7 +108,8 @@ Use the GUI in SQL Server Management Studio to create the credential by followin
 1. Select your **subscription** from the drop-drown. 
 1. Select your **storage account** from the drop-down. 
 1. Select the container you created previously from the drop-down. 
-1. Select **Create Credential** to generate your *Shared Access Signature (SAS)*. Save this value as you will need it for the restore. 
+1. Select **Create Credential** to generate your *Shared Access Signature (SAS)*.  **Save this value as you'll need it for the restore.**
+1. 
 
    ![Create credential](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)
 
@@ -117,12 +118,12 @@ Use the GUI in SQL Server Management Studio to create the credential by followin
 
 
 ## Back up database
-In this step, back up the database `SQLTest` to your Azure Blob storage account using either the GUI within SQL Server Management Studio, or Transact-SQL (T-SQL). 
+In this step, back up the database `SQLTestDB` to your Azure Blob storage account using either the GUI within SQL Server Management Studio, or Transact-SQL (T-SQL). 
 
 # [SSMS](#tab/SSMS)
 
 1. If the **Back Up Database** wizard is not already open, expand the **Databases** node within **Object Explorer** of [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
-1. Right-click your new `SQLTest` database, hover over **Tasks** and then select **Back up...** to launch the **Back Up Database** wizard. 
+1. Right-click your new `SQLTestDB` database, hover over **Tasks** and then select **Back up...** to launch the **Back Up Database** wizard. 
 1. Select **URL** from the **Back up to** drop down, and then select **Add** to launch the **Select Backup Destination** dialog box. 
 
    ![Back up to URL](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
@@ -201,7 +202,7 @@ In this step, restore the database using either the GUI in SQL Server Management
 
    ![Add backup device](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/add-backup-device.png)
 
-1. Select the container from the drop-down and then paste in the Shared Access Signature you saved when creating the credential. 
+1. Select the container from the drop-down and then paste in the Shared Access Signature (SAS) you saved when creating the credential. 
 1. Select **OK** to select the backup file location. 
 1. Expand **Containers** and select the container where your backup file exists. 
 1. Select the backup file you want to restore and then select **OK**. If no files are visible, then you may be using the wrong SAS key. You can regenerate the SAS key again by following the same steps as before to add the container. 
@@ -210,8 +211,6 @@ In this step, restore the database using either the GUI in SQL Server Management
 
 1. Select **OK** to close the **Select backup devices** dialog box. 
 1. Select **OK** to restore your database. 
-
-azure-storage-container.
 
 # [Transact-SQL](#tab/tsql)
 

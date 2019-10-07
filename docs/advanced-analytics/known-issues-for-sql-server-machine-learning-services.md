@@ -2,7 +2,7 @@
 title: Known issues for Python and R
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/23/2019
+ms.date: 10/07/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -423,6 +423,47 @@ Execution halted
 
 `data.table` as an `OutputDataSet` in R is supported in SQL Server 2017 Cumulative Update 14 (CU14) and later.
 
+### 21. Running a long script fails while installing a library
+
+Running a long running external script session and having the dbo in parallel trying to install a library on a different database can terminate the script.
+
+For example, running this external script against Master:
+
+```sql
+USE MASTER
+DECLARE @language nvarchar(1) = N'R'
+DECLARE @script nvarchar(max) = N'Sys.sleep(100)'
+DECLARE @input_data_1 nvarchar(max) = N'select 1'
+EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1 with result sets none
+go
+```
+
+While the dbo in parallel installs a library in LibraryManagementFunctional:
+
+```sql
+USE [LibraryManagementFunctional]
+go
+
+CREATE EXTERNAL LIBRARY [RODBC] FROM (CONTENT = N'/home/ani/var/opt/mssql/data/RODBC_1.3-16.tar.gz') WITH (LANGUAGE = 'R')
+go
+
+DECLARE @language nvarchar(1) = N'R'
+DECLARE @script nvarchar(14) = N'library(RODBC)'
+DECLARE @input_data_1 nvarchar(8) = N'select 1'
+EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1
+go
+```
+
+The external script will terminate with the following error message:
+
+> *A 'R' script error occurred during execution of 'sp_execute_external_script' with HRESULT 0x800704d4.*
+
+**Workaround**
+
+Don’t run the library install in parallel to the long-running query. Or rerun the long running query after the installation is complete.
+
+**Applies to:** SQL Server 2019 on Linux & Aris, Big Data Cluster only.
+
 ## Python script execution issues
 
 This section contains known issues that are specific to running Python on SQL Server, as well as issues that are related to the Python packages published by Microsoft, including [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
@@ -520,6 +561,80 @@ wget 'https://bootstrap.pypa.io/get-pip.py'
 **Recommendation**
 
 See [Install Python packages with sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md).
+
+**Applies to:** SQL Server 2019 on Linux
+
+### 7. Unable to install Python packages using pip after installing SQL Server 2019 on Windows
+
+After installing SQL Server 2019 on Windows, attempting to install a python package via **pip** from a DOS command line will fail. For example:
+
+```bash
+pip install quantfolio
+```
+
+This will return the following error:
+
+> *pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.*
+
+This is a problem specific to the Anaconda package. It will be fixed in an upcoming service release.
+
+**Workaround**
+
+Copy the following files:
+
++ libssl-1_1-x64.dll
++ libcrypto-1_1-x64.dll
+
+from the folder <br>
+`C:\Program Files\Microsoft SQL Server\MSSSQL15.MSSQLSERVER\PYTHON_SERVICES\Library\bin`
+
+to the folder <br>
+`C:\Program Files\Microsoft SQL Server\MSSSQL15.MSSQLSERVER\PYTHON_SERVICES\DLLs`
+
+Then open a new DOS command shell prompt.
+
+**Applies to:** SQL Server 2019 on Windows
+
+### 8. Error when using sp_execute_external_script without libc++abo.so on Linux
+
+On a clean Ubuntu machine that does not have `libc++abi.so` installed, running a sp_execute_external_script (SPEES) query fails with a `No such file or directory` error.
+
+For example:
+
+```text
+EXEC sp_execute_external_script
+    @language = N'Python'
+    , @script = N'
+OutputDataSet = InputDataSet'
+    , @input_data_1 = N'select 1'
+    , @input_data_1_name = N'InputDataSet'
+    , @output_data_1_name = N'OutputDataSet'
+    WITH RESULT SETS (([output] int not null));
+Msg 39012, Level 16, State 14, Line 0
+Unable to communicate with the runtime for 'Python' script for request id: 94257840-1704-45E8-83D2-2F74AEB46CF7. Please check the requirements of 'Python' runtime.
+STDERR message(s) from external script:
+
+Failed to load library /opt/mssql-extensibility/lib/sqlsatellite.so with error libc++abi.so.1: cannot open shared object file: No such file or directory.
+
+SqlSatelliteCall error: Failed to load library /opt/mssql-extensibility/lib/sqlsatellite.so with error libc++abi.so.1: cannot open shared object file: No such file or directory.
+STDOUT message(s) from external script:
+SqlSatelliteCall function failed. Please see the console output for more information.
+Traceback (most recent call last):
+  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/computecontext/RxInSqlServer.py", line 605, in rx_sql_satellite_call
+    rx_native_call("SqlSatelliteCall", params)
+  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/RxSerializable.py", line 375, in rx_native_call
+    ret = px_call(functionname, params)
+RuntimeError: revoscalepy function failed.
+Total execution time: 00:01:00.387
+```
+
+**Workaround**
+
+Run the following command:
+
+```bash
+sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
+```
 
 **Applies to:** SQL Server 2019 on Linux
 

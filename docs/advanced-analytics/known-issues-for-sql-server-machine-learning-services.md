@@ -564,7 +564,7 @@ See [Install Python packages with sqlmlutils](package-management/install-additio
 
 **Applies to:** SQL Server 2019 on Linux
 
-### 7. Unable to install Python packages using pip after installing SQL Server 2019 on Windows 
+### 7. Unable to install Python packages using pip after installing SQL Server 2019 on Windows
 
 After installing SQL Server 2019 on Windows, attempting to install a python package via **pip** from a DOS command line will fail. For example:
 
@@ -595,7 +595,7 @@ Then open a new DOS command shell prompt.
 
 **Applies to:** SQL Server 2019 on Windows
 
-### 8. Error when using sp_execute_external_script without libc++abo.so on Linux
+### 8. Error when using sp_execute_external_script without libc++abo.so on Linux 
 
 On a clean Ubuntu machine that does not have `libc++abi.so` installed, running a sp_execute_external_script (SPEES) query fails with a `No such file or directory` error.
 

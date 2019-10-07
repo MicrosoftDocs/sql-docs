@@ -30,11 +30,11 @@ Here's an example of JSON text:
 
 ```json
 [{
-	"name": "John",
-	"skills": ["SQL", "C#", "Azure"]
+    "name": "John",
+    "skills": ["SQL", "C#", "Azure"]
 }, {
-	"name": "Jane",
-	"surname": "Doe"
+    "name": "Jane",
+    "surname": "Doe"
 }]
 ```
  

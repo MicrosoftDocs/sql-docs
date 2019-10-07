@@ -72,7 +72,7 @@ The **Waits** report filters out all idle and sleep waits. For more information 
 The **Expensive Queries** reports are reset when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts because the data in the underlying DMVs is cleared. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], detailed information about expensive queries can be found in the Query Store. 
 
 > [!NOTE]
-> The Performance Dashboard was first released as a standalone download for [SQL Server 2005](http://www.microsoft.com/download/details.aspx?id=22602), and later updated for [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+> The Performance Dashboard was first released as a standalone download for [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415), and later updated for [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
 
 ## Permissions  
 On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` and `ALTER TRACE` permissions. 

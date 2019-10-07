@@ -34,7 +34,7 @@ Once you install the Managed Instance extension, you will see a `Managed Instanc
 
 This extension enables you to see technical characteristics of your Managed Instance and some resource usage.
 
-![Managed instance properties](media/ads-mi-tab1.png)
+![Managed instance properties](media/azure-sql-mi-extension/ads-mi-tab1.png)
 
 On the first blade, you are able to see the following details:
 - **Basic properties** such as available number of vCores, memory, storage, current service-tier and hardware generation, and IO
@@ -47,7 +47,7 @@ characteristics like instance log write throughput or file IO/throughput charact
 
 This extension provides some recommendations and alerts that can help you optimize your Managed Instance.
 
-![Managed instance recommendations](media/ads-mi-tab2.png)
+![Managed instance recommendations](media/azure-sql-mi-extension/ads-mi-tab2.png)
 
 Some of the recommendations that are shown in this table are: 
 - Reaching storage space limit - you should either delete unnesecaary data or increase instance storage size because databases that reach storage limit might fail to process even read queries.
@@ -63,7 +63,7 @@ You should periodically review these recommendations and take some actions. Mana
 
 Managed instance extension enables you to see the state of database replicas in your Managed instance.
 
-![Managed instance replicas](media/ads-mi-tab3.png)
+![Managed instance replicas](media/azure-sql-mi-extension/ads-mi-tab3.png)
 
 On General-purpose service-tier, every database has a single (primary) replica, while on Business Critical instance every database has one primary and three secondary replicas (one is used for read-only workloads). Here you can monitor synchronization process and verify  that all secondary replicas are synchronized with the primary replica. 
 
@@ -71,7 +71,7 @@ On General-purpose service-tier, every database has a single (primary) replica, 
 
 Managed Instance extension shows the most relevant latest SQL Error log entries.
 
-![Managed instance log entries](media/ads-mi-tab2.png)
+![Managed instance log entries](media/azure-sql-mi-extension/ads-mi-tab2.png)
 
 Managed Instance emits a large number of log entries and most of them are internal/system information. Some log entries are showing physical database names (GUID values) instead of actual logical database names.
 

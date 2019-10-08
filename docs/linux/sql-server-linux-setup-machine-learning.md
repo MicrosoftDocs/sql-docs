@@ -5,7 +5,7 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 09/23/2019
+ms.date: 10/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning

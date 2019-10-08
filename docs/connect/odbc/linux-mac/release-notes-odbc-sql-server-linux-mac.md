@@ -38,7 +38,7 @@ GeneMi.  2019/04/03.
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## Known Issue:
+**Known Issue:**
 
 When using Always Encrypted with secure enclaves and Azure Key Vault, odd key path lengths may result in CMK signature verification errors. If you encounter this issue, try changing the length of the keypath by one character by renaming the AKV key.
 

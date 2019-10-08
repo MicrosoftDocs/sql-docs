@@ -96,11 +96,11 @@ Use the GUI in SQL Server Management Studio to create the credential by followin
 
 1. Expand the **Databases** node within **Object Explorer** of [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 1. Right-click your new `SQLTestDB` database, hover over **Tasks** and then select **Back up...** to launch the **Back Up Database** wizard. 
-1. Select **URL** from the **Back up to** drop down, and then select **Add** to launch the **Select Backup Destination** dialog box. 
+1. Select **URL** from the **Back up to** destination drop down, and then select **Add** to launch the **Select Backup Destination** dialog box. 
 
    ![Back up to URL](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
-1. Select **New container** on the **Select Backup Destination** dialog box to launch the **Connect to a Microsoft Subscription** window. If this step was done previously, then instead of creating a new container, select the existing container from the drop-down and skip to step 10. 
+1. Select **New container** on the **Select Backup Destination** dialog box to launch the **Connect to a Microsoft Subscription** window. 
 
    ![Backup destination](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
 
@@ -109,7 +109,6 @@ Use the GUI in SQL Server Management Studio to create the credential by followin
 1. Select your **storage account** from the drop-down. 
 1. Select the container you created previously from the drop-down. 
 1. Select **Create Credential** to generate your *Shared Access Signature (SAS)*.  **Save this value as you'll need it for the restore.**
-1. 
 
    ![Create credential](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)
 
@@ -203,6 +202,9 @@ In this step, restore the database using either the GUI in SQL Server Management
    ![Add backup device](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/add-backup-device.png)
 
 1. Select the container from the drop-down and then paste in the Shared Access Signature (SAS) you saved when creating the credential. 
+
+   ![Backup destination](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
+
 1. Select **OK** to select the backup file location. 
 1. Expand **Containers** and select the container where your backup file exists. 
 1. Select the backup file you want to restore and then select **OK**. If no files are visible, then you may be using the wrong SAS key. You can regenerate the SAS key again by following the same steps as before to add the container. 
@@ -217,8 +219,6 @@ In this step, restore the database using either the GUI in SQL Server Management
 To restore your on-premises database from Azure Blob storage, modify the following Transact-SQL command to use your own storage account and then run it within a new query window: 
 
 ```sql
-USE [master]
-
 USE [master]
 RESTORE DATABASE [SQLTestDB] FROM 
 URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_backup_2020_01_01_000001.bak'

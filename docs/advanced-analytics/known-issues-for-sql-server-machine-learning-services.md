@@ -597,7 +597,7 @@ Then open a new DOS command shell prompt.
 
 ### 8. Error when using `sp_execute_external_script` without `libc++abo.so` on Linux
 
-On a clean Linux machine that does not have `libc++abi.so` installed, running a sp_execute_external_script (SPEES) query fails with a `No such file or directory` error.
+On a clean Linux machine that does not have `libc++abi.so` installed, running a `sp_execute_external_script` (SPEES) query fails with a "No such file or directory" error.
 
 For example:
 

@@ -110,7 +110,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 ## Logins and Object Ownership  
   
 ### Are logins and passwords replicated?  
- No. You could create a DTS package to transfer logins and passwords from a Publisher to one or more Subscribers.  
+ No. You could create an SSIS package to transfer logins and passwords from a Publisher to one or more Subscribers.  
   
 ### What are schemas and how are they replicated?  
  Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *schema* has two meanings:  

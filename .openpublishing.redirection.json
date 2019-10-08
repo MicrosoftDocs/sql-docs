@@ -202,7 +202,7 @@
         },
         {
             "source_path": "docs/relational-databases/replication/configure-iis-for-web-synchronization.md",
-            "redirect_url": "/sql/relational-databases/replication/configure-iis-7-for-web-synchronization",
+            "redirect_url": "/sql/relational-databases/replication/configure-iis-7-for-web-synchronization", 
             "redirect_document_id": false
         },
         {

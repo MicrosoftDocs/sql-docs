@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
-ms.date: 08/21/2019
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -54,6 +54,22 @@ The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15
     - Microsoft .NET Framework 4.6.2. Available from [Download Center](https://www.microsoft.com/download/details.aspx?id=53344).
     - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
 
+## SQL Server installation may fail if SSMS 18.x is installed
+
+- **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] installation fails when the following installations happen in this order:
+  1. SQL Server Management Studio (SSMS) version 18.0, 18.1, 18.2, or 18.3 is installed on the server.
+  1. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] installation is attempted from removable media. For example, the installation media is a DVD.
+
+- **Workaround**:
+  1. Uninstall any version of SSMS older than SSMS 18.3.1.
+  1. Install a newer version of SSMS (18.3.1 or later). For the latest version, see [Download SSMS](../ssms/download-sql-server-management-studio-ssms.md).
+  1. Install [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] normally.
+
+  >[!NOTE]
+  >Uninstall is required.
+
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] release candidate.
+
 ## Updated compiler
 
 - **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] is built with an updated compiler. CTP 2.1 had a known issue where results for floating point and other conversion scenarios may have returned a different value than previous versions because of the updated compiler. CTP 2.2 includes work to ensure that the affected scenarios return the same results as previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As of the release candidate release we do not know any remaining issues. Please report any result anomalies compared to [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](https://aka.ms/sqlfeedback) immediately.
@@ -105,7 +121,7 @@ The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15
 - **Workaround**:  Install the latest VC Runtime 2013 (x86):
 
   - [Verbose](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
-  - [Direct](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+  - [Direct](https://support.microsoft.com/help/4032938/update-for-visual-c-2013-redistributable-package)
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5.
 
@@ -126,6 +142,10 @@ The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15
 - **Workaround**: Open the MDS portal and go to the resource manually.
 
 - **Applies to**: SQL Server 2019 release candidate.
+
+## Machine Learning Services
+
+For issues in SQL Server Machine Learning Services, see [Known issues in SQL Server Machine Learning Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md).
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

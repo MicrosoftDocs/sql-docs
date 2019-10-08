@@ -68,7 +68,7 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
   
 1.  Open Window PowerShell or Windows PowerShell ISE (see version requirements above).  
   
-2.  Edit and then execute the b script:  
+2.  Edit and then execute the below script:  
   
     ```powershell
     # Define global variables for the script  

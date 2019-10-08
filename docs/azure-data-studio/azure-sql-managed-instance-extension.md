@@ -77,7 +77,7 @@ Managed Instance extension shows the most relevant latest SQL Error log entries.
 
 Managed Instance emits a large number of log entries and most of them are internal/system information. Some log entries are showing physical database names (`GUID` values) instead of actual logical database names.
 
-Managed Instance extension filters-out unnecessary  log entries based on [Dimitri Furman method](https://blogs.msdn.microsoft.com/sqlcat/2018/05/04/azure-sql-db-managed-instance-sp_readmierrorlog/) and displays actual logical file names instead of physical names.
+Managed Instance extension filters-out unnecessary  log entries based on [Dimitri Furman method](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506) and displays actual logical file names instead of physical names.
 
 ## Reporting problems
 

@@ -582,8 +582,8 @@ This is a problem specific to the Anaconda package. It will be fixed in an upcom
 
 Copy the following files:
 
-+ libssl-1_1-x64.dll
-+ libcrypto-1_1-x64.dll
++ `libssl-1_1-x64.dll`
++ `libcrypto-1_1-x64.dll`
 
 from the folder <br>
 `C:\Program Files\Microsoft SQL Server\MSSSQL15.MSSQLSERVER\PYTHON_SERVICES\Library\bin`

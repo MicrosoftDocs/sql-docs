@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: SQL Server back up and restore to Azure Blob storage service | Microsoft Docs"
+title: "Quickstart: SQL back up and restore to Azure Blob storage service | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/09/2018"
 ms.prod: sql
@@ -11,7 +11,7 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: "rothja"
 ms.author: "jroth"
 ---
-# Quickstart: SQL Server back up and restore to Azure Blob storage service
+# Quickstart: SQL back up and restore to Azure Blob storage service
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 This quickstart helps you understand how to write backups to and restore from the Azure Blob Storage Service.  The article explains how to create an Azure Blob Container, write a backup to the blob service, and then perform a restore.
   
@@ -113,7 +113,7 @@ Use the GUI in SQL Server Management Studio to create the credential by followin
    ![Create credential](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)
 
 1. Select **OK** to close the **Connect to a Microsoft Subscription** window. This populates the *Azure storage container* value on the **Select Backup Destination** dialog box. Select **OK** to choose the selected storage container, and close the dialog box. 
-1. At this point, you can either skip ahead to step 4 in the next section to take the backup of the database, or close out the **Back up Database** wizard if you want to proceed with using Transact-SQL to back up the database instead. 
+1. At this point, you can either skip ahead to step 4 in the next section to take the backup of the database, or close the **Back up Database** wizard if you want to proceed with using Transact-SQL to back up the database instead. 
 
 
 ## Back up database
@@ -156,11 +156,11 @@ GO
 ---
 
 ## Delete database
-In this step, delete the database before performing the restore using the GUI in SQL Server Management studio, or with Transact-SQL.
+In this step, delete the database before performing the restore. This step is only necessary for the purpose of this tutorial, but is unlikely to be used in normal database management procedures. You can skip this step, but then you'll either need to change the name of the database during the restore on a managed instance, or run the restore command `WITH REPLACE` to restore the database successfully on-premises. 
 
 # [SSMS](#tab/SSMS)
 
-1. Expand the **Databases** node in **Object explorer**, right-click the SQLTestDB database, and select delete to launch the **Delete object** wizard. 
+1. Expand the **Databases** node in **Object explorer**, right-click the `SQLTestDB` database, and select delete to launch the **Delete object** wizard. 
 1. On a managed instance, select **OK** to delete the database. On-premises, check the checkbox next to **Close existing connections** and then select **OK** to delete the database. 
 
 # [Transact-SQL](#tab/tsql)
@@ -216,7 +216,7 @@ In this step, restore the database using either the GUI in SQL Server Management
 
 # [Transact-SQL](#tab/tsql)
 
-To restore your on-premises database from Azure Blob storage, modify the following Transact-SQL command to use your own storage account and then run it within a new query window: 
+To restore your on-premises database from Azure Blob storage, modify the following Transact-SQL command to use your own storage account and then run it within a new query window. 
 
 ```sql
 USE [master]

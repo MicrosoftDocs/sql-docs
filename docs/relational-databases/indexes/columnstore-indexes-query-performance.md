@@ -149,8 +149,6 @@ With string predicate pushdown, the query execution computes the predicate again
 1.  Only the qualified row is returned reducing number of the rows that need to flow out of SCAN node. 
 2.  The number of string comparisons are significantly reduced. In this example, only 100 string comparisons are required as against 1 million comparisons. There are some limitations as described below:    
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     -   No string predicate pushdown for delta rowgroups. There is no dictionary for columns in delta rowgroups.    
     -   No string predicate pushdown if dictionary exceeds 64 KB entries.    
     -   Expression evaluating NULLs are not supported.    

@@ -8,7 +8,7 @@ helpviewer_keywords:
    - "PolyBase, installation"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ""
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Install PolyBase on Windows
@@ -149,7 +149,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 
 ## <a id="enable"></a> Enable PolyBase
 
-After installation, PolyBase must be enabled to access its features. To connect to SQL Server 2019 CTP 2.0, you must enable PolyBase after installation. Use the following Transact-SQL command.
+After installation, PolyBase must be enabled to access its features. Use the following Transact-SQL command. SQL 2019 instances deployed during Big Data Cluster installation have this setting enabled by default.
 
 
 ```sql

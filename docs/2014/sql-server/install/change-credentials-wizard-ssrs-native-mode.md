@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Change Credentials Wizard"
   - "report server database, reconfigure"
 ms.assetid: 9eb4060a-9c3e-41e0-8767-3cfaebc45de7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Change Credentials Wizard (SSRS Native Mode)

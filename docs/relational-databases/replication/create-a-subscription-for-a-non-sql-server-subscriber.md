@@ -150,27 +150,27 @@ ms.author: "mathoma"
   
     -   If the value of **enabled_for_het_sub** is 1, non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers are supported.  
   
-    -   If the value of **enabled_for_het_sub** is 0, execute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying **enabled_for_het_sub** for **@property** and **true** for **@value**.  
+    -   If the value of **enabled_for_het_sub** is 0, execute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying **enabled_for_het_sub** for `@property` and **true** for `@value`.  
   
         > [!NOTE]  
         >  Before changing **enabled_for_het_sub** to **true**, you must drop any existing subscriptions to the publication. You cannot set **enabled_for_het_sub** to **true** when the publication also supports updating subscriptions. Changing **enabled_for_het_sub** will affect other publication properties. For more information, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
-3.  At the Publisher on the publication database, execute [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify **@publication**, **@subscriber**, a value of **(default destination)** for **@destination_db**, a value of **push** for **@subscription_type**, and a value of 3 for **@subscriber_type** (specifies an OLE DB provider).  
+3.  At the Publisher on the publication database, execute [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify `@publication`, `@subscriber`, a value of `(default destination)` for `@destination_db`, a value of **push** for `@subscription_type`, and a value of 3 for `@subscriber_type` (specifies an OLE DB provider).  
   
 4.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specify the following:  
   
-    -   The **@subscriber**and **@publication** parameters.  
+    -   The `@subscriber` and `@publication` parameters.  
   
-    -   A value of **(default destination)** for **@subscriber_db**,  
+    -   A value of **(default destination)** for `@subscriber_db`,  
   
-    -   The properties of the non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source for **@subscriber_provider**, **@subscriber_datasrc**, **@subscriber_location**, **@subscriber_provider_string**, and **@subscriber_catalog**.  
+    -   The properties of the non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source for `@subscriber_provider`, `@subscriber_datasrc`, `@subscriber_location`, `@subscriber_provider_string`, and `@subscriber_catalog`.  
   
-    -   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows credentials under which the Distribution Agent at the Distributor runs for **@job_login** and **@job_password**.  
+    -   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows credentials under which the Distribution Agent at the Distributor runs for `@job_login` and `@job_password`.  
   
-        > [!NOTE]  
-        >  Connections made using Windows Integrated Authentication always use the Windows credentials specified by **@job_login** and **@job_password**. The Distribution Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent will connect to the Subscriber using Windows Integrated Authentication.  
+       > [!NOTE]  
+       > Connections made using Windows Integrated Authentication always use the Windows credentials specified by `@job_login` and `@job_password`. The Distribution Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent will connect to the Subscriber using Windows Integrated Authentication.  
   
-    -   A value of **0** for **@subscriber_security_mode** and the OLE DB provider login information for **@subscriber_login** and **@subscriber_password**.  
+    -   A value of **0** for `@subscriber_security_mode` and the OLE DB provider login information for `@subscriber_login` and `@subscriber_password`.  
   
     -   A schedule for the Distribution Agent job for this subscription. For more information, see [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   

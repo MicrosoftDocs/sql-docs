@@ -5,7 +5,7 @@ description: In this quickstart, learn how to work with data types and data obje
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/17/2019  
+ms.date: 10/04/2019  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -21,11 +21,14 @@ SQL Server relies on the Python **pandas** package, which is great for working w
 
 Concepts to know up front include:
 
-+ A data frame is a table with _multiple_ columns.
-+ A single column of a data frame is a list-like object called a series.
-+ A single value of a data frame is called a cell and is accessed by index.
+- A data frame is a table with _multiple_ columns.
+- A single column of a data frame is a list-like object called a series.
+- A single value of a data frame is called a cell and is accessed by index.
 
 How would you expose the single result of a calculation as a data frame, if a data.frame requires a tabular structure? One answer is to represent the single scalar value as a series, which is easily converted to a data frame. 
+
+> [!NOTE]
+> When returning dates, Python in SQL uses DATETIME which has a restricted date range of 1753-01-01(-53690) through 9999-12-31(2958463). 
 
 ## Prerequisites
 
@@ -198,11 +201,12 @@ Now you'll output specific values from two series of math results in a data.fram
 
 ## Next steps
 
-Next, you'll build a predictive model using Python in SQL Server.
+To learn about writing advanced Python functions in SQL Server, follow this quickstart:
 
 > [!div class="nextstepaction"]
-> [Create and score a predictive model in Python](quickstart-python-train-score-model.md)
+> [Write advanced Python functions with SQL Server Machine Learning Services](quickstart-python-functions.md)
 
-For more information on SQL Server Machine Learning Services, see:
+For more information on using Python in SQL Server Machine Learning Services, see the following articles:
 
+- [Create and score a predictive model in Python](quickstart-python-train-score-model.md)
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

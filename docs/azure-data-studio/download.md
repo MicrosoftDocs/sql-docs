@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
 ms.custom: "seodec18"
-ms.date: "10/03/2019"
+ms.date: "10/08/2019"
 ms.reviewer: "alayu; sstein"
 ---
 
@@ -24,9 +24,9 @@ Download and install the latest release, the *October Release*:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|October 2, 2019 |1.12.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|October 2, 2019 |1.12.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2103004)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105131)|October 2, 2019 |1.12.0|
+|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|October 8, 2019 |1.12.1|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|October 8, 2019 |1.12.1|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2103004)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105131)|October 8, 2019 |1.12.1|
 
 For details about the latest release, see the [release notes](release-notes.md).
 

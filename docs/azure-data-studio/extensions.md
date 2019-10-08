@@ -9,7 +9,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
-ms.date: "09/24/2018"
+ms.date: "10/03/2019"
 ---
 
 # Extend the functionality of [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -21,9 +21,11 @@ Extensions are provided by the Azure Data Studio team (Microsoft), as well as th
 
 ## Add Azure Data Studio extensions
 
-1. To open the extensions manager and access the available extensions, select the extensions icon, or select **Extensions** in the **View** menu.\
-    You can also quickly access the extensions manager by pressing `Ctrl+Shift+X` (Windows/Linux) or `Command+Shift+X` (Mac).\
+1. Access the available extensions by selecting the Extensions Icon, or by selecting **Extensions** in the **View** menu.
+
     ![extension manager icon](media/extensions/extension-manager-icon.png)
+
+    You can also quickly access the extensions manager by pressing `Ctrl+Shift+X` (Windows/Linux) or `Command+Shift+X` (Mac).
 
 2. Select an available extension to view its details.
     ![extension details](media/extensions/extension-details.png)
@@ -31,6 +33,8 @@ Extensions are provided by the Azure Data Studio team (Microsoft), as well as th
 3. Select the extension you want and **Install** it.
 
 4. Once installed, **Reload** to enable the extension in Azure Data Studio (only required when installing an extension for the first time).
+
+If you're having problems accessing the Extensions Manager on Azure Data Studio, you can download the extension you need on our [GitHub Wiki](https://github.com/microsoft/azuredatastudio/wiki/List-of-Extensions).
 
 
 ## Access Installed Azure Data Studio Extensions

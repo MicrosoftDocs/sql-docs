@@ -29,15 +29,23 @@ Complete details about licensing are in `License Terms` folder on the installati
 
 ## Build number
 
-The latest build number for SQL Server 2019 is `15.0.1900.25`.
+The RTM build number for SQL Server 2019 is `15.0.2000.5`.
 
-## Installation Wizard may wait between EULA pages
+## SQL Server installation may fail if SSMS 18.x is installed
 
-- **Issue and customer impact**: During installation with Installation Wizard, the process may wait an excessive amount of time between the end user license agreement (EULA) for R Services and the EULA for Python.
+- **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] installation fails when the following installations happen in this order:
+  1. SQL Server Management Studio (SSMS) version 18.0, 18.1, 18.2, or 18.3 is installed on the server.
+  1. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] installation is attempted from removable media. For example, the installation media is a DVD.
 
-- **Workaround**: Wait for the Installation Wizard to proceed. The time to wait may exceed 30 minutes.
+- **Workaround**:
+  1. Uninstall any version of SSMS older than SSMS 18.3.1.
+  1. Install a newer version of SSMS (18.3.1 or later). For the latest version, see [Download SSMS](../ssms/download-sql-server-management-studio-ssms.md).
+  1. Install [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] normally.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
+  >[!NOTE]
+  >Uninstall is required.
+
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] release candidate.
 
 ## UTF-8 collations
 

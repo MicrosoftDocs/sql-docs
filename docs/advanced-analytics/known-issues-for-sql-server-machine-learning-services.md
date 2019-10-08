@@ -427,7 +427,7 @@ Execution halted
 
 Running a long running external script session and having the dbo in parallel trying to install a library on a different database can terminate the script.
 
-For example, running this external script against Master:
+For example, running this external script against master:
 
 ```sql
 USE MASTER
@@ -454,7 +454,7 @@ EXEC sp_execute_external_script @language = @language, @script = @script,
 go
 ```
 
-The external script will terminate with the following error message:
+The previous long running external script against master will terminate with the following error message:
 
 > *A 'R' script error occurred during execution of 'sp_execute_external_script' with HRESULT 0x800704d4.*
 
@@ -597,7 +597,7 @@ Then open a new DOS command shell prompt.
 
 ### 8. Error when using sp_execute_external_script without libc++abo.so on Linux
 
-On a clean Ubuntu machine that does not have `libc++abi.so` installed, running a sp_execute_external_script (SPEES) query fails with a `No such file or directory` error.
+On a clean Linux machine that does not have `libc++abi.so` installed, running a sp_execute_external_script (SPEES) query fails with a `No such file or directory` error.
 
 For example:
 

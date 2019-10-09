@@ -31,7 +31,15 @@ DBCC DROPRESULTSETCACHE
 ## Permissions
 
 Requires membership in the DB_OWNER fixed server role.
-  
+
+## Remarks
+
+This command empties the result set cache for all queries.  
+
+Turning OFF the result set cache feature for a database also deletes all cached results.  
+
+Pausing a database enabled with result set caching won't delete the cached results.  
+
 ## See also
 
 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>

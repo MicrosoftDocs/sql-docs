@@ -105,21 +105,14 @@ MAX_DOP = *value*
 Specifies the **maximum degree of parallelism (MAXDOP)** for parallel query execution. *value* must be 0 or a positive integer. The allowed range for *value* is from 0 through 64. The default setting for *value*, 0, uses the global setting. MAX_DOP is handled as follows:
 
 > [!NOTE]
-> The **max degree of parallelism (MAXDOP)** limit is set per [task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks which are assigned to a [scheduler](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). For more information, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
-
-> [!NOTE]
-> Setting the maximum degree of parallelism as a query hint is effective as long as it does not exceed the workload group MAX_DOP. If the MAXDOP query hint value exceeds the value that is configured by using the Resource Governor, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uses the Resource Governor MAXDOP value.     
-> The MAXDOP [query hint](../../t-sql/queries/hints-transact-sql-query.md) always overrides the [server configuration for max degree of parallelism]()(../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).    
-> Workload group MAX_DOP overrides the [server configuration for max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+> Workload group MAX_DOP overrides the [server configuration for max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) and the **MAXDOP** [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 > [!TIP]
-> To accomplish this at the query level, use the **MAXDOP** [query hint](../../t-sql/queries/hints-transact-sql-query.md).      
+> To accomplish this at the query level, use the **MAXDOP** [query hint](../../t-sql/queries/hints-transact-sql-query.md). Setting the maximum degree of parallelism as a query hint is effective as long as it does not exceed the workload group MAX_DOP. If the MAXDOP query hint value exceeds the value that is configured by using the Resource Governor, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uses the Resource Governor `MAX_DOP` value. The MAXDOP [query hint](../../t-sql/queries/hints-transact-sql-query.md) always overrides the [server configuration for max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).      
+>   
 > To accomplish this at the database level, use the **MAXDOP** [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).      
+>   
 > To accomplish this at the server level, use the **max degree of parallelism (MAXDOP)** [server configuration option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).     
-
-> [!NOTE]
-> If the query is marked as serial at compile time, it cannot be changed back to parallel at run time regardless of the workload group or server configuration setting.
-> After MAX_DOP is configured, it can only be lowered due to memory pressure. Workload group reconfiguration is not visible while waiting in the grant memory queue.
 
 GROUP_MAX_REQUESTS = *value*     
 Specifies the maximum number of simultaneous requests that are allowed to execute in the workload group. *value* must be a 0 or a positive integer. The default setting for *value* is 0, and allows unlimited requests. When the maximum concurrent requests are reached, a user in that group can log in, but is placed in a wait state until concurrent requests are dropped below the value specified.
@@ -142,6 +135,10 @@ Workload group can specify an external resource pool. You can define a workload 
 
 ## Remarks
 When `REQUEST_MEMORY_GRANT_PERCENT` is used, index creation is allowed to use more workspace memory than what is initially granted for improved performance. This special handling is supported by Resource Governor in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. However, the initial grant and any additional memory grant are limited by resource pool and workload group settings.
+
+The `MAX_DOP` limit is set per [task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks which are assigned to a [scheduler](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). For more information, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
+
+When `MAX_DOP` is used and a query is marked as serial at compile time, it cannot be changed back to parallel at run time regardless of the workload group or server configuration setting. After `MAX_DOP` is configured, it can only be lowered due to memory pressure. Workload group reconfiguration is not visible while waiting in the grant memory queue.
 
 ### Index Creation on a Partitioned Table
 

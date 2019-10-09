@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_column_encryption_enclave (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/15/2019"
+ms.date: "10/11/2019"
 ms.prod: sql
 ms.reviewer: "vanto"
 ms.technology: system-objects
@@ -12,7 +12,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 ---
 # sys.dm_column_encryption_enclave (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 Returns performance counters for the secure enclave for Always Encrypted. For more information, see [Always Encrypted with Secure Enclaves](../security/encryption/always-encrypted-enclaves.md).
 

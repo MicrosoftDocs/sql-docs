@@ -28,7 +28,8 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
    
 You can check the configured enclave type value and the enclave type value currently in effect by using the [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) view. 
 
-To confirm an enclave of the type (greater than 0) that is currently in effect has been correctly initialized after the last restart of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md), check the [sys.dm_column_encryption_enclave (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md) view:
+To confirm an enclave of the type (greater than 0) that is currently in effect has been correctly initialized after the last restart of 
+[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], check the [sys.dm_column_encryption_enclave (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md) view:
  - If the view contains exactly one row, the enclave is correctly initialized. 
  - If the view contains no rows, check the SQL Server error log for enclave initialization errors - see [View the SQL Server error log (SQL Server Management Studio)](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md).
 

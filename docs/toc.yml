@@ -4170,7 +4170,11 @@
     href: sql-server/install/planning-a-sql-server-installation.md
     items:
     - name: Hardware & Software Requirements
-      href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
+      items:
+      - name: SQL Server 2019
+        href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
+      - name: SQL Server 2017 & prior
+        href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
     - name: Security Considerations
       href: sql-server/install/security-considerations-for-a-sql-server-installation.md
     - name: Network Protocols & Network Libraries
@@ -4288,6 +4292,8 @@
         href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
       - name: Change the Database Compatibility Mode with Query Tuning Assistant
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
+      - name: Latest updates for SQL Server
+        href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
   - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:
@@ -5066,10 +5072,6 @@
           href: relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
         - name: Define a logical record relationship
           href: relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
-        - name: Configure web synchronization
-          href: relational-databases/replication/configure-web-synchronization.md
-        - name: Configure IIS for Web Synchronization
-          href: relational-databases/replication/configure-iis-for-web-synchronization.md
         - name: Configure IIS 7 for Web Synchronization
           href: relational-databases/replication/configure-iis-7-for-web-synchronization.md
         - name: Resolve data conflicts

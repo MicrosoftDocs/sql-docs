@@ -142,6 +142,7 @@ WHERE blocking_session_id IS NOT NULL;
 ``` 
   
 ## See Also  
-  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
-  
+[SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
+[Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md)     
+   
  

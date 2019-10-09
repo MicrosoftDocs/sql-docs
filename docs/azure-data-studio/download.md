@@ -26,7 +26,7 @@ Download and install the latest release, the *October Release*:
 |:---|:---|:---|:---|
 |Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|October 8, 2019 |1.12.1|
 |macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|October 8, 2019 |1.12.1|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2103004)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105131)|October 8, 2019 |1.12.1|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2105131)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://azuredatastudiobuilds.blob.core.windows.net/releases/1.12.1/azuredatastudio-linux-1.12.1.tar.gz)|October 8, 2019 |1.12.1|
 
 For details about the latest release, see the [release notes](release-notes.md).
 

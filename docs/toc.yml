@@ -4288,6 +4288,8 @@
         href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
       - name: Change the Database Compatibility Mode with Query Tuning Assistant
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
+      - name: Update Center for SQL Server
+        href: database-engine/install-windows/update-center-for-microsoft-sql-server.md
   - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:

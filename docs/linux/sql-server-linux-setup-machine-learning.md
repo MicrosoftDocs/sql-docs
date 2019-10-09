@@ -509,6 +509,18 @@ You can install other R and Python packages and use them in script that executes
    @script = N'import httpie' 
    ```
 
+## Run in a container
+
+SQL Server Machine Learning Services can be run in a Docker container.
+
+### Prerequisites
+
+- Git command-line interface.
+- Docker Engine 1.8+ on any supported Linux distribution, or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
+- Minimum of 2 gigabytes (GB) of disk space.
+- Minimum of 2 GB of RAM.
+- [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
+
 ## Limitations in CTP releases
 
 R and Python integration on Linux is still under active development. The following features are not yet enabled in the preview version.

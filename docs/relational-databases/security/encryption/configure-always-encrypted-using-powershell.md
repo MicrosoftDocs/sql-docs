@@ -102,7 +102,7 @@ Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\you
  
 ## Always Encrypted Tasks using PowerShell
 
-- [Configure Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md) 
+- [Provision Always Encrypted Keys using PowerShell](configure-always-encrypted-keys-using-powershell.md)
 - [Rotate Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 - [Encrypt, Re-Encrypt or Decrypt Columns with Always Encrypted using PowerShell](configure-column-encryption-using-powershell.md)
 

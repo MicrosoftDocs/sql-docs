@@ -87,15 +87,12 @@ To ensure Always Encrypted is effective in preventing these types of attacks, yo
 - To ensure your key management process does not inadvertently reveal column master keys or column encryption keys, it is critical to identify potential adversaries and security threats before defining and implementing a key management process. For example, if your goal is to ensure DBAs have no access to sensitive data, then a DBA cannot be responsible for generating the keys. A DBA, however, *can* manage key metadata in the database, as the metadata does not contain the plaintext keys.
 
 ## Next Steps
-
+- [Encrypt, Re-Encrypt or Decrypt Columns using Always Encrypted Wizard](always-encrypted-wizard.md)
 - [Create and Store Column Master Keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md)
 - [Provision Always Encrypted Keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
-- [Configure Always Encrypted using PowerShell](configure-always-encrypted-using-powershell.md)
-
-
+- [Provision Always Encrypted Keys using PowerShell](configure-always-encrypted-keys-using-powershell.md)
 
 ## See Also
-
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted Wizard tutorial (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [Always Encrypted Wizard tutorial (Windows Certificate Store)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)

@@ -214,8 +214,9 @@ Consult the documentation for your HSM and CSP, for how to configure the CSP on 
  
  
 ## Next Steps  
-- [Configure Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-- [Configure Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
+- [Encrypt, Re-Encrypt or Decrypt Columns using Always Encrypted Wizard](always-encrypted-wizard.md)
+- [Provision Always Encrypted Keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+- [Configure Always Encrypted using PowerShell](configure-always-encrypted-using-powershell.md)
   
 ## See Also 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

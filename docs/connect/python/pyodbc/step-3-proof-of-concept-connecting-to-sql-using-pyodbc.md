@@ -86,7 +86,7 @@ Here is an example ODBC connection string that specifies AAD interactive authent
 
 For details on the AAD authentication options of the ODBC driver, see the following article:
 
-- [Using Azure Active Directory with the ODBC Driver](../../odbc/using-azure-active-directory#new-andor-modified-dsn-and-connection-string-keywords)
+- [Using Azure Active Directory with the ODBC Driver](../../odbc/using-azure-active-directory.md#new-andor-modified-dsn-and-connection-string-keywords)
 
 ## Next steps
   

@@ -33,6 +33,8 @@ SET RESULT_SET_CACHING { ON | OFF };
   
 ## Remarks  
 
+Run this command when connected to the user database where you want to configure the result_set_caching setting for.
+
 **ON**   
 Enables result set caching for the current client session.  Result set caching cannot be turned ON for a session if it is turned OFF at the database level.
 

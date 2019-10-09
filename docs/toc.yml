@@ -5067,8 +5067,6 @@
         - name: Define a logical record relationship
           href: relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
         - name: Configure web synchronization
-          href: relational-databases/replication/configure-web-synchronization.md
-        - name: Configure IIS for Web Synchronization
           href: relational-databases/replication/configure-iis-for-web-synchronization.md
         - name: Configure IIS 7 for Web Synchronization
           href: relational-databases/replication/configure-iis-7-for-web-synchronization.md

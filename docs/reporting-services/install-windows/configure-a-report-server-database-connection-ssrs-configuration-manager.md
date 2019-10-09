@@ -101,6 +101,9 @@ You can specify a Windows user account for the report server connection to the r
 
 You can specify a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to connect to the report server database. If you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication and the report server database is on a remote computer, use IPSec to help secure the transmission of data between the servers. If you use a database login, you must update the report server database connection every time you change the password or the account.  
 
+> [!NOTE]
+> When using an Azure SQL Managed Instance to host the Reporting Services databases, support is limited to using SQL Server login credentials for the connection.
+
 ### Database Permissions
 
 Accounts used to connect to the report server database are granted the following roles:  

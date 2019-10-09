@@ -2,7 +2,7 @@
 title: "SQL Server Migration Assistant for Access (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
-ms.date: 10/10/2019"
+ms.date: "10/10/2019"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual

@@ -27,7 +27,7 @@ The following diagram visually describes opportunities and benefits of the exten
   ![Goals of integration with SQL Server](../media/ml-service-value-add.png "Machine Learning Services Value Add")
 -->
 
-Any supported external language can be run by calling a stored procedure, and the results are returned as tabular results directly to SQL Server, making it easy to use the external language from any application that can send a SQL query and handle the results.
+Any supported external language can be run by calling a stored procedure and the results are returned as tabular results directly to SQL Server. This makes it easy to use the external language from any application that can send a SQL query and handle the results.
 
 ## Architecture diagrams
 

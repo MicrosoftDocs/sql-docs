@@ -44,7 +44,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 `[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
-`[ @failover_mode = ] 'failover_mode'`  
+`[ @failover_mode = ] 'failover_mode'`
  Is the failover mode for the subscription. *failover_mode* is **nvarchar(10)** and can be one of these values.  
   
 |Value|Description|  

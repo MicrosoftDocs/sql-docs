@@ -40,6 +40,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) announcement archive](what-s-new-in-sql-server-ver15-prerelease.md) contains a list of features announced and changed for all previous CTP releases of this feature.
 
 ## Intelligent Database
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on innovations in previous versions to provide industry-leading performance out of the box. From [Intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md) to support for persistent memory devices, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]'s Intelligent Database features improve performance and scalability of all your database workloads without any change to your application or database design.
 
 ### Intelligent Query Processing
 With [Intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md) you know that critical parallel workloads improve when running at scale, while remaining adaptive to the constantly changing world of data. Intelligent Query Processing is available by default on the latest [Database Compatibility Level](../t-sql/statements/alter-database-transact-sql-compatibility-level.md#differences-between-compatibility-level-140-and-level-150) setting, delivering broad impact that improves the performance of existing workloads with minimal implementation effort.
@@ -55,7 +56,7 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 
 
 ### In-Memory Database
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] In-Memory Database technologies allow you to deliver sub-millisecond response times over your databases.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] In-Memory Database technologies leverage modern hardware innovation to deliver unparalleled performance and scale. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on earlier innovations in this area such as In-Memory OLTP to unlock a new level of scalability across all your database workloads.  
 
 |New feature or update | Details |
 |:---|:---|
@@ -65,7 +66,7 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 | &nbsp; | &nbsp; |
 
 ### Intelligent performance
-Intelligent performance provides better control over your database server, removing previously known resource bottlenecks to achieve new levels of scalability.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on Intelligent Database innovations in previous releases to ensure that [It Just Runs Faster](https://blogs.msdn.microsoft.com/bobsql/tag/it-just-runs-faster/). These improvements help overcome known resource bottlenecks and provide you with options to configure your database server to provide predictable performance across all your workloads.
 
 |New feature or update | Details |
 |:---|:---|

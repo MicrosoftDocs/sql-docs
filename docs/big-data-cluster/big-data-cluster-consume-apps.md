@@ -1,17 +1,17 @@
 ---
 title: Consume applications on SQL Server big data clusters
 titleSuffix: SQL Server big data clusters
-description: Consume an application deployed on SQL Server 2019 big data clusters using a RESTful web service (preview).
+description: Consume an application deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] using a RESTful web service (preview).
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 07/25/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Consume an app deployed on SQL Server big data clusters using a RESTful web service
+# Consume an app deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] using a RESTful web service
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -25,7 +25,7 @@ This article describes how to consume an app deployed on a SQL Server 2019 big d
 
 ## Capabilities
 
-After you have deployed an application to your SQL Server 2019 big data cluster (preview), you can access and consume that application using a RESTful web service. This enables integration of that app from other applications or services (for example, a mobile app or website). The following table describes the application deployment commands that you can use with **azdata** to get information about the RESTful web service for your app.
+After you have deployed an application to your [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], you can access and consume that application using a RESTful web service. This enables integration of that app from other applications or services (for example, a mobile app or website). The following table describes the application deployment commands that you can use with **azdata** to get information about the RESTful web service for your app.
 
 |Command |Description |
 |:---|:---|
@@ -46,7 +46,7 @@ The **azdata app describe** command provides detailed information about the app 
 Describe your app by running a command similar to the following example:
 
 ```bash
-azdata app describe --name addpy --version v1
+azdata app describe --name add-app --version v1
 ```
 
 ```json
@@ -120,4 +120,4 @@ You have now successfully called the app through the web service. You can follow
 
 You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
 
-For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

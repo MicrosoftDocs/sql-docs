@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "logical OR (||)"
   - "|| (logical OR)"
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # || (Logical OR) (SSIS Expression)
 

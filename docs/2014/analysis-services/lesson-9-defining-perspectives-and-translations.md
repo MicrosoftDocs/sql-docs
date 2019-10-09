@@ -29,7 +29,7 @@ manager: craigg
  [Lesson 10: Defining Administrative Roles](lesson-10-defining-administrative-roles.md)  
   
 ## See Also  
- [Analysis Services Tutorial Scenario](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)   
  [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Perspectives](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives)   
  [Perspectives in Multidimensional Models](multidimensional-models/perspectives-in-multidimensional-models.md)   

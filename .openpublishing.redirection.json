@@ -1,13 +1,28 @@
 {
     "redirections": [
-         {
-            "source_path": "docs/big-data-cluster/reference-azdata-sql.md",
+        {
+            "source_path": "docs/big-data-cluster/reference-azdata-control.md",
             "redirect_url": "/sql/big-data-cluster/reference-azdata",
             "redirect_document_id": false
-        },  
+        },
         {
-            "source_path": "docs/big-data-cluster/reference-azdata-notebook.md",
-            "redirect_url": "/sql/big-data-cluster/reference-azdata",
+            "source_path": "docs/database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md",
+            "redirect_url": "/sql/database-engine/discontinued-database-engine-functionality-in-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/deploy-install-azdata-installer.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/system-catalog-views/sys-sql-feature-restrictions.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/feature-restrictions.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
             "redirect_document_id": false
         },
         {
@@ -181,6 +196,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/relational-databases/track-changes/known-issues-resolutions-with-cdc-for-oracle-attunity.md",
+            "redirect_url": "/sql/integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/relational-databases/database-features.md",
             "redirect_url": "/sql/relational-databases/databases/databases",
             "redirect_document_id": false
@@ -281,6 +301,26 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/advanced-analytics/tutorials/quickstart-python-verify.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-python-create-script",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-python-create-script",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-python-create-script",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-python-train-score-model",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/advanced-analytics/tutorials/rtsql-create-a-predictive-model-r.md",
             "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-predictive-model",
             "redirect_document_id": true
@@ -316,13 +356,43 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "sql/advanced-analytics/tutorials/quickstart-r-verify.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-script",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sql/advanced-analytics/tutorials/quickstart-r-run-using-tsql.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-script",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "sql/advanced-analytics/tutorials/quickstart-r-inputs-and-outputs.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-script",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "sql/advanced-analytics/tutorials/quickstart-r-create-predictive-model.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-train-score-model",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "sql/advanced-analytics/tutorials/quickstart-r-predict-from-model.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-train-score-model",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/advanced-analytics/r/configuration-sql-server-r-services.md",
-            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md",
-            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/managing-and-monitoring-r-solutions.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
             "redirect_document_id": false
         },
         {
@@ -338,6 +408,36 @@
         {
             "source_path": "docs/advanced-analytics/r/dmvs-for-sql-server-r-services.md",
             "redirect_url": "/sql/advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md",
+            "redirect_url": "/sql/advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/extended-events-for-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/administration/extended-events",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/xe-event-predict-tsql.md",
+            "redirect_url": "/sql/advanced-analytics/administration/extended-events-predict-tsql",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/administration/modify-user-account-pool.md",
+            "redirect_url": "/sql/advanced-analytics/administration/scale-concurrent-execution-external-scripts",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/administration/resource-governance.md",
+            "redirect_url": "/sql/advanced-analytics/administration/resource-governor",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/administration/how-to-create-a-resource-pool.md",
+            "redirect_url": "/sql/advanced-analytics/administration/create-external-resource-pool",
             "redirect_document_id": true
         },
         {
@@ -501,8 +601,38 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/advanced-analytics/package-management/default-packages.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/advanced-analytics/r/determine-which-packages-are-installed-on-sql-server.md",
             "redirect_url": "/sql/advanced-analytics/package-management/installed-package-information",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/package-management/installed-package-information.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/tutorial-python-clustering-model.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/python-clustering-model",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/tutorial-python-clustering-model-prepare-data.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/python-clustering-model-prepare-data",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/tutorial-python-clustering-model-build.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/python-clustering-model-build",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/tutorial-python-clustering-model-deploy.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/python-clustering-model-deploy",
             "redirect_document_id": true
         },
         {
@@ -932,7 +1062,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/r-package-management-for-sql-server-r-services.md",
-            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
@@ -1007,17 +1137,17 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/monitoring-r-services.md",
-            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/advanced-analytics/python/monitoring-python-services.md",
-            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/advanced-analytics/python/managing-and-monitoring-python-solutions.md",
-            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
             "redirect_document_id": false
         },
         {
@@ -1547,7 +1677,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/create-a-local-package-repository-using-minicran.md",
-            "redirect_url": "/sql/advanced-analytics/r/create-a-local-package-repository-using-minicran",
+            "redirect_url": "/sql/advanced-analytics/package-management/create-a-local-package-repository-using-minicran",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/create-a-local-package-repository-using-minicran.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/create-a-local-package-repository-using-minicran",
             "redirect_document_id": false
         },
         {
@@ -1632,7 +1767,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md",
-            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
@@ -1787,7 +1922,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/managing-and-monitoring-r-solutions.md",
-            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
             "redirect_document_id": false
         },
         {
@@ -1817,7 +1952,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/packages-installed-in-user-libraries.md",
-            "redirect_url": "/sql/advanced-analytics/r/packages-installed-in-user-libraries",
+            "redirect_url": "/sql/advanced-analytics/package-management/tips-for-using-r-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/packages-installed-in-user-libraries.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/tips-for-using-r-packages",
             "redirect_document_id": false
         },
         {
@@ -1876,8 +2016,38 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/advanced-analytics/r/r-package-how-to-enable-or-disable.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/install-r-packages-tsql.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/package-install-uninstall-and-sync.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/use-revoscaler-to-manage-r-packages.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md",
             "redirect_url": "/sql/advanced-analytics/r/r-package-management-for-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/install-additional-r-packages-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/python/install-additional-python-packages-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-python-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
@@ -1947,8 +2117,13 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/sql-server-r-services-tutorials.md",
-            "redirect_url": "/sql/advanced-analytics/tutorials/machine-learning-services-tutorials",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sql-server-python-tutorials",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/machine-learning-services-tutorials.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sql-server-python-tutorials",
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/advanced-analytics/r-services/sql-server-r-services.md",
@@ -13858,6 +14033,36 @@
         {
             "source_path": "docs/analysis-services/multidimensional-models-adomd-net-server/index.md",
             "redirect_url": "/bi-reference/adomd/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-ag-kubernetes.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-connect.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-create-deployment.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-manage.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-deploy.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/indexes/columnstore-indexes-defragmentation.md",
+            "redirect_url": "/sql/relational-databases/indexes/reorganize-and-rebuild-indexes",
             "redirect_document_id": false
         }
     ]

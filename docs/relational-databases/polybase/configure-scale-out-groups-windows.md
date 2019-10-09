@@ -6,7 +6,7 @@ ms.technology: polybase
 ms.topic: "tutorial"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ""
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Configure PolyBase scale-out groups on Windows

@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: This tutorial shows you how to use SQL Server Language Extensions and run Java code that search a string with regular expressions.
 author: dphansen
 ms.author: davidph 
-ms.date: 07/25/2019
+ms.date: 10/07/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -182,29 +182,29 @@ If you are using Windows, follow the steps below to create an external language 
 
 1. Create a .zip file containing the extension.
 
-    As part of the SQL Server setup on Windows, the Java extension **.dll** file is installed in this location: `[SQL Server install path]\MSSQL\Binn\javaextension.dll`.
-
-    Compress the `javaextension.dll` into a **.zip** file. For example: `javaextension.zip`.
+    As part of the SQL Server setup on Windows, the Java extension **.zip** file is installed in this location: `[SQL Server install path]\MSSQL\Binn\java-lang-extension.zip`. This zip file contains the **javaextension.dll**.
 
 2. Create an external language Java from the .zip file:
 
     ```sql
     CREATE EXTERNAL LANGUAGE Java
     FROM
-    (CONTENT = N'[Path to .zip file]\javaextension.zip', FILE_NAME = 'javaextension.dll')
+    (CONTENT = N'[SQL Server install path]\MSSQL\Binn\java-lang-extension.zip', FILE_NAME = 'javaextension.dll',
+    ENVIRONMENT_VARIABLES = N'{"JRE_HOME":"<path to JRE>"}' );
     GO
     ```
 
 ### Create external language on Linux
 
-On Linux, you don't need to manually create a **.tar.gz** file. As part of setup, there is already generated a **.tar.gz** file under the following path:
-`/opt/mssql/lib/extensibility/java-lang-extension.tar.gz`.
+As part of setup, the extension **.tar.gz** file is saved under the following path:
+`/opt/mssql-extensibility/lib/java-lang-extension.tar.gz`.
 
 To create an external language Java, run the following T-SQL statement on Linux:
 
 ```sql
 CREATE EXTERNAL LANGUAGE Java
-FROM (CONTENT = N'/opt/mssql/lib/extensibility/java-lang-extension.tar.gz', file_name = 'javaextension.so');
+FROM (CONTENT = N'/opt/mssql-extensibility/lib/java-lang-extension.tar.gz', file_name = 'javaextension.so',
+ENVIRONMENT_VARIABLES = N'{"JRE_HOME":"<path to JRE>"}' );
 GO
 ```
 

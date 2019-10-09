@@ -63,7 +63,7 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
         - **Windows**:  Import the .pem file as a certificate under current user -> trusted root certification authorities -> certificates
         - **macOS**: 
            - Copy the cert to ```/usr/local/etc/openssl/certs```
-           - Run the following command to get the hash value: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - Run the following command to get the hash value: ```/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout```
            - Rename the cert to value. For example: ```mv mssql.pem dc2dd900.0```. Make sure dc2dd900.0 is in ```/usr/local/etc/openssl/certs```
     
 -	**Example connection strings** 

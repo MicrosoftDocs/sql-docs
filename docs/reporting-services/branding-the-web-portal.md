@@ -22,7 +22,7 @@ You can alter the appearance of the web portal by branding it to your business. 
   
 A brand package for Reporting Services consists of three items and is packaged as a zip file.   
   
-- color.json  
+- colors.json  
 - metadata.xml  
 - logo.png (optional)  
   

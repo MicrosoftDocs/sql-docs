@@ -163,14 +163,12 @@ GO
 
 ### Parallel execution
 
-Notice that the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) inputs include **@parallel=1**, used to enable parallel processing. In contrast with previous releases, in SQL Server 2019, setting **@parallel=1** delivers a stronger hint to the query optimizer, making parallel execution a much more likely outcome.
+Notice that the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) inputs include `@parallel=1`, used to enable parallel processing. In contrast with previous releases, in SQL Server 2019, setting `@parallel=1` delivers a stronger hint to the query optimizer, making parallel execution a much more likely outcome.
 
-By default, the query optimizer tends to operate under **@parallel=1** on tables having more than 256 rows, but if you can handle this explicitly by setting **@parallel=1** as shown in this script.
+By default, the query optimizer tends to operate under `@parallel=1` on tables having more than 256 rows, but if you can handle this explicitly by setting `@parallel=1` as shown in this script.
 
 > [!Tip]
-> For training workoads, you can use **@parallel** with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions, including open-source R functions, not specifically engineered with that capability. This works because partitions have affinity to specific threads, so all operations called in a script execute on a per-partition basis, on the given thread.
-
-<a name="training-step"></a>
+> For training workoads, you can use `@parallel` with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions, including open-source R functions, not specifically engineered with that capability. This works because partitions have affinity to specific threads, so all operations called in a script execute on a per-partition basis, on the give`thread.`<a name="training-step"></a>
 
 ## Run the procedure and train the model
 

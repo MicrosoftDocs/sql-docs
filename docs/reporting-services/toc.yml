@@ -1,7 +1,7 @@
 - name: What is SQL Server Reporting Services (SSRS)?
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
 
-- name: Welcome to SQL Server >>
+- name: Welcome to SQL Server >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 
 - name: Overview
@@ -125,12 +125,12 @@
     href: ../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md
   - name: Reporting Services features in editions of SQL Server
     href: ../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
-- name: Install Reporting Services
+- name: Install Reporting Services versions
   items:
-  - name: Install Reporting Services 2017
+  - name: Install Reporting Services
     href: ../reporting-services/install-windows/install-reporting-services.md
     items:
-    - name: Find the product key for Reporting Services 2017
+    - name: Find the product key for Reporting Services
       href: ../reporting-services/install-windows/find-reporting-services-product-key-ssrs.md
   - name: Install Reporting Services 2016 in native mode
     href: ../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
@@ -1678,7 +1678,7 @@
   items:
   - name: REST API
     href: ../reporting-services/developer/rest-api.md
-  - name: REST API samples >
+  - name: REST API samples >>
     href: https://github.com/Microsoft/Reporting-Services
   - name: Integrating Reporting Services into Applications
     href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md

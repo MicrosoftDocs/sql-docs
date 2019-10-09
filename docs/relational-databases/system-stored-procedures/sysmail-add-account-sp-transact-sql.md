@@ -19,7 +19,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # sysmail_add_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Creates a new Database Mail account holding information about an SMTP account.  
   
@@ -76,7 +76,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  The password to use to log on to the e-mail server. *password* is **nvarchar(128)**, with a default of NULL. There is no need to provide a password unless a username is specified.  
   
 `[ @use_default_credentials = ] use_default_credentials`
- Specifies whether to send the mail to the SMTP server using the credentials of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** is bit, with a default of 0. When this parameter is 1, Database Mail uses the credentials of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. When this parameter is 0, Database Mail sends the **@username** and **@password** parameters if present, otherwise sends mail without **@username** and **@password** parameters.  
+ Specifies whether to send the mail to the SMTP server using the credentials of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** is bit, with a default of 0. When this parameter is 1, Database Mail uses the credentials of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. When this parameter is 0, Database Mail sends the **\@username** and **\@password** parameters if present, otherwise sends mail without **\@username** and **\@password** parameters.  
   
 `[ @enable_ssl = ] enable_ssl`
  Specifies whether Database Mail encrypts communication using Secure Sockets Layer. **Enable_ssl** is bit, with a default of 0.  
@@ -88,11 +88,11 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  **0** (success) or **1** (failure)  
   
 ## Remarks  
- Database Mail provides separate parameters for **@email_address**, **@display_name**, and **@replyto_address**. The **@email_address** parameter is the address from which the message is sent. The **@display_name** parameter is the name shown in the **From:** field of the e-mail message. The **@replyto_address** parameter is the address where replies to the e-mail message will be sent. For example, an account used for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may send e-mail messages from an e-mail address that is only used for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Messages from that address should display a friendly name, so recipients can easily determine that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sent the message. If a recipient replies to the message, the reply should go to the database administrator rather than the address used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. For this scenario, the account uses **SqlAgent@Adventure-Works.com** as the e-mail address. The display name is set to **SQL Server Agent Automated Mailer**. The account uses **danw@Adventure-Works.com** as the reply to address, so replies to messages sent from this account go to the database administrator rather than the e-mail address for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. By providing independent settings for these three parameters, Database Mail allows you to configure messages to suit your needs.  
+ Database Mail provides separate parameters for **\@email_address**, **\@display_name**, and **\@replyto_address**. The **\@email_address** parameter is the address from which the message is sent. The **\@display_name** parameter is the name shown in the **From:** field of the e-mail message. The **\@replyto_address** parameter is the address where replies to the e-mail message will be sent. For example, an account used for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may send e-mail messages from an e-mail address that is only used for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Messages from that address should display a friendly name, so recipients can easily determine that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sent the message. If a recipient replies to the message, the reply should go to the database administrator rather than the address used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. For this scenario, the account uses **SqlAgent@Adventure-Works.com** as the e-mail address. The display name is set to **SQL Server Agent Automated Mailer**. The account uses **danw@Adventure-Works.com** as the reply to address, so replies to messages sent from this account go to the database administrator rather than the e-mail address for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. By providing independent settings for these three parameters, Database Mail allows you to configure messages to suit your needs.  
   
- The **@mailserver_type** parameter supports the value **'SMTP'**.  
+ The **\@mailserver_type** parameter supports the value **'SMTP'**.  
   
- When **@use_default_credentials** is 1 mail is sent to the SMTP server using the credentials of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. When **@use_default_credentials** is 0 and a **@username** and **@password** are specified for an account, the account uses SMTP authentication. The **@username** and **@password** are the credentials the account uses for the SMTP server, not credentials for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or the network that the computer is on.  
+ When **\@use_default_credentials** is 1 mail is sent to the SMTP server using the credentials of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. When **\@use_default_credentials** is 0 and a **\@username** and **\@password** are specified for an account, the account uses SMTP authentication. The **\@username** and **\@password** are the credentials the account uses for the SMTP server, not credentials for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or the network that the computer is on.  
   
  The stored procedure **sysmail_add_account_sp** is in the **msdb** database and is owned by the **dbo** schema. The procedure must be executed with a three-part name if the current database is not **msdb**.  
   

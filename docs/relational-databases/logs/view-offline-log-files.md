@@ -69,7 +69,7 @@ ms.author: "mathoma"
   
     3.  Enter the remote computer name, and then click **OK**.  
   
-3.  Right-click **WMI Control (Local)** or **WMI Control (***RemoteComputerName***)**, and then click **Properties**.  
+3.  Right-click **WMI Control (Local)** or **WMI Control (**_RemoteComputerName_**)**, and then click **Properties**.  
   
 4.  In the **WMI Control Properties** dialog box, click the **Security** tab.  
   

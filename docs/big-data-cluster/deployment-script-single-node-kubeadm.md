@@ -1,11 +1,11 @@
 ---
 title: Deploy with a bash script to a single node kubeadm cluster
 titleSuffix: SQL Server big data clusters
-description: Use a bash deployment script to deploy a SQL Server 2019 big data cluster (preview) to a single node kubeadm cluster.
+description: Use a bash deployment script to deploy a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] to a single node kubeadm cluster.
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -29,7 +29,7 @@ In this tutorial, you use a sample bash deployment script to deploy a single nod
 - Update existing packages using commands below to ensure that the OS image is up-to-date.
 
    ``` bash
-   sudo apt update&&apt upgrade -y
+   sudo apt update && sudo apt upgrade -y
    sudo systemctl reboot
    ```
 

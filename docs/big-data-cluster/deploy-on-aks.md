@@ -1,11 +1,11 @@
 ---
 title: Configure Azure Kubernetes Service
 titleSuffix: SQL Server big data clusters
-description: Learn how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments.
+description: Learn how to configure Azure Kubernetes Service (AKS) for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/10/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments.
+This article describes how to configure Azure Kubernetes Service (AKS) for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments.
 
 AKS makes it simple to create, configure, and manage a cluster of virtual machines that are preconfigured with a Kubernetes cluster to run containerized applications. This enables you to use your existing skills or draw upon a large and growing body of community expertise, to deploy and manage container-based applications on Microsoft Azure.
 
@@ -32,11 +32,11 @@ This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If
    - **SQL Server 2019 extension**
    - **Azure CLI**
 
-- Minimum 1.10 version for Kubernetes server. For AKS, you need to use `--kubernetes-version` parameter to specify a version different than the default.
+- Minimum 1.13 version for Kubernetes server. For AKS, you need to use `--kubernetes-version` parameter to specify a version different than the default.
 
-- For an optimal experience while validating basic scenarios on AKS, use:
+- To ensure a successful deployment and an optimal experience while validating basic scenarios on AKS, you can use a single node or a multi-node AKS cluster, with these resources available:
    - 8 vCPUs across all nodes
-   - 32 GB of memory per VM
+   - 64 GB of memory per VM
    - 24 or more attached disks across all nodes
 
    > [!TIP]
@@ -160,4 +160,4 @@ If you have any problems creating an Azure Kubernetes Service with the previous 
 
 The steps in this article configured a Kubernetes cluster in AKS. The next step is to deploy a SQL Server 2019 big data cluster on the AKS Kubernetes cluster. For more information on how to deploy big data clusters, see the following article:
 
-[How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md)
+[How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)

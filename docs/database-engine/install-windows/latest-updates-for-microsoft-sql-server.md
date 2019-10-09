@@ -1,6 +1,6 @@
 ﻿---
-title: Update Center for Microsoft SQL Server
-TOCTitle: Update Center for Microsoft SQL Server
+title: Latest updates for Microsoft SQL Server
+TOCTitle: Latest updates for Microsoft SQL Server
 ms:assetid: 0d1835fd-2b44-47cf-8f90-305ca14b7823
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ff803383(v=MSDN.10)
 ms:contentKeyID: 31804705

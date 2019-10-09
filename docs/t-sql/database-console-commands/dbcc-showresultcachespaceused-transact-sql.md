@@ -36,7 +36,12 @@ The maximum size of result set cache is 1 TB per database.  Azure SQL Data Wareh
 - every 48 hours if the result set hasn't been used.
 - when the result set cache approaches the maximum size.
 
-Users can manually empty the result set cache for a database by turning OFF the result set cache feature or by using the `DBCC DROPRESULTSETCACHE` command.   Pausing a database won't empty result set cache.  
+To manually empty the result set cache for a database, users can use one of these options:
+
+- Turn OFF the result set cache feature for the database
+- Run `DBCC DROPRESULTSETCACHE` while connected to the database 
+
+Pausing a database won't empty result set cache.  
 
 ## Permissions
 

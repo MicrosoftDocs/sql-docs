@@ -29,6 +29,15 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+## 17.4.2, October 2019
+
+| Feature added | Details |
+| :------------ | :------ |
+| Support for additional Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
+| Support for setting data classification version | See [Data Classification](../data-classification.md#bkmk-version). |
+| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## 17.4, August 2019
 
 | Feature added | Details |

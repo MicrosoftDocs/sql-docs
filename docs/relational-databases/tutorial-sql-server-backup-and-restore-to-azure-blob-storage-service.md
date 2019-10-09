@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: SQL back up and restore to Azure Blob storage service | Microsoft Docs"
+title: "Quickstart: SQL backup and restore to Azure Blob storage service | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/09/2018"
 ms.prod: sql
@@ -11,7 +11,7 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: "rothja"
 ms.author: "jroth"
 ---
-# Quickstart: SQL back up and restore to Azure Blob storage service
+# Quickstart: SQL backup and restore to Azure Blob storage service
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 This quickstart helps you understand how to write backups to and restore from the Azure Blob Storage Service.  The article explains how to create an Azure Blob Container, write a backup to the blob service, and then perform a restore.
   
@@ -42,7 +42,7 @@ To create a Container, follow these steps:
     ![New container](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
   > [!NOTE]
-  > Authentication to the storage account is required for SQL Server backup and restore even if you choose to create a public container. You can also create a container programatically using REST APIs. For more information, see [Create container](https://docs.microsoft.com/rest/api/storageservices/Create-Container)
+  > Authentication to the storage account is required for SQL Server backup and restore even if you choose to create a public container. You can also create a container programmatically using REST APIs. For more information, see [Create container](https://docs.microsoft.com/rest/api/storageservices/Create-Container)
 
 ## Create a test database 
 In this step, create a test database using SQL Server Management Studio (SSMS). 
@@ -96,7 +96,7 @@ Use the GUI in SQL Server Management Studio to create the credential by followin
 
 1. Expand the **Databases** node within **Object Explorer** of [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 1. Right-click your new `SQLTestDB` database, hover over **Tasks** and then select **Back up...** to launch the **Back Up Database** wizard. 
-1. Select **URL** from the **Back up to** destination drop down, and then select **Add** to launch the **Select Backup Destination** dialog box. 
+1. Select **URL** from the **Back up to** destination drop-down, and then select **Add** to launch the **Select Backup Destination** dialog box. 
 
    ![Back up to URL](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 

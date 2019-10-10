@@ -77,7 +77,7 @@ manager: craigg
   
 -   SQL Credential used to authenticate to the Azure storage account.  
   
--   Either specify not to encrypt using *@encryption_algorithm* = **NO_ENCRYPTION** or specify a supported encryption algorithm. For more information on encryption, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).  
+-   Either specify not to encrypt using *\@encryption_algorithm* = **NO_ENCRYPTION** or specify a supported encryption algorithm. For more information on encryption, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).  
   
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for database level configuration is only supported through Transact-SQL.  
   
@@ -88,7 +88,7 @@ manager: craigg
   
 -   **Using Transact-SQL:**  
   
-     If you are enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for the first time, the required parameters are: *@database_name*, *@credential_name*, *@encryption_algorithm*,  *@enable_backup* The *@storage_url* parameter is optional. If you do not provide a value for  the @storage_url parameter, the value is derived using the storage account information from the SQL Credential. If you provide the storage URL you should only provide the URL for the root of the storage account, and must match the information in the SQL Credential you specified.  
+     If you are enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for the first time, the required parameters are: *\@database_name*, *\@credential_name*, *\@encryption_algorithm*,  *\@enable_backup* The *\@storage_url* parameter is optional. If you do not provide a value for  the @storage_url parameter, the value is derived using the storage account information from the SQL Credential. If you provide the storage URL you should only provide the URL for the root of the storage account, and must match the information in the SQL Credential you specified.  
   
     1.  Connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
@@ -129,13 +129,13 @@ manager: craigg
 ##  <a name="InstanceConfigure"></a> Enable and Configure Default [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] settings for the Instance  
  You can enable and configure default [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] settings at the instance level in two ways:  By using the system stored procedure `smart_admin.set_instance_backup` or **SQL Server Management Studio**. The two methods are explained below:  
   
- **smart_admin.set_instance_backup:**. By specifying the value **1** for *@enable_backup* parameter, you can enable backup and set the default configurations. Once applied at the instance level, these default settings are applied to any new database that is added to this instance.  When [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is enabled for the first time, the following information must be provided in addition to enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] on the instance:  
+ **smart_admin.set_instance_backup:**. By specifying the value **1** for *\@enable_backup* parameter, you can enable backup and set the default configurations. Once applied at the instance level, these default settings are applied to any new database that is added to this instance.  When [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is enabled for the first time, the following information must be provided in addition to enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] on the instance:  
   
 -   The retention period.  
   
 -   SQL Credential used to authenticate to the Azure storage account.  
   
--   The encryption option. Either specify not to encrypt using *@encryption_algorithm* = **NO_ENCRYPTION** or specify a supported encryption algorithm. For more information on encryption, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).  
+-   The encryption option. Either specify not to encrypt using *\@encryption_algorithm* = **NO_ENCRYPTION** or specify a supported encryption algorithm. For more information on encryption, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).  
   
  Once enabled these settings are persisted. If you are changing the configuration, only the database name and the setting you want to change is required. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] retains the existing values when not specified.  
   
@@ -196,7 +196,7 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
 >  When you create a new database after configuring the default settings, it may take up to 15 minutes for the database to be configured with the default settings. This also applies to databases that are changed from **Simple** to **Full** or **Bulk-Logged** recovery model.  
   
 ##  <a name="DatabaseDisable"></a> Disable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for a database  
- You can disable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] settings by using the `sp_set_db_backup` system stored procedure. The *@enableparameter* is used to enable and disable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configurations for a specific database, where 1 enables and 0 disables the configuration settings.  
+ You can disable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] settings by using the `sp_set_db_backup` system stored procedure. The *\@enableparameter* is used to enable and disable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configurations for a specific database, where 1 enables and 0 disables the configuration settings.  
   
 #### To Disable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for a specific database:  
   

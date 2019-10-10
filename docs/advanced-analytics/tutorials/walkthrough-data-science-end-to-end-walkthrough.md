@@ -37,7 +37,7 @@ We recommend that you do this walkthrough on a client workstation. You must be a
 
 Alternatively, you can run the walkthrough on a computer that has both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and an R development environment, but we don't recommend this configuration for a production environment. If you need to put client and server on the same computer, be sure to install a second set of Microsoft R libraries for sending R script from a "remote" client. Do not use the R libraries that are installed in the program files of the SQL Server instance. Specifically, if you are using one computer, you need the RevoScaleR library in both of these locations to support client and server operations.
 
-+ C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
++ C:\Program Files\Microsoft\ML Server\R_SERVER\library\RevoScaleR 
 + C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 <a name="add-packages"></a>

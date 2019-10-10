@@ -40,6 +40,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) announcement archive](what-s-new-in-sql-server-ver15-prerelease.md) contains a list of features announced and changed for all previous CTP releases of this feature.
 
 ## Intelligent Database
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on innovations in previous versions to provide industry-leading performance out of the box. From [Intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md) to support for persistent memory devices, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]'s Intelligent Database features improve performance and scalability of all your database workloads without any change to your application or database design.
 
 ### Intelligent Query Processing
 With [Intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md) you know that critical parallel workloads improve when running at scale, while remaining adaptive to the constantly changing world of data. Intelligent Query Processing is available by default on the latest [Database Compatibility Level](../t-sql/statements/alter-database-transact-sql-compatibility-level.md#differences-between-compatibility-level-140-and-level-150) setting, delivering broad impact that improves the performance of existing workloads with minimal implementation effort.
@@ -55,7 +56,7 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 
 
 ### In-Memory Database
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] In-Memory Database technologies allow you to deliver sub-millisecond response times over your databases.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] In-Memory Database technologies leverage modern hardware innovation to deliver unparalleled performance and scale. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on earlier innovations in this area such as In-Memory OLTP to unlock a new level of scalability across all your database workloads.  
 
 |New feature or update | Details |
 |:---|:---|
@@ -65,7 +66,7 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 | &nbsp; | &nbsp; |
 
 ### Intelligent performance
-Intelligent performance provides better control over your database server, removing previously known resource bottlenecks to achieve new levels of scalability.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on Intelligent Database innovations in previous releases to ensure that [It Just Runs Faster](https://blogs.msdn.microsoft.com/bobsql/tag/it-just-runs-faster/). These improvements help overcome known resource bottlenecks and provide you with options to configure your database server to provide predictable performance across all your workloads.
 
 |New feature or update | Details |
 |:---|:---|
@@ -182,27 +183,30 @@ When an ETL process fails because the source and the destination don't have matc
 | &nbsp; | &nbsp; |
 
 ## Platform choice
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on the innovations introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] to allow you to run [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on your platform of choice with more functionality and security than ever before.
 
 ### <a id="sql-server-on-linux"></a>Linux
 
 | New feature or update | Details |
 |:-----|:-----|
-|New container registry|[Get started with SQL Server containers on Docker](../linux/quickstart-install-connect-docker.md) |
 |Replication support |[SQL Server Replication on Linux](../linux/sql-server-linux-replication.md)
 |Support for the Microsoft Distributed Transaction Coordinator (MSDTC) |[How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md) |
 |OpenLDAP support for third-party AD providers |[Tutorial: Use Active Directory authentication with SQL Server on Linux](../linux/sql-server-linux-active-directory-authentication.md) |
 |Machine Learning on Linux |[Configure Machine Learning on Linux](../linux/sql-server-linux-setup-machine-learning.md) |
 |`tempdb` improvements | By default, a new installation of SQL Server on Linux creates multiple `tempdb` data files based on the number of logical cores (with up to 8 data files). This does not apply to in-place minor or major version upgrades. Each `tempdb` file is 8 MB with an auto growth of 64 MB. This behavior is similar to the default SQL Server installation on Windows. |
 | PolyBase on Linux | [Install PolyBase](../relational-databases/polybase/polybase-linux-setup.md) on Linux for non-Hadoop connectors.<br/><br/>[PolyBase type mapping](../relational-databases/polybase/polybase-type-mapping.md). |
-| Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for SQL Server 2019. |
+| Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
 | &nbsp; | &nbsp; |
 
 ### Containers
+The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is to use containers. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on the innovations introduced in earlier versions to enable you to deploy [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] containers on new platforms, in a safer manner, and with more functionality.
 
 |New feature or update | Details |
 |:---|:---|
-| Microsoft Container Registry | The [Microsoft Container Registry](https://www.ntweekly.com/2019/09/23/microsoft-container-registry-to-replace-docker-hub-for-new-images/) now replaces Docker Hub for new official Microsoft container images, including [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
+| Microsoft Container Registry | The [Microsoft Container Registry](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) now replaces Docker Hub for new official Microsoft container images, including [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
 | Non-root containers | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces the ability to create safer containers by starting the [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] process as a non-root user by default. See [build and run SQL Server containers as a non-root user](../linux/sql-server-linux-configure-docker.md#buildnonrootcontainer) for more details. |
+| Red Hat certified container images | Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], you will now be able to run SQL Server containers on Red Hat Enterprise Linux. |
+| Polybase and Machine Learning support| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces new ways to work with SQL Server Containers such as Machine Learning Services and Polybase. Check out some examples in the [SQL Server in container GitHub repository](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples). |
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> SQL Server Machine Learning Services

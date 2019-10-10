@@ -32,17 +32,17 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## Arguments  
- @credential = *@credential*  
+ @credential = *\@credential*  
  Is the database scoped credential associated with the local Stretch-enabled database.  
   
- @with_copy = *@with_copy*  
- Specifies whether to make a copy of the remote data and connect to the copy (recommended). *@with_copy* is bit.  
+ @with_copy = *\@with_copy*  
+ Specifies whether to make a copy of the remote data and connect to the copy (recommended). *\@with_copy* is bit.  
   
- @azure_servername = *@azure_servername*  
- Specifies the name of the Azure server that contains the remote data. *@azure_servername* is sysname.  
+ @azure_servername = *\@azure_servername*  
+ Specifies the name of the Azure server that contains the remote data. *\@azure_servername* is sysname.  
   
- @azure_databasename = *@azure_databasename*  
- Specifies the name of the Azure database that contains the remote data. *@azure_databasename* is sysname.  
+ @azure_databasename = *\@azure_databasename*  
+ Specifies the name of the Azure database that contains the remote data. *\@azure_databasename* is sysname.  
   
 ## Return Code Values  
  0 (success) or >0 (failure)  

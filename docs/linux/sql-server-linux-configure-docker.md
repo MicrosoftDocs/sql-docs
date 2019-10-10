@@ -20,6 +20,8 @@ This article explains how to configure and use the [mssql-server-linux container
 > [!NOTE]
 > This article specifically focuses on using the mssql-server-linux image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
+>Before choosing to run a SQL Server container for production use cases, please review our [support policy for SQL Server Containers](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server) to ensure that you are running on a supported configuration.
+
 ## Pull and run the container image
 
 To pull and run the Docker container images for SQL Server 2017 and SQL Server 2019 preview, follow the prerequisites and steps in the following quickstart:

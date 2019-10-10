@@ -50,7 +50,7 @@ ms.author: sstein
  None.  
   
 ## Remarks  
- If no entry exists for the publisher and the publishing database, **sp_validate_redirected_publisher** returns null in the output parameter *@redirected_publisher*. If an entry exists, it is returned in the output parameter in both success and failure cases.  
+ If no entry exists for the publisher and the publishing database, **sp_validate_redirected_publisher** returns null in the output parameter *\@redirected_publisher*. If an entry exists, it is returned in the output parameter in both success and failure cases.  
   
  If the validation succeeds, **sp_validate_redirected_publisher** returns a success indication.  
   

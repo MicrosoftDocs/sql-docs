@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
-ms.date: 08/21/2019
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -70,6 +70,8 @@ The RTM build number for SQL Server 2019 is `15.0.2000.5`.
 
 - [Hardware and Software Requirements for Installing SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 
-[!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
+## Machine Learning Services
 
-![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
+For issues in SQL Server Machine Learning Services, see [Known issues in SQL Server Machine Learning Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md).
+
+[!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]

@@ -48,8 +48,7 @@ You can choose to deploy Kubernetes in any of three ways:
 | Deploy Kubernetes on: | Description | Link |
 |---|---|---|
 | **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. | [Instructions](deploy-on-aks.md) |
-| **Multiple machines (kubeadm)** | A Kubernetes cluster deployed on physical or virtual machines using **kubeadm** | [Instructions](deploy-with-kubeadm.md) |
-| **Minikube** | A single-node Kubernetes cluster in a VM. | [Instructions](deploy-on-minikube.md) |
+| **Single or Multiple machines (kubeadm)** | A Kubernetes cluster deployed on physical or virtual machines using **kubeadm** | [Instructions](deploy-with-kubeadm.md) |
 
 > [!TIP]
 > You can also script the deployment of AKS and a big data cluster in one step. For more information, see how to do this in a [python script](quickstart-big-data-cluster-deploy.md) or an Azure Data Studio [notebook](deploy-notebooks.md).
@@ -75,13 +74,27 @@ The following sections provide more details on how to configure your big data cl
 
 ## <a id="configfile"></a> Default configurations
 
-Big data cluster deployment options are defined in JSON configuration files. You can start your customization of the cluster deployment from the built-in deployment profiles with default settings for dev/test environments:
+Big data cluster deployment options are defined in JSON configuration files. You can start your customization of the cluster deployment from the built-in deployment profiles that are available in the **azdata**. Run this command to find what are the templates available:
+
+```
+azdata bdc config list -o table 
+```
+For example, for SQL Server 2019 CU1, the outcome of the above command is:
+```
+Result
+----------------
+aks-dev-test
+aks-dev-test-ha
+kubeadm-dev-test
+kubeadm-prod
+```
 
 | Deployment profile | Kubernetes environment |
 |---|---|
-| **aks-dev-test** | Azure Kubernetes Service (AKS) |
-| **kubeadm-dev-test** | Multiple machines (kubeadm) |
-| **minikube-dev-test** | minikube |
+| **aks-dev-test** | Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)|
+| **aks-dev-test-ha** | Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS). Mission critical services like SQL Server master and HDFS name node are configured for high availability.|
+| **kubeadm-dev-test** | Deploy SQL Server big data cluster on a Kubernetes cluster created with kubeadm using a single or multiple physical or virtual machines.|
+| **kubeadm-prod**| Deploy SQL Server big data cluster on a Kubernetes cluster created with kubeadm using a single or multiple physical or virtual machines. Use this template to enable big data cluster services to integrate with Active Directory. Mission critical services like SQL Server master instance and HDFS name node are deployed in a highly available configuration.  |
 
 You can deploy a big data cluster by running **azdata bdc create**. This prompts you to choose one of the default configurations and then guides you through the deployment.
 
@@ -142,10 +155,8 @@ The following environment variables are used for security settings that are not 
 
 | Environment variable | Requirement |Description |
 |---|---|---|
-| **CONTROLLER_USERNAME** | Required |The username for the cluster administrator. |
-| **CONTROLLER_PASSWORD** | Required |The password for the cluster administrator. |
-| **MSSQL_SA_PASSWORD** | Required |The password of SA user for SQL master instance. |
-| **KNOX_PASSWORD** | Required |The password for Knox **root** user. Note than in a basic authentication setup only user supported for Knox is **root**.|
+| **AZDATA_USERNAME** | Required |The username for the cluster administrator. An sysadmin login with the same name will be created in SQL Server master instance. As a security best practice, **sa** account will be disabled. |
+| **AZDATA_PASSWORD** | Required |The password for the user accounts created above. Same password will be used for the **root** user, used for securing Knox gateway and HDFS. |
 | **ACCEPT_EULA**| Required for first use of `azdata`| Set to "yes". When set as an environment variable, it applies EULA to both SQL Server and `azdata`. If not set as environment variable, you can include `--accept-eula=yes` in the first use of `azdata` command.|
 | **DOCKER_USERNAME** | Optional | The username to access the container images in case they are stored in a private repository. See the [Offline deployments](deploy-offline.md) topic for more details on how to use a private Docker repository for big data cluster deployment.|
 | **DOCKER_PASSWORD** | Optional |The password to access the above private repository. |
@@ -155,18 +166,14 @@ These environment variables must be set prior to calling **azdata bdc create**. 
 The following example shows how to set the environment variables for Linux (bash) and Windows (PowerShell):
 
 ```bash
-export CONTROLLER_USERNAME=admin
-export CONTROLLER_PASSWORD=<password>
-export MSSQL_SA_PASSWORD=<password>
-export KNOX_PASSWORD=<password>
+export AZDATA_USERNAME=admin
+export AZDATA_PASSWORD=<password>
 export ACCEPT_EULA=yes
 ```
 
 ```PowerShell
-SET CONTROLLER_USERNAME=admin
-SET CONTROLLER_PASSWORD=<password>
-SET MSSQL_SA_PASSWORD=<password>
-SET KNOX_PASSWORD=<password>
+SET AZDATA_USERNAME=admin
+SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
@@ -181,8 +188,8 @@ azdata bdc create --config-profile custom --accept-eula yes
 
 Please note the following guidelines:
 
-- Make sure you wrap the password in double quotes if it contains any special characters. You can set the **MSSQL_SA_PASSWORD** to whatever you like, but make sure the password is sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
-- The **SA** login is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the **MSSQL_SA_PASSWORD** environment variable you specified is discoverable by running `echo $MSSQL_SA_PASSWORD` in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
+- Make sure you wrap the password in double quotes if it contains any special characters. You can set the **AZDATA_PASSWORD** to whatever you like, but make sure the password is sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
+- The **AZDATA_USERNAME** login is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the **AZDATA_PASSWORD** environment variable you specified is discoverable by running `echo $AZDATA_PASSWORD` in the container. For security purposes, change the password as a best practice.
 
 ## <a id="unattended"></a> Unattended install
 
@@ -217,7 +224,7 @@ Cluster deployed successfully.
 
 ## <a id="endpoints"></a> Retrieve endpoints
 
-After the deployment script has completed successfully, you can obtain the IP addresses of the external endpoints for the big data cluster using the following steps.
+After the deployment script has completed successfully, you can obtain the addresses of the external endpoints for the big data cluster using the following steps.
 
 1. After the deployment, find the IP address of the controller endpoint either from the deployment standard output or by looking at the EXTERNAL-IP output of the following **kubectl** command:
 
@@ -264,14 +271,6 @@ You can also get all the service endpoints deployed for the cluster by running t
 
 ```bash
 kubectl get svc -n <your-big-data-cluster-name>
-```
-
-### Minikube
-
-If you are using minikube, you need to run the following command to get the IP address you need to connect to. In addition to the IP, specify the port for the endpoint you need to connect to.
-
-```bash
-minikube ip
 ```
 
 ## <a id="status"></a> Verify the cluster status

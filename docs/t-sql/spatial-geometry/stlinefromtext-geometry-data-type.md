@@ -1,7 +1,7 @@
 ---
 title: "STLineFromText (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/03/2017"
+ms.date: "10/11/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -45,17 +45,38 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
  OGC type: **LineString**  
   
 ## Remarks  
- This method will throw a **FormatException** if the input is not well-formatted.  
+ This method will throw a **FormatException** if the input is not well-formatted. Three-dimension and/or measured geometry WKT notation from the Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.2.1 is not supported. See examples for the supported representation of Z (elevation) and M (measure) values.
   
 ## Examples  
- The following example uses `STLineFromText()` to create a `geometry` instance.  
-  
+ The following examples uses `STLineFromText()` to create a `geometry` instance.
+
+### Example 1: Two-dimension geometry WKT
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100, 200 200)', 0);  
 SELECT @g.ToString();  
 ```  
   
+### Example 2: Three-dimension geometry WKT
+```  
+DECLARE @g geometry;  
+SET @g = geometry::STLineFromText('LINESTRING (100 100 100, 200 200 200)', 0);  
+SELECT @g.ToString();  
+``` 
+
+### Example 3: Two-dimension measured geometry WKT
+```  
+DECLARE @g geometry;  
+SET @g = geometry::STLineFromText('LINESTRING (100 100 NULL 100, 200 200 NULL 200)', 0);  
+SELECT @g.ToString();  
+``` 
+
+### Example 4: Three-dimension mesured geometry WKT
+```  
+DECLARE @g geometry;  
+SET @g = geometry::STLineFromText('LINESTRING (100 100 100 100, 200 200 200 200)', 0);  
+SELECT @g.ToString();  
+``` 
 ## See Also  
  [OGC Static Geometry Methods](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   

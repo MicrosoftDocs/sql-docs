@@ -183,7 +183,7 @@ When an ETL process fails because the source and the destination don't have matc
 | &nbsp; | &nbsp; |
 
 ## Platform choice
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md) builds on the innovations introduced in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] to allow you to run [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on your platform of choice with more functionality and security than ever before.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md) builds on the innovations introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] to allow you to run [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on your platform of choice with more functionality and security than ever before.
 
 ### <a id="sql-server-on-linux"></a>Linux
 

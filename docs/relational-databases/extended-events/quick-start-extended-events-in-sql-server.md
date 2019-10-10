@@ -404,7 +404,7 @@ In the SSMS **Object Explorer**, you can right-click your event session node. In
 There are innumerable scenarios for the effective use of extended events. The following articles provide example scenarios that involve the locks taken during queries.
 
 
-Specific scenarios for event sessions aimed at assessing locks are described in the following articles. The articles also show some advanced techniques, such as using **@dbid**, and using the dynamic `EXECUTE (@YourSqlString)`:
+Specific scenarios for event sessions aimed at assessing locks are described in the following articles. The articles also show some advanced techniques, such as using **\@dbid**, and using the dynamic `EXECUTE (@YourSqlString)`:
 
 - [Find the Objects That Have the Most Locks Taken on Them](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - This scenario uses the target package0.histogram, which processes the raw event data before displaying it to you.

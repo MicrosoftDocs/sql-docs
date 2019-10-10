@@ -28,7 +28,7 @@ ms.author: mlandzic
 ---
 # CURRENT_TIMEZONE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xx-asdb-xxxx-xxx](../../includes/tsql-appliesto-xx-asdb-xxxx-xxx.md)]
+[!INCLUDE[appliesto-xx-asdb-xxx-xxx-md.md](../../includes/appliesto-xx-asdb-xxx-xxx-md.md)]
 
 This function returns the name of the time zone observed by a server or an instance. For SQL Database Managed Instance, return value is based on the time zone of the instance itself assigned during instance creation, not the time zone of the underlying operating system.
   

@@ -95,14 +95,13 @@ manager: craigg
   
 -   Backup to multiple blobs in a single backup operation is not supported. For example, the following returns an error:  
   
-    ```  
-    BACKUP DATABASE AdventureWorks2012   
-    TO URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012_1.bak'   
-       URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012_2.bak'   
-          WITH CREDENTIAL = 'mycredential'   
+    ```sql
+    BACKUP DATABASE AdventureWorks2012
+    TO URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012_1.bak'
+       URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012_2.bak'
+          WITH CREDENTIAL = 'mycredential'
          ,STATS = 5;  
-    GO  
-  
+    GO
     ```  
   
 -   Specifying a block size with `BACKUP` is not supported.  
@@ -272,21 +271,16 @@ manager: craigg
   
 ###  <a name="credential"></a> Create a Credential  
  The following example creates a credential that stores the Azure Storage authentication information.  
-  
-1.  **Tsql**  
-  
-    ```  
+
+    ```sql
     IF NOT EXISTS  
     (SELECT * FROM sys.credentials   
     WHERE credential_identity = 'mycredential')  
     CREATE CREDENTIAL mycredential WITH IDENTITY = 'mystorageaccount'  
     ,SECRET = '<storage access key>' ;  
+    ```
   
-    ```  
-  
-2.  **C#**  
-  
-    ```  
+    ```csharp
     // Connect to default sql server instance on local machine  
     Server server = new Server(".");  
     string identity = "mystorageaccount";  
@@ -298,41 +292,33 @@ manager: craigg
     credential.Create(identity, secret);  
     ```  
   
-3.  **PowerShell**  
-  
-    ```  
+    ```powershell
     # create variables  
     $storageAccount = "mystorageaccount"  
     $storageKey = "<storage access key>"  
-    $secureString = convertto-securestring $storageKey  -asplaintext -force  
+    $secureString = ConvertTo-SecureString $storageKey  -asplaintext -force  
     $credentialName = "mycredential"  
   
     $srvPath = "SQLSERVER:\SQL\COMPUTERNAME\INSTANCENAME"  
     # for default instance, the $srvpath variable would be "SQLSERVER:\SQL\COMPUTERNAME\DEFAULT"  
   
     # Create a credential  
-     New-SqlCredential -Name $credentialName -Path $srvpath -Identity $storageAccount -Secret $secureString  
-  
+     New-SqlCredential -Name $credentialName -Path $srvpath -Identity $storageAccount -Secret $secureString
     ```  
   
 ###  <a name="complete"></a> Backing up a complete database  
- The following example backs up the AdventureWorks2012 database to the Azure Blob storage service.  
+ The following example backs up the AdventureWorks2012 database to the Azure Blob storage service.
   
-1.  **Tsql**  
-  
-    ```  
+    ```sql
     BACKUP DATABASE AdventureWorks2012   
     TO URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012.bak'   
           WITH CREDENTIAL = 'mycredential'   
          ,COMPRESSION  
          ,STATS = 5;  
-    GO  
-  
+    GO
     ```  
   
-1.  **C#**  
-  
-    ```  
+    ```csharp
     // Connect to default sql server instance on local machine  
     Server server = new Server(".");  
     string identity = "mystorageaccount";  
@@ -355,11 +341,9 @@ manager: craigg
     backup.CompressionOption = BackupCompressionOptions.On;  
     backup.Devices.AddDevice(url, DeviceType.Url);  
     backup.SqlBackup(server);  
-    ```  
+    ```
   
-2.  **PowerShell**  
-  
-    ```  
+    ```powershell
     # create variables  
     $backupUrlContainer = "https://mystorageaccount.blob.core.windows.net/mycontainer/"  
     $credentialName = "mycredential"  
@@ -369,16 +353,13 @@ manager: craigg
     # navigate to SQL Server Instance  
     CD $srvPath   
     $backupFile = $backupUrlContainer + "AdventureWorks2012" +  ".bak"  
-    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On  
-  
+    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On
     ```  
   
 ###  <a name="databaselog"></a> Backing up the database and log  
  The following example backups up the AdventureWorks2012 sample database, which uses the simple recovery model by default. To support log backups, the AdventureWorks2012 database is modified to use the full recovery model. The example then creates a full database backup to Azure Blob, and after a period of update activity, backs up the log. This example creates a backup file name with a datetime stamp.  
   
-1.  **Tsql**  
-  
-    ```  
+    ```sql
     -- To permit log backups, before the full database backup, modify the database   
     -- to use the full recovery model.  
     USE master;  
@@ -409,11 +390,9 @@ manager: craigg
     WITH CREDENTIAL = 'mycredential'  
     ,COMPRESSION;  
     GO  
-    ```  
+    ```
   
-2.  **C#**  
-  
-    ```  
+    ```csharp
     // Connect to default sql server instance on local machine  
     Server server = new Server(".");  
     string identity = "mystorageaccount";  
@@ -453,43 +432,34 @@ manager: craigg
     backupLog.Action = BackupActionType.Log;  
     backupLog.SqlBackup(server);  
     ```  
-  
-3.  **PowerShell**  
-  
-    ```  
-  
+
+    ```powershell
     #create variables  
     $backupUrlContainer = "https://mystorageaccount.blob.core.windows.net/mycontainer/"  
     $credentialName = "mycredential"  
     $srvPath = "SQLSERVER:\SQL\COMPUTERNAME\INSTANCENAME"  
     # for default instance, the $srvpath variable would be "SQLSERVER:\SQL\COMPUTERNAME\DEFAULT"  
   
-    # navigate to theSQL Server Instance  
-  
+    # navigate to theSQL Server Instance
     CD $srvPath   
     #Create a unique file name for the full database backup  
     $backupFile = $backupUrlContainer + "AdventureWorks2012_" + (Get-Date).ToString("s").Replace("-","_").Replace(":", "_").Replace(" ","_").Replace("/", "_") +  ".bak"  
   
-    #Backup Database to URL  
-  
+    #Backup Database to URL
     Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Database    
   
     #Create a unique file name for log backup  
   
     $backupFile = $backupUrlContainer + "AdventureWorks2012_" + (Get-Date).ToString("s").Replace("-","_").Replace(":", "_").Replace(" ","_").Replace("/", "_") +  ".trn"  
   
-    #Backup Log to URL  
-  
-    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Log  
-  
+    #Backup Log to URL
+    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Log
     ```  
   
 ###  <a name="filebackup"></a> Creating a full file backup of the primary filegroup  
- The following example creates a full file backup of the primary filegroup.  
+ The following example creates a full file backup of the primary filegroup.
   
-1.  **Tsql**  
-  
-    ```  
+    ```sql
     --Back up the files in Primary:  
     BACKUP DATABASE AdventureWorks2012  
        FILEGROUP = 'Primary'  
@@ -497,11 +467,9 @@ manager: craigg
        WITH CREDENTIAL = 'mycredential'  
        ,COMPRESSION;  
     GO  
-    ```  
+    ```
   
-2.  **C#**  
-  
-    ```  
+    ```csharp
     // Connect to default sql server instance on local machine  
     Server server = new Server(".");  
     string identity = "mystorageaccount";  
@@ -525,14 +493,10 @@ manager: craigg
     backup.DatabaseFileGroups.Add("PRIMARY");  
     backup.CompressionOption = BackupCompressionOptions.On;  
     backup.Devices.AddDevice(url, DeviceType.Url);  
-    backup.SqlBackup(server);  
+    backup.SqlBackup(server);
+    ```
   
-    ```  
-  
-3.  **PowerShell**  
-  
-    ```  
-  
+    ```powershell
     #create variables  
     $backupUrlContainer = "https://mystorageaccount.blob.core.windows.net/mycontainer/"  
     $credentialName = "mycredential"  
@@ -547,16 +511,13 @@ manager: craigg
   
     #Backup Primary File Group to URL  
   
-    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Files -DatabaseFileGroup Primary  
-  
+    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Files -DatabaseFileGroup Primary
     ```  
   
 ###  <a name="differential"></a> Creating a differential file backup of the primary filegroup  
  The following example creates a differential file backup of the primary filegroup.  
   
-1.  **Tsql**  
-  
-    ```  
+    ```sql
     --Back up the files in Primary:  
     BACKUP DATABASE AdventureWorks2012  
        FILEGROUP = 'Primary'  
@@ -565,13 +526,10 @@ manager: craigg
           CREDENTIAL = 'mycredential'  
           ,COMPRESSION  
       ,DIFFERENTIAL;  
-    GO  
+    GO
+    ```
   
-    ```  
-  
-2.  **C#**  
-  
-    ```  
+    ```csharp
     // Connect to default sql server instance on local machine  
     Server server = new Server(".");  
     string identity = "mystorageaccount";  
@@ -596,41 +554,31 @@ manager: craigg
     backup.Incremental = true;  
     backup.CompressionOption = BackupCompressionOptions.On;  
     backup.Devices.AddDevice(url, DeviceType.Url);  
-    backup.SqlBackup(server);  
-  
-    ```  
-  
-3.  **PowerShell**  
-  
-    ```  
-  
+    backup.SqlBackup(server); 
+    ```
+
+    ```powershell
     #create variables  
     $backupUrlContainer = "https://mystorageaccount.blob.core.windows.net/mycontainer/"  
     $credentialName = "mycredential"  
     $srvPath = "SQLSERVER:\SQL\COMUTERNAME\INSTANCENAME"  
     # for default instance, the $srvpath variable would be "SQLSERVER:\SQL\COMPUTERNAME\DEFAULT"  
   
-    # navigate to SQL Server Instance  
-  
+    # navigate to SQL Server Instance
     CD $srvPath   
   
     #create a unique file name for the full backup  
     $backupdbFile = $backupUrlContainer + "AdventureWorks2012_" + (Get-Date).ToString("s").Replace("-","_").Replace(":", "_").Replace(" ","_").Replace("/", "_") +  ".bak"  
   
-    #Create a differential backup of the primary filegroup  
-  
-    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Files -DatabaseFileGroup Primary -Incremental  
-  
+    #Create a differential backup of the primary filegroup
+    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Files -DatabaseFileGroup Primary -Incremental
     ```  
   
 ###  <a name="restoredbwithmove"></a> Restore a database and move files  
- To restore a full database backup and move the restored database to C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data directory, use the following steps.  
+ To restore a full database backup and move the restored database to C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data directory, use the following steps.
   
-1.  **Tsql**  
-  
-    ```  
-    -- Backup the tail of the log first  
-  
+    ```sql
+    -- Backup the tail of the log first
     DECLARE @Log_Filename AS VARCHAR (300);  
     SET @Log_Filename = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012_Log_'+   
     REPLACE (REPLACE (REPLACE (CONVERT (VARCHAR (40), GETDATE (), 120), '-','_'),':', '_'),' ', '_') + '.trn';  
@@ -644,13 +592,10 @@ manager: craigg
     WITH CREDENTIAL = 'mycredential'  
     ,MOVE 'AdventureWorks2012_data' to 'C:\Program Files\Microsoft SQL Server\myinstance\MSSQL\DATA\AdventureWorks2012.mdf'  
     ,MOVE 'AdventureWorks2012_log' to 'C:\Program Files\Microsoft SQL Server\myinstance\MSSQL\DATA\AdventureWorks2012.ldf'  
-    ,STATS = 5  
+    ,STATS = 5
+    ```
   
-    ```  
-  
-2.  **C#**  
-  
-    ```  
+    ```csharp
     // Connect to default sql server instance on local machine  
     Server server = new Server(".");  
     string identity = "mystorageaccount";  
@@ -700,22 +645,17 @@ manager: craigg
     restore.Devices.AddDevice(urlBackupData, DeviceType.Url);  
     restore.RelocateFiles.Add(new RelocateFile(dbName, newDataFilePath));  
     restore.RelocateFiles.Add(new RelocateFile(dbName+ "_Log", newLogFilePath));  
-    restore.SqlRestore(server);  
-  
+    restore.SqlRestore(server);
     ```  
-  
-3.  **PowerShell**  
-  
-    ```  
-  
+
+    ```powershell
     #create variables  
     $backupUrlContainer = "https://mystorageaccount.blob.core.windows.net/mycontainer/"  
     $credentialName = "mycredential"  
     $srvPath = "SQLSERVER:\SQL\COMPUTERNAME\INSTNACENAME"  
     # for default instance, the $srvpath variable would be "SQLSERVER:\SQL\COMPUTERNAME\DEFAULT"  
   
-    # navigate to SQL Server Instance   
-  
+    # navigate to SQL Server Instance
     CD $srvPath   
   
     #create a unique file name for the full backup  
@@ -727,25 +667,20 @@ manager: craigg
     #Create a unique file name for the tail log backup  
     $backuplogFile = $backupUrlContainer + "AdventureWorks2012_" + (Get-Date).ToString("s").Replace("-","_").Replace(":", "_").Replace(" ","_").Replace("/", "_") +  ".trn"  
   
-    #Backup tail log to URL  
-  
+    #Backup tail log to URL
     Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName  -BackupAction Log -NoRecovery    
   
-    # Restore Database and move files  
-  
+    # Restore Database and move files
     $newDataFilePath = New-Object Microsoft.SqlServer.Management.Smo.RelocateFile ("AdventureWorks_Data","C:\Program Files\Microsoft SQL Server\myinstance\MSSQL\DATA\AdventureWorks2012.mdf")  
     $newLogFilePath = New-Object Microsoft.SqlServer.Management.Smo.RelocateFile("AdventureWorks_Log","C:\Program Files\Microsoft SQL Server\myinstance\MSSQL\DATA\AdventureWorks2012.ldf")  
   
-    Restore-SqlDatabase -Database AdventureWorks2012 -SqlCredential $credentialName -BackupFile $backupdbFile -RelocateFile @($newDataFilePath,$newLogFilePath)  
-  
+    Restore-SqlDatabase -Database AdventureWorks2012 -SqlCredential $credentialName -BackupFile $backupdbFile -RelocateFile @($newDataFilePath,$newLogFilePath)
     ```  
   
 ###  <a name="PITR"></a> Restoring to a point-in-time using STOPAT  
  The following example restores a database to its state to a point in time, and shows a restore operation.  
   
-1.  **Tsql**  
-  
-    ```  
+    ```sql
     RESTORE DATABASE AdventureWorks FROM URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012.bak'   
     WITH   
      CREDENTIAL = 'mycredential'  
@@ -763,9 +698,7 @@ manager: craigg
     GO  
     ```  
   
-2.  **C#**  
-  
-    ```  
+    ```csharp
     // Connect to default sql server instance on local machine  
     Server server = new Server(".");  
     string identity = "mystorageaccount";  
@@ -825,22 +758,17 @@ manager: craigg
     restoreLog.Action = RestoreActionType.Log;  
     restoreLog.Devices.AddDevice(urlBackupData, DeviceType.Url);  
     restoreLog.ToPointInTime = DateTime.Now.ToString();   
-    restoreLog.SqlRestore(server);  
+    restoreLog.SqlRestore(server);
+    ```
   
-    ```  
-  
-3.  **PowerShell**  
-  
-    ```  
-  
+    ```powershell
     #create variables  
     $backupUrlContainer = "https://mystorageaccount.blob.core.windows.net/mycontainer/"  
     $credentialName = "mycredential"  
     $srvPath = "SQLSERVER:\SQL\COMPUTERNAME\INSTANCENAME"  
     # for default instance, the $srvpath variable would be "SQLSERVER:\SQL\COMPUTERNAME\DEFAULT"  
   
-    # Navigate to SQL Server Instance Directory  
-  
+    # Navigate to SQL Server Instance Directory
     CD $srvPath   
   
     #create a unique file name for the full backup  
@@ -852,25 +780,20 @@ manager: craigg
     #Create a unique file name for the tail log backup  
     $backuplogFile = $backupUrlContainer + "AdventureWorks2012_" + (Get-Date).ToString("s").Replace("-","_").Replace(":", "_").Replace(" ","_").Replace("/", "_") +  ".trn"  
   
-    #Backup tail log to URL  
-  
+    #Backup tail log to URL
     Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName  -BackupAction Log -NoRecovery     
   
-    # Restore Database and move files  
-  
+    # Restore Database and move files
     $newDataFilePath = New-Object Microsoft.SqlServer.Management.Smo.RelocateFile ("AdventureWorks_Data","C:\Program Files\Microsoft SQL Server\myinstance\MSSQL\DATA\AdventureWorks2012.mdf")  
     $newLogFilePath = New-Object Microsoft.SqlServer.Management.Smo.RelocateFile("AdventureWorks_Log","C:\Program Files\Microsoft SQL Server\myinstance\MSSQL\DATA\AdventureWorks2012.ldf")  
   
     Restore-SqlDatabase -Database AdventureWorks2012 -SqlCredential $credentialName -BackupFile $backupdbFile -RelocateFile @($newDataFilePath,$newLogFilePath) -NoRecovery    
   
     # Restore Transaction log with Stop At:  
-    Restore-SqlDatabase -Database AdventureWorks2012 -SqlCredential $credentialName -BackupFile $backuplogFile  -ToPointInTime (Get-Date).ToString()  
-  
+    Restore-SqlDatabase -Database AdventureWorks2012 -SqlCredential $credentialName -BackupFile $backuplogFile  -ToPointInTime (Get-Date).ToString()
     ```  
   
 ## See Also  
  [SQL Server Backup to URL Best Practices and Troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Back Up and Restore of System Databases &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
-  
-  

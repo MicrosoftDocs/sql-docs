@@ -52,7 +52,8 @@ R code that is run from "inside" SQL Server is executed by calling a stored proc
 
 ![rsql_indb780-01](../r/media/script_in-db-r.png)
 
-1. A request for the R runtime is indicated by the parameter _@language='R'_ passed to the stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). SQL Server sends this request to the Launchpad service.
+1. A request for the R runtime is indicated by the parameter _@language='R'_ passed to the stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). SQL Server sends this request to the Launchpad service. 
+In Linux, SQL uses the **mssql-launchpadd** service to communicate with a separate Launchpad process for each user.
 2. The Launchpad service starts the appropriate launcher; in this case, RLauncher.
 3. RLauncher starts the external R process.
 4. BxlServer coordinates with the R runtime to manage exchanges of data with SQL Server and storage of working results.

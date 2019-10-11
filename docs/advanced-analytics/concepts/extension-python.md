@@ -59,6 +59,7 @@ After the script has been embedded in the stored procedure, any application that
 ![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
 1. A request for the Python runtime is indicated by the parameter `@language='Python'` passed to the stored procedure. SQL Server sends this request to the Launchpad service.
+In Linux, SQL uses the **mssql-launchpadd** service to communicate with a separate Launchpad process for each user.
 2. The Launchpad service starts the appropriate launcher; in this case, PythonLauncher.
 3. PythonLauncher starts the external Python35 process.
 4. BxlServer coordinates with the Python runtime to manage exchanges of data, and storage of working results.

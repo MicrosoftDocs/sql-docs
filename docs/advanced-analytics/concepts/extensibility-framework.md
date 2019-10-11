@@ -39,11 +39,21 @@ Any R or Python script can be run by calling a stored procedure, and the results
 
 ## Architecture diagram
 
-The architecture is designed such that external scripts run in a separate process from SQL Server, but with components that internally manage the chain of requests for data and operations on SQL Server. Depending on the version of SQL Server, supported language extensions include R and Python.
+The architecture is designed such that external scripts run in a separate process from SQL Server, but with components that internally manage the chain of requests for data and operations on SQL Server. Depending on the version of SQL Server, supported language extensions include [R](extension-r.md) and [Python](extension-python.md).
 
-  ![Component architecture](../media/generic-architecture.png "Component architecture")
+  <!-- ![Component architecture](../media/generic-architecture.png "Component architecture") -->
 
-Components include a **Launchpad** service used to invoke external runtimes (R or Python) and library-specific logic for loading interpreters and libraries. The Launcher loads a language run time, plus any proprietary modules. For example, if your code includes RevoScaleR functions, a RevoScaleR interpreter is loaded. **BxlServer** and **SQL Satellite** manage communication and data transfer with SQL Server.
+  ***Component architecture in Windows:***
+  
+  ![Windows component architecture](../media/generic-architecture-windows.png "Component architecture")
+  
+  ***Component architecture in Linux:***
+
+  ![Linux component architecture](../media/generic-architecture-linux.png "Component architecture")
+  
+Components include a **Launchpad** service used to invoke external runtimes (R or Python) and library-specific logic for loading interpreters and libraries. The Launcher loads a language run time, plus any proprietary modules. For example, if your code includes RevoScaleR functions, a RevoScaleR interpreter is loaded. **BxlServer** and **SQL Satellite** manage communication and data transfer with SQL Server. 
+
+In Linux, SQL uses the **mssql-launchpadd** service to communicate with a separate Launchpad process for each user.
 
 <a name="launchpad"></a>
 

@@ -84,7 +84,11 @@
       - name: Offline deployments
         href: big-data-cluster/deploy-offline.md
       - name: Deploy with high availability
-        href: big-data-cluster/deployment-high-availability.md
+        items:
+        - name: Master instance
+          href: big-data-cluster/deployment-high-availability.md
+        - name: HDFS node name and Spark
+          href: big-data-cluster/deployment-high-availability-hdfs-spark.md
       - name: Kubernetes clusters
         items:
         - name: Azure Kubernetes Service

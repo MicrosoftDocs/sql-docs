@@ -46,12 +46,12 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
   
 2.  Create the plan guide on the parameterized form of the query, specifying the PARAMETERIZATION FORCED query hint.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     > [!IMPORTANT]  
     >  As part of parameterizing a query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a data type to the parameters that replace the literal values, depending on the value and size of the literal. The same process occurs to the value of the constant literals passed to the **\@stmt** output parameter of **sp_get_query_template**. Because the data type specified in the **\@params** argument of **sp_create_plan_guide** must match that of the query as it is parameterized by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you may have to create more than one plan guide to cover the complete range of possible parameter values for the query.  
-  
- The following script can be used both to obtain the parameterized query and then create a plan guide on it:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+The following script can be used both to obtain the parameterized query and then create a plan guide on it:  
   
 ```  
 DECLARE @stmt nvarchar(max);  
@@ -74,9 +74,7 @@ EXEC sp_create_plan_guide
     N'OPTION(PARAMETERIZATION FORCED)';  
 ```  
   
- Similarly, in a database in which forced parameterization is already enabled, you can make sure that the sample query, and others that are syntactically equivalent, except for their constant literal values, are parameterized according to the rules of simple parameterization. To do this, specify PARAMETERIZATION SIMPLE instead of PARAMETERIZATION FORCED in the OPTION clause.  
+Similarly, in a database in which forced parameterization is already enabled, you can make sure that the sample query, and others that are syntactically equivalent, except for their constant literal values, are parameterized according to the rules of simple parameterization. To do this, specify PARAMETERIZATION SIMPLE instead of PARAMETERIZATION FORCED in the OPTION clause.  
   
 > [!NOTE]  
->  TEMPLATE plan guides match statements to queries submitted in batches that consist of a single statement only. Statements inside multistatement batches are not eligible to be matched by TEMPLATE plan guides.  
-  
-  
+>  TEMPLATE plan guides match statements to queries submitted in batches that consist of a single statement only. Statements inside multistatement batches are not eligible to be matched by TEMPLATE plan guides.

@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
-ms.date: 10/07/2019
+ms.date: 10/11/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -15,7 +15,7 @@ monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 
 This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. For related information, see:
 
->[What's New in [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]](../sql-server/what-s-new-in-sql-server-ver15.md)
+> [What's New in [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]](../sql-server/what-s-new-in-sql-server-ver15.md)
 
 ## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -42,14 +42,16 @@ The RTM build number for SQL Server 2019 is `15.0.2000.5`.
   1. Install a newer version of SSMS (18.3.1 or later). For the latest version, see [Download SSMS](../ssms/download-sql-server-management-studio-ssms.md).
   1. Install [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] normally.
 
-  >[!NOTE]
-  >Uninstall is required.
+  > [!NOTE]
+  > Uninstall is required.
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] release candidate.
 
 ## UTF-8 collations
 
-- **Issue and customer impact**: UTF-8 enabled collations cannot be used with in-memory OLTP.
+- **Issue and customer impact**: UTF-8 enabled collations cannot be used with the following features:
+  - [In-Memory OLTP tables](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)
+  - [Always Encrypted with Secure Enclaves](../sql/relational-databases/security/encryption/always-encrypted-enclaves.md) (When not using Secure Enclaves, [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) can use UTF-8)
 
   > [!Note]
   > There is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SQL Server Data Tools (SSDT). The latest [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) version 18 supports choice of UTF-8 enabled collations in the UI.

@@ -113,7 +113,7 @@ manager: craigg
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  The following example adds a secondary replica to an availability group named *AG2*. A stand-alone server instance, *COMPUTER03\HADR_INSTANCE*, is specified to host the new availability replica. This replica configured to allow only read-write connections for the primary role and to allow only read-intent connections for secondary role.  
   
-```  
+```sql
 ALTER AVAILABILITY GROUP AG2   
    ADD REPLICA ON   
       'COMPUTER03\HADR_INSTANCE' WITH   
@@ -127,7 +127,8 @@ GO
   
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
- **To configure access on an availability replica**  
+
+### To configure access on an availability replica
   
 > [!NOTE]  
 >  For a code example, see [Example (PowerShell)](#PSExample), later in this section.  
@@ -158,24 +159,20 @@ GO
     > [!NOTE]  
     >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
- **To set up and use the SQL Server PowerShell provider**  
+To set up and use the SQL Server PowerShell provider, see [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md).
   
--   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
+The following example, sets the both the `ConnectionModeInSecondaryRole` and `ConnectionModeInPrimaryRole` parameters to `AllowAllConnections`.  
   
-###  <a name="PSExample"></a> Example (PowerShell)  
- The following example, sets the both the `ConnectionModeInSecondaryRole` and `ConnectionModeInPrimaryRole` parameters to `AllowAllConnections`.  
-  
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\PrimaryServer\default\AvailabilityGroups\MyAg  
 $primaryReplica = Get-Item "AvailabilityReplicas\PrimaryServer"  
-Set-SqlAvailabilityReplica -ConnectionModeInSecondaryRole "AllowAllConnections" `   
--InputObject $primaryReplica  
-Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `   
--InputObject $primaryReplica  
-  
+
+Set-SqlAvailabilityReplica -ConnectionModeInSecondaryRole "AllowAllConnections" `
+ -InputObject $primaryReplica  
+Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
+-InputObject $primaryReplica
 ```  
-  
-  
+
 ##  <a name="FollowUp"></a> Follow Up: After Configuring Read-Only Access for an Availability Replica  
  **Read-only access to a readable secondary replica**  
   
@@ -233,5 +230,3 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
  [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)  
-  
-  

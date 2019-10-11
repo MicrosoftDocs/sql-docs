@@ -77,10 +77,10 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
   
  For more information about reverting to the previous context, see [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO **\@***varbinary_variable*  
- Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct **\@***varbinary_variable* value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to **\@***varbinary_variable*. The **COOKIE INTO** option can only be used at the adhoc level.  
+ COOKIE INTO *\@varbinary_variable*  
+ Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct *\@varbinary_variable* value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to *\@varbinary_variable*. The **COOKIE INTO** option can only be used at the adhoc level.  
   
- **@** *varbinary_variable* is **varbinary(8000)**.  
+ *\@varbinary_variable* is **varbinary(8000)**.  
   
 > [!NOTE]  
 >  The cookie **OUTPUT** parameter for is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(100)**. Applications should reserve **varbinary(8000)** so that the application continues to operate correctly if the cookie return size increases in a future release.  
@@ -124,7 +124,7 @@ If the user is orphaned (the associated login no longer exists), and the user wa
 ## Using WITH NO REVERT  
  When the EXECUTE AS statement includes the optional WITH NO REVERT clause, the execution context of a session cannot be reset using REVERT or by executing another EXECUTE AS statement. The context set by the statement remains in affect until the session is dropped.  
   
- When the WITH NO REVERT COOKIE = @*varbinary_variabl*e clause is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passes the cookie value to @*varbinary_variabl*e. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the same *\@varbinary_variable* value.  
+ When the WITH NO REVERT COOKIE = *\@varbinary_variable* clause is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passes the cookie value to *\@varbinary_variable*. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = *\@varbinary_variable* statement contains the same *\@varbinary_variable* value.  
   
  This option is useful in an environment in which connection pooling is used. Connection pooling is the maintenance of a group of database connections for reuse by applications on an application server. Because the value passed to *\@varbinary_variable* is known only to the caller of the EXECUTE AS statement, the caller can guarantee that the execution context they establish cannot be changed by anyone else.  
   
@@ -181,7 +181,7 @@ GO
 ```  
   
 ### B. Using the WITH COOKIE clause  
- The following example sets the execution context of a session to a specified user and specifies the WITH NO REVERT COOKIE = @*varbinary_variabl*e clause. The `REVERT` statement must specify the value passed to the `@cookie` variable in the `EXECUTE AS` statement to successfully revert the context back to the caller. To run this example, the `login1` login and `user1` user created in example A must exist.  
+ The following example sets the execution context of a session to a specified user and specifies the WITH NO REVERT COOKIE = *\@varbinary_variable* clause. The `REVERT` statement must specify the value passed to the `@cookie` variable in the `EXECUTE AS` statement to successfully revert the context back to the caller. To run this example, the `login1` login and `user1` user created in example A must exist.  
   
 ```  
 DECLARE @cookie varbinary(8000);  
@@ -205,6 +205,3 @@ GO
 ## See Also  
  [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
  [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)  
-  
-  
-

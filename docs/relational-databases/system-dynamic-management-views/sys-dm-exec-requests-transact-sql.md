@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Returns information about each request that is executing within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Returns information about each request that is executing within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about requests, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md). 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -179,11 +179,11 @@ GO
 ```
 
 ## See Also
-
-- [Dynamic Management Views and Functions](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [Execution Related Dynamic Management Views and Functions](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
-- [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)
-- [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
-- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
-- [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
-- [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+[Dynamic Management Views and Functions](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+[Execution Related Dynamic Management Views and Functions](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)      
+[sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     
+[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)     
+[sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
+[sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
+[SQL Server, SQL Statistics Object](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     

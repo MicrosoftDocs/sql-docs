@@ -421,7 +421,7 @@ ALTER USER userName
     | DEFAULT_LANGUAGE = { NONE | <lcid> | <language name> | <language alias> }
     | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]
   
--- Users or groups that are migrated or federated and synchronized with Azure AD have the following syntax
+-- Users or groups that are migrated as federated and synchronized with Azure AD have the following syntax:
 
     /** Applies to Windows users that were migrated and have the following user names:
     - Windows user <domain\user>
@@ -456,16 +456,14 @@ ALTER USER userName
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
  Specifies the first schema that will be searched by the server when it resolves the names of objects for this user. Setting the default schema to NULL removes a default schema from a Windows group. The NULL option can't be used with a Windows user.  
   
- PASSWORD **=** '*password*'  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ PASSWORD **=** '*password*' 
   
  Specifies the password for the user that is being changed. Passwords are case-sensitive.  
   
 > [!NOTE]  
 > This option is available only for contained users. For more information, see [Contained Databases](../../relational-databases/databases/contained-databases.md) and [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
   
- OLD_PASSWORD **=** _'oldpassword'_  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ OLD_PASSWORD **=** _'oldpassword'_
   
  The current user password that will be replaced by '*password*'. Passwords are case-sensitive. *OLD_PASSWORD* is required to change a password, unless you have **ALTER ANY USER** permission. Requiring *OLD_PASSWORD* prevents users with **IMPERSONATION** permission from changing the password.  
   
@@ -473,7 +471,6 @@ ALTER USER userName
 > This option is available only for contained users.
   
  DEFAULT_LANGUAGE **=**_{ NONE | \<lcid> | \<language name> | \<language alias> }_  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies a default language to be assigned to the user. If this option is set to NONE, the default language is set to the current default language of the database. If the default language of the database is later changed, the default language of the user will remain unchanged. *DEFAULT_LANGUAGE* can be the local ID (lcid), the name of the language, or the language alias.  
   
@@ -481,7 +478,6 @@ ALTER USER userName
 > This option may only be specified in a contained database and only for contained users.
   
  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Suppresses cryptographic metadata checks on the server in bulk copy operations. This enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.  
   
@@ -618,7 +614,7 @@ The following example remaps the user, `westus/joe` to an Azure AD user, `joe@we
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com
 ```
 
-### E. Map the user in the database to a non-existent Azure AD login in managed instance
+### E. Map an old Windows user in the database without a login in managed instance to an Azure AD user
 
 The following example remaps the user, `westus/joe` without a login, to an Azure AD user, `joe@westus.com`. The federated user must exist in Azure AD.
 
@@ -636,7 +632,7 @@ ALTER USER [westus/joe] WITH LOGIN = joe@westus.com, name= joe_alias
 
 ### G. Map a Windows group that was migrated in managed instance to an Azure AD group
 
-The following example remaps the old on-premise group, `westus\mygroup` to an Azure AD group `mygroup` in the managed instance. The group must exist in Azure AD.
+The following example remaps the old on-premises group, `westus\mygroup` to an Azure AD group `mygroup` in the managed instance. The group must exist in Azure AD.
 
 ```sql
 ALTER USER [westus\mygroup] WITH LOGIN = mygroup
@@ -649,6 +645,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
  - [Contained Databases](../../relational-databases/databases/contained-databases.md)
  - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
  - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
+ - [Tutorial: Migrating SQL Server on-premises Windows users and groups to Azure SQL Database managed instance using T-SQL DDL syntax](/azure/sql-database/sql-database-managed-instance-aad-migration-tutorial)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"

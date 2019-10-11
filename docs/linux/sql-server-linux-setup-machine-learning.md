@@ -511,7 +511,7 @@ You can install other R and Python packages and use them in script that executes
 
 ## Run in a container
 
-Follow the steps below to build and run SQL Server Machine Learning Services in a Docker container.
+Follow the steps below to build and run SQL Server Machine Learning Services in a Docker container. For more information, see [Configure SQL Server container images on Docker](sql-server-linux-configure-docker.md).
 
 ### Prerequisites
 

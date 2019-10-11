@@ -43,7 +43,8 @@ CHAR ( integer_expression )
   
 ## Arguments  
 *integer_expression*  
-An integer from 0 through 255. `CHAR` returns a `NULL` value for integer expressions outside this input range or not associated with a complete character compatible with the return type.
+An integer from 0 through 255. `CHAR` returns a `NULL` value for integer expressions outside this input range or not representing a complete character.
+`CHAR` also returns a `NULL` value when the character exceeds the length of the return type.
 Many common character sets share ASCII as a sub-set and will return the same character for integer values in the range 0 through 127.
 
 > [!NOTE]
@@ -178,9 +179,10 @@ single_byte_representing_complete_character single_byte_representing_complete_ch
 ```
 
 ### F. Using CHAR to return multibyte characters
-This example uses integer and hex values in the valid range for Extended ASCII. However, the CHAR function returns NULL because the parameter represents only the first byte of a multibyte character.
-A `CHAR(2)` double-byte character cannot be composed from constituent first and second `CHAR(1)` bytes in the way that
-a `NCHAR(2)` supplementary character can be composed from constituent high and low `NCHAR(1)` surrogates.
+This example uses integer and hex values in the valid range for Extended ASCII.
+However, the `CHAR` function returns `NULL` because the parameter represents only the first byte of a multibyte character.
+A **char(2)** double-byte character cannot be composed from or divided into constituent parts without conversion:
+such parts are not generally valid **char(1)** values.
   
 ```sql
 SELECT CHAR(129) AS first_byte_of_double_byte_character, 
@@ -197,7 +199,9 @@ NULL                                NULL
 ```
   
 ### G. Using CONVERT instead of CHAR to return legacy multibyte characters
-This example relies on the default codepage of the current database to map a two-byte legacy codepoint to a single character.
+This example relies on the default codepage of the current database to decode a multibyte character.
+`CONVERT` here operates on a character encoding: SHIFT\_JIS.
+`CHAR` operates on character sets and codepoints: JIS X 208 code 2-86 (row 2 cell 86).
 
 ```sql
 CREATE DATABASE [multibyte-char-context]
@@ -222,7 +226,7 @@ eighth-note context-dependent-convert context-dependent-cast
 This example highlights the distinction the Unicode standard makes between a character's _code point_ and the _code unit sequence_ under a given _encoding form_.
 The binary code assigned to a character in a classic character set is its only numeric identifier.
 In contrast, the UTF-8 byte sequence associated with a character is an algorithmic encoding of its assigned numeric identifier: the code point.
-UTF-8 `CHAR` and UTF-16 `NCHAR` are different _encoding forms_ using 8-bit and 16-bit _code units_, of the same character set: the Unicode Character Database.
+UTF-8 **char** and UTF-16 **nchar** are different _encoding forms_ using 8-bit and 16-bit _code units_, of the same character set: the Unicode Character Database.
 
 ```sql
 ; WITH uni(c) AS (
@@ -244,7 +248,7 @@ UTF-8 `CHAR` and UTF-16 `NCHAR` are different _encoding forms_ using 8-bit and 1
   FROM enc
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)] Generated under a `_SC` collation with supplementary character support.
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] Generated under a `\_SC` collation with supplementary character support.
 
 ```
 Music note Music note (UTF-8) Code Point  UTF-16LE bytes UTF-8 bytes

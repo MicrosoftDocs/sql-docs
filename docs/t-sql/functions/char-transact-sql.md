@@ -181,8 +181,8 @@ single_byte_representing_complete_character single_byte_representing_complete_ch
 ### F. Using CHAR to return multibyte characters
 This example uses integer and hex values in the valid range for Extended ASCII.
 However, the `CHAR` function returns `NULL` because the parameter represents only the first byte of a multibyte character.
-A **char(2)** double-byte character cannot be composed from or divided into constituent parts without conversion:
-such parts are not generally valid **char(1)** values.
+A **char(2)** double-byte character cannot be composed from or divided into parts without conversion:
+those parts are not generally valid **char(1)** values.
   
 ```sql
 SELECT CHAR(129) AS first_byte_of_double_byte_character, 
@@ -198,7 +198,7 @@ first_byte_of_double_byte_character first_byte_of_double_byte_character
 NULL                                NULL                                         
 ```
   
-### G. Using CONVERT instead of CHAR to return legacy multibyte characters
+### G. Using CONVERT instead of CHAR to decode multibyte characters
 This example relies on the default codepage of the current database to decode a multibyte character.
 `CONVERT` here operates on a character encoding: SHIFT\_JIS.
 `CHAR` operates on character sets and codepoints: JIS X 208 code 2-86 (row 2 cell 86).
@@ -222,7 +222,7 @@ eighth-note context-dependent-convert context-dependent-cast
 ♪           ♪                         ♪
 ```
 
-### H. Using NCHAR instead of CHAR to return UTF-8 characters
+### H. Using NCHAR instead of CHAR to look up UTF-8 characters
 This example highlights the distinction the Unicode standard makes between a character's _code point_ and the _code unit sequence_ under a given _encoding form_.
 The binary code assigned to a character in a classic character set is its only numeric identifier.
 In contrast, the UTF-8 byte sequence associated with a character is an algorithmic encoding of its assigned numeric identifier: the code point.
@@ -233,7 +233,7 @@ UTF-8 **char** and UTF-16 **nchar** are different _encoding forms_ using 8-bit a
     -- BMP character
     SELECT NCHAR(9835)
     UNION ALL
-    -- non-BMP supplementary character or, under legacy collation, NULL
+    -- non-BMP supplementary character or, under downlevel collation, NULL
     SELECT NCHAR(127925)
   ),
   enc(u16c, u8c) AS (

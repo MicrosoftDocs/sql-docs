@@ -200,8 +200,10 @@ NULL                                NULL
   
 ### G. Using CONVERT instead of CHAR to decode multibyte characters
 This example relies on the default codepage of the current database to decode a multibyte character.
-`CONVERT` here operates on a character encoding: SHIFT\_JIS.
-`CHAR` operates on character sets and codepoints: JIS X 208 code 2-86 (row 2 cell 86).
+`CONVERT` here operates on a character encoding, SHIFT\_JIS.
+`CHAR` and `NCHAR` operate on character sets and codepoints,
+which works well with ASCII code 13 above, but not with JIS X 208 code 2-86 here.
+Encoding JIS X 208 ku-ten codes to SHIFT\_JIS is outside the scope of this example.
 
 ```sql
 CREATE DATABASE [multibyte-char-context]
@@ -248,7 +250,7 @@ UTF-8 **char** and UTF-16 **nchar** are different _encoding forms_ using 8-bit a
   FROM enc
 ```
 
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)] Generated under a `\_SC` collation with supplementary character support.
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] Generated under a `_SC` collation with supplementary character support.
 
 ```
 Music note Music note (UTF-8) Code Point  UTF-16LE bytes UTF-8 bytes

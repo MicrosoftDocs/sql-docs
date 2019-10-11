@@ -76,45 +76,49 @@ The next step is to create a Spark streaming job that loads web clickstream data
 
 1. In Azure Data Studio, connect to the master instance of your big data cluster. For more information, see [Connect to a big data cluster](connect-to-big-data-cluster.md).
 
-1. Double-click on the HDFS/Spark gateway connection in the **Servers** window. Then select **New Spark Job**.
+2. Create a new notebook and select Spark | Scala as your kernel.
 
-   ![New Spark job](media/tutorial-data-pool-ingest-spark/hdfs-new-spark-job.png)
+3. Run the Spark Ingestion Job
+   1. Configure the Spark-SQL connector parameters
+      ```
+      import org.apache.spark.sql.types._
 
-1. In the **New Job** window, enter a name in the **Job name** field.
+      // Change per your installation
+      val user= "username"
+      val password= "****"
+      val database =  "MyTestDatabase"
+      val sourceDir = "/file_streaming"
+      val datapool_table = "streaming_DataPoolTable"
+      val datasource_name = "test_data_src"
+      val schema = StructType(Seq(
+         StructField("wcs_click_date_sk",IntegerType,true), StructField("wcs_click_time_sk",IntegerType,true), StructField("wcs_sales_sk",IntegerType,true), StructField("wcs_item_sk",IntegerType,true), 
+         StructField("wcs_web_page_sk",IntegerType,true), StructField("wcs_user_sk",IntegerType,true)
+      ))
 
-1. In the **Jar/py File** drop-down, select **HDFS**. Then enter the following jar file path:
+      val hostname = "master-0.master-svc"
+      val port = 1433
+      val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
+      ```
+   2. Define and Run the Spark Job
+      * Each job has two parts: readStream and writeStream. Below, we create a data frame using the schema defined above, and then write to the external table in the data pool.
+      ```
+       import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
+      
+      val df = spark.readStream.format("csv").schema(schema).option("header", true).load(sourceDir)
+      val query = df.writeStream.outputMode("append").foreachBatch{ (batchDF: DataFrame, batchId: Long) => 
+                batchDF.write
+                 .format("com.microsoft.sqlserver.jdbc.spark")
+                 .mode("append")
+                  .option("url", url)
+                  .option("dbtable", datapool_table)
+                  .option("user", user)
+                  .option("password", password)
+                  .option("dataPoolDataSource",datasource_name).save()
+               }.start()
 
-   ```text
-   /jar/mssql-spark-lib-assembly-1.0.jar
-   ```
-
-1. In the **Main Class** field, enter `FileStreaming`.
-
-1. In the **Arguments** field, enter the following text, specifying the password to the SQL Server master instance in the `<your_password>` placeholder. 
-
-   ```text
-   --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
-   ```
-
-   The following table describes each argument:
-
-   | Argument | Description |
-   |---|---|
-   | server name | SQL Server use for reading the table schema |
-   | port number | Port SQL Server is listening on (default 1433) |
-   | username | SQL Server login user name |
-   | password | SQL Server login password |
-   | database name | Target database |
-   | external table name | Table to use for results |
-   | Source directory for streaming | This must be a full URI, such as "hdfs:///clickstream_data" |
-   | input format | This can be "csv", "parquet", or "json" |
-   | enable checkpoint | true or false |
-   | timeout | time to run the job for in milliseconds before exiting |
-
-1. Press **Submit** to submit the job.
-
-   ![Spark job submit](media/tutorial-data-pool-ingest-spark/spark-new-job-settings.png)
-
+      query.processAllAvailable()
+      query.awaitTermination(40000)
+      ```
 ## Query the data
 
 The following steps show that the Spark streaming job loaded the data from HDFS into the data pool.
@@ -133,7 +137,24 @@ The following steps show that the Spark streaming job loaded the data from HDFS 
    SELECT count(*) FROM [web_clickstreams_spark_results];
    SELECT TOP 10 * FROM [web_clickstreams_spark_results];
    ```
+1. The data can also be queried in Spark. For example, the code below prints the number of records in the table:
+   ```
+   def df_read(dbtable: String,
+                url: String,
+                dataPoolDataSource: String=""): DataFrame = {
+        spark.read
+             .format("com.microsoft.sqlserver.jdbc.spark")
+             .option("url", url)
+             .option("dbtable", dbtable)
+             .option("user", user)
+             .option("password", password)
+             .option("dataPoolDataSource", dataPoolDataSource)
+             .load()
+             }
 
+   val new_df = df_read(datapool_table, url, dataPoolDataSource=datasource_name)
+   println("Number of rows is " +  new_df.count)
+   ```
 ## Clean up
 
 Use the following command to remove the database objects created in this tutorial.

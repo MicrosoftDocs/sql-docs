@@ -41,8 +41,6 @@ Any R or Python script can be run by calling a stored procedure, and the results
 
 The architecture is designed such that external scripts run in a separate process from SQL Server, but with components that internally manage the chain of requests for data and operations on SQL Server. Depending on the version of SQL Server, supported language extensions include [R](extension-r.md) and [Python](extension-python.md).
 
-  <!-- ![Component architecture](../media/generic-architecture.png "Component architecture") -->
-
   ***Component architecture in Windows:***
   
   ![Windows component architecture](../media/generic-architecture-windows.png "Component architecture")

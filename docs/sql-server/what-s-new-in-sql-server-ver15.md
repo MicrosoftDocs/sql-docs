@@ -56,7 +56,6 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 
 
 ### In-Memory Database
-=======
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [In-Memory Database](../relational-databases/in-memory-database.md) technologies leverage modern hardware innovation to deliver unparalleled performance and scale. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on earlier innovations in this area such as In-Memory OLTP to unlock a new level of scalability across all your database workloads.  
 
 |New feature or update | Details |
@@ -203,6 +202,7 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 | Non-root containers | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces the ability to create safer containers by starting the [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] process as a non-root user by default. See [build and run SQL Server containers as a non-root user](../linux/sql-server-linux-configure-docker.md#buildnonrootcontainer) for more details. |
 | Red Hat certified container images | Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], you will now be able to run SQL Server containers on Red Hat Enterprise Linux. |
 | Polybase and Machine Learning support| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces new ways to work with SQL Server Containers such as Machine Learning Services and Polybase. Check out some examples in the [SQL Server in container GitHub repository](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples). |
+| &nbsp; | &nbsp; |
 
 ## Setup
 

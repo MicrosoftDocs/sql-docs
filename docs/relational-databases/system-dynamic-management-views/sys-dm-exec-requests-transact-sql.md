@@ -26,8 +26,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Returns information about each request that is executing within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about requests, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md). 
-  
+Returns information about each request that is executing in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about requests, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
+   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID of the session to which this request is related. Is not nullable.|  
@@ -187,3 +187,5 @@ GO
 [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
 [SQL Server, SQL Statistics Object](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
+[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md)    

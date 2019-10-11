@@ -102,7 +102,7 @@ ms.author: mathoma
     ```  
   
     > [!NOTE]  
-    >  You should create the jobs at all of the possible failover targets before failover, and mark them as disabled until the availability replica at a host becomes the new primary replica. The CDC jobs running at the old primary database should be also disabled when the local database becomes a secondary database. To disable and enable jobs, use the *@enabled* option of [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). For more information about creating CDC jobs, see [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
+    >  You should create the jobs at all of the possible failover targets before failover, and mark them as disabled until the availability replica at a host becomes the new primary replica. The CDC jobs running at the old primary database should be also disabled when the local database becomes a secondary database. To disable and enable jobs, use the *\@enabled* option of [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). For more information about creating CDC jobs, see [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
   
 -   **Adding CDC Roles to an Always On Primary Database Replica**  
   
@@ -149,7 +149,7 @@ ms.author: mathoma
   
      Either the availability group listener name or the explicit node name can be used to locate the secondary replica. If the availability group listener name is used, access will be directed to any suitable secondary replica.  
   
-     When **sp_addlinkedserver** is used to create a linked server to access the secondary, the *@datasrc* parameter is used for the availability group listener name or the explicit server name, and the *@provstr* parameter is used to specify read-only intent.  
+     When **sp_addlinkedserver** is used to create a linked server to access the secondary, the *\@datasrc* parameter is used for the availability group listener name or the explicit server name, and the *\@provstr* parameter is used to specify read-only intent.  
   
     ```sql  
     EXEC sp_addlinkedserver   

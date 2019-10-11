@@ -1,7 +1,7 @@
 ---
 title: "Point (geography Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/30/2017"
+ms.date: "10/10/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -39,7 +39,7 @@ Point ( Lat, Long, SRID )
  Is a **float** expression representing the y-coordinate of the **Point** being generated. For more information on valid latitude and longitude values, see [Point](../../relational-databases/spatial/point.md).  
   
  *SRID*  
- Is an **int** expression representing the SRID of the **geography** instance you wish to return.  
+ Is an **int** expression representing the [Spatial Reference Identifier](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) of the **geography** instance you wish to return.  
   
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geography**  

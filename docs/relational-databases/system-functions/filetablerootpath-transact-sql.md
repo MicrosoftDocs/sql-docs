@@ -34,8 +34,8 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  *FileTable_name*  
  The name of the FileTable. *FileTable_name* is of type **nvarchar**. This is an optional parameter. The default value is the current database. Specifying *schema_name* is also optional. You can pass NULL for *FileTable_name* to use the default parameter value  
   
- *@option*  
- An integer expression that defines how the server component of the path should be formatted. *@option* can have one of the following values:  
+ *\@option*  
+ An integer expression that defines how the server component of the path should be formatted. *\@option* can have one of the following values:  
   
 |Value|Description|  
 |-----------|-----------------|  

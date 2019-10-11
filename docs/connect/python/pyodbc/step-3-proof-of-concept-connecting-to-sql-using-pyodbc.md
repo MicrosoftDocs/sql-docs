@@ -1,7 +1,7 @@
 ---
 title: "Step 3: Proof of concept connecting to SQL using pyodbc | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/08/2017"
+ms.date: "10/09/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -70,7 +70,24 @@ while row:
     print 'Inserted Product key is ' + str(row[0]) 
     row = cursor.fetchone()
 ```  
-  `      
-  ## Next steps  
+
+## Azure Active Directory (AAD) and the connection string
+
+pyODBC uses the Microsoft ODBC driver for SQL Server.
+If your version of the ODBC driver is 17.1 or later, you can use the AAD interactive mode of the ODBC driver through pyODBC.
+This AAD interactive option works if Python and pyODBC allow the ODBC driver to pop up the dialog.
+This option is available only on the Windows operating system.
+
+### Example connection string for AAD interactive authentication
+
+Here is an example ODBC connection string that specifies AAD interactive authentication:
+
+- `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
+
+For details on the AAD authentication options of the ODBC driver, see the following article:
+
+- [Using Azure Active Directory with the ODBC Driver](../../odbc/using-azure-active-directory.md#new-andor-modified-dsn-and-connection-string-keywords)
+
+## Next steps
   
 For more information, see the [Python Developer Center](https://azure.microsoft.com/develop/python/).

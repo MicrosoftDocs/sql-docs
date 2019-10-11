@@ -21,11 +21,6 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 **Use the [latest tools](what-s-new-in-sql-server-ver15-prerelease.md#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
->[!NOTE]
->The content is published for the [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate. The release candidate is pre-release software. The information is subject to change. For information about support scenarios, refer to [Support](#support).
->
->This release includes improvements that were announced earlier in community technology preview (CTP) releases. The improvements added features, fixed bugs, improved security, and optimized performance. For a list of features introduced or improved in the CTP releases before [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP announcement archive](what-s-new-in-sql-server-ver15-prerelease.md).
-
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] for [!INCLUDE[sql-server](../includes/ssnoversion-md.md)]. It also provides additional capability and improvements for the SQL Server database engine, SQL Server Analysis Services, SQL Server Machine Learning Services, SQL Server on Linux, and SQL Server Master Data Services.
 
 The following sections provide an overview of these features.
@@ -45,20 +40,23 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) announcement archive](what-s-new-in-sql-server-ver15-prerelease.md) contains a list of features announced and changed for all previous CTP releases of this feature.
 
 ## Intelligent Database
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on innovations in previous versions to provide industry-leading performance out of the box. From [Intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md) to support for persistent memory devices, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]'s Intelligent Database features improve performance and scalability of all your database workloads without any change to your application or database design.
 
 ### Intelligent Query Processing
+With [Intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md) you know that critical parallel workloads improve when running at scale, while remaining adaptive to the constantly changing world of data. Intelligent Query Processing is available by default on the latest [Database Compatibility Level](../t-sql/statements/alter-database-transact-sql-compatibility-level.md#differences-between-compatibility-level-140-and-level-150) setting, delivering broad impact that improves the performance of existing workloads with minimal implementation effort.
 
 |New feature or update | Details |
 |:---|:---|
 |Row mode memory grant feedback |Expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators. This can automatically correct excessive grants that result in wasted memory and reduced concurrency, and correct insufficient memory grants that cause expensive spills to disk. See [Row mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
-|Table variable deferred compilation|Improves plan quality and overall performance for queries that reference table variables. During optimization and initial compilation, this feature propagates cardinality estimates that are based on actual table variable row counts. This accurate row count information optimizes downstream plan operations. See [Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
-|Approximate query processing with `APPROX_COUNT_DISTINCT `|For scenarios when absolute precision isn't important, but responsiveness is critical, `APPROX_COUNT_DISTINCT` aggregates across large datasets using less resources than `COUNT(DISTINCT())` for superior concurrency. See [Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
 |Batch mode on rowstore|Batch mode on rowstore enables batch mode execution without requiring columnstore indexes. Batch mode execution uses CPU more efficiently during analytical workloads, but until [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] it was only used when a query included operations with columnstore indexes. However, some applications may use features that aren't supported with columnstore indexes, and therefore could not leverage batch mode. Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], batch mode is enabled on eligible analytical workloads whose queries include operations with any type of index (rowstore or columnstore). See [Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
 |Scalar UDF Inlining|Automatically transforms scalar UDFs into relational expressions and embeds them in the calling SQL query. This transformation improves the performance of workloads that take advantage of scalar UDFs. See [Scalar UDF Inlining](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
+|Table variable deferred compilation|Improves plan quality and overall performance for queries that reference table variables. During optimization and initial compilation, this feature propagates cardinality estimates that are based on actual table variable row counts. This accurate row count information optimizes downstream plan operations. See [Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
+|Approximate query processing with `APPROX_COUNT_DISTINCT `|For scenarios when absolute precision isn't important, but responsiveness is critical, `APPROX_COUNT_DISTINCT` aggregates across large datasets using less resources than `COUNT(DISTINCT())` for superior concurrency. See [Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
 | &nbsp; | &nbsp; |
 
 
 ### In-Memory Database
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [In-Memory Database](../relational-databases/in-memory-database.md) technologies leverage modern hardware innovation to deliver unparalleled performance and scale. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on earlier innovations in this area such as In-Memory OLTP to unlock a new level of scalability across all your database workloads.  
 
 |New feature or update | Details |
 |:---|:---|
@@ -68,6 +66,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | &nbsp; | &nbsp; |
 
 ### Intelligent performance
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on Intelligent Database innovations in previous releases to ensure that [It Just Runs Faster](https://blogs.msdn.microsoft.com/bobsql/tag/it-just-runs-faster/). These improvements help overcome known resource bottlenecks and provide you with options to configure your database server to provide predictable performance across all your workloads.
 
 |New feature or update | Details |
 |:---|:---|
@@ -80,6 +79,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | &nbsp; | &nbsp; |
 
 ### Monitoring
+Monitoring improvements unlock performance insights over any database workload, just when you need them.
 
 |New feature or update | Details |
 |:---|:---|
@@ -87,13 +87,14 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Custom capture policy for the Query Store|When enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine-tune data collection in a specific server. For more information, see [ALTER DATABASE SET Options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
 |`LIGHTWEIGHT_QUERY_PROFILING`|New database scoped configuration. See [`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp). |
 |`sys.dm_exec_requests` column `command` | Shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. See [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|
-|`sys.dm_exec_query_plan_stats` |New DMF returns the equivalent of the last known actual execution plan for most queries. See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
+|`sys.dm_exec_query_plan_stats` |New DMF returns the equivalent of the last known actual execution plan for all queries. See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
 |`LAST_QUERY_PLAN_STATS` | New database scoped configuration to enable `sys.dm_exec_query_plan_stats`. See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |`query_post_execution_plan_profile` | Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. See [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).|
 |`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | New DMF returns information about a page in a database. See [sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ## Developer experience
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] continues to provide a world-class developer experience with enhancements to graph and spatial data types, UTF-8 support, and a new extensibility framework that allows developers to use the language of their choice to gain insights across all their data.
 
 ### Graph
 
@@ -106,10 +107,11 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | &nbsp; | &nbsp; |
 
 ### Unicode support
+Support businesses accross different countries and regions, where the requirement of providing global multilingual database applications and services is critical to meet customer demands, and specific market regulations. 
 
 |New feature or update | Details |
 |:---|:---|
-|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. This supports applications extending to a global scale, where the requirement of providing global multilingual database applications and services is critical to meet customer demands, and specific market regulations. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate enables UTF-8 support for Polybase external tables, and for Always Encrypted.|
+|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. Support includes PolyBase external tables, and Always Encrypted. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).|
 | &nbsp; | &nbsp; |
 
 ### Language extensions
@@ -132,6 +134,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | &nbsp; | &nbsp; |
 
 ### Error messages
+When an ETL process fails because the source and the destination don't have matching data types and/or length, troubleshooting used to be very time-consuming, especially in large datasets. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] allows faster insights into data truncation errors.
 
 |New feature or update | Details |
 |:---|:---|
@@ -139,6 +142,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | &nbsp; | &nbsp; |
 
 ## Mission critical security
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides a security architecture that is designed to allow database administrators and developers to create secure database applications and counter threats. Each version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has improved on previous versions with the introduction of new features and functionality, and [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] continues to build on this story.
 
 |New feature or update | Details |
 |:---|:---|
@@ -147,6 +151,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | &nbsp; | &nbsp; |
 
 ## High availability
+One common task everyone deploying [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has to account for is making sure that all mission critical [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances and the databases within them are available when the business and end users need them, whether that is 9 to 5 or around the clock. Availability is a key pillar of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] platform, and [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces many new features and enhancements that allow businesses to ensure their database environments are highly available.
 
 ### Availability Groups
 
@@ -172,36 +177,39 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Suspend and resume initial scan for Transparent Data Encryption (TDE)|See [Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume).|
 | &nbsp; | &nbsp; |
 
-## Setup 
-
-|New feature or update | Details | 
-|:---|:---| 
-|New memory setup options | Sets the *min server memory (MB)* and *max server memory (MB)* server configurations during installation. For more information, see [Database Engine Configuration - Memory page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) and the `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY`, and `SQLMAXMEMORY` parameters in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The proposed value will align with the memory configuration guidelines in [Server Memory Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
-|New parallelism setup options | Sets the *max degree of parallelism* server configuration during installation. For more information, see [Database Engine Configuration - MaxDOP page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) and the `SQLMAXDOP` parameter in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The default value will align with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
-| &nbsp; | &nbsp; |
-
 ## Platform choice
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on the innovations introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] to allow you to run [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on your platform of choice with more functionality and security than ever before.
 
 ### <a id="sql-server-on-linux"></a>Linux
 
 | New feature or update | Details |
 |:-----|:-----|
-|New container registry|[Get started with SQL Server containers on Docker](../linux/quickstart-install-connect-docker.md) |
 |Replication support |[SQL Server Replication on Linux](../linux/sql-server-linux-replication.md)
 |Support for the Microsoft Distributed Transaction Coordinator (MSDTC) |[How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md) |
 |OpenLDAP support for third-party AD providers |[Tutorial: Use Active Directory authentication with SQL Server on Linux](../linux/sql-server-linux-active-directory-authentication.md) |
 |Machine Learning on Linux |[Configure Machine Learning on Linux](../linux/sql-server-linux-setup-machine-learning.md) |
 |`tempdb` improvements | By default, a new installation of SQL Server on Linux creates multiple `tempdb` data files based on the number of logical cores (with up to 8 data files). This does not apply to in-place minor or major version upgrades. Each `tempdb` file is 8 MB with an auto growth of 64 MB. This behavior is similar to the default SQL Server installation on Windows. |
 | PolyBase on Linux | [Install PolyBase](../relational-databases/polybase/polybase-linux-setup.md) on Linux for non-Hadoop connectors.<br/><br/>[PolyBase type mapping](../relational-databases/polybase/polybase-type-mapping.md). |
-| Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for SQL Server 2019. |
+| Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
 | &nbsp; | &nbsp; |
 
 ### Containers
+The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is to use containers. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on the innovations introduced in earlier versions to enable you to deploy [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] containers on new platforms, in a safer manner, and with more functionality.
 
 |New feature or update | Details |
 |:---|:---|
-| Microsoft Container Registry | The [Microsoft Container Registry](https://www.ntweekly.com/2019/09/23/microsoft-container-registry-to-replace-docker-hub-for-new-images/) now replaces Docker Hub for new official Microsoft container images, including [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
+| Microsoft Container Registry | The [Microsoft Container Registry](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) now replaces Docker Hub for new official Microsoft container images, including [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
 | Non-root containers | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces the ability to create safer containers by starting the [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] process as a non-root user by default. See [build and run SQL Server containers as a non-root user](../linux/sql-server-linux-configure-docker.md#buildnonrootcontainer) for more details. |
+| Red Hat certified container images | Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], you will now be able to run SQL Server containers on Red Hat Enterprise Linux. |
+| Polybase and Machine Learning support| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces new ways to work with SQL Server Containers such as Machine Learning Services and Polybase. Check out some examples in the [SQL Server in container GitHub repository](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples). |
+| &nbsp; | &nbsp; |
+
+## Setup
+
+|New feature or update | Details |
+|:---|:---| 
+|New memory setup options | Sets the *min server memory (MB)* and *max server memory (MB)* server configurations during installation. For more information, see [Database Engine Configuration - Memory page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) and the `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY`, and `SQLMAXMEMORY` parameters in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The proposed value will align with the memory configuration guidelines in [Server Memory Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
+|New parallelism setup options | Sets the *max degree of parallelism* server configuration during installation. For more information, see [Database Engine Configuration - MaxDOP page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) and the `SQLMAXDOP` parameter in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The default value will align with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> SQL Server Machine Learning Services
@@ -234,12 +242,6 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | Governance setting for Power BI cache refreshes.  | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release  introduces the **ClientCacheRefreshPolicy** property. This property allows you to override this behavior at the server level. To learn more, see [General Properties](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
 | Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32) in Details. |
 | &nbsp; | &nbsp; |
-
-[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
-
-For specific features excluded from support, see the [release notes](sql-server-ver15-release-notes.md).
-
-In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.2.
 
 ## See also
 

@@ -11,6 +11,7 @@ apiname:
   - "SQLBindCol"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLBindCol"

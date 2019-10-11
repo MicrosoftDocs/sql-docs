@@ -201,6 +201,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/relational-databases/replication/configure-iis-for-web-synchronization.md",
+            "redirect_url": "/sql/relational-databases/replication/configure-iis-7-for-web-synchronization", 
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/relational-databases/database-features.md",
             "redirect_url": "/sql/relational-databases/databases/databases",
             "redirect_document_id": false
@@ -5558,6 +5563,11 @@
         {
             "source_path": "docs/linux/sql-server-linux-kubernetes-operator.md",
             "redirect_url": "/sql/linux/sql-server-ag-kubernetes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-machine-learning-services-container.md",
+            "redirect_url": "/sql/linux/sql-server-linux-setup-machine-learning",
             "redirect_document_id": false
         },
         {

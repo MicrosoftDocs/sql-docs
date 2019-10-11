@@ -35,7 +35,7 @@ sp_rda_get_rpo_duration @durationinhours output
 ```    
     
 ## Output parameter    
- *@durationinhours*    
+ *\@durationinhours*    
   Is the number of hours (a non-null integer value) of migrated data that SQL Server retains for the current Stretch-enabled database.    
     
 ## Permissions    

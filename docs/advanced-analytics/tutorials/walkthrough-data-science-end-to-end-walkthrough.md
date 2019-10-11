@@ -4,7 +4,7 @@ description: Tutorial showing how to create an end-to-end R solution for in-data
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 11/26/2018  
+ms.date: 10/11/2019  
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
@@ -39,6 +39,9 @@ Alternatively, you can run the walkthrough on a computer that has both [!INCLUDE
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
 + C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
+
+> [!NOTE]
+> If you are using [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/) or the [Data Science Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/), instead of R Client, the path to RevoScaleR is C:\Program Files\Microsoft\ML Server\R_SERVER\library\RevoScaleR
 
 <a name="add-packages"></a>
 

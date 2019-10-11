@@ -32,10 +32,10 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
 ## Arguments  
  *linestring_tagged_text*  
- Is the WKT representation of the **geometryLineString** instance you wish to return. *linestring_tagged_text* is an **nvarchar(max)** expression.  
+ Is the WKT representation of the **geometryLineString** instance you want to return. *linestring_tagged_text* is an **nvarchar(max)** expression.  
   
  *SRID*  
- Is an **int** expression representing the spatial reference ID (SRID) of the **geometryLineString** instance you wish to return.  
+ Is an **int** expression representing the spatial reference ID (SRID) of the **geometryLineString** instance you want to return.  
   
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geometry**  
@@ -45,10 +45,10 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
  OGC type: **LineString**  
   
 ## Remarks  
- This method will throw a **FormatException** if the input is not well-formatted. Three-dimension and/or measured geometry WKT notation from the Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.2.1 is not supported. See examples for the supported representation of Z (elevation) and M (measure) values.
+This method throws a **FormatException** if the input isn't well-formatted. Three-dimension and measured geometry WKT notation from the Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.2.1 aren't supported. See examples for the supported representation of Z (elevation) and M (measure) values.
   
 ## Examples  
- The following examples uses `STLineFromText()` to create a `geometry` instance.
+ The following examples use `STLineFromText()` to create a `geometry` instance.
 
 ### Example 1: Two-dimension geometry WKT
 ```  
@@ -71,7 +71,7 @@ SET @g = geometry::STLineFromText('LINESTRING (100 100 NULL 100, 200 200 NULL 20
 SELECT @g.ToString();  
 ``` 
 
-### Example 4: Three-dimension mesured geometry WKT
+### Example 4: Three-dimension measured geometry WKT
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100 100 100, 200 200 200 200)', 0);  

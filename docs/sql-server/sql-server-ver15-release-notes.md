@@ -51,7 +51,7 @@ The RTM build number for SQL Server 2019 is `15.0.2000.5`.
 
 - **Issue and customer impact**: UTF-8 enabled collations cannot be used with the following features:
   - [In-Memory OLTP tables](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)
-  - [Always Encrypted with Secure Enclaves](../sql/relational-databases/security/encryption/always-encrypted-enclaves.md) (When not using Secure Enclaves, [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) can use UTF-8)
+  - [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md) (When not using Secure Enclaves, [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) can use UTF-8)
 
   > [!Note]
   > There is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SQL Server Data Tools (SSDT). The latest [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) version 18 supports choice of UTF-8 enabled collations in the UI.

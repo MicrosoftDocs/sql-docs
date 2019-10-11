@@ -99,6 +99,7 @@ In Reporting Services 2019, you can also use a Power BI dataset in a Premium cap
 
 |**Data source**|**Example**|**Description**|  
 | Power BI Premium dataset | Server=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;initial catalog = <YourDatasetName> | Set data source type to **Microsoft SQL Server Analysis Services**. |
+
 ::: moniker-end
 
   

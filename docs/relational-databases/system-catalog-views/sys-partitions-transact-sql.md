@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |object_id|**int**|Indicates the ID of the object to which this partition belongs. Every table or view is composed of at least one partition.|  
 |index_id|**int**|Indicates the ID of the index within the object to which this partition belongs.<br /><br /> 0 = heap<br />1 = clustered index<br />2 or greater = nonclustered index|  
 |partition_number|**int**|Is a 1-based partition number within the owning index or heap. For non-partitioned tables and indexes, the value of this column is 1.|  
-|hobt_id|**bigint**|Indicates the ID of the data heap or B-tree that contains the rows for this partition.|  
+|hobt_id|**bigint**|Indicates the ID of the data heap or B-tree (HoBT) that contains the rows for this partition.|  
 |rows|**bigint**|Indicates the approximate number of rows in this partition.|  
 |filestream_filegroup_id|**smallint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indicates the ID of the FILESTREAM filegroup stored on this partition.|  
 |data_compression|**tinyint**|Indicates the state of compression for each partition:<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE : **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE : **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **Note:** Full text indexes will be compressed in any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

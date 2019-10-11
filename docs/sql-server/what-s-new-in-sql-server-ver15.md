@@ -243,12 +243,6 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 | Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32) in Details. |
 | &nbsp; | &nbsp; |
 
-[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
-
-For specific features excluded from support, see the [release notes](sql-server-ver15-release-notes.md).
-
-In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.2.
-
 ## See also
 
 - [`SqlServer` PowerShell module](https://www.powershellgallery.com/packages/Sqlserver)

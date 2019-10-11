@@ -56,7 +56,7 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 
 
 ### In-Memory Database
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] In-Memory Database technologies leverage modern hardware innovation to deliver unparalleled performance and scale. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on earlier innovations in this area such as In-Memory OLTP to unlock a new level of scalability across all your database workloads.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [In-Memory Database](../relational-databases/in-memory-database.md) technologies leverage modern hardware innovation to deliver unparalleled performance and scale. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on earlier innovations in this area such as In-Memory OLTP to unlock a new level of scalability across all your database workloads.  
 
 |New feature or update | Details |
 |:---|:---|
@@ -94,6 +94,7 @@ Monitoring improvements unlock performance insights over any database workload, 
 | &nbsp; | &nbsp; |
 
 ## Developer experience
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] continues to provide a world-class developer experience with enhancements to graph and spatial data types, UTF-8 support, and a new extensibility framework that allows developers to use the language of their choice to gain insights across all their data.
 
 ### Graph
 
@@ -110,7 +111,7 @@ Support businesses accross different countries and regions, where the requiremen
 
 |New feature or update | Details |
 |:---|:---|
-|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. Support includes PolyBase external tables, and Always Encrypted. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] |
+|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. Support includes PolyBase external tables, and Always Encrypted. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).|
 | &nbsp; | &nbsp; |
 
 ### Language extensions
@@ -141,6 +142,7 @@ When an ETL process fails because the source and the destination don't have matc
 | &nbsp; | &nbsp; |
 
 ## Mission critical security
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides a security architecture that is designed to allow database administrators and developers to create secure database applications and counter threats. Each version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has improved on previous versions with the introduction of new features and functionality, and [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] continues to build on this story.
 
 |New feature or update | Details |
 |:---|:---|
@@ -149,6 +151,7 @@ When an ETL process fails because the source and the destination don't have matc
 | &nbsp; | &nbsp; |
 
 ## High availability
+One common task everyone deploying [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has to account for is making sure that all mission critical [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances and the databases within them are available when the business and end users need them, whether that is 9 to 5 or around the clock. Availability is a key pillar of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] platform, and [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces many new features and enhancements that allow businesses to ensure their database environments are highly available.
 
 ### Availability Groups
 
@@ -172,14 +175,6 @@ When an ETL process fails because the source and the destination don't have matc
 |Online clustered columnstore index build and rebuild | See [Perform Index Operations Online](../relational-databases/indexes/perform-index-operations-online.md). |
 |Resumable online rowstore index build | See [Perform Index Operations Online](../relational-databases/indexes/perform-index-operations-online.md). |
 |Suspend and resume initial scan for Transparent Data Encryption (TDE)|See [Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume).|
-| &nbsp; | &nbsp; |
-
-## Setup
-
-|New feature or update | Details |
-|:---|:---| 
-|New memory setup options | Sets the *min server memory (MB)* and *max server memory (MB)* server configurations during installation. For more information, see [Database Engine Configuration - Memory page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) and the `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY`, and `SQLMAXMEMORY` parameters in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The proposed value will align with the memory configuration guidelines in [Server Memory Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
-|New parallelism setup options | Sets the *max degree of parallelism* server configuration during installation. For more information, see [Database Engine Configuration - MaxDOP page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) and the `SQLMAXDOP` parameter in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The default value will align with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
 | &nbsp; | &nbsp; |
 
 ## Platform choice
@@ -207,6 +202,14 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 | Non-root containers | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces the ability to create safer containers by starting the [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] process as a non-root user by default. See [build and run SQL Server containers as a non-root user](../linux/sql-server-linux-configure-docker.md#buildnonrootcontainer) for more details. |
 | Red Hat certified container images | Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], you will now be able to run SQL Server containers on Red Hat Enterprise Linux. |
 | Polybase and Machine Learning support| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces new ways to work with SQL Server Containers such as Machine Learning Services and Polybase. Check out some examples in the [SQL Server in container GitHub repository](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples). |
+| &nbsp; | &nbsp; |
+
+## Setup
+
+|New feature or update | Details |
+|:---|:---| 
+|New memory setup options | Sets the *min server memory (MB)* and *max server memory (MB)* server configurations during installation. For more information, see [Database Engine Configuration - Memory page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) and the `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY`, and `SQLMAXMEMORY` parameters in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The proposed value will align with the memory configuration guidelines in [Server Memory Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
+|New parallelism setup options | Sets the *max degree of parallelism* server configuration during installation. For more information, see [Database Engine Configuration - MaxDOP page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) and the `SQLMAXDOP` parameter in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The default value will align with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> SQL Server Machine Learning Services

@@ -32,14 +32,14 @@ Any supported external language can be run by calling a stored procedure and the
 ## Architecture diagrams
 
 The architecture is designed such that external code run in a separate process from SQL Server, but with components that internally manage the chain of requests for data and operations on SQL Server. 
+  
+  ***Component architecture in Windows:***
 
   ![Component architecture on Windows](../media/generic-architecture-windows.png "Component architecture on Windows")
   
-  ***Component architecture in Windows***
+  ***Component architecture in Linux:***
   
   ![Component architecture on Linux](../media/generic-architecture-linux.png "Component architecture on WindowsLinux")
-  
-  ***Component architecture in Linux***
   
 Components include a **Launchpad** service used to invoke external runtimes (for example, Java) and library-specific logic for loading interpreters and libraries.
 

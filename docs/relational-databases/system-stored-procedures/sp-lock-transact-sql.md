@@ -24,7 +24,7 @@ ms.author: sstein
   Reports information about locks.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] To obtain information about locks in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], use the [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) dynamic management view.  
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] To obtain information about locks in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], use the [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) dynamic management view.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
  0 (success)  
   
 ## Result Sets  
- The **sp_lock** result set contains one row for each lock held by the sessions specified in the **@spid1** and **@spid2** parameters. If neither **@spid1** nor **@spid2** is specified, the result set reports the locks for all sessions currently active in the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ The **sp_lock** result set contains one row for each lock held by the sessions specified in the **\@spid1** and **\@spid2** parameters. If neither **\@spid1** nor **\@spid2** is specified, the result set reports the locks for all sessions currently active in the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -76,7 +76,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
 ### A. Listing all locks  
  The following example displays information about all locks currently held in an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-```  
+```sql  
 USE master;  
 GO  
 EXEC sp_lock;  
@@ -86,7 +86,7 @@ GO
 ### B. Listing a lock from a single-server process  
  The following example displays information, including locks, about process ID `53`.  
   
-```  
+```sql  
 USE master;  
 GO  
 EXEC sp_lock 53;  

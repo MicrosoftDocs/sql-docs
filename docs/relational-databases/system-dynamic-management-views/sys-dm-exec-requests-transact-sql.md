@@ -179,12 +179,13 @@ GO
 ```
 
 ## See Also
-[Dynamic Management Views and Functions](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)    
-[Execution Related Dynamic Management Views and Functions](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)     
-[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)       
-[Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md)    
-[sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)    
-[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)    
+[Dynamic Management Views and Functions](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+[Execution Related Dynamic Management Views and Functions](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)      
+[sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     
+[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)     
 [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
 [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
+[SQL Server, SQL Statistics Object](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
+[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md)    

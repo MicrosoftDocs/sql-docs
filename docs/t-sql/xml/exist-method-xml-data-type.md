@@ -66,7 +66,7 @@ select @f;
   
 -   The code `cast as xs:date?` is used to cast the value to **xs:date** type for purposes of comparison.  
   
--   The value of the **@Somedate** attribute is untyped. In comparing this value, it is implicitly cast to the type on the right side of the comparison, the **xs:date** type.  
+-   The value of the **\@Somedate** attribute is untyped. In comparing this value, it is implicitly cast to the type on the right side of the comparison, the **xs:date** type.  
   
 -   Instead of **cast as xs:date()**, you can use the **xs:date()** constructor function. For more information, see [Constructor Functions &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md).  
   

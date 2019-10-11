@@ -47,7 +47,7 @@ ms.author: "sstein"
   
 -   A DACPAC is a Windows file with a .dacpac extension. The file supports an open format consisting of multiple XML sections representing details of the DACPAC origin, the objects in the database, and other characteristics. An advanced user can unpack the file using the DacUnpack.exe utility that ships with the product to inspect each section more closely.  
   
--   The user must be a member of the **dbmanager** role or assigned **CREATE DATABASE** permissions to create a database, including creating a database by deploying a DAC package. The user must be a member of the **dbmanager** role, or have been assigned **DROP DATABASE permissions** to drop a database.  
+-   The user must be a member of the **dbmanager** role or assigned **CREATE DATABASE** permissions to create a database, including creating a database by deploying a DAC package. The user must be a member of the **dbmanager** role, or have been assigned **DROP DATABASE** permissions to drop a database.  
   
 ## DAC Tools  
  A DACPAC can be seamlessly used across multiple tools that ship with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. These tools address the requirements of different user personas using a DACPAC as the unit of interoperability.  

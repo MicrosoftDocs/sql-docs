@@ -60,7 +60,7 @@ The server computes the result set, and for any encrypted columns included in th
 
  A client driver interacts with a key store, containing a column master key, using a column master key store provider, which is a client-side software component that encapsulates a key store containing the column master key. Providers for common types of key stores are available in client side driver libraries from Microsoft or as standalone downloads. You can also implement your own provider. Always Encrypted capabilities, including built-in column master key store providers, vary by a driver library and its version. 
 
-For details of how to develop applications using Always Encrypted with particular client drivers, see [Develop Applications using Always Encrypted](always-encrypted-client-development.md).
+For details of how to develop applications using Always Encrypted with particular client drivers, see [Develop applications using Always Encrypted](always-encrypted-client-development.md).
 
 ## Remarks
 
@@ -97,7 +97,7 @@ To successfully update the column, do the following:
 - Randomized encryption uses a method that encrypts data in a less predictable manner. Randomized encryption is more secure, but prevents searching, grouping, indexing, and joining on encrypted columns.
 
 Use deterministic encryption for columns that will be used as search or grouping parameters, for example a government ID number. Use randomized encryption, for data such as confidential investigation comments, which are not grouped with other records and are not used to join tables.
-For details on Always Encrypted cryptographic algorithms, see [Always Encrypted Cryptography](../../../relational-databases/security/encryption/always-encrypted-cryptography.md). 
+For details on Always Encrypted cryptographic algorithms, see [Always Encrypted cryptography](../../../relational-databases/security/encryption/always-encrypted-cryptography.md). 
 
 
 ## Configuring Always Encrypted
@@ -263,10 +263,9 @@ GO
 ## See Also  
 - [Configure Always Encrypted using SSMS](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)   
 - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
-- [Develop Applications using Always Encrypted](always-encrypted-client-development.md) 
-- [Encrypt, Re-Encrypt or Decrypt Columns using Always Encrypted Wizard](always-encrypted-wizard.md)
-- [Migrate Sensitive Data Protected by Always Encrypted](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)   
-- [Always Encrypted Cryptography](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
+- [Develop applications using Always Encrypted](always-encrypted-client-development.md) 
+- [Configure column encryption using Always Encrypted Wizard](always-encrypted-wizard.md)
+- [Always Encrypted cryptography](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
 - [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
 - [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
 - [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   

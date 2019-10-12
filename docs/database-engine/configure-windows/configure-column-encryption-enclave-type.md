@@ -1,5 +1,5 @@
 ---
-title: "Column encryption enclave type Server Configuration Option | Microsoft Docs"
+title: "Configure enclave type for Always Encrypted Server Configuration Option | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/24/2018"
 ms.prod: sql
@@ -11,17 +11,17 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
-# column encryption enclave type Server Configuration Option
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# Configure enclave type for Always Encrypted Server Configuration Option
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-  Use the **column encryption enclave type** option to enable or disable a secure enclave for Always Encrypted.  For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+This article describes how to enable or disable a secure enclave for Always Encrypted with secure enclaves. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
- The following table lists the possible **column encryption enclave type** values:  
+The **column encryption enclave type** Server Configuration Option controls the type of a secure enclave used for Always Encrypted. The option can be set to one of the following values:  
   
 |Value|Description|  
 |-------------------|-----------------|  
 |0|**No secure enclave**. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] will not initialize the secure enclave for Always Encrypted. As a result, the functionality of Always Encrypted with secure enclaves will not be available.|  
-|1|**Virtualization based security (VBS)**. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] will initialize the secure enclave (a VBS secure memory enclave) for Always Encrypted.|    
+|1|**Virtualization based security (VBS)**. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] will attempt to initialize a virtualization-based security (VBS) enclave.
 
 > [!IMPORTANT]
 > Changes to the **column encryption enclave type** do not take effect until you restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
@@ -67,6 +67,8 @@ SELECT
 FROM sys.configurations
 WHERE [name] = 'column encryption enclave type'; 
 ```  
+## Next Steps
+ [Manage keys for Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)
 
 ## See Also  
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: "Encrypt, Re-Encrypt or Decrypt Columns using Always Encrypted Wizard | Microsoft Docs"
+title: "Configure column encryption using Always Encrypted Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/04/2016"
 ms.prod: sql
@@ -17,7 +17,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Encrypt, Re-Encrypt or Decrypt Columns using Always Encrypted Wizard
+# Configure column encryption using Always Encrypted Wizard
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 The Always Encrypted Wizard is a powerful tool that allows you to set the desired [Always Encrypted](always-encrypted-database-engine.md) configuration for selected database columns. Depending on the current configuration and the desired target configuration, the wizard can encrypt a column, decrypt it (remove encryption), or re-encrypt it (for example, using a new column encryption key or an encryption type that is different from the current type, configured for the column). Multiple columns can be configured in a single run of the wizard.
@@ -29,7 +29,7 @@ The wizard allows you to encrypt columns with existing column encryption keys, o
     - [Protect sensitive data in Azure SQL Database with Always Encrypted and column master keys in Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
 
  - For a video that includes using the wizard, see [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted). Also, see the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Security Team blog [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545).  
- - For information about Always Encrypted keys, see [Overview of Key Management for Always Encrypted](overview-of-key-management-for-always-encrypted.md).
+ - For information about Always Encrypted keys, see [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md).
  - For information about encryption types supported in Always Encrypted, see [Selecting Deterministic or Randomized Encryption](always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
  
  ## Permissions
@@ -76,19 +76,19 @@ If you have selected an auto-generated column encryption key for any column on t
 
 When configuring a new column master key, you can either pick an existing key in Windows Certificate Store or in Azure Key Vault and have the wizard to create just a metadata object for the key in the database, or you can choose to generate both the key and the metadata object describing the key in the database. 
 
-For more information about creating and storing column master keys in Windows Certificate Store, Azure Key Vault or other key stores, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+For more information about creating and storing column master keys in Windows Certificate Store, Azure Key Vault or other key stores, see [Create and store column master keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 > [!TIP]
 > The wizard allows you to browse and create keys only in Windows Certificate Store and Azure Key Vault. It also auto-generates the names of both the new keys and the database metadata objects describing the keys. If you need more control for how your keys are provisioned (and more choices for a key store containing your column master key), you can use the **New Column Master Key** and **New Column Encryption Key** dialogs to create the keys first, and then run the wizard and pick the keys you have created. See [Provision Column Master Keys with the New Column Master Key Dialog](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) and [Provision Column Encryption Keys with the New Column Encryption Key Dialog](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog).
 
 ## Next Steps
-- [Query Columns Protected with Always Encrypted using SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
-- [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
+- [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
 ## See Also  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
- - [Overview of Key Management for Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
+ - [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
  - [Configure Always Encrypted using SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
- - [Provision Always Encrypted Keys using PowerShell](configure-always-encrypted-keys-using-powershell.md)
- - [Encrypt, Re-Encrypt or Decrypt Columns with Always Encrypted using PowerShell](configure-column-encryption-using-powershell.md)
- - [Encrypt, Re-Encrypt or Decrypt Columns by Publishing a DAC Package](configure-always-encrypted-using-dacpac.md)
+ - [Provision Always Encrypted keys using PowerShell](configure-always-encrypted-keys-using-powershell.md)
+ - [Configure column encryption using Always Encrypted with PowerShell](configure-column-encryption-using-powershell.md)
+ - [Configure column encryption using Always Encrypted with a DAC package](configure-always-encrypted-using-dacpac.md)

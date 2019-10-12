@@ -1,0 +1,70 @@
+---
+title: Enable Always Encrypted with secure enclaves for existing encrypted columns | Microsoft Docs"
+ms.custom: ""
+ms.date: 10/10/2019
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
+ms.reviewer: "vanto"
+ms.technology: security
+ms.topic: conceptual
+author: jaszymas
+ms.author: jaszymas
+monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+---
+# Enable Always Encrypted with secure enclaves for existing encrypted columns 
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+
+This article describes how to unlock the functionality of Always Encrypted with secure enclaves for existing columns that currently are not encrypted with enclave-enabled keys.
+
+There are several ways to enable the enclave functionality for an existing column that isn't enclave-enabled. Which method you choose, depends on several factors:
+
+- **Scope/granularity:** Do you want to enable the enclave functionality for a subset of columns, or for all columns protected with a given column master key?
+- **Data size:** What is the size of the tables containing the column(s) you want to make enclave-enabled?
+- Do you also want to change the encryption type for your column(s)? Remember that only randomized encryption supports rich computations (pattern matching, comparison operators). If your column is encrypted using deterministic encryption, you'll also need to re-encrypt it with randomized encryption to unlock the full functionality of Always Encrypted with secure enclaves.
+
+Here are the three approaches for enabling enclaves for existing columns:
+
+## Method 1: Rotate the column master key to replace it with an enclave-enabled column master key
+Replacing an existing column master key (that is not enclave-enabled) with a new column master key that is enclave-enabled effectively makes all column encryption keys (associated with the column master key) also enclave-enabled. Consequently, all column encryption keys, impacted by the rotation, will be permitted to be used for enclave computations on columns they encrypt.
+
+- Pros:
+  - Doesn't involve re-encrypting data, so it's typically the fastest approach. It's a recommended approach for columns containing large amounts of data, providing all columns, you need to enable rich computations for, already use deterministic encryption and, thus, do not need to be re-encrypted.
+  - Can enable the enclave functionality for multiple columns at scale, as it makes all column encryption keys and all encrypted columns, associated with the original column master key, enclave-enabled.
+  
+- Cons:
+  - Doesn't support changing the encryption type from deterministic to randomized, so while it unlocks in-place encryption for columns encrypted using deterministic encryption, it doesn't enable rich computations. You need to re-encrypt the columns using randomized encryption.
+  - Doesn't allow you to selectively convert some of the columns, associated with a given column master key.
+  - Introduces key management overhead - you need to create a new column master key and make it available to applications that query the impacted columns. 
+For information on how to rotate a column master key, see [Rotate enclave-enabled keys](always-encrypted-enclaves-rotate-keys.md).
+
+## Method 2: Rotate the column master key and re-encrypt columns using randomized encryption in-place
+This method involves executing Method 1 as the first stage, and subsequently re-encrypting columns (that currently deterministic encryption) with randomized encryption to unlock rich queries.
+
+- Pros:
+  - Re-encrypts data in-place, and thus it is a recommended method to enable rich queries for encrypted columns that current use deterministic encryption and contain large amounts of data. Step 1 (the column master key rotation) unlocks in-place encryption for columns using deterministic encryption, so step 2 (re-encrypting columns) can be performed in-place.
+  - Can enable the enclave functionality for multiple columns at scale.
+  
+- Cons:
+  - Doesn't allow you to selectively convert some of the columns, associated with a given column master key.
+  - It introduces key management overhead - you need to create a new column master key and make it available to applications that query the impacted columns.
+
+For information on how to rotate a column master key and and re-encrypt a column in-place to rotate a column encryption key, see [Rotate enclave-enabled keys](always-encrypted-enclaves-rotate-keys.md).
+
+## Method 3: Re-encrypt a selected column with a an enclave-enabled column encryption key the client side
+This method involves re-encrypting a column with an enclave-enabled column encryption key and, if needed, randomized encryption (if the column is encrypted using deterministic encryption). Since the current column encryption key is not enclave-enabled, re-encryption cannot be performed in-place and it requires using tools, such as the Always Encrypted wizard or the Set-SqlColumnEncryption cmdlet, which perform re-encryption outside of the database.
+ 
+- Pros - this method:
+  - Allows you selectively to enable the enclave functionality for one column or a small subset of columns.
+  - It can enable rich computations for a columns using encrypted column in one step.
+  - It doesn't require creating a new column master key, so it has a smaller impact on applications.
+  
+- Cons:
+  - The entire content of the table that contains the column needs to be moved outside of the database for re-encryption, so it is recommended only for small tables.
+
+For more information on how to rotate a column encryption via a client-side tool, see [Rotate Always Encrypted keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md) and  [Rotate Always Encrypted keys using PowerShell](rotate-always-encrypted-keys-using-powershell.md).
+
+## Next Steps
+- [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md)
+- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
+
+

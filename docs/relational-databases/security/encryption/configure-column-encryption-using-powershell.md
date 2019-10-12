@@ -1,5 +1,5 @@
 ---
-title: "Encrypt, Re-Encrypt or Decrypt Columns with Always Encrypted using PowerShell | Microsoft Docs"
+title: "Configure column encryption using Always Encrypted with PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/01/2019"
 ms.prod: sql
@@ -12,7 +12,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Encrypt, Re-Encrypt or Decrypt Columns with Always Encrypted using PowerShell
+# Configure column encryption using Always Encrypted with PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 This article provides the steps for setting the target Always Encrypted configuration for database columns using the [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) cmdlet (in the *SqlServer* PowerShell module). The **Set-SqlColumnEncryption** cmdlet modifies both the schema of the target database as well as the data stored in the selected columns. The data stored in a column can be encrypted, re-encrypted, or decrypted, depending on the specified target encryption settings for the columns and the current encryption configuration.
@@ -21,7 +21,7 @@ For more information about Always Encrypted support in the SqlServer PowerShell 
 ## Prerequisites
 
 To set the target encryption configuration, you need to make sure:
-- a column encryption key is configured in the database (if you are encrypting or re-encrypting a column). For details, see [Configure Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md).
+- a column encryption key is configured in the database (if you are encrypting or re-encrypting a column). For details, see [Configure Always Encrypted keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md).
 - you can access the column master key for each column you want to encrypt, re-encrypt, or decrypt, from the computer running the PowerShell cmdlets. 
 
 ## Performance and Availability Considerations
@@ -51,7 +51,7 @@ The **Set-SqlColumnEncryption** cmdlet, used to configure encryption for databas
 Task  |Article  |Accesses plaintext keys/key store  |Accesses database   
 ---|---|---|---
 Step 1. Start a PowerShell environment and import the SqlServer module. | [Import the SqlServer module](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | No
-Step 2. Connect to your server and database | [Connecting to a Database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
+Step 2. Connect to your server and database | [Connecting to a database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
 Step 3. Authenticate to Azure, if your column master key (protecting the column encryption key, to be rotated), is stored in Azure Key Vault | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Yes | No
 Step 4. Construct an array of SqlColumnEncryptionSettings objects - one for each database column, you want to encrypt, re-encrypt, or decrypt. SqlColumnMasterKeySettings is an object that exists in memory (in PowerShell). It specifies the target encryption scheme for a column. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | No | No
 Step 5. Set the desired encryption configuration, specified in the array of SqlColumnMasterKeySettings objects, you created in the previous step. A column will be encrypted, re-encrypted, or decrypted, depending on the specified target settings and the current encryption configuration of the column.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Note:** This step may take a long time. Your applications will not be able to access the tables through the entire operation or a portion of it, depending on the approach (online vs. offline), you select. | Yes | Yes
@@ -143,13 +143,13 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ```
  
 ## Next Steps
-- [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
+- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
 ## See Also  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
- - [Overview of Key Management for Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
+ - [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
  - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
- - [Encrypt, Re-Encrypt or Decrypt Columns using Always Encrypted Wizard](always-encrypted-wizard.md)
- - [Encrypt, Re-Encrypt or Decrypt Columns by Publishing a DAC Package](configure-always-encrypted-using-dacpac.md)
+ - [Configure column encryption using Always Encrypted Wizard](always-encrypted-wizard.md)
+ - [Configure column encryption using Always Encrypted with a DAC package](configure-always-encrypted-using-dacpac.md)
 
 

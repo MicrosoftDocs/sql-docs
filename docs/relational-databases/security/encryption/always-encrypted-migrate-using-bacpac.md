@@ -1,5 +1,5 @@
 ---
-title: "Export and Import Databases using Always Encrypted  | Microsoft Docs"
+title: "Export and import databases using Always Encrypted  | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019
 ms.prod: sql
@@ -17,7 +17,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Export and Import Databases using Always Encrypted 
+# Export and import databases using Always Encrypted 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 This article describes how to export and import databases containing columns protected with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
@@ -42,11 +42,11 @@ You need *ALTER ANY COLUMN MASTER KEY* and *ALTER ANY COLUMN ENCRYPTION KEY* on 
 You do not need to have access to column master keys configured for the encrypted columns, as the data stays encrypted during the export and import operations.
 
 ## Next Steps
-- [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
+- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
 
 ## See Also
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Back up and Restore Databases using Always Encrypted](always-encrypted-migrate-using-backup-restore.md)
-- [Migrate Data to or from Columns using Always Encrypted with SQL Server Import and Export Wizard](always-encrypted-migrate-using-import-export-wizard.md)
-- [Bulk Load Encrypted Data to Columns Protected by Always Encrypted](migrate-sensitive-data-protected-by-always-encrypted.md)
+- [Back up and restore databases using Always Encrypted ](always-encrypted-migrate-using-backup-restore.md)
+- [Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard](always-encrypted-migrate-using-import-export-wizard.md)
+- [Bulk load encrypted data to columns using Always Encrypted](migrate-sensitive-data-protected-by-always-encrypted.md)

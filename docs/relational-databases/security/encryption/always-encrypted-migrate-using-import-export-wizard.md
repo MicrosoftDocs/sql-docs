@@ -1,5 +1,5 @@
 ---
-title: "Migrate Data to or from Columns using Always Encrypted with SQL Server Import and Export Wizard | Microsoft Docs"
+title: "Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard  | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019
 ms.prod: sql
@@ -17,7 +17,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Migrate Data to or from Columns using Always Encrypted with SQL Server Import and Export Wizard 
+# Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 The [SQL Server Import and Export Wizard](../../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) is a tool that allows you to copy data from a source to a destination. This document describes how to use the SQL Server Import and Export Wizard if a source or/and a destination is a SQL Server database containing columns protected with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
@@ -77,6 +77,6 @@ For more information, see [Create and Store Column Master Keys (Always Encrypted
 
 ## See Also
 - [Always Encrypted](always-encrypted-database-engine.md)
-- [Export and Import Databases using Always Encrypted](always-encrypted-migrate-using-bacpac.md)
-- [Back up and Restore Databases using Always Encrypted](always-encrypted-migrate-using-backup-restore.md)
-- [Bulk Load Encrypted Data to Columns Protected by Always Encrypted](migrate-sensitive-data-protected-by-always-encrypted.md)
+- [Export and import databases using Always Encrypted](always-encrypted-migrate-using-bacpac.md)
+- [Back up and restore databases using Always Encrypted](always-encrypted-migrate-using-backup-restore.md)
+- [Bulk load encrypted data to columns using Always Encrypted](migrate-sensitive-data-protected-by-always-encrypted.md)

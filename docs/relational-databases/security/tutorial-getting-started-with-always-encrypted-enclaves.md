@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Getting Started with Always Encrypted with secure enclaves using SSMS | Microsoft Docs"
 ms.custom: ""
-ms.date: 08/07/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -14,7 +14,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:
 - How to create a basic environment for testing and evaluating Always Encrypted with secure enclaves.
@@ -42,7 +42,7 @@ To get started with Always Encrypted with secure enclaves, you need at least two
       - Generation 2 VMs, for example: the Dsv3 or Esv3 series VMs. See [Support for generation 2 VMs on Azure](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2).
    - On VMWare vSphere 6.7 or later, enable Virtualization Based Security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
    - Other hypervisors and public clouds may support using Always Encrypted with secure enclaves in a VM as long as virtualization extensions (sometimes called nested virtualization) are exposed to the VM. Check your virtualization solution?s documentation for compatibility and configuration instructions.
-- [SQL Server Management Studio (SSMS) 18.0 or later](../../ssms/download-sql-server-management-studio-ssms.md).
+- [SQL Server Management Studio (SSMS) 18.3 or later](../../ssms/download-sql-server-management-studio-ssms.md).
 
 As an alternative, you can install SSMS on another machine.
 
@@ -339,10 +339,12 @@ Now, you can run rich queries against the encrypted columns. Some query processi
 3. Try the same query again in the SSMS instance that does not have Always Encrypted enabled, and note the failure that occurs.
 
 ## Next Steps
-Go to [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md), which is the continuation of this tutorial.
+After completing this tutorial, you can go to one of the following tutorials:
+- [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
-See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for information on other use cases for Always Encrypted with secure enclaves. For example:
-
-- [Configuring TPM attestation.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [Configuring HTTPS for your HGS instance.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
-- Developing applications that issue rich queries against encrypted columns.
+## See Also
+- [Configure enclave type for Always Encrypted Server Configuration Option](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
+- [Provision enclave-enabled keys](encryption/always-encrypted-enclaves-provision-keys.md)
+- [Configure column encryption in-place with Transact-SQL](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
+- [Query columns using Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves-query-columns.md)

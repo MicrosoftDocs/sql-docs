@@ -1,5 +1,5 @@
 ---
-title: "Always Encrypted Cryptography | Microsoft Docs"
+title: "Always Encrypted cryptography | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/01/2019
 ms.prod: sql
@@ -13,7 +13,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Always Encrypted Cryptography
+# Always Encrypted cryptography
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   This document describes encryption algorithms and mechanisms to derive cryptographic material used in the [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
@@ -173,6 +173,6 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
   
 ## See Also  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- - [Develop Applications using Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+ - [Develop applications using Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

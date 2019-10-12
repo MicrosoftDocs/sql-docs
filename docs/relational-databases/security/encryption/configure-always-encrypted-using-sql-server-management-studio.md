@@ -30,17 +30,17 @@ SSMS does not support role separation between those who manage the database (DBA
 
 ## Always Encrypted Tasks using SSMS
 
-- [Provision Always Encrypted Keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
-- [Rotate Always Encrypted Keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
-- [Encrypt, Re-Encrypt or Decrypt Columns using Always Encrypted Wizard](always-encrypted-wizard.md)
-- [Encrypt, Re-Encrypt or Decrypt Columns by Publishing a DAC Package](configure-always-encrypted-using-dacpac.md)
-- [Query Columns Protected with Always Encrypted using SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
-- [Export and Import Databases using Always Encrypted](always-encrypted-migrate-using-bacpac.md)
-- [Back up and Restore Databases using Always Encrypted](always-encrypted-migrate-using-backup-restore.md)
-- [Migrate Data to or from Columns using Always Encrypted with SQL Server Import and Export Wizard](always-encrypted-migrate-using-import-export-wizard.md)
+- [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+- [Rotate Always Encrypted keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
+- [Configure column encryption using Always Encrypted Wizard](always-encrypted-wizard.md)
+- [Configure column encryption using Always Encrypted with a DAC package](configure-always-encrypted-using-dacpac.md)
+- [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Export and import databases using Always Encrypted](always-encrypted-migrate-using-bacpac.md)
+- [Back up and restore databases using Always Encrypted](always-encrypted-migrate-using-backup-restore.md)
+- [Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard](always-encrypted-migrate-using-import-export-wizard.md)
 
 ## See Also
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+- [Overview of key management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-- [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
+- [Develop applications using Always Encrypted](always-encrypted-client-development.md)

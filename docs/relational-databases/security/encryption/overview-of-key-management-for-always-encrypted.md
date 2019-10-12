@@ -1,5 +1,5 @@
 ---
-title: "Overview of Key Management for Always Encrypted | Microsoft Docs"
+title: "Overview of key management for Always Encrypted | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/01/2019
 ms.prod: sql
@@ -12,7 +12,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Overview of Key Management for Always Encrypted
+# Overview of key management for Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -64,12 +64,12 @@ When Always Encrypted keys are managed without role separation, a single person 
 Always Encrypted keys can be managed using [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) and [PowerShell](../../scripting/sql-server-powershell.md):
 
 - **SQL Server Management Studio (SSMS)** - provides dialogs and wizards that combine tasks involving key store access and database access, so SSMS does not support role separation, but it makes configuring your keys easy. For more information about managing keys using SSMS, see:
-    - [Provision Always Encrypted Keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
-    - [Rotate Always Encrypted Keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
+    - [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+    - [Rotate Always Encrypted keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
 
 - **SQL Server PowerShell** - includes cmdlets for managing Always Encrypted keys with and without role separation. For more information, see:
-    - [Configure Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-    - [Rotate Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
+    - [Configure Always Encrypted keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
+    - [Rotate Always Encrypted keys using PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
 
 ## Security Considerations for Key Management
@@ -87,10 +87,10 @@ To ensure Always Encrypted is effective in preventing these types of attacks, yo
 - To ensure your key management process does not inadvertently reveal column master keys or column encryption keys, it is critical to identify potential adversaries and security threats before defining and implementing a key management process. For example, if your goal is to ensure DBAs have no access to sensitive data, then a DBA cannot be responsible for generating the keys. A DBA, however, *can* manage key metadata in the database, as the metadata does not contain the plaintext keys.
 
 ## Next Steps
-- [Encrypt, Re-Encrypt or Decrypt Columns using Always Encrypted Wizard](always-encrypted-wizard.md)
-- [Create and Store Column Master Keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md)
-- [Provision Always Encrypted Keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
-- [Provision Always Encrypted Keys using PowerShell](configure-always-encrypted-keys-using-powershell.md)
+- [Configure column encryption using Always Encrypted Wizard](always-encrypted-wizard.md)
+- [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md)
+- [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+- [Provision Always Encrypted keys using PowerShell](configure-always-encrypted-keys-using-powershell.md)
 
 ## See Also
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

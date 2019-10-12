@@ -1,5 +1,5 @@
 ---
-title: "Develop Applications using Always Encrypted | Microsoft Docs"
+title: "Develop applications using Always Encrypted | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/01/2019"
 ms.prod: sql
@@ -13,7 +13,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Develop Applications using Always Encrypted
+# Develop applications using Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) is a client-side encryption technology that ensures sensitive data (and related encryption keys) are never revealed to the SQL Server or Azure SQL Database. With Always Encrypted, a client driver transparently encrypts sensitive data before passing the data to the Database Engine, and it transparently decrypts data retrieved from encrypted database columns.

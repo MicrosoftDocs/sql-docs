@@ -1,7 +1,7 @@
 ---
-title: "Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption | Microsoft Docs"
+title: "Tutorial: Create and use indexes on enclave-enabled columns using randomized encryption | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/26/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -13,7 +13,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
-# Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption
+# Tutorial: Create and use indexes on enclave-enabled columns using randomized encryption
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This tutorial teaches you how to create and use indexes on enclave-enabled columns using randomized encryption supported in [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:
@@ -166,5 +166,7 @@ In this step, you'll create an index on an encrypted column, pretending to be tw
    1. In the **Live Query Statistics** (in the bottom part of the query window), observe that the query uses the index.
 
 ## Next steps
+- [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
-- See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for information on other use cases for Always Encrypted with secure enclaves.
+## See also
+- [Create and use indexes on column using Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves-create-use-indexes.md)

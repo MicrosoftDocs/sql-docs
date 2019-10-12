@@ -1,5 +1,5 @@
 ---
-title: "Query Columns Protected with Always Encrypted using SQL Server Management Studio | Microsoft Docs"
+title: "Query columns using Always Encrypted with SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/01/2019
 ms.prod: sql
@@ -17,7 +17,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Query Columns Protected with Always Encrypted using SQL Server Management Studio
+# Query columns using Always Encrypted with SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 This article describes how to query columns, encrypted with with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) using [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md). With SSMS, you can:

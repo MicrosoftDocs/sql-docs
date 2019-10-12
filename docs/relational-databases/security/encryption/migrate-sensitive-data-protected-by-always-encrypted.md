@@ -1,5 +1,5 @@
 ---
-title: "Bulk Load Encrypted Data to Columns Protected by Always Encrypted | Microsoft Docs"
+title: "Bulk load encrypted data to columns using Always Encrypted | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/04/2015"
 ms.prod: sql
@@ -14,7 +14,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Bulk Load Encrypted Data to Columns Protected by Always Encrypted
+# Bulk load encrypted data to columns using Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 To load encrypted data without performing metadata checks on the server during bulk copy operations, create the user with the **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** option. This option is intended to be used by legacy tools from versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] older than [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (such as bcp.exe) or by using third-party Extract-Transform-Load (ETL) work flows that cannot use Always Encrypted. This allows a user to securely move encrypted data from one set of tables, containing encrypted columns, to another set of tables with encrypted columns (in the same or a different database).  
@@ -67,7 +67,7 @@ Do not use this option for developing new applications. Instead, use a client dr
 
 ## See Also  
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Migrate Data to or from Columns using Always Encrypted with SQL Server Import and Export Wizard](always-encrypted-migrate-using-import-export-wizard.md)
+- [Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard](always-encrypted-migrate-using-import-export-wizard.md)
 - [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
 - [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
 

@@ -12,8 +12,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Always Encrypted with Secure Enclaves
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
-
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
  
 Always Encrypted with secure enclaves provides additional functionality to the [Always Encrypted](always-encrypted-database-engine.md) feature.
 
@@ -71,6 +70,8 @@ Always Encrypted with secure enclaves introduces the concept of enclave-enabled 
 
 When the SQL Server Engine determines operations, specified in a query, need to be performed inside the secure enclave, the SQL Server Engine requests the client driver shares the column encryption keys that are needed for the computations with the secure enclave. The client driver shares the column encryption keys only if the keys are enclave-enabled (that is, encrypted with enclave-enabled column master keys) and they're properly signed. Otherwise, the query fails.
 
+For more information, see [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md).
+
 ## Enclave-enabled Columns
 
 An enclave-enabled column is a database column encrypted with an enclave-enabled column encryption key. The functionality available for an enclave-enabled column depends on the encryption type the column is using.
@@ -108,20 +109,11 @@ For in-place encryption to be possible, the column encryption key (or keys), inv
 - Decryption: the current column encryption key of the column must be enclave-enabled.
 
 ### Indexes on Enclave-enabled Columns using Randomized Encryption
-You can create nonclustered indexes on enclave-enabled columns using randomized encryption to make rich queries run faster. To ensure an index on a column encrypted using randomized encryption doesn't leak sensitive data and, at the same time, it's useful for processing queries inside the enclave, the key values in the index data structure (B-tree) are encrypted and sorted based on their plaintext values. When the query executor in the SQL Server Engine uses an index on an encrypted column for computations inside the enclave, it searches the index to look up specific values stored in the column. Each search may involve multiple comparisons. The query executor delegates each comparison to the enclave, which decrypts a value stored in the column and the encrypted index key value to be compared, it performs the comparison on plaintext and it returns the result of the comparison to the executor. For general information, not specific to Always Encrypted, on how indexing in SQL Server works, see [Clustered and Nonclustered Indexes Described](../../indexes/clustered-and-nonclustered-indexes-described.md).
-
-Because an index on an enclave-enabled column using randomized encryption stores the encrypted index key values while the values are sorted based on plaintext, SQL Server Engine must use the enclave for any operation that involves creating or updating an index, including:
-- Creating or rebuilding an index.
-- Inserting, updating, or deleting a row in the table (containing an indexed/encrypted column), which triggers inserting or/and removing an index key to/from the index.
-- Running DBCC commands that involve checking the integrity of indexes, for example [DBCC CHECKDB (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) or [DBCC CHECKTABLE (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
-- Database recovery (for example, after SQL Server fails and restarts), if SQL Server needs to undo any changes to the index (see more details below).
-
-All the above operations require the enclave has the column encryption key for the indexed column, so that it can decrypt the index keys. In general, the enclave can obtain a column encryption key in one of two ways:
-
-- **Directly from the client application** that invoked the operation on the index, as described in the introduction above. This method requires the application or the user to have access to the column master key and the column encryption key, protecting the indexed column. The application must connect to the database with Always Encrypted enabled for the connection.
-- **From the cache of column encryption keys.** The enclave stores the keys, used in previous queries, in the cache that is located inside the enclave, and is therefore inaccessible from the outside. If an application triggers an operation on an index without providing the required column encryption key directly, the enclave looks up the key in the cache. If the enclave finds the key in the cache, it uses it for the operation. This method allows DBAs to manage indexes and perform certain data cleansing operations (for example, removing a row from a table containing an index on an encrypted column), without having access to the cryptographic keys or the data in plaintext. This method requires the application connects to the database without Always Encrypted enabled for the connection.
+You can create nonclustered indexes on enclave-enabled columns using randomized encryption to make rich queries run faster. To ensure an index on a column encrypted using randomized encryption doesn't leak sensitive data and, at the same time, it's useful for processing queries inside the enclave, the key values in the index data structure (B-tree) are encrypted and sorted based on their plaintext values. When the query executor in the SQL Server Engine uses an index on an encrypted column for computations inside the enclave, it searches the index to look up specific values stored in the column. Each search may involve multiple comparisons. The query executor delegates each comparison to the enclave, which decrypts a value stored in the column and the encrypted index key value to be compared, it performs the comparison on plaintext and it returns the result of the comparison to the executor. 
 
 Creating indexes on columns that use randomized encryption and are not enclave-enabled remains unsupported.
+
+For more details, see [Create and use indexes on column using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md). For general information, not specific to Always Encrypted, on how indexing in SQL Server works, see [Clustered and Nonclustered Indexes Described](../../indexes/clustered-and-nonclustered-indexes-described.md).
 
 #### Database Recovery
 
@@ -191,5 +183,5 @@ The following limitations apply to [!INCLUDE[sql-server-2019](../../../includes/
 
 ## Next steps
 
-- Set up your test environment and try the functionality of Always Encrypted with secure enclaves in SSMS - see [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
-- For details on how to use Always Encrypted with secure enclaves, see [Configure Always Encrypted with secure enclaves](configure-always-encrypted-enclaves.md).
+- [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+

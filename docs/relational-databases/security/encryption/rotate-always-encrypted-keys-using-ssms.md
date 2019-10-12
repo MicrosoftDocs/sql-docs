@@ -1,5 +1,5 @@
 ---
-title: "Rotate Always Encrypted Keys using SQL Server Management Studio | Microsoft Docs"
+title: "Rotate Always Encrypted keys using SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/01/2019
 ms.prod: sql
@@ -17,12 +17,12 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Rotate Always Encrypted Keys using SQL Server Management Studio
+# Rotate Always Encrypted keys using SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 This article describes tasks for rotating Always Encrypted column master keys and column encryption keys with [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md).
 
-For an overview of Always Encrypted key management, including best practice recommendations and important security considerations, see [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
+For an overview of Always Encrypted key management, including best practice recommendations and important security considerations, see [Overview of key management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 
 <a name="rotatecmk"></a>
 ## Rotate Column Master Keys
@@ -58,7 +58,7 @@ In this step, you need to make sure that all your client applications that query
   - If the certificate is stored in the *Local computer* certificate store location, the application's Windows identity must have permission to access the certificate.
 - If the new column master key is stored in Microsoft Azure Key Vault, the application must be implemented so that it can authenticate to Azure and has permission to access the key.
 
-For details, see [Create and Store Column Master Keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+For details, see [Create and store column master keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 > [!NOTE]
 > At this point in the rotation, both the old column master key and the new column master key are valid and can be used to access the data.
@@ -103,7 +103,7 @@ You also need to be able to access both the old column master key and the new co
 - **Key Store Provider (CNG)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the KSP configuration.
 - **Cryptographic Service Provider (CAPI)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the CSP configuration.
 
-For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+For more information, see [Create and store column master keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 <a name="rotatecek"></a> 
 ## Rotate Column Encryption Keys
@@ -138,12 +138,12 @@ You also need to be able to access column master keys for both the new and the o
 For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ## Next Steps
-- [Query Columns Protected with Always Encrypted using SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
-- [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
+- [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
 ## See Also
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Overview of Key Management for Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
+- [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
 - [Configure Always Encrypted using SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
 - [Configure Always Encrypted using PowerShell](configure-always-encrypted-using-powershell.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

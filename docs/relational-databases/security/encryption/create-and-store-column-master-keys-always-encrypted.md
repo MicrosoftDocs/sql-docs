@@ -1,5 +1,5 @@
 ---
-title: "Create and Store Column Master Keys for Always Encrypted | Microsoft Docs"
+title: "Create and store column master keys for Always Encrypted | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/01/2019"
 ms.prod: sql
@@ -12,7 +12,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Create and Store Column Master Keys for Always Encrypted
+# Create and store column master keys for Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 *Column Master Keys* are key-protecting keys used in Always Encrypted to encrypt column encryption keys. Column master keys must be stored in a trusted key store, and the keys need to be accessible to applications that need to encrypt or decrypt data, and tools for configuring Always Encrypted and managing Always Encrypted keys.

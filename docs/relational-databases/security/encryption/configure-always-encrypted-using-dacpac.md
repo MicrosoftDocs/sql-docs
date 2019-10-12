@@ -1,5 +1,5 @@
 ---
-title: "Encrypt, Re-Encrypt or Decrypt Columns by Publishing a DAC Package  | Microsoft Docs"
+title: "Configure column encryption using Always Encrypted with a DAC package   | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019
 ms.prod: sql
@@ -17,7 +17,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Encrypt, Re-Encrypt or Decrypt Columns by Publishing a DAC Package
+# Configure column encryption using Always Encrypted with a DAC package 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 A [data-tier application (DAC) package](../../data-tier-applications/data-tier-applications.md), also known as a DACPAC, is a portable unit of SQL Server database deployment that defines all of the SQL Server objects, including tables and columns inside the tables. When you publish a DACPAC to a database (when you upgrade a database using a DACPAC), the schema of the target database gets update to match the schema in the DACPAC. You can publish a DACPAC using [the Upgrade Data-tier Application Wizard](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard) in SQL Server Management Studio, [PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell), or [sqlpackage](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables).
@@ -51,12 +51,12 @@ For more information, see [Create and Store Column Master Keys (Always Encrypted
  
 ## Next Steps
 - [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
-- [Query Columns Protected with Always Encrypted using SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 
 ## See Also  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
- - [Overview of Key Management for Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
+ - [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
  - [Configure Always Encrypted using SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
- - [Encrypt, Re-Encrypt or Decrypt Columns using Always Encrypted Wizard](always-encrypted-wizard.md)
- - [Encrypt, Re-Encrypt or Decrypt Columns by Publishing a DAC Package](configure-always-encrypted-using-dacpac.md)
+ - [Configure column encryption using Always Encrypted Wizard](always-encrypted-wizard.md)
+ - [Configure column encryption using Always Encrypted with PowerShell](configure-column-encryption-using-powershell.md)
  

@@ -21,6 +21,30 @@ ms.technology: big-data-cluster
 
 The way a SQL Server big data cluster consumes these persistent volumes is by using [Storage Classes](https://kubernetes.io/docs/concepts/storage/storage-classes/). You can create different storage classes for different kind of storage and specify them at the big data cluster deployment time. You can configure which storage class and the persistent volume claim size to use for which purpose at the pool level. A SQL Server big data cluster creates [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) with the specified storage class name for each component that requires persistent volumes. It then mounts the corresponding persistent volume(s) in the pod. 
 
+Here are some important aspects to consider when you are planning storage configuration for your big data cluster:
+
+1. For a successful big data cluster deployment, you must ensure the required number of persistent volumes are available. If you are deploying on an AKS cluster and you are using one of the built-in storage classes (`default` or `managed-premium`) - these support dynamic provisioning for the persistent volumes. This means that you do not have to pre-create the persistent volumes, but you must ensure the worker nodes available in the AKS cluster can attach as many disks as persistent volumes are necessary for the deployment. Depending on the [VM size](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes) specified for the worker nodes, each node can attach a certain number of disks. For a default size cluster(with no high availability), a minimum of 24 disks are required. If you are enabling high availability or scaling up any pool, you must ensure at a minimum two persisted volumes per each additional replica, irrespective of the resource you are scaling up.
+
+1. If the storage provisioner for the storage class you are providing in the configuration does not support dynamic provisioning, you must pre-create the persisted volumes. For example, the `local-storage` provisioner does not enable dynamic provisioning. See this [sample script](https://github.com/microsoft/sql-server-samples/tree/cu1-bdc/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) on how to do so in a Kubernetes cluster deployed with `kubeadm`.
+
+1. When you deploy a big data cluster, you can configure same storage class to be used by all components in the cluster. But as a best practice for a production deployment, various components will require different storage configurations to accommodate various workloads in terms of size or throughput. You can overwrite the default storage configuration specified in the controller for each of the SQL Server master instance, data and storage pools. This article provides examples how to do this.
+
+1. As of SQL Server 2019 CU1 release, you can't modify storage configuration setting post deployment. This includes not all modifying the size of the persistent volume claim for each instance, but also scaling operations post deployment are not supported. So planning the storage layout before big data cluster is very important.
+
+1. By the nature of deploying on Kubernetes as containerized applications, and using features like stateful sets and persistent storage, Kubernetes ensures that pods are restarted in case of health issues and attached to the same persistent storage. But in case there is a node failure and pod must be restarted on another node, there is increased risk of unavailability if the storage is local to the failed node. To overcome this risk, you must either configure additional redundancy and enable [high availability features](deployment-high-availability.md) or use remote redundant storage. Here is an overview of the storage options for various components in the big data clusters.
+
+| Resources | Storage type for data | Storage type for log |  Notes |
+|---|---|---|--|
+| SQL Server master instance | Local (replicas>=3) or Remote redundant storage (replica=1) | Local storage | Stateful set based implementation where pods stick to the nodes will ensure restarts and transient failures won’t cause data loss. |
+| Compute pool | Local storage* | Local storage | No user data stored. |
+| Data pool | Local/Remote redundant storage | Local storage | Use remote redundant storage if data pool can not be rebuilt from other data sources.  |
+| Storage pool (HDFS) | Local/Remote redundant storage | Local storage | HDFS replication is enabled. |
+| Spark pool | Local storage* | Local storage | No user data stored. |
+| Control (controldb, metricsdb, logsdb)| Remote redundant storage | Local storage | Critical to use storage level redundancy for big data cluster metadata. |
+
+> [!IMPORTANT]
+> You must ensure control related components are on remote redundant storage. `controldb-0` pod hosts a SQL Server instance with databases that store all metadata about the cluster service states,  various settings etc. Unavailability of this instance will cause health issues with other dependent services in the cluster.
+
 ## Configure big data cluster storage settings
 
 Similar to other customizations, you can specify storage settings in the cluster configuration files at deployment time for each pool in the **bdc.json** configuration file and for the control services in the **control.json** file. If there are no storage configuration settings in the pool specifications, then the control storage settings will be used **for all other components**, including SQL Server master (**master** resource), HDFS (**storage-0** resource) or data pool. This is a sample of the storage configuration section that you can include in the spec:
@@ -42,9 +66,6 @@ Similar to other customizations, you can specify storage settings in the cluster
 
 Deployment of big data cluster will use persistent storage to store data, metadata and logs for various components. You can customize the size of the persistent volume claims created as part of the deployment. As a best practice, we recommend to use storage classes with a *Retain* [reclaim policy](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
 
-> [!NOTE]
-> In CTP 3.2, you can't modify storage configuration setting post deployment. Also, only `ReadWriteOnce` access mode for the whole cluster is supported.
-
 > [!WARNING]
 > Running without persistent storage can work in a test environment, but it could result in a non-functional cluster. Upon pod restarts, cluster metadata and/or user data will be lost permanently. We do not recommend to run in this configuration. 
 
@@ -56,11 +77,6 @@ AKS comes with [two built-in storage classes](https://docs.microsoft.com/azure/a
 
 > [!WARNING]
 > Persistent volumes created with the built-in storage classes **default** and **managed-premium** have a reclaim policy of *Delete*. So at the time the you delete the SQL Server big data cluster, persistent volume claims get deleted and then persistent volumes as well. You can create custom storage classes using **azure-disk** privioner with a *Retain* reclaim policy as shown in  [this](https://docs.microsoft.com/azure/aks/concepts-storage#storage-classes) article.
-
-
-## Minikube storage class
-
-Minikube comes with a built-in storage class called **standard** along with a dynamic provisioner for it. The built in configuration file for minikube *minikube-dev-test* has the storage configuration settings in the control plane spec. The same settings will be applied to all pools specs. You can also customize a copy of this file and use it for your big data cluster deployment on minikube. You can manually edit the custom file and change the size of the persistent volumes claims for specific pools to accommodate the workloads you want to run. Or, see [Configure storage](#config-samples) section for examples on how to do edits using *azdata* commands.
 
 ## Kubeadm storage classes
 
@@ -137,4 +153,3 @@ azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 For complete documentation about volumes in Kubernetes, see the [Kubernetes documentation on Volumes](https://kubernetes.io/docs/concepts/storage/volumes/).
 
 For more information about deploying a SQL Server big data cluster, see [How to deploy SQL Server big data cluster on Kubernetes](deployment-guidance.md).
-

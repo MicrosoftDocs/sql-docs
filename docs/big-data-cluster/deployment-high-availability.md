@@ -17,11 +17,10 @@ ms.technology: big-data-cluster
 
 By the nature of deploying SQL Server Big Data Clusters on Kubernetes as containerized applications, and using features like stateful sets and persistent storage, this infrastructure has already built-in health monitoring, failure detection, and failover mechanisms that big data clusters components are leveraging to maintain services health. For increased reliability, you can also configure SQL Server master instance or HDFS name node and Spark shared services to be deployed with additional replicas in a high availability configuration. Monitoring, failure detection, and automatic failover are managed by big data cluster management service, namely the control service, without user intervention – all from availability group setup, configuring database mirroring endpoints, to adding databases to the availability group or failover and upgrade coordination. 
 
-
 Here are some of the capabilities that availability groups enable:
 
-1. If the high availability settings are specified in the deployment configuration file, a single availability group named `containedag` is created. By default, `containedag` has three replicas, including primary. All CRUD operations for the availability group are managed internally, including creating the availability group or joining replicas to the availability group created. Additional availability groups can not be created in the SQL Server master instance in a big data cluster.
-1. All databases are automatically added to the availability group, including all user and system databases like `master` and `msdb`. This provides a single-system view across the availability group replicas. Additional model databases - `model_replicatedmaster` and `model_msdb` - are used to seed the replicated portion of the system databases. In addition to these databases, you will see `containedag_master` and `containedag_msdb` databases if you connect directly to the instance. The `containedag` databases represent the `master` and `msdb` inside the availability group.
+1. If the high availability settings are specified in the deployment configuration file, a single availability group named `containedag` is created. By default, `containedag` has three replicas, including primary. All CRUD operations for the availability group are managed internally, including creating the availability group or joining replicas to the availability group created. Additional availability groups cannot be created in the SQL Server master instance in a big data cluster.
+1. All databases are automatically added to the availability group, including all user and system databases like `master` and `msdb`. This capability provides a single-system view across the availability group replicas. Additional model databases - `model_replicatedmaster` and `model_msdb` - are used to seed the replicated portion of the system databases. In addition to these databases, you will see `containedag_master` and `containedag_msdb` databases if you connect directly to the instance. The `containedag` databases represent the `master` and `msdb` inside the availability group.
 
 > [!IMPORTANT]
 > At the time of the SQL Server 2019 CU1 release, only databases created as result of a CREATE DATABASE statement are automatically added to the availability group. Databases created on the instance as result of other workflows like restore are not yet added to the availability group and big data cluster admin would have to do this manually. See the [Connect to SQL Server instance](#instance-connect) section for instructions.
@@ -30,8 +29,7 @@ Here are some of the capabilities that availability groups enable:
 1. An external endpoint is automatically provisioned for connecting to databases within the availability group. This endpoint `master-svc-external` plays the role of the availability group listener.
 1. A second external endpoint is provisioned for read-only connections to the secondary replicas to scale out the read workloads.
 
-
-# Deploy
+E# Deploy
 
 To deploy SQL Server master in an availability group:
 
@@ -118,7 +116,7 @@ azdata bdc endpoint list -e sql-server-master-readonly -o table
 
 ### <a id="instance-connect"></a> Connect to SQL Server instance
 
-For certain operations like setting server level configurations or manually adding a database to the availability group (in case database was created with a restore workflow), you need a connection to the instance. To provide this connection, expose an external endpoint. Here is an example that shows how to expose this endpoint and then add the database that was created with a restore workflow to the availability group. Similar instructions for setting up a conenction to the SQL Server master instance apply when you want to change seerver configurations with `sp_configure`.
+For certain operations like setting server level configurations or manually adding a database to the availability group (in case database was created with a restore workflow), you need a connection to the instance. To provide this connection, expose an external endpoint. Here is an example that shows how to expose this endpoint and then add the database that was created with a restore workflow to the availability group. Similar instructions for setting up a connection to the SQL Server master instance apply when you want to change server configurations with `sp_configure`.
 
 - Determine the pod that hosts the primary replica by connecting to the `sql-server-master` endpoint and run:
 

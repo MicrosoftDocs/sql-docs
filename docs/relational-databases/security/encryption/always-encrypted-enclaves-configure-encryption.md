@@ -26,7 +26,7 @@ The supported cryptographic operations and the requirements for column encryptio
 - Encrypting a plaintext column. The column encryption key used to encrypt the column must be enclave-enabled.
 - Re-encrypting an encrypted column using a new encryption type or/and a new column encryption key. Both the current column encryption key and the new column encryption key (if different than the current key) must be enclave-enabled.
 - Decrypting an encrypted column - the column encryption key, protecting the column, must be enclave-enabled.
-See [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-key-management.md) for information how to ensure your column encryption keys are enclave-enabled.
+See [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md) for information how to ensure your column encryption keys are enclave-enabled.
 
 In-place encryption also requires a SQL Server instance that has a correctly initialized secure enclave. See [column encryption enclave type Server Configuration Option](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md).
 

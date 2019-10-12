@@ -14,18 +14,18 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 # Enable Always Encrypted with secure enclaves for existing encrypted columns 
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-This article describes how to unlock the functionality of Always Encrypted with secure enclaves for existing columns that currently are not encrypted with enclave-enabled keys.
+This article describes how to unlock the functionality of Always Encrypted with secure enclaves for existing encrypted columns. 
 
-There are several ways to enable the enclave functionality for an existing column that isn't enclave-enabled. Which method you choose, depends on several factors:
+If you have existing columns, encrypted with keys that are not enclave-enabled, you can make the columns encrypted with enclave-enabled keys, to enable the use of a secure enclave in queries on your columns. You do that using in a few different ways, depending on:
 
 - **Scope/granularity:** Do you want to enable the enclave functionality for a subset of columns, or for all columns protected with a given column master key?
 - **Data size:** What is the size of the tables containing the column(s) you want to make enclave-enabled?
-- Do you also want to change the encryption type for your column(s)? Remember that only randomized encryption supports rich computations (pattern matching, comparison operators). If your column is encrypted using deterministic encryption, you'll also need to re-encrypt it with randomized encryption to unlock the full functionality of Always Encrypted with secure enclaves.
+- Do you also want to change the encryption type for your column(s)? Remember that only randomized encryption supports rich computations (pattern matching, comparison operators). If your column is encrypted using deterministic encryption, you'll also need to re-encrypt it with randomized encryption to unlock rich computations.
 
 Here are the three approaches for enabling enclaves for existing columns:
 
 ## Method 1: Rotate the column master key to replace it with an enclave-enabled column master key
-Replacing an existing column master key (that is not enclave-enabled) with a new column master key that is enclave-enabled effectively makes all column encryption keys (associated with the column master key) also enclave-enabled. Consequently, all column encryption keys, impacted by the rotation, will be permitted to be used for enclave computations on columns they encrypt.
+Replacing an existing column master key (that is not enclave-enabled) with a new column master key that is enclave-enabled effectively makes all column encryption keys (associated with the column master key) also enclave-enabled. 
 
 - Pros:
   - Doesn't involve re-encrypting data, so it's typically the fastest approach. It's a recommended approach for columns containing large amounts of data, providing all columns, you need to enable rich computations for, already use deterministic encryption and, thus, do not need to be re-encrypted.
@@ -48,10 +48,10 @@ This method involves executing Method 1 as the first stage, and subsequently re-
   - Doesn't allow you to selectively convert some of the columns, associated with a given column master key.
   - It introduces key management overhead - you need to create a new column master key and make it available to applications that query the impacted columns.
 
-For information on how to rotate a column master key and and re-encrypt a column in-place to rotate a column encryption key, see [Rotate enclave-enabled keys](always-encrypted-enclaves-rotate-keys.md).
+For information on how to rotate a column master key and re-encrypt a column in-place to rotate a column encryption key, see [Rotate enclave-enabled keys](always-encrypted-enclaves-rotate-keys.md).
 
-## Method 3: Re-encrypt a selected column with a an enclave-enabled column encryption key the client side
-This method involves re-encrypting a column with an enclave-enabled column encryption key and, if needed, randomized encryption (if the column is encrypted using deterministic encryption). Since the current column encryption key is not enclave-enabled, re-encryption cannot be performed in-place and it requires using tools, such as the Always Encrypted wizard or the Set-SqlColumnEncryption cmdlet, which perform re-encryption outside of the database.
+## Method 3: Re-encrypt a selected column with an enclave-enabled column encryption key the client side
+This method involves re-encrypting a column with an enclave-enabled column encryption key and, if needed, randomized encryption. Since the current column encryption key is not enclave-enabled, you cannot re-encrypt it in-place. Use the Always Encrypted wizard or the Set-SqlColumnEncryption cmdlet to re-encrypt the column outside of the database.
  
 - Pros - this method:
   - Allows you selectively to enable the enclave functionality for one column or a small subset of columns.
@@ -59,7 +59,8 @@ This method involves re-encrypting a column with an enclave-enabled column encry
   - It doesn't require creating a new column master key, so it has a smaller impact on applications.
   
 - Cons:
-  - The entire content of the table that contains the column needs to be moved outside of the database for re-encryption, so it is recommended only for small tables.
+  - To re-encrypt the data, the tool will move it out of the database, which can take a long time. 
+
 
 For more information on how to rotate a column encryption via a client-side tool, see [Rotate Always Encrypted keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md) and  [Rotate Always Encrypted keys using PowerShell](rotate-always-encrypted-keys-using-powershell.md).
 

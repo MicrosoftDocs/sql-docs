@@ -12,14 +12,14 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Configure enclave type for Always Encrypted Server Configuration Option
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 This article describes how to enable or disable a secure enclave for Always Encrypted with secure enclaves. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 The **column encryption enclave type** Server Configuration Option controls the type of a secure enclave used for Always Encrypted. The option can be set to one of the following values:  
   
 |Value|Description|  
-|-------------------|-----------------|  
+|-------------------|-----------------| 
 |0|**No secure enclave**. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] will not initialize the secure enclave for Always Encrypted. As a result, the functionality of Always Encrypted with secure enclaves will not be available.|  
 |1|**Virtualization based security (VBS)**. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] will attempt to initialize a virtualization-based security (VBS) enclave.
 

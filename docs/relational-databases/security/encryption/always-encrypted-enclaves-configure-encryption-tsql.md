@@ -37,7 +37,7 @@ The remainder of this article describes how to trigger in-place encryption  usin
 - SQL Server Management Studio 18.4 or newer.
 
 ### Steps
-1. Open a query window with Always Encrypted and enclave computations enabled in the database connection. For details, see [Prepare an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
+1. Open a query window with Always Encrypted and enclave computations enabled in the database connection. For details, see [Enabling and disabling Always Encrypted for a database connection ](always-encrypted-query-columns-ssms.md#en-dis).
 2. In the query window, issue the `ALTER TABLE`/`ALTER COLUMN` statement, specifying an enclave-enabled column encryption key in the `ENCRYPTED WITH` clause. If your column is a string column (for example, char, varchar, nchar, nvarchar), you may also need to change the collation to a BIN2 collation. See ... for details.
     
     > [!NOTE]

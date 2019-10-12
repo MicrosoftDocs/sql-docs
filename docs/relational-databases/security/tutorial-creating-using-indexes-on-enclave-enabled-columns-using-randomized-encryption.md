@@ -14,7 +14,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Tutorial: Create and use indexes on enclave-enabled columns using randomized encryption
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 This tutorial teaches you how to create and use indexes on enclave-enabled columns using randomized encryption supported in [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:
 

@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
 ms.custom: "seodec18"
-ms.date: "10/08/2019"
+ms.date: "10/11/2019"
 ms.reviewer: "alayu; sstein"
 ---
 
@@ -24,9 +24,9 @@ Download and install the latest release, the *October Release*:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|October 8, 2019 |1.12.1|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|October 8, 2019 |1.12.1|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2105131)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://azuredatastudiobuilds.blob.core.windows.net/releases/1.12.1/azuredatastudio-linux-1.12.1.tar.gz)|October 8, 2019 |1.12.1|
+|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|October 11, 2019 |1.12.2|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|October 11, 2019 |1.12.2|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2105131)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105132)|October 11, 2019 |1.12.2|
 
 For details about the latest release, see the [release notes](release-notes.md).
 
@@ -63,7 +63,7 @@ The *user installer* is recommended because it does not require administrator pr
 ## Get Azure Data Studio for Linux
 
 1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux by using one of the installers or the tar.gz archive:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2103004)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2105131)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105131)
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:

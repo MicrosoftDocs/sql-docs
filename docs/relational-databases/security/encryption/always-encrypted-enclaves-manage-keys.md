@@ -23,8 +23,12 @@ The general guidelines and processes for [managing Always Encrypted keys](overvi
 
 The following articles discuss the aspects specific to managing enclave-enabled keys.
 
+- [Provision enclave-enabled keys](always-encrypted-enclaves-provision-keys.md)
+- [Rotate enclave-enabled keys](always-encrypted-enclaves-rotate-keys.md)
+
+
 ## Next Steps
- - [Provision enclave-enabled keys](always-encrypted-enclaves-provision-keys.md)
+- [Provision enclave-enabled keys](always-encrypted-enclaves-provision-keys.md)
 
 ## See Also  
 - [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md)

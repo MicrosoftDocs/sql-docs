@@ -14,31 +14,31 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 # Configure column encryption in-place with Transact-SQL
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-This article describes how to use the [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md)/`ALTER COLUMN` statement to perform cryptographic operations in place on columns using Always Encrypted with secure enclaves with the [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md)/`ALTER COLUMN` statement. For basic information about in-place encryption and general pre-requisites, see [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
+This article describes how to perform cryptographic operations in-place on columns using Always Encrypted with secure enclaves with the `ALTER TABLE`/`ALTER COLUMN` statement. For basic information about in-place encryption and general pre-requisites, see [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
 
-With the `ALTER TABLE`/`ALTER COLUMN` statement you can set the target encryption configuration for a column. When your execute the statement, a column can be encrypted, re-encrypted, or decrypted, depending on the current and the target encryption configuration, specified in the column definition in the statement. 
-- If the column is currently not encrypted, it will be encrypted if you specify the `ENCRYPTED WITH` clause om the column definition.
-- If the column is currently encrypted, it will be decrypted (converted to a plaintext column), if you do not specify the `ENCRYPTED WITH` clause the column definition.
+With the `ALTER TABLE`/`ALTER COLUMN` statement you can set the target encryption configuration for a column. When your execute the statement, the server-side secure enclave will encrypt, re-encrypt, or decrypt the data stored in the column, depending on the current and the target encryption configuration, specified in the column definition in the statement. 
+- If the column is currently not encrypted, it will be encrypted if you specify the `ENCRYPTED WITH` clause in the column definition.
+- If the column is currently encrypted, it will be decrypted (converted to a plaintext column), if you do not specify the `ENCRYPTED WITH` clause in the column definition.
 - If the column is currently encrypted, it will be re-encrypted if you specify the `ENCRYPTED WITH` clause and the specified column encryption type or the column encryption key are different from the currently used encryption type or the column encryption key. 
 
 > [!NOTE]
-> You cannot combine cryptographic operations with other changes to the definition of a column in a single an `ALTER TABLE`/`ALTER COLUMN` statement, except changing the column to `NULL` or `NOT NULL`, or changing the column collation. 
+> You cannot combine cryptographic operations with other changes in a single an `ALTER TABLE`/`ALTER COLUMN` statement, except changing the column to `NULL` or `NOT NULL`, or changing a collation. For example, you cannot encrypt a column AND change a data type of the column in a single `ALTER TABLE`/`ALTER COLUMN` Transact-SQL statement. Use two separate statements.
 
-As for any query that uses a server-side secure enclave, an `ALTER TABLE`/`ALTER COLUMN` statement that triggers in-place encryption must be sent over a connection with Always Encrypted and enclave computations enabled. 
+As any query that uses a server-side secure enclave, an `ALTER TABLE`/`ALTER COLUMN` statement that triggers in-place encryption must be sent over a connection with Always Encrypted and enclave computations enabled. 
 
 The remainder of this article describes how to trigger in-place encryption  using `ALTER TABLE`/`ALTER COLUMN` from SQL Server Management Studio. Alternatively, you can issue `ALTER TABLE`/`ALTER COLUMN` from your application. 
 
 > [!NOTE]
-> Currently, other tools, including the [Invoke-Sqlcmd](https://docs.microsoft.com/en-us/powershell/module/sqlserver/invoke-sqlcmd) cmdlet in the SqlServer PowerShell module and [sqlcmd](../../../tools/sqlcmd-utility.md) do not support using `ALTER TABLE`/`ALTER COLUMN` for cryptographic operations.
+> Currently, tools other than SSMS, including the [Invoke-Sqlcmd](https://docs.microsoft.com/en-us/powershell/module/sqlserver/invoke-sqlcmd) cmdlet in the SqlServer PowerShell module and [sqlcmd](../../../tools/sqlcmd-utility.md), do not support using `ALTER TABLE`/`ALTER COLUMN` for in-place cryptographic operations.
 
 ## Perform in-place encryption with Transact-SQL in SSMS
 ### Pre-requisites
 - Pre-requisites described in [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
-- SQL Server Management Studio 18.4 or newer.
+- SQL Server Management Studio 18.3 or higher.
 
 ### Steps
 1. Open a query window with Always Encrypted and enclave computations enabled in the database connection. For details, see [Enabling and disabling Always Encrypted for a database connection ](always-encrypted-query-columns-ssms.md#en-dis).
-2. In the query window, issue the `ALTER TABLE`/`ALTER COLUMN` statement, specifying an enclave-enabled column encryption key in the `ENCRYPTED WITH` clause. If your column is a string column (for example, char, varchar, nchar, nvarchar), you may also need to change the collation to a BIN2 collation. See ... for details.
+2. In the query window, issue the `ALTER TABLE`/`ALTER COLUMN` statement, specifying an enclave-enabled column encryption key in the `ENCRYPTED WITH` clause. If your column is a string column (for example, `char`, `varchar`, `nchar`, `nvarchar`), you may also need to change the collation to a BIN2 collation. 
     
     > [!NOTE]
     > If your column master key is stored in Azure Key Vault, you might be prompted to sign in to Azure.
@@ -59,10 +59,10 @@ The remainder of this article describes how to trigger in-place encryption  usin
 ### Examples
 #### Encrypting a column in-place
 The below example assumes:
-- CEK1 is an enclave-enabled column encryption key.
-- The SSN column is plaintext and is currently using the default database collation, e.g. a Latin1, non-BIN2 collation (for example, Latin1\_General\_CI\_AI\_KS\_WS).
+- `CEK1` is an enclave-enabled column encryption key.
+- The `SSN` column is plaintext and is currently using the default database collation, e.g. a Latin1, non-BIN2 collation (for example, `Latin1\_General\_CI\_AI\_KS\_WS`).
 
-The statement encrypts the SSN column using randomized encryption and enclave-enabled column encryption key. It also overwrites the default database collation with the corresponding (in the same code page) BIN2 collation.
+The statement encrypts the `SSN` column using randomized encryption and the enclave-enabled column encryption key in-place. It also overwrites the default database collation with the corresponding (in the same code page) BIN2 collation.
 
 The operation is performed online (`ONLINE = ON`). Also note the call to `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` which recreates the plans of the queries impacted by the table schema change.
 
@@ -79,10 +79,10 @@ GO
 
 #### Re-encrypt a column in-place to change encryption type
 The below example assumes:
-- The SSN column is encrypted using deterministic encryption and an enclave-enabled column encryption key, CEK1.
-- The current collation, set at the column level, is Latin1\_General\_BIN2.
+- The `SSN` column is encrypted using deterministic encryption and an enclave-enabled column encryption key, `CEK1`.
+- The current collation, set at the column level, is `Latin1\_General\_BIN2`.
 
-The below statement re-encrypts the column using randomized encryption and the same key (CEK1)
+The below statement re-encrypts the column using randomized encryption and the same key (`CEK1`)
 
 ```sql
 ALTER TABLE [dbo].[Employees]
@@ -97,11 +97,11 @@ GO
 
 #### Re-encrypt a column in-place to rotate a column encryption key
 The below example assumes:
-- The SSN column is encrypted using randomized encryption and an enclave-enabled column encryption key, CEK1.
-- CEK2 is an enclave-enabled column encryption key (different from CEK1).
-- The current collation, set at the column level, is Latin1\_General\_BIN2.
+- The `SSN` column is encrypted using randomized encryption and an enclave-enabled column encryption key, `CEK1`.
+- `CEK2` is an enclave-enabled column encryption key (different from `CEK1`).
+- The current collation, set at the column level, is `Latin1\_General\_BIN2`.
 
-The below statement re-encrypts the column with CEK2.
+The below statement re-encrypts the column with `CEK2`.
 
 ```sql
 ALTER TABLE [dbo].[Employees]
@@ -115,8 +115,8 @@ GO
 ```
 #### Decrypt a column in-place
 The below example assumes:
-- The SSN column is encrypted using an enclave-enabled column encryption key.
-- The current collation, set at the column level, is Latin1\_General\_BIN2.
+- The `SSN` column is encrypted using an enclave-enabled column encryption key.
+- The current collation, set at the column level, is `Latin1\_General\_BIN2`.
 
 The below statement decrypts the column (and keeps the collation unchanged - alternatively, you can choose to change the collation, for example, to a non-BIN2 collation in the same statement).
 
@@ -131,9 +131,10 @@ GO
 
 ## Next Steps
 - [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md)
-- [Create and use indexes on column using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
+- [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
 - [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
 ## See Also  
 - [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
+- [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)

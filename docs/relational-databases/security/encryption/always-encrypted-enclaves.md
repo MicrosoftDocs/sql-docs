@@ -18,7 +18,7 @@ Always Encrypted with secure enclaves provides additional functionality to the [
 
 Introduced in SQL Server 2016, Always Encrypted protects the confidentiality of sensitive data from malware and high-privileged *unauthorized* users of SQL Server. High-privileged unauthorized users are DBAs, computer admins, cloud admins, or anyone else who has legitimate access to server instances, hardware, etc., but who should not have access to some or all of the actual data. 
 
-Until now, Always Encrypted protected the data by encrypting it on the client side and never allowing the data or the corresponding cryptographic keys to appear in plaintext inside the SQL Server Engine. As a result, the functionality on encrypted columns inside the database was severely restricted. The only operations SQL Server could perform on encrypted data were equality comparisons (and equality comparisons were only available with deterministic encryption). All other operations, including cryptographic operations (initial data encryption or key rotation), or rich computations (for example, pattern matching) were not supported inside the database. Users needed to move the data outside of the database to perform these operations on the client-side.
+Without the enhancements discussed in this article, Always Encrypted protects the data by encrypting it on the client side and never allowing the data or the corresponding cryptographic keys to appear in plaintext inside the SQL Server Engine. As a result, the functionality on encrypted columns inside the database is severely restricted. The only operations SQL Server can perform on encrypted data are equality comparisons (only available with deterministic encryption). All other operations, including cryptographic operations (initial data encryption or key rotation) and or rich computations (for example, pattern matching) are not supported inside the database. Users need to move their data outside of the database to perform these operations on the client-side.
 
 Always Encrypted *with secure enclaves* addresses these limitations by allowing computations on plaintext data inside a secure enclave on the server side. A secure enclave is a protected region of memory within the SQL Server process, and acts as a trusted execution environment for processing sensitive data inside the SQL Server engine. A secure enclave appears as a black box to the rest of the SQL Server and other processes on the hosting machine. There is no way to view any data or code inside the enclave from the outside, even with a debugger.  
 
@@ -53,7 +53,7 @@ In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], Always Encrypt
 
 The secure enclave inside the SQL Server Engine can access sensitive data stored in encrypted database columns and the corresponding column encryption keys in plaintext. Before submitting a query that involves enclave computations to SQL Server, the client driver inside the application must verify the secure enclave is a genuine enclave based on a given technology (for example, VBS) and the code running inside the enclave has been signed for running inside the enclave. 
 
-The process of verifying the enclave is called **enclave attestation**, and it usually involves both a client driver within the application and SQL Server contacting an external attestation service. The specifics of the attestation process depend on the enclave technology and the attestation service.
+The process of verifying the enclave is called **enclave attestation**, and it involves both a client driver within the application and SQL Server contacting an external attestation service. The specifics of the attestation process depend on the enclave technology and the attestation service.
 
 The attestation process SQL Server supports for VBS secure enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] is Windows Defender System Guard runtime attestation, which uses Host Guardian Service (HGS) as an attestation service. You need to configure HGS in your environment and register the machine hosting your SQL Server instance in HGS. You also must configure you client applications or tools (for example, SQL Server Management Studio) with an HGS attestation.
 
@@ -113,7 +113,7 @@ You can create nonclustered indexes on enclave-enabled columns using randomized 
 
 Creating indexes on columns that use randomized encryption and are not enclave-enabled remains unsupported.
 
-For more details, see [Create and use indexes on column using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md). For general information, not specific to Always Encrypted, on how indexing in SQL Server works, see [Clustered and Nonclustered Indexes Described](../../indexes/clustered-and-nonclustered-indexes-described.md).
+For more details, see [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md). For general information, not specific to Always Encrypted, on how indexing in SQL Server works, see [Clustered and Nonclustered Indexes Described](../../indexes/clustered-and-nonclustered-indexes-described.md).
 
 #### Database Recovery
 
@@ -147,8 +147,7 @@ If your database contains indexes on enclave-enabled columns using randomized en
 When you migrate your database using a bacpac file, you need to make sure you drop all indexes enclave-enabled columns using randomized encryption before creating the bacpac file.
 
 ## Known Limitations
-
-Secure enclaves enhance the functionality of Always Encrypted. The following capabilities **are now supported for enclave-enabled columns**:
+Always Encrypted with secure enclaves addresses some limitations of Always Encrypted, by enabling the following operations:
 
 - In-place cryptographic operations.
 - Pattern matching (LIKE) and comparison operators on column encrypted using randomized encryption.
@@ -156,7 +155,7 @@ Secure enclaves enhance the functionality of Always Encrypted. The following cap
     > The above operations are supported for character string columns that use collations with a binary2 sort order (BIN2 collations). Character string columns using non-BIN2 collations can be encrypted using randomized encryption and enclave-enabled column encryption keys. However, the only new functionality that is enabled for such columns is in-place encryption.
 - Creating nonclustered indexes on columns using randomized encryption.
 
-All other limitations (not addressed by the above enhancements) that are listed for Always Encrypted (without secure enclaves) at [Feature Details](always-encrypted-database-engine.md#feature-details) also apply to Always Encrypted with secure enclaves.
+All other limitations for Always Encrypted listed at [Feature Details](always-encrypted-database-engine.md#feature-details) also apply to Always Encrypted with secure enclaves.
 
 The following limitations are specific to Always Encrypted with secure enclaves:
 
@@ -166,22 +165,24 @@ The following limitations are specific to Always Encrypted with secure enclaves:
 - Queries with the LIKE operator or a comparison operator that has a query parameter using one of the following data types (that become large objects after encryption) ignore indexes and perform table scans.
     - nchar[n] and nvarchar[n], if n is greater than 3967.
     - char[n], varchar[n], binary[n], varbinary[n], if n is greater than 7935.
-- In-place cryptographic operations cannot be combined with any other changes of column metadata, except changing a collation within the same code page and nullability. For example, you cannot encrypt, re-encrypt, or decrypt a column AND change a data type of the column in a single ALTER TABLE or ALTER COLUMN Transact-SQL statement. Use two separate statements.
+- In-place cryptographic operations cannot be combined with any other changes of column metadata, except changing a collation within the same code page and nullability. For example, you cannot encrypt, re-encrypt, or decrypt a column AND change a data type of the column in a single `ALTER TABLE`/`ALTER COLUMN` Transact-SQL statement. Use two separate statements.
 - Using enclave-enabled keys for columns in in-memory tables isn't supported.
 - Expressions defining computed columns cannot perform any computations on enclave-enabled columns using randomized encryption (even if the computations are LIKE and range comparisons)..
 - The only supported key stores for storing enclave-enabled column master keys are Windows Certificate Store and Azure Key Vault.
-
-The following limitations apply to [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], but are on the roadmap to be addressed:
-
 - Creating statistics for enclave-enabled columns using randomized encryption is not supported.
-- The only client driver supporting Always Encrypted with secure enclaves is .NET Framework Data Provider for SQL Server (ADO.NET) in .NET Framework 4.7.2. ODBC/JDBC isn't supported.
-- Tooling support for Always Encrypted with secure enclaves is currently incomplete. In particular:
-  - Import/exporting databases containing enclave-enabled keys is not supported.
-  - To trigger an in-place cryptographic operation via an ALTER TABLE Transact-SQL statement, you need to issue the statement using a query window in SSMS, or you can write your own program that issues the statement. The Set-SqlColumnEncryption cmdlet in the SqlServer PowerShell module and the Always Encrypted wizard in SQL Server Management Studio do not support in-place encryption yet - both tools currently move the data out of the database for cryptographic operations, even if the column encryption keys used for the operations are enclave-enabled.
 - DBCC commands checking the integrity of indexes or updating indexes are not supported.
 - Creating indexes on encrypted columns at the time of creating the table (via CREATE TABLE). You need to create an index on an encrypted column separately via CREATE INDEX.
+- Tooling limitations:
+  - Importing/exporting databases containing enclave-enabled keys is not supported.
+  - To trigger an in-place cryptographic operation via an ALTER TABLE Transact-SQL statement, you need to issue the statement using a query window in SSMS, or you can write your own program that issues the statement. Currently, the Set-SqlColumnEncryption cmdlet in the SqlServer PowerShell module and the Always Encrypted wizard in SQL Server Management Studio do not support in-place encryption - they move the data out of the database for cryptographic operations, even if the column encryption keys used for the operations are enclave-enabled.
 
 ## Next steps
-
 - [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+## See also
+- [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)
+- [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
+- [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md)
+- [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md)
+- [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
+
 

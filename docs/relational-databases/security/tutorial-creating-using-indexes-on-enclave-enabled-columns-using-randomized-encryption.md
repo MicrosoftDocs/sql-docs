@@ -169,4 +169,4 @@ In this step, you'll create an index on an encrypted column, pretending to be tw
 - [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
 ## See also
-- [Create and use indexes on column using Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves-create-use-indexes.md)
+- [Create and use indexes on columns using Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves-create-use-indexes.md)

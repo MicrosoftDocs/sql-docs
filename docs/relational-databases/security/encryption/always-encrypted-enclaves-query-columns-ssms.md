@@ -15,17 +15,20 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 This articles describes how to use SQL Server Management Studio to issue queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), including:
-- Queries that trigger in-place cryptographic operations - see [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
-- Queries including range comparisons or pattern matching operations on columns encrypted with enclave-enabled keys.
+- Queries that trigger in-place cryptographic operations.
+- Queries triggering rich computations, including range comparisons or pattern matching operations on columns encrypted with enclave-enabled keys.
+- Queries that create or update indexes on encrypted columns using randomized encryption and enclave-enabled keys.
 
 To use SSMS to run queries on encrypted columns using a secure enclave, follow  general instructions in [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md). Here are a few things that are specific to enclaves, you should be aware of:
 
 - You need SSMS version 18.3 or higher.
-- Make sure a query window, you are running queries utilizing a secure enclave from, uses a connection that has Always Encrypted and enclave computations enabled - see [Enabling and disabling Always Encrypted for a database connection ](always-encrypted-query-columns-ssms.md#en-dis).
+- Make sure a query window, you are running queries utilizing a secure enclave from, uses a connection that has Always Encrypted and enclave computations enabled - for detailed instructions, see [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md) and [Enabling and disabling Always Encrypted for a database connection ](always-encrypted-query-columns-ssms.md#en-dis).
 
 ## Next Steps
 - [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
 ## See Also  
 - [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
+- [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
 

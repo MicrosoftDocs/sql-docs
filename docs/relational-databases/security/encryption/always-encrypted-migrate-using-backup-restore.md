@@ -33,7 +33,7 @@ For detailed information about how to back up and restore a database, see:
 - [Restore a database to a Managed Instance](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance-get-started-restore)
 - 
 ## Next Steps
-- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
+- [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 
 ## See Also
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

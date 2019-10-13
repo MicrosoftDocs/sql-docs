@@ -132,7 +132,7 @@ GO
 ## Next Steps
 - [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md)
 - [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
-- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
+- [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 
 ## See Also  
 - [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)

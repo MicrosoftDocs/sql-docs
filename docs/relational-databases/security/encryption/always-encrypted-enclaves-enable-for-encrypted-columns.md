@@ -69,6 +69,6 @@ For more information on how to rotate a column encryption via a client-side tool
 
 ## Next Steps
 - [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md)
-- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
+- [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 
 

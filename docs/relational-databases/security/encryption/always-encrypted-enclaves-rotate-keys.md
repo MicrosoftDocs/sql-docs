@@ -35,7 +35,7 @@ The below high-level steps include links to detailed articles, depending on your
 ## Next Steps
 - [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md)
 - [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
-- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
+- [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 
 ## See Also  
 - [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)

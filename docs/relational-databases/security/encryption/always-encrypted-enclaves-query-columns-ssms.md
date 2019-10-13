@@ -25,7 +25,7 @@ To use SSMS to run queries on encrypted columns using a secure enclave, follow  
 - Make sure a query window, you are running queries utilizing a secure enclave from, uses a connection that has Always Encrypted and enclave computations enabled - for detailed instructions, see [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md) and [Enabling and disabling Always Encrypted for a database connection ](always-encrypted-query-columns-ssms.md#en-dis).
 
 ## Next Steps
-- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
+- [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 
 ## See Also  
 - [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)

@@ -27,7 +27,7 @@ This tutorial is the continuation of [Tutorial: Getting Started with Always Encr
 
 ## Step 1: Enable Accelerated Database Recovery (ADR) in your database
 
-Microsoft strongly recommends you enable ADR in your database before creating the first index on an enclave-enabled column using randomized encryption. See the [Database Recovery](./encryption/always-encrypted-enclaves.md##database-recovery) section in [Always Encrypted with Secure Enclaves](./encryption/always-encrypted-enclaves.md).
+Microsoft strongly recommends you enable ADR in your database before creating the first index on an enclave-enabled column using randomized encryption. See the [Database Recovery](./encryption/always-encrypted-enclaves.md##database-recovery) section in [Always Encrypted with secure enclaves](./encryption/always-encrypted-enclaves.md).
 
 1. Close any SSMS instances, you used in the previous tutorial. This will close database connections you've opened, which is required to enable ADR.
 1. Open a new instance of SSMS and connect to your SQL Server instance as sysadmin **without** Always Encrypted enabled for the database connection.

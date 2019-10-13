@@ -14,7 +14,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 # sys.dm_column_encryption_enclave (Transact-SQL)
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-Returns performance counters for the secure enclave for Always Encrypted. For more information, see [Always Encrypted with Secure Enclaves](../security/encryption/always-encrypted-enclaves.md).
+Returns performance counters for the secure enclave for Always Encrypted. For more information, see [Always Encrypted with secure enclaves](../security/encryption/always-encrypted-enclaves.md).
 
 If the enclave is configured and has been correctly initialized after the last restart of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the view contains exactly one row. If the enclave is not configured or it has not been correctly initialized, the view returns no rows. 
 

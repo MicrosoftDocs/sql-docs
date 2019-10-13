@@ -44,7 +44,6 @@ You do not need to have access to column master keys configured for the encrypte
 ## Next Steps
 - [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
-
 ## See Also
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Back up and restore databases using Always Encrypted ](always-encrypted-migrate-using-backup-restore.md)

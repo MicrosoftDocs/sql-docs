@@ -92,7 +92,7 @@ To enable (disable) Always Encrypted:
 1. If you are using SSMS 18 or newer:
     1. Select the **Always Encrypted** tab.
     1. To enable Always Encrypted, select **Enable Always Encrypted (column encryption)**. To disable Always Encrypted, make sure **Enable Always Encrypted (column encryption)** is not selected.
-    1. If your SQL Server instance is configured with a secure enclave, you can specify an enclave attestation url. If you SQL Server instance does not use a secure enclave, make sure you leave the **Enclave Attestation URL** textbox blank. See [Always Encrypted with Secure Enclaves](always-encrypted-enclaves.md) for more information.
+    1. If your SQL Server instance is configured with a secure enclave, you can specify an enclave attestation url. If you SQL Server instance does not use a secure enclave, make sure you leave the **Enclave Attestation URL** textbox blank. See [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) for more information.
 1. If you are using SSMS 17 or older:
     1. Select the **Additional Properties** tab.
     1. To enable Always Encrypted, type `Column Encryption Setting = Enabled`. To disable Always Encrypted, specify `Column Encryption Setting = Disabled` or remove the setting of **Column Encryption Setting** from the **Additional Properties** tab (its default value is **Disabled**).   

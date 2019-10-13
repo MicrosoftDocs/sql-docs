@@ -1,5 +1,5 @@
 ---
-title: "Always Encrypted with Secure Enclaves (Database Engine) | Microsoft Docs"
+title: "Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019
 ms.prod: sql
@@ -11,7 +11,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
-# Always Encrypted with Secure Enclaves
+# Always Encrypted with secure enclaves
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
  
 Always Encrypted with secure enclaves provides additional functionality to the [Always Encrypted](always-encrypted-database-engine.md) feature.

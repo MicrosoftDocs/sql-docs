@@ -1,5 +1,5 @@
 ---
-title: "Configure Always Encrypted with Secure Enclaves | Microsoft Docs"
+title: "Configure Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019
 ms.prod: sql

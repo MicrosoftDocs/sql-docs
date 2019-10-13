@@ -15,10 +15,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Using Always Encrypted with the .NET Framework Data Provider for SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-This article provides information on how to develop .NET applications using [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) and the [.NET Framework Data Provider for SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx).
+This article provides information on how to develop .NET applications using [Always Encrypted](always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) and the [.NET Framework Data Provider for SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx).
 
-Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the .NET Framework Data Provider for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
-
+Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the .NET Framework Data Provider for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Develop applications using Always Encrypted](always-encrypted-client-development.md) and [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md).
 
 ## Prerequisites
 
@@ -52,6 +51,22 @@ Always Encrypted can also be enabled for individual queries. See the **Controlli
 Note that, enabling Always Encrypted is not sufficient for encryption or decryption to succeed. You also need to make sure:
 - The application has the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* database permissions, required to access the metadata about Always Encrypted keys in the database. For details, see [Permissions section in Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_7).
 - The application can access the column master key that protects the column encryption keys, encrypting the queried database columns.
+
+## Enabling Always Encrypted with Secure Enclaves
+
+Beginning with .NET Framework version version 4.7.2, the driver supports [Always Encrypted with secure enclaves](always-encrypted-enclaves.md). 
+
+To enable the use of the enclave when connecting to [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] or later, you need to configure your application and the .NET Framework Data Provider for SQL Server to enable enclave computations and enclave attestation. 
+
+For general information on the client driver role in enclave computations and enclave attestation, see [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md). 
+
+To configure your application:
+
+1. Integrate the [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders) NuGet package with your application. The NuGet is a library of enclave providers, implementing the client-side logic for attestation protocols and for establishing a secure channel with a secure enclave inside SQL Server.  
+2. Update your application configuration (for example in web.config or app.config) to define the mapping between an enclave type, your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance has been configured with (see [Configure the enclave type for Always Encrypted Server Configuration Option](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)). [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] supports VBS enclaves and Host Guardian Service for attestation. Therefore, you need to map the VBS enclave type to the Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.VirtualizationBasedSecurityEnclaveProvider class from the NuGet package. 
+3. Enable enclave computations for a connection from your application to the database by setting the Enclave Attestation URL keyword in the connection string to an attestation endpoint. The value of the keyword should be set to the attestation endpoint of the HGS server, configured in your environment.
+
+For a step-by-step tutorial, see [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
 ## Retrieving and Modifying Data in Encrypted Columns
 

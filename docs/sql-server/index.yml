@@ -67,6 +67,7 @@ landingContent:
 
 landingContent:
   - title: Begin Administration
+    linkLists:
     - linkListType: overview
       links:
       - text: Install SQL Server

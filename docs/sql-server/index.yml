@@ -15,177 +15,177 @@ metadata:
 landingContent:
   - title: Begin Backend Development
     linkLists:
-    - linkListType: overview
-      links:
-      - text: CREATE DATABASE
-        url: https://docs.microsoft.com/sql/t-sql/statements/create-database-transact-sql
-      - text: CREATE TABLE
-        url: https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql
-      - text: Primary and foreign keys
-        url: https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql
-      - text: CREATE INDEX
-        url: https://docs.microsoft.com/sql/t-sql/statements/create-index-transact-sql
-      - text: INSERT data
-        url: https://docs.microsoft.com/sql/t-sql/statements/insert-transact-sql
-      - text: SELECT - JOIN - GROUP BY
-        url: https://docs.microsoft.com/sql/t-sql/queries/select-transact-sql
-      - text: CREATE VIEW
-        url: https://docs.microsoft.com/sql/t-sql/statements/create-view-transact-sql
-      - text: Stored procedures
-        url: https://docs.microsoft.com/sql/relational-databases/stored-procedures/stored-procedures-database-engine
-      - text: Sample databases
-        url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
+      - linkListType: overview
+        links:
+        - text: CREATE DATABASE
+          url: https://docs.microsoft.com/sql/t-sql/statements/create-database-transact-sql
+        - text: CREATE TABLE
+          url: https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql
+        - text: Primary and foreign keys
+          url: https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql
+        - text: CREATE INDEX
+          url: https://docs.microsoft.com/sql/t-sql/statements/create-index-transact-sql
+        - text: INSERT data
+          url: https://docs.microsoft.com/sql/t-sql/statements/insert-transact-sql
+        - text: SELECT - JOIN - GROUP BY
+          url: https://docs.microsoft.com/sql/t-sql/queries/select-transact-sql
+        - text: CREATE VIEW
+          url: https://docs.microsoft.com/sql/t-sql/statements/create-view-transact-sql
+        - text: Stored procedures
+          url: https://docs.microsoft.com/sql/relational-databases/stored-procedures/stored-procedures-database-engine
+        - text: Sample databases
+          url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
 
 landingContent:
   - title: Advanced Backend Development
     linkLists:
-    - linkListType: overview
-      links:
-      - text: FROM - JOIN
-        url: https://docs.microsoft.com/sql/t-sql/queries/from-transact-sql
-      - text: OPENJSON
-        url: https://docs.microsoft.com/sql/t-sql/functions/openjson-transact-sql
-      - text: FOR XML
-        url: https://docs.microsoft.com/sql/relational-databases/xml/xml-data-sql-server
-      - text: .NET CLR integration
-        url: https://docs.microsoft.com/sql/relational-databases/clr-integration/common-language-runtime-integration-overview
-      - text: Partitioned tables and indexes
-        url: https://docs.microsoft.com/sql/relational-databases/partitions/partitioned-tables-and-indexes
-      - text: In-Memory OLTP
-        url: https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization
-      - text: Natively compilation stored procedures
-        url: https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures
-      - text: Columnstore indexes
-        url: https://docs.microsoft.com/sql/relational-databases/indexes/columnstore-indexes-overview
-      - text: Architecture guide
-        url: https://docs.microsoft.com/sql/relational-databases/pages-and-extents-architecture-guide
-      - text: Azure Blob storage with SQL Server
-        url: https://docs.microsoft.com/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016
+      - linkListType: overview
+        links:
+        - text: FROM - JOIN
+          url: https://docs.microsoft.com/sql/t-sql/queries/from-transact-sql
+        - text: OPENJSON
+          url: https://docs.microsoft.com/sql/t-sql/functions/openjson-transact-sql
+        - text: FOR XML
+          url: https://docs.microsoft.com/sql/relational-databases/xml/xml-data-sql-server
+        - text: .NET CLR integration
+          url: https://docs.microsoft.com/sql/relational-databases/clr-integration/common-language-runtime-integration-overview
+        - text: Partitioned tables and indexes
+          url: https://docs.microsoft.com/sql/relational-databases/partitions/partitioned-tables-and-indexes
+        - text: In-Memory OLTP
+          url: https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization
+        - text: Natively compilation stored procedures
+          url: https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures
+        - text: Columnstore indexes
+          url: https://docs.microsoft.com/sql/relational-databases/indexes/columnstore-indexes-overview
+        - text: Architecture guide
+          url: https://docs.microsoft.com/sql/relational-databases/pages-and-extents-architecture-guide
+        - text: Azure Blob storage with SQL Server
+          url: https://docs.microsoft.com/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016
 
 landingContent:
   - title: Begin Administration
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Install SQL Server
-        url: https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server
-      - text: Recovery and continuity
-        url: https://docs.microsoft.com/sql/database-engine/sql-server-business-continuity-dr
-      - text: Security
-        url: https://docs.microsoft.com/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
-      - text: sp_configure server-wide settings
-        url: https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql
-      - text: Database Console Commands (DBCC)
-        url: https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql
+      - linkListType: overview
+        links:
+        - text: Install SQL Server
+          url: https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server
+        - text: Recovery and continuity
+          url: https://docs.microsoft.com/sql/database-engine/sql-server-business-continuity-dr
+        - text: Security
+          url: https://docs.microsoft.com/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
+        - text: sp_configure server-wide settings
+          url: https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql
+        - text: Database Console Commands (DBCC)
+          url: https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql
 
 landingContent:
   - title: Advanced Administration
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Replication
-        url: https://docs.microsoft.com/sql/relational-databases/replication/sql-server-replication
-      - text: Big Data Clusters
-        url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
-      - text: Monitor and tune Performance
-        url: https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance
-      - text: Database Tuning Advisor (DTA)
-        url: https://docs.microsoft.com/sql/relational-databases/performance/database-engine-tuning-advisor
-      - text: SQL Server Profiler
-        url: https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler
+      - linkListType: overview
+        links:
+        - text: Replication
+          url: https://docs.microsoft.com/sql/relational-databases/replication/sql-server-replication
+        - text: Big Data Clusters
+          url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
+        - text: Monitor and tune Performance
+          url: https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance
+        - text: Database Tuning Advisor (DTA)
+          url: https://docs.microsoft.com/sql/relational-databases/performance/database-engine-tuning-advisor
+        - text: SQL Server Profiler
+          url: https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler
 
 landingContent:
   - title: Data administration
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Import and export data
-        url: https://docs.microsoft.com/sql/relational-databases/import-export/overview-import-export
-      - text: Bulk data import and export
-        url: https://docs.microsoft.com/sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server
-      - text: Bulk Copy Program (BCP.exe)
-        url: https://docs.microsoft.com/sql/tools/bcp-utility
-      - text: Azure Database Migration Service
-        url: https://docs.microsoft.com/azure/dms/dms-overview
-      - text: Data Quality Service (DQS)
-        url: https://docs.microsoft.com/sql/data-quality-services/data-quality-services
-      - text: Data Migration Assistant (DMA)
-        url: https://docs.microsoft.com/sql/dma/dma-overview
-      - text: SQL Server Migration Assistant (SSMA)
-        url: https://docs.microsoft.com/sql/ssma/sql-server-migration-assistant
-      - text: Data compression
-        url: https://docs.microsoft.com/sql/relational-databases/data-compression/data-compression
-      - text: Master Data Services (MDS)
-        url: https://docs.microsoft.com/sql/master-data-services/master-data-services-overview-mds
+      - linkListType: overview
+        links:
+        - text: Import and export data
+          url: https://docs.microsoft.com/sql/relational-databases/import-export/overview-import-export
+        - text: Bulk data import and export
+          url: https://docs.microsoft.com/sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server
+        - text: Bulk Copy Program (BCP.exe)
+          url: https://docs.microsoft.com/sql/tools/bcp-utility
+        - text: Azure Database Migration Service
+          url: https://docs.microsoft.com/azure/dms/dms-overview
+        - text: Data Quality Service (DQS)
+          url: https://docs.microsoft.com/sql/data-quality-services/data-quality-services
+        - text: Data Migration Assistant (DMA)
+          url: https://docs.microsoft.com/sql/dma/dma-overview
+        - text: SQL Server Migration Assistant (SSMA)
+          url: https://docs.microsoft.com/sql/ssma/sql-server-migration-assistant
+        - text: Data compression
+          url: https://docs.microsoft.com/sql/relational-databases/data-compression/data-compression
+        - text: Master Data Services (MDS)
+          url: https://docs.microsoft.com/sql/master-data-services/master-data-services-overview-mds
 
 landingContent:
   - title: Begin Frontend Development
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Connect to SQL Server
-        url: https://docs.microsoft.com/sql/relational-databases/lesson-1-connecting-to-the-database-engine
-      - text: Connect using programming languages
-        url: https://docs.microsoft.com/sql/connect/
+      - linkListType: overview
+        links:
+        - text: Connect to SQL Server
+          url: https://docs.microsoft.com/sql/relational-databases/lesson-1-connecting-to-the-database-engine
+        - text: Connect using programming languages
+          url: https://docs.microsoft.com/sql/connect/
 
 landingContent:
   - title: Advanced Frontend Development
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Machine Learning with SQL Server
-        url: https://docs.microsoft.com/sql/advanced-analytics/
-      - text: SQL Server Management Objects (SMO)
-        url: https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/overview-smo
+      - linkListType: overview
+        links:
+        - text: Machine Learning with SQL Server
+          url: https://docs.microsoft.com/sql/advanced-analytics/
+        - text: SQL Server Management Objects (SMO)
+          url: https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/overview-smo
 
 landingContent:
   - title: SQL Server client technologies
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Machine Learning and analytics
-        url: https://www.microsoft.com/sql/advanced-analytics/
-      - text: Application Platform System (APS-PDW)
-        url: https://www.microsoft.com/sql/analytics-platform-system/
-      - text: Data Mining Extensions (DMX)
-        url: https://www.microsoft.com/sql/dmx/
-      - text: SQL Server Integration Services (SSIS)
-        url: https://www.microsoft.com/sql/integration-services/
-      - text: Multidimensional Expressions (MDX)
-        url: https://www.microsoft.com/sql/mdx/
-      - text: SQL Server Reporting Services (SSRS)
-        url: https://www.microsoft.com/sql/reporting-services/
+      - linkListType: overview
+        links:
+        - text: Machine Learning and analytics
+          url: https://www.microsoft.com/sql/advanced-analytics/
+        - text: Application Platform System (APS-PDW)
+          url: https://www.microsoft.com/sql/analytics-platform-system/
+        - text: Data Mining Extensions (DMX)
+          url: https://www.microsoft.com/sql/dmx/
+        - text: SQL Server Integration Services (SSIS)
+          url: https://www.microsoft.com/sql/integration-services/
+        - text: Multidimensional Expressions (MDX)
+          url: https://www.microsoft.com/sql/mdx/
+        - text: SQL Server Reporting Services (SSRS)
+          url: https://www.microsoft.com/sql/reporting-services/
 
 landingContent:
   - title: Sister Database Products
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Azure SQL Database single database
-        url: https://docs.microsoft.com/azure/sql-database/
-      - text: Azure SQL Database managed instance
-        url: https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance
-      - text: SQL Server on a virtual machine (VM)
-        url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/
-      - text: SQL Data Warehouse
-        url: https://docs.microsoft.com/azure/sql-data-warehouse/
-      - text: Analytics Platform System (APS-PDW)
-        url: https://docs.microsoft.com/sql/analytics-platform-system/
-      - text: SQL Server on Linux
-        url: https://docs.microsoft.com/sql/linux/
-      - text: PostgreSQL database
-        url: https://docs.microsoft.com/azure/postgresql/
-      - text: MySQL database
-        url: https://docs.microsoft.com/azure/mysql/
-      - text: NoSQL - Azure Cosmos DB
-        url: https://docs.microsoft.com/azure/cosmos-db/
+      - linkListType: overview
+        links:
+        - text: Azure SQL Database single database
+          url: https://docs.microsoft.com/azure/sql-database/
+        - text: Azure SQL Database managed instance
+          url: https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance
+        - text: SQL Server on a virtual machine (VM)
+          url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/
+        - text: SQL Data Warehouse
+          url: https://docs.microsoft.com/azure/sql-data-warehouse/
+        - text: Analytics Platform System (APS-PDW)
+          url: https://docs.microsoft.com/sql/analytics-platform-system/
+        - text: SQL Server on Linux
+          url: https://docs.microsoft.com/sql/linux/
+        - text: PostgreSQL database
+          url: https://docs.microsoft.com/azure/postgresql/
+        - text: MySQL database
+          url: https://docs.microsoft.com/azure/mysql/
+        - text: NoSQL - Azure Cosmos DB
+          url: https://docs.microsoft.com/azure/cosmos-db/
 
 landingContent:
   - title: Special articles
     linkLists:
-    - linkListType: overview
-      links:
-      - text: Previous versions 2014-2005
-        url: https://docs.microsoft.com/sql/
-      - text: What's new in SQL Server 2019
-        url: https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation
+      - linkListType: overview
+        links:
+        - text: Previous versions 2014-2005
+          url: https://docs.microsoft.com/sql/
+        - text: What's new in SQL Server 2019
+          url: https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation

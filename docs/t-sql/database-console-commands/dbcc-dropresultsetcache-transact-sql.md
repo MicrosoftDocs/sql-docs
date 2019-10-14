@@ -42,6 +42,7 @@ Requires membership in the DB_OWNER fixed server role.
 
 ## See also
 
+[Result set caching overview](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-result-set-caching-overview?branch=pr-en-us-91292)
 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

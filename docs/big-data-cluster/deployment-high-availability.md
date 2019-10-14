@@ -94,9 +94,11 @@ For connections to the primary replica, use `sql-server-master` endpoint. This e
 azdata bdc endpoint list -e sql-server-master -o table
 ```
 
-`Description                           Endpoint             Name               Protocol`
-`------------------------------------  -------------------  -----------------  ----------`
-`SQL Server Master Instance Front-End  13.64.235.192,31433  sql-server-master  tds`
+```
+Description                           Endpoint             Name               Protocol
+------------------------------------  -------------------  -----------------  ----------
+SQL Server Master Instance Front-End  11.11.111.111,11111  sql-server-master  tds
+```
 
 > [!NOTE]
 > Failover events can occur during a distributed query execution that is accessing data from remote data sources like HDFS or data pool. As a best practice, applications should be designed to have connection retry logic in case of disconnects caused by failover.  

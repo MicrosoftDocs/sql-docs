@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
- Permission to execute **sp_spaceused** is granted to the **public** role. Only members of the **db_owner** fixed database role can specify the **@updateusage** parameter.  
+ Permission to execute **sp_spaceused** is granted to the **public** role. Only members of the **db_owner** fixed database role can specify the **\@updateusage** parameter.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

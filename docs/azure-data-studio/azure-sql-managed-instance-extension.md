@@ -38,29 +38,31 @@ The extension displays technical characteristics and some resource usage of your
 
 The first blade shows the following details:
 
-- **Properties** - This displays basic information about your managed instance, including the available number of vCores, memory, and storage. You'll also see the current service-tier, hardware generation, and IO characteristics such as instance log write throughput or file I/O throughput characteristics.
-- **Local SSD storage** - On General purpose service-tier only **TEMPDB** files are placed locally, while on Business-Critical tier all database files are placed on local SSD storage. In this section, you can see how much space on the local storage is used by your managed instance.
-- **Azure Premium Disk Storage** - user and system database in General Purpose service-tier are placed on Azure Premium storage. Here you can find how much data you used, and what is remaining storage and number of files. On Business-Critical service tier this section is empty.
-- **Resource usage** that will show you how much storage and CPU your instance used in past two hours. Increase the instance size if you are reaching the limit.
+- **Properties** - Get basic information about your managed instance, including available vCores, memory, and storage. Aslo find your current service-tier, hardware generation, and IO characteristics such as instance log write throughput or file I/O throughput characteristics.
+- **Local SSD storage** - On the General purpose service-tier, **TempDB** files are stored locally. On the Business-Critical service tier, _all_ database files are placed on local SSD storage. In this section, you can see how much space on the local storage is used by your managed instance.
+- **Azure Premium Disk Storage** - On the General Purpose service tier, user and system database files are placed on Azure Premium storage. In this section, you can see the amount of data used, the number of files, and the available storage. On Business-Critical service tier, this section is empty.
+- **Resource usage** - View the percentage of storage and CPU that your managed instance used over the previous two hours. This way, you can increase the instance size if it's nearing the limit.
 
 ## Recommendations
 
-This extension provides some recommendations and alerts that can help you optimize your Managed Instance.
+When you select the second blade in the Managed Instance tab, you get recommendations and alerts to help optimize your managed instance.
 
 ![Managed instance recommendations](media/azure-sql-mi-extension/ads-mi-tab2.png)
 
-Some of the recommendations that are shown in this table are:
+You might see some of the following recommendations:
 
-- Reaching storage space limit - you should either delete unnecessary data or increase instance storage size because databases that reach storage limit might fail to process even read queries.
-- Reaching instance throughout limit - if you are loading ~22MB/s on GP or ~48 MB/s on BC, Managed instance will limit your load to ensure that backups can be taken.
-- Memory pressure - Low Page Life Expectancy or a lot of `PAGEIOLATCH` wait statistics might indicate that your instance is evicting pages from the memory and constantly trying to load more pages from disk.
-- Log file limits - if your logs are reaching [file IO limits on General-purpose service tier](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier) you might need to increase file size to get better performance.
-- Data file limits - if your data files are reaching [file IO limits on General-purpose service tier](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier) you might need to increase file size to get better performance. This issue might cause memory pressure and slow down backups.
-- Availability issues - high number of virtual log files might cause performance impact and potential longer database recovery on General-purpose service-tier in a case of process failure.
+- **Reaching storage space limit** - Either delete unnecessary data or increase instance storage size. Databases that reach storage limit might fail to process even read queries.
+- **Reaching instance throughput limit** - You're loading close to 22MB/s on the General Purpose service tier or about 48 MB/s on the Business Critical service tier. Be aware that the managed instance will limit your load to ensure that backups can be taken.
+- **Memory pressure** - Low page life expectancy or a lot of `PAGEIOLATCH` wait statistics might indicate that your instance is evicting pages from the memory and constantly trying to load more pages from disk.
+- **Log file limits** - If your logs are reaching [file IO limits on General Purpose service tier](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier) you might need to increase the log file size to get better performance.
+- **Data file limits** - If your data files are reaching [file IO limits on General Purpose service tier](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier) you might need to increase file size to get better performance. This issue might cause memory pressure and slow down backups.
+- **Availability issues** - A high number of virtual log files can impact performance and might result in  longer database recovery on General-purpose service-tier in a case of process failure.
 
-You should periodically review these recommendations, investigate the root causes, and take corrective actions. Managed instance extension provides the scripts that you can execute to mitigate some of the reported issues.
+You should periodically review these recommendations, investigate the root causes, and take action to correct any issues. The Azure SQL managed instance extension provides scripts you can execute to mitigate some of the reported issues.
 
 ## Replicas
+
+\***
 
 Managed instance extension enables you to see the state of database replicas in your Managed instance.
 

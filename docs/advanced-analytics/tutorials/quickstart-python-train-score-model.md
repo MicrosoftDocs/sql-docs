@@ -5,7 +5,7 @@ description: Create a simple predictive model in Python using SQL Server Machine
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/04/2019  
+ms.date: 10/14/2019  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -65,7 +65,7 @@ In this step, you'll create a stored procedure that generates a model for predic
     import pickle
     from sklearn.naive_bayes import GaussianNB
     GNB = GaussianNB()
-    trained_model = pickle.dumps(GNB.fit(iris_data[[0,1,2,3]], iris_data[[4]].values.ravel()))
+    trained_model = pickle.dumps(GNB.fit(iris_data[["Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"]], iris_data[["SpeciesId"]].values.ravel()))
     '
             , @input_data_1 = N'select "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "SpeciesId" from iris_data'
             , @input_data_1_name = N'iris_data'
@@ -118,35 +118,35 @@ Now that you have created, trained, and saved a model, move on to the next step:
 1. Run the following code to create the stored procedure that performs scoring. At run time, this procedure will load a binary model, use columns `[1,2,3,4]` as inputs, and specify columns `[0,5,6]` as output.
 
    ```sql
-   CREATE PROCEDURE predict_species (@model VARCHAR(100))
-   AS
-   BEGIN
-       DECLARE @nb_model VARBINARY(max) = (
-               SELECT model
-               FROM iris_models
-               WHERE model_name = @model
-               );
-   
-       EXECUTE sp_execute_external_script @language = N'Python'
-           , @script = N'
-   import pickle
-   irismodel = pickle.loads(nb_model)
-   species_pred = irismodel.predict(iris_data[[1,2,3,4]])
-   iris_data["PredictedSpecies"] = species_pred
-   OutputDataSet = iris_data[[0,5,6]] 
-   print(OutputDataSet)
-   '
-           , @input_data_1 = N'select id, "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "SpeciesId" from iris_data'
-           , @input_data_1_name = N'iris_data'
-           , @params = N'@nb_model varbinary(max)'
-           , @nb_model = @nb_model
-       WITH RESULT SETS((
-                   "id" INT
-                 , "SpeciesId" INT
-                 , "SpeciesId.Predicted" INT
-                   ));
-   END;
-   GO
+    CREATE PROCEDURE predict_species (@model VARCHAR(100))
+    AS
+    BEGIN
+        DECLARE @nb_model VARBINARY(max) = (
+                SELECT model
+                FROM iris_models
+                WHERE model_name = @model
+                );
+    
+        EXECUTE sp_execute_external_script @language = N'Python'
+            , @script = N'
+    import pickle
+    irismodel = pickle.loads(nb_model)
+    species_pred = irismodel.predict(iris_data[["Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"]])
+    iris_data["PredictedSpecies"] = species_pred
+    OutputDataSet = iris_data[["id","SpeciesId","PredictedSpecies"]] 
+    print(OutputDataSet)
+    '
+            , @input_data_1 = N'select id, "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "SpeciesId" from iris_data'
+            , @input_data_1_name = N'iris_data'
+            , @params = N'@nb_model varbinary(max)'
+            , @nb_model = @nb_model
+        WITH RESULT SETS((
+                    "id" INT
+                  , "SpeciesId" INT
+                  , "SpeciesId.Predicted" INT
+                    ));
+    END;
+    GO
    ```
 
 2. Execute the stored procedure, giving the model name "Naive Bayes" so that the procedure knows which model to use.

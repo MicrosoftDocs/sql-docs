@@ -12,7 +12,6 @@ metadata:
   ms.author: genemi
   ms.date: 10/14/2019
 
-
 landingContent:
   - title: Begin Backend Development
     linkLists:
@@ -36,7 +35,6 @@ landingContent:
         url: https://docs.microsoft.com/sql/relational-databases/stored-procedures/stored-procedures-database-engine
       - text: Sample databases
         url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
-
 
 landingContent:
   - title: Advanced Backend Development
@@ -64,7 +62,6 @@ landingContent:
       - text: Azure Blob storage with SQL Server
         url: https://docs.microsoft.com/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016
 
-
 landingContent:
   - title: Begin Administration
     linkLists:
@@ -81,7 +78,6 @@ landingContent:
       - text: Database Console Commands (DBCC)
         url: https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql
 
-
 landingContent:
   - title: Advanced Administration
     linkLists:
@@ -97,7 +93,6 @@ landingContent:
         url: https://docs.microsoft.com/sql/relational-databases/performance/database-engine-tuning-advisor
       - text: SQL Server Profiler
         url: https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler
-
 
 landingContent:
   - title: Data administration
@@ -123,7 +118,6 @@ landingContent:
       - text: Master Data Services (MDS)
         url: https://docs.microsoft.com/sql/master-data-services/master-data-services-overview-mds
 
-
 landingContent:
   - title: Begin Frontend Development
     linkLists:
@@ -134,7 +128,6 @@ landingContent:
       - text: Connect using programming languages
         url: https://docs.microsoft.com/sql/connect/
 
-
 landingContent:
   - title: Advanced Frontend Development
     linkLists:
@@ -144,7 +137,6 @@ landingContent:
         url: https://docs.microsoft.com/sql/advanced-analytics/
       - text: SQL Server Management Objects (SMO)
         url: https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/overview-smo
-
 
 landingContent:
   - title: SQL Server client technologies
@@ -163,7 +155,6 @@ landingContent:
         url: https://www.microsoft.com/sql/mdx/
       - text: SQL Server Reporting Services (SSRS)
         url: https://www.microsoft.com/sql/reporting-services/
-
 
 landingContent:
   - title: Sister Database Products
@@ -189,7 +180,6 @@ landingContent:
       - text: NoSQL - Azure Cosmos DB
         url: https://docs.microsoft.com/azure/cosmos-db/
 
-
 landingContent:
   - title: Special articles
     linkLists:
@@ -199,4 +189,3 @@ landingContent:
         url: https://docs.microsoft.com/sql/
       - text: What's new in SQL Server 2019
         url: https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation
-

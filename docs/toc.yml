@@ -1,3 +1,6 @@
+
+- name: Topic categories for SQL Server
+  href: sql-server/index.yml
 - name: Welcome to SQL Server
   href: sql-server/sql-server-technical-documentation.md
 

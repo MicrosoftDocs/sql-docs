@@ -36,6 +36,9 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 SSMS is free!
 
+> [!Note]
+> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit this page in [English](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15). You can download different languages from the English version site by selecting [available languages](#available-languages-ssms-1831).
+
 ## Download SSMS 18.3.1
 
 **SSMS 18.3.1 is now available, and is the latest general availability (GA) version of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**

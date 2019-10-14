@@ -48,7 +48,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  Properties containing NULL values are not included in the return set.  
   
 ## Example  
- The following example uses `sp_help_spatial_geometry_index` to investigate the spatial index **SIndx_SpatialTable_geometry_col2** defined on table **geometry_col** for the given query sample in **@qs**. This example returns only the core properties of the specified index.  
+ The following example uses `sp_help_spatial_geometry_index` to investigate the spatial index **SIndx_SpatialTable_geometry_col2** defined on table **geometry_col** for the given query sample in **\@qs**. This example returns only the core properties of the specified index.  
   
 ```  
 declare @qs geometry  

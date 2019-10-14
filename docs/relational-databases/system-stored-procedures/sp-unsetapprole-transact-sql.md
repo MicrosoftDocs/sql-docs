@@ -33,7 +33,7 @@ sp_unsetapprole @cookie
 ```  
   
 ## Arguments  
- **@cookie**  
+ **\@cookie**  
  Specifies the cookie that was created when the application role was activated. The cookie is created by [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary(8000)**.  
   
 > [!NOTE]  

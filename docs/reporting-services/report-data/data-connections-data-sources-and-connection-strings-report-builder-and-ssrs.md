@@ -92,16 +92,6 @@ ms.author: maggies
  
  > [!NOTE]  
 >  [Connectionstrings.com](https://www.connectionstrings.com/) is another resource to get examples for connection strings. 
-
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-
-In Reporting Services 2019, you can also use a Power BI dataset in a Premium capacity as a data source. This table gives an example.
-
-|**Data source**|**Example**|**Description**|  
-| Power BI Premium dataset | Server=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;initial catalog = <YourDatasetName> | Set data source type to **Microsoft SQL Server Analysis Services**. |
-
-::: moniker-end
-
   
 |**Data source**|**Example**|**Description**|  
 |---------------------|-----------------|---------------------|  
@@ -117,9 +107,11 @@ In Reporting Services 2019, you can also use a Power BI dataset in a Premium cap
 |Teradata data source|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Set the data source type to **Teradata**. The connection string is an Internet Protocol (IP) address in the form of four fields, where each field can be from one to three digits. For more information, see [Teradata Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
 |Teradata data source|`Database=` *\<database name>* `; data source=` *\<NN*N*>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Set the data source type to **Teradata**, similar to the previous example. Only use the default database that is specified in the Database tag, and do not automatically discover data relationships.|  
 |XML data source, Web service|`data source=https://adventure-works.com/results.aspx`|Set the data source type to **XML**. The connection string is a URL for a web service that supports Web Services Definition Language (WSDL). For more information, see [XML Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
-|XML data source, XML document|`https://localhost/XML/Customers.xml`|Set the data source type to **XML**. The connection string is a URL to the XML document.|  
+|XML data source, XML document|`https://localhost/XML/Customers.xml`|Set the data source type to **XML**. The connection string is a URL to the XML document. 
 |XML data source, embedded XML document|*Empty*|Set the data source type to **XML**. The XML data is embedded in the report definition.|  
 |SharePoint List|`data source=https://MySharePointWeb/MySharePointSite/`|Set data source type to **SharePoint List**.|  
+| Power BI Premium dataset (Starting with Reporting Services 2019) | Server=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;initial catalog = <YourDatasetName> | Set data source type to **Microsoft SQL Server Analysis Services**. |
+
   
  If you fail to connect to a report server using **localhost**, check that the network protocol for TCP/IP protocol is enabled. For more information, see [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  
   

@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-By the nature of deploying SQL Server Big Data Clusters on Kubernetes as containerized applications, and using features like stateful sets and persistent storage, this infrastructure has already built-in health monitoring, failure detection, and failover mechanisms that big data clusters components are leveraging to maintain services health. For increased reliability, you can also configure SQL Server master instance or HDFS name node and Spark shared services to be deployed with additional replicas in a high availability configuration. Monitoring, failure detection, and automatic failover are managed by big data cluster management service, namely the control service, without user intervention – all from availability group setup, configuring database mirroring endpoints, to adding databases to the availability group or failover and upgrade coordination. 
+Because SQL Server Big Data Clusters is on Kubernetes as containerized applications, and uses features like stateful sets and persistent storage, this infrastructure has built-in health monitoring, failure detection, and failover mechanisms that cluster components leverage to maintain service health. For increased reliability, you can also configure SQL Server master instance or HDFS name node and Spark shared services to deploy with additional replicas in a high availability configuration. Monitoring, failure detection, and automatic failover are managed by a big data cluster management service, namely the control service. This service provide without user intervention – all from availability group setup, configuring database mirroring endpoints, to adding databases to the availability group or failover and upgrade coordination. 
 
 Here are some of the capabilities that availability groups enable:
 
@@ -29,7 +29,7 @@ Here are some of the capabilities that availability groups enable:
 1. An external endpoint is automatically provisioned for connecting to databases within the availability group. This endpoint `master-svc-external` plays the role of the availability group listener.
 1. A second external endpoint is provisioned for read-only connections to the secondary replicas to scale out the read workloads.
 
-E# Deploy
+## Deploy
 
 To deploy SQL Server master in an availability group:
 
@@ -67,7 +67,7 @@ You can use either the `aks-dev-test-ha` or the `kubeadm-prod` built-in configur
 }
 ```
 
-The following steps walk through an example on how to start from `aks-dev-test-ha` profile and customize your big data cluster deployment configuration. For a deployment on a kubeadm cluster, similar steps would apply, but make sure you are using *NodePort* for the **serviceType** in the  **endpoints** section.
+The following steps walk through an example on how to start from `aks-dev-test-ha` profile and customize your big data cluster deployment configuration. For a deployment on a `kubeadm` cluster, similar steps would apply, but make sure you are using `NodePort` for the `serviceType` in the  `endpoints` section.
 
 1. Clone your targeted profile
 
@@ -126,7 +126,7 @@ For certain operations like setting server level configurations or manually addi
 
 - Expose the external endpoint by creating a new Kubernetes service
 
-    For a kubeadm cluster run below command. Replace `podName` with the name of the server returned at previous step, `serviceName` with the preferred name for the Kubernetes service created  and `namespaceName`* with the name of your BDC cluster.
+    For a `kubeadm` cluster run below command. Replace `podName` with the name of the server returned at previous step, `serviceName` with the preferred name for the Kubernetes service created  and `namespaceName`* with the name of your BDC cluster.
 
     ```bash
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=NodePort
@@ -177,7 +177,7 @@ For certain operations like setting server level configurations or manually addi
 
 ## Known limitations
 
-These are the known issues and limitations with availability groups for SQL Server master in big data cluster:
+The known issues and limitations with availability groups for SQL Server master in big data cluster:
 
 - Databases created as result of workflows other than `CREATE DATABASE` like `RESTORE`, `CREATE DATABASE FROM SNAPSHOT` are not automatically added to the availability group. [Connect to the instance](#instance-connect) and add the database to the availability group manually.
 - Certain operations like running server configuration settings with `sp_configure` require a connection to the master instance. You cannot use the corresponding primary endpoint. Follow [the instructions](#instance-connect) to connect to the SQL Server instance and run `sp_configure`.

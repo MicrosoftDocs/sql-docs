@@ -9,12 +9,34 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
-ms.date: "10/03/2019"
+ms.date: "10/11/2019"
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## October 2019 (hotfix 2)
+
+October 11, 2019 &nbsp; / &nbsp; version: 1.12.2
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Disable automatically starting the EH in inspect mode |  |
+| &nbsp; | &nbsp; |
+
+## October 2019 (hotfix)
+
+October 8, 2019 &nbsp; / &nbsp; version: 1.12.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Fixed issue for quotes and backslashes in Notebooks to escape correctly. |  |
+| &nbsp; | &nbsp; |
 
 ## October 2019
 

@@ -34,11 +34,11 @@ Requires membership in the DB_OWNER fixed server role.
 
 ## Remarks
 
-This command empties the result set cache for all queries.  
+- This command empties the result set cache for all queries.  
 
-Turning OFF the result set cache feature for a database also deletes all cached results.  
+- Turning OFF the result set cache feature for a database also deletes all cached results.  
 
-Pausing a database enabled with result set caching won't delete the cached results.  
+- Pausing a database enabled with result set caching won't delete the cached results.  
 
 ## See also
 

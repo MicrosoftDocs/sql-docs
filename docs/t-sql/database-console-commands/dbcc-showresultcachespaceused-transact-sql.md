@@ -31,18 +31,6 @@ DBCC SHOWRESULTCACHESPACEUSED
 
 The `DBCC SHOWRESULTCACHESPACEUSED` command doesn't take any parameters and returns the space used by the database where the command is run.
 
-The maximum size of result set cache is 1 TB per database.  Azure SQL Data Warehouse automatically evicts entries in the result set cache:
-
-- every 48 hours if the result set hasn't been used.
-- when the result set cache approaches the maximum size.
-
-To manually empty the result set cache for a database, users can use one of these options:
-
-- Turn OFF the result set cache feature for the database
-- Run `DBCC DROPRESULTSETCACHE` while connected to the database 
-
-Pausing a database won't empty result set cache.  
-
 ## Permissions
 
 Requires VIEW SERVER STATE permission.
@@ -59,6 +47,7 @@ Requires VIEW SERVER STATE permission.
 
 ## See also
 
+[Result set caching overview](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-result-set-caching-overview?branch=pr-en-us-91292)
 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

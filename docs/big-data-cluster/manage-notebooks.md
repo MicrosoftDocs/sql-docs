@@ -1,6 +1,6 @@
 ---
 title: Manage SQL Server Big Data Clusters with Azure Data Studio notebooks
-titleSuffix: Manage SQL Server big data cluster cluster with Azure Data Studio notebooks
+titleSuffix: Manage SQL Server Big Data Clusters with Azure Data Studio notebooks
 description: Use a notebook from Azure Data Studio to manage and troubleshoot a big data cluster.
 author: yualan
 ms.author: alanyu
@@ -25,7 +25,7 @@ In addition to notebooks, you can view a collection of notebooks, which is calle
 
 ## Prerequisites
 
-You need these prerequisites to launch a notebook:
+You need these prerequisites to open a notebook:
 
 * The latest version of [Azure Data Studio Insiders build](https://aka.ms/azuredatastudio-rc)
 * The [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] extension, installed in Azure Data Studio
@@ -37,7 +37,7 @@ In addition to those prerequisites, to deploy SQL Server 2019 Big Data Clusters,
 * [Azure CLI](/cli/azure/install-azure-cli)
 
 ## Access troubleshooting notebooks
-There are three ways to access troubleshooting notebooks:
+There are three ways to access troubleshooting notebooks.
 
 ### Command Palette
 1. Select **View** > **Command Palette**.
@@ -59,7 +59,7 @@ The Jupyter Books viewlet with the Jupyter Book that contains the troubleshootin
 3. After you're connected to the controller, right-click the endpoint and select **Manage**.
 4. After the dashboard loads, select **troubleshoot** to open the Jupyter Book troubleshooting guides.
 
-## How to use troubleshooting notebooks
+## Use troubleshooting notebooks
 1. Find the troubleshooting guide that you need in the Jupyter Book table of contents.
 1. The notebooks are optimized, so you just need to select **Run Cells**. This action will run each cell in the notebook individually until the notebook is complete.
 1. If an error is found, the Jupyter Book will suggest a notebook that you can run to fix the error. Follow the recommended steps, and then run the notebook again.

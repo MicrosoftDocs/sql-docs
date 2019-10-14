@@ -47,7 +47,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
  0 (success)  
   
 ## Result Sets  
- The **sp_lock** result set contains one row for each lock held by the sessions specified in the **@spid1** and **@spid2** parameters. If neither **@spid1** nor **@spid2** is specified, the result set reports the locks for all sessions currently active in the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ The **sp_lock** result set contains one row for each lock held by the sessions specified in the **\@spid1** and **\@spid2** parameters. If neither **\@spid1** nor **\@spid2** is specified, the result set reports the locks for all sessions currently active in the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

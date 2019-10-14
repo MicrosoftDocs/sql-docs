@@ -47,7 +47,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## Remarks  
   
 ## Example  
- The following example uses `sp_help_spatial_geography_index` to investigate the **geography** spatial index **SIndx_SpatialTable_geography_col2** defined on table **geography_col** for the given query sample in **@qs**. This example returns only the core properties of the specified index.  
+ The following example uses `sp_help_spatial_geography_index` to investigate the **geography** spatial index **SIndx_SpatialTable_geography_col2** defined on table **geography_col** for the given query sample in **\@qs**. This example returns only the core properties of the specified index.  
   
 ```  
 declare @qs geography  

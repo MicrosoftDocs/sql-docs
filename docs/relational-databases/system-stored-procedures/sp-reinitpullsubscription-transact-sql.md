@@ -52,7 +52,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  **sp_reinitpullsubscription** can be called from the Subscriber to reinitialize the subscription, during the next run of the Distribution Agent.  
   
- Subscriptions to publications created with a value of **false** for **@immediate_sync** cannot be reinitialized from the Subscriber.  
+ Subscriptions to publications created with a value of **false** for **\@immediate_sync** cannot be reinitialized from the Subscriber.  
   
  You can reinitialize a pull subscription by either executing **sp_reinitpullsubscription** at the Subscriber or **sp_reinitsubscription** at the Publisher.  
   

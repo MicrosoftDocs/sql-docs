@@ -1,7 +1,7 @@
 ---
 title: "Linked Servers (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/29/2019"
+ms.date: "10/14/2019"
 ms.prod: sql
 ms.technology: 
 ms.prod_service: "database-engine"
@@ -61,13 +61,16 @@ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
  ![Client tier, server tier, and database server tier](../../relational-databases/linked-servers/media/lsvr.gif "Client tier, server tier, and database server tier")  
   
 Typically, linked servers are used to handle distributed queries. When a client application executes a distributed query through a linked server, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parses the command and sends requests to OLE DB. The rowset request may be in the form of executing a query against the provider or opening a base table from the provider.  
-  
+
 > [!NOTE]
 > For a data source to return data through a linked server, the OLE DB provider (DLL) for that data source must be present on the same server as the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-> [!IMPORTANT] 
-> When an OLE DB provider is used, the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs must have read and execute permissions for the directory, and all subdirectories, in which the provider is installed. This includes Microsoft-released providers, and any third-party providers. 
-  
+ 
+> [!IMPORTANT]
+> When an OLE DB provider is used, the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs must have read and execute permissions for the directory, and all subdirectories, in which the provider is installed. This includes Microsoft-released providers, and any third-party providers.
+
+> [!NOTE]
+> Linked servers support Active Directory pass-through authentication when using full delegation. Starting with SQL Server 2017 CU17, pass-through authentication with constrained delegation is also supported; however, [resource-based constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) is not supported.
+
 ## Managing Providers  
 There is a set of options that control how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] loads and uses OLE DB providers that are specified in the registry.  
   

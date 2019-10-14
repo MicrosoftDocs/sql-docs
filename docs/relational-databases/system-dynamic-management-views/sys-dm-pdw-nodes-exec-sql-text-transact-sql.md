@@ -22,11 +22,11 @@ Returns the text of the SQL batch that is identified by the specified *sql_handl
 ## Table Returned  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**dbid**|**smallint**|ID of database.<br /><br /> For ad hoc and prepared SQL statements, the ID of the database where the statements were compiled.|  
+|**dbid**|**smallint**|ID of database.<br /><br /> For unplanned and prepared SQL statements, the ID of the database where the statements were compiled.|  
 |**objectid**|**int**|ID of object.<br /><br /> Is NULL for ad hoc and prepared SQL statements.|  
 |**number**|**smallint**|For a numbered stored procedure, this column returns the number of the stored procedure. For more information, see [sys.numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Is NULL for ad hoc and prepared SQL statements.|  
-|**encrypted**|**bit**|1 = SQL text is encrypted.<br /><br /> 0 = SQL text is not encrypted.|  
-|**text**|**nvarchar(max** **)**|Text of the SQL query.<br /><br /> Is NULL for encrypted objects.|  
+|**encrypted**|**bit**|1: SQL text is encrypted.<br /><br /> 0: SQL text is not encrypted.|  
+|**text**|**nvarchar(max)**|Text of the SQL query.<br /><br /> Is NULL for encrypted objects.|  
 |**pdw_node_id**|**int**|Unique numeric id associated with the node.|
 
 ## Remarks  

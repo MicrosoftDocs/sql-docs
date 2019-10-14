@@ -70,6 +70,6 @@ The same remarks in [sys.dm_exec_query_profiles](https://docs.microsoft.com/en-u
 
 ## See Also  
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
-  
+   
 
 

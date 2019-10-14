@@ -20,7 +20,7 @@ In addition to deploying SQL Server master instance in a highly available config
 - HDFS name node
 - Livy and Yarn Resource Manager. 
 
-Spark History, Job History and Hive metadata service are stateless services. Zookeeper is not involved in ensuring the service health for these components. 
+Spark History, Job History, and Hive metadata service are stateless services. Zookeeper is not involved in ensuring the service health for these components. 
 
 Deploying multiple replicas for these services results in enhanced scalability, reliability, and load balancing of the workloads between the available replicas.
 
@@ -35,7 +35,7 @@ Deploying multiple replicas for these services results in enhanced scalability, 
 
 ## Deploy
 
-If either name node or spark head is configured to be deployed with 2 replicas, then you must also configure the Zookeeper resource with 3 replicas. In a highly available configuration for HDFS name node, the 2 replicas are hosted by 2 pods: `nmnode-0` and `nmnode-1`. This is an active-passive configuration - only one of the name nodes are active at a time, the other is in stand-by, and it becomes active as a result of a failover event. 
+If either name node or spark head is configured to be deployed with two replicas, then you must also configure the Zookeeper resource with three replicas. In a highly available configuration for HDFS name node, two pods host the two replicas. Th pods are `nmnode-0` and `nmnode-1`. This configuration is active-passive. Only one of the name nodes is active at a time. The other is in stand-by - it becomes active as a result of a failover event. 
 
 You can use either the `aks-dev-test-ha` or the `kubeadm-prod` built-in configuration profiles to start customizing your big data cluster deployment. These profiles include the settings required for resources you can configure additional high availability. For example, below is a section in the `bdc.json` configuration file that is relevant for  deploying HDFS name node, Zookeeper and shared Spark resources (`sparkhead`) with high availability.  
 
@@ -83,9 +83,9 @@ As a best practice, in a production deployment, you must also configure HDFS blo
 
 ## Known limitations
 
-These are the known issues and limitations with configuring high availability for the Hadoop services in the SQL Server big data clusters:
+The known issues and limitations with configuring high availability for the Hadoop services in the SQL Server big data clusters include:
 
-- All configurations must be specified at the time of the big data cluster deployment. At the time of the SQL Server 2019 CU1 release, you cannot enable the high availability configuration post deployment.
+- All configurations must be specified at the time of the big data cluster deployment. With SQL Server 2019 CU1 release, you cannot enable the high availability configuration after deployment.
 
 ## Next steps
 

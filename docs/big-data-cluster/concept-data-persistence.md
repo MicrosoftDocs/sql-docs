@@ -23,15 +23,15 @@ The way a SQL Server big data cluster consumes these persistent volumes is by us
 
 Here are some important aspects to consider when you are planning storage configuration for your big data cluster:
 
-1. For a successful big data cluster deployment, you must ensure the required number of persistent volumes are available. If you are deploying on an AKS cluster and you are using one of the built-in storage classes (`default` or `managed-premium`) - these support dynamic provisioning for the persistent volumes. This means that you do not have to pre-create the persistent volumes, but you must ensure the worker nodes available in the AKS cluster can attach as many disks as persistent volumes are necessary for the deployment. Depending on the [VM size](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes) specified for the worker nodes, each node can attach a certain number of disks. For a default size cluster(with no high availability), a minimum of 24 disks are required. If you are enabling high availability or scaling up any pool, you must ensure at a minimum two persisted volumes per each additional replica, irrespective of the resource you are scaling up.
+- For a successful big data cluster deployment, you must ensure the required number of persistent volumes are available. If you are deploying on an AKS cluster and you are using one of the built-in storage classes (`default` or `managed-premium`) - these support dynamic provisioning for the persistent volumes. This means that you do not have to pre-create the persistent volumes, but you must ensure the worker nodes available in the AKS cluster can attach as many disks as persistent volumes are necessary for the deployment. Depending on the [VM size](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes) specified for the worker nodes, each node can attach a certain number of disks. For a default size cluster(with no high availability), a minimum of 24 disks are required. If you are enabling high availability or scaling up any pool, you must ensure at a minimum two persisted volumes per each additional replica, irrespective of the resource you are scaling up.
 
-1. If the storage provisioner for the storage class you are providing in the configuration does not support dynamic provisioning, you must pre-create the persisted volumes. For example, the `local-storage` provisioner does not enable dynamic provisioning. See this [sample script](https://github.com/microsoft/sql-server-samples/tree/cu1-bdc/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) on how to do so in a Kubernetes cluster deployed with `kubeadm`.
+- If the storage provisioner for the storage class you are providing in the configuration does not support dynamic provisioning, you must pre-create the persisted volumes. For example, the `local-storage` provisioner does not enable dynamic provisioning. See this [sample script](https://github.com/microsoft/sql-server-samples/tree/cu1-bdc/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) on how to do so in a Kubernetes cluster deployed with `kubeadm`.
 
-1. When you deploy a big data cluster, you can configure same storage class to be used by all components in the cluster. But as a best practice for a production deployment, various components will require different storage configurations to accommodate various workloads in terms of size or throughput. You can overwrite the default storage configuration specified in the controller for each of the SQL Server master instance, data and storage pools. This article provides examples how to do this.
+- When you deploy a big data cluster, you can configure same storage class to be used by all components in the cluster. But as a best practice for a production deployment, various components will require different storage configurations to accommodate various workloads in terms of size or throughput. You can overwrite the default storage configuration specified in the controller for each of the SQL Server master instance, data and storage pools. This article provides examples how to do this.
 
-1. As of SQL Server 2019 CU1 release, you can't modify storage configuration setting post deployment. This includes not all modifying the size of the persistent volume claim for each instance, but also scaling operations post deployment are not supported. So planning the storage layout before big data cluster is very important.
+- As of SQL Server 2019 CU1 release, you can't modify storage configuration setting post deployment. This includes not all modifying the size of the persistent volume claim for each instance, but also scaling operations post deployment are not supported. So planning the storage layout before big data cluster is very important.
 
-1. By the nature of deploying on Kubernetes as containerized applications, and using features like stateful sets and persistent storage, Kubernetes ensures that pods are restarted in case of health issues and attached to the same persistent storage. But in case there is a node failure and pod must be restarted on another node, there is increased risk of unavailability if the storage is local to the failed node. To overcome this risk, you must either configure additional redundancy and enable [high availability features](deployment-high-availability.md) or use remote redundant storage. Here is an overview of the storage options for various components in the big data clusters.
+- By the nature of deploying on Kubernetes as containerized applications, and using features like stateful sets and persistent storage, Kubernetes ensures that pods are restarted in case of health issues and attached to the same persistent storage. But in case there is a node failure and pod must be restarted on another node, there is increased risk of unavailability if the storage is local to the failed node. To overcome this risk, you must either configure additional redundancy and enable [high availability features](deployment-high-availability.md) or use remote redundant storage. Here is an overview of the storage options for various components in the big data clusters.
 
 | Resources | Storage type for data | Storage type for log |  Notes |
 |---|---|---|--|
@@ -47,7 +47,7 @@ Here are some important aspects to consider when you are planning storage config
 
 ## Configure big data cluster storage settings
 
-Similar to other customizations, you can specify storage settings in the cluster configuration files at deployment time for each pool in the **bdc.json** configuration file and for the control services in the **control.json** file. If there are no storage configuration settings in the pool specifications, then the control storage settings will be used **for all other components**, including SQL Server master (**master** resource), HDFS (**storage-0** resource) or data pool. This is a sample of the storage configuration section that you can include in the spec:
+Similar to other customizations, you can specify storage settings in the cluster configuration files at deployment time for each pool in the `bdc.json` configuration file and for the control services in the `control.json` file. If there are no storage configuration settings in the pool specifications, then the control storage settings will be used for all other components, including SQL Server master (`master` resource), HDFS (`storage-0` resource) or data pool. This is a sample of the storage configuration section that you can include in the spec:
 
 ```json
     "storage": 
@@ -73,47 +73,47 @@ Deployment of big data cluster will use persistent storage to store data, metada
 
 ## AKS storage classes
 
-AKS comes with [two built-in storage classes](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **default** and **managed-premium** along with dynamic provisioner for them. You can specify either of those or create your own storage class  for deploying big data cluster with persistent storage enabled. By default, the built in cluster configuration file for aks *aks-dev-test* comes with persistent storage configurations to use **default** storage class.
+AKS comes with [two built-in storage classes](/azure/aks/azure-disks-dynamic-pv/) `default` and `managed-premium` along with dynamic provisioner for them. You can specify either of those or create your own storage class  for deploying big data cluster with persistent storage enabled. By default, the built in cluster configuration file for aks `aks-dev-test`comes with persistent storage configurations to use `default` storage class.
 
 > [!WARNING]
-> Persistent volumes created with the built-in storage classes **default** and **managed-premium** have a reclaim policy of *Delete*. So at the time the you delete the SQL Server big data cluster, persistent volume claims get deleted and then persistent volumes as well. You can create custom storage classes using **azure-disk** privioner with a *Retain* reclaim policy as shown in  [this](https://docs.microsoft.com/azure/aks/concepts-storage#storage-classes) article.
+> Persistent volumes created with the built-in storage classes `default` and `managed-premium` have a reclaim policy of *Delete*. So at the time the you delete the SQL Server big data cluster, persistent volume claims get deleted and then persistent volumes as well. You can create custom storage classes using `azure-disk` provisioner with a `Retain` reclaim policy as shown in [this](/azure/aks/concepts-storage/#storage-classes) article.
 
-## Kubeadm storage classes
+## `kubeadm` storage classes
 
-Kubeadm does not come with a built-in storage class. You must create your own storage classes and persistent volumes using local storage or your preferred provisioner, such as [Rook](https://github.com/rook/rook). In that case, you would set the **className** to the storage class you configured. 
+`kubeadm` does not come with a built-in storage class. You must create your own storage classes and persistent volumes using local storage or your preferred provisioner, such as [Rook](https://github.com/rook/rook). In that case, you would set the `className` to the storage class you configured. 
 
 > [!NOTE]
->  In the built in deployment configuration file for *kubeadm kubeadm-dev-test* there is no storage class name specified for the data and log storage. Before deployment, you must customize the configuration file and set the value for className otherwise the pre-deployment validations will fail. Deployment also has a validation step that checks for the existence of the storage class, but not for the necessary persistent volumes. You must ensure you create enough volumes depending on the scale of your cluster. In CTP 3.1, for the default cluster size you must create at least 23 volumes. [Here](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) is an example on how to create persistent volumes using local provisioner.
+>  In the built in deployment configuration file for `kubeadm kubeadm-dev-test` there is no storage class name specified for the data and log storage. Before deployment, you must customize the configuration file and set the value for className otherwise the pre-deployment validations will fail. Deployment also has a validation step that checks for the existence of the storage class, but not for the necessary persistent volumes. You must ensure you create enough volumes depending on the scale of your cluster. In CTP 3.1, for the default cluster size you must create at least 23 volumes. [Here](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) is an example on how to create persistent volumes using local provisioner.
 
 
 ## Customize storage configurations for each pool
 
-For all customizations, you must first create a copy of the built in configuration file you want to use. For example, the following command creates a copy of the *aks-dev-test* deployment configuration files in a subdirectory named `custom`:
+For all customizations, you must first create a copy of the built in configuration file you want to use. For example, the following command creates a copy of the `aks-dev-test` deployment configuration files in a subdirectory named `custom`:
 
 ```bash
 azdata bdc config init --source aks-dev-test --target custom
 ```
 
-This creates two files, **bdc.json** and **control.json** that can be customized by either editing them manually, or you can use **azdata bdc config** command. You can use a combination of jsonpath and jsonpatch libraries to provide ways to edit your config files.
+This creates two files, `bdc.json` and `control.json` that can be customized by either editing them manually, or you can use `azdata bdc config` command. You can use a combination of jsonpath and jsonpatch libraries to provide ways to edit your config files.
 
 
 ### <a id="config-samples"></a> Configure storage class name and/or claims size
 
 By default, the size of the persistent volume claims provisioned for each of the pods provisioned in the cluster is 10 GB. You can update this value to accommodate the workloads you are running in a custom configuration file before cluster deployment.
 
-The following example updates the size of persistent volume claims size to 32Gi in the **control.jsaon**. If not overridden at pool level, this setting will be applied to all pools:
+The following example updates the size of persistent volume claims size to 32Gi in the `control.json`. If not overridden at pool level, this setting will be applied to all pools:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.size=100Gi"
 ```
 
-Following example shows how to modify the storage class for the **control.json** file:
+Following example shows how to modify the storage class for the `control.json` file:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.className=<yourStorageClassName>"
 ```
 
-Another option is to manually edit the custom configuration file or to use json patch like in the following example that changes the storage class for Storage pool. Create a *patch.json* file with this content:
+Another option is to manually edit the custom configuration file or to use json patch like in the following example that changes the storage class for Storage pool. Create a `patch.json` file with this content:
 
 ```json
 {
@@ -142,7 +142,7 @@ Another option is to manually edit the custom configuration file or to use json 
 }
 ```
 
-Apply the patch file. Use **azdata bdc config patch** command to apply the changes in the JSON patch file. The following example applies the patch.json file to a target deployment configuration file custom.json.
+Apply the patch file. Use `azdata bdc config patch` command to apply the changes in the JSON patch file. The following example applies the `patch.json` file to a target deployment configuration file `custom.json`.
 
 ```bash
 azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json

@@ -174,7 +174,7 @@ If you are not using a Java IDE, you can manually create a `.jar` file. For more
 
 ## Create external language
 
-In CTP 3.0 and later, you need to create an external language in the database. The external language is a database scoped object, which means that external languages like Java need to be created for each database you want to use it in.
+You need to create an external language in the database. The external language is a database scoped object, which means that external languages like Java need to be created for each database you want to use it in.
 
 ### Create external language on Windows
 
@@ -220,7 +220,7 @@ Use [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/cr
 
 In this sample, you will create two external libraries. One for the SDK and one for the RegEx Java code.
 
-1. The SDK jar file **mssql-java-lang-extension.jar** is installed as part of SQL Server 2019 CTP 3.0 and later on both Windows and Linux.
+1. The SDK jar file **mssql-java-lang-extension.jar** is installed as part of SQL Server 2019 on both Windows and Linux.
 
     + Default installation path on Windows: **[instance installation home directory]\MSSQL\Binn\mssql-java-lang-extension.jar**
 

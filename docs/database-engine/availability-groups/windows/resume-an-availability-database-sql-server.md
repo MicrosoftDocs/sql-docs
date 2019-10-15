@@ -62,9 +62,9 @@ ms.author: mathoma
   
 1.  Connect to the server instance that hosts the secondary replica whose database you want to resume.  
   
-2.  Resume the secondary database by using the following [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)statement:  
-  
-     ALTER DATABASE *database_name* SET HADR RESUME  
+2.  Resume the secondary database by using the following [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) statement:  
+
+     ALTER DATABASE *database_name* SET HADR RESUME;
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To resume a secondary database**  

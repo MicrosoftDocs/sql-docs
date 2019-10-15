@@ -51,7 +51,7 @@ The architecture is designed such that external scripts run in a separate proces
   
 Components include a **launchpad** service used to invoke external runtimes and library-specific logic for loading interpreters and libraries. The launcher loads a language runtime, plus any proprietary modules. For example, if your code includes RevoScaleR functions, a RevoScaleR interpreter is loaded. **BxlServer** and **SQL Satellite** manage communication and data transfer with SQL Server. 
 
-In Linux, SQL uses the **launchpadd** service to communicate with a separate launchpad process for each user.
+In Linux, SQL uses a **launchpadd** service to communicate with a separate launchpad process for each user.
 
 <a name="launchpad"></a>
 

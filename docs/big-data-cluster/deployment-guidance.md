@@ -111,7 +111,7 @@ In this scenario, you are prompted for any settings that are not part of the def
 
 ## <a id="customconfig"></a> Custom configurations
 
-It is also possible to customize your own deployment configuration profile. You can do this with the following steps:
+It is also possible to customize your deployment to accommodate the workloads you are planning to run. Note that there you can not change the scale (number of replicas) or storage settings for big data cluster services post deployments, so you must plan your deployment configuration carefully to avoid capacity issues. To cusomize your deployment, follow these steps:
 
 1. Start with one of the standard deployment profiles that match your Kubernetes environment. You can use the  **azdata bdc config list** command to list them:
 

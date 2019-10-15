@@ -107,7 +107,7 @@ A document map provides a set of navigational links to report items in a rendere
 > [!NOTE]  
 >  For more information about downloading sample reports, see [Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
->  For more information, see "URL Access" in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
+  
 
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

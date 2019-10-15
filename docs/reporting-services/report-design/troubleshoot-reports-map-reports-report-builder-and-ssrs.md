@@ -183,7 +183,7 @@ ms.author: maggies
   
 -   The map projection must be **Mercator**.  
   
--   For local preview, you must have internet access. For a report that runs from the report server, the report server must be configure to support tile background. For more information, see "Planning for Map Support" in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
+-   For local preview, you must have internet access. For a report that runs from the report server, the report server must be configure to support tile background. For more information, see "Planning for Map Support" in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312).  
   
  For more information about adding a tile layer, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

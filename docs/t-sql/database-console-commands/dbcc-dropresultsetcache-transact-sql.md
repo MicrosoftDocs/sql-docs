@@ -34,14 +34,15 @@ Requires membership in the DB_OWNER fixed server role.
 
 ## Remarks
 
-This command empties the result set cache for all queries.  
+- This command empties the result set cache for all queries.  
 
-Turning OFF the result set cache feature for a database also deletes all cached results.  
+- Turning OFF the result set cache feature for a database also deletes all cached results.  
 
-Pausing a database enabled with result set caching won't delete the cached results.  
+- Pausing a database enabled with result set caching won't delete the cached results.  
 
 ## See also
 
+[Performance tuning with result set caching](https://review.docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

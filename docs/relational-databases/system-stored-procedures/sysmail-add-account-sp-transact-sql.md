@@ -49,13 +49,13 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  The name of the account to add. *account_name* is **sysname**, with no default.  
   
 `[ @email_address = ] 'email_address'`
- The e-mail address to send the message from. This address must be an internet e-mail address. *email_address* is **nvarchar(128)**, with no default. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may send e-mail from the address **SqlAgent@Adventure-Works.com**.  
+ The e-mail address to send the message from. This address must be an internet e-mail address. *email_address* is **nvarchar(128)**, with no default. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may send e-mail from the address **SqlAgent\@Adventure-Works.com**.  
   
 `[ @display_name = ] 'display_name'`
  The display name to use on e-mail messages from this account. *display_name* is **nvarchar(128)**, with a default of NULL. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may display the name **SQL Server Agent Automated Mailer** on e-mail messages.  
   
 `[ @replyto_address = ] 'replyto_address'`
- The address that responses to messages from this account are sent to. *replyto_address* is **nvarchar(128)**, with a default of NULL. For example, replies to an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may go to the database administrator, **danw@Adventure-Works.com**.  
+ The address that responses to messages from this account are sent to. *replyto_address* is **nvarchar(128)**, with a default of NULL. For example, replies to an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may go to the database administrator, **danw\@Adventure-Works.com**.  
   
 `[ @description = ] 'description'`
  Is a description for the account. *description* is **nvarchar(256)**, with a default of NULL.  

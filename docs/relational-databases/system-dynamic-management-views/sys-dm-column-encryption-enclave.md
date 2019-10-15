@@ -24,11 +24,9 @@ If the enclave is configured and has been correctly initialized after the last r
 |current_column_encryption_key_count|**int**|The count of column encryption keys the enclave currently holds.|  
 |current_memory_size_kb|**bigint**|Enclave memory size in KB|  
 |total_evicted_session_count|**bigint**|The total count of enclave sessions evicted since the last server restart.|   
-|total_user_enclave_error_count|**bigint**|The total count of user errors that occurred in the enclave since the last server restart.|   
-|total_system_enclave_error_count|**bigint**|The total count of system errors that occurred in the enclave since the last server restart.|   
   
 ## Permissions  
- 
+Requires `VIEW SERVER STATE` permission.   
   
 ## Examples  
  
@@ -38,6 +36,6 @@ GO
 ```  
   
 ## See Also  
- [column encryption enclave type Server Configuration Option](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
+ [Configure the enclave type for Always Encrypted Server Configuration Option](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
   
   

@@ -57,9 +57,9 @@ The process of verifying the enclave is called **enclave attestation**, and it i
 
 The attestation process SQL Server supports for VBS secure enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] is Windows Defender System Guard runtime attestation, which uses Host Guardian Service (HGS) as an attestation service. You need to configure HGS in your environment and register the machine hosting your SQL Server instance in HGS. You also must configure you client applications or tools (for example, SQL Server Management Studio) with an HGS attestation.
 
-## Secure Enclave Providers
+## Supported Client Drivers
 
-To use Always Encrypted with secure enclaves, an application must use a client driver that supports the feature. In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], your applications must use .NET Framework 4.7.2 and .NET Framework Data Provider for SQL Server. In addition, .NET applications must be configured with a **secure enclave provider** specific to the enclave type (for example, VBS) and the attestation service (for example, HGS), you are using. The supported enclave providers are shipped separately in a NuGet package, which you need to integrate with your application. An enclave provider implements the client-side logic for the attestation protocol and for establishing a secure channel with a secure enclave of a given type.
+To use Always Encrypted with secure enclaves, an application must use a client driver that supports the feature. You need to configure the application and the client driver to enable enclave computations and enclave attestation. For details, including the list of supported client drivers, see [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
 
 ## Enclave-enabled Keys
 

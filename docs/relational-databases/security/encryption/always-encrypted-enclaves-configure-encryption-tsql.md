@@ -14,7 +14,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 # Configure column encryption in-place with Transact-SQL
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-This article describes how to perform cryptographic operations in-place on columns using Always Encrypted with secure enclaves with the `ALTER TABLE`/`ALTER COLUMN` statement. For basic information about in-place encryption and general pre-requisites, see [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
+This article describes how to perform cryptographic operations in-place on columns using Always Encrypted with secure enclaves with the [ALTER TABLE Statement](../../../odbc/microsoft/alter-table-statement.md)/`ALTER COLUMN` statement. For basic information about in-place encryption and general pre-requisites, see [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
 
 With the `ALTER TABLE`/`ALTER COLUMN` statement you can set the target encryption configuration for a column. When your execute the statement, the server-side secure enclave will encrypt, re-encrypt, or decrypt the data stored in the column, depending on the current and the target encryption configuration, specified in the column definition in the statement. 
 - If the column is currently not encrypted, it will be encrypted if you specify the `ENCRYPTED WITH` clause in the column definition.
@@ -60,7 +60,7 @@ The remainder of this article describes how to trigger in-place encryption  usin
 #### Encrypting a column in-place
 The below example assumes:
 - `CEK1` is an enclave-enabled column encryption key.
-- The `SSN` column is plaintext and is currently using the default database collation, e.g. a Latin1, non-BIN2 collation (for example, `Latin1\_General\_CI\_AI\_KS\_WS`).
+- The `SSN` column is plaintext and is currently using the default database collation, e.g. a Latin1, non-BIN2 collation (for example, `Latin1_General_CI_AI_KS_WS`).
 
 The statement encrypts the `SSN` column using randomized encryption and the enclave-enabled column encryption key in-place. It also overwrites the default database collation with the corresponding (in the same code page) BIN2 collation.
 
@@ -80,7 +80,7 @@ GO
 #### Re-encrypt a column in-place to change encryption type
 The below example assumes:
 - The `SSN` column is encrypted using deterministic encryption and an enclave-enabled column encryption key, `CEK1`.
-- The current collation, set at the column level, is `Latin1\_General\_BIN2`.
+- The current collation, set at the column level, is `Latin1_General_BIN2`.
 
 The below statement re-encrypts the column using randomized encryption and the same key (`CEK1`)
 
@@ -99,7 +99,7 @@ GO
 The below example assumes:
 - The `SSN` column is encrypted using randomized encryption and an enclave-enabled column encryption key, `CEK1`.
 - `CEK2` is an enclave-enabled column encryption key (different from `CEK1`).
-- The current collation, set at the column level, is `Latin1\_General\_BIN2`.
+- The current collation, set at the column level, is `Latin1_General_BIN2`.
 
 The below statement re-encrypts the column with `CEK2`.
 
@@ -116,7 +116,7 @@ GO
 #### Decrypt a column in-place
 The below example assumes:
 - The `SSN` column is encrypted using an enclave-enabled column encryption key.
-- The current collation, set at the column level, is `Latin1\_General\_BIN2`.
+- The current collation, set at the column level, is `Latin1_General_BIN2`.
 
 The below statement decrypts the column (and keeps the collation unchanged - alternatively, you can choose to change the collation, for example, to a non-BIN2 collation in the same statement).
 

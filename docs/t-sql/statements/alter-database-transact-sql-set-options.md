@@ -3132,7 +3132,7 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## See also
 
-- [Result set caching overview](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-result-set-caching-overview?branch=pr-en-us-91292)
+- [Result set caching in Azure SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-result-set-caching-overview) 
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

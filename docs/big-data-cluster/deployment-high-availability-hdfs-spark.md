@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In addition to deploying SQL Server master instance in a highly available configuration using availability groups, you can deploy other mission critical services in the big data cluster to ensure an increased level of reliability. You can configure **HDFS name node** and the shared Spark services grouped under **SparkHead** with an additional replica. In this case, **Zookeeper** is also deployed in the big data cluster to server as cluster coordinator and metadata store for following services: 
+In addition to deploying SQL Server master instance in a highly available configuration using availability groups, you can deploy other mission critical services in the big data cluster to ensure an increased level of reliability. You can configure `HDFS name node` and the shared Spark services grouped under `SparkHead` with an additional replica. In this case, `Zookeeper` is also deployed in the big data cluster to server as cluster coordinator and metadata store for following services: 
 
 - HDFS name node
 - Livy and Yarn Resource Manager. 
@@ -35,7 +35,7 @@ Deploying multiple replicas for these services results in enhanced scalability, 
 
 ## Deploy
 
-If either name node or spark head is configured to be deployed with two replicas, then you must also configure the Zookeeper resource with three replicas. In a highly available configuration for HDFS name node, two pods host the two replicas. Th pods are `nmnode-0` and `nmnode-1`. This configuration is active-passive. Only one of the name nodes is active at a time. The other is in stand-by - it becomes active as a result of a failover event. 
+If either name node or spark head is configured with two replicas, then you must also configure the Zookeeper resource with three replicas. In a highly available configuration for HDFS name node, two pods host the two replicas. Th pods are `nmnode-0` and `nmnode-1`. This configuration is active-passive. Only one of the name nodes is active at a time. The other is in stand-by - it becomes active as a result of a failover event. 
 
 You can use either the `aks-dev-test-ha` or the `kubeadm-prod` built-in configuration profiles to start customizing your big data cluster deployment. These profiles include the settings required for resources you can configure additional high availability. For example, below is a section in the `bdc.json` configuration file that is relevant for  deploying HDFS name node, Zookeeper and shared Spark resources (`sparkhead`) with high availability.  
 

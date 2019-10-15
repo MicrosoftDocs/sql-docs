@@ -5,7 +5,7 @@ description: Create a simple predictive model in R using SQL Server Machine Lear
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/17/2019  
+ms.date: 10/04/2019  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -209,12 +209,6 @@ It's also possible to use the [PREDICT (Transact-SQL)](../../t-sql/queries/predi
 
 ## Next steps
 
-To learn about handling R data types in SQL Server, follow this quickstart:
+For more information on SQL Server Machine Learning Services, see:
 
-> [!div class="nextstepaction"]
-> [Handle data types and objects using R in SQL Server Machine Learning Services](quickstart-r-data-types-and-objects.md)
-
-For more information on SQL Server Machine Learning Services, see the following articles.
-
-- [Write advanced R functions with SQL Server Machine Learning Services](quickstart-r-functions.md)
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

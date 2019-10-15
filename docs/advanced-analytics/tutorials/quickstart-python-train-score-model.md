@@ -5,7 +5,7 @@ description: Create a simple predictive model in Python using SQL Server Machine
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/17/2019  
+ms.date: 10/14/2019  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -23,9 +23,9 @@ You'll create and execute two stored procedures running in SQL. The first one us
 By completing this quickstart, you'll learn:
 
 > [!div class="checklist"]
-> * How to embed Python code in a stored procedure
-> * How to pass inputs to your code through inputs on the stored procedure
-> * How stored procedures are used to operationalize models
+> - How to embed Python code in a stored procedure
+> - How to pass inputs to your code through inputs on the stored procedure
+> - How stored procedures are used to operationalize models
 
 ## Prerequisites
 
@@ -65,7 +65,7 @@ In this step, you'll create a stored procedure that generates a model for predic
     import pickle
     from sklearn.naive_bayes import GaussianNB
     GNB = GaussianNB()
-    trained_model = pickle.dumps(GNB.fit(iris_data[[0,1,2,3]], iris_data[[4]].values.ravel()))
+    trained_model = pickle.dumps(GNB.fit(iris_data[["Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"]], iris_data[["SpeciesId"]].values.ravel()))
     '
             , @input_data_1 = N'select "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "SpeciesId" from iris_data'
             , @input_data_1_name = N'iris_data'
@@ -131,9 +131,9 @@ Now that you have created, trained, and saved a model, move on to the next step:
            , @script = N'
    import pickle
    irismodel = pickle.loads(nb_model)
-   species_pred = irismodel.predict(iris_data[[1,2,3,4]])
+   species_pred = irismodel.predict(iris_data[["Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"]])
    iris_data["PredictedSpecies"] = species_pred
-   OutputDataSet = iris_data[[0,5,6]] 
+   OutputDataSet = iris_data[["id","SpeciesId","PredictedSpecies"]] 
    print(OutputDataSet)
    '
            , @input_data_1 = N'select id, "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "SpeciesId" from iris_data'
@@ -177,11 +177,6 @@ Likewise, you can also leverage resourcing features of SQL Server, such as paral
 A final benefit is that the processes can be modified using parameters. In this exercise, Python code that created the model (named "Naive Bayes" in this example) was passed as an input to a second stored procedure calling the model in a scoring process. This exercise only uses one model, but you can imagine how parameterizing the model in a scoring task would make that script more useful.
 
 ## Next steps
-
-To learn about handling Python data types in SQL Server, follow this quickstart:
-
-> [!div class="nextstepaction"]
-> [Handle data types and objects using Python in SQL Server Machine Learning Services](quickstart-python-data-structures.md)
 
 For more information on SQL Server Machine Learning Services, see:
 

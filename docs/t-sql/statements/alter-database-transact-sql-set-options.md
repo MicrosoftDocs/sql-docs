@@ -3028,28 +3028,28 @@ ON
 Specifies that query result sets returned from this database will be cached in Azure SQL Data Warehouse storage.
 
 OFF        
-Specifies that query result sets returned from this database will not be cached in Azure SQL Data warehouse storage. Users can tell if a query was executed with a result cache hit or miss by querying sys.pdw_request_steps with a specific request_id.   If there is a cache hit, the query result will have a single step with following details:
-
-|**Column name** |**Operator** |**Value** |
-|----|----|----|
-| operation_type|=|ReturnOperation|
-|step_index|=|0|
-|location_type|=|Control|
-command|Like|%DWResultCacheDb%|
-| | |
+Specifies that query result sets returned from this database will not be cached in Azure SQL Data warehouse storage. 
 
 ### Remarks
-This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data Warehouse storage. A new column, is_result_set_caching_on, is introduced in [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to show the result cache setting for a database.  
+This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data Warehouse storage. 
 
-Cached result set is reused for a query if all of the following requirements are all met:
+Run this command to check a database's result set caching configuration.  If result set caching is turned ON, is_result_set_caching_on will return 1.
 
-1. The user who's running the query has access to all the tables referenced in the query.
-1. There is an exact match between the new query and the previous query that generated the result set cache.
-1. There is no data or schema changes in the tables where the cached result set was generated from.  
+```sql
 
-Once result set caching is turned ON for a database, results are cached for all queries until the cache is full, except queries that use non-deterministic functions such as DateTime.Now() and queries that return data with row size larger than 64KB.   
+SELECT name, is_result_set_caching_on FROM sys.databases 
+WHERE name = <'Your_Database_Name'>
 
-Queries with large result sets (for example, > 1 million rows) may experience slower performance during the first run when the result cache is being created.
+```
+
+Run this command to check if a query was executed with a result cache hit or miss.  If there is a cache hit, the result_cache_hit will return 1. 
+
+```sql
+
+SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests 
+WHERE request_id = <'Your_Query_Request_ID'>
+
+```
 
 **<snapshot_option> ::=**        
 **Applies to**: Azure SQL Data Warehouse (preview)
@@ -3132,6 +3132,7 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## See also
 
+- [Result set caching in Azure SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-result-set-caching-overview) 
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

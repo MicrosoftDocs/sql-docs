@@ -110,14 +110,14 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 ## Logins and Object Ownership  
   
 ### Are logins and passwords replicated?  
- No. You could create a DTS package to transfer logins and passwords from a Publisher to one or more Subscribers.  
+ No. You could create an SSIS package to transfer logins and passwords from a Publisher to one or more Subscribers.  
   
 ### What are schemas and how are they replicated?  
  Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *schema* has two meanings:  
   
--   The definition of an object, such as a CREATE TABLE statement. By default, replication copies the definitions of all replicated objects to the Subscriber.  
+-   The definition of an object, such as a `CREATE TABLE` statement. By default, replication copies the definitions of all replicated objects to the Subscriber.  
   
--   The namespace within which an object is created: \<Database>.\<Schema>.\<Object>. Schemas are defined using the CREATE SCHEMA statement.  
+-   The namespace within which an object is created: \<Database>.\<Schema>.\<Object>. Schemas are defined using the `CREATE SCHEMA` statement.  
   
 -   Replication has the following default behavior in the New Publication Wizard with respect to schemas and object ownership:  
   
@@ -172,7 +172,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
  There are a variety of mechanisms for rebuilding indexes. They can all be used with no special considerations for replication, with the following exception: primary keys are required on tables in transactional publications, so you cannot drop and recreate primary keys on these tables.  
   
 ### How do I add or change indexes on publication and subscription databases?  
- Indexes can be added at the Publisher or Subscribers with no special considerations for replication (be aware that indexes can affect performance). CREATE INDEX and ALTER INDEX are not replicated, so if you add or change an index at, for example, the Publisher, you must make the same addition or change at the Subscriber if you want it reflected there.  
+ Indexes can be added at the Publisher or Subscribers with no special considerations for replication (be aware that indexes can affect performance). `CREATE INDEX` and `ALTER INDEX` are not replicated, so if you add or change an index at, for example, the Publisher, you must make the same addition or change at the Subscriber if you want it reflected there.  
   
 ### How do I move or rename files for databases involved in replication?  
  In versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], moving or renaming database files required detaching and reattaching the database. Because a replicated database cannot be detached, replication had to be removed from these databases first. Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], you can move or rename files without detaching and re-attaching the database, with no effect on replication. For more information about moving and renaming files, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
@@ -181,7 +181,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
  First drop the article from the publication using [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md), or the **Publication Properties - \<Publication>** dialog box, and then drop it from the database using `DROP <Object>`. You cannot drop articles from snapshot or transactional publications after subscriptions have been added; you must drop the subscriptions first. For more information, see [Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### How do I add or drop columns on a published table?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports a wide variety of schema changes on published objects, including adding and dropping columns. For example, execute ALTER TABLE … DROP COLUMN at the Publisher, and the statement is replicated to Subscribers and then executed to drop the column. Subscribers running versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] support adding and dropping columns through the stored procedures [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) and [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). For more information, see [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports a wide variety of schema changes on published objects, including adding and dropping columns. For example, execute `ALTER TABLE … DROP COLUMN` at the Publisher, and the statement is replicated to Subscribers and then executed to drop the column. Subscribers running versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] support adding and dropping columns through the stored procedures [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) and [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). For more information, see [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## Replication Maintenance  
   

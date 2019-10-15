@@ -33,6 +33,8 @@ SET RESULT_SET_CACHING { ON | OFF };
   
 ## Remarks  
 
+Run this command when connected to the user database where you want to configure the result_set_caching setting for.
+
 **ON**   
 Enables result set caching for the current client session.  Result set caching cannot be turned ON for a session if it is turned OFF at the database level.
 
@@ -54,7 +56,7 @@ WHERE request_id = 'QID58286'
 Requires membership in the public role
 
 ## See also
-
+[Result set caching in Azure SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-result-set-caching-overview)</br>
 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql)</br>

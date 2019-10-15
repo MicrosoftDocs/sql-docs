@@ -5,7 +5,7 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 10/11/2019
+ms.date: 10/14/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
@@ -590,25 +590,6 @@ Follow the steps below to build and run SQL Server Machine Learning Services in 
     CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
     941e1bdf8e1d        mcr.microsoft.com/mssql/server/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour     0.0.0.0:1401->1433/tcp   sql1
     ```
-
-## Limitations in CTP releases
-
-R and Python integration on Linux is still under active development. The following features are not yet enabled in the preview version.
-
-+ Implied authentication is currently not available in Machine Learning Services on Linux at this time, which means you cannot connect back to the server from an in-progress R or Python script to access data or other resources. 
-
-### Resource governance
-
-There is parity between Linux and Windows for [Resource governance](../t-sql/statements/create-external-resource-pool-transact-sql.md) for external resource pools, but the statistics for [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) currently have different units on Linux. Units will align in an upcoming CTP.
- 
-| Column name   | Description | Value on Linux | 
-|---------------|--------------|---------------|
-|peak_memory_kb | The maximum amount of memory used for the resource pool. | On Linux, this statistic is sourced from the CGroups memory subsystem, where the value is memory.max_usage_in_bytes |
-|write_io_count | The total write IOs issued since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the CGroups blkio subsystem, where the value on the write row is blkio.throttle.io_serviced | 
-|read_io_count | The total read IOs issued since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the CGroups blkio subsystem, where value on the read row is blkio.throttle.io_serviced | 
-|total_cpu_kernel_ms | The cumulative CPU user kernel time in milliseconds since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the CGroups cpuacct subsystem, where the value on the user row is cpuacct.stat |  
-|total_cpu_user_ms | The cumulative CPU user time in milliseconds since the Resource Governor statistics were reset.| On Linux, this statistic is sourced from the CGroups cpuacct subsystem, where the value on the system row value is cpuacct.stat | 
-|active_processes_count | The number of external processes running at the moment of the request.| On Linux, this statistic is sourced from the GGroups pids subsystem, where the value is pids.current | 
 
 ## Next steps
 

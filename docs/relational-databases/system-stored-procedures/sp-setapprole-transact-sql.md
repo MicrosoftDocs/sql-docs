@@ -60,7 +60,7 @@ sp_setapprole [ @rolename = ] 'role',
  Specifies whether a cookie is to be created. **true** is implicitly converted to 1. **false** is implicitly converted to 0.  
   
 `[ @cookie = ] @cookie OUTPUT`
- Specifies an output parameter to contain the cookie. The cookie is generated only if the value of **@fCreateCookie** is **true**. **varbinary(8000)**  
+ Specifies an output parameter to contain the cookie. The cookie is generated only if the value of **\@fCreateCookie** is **true**. **varbinary(8000)**  
   
 > [!NOTE]  
 > The cookie **OUTPUT** parameter for **sp_setapprole** is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(50)**. Applications should continue to reserve **varbinary(8000)** so that the application continues to operate correctly if the cookie return size increases in a future release.

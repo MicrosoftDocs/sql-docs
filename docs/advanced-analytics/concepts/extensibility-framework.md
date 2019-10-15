@@ -1,6 +1,6 @@
 ---
-title: Extensibility architecture for R language and Python script
-description: External code support for the SQL Server database engine, with dual architecture for running R and Python script on relational data.
+title: Extensibility architecture for external scripts
+description: This article describes the architecture of the extensibility framework for running an external script, such as R or Python, on SQL server.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -27,15 +27,15 @@ The following diagram visually describes opportunities and benefits of the exten
 
   ![Goals of integration with SQL Server](../media/ml-service-value-add.png "Machine Learning Services Value Add")
 
-Any R or Python script can be run by calling a stored procedure, and the results are returned as tabular results directly to SQL Server. This makes it easy to generate or consume machine learning from any application that can send a SQL query and handle the results.
+An external script can be run by calling a stored procedure, and the results are returned as tabular results directly to SQL Server. This makes it easy to generate or consume machine learning from any application that can send a SQL query and handle the results.
 
 + External script execution is subject to SQL Server data security. A user running an external script can only access data that is equally available in a SQL query. If a query fails due to insufficient permission, a script run by the same user would also fail for the same reason. SQL Server security is enforced at the table, database, and instance level. Database administrators can manage user access, resources used by external scripts, and external code libraries added to the server.  
 
-+ Scale and optimization opportunities have a dual basis: gains through the database platform (ColumnStore indexes, [resource governance](../../advanced-analytics/r/resource-governance-for-r-services.md)), and extension-specific gains when Microsoft libraries for R and Python are used for data science models. Whereas R is single-threaded, RevoScaleR functions are multi-threaded, capable of distributing a workload over multiple cores.
++ Scale and optimization opportunities have a dual basis: gains through the database platform (ColumnStore indexes, [resource governance](../../advanced-analytics/r/resource-governance-for-r-services.md)); and extension-specific gains, for example when Microsoft libraries for R and Python are used for data science models. Whereas R is single-threaded, RevoScaleR functions are multi-threaded, capable of distributing a workload over multiple cores.
 
 + Deployment uses SQL Server methodologies. These can be stored procedures wrapping an external script, embedded SQL, or T-SQL queries calling functions like PREDICT to return results from forecasting models persisted on the server.
 
-+ R and Python developers with established skills in specific tools and IDEs can write code in those tools and then port the code to SQL Server.
++ Developers with established skills in specific tools and IDEs can write code in those tools and then port the code to SQL Server.
 
 ## Architecture diagram
 
@@ -49,7 +49,7 @@ The architecture is designed such that external scripts run in a separate proces
 
   ![Linux component architecture](../media/generic-architecture-linux.png "Component architecture")
   
-Components include a **launchpad** service used to invoke external runtimes (R or Python) and library-specific logic for loading interpreters and libraries. The Launcher loads a language run time, plus any proprietary modules. For example, if your code includes RevoScaleR functions, a RevoScaleR interpreter is loaded. **BxlServer** and **SQL Satellite** manage communication and data transfer with SQL Server. 
+Components include a **launchpad** service used to invoke external runtimes and library-specific logic for loading interpreters and libraries. The launcher loads a language runtime, plus any proprietary modules. For example, if your code includes RevoScaleR functions, a RevoScaleR interpreter is loaded. **BxlServer** and **SQL Satellite** manage communication and data transfer with SQL Server. 
 
 In Linux, SQL uses the **launchpadd** service to communicate with a separate launchpad process for each user.
 
@@ -76,9 +76,9 @@ In Linux, only one database engine instance is supported and there is one launch
 
 ## BxlServer and SQL Satellite
 
-**BxlServer** is an executable provided by Microsoft that manages communication between SQL Server and Python or R. It creates the Windows job objects for Windows, or the namespaces for Linux, that are used to contain external script sessions. It also provisions secure working folders for each external script job and uses SQL Satellite to manage data transfer between the external runtime and SQL Server. If you run [Process Explorer](https://technet.microsoft.com/sysinternals/processexplorer.aspx) while a job is running, you might see one or multiple instances of BxlServer.
+**BxlServer** is an executable provided by Microsoft that manages communication between SQL Server and the language runtime. It creates the Windows job objects for Windows, or the namespaces for Linux, that are used to contain external script sessions. It also provisions secure working folders for each external script job and uses SQL Satellite to manage data transfer between the external runtime and SQL Server. If you run [Process Explorer](https://technet.microsoft.com/sysinternals/processexplorer.aspx) while a job is running, you might see one or multiple instances of BxlServer.
 
-In effect, BxlServer is a companion to a language run time environment that works with SQL Server to transfer data and manage tasks. BXL stands for Binary Exchange language and refers to the data format used to move data efficiently between SQL Server and external processes. BxlServer is also an important part of related products such as Microsoft R Client and Microsoft R Server.
+In effect, BxlServer is a companion to a language runtime environment that works with SQL Server to transfer data and manage tasks. BXL stands for Binary Exchange language and refers to the data format used to move data efficiently between SQL Server and external processes. BxlServer is also an important part of related products such as Microsoft R Client and Microsoft R Server.
 
 **SQL Satellite** is an extensibility API, included in the database engine, that supports external code or external runtimes implemented using C or C++.
 

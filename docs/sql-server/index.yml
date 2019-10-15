@@ -17,7 +17,7 @@ metadata:
 landingContent:
 
 
-  - title: Backend Development 1
+  - title: Backend Development
     linkLists:
     - linkListType: get-started
       links:
@@ -43,7 +43,7 @@ landingContent:
         url: https://docs.microsoft.com/sql/relational-databases/stored-procedures/stored-procedures-database-engine
 
 
-  - title: Backend Development 2
+  - title: Advanced Backend Dev
     linkLists:
     - linkListType: reference
       links:
@@ -145,7 +145,7 @@ landingContent:
         url: https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/overview-smo
 
 
-  - title: Client technologies
+  - title: Client services
     linkLists:
     - linkListType: overview
       links:

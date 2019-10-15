@@ -1,5 +1,6 @@
 ---
-title: "Multiple Bulk Copy Operations"
+title: "Multiple bulk copy operations"
+description: "Describes how to do multiple bulk copy operations of data into an instance of SQL Server using the SqlBulkCopy class."
 ms.date: "08/15/2019"
 dev_langs: 
   - "csharp"
@@ -12,7 +13,7 @@ author: v-kaywon
 ms.author: v-kaywon
 ms.reviewer: rothja
 ---
-# Multiple Bulk Copy Operations
+# Multiple bulk copy operations
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
@@ -22,12 +23,13 @@ You can perform multiple bulk copy operations using a single instance of a <xref
 >  Performing multiple bulk copy operations using the same instance of <xref:Microsoft.Data.SqlClient.SqlBulkCopy> is usually more efficient than using a separate instance for each operation.  
   
 If you perform several bulk copy operations using the same <xref:Microsoft.Data.SqlClient.SqlBulkCopy> object, there are no restrictions on whether source or target information is equal or different in each operation. However, you must ensure that column association information is properly set each time you write to the server.  
-  
+
+## Example
+
 > [!IMPORTANT]
->  This sample will not run unless you have created the work tables as described in [Bulk Copy Example Setup](bulk-copy-example-setup.md). This code is provided to demonstrate the syntax for using **SqlBulkCopy** only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL `INSERT … SELECT` statement to copy the data.  
+>  This sample will not run unless you have created the work tables as described in [Bulk copy example setup](bulk-copy-example-setup.md). This code is provided to demonstrate the syntax for using **SqlBulkCopy** only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL `INSERT … SELECT` statement to copy the data.  
   
 [!code-csharp[DataWorks SqlBulkCopy_._ColumnMappingOrdersDetails#1](~/../sqlclient/doc/samples/SqlBulkCopy_ColumnMappingOrdersDetails.cs#1)]
   
-## See also
-
-- [Bulk Copy Operations in SQL Server](bulk-copy-operations-in-sql-server.md)
+## Next steps
+- [Bulk copy operations in SQL Server](bulk-copy-operations-sql-server.md)

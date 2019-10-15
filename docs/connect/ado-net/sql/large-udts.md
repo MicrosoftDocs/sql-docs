@@ -1,5 +1,6 @@
 ---
 title: "Large UDTs"
+description: "Demonstrates how to retrieve data from large value UDTs introduced in SQL Server 2008."
 ms.date: "08/15/2019"
 dev_langs: 
   - "csharp"
@@ -20,16 +21,12 @@ User-defined types (UDTs) allow a developer to extend the server's scalar type s
   
 Previously, UDTs were restricted to a maximum size of 8 kilobytes. In SQL Server 2008, this restriction has been removed for UDTs that have a format of <xref:Microsoft.Data.SqlClient.Server.Format.UserDefined>.  
   
-For the complete documentation for user-defined types, see the version of SQL Server Books Online for the version of SQL Server you are using.  
+For the complete documentation for user-defined types, see [CLR User-Defined Types](https://go.microsoft.com/fwlink/?LinkId=98366) from SQL Server Books Online.
   
-**SQL Server Books Online**  
-  
-1. [CLR User-Defined Types](https://go.microsoft.com/fwlink/?LinkId=98366)  
-  
-## Retrieving UDT Schemas Using GetSchema  
+## Retrieving UDT schemas using GetSchema  
 The <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> method of <xref:Microsoft.Data.SqlClient.SqlConnection> returns database schema information in a <xref:System.Data.DataTable>.
   
-### GetSchemaTable Column Values for UDTs  
+### GetSchemaTable column values for UDTs  
 The <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> method of a <xref:Microsoft.Data.SqlClient.SqlDataReader> returns a <xref:System.Data.DataTable> that describes column metadata. The following table describes the differences in the column metadata for large UDTs between SQL Server 2005 and SQL Server 2008.  
   
 |SqlDataReader column|SQL Server 2005|SQL Server 2008 and later|  
@@ -44,7 +41,7 @@ The <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> method of a 
 |`DataTypeName`|`SqlDbType.VarBinary`|The three part name specified as *Database.SchemaName.TypeName*.|  
 |`IsLong`|Varies|Varies|  
   
-## SqlDataReader Considerations  
+## SqlDataReader considerations  
 The <xref:Microsoft.Data.SqlClient.SqlDataReader> has been extended beginning in SQL Server 2008 to support retrieving large UDT values. How large UDT values are processed by a <xref:Microsoft.Data.SqlClient.SqlDataReader> depends on the version of SQL Server you are using, as well as on the `Type System Version` specified in the connection string. For more information, see <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
 The following methods of <xref:Microsoft.Data.SqlClient.SqlDataReader> will return a <xref:System.Data.SqlTypes.SqlBinary> instead of a UDT when the `Type System Version` is set to SQL Server 2005:  
@@ -76,7 +73,7 @@ The following <xref:Microsoft.Data.SqlClient.SqlParameter> properties have been 
 |<xref:Microsoft.Data.SqlClient.SqlParameter.SqlValue%2A>|Gets or sets an object that represents the value of the parameter. The default is null. The property can be `SqlBinary`, `Byte[]`, or a managed object.|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Size%2A>|Gets or sets the size of the parameter value to resolve. The default value is 0. The property can be an integer that represents the size of the parameter value. For large UDTs, it can be the actual size of the UDT, or -1 for unknown.|  
   
-## Retrieving Data Example  
+## Retrieving data example  
 The following code fragment demonstrates how to retrieve large UDT data. The `connectionString` variable assumes a valid connection to a SQL Server database and the `commandString` variable assumes a valid SELECT statement with the primary key column listed first.  
   
 ```csharp  
@@ -105,6 +102,5 @@ reader.close
 }  
 ```  
   
-## See also
-
-- [SQL Server Binary and Large-Value Data](sql-server-binary-and-large-value-data.md)
+## Next steps
+- [SQL Server binary and large-value data](sql-server-binary-large-value-data.md)

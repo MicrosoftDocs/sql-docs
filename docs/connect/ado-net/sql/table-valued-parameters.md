@@ -1,5 +1,6 @@
 ---
-title: "Table-Valued Parameters"
+title: "Table-valued parameters"
+description: "Describes how to work with table-valued parameters, which were introduced in SQL Server 2008."
 ms.date: "08/15/2019"
 dev_langs: 
   - "csharp"
@@ -12,7 +13,7 @@ author: v-kaywon
 ms.author: v-kaywon
 ms.reviewer: rothja
 ---
-# Table-Valued Parameters
+# Table-valued parameters
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
@@ -30,7 +31,7 @@ For more information about table-valued parameters, see the following resources.
 |[Table-Valued Parameters (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=98363) in SQL Server Books Online|Describes how to create and use table-valued parameters.|  
 |[User-Defined Table Types](https://go.microsoft.com/fwlink/?LinkId=98364) in SQL Server Books Online|Describes user-defined table types that are used to declare table-valued parameters.|  
   
-## Passing Multiple Rows in Previous Versions of SQL Server  
+## Passing multiple rows in previous versions of SQL Server  
 Before table-valued parameters were introduced to SQL Server 2008, the options for passing multiple rows of data to a stored procedure or a parameterized SQL command were limited. A developer could choose from the following options for passing multiple rows to the server:  
   
 - Use a series of individual parameters to represent the values in multiple columns and rows of data. The amount of data that can be passed by using this method is limited by the number of parameters allowed. SQL Server procedures can have, at most, 2100 parameters. Server-side logic is required to assemble these individual values into a table variable or a temporary table for processing.  
@@ -41,7 +42,7 @@ Before table-valued parameters were introduced to SQL Server 2008, the options f
   
 - Use the `bcp` utility program or the <xref:Microsoft.Data.SqlClient.SqlBulkCopy> object to load many rows of data into a table. Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.  
   
-## Creating Table-Valued Parameter Types  
+## Creating table-valued parameter types  
 Table-valued parameters are based on strongly-typed table structures that are defined by using Transact-SQL CREATE TYPE statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](https://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server Books Online.  
   
 The following statement creates a table type named CategoryTableType that consists of CategoryID and CategoryName columns:  
@@ -58,7 +59,7 @@ CREATE PROCEDURE usp_UpdateCategories
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
   
-## Modifying Data with Table-Valued Parameters (Transact-SQL)  
+## Modifying data with table-valued parameters (transact-SQL)  
 Table-valued parameters can be used in set-based data modifications that affect multiple rows by executing a single statement. For example, you can select all the rows in a table-valued parameter and insert them into a database table, or you can create an update statement by joining a table-valued parameter to the table you want to update.  
   
 The following Transact-SQL UPDATE statement demonstrates how to use a table-valued parameter by joining it to the Categories table. When you use a table-valued parameter with a JOIN in a FROM clause, you must also alias it, as shown here, where the table-valued parameter is aliased as "ec":  
@@ -77,7 +78,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  
   
-## Limitations of Table-Valued Parameters  
+## Limitations of table-valued parameters  
 There are several limitations to table-valued parameters:  
   
 - You cannot pass table-valued parameters to [CLR user-defined functions](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md).  
@@ -88,7 +89,7 @@ There are several limitations to table-valued parameters:
   
 - You cannot use ALTER TABLE statements to modify the design of table-valued parameters.  
   
-## Configuring a SqlParameter Example  
+## Configuring a SqlParameter example  
 <xref:Microsoft.Data.SqlClient> supports populating table-valued parameters from <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> or <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.Data.SqlClient.Server.SqlDataRecord> objects. You must specify a type name for the table-valued parameter by using the <xref:Microsoft.Data.SqlClient.SqlParameter.TypeName%2A> property of a <xref:Microsoft.Data.SqlClient.SqlParameter>. The `TypeName` must match the name of a compatible type previously created on the server. The following code fragment demonstrates how to configure <xref:Microsoft.Data.SqlClient.SqlParameter> to insert data.  
  
 In the following example, the `addedCategories` variable contains a <xref:System.Data.DataTable>. To see how the variable is populated, see the examples in the next section, [Passing a Table-Valued Parameter to a Stored Procedure](#passing).
@@ -111,7 +112,7 @@ SqlParameter tvpParam = insertCommand.Parameters.AddWithValue("@tvpNewCategories
 tvpParam.SqlDbType = SqlDbType.Structured;  
 ```  
   
-## <a name="passing"></a> Passing a Table-Valued Parameter to a Stored Procedure  
+## <a name="passing"></a> Passing a table-valued parameter to a stored procedure  
 This example demonstrates how to pass table-valued parameter data to a stored procedure. The code extracts added rows into a new <xref:System.Data.DataTable> by using the <xref:System.Data.DataTable.GetChanges%2A> method. The code then defines a <xref:Microsoft.Data.SqlClient.SqlCommand>, setting the <xref:Microsoft.Data.SqlClient.SqlCommand.CommandType%2A> property to <xref:System.Data.CommandType.StoredProcedure>. The <xref:Microsoft.Data.SqlClient.SqlParameter> is populated by using the <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> method and the <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> is set to `Structured`. The <xref:Microsoft.Data.SqlClient.SqlCommand> is then executed by using the <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> method.  
   
 ```csharp  
@@ -132,7 +133,7 @@ using (connection)
 }  
 ```  
   
-### Passing a Table-Valued Parameter to a Parameterized SQL Statement  
+### Passing a table-valued parameter to a parameterized SQL statement  
  The following example demonstrates how to insert data into the dbo.Categories table by using an INSERT statement with a SELECT subquery that has a table-valued parameter as the data source. When passing a table-valued parameter to a parameterized SQL statement, you must specify a type name for the table-valued parameter by using the new <xref:Microsoft.Data.SqlClient.SqlParameter.TypeName%2A> property of a <xref:Microsoft.Data.SqlClient.SqlParameter>. This `TypeName` must match the name of a compatible type previously created on the server. The code in this example uses the `TypeName` property to reference the type structure defined in dbo.CategoryTableType.  
   
 > [!NOTE]
@@ -162,7 +163,7 @@ using (connection)
 }  
 ```  
   
-## Streaming Rows with a DataReader  
+## Streaming rows with a DataReader  
 You can also use any object derived from <xref:System.Data.Common.DbDataReader> to stream rows of data to a table-valued parameter. The following code fragment demonstrates retrieving data from an Oracle database by using an <xref:System.Data.OracleClient.OracleCommand> and an <xref:System.Data.OracleClient.OracleDataReader>. The code then configures a <xref:Microsoft.Data.SqlClient.SqlCommand> to invoke a stored procedure with a single input parameter. The <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> property of the <xref:Microsoft.Data.SqlClient.SqlParameter> is set to `Structured`. The <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> passes the `OracleDataReader` result set to the stored procedure as a table-valued parameter.  
   
 ```csharp  
@@ -187,6 +188,5 @@ OracleDataReader oracleReader = selectCommand.ExecuteReader(
  insertCommand.ExecuteNonQuery();  
 ```  
   
-## See also
-
-- [SQL Server Data Operations in ADO.NET](sql-server-data-operations.md)
+## Next steps
+- [SQL Server data operations in ADO.NET](sql-server-data-operations.md)

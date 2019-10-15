@@ -1,5 +1,6 @@
 ---
 title: "Multiple Active Result Sets (MARS)"
+description: "Describes how to have more than one SqlDataReader open on a connection when each instance of SqlDataReader is started from a separate command."
 ms.date: "08/15/2019"
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
 ms.prod: sql
@@ -16,17 +17,16 @@ ms.reviewer: rothja
 
 Multiple Active Result Sets (MARS) is a feature that allows the execution of multiple batches on a single connection. In previous versions, only one batch could be executed at a time against a single connection. Executing multiple batches with MARS does not imply simultaneous execution of operations.  
   
-## In This Section  
-[Enabling Multiple Active Result Sets](enabling-multiple-active-result-sets.md)  
+## In this section  
+[Enabling Multiple Active Result Sets](enable-multiple-active-result-sets.md)  
 Discusses how to use MARS with SQL Server.  
   
-[Manipulating Data](manipulating-data.md)  
+[Manipulating data](manipulate-data.md)  
 Provides examples of coding MARS applications.  
   
-## Related Sections  
-[Asynchronous Operations](asynchronous-operations.md)  
+## Related sections  
+[Asynchronous operations](asynchronous-operations.md)  
 Provides details on using the new asynchronous features in .NET.  
   
-## See also
-
+## Next steps
 - [SQL Server and ADO.NET](index.md)

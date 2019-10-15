@@ -1,5 +1,6 @@
 ---
-title: "Bulk Copy Example Setup"
+title: "Bulk copy example setup"
+description: "Describes the tables used in the bulk copy examples and provides SQL scripts for creating the tables in the AdventureWorks database."
 ms.date: "09/30/2019"
 dev_langs: 
   - "sql"
@@ -12,7 +13,7 @@ author: v-kaywon
 ms.author: v-kaywon
 ms.reviewer: rothja
 ---
-# Bulk Copy Example Setup
+# Bulk copy example setup
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
@@ -25,7 +26,7 @@ A few of the code samples demonstrate how to use one <xref:Microsoft.Data.SqlCli
 > [!NOTE]
 >  The **SqlBulkCopy** code samples are provided to demonstrate the syntax for using **SqlBulkCopy** only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL `INSERT … SELECT` statement to copy the data.  
   
-## Table Setup  
+## Table setup  
 To create the tables necessary for the code samples to run correctly, you must run the following Transact-SQL statements in a SQL Server database.  
   
 ```sql
@@ -87,6 +88,5 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
 ) ON [PRIMARY]) ON [PRIMARY]  
 ```  
   
-## See also
-
-- [Bulk Copy Operations in SQL Server](bulk-copy-operations-in-sql-server.md)
+## Next steps
+- [Bulk copy operations in SQL Server](bulk-copy-operations-sql-server.md)

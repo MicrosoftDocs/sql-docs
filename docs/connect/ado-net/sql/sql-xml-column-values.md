@@ -1,5 +1,6 @@
 ---
-title: "SQL XML Column Values"
+title: "SQL XML column values"
+description: "Demonstrates how to retrieve and work with XML data retrieved from SQL Server."
 ms.date: "08/15/2019"
 dev_langs: 
   - "csharp"
@@ -12,7 +13,7 @@ author: v-kaywon
 ms.author: v-kaywon
 ms.reviewer: rothja
 ---
-# SQL XML Column Values
+# SQL XML column values
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
@@ -26,7 +27,6 @@ The following console application selects two rows, each containing an `xml` col
   
 [!code-csharp[DataWorks SqlDataReader_GetSqlXml#1](~/../sqlclient/doc/samples/SqlDataReader_GetSqlXml.cs#1)]
   
-## See also
-
+## Next steps
 - <xref:System.Data.SqlTypes.SqlXml>
-- [XML Data in SQL Server](xml-data-in-sql-server.md)
+- [XML data in SQL Server](xml-data-sql-server.md)

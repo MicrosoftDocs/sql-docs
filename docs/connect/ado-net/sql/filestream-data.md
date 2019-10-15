@@ -1,5 +1,6 @@
 ---
-title: "FILESTREAM Data"
+title: "FILESTREAM data"
+description: "Describes how to work with large-value data stored in SQL Server 2008 with the FILESTREAM attribute."
 ms.date: "08/15/2019"
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
 ms.prod: sql
@@ -11,7 +12,7 @@ ms.author: v-kaywon
 ms.reviewer: rothja
 ---
 
-# FILESTREAM Data
+# FILESTREAM data
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
@@ -22,11 +23,11 @@ The FILESTREAM storage attribute is for binary (BLOB) data stored in a varbinary
 
 Specifying the FILESTREAM attribute on a varbinary(max) column causes SQL Server to store the data on the local NTFS file system instead of in the database file. Although it is stored separately, you can use the same Transact-SQL statements that are supported for working with varbinary(max) data that is stored in the database.
 
-## SqlClient Support for FILESTREAM
+## SqlClient support for FILESTREAM
 
 The Microsoft SqlClient Data Provider for SQL Server, <xref:Microsoft.Data.SqlClient>, supports reading and writing to FILESTREAM data using the <xref:Microsoft.Data.SqlTypes.SqlFileStream> class defined in the <xref:System.Data.SqlTypes> namespace. `SqlFileStream` inherits from the <xref:System.IO.Stream> class, which provides methods for reading and writing to streams of data. Reading from a stream transfers data from the stream into a data structure, such as an array of bytes. Writing transfers the data from the data structure into a stream.
 
-### Creating the SQL Server Table
+### Creating the SQL Server table
 
 The following Transact-SQL statements creates a table named employees and inserts a row of data. Once you have enabled FILESTREAM storage, you can use this table in conjunction with the code examples that follow. The links to resources in SQL Server Books Online are located at the end of this topic.
 
@@ -44,7 +45,7 @@ Values(1, 0x00, default)
 GO
 ```
 
-### Example: Reading, Overwriting, and Inserting FILESTREAM Data
+### Example: Reading, overwriting, and inserting FILESTREAM data
 
 The following sample demonstrates how to read data from a FILESTREAM. The code gets the logical path to the file, setting the `FileAccess` to `Read` and the `FileOptions` to `SequentialScan`. The code then reads the bytes from the SqlFileStream into the buffer. The bytes are then written to the console window.
 
@@ -187,7 +188,6 @@ The complete documentation for FILESTREAM is located in the following sections i
 |[Create Client Applications for FILESTREAM Data](../../../relational-databases/blob/create-client-applications-for-filestream-data.md)|Describes the Windows API functions for working with FILESTREAM data.|
 |[FILESTREAM and Other SQL Server Features](../../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)|Provides considerations, guidelines and limitations for using FILESTREAM data with other features of SQL Server.|
 
-## See also
-
-- [SQL Server Data Types and ADO.NET](sql-server-data-types.md)
-- [SQL Server Binary and Large-Value Data](sql-server-binary-and-large-value-data.md)
+## Next steps
+- [SQL Server data types and ADO.NET](sql-server-data-types.md)
+- [SQL Server binary and large-value data](sql-server-binary-large-value-data.md)

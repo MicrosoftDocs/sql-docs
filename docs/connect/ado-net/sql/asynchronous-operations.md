@@ -1,5 +1,6 @@
 ---
-title: "Asynchronous Operations"
+title: "Asynchronous operations"
+description: "Describes how to perform asynchronous database operations by using an API that is modeled after the asynchronous model used by the .NET Framework."
 ms.date: "09/30/2019"
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
 ms.prod: sql
@@ -10,7 +11,7 @@ author: v-kaywon
 ms.author: v-kaywon
 ms.reviewer: rothja
 ---
-# Asynchronous Operations
+# Asynchronous operations
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
@@ -23,17 +24,16 @@ The .NET provides several standard asynchronous design patterns that developers 
   
 Although using asynchronous techniques with ADO.NET features does not add any special considerations, it is important to be aware of the benefits and pitfalls of creating multithreaded applications. The examples that follow in this section point out several important issues that developers will need to take into account when building applications that incorporate multithreaded functionality.  
   
-## In This Section  
-[Windows Applications Using Callbacks](windows-applications-using-callbacks.md)  
+## In this section  
+[Windows applications using callbacks](windows-applications-callbacks.md)  
 Provides an example demonstrating how to execute an asynchronous command safely, correctly handling interaction with a form and its contents from a separate thread.  
   
-[ASP.NET Applications Using Wait Handles](aspnet-apps-using-wait-handles.md)  
+[ASP.NET applications using wait handles](aspnet-apps-use-wait-handles.md)  
 Provides an example demonstrating how to execute multiple concurrent commands from an ASP.NET page, using Wait handles to manage the operation at completion of all the commands.  
   
-[Polling in Console Applications](polling-in-console-applications.md)  
+[Polling in console applications](poll-console-applications.md)  
 Provides an example demonstrating the use of polling to wait for the completion of an asynchronous command execution from a console application. This technique is also valid in a class library or other application without a user interface.  
   
-## See also
-
+## Next steps
 - [SQL Server and ADO.NET](index.md)
 - [Calling Synchronous Methods Asynchronously](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)

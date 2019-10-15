@@ -1,5 +1,6 @@
 ---
-title: "SQL Server Security"
+title: "SQL Server security"
+description: "Provides an overview of SQL Server security features, and application scenarios for creating secure ADO.NET applications that target SQL Server."
 ms.date: "09/26/2019"
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
 ms.prod: sql
@@ -10,9 +11,10 @@ author: v-kaywon
 ms.author: v-kaywon
 ms.reviewer: rothja
 ---
-# SQL Server Security
+# SQL Server security
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 SQL Server has many features that support creating secure database applications.  
   
 Common security considerations, such as data theft or vandalism, apply regardless of the version of SQL Server you are using. Data integrity should also be considered as a security issue. If data is not protected, it is possible that it could become worthless if ad hoc data manipulation is permitted and the data is inadvertently or maliciously modified with incorrect values or deleted entirely. In addition, there are often legal requirements that must be adhered to, such as the correct storage of confidential information. Storing some kinds of personal data is proscribed entirely, depending on the laws that apply in a particular jurisdiction.  
@@ -25,22 +27,22 @@ Even if the initial design of an application is sound, new threats may emerge as
   
 The topics in this section briefly describe the security features in SQL Server that are relevant for developers, with links to relevant topics in SQL Server Books Online and other resources that provide more detailed coverage.  
   
-## In This Section  
-[Authentication in SQL Server](authentication-in-sql-server.md)  
+## In this section  
+[Authentication in SQL Server](authentication-sql-server.md)  
 Describes logins and authentication in SQL Server and provides links to additional resources. 
   
-[Application Security Scenarios in SQL Server](application-security-scenarios-in-sql-server.md)  
+[Application security scenarios in SQL Server](application-security-scenarios-sql-server.md)  
 Contains topics discussing various application security scenarios for ADO.NET and SQL Server applications.  
   
-[SQL Server Express Security](sql-server-express-security.md)  
+[SQL Server Express security](sql-server-express-security.md)  
 Describes security considerations for SQL Server Express.  
   
-## Related Sections  
+## Related sections  
 [Security Center for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 Describes security considerations for SQL Server and Azure SQL Database.
 
 [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
 Describes security concerns to consider before installing SQL Server.
 
-## See also
+## Next steps
 - [SQL Server and ADO.NET](index.md)

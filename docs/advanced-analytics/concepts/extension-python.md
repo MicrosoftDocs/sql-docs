@@ -58,9 +58,9 @@ After the script has been embedded in the stored procedure, any application that
 
 ![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
-1. A request for the Python runtime is indicated by the parameter `@language='Python'` passed to the stored procedure. SQL Server sends this request to the Launchpad service.
-In Linux, SQL uses the **mssql-launchpadd** service to communicate with a separate Launchpad process for each user.
-2. The Launchpad service starts the appropriate launcher; in this case, PythonLauncher.
+1. A request for the Python runtime is indicated by the parameter `@language='Python'` passed to the stored procedure. SQL Server sends this request to the launchpad service.
+In Linux, SQL uses the **launchpadd** service to communicate with a separate launchpad process for each user. See the [Extensibility architecture diagram](extensibility-framework.md#architecture-diagram) for details.
+2. The launchpad service starts the appropriate launcher; in this case, PythonLauncher.
 3. PythonLauncher starts the external Python35 process.
 4. BxlServer coordinates with the Python runtime to manage exchanges of data, and storage of working results.
 5. SQL Satellite manages communications about related tasks and processes with SQL Server.
@@ -82,7 +82,7 @@ The following diagram summarizes the overall workflow when scripts are sent from
 2. BxlServer is included with Machine Learning Services (In-Database) and runs in a separate process from the Python runtime.
 3. BxlServer determines the connection target and initiates a connection using ODBC, passing credentials supplied as part of the connection string in the Python script.
 4. BxlServer opens a connection to the SQL Server instance.
-5. When an external script runtime is called, the Launchpad service is invoked, which in turn starts the appropriate launcher: in this case, PythonLauncher.dll. Thereafter, processing of Python code is handled in a workflow similar to that when Python code is invoked from a stored procedure in T-SQL.
+5. When an external script runtime is called, the launchpad service is invoked, which in turn starts the appropriate launcher: in this case, PythonLauncher.dll. Thereafter, processing of Python code is handled in a workflow similar to that when Python code is invoked from a stored procedure in T-SQL.
 6. PythonLauncher makes a call to the instance of the Python that is installed on the SQL Server computer.
 7. Results are returned to BxlServer.
 8. SQL Satellite manages communication with SQL Server and cleanup of related job objects.

@@ -52,7 +52,7 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## Remarks  
  Either *collection_set_id* or *name* must have a value, both cannot be NULL.  
   
- This procedure will start the collection and upload jobs for the specified collection set and will immediately start the collection agent job if the collection set has its **@collection_mode** set to non-cached (1). For more information see, [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ This procedure will start the collection and upload jobs for the specified collection set and will immediately start the collection agent job if the collection set has its **\@collection_mode** set to non-cached (1). For more information see, [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
  sp_sycollector_run_collection_set can also be used to run a collection set that does not have a schedule.  
   

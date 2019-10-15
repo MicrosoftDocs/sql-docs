@@ -84,7 +84,7 @@ Monitoring improvements unlock performance insights over any database workload, 
 |New feature or update | Details |
 |:---|:---|
 |`WAIT_ON_SYNC_STATISTICS_REFRESH` | A new wait type in `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations. See [`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|
-|Custom capture policy for the Query Store|When they're enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine-tune data collection in a specific server. See [ALTER DATABASE SET Options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
+|Custom capture policy for Query Store|When they're enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine-tune data collection in a specific server. See [ALTER DATABASE SET options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
 |`LIGHTWEIGHT_QUERY_PROFILING`| A new database scoped configuration. See [`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp). |
 |`sys.dm_exec_requests` column `command` | Shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to finish before it continues the query execution. See [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|
 |`sys.dm_exec_query_plan_stats` | A new dynamic management function (DMF) that returns the equivalent of the last known actual execution plan for all queries. See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
@@ -250,7 +250,7 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 
 ## Next steps
 
-- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release notes](sql-server-ver15-release-notes.md).
+- See [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release notes](sql-server-ver15-release-notes.md).
 - [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Technical white paper](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br>Published September 2018. Applies to Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 for Windows, Linux, and Docker containers.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

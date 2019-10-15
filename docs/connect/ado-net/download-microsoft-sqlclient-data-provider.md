@@ -22,6 +22,9 @@ ms.reviewer: rothja
 The Microsoft.Data.SqlClient package is available on NuGet.org. Refer to the dependencies section from the links below to download the dependencies.
 
 ## Available downloads of Microsoft SqlClient Data Provider for SQL Server
+ * [1.1.0-preview1.19275.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/1.1.0-preview1.19275.1)
+ * [1.0.19269.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/1.0.19269.1)
+ * [1.0.19249.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/1.0.19249.1)
  * [1.0.19239.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/1.0.19239.1)
  * [1.0.19221.1-Preview](https://www.nuget.org/packages/Microsoft.Data.SqlClient/1.0.19221.1-Preview)
  * [1.0.19189.1-Preview](https://www.nuget.org/packages/Microsoft.Data.SqlClient/1.0.19189.1-Preview)

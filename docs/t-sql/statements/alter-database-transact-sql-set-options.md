@@ -3132,7 +3132,7 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## See also
 
-- [Performance tuning with result set caching](https://review.docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-result-set-caching)
+- [Performance tuning with result set caching](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

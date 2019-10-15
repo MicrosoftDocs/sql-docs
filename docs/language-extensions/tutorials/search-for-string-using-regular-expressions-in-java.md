@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: This tutorial shows you how to use SQL Server Language Extensions and run Java code that search a string with regular expressions.
 author: dphansen
 ms.author: davidph 
-ms.date: 10/07/2019
+ms.date: 10/15/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions

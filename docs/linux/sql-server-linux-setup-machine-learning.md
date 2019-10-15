@@ -5,7 +5,7 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 10/14/2019
+ms.date: 10/15/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
@@ -31,7 +31,7 @@ Machine Learning Services is also supported on Linux containers. We do not provi
 
 ## Uninstall preview release
 
-If you have installed a preview release (CTP or Release Candidate), we recommend uninstalling this version to remove all previous packages before installing SQL Server 2019. Side-by-side installation of multiple versions is not supported, and the package list has changed over the last several preview (CTP/RC) releases.
+If you have installed a preview release (Community Technical Preview (CTP) or Release Candidate), we recommend uninstalling this version to remove all previous packages before installing SQL Server 2019. Side-by-side installation of multiple versions is not supported, and the package list has changed over the last several preview (CTP/RC) releases.
 
 ### 1. Confirm package installation
 
@@ -172,8 +172,6 @@ On an internet-connected device, packages are downloaded and installed independe
 | [microsoft-r-open*](#mro) | R | Open-source distribution of R, composed of three packages. |
 |mssql-mlservices-mlm-r  | R | *Full install*. Provides RevoScaleR, MicrosoftML, sqlRUtils, olapR, pre-trained models for image featurization and text sentiment analysis.| 
 |mssql-mlservices-packages-r  | R | *Minimum install*. Provides RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Excludes pre-trained models. | 
-|mssql-mlservices-mml-py  | CTP 2.0-2.1 only | Obsolete in CTP 2.2 due to Python package consolidation into mssql-mslservices-python. Provides revoscalepy. Excludes pre-trained models and microsoftml.| 
-|mssql-mlservices-mml-r  | CTP 2.0-2.1 only | Obsolete in CTP 2.2 due to R package consolidation into mssql-mslservices-python. Provides RevoScaleR, sqlRUtils, olapR. Excludes pre-trained models and MicrosoftML.  |
 
 <a name="RHEL"></a>
 
@@ -414,7 +412,7 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 
 #### Download site
 
-You can download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for R and Python are colocated with database engine package. Base version for the mlservices packages is 9.4.5 (for CTP 2.0) 9.4.6 (for CTP 2.1 and later). Recall that the microsoft-r-open packages are in a [different repository](#mro).
+You can download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for R and Python are colocated with database engine package. Base version for the mlservices packages is 9.4.6. Recall that the microsoft-r-open packages are in a [different repository](#mro).
 
 #### RHEL/7 paths
 

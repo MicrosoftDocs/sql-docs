@@ -5,7 +5,7 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 08/21/2019
+ms.date: 10/15/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -25,7 +25,7 @@ Language Extensions is also supported on Linux containers. We do not provide pre
 
 ## Uninstall preview version
 
-If you have installed a preview release (CTP or Release Candidate), we recommend uninstalling this version to remove all previous packages before installing SQL Server 2019. Side-by-side installation of multiple versions is not supported, and the package list has changed over the last several preview (CTP/RC) releases.
+If you have installed a preview release (Community Technical Preview (CTP) or Release Candidate (RC)), we recommend uninstalling this version to remove all previous packages before installing SQL Server 2019. Side-by-side installation of multiple versions is not supported, and the package list has changed over the last several preview (CTP/RC) releases.
 
 ### 1. Confirm package installation
 

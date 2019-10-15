@@ -61,9 +61,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  When *continuous* = 0, the **sp_cdc_scan** job executes up to *max_scans* scans of the log, processing up to *max_trans* transactions during each scan, and then exits.  
   
- If **@continuous** is changed from 1 to 0, **@pollinginterval** is automatically set to 0. A value specified for **@pollinginterval** other than 0 is ignored.  
+ If **\@continuous** is changed from 1 to 0, **\@pollinginterval** is automatically set to 0. A value specified for **\@pollinginterval** other than 0 is ignored.  
   
- If **@continuous** is omitted or explicitly set to NULL and **@pollinginterval** is explicitly set to a value greater than 0, **@continuous** is automatically set to 1.  
+ If **\@continuous** is omitted or explicitly set to NULL and **\@pollinginterval** is explicitly set to a value greater than 0, **\@continuous** is automatically set to 1.  
   
  *continuous* is valid only for capture jobs.  
   

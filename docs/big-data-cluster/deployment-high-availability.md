@@ -19,15 +19,15 @@ Because SQL Server Big Data Clusters is on Kubernetes as containerized applicati
 
 Here are some of the capabilities that availability groups enable:
 
-1. If the high availability settings are specified in the deployment configuration file, a single availability group named `containedag` is created. By default, `containedag` has three replicas, including primary. All CRUD operations for the availability group are managed internally, including creating the availability group or joining replicas to the availability group created. Additional availability groups cannot be created in the SQL Server master instance in a big data cluster.
-1. All databases are automatically added to the availability group, including all user and system databases like `master` and `msdb`. This capability provides a single-system view across the availability group replicas. Additional model databases - `model_replicatedmaster` and `model_msdb` - are used to seed the replicated portion of the system databases. In addition to these databases, you will see `containedag_master` and `containedag_msdb` databases if you connect directly to the instance. The `containedag` databases represent the `master` and `msdb` inside the availability group.
+- If the high availability settings are specified in the deployment configuration file, a single availability group named `containedag` is created. By default, `containedag` has three replicas, including primary. All CRUD operations for the availability group are managed internally, including creating the availability group or joining replicas to the availability group created. Additional availability groups cannot be created in the SQL Server master instance in a big data cluster.
+- All databases are automatically added to the availability group, including all user and system databases like `master` and `msdb`. This capability provides a single-system view across the availability group replicas. Additional model databases - `model_replicatedmaster` and `model_msdb` - are used to seed the replicated portion of the system databases. In addition to these databases, you will see `containedag_master` and `containedag_msdb` databases if you connect directly to the instance. The `containedag` databases represent the `master` and `msdb` inside the availability group.
 
-> [!IMPORTANT]
-> At the time of the SQL Server 2019 CU1 release, only databases created as result of a CREATE DATABASE statement are automatically added to the availability group. Databases created on the instance as result of other workflows like restore are not yet added to the availability group and big data cluster admin would have to do this manually. See the [Connect to SQL Server instance](#instance-connect) section for instructions.
->
-1. Polybase configuration databases are not included in the availability group because they include instance level metadata specific to each replica.
-1. An external endpoint is automatically provisioned for connecting to databases within the availability group. This endpoint `master-svc-external` plays the role of the availability group listener.
-1. A second external endpoint is provisioned for read-only connections to the secondary replicas to scale out the read workloads.
+  > [!IMPORTANT]
+  > At the time of the SQL Server 2019 CU1 release, only databases created as result of a CREATE DATABASE statement are automatically added to the availability group. Databases created on the instance as result of other workflows like restore are not yet added to the availability group and big data cluster admin would have to do this manually. See the [Connect to SQL Server instance](#instance-connect) section for instructions.
+  >
+- Polybase configuration databases are not included in the availability group because they include instance level metadata specific to each replica.
+- An external endpoint is automatically provisioned for connecting to databases within the availability group. This endpoint `master-svc-external` plays the role of the availability group listener.
+- A second external endpoint is provisioned for read-only connections to the secondary replicas to scale out the read workloads.
 
 ## Deploy
 
@@ -112,9 +112,11 @@ For read-only connections to databases in secondary replicas, use the `sql-serve
 azdata bdc endpoint list -e sql-server-master-readonly -o table
 ```
 
-`Description                                    Endpoint            Name                        Protocol`
-`---------------------------------------------  ------------------  --------------------------  ----------`
-`SQL Server Master Readable Secondary Replicas  13.64.238.24,31436  sql-server-master-readonly  tds`
+```
+Description                                    Endpoint            Name                        Protocol
+---------------------------------------------  ------------------  --------------------------  ----------
+SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-master-readonly  tds
+```
 
 ### <a id="instance-connect"></a> Connect to SQL Server instance
 

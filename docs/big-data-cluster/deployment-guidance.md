@@ -155,7 +155,7 @@ The following environment variables are used for security settings that are not 
 
 | Environment variable | Requirement |Description |
 |---|---|---|
-| **AZDATA_USERNAME** | Required |The username for the cluster administrator. An sysadmin login with the same name will be created in SQL Server master instance. As a security best practice, **sa** account will be disabled. |
+| **AZDATA_USERNAME** | Required |The username for SQL Server big data cluster administrator. An sysadmin login with the same name will be created in SQL Server master instance. As a security best practice, **sa** account will be disabled. |
 | **AZDATA_PASSWORD** | Required |The password for the user accounts created above. Same password will be used for the **root** user, used for securing Knox gateway and HDFS. |
 | **ACCEPT_EULA**| Required for first use of `azdata`| Set to "yes". When set as an environment variable, it applies EULA to both SQL Server and `azdata`. If not set as environment variable, you can include `--accept-eula=yes` in the first use of `azdata` command.|
 | **DOCKER_USERNAME** | Optional | The username to access the container images in case they are stored in a private repository. See the [Offline deployments](deploy-offline.md) topic for more details on how to use a private Docker repository for big data cluster deployment.|
@@ -235,14 +235,17 @@ After the deployment script has completed successfully, you can obtain the addre
    > [!TIP]
    > If you did not change the default name during deployment, use `-n mssql-cluster` in the previous command. **mssql-cluster** is the default name for the big data cluster.
 
-1. Log in to the big data cluster with [azdata login](reference-azdata.md). Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
+1. Log in to the big data cluster with [azdata login](reference-azdata.md). Set the **--endpoint** parameter to the external IP address of the controller endpoint.
 
    ```bash
-   azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
+   azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
    ```
 
-   Specify the username and password that you configured for the controller (CONTROLLER_USERNAME and CONTROLLER_PASSWORD) during deployment.
+   Specify the username and password that you configured for the big data cluster admin (AZDATA_USERNAME and AZDATA_PASSWORD) during deployment.
 
+   > [!TIP]
+   > If you are the Kubernetes cluster administrator and have access to the cluster configuration file (kube config file), you can configure the current context to point to the targeted Kubernetes cluster. In this case, you can login with `azdata login -n <namespaceName>`, where `namespace` is the big data cluster name. You would be prompted for credentials if not specified within the login command.
+   
 1. Run [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
 
    ```bash

@@ -71,7 +71,7 @@ description
 
 	To help people understand that this is a learning topic and not an action topic, start the title with "How something works ...." or one of the other terms suggested previously
 
-	The heading must use an industry standard term. If your feature is a proprietary name like "Elastic database pools", use a synonym. For example,	"Learn about elastic database pools for multi-tenant databases". In this case, "multi-tenant database" is the industry-standard term that will be an anchor for finding the topic.
+	The heading must use an industry standard term. If your feature is a proprietary name like "Elastic database pools", use a synonym. For example, "Learn about elastic database pools for multi-tenant databases". In this case, "multi-tenant database" is the industry-standard term that will be an anchor for finding the topic.
 ---------------------->
 
 <!--------------------
@@ -180,7 +180,7 @@ If you delete a database, SQL Database keeps the backups in the same way it woul
 
 
 <!-----------------
-    Use notes sparingly; customers might ignore the notes. However, they do help break up the visual space to make the article look more interesting. Use notes to add related piece of information that broaden customers' knowledge.
+    Use notes sparingly; customers might ignore the notes. However, notes do help break up the visual space to make the article look more interesting. Use notes to add related pieces of information that broaden customers' knowledge.
 ------------------->
 
 >[AZURE.IMPORTANT]

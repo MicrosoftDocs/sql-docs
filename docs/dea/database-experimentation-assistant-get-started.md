@@ -33,7 +33,7 @@ Considerations:
 - Before you start your trace capture, make sure that you back up the databases from which you're capturing a trace.
 - A DEA user must be configured to connect to the database by using Windows authentication.
 - A SQL Server service account requires access to the source trace file path.
-- For best results, query executions should be run at least 15 times.  
+- For DEA to determine whether the performance of a query is improved or degraded, that query must execute at least 15 times during the capture period.  
 
 To capture a trace on your source server:
 

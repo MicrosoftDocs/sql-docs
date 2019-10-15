@@ -49,30 +49,34 @@ The architecture is designed such that external scripts run in a separate proces
 
   ![Linux component architecture](../media/generic-architecture-linux.png "Component architecture")
   
-Components include a **Launchpad** service used to invoke external runtimes (R or Python) and library-specific logic for loading interpreters and libraries. The Launcher loads a language run time, plus any proprietary modules. For example, if your code includes RevoScaleR functions, a RevoScaleR interpreter is loaded. **BxlServer** and **SQL Satellite** manage communication and data transfer with SQL Server. 
+Components include a **launchpad** service used to invoke external runtimes (R or Python) and library-specific logic for loading interpreters and libraries. The Launcher loads a language run time, plus any proprietary modules. For example, if your code includes RevoScaleR functions, a RevoScaleR interpreter is loaded. **BxlServer** and **SQL Satellite** manage communication and data transfer with SQL Server. 
 
-In Linux, SQL uses the **mssql-launchpadd** service to communicate with a separate Launchpad process for each user.
+In Linux, SQL uses the **launchpadd** service to communicate with a separate launchpad process for each user.
 
 <a name="launchpad"></a>
 
 ## Launchpad
 
-The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a service that manages and executes external scripts, similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries. The Launchpad service can start only trusted launchers that are published by Microsoft, or that have been certified by Microsoft as meeting requirements for performance and resource management.
+The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a service that manages and executes external scripts, similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries. The launchpad service can start only trusted launchers that are published by Microsoft, or that have been certified by Microsoft as meeting requirements for performance and resource management.
 
 | Trusted launchers | Extension | SQL Server versions |
 |-------------------|-----------|---------------------|
-| RLauncher.dll for the R language | [R extension](extension-r.md) | SQL Server 2016 and later |
-| Pythonlauncher.dll for Python 3.5 | [Python extension](extension-python.md) | SQL Server 2017 and later |
+| RLauncher.dll for the R language for Windows | [R extension](extension-r.md) | SQL Server 2016 and later |
+| Pythonlauncher.dll for Python 3.5 for Windows | [Python extension](extension-python.md) | SQL Server 2017 and later |
+| RLauncher.so for the R language for Linux | [R extension](extension-r.md) | SQL Server 2016 and later |
+| Pythonlauncher.so for Python 3.5 for Linux | [Python extension](extension-python.md) | SQL Server 2017 and later |
 
-The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under its own user account. If you change the account that runs Launchpad, be sure to do so using SQL Server Configuration Manager, to ensure that changes are written to related files.
+The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under its own user account. If you change the account that runs launchpad, be sure to do so using SQL Server Configuration Manager, to ensure that changes are written to related files.
 
-A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for each database engine instance to which you have added SQL Server Machine Learning Services. There is one Launchpad service for each database engine instance, so if you have multiple instances with external script support, you will have a Launchpad service for each one. A database engine instance is bound to the Launchpad service created for it. All invocations of external script in a stored procedure or T-SQL result in the SQL Server service calling the Launchpad service created for the same instance.
+In Windows, a separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for each database engine instance to which you have added SQL Server Machine Learning Services. There is one launchpad service for each database engine instance, so if you have multiple instances with external script support, you will have a launchpad service for each one. A database engine instance is bound to the launchpad service created for it. All invocations of external script in a stored procedure or T-SQL result in the SQL Server service calling the launchpad service created for the same instance.
 
-To execute tasks in a specific supported language, the Launchpad gets a secured worker account from the pool, and starts a satellite process to manage the external runtime. Each satellite process inherits the user account of the Launchpad and uses that worker account for the duration of script execution. If script uses parallel processes, they are created under the same, single worker account.
+To execute tasks in a specific supported language, the launchpad gets a secured worker account from the pool, and starts a satellite process to manage the external runtime. Each satellite process inherits the user account of the launchpad and uses that worker account for the duration of script execution. If script uses parallel processes, they are created under the same, single worker account.
+
+In Linux, only one database engine instance is supported and there is one launchpadd service bound to the instance. When a script is executed, the launchpadd service starts a separate launchpad process with the low-privileged user account **mssql_satellite**. Each satellite process inherits the mssql_satellite user account of launchpad and uses that for the duration of script execution.
 
 ## BxlServer and SQL Satellite
 
-**BxlServer** is an executable provided by Microsoft that manages communication between SQL Server and Python or R. It creates the Windows job objects that are used to contain external script sessions, provisions secure working folders for each external script job, and uses SQL Satellite to manage data transfer between the external runtime and SQL Server. If you run [Process Explorer](https://technet.microsoft.com/sysinternals/processexplorer.aspx) while a job is running, you might see one or multiple instances of BxlServer.
+**BxlServer** is an executable provided by Microsoft that manages communication between SQL Server and Python or R. It creates the Windows job objects for Windows, or the namespaces for Linux, that are used to contain external script sessions. It also provisions secure working folders for each external script job and uses SQL Satellite to manage data transfer between the external runtime and SQL Server. If you run [Process Explorer](https://technet.microsoft.com/sysinternals/processexplorer.aspx) while a job is running, you might see one or multiple instances of BxlServer.
 
 In effect, BxlServer is a companion to a language run time environment that works with SQL Server to transfer data and manage tasks. BXL stands for Binary Exchange language and refers to the data format used to move data efficiently between SQL Server and external processes. BxlServer is also an important part of related products such as Microsoft R Client and Microsoft R Server.
 

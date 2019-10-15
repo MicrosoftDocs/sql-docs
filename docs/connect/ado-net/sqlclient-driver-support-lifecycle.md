@@ -1,5 +1,5 @@
 ---
-title: "SqlClient Driver support lifecycle"
+title: "SqlClient driver support lifecycle"
 description: "Page that contains product support lifecycle information."
 ms.date: "08/15/2019"
 dev_langs: 
@@ -14,7 +14,7 @@ author: v-kaywon
 ms.author: v-kaywon
 ms.reviewer: rothja
 ---
-# SqlClient Driver support lifecycle
+# SqlClient driver support lifecycle
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 

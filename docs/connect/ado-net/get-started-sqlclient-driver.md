@@ -1,5 +1,5 @@
 ---
-title: "Getting started with the SqlClient Driver | Microsoft Docs"
+title: "Getting started with the SqlClient driver | Microsoft Docs"
 description: "Intoduction in using the SqlClient Dirver."
 ms.custom: ""
 ms.date: "09/30/2019"
@@ -13,7 +13,7 @@ author: v-kaywon
 ms.author: v-kaywon
 ms.reviewer: rothja
 ---
-# Getting started with the SqlClient Driver
+# Getting started with the SqlClient driver
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 

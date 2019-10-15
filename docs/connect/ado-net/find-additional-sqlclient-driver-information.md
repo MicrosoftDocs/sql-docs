@@ -1,5 +1,5 @@
 ---
-title: "Finding additional SqlClient Driver information"
+title: "Finding additional SqlClient driver information"
 description: "Page that contains useful information regarding the driver."
 ms.date: "09/30/2019"
 dev_langs: 
@@ -14,7 +14,7 @@ author: v-kaywon
 ms.author: v-kaywon
 ms.reviewer: rothja
 ---
-# Finding additional SqlClient Driver information
+# Finding additional SqlClient driver information
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
@@ -29,4 +29,4 @@ For more information about the Microsoft SqlClient Data Provider for SQL Server 
 |[.NET API Browser](https://docs.microsoft.com/dotnet/api/)|This site contains .NET API information for the driver.|  
   
 ## Next steps
- [Overview of the SqlClient Driver](overview-sqlclient-driver.md)  
+ [Overview of the SqlClient driver](overview-sqlclient-driver.md)  

@@ -1,5 +1,5 @@
 ---
-title: "Overview of the SqlClient Driver | Microsoft Docs"
+title: "Overview of the SqlClient driver | Microsoft Docs"
 description: "An overview of the Microsoft SqlClient Data Provider for SQL Server."
 ms.custom: ""
 ms.date: "09/30/2019"
@@ -13,7 +13,7 @@ author: v-kaywon
 ms.author: v-kaywon
 ms.reviewer: rothja
 ---
-# Overview of the SqlClient Driver
+# Overview of the SqlClient driver
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
@@ -27,8 +27,8 @@ ms.reviewer: rothja
 |-----------|-----------------|  
 |[Introduction to Microsoft.Data.SqlClient namespace](introduction-microsoft-data-sqlclient-namespace.md)|Introduction page for the Microsoft.Data.SqlClient namespace.|  
 |[Download Microsoft SqlClient Data Provider for SQL Server](download-microsoft-sqlclient-data-provider.md)|Download page for ADO.NET and Microsoft SqlClient Data Provider for SQL Server.|  
-|[SqlClient Driver support lifecycle](sqlclient-driver-support-lifecycle.md)|Page that contains product support lifecycle information.|  
-|[Finding additional SqlClient Driver information](find-additional-sqlclient-driver-information.md)|Page that contains useful information regarding the driver.|  
+|[SqlClient driver support lifecycle](sqlclient-driver-support-lifecycle.md)|Page that contains product support lifecycle information.|  
+|[Finding additional SqlClient driver information](find-additional-sqlclient-driver-information.md)|Page that contains useful information regarding the driver.|  
 
 ## Next steps
  [SqlClient Driver GitHub Repository](https://github.com/dotnet/SqlClient)  

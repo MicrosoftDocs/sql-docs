@@ -29,9 +29,9 @@ Package location for the Python and R extensions is in the SQL Server Linux sour
 
 Machine Learning Services is also supported on Linux containers. We do not provide pre-built containers with Machine Learning Services, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-## Uninstall previous CTP
+## Uninstall preview release
 
-The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 3.2. Side-by-side installation of multiple versions is not supported.
+If you have installed a preview release (CTP or Release Candidate), we recommend uninstalling this version to remove all previous packages before installing SQL Server 2019. Side-by-side installation of multiple versions is not supported, and the package list has changed over the last several preview (CTP/RC) releases.
 
 ### 1. Confirm package installation
 
@@ -41,7 +41,7 @@ You might want to check for the existence of a previous installation as a first 
 ls /opt/microsoft/mssql/bin
 ```
 
-### 2. Uninstall previous CTP 2.x packages
+### 2. Uninstall CTP/RC packages
 
 Uninstall at the lowest package level. Any upstream package dependent on a lower-level package is automatically uninstalled.
 
@@ -57,14 +57,14 @@ Commands for removing packages appear in the following table.
 | Ubuntu	| `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
-> Microsoft R Open 3.4.4 is composed of two or three packages, depending on which CTP release you previously installed. (The foreachiterators package was combined into the main mro package in CTP 2.2.) If any of these packages remain after removing microsoft-r-open-mro-3.4.4, you should remove them individually.
+> Microsoft R Open 3.4.4 is composed of two packages, depending on which CTP release you previously installed. (The foreachiterators package was combined into the main mro package in CTP 2.2.) If any of these packages remain after removing microsoft-r-open-mro-3.4.4, you should remove them individually.
 > ```
 > microsoft-r-open-foreachiterators-3.4.4
 > microsoft-r-open-mkl-3.4.4
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### 3. Proceed with CTP 3.2 install
+### 3. Proceed with install
 
 Install at the highest package level using the instructions in this article for your operating system.
 

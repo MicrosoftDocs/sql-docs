@@ -37,8 +37,8 @@ ms.technology: install
                                                     <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-database/">Azure SQL Database</a></li>
                                                     <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is">Azure SQL Data Warehouse</a></li>
                                                     <li><a class="barLink" href="/sql/sql-server/what-s-new-in-sql-server-ver15?view=sql-server-ver15">SQL Server 2019 (Preview)</a></li>
-                                                    <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017">SQL Server 2017</a></li>
-                                                    <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016">SQL Server 2016</a></li>
+                                                    <li><a class="barLink" href="/sql/sql-server/index.yml?view=sql-server-2017">SQL Server 2017</a></li>
+                                                    <li><a class="barLink" href="/sql/sql-server/index.yml?view=sql-server-2016">SQL Server 2016</a></li>
                                                     <li><a class="barLink" href="/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014">SQL Server 2014</a></li>
                                                     <li><a class="barLink" href="https://docs.microsoft.com/previous-versions/sql/">Previous SQL Server Versions (2005 - 2012)</a></li>
                                                     <li><a class="barLink" href="/sql/analytics-platform-system/index">Analytics Platform System - Parallel Data Warehouse</a><li>

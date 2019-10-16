@@ -39,7 +39,7 @@ An external script can be run by calling a stored procedure, and the results are
 
 ## Architecture diagram
 
-The architecture is designed such that external scripts run in a separate process from SQL Server, but with components that internally manage the chain of requests for data and operations on SQL Server. Depending on the version of SQL Server, supported language extensions include [R](extension-r.md) and [Python](extension-python.md).
+The architecture is designed such that external scripts run in a separate process from SQL Server, but with components that internally manage the chain of requests for data and operations on SQL Server. Depending on the version of SQL Server, supported language extensions include [R](extension-r.md), [Python](extension-python.md), and third-party languages such as Java and .NET.
 
   ***Component architecture in Windows:***
   
@@ -63,8 +63,8 @@ The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a serv
 |-------------------|-----------|---------------------|
 | RLauncher.dll for the R language for Windows | [R extension](extension-r.md) | SQL Server 2016 and later |
 | Pythonlauncher.dll for Python 3.5 for Windows | [Python extension](extension-python.md) | SQL Server 2017 and later |
-| RLauncher.so for the R language for Linux | [R extension](extension-r.md) | SQL Server 2016 and later |
-| Pythonlauncher.so for Python 3.5 for Linux | [Python extension](extension-python.md) | SQL Server 2017 and later |
+| RLauncher.so for the R language for Linux | [R extension](extension-r.md) | SQL Server 2019 and later |
+| Pythonlauncher.so for Python 3.5 for Linux | [Python extension](extension-python.md) | SQL Server 2019 and later |
 
 The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under its own user account. If you change the account that runs launchpad, be sure to do so using SQL Server Configuration Manager, to ensure that changes are written to related files.
 

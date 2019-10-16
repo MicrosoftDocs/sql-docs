@@ -24,7 +24,7 @@ The page is the fundamental unit of data storage in [!INCLUDE[ssNoVersion](../in
 
 The fundamental unit of data storage in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is the page. The disk space allocated to a data file (.mdf or .ndf) in a database is logically divided into pages numbered contiguously from 0 to n. Disk I/O operations are performed at the page level. That is, SQL Server reads or writes whole data pages.
 
-Extents are a collection of eight physically contiguous pages and are used to efficiently manage the pages. All pages are tracked in extents.
+Extents are a collection of eight physically contiguous pages and are used to efficiently manage the pages. All pages are organized into extents.
 
 ### Pages
 

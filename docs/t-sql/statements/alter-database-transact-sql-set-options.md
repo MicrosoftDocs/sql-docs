@@ -3103,26 +3103,6 @@ SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### Check for result set cache hit or cache miss for a query
-
-```sql
-If
-(SELECT step_index  
-FROM sys.dm_pdw_request_steps  
-WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
-SELECT 1 as is_cache_hit  
-ELSE
-SELECT 0 as is_cache_hit;
-```
-
-### Check for all queries with result set cache hits
-
-```sql
-SELECT *  
-FROM sys.dm_pdw_request_steps  
-WHERE command like '%DWResultCacheDb%' and step_index = 0;
-```
-
 ### Enable the Read_Committed_Snapshot option for a database
 
 ```sql

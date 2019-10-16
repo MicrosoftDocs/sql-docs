@@ -72,7 +72,7 @@ The following steps create an external table in the data pool named **web_clicks
 
 ## Start a Spark streaming job
 
-The next step is to create a Spark streaming job that loads web clickstream data from the storage pool (HDFS) into the external table you created in the data pool.
+The next step is to create a Spark streaming job that loads web clickstream data from the storage pool (HDFS) into the external table you created in the data pool. This data was added to /clickstream_data in [Load sample data into your big data cluster](tutorial-load-sample-data.md).
 
 1. In Azure Data Studio, connect to the master instance of your big data cluster. For more information, see [Connect to a big data cluster](connect-to-big-data-cluster.md).
 
@@ -82,17 +82,18 @@ The next step is to create a Spark streaming job that loads web clickstream data
    1. Configure the Spark-SQL connector parameters
       ```
       import org.apache.spark.sql.types._
+      import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
 
       // Change per your installation
       val user= "username"
       val password= "****"
       val database =  "MyTestDatabase"
-      val sourceDir = "/file_streaming"
-      val datapool_table = "streaming_DataPoolTable"
-      val datasource_name = "test_data_src"
+      val sourceDir = "/clickstream_data"
+      val datapool_table = "web_clickstreams_spark_results"
+      val datasource_name = "SqlDataPool"
       val schema = StructType(Seq(
-         StructField("wcs_click_date_sk",IntegerType,true), StructField("wcs_click_time_sk",IntegerType,true), StructField("wcs_sales_sk",IntegerType,true), StructField("wcs_item_sk",IntegerType,true), 
-         StructField("wcs_web_page_sk",IntegerType,true), StructField("wcs_user_sk",IntegerType,true)
+      StructField("wcs_click_date_sk",IntegerType,true), StructField("wcs_click_time_sk",IntegerType,true), StructField("wcs_sales_sk",IntegerType,true), StructField("wcs_item_sk",IntegerType,true), 
+      StructField("wcs_web_page_sk",IntegerType,true), StructField("wcs_user_sk",IntegerType,true)
       ))
 
       val hostname = "master-0.master-svc"
@@ -102,7 +103,7 @@ The next step is to create a Spark streaming job that loads web clickstream data
    2. Define and Run the Spark Job
       * Each job has two parts: readStream and writeStream. Below, we create a data frame using the schema defined above, and then write to the external table in the data pool.
       ```
-       import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
+      import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
       
       val df = spark.readStream.format("csv").schema(schema).option("header", true).load(sourceDir)
       val query = df.writeStream.outputMode("append").foreachBatch{ (batchDF: DataFrame, batchId: Long) => 

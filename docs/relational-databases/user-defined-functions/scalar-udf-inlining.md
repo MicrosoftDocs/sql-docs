@@ -18,7 +18,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-a
 ---
 # Scalar UDF Inlining
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article introduces Scalar UDF inlining, a feature under the intelligent query processing suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 

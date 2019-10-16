@@ -43,13 +43,12 @@ SQL Server on Linux is supported by SSDT version 17.0 RC or later.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-3. Click **Create**. After the local Git repository is created, double click **SSDTRepo**.
+4. Click **Create**. After the local Git repository is created, double click **SSDTRepo**.
 
-4. Click **New** in the **Solutions** section. Select **SQL Server** under **Other Languages** node in the **New Project** dialog.
+5. Click **New** in the **Solutions** section. Select **SQL Server** under **Other Languages** node in the **New Project** dialog.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
-
-5. Type in **TutorialDB** for the name and click **OK** to create a new database project.
+6. Type in **TutorialDB** for the name and click **OK** to create a new database project.
 
 ## Create a new table in the database project
 

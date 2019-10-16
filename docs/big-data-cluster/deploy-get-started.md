@@ -41,8 +41,6 @@ Big data clusters are deployed as a series of interrelated containers that are m
 
 - **Multiple machines**: You can also deploy Kubernetes to multiple Linux machines, which could be physical servers or virtual machines. The [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) tool can be used to create the Kubernetes cluster. You can use a [bash script](deployment-script-single-node-kubeadm.md) to automate this type of deployment. This method works well if you already have existing infrastructure that you want to use for your big data cluster. For more information about using **kubeadm** deployments with big data clusters, see [Configure Kubernetes on multiple machines for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments](deploy-with-kubeadm.md).
 
-- **Minikube**: Minikube allows you to run Kubernetes locally on a single server. It is a good option if you are trying out big data clusters or need to use it in a testing or development scenario. For more information about using Minikube, see the [Minikube documentation](https://kubernetes.io/docs/setup/minikube/). For specific requirements for using Minikube with big data clusters, see [Configure minikube for SQL Server 2019 big data cluster deployments](deploy-on-minikube.md).
-
 ## Deploy a big data cluster
 
 After configuring Kubernetes, you deploy a big data cluster with the `azdata bdc create` command. When deploying, you can take several different approaches.

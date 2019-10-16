@@ -106,7 +106,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 
 ```
 > [!NOTE] 
-> There is a known issue during the preview of ordered clustered columnstore index (CCI) where duplicate data are generated if the ordered CCI is created via CREATE CLUSTERED COLUMNSTORE INDEX or rebuilt via ALTER INDEX on a partitioned table.  There is no data loss involved.  A fix to this issue will be available soon.  For a workaround, users can create ordered CCI via CTAS command. 
+> During the preview of ordered clustered columnstore index (CCI) in Azure SQL Data Warehouse, duplicate data may be generated if the ordered CCI is created via CREATE CLUSTERED COLUMNSTORE INDEX or rebuilt via ALTER INDEX on a partitioned table.  There is no data loss involved.  A fix to this issue will be available soon.  For a workaround, users can create ordered CCI on a partitioned table using CTAS command. 
   
 ## Arguments  
 

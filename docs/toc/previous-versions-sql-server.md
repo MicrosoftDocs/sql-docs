@@ -21,7 +21,7 @@ The documentation for several older versions of Microsoft SQL Server has been ar
 >
 > In the dropdown list, the value labeled **SQL Server previous versions** allows this article to be displayed. This version value also hides most other articles. Almost every other version value hides this article.
 >
-> The documentation for a _newer_ version of SQL Server is available [here](../sql-server/sql-server-technical-documentation.md?view=sql-server-2017).
+> The documentation for a _newer_ version of SQL Server is available [here](../sql-server/index.yml?view=sql-server-2017).
 
 ## Archived documentation
 
@@ -70,5 +70,5 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 
 ## See also
 
-[SQL Server Documentation, start](../sql-server/sql-server-technical-documentation.md?view=sql-server-2016)  
+[SQL Server Documentation, start](../sql-server/index.yml?view=sql-server-2016)  
 [Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)  

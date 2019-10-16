@@ -40,10 +40,10 @@ For more information, see [What are SQL Server [!INCLUDE[big-data-clusters](../i
 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) announcement archive](what-s-new-in-sql-server-ver15-prerelease.md) contains a list of features that have been announced and changed for all previous CTP releases of this feature.
 
 ## Intelligent database
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on innovations in previous versions to provide industry-leading performance out of the box. From [Intelligent query processing](../relational-databases/performance/intelligent-query-processing.md) to support for persistent memory devices, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] intelligent database features improve performance and scalability of all your database workloads without any changes to your application or database design.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on innovations in previous versions to provide industry-leading performance out of the box. From [Intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md) to support for persistent memory devices, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] intelligent database features improve performance and scalability of all your database workloads without any changes to your application or database design.
 
-### Intelligent query processing
-With [intelligent query processing](../relational-databases/performance/intelligent-query-processing.md), you know that critical parallel workloads improve when they're running at scale. At the same time, they remain adaptive to the constantly changing world of data. Intelligent query processing is available by default on the latest [database compatibility level](../t-sql/statements/alter-database-transact-sql-compatibility-level.md#differences-between-compatibility-level-140-and-level-150) setting, delivering broad impact that improves the performance of existing workloads with minimal implementation effort.
+### Intelligent Query Processing
+With [intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md), you know that critical parallel workloads improve when they're running at scale. At the same time, they remain adaptive to the constantly changing world of data. Intelligent Query Processing is available by default on the latest [database compatibility level](../t-sql/statements/alter-database-transact-sql-compatibility-level.md#differences-between-compatibility-level-140-and-level-150) setting, delivering broad impact that improves the performance of existing workloads with minimal implementation effort.
 
 |New feature or update | Details |
 |:---|:---|

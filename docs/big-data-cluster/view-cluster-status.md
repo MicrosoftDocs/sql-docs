@@ -104,7 +104,7 @@ You can obtain the IP addresses of the external endpoints for the big data clust
    azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
-   Specify the username and password that you configured for the controller (CONTROLLER_USERNAME and CONTROLLER_PASSWORD) during deployment.
+   Specify the username and password that you configured for the controller (AZDATA_USERNAME and AZDATA_PASSWORD) during deployment.
 
 1. Run [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
 

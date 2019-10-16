@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"

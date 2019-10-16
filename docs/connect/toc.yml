@@ -2,7 +2,7 @@
   href: ../connect/homepage-sql-connection-programming.md
 
 - name: Welcome to SQL Server >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 
 - name: SQL Server Drivers
   href: ../connect/sql-connection-libraries.md

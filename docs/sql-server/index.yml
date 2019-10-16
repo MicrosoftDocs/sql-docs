@@ -198,7 +198,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: What's new in SQL Server 2019
-        url: https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation
+        url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15
       - text: Previous versions 2014-2005
-        url: https://docs.microsoft.com/sql/
+        url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
 

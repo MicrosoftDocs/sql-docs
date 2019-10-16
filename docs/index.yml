@@ -34,7 +34,7 @@ productDirectory:
   - title: SQL Server on Windows
     imageSrc: media/index/windows.png
     links:
-      - url: sql-server/sql-server-technical-documentation.md
+      - url: sql-server/index.yml
         text: On-premises
       - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
         text: On an Azure VM

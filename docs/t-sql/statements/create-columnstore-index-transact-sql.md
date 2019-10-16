@@ -106,7 +106,8 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 
 ```
 > [!NOTE] 
-> There is a known issue during the preview of ordered clustered columnstore index (CCI) where duplicate data are generated if users create or rebuild the ordered CCI using CREATE CLUSTERED COLUMNSTORE INDEX on a partitioned table.  There is no data loss involved.  A fix to this issue will be provided soon.  For a workaround, users can create ordered CCI via CTAS command.   
+> There is a known issue during the preview of ordered clustered columnstore index (CCI) where duplicate data are generated if the ordered CCI is created via CREATE CLUSTERED COLUMNSTORE INDEX or rebuilt via ALTER INDEX on a partitioned table.  There is no data loss involved.  A fix to this issue will be available soon.  For a workaround, users can create ordered CCI via CTAS command. 
+  
 ## Arguments  
 
 Some of the options are not available in all database engine versions. The following table shows the versions when the options are introduced in CLUSTERED COLUMNSTORE and NONCLUSTERED COLUMNSTORE indexes:

@@ -39,11 +39,11 @@ For more information, see [What are SQL Server [!INCLUDE[big-data-clusters](../i
 
 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) announcement archive](what-s-new-in-sql-server-ver15-prerelease.md) contains a list of features that have been announced and changed for all previous CTP releases of this feature.
 
-## Intelligent database
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on innovations in previous versions to provide industry-leading performance out of the box. From [Intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md) to support for persistent memory devices, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] intelligent database features improve performance and scalability of all your database workloads without any changes to your application or database design.
+## Intelligent Database
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on innovations in previous versions to provide industry-leading performance out of the box. From [Intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md) to support for persistent memory devices, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Intelligent Database features improve performance and scalability of all your database workloads without any changes to your application or database design.
 
 ### Intelligent Query Processing
-With [intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md), you know that critical parallel workloads improve when they're running at scale. At the same time, they remain adaptive to the constantly changing world of data. Intelligent Query Processing is available by default on the latest [database compatibility level](../t-sql/statements/alter-database-transact-sql-compatibility-level.md#differences-between-compatibility-level-140-and-level-150) setting, delivering broad impact that improves the performance of existing workloads with minimal implementation effort.
+With [Intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md), you know that critical parallel workloads improve when they're running at scale. At the same time, they remain adaptive to the constantly changing world of data. Intelligent Query Processing is available by default on the latest [database compatibility level](../t-sql/statements/alter-database-transact-sql-compatibility-level.md#differences-between-compatibility-level-140-and-level-150) setting, delivering broad impact that improves the performance of existing workloads with minimal implementation effort.
 
 |New feature or update | Details |
 |:---|:---|
@@ -51,40 +51,40 @@ With [intelligent Query Processing](../relational-databases/performance/intellig
 |Batch mode on rowstore | Enables batch mode execution without requiring columnstore indexes. Batch mode execution uses CPU more efficiently during analytical workloads but, until [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], it was used only when a query included operations with columnstore indexes. However, some applications might use features that aren't supported with columnstore indexes and, therefore, can't leverage batch mode. Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], batch mode is enabled on eligible analytical workloads whose queries include operations with any type of index (rowstore or columnstore). See [Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
 |Scalar UDF Inlining|Automatically transforms scalar UDFs into relational expressions and embeds them in the calling SQL query. This transformation improves the performance of workloads that take advantage of scalar UDFs. See [Scalar UDF Inlining](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
 |Table variable deferred compilation|Improves plan quality and overall performance for queries that reference table variables. During optimization and initial compilation, this feature propagates cardinality estimates that are based on actual table variable row counts. This accurate row count information optimizes downstream plan operations. See [Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
-|Approximate query processing with `APPROX_COUNT_DISTINCT `|For scenarios when absolute precision isn't important but responsiveness is critical, `APPROX_COUNT_DISTINCT` aggregates across large datasets by using fewer resources than `COUNT(DISTINCT())` for superior concurrency. See [Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
+|Approximate query processing with `APPROX_COUNT_DISTINCT` |For scenarios when absolute precision isn't important but responsiveness is critical, `APPROX_COUNT_DISTINCT` aggregates across large datasets by using fewer resources than `COUNT(DISTINCT())` for superior concurrency. See [Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
 | &nbsp; | &nbsp; |
 
 
-### In-memory database
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [In-memory database](../relational-databases/in-memory-database.md) technologies leverage modern hardware innovation to deliver unparalleled performance and scale. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on earlier innovations in this area, such as in-memory online transaction processing (OLTP), to unlock a new level of scalability across all your database workloads.  
+### In-Memory Database
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [In-Memory Database](../relational-databases/in-memory-database.md) technologies leverage modern hardware innovation to deliver unparalleled performance and scale. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on earlier innovations in this area, such as in-memory online transaction processing (OLTP), to unlock a new level of scalability across all your database workloads.  
 
 |New feature or update | Details |
 |:---|:---|
 |Hybrid buffer pool| A new feature of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], where database pages sitting on database files that are placed on a persistent memory (PMEM) device are directly accessed when required. See [Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md).|
-|Memory-optimized `tempdb` metadata| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new feature that is part of the [in-memory database](../relational-databases/in-memory-database.md) feature family, memory-optimized `tempdb` metadata, which effectively removes this bottleneck and unlocks a new level of scalability for `tempdb` heavy workloads. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the system tables involved in managing temp table metadata can be moved into latch-free, non-durable, memory-optimized tables. See [Memory-optimized `tempdb` metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
-| In-memory OLTP support for database snapshots | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces support for creating [database snapshots](../relational-databases/databases/database-snapshots-sql-server.md) of databases that include memory-optimized filegroups. |
+|Memory-optimized `TempDB` metadata| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new feature that is part of the [in-memory database](../relational-databases/in-memory-database.md) feature family, memory-optimized `TempDB` metadata, which effectively removes this bottleneck and unlocks a new level of scalability for `TempDB` heavy workloads. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the system tables involved in managing temp table metadata can be moved into latch-free, non-durable, memory-optimized tables. See [Memory-optimized `TempDB` metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
+| In-Memory OLTP support for database snapshots | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces support for creating [database snapshots](../relational-databases/databases/database-snapshots-sql-server.md) of databases that include memory-optimized filegroups. |
 | &nbsp; | &nbsp; |
 
 ### Intelligent performance
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on intelligent database innovations in previous releases to ensure that [It Just Runs Faster](https://blogs.msdn.microsoft.com/bobsql/tag/it-just-runs-faster/). These improvements help overcome known resource bottlenecks and provide options for configuring your database server to provide predictable performance across all your workloads.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on Intelligent Database innovations in previous releases to ensure that [It Just Runs Faster](https://blogs.msdn.microsoft.com/bobsql/tag/it-just-runs-faster/). These improvements help overcome known resource bottlenecks and provide options for configuring your database server to provide predictable performance across all your workloads.
 
 |New feature or update | Details |
 |:---|:---|
 |`OPTIMIZE_FOR_SEQUENTIAL_KEY`|Turns on an optimization within the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, which is typically seen with indexes that have a sequential key, such as an identity column, sequence, or date/time column. See [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys).|
-|Forcing fast forward and static cursors | A Query Store plan that forces support for fast forward and static cursors. See [Plan forcing support for fast forward and static cursors](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
+|Forcing fast forward and static cursors | Provides Query Store plan forcing support for fast forward and static cursors. See [Plan forcing support for fast forward and static cursors](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
 |Resource governance| The configurable value for the `REQUEST_MAX_MEMORY_GRANT_PERCENT` option of `CREATE WORKLOAD GROUP` and `ALTER WORKLOAD GROUP` has been changed from an integer to a float data type, to allow more granular control of memory limits. See [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) and [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Reduced recompilations for workloads| Improves the use of temporary tables across multiple scopes. See [Reduced recompilations for workloads](../relational-databases/tables/tables.md#ctp23). |
 |Indirect checkpoint scalability |See [Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
-|Concurrent PFS updates|[Page Free Space (PFS) pages](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) are special pages within a database file that SQL Server uses to help locate free space when it allocates space for an object. Page latch contention on PFS pages is commonly associated with [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), but it can also occur on user databases when there are many concurrent object allocation threads. This improvement changes the way that concurrency is managed with PFS updates so that they can be updated under a shared latch, rather than an exclusive latch. This behavior is on by default in all databases (including `tempdb`) starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
+|Concurrent PFS updates|[Page Free Space (PFS) pages](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) are special pages within a database file that SQL Server uses to help locate free space when it allocates space for an object. Page latch contention on PFS pages is commonly associated with [`TempDB`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), but it can also occur on user databases when there are many concurrent object allocation threads. This improvement changes the way that concurrency is managed with PFS updates so that they can be updated under a shared latch, rather than an exclusive latch. This behavior is on by default in all databases (including `TempDB`) starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
 | &nbsp; | &nbsp; |
 
-### Improvements in monitoring
+### Monitoring
 Monitoring improvements unlock performance insights over any database workload, just when you need them.
 
 |New feature or update | Details |
 |:---|:---|
 |`WAIT_ON_SYNC_STATISTICS_REFRESH` | A new wait type in `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations. See [`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|
-|Custom capture policy for Query Store|When they're enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine-tune data collection in a specific server. See [ALTER DATABASE SET options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
+|Custom capture policy for Query Store | When this policy is enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine-tune data collection in a specific server. See [ALTER DATABASE SET options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
 |`LIGHTWEIGHT_QUERY_PROFILING`| A new database scoped configuration. See [`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp). |
 |`sys.dm_exec_requests` column `command` | Shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to finish before it continues the query execution. See [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|
 |`sys.dm_exec_query_plan_stats` | A new dynamic management function (DMF) that returns the equivalent of the last known actual execution plan for all queries. See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
@@ -111,7 +111,7 @@ Support businesses across different countries and regions, where the requirement
 
 |New feature or update | Details |
 |:---|:---|
-|Support for UTF-8 character encoding |Supports the UTF-8 protocol for import and export encoding, and as database-level or column-level collation for string data. Support includes PolyBase external tables, and Always Encrypted. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).|
+|Support for UTF-8 character encoding |Supports UTF-8 for import and export encoding, and as database-level or column-level collation for string data. Support includes PolyBase external tables, and Always Encrypted. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).|
 | &nbsp; | &nbsp; |
 
 ### Language extensions
@@ -134,11 +134,11 @@ Support businesses across different countries and regions, where the requirement
 | &nbsp; | &nbsp; |
 
 ### Error messages
-When an extract, transform, and load (ETL) process fails because the source and the destination don't have matching data types or length, troubleshooting used to be time-consuming, especially in large datasets. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] allows faster insights into data truncation errors.
+When an extract, transform, and load (ETL) process fails because the source and the destination don't have matching data types and/or length, troubleshooting used to be time-consuming, especially in large datasets. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] allows faster insights into data truncation errors.
 
 |New feature or update | Details |
 |:---|:---|
-|Verbose truncation warnings | A truncation error message defaults to include table and column names, and truncated value. See [VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation).|
+|Verbose truncation warnings | The data truncation error message defaults to include table and column names, and the truncated value. See [VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation).|
 | &nbsp; | &nbsp; |
 
 ## Mission-critical security
@@ -153,12 +153,12 @@ When an extract, transform, and load (ETL) process fails because the source and 
 ## High availability
 One common task that everyone who deploys [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has to account for is making sure that all mission critical [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances and the databases within them are available whenever the business and end users need them. Availability is a key pillar of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] platform, and [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces many new features and enhancements that allow businesses to ensure that their database environments are highly available.
 
-### Availability groups
+### Availability Groups
 
 |New feature or update | Details |
 |:---|:---|
 |Up to five synchronous replicas|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] increases the maximum number of synchronous replicas to five, up from three in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. You can configure this group of five replicas to have automatic failover within the group. There is one primary replica, plus four synchronous secondary replicas.|
-|Secondary-to-primary replica connection redirection| Allows client application connections to be directed to the primary replica regardless of the target server that's specified in the connection string. See [Secondary-to-primary replica read/write connection redirection (Always On availability groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).|
+|Secondary-to-primary replica connection redirection| Allows client application connections to be directed to the primary replica regardless of the target server that's specified in the connection string. See [Secondary-to-primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).|
 | &nbsp; | &nbsp; |
 
 ### Recovery
@@ -184,11 +184,11 @@ One common task that everyone who deploys [!INCLUDE[ssNoVersion](../includes/ssn
 
 | New feature or update | Details |
 |:-----|:-----|
-|Replication support | See [SQL Server Replication on Linux](../linux/sql-server-linux-replication.md).
+|Replication support | See [SQL Server Replication on Linux](../linux/sql-server-linux-replication.md). |
 |Support for the Microsoft Distributed Transaction Coordinator (MSDTC) | See [How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md). |
 |OpenLDAP support for third-party AD providers | See [Tutorial: Use Active Directory authentication with SQL Server on Linux](../linux/sql-server-linux-active-directory-authentication.md). |
-|Machine learning on Linux | See [Configure machine learning on Linux](../linux/sql-server-linux-setup-machine-learning.md). |
-|`tempdb` improvements | By default, a new installation of SQL Server on Linux creates multiple `tempdb` data files, based on the number of logical cores (with up to eight data files). This doesn't apply to in-place minor or major version upgrades. Each `tempdb` file is 8 MB with an auto growth of 64 MB. This behavior is similar to the default SQL Server installation on Windows. |
+|Machine Learning on Linux | See [Configure Machine Learning on Linux](../linux/sql-server-linux-setup-machine-learning.md). |
+|`TempDB` improvements | By default, a new installation of SQL Server on Linux creates multiple `TempDB` data files, based on the number of logical cores (with up to eight data files). This doesn't apply to in-place minor or major version upgrades. Each `TempDB` file is 8 MB with an auto growth of 64 MB. This behavior is similar to the default SQL Server installation on Windows. |
 | PolyBase on Linux | See [Install PolyBase](../relational-databases/polybase/polybase-linux-setup.md) on Linux for non-Hadoop connectors.<br/><br/>See [PolyBase type mapping](../relational-databases/polybase/polybase-type-mapping.md). |
 | Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
 | &nbsp; | &nbsp; |
@@ -201,7 +201,7 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 | Microsoft Container Registry | The [Microsoft Container Registry](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) now replaces Docker Hub for new official Microsoft container images, including [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
 | Non-root containers | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces the ability to create safer containers by starting the [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] process as a non-root user by default. See [build and run SQL Server containers as a non-root user](../linux/sql-server-linux-configure-docker.md#buildnonrootcontainer). |
 | Red Hat certified container images | Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], you can run SQL Server containers on Red Hat Enterprise Linux. |
-| PolyBase and machine learning support| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces new ways to work with SQL Server Containers such as Machine Learning Services and PolyBase. Check out some examples in the [SQL Server in container GitHub repository](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples). |
+| PolyBase and Machine Learning support| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces new ways to work with SQL Server Containers such as Machine Learning Services and PolyBase. Check out some examples in the [SQL Server in container GitHub repository](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples). |
 | &nbsp; | &nbsp; |
 
 ## Setup options
@@ -216,15 +216,15 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 
 |New feature or update | Details |
 |:---|:---|
-|Partition-based modeling|Processes external scripts per partition of your data by using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model. See [Create partition-based models](../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).|
-|Windows Server Failover Cluster| Configures high availability for Machine Learning Services on a Windows Server Failover Cluster.|
+|Partition-based modeling | You can process external scripts per partition of your data by using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model. See [Create partition-based models](../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).|
+|Windows Server Failover Cluster| You can configure high availability for Machine Learning Services on a Windows Server Failover Cluster.|
 | &nbsp; | &nbsp; |
 
 ## [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
 
 | New feature or update | Details |
 |:---|:---|
-|Support for Azure SQL Database managed-instance databases| Host [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] on a managed instance. See [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] installation and configuration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
+|Support for Azure SQL Database managed instance databases| Host [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] on a managed instance. See [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] installation and configuration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
 |New HTML controls| HTML controls replace all former Silverlight components. Silverlight dependency removed.|
 | &nbsp; | &nbsp; |
 
@@ -239,7 +239,7 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 |Dynamic formatting of measures using calculation groups |Allows you to conditionally change format strings for measures with [calculation groups](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24). For example, with currency conversion, you can display a measure by using a variety of foreign currency formats.|
 |Many-to-many relationships in tabular models| See [Many-to-many relationships in tabular models](what-s-new-in-sql-server-ver15-prerelease.md#many-to-many-ctp24).|
 |Property settings for resource governance| See [Property settings for resource governance](what-s-new-in-sql-server-ver15-prerelease.md#property-ctp24).|
-| Governance setting for Power BI cache refreshes.  | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release introduces the **ClientCacheRefreshPolicy** property, which allows you to override this behavior at the server level. To learn more, see [General Properties](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
+| Governance setting for Power BI cache refreshes | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release introduces the **ClientCacheRefreshPolicy** property, which allows you to override this behavior at the server level. To learn more, see [General Properties](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
 | Online attach  | Allows you to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more, see [Online attach](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32). |
 | &nbsp; | &nbsp; |
 

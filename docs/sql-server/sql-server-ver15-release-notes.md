@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
-ms.date: 08/21/2019
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -54,16 +54,21 @@ The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15
     - Microsoft .NET Framework 4.6.2. Available from [Download Center](https://www.microsoft.com/download/details.aspx?id=53344).
     - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
 
-## <a name = "release-notes"></a>Features excluded from support
+## SQL Server installation may fail if SSMS 18.x is installed
 
-- **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] excludes support for the following components, features, and scenarios:
-  - SQL Server Analysis Services
-  - SQL Server Reporting Services
-  - Always On availability groups on Kubernetes
+- **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] installation fails when the following installations happen in this order:
+  1. SQL Server Management Studio (SSMS) version 18.0, 18.1, 18.2, or 18.3 is installed on the server.
+  1. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] installation is attempted from removable media. For example, the installation media is a DVD.
 
-- **Workaround**: None. Exclusion applies to all customers, including participants in SQL Early Adopter Program.
+- **Workaround**:
+  1. Uninstall any version of SSMS older than SSMS 18.3.1.
+  1. Install a newer version of SSMS (18.3.1 or later). For the latest version, see [Download SSMS](../ssms/download-sql-server-management-studio-ssms.md).
+  1. Install [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] normally.
 
-- **Applies to**: Release candidate
+  >[!NOTE]
+  >Uninstall is required.
+
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] release candidate.
 
 ## Updated compiler
 
@@ -108,7 +113,7 @@ The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15
 
 ## SQL Server Configuration Manager may not start
 
-- **Issue and customer impact**: SQL Server Configuration Manager (SSCM) does not start on a machine without VCRuntime 140. When starting SSCM, the user may see the following dialog: 
+- **Issue and customer impact**: SQL Server Configuration Manager (SSCM) doesn't start on a machine without the VCRuntime 140 (VCRUNTIME140.dll) file. When starting SSCM, the user may see the following dialog: 
 
 
   `MMC could not create the snap-in. The snap-in might not have been installed correctly.`
@@ -116,7 +121,7 @@ The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15
 - **Workaround**:  Install the latest VC Runtime 2013 (x86):
 
   - [Verbose](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
-  - [Direct](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+  - [Direct](https://support.microsoft.com/help/4032938/update-for-visual-c-2013-redistributable-package)
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5.
 
@@ -127,6 +132,20 @@ The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15
 - **Workaround**: None
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Release candidate
+
+## Master Data Service notification email contains broken link
+
+- **Issue and customer impact**: The notification email from Master Data Services (MDS) contains a broken link. The link navigates to a page that returns an error like the following message:
+
+   `The view 'Index' or its master was not found or no view engine supports the searched locations.`
+
+- **Workaround**: Open the MDS portal and go to the resource manually.
+
+- **Applies to**: SQL Server 2019 release candidate.
+
+## Machine Learning Services
+
+For issues in SQL Server Machine Learning Services, see [Known issues in SQL Server Machine Learning Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md).
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

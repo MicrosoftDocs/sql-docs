@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "custom foreach enumerators [Integration Services], creating"
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Creating a Custom Foreach Enumerator
 

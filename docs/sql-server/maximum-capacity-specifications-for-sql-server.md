@@ -1,6 +1,6 @@
 ---
 title: "Maximum Capacity Specifications for SQL Server | Microsoft Docs"
-ms.date: 11/06/2017
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""
@@ -55,12 +55,12 @@ ms.author: "mikeray"
 |Columns in GROUP BY, ORDER BY||Limited only by number of bytes||  
 |Columns or expressions in a GROUP BY WITH CUBE or WITH ROLLUP statement||10||  
 |Columns per index key||32|If the table contains one or more XML indexes, the clustering key of the user table is limited to 31 columns because the XML column is added to the clustering key of the primary XML index. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you can include nonkey columns in a nonclustered index to avoid the limitation of a maximum of 32 key columns. For more information, see [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|  
-|Columns per foreign key||32||  
-|Columns per primary key||32||  
-|Columns per nonwide table||1,024||  
-|Columns per wide table||30,000||  
-|Columns per SELECT statement||4,096||  
-|Columns per INSERT statement||4,096||  
+|Columns per foreign key or primary key||32||  
+|Columns per `INSERT` statement||4,096||  
+|Columns per `SELECT` statement||4,096||  
+|Columns per table||1,024|Tables that include sparse column sets include up to 30,000 columns. See [sparse column sets](../relational-databases/tables/use-column-sets.md).|  
+|Columns per `UPDATE` statement||4,096|Different limits apply to [sparse column sets](../relational-databases/tables/use-column-sets.md).|  
+|Columns per view||1,024||  
 |Connections per client||Maximum value of configured connections||  
 |Database size||524,272 terabytes||  
 |Databases per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
@@ -79,7 +79,8 @@ ms.author: "mikeray"
 |Locks per connection||Maximum locks per server||  
 |Locks per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Limited only by memory|This value is for static lock allocation. Dynamic locks are limited only by memory.|  
 |Nested stored procedure levels||32|If a stored procedure accesses more than 64  databases, or more than 2 databases in interleaving, you will receive an error.|  
-|Nested subqueries||32||  
+|Nested subqueries||32||    
+|Nested transactions||4,294,967,296||     
 |Nested trigger levels||32||  
 |Nonclustered indexes per table||999||  
 |Number of distinct expressions in the GROUP BY clause when any of the following are present: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP||32||  
@@ -93,7 +94,6 @@ ms.author: "mikeray"
 |Statistics on non-indexed columns||30,000|| 
 |Tables per SELECT statement||Limited only by available resources||  
 |Triggers per table||Limited by number of objects in a database|Database objects include objects such as tables, views, stored procedures, user-defined functions, triggers, rules, defaults, and constraints. The sum of the number of all objects in a database cannot exceed 2,147,483,647.|  
-|Columns per UPDATE statement (Wide Tables)||4096||  
 |User connections||32,767||  
 |XML indexes||249||  
   

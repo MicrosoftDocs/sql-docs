@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/03/2019"
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -18,15 +18,16 @@ helpviewer_keywords:
   - "sys.dm_exec_requests dynamic management view"
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
-ms.author: sstein
+ms.author: pelopes
+ms.reviewer: sstein
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Returns information about each request that is executing within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+Returns information about each request that is executing in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about requests, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
+   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID of the session to which this request is related. Is not nullable.|  
@@ -41,7 +42,7 @@ Returns information about each request that is executing within [!INCLUDE[ssNoVe
 |database_id|**smallint**|ID of the database the request is executing against. Is not nullable.|  
 |user_id|**int**|ID of the user who submitted the request. Is not nullable.|  
 |connection_id|**uniqueidentifier**|ID of the connection on which the request arrived. Is nullable.|  
-|blocking_session_id|**smallint**|ID of the session that is blocking the request. If this column is NULL, the request is not blocked, or the session information of the blocking session is not available (or cannot be identified).<br /><br /> -2 = The blocking resource is owned by an orphaned distributed transaction.<br /><br /> -3 = The blocking resource is owned by a deferred recovery transaction.<br /><br /> -4 = Session ID of the blocking latch owner could not be determined at this time because of internal latch state transitions.|  
+|blocking_session_id|**smallint**|ID of the session that is blocking the request. If this column is NULL or equal to 0, the request is not blocked, or the session information of the blocking session is not available (or cannot be identified).<br /><br /> -2 = The blocking resource is owned by an orphaned distributed transaction.<br /><br /> -3 = The blocking resource is owned by a deferred recovery transaction.<br /><br /> -4 = Session ID of the blocking latch owner could not be determined at this time because of internal latch state transitions.|  
 |wait_type|**nvarchar(60)**|If the request is currently blocked, this column returns the type of wait. Is nullable.<br /><br /> For information about types of waits, see [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|If the request is currently blocked, this column returns the duration in milliseconds, of the current wait. Is not nullable.|  
 |last_wait_type|**nvarchar(60)**|If this request has previously been blocked, this column returns the type of the last wait. Is not nullable.|  
@@ -71,7 +72,7 @@ Returns information about each request that is executing within [!INCLUDE[ssNoVe
 |ansi_padding|**bit**|1 = ANSI_PADDING setting is ON for the request.<br /><br /> Otherwise, it is 0.<br /><br /> Is not nullable.|  
 |ansi_nulls|**bit**|1 = ANSI_NULLS setting is ON for the request. Otherwise, it is 0.<br /><br /> Is not nullable.|  
 |concat_null_yields_null|**bit**|1 = CONCAT_NULL_YIELDS_NULL setting is ON for the request. Otherwise, it is 0.<br /><br /> Is not nullable.|  
-|transaction_isolation_level|**smallint**|Isolation level with which the transaction for this request is created. Is not nullable.<br /><br /> 0 = Unspecified<br /><br /> 1 = ReadUncomitted<br /><br /> 2 = ReadCommitted<br /><br /> 3 = Repeatable<br /><br /> 4 = Serializable<br /><br /> 5 = Snapshot|  
+|transaction_isolation_level|**smallint**|Isolation level with which the transaction for this request is created. Is not nullable.<br /> 0 = Unspecified<br /> 1 = ReadUncomitted<br /> 2 = ReadCommitted<br /> 3 = Repeatable<br /> 4 = Serializable<br /> 5 = Snapshot|  
 |lock_timeout|**int**|Lock time-out period in milliseconds for this request. Is not nullable.|  
 |deadlock_priority|**int**|DEADLOCK_PRIORITY setting for the request. Is not nullable.|  
 |row_count|**bigint**|Number of rows that have been returned to the client by this request. Is not nullable.|  
@@ -90,6 +91,7 @@ Returns information about each request that is executing within [!INCLUDE[ssNoVe
 |is_resumable |**bit** |**Applies to**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indicates whether the request is a resumable index operation. |  
 |page_resource |**binary(8)** |**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> An 8-byte hexadecimal representation of the page resource if the `wait_resource` column contains a page. For more information, see [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**Applies to**: Azure SQL Database Hyperscale<br /><br /> Number of page server reads performed by this request. Is not nullable.|  
+| &nbsp; | &nbsp; | &nbsp; |
 
 ## Remarks 
 To execute code that is outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, extended stored procedures and distributed queries), a thread has to execute outside the control of the non-preemptive scheduler. To do this, a worker switches to preemptive mode. Time values returned by this dynamic management view do not include time spent in preemptive mode.
@@ -177,11 +179,13 @@ GO
 ```
 
 ## See Also
-
-- [Dynamic Management Views and Functions](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [Execution Related Dynamic Management Views and Functions](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
-- [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)
-- [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
-- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
-- [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
-- [sys.dm_exec_sql_text &#40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+[Dynamic Management Views and Functions](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+[Execution Related Dynamic Management Views and Functions](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)      
+[sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     
+[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)     
+[sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
+[sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
+[SQL Server, SQL Statistics Object](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
+[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md)    

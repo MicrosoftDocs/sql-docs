@@ -4,8 +4,8 @@ ms.custom: ""
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: kfile
 ms.date: "10/24/2018"
 ms.technology: install

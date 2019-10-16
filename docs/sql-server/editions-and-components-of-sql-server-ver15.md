@@ -41,6 +41,9 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 This topic provides details of features supported by the various editions of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)].
 
+> [!NOTE]
+> This content is being updated for SQL Server 2019. The information in the article is not final.
+
 For information about older versions, see:
 
 * [SQL Server 2017](editions-and-components-of-sql-server-2017.md)
@@ -181,10 +184,10 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Columnstore <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|
 |Large object binaries in clustered columnstore indexes|Yes|Yes|Yes|Yes|Yes|
 |Online non-clustered columnstore index rebuild|Yes|No|No|No|No|
-|In-memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes, <sup>2</sup>|Yes|
-|In-memory Database: hybrid buffer pool|Yes|Yes|No|No|No|
-|In-memory Database: memory optimized tempdb|Yes|No|No|No|No|
-|In-memory database: persistent memory support|Yes|Yes|Yes|Yes|Yes|
+|In-Memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes, <sup>2</sup>|Yes|
+|In-Memory Database: hybrid buffer pool|Yes|Yes|No|No|No|
+|In-Memory Database: memory optimized tempdb|Yes|No|No|No|No|
+|In-Memory database: persistent memory support|Yes|Yes|Yes|Yes|Yes|
 |Stretch database|Yes|Yes|Yes|Yes|Yes|
 |Multi-instance support|50|50|50|50|50|
 |Table and index partitioning|Yes|Yes|Yes|Yes|Yes|
@@ -198,19 +201,18 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Read-ahead|Yes|No|No|No|No|
 |Advanced scanning|Yes|No|No|No|No|
 |Delayed durability|Yes|Yes|Yes|Yes|Yes|
-|Automatic tuning|Yes|No|No|No|No|
-|Intelligent database: automatic tuning|Yes|No|No|No|No|
-|Intelligent database: batch mode for row store|Yes|No|No|No|No|
-|Intelligent database: row mode memory grant feedback|Yes|No|No|No|No|
-|Intelligent database: approximate count distinct|Yes|Yes|Yes|Yes|Yes|
-|Intelligent database: table variable deferred compilation|Yes|Yes|Yes|Yes|Yes|
-|Intelligent database: scalar UDF inlining|Yes|Yes|Yes|Yes|Yes|
+|Intelligent Database: automatic tuning|Yes|No|No|No|No|
+|Intelligent Database: batch mode for row store|Yes|No|No|No|No|
+|Intelligent Database: row mode memory grant feedback|Yes|No|No|No|No|
+|Intelligent Database: approximate count distinct|Yes|Yes|Yes|Yes|Yes|
+|Intelligent Database: table variable deferred compilation|Yes|Yes|Yes|Yes|Yes|
+|Intelligent Database: scalar UDF inlining|Yes|Yes|Yes|Yes|Yes|
 |Batch mode adaptive joins|Yes|No|No|No|No|
 |Batch mode memory grant feedback|Yes|No|No|No|No|
 |Interleaved execution for multi-statement table valued functions|Yes|Yes|Yes|Yes|Yes|
 |Bulk insert improvements|Yes|Yes|Yes|Yes|Yes|
 
-<sup>1</sup> In-memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
+<sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
 <sup>2</sup> This feature is not included in the LocalDB installation option.
 
@@ -220,6 +222,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |-------------|----------------|--------------|---------|-------------|------------------------------------|
 |Row-level security|Yes|Yes|Yes|Yes|Yes|
 |Always Encrypted|Yes|Yes|Yes|Yes|Yes|
+|Always Encrypted with Secure Enclaves|Yes|Yes|Yes|Yes|Yes|
 |Dynamic data masking|Yes|Yes|Yes|Yes|Yes|
 |Basic auditing|Yes|Yes|Yes|Yes|Yes|
 |Fine grained auditing|Yes|Yes|Yes|Yes|Yes|
@@ -250,6 +253,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|
 |SQL Management Objects (SMO)|Yes|Yes|Yes|Yes|Yes|
 |SQL Assessment API|Yes|Yes|Yes|Yes|Yes|
+|SQL Vulnerability Assessment |Yes|Yes|Yes|Yes|Yes|
 |SQL Configuration Manager|Yes|Yes|Yes|Yes|Yes|
 |SQL CMD (Command Prompt tool)|Yes|Yes|Yes|Yes|Yes|
 |Distributed Replay - Admin Tool|Yes|Yes|Yes|Yes|No|

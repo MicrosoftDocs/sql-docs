@@ -14072,7 +14072,7 @@
         },
         {
             "source_path": "docs/linux/sql-server-linux-develop-use-vscode.md",
-            "redirect_url": "/sql/visual-studio-code/sql-server-linux-develop-use-vscode",
+            "redirect_url": "/sql/tools/sql-server-develop-use-vscode",
             "redirect_document_id": false
         }
     ]

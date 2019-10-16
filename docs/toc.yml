@@ -25,6 +25,8 @@
       href: database-engine/whats-new-in-sql-server-2016.md
   - name: Editions & Features
     items:
+    - name: SQL Server 2019
+      href: sql-server/editions-and-components-of-sql-server-ver15.md
     - name: SQL Server 2017
       href: sql-server/editions-and-components-of-sql-server-2017.md
     - name: SQL Server 2016

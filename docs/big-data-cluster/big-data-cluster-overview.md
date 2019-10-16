@@ -85,7 +85,7 @@ The following diagram shows the components of a big data cluster for SQL Server.
 
 ### <a id="controlplane"></a> Controller
 
-The controller provides management and security for the cluster. It contains the cntrol service, the configuration store, and other cluster-level services such as Kibana, Grafana, and Elastic Search.
+The controller provides management and security for the cluster. It contains the control service, the configuration store, and other cluster-level services such as Kibana, Grafana, and Elastic Search.
 
 ### <a id="computeplane"></a> Compute pool
 

@@ -66,7 +66,10 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
    ```bash
    sudo apt-get update && \
    sudo apt-get install -y python3 && \
-   sudo apt-get install -y python3-pip
+   sudo apt-get install -y python3-pip && \
+   sudo apt-get install -y libkrb5-dev && \
+   sudo apt-get install -y libsqlite3-dev && \
+   sudo apt-get install -y unixodbc-dev
    ```
 
 1. Upgrade pip3:
@@ -83,10 +86,14 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
 
 1. If you have any previous releases of `azdata` installed, it is important to uninstall it first before installing the latest version.
 
-   For CTP 3.2, run the following command.
+   For CTP 3.2 or RC1, run the following command.
 
    ```bash
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
+   ```
+   or
+   ```bash
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
 1. Install `azdata` with the following command:

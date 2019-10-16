@@ -1,5 +1,6 @@
-- name: Welcome to SQL Server
-  href: sql-server/sql-server-technical-documentation.md
+
+- name: Job roles with SQL Server
+  href: sql-server/index.yml
 
 - name: SQL docs navigation tips
   href: sql-server/sql-docs-navigation-guide.md

@@ -76,9 +76,9 @@ If you are using AKS, you need to run the following command to get the IP addres
 kubectl get svc controller-svc-external -n <name of your big data cluster>
 ```
 
-## Kubeadm or Minikube
+## Kubernetes clusters created with kubeadm
 
-If you are using Kubeadm or Minikube run the following command to get the IP address to sign in in to the cluster
+Run the following command to get the IP address to sign in in to the cluster
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'

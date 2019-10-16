@@ -3051,21 +3051,6 @@ WHERE request_id = <'Your_Query_Request_ID'>
 
 ```
 
-Once result set caching is turned ON for a database, results are cached for all queries until the cache is full, except for these queries:
-
-- Queries using non-deterministic functions such as DateTime.Now() 
-- Queries using user defined functions
-- Queries returning data with row size larger than 64KB   
-
-Queries with large result sets (for example, > 1 million rows) may experience slower performance during the first run when the result cache is being created.
-
-Cached result set is reused for a query if all of the following requirements are all met:
-
-1. The user who's running the query has access to all the tables referenced in the query.
-1. There is an exact match between the new query and the previous query that generated the result set cache.
-1. There is no data or schema changes in the tables where the cached result set was generated from.  
-
-
 **<snapshot_option> ::=**        
 **Applies to**: Azure SQL Data Warehouse (preview)
 
@@ -3147,6 +3132,7 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## See also
 
+- [Performance tuning with result set caching](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

@@ -1,11 +1,11 @@
 
-- name: SQL Server Technical Documentation
+- name: SQL Server
   href: sql-server/index.yml
 
-- name: SQL docs navigation tips
+- name: Docs navigation tips
   href: sql-server/sql-docs-navigation-guide.md
-- name: SQL education center
-  href: education-center/index.yml
+- name: Education center
+  href: lp/sql-server/index.yml
 - name: Previous versions 2005-2014
   href: toc/previous-versions-sql-server.md
 

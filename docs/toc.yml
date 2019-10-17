@@ -53,6 +53,8 @@
       href: big-data-cluster/big-data-cluster-overview.md
     - name: Release notes
       href: big-data-cluster/release-notes-big-data-cluster.md
+    - name: Supportability 
+      href: big-data-cluster/big-data-cluster-supportability.md
   - name: Install
     items:
     - name: Get Started

@@ -8,7 +8,7 @@ ms.technology: tools-other
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: markingmyname
 ms.author: maghan
-ms.date: 12/18/2018
+ms.date: 10/17/2019
 ---
 
 # Use Visual Studio Code to create and run Transact-SQL scripts
@@ -91,7 +91,7 @@ Follow these steps to create a connection profile and connect to a SQL Server.
    After you enter all values and select **Enter**, Visual Studio Code creates the connection profile and connects to the SQL Server.
 
    > [!TIP]
-   > If the connection fails, try to diagnose the problem from the error message in the **Output** panel in Visual Studio Code. To open the **Output** panel, select **View** > **Output**. Also review the [connection troubleshooting recommendations](./sql-server-linux-troubleshooting-guide.md#connection).
+   > If the connection fails, try to diagnose the problem from the error message in the **Output** panel in Visual Studio Code. To open the **Output** panel, select **View** > **Output**. Also review the [connection troubleshooting recommendations](../linux/sql-server-linux-troubleshooting-guide.md).
 
 6. Verify your connection in the lower status bar.
 

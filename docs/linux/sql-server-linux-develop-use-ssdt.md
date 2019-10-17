@@ -9,6 +9,7 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ---
+
 # Use Visual Studio to create databases for SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -102,8 +103,8 @@ If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements] and the 
 
 For more information about developing a database with SQL Data Tools, see [SSDT MSDN documents]
 
-[Download and Install Visual Studio]:https://www.visualstudio.com/downloads/
-[Download and Install SSDT]:https://aka.ms/ssdt-download
-[SSDT MSDN documents]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[Tutorial: Writing Transact-SQL Statements]:https://msdn.microsoft.com/library/ms365303.aspx
-[Transact-SQL Reference (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx
+[Download and Install Visual Studio](https://www.visualstudio.com/downloads/)
+[Download and Install SSDT](https://aka.ms/ssdt-download)
+[SSDT MSDN documents](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)
+[Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx)
+[Transact-SQL Reference (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx)

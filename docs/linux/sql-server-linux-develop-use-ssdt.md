@@ -17,7 +17,7 @@ SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and
 
 ## Install Visual Studio and SQL Server Data Tools
 
-1. If you haven't already installed Visual Studio on your Windows machine, [Download and Install Visual Studio]. If you don't have a Visual Studio license, [Visual Studio Community edition](https://visualstudio.microsoft.com/downloads/) is a free, fully featured IDE for students, open-source, and individual developers.
+1. If you haven't already installed Visual Studio on your Windows machine, [Download and Install Visual Studio](https://visualstudio.microsoft.com/downloads/). If you don't have a Visual Studio license, Visual Studio Community edition is a free, fully featured IDE for students, open-source, and individual developers.
 
 2. During the Visual Studio installation, select **Custom** for the **Choose the type of installation** option. Click **Next**
 

@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/big-data-cluster/deploy-on-minikube.md",
+            "redirect_url": "/sql/big-data-cluster/deploy-get-started",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/big-data-cluster/reference-azdata-control.md",
             "redirect_url": "/sql/big-data-cluster/reference-azdata",
             "redirect_document_id": false

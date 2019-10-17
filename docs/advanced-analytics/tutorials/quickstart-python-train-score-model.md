@@ -41,6 +41,8 @@ In this step, you'll create a stored procedure that generates a model for predic
 
 1. Open SSMS, connect to your SQL Server instance, and open a new query window.
 
+1. Connect to the irissql database.
+
     ```sql
     USE irissql
     GO

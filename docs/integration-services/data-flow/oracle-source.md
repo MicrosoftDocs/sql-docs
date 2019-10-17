@@ -48,7 +48,7 @@ The custom properties of the Oracle source are as below. All properties are read
 |AccessMode|Integer (enumeration)|The mode used to access the database. The possible values are **Table Name** and **SQL Command**. The default is **Table Name**.|
 |BatchSize|Integer|The size of the batch for bulk loading. This is the number of records extracted as an array. <br>This property is set by **Advanced Editor** only|
 |DefaultCodePage|Integer|The code page to use when data source does not have code page information. <br>This property is set by **Advanced Editor** only.|
-|PreFetchCount|Integer|The number of pre-fetched (look ahead) rows. <br>This property is set by **Advanced Editor** only.|
+|PreFetchCount|Integer|The number of pre-fetched rows. <br>This property is set by **Advanced Editor** only.|
 |SqlCommand|String|The SQL command to be executed when AccessMode is set to SQL Command.|
 |TableName|String|The name of the table with the data to be used when AccessMode is set to Table Name.|
 

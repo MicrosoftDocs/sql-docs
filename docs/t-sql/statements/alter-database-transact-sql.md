@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (Transact-SQL)| Microsoft Docs"
 ms.custom: ""
-ms.date: "10/14/2019"
+ms.date: "10/17/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -464,7 +464,7 @@ The MAXSIZE value for the DTU-based model, if specified, has to be a valid value
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**General Purpose service tier - Fsv2 series (preview)**
+**General Purpose service tier - Fsv2-series (preview)**
 
 |MAXSIZE|GP_Fsv2_72|
 |:----- | ------: |
@@ -494,7 +494,7 @@ The MAXSIZE value for the DTU-based model, if specified, has to be a valid value
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**Business Critical service tier - M series (preview)**
+**Business Critical service tier - M-series (preview)**
 
 |MAXSIZE|BC_M_128|
 |:----- | -------: |

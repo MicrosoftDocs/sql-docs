@@ -39,7 +39,7 @@ By completing this quickstart, you'll learn:
 
 In this step, you'll create a stored procedure that generates a model for predicting outcomes.
 
-1. Open a new query window in SSMS connected to the **irissql** database. 
+1. Open SSMS, connect to your SQL Server instance, and open a new query window.
 
     ```sql
     USE irissql

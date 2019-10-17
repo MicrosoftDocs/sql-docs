@@ -44,7 +44,7 @@ To create the model, you'll create source data for training, create the model an
 
 ### Create the source data
 
-1. Open **SQL Server Management Studio** and connect to your SQL Server instance.
+1. Open SSMS, connect to your SQL Server instance, and open a new query window.
 
 1. Create a table to save the training data.
 

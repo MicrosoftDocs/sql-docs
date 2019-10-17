@@ -47,24 +47,11 @@ landingContent:
     - linkListType: reference
       links:
       - text: Transact-SQL 
-        url: ../t-sql/language-reference
+        url: ../t-sql/language-reference.md
       - text: SQL Powershell
         url: ../powershell/sql-server-powershell.md
-      - text: Previous versions 2014-2005
+      - text: Previous versions 2005-2014
         url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
-
-  - title: SQL on Azure
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: Azure SQL Database single database
-        url: /azure/sql-database/sql-database-single-database-quickstart-guide.md 
-      - text: Azure SQL Database managed instance
-        url: /azure/sql-database/sql-database-managed-instance-quickstart-guide
-      - text: SQL Server on a Windows VM
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
-      - text: SQL Server on a Linux VM
-        url: ../linux/quickstart-install-connect-clouds.md
 
   - title: Administration
     linkLists:
@@ -94,6 +81,21 @@ landingContent:
         url: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       - text: Failover cluster instances
         url: failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+
+  - title: SQL on Azure
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Azure SQL Database single database
+        url: /azure/sql-database/sql-database-single-database-quickstart-guide.md 
+      - text: Azure SQL Database managed instance
+        url: /azure/sql-database/sql-database-managed-instance-quickstart-guide
+      - text: SQL Server on a Windows VM
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+      - text: SQL Server on a Linux VM
+        url: ../linux/quickstart-install-connect-clouds.md
+
+
 
 
   - title: Development

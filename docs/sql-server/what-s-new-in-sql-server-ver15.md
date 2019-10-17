@@ -128,7 +128,7 @@ Support businesses across different countries and regions, where the requirement
 
 |New feature or update | Details |
 |:---|:---|
-| New spatial reference identifiers (SRIDs) |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) provides a more robust and accurate datum that's is more closely aligned with global positioning systems. The new SRIDs are:<ul><li>7843 for geographic 2D</li><li>7844 for geographic 3D</li></ul> For definitions of new SRIDs, see [sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) view. |
+| New spatial reference identifiers (SRIDs) |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) provides a more robust and accurate datum that's more closely aligned with global positioning systems. The new SRIDs are:<ul><li>7843 for geographic 2D</li><li>7844 for geographic 3D</li></ul> For definitions of new SRIDs, see [sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) view. |
 | &nbsp; | &nbsp; |
 
 ### Error messages

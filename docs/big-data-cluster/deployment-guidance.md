@@ -68,7 +68,7 @@ After you have configured your Kubernetes cluster, you can proceed with the depl
 
 ## <a id="deploy"></a> Deployment overview
 
-Most big data cluster settings are defined in a JSON deployment configuration file. You can use a default deployment profile for AKS, `kubeadm`, or `minikube` or you can customize your own deployment configuration file to use during setup. For security reasons, authentication settings are passed via environment variables.
+Most big data cluster settings are defined in a JSON deployment configuration file. You can use a default deployment profile for AKS and Kubernetes clusters created with `kubeadm` or you can customize your own deployment configuration file to use during setup. For security reasons, authentication settings are passed via environment variables.
 
 The following sections provide more details on how to configure your big data cluster deployments as well as examples of common customizations. Also, you can always edit the custom deployment configuration file using an editor like VS Code for example.
 

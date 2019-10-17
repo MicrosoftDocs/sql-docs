@@ -124,15 +124,13 @@ If the client computer you use to connect to SQL Server has Internet access, you
 
 1. On the client computer, open RStudio and create a new **R Script** file.
 
-1. Use the following R script to install the **glue** package using **sqlmlutils**. Substitute your own SQL Server database connection information.
+1. Use the following R script to install the **glue** package using **sqlmlutils**. Substitute your own SQL Server database connection information (if you don't use Windows Authentication, add `uid` and `pwd` parameters).
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```
@@ -189,15 +187,13 @@ On the client computer:
 
 1. Open RStudio and create a new **R Script** file.
 
-1. Use the following R script to install the **glue** package using **sqlmlutils**. Substitute your own SQL Server database connection information.
+1. Use the following R script to install the **glue** package using **sqlmlutils**. Substitute your own SQL Server database connection information (if you don't use Windows Authentication, add `uid` and `pwd` parameters).
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
    localRepo = "c:/temp/packages/glue"
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC", repos=paste0("file:///",localRepo))

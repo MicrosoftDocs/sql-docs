@@ -21,7 +21,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # sp_enclave_send_keys (Transact-SQL)
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 Sends columns encryption keys, defined in the database, to the server-side secure enclave used with [Always Encrypted with secure enclaves](../security/encryption/always-encrypted-enclaves.md).
 
@@ -29,7 +29,7 @@ Sends columns encryption keys, defined in the database, to the server-side secur
 
 `sp_enclave_send_keys` provides an easy way to send keys to the enclave and populate the column encryption key cache for subsequent indexing operations. Use `sp_enclave_send_keys` to enable:
 - A DBA to rebuild or alter indexes or statistics on encrypted database columns, if the DBA does not have access to the column master key(s). See [Invoke indexing operations using cached column encryption keys](../security/encryption/always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys).
-- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to complete the recovery of indexes on encrypted columns. See [Database Recovery](../security/encryption/always-encrypted-enclaves.md#database-recovery).
+- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to complete the recovery of indexes on encrypted columns. See [Database Recovery](../security/encryption/always-encrypted-enclaves.md#database-recovery).
 - An application using .NET Framework Data Provider for SQL Server to bulk load data to encrypted columns.
 
 To successfully invoke `sp_enclave_send_keys`, you need to connect to the database with Always Encrypted and enclave computations enabled for the database connection. You also need to have access to column master keys, protecting the column encryption keys, you are going to send, and you need permissions to access Always Encrypted key metadata in the database. 

@@ -3,9 +3,6 @@
 title: SQL Server technical documentation
 summary: Technical documentation to help you get started, administer, develop, and work with SQL Server. 
 
-# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
-
-
 metadata:
   title: SQL Server topics
   description: Choose the area of SQL Server you are interested in.
@@ -13,7 +10,7 @@ metadata:
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
-  ms.date: 10/14/2019
+  ms.date: 10/14/2019  
 
 
 landingContent:

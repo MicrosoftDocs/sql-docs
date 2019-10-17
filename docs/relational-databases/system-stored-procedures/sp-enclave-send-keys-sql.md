@@ -1,7 +1,7 @@
 ---
 title: "sp_enclave_send_keys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/26/2019
+ms.date: 10/19/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto

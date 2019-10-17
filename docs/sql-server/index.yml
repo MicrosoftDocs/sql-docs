@@ -40,10 +40,6 @@ landingContent:
         url: ../ssms/download-sql-server-management-studio-ssms.md
       - text: Azure Data Studio
         url: ../azure-data-studio/download.md
-    - linkListType: concept
-      links:
-      - text: Databases
-        url: ../relational-databases/databases/databases.md
     - linkListType: reference
       links:
       - text: Transact-SQL 
@@ -143,8 +139,10 @@ landingContent:
 
   - title: Development
     linkLists:
-    - linkListType: get-started
+    - linkListType: reference 
       links:
+      - text: Databases
+        url: ../relational-databases/databases/databases.md
       - text: CREATE DATABASE
         url: ../t-sql/statements/create-database-transact-sql.md
       - text: CREATE TABLE

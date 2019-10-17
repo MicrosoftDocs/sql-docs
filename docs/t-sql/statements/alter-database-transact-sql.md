@@ -494,7 +494,7 @@ The MAXSIZE value for the DTU-based model, if specified, has to be a valid value
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**Business Critical service tier - M series (preview)**
+**Business Critical service tier - M-series (preview)**
 
 |MAXSIZE|BC_M_128|
 |:----- | -------: |

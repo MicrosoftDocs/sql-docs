@@ -65,7 +65,7 @@ landingContent:
       links:
       - text: Security
         url: https://docs.microsoft.com/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
-      - text: Monitor and tune Performance
+      - text: Monitor and tune performance
         url: https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance
       - text: In-Memory OLTP
         url: https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization

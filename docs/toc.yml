@@ -125,6 +125,10 @@
       href: big-data-cluster/concept-security.md
   - name: How-to guides
     items:
+    - name: Configuration
+      items:
+      - name: SQL Server master instance
+        href: big-data-cluster/configure-sql-server-master-instance.md
     - name: Data virtualization
       items:
       - name: Relational data

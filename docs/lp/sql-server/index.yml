@@ -1,11 +1,13 @@
 ### YamlMime:Landing
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
-title: SQL Server technical documentation
-summary: Technical documentation to help you get started, administer, develop, and work with SQL Server and associated products. 
+
+title: SQL Server education center
+summary: Tutorials, quickstarts, and educational resources to help you get started with the entire family of SQL products. 
 
 metadata:
-  title: SQL Server technical documentation 
-  description: Choose the area of SQL Server you are interested in.
+  title: SQL Server education center 
+  description: Tutorials, quickstarts, and educational resources to help you get started with the entire family of SQL products. 
   ms.prod: sql
   ms.topic: landing-page
   author: MashaMSFT
@@ -16,12 +18,12 @@ metadata:
 landingContent:
   - title: SQL Server on-premises 
     linkLists:
-    - linkListType: whats-new
+    - linkListType: quickstart
       links:
-      - text: SQL Server 2019 
-        url: what-s-new-in-sql-server-ver15.md
-      - text: Big data cluster
-        url: ../big-data-cluster/big-data-cluster-overview.md
+      - text: Using SQL Server Management Studio 
+        url: ../../ssms/tutorials/connect-query-sql-server.md
+      - text: Connect & query with Azure Data Studio
+        url: ../../azure-data-studio/quickstart-sql-server.md
       - text: Azure Data Studio
         url: ../azure-data-studio/what-is.md
       - text: SQL Server on Linux

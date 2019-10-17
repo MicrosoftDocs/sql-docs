@@ -14,14 +14,12 @@ metadata:
 
 
 landingContent:
-  - title: SQL Server on-premises 
+  - title: SQL Server
     linkLists:
     - linkListType: whats-new
       links:
       - text: SQL Server 2019 
         url: what-s-new-in-sql-server-ver15.md
-      - text: Big data cluster
-        url: ../big-data-cluster/big-data-cluster-overview.md
       - text: Azure Data Studio
         url: ../azure-data-studio/what-is.md
       - text: SQL Server on Linux
@@ -82,17 +80,21 @@ landingContent:
 
 
 
-  - title: Data management
+  - title: Data management & migration
     linkLists:
     - linkListType: overview
       links:
+      - text: SQL Server Reporting Services (SSRS)
+        url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+      - text: SQL Server Analysis Services (SSAS)
+        url: /analysis-services/analysis-services-overview
       - text: SQL Server Integration Services (SSIS)
         url: ../integration-services/sql-server-integration-services.md
       - text: Import and export data
         url: https://docs.microsoft.com/sql/relational-databases/import-export/overview-import-export
       - text: SQL Server Replication
         url: ../relational-databases/replication/sql-server-replication.md
-    - linkListType: architecture
+    - linkListType: deploy
       links:
       - text: Azure Database Migration Service
         url: https://docs.microsoft.com/azure/dms/dms-overview
@@ -121,14 +123,12 @@ landingContent:
       - text: SQL Server on a Linux VM
         url: ../linux/quickstart-install-connect-clouds.md
 
-  - title: Reporting & Analytics 
+  - title: Big data & machine learning 
     linkLists:
     - linkListType: overview
       links:
-      - text: SQL Server Reporting Services (SSRS)
-        url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-      - text: SQL Server Analysis Services (SSAS)
-        url: /analysis-services/analysis-services-overview
+      - text: Big data cluster
+        url: ../big-data-cluster/big-data-cluster-overview.md
       - text: Application Platform System (APS-PDW)
         url: https://www.microsoft.com/sql/analytics-platform-system/
       - text: Machine Learning with SQL Server

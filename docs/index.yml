@@ -126,7 +126,7 @@ conceptualContent:
         url: lp/sql-server/load-move-data.md
 
 
-additionalContent:
+additionalContent: 
   sections:
     - items:
       - title: Development

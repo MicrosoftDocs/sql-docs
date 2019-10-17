@@ -20,9 +20,15 @@ In this quickstart, you'll create and train a predictive model using R, save the
 
 You'll create and execute two stored procedures running in SQL. The first one uses the **mtcars** dataset included with R and generates a simple generalized linear model (GLM) that predicts the probability that a vehicle has been fitted with a manual transmission. The second procedure is for scoring - it calls the model generated in the first procedure to output a set of predictions based on new data. By placing R code in a SQL stored procedure, operations are contained in SQL, are reusable, and can be called by other stored procedures and client applications.
 
-
 > [!TIP]
 > If you need a refresher on linear models, try this tutorial which describes the process of fitting a model using rxLinMod:  [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model)
+
+By completing this quickstart, you'll learn:
+
+> [!div class="checklist"]
+> - How to embed R code in a stored procedure
+> - How to pass inputs to your code through inputs on the stored procedure
+> - How stored procedures are used to operationalize models
 
 ## Prerequisites
 

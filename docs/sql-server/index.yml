@@ -115,9 +115,10 @@ landingContent:
     - linkListType: overview
       links:
       - text: Azure SQL Database single database
-        url: /azure/sql-database/sql-database-single-database-quickstart-guide.md 
+        url: /azure/sql-database/sql-database-single-database-quickstart-guide
       - text: Azure SQL Database managed instance
         url: /azure/sql-database/sql-database-managed-instance-quickstart-guide
+      - text: Azure SQL Data warehouse
       - text: SQL Server on a Windows VM
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
       - text: SQL Server on a Linux VM

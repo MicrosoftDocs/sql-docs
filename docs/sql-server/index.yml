@@ -115,6 +115,7 @@ landingContent:
       - text: Azure SQL Database managed instance
         url: /azure/sql-database/sql-database-managed-instance-quickstart-guide
       - text: Azure SQL Data warehouse
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
       - text: SQL Server on a Windows VM
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
       - text: SQL Server on a Linux VM

@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
 title: SQL Server technical documentation
-summary: Technical documentation to help you get started, administer, develop, and work with SQL Server. 
+summary: Technical documentation to help you get started, administer, develop, and work with SQL Server and associated products. 
 
 metadata:
-  title: SQL Server topics
+  title: SQL Server technical documentation 
   description: Choose the area of SQL Server you are interested in.
   ms.prod: sql
   ms.topic: landing-page
@@ -52,6 +52,8 @@ landingContent:
         url: ../powershell/sql-server-powershell.md
       - text: Previous versions 2005-2014
         url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
+      - text: Sample databases
+        url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
 
   - title: Administration
     linkLists:
@@ -121,31 +123,27 @@ landingContent:
       - text: SQL Server on a Linux VM
         url: ../linux/quickstart-install-connect-clouds.md
 
-
-
-
   - title: Development
     linkLists:
     - linkListType: get-started
       links:
       - text: CREATE DATABASE
-        url: https://docs.microsoft.com/sql/t-sql/statements/create-database-transact-sql
+        url: ../t-sql/statements/create-database-transact-sql.md
       - text: CREATE TABLE
-        url: https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql
-      - text: Primary and foreign keys
-        url: https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql
+        url: ../t-sql/statements/create-table-transact-sql.md
       - text: CREATE INDEX
-        url: https://docs.microsoft.com/sql/t-sql/statements/create-index-transact-sql
-      - text: Sample databases
-        url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
+        url: ../t-sql/statements/create-index-transact-sql.md
       - text: INSERT data
-        url: https://docs.microsoft.com/sql/t-sql/statements/insert-transact-sql
+        url: ../t-sql/statements/insert-transact-sql.md
       - text: SELECT - JOIN - GROUP BY
-        url: https://docs.microsoft.com/sql/t-sql/queries/select-transact-sql
+        url: ../t-sql/queries/select-transact-sql.md
       - text: CREATE VIEW
-        url: https://docs.microsoft.com/sql/t-sql/statements/create-view-transact-sql
+        url: ../t-sql/statements/create-view-transact-sql.md
       - text: Stored procedures
-        url: https://docs.microsoft.com/sql/relational-databases/stored-procedures/stored-procedures-database-engine
+        url: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
+      - text: Client connectivity
+        url: ../connect/homepage-sql-connection-programming.md
+
 
   - title: Reporting & Analytics 
     linkLists:
@@ -163,6 +161,3 @@ landingContent:
         url: ../advanced-analytics/r/sql-server-r-services.md
       - text: PolyBase
         url: ../relational-databases/polybase/polybase-guide.md
-
-
-

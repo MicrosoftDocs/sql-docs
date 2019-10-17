@@ -26,7 +26,7 @@
   - name: Editions & Features
     items:
     - name: SQL Server 2019
-      href: sql-server/editions-and-components-of-sql-server-ver15.md
+      href: sql-server/editions-and-components-of-sql-server-version-15.md
     - name: SQL Server 2017
       href: sql-server/editions-and-components-of-sql-server-2017.md
     - name: SQL Server 2016

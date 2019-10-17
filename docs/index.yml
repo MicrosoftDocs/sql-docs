@@ -30,7 +30,7 @@ productDirectory:
       - url: https://docs.microsoft.com/azure/sql-database/
         text: Azure SQL Database
       - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
-        text: Azure SQL Data Warehouse
+        text: Azure Synapse Analytics (SQL DW)
   - title: SQL Server on Windows
     imageSrc: media/index/windows.png
     links:
@@ -96,7 +96,7 @@ conceptualContent:
         - text: Azure SQL Database
           url: /azure/sql-database/sql-database-release-notes
           itemType: overview
-        - text: Azure SQL Data Warehouse
+        - text: Azure Synapse Analytics (SQL DW)
           url: /azure/sql-data-warehouse/release-notes-10-0-10106-0
           itemType: overview
         - text: SQL Server Management Studio (SSMS)
@@ -290,7 +290,7 @@ additionalContent:
         links:
           - text: Azure Analysis Services
             url: https://docs.microsoft.com/azure/analysis-services/
-          - text: Azure SQL Data Warehouse
+          - text: Azure Synapse Analytics (SQL DW)
             url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
           - text: Microsoft Analytics Platform System
             url: analytics-platform-system/index.md

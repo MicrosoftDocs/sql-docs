@@ -17,7 +17,7 @@ SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and
 
 ## Install Visual Studio and SQL Server Data Tools
 
-1. If you have not already installed Visual Studio on your Windows machine, [Download and Install Visual Studio]. If you do not have a Visual Studio license, Visual Studio Community edition is a free, fully-featured IDE for students, open-source and individual developers.
+1. If you haven't already installed Visual Studio on your Windows machine, [Download and Install Visual Studio]. If you do not have a Visual Studio license, Visual Studio Community edition is a free, fully featured IDE for students, open-source, and individual developers.
 
 2. During the Visual Studio installation, select **Custom** for the **Choose the type of installation** option. Click **Next**
 
@@ -43,7 +43,7 @@ SQL Server on Linux is supported by SSDT version 17.0 RC or later.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-3. Click **Create**. After the local Git repository is created, double click **SSDTRepo**.
+3. Click **Create**. After the local Git repository is created, double-click **SSDTRepo**.
 
 4. Click **New** in the **Solutions** section. Select **SQL Server** under **Other Languages** node in the **New Project** dialog.
 
@@ -95,7 +95,7 @@ SQL Server on Linux is supported by SSDT version 17.0 RC or later.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
-You have successfully created a new database on SQL Server instance on Linux and learned the basics of developing a database with a source-controlled database project.
+You've successfully created a new database on SQL Server instance on Linux and learned the basics of developing a database with a source-controlled database project.
 
 ## Next steps
 

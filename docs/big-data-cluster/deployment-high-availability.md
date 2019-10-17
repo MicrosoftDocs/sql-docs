@@ -27,7 +27,7 @@ Here are some of the capabilities that availability groups enable:
 1. A second external endpoint is provisioned for read-only connections to the secondary replicas. 
 
 
-# Deploy
+## Deploy
 
 To deploy SQL Server master in an availability group:
 

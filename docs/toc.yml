@@ -4,6 +4,8 @@
 
 - name: SQL docs navigation tips
   href: sql-server/sql-docs-navigation-guide.md
+- name: SQL education center
+  href: education-center/index.yml
 - name: Previous versions 2005-2014
   href: toc/previous-versions-sql-server.md
 

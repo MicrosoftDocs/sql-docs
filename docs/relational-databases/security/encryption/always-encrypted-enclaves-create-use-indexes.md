@@ -69,6 +69,9 @@ This method is useful to:
 
 - To achieve role separation when managing indexes, as it enables DBAs to create and alter indexes on encrypted columns, without having access to sensitive data. 
 
+> [!TIP] 
+> [sp_enclave_send_keys (Transact-SQL)](../../system-stored-procedures/sp-enclave-send-keys-sql.md) allows you to easily send all enclave-enabled column encryption keys, used for indexes, to the enclave and populate the key cache. 
+
 For step-by-step instructions on how to use this method, see [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md). 
 
 ## Next Steps
@@ -76,3 +79,4 @@ For step-by-step instructions on how to use this method, see [Tutorial: Creating
 
 ## See Also  
 - [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
+- [sp_enclave_send_keys (Transact-SQL)](../../system-stored-procedures/sp-enclave-send-keys-sql.md)

@@ -186,7 +186,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Online non-clustered columnstore index rebuild|Yes|No|No|No|No|
 |In-Memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes, <sup>2</sup>|Yes|
 |In-Memory Database: hybrid buffer pool|Yes|Yes|No|No|No|
-|In-Memory Database: memory optimized tempdb|Yes|No|No|No|No|
+|In-Memory Database: memory-optimized tempdb metadata|Yes|No|No|No|No|
 |In-Memory database: persistent memory support|Yes|Yes|Yes|Yes|Yes|
 |Stretch database|Yes|Yes|Yes|Yes|Yes|
 |Multi-instance support|50|50|50|50|50|

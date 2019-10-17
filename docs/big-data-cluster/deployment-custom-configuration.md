@@ -536,18 +536,8 @@ The following **patch.json** file performs the following changes:
       "op": "add",
       "path": "spec.services.hdfs.resources/-",
       "value": "spark-0"
-    },
-    {
-      "op": "add",
-      "path": "spec.services.spark.settings",
-      "value": {
-        "DriverMemory": "2g",
-        "DriverCores": "1",
-        "ExecutorInstances": "2",
-        "ExecutorMemory": "2g",
-        "ExecutorCores": "1"
-      }
     }
+   }
   ]
 }
 ```

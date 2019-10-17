@@ -49,7 +49,7 @@ landingContent:
       - text: Transact-SQL 
         url: ../t-sql/language-reference
       - text: SQL Powershell
-        url: ../powershell/sql-server-powershell
+        url: ../powershell/sql-server-powershell.md
       - text: Previous versions 2014-2005
         url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
 
@@ -64,7 +64,7 @@ landingContent:
       - text: SQL Server on a Windows VM
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
       - text: SQL Server on a Linux VM
-        url: ..linux/quickstart-install-connect-clouds.md
+        url: ../linux/quickstart-install-connect-clouds.md
 
   - title: Administration
     linkLists:
@@ -141,11 +141,11 @@ landingContent:
     - linkListType: overview
       links:
       - text: SQL Server Integration Services (SSIS)
-        url: ../integration-services/sql-server-integration-services
+        url: ../integration-services/sql-server-integration-services.md
       - text: Import and export data
         url: https://docs.microsoft.com/sql/relational-databases/import-export/overview-import-export
       - text: SQL Server Replication
-        url: ../relational-databases/replication/sql-server-replication
+        url: ../relational-databases/replication/sql-server-replication.md
     - linkListType: architecture
       links:
       - text: Azure Database Migration Service

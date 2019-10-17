@@ -27,7 +27,7 @@ The following sections provide an overview of these features.
 
 ## Data virtualization and [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
-Businesses today often preside over vast data estates consisting of a wide array of ever-growing data sets that are hosted in siloed data sources across the company. Gain near real-time insights from all your data with SQL Server 2019 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], which provide a complete environment for working with large sets of data, including machine learning and AI capabilities.
+Businesses today often preside over vast data estates consisting of a wide array of ever-growing data sets that are hosted in siloed data sources across the company. Gain near real-time insights from all your data with SQL Server 2019 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], which provide a complete environment for working with large sets of data, including machine learning and AI capabilities.
 
 | New feature or update | Details |
 |:---|:---|
@@ -36,8 +36,6 @@ Businesses today often preside over vast data estates consisting of a wide array
 | &nbsp; | &nbsp; |
 
 For more information, see [What are SQL Server [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]?](../big-data-cluster/big-data-cluster-overview.md).
-
-[[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) announcement archive](what-s-new-in-sql-server-ver15-prerelease.md) contains a list of features that have been announced and changed for all previous CTP releases of this feature.
 
 ## Intelligent Database
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on innovations in previous versions to provide industry-leading performance out of the box. From [Intelligent Query Processing](../relational-databases/performance/intelligent-query-processing.md) to support for persistent memory devices, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Intelligent Database features improve performance and scalability of all your database workloads without any changes to your application or database design.
@@ -73,7 +71,7 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 |`OPTIMIZE_FOR_SEQUENTIAL_KEY`|Turns on an optimization within the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, which is typically seen with indexes that have a sequential key, such as an identity column, sequence, or date/time column. See [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys).|
 |Forcing fast forward and static cursors | Provides Query Store plan forcing support for fast forward and static cursors. See [Plan forcing support for fast forward and static cursors](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
 |Resource governance| The configurable value for the `REQUEST_MAX_MEMORY_GRANT_PERCENT` option of `CREATE WORKLOAD GROUP` and `ALTER WORKLOAD GROUP` has been changed from an integer to a float data type, to allow more granular control of memory limits. See [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) and [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
-|Reduced recompilations for workloads| Improves the use of temporary tables across multiple scopes. See [Reduced recompilations for workloads](../relational-databases/tables/tables.md#ctp23). |
+|Reduced recompilations for workloads| Improves performance when using temporary tables across multiple scopes by reducing unnecessary recompilations. See [Reduced recompilations for workloads](../relational-databases/tables/tables.md#ctp23). |
 |Indirect checkpoint scalability |See [Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
 |Concurrent PFS updates|[Page Free Space (PFS) pages](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) are special pages within a database file that SQL Server uses to help locate free space when it allocates space for an object. Page latch contention on PFS pages is commonly associated with [`TempDB`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), but it can also occur on user databases when there are many concurrent object allocation threads. This improvement changes the way that concurrency is managed with PFS updates so that they can be updated under a shared latch, rather than an exclusive latch. This behavior is on by default in all databases (including `TempDB`) starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
 | &nbsp; | &nbsp; |
@@ -100,9 +98,9 @@ Monitoring improvements unlock performance insights over any database workload, 
 
 |New feature or update | Details |
 |:---|:---|
-|Edge constraint cascade delete actions | Defines cascaded delete actions on an edge constraint in a graph database. See [Edge constraints](../relational-databases/tables/graph-edge-constraints.md). |
-|New graph function - `SHORTEST_PATH` | Uses `SHORTEST_PATH` inside `MATCH` to find the shortest path between any two nodes in a graph or to perform arbitrary length traversals.|
-|Partition tables and indexes| Divides the data of partitioned tables and indexes into units that can be spread across more than one filegroup in a graph database. |
+|Edge constraint cascade delete actions | You can now define cascaded delete actions on an edge constraint in a graph database. See [Edge constraints](../relational-databases/tables/graph-edge-constraints.md). |
+|New graph function - `SHORTEST_PATH` | You can now use `SHORTEST_PATH` inside `MATCH` to find the shortest path between any two nodes in a graph or to perform arbitrary length traversals.|
+|Partition tables and indexes| Graph tables now support table and index partitioning. |
 |Use derived table or view aliases in graph match query |See [Graph match query](../t-sql/queries/match-sql-graph.md). |
 | &nbsp; | &nbsp; |
 
@@ -122,7 +120,7 @@ Support businesses across different countries and regions, where the requirement
 |Java language SDK is open source |The [Microsoft Extensibility SDK for Java for Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) is now open source and [available on GitHub](https://github.com/microsoft/sql-server-language-extensions).|
 |Support for Java data types|See [Java data types](../language-extensions/how-to/java-to-sql-data-types.md).|
 |New default Java Runtime | SQL Server now includes Azul Systems Zulu Embedded for Java support throughout the product. See [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/). |
-|SQL Server language extensions| Execute external code with the extensibility framework. See [SQL Server language extensions](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
+|SQL Server Language Extensions| Execute external code with the extensibility framework. See [SQL Server Language Extensions](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 |Register external languages|A new Data Definition Language (DDL), `CREATE EXTERNAL LANGUAGE`, registers external languages, such as Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
 | &nbsp; | &nbsp; |
 
@@ -158,14 +156,14 @@ One common task that everyone who deploys [!INCLUDE[ssNoVersion](../includes/ssn
 |New feature or update | Details |
 |:---|:---|
 |Up to five synchronous replicas|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] increases the maximum number of synchronous replicas to five, up from three in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. You can configure this group of five replicas to have automatic failover within the group. There is one primary replica, plus four synchronous secondary replicas.|
-|Secondary-to-primary replica connection redirection| Allows client application connections to be directed to the primary replica regardless of the target server that's specified in the connection string. See [Secondary-to-primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).|
+|Secondary to primary replica connection redirection| Allows client application connections to be directed to the primary replica regardless of the target server that's specified in the connection string. See [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).|
 | &nbsp; | &nbsp; |
 
 ### Recovery
 
 |New feature or update | Details |
 |:---|:---|
-|Accelerated database recovery | Enables accelerated database recovery per-database. See [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
+|Accelerated database recovery | Reduce the time to recover after a restart or a long-running transaction rollback with accelerated database recovery (ADR). See [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
 | &nbsp; | &nbsp; |
 
 ### Resumable operations
@@ -187,7 +185,7 @@ One common task that everyone who deploys [!INCLUDE[ssNoVersion](../includes/ssn
 |Replication support | See [SQL Server Replication on Linux](../linux/sql-server-linux-replication.md). |
 |Support for the Microsoft Distributed Transaction Coordinator (MSDTC) | See [How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md). |
 |OpenLDAP support for third-party AD providers | See [Tutorial: Use Active Directory authentication with SQL Server on Linux](../linux/sql-server-linux-active-directory-authentication.md). |
-|Machine Learning on Linux | See [Configure Machine Learning on Linux](../linux/sql-server-linux-setup-machine-learning.md). |
+|Machine Learning Services on Linux | See [Install SQL Server Machine Learning Services (Python and R) on Linux](../linux/sql-server-linux-setup-machine-learning.md). |
 |`TempDB` improvements | By default, a new installation of SQL Server on Linux creates multiple `TempDB` data files, based on the number of logical cores (with up to eight data files). This doesn't apply to in-place minor or major version upgrades. Each `TempDB` file is 8 MB with an auto growth of 64 MB. This behavior is similar to the default SQL Server installation on Windows. |
 | PolyBase on Linux | See [Install PolyBase](../relational-databases/polybase/polybase-linux-setup.md) on Linux for non-Hadoop connectors.<br/><br/>See [PolyBase type mapping](../relational-databases/polybase/polybase-type-mapping.md). |
 | Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
@@ -209,7 +207,7 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 |New feature or update | Details |
 |:---|:---| 
 |New memory setup options | Sets the *min server memory (MB)* and *max server memory (MB)* server configurations during installation. See [Database Engine Configuration - Memory page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) and the `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY`, and `SQLMAXMEMORY` parameters in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The proposed value aligns with the memory configuration guidelines in [Server Memory Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
-|New parallelism setup options | Sets the *max degree of parallelism* server configuration during installation. See [Database Engine Configuration - MaxDOP page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) and the `SQLMAXDOP` parameter in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The default value aligns with the maximum degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
+|New parallelism setup options | Sets the *max degree of parallelism* server configuration during installation. See [Database Engine Configuration - MaxDOP page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) and the `SQLMAXDOP` parameter in [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). The default value aligns with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> SQL Server Machine Learning Services

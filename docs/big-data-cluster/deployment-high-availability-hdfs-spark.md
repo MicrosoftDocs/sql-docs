@@ -33,6 +33,14 @@ Deploying multiple replicas for these services results in enhanced scalability, 
 > - Hive metadata service  
 >
 
+The following image shows a spark HA deployment in a SQL Server Big Data Cluster:
+
+:::image type="content" source="media/deployment-high-availability-hdfs-spark/spark-ha.png" alt-text="spark-ha-bdc":::
+
+The following image shows an HDFS HA deployment in a SQL Server Big Data Cluster:
+
+:::image type="content" source="media/deployment-high-availability-hdfs-spark/hdfs-ha.png" alt-text="hdfs-ha-bdc":::
+
 ## Deploy
 
 If either name node or spark head is configured with two replicas, then you must also configure the Zookeeper resource with three replicas. In a highly available configuration for HDFS name node, two pods host the two replicas. Th pods are `nmnode-0` and `nmnode-1`. This configuration is active-passive. Only one of the name nodes is active at a time. The other is in stand-by - it becomes active as a result of a failover event. 

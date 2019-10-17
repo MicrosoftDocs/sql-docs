@@ -99,12 +99,12 @@ You have successfully created a new database on SQL Server instance on Linux and
 
 ## Next steps
 
-If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements] and the [Transact-SQL Reference (Database Engine)].
+If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md).
 
-For more information about developing a database with SQL Data Tools, see [SSDT MSDN documents]
+For more information about developing a database with SQL Data Tools, see the below articles.
 
-[Download and Install Visual Studio](https://www.visualstudio.com/downloads/)
-[Download and Install SSDT](https://aka.ms/ssdt-download)
-[SSDT MSDN documents](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)
-[Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx)
-[Transact-SQL Reference (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx)
+[Download and Install Visual Studio](https://www.visualstudio.com/downloads/).
+[Download and Install SSDT](https://aka.ms/ssdt-download).
+[SSDT MSDN documents](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx).
+[Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx).
+[Transact-SQL Reference (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx).

@@ -30,7 +30,7 @@ Requires `VIEW SERVER STATE` permission.
   
 ## Examples  
  
-```  
+```sql  
 SELECT * FROM sys.dm_column_encryption_enclave;  
 GO  
 ```  

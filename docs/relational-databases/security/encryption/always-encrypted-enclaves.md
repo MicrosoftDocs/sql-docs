@@ -161,20 +161,18 @@ The following limitations are specific to Always Encrypted with secure enclaves:
 
 - Clustered indexes can't be created on enclave-enabled columns using randomized encryption.
 - Enclave-enabled columns using randomized encryption can't be primary key columns and cannot be referenced by foreign key constraints or unique key constraints.
-- Hash joins and merged joins on enclave-enabled columns using randomized encryption are not supported. Only nested loop joins (using indexes, if available) are supported.
-- Queries with the LIKE operator or a comparison operator that has a query parameter using one of the following data types (that become large objects after encryption) ignore indexes and perform table scans.
-    - nchar[n] and nvarchar[n], if n is greater than 3967.
-    - char[n], varchar[n], binary[n], varbinary[n], if n is greater than 7935.
+- Only nested loop joins (using indexes, if available) are supported on enclave-enabled columns using randomized encryption. Hash joins and merged joins  are not supported. 
 - In-place cryptographic operations cannot be combined with any other changes of column metadata, except changing a collation within the same code page and nullability. For example, you cannot encrypt, re-encrypt, or decrypt a column AND change a data type of the column in a single `ALTER TABLE`/`ALTER COLUMN` Transact-SQL statement. Use two separate statements.
 - Using enclave-enabled keys for columns in in-memory tables isn't supported.
-- Expressions defining computed columns cannot perform any computations on enclave-enabled columns using randomized encryption (even if the computations are LIKE and range comparisons)..
-- The only supported key stores for storing enclave-enabled column master keys are Windows Certificate Store and Azure Key Vault.
-- Creating statistics for enclave-enabled columns using randomized encryption is not supported.
-- DBCC commands checking the integrity of indexes or updating indexes are not supported.
-- Creating indexes on encrypted columns at the time of creating the table (via CREATE TABLE). You need to create an index on an encrypted column separately via CREATE INDEX.
+- Expressions defining computed columns cannot perform any computations on enclave-enabled columns using randomized encryption (even if the computations  are LIKE and range comparisons).
+- Escape characters are not supported in parameters of the LIKE operator on enclave-enabled columns using randomized encryption.
+- Queries with the LIKE operator or a comparison operator that has a query parameter using one of the following data types (that become large objects after encryption) ignore indexes and perform table scans.
+    - `nchar[n]` and `nvarchar[n]`, if n is greater than 3967.
+    - `char[n]`, `varchar[n]`, `binary[n]`, `varbinary[n]`, if n is greater than 7935.
 - Tooling limitations:
+  - The only supported key stores for storing enclave-enabled column master keys are Windows Certificate Store and Azure Key Vault.
   - Importing/exporting databases containing enclave-enabled keys is not supported.
-  - To trigger an in-place cryptographic operation via an ALTER TABLE Transact-SQL statement, you need to issue the statement using a query window in SSMS, or you can write your own program that issues the statement. Currently, the Set-SqlColumnEncryption cmdlet in the SqlServer PowerShell module and the Always Encrypted wizard in SQL Server Management Studio do not support in-place encryption - they move the data out of the database for cryptographic operations, even if the column encryption keys used for the operations are enclave-enabled.
+  - To trigger an in-place cryptographic operation via `ALTER TABLE`/`ALTER COLUMN`, you need to issue the statement using a query window in SSMS, or you can write your own program that issues the statement. Currently, the Set-SqlColumnEncryption cmdlet in the SqlServer PowerShell module and the Always Encrypted wizard in SQL Server Management Studio do not support in-place encryption - they move the data out of the database for cryptographic operations, even if the column encryption keys used for the operations are enclave-enabled.
 
 ## Next steps
 - [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).

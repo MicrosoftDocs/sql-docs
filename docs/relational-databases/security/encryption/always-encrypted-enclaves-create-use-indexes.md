@@ -20,7 +20,7 @@ Always Encrypted with secure enclaves supports:
 - Clustered and non-clustered indexes on columns encrypted using deterministic encryption and enclave-enabled keys. Such indexes are sorted based on ciphertext. No special considerations apply to such indexes - you can manage and use them the same way as indexes on columns encrypted using deterministic encryption and keys that are not enclave-enabled (as with Always Encrypted). 
 - Nonclustered indexes on columns encrypted using randomized encryption and enclave-enabled keys. To ensure an index on a column encrypted using randomized encryption doesn't leak sensitive data and, at the same time, it's useful for processing queries inside the enclave, the key values in the index data structure (B-tree) are encrypted and sorted based on their plaintext values. For more information, see [Indexes on Enclave-enabled Columns using Randomized Encryption](always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption). 
 
-The remainder of this section applies to nonclustered indexes on columns encrypted using randomized encryption and enclave-enabled keys.
+The remainder of this section article to nonclustered indexes on columns encrypted using randomized encryption and enclave-enabled keys.
 
 Since an index on a column using randomized encryption and an enclave-enabled column encryption key contains encrypted (ciphertext) data sored based on plaintext, SQL Server Engine must use the enclave for any operation that involves creating, or updating, or searching an index, including:
 

@@ -33,7 +33,7 @@ To confirm an enclave of the type (greater than 0) that is currently in effect h
  - If the view contains exactly one row, the enclave is correctly initialized. 
  - If the view contains no rows, check the SQL Server error log for enclave initialization errors - see [View the SQL Server error log (SQL Server Management Studio)](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md).
 
-For step-by-step instructions on how to configure a VBS enclave, see [Step 3: Enable Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md#step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server).
+For step-by-step instructions on how to configure a VBS enclave, see [Enable Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md#step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server).
 
 ## Examples  
  The following example enables the secure enclave and sets the enclave type to VBS:

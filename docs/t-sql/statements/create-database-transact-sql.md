@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, and Analytics Platform System
 ms.custom: ""
-ms.date: "10/14/2019"
+ms.date: "10/17/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -1010,7 +1010,7 @@ The MAXSIZE value for the DTU-based model, if specified, has to be a valid value
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**General Purpose service tier - Fsv2 series (preview)**
+**General Purpose service tier - Fsv2-series (preview)**
 
 |MAXSIZE|GP_Fsv2_72|
 |:----- | ------: |
@@ -1040,7 +1040,7 @@ The MAXSIZE value for the DTU-based model, if specified, has to be a valid value
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**Business Critical service tier - M series (preview)**
+**Business Critical service tier - M-series (preview)**
 
 |MAXSIZE|BC_M_128|
 |:----- | -------: |

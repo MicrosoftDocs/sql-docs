@@ -17,7 +17,6 @@ metadata:
 
 
 landingContent:
-
   - title: Getting started 
     linkLists:
     - linkListType: whats-new
@@ -69,8 +68,6 @@ landingContent:
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
       - text: SQL Server on a Linux VM
         url: ..linux/quickstart-install-connect-clouds.md
-
-
 
   - title: Administration
     linkLists:

@@ -14,7 +14,7 @@ metadata:
 
 
 landingContent:
-  - title: Getting started 
+  - title: SQL Server on-premises 
     linkLists:
     - linkListType: whats-new
       links:
@@ -82,6 +82,32 @@ landingContent:
       - text: Failover cluster instances
         url: failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
 
+
+
+  - title: Data management
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: SQL Server Integration Services (SSIS)
+        url: ../integration-services/sql-server-integration-services.md
+      - text: Import and export data
+        url: https://docs.microsoft.com/sql/relational-databases/import-export/overview-import-export
+      - text: SQL Server Replication
+        url: ../relational-databases/replication/sql-server-replication.md
+    - linkListType: architecture
+      links:
+      - text: Azure Database Migration Service
+        url: https://docs.microsoft.com/azure/dms/dms-overview
+      - text: Database Experimentation Assistant
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Data Migration Assistant (DMA)
+        url: https://docs.microsoft.com/sql/dma/dma-overview
+      - text: SQL Server Migration Assistant (SSMA)
+        url: https://docs.microsoft.com/sql/ssma/sql-server-migration-assistant
+      - text: ETL Data Factory
+        url: https://docs.microsoft.com/azure/data-factory/
+
+
   - title: SQL on Azure
     linkLists:
     - linkListType: overview
@@ -137,29 +163,6 @@ landingContent:
         url: ../advanced-analytics/r/sql-server-r-services.md
       - text: PolyBase
         url: ../relational-databases/polybase/polybase-guide.md
-
-  - title: Data management
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: SQL Server Integration Services (SSIS)
-        url: ../integration-services/sql-server-integration-services.md
-      - text: Import and export data
-        url: https://docs.microsoft.com/sql/relational-databases/import-export/overview-import-export
-      - text: SQL Server Replication
-        url: ../relational-databases/replication/sql-server-replication.md
-    - linkListType: architecture
-      links:
-      - text: Azure Database Migration Service
-        url: https://docs.microsoft.com/azure/dms/dms-overview
-      - text: Database Experimentation Assistant
-        url: ../dea/database-experimentation-assistant-overview.md
-      - text: Data Migration Assistant (DMA)
-        url: https://docs.microsoft.com/sql/dma/dma-overview
-      - text: SQL Server Migration Assistant (SSMA)
-        url: https://docs.microsoft.com/sql/ssma/sql-server-migration-assistant
-      - text: ETL Data Factory
-        url: https://docs.microsoft.com/azure/data-factory/
 
 
 

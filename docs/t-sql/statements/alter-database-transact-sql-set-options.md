@@ -3050,6 +3050,9 @@ SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests
 WHERE request_id = <'Your_Query_Request_ID'>
 
 ```
+### Permissions
+To set the RESULT_SET_CACHING option, a user needs server-level principal login (the one created by the provisioning process) or be a member of the `dbmanager` database role.  
+
 
 **<snapshot_option> ::=**        
 **Applies to**: Azure SQL Data Warehouse (preview)
@@ -3069,10 +3072,7 @@ This command must be run while connected to the `master` database. Turning READ_
 
 In a database with READ_COMMITTED_SNAPSHOT enabled, queries may experience slower performance due to the scan of versions if multiple data versions are present. Long-open transactions can also cause an increase in the size of the database. This issue occurs if there are data changes by these transactions that block version cleanup.  
 
-## Permissions
-
-To set the RESULT_SET_CACHING option, a user needs server-level principal login (the one created by the provisioning process) or be a member of the `dbmanager` database role.  
-
+### Permissions
 To set the READ_COMMITTED_SNAPSHOT option, a user needs ALTER permission on the database.
 
 ## Examples
@@ -3103,26 +3103,6 @@ SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### Check for result set cache hit or cache miss for a query
-
-```sql
-If
-(SELECT step_index  
-FROM sys.dm_pdw_request_steps  
-WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
-SELECT 1 as is_cache_hit  
-ELSE
-SELECT 0 as is_cache_hit;
-```
-
-### Check for all queries with result set cache hits
-
-```sql
-SELECT *  
-FROM sys.dm_pdw_request_steps  
-WHERE command like '%DWResultCacheDb%' and step_index = 0;
-```
-
 ### Enable the Read_Committed_Snapshot option for a database
 
 ```sql
@@ -3132,7 +3112,7 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## See also
 
-- [Result set caching in Azure SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-result-set-caching-overview) 
+- [Performance tuning with result set caching](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

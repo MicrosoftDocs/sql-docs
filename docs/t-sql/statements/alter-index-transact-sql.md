@@ -168,7 +168,6 @@ ALTER INDEX { index_name | ALL }
 }  
   
 ```
-
 ## Arguments
 
  *index_name*  

@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 In this quickstart, you'll create and train a predictive model using Python, save the model to a table in your SQL Server instance, then use the model to predict values from new data using [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
-You'll create and execute two stored procedures running in SQL. The first one uses the classic Iris flower data set and generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring - it calls the model generated in the first procedure to output a set of predictions based on new data. By placing code in a stored procedure, operations are contained, reusable, and callable by other stored procedures and client applications.
+You'll create and execute two stored procedures running in SQL. The first one uses the classic Iris flower data set and generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring - it calls the model generated in the first procedure to output a set of predictions based on new data. By placing Python code in a SQL stored procedure, operations are contained in SQL, are reusable, and can be called by other stored procedures and client applications.
 
 By completing this quickstart, you'll learn:
 
@@ -39,7 +39,9 @@ By completing this quickstart, you'll learn:
 
 In this step, you'll create a stored procedure that generates a model for predicting outcomes.
 
-1. Open a new query window in SSMS connected to the **irissql** database. 
+1. Open SSMS, connect to your SQL Server instance, and open a new query window.
+
+1. Connect to the irissql database.
 
     ```sql
     USE irissql

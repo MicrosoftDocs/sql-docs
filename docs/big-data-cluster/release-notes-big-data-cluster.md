@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article lists the updates and know issues for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC).
+This article lists the updates for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC).
 
 ## <a id="rtm"></a> SQL Server 2019 (November, 2019)
 
@@ -35,9 +35,9 @@ This section explains platforms that are supported with [!INCLUDE[big-data-clust
 |Platform|Supported versions|
 |---------|---------|
 |Kubernetes|BDC requires Kubernetes version minimum 1.13. See [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/) for Kubernetes version support policy.|
-|AKS|BDC requires AKS version minimum 1.13.<br/>See [Supported Kubernetes versions in Azure Kubernetes Service (AKS)](/azure/aks/supported-kubernetes-versions) for AKS version support policy.|
+|Azure Kubernetes Service (AKS)|BDC requires AKS version minimum 1.13.<br/>See [Supported Kubernetes versions in AKS](/azure/aks/supported-kubernetes-versions) for version support policy.|
 
-### Host OS for Kubernentes
+### Host OS for Kubernetes
 
 |Platform|Supported versions|
 |---------|---------|

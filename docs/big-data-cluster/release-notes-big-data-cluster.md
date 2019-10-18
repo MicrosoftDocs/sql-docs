@@ -46,7 +46,7 @@ This article lists the updates and know issues for the most recent releases of [
 
 |Edition|Notes|
 |---------|---------|
-|Enterprise Edition<br/>Standard Edition<br/>Developer| Big Data Cluster Edition is determined by the edition of SQL Server master instance. At deployment time Developer edition is deployed by default. You can change the edition post deployment.|
+|Enterprise Edition<br/>Standard Edition<br/>Developer| Big Data Cluster Edition is determined by the edition of SQL Server master instance. At deployment time Developer edition is deployed by default. You can change the edition post deployment. See [Configure SQL Server master instance](../big-data-cluster/configure-sql-server-master-instance.md). |
 
 ## <a id="rc"></a> Release candidate (August, 2019)
 

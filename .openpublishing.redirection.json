@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/big-data-cluster/deploy-on-minikube.md",
+            "redirect_url": "/sql/big-data-cluster/deploy-get-started",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/big-data-cluster/reference-azdata-control.md",
             "redirect_url": "/sql/big-data-cluster/reference-azdata",
             "redirect_document_id": false
@@ -14074,6 +14079,11 @@
             "source_path": "docs/relational-databases/indexes/columnstore-indexes-defragmentation.md",
             "redirect_url": "/sql/relational-databases/indexes/reorganize-and-rebuild-indexes",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-develop-use-vscode.md",
+            "redirect_url": "/sql/visual-studio-code/sql-server-develop-use-vscode",
+            "redirect_document_id": true
         }
     ]
 }

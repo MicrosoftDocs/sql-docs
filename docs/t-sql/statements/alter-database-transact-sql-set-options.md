@@ -3050,6 +3050,9 @@ SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests
 WHERE request_id = <'Your_Query_Request_ID'>
 
 ```
+### Permissions
+To set the RESULT_SET_CACHING option, a user needs server-level principal login (the one created by the provisioning process) or be a member of the `dbmanager` database role.  
+
 
 **<snapshot_option> ::=**        
 **Applies to**: Azure SQL Data Warehouse (preview)
@@ -3069,10 +3072,7 @@ This command must be run while connected to the `master` database. Turning READ_
 
 In a database with READ_COMMITTED_SNAPSHOT enabled, queries may experience slower performance due to the scan of versions if multiple data versions are present. Long-open transactions can also cause an increase in the size of the database. This issue occurs if there are data changes by these transactions that block version cleanup.  
 
-## Permissions
-
-To set the RESULT_SET_CACHING option, a user needs server-level principal login (the one created by the provisioning process) or be a member of the `dbmanager` database role.  
-
+### Permissions
 To set the READ_COMMITTED_SNAPSHOT option, a user needs ALTER permission on the database.
 
 ## Examples

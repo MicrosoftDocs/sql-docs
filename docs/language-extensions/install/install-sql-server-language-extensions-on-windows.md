@@ -256,7 +256,7 @@ If you are using Standard Edition and do not have Resource Governor, you can use
 
 ## Configure on Big Data Cluster
 
-Language Extensions is installed by default on [SQL Server Big Data Clusters](../../big-data-cluster/big-data-cluster-overview) and does not require to follow the steps above.
+Language Extensions is installed by default on [SQL Server Big Data Clusters](../../big-data-cluster/big-data-cluster-overview.md) and does not require to follow the steps above.
 
 To enable Language Extensions, run this statement on the master instance:
 
@@ -268,7 +268,7 @@ GO
 
 ### Configure on Big Data Cluster with Always On Availability Groups
 
-If you are using [SQL Server Big Data Clusters](../../big-data-cluster/big-data-cluster-overview) with [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), you need to perform a few extra steps. 
+If you are using [SQL Server Big Data Clusters](../../big-data-cluster/big-data-cluster-overview.md) with [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), you need to perform a few extra steps. 
 
 1. Connect to the master instance and run this statement:
 
@@ -293,6 +293,7 @@ If you are using [SQL Server Big Data Clusters](../../big-data-cluster/big-data-
 1. Connect to each master replica endpoint and enable script execution.
 
     Example:
+
     ```
     mymaster-2                        LoadBalancer   10.0.48.180    23.100.39.96     1533:30312/TCP 
     ```

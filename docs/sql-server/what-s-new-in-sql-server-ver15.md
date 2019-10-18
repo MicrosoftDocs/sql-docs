@@ -231,10 +231,10 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 | New feature or update | Details |
 |:---|:---|
 |Query interleaving| See [Query interleaving](https://docs.microsoft.com/analysis-services/tabular-models/query-interleaving). |
-|Multidimensional expression (MDX) query support for tabular models with calculation groups | See [Calculation groups](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24). |
-|Calculation groups in tabular model| See [Calculation groups in tabular model](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24). |
-|MDX query support for tabular models with calculation groups | See [Calculation groups](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24). |
-|Dynamic formatting of measures using calculation groups |Allows you to conditionally change format strings for measures with [calculation groups](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24). For example, with currency conversion, you can display a measure by using a variety of foreign currency formats.|
+|Multidimensional expression (MDX) query support for tabular models with calculation groups | See [Calculation groups](/analysis-services/tabular-models/calculation-groups). |
+|Calculation groups in tabular model| See [Calculation groups in tabular model](/analysis-services/tabular-models/calculation-groups). |
+|MDX query support for tabular models with calculation groups | See [Calculation groups](/analysis-services/tabular-models/calculation-groups). |
+|Dynamic formatting of measures using calculation groups |Allows you to conditionally change format strings for measures with [calculation groups](/analysis-services/tabular-models/calculation-groups). For example, with currency conversion, you can display a measure by using a variety of foreign currency formats.|
 |Many-to-many relationships in tabular models| See [Many-to-many relationships in tabular models](what-s-new-in-sql-server-ver15-prerelease.md#many-to-many-ctp24).|
 |Property settings for resource governance| See [Property settings for resource governance](what-s-new-in-sql-server-ver15-prerelease.md#property-ctp24).|
 | Governance setting for Power BI cache refreshes | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release introduces the **ClientCacheRefreshPolicy** property, which allows you to override this behavior at the server level. To learn more, see [General Properties](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |

@@ -23,37 +23,37 @@ To change any of these settings, follow these steps:
 
 1. Create a custom `mssql-custom.conf` file that includes targeted settings. The following example enables SQL Agent, telemetry, sets a PID for Enterprise Edition, and enables trace flag 1204.:
 
-  ```
-  [sqlagent]
-  enabled=true
-  
-  [telemetry]
-  customerfeedback=true
-  userRequestedLocalAuditDirectory = /tmp/audit
-  
-  [DEFAULT]
-  pid = Enterprise
-  
-  [traceflag]
-  traceflag0 = 1204
-  ```
+   ```
+   [sqlagent]
+   enabled=true
+   
+   [telemetry]
+   customerfeedback=true
+   userRequestedLocalAuditDirectory = /tmp/audit
+
+   [DEFAULT]
+   pid = Enterprise
+
+   [traceflag]
+   traceflag0 = 1204
+   ```
 
 1. Copy `mssql-custom.conf` file to `/var/opt/mssql` in the `mssql-server` container in the `master-0` pod. Replace `<namespaceName>` with the big data cluster name.
 
-  ```bash
-  kubectl cp mssql-custom.conf master-0:/var/opt/mssql/mssql-custom.conf -c mssql-server -n <namespaceName>
-  ```
+   ```bash
+   kubectl cp mssql-custom.conf master-0:/var/opt/mssql/mssql-custom.conf -c mssql-server -n <namespaceName>
+   ```
 
 1. Restart SQL Server instance.  Replace `<namespaceName>` with the big data cluster name.
 
-  ```bash
-  kubectl exec -it master-0  -c mssql-server -n <namespaceName>-- /bin/bash
-  supervisorctl restart mssql-server
-  exit
-  ```
+   ```bash
+   kubectl exec -it master-0  -c mssql-server -n <namespaceName>-- /bin/bash
+   supervisorctl restart mssql-server
+   exit
+   ```
 
-  > [!IMPORTANT]
-  > If SQL Server master instance is in an availability groups configuration, copy the `mssql-custom.conf` file in all the `master` pods. Note that each restart will cause a failover, so you must make sure you are timing this activity during downtime periods.
+> [!IMPORTANT]
+> If SQL Server master instance is in an availability groups configuration, copy the `mssql-custom.conf` file in all the `master` pods. Note that each restart will cause a failover, so you must make sure you are timing this activity during downtime periods.
 
 ## Known limitations
 

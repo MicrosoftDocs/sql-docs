@@ -8,7 +8,7 @@
 
 - name: Overview
   items:
-  - name: New with SQL Server
+  - name: What's New
     items:
     - name: SQL Server 2019
       href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -25,6 +25,8 @@
       href: database-engine/whats-new-in-sql-server-2016.md
   - name: Editions & Features
     items:
+    - name: SQL Server 2019
+      href: sql-server/editions-and-components-of-sql-server-version-15.md
     - name: SQL Server 2017
       href: sql-server/editions-and-components-of-sql-server-2017.md
     - name: SQL Server 2016
@@ -97,8 +99,6 @@
           href: big-data-cluster/deploy-on-aks.md
         - name: Kubeadm
           href: big-data-cluster/deploy-with-kubeadm.md
-        - name: Minikube
-          href: big-data-cluster/deploy-on-minikube.md
       - name: Deployment scripts
         items:
         - name: AKS python script
@@ -8364,27 +8364,27 @@
     - name: Extensions
       href: azure-data-studio/extensions.md
       items:
-      - name: PostgreSQL extension (preview)
+      - name: PostgreSQL extension
         href: azure-data-studio/postgres-extension.md
-      - name: SQL Server 2019 (preview)
+      - name: SQL Server 2019
         href: azure-data-studio/sql-server-2019-extension.md
-      - name: SQL Server Agent (preview)
+      - name: SQL Server Agent
         href: azure-data-studio/sql-server-agent-extension.md
-      - name: SQL Server Central Management Servers extension (preview)
+      - name: SQL Server Central Management Servers extension
         href: azure-data-studio/sql-server-cms-extension.md        
-      - name: SQL Server dacpac extension (preview)
+      - name: SQL Server dacpac extension
         href: azure-data-studio/sql-server-dacpac-extension.md
-      - name: SQL Server Import (preview)
+      - name: SQL Server Import
         href: azure-data-studio/sql-server-import-extension.md
-      - name: SQL Server Profiler (preview)
+      - name: SQL Server Profiler
         href: azure-data-studio/sql-server-profiler-extension.md
-      - name: Schema Compare extension (preview)
+      - name: Schema Compare extension
         href: azure-data-studio/schema-compare-extension.md        
       - name: PowerShell extension
         href: azure-data-studio/powershell-extension.md        
-      - name: Managed Instance extension (preview)
+      - name: Managed Instance extension
         href: azure-data-studio/azure-sql-managed-instance-extension.md        
-      - name: SandDance extension (preview)
+      - name: SandDance extension
         href: azure-data-studio/sanddance-extension.md
     - name: Extension Authoring
       items:
@@ -10309,7 +10309,7 @@
       items:
       - name: SQL Server 2017
         href: linux/sql-server-linux-release-notes.md
-      - name: SQL Server 2019 preview
+      - name: SQL Server 2019
         href: linux/sql-server-linux-release-notes-2019.md
     - name: What's new?
       href: linux/sql-server-linux-whats-new.md

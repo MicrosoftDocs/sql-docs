@@ -19,7 +19,7 @@ This article describes how to access the service endpoints and view the status o
 
 ## <a id="datastudio"></a> Use Azure Data Studio
 
-After downloading the latest **insiders build** of [Azure Data Studio](https://aka.ms/getazuredatastudio), you can view service endpoints and the status of a big data cluster with the SQL Server big data cluster dashboard. Note that some of the features below are only first available in the insiders build of Azure Data Studio.
+After downloading the latest **insiders build** of [Azure Data Studio](https://aka.ms/getazuredatastudio), you can view service endpoints and the status of a big data cluster with the SQL Server big data cluster dashboard. Some of the features below are only first available in the insiders build of Azure Data Studio.
 
 1. First, create a connection to your big data cluster in Azure Data Studio. For more information, see [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md).
 
@@ -48,7 +48,7 @@ The service endpoints table also exposes several dashboards for monitoring:
 - Spark Job Monitoring
 - Spark Resource Management
 
-You can directly click on these links. You will be required to authenticate when accessing these dashboards. For the metrics and logs dashboards you must provide controller admin credentials that you set at deployment time using environment variables **AZDATA_USERNAME** and **AZDATA_PASSWORD**. Spark dashboards will use gateway (Knox) credentials: either AD identity in a cluster integrated with AD or user **root** and **AZDATA_PASSWORD** if using basic authentication in your cluster. 
+You can directly click on these links. You will be required to authenticate when accessing these dashboards. For the metrics and logs dashboards, provide controller admin credentials that you set at deployment time using environment variables **AZDATA_USERNAME** and **AZDATA_PASSWORD**. Spark dashboards will use gateway (Knox) credentials: either AD identity in a cluster integrated with AD or user **root** and **AZDATA_PASSWORD** if using basic authentication in your cluster. 
 
 ### <a id="notebook"></a> Cluster Status notebook
 
@@ -72,7 +72,7 @@ You can directly click on these links. You will be required to authenticate when
     > [!Note]
     > If you do not have a config file setup with your big data, you will be asked for the controller endpoint. Type or paste it, and then press ENTER to proceed.
 
-5. If you connected successfully, the rest of the notebook will show the output of each component of the big data cluster. When you want to re-run a certain code cell, hover over the code cell and click the **Run** icon.
+5. If you connected successfully, the rest of the notebook will show the output of each component of the big data cluster. When you want to rerun a certain code cell, hover over the code cell and click the **Run** icon.
 
 ## Use azdata
 
@@ -93,7 +93,7 @@ You can also use [azdata](deploy-install-azdata.md) commands to view both endpoi
    azdata login --endpoint https://<control_domain_name>:30080 --auth ad
    ```
 
-1. Run [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
+1. Run [`azdata bdc endpoint list`](reference-azdata-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -119,7 +119,7 @@ You can also use [azdata](deploy-install-azdata.md) commands to view both endpoi
 
 ### View cluster status
 
-You can view the status of the cluster with the [azdata bdc status show](reference-azdata-bdc-status.md) command.
+You can view the status of the cluster with the [`azdata bdc status show`](reference-azdata-bdc-status.md) command.
 
 ```bash
 azdata bdc status show
@@ -202,9 +202,9 @@ The following shows sample output from this command:
  appproxy        ready    healthy         ReplicaSet appproxy is healthy
 ```
 
-### View specific resource status
+### View resource status
 
-You can view the status of a specific resource within the cluster with the [azdata bdc pool status show](reference-azdata-bdc-pool-status.md) command. To use this command, specify the type of pool with the `--resource` parameter. Few examples of inputs for `--resource` paramter are:
+You can view the status of a specific resource within the cluster with the [`azdata bdc pool status show`](reference-azdata-bdc-pool-status.md) command. To use this command, specify the type of pool with the `--resource` parameter. Few examples of inputs for `--resource` parameter are:
 
 - master
 - control
@@ -218,13 +218,13 @@ For example, the following command displays the pool status of the storage pool:
 azdata bdc pool status show --resource master
 ```
 
-To see the status of all components that are running a specific service you must use the corresponding command group `azdata bdc <serviceName> status show`. For example:
+To see the status of all components that are running a specific service, use the corresponding command group `azdata bdc <serviceName> status show`. For example:
 
 - azdata bdc sql status show 
 - azdata bdc hdfs status show
 - azdata bdc spark status show
 
-Here is an sample output:
+Here is a sample output:
 
 ```output
  Sql: ready                                                                                                                                                                                                          Health Status:  healthy
@@ -302,7 +302,7 @@ The `nodeMetricsUrl` and `sqlMetricsUrl` values link to a Grafana dashboard for 
 
 ### View controller status
 
-You can view the controller status with the [azdata bdc control status show](reference-azdata-bdc-control-status.md) command. It provides similar links to the monitoring dashboards related to the controller components of the big data cluster.
+You can view the controller status with the [`azdata bdc control status show`](reference-azdata-bdc-control-status.md) command. It provides similar links to the monitoring dashboards related to the controller components of the big data cluster.
 
 ## Next steps
 

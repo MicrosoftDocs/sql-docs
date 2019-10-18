@@ -182,6 +182,8 @@ Restarting the service also automatically restarts the related SQL Server Launch
 
 You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
+<a name="register_external_language"></a>
+
 ## Register external language
 
 For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
@@ -268,7 +270,42 @@ GO
 
 If you are using [SQL Server Big Data Clusters](../../big-data-cluster/big-data-cluster-overview) with [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), you need to perform a few extra steps. 
 
-1. Connect to the master instance
+1. Connect to the master instance and run this statement:
+
+    ```sql
+    SELECT @@SERVERNAME
+    ```
+
+    Note down the server name. In this example, the server name is **master-2**.
+
+1. On each replica on the Always On Availability Group in the Big Data Cluster, run these `kubectl` commands:
+
+    ```
+    kubectl -n bdc expose pod master-0 --port=1533 --name=mymaster-0 --type=LoadBalancer
+    service/mymaster-0 exposed
+
+    kubectl -n bdc expose pod master-1 --port=1533 --name=mymaster-1 --type=LoadBalancer
+    service/mymaster-1 exposed
+
+    kubectl -n bdc expose pod master-2 --port=1533 --name=mymaster-2 --type=LoadBalancer
+    ```
+
+1. Connect to each master replica endpoint and enable script execution.
+
+    Example:
+    ```
+    mymaster-2                        LoadBalancer   10.0.48.180    23.100.39.96     1533:30312/TCP 
+    ```
+
+    Run this statement:
+
+    ```sql
+    EXEC sp_configure 'external scripts enabled', 1
+    RECONFIGURE WITH OVERRIDE
+    GO
+    ```
+
+Once you have configured Language Extensions, you can [register external language](#register_external_language).
 
 ## Next steps
 

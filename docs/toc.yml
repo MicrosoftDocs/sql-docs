@@ -1,10 +1,10 @@
 
-- name: Job roles with SQL Server
+- name: SQL Server
   href: sql-server/index.yml
 
-- name: SQL docs navigation tips
+- name: Docs navigation tips
   href: sql-server/sql-docs-navigation-guide.md
-- name: Previous versions 2014-2005
+- name: Previous versions 2005-2014
   href: toc/previous-versions-sql-server.md
 
 - name: Overview

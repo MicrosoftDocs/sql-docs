@@ -22,7 +22,7 @@ highlightedContent:
      url: tools/overview-sql-tools.md
    - title: SQL Server Education Center
      itemType: learn
-     url: lp/sql-server/index.yml
+     url: lp/sql-server/sql-education-center.md
 
 productDirectory:
   items:

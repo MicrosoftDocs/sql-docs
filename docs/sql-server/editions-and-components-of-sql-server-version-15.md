@@ -230,7 +230,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |User-defined roles|Yes|Yes|Yes|Yes|Yes|
 |Contained databases|Yes|Yes|Yes|Yes|Yes|
 |Encryption for backups|Yes|Yes|No|No|No|
-|Data classification and audition|Yes|Yes|Yes|Yes|Yes|
+|Data classification and auditing|Yes|Yes|Yes|Yes|Yes|
 
 ##  <a name="Replication"></a> Replication
 

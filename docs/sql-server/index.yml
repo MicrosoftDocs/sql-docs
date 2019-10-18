@@ -40,14 +40,9 @@ landingContent:
         url: ../azure-data-studio/download.md
     - linkListType: reference
       links:
-      - text: Transact-SQL 
-        url: ../t-sql/language-reference.md
-      - text: SQL Powershell
-        url: ../powershell/sql-server-powershell.md
       - text: Previous versions 2005-2014
         url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
-      - text: Sample databases
-        url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
+
 
   - title: SQL on Azure
     linkLists:
@@ -63,32 +58,6 @@ landingContent:
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
       - text: SQL Server on a Linux VM
         url: ../linux/quickstart-install-connect-clouds.md
-
-  - title: Big data & machine learning 
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: Big data cluster
-        url: ../big-data-cluster/big-data-cluster-overview.md
-      - text: Analytics Platform System 
-        url: https://www.microsoft.com/sql/analytics-platform-system/
-      - text: Machine Learning with SQL Server
-        url: https://docs.microsoft.com/sql/advanced-analytics/
-      - text: R Services 
-        url: ../advanced-analytics/r/sql-server-r-services.md
-      - text: PolyBase
-        url: ../relational-databases/polybase/polybase-guide.md
-
-  - title: Business Intelligence 
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: SQL Server Reporting Services (SSRS)
-        url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-      - text: SQL Server Analysis Services (SSAS)
-        url: /analysis-services/analysis-services-overview
-      - text: SQL Server Integration Services (SSIS)
-        url: ../integration-services/sql-server-integration-services.md
 
   - title: Administration
     linkLists:
@@ -121,36 +90,62 @@ landingContent:
       - text: SQL Server Replication
         url: ../relational-databases/replication/sql-server-replication.md
 
+  - title: Big data & machine learning 
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Big data cluster
+        url: ../big-data-cluster/big-data-cluster-overview.md
+      - text: Analytics Platform System 
+        url: https://www.microsoft.com/sql/analytics-platform-system/
+      - text: Machine Learning with SQL Server
+        url: https://docs.microsoft.com/sql/advanced-analytics/
+      - text: R Services 
+        url: ../advanced-analytics/r/sql-server-r-services.md
+      - text: PolyBase
+        url: ../relational-databases/polybase/polybase-guide.md
+
+  - title: Business Intelligence 
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: SQL Server Reporting Services (SSRS)
+        url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+      - text: SQL Server Analysis Services (SSAS)
+        url: /analysis-services/analysis-services-overview
+      - text: SQL Server Integration Services (SSIS)
+        url: ../integration-services/sql-server-integration-services.md
+
   - title: Migration
     linkLists:
     - linkListType: overview
       links:
-      - text: SQL Server Integration Services (SSIS)
-        url: ../integration-services/sql-server-integration-services.md
-      - text: Import and export data
-        url: https://docs.microsoft.com/sql/relational-databases/import-export/overview-import-export
-      - text: SQL Server Replication
-        url: ../relational-databases/replication/sql-server-replication.md
+      - text: Azure Database Migration Service
+        url: https://docs.microsoft.com/azure/dms/dms-overview
+      - text: Database Experimentation Assistant
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Data Migration Assistant (DMA)
+        url: https://docs.microsoft.com/sql/dma/dma-overview
+      - text: SQL Server Migration Assistant (SSMA)
+        url: https://docs.microsoft.com/sql/ssma/sql-server-migration-assistant
+      - text: ETL Data Factory
+        url: https://docs.microsoft.com/azure/data-factory/
 
-  - title: Development
+
+  - title: Reference
     linkLists:
     - linkListType: reference 
       links:
-      - text: Databases
-        url: ../relational-databases/databases/databases.md
       - text: CREATE DATABASE
         url: ../t-sql/statements/create-database-transact-sql.md
       - text: CREATE TABLE
         url: ../t-sql/statements/create-table-transact-sql.md
-      - text: CREATE INDEX
-        url: ../t-sql/statements/create-index-transact-sql.md
-      - text: INSERT data
-        url: ../t-sql/statements/insert-transact-sql.md
-      - text: SELECT - JOIN - GROUP BY
-        url: ../t-sql/queries/select-transact-sql.md
-      - text: CREATE VIEW
-        url: ../t-sql/statements/create-view-transact-sql.md
-      - text: Stored procedures
-        url: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
       - text: Client connectivity
         url: ../connect/homepage-sql-connection-programming.md
+      - text: Transact-SQL 
+        url: ../t-sql/language-reference.md
+      - text: SQL Powershell
+        url: ../powershell/sql-server-powershell.md
+      - text: Sample databases
+        url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
+

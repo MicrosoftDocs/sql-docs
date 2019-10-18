@@ -17,9 +17,9 @@ ms.technology: big-data-cluster
 
 Configure master instance of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
-Server configuration settings can not be configured for SQL Server master instance at deployment time. This article describes a temporary workaround on how to configure settings like SQL Server edition, enable or disable SQL Server Agent, enable specific trace flags or enable/disable customer feedback.
+Server configuration settings cannot be configured for SQL Server master instance at deployment time. This article describes a temporary workaround on how to configure settings like SQL Server edition, enable or disable SQL Server Agent, enable specific trace flags or enable/disable customer feedback.
 
-To change any of these settings follow these steps:
+To change any of these settings, follow these steps:
 
 1. Create a custom `mssql-custom.conf` file that includes targeted settings. The following example enables SQL Agent, telemetry, sets a PID for Enterprise Edition, and enables trace flag 1204.:
 
@@ -58,7 +58,7 @@ exit
 ## Known limitations
 
 - The steps above require Kubernetes cluster admin permissions
-- You can not change the server collation for SQL Server master instance of the big data cluster post deployment.
+- You cannot change the server collation for SQL Server master instance of the big data cluster post deployment.
 
 ## Next steps
 

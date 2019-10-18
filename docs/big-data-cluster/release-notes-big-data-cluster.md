@@ -19,35 +19,45 @@ This article lists the updates and know issues for the most recent releases of [
 
 ## <a id="rtm"></a> SQL Server 2019 (November, 2019)
 
-### Supportability
+|New feature or update | Details |
+|:---|:---|
+|SQL Server Always On Availability Group |When you deploy a SQL Server Big Data Cluster, you can configure the deployment to create an availability group to provide:<br/><br/>- High availability <br/><br/>- Read-scale out <br/><br/>- Scale-out data insertion into data pool<br/><br>See [Deploy with high availability](../big-data-cluster/deployment-high-availability.md). |
+|`azdata` |Simplified installation for the tool with [installation manager](./deploy-install-azdata-linux-package.md)<br/><br/>[`azdata notebook` command](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status` command](./reference-azdata-bdc-status.md) |
+|Azure Data Studio|[Download the Release Candidate build of Azure Data Studio](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Added troubleshooting notebooks through SQL Server 2019 guide Jupyter Book.<br/><br/>Added controller login experience.<br/><br/>Added controller dashboard to view service endpoints, view cluster health status, and access troubleshooting notebooks.<br/><br/>Improved notebook cell output/editing performance.|
+| &nbsp; | &nbsp; |
 
-#### Kubernetes platforms
+## Supportability
+
+This section explains platforms that are supported with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC).
+
+### Kubernetes platforms
 
 |Platform|Supported versions|
 |---------|---------|
 |Kubernetes|BDC requires Kubernetes version minimum 1.13. See [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/) for Kubernetes version support policy.|
 |AKS|BDC requires AKS version minimum 1.13.<br/>See [Supported Kubernetes versions in Azure Kubernetes Service (AKS)](/azure/aks/supported-kubernetes-versions) for AKS version support policy.|
 
-#### Host OS for Kubernentes
+### Host OS for Kubernentes
 
 |Platform|Supported versions|
 |---------|---------|
 |Red Hat Enterprise Linux|7.3<br/>7.4<br/>7.5<br/>7.6|
 |Ubuntu|16.04|
 
-#### Tools
+### Tools
 
 |Platform|Supported versions|
 |---------|---------|
 |`azdata`|Must be same minor version as the server (same as SQL Server master instance).<br/>Run `azdata –-version` to validate the version.<br/>For SQL Server 2019 Service Update you must use version 15.0.2100|
 |Azure Data Studio|Get the latest build of [Azure Data Studio](https://aka.ms/getazuredatastudio).|
 
-#### SQL Server Editions
+### SQL Server Editions
 
 |Edition|Notes|
 |---------|---------|
 |Enterprise Edition<br/>Standard Edition<br/>Developer| Big Data Cluster Edition is determined by the edition of SQL Server master instance. At deployment time Developer edition is deployed by default. You can change the edition post deployment. See [Configure SQL Server master instance](../big-data-cluster/configure-sql-server-master-instance.md). |
 
+<!--
 ## <a id="rc"></a> Release candidate (August, 2019)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 release candidate.
@@ -841,6 +851,7 @@ The following sections provide known issues for [!INCLUDE[big-data-clusters-2019
 - The SA_PASSWORD is part of the environment and discoverable (for example in a cord dump file). You must reset the SA_PASSWORD on the master instance after deployment. This is not a bug but a security step. For more information on how to change the SA_PASSWORD in a Linux container, see [Change the SA password](../linux/quickstart-install-connect-docker.md#sapassword).
 
 - AKS logs may contain SA password for big data cluster deployments.
+-->
 
 ## Next steps
 

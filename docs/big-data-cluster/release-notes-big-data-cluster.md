@@ -15,9 +15,42 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article lists the updates and know issues for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
+This article lists the updates and know issues for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC).
 
-## <a id="rc"></a> Release candidate (August)
+## <a id="rtm"></a> SQL Server 2019 (November, 2019)
+
+### Supportability
+
+#### Kubernetes platforms
+
+|Platform|Supported versions|
+|---------|---------|
+|Kubernetes|BDC requires Kubernetes version minimum 1.13. See [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/) for Kubernetes version support policy.|
+|AKS|BDC requires AKS version minimum 1.13.
+See [Supported Kubernetes versions in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions) for AKS version support policy.|
+
+#### Host OS for Kubernentes
+
+|Platform|Supported versions|
+|---------|---------|
+|Red Hat Enterprise Linux|7.3<br/>7.4<br/>7.5<br/>7.6|
+|Ubuntu|16.04|
+
+#### Tools
+
+|Platform|Supported versions|
+|---------|---------|
+|`azdata`|Must be same minor version as the server (same as SQL Server master instance).<br/>Run `azdata –-version` to validate the version.<br/>
+For SQL Server 2019 Service Update you must use version 15.0.2100
+|Azure Data Studio|Get the latest build of [Azure Data Studio](https://aka.ms/getazuredatastudio).|
+
+#### SQL Server Editions
+
+|Edition|Notes|
+|---------|---------|
+|Enterprise Edition<br/>Standard Edition<br/>Developer| Big Data Cluster Edition is determined by the edition of SQL Server master instance. At deployment time Developer edition is deployed by default. You can change the edition post deployment.|
+
+## <a id="rc"></a> Release candidate (August, 2019)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 release candidate.
 
@@ -36,7 +69,7 @@ The following sections describe the new features and known issues for big data c
 
 * The "kubeadm-prod" deployment profile is not supported in SQL Server 2019 Big Data Clusters release candidate with the above build number. Instead, use "kubeadm-dev-test" profile for Kubeadm deployments.
 
-## <a id="ctp32"></a> CTP 3.2 (July)
+## <a id="ctp32"></a> CTP 3.2 (July, 2019)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 3.2.
 
@@ -73,7 +106,7 @@ The following sections describe the known issues and limitations with this relea
 
 - REPEATED nodes cannot be queried and it might return wrong results.
 
-## <a id="ctp31"></a> CTP 3.1 (June)
+## <a id="ctp31"></a> CTP 3.1 (June, 2019)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 3.1.
 
@@ -167,7 +200,7 @@ The following sections describe the known issues and limitations with this relea
 - Between CTP 3.0 and 3.1, Kibana version was upgraded from 6.3.1 to 7.0.1.  This has made the Microsoft Edge browser incompatible with Kibana. Users will see a blank page when loading the current version of the Kibana dashboards in Microsoft Edge. See [here]( https://www.elastic.co/support/matrix#matrix_browse) for supported browsers for Kibana.
 
 
-## <a id="ctp30"></a> CTP 3.0 (May)
+## <a id="ctp30"></a> CTP 3.0 (May, 2019)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 3.0.
 
@@ -266,7 +299,7 @@ The following sections describe the known issues and limitations with this relea
 
 - AKS logs may contain SA password for big data cluster deployments.
 
-## <a id="ctp25"></a> CTP 2.5 (April)
+## <a id="ctp25"></a> CTP 2.5 (April, 2019)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.5.
 
@@ -354,7 +387,7 @@ The following sections describe the known issues and limitations with this relea
 
 - AKS logs may contain SA password for big data cluster deployments.
 
-## <a id="ctp24"></a> CTP 2.4 (March)
+## <a id="ctp24"></a> CTP 2.4 (March, 2019)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.4.
 
@@ -485,7 +518,7 @@ A new Python Kubernetes client (version 9.0.0) changed the delete namespaces API
 
 - AKS logs may contain SA password for big data cluster deployments.
 
-## <a id="ctp23"></a> CTP 2.3 (February)
+## <a id="ctp23"></a> CTP 2.3 (February, 2019)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.3.
 
@@ -607,7 +640,7 @@ If you use kubeadm to deploy Kubernetes on multiple machines, the cluster admini
 
 - AKS logs may contain SA password for big data cluster deployments.
 
-## <a id="ctp22"></a> CTP 2.2 (December 2018)
+## <a id="ctp22"></a> CTP 2.2 (December, 2018)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.2.
 
@@ -676,7 +709,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 - AKS logs may contain SA password for big data cluster deployments.
 
-## <a id="ctp21"></a> CTP 2.1 (November 2018)
+## <a id="ctp21"></a> CTP 2.1 (November, 2018)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.1.
 

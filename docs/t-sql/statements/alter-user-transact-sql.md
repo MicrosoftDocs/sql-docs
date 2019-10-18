@@ -218,11 +218,6 @@ GO
 
 ## Syntax
 
-> [!IMPORTANT]
-> Azure AD logins for SQL Database managed instance is in **public preview**. Only the following options are supported for Azure SQL Database managed instance when applying to users with Azure AD logins:
-> `DEFAULT_SCHEMA = { schemaName | NULL }` and
-> `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
-
 ```
 -- Syntax for Azure SQL Database
   
@@ -402,7 +397,7 @@ GO
 ## Syntax
 
 > [!IMPORTANT]
-> Azure AD logins for SQL Database managed instance is in **public preview**. Only the following options are supported for Azure SQL Database managed instance when applying to users with Azure AD logins:
+> Only the following options are supported for Azure SQL Database managed instance when applying to users with Azure AD logins:
 > `DEFAULT_SCHEMA = { schemaName | NULL }` and
 > `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
 > </br> </br> There is a new syntax extension that was added to help remap users in a database that was migrated to managed instance. The ALTER USER syntax helps map database users in a federated and synchronized domain with Azure AD, to Azure AD logins.
@@ -533,7 +528,7 @@ These remarks apply to authenticating as Windows users that have been federated 
     - Check the login's indicated type is `E` or `X`.
 - PASSWORD option can't be used for Azure AD users.
 - In all migration cases, the roles and permissions of Windows users or groups will automatically be transferred to the new Azure AD users or groups.
-- A new syntax extension, **FROM EXTERNAL PROVIDER** is available for altering Windows users and groups from SQL on-premises to Azure AD users and groups. The Windows domain must be federated with Azure AD and all Windows domain members must exist in Azure AD when using this extension. The **FROM EXTERNAL PROVIDER** syntax applies to managed instance and should be used in case Windows users don't have logins and need to be mapped to Azure AD logins.
+- A new syntax extension, **FROM EXTERNAL PROVIDER** is available for altering Windows users and groups from SQL on-premises to Azure AD users and groups. The Windows domain must be federated with Azure AD and all Windows domain members must exist in Azure AD when using this extension. The **FROM EXTERNAL PROVIDER** syntax applies to managed instance and should be used in case Windows users do not have logins on the original SQL instance and need to be mapped to standalone Azure AD database users.
   - In this case, the allowable userName can be:
     - A Widows user (_domain\user_).
     - A Windows group (_MyWidnowsGroup_).

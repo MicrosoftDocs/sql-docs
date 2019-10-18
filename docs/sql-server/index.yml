@@ -49,6 +49,45 @@ landingContent:
       - text: Sample databases
         url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
 
+  - title: SQL on Azure
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Azure SQL Database single database
+        url: /azure/sql-database/sql-database-single-database-quickstart-guide
+      - text: Azure SQL Database managed instance
+        url: /azure/sql-database/sql-database-managed-instance-quickstart-guide
+      - text: Azure SQL Data warehouse
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+      - text: SQL Server on a Windows VM
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+      - text: SQL Server on a Linux VM
+        url: ../linux/quickstart-install-connect-clouds.md
+
+  - title: Big data & machine learning 
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Big data cluster
+        url: ../big-data-cluster/big-data-cluster-overview.md
+      - text: Application Platform System (APS-PDW)
+        url: https://www.microsoft.com/sql/analytics-platform-system/
+      - text: Machine Learning with SQL Server
+        url: https://docs.microsoft.com/sql/advanced-analytics/
+      - text: R Services 
+        url: ../advanced-analytics/r/sql-server-r-services.md
+      - text: PolyBase
+        url: ../relational-databases/polybase/polybase-guide.md
+
+  - title: Business Intelligence 
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: SQL Server Reporting Services (SSRS)
+        url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+      - text: SQL Server Analysis Services (SSAS)
+        url: /analysis-services/analysis-services-overview
+
   - title: Administration
     linkLists:
     - linkListType: deploy
@@ -80,21 +119,21 @@ landingContent:
 
 
 
-  - title: Data management & migration
+  - title: Data management 
     linkLists:
     - linkListType: overview
       links:
-      - text: SQL Server Reporting Services (SSRS)
-        url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-      - text: SQL Server Analysis Services (SSAS)
-        url: /analysis-services/analysis-services-overview
       - text: SQL Server Integration Services (SSIS)
         url: ../integration-services/sql-server-integration-services.md
       - text: Import and export data
         url: https://docs.microsoft.com/sql/relational-databases/import-export/overview-import-export
       - text: SQL Server Replication
         url: ../relational-databases/replication/sql-server-replication.md
-    - linkListType: deploy
+
+
+  - title: Migration
+    linkLists:
+    - linkListType: overview
       links:
       - text: Azure Database Migration Service
         url: https://docs.microsoft.com/azure/dms/dms-overview
@@ -108,35 +147,6 @@ landingContent:
         url: https://docs.microsoft.com/azure/data-factory/
 
 
-  - title: SQL on Azure
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: Azure SQL Database single database
-        url: /azure/sql-database/sql-database-single-database-quickstart-guide
-      - text: Azure SQL Database managed instance
-        url: /azure/sql-database/sql-database-managed-instance-quickstart-guide
-      - text: Azure SQL Data warehouse
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-      - text: SQL Server on a Windows VM
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
-      - text: SQL Server on a Linux VM
-        url: ../linux/quickstart-install-connect-clouds.md
-
-  - title: Big data & machine learning 
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: Big data cluster
-        url: ../big-data-cluster/big-data-cluster-overview.md
-      - text: Application Platform System (APS-PDW)
-        url: https://www.microsoft.com/sql/analytics-platform-system/
-      - text: Machine Learning with SQL Server
-        url: https://docs.microsoft.com/sql/advanced-analytics/
-      - text: R Services 
-        url: ../advanced-analytics/r/sql-server-r-services.md
-      - text: PolyBase
-        url: ../relational-databases/polybase/polybase-guide.md
 
   - title: Development
     linkLists:

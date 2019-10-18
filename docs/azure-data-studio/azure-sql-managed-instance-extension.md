@@ -34,64 +34,67 @@ With the extension installed, you'll see a **Managed Instance** tab in Azure Dat
 
 The extension displays technical characteristics and some resource usage of your managed instance.
 
-![Managed instance properties](media/azure-sql-mi-extension/ads-mi-tab1.png)
+[ ![Managed instance properties](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
 
-The first blade shows the following details:
+The top blade shows the following details:
 
-- **Properties** - Get basic information about your managed instance, including available vCores, memory, and storage. Aslo find your current service-tier, hardware generation, and IO characteristics such as instance log write throughput or file I/O throughput characteristics.
-- **Local SSD storage** - On the General purpose service-tier, **TempDB** files are stored locally. On the Business-Critical service tier, _all_ database files are placed on local SSD storage. In this section, you can see how much space on the local storage is used by your managed instance.
-- **Azure Premium Disk Storage** - On the General Purpose service tier, user and system database files are placed on Azure Premium storage. In this section, you can see the amount of data used, the number of files, and the available storage. On Business-Critical service tier, this section is empty.
+- **Properties** - Get basic information about your managed instance, including available vCores, memory, and storage. Also find your current service tier, hardware generation, and IO characteristics such as instance log write throughput or file I/O throughput characteristics.
+- **Local SSD storage** - On the general-purpose service tier, **TempDB** files are stored locally. On the business-critical service tier, _all_ database files are placed on local SSD storage. In this section, you can see how much space on the local storage is used by your managed instance.
+- **Azure Premium Disk Storage** - On the general-purpose service tier, user and system database files are placed on Azure Premium storage. In this section, you can see the amount of data used, the number of files, and the available storage. On the business-critical service tier, this section is empty.
 - **Resource usage** - View the percentage of storage and CPU that your managed instance used over the previous two hours. This way, you can increase the instance size if it's nearing the limit.
 
 ## Recommendations
 
-When you select the second blade in the Managed Instance tab, you get recommendations and alerts to help optimize your managed instance.
+When you select the second blade in the **Managed Instance** tab, you get recommendations and alerts to help optimize your managed instance.
 
-![Managed instance recommendations](media/azure-sql-mi-extension/ads-mi-tab2.png)
+[ ![Managed instance recommendations](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
 
 You might see some of the following recommendations:
 
 - **Reaching storage space limit** - Either delete unnecessary data or increase instance storage size. Databases that reach storage limit might fail to process even read queries.
-- **Reaching instance throughput limit** - You're loading close to 22MB/s on the General Purpose service tier or about 48 MB/s on the Business Critical service tier. Be aware that the managed instance will limit your load to ensure that backups can be taken.
+- **Reaching instance throughput limit** - You're loading close to 22MB/s on the general-purpose service tier or about 48 MB/s on the business-critical service tier. Be aware that the managed instance will limit your load to ensure that backups can be taken.
 - **Memory pressure** - Low page life expectancy or a lot of `PAGEIOLATCH` wait statistics might indicate that your instance is evicting pages from the memory and constantly trying to load more pages from disk.
-- **Log file limits** - If your logs are reaching [file IO limits on General Purpose service tier](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier) you might need to increase the log file size to get better performance.
-- **Data file limits** - If your data files are reaching [file IO limits on General Purpose service tier](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier) you might need to increase file size to get better performance. This issue might cause memory pressure and slow down backups.
-- **Availability issues** - A high number of virtual log files can impact performance and might result in  longer database recovery on General-purpose service-tier in a case of process failure.
+- **Log file limits** - If your logs are reaching [file IO limits on the general-purpose service tier](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier) you might need to increase the log file size to get better performance.
+- **Data file limits** - If your data files are reaching [file IO limits on the general-purpose service tier](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier) you might need to increase file size to get better performance. This issue might cause memory pressure and slow down backups.
+- **Availability issues** - A high number of virtual log files can impact performance and might result in  longer database recovery on the general-purpose service tier in a case of process failure.
 
-You should periodically review these recommendations, investigate the root causes, and take action to correct any issues. The Azure SQL managed instance extension provides scripts you can execute to mitigate some of the reported issues.
+You should periodically review these recommendations, investigate the root causes, and take action to correct any issues. Azure SQL managed instance extension provides scripts you can execute to mitigate some of the reported issues.
 
 ## Replicas
 
-\***
+The third blade in the **Managed Instance** tab shows you the state of database replicas in your managed instance.
 
-Managed instance extension enables you to see the state of database replicas in your Managed instance.
+[ ![Managed instance replicas](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
 
-![Managed instance replicas](media/azure-sql-mi-extension/ads-mi-tab3.png)
-
-On General-purpose service-tier, every database has a single (primary) replica, while on Business Critical instance every database has one primary and three secondary replicas (one is used for read-only workloads). Here you can monitor synchronization process and verify  that all secondary replicas are synchronized with the primary replica.
+On the general-purpose service tier, every database has a single (primary) replica. On a business-critical tier instance, every database has one primary and three secondary replicas, one of which is used for read-only workloads. On the **Replicas** blade, you can monitor the synchronization process and verify that all secondary replicas are synchronized with the primary replica.
 
 ## Logs
 
-Managed Instance extension shows the most relevant latest SQL Error log entries.
+The forth blade of **Managed Instance** shows the most recent and relevant SQL error log entries.
 
-![Managed instance log entries](media/azure-sql-mi-extension/ads-mi-tab4.png)
+[ ![Managed instance log entries](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
 
-Managed Instance emits a large number of log entries and most of them are internal/system information. Some log entries are showing physical database names (`GUID` values) instead of actual logical database names.
+While your managed instance generates a large number of log entries, most of these are internal/system information. Also, some log entries show physical database names (`GUID` values) instead of actual logical database names.
 
-Managed Instance extension filters-out unnecessary  log entries based on [Dimitri Furman method](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506) and displays actual logical file names instead of physical names.
+Azure SQL managed instance extension presents more relevant information by filtering out unnecessary  log entries based on [Dimitri Furman method](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506). The extension also displays actual logical file names instead of physical names.
 
 ## Reporting problems
 
-If you experience any problems with the Managed instance Extension, report the issue on [Extension GitHub project](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues).
+If you experience any problems with the Azure SQL managed instance extension, go to the [Extension GitHub project](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues) and report your issue.
 
 ## Maintainers
 
-- [Jovan Popovic(MSFT)](https://github.com/jovanpop_msft) - [@jovanpop_msft](https://twitter.com/JovanPop_MSFT)
+- [Jovan Popovic(MSFT)](https://github.com/jovanpop-msft) - [@jovanpop_msft](https://twitter.com/JovanPop_MSFT)
 
 ## Code of conduct
 
 This project has adopted the [Microsoft Open Source Code of Conduct][conduct-code].
+
 For more information, see the [Code of Conduct FAQ][conduct-FAQ] or contact [opencode@microsoft.com][conduct-email] with any additional questions or comments.
+
+## Next steps
+
+For more information, visit [the GitHub project](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/).
 
 [conduct-code]: http://opensource.microsoft.com/codeofconduct/
 [conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/

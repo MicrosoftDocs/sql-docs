@@ -54,9 +54,9 @@ landingContent:
     - linkListType: overview
       links:
       - text: Azure SQL Database single database
-        url: /azure/sql-database/sql-database-single-database-quickstart-guide
+        url: /azure/sql-database/sql-database-single-database
       - text: Azure SQL Database managed instance
-        url: /azure/sql-database/sql-database-managed-instance-quickstart-guide
+        url: /azure/sql-database/sql-database-managed-instance
       - text: Azure SQL Data warehouse
         url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
       - text: SQL Server on a Windows VM
@@ -70,7 +70,7 @@ landingContent:
       links:
       - text: Big data cluster
         url: ../big-data-cluster/big-data-cluster-overview.md
-      - text: Application Platform System (APS-PDW)
+      - text: Analytics Platform System 
         url: https://www.microsoft.com/sql/analytics-platform-system/
       - text: Machine Learning with SQL Server
         url: https://docs.microsoft.com/sql/advanced-analytics/
@@ -87,6 +87,8 @@ landingContent:
         url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
       - text: SQL Server Analysis Services (SSAS)
         url: /analysis-services/analysis-services-overview
+      - text: SQL Server Integration Services (SSIS)
+        url: ../integration-services/sql-server-integration-services.md
 
   - title: Administration
     linkLists:
@@ -116,10 +118,10 @@ landingContent:
         url: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       - text: Failover cluster instances
         url: failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+      - text: SQL Server Replication
+        url: ../relational-databases/replication/sql-server-replication.md
 
-
-
-  - title: Data management 
+  - title: Migration
     linkLists:
     - linkListType: overview
       links:
@@ -129,24 +131,6 @@ landingContent:
         url: https://docs.microsoft.com/sql/relational-databases/import-export/overview-import-export
       - text: SQL Server Replication
         url: ../relational-databases/replication/sql-server-replication.md
-
-
-  - title: Migration
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: Azure Database Migration Service
-        url: https://docs.microsoft.com/azure/dms/dms-overview
-      - text: Database Experimentation Assistant
-        url: ../dea/database-experimentation-assistant-overview.md
-      - text: Data Migration Assistant (DMA)
-        url: https://docs.microsoft.com/sql/dma/dma-overview
-      - text: SQL Server Migration Assistant (SSMA)
-        url: https://docs.microsoft.com/sql/ssma/sql-server-migration-assistant
-      - text: ETL Data Factory
-        url: https://docs.microsoft.com/azure/data-factory/
-
-
 
   - title: Development
     linkLists:

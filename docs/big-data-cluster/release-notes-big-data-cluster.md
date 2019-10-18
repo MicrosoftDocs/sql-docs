@@ -26,8 +26,7 @@ This article lists the updates and know issues for the most recent releases of [
 |Platform|Supported versions|
 |---------|---------|
 |Kubernetes|BDC requires Kubernetes version minimum 1.13. See [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/) for Kubernetes version support policy.|
-|AKS|BDC requires AKS version minimum 1.13.
-See [Supported Kubernetes versions in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions) for AKS version support policy.|
+|AKS|BDC requires AKS version minimum 1.13.<br/>See [Supported Kubernetes versions in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions) for AKS version support policy.|
 
 #### Host OS for Kubernentes
 
@@ -40,8 +39,7 @@ See [Supported Kubernetes versions in Azure Kubernetes Service (AKS)](https://do
 
 |Platform|Supported versions|
 |---------|---------|
-|`azdata`|Must be same minor version as the server (same as SQL Server master instance).<br/>Run `azdata –-version` to validate the version.<br/>
-For SQL Server 2019 Service Update you must use version 15.0.2100
+|`azdata`|Must be same minor version as the server (same as SQL Server master instance).<br/>Run `azdata –-version` to validate the version.<br/>For SQL Server 2019 Service Update you must use version 15.0.2100|
 |Azure Data Studio|Get the latest build of [Azure Data Studio](https://aka.ms/getazuredatastudio).|
 
 #### SQL Server Editions

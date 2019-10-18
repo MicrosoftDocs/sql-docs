@@ -70,7 +70,7 @@ ms.author: mikeray
   
 -   Parallel backups to the same blob cause one of the backups to fail with an **Initialization failed** error.  
   
--   Use the following error logs to help with troubleshooting backup errors:  
+-   If using Page Blobs (BACKUP... TO URL... WITH CREDENTIAL), use the following error logs to help with troubleshooting backup errors:  
   
     -   Set trace flag 3051 to turn on logging to a specific error log with the following format in:  
   

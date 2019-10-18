@@ -252,6 +252,24 @@ To ensure that language extensions jobs are prioritized and resourced appropriat
   
 If you are using Standard Edition and do not have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources.
 
+## Configure on Big Data Cluster
+
+Language Extensions is installed by default on [SQL Server Big Data Clusters](../../big-data-cluster/big-data-cluster-overview) and does not require to follow the steps above.
+
+To enable Language Extensions, run this statement on the master instance:
+
+```sql
+EXEC sp_configure 'external scripts enabled', 1
+RECONFIGURE WITH OVERRIDE
+GO
+```
+
+### Configure on Big Data Cluster with Always On Availability Groups
+
+If you are using [SQL Server Big Data Clusters](../../big-data-cluster/big-data-cluster-overview) with [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), you need to perform a few extra steps. 
+
+1. Connect to the master instance
+
 ## Next steps
 
 Java developers can get started with some simple examples, and learn the basics of how Java works with SQL Server. For your next step, see the following link:

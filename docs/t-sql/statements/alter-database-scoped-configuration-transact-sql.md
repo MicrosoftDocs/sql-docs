@@ -109,7 +109,7 @@ Specify a query plan handle to clear a single query plan from the plan cache.
 MAXDOP **=** {\<value> | PRIMARY }
 **\<value>**
 
-Specifies the default **max degree of parallelism (MAXDOP)** setting that should be used for statements. 0 is the default value and indicates that the server configuration will be used instead. The MAXDOP at the database scope overrides (unless it is set to 0) the **max degree of parallelism** set at the server level by sp_configure. Query hints can still override the database scoped MAXDOP in order to tune specific queries that need different setting. All these settings are limited by the MAXDOP set for the [Workload Group]().
+Specifies the default **max degree of parallelism (MAXDOP)** setting that should be used for statements. 0 is the default value and indicates that the server configuration will be used instead. The MAXDOP at the database scope overrides (unless it is set to 0) the **max degree of parallelism** set at the server level by sp_configure. Query hints can still override the database scoped MAXDOP in order to tune specific queries that need different setting. All these settings are limited by the MAXDOP set for the [Workload Group](create-workload-group-transact-sql.md).
 
 You can use the MAXDOP option to limit the number of processors to use in parallel plan execution. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  considers parallel execution plans for queries, index data definition language (DDL) operations, parallel insert, online alter column, parallel stats collection, and static and keyset-driven cursor population.
 

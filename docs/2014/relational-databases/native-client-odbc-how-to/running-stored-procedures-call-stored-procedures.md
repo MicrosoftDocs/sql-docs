@@ -1,7 +1,7 @@
 ---
 title: "Call Stored Procedures (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/18/2019"
+ms.date: 10/18/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: native-client

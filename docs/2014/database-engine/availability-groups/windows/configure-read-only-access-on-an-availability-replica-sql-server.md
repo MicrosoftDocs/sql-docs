@@ -131,7 +131,7 @@ GO
 ### To configure access on an availability replica
   
 > [!NOTE]  
->  For a code example, see [Example (PowerShell)](#PSExample), later in this section.  
+>  For a code example, see the PowerShell examples later in this section.  
   
 1.  Change directory (`cd`) to the server instance that hosts the primary replica.  
   

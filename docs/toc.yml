@@ -255,10 +255,6 @@
           href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
         - name: bdc hdfs status
           href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
-        - name: bdc pool
-          href: big-data-cluster/reference-azdata-bdc-pool.md
-        - name: bdc pool status
-          href: big-data-cluster/reference-azdata-bdc-pool-status.md               
         - name: bdc spark
           href: big-data-cluster/reference-azdata-bdc-spark.md        
         - name: bdc spark batch

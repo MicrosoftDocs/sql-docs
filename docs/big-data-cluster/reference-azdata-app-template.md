@@ -20,13 +20,13 @@ The following article provides reference for the `sql` commands in the `azdata` 
 ## Commands
 |     |     |
 | --- | --- |
-[azdata app template list](#azdata-app-template-list) | Fetch supported templates.
-[azdata app template pull](#azdata-app-template-pull) | Download supported templates.
+[`azdata app template list`](#azdata-app-template-list) | Fetch supported templates.
+[`azdata app template pull`](#azdata-app-template-pull) | Download supported templates.
 ## azdata app template list
 Fetch supported templates under the specified [URL] github repository.
 ```bash
-azdata app template list [--url -u] 
-       ```
+azdata app template list [--url -u]
+```
 ### Examples
 Fetch all templates under the default template repository location.
 ```bash

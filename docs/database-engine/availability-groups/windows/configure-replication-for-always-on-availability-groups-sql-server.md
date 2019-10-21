@@ -46,7 +46,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
         @security_mode = 1;  
     ```  
   
-3.  Configure the remote publisher. If stored procedures are being used to configure the distributor, run **sp_adddistpublisher**. The *@security_mode* parameter is used to determine how the publisher validation stored procedure that is run from the replication agents, connects to the current primary. If set to 1 Windows authentication is used to connect to the current primary. If set to 0, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication is used with the specified *@login* and *@password* values. The login and password specified must be valid at each secondary replica for the validation stored procedure to successfully connect to that replica.  
+3.  Configure the remote publisher. If stored procedures are being used to configure the distributor, run **sp_adddistpublisher**. The *\@security_mode* parameter is used to determine how the publisher validation stored procedure that is run from the replication agents, connects to the current primary. If set to 1 Windows authentication is used to connect to the current primary. If set to 0, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication is used with the specified *\@login* and *\@password* values. The login and password specified must be valid at each secondary replica for the validation stored procedure to successfully connect to that replica.  
   
     > [!NOTE]  
     >  If any modified replication agents run on a computer other than the distributor, use of Windows authentication for the connection to the primary will require Kerberos authentication to be configured for the communication between the replica host computers. Use of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login for the connection to the current primary will not require Kerberos authentication.  
@@ -66,7 +66,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
  **Configure the publisher at the original publisher**  
   
-1.  Configure remote distribution. If stored procedures are being used to configure the publisher, run **sp_adddistributor**. Specify the same value for *@password* as that used when **sp_adddistrbutor** was run at the distributor to set up distribution.  
+1.  Configure remote distribution. If stored procedures are being used to configure the publisher, run **sp_adddistributor**. Specify the same value for *\@password* as that used when **sp_adddistrbutor** was run at the distributor to set up distribution.  
   
     ```  
     exec sys.sp_adddistributor  
@@ -116,10 +116,10 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- If *@installed* is 0, replication must be added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation.  
+ If *\@installed* is 0, replication must be added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation.  
   
 ##  <a name="step4"></a> 4. Configure the Secondary Replica Hosts as Replication Publishers  
- A secondary replica cannot act as a replication publisher or republisher but replication must be configured so that the secondary can take over after a failover. At the distributor, configure distribution for each secondary replica host. Specify the same distribution database and working directory as was specified when the original publisher was added to the distributor. If you are using stored procedures to configure distribution, use **sp_adddistpublisher** to associate the remote publishers with the distributor. If *@login* and *@password* were used for the original publisher, specify the same values for each when you add the secondary replica hosts as publishers.  
+ A secondary replica cannot act as a replication publisher or republisher but replication must be configured so that the secondary can take over after a failover. At the distributor, configure distribution for each secondary replica host. Specify the same distribution database and working directory as was specified when the original publisher was added to the distributor. If you are using stored procedures to configure distribution, use **sp_adddistpublisher** to associate the remote publishers with the distributor. If *\@login* and *\@password* were used for the original publisher, specify the same values for each when you add the secondary replica hosts as publishers.  
   
 ```  
 EXEC sys.sp_adddistpublisher  
@@ -130,7 +130,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- At each secondary replica host, configure distribution. Identify the distributor of the original publisher as the remote distributor. Use the same password as that used when **sp_adddistributor** was run originally at the distributor. If stored procedures are being used to configure distribution, the *@password* parameter of **sp_adddistributor** is used to specify the password.  
+ At each secondary replica host, configure distribution. Identify the distributor of the original publisher as the remote distributor. Use the same password as that used when **sp_adddistributor** was run originally at the distributor. If stored procedures are being used to configure distribution, the *\@password* parameter of **sp_adddistributor** is used to specify the password.  
   
 ```  
 EXEC sp_adddistributor   

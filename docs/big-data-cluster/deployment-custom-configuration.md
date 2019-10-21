@@ -109,11 +109,16 @@ Similarly for changing the settings of a single service within a specific resour
             "replicas": 2,
             "settings": {
                 "spark": {
-                    "driverMemory": "2g",
-                    "driverCores": "1",
-                    "executorInstances": "3",
-                    "executorMemory": "1536m",
-                    "executorCores": "1"
+                    "spark-defaults-conf.spark.driver.memory": "2g",
+                    "spark-defaults-conf.spark.driver.cores": "1",
+                    "spark-defaults-conf.spark.executor.instances": "3",
+                    "spark-defaults-conf.spark.executor.memory": "1536m",
+                    "spark-defaults-conf.spark.executor.cores": "1",
+                    "yarn-site.yarn.nodemanager.resource.memory-mb": "18432",
+                    "yarn-site.yarn.nodemanager.resource.cpu-vcores": "6",
+                    "yarn-site.yarn.scheduler.maximum-allocation-mb": "18432",
+                    "yarn-site.yarn.scheduler.maximum-allocation-vcores": "6",
+                    "yarn-site.yarn.scheduler.capacity.maximum-am-resource-percent": "0.3"
                 }
             }
         }
@@ -133,17 +138,21 @@ If you want to apply same configurations for a service associated with multiple 
             "storage-0"
         ],
         "settings": {
-            "driverMemory": "2g",
-            "driverCores": "1",
-            "executorInstances": "3",
-            "executorMemory": "1536m",
-            "executorCores": "1"
+            "spark-defaults-conf.spark.driver.memory": "2g",
+            "spark-defaults-conf.spark.driver.cores": "1",
+            "spark-defaults-conf.spark.executor.instances": "3",
+            "spark-defaults-conf.spark.executor.memory": "1536m",
+            "spark-defaults-conf.spark.executor.cores": "1",
+            "yarn-site.yarn.nodemanager.resource.memory-mb": "18432",
+            "yarn-site.yarn.nodemanager.resource.cpu-vcores": "6",
+            "yarn-site.yarn.scheduler.maximum-allocation-mb": "18432",
+            "yarn-site.yarn.scheduler.maximum-allocation-vcores": "6",
+            "yarn-site.yarn.scheduler.capacity.maximum-am-resource-percent": "0.3"
         }
     }
     ...
 }
 ```
-
 
 To customize your cluster deployment configuration files, you can use any JSON format editor, such as VSCode. For scripting these edits for automation purposes, use the **azdata bdc config** command. This article explains how to configure big data cluster deployments by modifying deployment configuration files. It provides examples for how to change the configuration for different scenarios. For more information about how configuration files are used in deployments, see the [deployment guidance](deployment-guidance.md#configfile).
 
@@ -156,6 +165,43 @@ To customize your cluster deployment configuration files, you can use any JSON f
    ```bash
    azdata bdc config init --source aks-dev-test --target custom
    ```
+
+## <a id="docker"></a> Change default Docker registry, repository and images tag
+
+The built-in configuration files, specifically control.json includes a `docker` section where container registry, repository and images tag are pre-populated. By default, images required for big data clusters are in the Microsoft Container Registry (`mcr.microsoft.com`), in the `mssql/bdc` repository:
+
+```json
+{
+    "apiVersion": "v1",
+    "metadata": {
+        "kind": "Cluster",
+        "name": "mssql-cluster"
+    },
+    "spec": {
+        "docker": {
+            "registry": "mcr.microsoft.com",
+            "repository": "mssql/bdc",
+            "imageTag": "2019-GDR1-ubuntu-1604",
+            "imagePullPolicy": "Always"
+        },
+        ...
+    }
+}
+```
+
+> [!TIP]
+> As a best practice, you must use a version specific image tag and avoid using `latest` image tag, as this can result in version mismatch that will cause cluster health issues.
+
+Before deployment, you can customize the `docker` settings by either directly editing the `control.json` configuration file or using `azdata bdc config` commands. For example, following commands are updating a `custom` control.json configuration file with a different `<registry>`, `<repository>` and `<image_tag>`:
+
+```bash
+azdata bdc config replace -c custom/control.json -j "$.spec.docker.registry=<registry>"
+azdata bdc config replace -c custom/control.json -j "$.spec.docker.repository=<repository>"
+azdata bdc config replace -c custom/control.json -j "$.spec.docker.imageTag=<image_tag>"
+```
+
+> [!TIP]
+> Big data clusters must have access to the container registry and repository from which to pull container images. If your environment does not have access to the default Microsoft Container Registry, you can perform an offline installation where the required images are first placed into a private Docker repository. For more information about offline installations, see [Perform an offline deployment of a SQL Server big data cluster](deploy-offline.md).
 
 ## <a id="clustername"></a> Change cluster name
 
@@ -219,11 +265,16 @@ The configurations of each resource, such as the storage pool, is defined in the
         "replicas": 2,
         "settings": {
             "spark": {
-                "driverMemory": "2g",
-                "driverCores": "1",
-                "executorInstances": "3",
-                "executorMemory": "1536m",
-                "executorCores": "1"
+                "spark-defaults-conf.spark.driver.memory": "2g",
+                "spark-defaults-conf.spark.driver.cores": "1",
+                "spark-defaults-conf.spark.executor.instances": "3",
+                "spark-defaults-conf.spark.executor.memory": "1536m",
+                "spark-defaults-conf.spark.executor.cores": "1",
+                "yarn-site.yarn.nodemanager.resource.memory-mb": "18432",
+                "yarn-site.yarn.nodemanager.resource.cpu-vcores": "6",
+                "yarn-site.yarn.scheduler.maximum-allocation-mb": "18432",
+                "yarn-site.yarn.scheduler.maximum-allocation-vcores": "6",
+                "yarn-site.yarn.scheduler.capacity.maximum-am-resource-percent": "0.3"
             }
         }
     }
@@ -240,6 +291,10 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 ## <a id="storage"></a> Configure storage
 
 You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage and data pools and updates the size of the persistent volume claim for storing data to 500 Gb for HDFS (storage pool) and 100 Gb for data pool. 
+
+> [!TIP]
+> For more information about storage configuration, see [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
+
 First create a patch.json file as below that includes the new *storage* section, in addition to *type* and *replicas*
 
 ```json
@@ -296,8 +351,6 @@ azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
 
 > [!NOTE]
 > A configuration file based on **kubeadm-dev-test** does not have a storage definition for each pool, but you can use above process to added if needed.
-
-For more information about storage configuration, see [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
 
 ## <a id="sparkstorage"></a> Configure storage pool without spark
 
@@ -498,11 +551,16 @@ The following **patch.json** file performs the following changes:
       "op": "replace",
       "path": "spec.services.spark.settings",
       "value": {
-        "driverMemory": "2g",
-        "driverCores": 1,
-        "executorInstances": 3,
-        "executorCores": 1,
-        "executorMemory": "1536m"
+            "spark-defaults-conf.spark.driver.memory": "2g",
+            "spark-defaults-conf.spark.driver.cores": "1",
+            "spark-defaults-conf.spark.executor.instances": "3",
+            "spark-defaults-conf.spark.executor.memory": "1536m",
+            "spark-defaults-conf.spark.executor.cores": "1",
+            "yarn-site.yarn.nodemanager.resource.memory-mb": "18432",
+            "yarn-site.yarn.nodemanager.resource.cpu-vcores": "6",
+            "yarn-site.yarn.scheduler.maximum-allocation-mb": "18432",
+            "yarn-site.yarn.scheduler.maximum-allocation-vcores": "6",
+            "yarn-site.yarn.scheduler.capacity.maximum-am-resource-percent": "0.3"
       }
     }
   ]

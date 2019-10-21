@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, and Analytics Platform System
 ms.custom: ""
-ms.date: "10/18/2019"
+ms.date: "10/19/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -895,8 +895,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
       | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14'
       | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80'
       | 'GP_Fsv2_72'
-      | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8' | 'GP_S_Gen5_10' | 'GP_S_Gen5_12'
-      | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
+      | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
+      | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
@@ -920,8 +920,8 @@ CREATE DATABASE database_name
       | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14'
       | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80'
       | 'GP_Fsv2_72'
-      | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8' | 'GP_S_Gen5_10' | 'GP_S_Gen5_12'
-      | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
+      | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
+      | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
@@ -960,7 +960,7 @@ Specifies the maximum size of the database. MAXSIZE must be valid for the specif
 > [!NOTE]
 > The **MAXSIZE** argument does not apply to single databases in the Hyperscale service tier. Hyperscale tier databases grow as needed, up to 100 TB. The SQL Database service adds storage automatically - you do not need to set a maximum size.
 
-**DTU-based model for single and pooled databases on a SQL Database server**
+**DTU model for single and pooled databases on a SQL Database server**
 
 |**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|
@@ -986,85 +986,86 @@ Specifies the maximum size of the database. MAXSIZE must be valid for the specif
 |1024 GB|N/A|N/A|√|√|√ (D)|
 |From 1024 GB up to 4096 GB in increments of 256 GB* |N/A|N/A|N/A|N/A|√|√|
 
-\* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size. P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For additional details regarding resource limitations for the DTU-based model, see [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+\* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size. P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For additional details regarding resource limitations for the DTU model, see [DTU resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
-The MAXSIZE value for the DTU-based model, if specified, has to be a valid value shown in the table above for the service tier specified.
+The MAXSIZE value for the DTU model, if specified, has to be a valid value shown in the table above for the service tier specified.
 
-**vCore-based model**
+**vCore model**
 
-**General Purpose service tier - Generation 4 compute platform (part 1)**
+**General Purpose - provisioned compute - Generation 4 (part 1)**
 
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
 |Max data size (GB)|1024|1024|1024|1536|1536|1536|
 
-**General Purpose service tier - Generation 4 compute platform (part 2)**
+**General Purpose - provisioned compute - Generation 4 (part 2)**
 
-|MAXSIZE|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24|
+|MAXSIZE|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
 |Max data size (GB)|1536|3072|3072|3072|4096|4096|
 
-**General Purpose service tier - Generation 5 compute platform (part 1)**
+**General Purpose - provisioned compute - Generation 5 (part 1)**
 
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |Max data size (GB)|1024|1024|1024|1536|1536|1536|1536|
 
-**General Purpose service tier - Generation 5 compute platform (part 2)**
+**General Purpose - provisioned compute - Generation 5 (part 2)**
 
 |MAXSIZE|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**General Purpose service tier - Fsv2-series (preview)**
+**General Purpose - provisioned compute - Fsv2-series (preview)**
 
 |MAXSIZE|GP_Fsv2_72|
 |:----- | ------: |
 |Max data size (GB)|4096|
 
-**General Purpose service tier - serverless compute platform (part 1)**
+**General Purpose - serverless compute - Gen 5 (part 1)**
 
 |MAXSIZE|GP_S_Gen5_1|GP_S_Gen5_2|GP_S_Gen5_4|GP_S_Gen5_6|GP_S_Gen5_8|
 |:----- | ------: |-------: |-------: |-------: |--------: |
 |Max vCores|1|2|4|6|8|
 
-**General Purpose service tier - serverless compute platform (part 2)**
+**General Purpose - serverless compute - Gen 5 (part 2)**
 
 |MAXSIZE|GP_S_Gen5_10|GP_S_Gen5_12|GP_S_Gen5_14|GP_S_Gen5_16|
 |:----- | ------: |-------: |-------: |-------: |
 |Max vCores|10|12|14|16|
 
-**Business Critical service tier - Generation 4 compute platform (part 1)**
+**Business Critical - provisioned compute - Generation 4 (part 1)**
 
 |Performance level|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |Max data size (GB)|1024|1024|1024|1024|1024|1024|
 
-**Business Critical service tier - Generation 4 compute platform (part 2)**
+**Business Critical - provisioned compute - Generation 4 (part 2)**
 
 |Performance level|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
 |Max data size (GB)|1024|1024|1024|1024|1024|1024|
 
-**Business Critical service tier - Generation 5 compute platform (part 1)**
+**Business Critical - provisioned compute - Generation 5 (part 1)**
 
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |---------: |--------:|--------: |
 |Max data size (GB)|1024|1024|1024|1536|1536|1536|1536|
 
-**Business Critical service tier - Generation 5 compute platform (part 2)**
+**Business Critical - provisioned compute - Generation 5 (part 2)**
 
 |MAXSIZE|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**Business Critical service tier - M-series (preview)**
+**Business Critical - provisioned compute - M-series (preview)**
 
 |MAXSIZE|BC_M_128|
 |:----- | -------: |
 |Max data size (GB)|4096|
 
-If no `MAXSIZE` value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitations for vCore-based model, see [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+
+If no `MAXSIZE` value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitations for vCore model, see [vCore resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
 The following rules apply to MAXSIZE and EDITION arguments:
 
@@ -1089,7 +1090,7 @@ SERVICE_OBJECTIVE
 
 
 
-For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers). If the specified SERVICE_OBJECTIVE is not supported by the EDITION, you receive an error. To change the SERVICE_OBJECTIVE value from one tier to another (for example from S1 to P1), you must also change the EDITION value. For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) and [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Support for PRS service objectives have been removed. For questions, use this e-mail alias: premium-rs@microsoft.com.
+For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers). If the specified SERVICE_OBJECTIVE is not supported by the EDITION, you receive an error. To change the SERVICE_OBJECTIVE value from one tier to another (for example from S1 to P1), you must also change the EDITION value. For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) and [vCore resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Support for PRS service objectives have been removed. For questions, use this e-mail alias: premium-rs@microsoft.com.
 
 ELASTIC_POOL (name = \<elastic_pool_name>)      
 **Applies to:** Single and pooled databases only. Does not apply to databases in the Hyperscale service tier.

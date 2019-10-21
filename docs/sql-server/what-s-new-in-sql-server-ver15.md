@@ -228,17 +228,16 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 
 ## SQL Server Analysis Services
 
+This release introduces new features and improvements for performance, resource governance, and client support.
+
 | New feature or update | Details |
 |:---|:---|
-|Query interleaving| See [Query interleaving](https://docs.microsoft.com/analysis-services/tabular-models/query-interleaving). |
-|Multidimensional expression (MDX) query support for tabular models with calculation groups | See [Calculation groups](/analysis-services/tabular-models/calculation-groups). |
-|Calculation groups in tabular model| See [Calculation groups in tabular model](/analysis-services/tabular-models/calculation-groups). |
-|MDX query support for tabular models with calculation groups | See [Calculation groups](/analysis-services/tabular-models/calculation-groups). |
-|Dynamic formatting of measures using calculation groups |Allows you to conditionally change format strings for measures with [calculation groups](/analysis-services/tabular-models/calculation-groups). For example, with currency conversion, you can display a measure by using a variety of foreign currency formats.|
-|Many-to-many relationships in tabular models| See [Many-to-many relationships in tabular models](/analysis-services/tabular-models/tabular-models-ssas).|
-|Property settings for resource governance| See [Property settings for resource governance](/analysis-services/tabular-models/tabular-models-ssas).|
-| Governance setting for Power BI cache refreshes | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release introduces the **ClientCacheRefreshPolicy** property, which allows you to override this behavior at the server level. To learn more, see [General Properties](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
-| Online attach  | Allows you to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more, see [Online attach](/analysis-services/tabular-models/tabular-models-ssas). |
+|Calculation groups in tabular models| Calculation groups can significantly reduce the number of redundant measures by grouping common measure expressions as *calculation items*. To learn more, see [Calculation groups in tabular model](/analysis-services/tabular-models/calculation-groups). |
+|Query interleaving| Query interleaving is a tabular mode system configuration that can improve user query response times in high-concurrency scenarios. To learn more, see [Query interleaving](/analysis-services/tabular-models/query-interleaving). |
+|Many-to-many relationships in tabular models| Allows many-to-many relationships between tables where both columns are non-unique. To learn more, see [Relationships in tabular models](/analysis-services/tabular-models/relationships-ssas-tabular).|
+|Property settings for resource governance| This release includes new memory settings: Memory\QueryMemoryLimit, DbpropMsmdRequestMemoryLimit, and OLAP\Query\RowsetSerializationLimit for resource governance. To learn more, see [Memory settings](/analysis-services/server-properties/memory-properties).|
+|Governance setting for Power BI cache refreshes | This release introduces the ClientCacheRefreshPolicy property, which overrides caching dashboard tile data and report data for initial load of Live connect reports by the Power BI service. To learn more, see [General Properties](/analysis-services/server-properties/general-properties). |
+| Online attach  | Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more, see [Online attach](/analysis-services/what-s-new-in-sql-server-analysis-services#online-attach). |
 | &nbsp; | &nbsp; |
 
 ## See also

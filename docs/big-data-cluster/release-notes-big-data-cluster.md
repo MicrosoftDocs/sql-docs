@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md) release notes
+# SQL Server Big Data Clusters release notes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -21,9 +21,9 @@ This article lists the updates and known issues for the most recent releases of 
 
 ## <a id="rtm"></a> SQL Server 2019
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduces [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md).
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduces SQL Server Big Data Clusters.
 
-Use [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md) to:
+Use SQL Server Big Data Clusters to:
 
 - [Deploy scalable clusters](../big-data-cluster/deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes. 
 - Read, write, and process big data from Transact-SQL or Spark.

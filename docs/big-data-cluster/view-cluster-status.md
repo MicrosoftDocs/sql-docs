@@ -202,9 +202,9 @@ The following shows sample output from this command:
  appproxy        ready    healthy         ReplicaSet appproxy is healthy
 ```
 
-### View resource status
+### View specific resource status
 
-You can view the status of a specific resource within the cluster with the [`azdata bdc pool status show`](reference-azdata-bdc-pool-status.md) command. To use this command, specify the type of pool with the `--resource` parameter. Few examples of inputs for `--resource` parameter are:
+You can view the status of a specific resource within the cluster with the [azdata bdc status show](reference-azdata-bdc-status.md) command. When you use this command you can filter using `--resource` parameter. Few examples of inputs for `--resource` parameter are:
 
 - master
 - control
@@ -212,32 +212,39 @@ You can view the status of a specific resource within the cluster with the [`azd
 - storage-0
 - gateway
 
-For example, the following command displays the pool status of the storage pool:
+For example, the following command displays the status of the storage pool:
 
 ```bash
-azdata bdc pool status show --resource master
+azdata bdc status show --all --resource storage-0
 ```
 
-To see the status of all components that are running a specific service, use the corresponding command group `azdata bdc <serviceName> status show`. For example:
+To see the status of all components that are running a specific service you must use the corresponding command group `azdata bdc <serviceName> status show`. For example:
 
-- azdata bdc sql status show 
-- azdata bdc hdfs status show
-- azdata bdc spark status show
+- azdata bdc sql status show --all
+- azdata bdc hdfs status show --all
+- azdata bdc spark status show --all
 
-Here is a sample output:
+Here is an sample output:
 
 ```output
- Sql: ready                                                                                                                                                                                                          Health Status:  healthy
+  Storage-0: ready                                                                                                                                                                                                    Health Status:  healthy
  ===========================================================================================================================================================================================================================================
- Resources: ready                                                                                                                                                                                                    Health Status:  healthy
+ Instances: running                                                                                                                                                                                                  Health Status:  healthy
  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Resourcename    State    Healthstatus    Details
+ Instancename    State    Healthstatus    Details
 
- master          ready    healthy         StatefulSet master is healthy
- compute-0       ready    healthy         StatefulSet compute-0 is healthy
- data-0          ready    healthy         StatefulSet data-0 is healthy
- storage-0       ready    healthy         StatefulSet storage-0 is healthy
-```
+ storage-0-0     running  healthy         Pod storage-0-0 is healthy
+ storage-0-1     running  healthy         Pod storage-0-1 is healthy
+
+
+ Dashboards
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Name            Url
+
+ nodeMetricsUrl  https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/nodemetrics/ui
+ sqlMetricsUrl   https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/sqlmetrics/ui
+ logsUrl         https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/logs/ui
+ ```
 
 > [!TIP]
 > Run the status command with `--all` parameters for additional health details, including links to metrics and logs dashboards corresponding to the specific instance. Here is a sample output when the `--all` parameters is used:

@@ -5,7 +5,7 @@ description: Configure the master instance of a SQL Server Big Data Cluster
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/01/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster

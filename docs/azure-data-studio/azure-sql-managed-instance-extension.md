@@ -82,10 +82,6 @@ Azure SQL managed instance extension filters out unnecessary  log entries based 
 
 If you experience any problems with the Azure SQL managed instance extension, go to the [Extension GitHub project](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues) and report your issue.
 
-## Maintainers
-
-- [Jovan Popovic(MSFT)](https://github.com/jovanpop-msft) - [@jovanpop_msft](https://twitter.com/JovanPop_MSFT)
-
 ## Code of conduct
 
 This project has adopted the [Microsoft Open Source Code of Conduct][conduct-code].

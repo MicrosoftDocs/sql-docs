@@ -31,6 +31,8 @@ Complete details about licensing are in `License Terms` folder on the installati
 
 The RTM build number for SQL Server 2019 is `15.0.2000.5`.
 
+[!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
+
 ## SQL Server installation may fail if SSMS 18.x is installed
 
 - **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] installation fails when the following installations happen in this order:

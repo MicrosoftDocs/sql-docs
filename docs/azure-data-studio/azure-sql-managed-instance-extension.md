@@ -22,7 +22,7 @@ The Azure SQL managed instance extension provides a dashboard for working with a
 - Shows state of database replicas
 - Displays filtered error logs
 
-## Installations
+## Install
 
 You can install the official release of this extension. Follow the steps
 in the [Azure Data Studio documentation](https://docs.microsoft.com/sql/azure-data-studio/extensions).

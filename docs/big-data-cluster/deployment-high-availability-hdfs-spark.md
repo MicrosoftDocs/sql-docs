@@ -5,7 +5,7 @@ description: Learn how to deploy [!INCLUDE[big-data-clusters-2019](../includes/s
 author: mihaelablendea
 ms.author: mihaelab 
 ms.reviewer: mikeray
-ms.date: 08/28/2019
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

@@ -1,7 +1,7 @@
 ---
 title: "Hardware and software requirements for installing SQL Server | Microsoft Docs"
 ms.custom: sqlfreshmay19
-ms.date: 10/11/2019
+ms.date: 11/01/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

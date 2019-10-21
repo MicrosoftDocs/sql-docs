@@ -1,9 +1,9 @@
 ---
-title: SQL Server Dacpac Extension
+title: SQL Server dacpac extension
 titleSuffix: Azure Data Studio
 description: Install and use the SQL Server dacpac extension (preview) for Azure Data Studio
 ms.custom: "seodec18"
-ms.date: "10/15/2019"
+ms.date: "10/21/2019"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -28,12 +28,12 @@ This experience is currently in its initial preview. Please report issues and fe
 ![dacpac extension demo gif](media/extensions/sql-server-dacpac-extension/dacpac-extension-demo.gif)
 
 
-## Why would I use the Data-tier Application wizard?
+## Why would I use the Data-tier Application Wizard?
 
 The wizard makes it easier to manage dacpac and bacpac files, which simplifies the development and deployment of data-tier elements that support your application. To learn more about using Data-tier applications, [check out our documentation.](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)
 
 
-## Install the Extension
+## Install the extension
 
 1. Select the Extensions Icon to view the available extensions.
 

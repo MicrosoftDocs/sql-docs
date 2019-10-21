@@ -60,7 +60,7 @@ SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];
 ```  
 
 > [!NOTE]
-> Use the [LEN](../../t-sql/functions/len-transact-sql.md) to return the number of characters encoded into a given string expression, and [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) to return the size in bytes for a given string expression. These outputs may differ depending on the data type and type of encoding used in the column. For more information on storage differences between different encoding types, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
+> When using [LEN](../../t-sql/functions/len-transact-sql.md) to return the number of characters encoded for a given string expression or [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) to return the size in bytes for a given string expression, the outputs may differ depending on the data type and type of encoding used in the column. For more information on storage differences between different encoding types, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
 ## Examples  
  The following example selects the number of characters and the data in `FirstName` for people located in `Australia`. This example uses the AdventureWorks database.  

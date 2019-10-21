@@ -19,7 +19,7 @@ This article summarizes the new features and enhancements for [!INCLUDE[sql-serv
 
 For more information and known issues, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release notes](sql-server-ver15-release-notes.md).
 
-For the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], use the [latest tools](what-s-new-in-sql-server-ver15-prerelease.md#tools).
+For the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], use the [latest tools](https://aka.ms/getazuredatastudio).
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] for [!INCLUDE[sql-server](../includes/ssnoversion-md.md)]. It also provides additional capability and improvements for the SQL Server database engine, SQL Server Analysis Services, SQL Server Machine Learning Services, SQL Server on Linux, and SQL Server Master Data Services.
 
@@ -235,10 +235,10 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 |Calculation groups in tabular model| See [Calculation groups in tabular model](/analysis-services/tabular-models/calculation-groups). |
 |MDX query support for tabular models with calculation groups | See [Calculation groups](/analysis-services/tabular-models/calculation-groups). |
 |Dynamic formatting of measures using calculation groups |Allows you to conditionally change format strings for measures with [calculation groups](/analysis-services/tabular-models/calculation-groups). For example, with currency conversion, you can display a measure by using a variety of foreign currency formats.|
-|Many-to-many relationships in tabular models| See [Many-to-many relationships in tabular models](what-s-new-in-sql-server-ver15-prerelease.md#many-to-many-ctp24).|
-|Property settings for resource governance| See [Property settings for resource governance](what-s-new-in-sql-server-ver15-prerelease.md#property-ctp24).|
+|Many-to-many relationships in tabular models| See [Many-to-many relationships in tabular models](/analysis-services/tabular-models/tabular-models-ssas).|
+|Property settings for resource governance| See [Property settings for resource governance](/analysis-services/tabular-models/tabular-models-ssas).|
 | Governance setting for Power BI cache refreshes | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release introduces the **ClientCacheRefreshPolicy** property, which allows you to override this behavior at the server level. To learn more, see [General Properties](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
-| Online attach  | Allows you to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more, see [Online attach](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32). |
+| Online attach  | Allows you to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more, see [Online attach](/analysis-services/tabular-models/tabular-models-ssas). |
 | &nbsp; | &nbsp; |
 
 ## See also

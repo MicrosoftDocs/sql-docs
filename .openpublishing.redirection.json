@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/big-data-cluster/what-s-new-in-sql-server-ver15-prerelease.md",
+            "redirect_url": "/sql/big-data-cluster/what-s-new-in-sql-server-ver15",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/big-data-cluster/deploy-on-minikube.md",
             "redirect_url": "/sql/big-data-cluster/deploy-get-started",
             "redirect_document_id": false

@@ -261,15 +261,29 @@ The following Transact-SQL examples demonstrate the detailed steps to fail over 
 1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED`. Run the following query on the global primary, which is the primary replica of the primary availability group. 
     
       ```sql  
-      SELECT ag.name
-             , drs.database_id
-             , drs.group_id
-             , drs.replica_id
-             , drs.synchronization_state_desc
-             , drs.end_of_log_lsn 
-        FROM sys.dm_hadr_database_replica_states drs,
-        sys.availability_groups ag
-          WHERE drs.group_id = ag.group_id;      
+      SELECT	ag.name, 
+		ar.replica_server_name, 
+		DB_NAME(drs.database_id) AS DatabaseName,
+		ar.availability_mode_desc, 
+		drs.synchronization_state_desc, 
+		drs.end_of_log_lsn,
+		ars.synchronization_health_desc, 
+		ars.connected_state_desc, 
+		drs.secondary_lag_seconds, 
+		ars.role_desc,
+		ars.operational_state_desc, 
+		drs.database_id,
+		drs.group_id, 
+		drs.replica_id, 
+		ag.is_distributed, 
+		secondary_lag_seconds
+    FROM sys.availability_groups ag
+    JOIN sys.availability_replicas ar ON ag.group_id=ar.group_id
+    LEFT JOIN sys.dm_hadr_database_replica_states drs ON drs.group_id = ag.group_id
+    LEFT JOIN sys.dm_hadr_availability_replica_states ars
+    ON ars.replica_id=ar.replica_id
+    WHERE ag.is_distributed=1 AND ag.name = 'distributedag'
+    ORDER BY ag.name, DB_NAME(drs.database_id), ars.role_desc;     
       ```  
 
     Proceed after the availability group **synchronization_state_desc** is `SYNCHRONIZED`. If **synchronization_state_desc** is not `SYNCHRONIZED`, run the command every five seconds until it changes. Do not proceed until the **synchronization_state_desc** = `SYNCHRONIZED`. 
@@ -282,17 +296,32 @@ The following Transact-SQL examples demonstrate the detailed steps to fail over 
 
     At this point, the distributed availability group is not available.
 
-1. Test the failover readiness. Run the following query:
+1. Test the failover readiness. Run the following query (replace distributedag to your AG name):
 
     ```sql
-    SELECT ag.name, 
-        drs.database_id, 
-        drs.group_id, 
-        drs.replica_id, 
-        drs.synchronization_state_desc, 
-        drs.end_of_log_lsn 
-    FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
-    WHERE drs.group_id = ag.group_id; 
+    SELECT	ag.name, 
+		ar.replica_server_name, 
+		DB_NAME(drs.database_id) AS DatabaseName,
+		ar.availability_mode_desc, 
+		drs.synchronization_state_desc, 
+		drs.end_of_log_lsn,
+		ars.synchronization_health_desc, 
+		ars.connected_state_desc, 
+		drs.secondary_lag_seconds, 
+		ars.role_desc,
+		ars.operational_state_desc, 
+		drs.database_id,
+		drs.group_id, 
+		drs.replica_id, 
+		ag.is_distributed, 
+		secondary_lag_seconds
+    FROM sys.availability_groups ag
+    JOIN sys.availability_replicas ar ON ag.group_id=ar.group_id
+    LEFT JOIN sys.dm_hadr_database_replica_states drs ON drs.group_id = ag.group_id
+    LEFT JOIN sys.dm_hadr_availability_replica_states ars
+    ON ars.replica_id=ar.replica_id
+    WHERE ag.is_distributed=1 AND ag.name = 'distributedag'
+    ORDER BY ag.name, DB_NAME(drs.database_id), ars.role_desc;
     ```  
     The availability group is ready to fail over when the **synchronization_state_desc** is `SYNCHRONIZED` and the **end_of_log_lsn** is the same for both availability groups. 
 
@@ -304,7 +333,10 @@ The following Transact-SQL examples demonstrate the detailed steps to fail over 
 
     After this step, the distributed availability group is available.
       
-After completing the steps above, the distributed availability group fails over without any data loss. If the availability groups are across a geographical distance that causes latency, change the availability mode back to ASYNCHRONOUS_COMMIT. 
+After completing the steps above, the distributed availability group fails over without any data loss. If the availability groups are across a geographical distance that causes latency, change the availability mode back to ASYNCHRONOUS_COMMIT.
+>[!NOTE]
+   >In a distributed availability group, the synchronization status between the two availability groups depends on the availability mode of both replicas. For asynchronous commit mode, both the current primary availability group, and the current secondary availability group must have `ASYNCHRONOUS_COMMIT` availability mode. For this reason, you must run the script above on both the global primary replica, and the forwarder.
+
   
 ## Remove a distributed availability group  
  The following Transact-SQL statement removes a distributed availability group named `distributedag`:  

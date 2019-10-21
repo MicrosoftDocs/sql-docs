@@ -33,7 +33,7 @@ manager: craigg
 ##  <a name="SyntaxOfURL"></a> Syntax for an Endpoint URL  
  The syntax for an endpoint URL is of the form:  
   
- TCP<strong>://</strong>*\<system-address>*<strong>:<strong>*\<port>*  
+ TCP<strong>://</strong>*\<system-address>*<strong>:</strong>*\<port>*  
   
  where  
   

@@ -54,90 +54,79 @@ manager: craigg
 ### Create a SQL Credential on All the Instances of SQL Server  
  There are two sample scripts, and both create a SQL Credential "mybackupToURL" on all the instances of SQL Server on a computer. The first example creates is simple and creates the credential and does not trap exceptions.  For example, if there was already an existing credential with the same name on one of the instances of the computer, the script would fail. The second example traps errors and allows the script to continue.  
   
-```  
-  
+```powershell
 import-module sqlps  
   
 # create variables  
 $storageAccount = "mystorageaccount"  
 $storageKey = "<storageaccesskeyvalue>"  
-$secureString = convertto-securestring $storageKey  -asplaintext -force  
+$secureString = ConvertTo-SecureString $storageKey  -asplaintext -force  
 $credentialName = "mybackuptoURL"  
   
 #cd to computer level  
 cd sqlserver:\sql\COMPUTERNAME  
 # get the list of instances  
-$instances = Get-childitem  
+$instances = Get-ChildItem  
 #pipe the instances to new-sqlcredentail cmdlet to create SQL credential  
-$instances | new-sqlcredential -Name $credentialName  -Identity $storageAccount -Secret $secureString  
+$instances | New-SqlCredential -Name $credentialName -Identity $storageAccount -Secret $secureString  
 ```  
   
-```  
-  
+```powershell
 import-module sqlps  
   
-# set the parameter values  
-  
+# set the parameter values
 $storageAccount = "mystorageaccount"  
 $storageKey = "<storageaccesskeyvalue>"  
-$secureString = convertto-securestring $storageKey  -asplaintext -force  
+$secureString = ConvertTo-SecureString $storageKey  -asplaintext -force  
 $credentialName = "mybackuptoURL"  
   
 #cd to computer level  
 cd sqlserver:\sql\COMPUTERNAME  
 # get the list of instances  
-$instances = Get-childitem  
+$instances = Get-ChildItem  
 #loop through instances and create a SQL credential, output any errors  
-foreach ($instance in $instances)  
+ForEach ($instance In $instances)  
 {  
     Try  
 {  
-     new-sqlcredential -Name $credentialName -path "SQLServer:\SQL\$($instance.name)" -Identity $storageAccount -Secret $secureString -ea Stop   
+     New-SqlCredential -Name $credentialName -path "SQLServer:\SQL\$($instance.name)" -Identity $storageAccount -Secret $secureString -ea Stop
 }  
 Catch [Exception]  
-    {  
-  
-            write-host "instance - $($instance.name): "$_.Exception.Message  
-  
-    }  
-  
- }  
-  
+    {
+            Write-Host "instance - $($instance.name): "$_.Exception.Message
+    }
+ }
 ```  
   
 ### Remove A SQL Credential from All the Instances of SQL Server  
  This script can be used to remove a specific credential from all the instances of SQL Server installed on the computer. If the Credential object does not exist on a specific instance, an error message is displayed, and the script continues until all instances are checked.  
   
-```  
-  
+```powershell
 import-module sqlps  
   
 cd SQLServer:\SQL\COMPUTERNAME  
 $credentialName = "mybackuptoURL"  
   
-$instances = Get-childitem  
+$instances = Get-ChildItem  
   
-foreach ($instance in $instances)  
-   {   
-    try  
+ForEach ($instance In $instances)  
+   {
+    Try  
         {  
             $path = "SQLServer:\SQL\$($instance.name)\credentials\$credentialName"   
-            Remove-sqlCredential -path $path -ea stop   
+            Remove-SqlCredential -Path $path -ea stop   
          }  
-         catch [Exception]  
+         Catch [Exception]  
          {  
-            write-host $_.Exception.Message  
-  
-        }  
-  
+            Write-Host $_.Exception.Message
+        }
     }  
 ```  
   
 ### Full Database Backup for all Databases (INCLUDING SYSTEM DATABASES)  
  The following script creates backups of all databases on the computer. This includes both user databases and **msdb** system database. The script filters out **tempdb** and **model** system databases.  
   
-```  
-  
+```powershell
 import-module sqlps  
 # set the parameter values  
 $storageAccount = "mystorageaccount"  
@@ -145,51 +134,45 @@ $blobContainer = "privatecontainertest"
 $backupUrlContainer = "https://$storageAccount.blob.core.windows.net/$blobContainer/"  
 $credentialName = "mybackuptoURL"  
   
-# cd to computer level  
-  
+# cd to computer level
 cd SQLServer:\SQL\COMPUTERNAME  
-$instances = Get-childitem   
+$instances = Get-ChildItem
 # loop through each instances and backup up all the  databases -filter out tempdb and model databases  
   
- foreach ($instance in $instances)  
+ ForEach ($instance In $instances)  
  {  
    $path = "sqlserver:\sql\$($instance.name)\databases"  
-   $alldatabases = get-childitem -Force -path $path |Where-object {$_.name -ne "tempdb" -and $_.name -ne "model"}   
-  
+   $alldatabases = Get-ChildItem -Force -path $path | Where-Object {$_.name -ne "tempdb" -and $_.name -ne "model"}   
    $alldatabases | Backup-SqlDatabase -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On -script   
- }  
-  
+ }
 ```  
   
 ### Full Database Backup for ALL User Databases  
  The following script can be used to back up all the user databases on all the instances of SQL Server on the computer.  
   
-```  
-  
-import-module sqlps   
+```powershell
+import-module sqlps
   
 $storageAccount = "mystorageaccount"  
 $blobContainer = "privatecontainertest"  
 $backupUrlContainer = "https://$storageAccount.blob.core.windows.net/$blobContainer/"  
 $credentialName = "mybackuptoURL"  
   
-# cd to computer level  
-  
+# cd to computer level
 cd SQLServer:\SQL\COMPUTERNAME  
-$instances = Get-childitem   
+$instances = Get-ChildItem
 # loop through each instances and backup up all the user databases  
- foreach ($instance in $instances)  
+ ForEach ($instance In $instances)  
  {  
     $databases = dir "sqlserver:\sql\$($instance.name)\databases"  
-   $databases | Backup-SqlDatabase -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On   
+    $databases | Backup-SqlDatabase -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On
  }  
 ```  
   
 ### Full Database Backup for MASTER and MSDB (SYSTEM DATABASES) On All the Instances of SQL Server  
  The following script can be used to back up **master** and **msdb** databases on all the instances of SQL Server installed on the computer.  
   
-```  
-  
+```powershell
 import-module sqlps  
   
 $storageAccount = "mystorageaccount"  
@@ -200,22 +183,20 @@ $sysDbs = "master", "msdb"
   
 #cd to computer level  
 cd sqlserver:\sql\COMPUTERNAME  
-$instances = Get-childitem   
-foreach ($instance in $instances)  
+$instances = Get-ChildItem
+ForEach ($instance In $instances)  
  {  
-      foreach ($s in $sysdbs)  
+      ForEach ($s In $sysdbs)  
      {  
-Backup-SqlDatabase -Database $s -path "sqlserver:\sql\$($instance.name)" -BackupContainer  $backupUrlContainer -SqlCredential $credentialName -Compression On   
-}    
- }  
-  
+        Backup-SqlDatabase -Database $s -path "sqlserver:\sql\$($instance.name)" -BackupContainer  $backupUrlContainer -SqlCredential $credentialName -Compression On   
+}
+ } 
 ```  
   
 ### Full Database Backup for All User Databases on an Instance of SQL Server  
  The following script is used to back up only the user databases available on a named instance of SQL Server. The same script can be used for the default instance on the computer by changing the $srvPath parameter value.  
   
-```  
-  
+```powershell
 import-module sqlps  
   
 $storageAccount = "mystorageaccount"  
@@ -237,8 +218,7 @@ $databases | Backup-SqlDatabase -BackupContainer $backupUrlContainer -SqlCredent
 ### Full Database Backup for Only System Databases (MASTER AND MSDB) On an Instance of SQL Server  
  The full script can be used to back up the **master** and the **msdb** databases on a named instance of SQL Server. The same script can be used for the default instance on the computer by changing the $srvpath parameter value.  
   
-```  
-  
+```powershell
 import-module sqlps  
   
 $storageAccount = "mystorageaccount"  
@@ -251,15 +231,12 @@ $credentialName = "mybackupToUrl"
 cd $srvPath  
   
 $sysDbs = "master", "msdb"  
-foreach ($s in $sysDbs)   
+ForEach ($s In $sysDbs)
 {  
 Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On  
-}  
-  
+}
 ```  
   
-## See Also  
- [SQL Server Backup and Restore with Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+## See Also
+ [SQL Server Backup and Restore with Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)
  [SQL Server Backup to URL Best Practices and Troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  
-  

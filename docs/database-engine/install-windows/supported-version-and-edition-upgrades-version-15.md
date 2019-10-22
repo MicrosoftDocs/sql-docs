@@ -24,23 +24,23 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
   
 ## Pre upgrade Checklist  
   
--   Before upgrading from one edition of [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] to another, verify that the functionality you are currently using is supported in the edition to which you are moving.  
+- Before upgrading from one edition of [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] to another, verify that the functionality you are currently using is supported in the edition to which you are moving.  
   
--   Before upgrading [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enable Windows Authentication for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent and verify the default configuration: that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account is a member of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin group.  
+- Before upgrading [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enable Windows Authentication for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent and verify the default configuration: that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account is a member of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin group.  
   
--   To upgrade to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], you must be running a supported operating system. For more information, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+- To upgrade to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], you must be running a supported operating system. For more information, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
--   Upgrade will be blocked if there is a pending restart.  
+- Upgrade will be blocked if there is a pending restart.  
   
--   Upgrade will be blocked if the Windows Installer service is not running.  
+- Upgrade will be blocked if the Windows Installer service is not running.  
   
 ## Unsupported Scenarios  
   
--   Cross-version instances of [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] are not supported. Version numbers of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] components must be the same in an instance of [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)].  
+- Cross-version instances of [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] are not supported. Version numbers of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] components must be the same in an instance of [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)].  
   
--   [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] is only available for 64-bit platforms. Cross-platform upgrade is not supported. You cannot upgrade a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to native 64-bit using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. However, you can back up or detach databases from a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then restore or attach them to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-bit) if the databases are not published in replication. You must re-create any logins and other user objects in master, msdb, and model system databases.  
+- [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] is only available for 64-bit platforms. Cross-platform upgrade is not supported. You cannot upgrade a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to native 64-bit using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. However, you can back up or detach databases from a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then restore or attach them to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-bit) if the databases are not published in replication. You must re-create any logins and other user objects in master, msdb, and model system databases.  
   
--   You cannot add new features during the upgrade of your existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], you can add features by using the [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Setup. For more information, see [Add Features to an Instance of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+- You cannot add new features during the upgrade of your existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], you can add features by using the [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Setup. For more information, see [Add Features to an Instance of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
  
 ## Upgrades from Earlier Versions to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
  
@@ -112,11 +112,11 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 ###  <a name="SupportFor2005"></a> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Support for [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
  This section discusses [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] support for [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. In [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], you will be able to do the following:  
   
--   Attach a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database (mdf/ldf files) to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] instance of database engine.  
+- Attach a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database (mdf/ldf files) to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] instance of database engine.  
   
--   Restore a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] instance of database engine from a backup.  
+- Restore a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] instance of database engine from a backup.  
   
--   Back up a [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] cube and restore it on [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)].  
+- Back up a [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] cube and restore it on [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)].  
   
 When a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database is upgraded to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], the database compatibility level will be changed from 90 to 100. (In [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], valid values for the database compatibility level are 100, 110, 120, 130, and 140.) [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) discusses how the compatibility level change could affect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications.  
   
@@ -167,20 +167,18 @@ For step-by-step instructions on how to perform an edition upgrade, see [Upgrade
   
  ** Changing the edition of a clustered instance of [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] limited. The following scenarios are not supported for [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] failover clusters:  
   
--   [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer, Standard, or Evaluation.  
+- [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer, Standard, or Evaluation.  
   
--   [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard or Evaluation.  
+- [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard or Evaluation.  
   
--   [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Evaluation.  
+- [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Evaluation.  
   
--   [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Evaluation to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard.  
+- [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Evaluation to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard.  
   
 ## See Also  
 
- [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
- 
- [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
- 
+ [Editions and supported features of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]](../../sql-server/editions-and-components-of-sql-server-version-15.md)
+
+ [Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
+
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
-  

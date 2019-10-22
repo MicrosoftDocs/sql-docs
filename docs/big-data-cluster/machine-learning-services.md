@@ -1,5 +1,5 @@
 ---
-title: Use Machine Learning Services (Python and R)
+title: Machine Learning Services (Python, R)
 titleSuffix: SQL Server Big Data Cluster
 description: Learn how you can run Python and R scripts on the master instance of a SQL Server Big Data Clusters with Machine Learning Services.
 author: dphansen
@@ -10,7 +10,7 @@ ms.prod: sql
 ms.technology: machine-learning
 ---
 
-# Use Machine Learning Services (Python and R) on a Big Data Cluster
+# Run Python and R scripts with Machine Learning Services on SQL Server Big Data Cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

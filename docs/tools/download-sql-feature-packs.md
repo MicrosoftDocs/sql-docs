@@ -43,7 +43,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 | [SQL Server Semantic Language Statistics](https://docs.microsoft.com/sql/relational-databases/search/install-and-configure-semantic-search) | The Semantic Language Statistics Database is a required component for the Statistical Semantic Search feature in Microsoft SQL Server. |
 | [SQL Server Shared Management Objects](https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide) | SQL Server Management Objects (SMO) is a .NET Framework object model that enables software developers to create client-side applications to manage and administer SQL Server objects and services. |
 | [System CLR Types](https://go.microsoft.com/fwlink/?linkid=2108808) | The SQL Server System CLR Types package contains the components implementing the geometry, geography, and hierarchy ID types in SQL Server. Note: This component also requires [Windows Installer 4.5](http://go.microsoft.com/fwlink/?LinkId=123373) |
-| [Windows PowerShell Extensions for Microsoft SQL Server](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server-powershell?view=sql-server-2017) | The Microsoft Windows PowerShell Extensions for SQL Server include a provider and a set of cmdlets that enable administrators and developers to build PowerShell scripts for managing instances of SQL Server. |
+| [Windows PowerShell Extensions for Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-powershell?view=sql-server-2017) | The Microsoft Windows PowerShell Extensions for SQL Server include a provider and a set of cmdlets that enable administrators and developers to build PowerShell scripts for managing instances of SQL Server. |
 
 ## Database engine
 
@@ -92,7 +92,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 
 | Feature | Description |
 |----|-----|
-| [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt)| SQL Server Data Tools is a modern development tool for building SQL Server relational databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio.|
+| [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)| SQL Server Data Tools is a modern development tool for building SQL Server relational databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio.|
 
 ## See also
 

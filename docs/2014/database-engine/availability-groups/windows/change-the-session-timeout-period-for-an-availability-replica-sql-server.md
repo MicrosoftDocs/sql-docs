@@ -82,7 +82,8 @@ manager: craigg
     ```  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
- **To change the session-timeout period for an availability replica**  
+
+### To change the session-timeout period for an availability replica
   
 1.  Change directory (`cd`) to the server instance that hosts the primary replica.  
   
@@ -90,19 +91,14 @@ manager: craigg
   
      For example, the following command sets the session-timeout period to 15 seconds.  
   
-    ```  
-    Set-SqlAvailabilityReplica -SessionTimeout 15 `   
-    -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
+    ```powershell
+    Set-SqlAvailabilityReplica -SessionTimeout 15 -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
   
     > [!NOTE]  
     >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
- **To set up and use the SQL Server PowerShell provider**  
-  
--   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
+To set up and use the SQL Server PowerShell provider, see [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md).
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
-  
-  

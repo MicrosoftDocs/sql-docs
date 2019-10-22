@@ -31,7 +31,7 @@ manager: craigg
 ## Finding a Particular System Message in Visual C#  
  The code example shows how to identify a system message by ID number and display the message.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv = new Server();  
@@ -47,10 +47,10 @@ manager: craigg
 ## Finding a Particular System Message in PowerShell  
  The code example shows how to identify a system message by ID number and display the message.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
-$srv = get-item default  
+$srv = Get-Item default  
   
 #Get the message 14126 in US English and display it  
 $msg = $srv.SystemMessages.ItemByIdAndLanguage(14126, "us_english")  
@@ -60,7 +60,7 @@ $msg.ID.ToString() + " "+ $msg.Text
 ## Adding a New User-Defined Message in Visual Basic  
  The code example demonstrates how to create a user-defined message with an ID greater than 50000.  
   
-```  
+```vb
 Dim mysrv As Server  
 mysrv = New Server  
 Dim udm As UserDefinedMessage  
@@ -71,9 +71,8 @@ udm.Create()
 ## Adding a New User-Defined Message in Visual C#  
  The code example demonstrates how to create a user-defined message with an ID greater than 50000.  
   
-```  
-{  
-  
+```csharp
+{
             Server mysrv = new Server();  
   
             UserDefinedMessage udm = new UserDefinedMessage(mysrv, 50030, "us_english",16, "Test message");  
@@ -85,20 +84,17 @@ udm.Create()
         }  
 ```  
   
-## Adding a New User-Defined Message in PowerShell  
+## Adding a New User-Defined Message in PowerShell
  The code example demonstrates how to create a user-defined message with an ID greater than 50000.  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
-#Create a new message  
-  
-$udm = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedMessage -argumentlist `  
+#Create a new message
+$udm = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedMessage -ArgumentList `  
 $srv, 50030, "us_english", 16, "Test message"  
 $udm.Create()  
 $msg = $srv.UserDefinedMessages.ItemByIdAndLanguage(50030, "us_english");  
 $msg  
 ```  
-  
-  

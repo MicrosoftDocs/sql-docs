@@ -9,7 +9,7 @@ ms.prod: sql
 ms.technology: machine-learning
 ---
 
-# Use Machine Learning Services (Python and R) on Big Data Clusters
+# Use Machine Learning Services (Python and R) on a Big Data Cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

@@ -33,6 +33,8 @@ Starting in SQL Server 2019, Language Extensions and Java support are provided. 
 
 + Do not install SQL Server Language Extensions on a domain controller. The Language Extensions portion of setup will fail.
 
++ Language Extensions and [Machine Learning Services](../../advanced-analytics/index.yml) are automatically installed on SQL Server Big Data Clusters. If you use a Big Data Cluster, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on a Big Data Cluster](../../machine-learning-services-big-data-cluster.md).
+
 > [!IMPORTANT]
 > After setup is complete, be sure to complete the post-configuration steps described in this article. These steps include enabling SQL Server to use external code, and adding accounts required for SQL Server to run Java code on your behalf. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.
 
@@ -253,54 +255,6 @@ To ensure that language extensions jobs are prioritized and resourced appropriat
 - To change the amount of memory reserved for the database, see [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
 If you are using Standard Edition and do not have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources.
-
-## Configure on Big Data Cluster
-
-Language Extensions is installed by default on [SQL Server Big Data Clusters](../../big-data-cluster/big-data-cluster-overview.md) and does not require to follow the steps above.
-
-To enable Language Extensions, run this statement on the master instance:
-
-```sql
-EXEC sp_configure 'external scripts enabled', 1
-RECONFIGURE WITH OVERRIDE
-GO
-```
-
-### Configure on Big Data Cluster with Always On Availability Groups
-
-If you are using [SQL Server Big Data Clusters](../../big-data-cluster/big-data-cluster-overview.md) with [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), you need to perform a few extra steps. 
-
-1. Connect to the master instance and run this statement:
-
-    ```sql
-    SELECT @@SERVERNAME
-    ```
-
-    Note down the server name. In this example, the server name is **master-2**.
-
-1. On each replica on the Always On Availability Group in the Big Data Cluster, run these `kubectl` commands:
-
-    ```
-    kubectl -n bdc expose pod master-0 --port=1533 --name=mymaster-0 --type=LoadBalancer
-    service/mymaster-0 exposed
-
-    kubectl -n bdc expose pod master-1 --port=1533 --name=mymaster-1 --type=LoadBalancer
-    service/mymaster-1 exposed
-
-    kubectl -n bdc expose pod master-2 --port=1533 --name=mymaster-2 --type=LoadBalancer
-    ```
-
-1. Connect to each master replica endpoint and enable script execution.
-
-    Run this statement:
-
-    ```sql
-    EXEC sp_configure 'external scripts enabled', 1
-    RECONFIGURE WITH OVERRIDE
-    GO
-    ```
-
-Once you have configured Language Extensions, you can [register external language](#register_external_language).
 
 ## Next steps
 

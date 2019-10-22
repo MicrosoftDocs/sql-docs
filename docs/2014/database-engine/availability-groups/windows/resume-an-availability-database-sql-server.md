@@ -88,7 +88,8 @@ manager: craigg
      ALTER DATABASE *database_name* SET HADR RESUME  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
- **To resume a secondary database**  
+
+### To resume a secondary database
   
 1.  Change directory (`cd`) to the server instance that hosts the replica whose database you want to resume. For more information, see [Prerequisites](#Prerequisites), earlier in this topic.  
   
@@ -96,9 +97,8 @@ manager: craigg
   
      For example, the following command resumes data synchronization for the availability database `MyDb3` in the availability group `MyAg`.  
   
-    ```  
-    Resume-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
+    ```powershell
+    Resume-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
     ```  
   
     > [!NOTE]  
@@ -114,5 +114,3 @@ manager: craigg
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
-  
-  

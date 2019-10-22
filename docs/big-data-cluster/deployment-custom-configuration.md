@@ -356,13 +356,58 @@ azdata bdc config patch --config-file custom-bdc/bdc.json --patch ./patch.json
 
 ## <a id="sparkstorage"></a> Configure storage pool without spark
 
-You can also configure the storage pools to run without spark and create a separate spark pool. This configuration enables you to scale spark compute power independent of storage. To see how to configure the spark pool, see the [JSON patch file example](#jsonpatch) at the end of this article.
+You can also configure the storage pools to run without spark and create a separate spark pool. This configuration enables you to scale spark compute power independent of storage. To see how to configure the spark pool, see the [Create a spark pool](#sparkpool) section in this article.
 
+> [!NOTE]
+> Deploying a big data cluster without Spark is not supported. So you must either have `includeSpark` set to `true` or you must create a separate [spark pool](#sparkpool) with at least one instance. You can also have Spark running both in storage pool (`includeSpark` is `true`) and have a separate Spark pool.
 
 By default, the `includeSpark` setting for the storage pool resource is set to true, so you must edit the `includeSpark` field into the storage configuration in order to make changes. The following command shows how to edit this value using inline json.
 
 ```bash
 azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.storage-0.spec.settings.spark.includeSpark=false"
+```
+
+## <a id="sparkpool"></a> Create a spark pool
+
+You can create a Spark pool in addition, or instead of Spark instances running in the storage pool. Following example shows how to create a spark pool with two instances by patching the `bdc.json` configuration file. 
+
+First, create a `spark-pool-patch.json` file as below:
+
+```json
+{
+    "patch": [
+        {
+            "op": "add",
+            "path": "spec.resources.spark-0",
+            "value": {
+                "metadata": {
+                    "kind": "Pool",
+                    "name": "default"
+                },
+                "spec": {
+                    "type": "Spark",
+                    "replicas": 2
+                }
+            }
+        },
+        {
+            "op": "add",
+            "path": "spec.services.spark.resources/-",
+            "value": "spark-0"
+        },
+        {
+            "op": "add",
+            "path": "spec.services.hdfs.resources/-",
+            "value": "spark-0"
+        }
+    ]
+}
+```
+
+Then run the `azdata bdc config patch` command:
+
+```bash
+azdata bdc config patch -c custom-bdc/bdc.json -p spark-pool-patch.json
 ```
 
 ## <a id="podplacement"></a> Configure pod placement using Kubernetes labels
@@ -407,13 +452,13 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.n
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
 ```
 
-## <a id="jsonpatch"></a> JSON patch files
+## <a id="jsonpatch"></a> Other customizations using JSON patch files
 
 JSON patch files configure multiple settings at once. For more information about JSON patches, see [JSON Patches in Python](https://github.com/stefankoegl/python-json-patch) and the [JSONPath Online Evaluator](https://jsonpath.com/).
 
-The following `patch.json` file performs the following changes:
+The following `patch.json` files perform the following changes:
 
-- Updates the port of single endpoint in `control.json`.
+- Update the port of single endpoint in `control.json`.
 
 ```json
 {
@@ -427,7 +472,7 @@ The following `patch.json` file performs the following changes:
 }
 ```
 
-- Updates all endpoints (`port` and `serviceType`) in `control.json`.
+- Update all endpoints (`port` and `serviceType`) in `control.json`.
 
 ```json
 {
@@ -452,7 +497,7 @@ The following `patch.json` file performs the following changes:
 }
 ```
 
-- Updates the controller storage settings in `control.json`. These settings are applicable to all cluster components, unless overridden at pool level.
+- Update the controller storage settings in `control.json`. These settings are applicable to all cluster components, unless overridden at pool level.
 
 ```json
 {
@@ -477,7 +522,7 @@ The following `patch.json` file performs the following changes:
 }
 ```
 
-- Updates the storage class name in `control.json`.
+- Update the storage class name in `control.json`.
 
 ```json
 {
@@ -491,7 +536,7 @@ The following `patch.json` file performs the following changes:
 }
 ```
 
-- Updates pool storage settings for storage pool in `bdc.json`.
+- Update pool storage settings for storage pool in `bdc.json`.
 
 ```json
 {
@@ -520,7 +565,7 @@ The following `patch.json` file performs the following changes:
 }
 ```
 
-- Updates Spark settings for storage pool in `bdc.json`.
+- Update Spark settings for storage pool in `bdc.json`.
 
 ```json
 {
@@ -545,39 +590,6 @@ The following `patch.json` file performs the following changes:
 }
 ```
 
-- Creates a spark pool with two instances in `bdc.json`.
-
-```json
-{
-  "patch": [
-      {
-      "op": "add",
-      "path": "spec.resources.spark-0",
-      "value": {
-          "metadata": {
-          "kind": "Pool",
-          "name": "default"
-          },
-          "spec": {
-          "type": "Spark",
-          "replicas": 2
-          }
-      }
-      },
-      {
-      "op": "add",
-      "path": "spec.services.spark.resources/-",
-      "value": "spark-0"
-      },
-      {
-      "op": "add",
-      "path": "spec.services.hdfs.resources/-",
-      "value": "spark-0"
-      }
-  ]
-}
-```
-
 > [!TIP]
 > For more information about the structure and options for changing a deployment configuration file, see [Deployment configuration file reference for big data clusters](reference-deployment-config.md).
 
@@ -594,10 +606,19 @@ By default, ElasticSearch container runs in privilege mode in big data cluster. 
 For disabling the container that runs ElasticSearch to run in privileged mode, you  must updated the `settings` section in the `control.json` and specify the value of `vm.max_map_count` to `-1`. Here is a sample of how this section would look like:
 
 ```json
-"settings": {
-    "ElasticSearch": {
-        "vm.max_map_count": "-1"
-      }
+{
+    "apiVersion": "v1",
+    "metadata": {...},
+    "spec": {
+        "docker": {...},
+        "storage": {...},
+        "endpoints": [...],
+        "settings": {
+            "ElasticSearch": {
+                "vm.max_map_count": "-1"
+            }
+        }
+    }
 }
 ```
 
@@ -607,45 +628,13 @@ You can manually edit the `control.json` and add the above section to the `spec`
 {
   "patch": [
     {
-      "op": "replace",
-      "path": "spec",
+      "op": "add",
+      "path": "spec.settings",
       "value": {
-        "docker": {
-            "registry": "mcr.microsoft.com",
-            "repository": "mssql/bdc",
-            "imageTag": "2019-RC1-ubuntu",
-            "imagePullPolicy": "Always"
-        },
-        "storage": {
-            "data": {
-                "className": "default",
-                "accessMode": "ReadWriteOnce",
-                "size": "15Gi"
-            },
-            "logs": {
-                "className": "default",
-                "accessMode": "ReadWriteOnce",
-                "size": "10Gi"
-            }
-        },
-        "endpoints": [
-            {
-                "name": "Controller",
-                "serviceType": "LoadBalancer",
-                "port": 30080
-            },
-            {
-                "name": "ServiceProxy",
-                "serviceType": "LoadBalancer",
-                "port": 30777
-            }
-        ],
-        "settings": {
             "ElasticSearch": {
                 "vm.max_map_count": "-1"
-       	     }
         }
-       }
+      }
     }
   ]
 }
@@ -654,7 +643,7 @@ You can manually edit the `control.json` and add the above section to the `spec`
 Run this command to patch the configuration file:
 
 ```bash
-azdata bdc config patch --config-file control.json --patch-file elasticsearch-patch.json
+azdata bdc config patch --config-file custom-bdc/control.json --patch-file elasticsearch-patch.json
 ```
 
 > [!IMPORTANT]

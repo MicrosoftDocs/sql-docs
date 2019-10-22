@@ -15,9 +15,9 @@ ms.technology: machine-learning
 
 You can run Python and R scripts on the master instance of a [SQL Server Big Data Clusters](big-data-cluster-overview.md) with [Machine Learning Services](../advanced-analytics/index.yml).
 
-## Enable on Big Data Cluster
+## Enable Machine Learning Services
 
-Machine Learning Services is installed by default on Big Data Clusters and does require separate installation.
+Machine Learning Services is installed by default on Big Data Clusters and does require separate installation. 
 
 To enable Machine Learning Services, run this statement on the master instance:
 
@@ -27,7 +27,7 @@ RECONFIGURE WITH OVERRIDE
 GO
 ```
 
-### Configure on Big Data Cluster with Always On Availability Groups
+### Enable on Big Data Cluster with Always On Availability Groups
 
 If you are using [SQL Server Big Data Clusters](../../big-data-cluster/big-data-cluster-overview.md) with [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), you need to perform a few extra steps. 
 

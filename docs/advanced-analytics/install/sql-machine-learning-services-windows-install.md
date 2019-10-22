@@ -37,7 +37,7 @@ This article explains how to install SQL Server Machine Learning Services on Win
   + R and Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-+ Machine Learning Services is automatically installed on SQL Server Big Data Clusters. If you use a Big Data Cluster, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on a Big Data Cluster](../../machine-learning-services-big-data-cluster.md).
++ Machine Learning Services is installed by default on SQL Server Big Data Clusters. If you use a Big Data Cluster, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on a Big Data Cluster](../../machine-learning-services-big-data-cluster.md).
 ::: moniker-end
 
 > [!IMPORTANT]

@@ -77,5 +77,5 @@ You are now ready to run Python and R scripts on the master instance of your Big
 
 + [Quickstart: Create and run simple Python scripts with SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-python-create-script.md)
 + [Quickstart: Create and score a predictive model in Python with SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-python-train-score-model.md)
-+ [Quickstart: Create and run simple R scripts with SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-r-create-script)
++ [Quickstart: Create and run simple R scripts with SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-r-create-script.md)
 + [Quickstart: Create and score a predictive model in R with SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-r-train-score-model.md)

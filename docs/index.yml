@@ -135,6 +135,32 @@ conceptualContent:
 additionalContent: 
   sections:
     - items:
+      - title: Administration
+        links:
+          - text: Dynamic Management Views (DMVs)
+            url: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
+          - text: System catalog views
+            url: relational-databases/system-catalog-views/catalog-views-transact-sql.md
+          - text: Extended events
+            url: relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
+          - text: Securing SQL Server
+            url: relational-databases/security/securing-sql-server.md
+          - text: SQL PowerShell
+            url: powershell/sql-server-powershell.md         
+          - text: Azure SQL REST API
+            url: https://docs.microsoft.com/rest/api/sql/
+          - text: Azure SQL PowerShell
+            url: https://docs.microsoft.com/powershell/module/az.sql/
+      - title: Security & Privacy
+        links:
+          - text: SQL Server Auditing
+            url: relational-databases/security/auditing/sql-server-audit-database-engine.md
+          - text: Azure SQL Database Auditing
+            url: https://docs.microsoft.com/azure/sql-database/sql-database-auditing
+          - text: Data classification
+            url: relational-databases/security/sql-data-discovery-and-classification.md
+          - text: Always Encrypted
+            url: relational-databases/security/encryption/always-encrypted-database-engine.md
       - title: Development
         links:
           - text: Build an app using SQL Server
@@ -183,32 +209,6 @@ additionalContent:
             url: https://docs.microsoft.com/analysis-services/analysis-services-overview
           - text: Microsoft Analytics Platform System
             url: analytics-platform-system/index.md
-      - title: Security & Privacy
-        links:
-          - text: SQL Server Auditing
-            url: relational-databases/security/auditing/sql-server-audit-database-engine.md
-          - text: Azure SQL Database Auditing
-            url: https://docs.microsoft.com/azure/sql-database/sql-database-auditing
-          - text: Data classification
-            url: relational-databases/security/sql-data-discovery-and-classification.md
-          - text: Always Encrypted
-            url: relational-databases/security/encryption/always-encrypted-database-engine.md
-      - title: Administration
-        links:
-          - text: Dynamic Management Views (DMVs)
-            url: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
-          - text: System catalog views
-            url: relational-databases/system-catalog-views/catalog-views-transact-sql.md
-          - text: Extended events
-            url: relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
-          - text: Securing SQL Server
-            url: relational-databases/security/securing-sql-server.md
-          - text: SQL PowerShell
-            url: powershell/sql-server-powershell.md         
-          - text: Azure SQL REST API
-            url: https://docs.microsoft.com/rest/api/sql/
-          - text: Azure SQL PowerShell
-            url: https://docs.microsoft.com/powershell/module/az.sql/
       - title: Tools
         links:
           - text: Azure Data Studio

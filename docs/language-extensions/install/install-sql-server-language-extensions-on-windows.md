@@ -292,12 +292,6 @@ If you are using [SQL Server Big Data Clusters](../../big-data-cluster/big-data-
 
 1. Connect to each master replica endpoint and enable script execution.
 
-    Example:
-
-    ```
-    mymaster-2                        LoadBalancer   10.0.48.180    23.100.39.96     1533:30312/TCP 
-    ```
-
     Run this statement:
 
     ```sql

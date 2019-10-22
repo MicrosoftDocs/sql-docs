@@ -75,7 +75,7 @@ conceptualContent:
         - text: SQL Server 2019
           url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15?view=sql-server-ver15
           itemType: whats-new
-        - text: SQL Server big data cluster
+        - text: SQL Server Big Data Cluster
           url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
           itemType: whats-new
         - text: Azure Data Studio

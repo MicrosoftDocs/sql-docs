@@ -77,8 +77,8 @@ landingContent:
         url: https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization
       - text: Automatic tuning
         url: ../relational-databases/automatic-tuning/automatic-tuning.md
-      - text: SQL Server Agent
-        url: ../ssms/agent/sql-server-agent.md
+      - text: Intelligent query processing 
+        url: ../relational-databases/performance/intelligent-query-processing.md
     - linkListType: concept
       links:
       - text: Backup & restore
@@ -105,19 +105,6 @@ landingContent:
       - text: PolyBase
         url: ../relational-databases/polybase/polybase-guide.md
 
-  - title: Business Intelligence 
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: SQL Server Reporting Services (SSRS)
-        url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-      - text: SQL Server Analysis Services (SSAS)
-        url: /analysis-services/analysis-services-overview
-      - text: SQL Server Integration Services (SSIS)
-        url: ../integration-services/sql-server-integration-services.md
-      - text: Azure Data Factory
-        url: https://docs.microsoft.com/azure/data-factory/
-
   - title: Migration
     linkLists:
     - linkListType: overview
@@ -134,6 +121,21 @@ landingContent:
         url: ../dea/database-experimentation-assistant-overview.md
       - text: SQL Server Migration Assistant (SSMA)
         url: ../ssma/sql-server-migration-assistant.md
+
+  - title: Business Intelligence 
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: SQL Server Reporting Services (SSRS)
+        url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+      - text: SQL Server Analysis Services (SSAS)
+        url: /analysis-services/analysis-services-overview
+      - text: SQL Server Integration Services (SSIS)
+        url: ../integration-services/sql-server-integration-services.md
+      - text: Azure Data Factory
+        url: https://docs.microsoft.com/azure/data-factory/
+
+
 
 
 

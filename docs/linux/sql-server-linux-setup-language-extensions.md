@@ -23,7 +23,7 @@ Package location for the Java extensions is in the SQL Server Linux source repos
 
 Language Extensions is also supported on Linux containers. We do not provide pre-built containers with Language Extensions, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-Language Extensions and [Machine Learning Services](../advanced-analytics/index.yml) are installed by default on SQL Server Big Data Clusters. If you use a Big Data Cluster, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on a Big Data Cluster](../machine-learning-services-big-data-cluster.md).
+Language Extensions and [Machine Learning Services](../advanced-analytics/index.yml) are installed by default on SQL Server Big Data Clusters. If you use a Big Data Cluster, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on a Big Data Cluster](../big-data-cluster/machine-learning-services.md).
 
 ## Uninstall preview version
 

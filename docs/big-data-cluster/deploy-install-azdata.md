@@ -107,6 +107,41 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
    > [!NOTE]
    > The `--user` switch installs `azdata` to the Python user install directory. This is typically `~/.local/bin` on Linux. Either add this directory to your path or navigate to the user install directory and run `./azdata` from there.
 
+## <a id="macOSX"></a> Install `azdata` on macOS or OS X
+
+To install `azdata` on macOS or OS X complete these steps. For each step, run the example in Terminal.
+
+1. On a macOS client, install [Homebrew](https://brew.sh) if you don't have it already:
+
+   ```
+   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+   ```
+
+1. Install Python and pip, minimum version 3.0:
+
+   ```
+   brew install python3
+   ```
+
+1. Install dependencies:
+
+   ```
+   pip3 install -U requests
+   brew install freetds
+   ```
+
+1. If you have any previous releases of the tool installed, it is important to uninstall it first before installing the latest version of `azdata`. The following command removes the release candidate version of `azdata`.
+
+   ```
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
+   ```
+
+1. Install `azdata` with the following command:
+
+   ```
+   pip3 install -r https://aka.ms/azdata
+   ```
+
 ## Next steps
 
 For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

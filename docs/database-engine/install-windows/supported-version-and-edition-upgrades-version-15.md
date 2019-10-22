@@ -28,7 +28,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
   
 - Before upgrading [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enable Windows Authentication for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent and verify the default configuration: that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account is a member of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin group.  
   
-- To upgrade to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], you must be running a supported operating system. For more information, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+- To upgrade to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], you must be running a supported operating system. For more information, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).  
   
 - Upgrade will be blocked if there is a pending restart.  
   

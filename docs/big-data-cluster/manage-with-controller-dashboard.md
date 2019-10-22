@@ -33,8 +33,7 @@ In addition to above, SQL Server 2019 Big Data Cluster also requires:
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [Azure CLI](/cli/azure/install-azure-cli)
 
-
-## Add SQL Server big data cluster controller
+## Add SQL Server Big Data Cluster controller
 
 1. Click on the Connections view on the left pane.
 2. At the bottom of the Connections view, click **SQL Server Big Data Clusters** to expand it.

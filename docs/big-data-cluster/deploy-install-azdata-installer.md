@@ -30,18 +30,12 @@ To install `azdata` on with the Microsoft Windows Installer,
 
 ### Uninstall if previous installation done with `pip`
 
-If you have any previous releases of **mssqlctl** installed, remove it. The following command removes the CTP 3.1 version of **mssqlctl**.
-
-   ```bash
-   pip3 uninstall -r https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
-   ```
-
 If you have any previous releases of `azdata` installed, it is important to uninstall it first before installing the latest version.
 
-   For CTP 3.2, run the following command.
+   To remove the releace candidate version of `azdata`, run the following command.
 
    ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
 Once removed, [install `azdata` on Windows](#install-azdata-windows).
@@ -63,11 +57,11 @@ To uninstall `azdata` with Windows Installer, follow the instructions for the ap
 
 | Platform      | Instructions                                           |
 | ------------- |--------------------------------------------------------|
-| Windows 10	| Start > Settings > Apps                                |
+| Windows 10| Start > Settings > Apps                                |
 | Windows 8     | Start > Control Panel > Programs > Uninstall a program |
 
-The program to uninstall is called **`Azdata CLI`** . Select this application, then click the `Uninstall` button.
+The program to uninstall is called `Azdata CLI` . Select this application, then click the `Uninstall` button.
 
 ## Next steps
 
-For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

@@ -21,25 +21,25 @@ For Windows and Linux (Ubuntu distribution), you can install with a [package man
 
 ## <a id="prerequisites"></a> Prerequisites
 
-`azdata` is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install `azdata` tool. The instructions below provide examples for Windows and Ubuntu. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
-In addition, you must also install and update the latest version of *requests* Python package:
+`azdata` is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. `pip` is required to download and install `azdata` tool. The instructions below provide examples for Windows and Ubuntu. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
+In addition, install and update the latest version of `requests` Python package:
 ```bash
 pip3 install -U requests
 ```
 
 > [!IMPORTANT]
-> If you are installing a newer version of big data clusters, you must backup your data and delete the old cluster *before* upgrading `azdata` and installing the new release. For more information, see [Upgrading to a new release](deployment-upgrade.md).
+> If you are installing a newer version of big data clusters, back up your data and delete the old cluster upgrading `azdata` and installing the new release. For more information, see [Upgrading to a new release](deployment-upgrade.md).
 
 ## <a id="windows"></a> Windows `azdata` installation
 
 1. On a Windows client, download the necessary Python package from [https://www.python.org/downloads/](https://www.python.org/downloads/). For python3.5.3 and later, pip3 is also installed when you install Python. 
 
    > [!TIP] 
-   > When installing Python3, select to add Python to your **PATH**. If you do not, you can later find where pip3 is located and manually add it to your **PATH**.
+   > When installing Python3, select to add Python to your `PATH`. If you do not, you can later find where pip3 is located and manually add it to your `PATH`.
 
 1. Open a new Windows PowerShell session so that it gets the latest path with Python in it.
 
-1. If you have any previous releases of the tool installed (prior to CTP 3.2, the tool was called **mssqlctl**), it is important to uninstall it first before installing the latest version of `azdata`. The following command removes the CTP 3.1 version of **mssqlctl**.
+1. If you have any previous releases of the tool installed (prior to CTP 3.2, the tool was called `mssqlctl`), it is important to uninstall it first before installing the latest version of `azdata`. The following command removes the CTP 3.1 version of `mssqlctl`.
 
    ```powershell
    pip3 uninstall -r https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
@@ -80,7 +80,7 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
    sudo -H pip3 install --upgrade pip
    ```
 
-1. If you have any previous releases of the tool installed (prior to CTP 3.2, the tool was called **mssqlctl**), it is important to uninstall it first before installing the latest version of `azdata`. The following command removes the CTP 3.1 version of **mssqlctl**.
+1. If you have any previous releases of the tool installed (prior to CTP 3.2, the tool was called `mssqlctl`), it is important to uninstall it first before installing the latest version of `azdata`. The following command removes the CTP 3.1 version of `mssqlctl`.
 
    ```bash
    pip3 uninstall -r https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt

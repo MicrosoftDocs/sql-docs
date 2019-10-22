@@ -207,9 +207,9 @@ If you are using the same storage account for your ERRORFILE and specifying the 
 
 The COPY command will auto-detect the compression type based on the file extension when this parameter is not specified:
 
-​		 .gz  - **GZIP**
-​		.snappy – **Snappy**
-​		.deflate - **DefaultCodec**
+- .gz  - **GZIP**
+- .snappy – **Snappy**
+- .deflate - **DefaultCodec**
 
  *FIELDQUOTE = 'field_quote'*
 *FIELDQUOTE* applies to CSV and specifies a single character that will be used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") will be used as the quote character as defined in the RFC 4180 standard. Extended ASCII characters are not supported with UTF-8 for FIELDQUOTE.

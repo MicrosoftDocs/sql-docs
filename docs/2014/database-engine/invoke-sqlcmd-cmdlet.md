@@ -24,33 +24,33 @@ manager: craigg
   
  This is an example of calling Invoke-Sqlcmd to execute a simple query, similar to specifying **sqlcmd** with the **-Q** and **-S** options:  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
  This is an example of calling **Invoke-Sqlcmd**, specifying an input file and piping the output to a file This is similar to specifying **sqlcmd** with the **-i** and **-o** options:  
   
-```  
-Invoke-Sqlcmd -InputFile "C:\MyFolder\TestSQLCmd.sql" | Out-File -filePath "C:\MyFolder\TestSQLCmd.rpt"  
+```powershell
+Invoke-Sqlcmd -InputFile "C:\MyFolder\TestSQLCmd.sql" | Out-File -FilePath "C:\MyFolder\TestSQLCmd.rpt"  
 ```  
   
  This is an example of using a Windows PowerShell array to pass multiple **sqlcmd** scripting variables to **Invoke-Sqlcmd**. The "$" characters identifying the **sqlcmd** scripting variables in the SELECT statement have been escaped by using the PowerShell back-tick "`" escape character:  
   
-```  
+```powershell
 $MyArray = "MyVar1 = 'String1'", "MyVar2 = 'String2'"  
 Invoke-Sqlcmd -Query "SELECT `$(MyVar1) AS Var1, `$(MyVar2) AS Var2;" -Variable $MyArray  
 ```  
   
  This is an example of using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider for Windows PowerShell to navigate to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)], and then using the Windows PowerShell **Get-Item** cmdlet to retrieve the SMO Server object for the instance and passing it to **Invoke-Sqlcmd**:  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\MyComputer\MyInstance  
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance (Get-Item .)  
 ```  
   
  The -Query parameter is positional and does not have to be named. If the first string that is passed to **Invoke-Sqlcmd**: is unnamed, it is treated as the -Query parameter.  
   
-```  
+```powershell
 Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
@@ -68,14 +68,14 @@ Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyI
   
  For example, assume that the default database for your Windows account in the default instance of the local computer is master. Then, the following commands would return master:  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL  
 Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"  
 ```  
   
  The following commands would return [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]:  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Person.Person  
 Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"  
 ```  
@@ -91,7 +91,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
   
  **Invoke-Sqlcmd** does not display messages, such as the output of PRINT statements, unless you specify the Windows PowerShell **-Verbose** common parameter. For example:  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
 ```  
   
@@ -144,5 +144,3 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
  [Use the Database Engine cmdlets](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
  [sqlcmd Utility](../tools/sqlcmd-utility.md)   
  [Use the sqlcmd Utility](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
-  
-  

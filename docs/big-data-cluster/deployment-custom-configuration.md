@@ -643,7 +643,7 @@ You can manually edit the `control.json` and add the above section to the `spec`
 Run this command to patch the configuration file:
 
 ```bash
-azdata bdc config patch --config-file control.json --patch-file elasticsearch-patch.json
+azdata bdc config patch --config-file custom-bdc/control.json --patch-file elasticsearch-patch.json
 ```
 
 > [!IMPORTANT]

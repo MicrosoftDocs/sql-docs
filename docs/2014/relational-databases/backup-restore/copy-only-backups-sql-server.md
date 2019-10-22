@@ -57,29 +57,26 @@ manager: craigg
   
 ###  <a name="PowerShellProcedure"></a> Using PowerShell  
   
-1.  Use the `Backup-SqlDatabase` cmdlet with the `-CopyOnly` parameter.  
+Use the `Backup-SqlDatabase` cmdlet with the `-CopyOnly` parameter.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
- **To create a full or log backup**  
+
+### To create a full or log backup
   
 -   [Create a Full Database Backup &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
 -   [Back Up a Transaction Log &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
- **To view copy-only backups**  
+### To view copy-only backups
   
 -   [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)  
   
- **To set up and use the SQL Server PowerShell provider**  
+### To set up and use the SQL Server PowerShell provider
   
 -   [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md)  
-  
 
-  
 ## See Also  
  [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [Copy Databases with Backup and Restore](../databases/copy-databases-with-backup-and-restore.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
-  
-  

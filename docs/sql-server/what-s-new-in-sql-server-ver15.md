@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 This article summarizes the new features and enhancements for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-For more information and known issues, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release notes](sql-server-ver15-release-notes.md).
+For more information and known issues, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release notes](sql-server-version-15-release-notes.md).
 
 For the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], use the [latest tools](https://aka.ms/getazuredatastudio).
 
@@ -247,7 +247,7 @@ This release introduces new features and improvements for performance, resource 
 
 ## Next steps
 
-- See [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release notes](sql-server-ver15-release-notes.md).
+- See [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release notes](sql-server-version-15-release-notes.md).
 - [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Technical white paper](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br>Published September 2018. Applies to Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 for Windows, Linux, and Docker containers.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -167,6 +167,8 @@
         href: big-data-cluster/big-data-cluster-consume-apps.md
     - name: Big Data/Machine Learning
       items:
+      - name: Use Machine Learning Services (Python, R)
+        href: big-data-cluster/machine-learning-services-big-data-cluster.md
       - name: Data wrangling using PROSE Code Accelerator
         href: big-data-cluster/use-prose-for-big-data-automation.md
       - name: Spark machine learning models with MLeap

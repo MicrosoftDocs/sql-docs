@@ -17,6 +17,8 @@ ms.technology: big-data-cluster
 
 This article describes how to install the `azdata` tool for the release candidate on Windows or Linux using `pip`.
 
+For Windows and Linux (Ubuntu distribution), you can install with a [package manager](./deploy-install-azdata-installer.md) for a simpler experience.
+
 ## <a id="prerequisites"></a> Prerequisites
 
 `azdata` is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install `azdata` tool. The instructions below provide examples for Windows and Ubuntu. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).

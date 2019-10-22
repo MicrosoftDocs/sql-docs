@@ -37,22 +37,23 @@ Most existing client tools that target SQL Server can seamlessly target SQL Serv
 
 ## Release history
 
-The following table lists the release history for SQL Server 2019 preview releases.
+The following table lists the release history for SQL Server 2019 releases.
 
 | Release                   | Version       | Release date |
 |---------------------------|---------------|--------------|
-| [Release candidate](#rc)  | 15.0.1900.25  | 2019-8-21    |
+| [GA](#ga)  | 15.x.xxxx.xx  | 2019-11-04    |
+| [Release candidate](#rc)  | 15.0.1900.25  | 2019-08-21    |
 
 ## <a id="cuinstall"></a> How to install updates
 
-If you have configured the preview repository (**mssql-server-preview**), then you will get the latest SQL Server CTP packages when you perform new installations. If you require Docker container images, please see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server/). For more information about repository configuration, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
+If you have configured the CU repository (mssql-server-2019), then you will get the latest CU of SQL Server packages when you perform new installations. If you require Docker container images, please see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server/). For more information about repository configuration, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
 
 If you are updating existing SQL Server packages, run the appropriate update command for each package to get the latest CU. For specific update instructions for each package, see the following installation guides:
 
 - [Install SQL Server package](sql-server-linux-setup.md#upgrade)
 - [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
 - [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
-- [Install SQL Server 2019 preview Machine Learning Services R and Python support on Linux](sql-server-linux-setup-machine-learning.md)
+- [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](sql-server-linux-setup-machine-learning.md)
 - [Install PolyBase package](../relational-databases/polybase/polybase-linux-setup.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 

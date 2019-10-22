@@ -391,7 +391,6 @@ kubectl label node <kubernetesNodeName8> mssql-cluster=bdc mssql-resource=bdc-st
 Then update the cluster deployment configuration files to include the label values. This example assumes that you are customizing configuration files in a `custom-bdc` profile. By default, there are no `nodeLabel` and `clusterLabel` keys in the built-in configurations so you will need to either edit a custom configuration file manually or use the `azdata bdc config add` commands to make the necessary edits.
 
 ```bash
-REM Node affinity
 azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc"
 azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc-shared"
 
@@ -399,6 +398,7 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.master.spec.no
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.compute-0.spec.nodeLabel=bdc-compute-pool"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.data-0.spec.nodeLabel=bdc-compute-pool"
 azdata bdc config add -c custom-bdc/bdc.json-j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
+
 # below can be omitted in which case we will take the node label default from the control.json
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.nmnode-0.spec.nodeLabel=bdc-shared"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.sparkhead.spec.nodeLabel=bdc-shared"

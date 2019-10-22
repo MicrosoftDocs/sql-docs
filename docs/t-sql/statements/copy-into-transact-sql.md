@@ -1,7 +1,7 @@
 ---
 title: "COPY INTO (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 04/30/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
 ms.reviewer: "jrasnick"
@@ -46,7 +46,7 @@ WITH
  [,FIELDTERMINATOR =  ‘field_terminator’]  
  [,ROWTERMINATOR = ‘row_terminator’]
  [,FIRSTROW = first_row]
- [,DATEFORMAT = ‘dateformat’] 
+ [,DATEFORMAT = ‘date_format’] 
  [,ENCODING = {'UTF8'|'UTF16'}] 
  [,IDENTITY_INSERT = {‘ON’ | ‘OFF’}]
 )     

@@ -36,7 +36,6 @@ When you install SQL Server on Linux, you must configure a Microsoft repository.
 |---|---|---|
 | **2019** | **mssql-server-2019** | SQL Server 2019 Cumulative Update (CU) repository. |
 | **2019 GDR** | **mssql-server-2019-gdr** | SQL Server 2019 GDR repository for critical updates only. |
-| **Preview (2019)** | **mssql-server-preview** | SQL Server 2019 preview and RC repository. |
 | **2017** | **mssql-server-2017** | SQL Server 2017 Cumulative Update (CU) repository. |
 | **2017 GDR** | **mssql-server-2017-gdr** | SQL Server 2017 GDR repository for critical updates only. |
 
@@ -139,10 +138,11 @@ If necessary, remove the old repository. Use one of the following commands based
 
 | Repository | Command to remove |
 |---|---|
-| **Preview (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
 | **Preview (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
-| **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
-| **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+| **2019 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2019'` |
+| **2019 GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2019-gdr'`|
+| **2017 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+| **2017 GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
 
 ::: zone-end
 
@@ -152,10 +152,11 @@ If necessary, remove the old repository. Use one of the following commands based
 
 | Repository | Command to remove |
 |---|---|
-| **Preview (2017)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
 | **Preview (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
-| **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
-| **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
+| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019 xenial main'` | 
+| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019-gdr xenial main'` |
+| **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
+| **2017 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
 ::: zone-end
 
@@ -169,7 +170,6 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 |---|---|---|
 | **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo` |
 | **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
-| **Preview (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
 | **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
@@ -183,7 +183,6 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 |---|---|---|
 | **2019 CU** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo` |
 | **2019 GDR** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019-gdr.repo` |
-| **Preview (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
 | **2017 CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
 | **2017 GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
@@ -205,7 +204,6 @@ Configure the new repository to use for SQL Server installations and upgrades.
    |---|---|---|
    | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
    | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |
-   | **Preview (2019)** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
    | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
    | **2017 GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 

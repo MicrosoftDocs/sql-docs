@@ -41,8 +41,8 @@ The following table lists the release history for SQL Server 2019 releases.
 
 | Release                   | Version       | Release date |
 |---------------------------|---------------|--------------|
-| [GA](#ga)  | 15.x.xxxx.xx  | 2019-11-04    |
-| [Release candidate](#rc)  | 15.0.1900.25  | 2019-08-21    |
+| [GA](#ga)                 | 15.0.2000.5  | 2019-11-04    |
+| [Release candidate](#rc)  | 15.0.1900.25  | 2019-08-21   |
 
 ## <a id="cuinstall"></a> How to install updates
 

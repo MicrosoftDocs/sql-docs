@@ -5,7 +5,7 @@ description: Learn how to use the MSSQL Spark Connector in Spark to read and wri
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 08/21/2019
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -44,7 +44,7 @@ The connector uses SQL Server Bulk write APIs. Any bulk write parameters can be 
 
 - A [SQL Server big data cluster](deploy-get-started.md).
 
-- [Azure Data Studio](https://aka.ms/azdata-insiders).
+- [Azure Data Studio](https://aka.ms/getazuredatastudio).
 
 ## Create the target database
 

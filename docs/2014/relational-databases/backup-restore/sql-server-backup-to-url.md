@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Backup to URL | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/25/2016"
+ms.date: 10/18/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: backup-restore
@@ -118,13 +118,13 @@ manager: craigg
 |||||  
 |-|-|-|-|  
 |Backup/Restore Statement|Supported|Exceptions|Comments|  
-|BACKUP|???|BLOCKSIZE, and MAXTRANSFERSIZE are not supported.|Requires WITH CREDENTIAL specified|  
-|RESTORE|???||Requires WITH CREDENTIAL specified|  
-|RESTORE FILELISTONLY|???||Requires WITH CREDENTIAL specified|  
-|RESTORE HEADERONLY|???||Requires WITH CREDENTIAL specified|  
-|RESTORE LABELONLY|???||Requires WITH CREDENTIAL specified|  
-|RESTORE VERIFYONLY|???||Requires WITH CREDENTIAL specified|  
-|RESTORE REWINDONLY|???|||  
+|BACKUP|&#x2713;|BLOCKSIZE, and MAXTRANSFERSIZE are not supported.|Requires WITH CREDENTIAL specified|  
+|RESTORE|&#x2713;||Requires WITH CREDENTIAL specified|  
+|RESTORE FILELISTONLY|&#x2713;||Requires WITH CREDENTIAL specified|  
+|RESTORE HEADERONLY|&#x2713;||Requires WITH CREDENTIAL specified|  
+|RESTORE LABELONLY|&#x2713;||Requires WITH CREDENTIAL specified|  
+|RESTORE VERIFYONLY|&#x2713;||Requires WITH CREDENTIAL specified|  
+|RESTORE REWINDONLY|&#x2713;|||  
   
  For syntax and general information about backup statements, see [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -135,34 +135,34 @@ manager: craigg
 |||||  
 |-|-|-|-|  
 |Argument|Supported|Exception|Comments|  
-|DATABASE|???|||  
-|LOG|???|||  
+|DATABASE|&#x2713;|||  
+|LOG|&#x2713;|||  
 ||  
-|TO (URL)|???|Unlike DISK and TAPE, URL does not support specifying or creating a logical name.|This argument is used to specify the URL path for the backup file.|  
-|MIRROR TO|???|||  
+|TO (URL)|&#x2713;|Unlike DISK and TAPE, URL does not support specifying or creating a logical name.|This argument is used to specify the URL path for the backup file.|  
+|MIRROR TO|&#x2713;|||  
 |**WITH OPTIONS:**||||  
-|CREDENTIAL|???||WITH CREDENTIAL is only supported when using BACKUP TO URL option to back up to the Azure Blob storage service.|  
-|DIFFERENTIAL|???|||  
-|COPY_ONLY|???|||  
-|COMPRESSION&#124;NO_COMPRESSION|???|||  
-|DESCRIPTION|???|||  
-|NAME|???|||  
-|EXPIREDATE &#124; RETAINDAYS|???|||  
-|NOINIT &#124; INIT|???||This option is ignored if used.<br /><br /> Appending to blobs is not possible. To overwrite a backup use the FORMAT argument.|  
-|NOSKIP &#124; SKIP|???|||  
-|NOFORMAT &#124; FORMAT|???||This option is ignored if used.<br /><br /> A backup taken to an existing blob fails unless WITH FORMAT is specified. The existing blob is overwritten when WITH FORMAT is specified.|  
-|MEDIADESCRIPTION|???|||  
-|MEDIANAME|???|||  
-|BLOCKSIZE|???|||  
-|BUFFERCOUNT|???|||  
-|MAXTRANSFERSIZE|???|||  
-|NO_CHECKSUM &#124; CHECKSUM|???|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|???|||  
-|STATS|???|||  
-|REWIND &#124; NOREWIND|???|||  
-|UNLOAD &#124; NOUNLOAD|???|||  
-|NORECOVERY &#124; STANDBY|???|||  
-|NO_TRUNCATE|???|||  
+|CREDENTIAL|&#x2713;||WITH CREDENTIAL is only supported when using BACKUP TO URL option to back up to the Azure Blob storage service.|  
+|DIFFERENTIAL|&#x2713;|||  
+|COPY_ONLY|&#x2713;|||  
+|COMPRESSION&#124;NO_COMPRESSION|&#x2713;|||  
+|DESCRIPTION|&#x2713;|||  
+|NAME|&#x2713;|||  
+|EXPIREDATE &#124; RETAINDAYS|&#x2713;|||  
+|NOINIT &#124; INIT|&#x2713;||This option is ignored if used.<br /><br /> Appending to blobs is not possible. To overwrite a backup use the FORMAT argument.|  
+|NOSKIP &#124; SKIP|&#x2713;|||  
+|NOFORMAT &#124; FORMAT|&#x2713;||This option is ignored if used.<br /><br /> A backup taken to an existing blob fails unless WITH FORMAT is specified. The existing blob is overwritten when WITH FORMAT is specified.|  
+|MEDIADESCRIPTION|&#x2713;|||  
+|MEDIANAME|&#x2713;|||  
+|BLOCKSIZE|&#x2713;|||  
+|BUFFERCOUNT|&#x2713;|||  
+|MAXTRANSFERSIZE|&#x2713;|||  
+|NO_CHECKSUM &#124; CHECKSUM|&#x2713;|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|&#x2713;|||  
+|STATS|&#x2713;|||  
+|REWIND &#124; NOREWIND|&#x2713;|||  
+|UNLOAD &#124; NOUNLOAD|&#x2713;|||  
+|NORECOVERY &#124; STANDBY|&#x2713;|||  
+|NO_TRUNCATE|&#x2713;|||  
   
  For more information about backup arguments, see [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -171,35 +171,35 @@ manager: craigg
 |||||  
 |-|-|-|-|  
 |Argument|Supported|Exceptions|Comments|  
-|DATABASE|???|||  
-|LOG|???|||  
-|FROM (URL)|???||The FROM URL argument is used to specify the URL path for the backup file.|  
+|DATABASE|&#x2713;|||  
+|LOG|&#x2713;|||  
+|FROM (URL)|&#x2713;||The FROM URL argument is used to specify the URL path for the backup file.|  
 |**WITH Options:**||||  
-|CREDENTIAL|???||WITH CREDENTIAL is only supported when using RESTORE FROM URL option to restore from Azure Blob Storage service.|  
-|PARTIAL|???|||  
-|RECOVERY &#124; NORECOVERY &#124; STANDBY|???|||  
-|LOADHISTORY|???|||  
-|MOVE|???|||  
-|REPLACE|???|||  
-|RESTART|???|||  
-|RESTRICTED_USER|???|||  
-|FILE|???|||  
-|PASSWORD|???|||  
-|MEDIANAME|???|||  
-|MEDIAPASSWORD|???|||  
-|BLOCKSIZE|???|||  
-|BUFFERCOUNT|???|||  
-|MAXTRANSFERSIZE|???|||  
-|CHECKSUM &#124; NO_CHECKSUM|???|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|???|||  
-|FILESTREAM|???|||  
-|STATS|???|||  
-|REWIND &#124; NOREWIND|???|||  
-|UNLOAD &#124; NOUNLOAD|???|||  
-|KEEP_REPLICATION|???|||  
-|KEEP_CDC|???|||  
-|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|???|||  
-|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|???|||  
+|CREDENTIAL|&#x2713;||WITH CREDENTIAL is only supported when using RESTORE FROM URL option to restore from Azure Blob Storage service.|  
+|PARTIAL|&#x2713;|||  
+|RECOVERY &#124; NORECOVERY &#124; STANDBY|&#x2713;|||  
+|LOADHISTORY|&#x2713;|||  
+|MOVE|&#x2713;|||  
+|REPLACE|&#x2713;|||  
+|RESTART|&#x2713;|||  
+|RESTRICTED_USER|&#x2713;|||  
+|FILE|&#x2713;|||  
+|PASSWORD|&#x2713;|||  
+|MEDIANAME|&#x2713;|||  
+|MEDIAPASSWORD|&#x2713;|||  
+|BLOCKSIZE|&#x2713;|||  
+|BUFFERCOUNT|&#x2713;|||  
+|MAXTRANSFERSIZE|&#x2713;|||  
+|CHECKSUM &#124; NO_CHECKSUM|&#x2713;|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|&#x2713;|||  
+|FILESTREAM|&#x2713;|||  
+|STATS|&#x2713;|||  
+|REWIND &#124; NOREWIND|&#x2713;|||  
+|UNLOAD &#124; NOUNLOAD|&#x2713;|||  
+|KEEP_REPLICATION|&#x2713;|||  
+|KEEP_CDC|&#x2713;|||  
+|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|&#x2713;|||  
+|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|&#x2713;|||  
   
  For more information about Restore arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   

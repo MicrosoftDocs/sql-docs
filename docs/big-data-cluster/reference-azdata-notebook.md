@@ -5,7 +5,7 @@ description: Reference article for azdata notebook commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/01/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-This article is a reference article for **azdata**. 
+The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
 |     |     |
@@ -51,22 +51,19 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata notebook run
 This command creates a temporary directory and executes the given notebook within it as the working directory.
-
->[!NOTE]
->Verified against azdata v15.0.1900: run command supported for Python 3 notebooks only.
-
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
                     [--output-html]  
                     [--arguments -a]  
                     [--interactive -i]  
-                    [--clear -c]
+                    [--clear -c]  
+                    [--timeout -t]
 ```
 ### Examples
 Run notebook.
@@ -80,13 +77,16 @@ The file path to the notebook to run.
 #### `--output-path`
 Directory path to use for notebook output.  Notebook with output data and any notebook generated files are generated relative to this directory.
 #### `--output-html`
-Optional flag indicating whether to additionally convert the output notebook to HTML format.  Creates a second output file.
+Optional flag indicatingg whether to additionally convert the output notebook to HTML format.  Creates a second output file.
 #### `--arguments -a`
 Optional list of notebook arguments to inject into the notebook execution.  Encoded as a JSON dictionary.  Example: '{"name":"value", "name2":"value2"}'
 #### `--interactive -i`
 Run a notebook in an interactive mode.
 #### `--clear -c`
 In interactive mode clear the console before rendering a cell.
+#### `--timeout -t`
+Seconds to wait for the execution to complete. The value -1 indicates wait forever.
+`600`
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -101,6 +101,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-- For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
-
-- For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).
+For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

@@ -27,9 +27,9 @@ RECONFIGURE WITH OVERRIDE
 GO
 ```
 
-### Enable on Big Data Cluster with Always On Availability Groups
+## Enable on Always On Availability Groups
 
-If you are using [SQL Server Big Data Clusters](../../big-data-cluster/big-data-cluster-overview.md) with [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), you need to perform a few extra steps. 
+If you are using SQL Server Big Data Clusters with [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), you need to perform a few extra steps to enable Machine Learning Services.
 
 1. Connect to the master instance and run this statement:
 
@@ -43,12 +43,18 @@ If you are using [SQL Server Big Data Clusters](../../big-data-cluster/big-data-
 
     ```
     kubectl -n bdc expose pod master-0 --port=1533 --name=mymaster-0 --type=LoadBalancer
-    service/mymaster-0 exposed
 
     kubectl -n bdc expose pod master-1 --port=1533 --name=mymaster-1 --type=LoadBalancer
-    service/mymaster-1 exposed
 
     kubectl -n bdc expose pod master-2 --port=1533 --name=mymaster-2 --type=LoadBalancer
+    ```
+
+    You should see an output similar to this:
+    
+    ```
+    service/mymaster-0 exposed
+    
+    service/mymaster-1 exposed
     ```
 
 1. Connect to each master replica endpoint and enable script execution.
@@ -61,4 +67,11 @@ If you are using [SQL Server Big Data Clusters](../../big-data-cluster/big-data-
     GO
     ```
 
-Once you have configured Language Extensions, you can [register external language](#register_external_language).
+You are now ready to run Python and R scripts on the master instance of your Big Data Cluster.
+
+## Next steps
+
++ [Quickstart: Create and run simple Python scripts with SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-python-create-script.md)
++ [Quickstart: Create and score a predictive model in Python with SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-python-train-score-model.md)
++ [Quickstart: Create and run simple R scripts with SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-r-create-script)
++ [Quickstart: Create and score a predictive model in R with SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-r-train-score-model.md)

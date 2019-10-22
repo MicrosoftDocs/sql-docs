@@ -177,7 +177,7 @@ For step-by-step instructions on how to perform an edition upgrade, see [Upgrade
   
 ## See Also  
 
- [Editions and supported features of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]](../../sql-server/editions-and-components-of-sql-server-version-15.md)
+ [Editions and supported features of [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]](../../sql-server/editions-and-components-of-sql-server-version-15.md)
 
  [Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 

@@ -1,6 +1,26 @@
 {
     "redirections": [
         {
+            "source_path": "docs/sql-server/sql-server-ver15-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-version-15-release-notes.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/reference-bdc-pool-status.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/reference-bdc-pool.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/what-s-new-in-sql-server-ver15-prerelease.md",
+            "redirect_url": "/sql/big-data-cluster/what-s-new-in-sql-server-ver15",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/big-data-cluster/deploy-on-minikube.md",
             "redirect_url": "/sql/big-data-cluster/deploy-get-started",
             "redirect_document_id": false

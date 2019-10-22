@@ -34,7 +34,7 @@
   - name: Release Notes
     items:
     - name: SQL Server 2019
-      href: sql-server/sql-server-ver15-release-notes.md
+      href: sql-server/sql-server-version-15-release-notes.md
     - name: SQL Server 2017
       href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: SQL Server 2016
@@ -123,6 +123,10 @@
       href: big-data-cluster/concept-security.md
   - name: How-to guides
     items:
+    - name: Configuration
+      items:
+      - name: SQL Server master instance
+        href: big-data-cluster/configure-sql-server-master-instance.md
     - name: Data virtualization
       items:
       - name: Relational data
@@ -251,10 +255,6 @@
           href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
         - name: bdc hdfs status
           href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
-        - name: bdc pool
-          href: big-data-cluster/reference-azdata-bdc-pool.md
-        - name: bdc pool status
-          href: big-data-cluster/reference-azdata-bdc-pool-status.md               
         - name: bdc spark
           href: big-data-cluster/reference-azdata-bdc-spark.md        
         - name: bdc spark batch
@@ -4257,6 +4257,8 @@
     items:
     - name: Compatibility Certification
       href: database-engine/install-windows/compatibility-certification.md
+    - name: Supported Version & Edition Upgrades SQL Server 2019
+      href: database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md
     - name: Supported Version & Edition Upgrades SQL Server 2017
       href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Supported Version & Edition Upgrades SQL Server 2016

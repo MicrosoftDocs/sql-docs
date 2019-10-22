@@ -143,10 +143,10 @@ manager: craigg
 ### Example Deleting the DAC but Leaving the Database (PowerShell)  
  The following example deletes a DAC named MyApplication using the `Unmanage()` method to delete the DAC but leave the database intact.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -167,7 +167,7 @@ $dacstore.Unmanage($dacName)
 ### Example Deleting the DAC and Detaching the Database (PowerShell)  
  The following example deletes a DAC named MyApplication using the `Uninstall()` method to delete the DAC and detach the database.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
 $srv = get-item .  
@@ -191,10 +191,10 @@ $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMo
 ### Example Deleting the DAC and Dropping the Database (PowerShell)  
  The following example deletes a DAC named MyApplication using the `Uninstall()` method to delete the DAC and drop the database.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -219,5 +219,3 @@ $dacName  = "MyApplication"
  [Register a Database As a DAC](register-a-database-as-a-dac.md)   
  [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Database Detach and Attach &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  
-  
-  

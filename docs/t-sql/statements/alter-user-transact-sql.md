@@ -1,7 +1,7 @@
 ---
 title: "ALTER USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/01/2019"
+ms.date: "10/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

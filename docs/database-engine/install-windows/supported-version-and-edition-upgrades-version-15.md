@@ -31,7 +31,6 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 - To upgrade to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], you must be running a supported operating system. For more information, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).  
   
 - Upgrade will be blocked if there is a pending restart.  
-  
 - Upgrade will be blocked if the Windows Installer service is not running.  
   
 ## Unsupported Scenarios  
@@ -46,10 +45,10 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
  
 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] supports upgrade from the following versions of SQL Server:
 
-- SQL Server 2012 SP2 or later
-- SQL Server 2014 or later
-- SQL Server 2016 or later
-- SQL Server 2017
+- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 or later
+- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 or later
+- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 13.0.1601.5 or later
+- [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]
 
 The table below lists the supported upgrade scenarios from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)].  
   

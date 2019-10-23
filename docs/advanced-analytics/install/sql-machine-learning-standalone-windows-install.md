@@ -79,14 +79,14 @@ For local installations, you must run Setup as an administrator. If you install 
 
     - R and Python are both selected by default. You can deselect either language, but we recommend that you install at least one of the supported languages.
 
-    ::: moniker-end
-    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-    ![Choose R or Python features](media/2017setup-features-page-mlsvr-rpy.png "Start installation of Machine Learning Server Standalone")
-    ::: moniker-end
-    ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-    ![Choose R or Python features](media/2019setup-features-page-mlsvr-rpy.png "Start installation of Machine Learning Server Standalone")
-    ::: moniker-end
-    ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker-end
+   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ![Choose R or Python features](media/2017setup-features-page-mlsvr-rpy.png "Start installation of Machine Learning Server Standalone")
+   ::: moniker-end
+   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ![Choose R or Python features](media/2019setup-features-page-mlsvr-rpy.png "Start installation of Machine Learning Server Standalone")
+   ::: moniker-end
+   ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
     
     All other options should be ignored. 
     

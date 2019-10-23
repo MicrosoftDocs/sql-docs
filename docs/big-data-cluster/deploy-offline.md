@@ -100,16 +100,18 @@ You can use an automated python script that will automatically pull all required
    **Windows:**
 
    ```PowerShell
-   python deploy-sql-big-data-aks.py
+   python push-bdc-images-to-custom-private-repo.py
    ```
 
    **Linux:**
 
    ```bash
-   sudo python deploy-sql-big-data-aks.py
+   sudo python push-bdc-images-to-custom-private-repo.py
    ```
 
 1. Follow the prompts for entering the Microsoft repository and your private repository information. After the script completes, all required images should be located in your private repository.
+
+1. Follow the instructions [here](deployment-custom-configuration.md#docker) to learn how to customize the `control.json` deployment configuration file to make use of your container registry and repository. Note that you must set `DOCKER_USERNAME` and `DOCKER_PASSWORD` environment variables before deployment to enable access to your private repository.
 
 ## Install tools offline
 

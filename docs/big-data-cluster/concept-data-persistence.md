@@ -78,12 +78,12 @@ AKS comes with [two built-in storage classes](/azure/aks/azure-disks-dynamic-pv/
 > [!WARNING]
 > Persistent volumes created with the built-in storage classes `default` and `managed-premium` have a reclaim policy of *Delete*. So at the time the you delete the SQL Server big data cluster, persistent volume claims get deleted and then persistent volumes as well. You can create custom storage classes using `azure-disk` provisioner with a `Retain` reclaim policy as shown in [this](/azure/aks/concepts-storage/#storage-classes) article.
 
-## `kubeadm` storage classes
+## Storage classes for `kubeadm` clusters 
 
-`kubeadm` does not come with a built-in storage class. You must create your own storage classes and persistent volumes using local storage or your preferred provisioner, such as [Rook](https://github.com/rook/rook). In that case, you would set the `className` to the storage class you configured. 
+Kubernetes clusters deployed using `kubeadm` do not have a built-in storage class. You must create your own storage classes and persistent volumes using local storage or your preferred provisioner, such as [Rook](https://github.com/rook/rook). In that case, you would set the `className` to the storage class you configured. 
 
 > [!NOTE]
->  In the built in deployment configuration file for `kubeadm kubeadm-dev-test` there is no storage class name specified for the data and log storage. Before deployment, you must customize the configuration file and set the value for className otherwise the pre-deployment validations will fail. Deployment also has a validation step that checks for the existence of the storage class, but not for the necessary persistent volumes. You must ensure you create enough volumes depending on the scale of your cluster. In CTP 3.1, for the default cluster size you must create at least 23 volumes. [Here](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) is an example on how to create persistent volumes using local provisioner.
+>  In the built in deployment configuration files for kubeadm (`kubeadm-dev-test` or `kubeadm-prod`) there is no storage class name specified for the data and log storage. Before deployment, you must customize the configuration file and set the value for className otherwise the pre-deployment validations will fail. Deployment also has a validation step that checks for the existence of the storage class, but not for the necessary persistent volumes. You must ensure you create enough volumes depending on the scale of your cluster. For the default minimum cluster size (default scale, no high availability) you must create at least 24 persistent volumes. [Here](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) is an example on how to create persistent volumes using local provisioner.
 
 
 ## Customize storage configurations for each pool

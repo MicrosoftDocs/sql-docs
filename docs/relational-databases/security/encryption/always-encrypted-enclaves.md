@@ -36,6 +36,8 @@ When parsing an application's query, the SQL Server Engine determines if the que
 
 During query processing, the data or the column encryption keys are not exposed in plaintext in the SQL Server Engine outside of the secure enclave. The SQL Server Engine delegates cryptographic operations and computations on encrypted columns to the secure enclave. If needed, the secure enclave decrypts the query parameters and/or the data stored in encrypted columns and performs the requested operations.
 
+In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
+
 ## Why use Always Encrypted with secure enclaves?
 
 With secure enclaves, Always Encrypted protects the confidentiality of sensitive data while providing the following benefits:
@@ -47,7 +49,6 @@ With secure enclaves, Always Encrypted protects the confidentiality of sensitive
 > [!IMPORTANT]
 > In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], rich computations are pending several performance optimizations and error-handling enhancements, and are currently disabled by default. To enable rich computations, see  [Enable rich computations](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
 
 ## Secure Enclave Attestation
 

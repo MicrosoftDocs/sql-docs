@@ -1,5 +1,5 @@
 ---
-title: "Editions and supported features of SQL Server 2017 ~ Linux"
+title: "Editions and supported features of SQL Server 2019 - Linux"
 ms.date: 10/23/2019
 ms.prod: sql
 ms.technology: linux
@@ -21,27 +21,27 @@ helpviewer_keywords:
   - "installing SQL Server, editions"
   - "editions [SQL Server], about edition options"
   - "Setup [SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: mikeray
 ---
-# Editions and supported features of SQL Server 2017 on Linux
+# Editions and supported features of SQL Server 2019 on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article provides details of features supported by the various editions of SQL Server 2017 on Linux. For editions and supported features of SQL Server on Windows, see [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
+This article provides details of features supported by the various editions of SQL Server 2019 on Linux. For editions and supported features of SQL Server on Windows, see [SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 For the latest release notes and what's new information, see the following:
-- [SQL Server 2017 on Linux release notes](sql-server-linux-release-notes.md)
-- [What's new in SQL Server 2017 on Linux](sql-server-linux-whats-new.md)
+- [SQL Server 2019 on Linux release notes](sql-server-linux-release-notes-2019.md)
+- [What's new in SQL Server 2019 on Linux](sql-server-linux-whats-new-2019.md)
 
 For a list of SQL Server features not available on Linux, see [Unsupported features and services](#Unsupported).
 
 ### Try SQL Server!    
     
-[Download SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
+[Download SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
 
 ## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] editions  
  The following table describes the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
@@ -60,7 +60,7 @@ You can install just the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
   
 ## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components  
 
-SQL Server 2017 on Linux supports the SQL Server database engine. The following table describes the features in the database engine.   
+SQL Server 2019 on Linux supports the SQL Server database engine. The following table describes the features in the database engine.   
   
 |Server components|Description|  
 |-----------------------|-----------------|  
@@ -203,9 +203,10 @@ For info about the Integration Services (SSIS) features supported by the edition
 |Planar and geodetic datatypes|Yes|Yes|Yes|Yes| 
 |Advanced spatial libraries|Yes|Yes|Yes|Yes|   
 |Import/export of industry-standard spatial data formats|Yes|Yes|Yes|Yes|   
+
 ## <a name="Unsupported"></a> Unsupported features & services
 
-The following features and services are not available SQL Server 2017 on Linux. The support of these features will be increasingly enabled over time.
+The following features and services are not available SQL Server 2019 on Linux. The support of these features will be increasingly enabled over time.
 
 | Area | Unsupported feature or service |
 |-----|-----|
@@ -239,9 +240,12 @@ The following features and services are not available SQL Server 2017 on Linux. 
 | &nbsp; | Master Data Services |
   
 ## Next steps
+ [Editions and supported features for SQL Server 2017 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [Editions and supported features for SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Editions and supported features for SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Editions and supported features for SQL Server 2016 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
  [Editions and supported features for SQL Server 2014 - Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  [Product Specifications for SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
+
+

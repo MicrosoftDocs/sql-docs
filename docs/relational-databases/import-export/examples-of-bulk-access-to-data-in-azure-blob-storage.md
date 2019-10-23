@@ -1,7 +1,7 @@
 ---
 title: "Examples of Bulk Access to Data in Azure Blob Storage | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/30/2019"
+ms.date: "10/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -47,14 +47,14 @@ SECRET = 'sv=2018-03-28&ss=b&srt=sco&sp=rwdlac&se=2019-08-31T02:25:19Z&st=2019-0
 
 ## Accessing data in a CSV file referencing an Azure blob storage location
 
-The following example uses an external data source pointing to an Azure storage account, named `newinvoices`.
+The following example uses an external data source pointing to an Azure storage account, named `MyAzureInvoices`.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH (
         TYPE = BLOB_STORAGE,
         LOCATION = 'https://newinvoices.blob.core.windows.net',
-        CREDENTIAL = 'UploadInvoices';
+        CREDENTIAL = UploadInvoices
     );
 ```
 
@@ -64,7 +64,10 @@ Then the `OPENROWSET` statement adds the container name (`week3`) to the file de
 SELECT * FROM OPENROWSET(
    BULK 'week3/inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
-   FORMAT = 'CSV') AS DataFile;
+   FORMAT = 'CSV',
+   FORMATFILE='invoices.fmt',
+   FORMATFILE_DATA_SOURCE = 'MyAzureInvoices'
+   ) AS DataFile;   
 ```
 
 Using `BULK INSERT`, use the container and file description:
@@ -95,7 +98,10 @@ Then the `OPENROWSET` statement does not include the container name in the file 
 SELECT * FROM OPENROWSET(
    BULK 'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoicesContainer',
-   FORMAT = 'CSV') AS DataFile;
+   FORMAT = 'CSV',
+   FORMATFILE='invoices.fmt',
+   FORMATFILE_DATA_SOURCE = 'MyAzureInvoices'
+   ) AS DataFile;
 ```
 
 Using `BULK INSERT`, do not use the container name in the file description:

@@ -36,15 +36,11 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 SSMS is free!
 
-## Download SSMS 18.3.1
-
-**SSMS 18.3.1 is now available, and is the latest general availability (GA) version of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
-
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
+## [Download SSMS](https://aka.ms/ssmsfullsetup)
 
 SSMS 18.3.1 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.3.1 upgrades it to 18.3.1 If you have an older *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.3.1.
 
-**Version Information**
+**Version information**
 
 - Release number: 18.3.1  
 - Build number: 15.0.18183.0  
@@ -55,6 +51,9 @@ If you have comments or suggestions, or you want to report issues, the best way 
 The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions so both versions are available for use.
 
 If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**
+
+> [!Note]
+> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit this page in [English](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15). You can download different languages from the English version site by selecting [available languages](#available-languages-ssms-1831).
 
 ## Available languages (SSMS 18.3.1)
 
@@ -70,9 +69,9 @@ SQL Server Management Studio 18.3.1:
 
 | New item | Details |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Data Classification | Add Data Classification information to column properties UI (*Information Type*, *Information Type Id*, *Sensitivity Label*, and *Sensitivity Label Id* are not exposed in the SSMS UI). |
-| Intellisense/Editor | Updated support for features recently added to SQL Server 2019 (e.g. "ALTER SERVER CONFIGURATION"). |
-| Integration Services | Add a new selection menu itemr `Tools > Migrate to Azure > Configure Azure-enabled DTExec` that will invoke SSIS package executions on Azure-SSIS Integration Runtime as Execute SSIS Package activities in ADF pipelines. |
+| Data Classification | Add Data Classification information to column properties UI (*Information Type*, *Information Type ID*, *Sensitivity Label*, and *Sensitivity Label ID* aren't exposed in the SSMS UI). |
+| Intellisense/Editor | Updated support for features recently added to SQL Server 2019 (for example "ALTER SERVER CONFIGURATION"). |
+| Integration Services | Add a new selection menu item `Tools > Migrate to Azure > Configure Azure-enabled DTExec` that invokes Integration services (SSIS) package executions on Azure-SSIS Integration Runtime as Execute SSIS Package activities in ADF pipelines. |
 | SMO/Scripting | Added support for Support scripting of Azure SQL DW unique constraint. |
 | SMO/Scripting | Data Classification  - Added support for SQL version 10 (SQL 2008) and higher.  - Added new sensitivity attribute 'rank' for SQL version 15 (SQL 2019) and higher and Azure SQL DB. |
 

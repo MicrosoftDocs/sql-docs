@@ -5,7 +5,7 @@ description: This article describes the controller of a [!INCLUDE[big-data-clust
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -49,7 +49,7 @@ The controller and the Kubernetes objects (stateful sets, pods, secrets, etc.) c
 
 All communication to the controller service is conducted via a REST API over HTTPS. A self-signed certificate will be automatically generated for you at bootstrap time. 
 
-Authentication to the controller service endpoint is based on username and password. These credentials are provisioned at cluster bootstrap time using the input for environment variables `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD`.
+Authentication to the controller service endpoint is either using an Active Directory identity or based on username and password. These credentials are provisioned at cluster bootstrap time using the input for environment variables `AZDATA_USERNAME` and `AZDATA_PASSWORD`.
 
 > [!NOTE]
 > You must provide a password that is in compliance with [SQL Server password complexity requirements](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017).

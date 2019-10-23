@@ -100,8 +100,8 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
  ```
---------  ----------
-123.45    100.00
+----------  ----------
+123.4500    100.00
 ```
   
 ### C. Using ROUND to truncate  

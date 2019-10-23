@@ -69,7 +69,7 @@ sp_OAMethod objecttoken , methodname
  Is a placeholder indicating that multiple parameters can be specified.  
   
 > [!NOTE]
->  *@parametername* can be a named parameter because it is part of the specified method and is passed through to the object. The other parameters for this stored procedure are specified by position, not name.  
+>  *\@parametername* can be a named parameter because it is part of the specified method and is passed through to the object. The other parameters for this stored procedure are specified by position, not name.  
   
 ## Return Code Values  
  0 (success) or a nonzero number (failure) that is the integer value of the HRESULT returned by the OLE Automation object.  

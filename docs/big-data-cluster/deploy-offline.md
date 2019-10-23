@@ -5,7 +5,7 @@ description: Learn how to perform an offline deployment of a SQL Server big data
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/28/2019
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -28,7 +28,7 @@ The following steps describe how to pull the big data cluster container images f
 > [!TIP]
 > The following steps explain the process. However, to simplify the task, you can use the [automated script](#automated) instead of manually running these commands.
 
-1. Pull the big data cluster container images by repeating the following command. Replace `<SOURCE_IMAGE_NAME>` with each [image name](#images). Replace `<SOURCE_DOCKER_TAG>` with the tag for the big data cluster release, such as **2019-RC1-ubuntu**.  
+1. Pull the big data cluster container images by repeating the following command. Replace `<SOURCE_IMAGE_NAME>` with each [image name](#images). Replace `<SOURCE_DOCKER_TAG>` with the tag for the big data cluster release, such as **2019-GDR1-ubuntu-1604**.  
 
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -76,7 +76,8 @@ The following big data cluster container images are required for an offline inst
 - **mssql-server**
 - **mssql-server-controller**
 - **mssql-server-data**
-- **mssql-server-ha**
+- **mssql-ha-operator**
+- **mssql-ha-supervisor**
 - **mssql-service-proxy**
 - **mssql-ssis-app-runtime**
 

@@ -1,6 +1,31 @@
 {
     "redirections": [
         {
+            "source_path": "docs/sql-server/sql-server-ver15-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-version-15-release-notes.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/reference-bdc-pool-status.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/reference-bdc-pool.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/what-s-new-in-sql-server-ver15-prerelease.md",
+            "redirect_url": "/sql/big-data-cluster/what-s-new-in-sql-server-ver15",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/deploy-on-minikube.md",
+            "redirect_url": "/sql/big-data-cluster/deploy-get-started",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/big-data-cluster/reference-azdata-control.md",
             "redirect_url": "/sql/big-data-cluster/reference-azdata",
             "redirect_document_id": false
@@ -8,11 +33,6 @@
         {
             "source_path": "docs/database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md",
             "redirect_url": "/sql/database-engine/discontinued-database-engine-functionality-in-sql-server",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/big-data-cluster/deploy-install-azdata-installer.md",
-            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
             "redirect_document_id": false
         },
         {
@@ -198,6 +218,11 @@
         {
             "source_path": "docs/relational-databases/track-changes/known-issues-resolutions-with-cdc-for-oracle-attunity.md",
             "redirect_url": "/sql/integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/replication/configure-iis-for-web-synchronization.md",
+            "redirect_url": "/sql/relational-databases/replication/configure-iis-7-for-web-synchronization", 
             "redirect_document_id": false
         },
         {
@@ -14064,6 +14089,11 @@
             "source_path": "docs/relational-databases/indexes/columnstore-indexes-defragmentation.md",
             "redirect_url": "/sql/relational-databases/indexes/reorganize-and-rebuild-indexes",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-develop-use-vscode.md",
+            "redirect_url": "/sql/visual-studio-code/sql-server-develop-use-vscode",
+            "redirect_document_id": true
         }
     ]
 }

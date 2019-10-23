@@ -188,11 +188,21 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 ### Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 ```
+
+CREATE CLUSTERED COLUMNSTORE INDEX INDEX index_name
+    ON [ database_name . [ schema ] . | schema . ] table_name
+    [ORDER (column[,...n])]
+    [WITH ( DROP_EXISTING = { ON | OFF } )]
+[;]
+
+
 CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
     ON [ database_name . [ schema ] . | schema . ] table_name
         ( { column [ ASC | DESC ] } [ ,...n ] )
     WITH ( DROP_EXISTING = { ON | OFF } )
 [;]
+
+
 ```
 
 ## Arguments
@@ -1149,6 +1159,24 @@ The following example creates a nonclustered index on the `VendorID` column of t
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
   ON Purchasing..ProductVendor (VendorID);
+```
+### Q. Create an ordered clustered index on a table  
+The following example creates an ordered clustered index on the `c1` and `c2` columns of the `T1` table in the `MyDB` database.
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX MyOrderedCCI ON MyDB.dbo.T1 
+ORDER (c1, c2);
+
+```
+
+### R. Convert a CCI to an ordered clustered index on a table  
+The following example convert the existing clustered columnstore index to an ordered clustered columnstore index called `MyOrderedCCI` on the `c1` and `c2` columns of the `T2` table in the `MyDB` database.
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX MyOrderedCCI ON MyDB.dbo.T2
+ORDER (c1, c2)
+WITH (DROP_EXISTING = ON);
+
 ```
 
 ## See Also

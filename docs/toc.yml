@@ -8,7 +8,7 @@
 
 - name: Overview
   items:
-  - name: New with SQL Server
+  - name: What's New
     items:
     - name: SQL Server 2019
       href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -25,6 +25,8 @@
       href: database-engine/whats-new-in-sql-server-2016.md
   - name: Editions & Features
     items:
+    - name: SQL Server 2019
+      href: sql-server/editions-and-components-of-sql-server-version-15.md
     - name: SQL Server 2017
       href: sql-server/editions-and-components-of-sql-server-2017.md
     - name: SQL Server 2016
@@ -32,7 +34,7 @@
   - name: Release Notes
     items:
     - name: SQL Server 2019
-      href: sql-server/sql-server-ver15-release-notes.md
+      href: sql-server/sql-server-version-15-release-notes.md
     - name: SQL Server 2017
       href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: SQL Server 2016
@@ -67,6 +69,8 @@
         href: big-data-cluster/deploy-big-data-tools.md
       - name: Install azdata
         items:
+        - name: With Windows Installer
+          href: big-data-cluster/deploy-install-azdata-installer.md
         - name: With Linux package manager
           href: big-data-cluster/deploy-install-azdata-linux-package.md
         - name: With pip
@@ -84,15 +88,17 @@
       - name: Offline deployments
         href: big-data-cluster/deploy-offline.md
       - name: Deploy with high availability
-        href: big-data-cluster/deployment-high-availability.md
+        items:
+        - name: Master instance
+          href: big-data-cluster/deployment-high-availability.md
+        - name: HDFS node name and Spark
+          href: big-data-cluster/deployment-high-availability-hdfs-spark.md
       - name: Kubernetes clusters
         items:
         - name: Azure Kubernetes Service
           href: big-data-cluster/deploy-on-aks.md
         - name: Kubeadm
           href: big-data-cluster/deploy-with-kubeadm.md
-        - name: Minikube
-          href: big-data-cluster/deploy-on-minikube.md
       - name: Deployment scripts
         items:
         - name: AKS python script
@@ -119,6 +125,10 @@
       href: big-data-cluster/concept-security.md
   - name: How-to guides
     items:
+    - name: Configuration
+      items:
+      - name: SQL Server master instance
+        href: big-data-cluster/configure-sql-server-master-instance.md
     - name: Data virtualization
       items:
       - name: Relational data
@@ -247,10 +257,6 @@
           href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
         - name: bdc hdfs status
           href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
-        - name: bdc pool
-          href: big-data-cluster/reference-azdata-bdc-pool.md
-        - name: bdc pool status
-          href: big-data-cluster/reference-azdata-bdc-pool-status.md               
         - name: bdc spark
           href: big-data-cluster/reference-azdata-bdc-spark.md        
         - name: bdc spark batch
@@ -4170,7 +4176,11 @@
     href: sql-server/install/planning-a-sql-server-installation.md
     items:
     - name: Hardware & Software Requirements
-      href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
+      items:
+      - name: SQL Server 2019
+        href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
+      - name: SQL Server 2017 & prior
+        href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
     - name: Security Considerations
       href: sql-server/install/security-considerations-for-a-sql-server-installation.md
     - name: Network Protocols & Network Libraries
@@ -4249,6 +4259,8 @@
     items:
     - name: Compatibility Certification
       href: database-engine/install-windows/compatibility-certification.md
+    - name: Supported Version & Edition Upgrades SQL Server 2019
+      href: database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md
     - name: Supported Version & Edition Upgrades SQL Server 2017
       href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Supported Version & Edition Upgrades SQL Server 2016
@@ -4288,6 +4300,8 @@
         href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
       - name: Change the Database Compatibility Mode with Query Tuning Assistant
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
+      - name: Latest updates for SQL Server
+        href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
   - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:
@@ -5066,10 +5080,6 @@
           href: relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
         - name: Define a logical record relationship
           href: relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
-        - name: Configure web synchronization
-          href: relational-databases/replication/configure-web-synchronization.md
-        - name: Configure IIS for Web Synchronization
-          href: relational-databases/replication/configure-iis-for-web-synchronization.md
         - name: Configure IIS 7 for Web Synchronization
           href: relational-databases/replication/configure-iis-7-for-web-synchronization.md
         - name: Resolve data conflicts
@@ -8352,25 +8362,27 @@
     - name: Extensions
       href: azure-data-studio/extensions.md
       items:
-      - name: PostgreSQL extension (preview)
+      - name: PostgreSQL extension
         href: azure-data-studio/postgres-extension.md
-      - name: SQL Server 2019 (preview)
+      - name: SQL Server 2019
         href: azure-data-studio/sql-server-2019-extension.md
-      - name: SQL Server Agent (preview)
+      - name: SQL Server Agent
         href: azure-data-studio/sql-server-agent-extension.md
-      - name: SQL Server Central Management Servers extension (preview)
+      - name: SQL Server Central Management Servers extension
         href: azure-data-studio/sql-server-cms-extension.md        
-      - name: SQL Server dacpac extension (preview)
+      - name: SQL Server dacpac extension
         href: azure-data-studio/sql-server-dacpac-extension.md
-      - name: SQL Server Import (preview)
+      - name: SQL Server Import
         href: azure-data-studio/sql-server-import-extension.md
-      - name: SQL Server Profiler (preview)
+      - name: SQL Server Profiler
         href: azure-data-studio/sql-server-profiler-extension.md
-      - name: Schema Compare extension (preview)
+      - name: Schema Compare extension
         href: azure-data-studio/schema-compare-extension.md        
       - name: PowerShell extension
         href: azure-data-studio/powershell-extension.md        
-      - name: SandDance extension (preview)
+      - name: Managed Instance extension
+        href: azure-data-studio/azure-sql-managed-instance-extension.md        
+      - name: SandDance extension
         href: azure-data-studio/sanddance-extension.md
     - name: Extension Authoring
       items:
@@ -10295,7 +10307,7 @@
       items:
       - name: SQL Server 2017
         href: linux/sql-server-linux-release-notes.md
-      - name: SQL Server 2019 preview
+      - name: SQL Server 2019
         href: linux/sql-server-linux-release-notes-2019.md
     - name: What's new?
       href: linux/sql-server-linux-whats-new.md

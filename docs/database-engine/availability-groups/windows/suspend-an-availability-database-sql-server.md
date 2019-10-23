@@ -94,9 +94,9 @@ ms.author: mathoma
   
 1.  Connect to the server instance that hosts the replica whose database you want to suspend. For more information, see [Prerequisites](#Prerequisites), earlier in this topic.  
   
-2.  Suspend the database by using the following [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)statement:  
+2.  Suspend the database by using the following [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) statement:  
   
-     ALTER DATABASE *database_name* SET HADR SUSPEND  
+     ALTER DATABASE *database_name* SET HADR SUSPEND;
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To suspend a database**  

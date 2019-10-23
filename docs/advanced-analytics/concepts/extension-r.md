@@ -52,8 +52,9 @@ R code that is run from "inside" SQL Server is executed by calling a stored proc
 
 ![rsql_indb780-01](../r/media/script_in-db-r.png)
 
-1. A request for the R runtime is indicated by the parameter _@language='R'_ passed to the stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). SQL Server sends this request to the Launchpad service.
-2. The Launchpad service starts the appropriate launcher; in this case, RLauncher.
+1. A request for the R runtime is indicated by the parameter _@language='R'_ passed to the stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). SQL Server sends this request to the launchpad service.
+In Linux, SQL uses a **launchpadd** service to communicate with a separate launchpad process for each user. See the [Extensibility architecture diagram](extensibility-framework.md#architecture-diagram) for details.
+2. The launchpad service starts the appropriate launcher; in this case, RLauncher.
 3. RLauncher starts the external R process.
 4. BxlServer coordinates with the R runtime to manage exchanges of data with SQL Server and storage of working results.
 5. SQL Satellite manages communications about related tasks and processes with SQL Server.
@@ -70,7 +71,7 @@ When connecting from a remote data science client that supports Microsoft R, you
 2. BxlServer is provided with Microsoft R and runs in a separate process from the R runtime.
 3. BxlServer determines the connection target and initiates a connection using ODBC, passing credentials supplied as part of the connection string in the R data source object.
 4. BxlServer opens a connection to the SQL Server instance.
-5. For an R call, the Launchpad service is invoked, which is turn starts the appropriate launcher, RLauncher. Thereafter, processing of R code is similar to the process for running R code from T-SQL.
+5. For an R call, the launchpad service is invoked, which is turn starts the appropriate launcher, RLauncher. Thereafter, processing of R code is similar to the process for running R code from T-SQL.
 6. RLauncher makes a call to the instance of the R runtime that is installed on the SQL Server computer.
 7. Results are returned to BxlServer.
 8. SQL Satellite manages communication with SQL Server and cleanup of related job objects.

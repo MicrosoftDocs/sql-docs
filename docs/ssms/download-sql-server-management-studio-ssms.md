@@ -53,9 +53,9 @@ The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earl
 If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**
 
 > [!Note]
-> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit this page in [English](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15). You can download different languages from the English version site by selecting [available languages](#available-languages-ssms-1831).
+> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit this page in [English](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15). You can download different languages from the English version site by selecting [available languages](#available-languages).
 
-## Available languages (SSMS 18.4)
+## Available languages
 
 This release of SSMS can be installed in the following languages:
 
@@ -69,12 +69,11 @@ SQL Server Management Studio 18.4:
 
 | New item | Details |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Data Classification | Add Data Classification information to column properties UI (*Information Type*, *Information Type ID*, *Sensitivity Label*, and *Sensitivity Label ID* aren't exposed in the SSMS UI). |
-| Intellisense/Editor | Updated support for features recently added to SQL Server 2019 (for example "ALTER SERVER CONFIGURATION"). |
-| Integration Services | Add a new selection menu item `Tools > Migrate to Azure > Configure Azure-enabled DTExec` that invokes Integration services (SSIS) package executions on Azure-SSIS Integration Runtime as Execute SSIS Package activities in ADF pipelines. |
-| SMO/Scripting | Added support for Support scripting of Azure SQL DW unique constraint. |
-| SMO/Scripting | Data Classification  - Added support for SQL version 10 (SQL 2008) and higher.  - Added new sensitivity attribute 'rank' for SQL version 15 (SQL 2019) and higher and Azure SQL DB. |
-
+| Data Classification | Added support for custom information protection policy for data classification. |
+| Query Store | Added the *Max Plan per query* value in the dialog properties. |
+| Query Store | Added support for the new Custom Capture Policies. |
+| SMO/Scripting | Support Script of materialized view in SQL DW. |
+| SMO/Scripting | Added support for *SQL On Demand*. |
 For details about what's new in this release, see [the SSMS release notes](release-notes-ssms.md).
 
 ## Supported SQL offerings (SSMS 18.4)

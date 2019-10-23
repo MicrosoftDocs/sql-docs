@@ -52,7 +52,9 @@ In addition to above, deploying SQL Server 2019 big data cluster also requires:
 :::image type="content" source="media/deploy-notebooks/deploy-notebooks2.png" alt-text="deploy-notebooks2.png":::
 
 Select the target configuration template from the available templates. The settings of the deployment profile can be customized in subsequent steps.
-Note: The available profiles are filtered depending on the type of deployment target chosen in the previous dialog.
+
+> [!NOTE]
+> The available profiles are filtered depending on the type of deployment target chosen in the previous dialog.
 
 ## Set Azure settings
 
@@ -85,7 +87,7 @@ If the deployment target is an existing Kubernetes cluster, the wizard prompts f
 
 This screen has inputs for various settings such as scale, endpoints, storage, and other advanced storage settings. Enter the appropriate values and select **Next**.
 
-### Scale Settings
+### Scale settings
 
 - Enter the number of instances of each of the components in the big data cluster.
 - Spark Instance can be included along with HDFS in the storage pool or on its own in the Spark pool.
@@ -93,13 +95,13 @@ This screen has inputs for various settings such as scale, endpoints, storage, a
 
 :::image type="content" source="media/deploy-notebooks/deploy-notebooks8.png" alt-text="deploy-notebooks8.png":::
 
-### Endpoint Settings
+### Endpoint settings
 
 The default endpoints have been pre-filled. However, they can be changed as appropriate. More on endpoints.
 
 :::image type="content" source="media/deploy-notebooks/deploy-notebooks9.png" alt-text="deploy-notebooks9.png":::
 
-### Storage Settings
+### Storage settings
 
 :::image type="content" source="media/deploy-notebooks/deploy-notebooks10.png" alt-text="deploy-notebooks10.png":::
 

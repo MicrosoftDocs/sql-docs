@@ -25,31 +25,95 @@ You can use notebooks to deploy big data clusters for [!INCLUDE[sql-server-2019]
 
 Following prerequisites are required to be able to launch the notebook:
 
-* Latest version of [Azure Data Studio Insiders build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master) installed
-* [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] extension installed in Azure Data Studio
+- Latest version of Azure Data Studio installed
+- SQL Server 2019 (15.x) extension installed in Azure Data Studio
 
 In addition to above, deploying SQL Server 2019 big data cluster also requires:
 
-* [azdata](deploy-install-azdata.md)
-* [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
-* [Azure CLI](/cli/azure/install-azure-cli)
+- `azdata`
+- `kubectl`
+- Azure CLI
 
 ## Launch the notebook
 
 1. Launch the Azure Data Studio Insiders.
+2. On the **Connections** tab, click **...** and select **Deploy SQL Server**
 
-1. On the **Connections** tab, click **...** and select **Deploy SQL Server big data cluster...**.
+   :::image type="content" source="media/deploy-notebooks/deploy-notebooks1.png" alt-text="deploy-notebooks1":::
 
-   ![AI and ML](media/deploy-notebooks/deploy-notebooks-1.png)
+3. From the deployment options, choose **SQL Server Big Data Cluster**
+4. From the **Deployment Target**, under **Options**, select either **New Azure Kubernetes Cluster** or **Existing Azure Kubernetes Service cluster**.
+5. Accept the privacy and license terms
+   This dialog also checks whether the required tools for the chosen type of SQL deployment on the host. The **Select** button is not enabled until the tools check is successful.  
+7. Click **Select** button. This will launch the deployment experience.
 
-1. From the **Deployment Target**, under **Options**, select either **New Azure Kubernetes Cluster** or **Existing Azure Kubernetes Service cluster**.
+## Set deployment configuration template
 
-1. Click **Select** button.
+:::image type="content" source="media/deploy-notebooks/deploy-notebooks2.png" alt-text="deploy-notebooks2.png":::
 
-1. This action launches a dialog to collect the user input, provide the required information and review the default values.
+Select the target configuration template from the available templates. The settings of the deployment profile can be customized in subsequent steps.
+Note: The available profiles are filtered depending on the type of deployment target chosen in the previous dialog.
 
-1. Click **Open Notebook** button.
-This action launches the appropriate notebook. To complete the deployment, follow the instructions in the notebook to deploy a big data cluster for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on an existing or new Azure Kubernetes Service cluster.
+## Set Azure settings
+
+If the deployment target is a new Azure Kubernetes Service (AKS), additional information such as Azure Subscription Id, resource group, AKS cluster name, VM count, size etc. will be required to create the AKS cluster.
+
+:::image type="content" source="media/deploy-notebooks/deploy-notebooks3.png" alt-text="deploy-notebooks3.png":::
+
+If the deployment target is an existing Kubernetes cluster, the wizard prompts for the path to the kube-config file to import the Kubernetes cluster settings. Ensure the appropriate cluster context is selected where the SQL Server 2019 Big Data Cluster will be deployed.
+
+:::image type="content" source="media/deploy-notebooks/deploy-notebooks4.png" alt-text="deploy-notebooks4.png":::
+
+## Set cluster, Docker and AD settings
+
+1. Enter the cluster name for the SQL Server 2019 big data cluster (BDC), admin username and password.
+
+   > [!NOTE]
+   > The same account will be used for controller and SQL Server.
+
+   :::image type="content" source="media/deploy-notebooks/deploy-notebooks5.png" alt-text="deploy-notebooks5.png":::
+
+1. Enter the Docker settings as appropriate
+
+   :::image type="content" source="media/deploy-notebooks/deploy-notebooks6.png" alt-text="deploy-notebooks6.png":::
+
+1. If AD authentication is available, enter the AD settings
+
+   :::image type="content" source="media/deploy-notebooks/deploy-notebooks7.png" alt-text="deploy-notebooks7.png":::
+
+## Set service settings
+
+This screen has inputs for various settings such as Scale, Endpoints, Storage and other Advanced storage settings. Please enter the appropriate values and select **Next**.
+
+### Scale Settings
+
+- Enter the number of instances of each of the components in the big data cluster.
+- Spark Instance can be included along with HDFS in the storage pool or on its own in the Spark pool.
+- For additional information on each of these components refer Master instance, Data Pool, Storage pool, Compute pool.
+
+:::image type="content" source="media/deploy-notebooks/deploy-notebooks8.png" alt-text="deploy-notebooks8.png":::
+
+### Endpoint Settings
+
+The default endpoints have been pre-filled. However, they can be changed as appropriate. More on endpoints.
+
+:::image type="content" source="media/deploy-notebooks/deploy-notebooks9.png" alt-text="deploy-notebooks9.png":::
+
+### Storage Settings
+
+:::image type="content" source="media/deploy-notebooks/deploy-notebooks10.png" alt-text="deploy-notebooks10.png":::
+
+The storage settings include storage class and claim size for data and logs. The settings can be applied across storage, data and SQL Server master pool.
+
+### Advanced Storage settings
+
+:::image type="content" source="media/deploy-notebooks/deploy-notebooks11.png" alt-text="deploy-notebooks11.png":::
+
+## Review and save or deploy
+
+Review all the input that was provided to deploy BDC. You can download the config files via **Save config files**. Additionally, you can script the entire deployment to a Notebook and to deploy  BDC with the settings at a later time or even share with another user. Select **Deploy** to initiate a silent deployment of BDC.
+
+:::image type="content" source="media/deploy-notebooks/deploy-notebooks12.png" alt-text="deploy-notebooks12.png":::
 
 ## Next steps
 

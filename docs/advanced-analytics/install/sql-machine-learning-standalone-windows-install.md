@@ -88,18 +88,18 @@ For local installations, you must run Setup as an administrator. If you install 
    ::: moniker-end
    ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
     
-    All other options should be ignored. 
+   All other options should be ignored. 
     
-    > [!NOTE]
-    > Avoid installing the **Shared Features** if the computer already has Machine Learning Services installed for SQL Server in-database analytics. This creates duplicate libraries.
-    > 
-    > Also, whereas R or Python scripts running in SQL Server are managed by SQL Server so as not to conflict with memory used by other database engine services, the standalone machine learning server has no such constraints, and can interfere with other database operations. Finally, remote access via RDP session, which is often used for operationalization, is typically blocked by database administrators.
-    > 
-    > For these reasons, we generally recommend that you install Machine Learning Server (Standalone) on a separate computer from SQL Server Machine Learning Services.
+   > [!NOTE]
+   > Avoid installing the **Shared Features** if the computer already has Machine Learning Services installed for SQL Server in-database analytics. This creates duplicate libraries.
+   > 
+   > Also, whereas R or Python scripts running in SQL Server are managed by SQL Server so as not to conflict with memory used by other database engine services, the standalone machine learning server has no such constraints, and can interfere with other database operations. Finally, remote access via RDP session, which is often used for operationalization, is typically blocked by database administrators.
+   > 
+   > For these reasons, we generally recommend that you install Machine Learning Server (Standalone) on a separate computer from SQL Server Machine Learning Services.
 
-5.  Accept the license terms for downloading and installing base language distributions. When the **Accept** button becomes unavailable, you can click **Next**. 
+5. Accept the license terms for downloading and installing base language distributions. When the **Accept** button becomes unavailable, you can click **Next**. 
 
-6.  On the **Ready to Install** page, verify your selections, and click **Install**.
+6. On the **Ready to Install** page, verify your selections, and click **Install**.
 
 When installation is finished, see [Custom reports for SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 For help with any errors or warnings, see [Upgrade and installation FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
@@ -114,28 +114,28 @@ For local installations, you must run Setup as an administrator. If you install 
 
 2. On the **Installation** tab, click **New R Server (Standalone) installation**.
     
-     ![Start setup of R Server Standalone](media/2016-setup-installation-rsvr.png "Start setup of R Server Standalone")
+   ![Start setup of R Server Standalone](media/2016-setup-installation-rsvr.png "Start setup of R Server Standalone")
 
 3. After the rules check is complete, accept SQL Server licensing terms, and select a new installation.
 
-4.  On the **Feature Selection** page, the following option should be already selected:
+4. On the **Feature Selection** page, the following option should be already selected:
     
-    **R Server (Standalone)**  
+   **R Server (Standalone)**  
     
-    ![Feature selections for R Server Standalone](media/2016setup-rserver-features.png "Feature selections for R Server Standalone")
+   ![Feature selections for R Server Standalone](media/2016setup-rserver-features.png "Feature selections for R Server Standalone")
     
-    All other options can be ignored. 
+   All other options can be ignored. 
     
-    > [!NOTE]
-    > Avoid installing the **Shared Features** if you are running setup on a computer where R Services has already been installed for SQL Server in-database analytics. This creates duplicate libraries.
-    > 
-    > Whereas R scripts running in SQL Server are managed by SQL Server so as not to conflict with memory used by other database engine services, the standalone R Server has no such constraints, and can interfere with other database operations.
-    > 
-    > We generally recommend that you install R Server (Standalone) on a separate computer from SQL Server R Services (In-Database).
+   > [!NOTE]
+   > Avoid installing the **Shared Features** if you are running setup on a computer where R Services has already been installed for SQL Server in-database analytics. This creates duplicate libraries.
+   > 
+   > Whereas R scripts running in SQL Server are managed by SQL Server so as not to conflict with memory used by other database engine services, the standalone R Server has no such constraints, and can interfere with other database operations.
+   > 
+   > We generally recommend that you install R Server (Standalone) on a separate computer from SQL Server R Services (In-Database).
 
-5.  Accept the license terms for downloading and installing base language distributions. When the **Accept** button becomes unavailable, you can click **Next**. 
+5. Accept the license terms for downloading and installing base language distributions. When the **Accept** button becomes unavailable, you can click **Next**. 
 
-6.  On the **Ready to Install** page, verify your selections, and click **Install**.
+6. On the **Ready to Install** page, verify your selections, and click **Install**.
 
 When installation is finished, see [Custom reports for SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 For help with any errors or warnings, see [Upgrade and installation FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).

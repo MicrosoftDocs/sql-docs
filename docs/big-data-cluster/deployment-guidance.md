@@ -74,12 +74,17 @@ The following sections provide more details on how to configure your big data cl
 
 ## <a id="configfile"></a> Default configurations
 
-Big data cluster deployment options are defined in JSON configuration files. You can start your customization of the cluster deployment from the built-in deployment profiles that are available in the **azdata**. Run this command to find what are the templates available:
+Big data cluster deployment options are defined in JSON configuration files. You can start your customization of the cluster deployment from the built-in deployment profiles that are available in the **azdata**. 
+
+> [!NOTE]
+> The container images required for the big data cluster deployment are hosted on Microsoft Container Registry (`mcr.microsoft.com`), in the `mssql/bdc` repository. By default, these settings are already included in the `control.json` configuration file in each of the deployment profiles included with `azdata`. In addition, the container image tag for each release is also pre-populated in the same configuration file. If you need to pull the container images into your own private container registry and or modify the container registry/repository settings, follow the instructions in the [Offline installation article](deploy-offline.md)
+
+Run this command to find what are the templates available:
 
 ```
 azdata bdc config list -o table 
 ```
-For example, for SQL Server 2019 CU1, the outcome of the above command is:
+For example, for SQL Server 2019 GDR1 service update release, the outcome of the above command is:
 ```
 Result
 ----------------

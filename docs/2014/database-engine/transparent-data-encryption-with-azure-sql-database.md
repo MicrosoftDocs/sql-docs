@@ -73,7 +73,7 @@ manager: craigg
   
 2.  Execute the following statements to create a database encryption key and encrypt the database.  
   
-    ```  
+    ```sql
     -- Create the database encryption key that will be used for TDE.  
     CREATE DATABASE ENCRYPTION KEY   
     WITH ALGORITHM = AES_256   
@@ -91,23 +91,19 @@ manager: craigg
   
 1.  To enable TDE, return the TDE status, and view the encryption activity.  
   
-    ```  
-    PS C:\> Switch-AzureMode -Name AzureResourceManager  
+    ```powershell
+    Switch-AzureMode -Name AzureResourceManager
+    Set-AzureSqlDatabaseTransparentDataEncryption -ServerName "myserver" -ResourceGroupName "Default-SQL-WestUS" -DatabaseName "database1" -State "Enabled"  
   
-    PS C:\> Set-AzureSqlDatabaseTransparentDataEncryption -ServerName "myserver" -ResourceGroupName "Default-SQL-WestUS" -DatabaseName "database1" -State "Enabled"  
-  
-    PS C:\> Get-AzureSqlDatabaseTransparentDataEncryption -ServerName "myserver" -ResourceGroupName "Default-SQL-WestUS" -DatabaseName "database1"  
-  
-    PS C:\> Get-AzureSqlDatabaseTransparentDataEncryptionActivity -ServerName "myserver" -ResourceGroupName "Default-SQL-WestUS" -DatabaseName "database1"  
-  
+    Get-AzureSqlDatabaseTransparentDataEncryption -ServerName "myserver" -ResourceGroupName "Default-SQL-WestUS" -DatabaseName "database1"  
+    Get-AzureSqlDatabaseTransparentDataEncryptionActivity -ServerName "myserver" -ResourceGroupName "Default-SQL-WestUS" -DatabaseName "database1"
     ```  
   
 2.  To disable TDE:  
   
-    ```  
-    PS C:\> Set-AzureSqlDatabaseTransparentDataEncryption -ServerName "myserver" -ResourceGroupName "Default-SQL-WestUS" -DatabaseName "database1" -State "Disabled"  
-  
-    PS C:\> Switch-AzureMode -Name AzureServiceManagement  
+    ```powershell
+    Set-AzureSqlDatabaseTransparentDataEncryption -ServerName "myserver" -ResourceGroupName "Default-SQL-WestUS" -DatabaseName "database1" -State "Disabled"  
+    Switch-AzureMode -Name AzureServiceManagement  
     ```  
   
 ##  <a name="Decrypt"></a> Decrypting a TDE Protected Database on [!INCLUDE[ssSDS](../includes/sssds-md.md)]  
@@ -134,7 +130,7 @@ manager: craigg
   
 2.  Execute the following statements to decrypt the database.  
   
-    ```  
+    ```sql
     -- Enable encryption  
     ALTER DATABASE [AdventureWorks] SET ENCRYPTION OFF;  
     GO  
@@ -168,5 +164,3 @@ manager: craigg
  [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
-  
-  

@@ -26,12 +26,12 @@ With Visual Studio 2019, the required functionality to enable Analysis Services,
 If you already have a license to Visual Studio 2019:
 
 - For SQL Database Projects, install the Data storage and Processing workload for Visual Studio
-- For Analysis Services, Integration Services or Reporting Services projects, install the appropriate [extension(s)](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions) from the marketplace
+- For Analysis Services, Integration Services or Reporting Services projects, install the appropriate [extension(s)](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) from the marketplace
 
 If you don’t already have a license to Visual Studio 2019:
 
 - Install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)
-- Install the Analysis Services, Integration Services, or Reporting Services [extension(s)](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions) as appropriate
+- Install the Analysis Services, Integration Services, or Reporting Services [extension(s)](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) as appropriate
 
 ## Changes in SSDT for Visual Studio 2017
 

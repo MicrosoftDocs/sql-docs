@@ -69,6 +69,8 @@
         href: big-data-cluster/deploy-big-data-tools.md
       - name: Install azdata
         items:
+        - name: With Windows Installer
+          href: big-data-cluster/deploy-install-azdata-installer.md
         - name: With Linux package manager
           href: big-data-cluster/deploy-install-azdata-linux-package.md
         - name: With pip
@@ -10303,14 +10305,18 @@
   items:
   - name: Overview
     items:
+    - name: What's new?
+      items:    
+      - name: SQL Server 2019
+        href: linux/sql-server-linux-whats-new-2019.md
+      - name: SQL Server 2017
+        href: linux/sql-server-linux-whats-new.md
     - name: Release notes
       items:
-      - name: SQL Server 2017
-        href: linux/sql-server-linux-release-notes.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-release-notes-2019.md
-    - name: What's new?
-      href: linux/sql-server-linux-whats-new.md
+      - name: SQL Server 2017
+        href: linux/sql-server-linux-release-notes.md
     - name: Editions & supported features
       href: linux/sql-server-linux-editions-and-components-2017.md
     - name: FAQ

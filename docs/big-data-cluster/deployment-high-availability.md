@@ -90,6 +90,8 @@ The following steps walk through an example on how to start from `aks-dev-test-h
 
 Depending on the type of workload you want to run against SQL Server master, you can connect either to the primary for read-write workloads or to the databases in the secondary replicas for read-only type of workloads. Here is an outline for each type of connection:
 
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
+
 ### Connect to databases on the primary replica
 
 For connections to the primary replica, use `sql-server-master` endpoint. This endpoint is also the listener for the AG. When using this endpoint, all connections are in the context of databases within the availability group. For example, a default connection using this endpoint will result in connecting to the `master` database within the availability group, not the SQL Server instance `master` database. Run this command to find the endpoint:

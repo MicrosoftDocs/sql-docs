@@ -127,6 +127,7 @@ azdata bdc hdfs acl set --path '/sale' --aclspec  'user::rw-,user:tom:rwx,group:
 ```
 
 ## Next steps
-For more information about [`azdata` commands]](reference-azdata.md).
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+- [`azdata` reference](reference-azdata.md)
+
+- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

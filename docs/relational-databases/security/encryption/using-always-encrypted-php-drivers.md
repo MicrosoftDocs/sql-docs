@@ -320,7 +320,7 @@ PDO_SQLSRV only:
  -   `PDO::ATTR_EMULATE_PREPARE` statement attribute specified in a parameterized query
  -   binding parameters in a batch of SQL statements
  
-The PHP drivers also inherit the limitations imposed by the ODBC Driver for SQL Server and the database. See [Limitations of the ODBC driver when using Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) and [Always Encrypted Feature Details](always-encrypted-database-engine.md#feature-details).  
+The PHP drivers also inherit the limitations imposed by the ODBC Driver for SQL Server and the database. See [Limitations of the ODBC driver when using Always Encrypted](using-always-encrypted-with-the-odbc-driver.md) and [Always Encrypted Feature Details](always-encrypted-database-engine.md#feature-details).  
   
 ## See Also  
 [Programming Guide for PHP SQL Driver](../../../connect/php/programming-guide-for-php-sql-driver.md)

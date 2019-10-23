@@ -101,7 +101,7 @@ Placeholder name for a provider-defined initialization function. The driver call
 int Read(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int *len);
 ```
 
-Placeholder name for a provider-defined communication function. The driver calls this function when the application requests to read data from a (previously-written-to) provider using the SQL_COPT_SS_CEKEYSTOREDATA connection attribute, allowing the application to read arbitrary data from the provider. See [Communicating with Keystore Providers](../../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) for more information.
+Placeholder name for a provider-defined communication function. The driver calls this function when the application requests to read data from a (previously-written-to) provider using the SQL_COPT_SS_CEKEYSTOREDATA connection attribute, allowing the application to read arbitrary data from the provider. See [Communicating with Keystore Providers](../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) for more information.
 
 |Argument|Description|
 |:--|:--|
@@ -114,7 +114,7 @@ Placeholder name for a provider-defined communication function. The driver calls
 ```
 int Write(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int len);
 ```
-Placeholder name for a provider-defined communication function. The driver calls this function when the application requests to write data to a provider using the SQL_COPT_SS_CEKEYSTOREDATA connection attribute, allowing the application to write arbitrary data to the provider. See [Communicating with Keystore Providers](../../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) for more information.
+Placeholder name for a provider-defined communication function. The driver calls this function when the application requests to write data to a provider using the SQL_COPT_SS_CEKEYSTOREDATA connection attribute, allowing the application to write arbitrary data to the provider. See [Communicating with Keystore Providers](../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) for more information.
 
 |Argument|Description|
 |:--|:--|
@@ -630,4 +630,4 @@ FoundProv:
 
 ## See Also
 
-[Using Always Encrypted with the ODBC Driver](../../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md)
+[Using Always Encrypted with the ODBC Driver](../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md)

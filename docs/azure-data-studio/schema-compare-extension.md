@@ -1,9 +1,9 @@
 ---
 title: Schema Compare extension
 titleSuffix: Azure Data Studio
-description: Install and use the Schema Compare extension (preview) for Azure Data Studio
+description: Install and use the Schema Compare extension for Azure Data Studio
 ms.custom: "seodec18"
-ms.date: "10/03/2019"
+ms.date: "11/04/2019"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,15 +11,13 @@ ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
 ---
-# Schema Compare extension (preview)
+# Schema Compare extension
 The Schema Compare extension provides an easy-to-use experience to compare two database definitions and apply the differences from the source to the target.
-
-This experience is currently in its initial preview. Report issues and feature requests [here.](https://github.com/microsoft/azuredatastudio/issues)
 
 
 ## Features
 
-* Compare schemas of two .dacpac files or databases
+* Compare schemas of two dacpac files or databases
 * View results as a set of actions that must be taken against the target for it to match the source
 * Selectively exclude actions listed in results
 * Set options that control the scope of the comparison
@@ -66,3 +64,4 @@ It can be tedious to manually manage and synchronize different database versions
 ## Next steps
 
 To learn more about Schema Compare, [check our documentation.](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions)
+Report issues and feature requests [here.](https://github.com/microsoft/azuredatastudio/issues)

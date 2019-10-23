@@ -34,13 +34,13 @@ The following command will open the shell.
 azdata bdc hdfs shell
 ```
 
-To access the help for `hdfs` shell and understand how to issue commands, you can run the following once the shell is active.
+To access the help for `hdfs` shell and understand how to issue commands, run the following command once the shell is active.
 
 ```bash
 [hdfs] ?
 ```
 
-The following example shows how to create a directory, list directories and modify permissions on a directory and give a named user `bob` read, write and execute access to directory `sales`.
+The following example shows how to create a directory, list directories and modify permissions on a directory and give a named user `bob` read, write, and execute access to directory `sales`.
 
 ```bash
 [hdfs] mkdir sales
@@ -85,7 +85,7 @@ azdata bdc hdfs chown --owner alice --group 'salesgroup' --path '/sales/data'
 
 ## Change permissions of a file or directory with `chmod`
 
-Change the basic permissions on files and directories (for owner, owning group and others). This follows the same principles for using `chmod` and [changing permissions on a Linux file system](https://www.lifewire.com/uses-of-command-chmod-2201064).
+Use `chmod` to change permissions on files and directories (for owner, owning group, and others). For more information, see [changing permissions on a Linux file system](https://www.lifewire.com/uses-of-command-chmod-2201064). In hdfs, the pattern is the same. For example:
 
 ```bash
 azdata bdc hdfs chmod --permission 750 --path /sales/data
@@ -97,7 +97,7 @@ azdata bdc hdfs chmod --permission 775 --path /sales/data/file.txt
 
 ## Set sticky bit on directories
 
-Set the sticky bit can on directories to prevent unintentional file deletion or relocation. The sticky bit limits the permission to delete or move a file to the superuser, directory owner or file owner. This setting does not effect the file. The below example sets a sticky bit on directory `users` by prefixing the permissions with a `1`.
+Set the sticky bit can on directories to prevent unintentional file deletion or relocation. The sticky bit limits the permission to delete or move a file to the superuser, directory owner, or file owner. This setting does not affect the file. The below example sets a sticky bit on directory `users` by prefixing the permissions with a `1`.
 
 ```bash
 azdata bdc hdfs chmod --path /sales/users --permission 1750

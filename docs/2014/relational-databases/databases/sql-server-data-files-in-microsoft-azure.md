@@ -53,8 +53,7 @@ manager: craigg
   
  The following example assumes that an Azure Storage container has been created, and a policy has been created with read, write, list, rights. Creating a policy on a container generates a SAS key which is safe to keep unencrypted in memory and needed by SQL Server to access the blob files in the container. In the following code snippet, replace `'your SAS key'` with an entry similar to the following: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. For more information, see [Create and Use a Shared Access Signature](https://msdn.microsoft.com/library/azure/jj721951.aspx)  
   
-```  
-  
+```sql
 -- Create a credential  
 CREATE CREDENTIAL [https://testdb.blob.core.windows.net/data]  
 WITH IDENTITY='SHARED ACCESS SIGNATURE',  
@@ -67,11 +66,11 @@ ON
     FILENAME = 'https://testdb.blob.core.windows.net/data/TestData.mdf' )  
  LOG ON  
 ( NAME = testdb_log,  
-    FILENAME =  'https://testdb.blob.core.windows.net/data/TestLog.ldf')  
-  
+    FILENAME =  'https://testdb.blob.core.windows.net/data/TestLog.ldf')
 ```  
   
- **Important note:** If there are any active references to data files in a container, attempts to delete the corresponding SQL Server credential fails.  
+> [!IMPORTANT]
+> If there are any active references to data files in a container, attempts to delete the corresponding SQL Server credential fails.  
   
 ### Security  
  The following are security considerations and requirements when storing SQL Server Data Files in Azure Storage.  
@@ -172,5 +171,3 @@ ON
   
 ## See Also  
  [Tutorial: SQL Server Data Files in Azure Storage service](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-  
-  

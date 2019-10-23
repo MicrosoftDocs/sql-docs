@@ -23,6 +23,8 @@ Package location for the Java extensions is in the SQL Server Linux source repos
 
 Language Extensions is also supported on Linux containers. We do not provide pre-built containers with Language Extensions, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
+Language Extensions and [Machine Learning Services](../advanced-analytics/index.yml) are installed by default on SQL Server Big Data Clusters. If you use Big Data Clusters, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md).
+
 ## Uninstall preview version
 
 If you have installed a preview release (Community Technical Preview (CTP) or Release Candidate (RC)), we recommend uninstalling this version to remove all previous packages before installing SQL Server 2019. Side-by-side installation of multiple versions is not supported, and the package list has changed over the last several preview (CTP/RC) releases.

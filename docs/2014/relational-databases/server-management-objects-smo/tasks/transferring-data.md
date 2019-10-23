@@ -31,7 +31,7 @@ manager: craigg
 ## Transferring Schema and Data from One Database to Another in Visual Basic  
  This code example shows how to transfer schema and data from one database to another using the <xref:Microsoft.SqlServer.Management.Smo.Transfer> object.  
   
-```VBNET
+```vb
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
@@ -59,7 +59,7 @@ xfr.ScriptTransfer()
 ## Transferring Schema and Data from One Database to Another in Visual C#  
  This code example shows how to transfer schema and data from one database to another using the <xref:Microsoft.SqlServer.Management.Smo.Transfer> object.  
   
-```  
+```csharp
 {  
             Server srv;  
             srv = new Server();  
@@ -89,7 +89,7 @@ xfr.ScriptTransfer()
 ## Transferring Schema and Data from One Database to Another in PowerShell  
  This code example shows how to transfer schema and data from one database to another using the <xref:Microsoft.SqlServer.Management.Smo.Transfer> object.  
   
-```  
+```powershell
 #Connect to the local, default instance of SQL Server.  
   
 #Get a server object which corresponds to the default instance  
@@ -99,11 +99,11 @@ $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server
 $db = $srv.Databases["AdventureWorks2012"]  
   
 #Create a database to hold the copy of AdventureWorks  
-$dbCopy = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Database -argumentlist $srv, "AdventureWorksCopy"  
+$dbCopy = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Database -ArgumentList $srv, "AdventureWorksCopy"  
 $dbCopy.Create()  
   
 #Define a Transfer object and set the required options and properties.  
-$xfr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Transfer -argumentlist $db  
+$xfr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Transfer -ArgumentList $db  
   
 #Set this objects properties  
 $xfr.CopyAllTables = $true  
@@ -117,5 +117,3 @@ $xfr.CopySchema = $true
 #Script the transfer. Alternatively perform immediate data transfer with TransferData method.  
 $xfr.ScriptTransfer()  
 ```  
-  
-  

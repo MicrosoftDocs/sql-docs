@@ -4,7 +4,7 @@ description: Setup a non-instance-aware standalone machine learning server for R
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/28/2018 
+ms.date: 10/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

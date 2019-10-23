@@ -15,11 +15,11 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article provides guidance on how to upgrade a SQL Server big data cluster to a new release. The steps in this article specifically apply to how to upgrade between preview releases.
+This article provides guidance on how to upgrade a SQL Server big data cluster to a new release. The steps in this article specifically apply to how to upgrade between preview releases or from a preview release to SQL Server 2019 service update release.
 
 ## Backup and delete the old cluster
 
-Currently, the only way to upgrade a big data cluster to a new release is to manually remove and recreate the cluster. Each release has a unique version of `azdata` that is not compatible with the previous version. Also, if an older cluster had to download an image on a new node, the latest image might not be compatible with the older images on the cluster. To upgrade to the latest release, use the following steps:
+Currently, there is no in place upgrade for big data clusters, the only way to upgrade to a new release is to manually remove and recreate the cluster. Each release has a unique version of `azdata` that is not compatible with the previous version. Also, if an older cluster had to download a container image on a new node, the latest image might not be compatible with the older images on the cluster. Note that the newer image is pulled only if you are using the `latest` image tag for in the deployment configuration file for the container settings. By default, each release has a specific image tag corrsponding to the SQl Server release version. To upgrade to the latest release, use the following steps:
 
 1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use [SQL Server backup and restore](data-ingestion-restore-database.md). For HDFS, you [can copy out the data with `curl`](data-ingestion-curl.md).
 
@@ -35,15 +35,13 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
    > [!Note]
    > Issuing a `azdata bdc delete` command will result in all objects created within the namespace identified with the big data cluster name to be deleted, but not the namespace itself. Namespace can be reused for subsequent deployments as long as it is empty and no other applications were created within.
 
-1. Prior to CTP 3.2, `azdata` was called `mssqlctl`. If you have any previous releases of `mssqlctl` or `azdata` installed, it is important to uninstall first before installing the latest version of `azdata`.
+1. Uninstall the old version of `azdata`
 
-   For CTP 2.3 or higher, run the following command. Replace `ctp3.1` in the command with the version of `mssqlctl` that you are uninstalling. If the version is prior to CTP 3.1, add a dash before the version number (for example, `ctp-2.5`).
+  ```powershell
+  pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
+  ```
 
-   ```powershell
-   pip3 uninstall -r https://aka.ms/azdata
-   ```
-
-1. Install the latest version of `azdata`. The following commands install `azdata` for the release candidate:
+1. Install the latest version of `azdata`. The following commands install `azdata` from the latest release:
 
    **Windows:**
 
@@ -58,7 +56,7 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
    ```
 
    > [!IMPORTANT]
-   > For each release, the path to `azdata` changes. Even if you previously installed `azdata` or `mssqlctl`, you must reinstall from the latest path before creating the new cluster.
+   > For each release, the path to the `n-1` version of `azdata` changes. Even if you previously installed `azdata`, you must reinstall from the latest path before creating the new cluster.
 
 ## <a id="azdataversion"></a> Verify the azdata version
 

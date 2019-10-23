@@ -150,7 +150,7 @@
         - name: Mount S3 for HDFS tiering
           href: big-data-cluster/hdfs-tiering-mount-s3.md
         - name: Manage HDFS permissions
-          href: big-data-cluster/hdfs-tiering-manage-permissionsS.md
+          href: big-data-cluster/hdfs-tiering-manage-permissions.md
     - name: Data ingestion
       items:
       - name: Load data with curl

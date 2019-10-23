@@ -33,7 +33,7 @@ Starting in SQL Server 2019, Language Extensions and Java support are provided. 
 
 + Do not install SQL Server Language Extensions on a domain controller. The Language Extensions portion of setup will fail.
 
-+ Language Extensions and [Machine Learning Services](../../advanced-analytics/index.yml) are installed by default on SQL Server Big Data Clusters. If you use a Big Data Cluster, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on a Big Data Cluster](../../big-data-cluster/machine-learning-services.md).
++ Language Extensions and [Machine Learning Services](../../advanced-analytics/index.yml) are installed by default on SQL Server Big Data Clusters. If you use Big Data Clusters, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 
 > [!IMPORTANT]
 > After setup is complete, be sure to complete the post-configuration steps described in this article. These steps include enabling SQL Server to use external code, and adding accounts required for SQL Server to run Java code on your behalf. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.

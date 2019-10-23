@@ -1,6 +1,6 @@
 ---
 title: Machine Learning Services (Python, R)
-titleSuffix: SQL Server Big Data Cluster
+titleSuffix: SQL Server Big Data Clusters
 description: Learn how you can run Python and R scripts on the master instance of a SQL Server Big Data Clusters with Machine Learning Services.
 author: dphansen
 ms.author: davidph
@@ -10,18 +10,18 @@ ms.prod: sql
 ms.technology: machine-learning
 ---
 
-# Run Python and R scripts with Machine Learning Services on SQL Server Big Data Cluster
+# Run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-You can run Python and R scripts on the master instance of a [SQL Server Big Data Clusters](big-data-cluster-overview.md) with [Machine Learning Services](../advanced-analytics/index.yml).
+You can run Python and R scripts on the master instance of [SQL Server Big Data Clusters](big-data-cluster-overview.md) with [Machine Learning Services](../advanced-analytics/index.yml).
 
 > [!NOTE]
 > You can also run Java code on the master instance with [SQL Server Language Extensions](../language-extensions/language-extensions-overview.md). Follow the steps below will also enable Language Extensions.
 
 ## Enable Machine Learning Services
 
-Machine Learning Services is installed by default on Big Data Clusters and does require separate installation. 
+Machine Learning Services is installed by default on Big Data Clusters and does require separate installation.
 
 To enable Machine Learning Services, run this statement on the master instance:
 
@@ -73,7 +73,7 @@ If you are using SQL Server Big Data Clusters with [Always On Availability Group
     GO
     ```
 
-You are now ready to run Python and R scripts on the master instance of your Big Data Cluster. See the quickstarts below to run your first script.
+You are now ready to run Python and R scripts on the master instance of Big Data Clusters. See the quickstarts below to run your first script.
 
 ## Next steps
 

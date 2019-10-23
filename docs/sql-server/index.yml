@@ -40,6 +40,12 @@ landingContent:
         url: ../azure-data-studio/download.md
     - linkListType: reference
       links:
+      - text: Transact-SQL 
+        url: ../t-sql/language-reference.md
+      - text: SQL Powershell
+        url: ../powershell/sql-server-powershell.md
+      - text: Sample databases
+        url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
       - text: Previous versions 2005-2014
         url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
 
@@ -90,20 +96,19 @@ landingContent:
       - text: SQL Server Replication
         url: ../relational-databases/replication/sql-server-replication.md
 
-  - title: Big data & machine learning 
+  - title: Business Intelligence 
     linkLists:
     - linkListType: overview
       links:
-      - text: SQL Server Big Data Clusters
-        url: ../big-data-cluster/big-data-cluster-overview.md
-      - text: Analytics Platform System 
-        url: https://www.microsoft.com/sql/analytics-platform-system/
-      - text: Machine Learning with SQL Server
-        url: https://docs.microsoft.com/sql/advanced-analytics/
-      - text: R Services 
-        url: ../advanced-analytics/r/sql-server-r-services.md
-      - text: PolyBase
-        url: ../relational-databases/polybase/polybase-guide.md
+      - text: SQL Server Reporting Services (SSRS)
+        url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+      - text: SQL Server Analysis Services (SSAS)
+        url: /analysis-services/analysis-services-overview
+      - text: SQL Server Integration Services (SSIS)
+        url: ../integration-services/sql-server-integration-services.md
+      - text: Azure Data Factory
+        url: https://docs.microsoft.com/azure/data-factory/
+
 
   - title: Migration
     linkLists:
@@ -122,37 +127,21 @@ landingContent:
       - text: SQL Server Migration Assistant (SSMA)
         url: ../ssma/sql-server-migration-assistant.md
 
-  - title: Business Intelligence 
+  - title: Big data & machine learning 
     linkLists:
     - linkListType: overview
       links:
-      - text: SQL Server Reporting Services (SSRS)
-        url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-      - text: SQL Server Analysis Services (SSAS)
-        url: /analysis-services/analysis-services-overview
-      - text: SQL Server Integration Services (SSIS)
-        url: ../integration-services/sql-server-integration-services.md
-      - text: Azure Data Factory
-        url: https://docs.microsoft.com/azure/data-factory/
+      - text: SQL Server Big Data Clusters
+        url: ../big-data-cluster/big-data-cluster-overview.md
+      - text: Analytics Platform System 
+        url: https://www.microsoft.com/sql/analytics-platform-system/
+      - text: Machine Learning with SQL Server
+        url: https://docs.microsoft.com/sql/advanced-analytics/
+      - text: R Services 
+        url: ../advanced-analytics/r/sql-server-r-services.md
+      - text: PolyBase
+        url: ../relational-databases/polybase/polybase-guide.md
 
 
 
-
-
-  - title: Reference
-    linkLists:
-    - linkListType: reference 
-      links:
-      - text: CREATE DATABASE
-        url: ../t-sql/statements/create-database-transact-sql.md
-      - text: CREATE TABLE
-        url: ../t-sql/statements/create-table-transact-sql.md
-      - text: Client connectivity
-        url: ../connect/homepage-sql-connection-programming.md
-      - text: Transact-SQL 
-        url: ../t-sql/language-reference.md
-      - text: SQL Powershell
-        url: ../powershell/sql-server-powershell.md
-      - text: Sample databases
-        url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
 

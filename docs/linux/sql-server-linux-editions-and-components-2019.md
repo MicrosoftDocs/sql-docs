@@ -211,10 +211,7 @@ The following features and services are not available SQL Server 2019 on Linux. 
 | Area | Unsupported feature or service |
 |-----|-----|
 | **Database engine** | Transactional replication |
-| &nbsp; | Merge replication |
-| &nbsp; | Change Data Capture (see SQL Server Agent) |
 | &nbsp; | Stretch DB |
-| &nbsp; | PolyBase |
 | &nbsp; | Distributed query with 3rd-party connections |
 | &nbsp; | Linked Servers to data sources other than [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
@@ -223,21 +220,20 @@ The following features and services are not available SQL Server 2019 on Linux. 
 | &nbsp; | Buffer Pool Extension |
 | **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
-| &nbsp; | Log Reader Agent |
-| &nbsp; | Change Data Capture (CDC) |
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
 | **Security** | Extensible Key Management |
 | &nbsp; | AD Authentication for Linked Servers | 
 | &nbsp; | AD Authentication for Availability Groups (AGs) | 
-| &nbsp; | 3rd party AD tools (Centrify, Vintela, Powerbroker) | 
 | **Services** | SQL Server Browser |
-| &nbsp; | SQL Server R services |
+| &nbsp; | SQL Server R services<sup>1</sup> |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
+
+<sup>1</sup> SQL Server R is supported within SQL Server, but SQL Server R services as a separate package is not supported.
   
 ## Next steps
  [Editions and supported features for SQL Server 2017 - Linux](sql-server-linux-editions-and-components-2017.md)  

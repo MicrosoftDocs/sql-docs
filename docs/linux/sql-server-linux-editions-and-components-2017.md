@@ -229,7 +229,6 @@ The following features and services are not available SQL Server 2017 on Linux. 
 | **Security** | Extensible Key Management |
 | &nbsp; | AD Authentication for Linked Servers | 
 | &nbsp; | AD Authentication for Availability Groups (AGs) | 
-| &nbsp; | 3rd party AD tools (Centrify, Vintela, Powerbroker) | 
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |

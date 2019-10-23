@@ -79,8 +79,8 @@ landingContent:
         url: https://docs.microsoft.com/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
       - text: Monitor and tune performance
         url: https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance
-      - text: In-Memory OLTP
-        url: https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization
+      - text: In-Memory Database
+        url: ..//relational-databases/in-memory-database.md
       - text: Automatic tuning
         url: ../relational-databases/automatic-tuning/automatic-tuning.md
       - text: Intelligent query processing 
@@ -139,7 +139,7 @@ landingContent:
         url: https://docs.microsoft.com/sql/advanced-analytics/
       - text: R Services 
         url: ../advanced-analytics/r/sql-server-r-services.md
-      - text: PolyBase
+      - text: Data virtualization with Polybase
         url: ../relational-databases/polybase/polybase-guide.md
 
 

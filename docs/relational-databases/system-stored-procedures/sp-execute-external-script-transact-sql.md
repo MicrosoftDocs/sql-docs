@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services](../../advanced-analytics/index.yml) and [Language Extensions](../..//language-extensions/language-extensions-overview.md). 
+The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services](../../advanced-analytics/index.yml) and [Language Extensions](../../language-extensions/language-extensions-overview.md). 
 
 For Machine Learning Services, [Python](../../advanced-analytics/concepts/extension-python.md) and [R](../../advanced-analytics/concepts/extension-r.md) are supported languages. For Language Extensions, Java is supported but must be defined with [CREATE EXTERNAL LANGUAGE](sql/t-sql/statements/create-external-language-transact-sql).
 
@@ -107,10 +107,10 @@ sp_execute_external_script
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 `[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]`
- Applies to SQL Server 2019 only and is used to build per-partition models. Specifies the name of the column used to order the result set, for example by product name. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular.
+  Used to build per-partition models. Specifies the name of the column used to order the result set, for example by product name. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular.
 
 `[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]`
- Applies to SQL Server 2019 only and is used to build per-partition models. Specifies the name of the column used to segment data, such as geographic region or date. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular. 
+  Used to build per-partition models. Specifies the name of the column used to segment data, such as geographic region or date. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular. 
 ::: moniker-end
 
 `[ @output_data_1_name =  N'output_data_1_name' ]`
@@ -134,11 +134,19 @@ sp_execute_external_script
 > [!IMPORTANT]
 > The query tree is controlled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and users cannot perform arbitrary operations on the query. 
 
-Use **sp_execute_external_script** to execute scripts written in a supported language. Currently, supported languages are R for SQL Server 2016 R Services, and Python and R for SQL Server 2017 Machine Learning Services. 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Use **sp_execute_external_script** to execute scripts written in a supported language. Supported languages are **Python** and **R** used with Machine Learning Services, and any language defined with [CREATE EXTERNAL LANGUAGE](sql/t-sql/statements/create-external-language-transact-sql) (for example, Java) used with Language Extensions.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Use **sp_execute_external_script** to execute scripts written in a supported language. Supported languages are **Python** and **R** in SQL Server 2017 Machine Learning Services.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Use **sp_execute_external_script** to execute scripts written in a supported language. The only supported language is **R** in SQL Server 2016 R Services.
+::: moniker-end
 
 By default, result sets returned by this stored procedure are output with unnamed columns. Column names used within a script are local to the scripting environment and are not reflected in the outputted result set. To name result set columns, use the `WITH RESULT SET` clause of [`EXECUTE`](../../t-sql/language-elements/execute-transact-sql.md).
-  
- In addition to returning a result set, you can return scalar values to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using OUTPUT parameters. The following example shows the use of the OUTPUT parameter to return the serialized R model that was used as input to the script:  
+
+In addition to returning a result set, you can return scalar values to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using OUTPUT parameters. 
   
 You can control the resources used by external scripts by configuring an external resource pool. For more information, see [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Information about the workload can be obtained from the resource governor catalog views, DMV's, and counters. For more information, see [Resource Governor Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md), [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md), and [SQL Server, External Scripts Object](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md).  
 
@@ -149,27 +157,26 @@ Monitor script execution using [sys.dm_external_script_requests](../../relationa
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ### Parameters for partition modeling
 
- In SQL Server 2019, currently in public preview, you can set two additional parameters that enable modeling on partitioned data, where partitions are based on one or more columns you provide that naturally segment a data set into logical partitions created and used only during script execution. Columns containing repeating values for age, gender, geographic region, date or time, are a few examples that lend themselves to partitioned data sets.
+You can set two additional parameters that enable modeling on partitioned data, where partitions are based on one or more columns you provide that naturally segment a data set into logical partitions created and used only during script execution. Columns containing repeating values for age, gender, geographic region, date or time, are a few examples that lend themselves to partitioned data sets.
  
- The two parameters are **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**, where the second parameter is used to order the result set. The parameters are passed as inputs to `sp_execute_external_script` with the external script executing once for every partition. For more information and examples, see [Tutorial: Create partition-based models](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition).
+The two parameters are **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**, where the second parameter is used to order the result set. The parameters are passed as inputs to `sp_execute_external_script` with the external script executing once for every partition. For more information and examples, see [Tutorial: Create partition-based models](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition).
 
- You can execute script in parallel by specifying `@parallel=1`. If the input query can be parallelized, you should set `@parallel=1` as part of your arguments to `sp_execute_external_script`. By default, the query optimizer operates under `@parallel=1` on tables having more than 256 rows, but if you want to handle this explicitly, this script includes the parameter as a demonstration.
+You can execute script in parallel by specifying `@parallel=1`. If the input query can be parallelized, you should set `@parallel=1` as part of your arguments to `sp_execute_external_script`. By default, the query optimizer operates under `@parallel=1` on tables having more than 256 rows, but if you want to handle this explicitly, this script includes the parameter as a demonstration.
 
- > [!Tip]
+> [!Tip]
 > For training workoads, you can use `@parallel` with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameters in SQL Server vNext, you can parallelize a script that calls functions not specifically engineered with that capability.
 ::: moniker-end
 
-### Streaming execution for R and Python scripts  
+### Streaming execution for Python and R scripts  
 
-Streaming allows the R or Python script to work with more data than can fit in memory. To control the number of rows passed during streaming, specify an integer value for the parameter, `@r_rowsPerRead` in the `@params` collection.  For example, if you are training a model that uses very wide data, you could adjust the value to read fewer rows, to ensure that all rows can be sent in one chunk of data. You might also use this parameter to manage the number of rows being read and processed at one time, to mitigate server performance issues. 
+Streaming allows the Python or R script to work with more data than can fit in memory. To control the number of rows passed during streaming, specify an integer value for the parameter, `@r_rowsPerRead` in the `@params` collection.  For example, if you are training a model that uses very wide data, you could adjust the value to read fewer rows, to ensure that all rows can be sent in one chunk of data. You might also use this parameter to manage the number of rows being read and processed at one time, to mitigate server performance issues. 
   
 Both the `@r_rowsPerRead` parameter for streaming and the `@parallel` argument should be considered hints. For the hint to be applied, it must be possible to generate a SQL query plan that includes parallel processing. If this is not possible, parallel processing cannot be enabled.  
   
 > [!NOTE]  
->  Streaming and parallel processing are supported only in Enterprise Edition. You can include the parameters in your queries in Standard Edition without raising an error, but the parameters have no effect and R scripts run in a single process.  
+> Streaming and parallel processing are supported only in Enterprise Edition. You can include the parameters in your queries in Standard Edition without raising an error, but the parameters have no effect and R scripts run in a single process.  
   
 ## Restrictions  
-
 
 ### Data types
 
@@ -302,16 +309,18 @@ For scoring, you can also use the native [PREDICT](../../t-sql/queries/predict-t
 
 ## See also
 
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Python Libraries and Data Types](../../advanced-analytics/python/python-libraries-and-data-types.md)  
- [R Libraries and R Data Types](../../advanced-analytics/r/r-libraries-and-data-types.md)  
- [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)   
- [Known Issues for SQL Server Machine Learning Services](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)   
- [CREATE EXTERNAL LIBRARY &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
- [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
- [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
- [SQL Server, External Scripts Object](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
-[sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
-[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 
++ [SQL Server Machine Learning Services](../../advanced-analytics/index.yml)
++ [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md). 
++ [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
++ [Python Libraries and Data Types](../../advanced-analytics/python/python-libraries-and-data-types.md)  
++ [R Libraries and R Data Types](../../advanced-analytics/r/r-libraries-and-data-types.md)  
++ [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)   
++ [Known Issues for SQL Server Machine Learning Services](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)   
++ [CREATE EXTERNAL LIBRARY &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
++ [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
++ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
++ [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
++ [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
++ [SQL Server, External Scripts Object](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
++ [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
++ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 

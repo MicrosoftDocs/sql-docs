@@ -1,11 +1,11 @@
 ---
 title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/14/2018"
+ms.date: "11/04/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: system-objects
+ms.technology: machine-learning
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_execute_external_script_TSQL"
@@ -17,22 +17,39 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_execute_external_script"
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-author: stevestein
-ms.author: sstein
+author: dphansen
+ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # sp_execute_external_script (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Executes a script provided as an input argument to the procedure. Script runs in the [extensibility framework](../../advanced-analytics/concepts/extensibility-framework.md). Script must be written in a supported and registered language, on a database engine having at least one extension: [**R**](../../advanced-analytics/concepts/extension-r.md), [**Python**](../../advanced-analytics/concepts/extension-python.md), or [**Java** (in SQL Server 2019 preview only)](../../advanced-analytics/java/extension-java.md). 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services](../../advanced-analytics/index.yml) and [Language Extensions](../..//language-extensions/language-extensions-overview.md). 
 
-To execute **sp_execute_external_script**, you must first enable external scripts by using the statement, `sp_configure 'external scripts enabled', 1;`.  
-  
+For Machine Learning Services, [Python](../../advanced-analytics/concepts/extension-python.md) and [R](../../advanced-analytics/concepts/extension-r.md) are supported languages. For Language Extensions, Java is supported but must be defined with [CREATE EXTERNAL LANGUAGE](sql/t-sql/statements/create-external-language-transact-sql).
+
+To execute **sp_execute_external_script**, you must first install Machine Learning Services or Language Extensions. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) and [Linux](../../linux/sql-server-linux-setup-machine-learning.md), or [Install SQL Server Language Extensions on Windows](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md) and [Linux](../../linux/sql-server-linux-setup-language-extensions.md).
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services](../../advanced-analytics/index.yml) on SQL Server 2017. 
+
+For Machine Learning Services, [Python](../../advanced-analytics/concepts/extension-python.md) and [R](../../advanced-analytics/concepts/extension-r.md) are supported languages. 
+
+To execute **sp_execute_external_script**, you must first install Machine Learning Services. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md).
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [R Services](../../advanced-analytics/r/sql-server-r-services.md) on SQL Server 2016.
+
+For R Services,  [R](../../advanced-analytics/concepts/extension-r.md) is the supported language.
+
+To execute **sp_execute_external_script**, you must first install R Services. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../../advanced-analytics/install/sql-r-services-windows-install.md).
+::: moniker-end
+
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-
-> [!Note]
-> Machine learning (R and Python) and programming extensions are installed as an add-on to the database engine instance. Support for specific extensions vary by SQL Server version.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## Syntax
@@ -51,7 +68,7 @@ sp_execute_external_script
     [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
 ```
 ::: moniker-end
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 ## Syntax for 2017 and earlier
 
 ```
@@ -69,8 +86,16 @@ sp_execute_external_script
 
 ## Arguments
  **\@language** = N'*language*'  
- Indicates the script language. *language* is **sysname**.  Depending on your version of SQL Server, valid values are R (SQL Server 2016 and later), Python (SQL Server 2017 and later), and Java (SQL Server 2019 preview). 
-  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+ Indicates the script language. *language* is **sysname**. Valid values are **R**, **Python**, and any language defined with [CREATE EXTERNAL LANGUAGE](sql/t-sql/statements/create-external-language-transact-sql) (for example, Java).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+ Indicates the script language. *language* is **sysname**. In SQL Server 2017, valid values are **R** and **Python**.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+ Indicates the script language. *language* is **sysname**. In SQL Server 2016, the only valid value is **R**.
+::: moniker-end
+
  **\@script** = N'*script*' 
  External language  script specified as a literal or variable input. *script* is **nvarchar(max)**.  
 

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Transaction Log Architecture and Management Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/05/2018"
+ms.date: "10/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -226,12 +226,12 @@ The following illustration shows a simplified version of the end-of-a-transactio
 LSN 148 is the last record in the transaction log. At the time that the recorded checkpoint at LSN 147 was processed, Tran 1 had been committed and Tran 2 was the only active transaction. That makes the first log record for Tran 2 the oldest log record for a transaction active at the time of the last checkpoint. This makes LSN 142, the Begin transaction record for Tran 2, the MinLSN.
 
 ### Long-running transactions
-The active log must include every part of all uncommitted transactions. An application that starts a transaction and does not commit it or roll it back prevents the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] from advancing the MinLSN. This can cause two types of problems:
+The active log must include every part of all uncommitted transactions. An application that starts a transaction and does not commit it or roll it back prevents the [!INCLUDE[ssde_md](../includes/ssde_md.md)] from advancing the MinLSN. This can cause two types of problems:
 
 * If the system is shut down after the transaction has performed many uncommitted modifications, the recovery phase of the subsequent restart can take much longer than the time specified in the **recovery interval** option.
 * The log might grow very large, because the log cannot be truncated past the MinLSN. This occurs even if the database is using the simple recovery model, in which the transaction log is generally truncated on each automatic checkpoint.
 
-Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], recovery of long-running transactions and the problems described above can be avoided by using [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).  
+Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], recovery of long-running transactions and the problems described above can be avoided by using [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).  
 
 ### Replication transactions
 The Log Reader Agent monitors the transaction log of each database configured for transactional replication, and it copies the transactions marked for replication from the transaction log into the distribution database. The active log must contain all transactions that are marked for replication, but that have not yet been delivered to the distribution database. If these transactions are not replicated in a timely manner, they can prevent the truncation of the log. For more information, see [Transactional Replication](../relational-databases/replication/transactional/transactional-replication.md).

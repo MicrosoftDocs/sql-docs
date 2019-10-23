@@ -10272,7 +10272,7 @@
   - name: Extended Features
     items: 
       - name: Extedned features and tools
-        href: download-sql-feature-packs.md
+        href: tools/download-sql-feature-packs.md
 - name: Tutorials
   items:
   - name: SQL Server

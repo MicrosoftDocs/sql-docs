@@ -82,7 +82,7 @@ manager: craigg
   
      The following example, joins the secondary replica to the `MyAG` availability group.  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAG JOIN;  
     ```  
   
@@ -100,7 +100,7 @@ manager: craigg
   
      For example, the following command joins a secondary replica hosted by the server instance located at the specified path to the availability group named `MyAg`.  This server instance must host a secondary replica in this availability group.  
   
-    ```  
+    ```powershell
     Join-SqlAvailabilityGroup -Path SQLSERVER:\SQL\SecondaryServer\InstanceName -Name 'MyAg'  
     ```  
   
@@ -122,5 +122,3 @@ manager: craigg
  [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
-  
-  

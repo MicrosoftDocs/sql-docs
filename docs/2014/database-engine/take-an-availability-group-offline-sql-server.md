@@ -53,7 +53,7 @@ manager: craigg
 ### Example  
  The following example takes the `AccountsAG` availability group offline.  
   
-```  
+```sql
 ALTER AVAILABILITY GROUP AccountsAG OFFLINE;  
 ```  
   
@@ -77,5 +77,3 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 ## See Also  
  [AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/always-on-availability-groups-sql-server.md)  
-  
-  

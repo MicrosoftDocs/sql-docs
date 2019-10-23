@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 This article summarizes the new features and enhancements for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-For more information and known issues, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release notes](sql-server-ver15-release-notes.md).
+For more information and known issues, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release notes](sql-server-version-15-release-notes.md).
 
 For the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], use the [latest tools](https://aka.ms/getazuredatastudio).
 
@@ -58,9 +58,9 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 
 |New feature or update | Details |
 |:---|:---|
-|Hybrid buffer pool| A new feature of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], where database pages sitting on database files that are placed on a persistent memory (PMEM) device are directly accessed when required. See [Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md).|
-|Memory-optimized `TempDB` metadata| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new feature that is part of the [in-memory database](../relational-databases/in-memory-database.md) feature family, memory-optimized `TempDB` metadata, which effectively removes this bottleneck and unlocks a new level of scalability for `TempDB` heavy workloads. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the system tables involved in managing temp table metadata can be moved into latch-free, non-durable, memory-optimized tables. See [Memory-optimized `TempDB` metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
-| In-Memory OLTP support for database snapshots | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces support for creating [database snapshots](../relational-databases/databases/database-snapshots-sql-server.md) of databases that include memory-optimized filegroups. |
+|Hybrid buffer pool| New feature of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required. See [Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md).|
+|Memory-optimized TempDB metadata| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new feature that is part of the [In-Memory Database](../relational-databases/in-memory-database.md) feature family, memory-optimized TempDB metadata, which effectively removes this bottleneck and unlocks a new level of scalability for TempDB heavy workloads. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the system tables involved in managing temporary table metadata can be moved into latch-free non-durable memory-optimized tables. See [Memory-Optimized TempDB Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
+| In-Memory OLTP support for Database Snapshots | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces support for creating [Database Snapshots](../relational-databases/databases/database-snapshots-sql-server.md) of databases that include memory-optimized filegroups. |
 | &nbsp; | &nbsp; |
 
 ### Intelligent performance
@@ -73,7 +73,7 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 |Resource governance| The configurable value for the `REQUEST_MAX_MEMORY_GRANT_PERCENT` option of `CREATE WORKLOAD GROUP` and `ALTER WORKLOAD GROUP` has been changed from an integer to a float data type, to allow more granular control of memory limits. See [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) and [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Reduced recompilations for workloads| Improves performance when using temporary tables across multiple scopes by reducing unnecessary recompilations. See [Reduced recompilations for workloads](../relational-databases/tables/tables.md#ctp23). |
 |Indirect checkpoint scalability |See [Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
-|Concurrent PFS updates|[Page Free Space (PFS) pages](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) are special pages within a database file that SQL Server uses to help locate free space when it allocates space for an object. Page latch contention on PFS pages is commonly associated with [`TempDB`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), but it can also occur on user databases when there are many concurrent object allocation threads. This improvement changes the way that concurrency is managed with PFS updates so that they can be updated under a shared latch, rather than an exclusive latch. This behavior is on by default in all databases (including `TempDB`) starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
+|Concurrent PFS updates|[Page Free Space (PFS) pages](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) are special pages within a database file that SQL Server uses to help locate free space when it allocates space for an object. Page latch contention on PFS pages is commonly associated with [TempDB](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), but it can also occur on user databases when there are many concurrent object allocation threads. This improvement changes the way that concurrency is managed with PFS updates so that they can be updated under a shared latch, rather than an exclusive latch. This behavior is on by default in all databases (including TempDB) starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
 | &nbsp; | &nbsp; |
 
 ### Monitoring
@@ -109,7 +109,7 @@ Support businesses across different countries and regions, where the requirement
 
 |New feature or update | Details |
 |:---|:---|
-|Support for UTF-8 character encoding |Supports UTF-8 for import and export encoding, and as database-level or column-level collation for string data. Support includes PolyBase external tables, and Always Encrypted. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).|
+|Support for UTF-8 character encoding |Supports UTF-8 for import and export encoding, and as database-level or column-level collation for string data. Support includes PolyBase external tables, and Always Encrypted (when not used with Enclaves). See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).|
 | &nbsp; | &nbsp; |
 
 ### Language extensions
@@ -186,8 +186,8 @@ One common task that everyone who deploys [!INCLUDE[ssNoVersion](../includes/ssn
 |Support for the Microsoft Distributed Transaction Coordinator (MSDTC) | See [How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md). |
 |OpenLDAP support for third-party AD providers | See [Tutorial: Use Active Directory authentication with SQL Server on Linux](../linux/sql-server-linux-active-directory-authentication.md). |
 |Machine Learning Services on Linux | See [Install SQL Server Machine Learning Services (Python and R) on Linux](../linux/sql-server-linux-setup-machine-learning.md). |
-|`TempDB` improvements | By default, a new installation of SQL Server on Linux creates multiple `TempDB` data files, based on the number of logical cores (with up to eight data files). This doesn't apply to in-place minor or major version upgrades. Each `TempDB` file is 8 MB with an auto growth of 64 MB. This behavior is similar to the default SQL Server installation on Windows. |
-| PolyBase on Linux | See [Install PolyBase](../relational-databases/polybase/polybase-linux-setup.md) on Linux for non-Hadoop connectors.<br/><br/>See [PolyBase type mapping](../relational-databases/polybase/polybase-type-mapping.md). |
+|TempDB improvements | By default, a new installation of SQL Server on Linux creates multiple TempDB data files, based on the number of logical cores (with up to eight data files). This doesn't apply to in-place minor or major version upgrades. Each TempDB file is 8 MB with an auto growth of 64 MB. This behavior is similar to the default SQL Server installation on Windows. |
+|PolyBase on Linux | See [Install PolyBase](../relational-databases/polybase/polybase-linux-setup.md) on Linux for non-Hadoop connectors.<br/><br/>See [PolyBase type mapping](../relational-databases/polybase/polybase-type-mapping.md). |
 | Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
 | &nbsp; | &nbsp; |
 
@@ -247,7 +247,7 @@ This release introduces new features and improvements for performance, resource 
 
 ## Next steps
 
-- See [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release notes](sql-server-ver15-release-notes.md).
+- See [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release notes](sql-server-version-15-release-notes.md).
 - [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Technical white paper](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br>Published September 2018. Applies to Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 for Windows, Linux, and Docker containers.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

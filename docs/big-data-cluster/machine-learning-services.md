@@ -31,7 +31,7 @@ RECONFIGURE WITH OVERRIDE
 GO
 ```
 
-## Enable on Always On Availability Groups
+## Enable Always On Availability Groups
 
 If you are using SQL Server Big Data Clusters with [Always On Availability Groups](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), you need to perform a few extra steps to enable Machine Learning Services.
 

@@ -37,7 +37,7 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 - [Data Classification](../../connect/odbc/data-classification.md)
 - [DSN and Connection String Keywords and Attributes](dsn-connection-string-attribute.md)
 - [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (the features available also apply, without OLEDB, to the ODBC Driver for SQL Server)
-- [Using Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [Using Always Encrypted](../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md)
 - [Using Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
 - [Using Transparent Network IP Resolution](../../connect/odbc/using-transparent-network-ip-resolution.md)
 - [Using XA Transactions](../../connect/odbc/use-xa-with-dtc.md)

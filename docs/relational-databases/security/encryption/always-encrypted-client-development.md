@@ -21,9 +21,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 For details about developing applications that use Always Encrypted protected databases, and which client drivers and which driver versions support Always Encrypted, see:
 
 - [Using Always Encrypted with the .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Using Always Encrypted with the JDBC Driver](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
-- [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
-- [Using Always Encrypted with the PHP Drivers](../../../connect/php/using-always-encrypted-php-drivers.md)
+- [Using Always Encrypted with the JDBC Driver](using-always-encrypted-with-the-jdbc-driver.md)
+- [Using Always Encrypted with the ODBC Driver](using-always-encrypted-with-the-odbc-driver.md)
+- [Using Always Encrypted with the PHP Drivers](using-always-encrypted-php-drivers.md)
 - [Using Always Encrypted the Microsoft.Data.SqlClient in .NET Core and .NET Framework Applications](https://github.com/dotnet/sqlclient/tree/master/release-notes)
 
 ## See Also

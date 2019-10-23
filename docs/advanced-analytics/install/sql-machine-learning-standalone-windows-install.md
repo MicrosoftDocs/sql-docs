@@ -75,9 +75,9 @@ For local installations, you must run Setup as an administrator. If you install 
 
 4. On the **Feature Selection** page, the following options should already be selected:
 
-    - Microsoft Machine Learning Server (Standalone)
+    - **Microsoft Machine Learning Server (Standalone)**
 
-    - R and Python are both selected by default. You can deselect either language, but we recommend that you install at least one of the supported languages.
+    - **R** and **Python** are both selected by default. You can deselect either language, but we recommend that you install at least one of the supported languages.
 
    ::: moniker-end
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -194,7 +194,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
 4. On an internet connected device, click the cumulative update link for your version of SQL Server.
 
-  + SQL Server 2019 updates (not yet available)
+  + SQL Server 2019 updates *(no updates available yet)*
   + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
   + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
 

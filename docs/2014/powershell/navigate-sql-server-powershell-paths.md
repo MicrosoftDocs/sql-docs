@@ -55,7 +55,7 @@ manager: craigg
 ### Alias Example (PowerShell)  
  For example, you can use one of the following sets of cmdlets or aliases to retrieve a listing of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances available to you by navigating to the SQLSERVER:\SQL folder and requesting the list of child items for the folder:  
   
-```  
+```powershell
 ## Shows using the full cmdet name.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
@@ -74,7 +74,8 @@ ls
 ```  
   
 ## Use Get-ChildItem  
- **Return information by using Get-Childitem**  
+
+### Return information by using Get-Childitem
   
 1.  Navigate to the node for which you want a list of childrem  
   
@@ -83,14 +84,13 @@ ls
 ### Get-ChildItem Example (PowerShell)  
  These examples illustrate the information returned by Get-Childitem for different nodes in a SQL Server provider path.  
   
-```  
+```powershell
 ## Return the current computer and any computer  
 ## to which you have made a SQL or WMI connection.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
   
 ## List the instances of the Database Engine on the local computer.  
-  
 Set-Location SQLSERVER:\SQL\localhost  
 Get-ChildItem  
   
@@ -106,7 +106,8 @@ Get-ChildItem -force
 ```  
   
 ## Create a Custom Drive  
- **Create and use a custom drive**  
+
+### Create and use a custom drive
   
 1.  Use `New-PSDrive` to define a custom drive. Use the `Root` parameter to specify the path that is represented by the custom drive name.  
   
@@ -115,7 +116,7 @@ Get-ChildItem -force
 ### Custom Drive Example (PowerShell)  
  This example creates a virtual drive named AWDB that maps to the node for a deployed copy of the AdventureWorks2012 sample database. The virtual drive is then used to navigate to a table in the database.  
   
-```  
+```powershell
 ## Create a new virtual drive.  
 New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012  
   
@@ -128,5 +129,3 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
  [Work With SQL Server PowerShell Paths](work-with-sql-server-powershell-paths.md)   
  [Convert URNs to SQL Server Provider Paths](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

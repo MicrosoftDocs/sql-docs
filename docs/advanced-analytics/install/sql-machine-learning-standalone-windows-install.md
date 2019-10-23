@@ -120,7 +120,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 4. On the **Feature Selection** page, the following option should be already selected:
     
-   **R Server (Standalone)**  
+   - **R Server (Standalone)**  
     
    ![Feature selections for R Server Standalone](media/2016setup-rserver-features.png "Feature selections for R Server Standalone")
     
@@ -194,6 +194,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
 4. On an internet connected device, click the cumulative update link for your version of SQL Server.
 
+  + SQL Server 2019 updates (not yet available)
   + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
   + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
 

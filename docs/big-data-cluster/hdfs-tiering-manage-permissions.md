@@ -97,7 +97,7 @@ azdata bdc hdfs chmod --permission 775 --path /sales/data/file.txt
 
 ## Set sticky bit on directories
 
-The sticky bit can be set on directories, preventing anyone except the superuser, directory owner or file owner from deleting or moving the files within the directory. Setting the sticky bit for a file has no effect. The below example sets a sticky bit on directory `users` by prefixing the permissions with a `1`.
+Set the sticky bit can on directories to prevent unintentional file deletion or relocation. The sticky bit limits the permission to delete or move a file to the superuser, directory owner or file owner. This setting does not effect the file. The below example sets a sticky bit on directory `users` by prefixing the permissions with a `1`.
 
 ```bash
 azdata bdc hdfs chmod --path /sales/users --permission 1750

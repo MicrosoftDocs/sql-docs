@@ -24,7 +24,6 @@ The updates have been made in SQL Server 2019 on Linux:
 
 | New feature or update | Details |
 |:-----|:-----|
-|New container registry|[Get started with SQL Server containers on Docker](quickstart-install-connect-docker.md) |
 |Replication support |[SQL Server Replication on Linux](sql-server-linux-replication.md)
 |Support for the Microsoft Distributed Transaction Coordinator (MSDTC) |[How to configure MSDTC on Linux](sql-server-linux-configure-msdtc.md) |
 |OpenLDAP support for third-party AD providers |[Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md) |
@@ -34,7 +33,6 @@ The updates have been made in SQL Server 2019 on Linux:
 | Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for SQL Server 2019. |
 | Microsoft Container Registry | The [Microsoft Container Registry](https://www.ntweekly.com/2019/09/23/microsoft-container-registry-to-replace-docker-hub-for-new-images/) now replaces Docker Hub for new official Microsoft container images, including [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
 | Non-root containers | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces the ability to create safer containers by starting the [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] process as a non-root user by default. See [build and run SQL Server containers as a non-root user](sql-server-linux-configure-docker.md#buildnonrootcontainer) for more details. |
-| &nbsp; | &nbsp; |
 
 ## Next steps
 

@@ -14014,6 +14014,21 @@
             "source_path": "docs/relational-databases/indexes/columnstore-indexes-defragmentation.md",
             "redirect_url": "/sql/relational-databases/indexes/reorganize-and-rebuild-indexes",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md",
+            "redirect_url": "/sql/relational-databases/security/encryption/using-always-encrypted-with-the-jdbc-driver",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md",
+            "redirect_url": "/sql/relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/php/using-always-encrypted-php-drivers.md",
+            "redirect_url": "/sql/relational-databases/security/encryption/using-always-encrypted-php-drivers",
+            "redirect_document_id": false
         }
     ]
 }

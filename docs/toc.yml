@@ -8131,29 +8131,91 @@
         href: relational-databases/security/authentication-access/create-a-credential.md
     - name: Encryption
       items:
+      - name: Always Encrypted
+        items:
+        - name: Configure Always Encrypted using PowerShell
+          href: relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
+        - name: Configure Always Encrypted using SSMS
+          href: relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
+        - name: Provision Always Encrypted keys
+          items:
+          - name: Create & store column master keys
+            href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
+          - name: Provision Always Encrypted keys using SSMS
+            href: relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md
+          - name: Provision Always Encrypted keys using PowerShell
+            href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
+        - name: Rotate Always Encrypted keys
+          items:
+          - name: Rotate Always Encrypted keys using SSMS
+            href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md
+          - name: Rotate Always Encrypted keys using PowerShell
+            href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
+        - name: Configure columns using Always Encrypted
+          items:
+          - name: Configure column encyption using Always Encrypted Wizard
+            href: relational-databases/security/encryption/always-encrypted-wizard.md
+          - name: Configure column encryption using Always Encrypted with PowerShell
+            href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
+          - name: Configure column encryption using Always Encrypted with a DAC package
+            href: relational-databases/security/encryption/configure-always-encrypted-using-dacpac.md
+        - name: Query columns using Always Encrypted
+          items:
+          - name: Query columns using Always Encrypted with SSMS
+            href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
+        - name: Migrate sensitive data protected with Always Encrypted
+          items:
+          - name: Export and import databases using Always Encrypted
+            href: relational-databases/security/encryption/always-encrypted-migrate-using-bacpac.md
+          - name: Back up and restore databases using Always Encrypted
+            href: relational-databases/security/encryption/always-encrypted-migrate-using-backup-restore.md
+          - name: Migrate data using Import and Export Wizard
+            href: relational-databases/security/encryption/always-encrypted-migrate-using-import-export-wizard.md
+          - name: Bulk load encrypted data to columns using Always Encrypted
+            href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
+        - name: Develop applications using Always Encrypted
+          items:
+          - name: Develop applications using Always Encrypted
+            href: relational-databases/security/encryption/always-encrypted-client-development.md
+          - name: Develop aplications with .NET Framework
+            href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
+          - name: Using Always Encrypted with the JDBC Driver
+            href: relational-databases/security/encryption/using-always-encrypted-with-the-jdbc-driver.md
+          - name: Using Always Encrypted with the ODBC Driver
+            href: relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md
+          - name: Using Always Encrypted with the PHP Drivers
+            href: relational-databases/security/encryption/using-always-encrypted-php-drivers.md
+      - name: Configure Always Encrypted with Secure Enclaves
+        href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+        items:
+          - name: Manage keys for Always Encrypted with secure enclaves
+            item:
+              - name: Manage enclave-enabled keys
+                href: relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md
+              - name: Provision enclave-enabled keys
+                href: relational-databases/security/encryption/always-encrypted-enclaves-provision-keys.md
+              - name: Rotate enclave-enabled keys
+                href: relational-databases/security/encryption/always-encrypted-enclaves-rotate-keys.md
+          - name: Configure columns with Always Encrypted with secure enclaves
+            item:
+              - name: Configure column encryption
+                href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
+              - name: Configure column encryption in-place with Transact-SQL 
+                href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
+              - name: Enable Always Encrypted with secure enclaves for existing encrypted columns
+                href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
+          - name: Query columns using Always Encrypted with secure enclaves
+            item:
+              - name: Query columns using Always Encrypted with secure enclaves
+                href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
+              - name: Query columns using Always Encrypted with secure enclaves with SSMS
+                href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md
+          - name: Create and use indexes on enclave-enabled columns
+            href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
+          - name: Develop applications using Always Encrypted with secure enclaves
+            href: relational-databases/security/encryption/always-encrypted-client-development.md          
       - name: Troubleshoot TDE
         href: relational-databases/security/encryption/troubleshoot-tde.md
-      - name: Configure Always Encrypted
-        items:
-        - name: Configure Always Encrypted with Secure Enclaves
-          href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
-        - name: Configure with SQL Server Management Studio
-          href: relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
-        - name: Configure with PowerShell
-          href: relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
-          items:
-          - name: Configure Always Encrypted keys
-            href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
-          - name: Rotate Always Encrypted keys
-            href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
-          - name: Configure column encryption
-            href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
-        - name: Create & store column master keys
-          href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
-        - name: Migrate sensitive data
-          href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
-        - name: Develop aplications with .NET Framework
-          href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
       - name: Move a TDE protected database
         href: relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
       - name: Extensible Key Management
@@ -8261,14 +8323,12 @@
       - name: Always Encrypted
         href: relational-databases/security/encryption/always-encrypted-database-engine.md
         items:
-        - name: Always Encrypted with Secure Enclaves
-          href: relational-databases/security/encryption/always-encrypted-enclaves.md
-        - name: Key management
+        - name: Overview of key management for Always Encrypted
           href: relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md
-        - name: Cryptography
+        - name: Always Encrypted cryptography
           href: relational-databases/security/encryption/always-encrypted-cryptography.md
-        - name: Client development
-          href: relational-databases/security/encryption/always-encrypted-client-development.md
+      - name: Always Encrypted with Secure Enclaves
+        href: relational-databases/security/encryption/always-encrypted-enclaves.md
       - name: Encryption keys
         href: relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
         items:
@@ -8285,16 +8345,22 @@
         href: relational-databases/security/auditing/sql-server-audit-records.md
   - name: Tutorials
     items:
-    - name: Getting started with Always Encrypted with secure enclaves using SSMS
-      href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
-    - name: Create and use indexes on Always Encrypted with secure enclaves columns
-      href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
+    - name: Always Encrypted
+      items:
+      - name: Protect sensitive data and store encryption keys in the Windows certificate store >
+        href: /azure/sql-database/sql-database-always-encrypted
+      - name: Protect sensitive data and store encryption keys in Azure Key Vault >
+        href: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
+    - name: Always Encrypted with secure enclaves
+      items:
+      - name: Getting started with Always Encrypted with secure enclaves using SSMS
+        href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+      - name: Create and use indexes on Always Encrypted with secure enclaves columns
+        href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
   - name: Reference
     items:
     - name: Permissions or Securables page
       href: relational-databases/security/permissions-or-securables-page.md
-    - name: Always Encrypted Wizard
-      href: relational-databases/security/encryption/always-encrypted-wizard.md
 - name: Tools
   href: tools/overview-sql-tools.md
   items:

@@ -105,7 +105,7 @@ manager: craigg
   
  To create an installation log, use the standard MsiExec logging switches. The following example creates the log file "Install_Log.txt" using the "v" verbose logging switch.  
   
-```  
+```cmd
 Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt  
 ```  
   
@@ -115,13 +115,13 @@ Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
 > [!IMPORTANT]  
 >  If you use the **/q** switch for a silent command line installation, the end-user license agreement will not be displayed. Regardless of the installation method, the use of this software is governed by a license agreement and you are responsible for complying with the license agreement.  
   
- **To perform a quiet installation:**  
+#### To perform a quiet installation
   
 1.  Open a command prompt **with administrator permissions**.  
   
 2.  Run the following command:  
   
-    ```  
+    ```cmd
     Msiexec.exe /i spPowerPivot.msi /q  
     ```  
   
@@ -157,7 +157,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
   
  Following the .msi installation, run the [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] Configuration Tool to configure and deploy the solutions in the SharePoint farm.  
   
- **To start the configuration tool:**  
+### To start the configuration tool 
   
  From the Windows Start screen type "power" and in the Apps search results, click **PowerPivot for SharePoint 2013 Configuration**. Note that the search results may include two links because [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup installs separate [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] configuration tools for SharePoint 2010 and SharePoint 2013. Make sure you start the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration tool.  
   
@@ -190,7 +190,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
   
 -   To Repair, run the following command:  
   
-    ```  
+    ```cmd
     msiexec.exe /f spPowerPivot.msi  
     ```  
   
@@ -198,8 +198,6 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
   
 -   To uninstall, run the following command:  
   
-    ```  
+    ```cmd
     msiexec.exe /uninstall spPowerPivot.msi  
-    ```  
-  
-  
+    ```

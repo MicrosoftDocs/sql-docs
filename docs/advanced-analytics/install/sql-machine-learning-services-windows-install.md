@@ -96,22 +96,22 @@ For local installations, you must run Setup as an administrator. If you install 
      
      Check this option to install Open JRE included with SQL or provide the location of a different version of a JDK or JRE.
    ::: moniker-end
-     
-     ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-     ![Feature options for R and Python](media/2017setup-features-page-mls-rpy.PNG "Setup options for R and Python")
-     ::: moniker-end
-     
-     ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-     ![Feature options for R, Python](media/2019setup-features-page-mls-rpy.png "Setup options for R, Python, and Java")
-     ::: moniker-end
-     
-     > [!NOTE]
-     > 
-     > Do not select the option for **Machine Learning Server (Standalone)**. The option to install Machine Learning Server under **Shared Features** is intended for use on a separate computer.
+   
+   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ![Feature options for R and Python](media/2017setup-features-page-mls-rpy.PNG "Setup options for R and Python")
+   ::: moniker-end
+   
+   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ![Feature options for R, Python](media/2019setup-features-page-mls-rpy.png "Setup options for R, Python, and Java")
+   ::: moniker-end
+   
+   > [!NOTE]
+   > 
+   > Do not select the option for **Machine Learning Server (Standalone)**. The option to install Machine Learning Server under **Shared Features** is intended for use on a separate computer.
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 
-1. On the **Consent to Install Microsoft R Open** page, select **Accept** and then **Next**. This license agreement covers Microsoft R Open, which includes a distribution of the open-source R base packages and tools, together with enhanced R packages and connectivity providers from the Microsoft development team.
+4. On the **Consent to Install Microsoft R Open** page, select **Accept** and then **Next**. This license agreement covers Microsoft R Open, which includes a distribution of the open-source R base packages and tools, together with enhanced R packages and connectivity providers from the Microsoft development team.
 
 1. On the **Consent to Install Python** page, select **Accept** and then **Next**. The Python open-source licensing agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
 
@@ -161,8 +161,8 @@ For R feature integration only, you should set the **MKL_CBWR** environment vari
 
 2. Create a new User or System variable. 
 
-  + Set variable name to `MKL_CBWR`
-  + Set the variable value to `AUTO`
+   + Set variable name to `MKL_CBWR`
+   + Set the variable value to `AUTO`
 
 This step requires a server restart. If you are about to enable script execution, you can hold off on the restart until all of the configuration work is done.
 

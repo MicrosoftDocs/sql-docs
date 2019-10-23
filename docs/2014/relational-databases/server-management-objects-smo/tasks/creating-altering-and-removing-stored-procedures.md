@@ -29,7 +29,7 @@ manager: craigg
 ## Creating, Altering, and Removing a Stored Procedure in Visual C#  
  This code example shows how to create a stored procedure for the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The example returns the last name of an employee when it is given the employee ID number (`BusinessEntityID`). The stored procedure requires one input parameter to specify the employee ID number and one output parameter to return the last name of the employee.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
@@ -69,47 +69,42 @@ manager: craigg
 ## Creating, Altering, and Removing a Stored Procedure in PowerShell  
  This code example shows how to create a stored procedure for the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The example returns the last name of an employee when it is given the employee ID number (`BusinessEntityID`). The stored procedure requires one input parameter to specify the employee ID number and one output parameter to return the last name of the employee.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
-# Define a StoredProcedure object variable by supplying the parent database and name arguments in the constructor.   
-$sp  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.StoredProcedure `  
--argumentlist $db, "GetLastNameByBusinessEntityID"  
+# Define a StoredProcedure object variable by supplying the parent database and name arguments in the constructor.
+$sp = New-Object -TypeName Microsoft.SqlServer.Management.SMO.StoredProcedure -argumentlist $db, "GetLastNameByBusinessEntityID"  
   
-#Set the TextMode property to false and then set the other object properties.   
+#Set the TextMode property to false and then set the other object properties.
 $sp.TextMode = $false  
 $sp.AnsiNullsStatus = $false  
 $sp.QuotedIdentifierStatus = $false  
   
 # Add two parameters  
 $type = [Microsoft.SqlServer.Management.SMO.Datatype]::Int  
-$param  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.StoredProcedureParameter `  
--argumentlist $sp,"@empval",$type  
+$param  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.StoredProcedureParameter -argumentlist $sp,"@empval",$type  
 $sp.Parameters.Add($param)  
   
 $type = [Microsoft.SqlServer.Management.SMO.DataType]::NVarChar(50)  
-$param2  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.StoredProcedureParameter `  
--argumentlist $sp,"@retval",$type  
+$param2  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.StoredProcedureParameter -argumentlist $sp,"@retval",$type  
 $param2.IsOutputParameter = $true  
 $sp.Parameters.Add($param2)  
   
-#Set the TextBody property to define the stored procedure.   
+#Set the TextBody property to define the stored procedure.
 $sp.TextBody =  " SELECT @retval = (SELECT LastName FROM Person.Person,HumanResources.Employee WHERE Person.Person.BusinessEntityID = HumanResources.Employee.BusinessentityID AND HumanResources.Employee.BusinessEntityID = @empval )"  
   
-# Create the stored procedure on the instance of SQL Server.   
+# Create the stored procedure on the instance of SQL Server.
 $sp.Create()  
   
-# Modify a property and run the Alter method to make the change on the instance of SQL Server.   
+# Modify a property and run the Alter method to make the change on the instance of SQL Server.
 $sp.QuotedIdentifierStatus = $true  
 $sp.Alter()  
   
-#Remove the stored procedure.   
+#Remove the stored procedure.
 $sp.Drop()  
 ```  
   
 ## See Also  
  <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>  
-  
-  

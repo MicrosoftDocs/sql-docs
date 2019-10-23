@@ -89,7 +89,7 @@ Go through the examples below to get started.
 
     ```powershell
     Get-SqlInstance -ServerInstance 'localhost' |
-    Invoke-SqlAssessment |
+    Invoke-SqlAssessment -FlattenOutput |
     Write-SqlTableData -ServerInstance 'localhost' -DatabaseName SQLAssessmentDemo -SchemaName Assessment -TableName Results -Force
     ```
 
@@ -97,7 +97,7 @@ Go through the examples below to get started.
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' |
-    Invoke-SqlAssessment |
+    Invoke-SqlAssessment -FlattenOutput |
     Write-SqlTableData -ServerInstance 'localhost' -DatabaseName SQLAssessmentDemo -SchemaName Assessment -TableName Results -Force
     ```
 

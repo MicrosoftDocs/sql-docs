@@ -191,9 +191,6 @@ The built-in configuration files, specifically control.json includes a `docker` 
 }
 ```
 
-> [!TIP]
-> As a best practice, you must use a version specific image tag and avoid using `latest` image tag, as this can result in version mismatch that will cause cluster health issues.
-
 Before deployment, you can customize the `docker` settings by either directly editing the `control.json` configuration file or using `azdata bdc config` commands. For example, following commands are updating a `custom-bdc` control.json configuration file with a different `<registry>`, `<repository>` and `<image_tag>`:
 
 ```bash
@@ -203,7 +200,10 @@ azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.imageTag=
 ```
 
 > [!TIP]
-> Big data clusters must have access to the container registry and repository from which to pull container images. If your environment does not have access to the default Microsoft Container Registry, you can perform an offline installation where the required images are first placed into a private Docker repository. For more information about offline installations, see [Perform an offline deployment of a SQL Server big data cluster](deploy-offline.md).
+> As a best practice, you must use a version specific image tag and avoid using `latest` image tag, as this can result in version mismatch that will cause cluster health issues.
+
+> [!TIP]
+> Big data clusters deployment must have access to the container registry and repository from which to pull container images. If your environment does not have access to the default Microsoft Container Registry, you can perform an offline installation where the required images are first placed into a private Docker repository. For more information about offline installations, see [Perform an offline deployment of a SQL Server big data cluster](deploy-offline.md). Note that you must set the `DOCKER_USERNAME` and `DOCKER_PASSWORD` [environment variables](deployment-guidance.md#env) before issuing the deployment to ensure the deployment workflow has acces to your private repository to pull the images from.
 
 ## <a id="clustername"></a> Change cluster name
 

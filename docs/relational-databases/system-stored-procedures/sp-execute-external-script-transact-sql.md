@@ -68,10 +68,10 @@ sp_execute_external_script
 ::: moniker-end
 
 ## Arguments
- **@language** = N'*language*'  
+ **\@language** = N'*language*'  
  Indicates the script language. *language* is **sysname**.  Depending on your version of SQL Server, valid values are R (SQL Server 2016 and later), Python (SQL Server 2017 and later), and Java (SQL Server 2019 preview). 
   
- **@script** = N'*script*' 
+ **\@script** = N'*script*' 
  External language  script specified as a literal or variable input. *script* is **nvarchar(max)**.  
 
 `[ @input_data_1 =  N'input_data_1' ]`

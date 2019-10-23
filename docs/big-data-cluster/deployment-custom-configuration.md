@@ -536,18 +536,8 @@ The following **patch.json** file performs the following changes:
       "op": "add",
       "path": "spec.services.hdfs.resources/-",
       "value": "spark-0"
-    },
-    {
-      "op": "add",
-      "path": "spec.services.spark.settings",
-      "value": {
-        "DriverMemory": "2g",
-        "DriverCores": "1",
-        "ExecutorInstances": "2",
-        "ExecutorMemory": "2g",
-        "ExecutorCores": "1"
-      }
     }
+   }
   ]
 }
 ```
@@ -573,7 +563,7 @@ For disabling the container that runs ElasticSearch to run in privileged mode, y
 }
 ```
 
-You can manully edit the **control.json** and add the above section to the **spec**, or you can create a patch file **elasticsearch-patch.json** like below and use **azdata** CLI to patch the **config.json** file:
+You can manully edit the **control.json** and add the above section to the **spec**, or you can create a patch file **elasticsearch-patch.json** like below and use **azdata** CLI to patch the **control.json** file:
 
 ```json
 {

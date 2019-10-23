@@ -1,7 +1,7 @@
 ---
 title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/18/2019"
+ms.date: "10/02/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -467,6 +467,9 @@ When using Always Encrypted with secure enclaves, you can change any encryption 
 *column_name*  
 The name of the column to be altered, added, or dropped. The *column_name* maximum is 128 characters. For new columns, you can omit *column_name* for columns created with a **timestamp** data type. The name **timestamp** is used if you don't specify *column_name* for a **timestamp** data type column.
 
+> [!NOTE]
+> New columns are added after all existing columns in the table being altered.
+
 [ _type\_schema\_name_**.** ] _type\_name_  
 The new data type for the altered column, or the data type for the added column. You can't specify *type_name* for existing columns of partitioned tables. *type_name* can be any one of the following types:
 
@@ -608,6 +611,9 @@ The syntax ALTER TABLE ... ADD/DROP/ALTER INDEX is supported only for memory-opt
 
 ADD  
 Specifies that one or more column definitions, computed column definitions, or table constraints are added. Or, the columns that the system uses for system versioning are added. For memory-optimized tables, you can add an index.
+
+> [!NOTE]
+> New columns are added after all existing columns in the table being altered.
 
 > [!IMPORTANT]
 > Without using an ALTER TABLE statement, the statements [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md), and [PAD_INDEX](alter-table-index-option-transact-sql.md) aren't supported for indexes on memory-optimized tables.
@@ -794,7 +800,7 @@ Specifies the allowed methods of lock escalation for a table.
 AUTO  
 This option allows [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to select the lock escalation granularity that's appropriate for the table schema.
 
-- If the table is partitioned, lock escalation is allowed to partition. After the lock is escalated to the partition level, the lock won't be escalated later to TABLE granularity.
+- If the table is partitioned, lock escalation will be allowed to the heap or B-tree (HoBT) granularity. In other words, escalation will be allowed to the partition level. After the lock is escalated to the HoBT level, the lock will not be escalated later to TABLE granularity.
 - If the table isn't partitioned, the lock escalation is done to the TABLE granularity.
 
 TABLE  

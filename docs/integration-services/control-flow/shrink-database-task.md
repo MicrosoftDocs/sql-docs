@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "database shrinking [Integration Services]"
   - "shrinking databases"
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Shrink Database Task
 

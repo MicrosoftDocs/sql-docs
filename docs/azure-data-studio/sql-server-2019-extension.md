@@ -11,9 +11,9 @@ ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
 ---
-# SQL Server 2019 extension (preview)
+# SQL Server 2019 extension for Azure Data Studio (preview)
 
-The SQL Server 2019 extension (preview) provides preview support for new features and tools shipping in support of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This includes preview support for [SQL Server 2019 big data clusters](../big-data-cluster/big-data-cluster-overview.md), an integrated [notebook experience](../big-data-cluster/notebooks-guidance.md), and a PolyBase [Create External Table wizard](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
+The SQL Server 2019 extension for Azure Data Studio (preview) provides preview support for new features and tools shipping in support of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Support includes preview support for [SQL Server 2019 big data clusters](../big-data-cluster/big-data-cluster-overview.md), an integrated [notebook experience](../big-data-cluster/notebooks-guidance.md), and a PolyBase [Create External Table wizard](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
 
 ## Install the SQL Server 2019 extension (preview)
 
@@ -27,7 +27,10 @@ To install the SQL Server 2019 extension (preview), download and install the ass
    |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|September 11, 2019 |0.16.0
    |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|September 11, 2019 |0.16.0
 
-1. In Azure Data Studio choose **Install Extension from VSIX Package** from the **File** menu and select the downloaded .vsix file.
+   > [!NOTE]
+   > There is a known issue with Internet Explorer where the VSIX will be downloaded as zip files. Use Edge or another browser to  download the VSIX correctly. 
+
+1. In Azure Data Studio, choose **Install Extension from VSIX Package** from the **File** menu and select the downloaded .vsix file.
 
 1. Choose **Yes** when prompted to confirm installation and wait for the notification that the installation succeeded.
 
@@ -55,11 +58,11 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
 * The **SQL Server big data cluster** connection type has been removed in this release. All functionality previously available from the SQL Server big data cluster connection is now available in the SQL Server connection.
 * HDFS browsing can be found under the **Data Services** folder
-* For notebooks the PySpark and other big data kernels work when connected to the SQL Server master instance in your SQL Server big data cluster.
+* For notebooks, the PySpark and other big data kernels work when connected to the SQL Server master instance in your SQL Server big data cluster.
 * Create External Table wizard:
   * Support for creating External Table using existing External Data Source.
   * Performance improvements across the wizard.
-  * Improved handling of object names with special characters. In some cases these caused the wizard to fail
+  * Improved handling of object names with special characters. In some cases, these caused the wizard to fail
   * Reliability improvements for the Object Mapping page.
   * Removed system databases - 'DWConfiguration', 'DWDiagnostics', 'DWQueue' - from the databases dropdown.
   * Support for setting the External File Format object's name in the **Create External Table from CSV Files** wizard.
@@ -76,15 +79,15 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
 ## Release Notes (v0.10.2)
 ### SQL Server 2019 support
-Support for SQL Server 2019 has been updated. On connecting to a SQL Server Big Data Cluster instance a new _Data Services_ folder will appear in the explorer tree. This has launch points for actions such as opening a new Notebook against the connection, submitting Spark jobs, and working with HDFS. Note that for some actions such as _Create External Data_ over a HDFS file/folder, the _SQL Server 2019 Preview_ extension must be installed.
+Support for SQL Server 2019 has been updated. After connecting to a SQL Server Big Data Cluster instance, a new _Data Services_ folder appears in the explorer tree. The folder has launch points for actions such as opening a new notebook against the connection, submitting Spark jobs, and working with HDFS. Some actions, such as _Create External Data_ over a HDFS file/folder, the _SQL Server 2019 Preview_ extension must be installed.
 
 ### Notebook support
 We have made significant updates to the Notebook user interface in this release. Our focus was on making it easy to read Notebooks that are shared with you. This meant removing all outline boxes around cells unless selected or hovered, adding hover support for easy cell-level actions without need to select a cell, and clarifying execution state by adding execution count, an animated _stop running_ button and more. We also added keyboard shortcuts for _New Notebook_ (`Ctrl+Shift+N`), _Run Cell_ (`F5`), _New Code Cell_ (`Ctrl+Shift+C`), _New Text Cell_ (`Ctrl+Shift+T`). Moving forward we will aim to have all key actions launchable by shortcut so let us know what you're missing!
 
 Other improvements and fixes include:
-* The _SQL Server 2019 Preview_ extension now prompts uses to pick an install directory for Python dependencies. It also no longer includes Python in the `.vsix file`, reducing overall extension size. The Python dependencies are needed to support Spark and Python3 kernels, so installing this extension is required to use these.
+* The _SQL Server 2019 Preview_ extension now prompts users to pick an install directory for Python dependencies. It also no longer includes Python in the `.vsix file`, reducing overall extension size. The Python dependencies support Spark and Python3 kernels.
 * Support for launching a new notebook from the command-line has been added. Launch with the arguments `--command=notebook.command.new --server=myservername` should open a new notebook and connect to this server.
-* Performance fixes for notebooks with a large code length in cells. If code cells are over 250 lines they will have a scrollbar added.
+* Performance fixes for notebooks with a large code length in cells. If code cells are over 250 lines, a scrollbar is added.
 * Improved .ipynb file support. Version 3 or higher is now supported. Please note that on saving files will be updated to version 4 or higher.
 * The `notebook.enabled` user setting has been removed now that the built in Notebook viewer is stable
 * High Contrast theme is now supported with a number of fixes to object layout in this case.
@@ -138,58 +141,3 @@ A number of improvements that help extenders were added in this release
 * Block use of Create External Data wizard if PolyBase is not enabled or running in the target server.
 * Spelling and naming fixes related to SQL Server 2019 and Create External Data.
 * Removed a large number of errors from the Azure Data Studio debug console.
-
-##  SQL Server 2019 Big Data Cluster support
-
-* Click **Add Connection** in *Object Explorer* and choose **SQL Server big data cluster** as the connection type.
-
-   > [!TIP]
-   > If you do not see the **SQL Server big data cluster** connection type, restart Azure Data Studio.
-
-* Enter the host name or IP address of the cluster endpoint plus the username & password used to connect.
-* Optionally, include a friendly display name in the **Name** field.
-* Click **Connect** and you can then launch common tasks from the Dashboard, browse **HDFS** in Object Explorer, and run in-context tasks from there.
-* To submit a Spark job against the cluster, right-click on the server node in *Object Explorer* and choose **Submit Spark Job** to bring up the submission dialog.
-* To open a Notebook, see the next section.
-
-For details, see [Big Data Clusters](../big-data-cluster/big-data-cluster-overview.md).
-
-
-## Azure Data Studio Notebooks
-
-* Open a notebook in one of the following ways:
-  * Open a new notebook from the *Command Palette*.
-  * Open the HDFS Object Explorer tree for a SQL Server 2019 big data cluster and either:
-    * Right click on the server node and choose **New Jupyter Notebook**.
-    * Right click on a CSV file, and choose **Analyze in Notebook**.
-  * Open an existing .ipynb file from the **File** menu or file explorer *(.ipynb files must be upgraded to version 4 or higher to load properly)*
-* Choose a kernel. For local notebook execution, choose Python 3. For remote execution, choose PySpark or Spark | Scala.
-* Choose a SQL Server big data cluster endpoint to connect to if executing remotely (this is not necessary for local development with Python 3).
-* Add code or markdown cells via the buttons in the notebook header. Remove cells with the trash can icon to the left of each cell.
-* Run cells with the play button for code cells, and toggle markdown editing and preview with the eye icon
-
-## PolyBase Create External Table Wizard
-
-* From a SQL Server 2019 instance the *Create External Table Wizard* can be opened in three ways:
-  * Right click on a server, choose **Manage**, click on the tab for SQL Server 2019 (Preview), and choose **Create External Table**.
-  * With a SQL Server 2019 instance selected in *Object Explorer*, bring up *Create External Wizard* via the *Command Palette*.
-  * Right click on a SQL Server 2019 database in *Object Explorer* and choose **Create External Table**.
-* In this version of the extension, external tables may be created to access remote SQL Server and Oracle tables.
-
-  > [!NOTE]
-  > While the External Table functionality is a SQL 2019 feature, the remote SQL Server may be running an earlier version of SQL Server.
-
-* Choose whether you are accessing SQL Server or Oracle on the first page of the wizard and continue.
-* You will be prompted to create a Database Master Key if one has not already been created (passwords of insufficient complexity will be blocked).
-* Create a data source connection and named credential for the remote server.
-* Choose which objects to map to your new external table.
-* Choose **Generate Script** or **Create** to finish the wizard.
-* After creation of the external table, it immediately appears in the object tree of the database where it was created.
-
-
-## Known Issues
-
-* If password is not saved when creating a connection, some actions such as submitting Spark Job may not succeed.
-* Existing .ipynb notebooks must be upgraded to version 4 or higher to load contents in the viewer.
-* Running the **Reinstall Notebook Dependencies** command may show 2 tasks in the tasks view, one of which fails. This does not cause installation to fail
-* Choosing **Add New Connection** in a Notebook and clicking cancel will cause **Select Connection** to be shown, even if you were already connected.

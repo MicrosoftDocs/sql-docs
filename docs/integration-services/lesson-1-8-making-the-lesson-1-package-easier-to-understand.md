@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 1-8: Annotate and format the Lesson 1 package 
 
@@ -49,7 +49,7 @@ In this task, you use the formatting features in [!INCLUDE[ssNoVersion](../inclu
   
     To wrap the text in the annotation box, place the cursor where you want to start a new line and press **Enter**.  
   
-    If you don't add text to the annotation box, the box disappears when you click outside it.  
+    If you don't add text to the annotation box, the box disappears when you click outside it.  Because of this behavior, if you want to paste text in the annotation box then copy the text to the clipboard before selecting Add Annotation. 
   
 ## Go to next task
 [Step 9: Test the Lesson 1 package](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  

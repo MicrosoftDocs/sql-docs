@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
-author: "markingmyname"
-ms.author: "maghan"
+author: maggiesMSFT 
+ms.author: maggies
 manager: kfile
 ---
 # Uninstall Reporting Services

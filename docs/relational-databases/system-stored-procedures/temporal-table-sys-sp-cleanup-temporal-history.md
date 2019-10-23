@@ -24,7 +24,7 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
   
 ## Arguments  
 
-*@table_name*
+*\@table_name*
 
 The name of the temporal table for which retention cleanup is invoked.
 

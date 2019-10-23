@@ -9,12 +9,52 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
-ms.date: "09/11/2019"
+ms.date: "10/11/2019"
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## October 2019 (hotfix 2)
+
+October 11, 2019 &nbsp; / &nbsp; version: 1.12.2
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Disable automatically starting the EH in inspect mode |  |
+| &nbsp; | &nbsp; |
+
+## October 2019 (hotfix)
+
+October 8, 2019 &nbsp; / &nbsp; version: 1.12.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Fixed issue for quotes and backslashes in Notebooks to escape correctly. |  |
+| &nbsp; | &nbsp; |
+
+## October 2019
+
+October 2, 2019 &nbsp; / &nbsp; version: 1.12.0
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Release of Query History extension | The SQL History extension saves all past queries executed in an Azure Data Studio session and lists them in execution order. Users can see open the query, execute the query, delete the query, pause query history, or delete all query history entries. |
+| New Copy/Paste Results | We have added additional ways to copy/paste results from the results grid. |
+| Update to Powershell extension |  |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/42?closed=1). |
+| &nbsp; | &nbsp; |
+
+### Known Issues
+- Notebooks
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
 
 ## September 2019
 

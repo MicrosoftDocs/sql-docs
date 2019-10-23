@@ -1,7 +1,7 @@
 ---
 title: Deploy SQL Server Big Data Cluster with high availability
 titleSuffix: Deploy SQL Server Big Data Cluster with high availability 
-description: Learn how to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview) to with high availability.
+description: Learn how to deploy SQL Server Big Data Cluster with high availability.
 author: mihaelablendea
 ms.author: mihaelab 
 ms.reviewer: mikeray
@@ -27,7 +27,7 @@ Here are some of the capabilities that availability groups enable:
 1. A second external endpoint is provisioned for read-only connections to the secondary replicas. 
 
 
-# Deploy
+## Deploy
 
 To deploy SQL Server master in an availability group:
 
@@ -81,6 +81,11 @@ The following steps show how to create a patch file that includes these settings
 
     ```bash
     azdata bdc config patch -c custom-aks/bdc.json --patch-file patch.json
+    ```
+1. Start cluster deployment using the cluster configuration profile created above
+
+    ```bash
+    azdata bdc create --config-profile custom-aks --accept-eula yes
     ```
 
 ## Connect to SQL Server databases

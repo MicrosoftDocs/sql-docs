@@ -168,7 +168,6 @@ ALTER INDEX { index_name | ALL }
 }  
   
 ```
-
 ## Arguments
 
  *index_name*  
@@ -335,7 +334,7 @@ FILLFACTOR = *fillfactor*
  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- Specifies whether to store the sort results in **tempdb**. The default is OFF.  
+ Specifies whether to store the sort results in **tempdb**. The default is OFF except for Azure SQL Database Hyperscale. For all index rebuild operations in Hyperscale, SORT_IN_TEMPDB is always ON, regardless of the option specified unless resumable index rebuild is used.  
   
  ON  
  The intermediate sort results that are used to build the index are stored in **tempdb**. If **tempdb** is on a different set of disks than the user database, this may reduce the time needed to create an index. However, this increases the amount of disk space that is used during the index build.  

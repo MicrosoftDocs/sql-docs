@@ -2,7 +2,7 @@
 title: "Scalar UDF Inlining in Microsoft SQL databases | Microsoft Docs"
 description: "Scalar UDF Inlining feature to improve performance of queries that invoke scalar UDFs in SQL Server (2018 and later), and Azure SQL Database."
 ms.custom: ""
-ms.date: 02/28/2019
+ms.date: 09/13/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-a
 ---
 # Scalar UDF Inlining
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article introduces Scalar UDF inlining, a feature under the intelligent query processing suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
@@ -148,7 +148,8 @@ A scalar T-SQL UDF can be inline if all of the following conditions are true:
 - The UDF uses the `EXECUTE AS CALLER` clause (the default behavior if the `EXECUTE AS` clause is not specified).
 - The UDF does not reference table variables or table-valued parameters.
 - The query invoking a scalar UDF does not reference a scalar UDF call in its `GROUP BY` clause.
-- The query invoking a scalar UDF in its select list with `DISTINCT` clause does not reference a scalar UDF call in its `ORDER BY` clause.
+- The query invoking a scalar UDF in its select list with `DISTINCT` clause does not have `ORDER BY` clause.
+- The UDF is not used in `ORDER BY` clause.
 - The UDF is not natively compiled (interop is supported).
 - The UDF is not used in a computed column or a check constraint definition.
 - The UDF does not reference user-defined types.

@@ -5,7 +5,7 @@ description: Create a simple predictive model in R using SQL Server Machine Lear
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/17/2019  
+ms.date: 10/04/2019  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -18,10 +18,17 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 In this quickstart, you'll create and train a predictive model using R, save the model to a table in your SQL Server instance, then use the model to predict values from new data using [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
-The model you'll use in this quickstart is a simple generalized linear model (GLM) that predicts the probability that a vehicle has been fitted with a manual transmission. You'll use the **mtcars** dataset included with R.
+You'll create and execute two stored procedures running in SQL. The first one uses the **mtcars** dataset included with R and generates a simple generalized linear model (GLM) that predicts the probability that a vehicle has been fitted with a manual transmission. The second procedure is for scoring - it calls the model generated in the first procedure to output a set of predictions based on new data. By placing R code in a SQL stored procedure, operations are contained in SQL, are reusable, and can be called by other stored procedures and client applications.
 
 > [!TIP]
 > If you need a refresher on linear models, try this tutorial which describes the process of fitting a model using rxLinMod:  [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model)
+
+By completing this quickstart, you'll learn:
+
+> [!div class="checklist"]
+> - How to embed R code in a stored procedure
+> - How to pass inputs to your code through inputs on the stored procedure
+> - How stored procedures are used to operationalize models
 
 ## Prerequisites
 
@@ -37,7 +44,7 @@ To create the model, you'll create source data for training, create the model an
 
 ### Create the source data
 
-1. Open **SQL Server Management Studio** and connect to your SQL Server instance.
+1. Open SSMS, connect to your SQL Server instance, and open a new query window.
 
 1. Create a table to save the training data.
 
@@ -209,12 +216,6 @@ It's also possible to use the [PREDICT (Transact-SQL)](../../t-sql/queries/predi
 
 ## Next steps
 
-To learn about handling R data types in SQL Server, follow this quickstart:
+For more information on SQL Server Machine Learning Services, see:
 
-> [!div class="nextstepaction"]
-> [Handle data types and objects using R in SQL Server Machine Learning Services](quickstart-r-data-types-and-objects.md)
-
-For more information on SQL Server Machine Learning Services, see the following articles.
-
-- [Write advanced R functions with SQL Server Machine Learning Services](quickstart-r-functions.md)
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

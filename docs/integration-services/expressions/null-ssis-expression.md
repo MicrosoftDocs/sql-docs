@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "NULL function"
   - "null values [Integration Services]"
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # NULL (SSIS Expression)
 

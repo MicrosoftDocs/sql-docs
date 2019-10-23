@@ -16,17 +16,135 @@
 - name: ADO.NET
   items:
   - name: Microsoft ADO.NET for SQL Server
-    href: ../connect/ado-net/microsoft-ado-net-for-sql-server.md
-  - name: "Step 1: Configure development environment for ADO.NET development"
-    href: ../connect/ado-net/step-1-configure-development-environment-for-ado-net-development.md
-  - name: "Step 2: Create a SQL database for ADO.NET development"
-    href: ../connect/ado-net/step-2-create-a-sql-database-for-ado-net-development.md
-  - name: "Step 3: Proof of concept connecting to SQL using ADO.NET"
-    href: ../connect/ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md
-  - name: "Step 4: Connect resiliently to SQL with ADO.NET"
-    href: ../connect/ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md
-
-
+    href: ../connect/ado-net/microsoft-ado-net-sql-server.md
+  - name: Getting started with the SqlClient Driver
+    href: ../connect/ado-net/get-started-sqlclient-driver.md
+    items:
+    - name: "Step 1: Configure development environment for ADO.NET development"
+      href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
+    - name: "Step 2: Create a SQL database for ADO.NET development"
+      href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
+    - name: "Step 3: Proof of concept connecting to SQL using ADO.NET"
+      href: ../connect/ado-net/step-3-connect-sql-ado-net.md
+    - name: "Step 4: Connect resiliently to SQL with ADO.NET"
+      href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
+  - name: Overview of the SqlClient Driver
+    href: ../connect/ado-net/overview-sqlclient-driver.md
+    items:
+    - name: Introduction to Microsoft.Data.SqlClient namespace
+      href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
+    - name: Download Microsoft SqlClient Data Provider for SQL Server
+      href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+    - name: SqlClient Driver support lifecycle
+      href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
+    - name: Finding additional SqlClient Driver information
+      href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+  - name: SQL Server and ADO.NET
+    href: ../connect/ado-net/sql/index.md
+    items:
+    - name: SQL Server security
+      href: ../connect/ado-net/sql/sql-server-security.md
+      items:
+      - name: Authentication in SQL Server
+        href: ../connect/ado-net/sql/authentication-sql-server.md
+      - name: Application security scenarios in SQL Server
+        href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
+        items:
+        - name: Writing secure dynamic SQL in SQL Server
+          href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
+      - name: SQL Server Express security
+        href: ../connect/ado-net/sql/sql-server-express-security.md
+    - name: SQL Server data types and ADO.NET
+      href: ../connect/ado-net/sql/sql-server-data-types.md
+      items:
+      - name: SqlTypes and the DataSet
+        href: ../connect/ado-net/sql/sqltypes-dataset.md
+      - name: Handling null values
+        href: ../connect/ado-net/sql/handle-null-values.md
+      - name: Comparing GUID and uniqueidentifier values
+        href: ../connect/ado-net/sql/compare-guid-uniqueidentifier-values.md
+      - name: Date and time data
+        href: ../connect/ado-net/sql/date-time-data.md
+      - name: Large UDTs
+        href: ../connect/ado-net/sql/large-udts.md
+      - name: XML data in SQL Server
+        href: ../connect/ado-net/sql/xml-data-sql-server.md
+        items:
+        - name: SQL XML column values
+          href: ../connect/ado-net/sql/sql-xml-column-values.md
+        - name: Specifying XML values as parameters
+          href: ../connect/ado-net/sql/specify-xml-values-parameters.md
+    - name: SQL Server binary and large-value data
+      href: ../connect/ado-net/sql/sql-server-binary-large-value-data.md
+      items:
+      - name: Modifying large-value (max) data in ADO.NET
+        href: ../connect/ado-net/sql/modify-large-value-max-data.md
+      - name: FILESTREAM data
+        href: ../connect/ado-net/sql/filestream-data.md
+      - name: Inserting an image from a file
+        href: ../connect/ado-net/sql/insert-image-file.md
+    - name: SQL Server data operations in ADO.NET
+      href: ../connect/ado-net/sql/sql-server-data-operations.md
+      items:
+      - name: Bulk copy operations in SQL Server
+        href: ../connect/ado-net/sql/bulk-copy-operations-sql-server.md
+        items:
+        - name: Bulk copy example setup
+          href: ../connect/ado-net/sql/bulk-copy-example-setup.md
+        - name: Single bulk copy operations
+          href: ../connect/ado-net/sql/single-bulk-copy-operations.md
+        - name: Multiple bulk copy operations
+          href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
+        - name: Transaction and bulk copy operations
+          href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
+      - name: Multiple Active Result Sets (MARS)
+        href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
+        items:
+        - name: Enabling Multiple Active Result Sets
+          href: ../connect/ado-net/sql/enable-multiple-active-result-sets.md
+        - name: Manipulating data
+          href: ../connect/ado-net/sql/manipulate-data.md
+      - name: Asynchronous operations
+        href: ../connect/ado-net/sql/asynchronous-operations.md
+        items:
+        - name: Windows applications using callbacks
+          href: ../connect/ado-net/sql/windows-applications-callbacks.md
+        - name: ASP.NET applications using wait handles
+          href: ../connect/ado-net/sql/aspnet-apps-use-wait-handles.md
+        - name: Polling in console applications
+          href: ../connect/ado-net/sql/poll-console-applications.md
+      - name: Table-valued parameters
+        href: ../connect/ado-net/sql/table-valued-parameters.md
+    - name: SQL Server features and ADO.NET
+      href: ../connect/ado-net/sql/sql-server-features-adonet.md
+      items:
+      - name: Enumerating instances of SQL Server (ADO.NET)
+        href: ../connect/ado-net/sql/enumerate-instances-sql-server.md
+      - name: Provider statistics for SQL Server
+        href: ../connect/ado-net/sql/provider-statistics-sql-server.md
+      - name: SQL Server Express user instances
+        href: ../connect/ado-net/sql/sql-server-express-user-instances.md
+      - name: Database mirroring in SQL Server
+        href: ../connect/ado-net/sql/database-mirroring-sql-server.md
+      - name: The context connection
+        href: ../connect/ado-net/sql/context-connection.md
+      - name: Query notifications in SQL Server
+        href: ../connect/ado-net/sql/query-notifications-sql-server.md
+        items:
+        - name: Enabling query notifications
+          href: ../connect/ado-net/sql/enable-query-notifications.md
+        - name: SqlDependency in an ASP.NET application
+          href: ../connect/ado-net/sql/sqldependency-aspnet-app.md
+        - name: Detecting changes with SqlDependency
+          href: ../connect/ado-net/sql/detect-changes-sqldependency.md
+        - name: SqlCommand execution with a SqlNotificationRequest
+          href: ../connect/ado-net/sql/sqlcommand-execution-sqlnotificationrequest.md
+      - name: Snapshot isolation in SQL Server
+        href: ../connect/ado-net/sql/snapshot-isolation-sql-server.md
+      - name: SqlClient support for high availability, disaster recovery
+        href: ../connect/ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md
+      - name: SqlClient support for LocalDB
+        href: ../connect/ado-net/sql/sqlclient-support-localdb.md
 
 - name: JDBC
   items:
@@ -2414,14 +2532,14 @@
       href: ../connect/jdbc/validating-user-input.md
     - name: Application Security
       href: ../connect/jdbc/application-security.md
-    - name: Using SSL Encryption
+    - name: Using encryption
       href: ../connect/jdbc/using-ssl-encryption.md
       items:
-      - name: Understanding SSL Support
+      - name: Understanding encryption support
         href: ../connect/jdbc/understanding-ssl-support.md
-      - name: Connecting with SSL Encryption
+      - name: Connecting with encryption
         href: ../connect/jdbc/connecting-with-ssl-encryption.md
-      - name: Configuring the Client for SSL Encryption
+      - name: Configuring the client for encryption
         href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
     - name: FIPS Mode
       href: ../connect/jdbc/fips-mode.md

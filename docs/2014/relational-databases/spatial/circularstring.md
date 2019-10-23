@@ -1,7 +1,7 @@
 ---
 title: "CircularString | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: 10/18/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
@@ -25,7 +25,7 @@ manager: craigg
 ### Accepted instances  
  A `CircularString` instance is accepted if it is either empty or contains an odd number of points, n, where n > 1. The following `CircularString` instances are accepted.  
   
-```  
+```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
@@ -33,7 +33,7 @@ DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
   
  `@g3` shows that `CircularString` instance may be accepted, but not valid. The following CircularString instance declaration is not accepted. This declaration throws a `System.FormatException`.  
   
-```  
+```sql
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
 ```  
   
@@ -52,7 +52,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
   
  The following example shows valid `CircularString` instances.  
   
-```  
+```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1, 0 1)';  
@@ -64,7 +64,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();
   
  The following example shows CircularString instances that are not valid.  
   
-```  
+```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING(1 1, 2 0, 1 1)';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(0 0, 0 0, 0 0)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
@@ -127,7 +127,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- Notice that the value for the `CircularString` example is close to 2???, which is the actual circumference of the circle.  
+ Notice that the value for the `CircularString` example is close to 2&#x03c0; (2 * pi), which is the actual circumference of the circle.  
   
 ### D. Declaring and Instantiating a Geometry Instance with a CircularString in the Same Statement  
  This snippet shows how to declare and instantiate a `geometry` instance with a `CircularString` in the same statement:  

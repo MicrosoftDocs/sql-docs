@@ -38,7 +38,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  Integer mapping the locale identifier (LCID) of the language for which you want to lade the thesaurus XML definition. To obtain the LCIDs of languages that are available on a server instance, use the [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) catalog view.  
   
- **@loadOnlyIfNotLoaded** = *action*  
+ **\@loadOnlyIfNotLoaded** = *action*  
  Specifies whether the thesaurus file is loaded into the internal thesaurus tables even if it has already been loaded. *action* is one of:  
   
 |Value|Definition|  

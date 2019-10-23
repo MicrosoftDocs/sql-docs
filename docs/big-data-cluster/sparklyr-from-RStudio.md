@@ -44,7 +44,7 @@ You can use sparklyr to connect from a client to the big data cluster using Livy
 In RStudio, create an R script and connect to Spark as in the following example:
 
 > [!TIP]
-> For the `<USERNAME>` and `<PASSWORD>` values, use the username (such as root) and password you set during the big data cluster deployment. For the `<IP>` and `<PORT>` values, see the documentation on [connecting to a big data cluster](connect-to-big-data-cluster.md).
+> For the `<AZDATA_USERNAME>` and `<AZDATA_PASSWORD>` values, use the username (such as root) and password you set during the big data cluster deployment. For the `<IP>` and `<PORT>` values, see the documentation on [connecting to a big data cluster](connect-to-big-data-cluster.md).
 
 ```r
 library(sparklyr)
@@ -52,7 +52,7 @@ library(dplyr)
 library(DBI)
 
 #Specify the Knox username and password
-config <- livy_config(user = "<username>", password = "<password>")
+config <- livy_config(user = "<AZDATA_USERNAME>", password = "<AZDATA_PASSWORD>")
 
 httr::set_config(httr::config(ssl_verifypeer = 0L, ssl_verifyhost = 0L))
 

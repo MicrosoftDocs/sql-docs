@@ -32,7 +32,9 @@ ms.author: mathoma
   
 -   **BACKUP DATABASE** supports only copy-only full backups of databases, files, or filegroups when it is executed on secondary replicas. Note that copy-only backups do not impact the log chain or clear the differential bitmap.  
   
--   Differential backups are not supported on secondary replicas.  
+-   Differential backups are not supported on secondary replicas.
+
+-   Concurrent backups, such as executing a transaction log backup on the primary replica while a full database backup is executing on the secondary replica, is currently not supported. 
   
 -   **BACKUP LOG** supports only regular log backups (the COPY_ONLY option is not supported for log backups on secondary replicas).  
   

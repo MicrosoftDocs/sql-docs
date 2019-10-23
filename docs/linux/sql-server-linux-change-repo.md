@@ -36,6 +36,7 @@ When you install SQL Server on Linux, you must configure a Microsoft repository.
 |---|---|---|
 | **2019** | **mssql-server-2019** | SQL Server 2019 Cumulative Update (CU) repository. |
 | **2019 GDR** | **mssql-server-2019-gdr** | SQL Server 2019 GDR repository for critical updates only. |
+| **2019 Preview** | **mssql-server-preview** | SQL Server 2019 Preview and RC repository. |
 | **2017** | **mssql-server-2017** | SQL Server 2017 Cumulative Update (CU) repository. |
 | **2017 GDR** | **mssql-server-2017-gdr** | SQL Server 2017 GDR repository for critical updates only. |
 

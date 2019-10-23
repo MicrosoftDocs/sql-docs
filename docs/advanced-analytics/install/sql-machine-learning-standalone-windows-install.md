@@ -82,6 +82,7 @@ For local installations, you must run Setup as an administrator. If you install 
     ::: moniker-end
     ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
     ![Choose R or Python features](media/2017setup-features-page-mlsvr-rpy.png "Start installation of Machine Learning Server Standalone")
+    ::: moniker-end
     ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
     ![Choose R or Python features](media/2019setup-features-page-mlsvr-rpy.png "Start installation of Machine Learning Server Standalone")
     ::: moniker-end

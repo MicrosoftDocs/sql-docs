@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, and Analytics Platform System
 ms.custom: ""
-ms.date: "10/19/2019"
+ms.date: "10/22/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -992,73 +992,73 @@ The MAXSIZE value for the DTU model, if specified, has to be a valid value shown
 
 **vCore model**
 
-**General Purpose - provisioned compute - Generation 4 (part 1)**
+**General purpose - provisioned compute - Gen4 (part 1)**
 
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
 |Max data size (GB)|1024|1024|1024|1536|1536|1536|
 
-**General Purpose - provisioned compute - Generation 4 (part 2)**
+**General purpose - provisioned compute - Gen4 (part 2)**
 
 |MAXSIZE|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
 |Max data size (GB)|1536|3072|3072|3072|4096|4096|
 
-**General Purpose - provisioned compute - Generation 5 (part 1)**
+**General purpose - provisioned compute - Gen5 (part 1)**
 
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |Max data size (GB)|1024|1024|1024|1536|1536|1536|1536|
 
-**General Purpose - provisioned compute - Generation 5 (part 2)**
+**General purpose - provisioned compute - Gen5 (part 2)**
 
 |MAXSIZE|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**General Purpose - provisioned compute - Fsv2-series (preview)**
+**General purpose - provisioned compute - Fsv2-series (preview)**
 
 |MAXSIZE|GP_Fsv2_72|
 |:----- | ------: |
 |Max data size (GB)|4096|
 
-**General Purpose - serverless compute - Gen 5 (part 1)**
+**General purpose - serverless compute - Gen5 (part 1)**
 
 |MAXSIZE|GP_S_Gen5_1|GP_S_Gen5_2|GP_S_Gen5_4|GP_S_Gen5_6|GP_S_Gen5_8|
 |:----- | ------: |-------: |-------: |-------: |--------: |
 |Max vCores|1|2|4|6|8|
 
-**General Purpose - serverless compute - Gen 5 (part 2)**
+**General purpose - serverless compute - Gen5 (part 2)**
 
 |MAXSIZE|GP_S_Gen5_10|GP_S_Gen5_12|GP_S_Gen5_14|GP_S_Gen5_16|
 |:----- | ------: |-------: |-------: |-------: |
 |Max vCores|10|12|14|16|
 
-**Business Critical - provisioned compute - Generation 4 (part 1)**
+**Business critical - provisioned compute - Gen4 (part 1)**
 
 |Performance level|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |Max data size (GB)|1024|1024|1024|1024|1024|1024|
 
-**Business Critical - provisioned compute - Generation 4 (part 2)**
+**Business critical - provisioned compute - Gen4 (part 2)**
 
 |Performance level|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
 |Max data size (GB)|1024|1024|1024|1024|1024|1024|
 
-**Business Critical - provisioned compute - Generation 5 (part 1)**
+**Business critical - provisioned compute - Gen5 (part 1)**
 
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |---------: |--------:|--------: |
 |Max data size (GB)|1024|1024|1024|1536|1536|1536|1536|
 
-**Business Critical - provisioned compute - Generation 5 (part 2)**
+**Business critical - provisioned compute - Gen5 (part 2)**
 
 |MAXSIZE|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**Business Critical - provisioned compute - M-series (preview)**
+**Business critical - provisioned compute - M-series (preview)**
 
 |MAXSIZE|BC_M_128|
 |:----- | -------: |
@@ -1070,7 +1070,7 @@ If no `MAXSIZE` value is set when using the vCore model, the default is 32 GB. F
 The following rules apply to MAXSIZE and EDITION arguments:
 
 - If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, if the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 250 MB.
-- If neither MAXSIZE nor EDITION is specified, the EDITION is set to General Purpose, and MAXSIZE is set to 32 GB.
+- If neither MAXSIZE nor EDITION is specified, the EDITION is set to `GeneralPurpose`, and MAXSIZE is set to 32 GB.
 
 SERVICE_OBJECTIVE
 

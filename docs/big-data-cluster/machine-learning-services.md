@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Cluster
 description: Learn how you can run Python and R scripts on the master instance of a SQL Server Big Data Clusters with Machine Learning Services.
 author: dphansen
 ms.author: davidph
-ms.date: 10/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
@@ -41,7 +41,7 @@ If you are using SQL Server Big Data Clusters with [Always On Availability Group
     SELECT @@SERVERNAME
     ```
 
-    Note down the server name. In this example, the server name is **master-2**.
+    Note down the server name. In this example, the server name for the master instance is **master-2**.
 
 1. On each replica on the Always On Availability Group in the Big Data Cluster, run these `kubectl` commands:
 
@@ -59,6 +59,8 @@ If you are using SQL Server Big Data Clusters with [Always On Availability Group
     service/mymaster-0 exposed
 
     service/mymaster-1 exposed
+
+    service/mymaster-2 exposed
     ```
 
 1. Connect to each master replica endpoint and enable script execution.

@@ -36,14 +36,14 @@ In addition to above, deploying SQL Server 2019 big data cluster also requires:
 
 ## Launch the notebook
 
-1. Launch the Azure Data Studio Insiders.
+1. Launch Azure Data Studio.
 2. On the **Connections** tab, click **...** and select **Deploy SQL Server**
 
    :::image type="content" source="media/deploy-notebooks/deploy-notebooks1.png" alt-text="deploy-notebooks1":::
 
-3. From the deployment options, choose **SQL Server Big Data Cluster**
+3. From the deployment options, choose **SQL Server Big Data Cluster**.
 4. From the **Deployment Target**, under **Options**, select either **New Azure Kubernetes Cluster** or **Existing Azure Kubernetes Service cluster**.
-5. Accept the privacy and license terms
+5. Accept the privacy and license terms.
    This dialog also checks whether the required tools for the chosen type of SQL deployment on the host. The **Select** button is not enabled until the tools check is successful.  
 7. Click **Select** button. This will launch the deployment experience.
 
@@ -56,7 +56,7 @@ Note: The available profiles are filtered depending on the type of deployment ta
 
 ## Set Azure settings
 
-If the deployment target is a new Azure Kubernetes Service (AKS), additional information such as Azure Subscription Id, resource group, AKS cluster name, VM count, size etc. will be required to create the AKS cluster.
+If the deployment target is a new Azure Kubernetes Service (AKS), additional information such as Azure subscription ID, resource group, AKS cluster name, VM count, size etc. will be required to create the AKS cluster.
 
 :::image type="content" source="media/deploy-notebooks/deploy-notebooks3.png" alt-text="deploy-notebooks3.png":::
 
@@ -66,7 +66,7 @@ If the deployment target is an existing Kubernetes cluster, the wizard prompts f
 
 ## Set cluster, Docker and AD settings
 
-1. Enter the cluster name for the SQL Server 2019 big data cluster (BDC), admin username and password.
+1. Enter the cluster name for the SQL Server 2019 big data cluster (BDC), administrator username, and password.
 
    > [!NOTE]
    > The same account will be used for controller and SQL Server.
@@ -83,7 +83,7 @@ If the deployment target is an existing Kubernetes cluster, the wizard prompts f
 
 ## Set service settings
 
-This screen has inputs for various settings such as Scale, Endpoints, Storage and other Advanced storage settings. Please enter the appropriate values and select **Next**.
+This screen has inputs for various settings such as scale, endpoints, storage, and other advanced storage settings. Enter the appropriate values and select **Next**.
 
 ### Scale Settings
 
@@ -103,7 +103,7 @@ The default endpoints have been pre-filled. However, they can be changed as appr
 
 :::image type="content" source="media/deploy-notebooks/deploy-notebooks10.png" alt-text="deploy-notebooks10.png":::
 
-The storage settings include storage class and claim size for data and logs. The settings can be applied across storage, data and SQL Server master pool.
+The storage settings include storage class and claim size for data and logs. The settings can be applied across storage, data, and SQL Server master pool.
 
 ### Advanced Storage settings
 

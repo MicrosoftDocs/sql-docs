@@ -30,8 +30,6 @@ manager: craigg
 ###  <a name="Security"></a> Security  
  For detailed information, see [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
   
-
-  
 ##  <a name="SSMS"></a> Using SQL Server Management Studio  
   
 #### To create a job category  
@@ -53,9 +51,7 @@ manager: craigg
 8.  In the **Manage Job Categories**_server_name_ dialog box, click **Refresh** to ensure that the new job category is active. If everything looks as expected, close this dialog box.  
   
  For more information on these dialog boxes, see [Job Categories: Manage Job Categories](job-categories-manage-job-categories.md) and [Job Categories Properties and New Job Category](job-categories-properties-new-job-category.md).  
-  
- 
-  
+
 ##  <a name="TSQL"></a> Using Transact-SQL  
   
 #### To create a job category  
@@ -66,7 +62,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql
     -- creates a local job category named AdminJobs   
     USE msdb ;  
     GO  
@@ -78,14 +74,8 @@ manager: craigg
     ```  
   
  For more information, see [sp_add_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql).  
-  
 
-  
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  **To create a job category**  
   
  Call the `JobCategory` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For example code, see [Scheduling Automatic Administrative Tasks in SQL Server Agent](sql-server-agent.md).  
-  
- 
-  
-  

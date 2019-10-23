@@ -96,7 +96,7 @@ manager: craigg
   
     3.  Copy and paste the following example into the query window and click `Execute`. This example enables [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for the database 'TestDB'. The retention period is set to 30 days. This sample uses the encryption option by specifying the encryption algorithm and the encryptor information.  
   
-    ```  
+    ```sql
     Use msdb;  
     GO  
     EXEC smart_admin.sp_set_db_backup   
@@ -107,8 +107,7 @@ manager: craigg
                     ,@encryption_algorithm ='AES_256'  
                     ,@encryptor_type= 'Certificate'  
                     ,@encryptor_name='MyBackupCert'  
-    GO  
-  
+    GO
     ```  
   
     > [!IMPORTANT]  
@@ -120,7 +119,7 @@ manager: craigg
   
      To review the configuration settings for a database use the following query:  
   
-    ```  
+    ```sql
     Use msdb  
     GO  
     SELECT * FROM smart_admin.fn_backup_db_config('TestDB')  
@@ -152,7 +151,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click `Execute`.  
   
-```  
+```sql
 Use msdb;  
 Go  
    EXEC smart_admin.sp_set_instance_backup  
@@ -173,11 +172,10 @@ GO
   
  To view the default configuration settings for the instance, use the following query:  
   
-```  
+```sql
 Use msdb;  
 GO  
-SELECT * FROM smart_admin.fn_backup_instance_config ();  
-  
+SELECT * FROM smart_admin.fn_backup_instance_config ();
 ```  
   
 #### Using PowerShell  
@@ -186,8 +184,8 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
   
 2.  Run the following script after modifying it to suit your settings  
   
-    ```  
-    C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
+    ```powershell
+    cd SQLSERVER:\SQL\Computer\MyInstance
     $encryptionOption = New-SqlBackupEncryptionOption -EncryptionAlgorithm Aes128 -EncryptorType ServerCertificate -EncryptorName "MyBackupCert"  
     Get-SqlSmartAdmin | Set-SqlSmartAdmin -BackupEnabled $True -BackupRetentionPeriodInDays 10 -EncryptionOption $encryptionOption  
     ```  
@@ -206,14 +204,13 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
   
 3.  Copy and paste the following example into the query window and click `Execute`.  
   
-```  
+```sql
 Use msdb;  
 Go  
 EXEC smart_admin.sp_set_db_backup   
                 @database_name='TestDB'   
                 ,@enable_backup=0;  
-GO  
-  
+GO
 ```  
   
 ##  <a name="DatabaseAllDisable"></a> Disable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for all the databases on the Instance  
@@ -227,7 +224,7 @@ GO
   
 3.  Copy and paste the following example into the query window and click `Execute`. The following example identifies if [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is configured at the instance level and all the [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] enabled databases on the instance, and executes the system stored procedure `sp_set_db_backup` to disable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
-```  
+```sql
 -- Create a working table to store the database names  
 Declare @DBNames TABLE  
   
@@ -245,19 +242,16 @@ DECLARE @SQL varchar(2000)
 INSERT INTO @DBNames (DBName)  
   
 SELECT db_name  
-       FROM   
+       FROM
   
        smart_admin.fn_backup_db_config (NULL)  
        WHERE is_smart_backup_enabled = 1  
   
-       --Select DBName from @DBNames  
-  
-       select @rowid = min(RowID)  
-       FROM @DBNames  
+       --Select DBName from @DBNames 
+       select @rowid = min(RowID) FROM @DBNames  
   
        WHILE @rowID IS NOT NULL  
-       Begin  
-  
+       Begin
              Set @dbname = (Select DBName From @DBNames Where RowID = @rowid)  
              Begin  
              Set @SQL = 'EXEC smart_admin.sp_set_db_backup    
@@ -270,18 +264,16 @@ SELECT db_name
              Select @rowid = min(RowID)  
              From @DBNames Where RowID > @rowid  
   
-       END  
-  
+       END
 ```  
   
  To review the configuration settings for all the databases on the instance, use the following query:  
   
-```  
+```sql
 Use msdb;  
 GO  
 SELECT * FROM smart_admin.fn_backup_db_config (NULL);  
-GO  
-  
+GO
 ```  
   
 ##  <a name="InstanceDisable"></a> Disable Default [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] settings for the Instance  
@@ -295,13 +287,12 @@ GO
   
 3.  Copy and paste the following example into the query window and click `Execute`.  
   
-    ```  
+    ```sql
     Use msdb;  
     Go  
     EXEC smart_admin.sp_set_instance_backup  
                     @enable_backup=0;  
-    GO  
-  
+    GO
     ```  
   
 #### Using PowerShell  
@@ -310,8 +301,8 @@ GO
   
 2.  Run the following script:  
   
-    ```  
-    C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
+    ```powershell
+    cd SQLSERVER:\SQL\Computer\MyInstance
     Set-SqlSmartAdmin -BackupEnabled $False  
     ```  
   
@@ -326,7 +317,7 @@ GO
   
 3.  Copy and paste the following example into the query window and then click `Execute`  
   
-```  
+```sql
 Use msdb;  
 GO  
 EXEC smart_admin.sp_backup_master_switch @new_state=0;  
@@ -340,8 +331,8 @@ Go
   
 2.  Run the following script after you modify it to suit your settings  
   
-    ```  
-    C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
+    ```powershell
+    cd SQLSERVER:\SQL\Computer\MyInstance
     Get-SqlSmartAdmin | Set-SqlSmartAdmin -MasterSwitch $False  
     ```  
   
@@ -353,12 +344,11 @@ Go
   
 3.  Copy and paste the following example into the query window and then click `Execute`.  
   
-```  
+```sql
 Use msdb;  
 Go  
 EXEC smart_admin. sp_backup_master_switch @new_state=1;  
-GO  
-  
+GO
 ```  
   
 #### To resume [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Using PowerShell  
@@ -367,9 +357,7 @@ GO
   
 2.  Run the following script after you modify it to suit your settings  
   
-    ```  
-    C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
+    ```powershell
+    cd SQLSERVER:\SQL\Computer\MyInstance
     Get-SqlSmartAdmin | Set-SqlSmartAdmin -MasterSwitch $True  
     ```  
-  
-  

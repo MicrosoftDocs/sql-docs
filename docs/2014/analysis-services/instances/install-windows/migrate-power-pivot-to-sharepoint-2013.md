@@ -86,7 +86,7 @@ manager: craigg
   
      Use PowerShell cmdlets in the SharePoint 2013 Management shell to mount the migrated content database. The service application database does not need to be mounted, only the content databases: ![PowerShell related content](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell related content")  
   
-    ```  
+    ```powershell
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
@@ -125,8 +125,8 @@ manager: craigg
   
     1.  In the SharePoint 2013 Management Run the `Set-PowerPivotServiceApplication` cmdlet with the `-StartMigratingRefreshSchedules` switch to enable automatic on demand schedule migration ![PowerShell related content](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell related content"). The following Windows PowerShell script assumes that there is only one PowerPivot service application.  
   
-        ```  
-        $app=Get-PowerPivotServiceApplication  
+        ```powershell
+        $app = Get-PowerPivotServiceApplication  
         Set-PowerPivotServiceApplication $app -StartMigratingRefreshSchedules  
         ```  
   
@@ -134,10 +134,9 @@ manager: craigg
   
     2.  If you want to check the current value of the StartMigratingRefreshSchedules property, run the following PowerShell script. The Script loops through all PowerPivot service application objects and display the name and property values:  
   
-        ```  
+        ```powershell
         $apps = Get-PowerPivotServiceApplication  
-        foreach ($app in $apps){}  
-        Get-PowerPivotServiceApplication $appp | format-table -property displayname,id,StartMigratingRefreshSchedules  
+        foreach ($app in $apps){ Get-PowerPivotServiceApplication $app | Format-Table -Property displayname, id, StartMigratingRefreshSchedules }
         ```  
   
      **Migrate Schedules option2: User updates each workbook**  
@@ -169,6 +168,4 @@ manager: craigg
   
 -   [Clean up preparations before an upgrade to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
--   [Upgrade databases from SharePoint 2010 to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).  
-  
-  
+-   [Upgrade databases from SharePoint 2010 to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).

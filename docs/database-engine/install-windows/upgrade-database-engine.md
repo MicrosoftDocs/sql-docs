@@ -35,6 +35,6 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
     For more information about new features and improved behaviors available after changing a database compatibility level, see [Differences between Compatibility Levels](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures).
 
-5.  [Take Advantage of New SQL Server Features](https://www.microsoft.com/sql-server/sql-server-2017). Finally, after you have completed the previous steps, you are ready to explore taking advantage of specific new database engine enhancements. This article suggests a few of these enhancements and provides links for more information.  
+5.  [Take Advantage of New SQL Server Features](https://www.microsoft.com/sql-server/sql-server-2019). Finally, after you have completed the previous steps, you are ready to explore taking advantage of specific new database engine enhancements. This article suggests a few of these enhancements and provides links for more information.  
   
   

@@ -19,7 +19,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 This release adds the support for Language Extensions in SQL Server. For more information about all of the features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
 
-- The default Java Runtime on Windows Linux is Open Zulu JRE and is included with the [SQL Server Language Extensions installation on Windows](install/install-sql-server-language-extensions-on-windows.md] and [SQL Server Language Extensions installation on Linux](../linux/sql-server-linux-setup-language-extensions.md).
+- The default Java Runtime on Windows Linux is Open Zulu JRE and is included with the [SQL Server Language Extensions installation on Windows](install/install-sql-server-language-extensions-on-windows.md) and [SQL Server Language Extensions installation on Linux](../linux/sql-server-linux-setup-language-extensions.md).
 - Supported [Java data types](how-to/java-to-sql-data-types.md).
 - [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) for registering external language (for example, Java) in SQL Server.
 - [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md).

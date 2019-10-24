@@ -28,7 +28,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services](../../advanced-analytics/index.yml) and [Language Extensions](../../language-extensions/language-extensions-overview.md). 
 
-For Machine Learning Services, [Python](../../advanced-analytics/concepts/extension-python.md) and [R](../../advanced-analytics/concepts/extension-r.md) are supported languages. For Language Extensions, Java is supported but must be defined with [CREATE EXTERNAL LANGUAGE](../../sql/t-sql/statements/create-external-language-transact-sql).
+For Machine Learning Services, [Python](../../advanced-analytics/concepts/extension-python.md) and [R](../../advanced-analytics/concepts/extension-r.md) are supported languages. For Language Extensions, Java is supported but must be defined with [CREATE EXTERNAL LANGUAGE](../../sql/t-sql/statements/create-external-language-transact-sql.md).
 
 To execute **sp_execute_external_script**, you must first install Machine Learning Services or Language Extensions. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) and [Linux](../../linux/sql-server-linux-setup-machine-learning.md), or [Install SQL Server Language Extensions on Windows](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md) and [Linux](../../linux/sql-server-linux-setup-language-extensions.md).
 ::: moniker-end
@@ -87,7 +87,7 @@ sp_execute_external_script
 ## Arguments
  **\@language** = N'*language*'  
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
- Indicates the script language. *language* is **sysname**. Valid values are **R**, **Python**, and any language defined with [CREATE EXTERNAL LANGUAGE](../../sql/t-sql/statements/create-external-language-transact-sql) (for example, Java).
+ Indicates the script language. *language* is **sysname**. Valid values are **R**, **Python**, and any language defined with [CREATE EXTERNAL LANGUAGE](../../sql/t-sql/statements/create-external-language-transact-sql.md) (for example, Java).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
  Indicates the script language. *language* is **sysname**. In SQL Server 2017, valid values are **R** and **Python**.
@@ -135,7 +135,7 @@ sp_execute_external_script
 > The query tree is controlled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and users cannot perform arbitrary operations on the query. 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Use **sp_execute_external_script** to execute scripts written in a supported language. Supported languages are **Python** and **R** used with Machine Learning Services, and any language defined with [CREATE EXTERNAL LANGUAGE](../../sql/t-sql/statements/create-external-language-transact-sql) (for example, Java) used with Language Extensions.
+Use **sp_execute_external_script** to execute scripts written in a supported language. Supported languages are **Python** and **R** used with Machine Learning Services, and any language defined with [CREATE EXTERNAL LANGUAGE](../../sql/t-sql/statements/create-external-language-transact-sql.md) (for example, Java) used with Language Extensions.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Use **sp_execute_external_script** to execute scripts written in a supported language. Supported languages are **Python** and **R** in SQL Server 2017 Machine Learning Services.

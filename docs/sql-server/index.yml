@@ -46,6 +46,8 @@ landingContent:
         url: ../powershell/sql-server-powershell.md
       - text: Sample databases
         url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
+      - text: Internals & architecture guides
+        url: https://aka.ms/sqlserverguides
       - text: Previous versions 2005-2014
         url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
 
@@ -83,8 +85,8 @@ landingContent:
         url: ..//relational-databases/in-memory-database.md
       - text: Automatic tuning
         url: ../relational-databases/automatic-tuning/automatic-tuning.md
-      - text: Intelligent query processing 
-        url: ../relational-databases/performance/intelligent-query-processing.md
+      - text: Intelligent Query Processing 
+        url: https://aka.ms/IQP
     - linkListType: concept
       links:
       - text: Backup & restore

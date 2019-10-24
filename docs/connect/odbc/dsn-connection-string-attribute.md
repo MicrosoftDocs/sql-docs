@@ -41,9 +41,9 @@ The following table lists the available keywords and the attributes for each pla
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+, DSN only)| | LMW |
 | [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+, DSN only) | | LMW |
-| [KeystoreAuthentication](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
-| [KeystorePrincipalId](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
-| [KeystoreSecret](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
+| [KeystoreAuthentication](../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
+| [KeystorePrincipalId](../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
+| [KeystoreSecret](../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [Language](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [MARS_Connection](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_MARS_ENABLED](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssmarsenabled) | LMW |
 | [MultiSubnetFailover](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_MULTISUBNET_FAILOVER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssmultisubnetfailover) | LMW |
@@ -161,7 +161,7 @@ Sets the authentication mode to use when connecting to SQL Server. See [Using Az
 
 ### ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
-Controls transparent column encryption (Always Encrypted). See [Using Always Encrypted (ODBC)](using-always-encrypted-with-the-odbc-driver.md) for more information.
+Controls transparent column encryption (Always Encrypted). See [Using Always Encrypted (ODBC)](../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md) for more information.
 
 | Keyword Value | Attribute Value | Description |
 |-|-|-|

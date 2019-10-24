@@ -68,7 +68,7 @@ SQL Server Management Studio 18.4:
 ## New in this release (SSMS 18.4)
 
 | New item | Details |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-----|-----|
 | Data Classification | Added support for custom information protection policy for data classification. |
 | Query Store | Added the *Max Plan per query* value in the dialog properties. |
 | Query Store | Added support for the new Custom Capture Policies. |

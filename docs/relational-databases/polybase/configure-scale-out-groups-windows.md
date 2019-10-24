@@ -35,8 +35,6 @@ The following steps summarize the process for creating a PolyBase scale-out grou
 
 5. Optional. Remove a compute node from  using [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Example walk-through
 
 This walks through the steps of configuring a PolyBase Group using:  

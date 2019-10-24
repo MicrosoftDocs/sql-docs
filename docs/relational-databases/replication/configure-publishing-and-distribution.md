@@ -36,8 +36,6 @@ Configure distribution using the New Publication Wizard or the Configure Distrib
 
 3. Follow the Configure Distribution Wizard to: 
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
   - Select a Distributor. To use a local Distributor, select **ServerName will act as its own Distributor; SQL Server will create a distribution database and log**. To use a remote Distributor, select **Use the following server as the Distributor**, and then select a server. The server must already be configured as a Distributor, and the Publisher must be enabled to use the Distributor. For more information, see [Enable a Remote Publisher at a Distributor &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).
 
      If you select a remote Distributor, you must enter a password on the **Administrative Password** page for connections made from the Publisher to the Distributor. This password must match the password specified when the Publisher was enabled at the remote Distributor.

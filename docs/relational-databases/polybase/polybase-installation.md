@@ -85,8 +85,6 @@ After you install PolyBase either standalone or in a scale-out group, you can't 
    
 6. On the PolyBase Configuration page, specify a port range with at least six ports. SQL Server setup  allocates the first six available ports from the range.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
    >[!IMPORTANT]
    > After installation, you must [enable the PolyBase feature](#enable).
 

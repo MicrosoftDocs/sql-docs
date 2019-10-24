@@ -190,8 +190,6 @@ The output of the **FOR JSON** clause has the following characteristics:
   
 3.  Both the names of columns and their values are escaped according to JSON syntax. For more info, see [How FOR JSON escapes special characters and control characters &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md).
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### Example
 Here's an example that demonstrates how the **FOR JSON** clause formats the JSON output.  
   

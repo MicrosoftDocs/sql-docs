@@ -77,8 +77,6 @@ A thesaurus query uses both a language-specific thesaurus and the global thesaur
 1.  First, the query looks up the language-specific file and loads it for processing (unless it is already loaded). The query is expanded to include the language-specific synonyms specified by the expansion set and replacement set rules in the thesaurus file. 
 2.  These steps are then repeated for the global thesaurus. However, if a term is already part of a match in the language specific thesaurus file, the term is ineligible for matching in the global thesaurus.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="structure"></a> Structure of a thesaurus file  
  Each thesaurus file defines an XML container whose ID is `Microsoft Search Thesaurus`, and a comment, `<!--` ... `-->`, that contains a sample thesaurus. The thesaurus is defined in a `<thesaurus>` element that contains samples of the child elements that define the diacritics setting, expansion sets, and replacement sets.
 

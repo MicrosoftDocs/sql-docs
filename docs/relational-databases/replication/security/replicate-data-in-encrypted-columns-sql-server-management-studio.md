@@ -36,8 +36,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 7.  Access the encrypted column data.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  You should use a symmetric key to encrypt column data. The symmetric key itself can be secured by different means at the Publisher and Subscriber.  
   

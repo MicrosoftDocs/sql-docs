@@ -17,6 +17,7 @@ helpviewer_keywords:
   - "table restores [SQL Server]"
   - "restoring databases [SQL Server], about restoring databases"
   - "database restores [SQL Server], scenarios"
+  - "accelerated database recovery"
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
@@ -51,6 +52,8 @@ ms.author: mathoma
 -   [Restore Under the Bulk-Logged Recovery Model](#RMblogRestore)  
   
 -   [Database Recovery Advisor (SQL Server Management Studio)](#DRA)  
+
+-   [Accelerated database recovery](#adr)
   
 -   [Related Content](#RelatedContent)  
   
@@ -107,13 +110,13 @@ ms.author: mathoma
  If any of these restrictions are inappropriate for your recovery needs, we recommend that you consider using the full recovery model. For more information, see [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 > [!IMPORTANT]  
->  Regardless of the recovery model of a database, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup cannot be restored by a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is older than the version that created the backup.  
+> Regardless of the recovery model of a database, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup cannot be restored by a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is older than the version that created the backup.  
   
 ##  <a name="RMblogRestore"></a> Restore Under the Bulk-Logged Recovery Model  
  This section discusses restore considerations that are unique to bulk-logged recovery model, which is intended exclusively as a supplement to the full recovery model.  
   
 > [!NOTE]  
->  For an introduction to the bulk-logged recovery model, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+> For an introduction to the bulk-logged recovery model, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  Generally, the bulk-logged recovery model is similar to the full recovery model, and the information described for the full recovery model also applies to both. However, point-in-time recovery and online restore are affected by the bulk-logged recovery model.  
   
@@ -137,37 +140,31 @@ ms.author: mathoma
  For information about how to perform an online restore, see [Online Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
 ##  <a name="DRA"></a> Database Recovery Advisor (SQL Server Management Studio)  
- The Database Recovery Advisor facilitates constructing restore plans that implement optimal correct restore sequences. Many known database restore issues and enhancements requested by customers have been addressed. Major enhancements introduced by the Database Recovery Advisor include the following:  
+The Database Recovery Advisor facilitates constructing restore plans that implement optimal correct restore sequences. Many known database restore issues and enhancements requested by customers have been addressed. Major enhancements introduced by the Database Recovery Advisor include the following:  
   
 -   **Restore-plan algorithm:**  The algorithm used to construct restore plans has improved significantly, particularly for complex restore scenarios. Many edge cases, including forking scenarios in point-in-time restores, are handled more efficiently than in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   **Point-in-time restores:**  The Database Recovery Advisor greatly simplifies restoring a database to a given point in time. A visual backup timeline significantly enhances support for point-in-time restores. This visual timeline allows you to identify a feasible point in time as the target recovery point for restoring a database. The timeline facilitates traversing a forked recovery path (a path that spans recovery forks). A given point-in-time restore plan automatically includes the backups that are relevant to the restoring to your target point in time (date and time). For more information, see [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
- For more information, see about the Database Recovery Advisor, see the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manageability blogs:  
+For more information, see about the Database Recovery Advisor, see the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manageability blogs:  
   
 -   [Recovery Advisor: An Introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
 -   [Recovery Advisor: Using SSMS to create/restore split backups](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
 
 ## <a name="adr"></a> Accelerated database recovery
+[Accelerated database recovery](/azure/sql-database/sql-database-accelerated-database-recovery/) is available in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Accelerated database recovery greatly improves database availability, especially in the presence of long running transactions, by redesigning the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] recovery process. [Database recovery](../../relational-databases/logs/the-transaction-log-sql-server.md#recovery-of-all-incomplete-transactions-when--is-started) is the process used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for each database to start in a transactionally consistent - or clean - state. A database for which accelerated database recovery was enabled completes the recovery process significantly faster after a failover or other non-clean shutdown. When enabled, Accelerated database recovery also completes rollback of cancelled long-running transactions significantly faster.
 
-SQL Server 2019 preview CTP 2.3 introduces [Accelerated database recovery](/azure/sql-database/sql-database-accelerated-database-recovery/) for SQL Server on-premises. Accelerated database recovery greatly improves database availability, especially in the presence of long running transactions, by redesigning the SQL Server database engine recovery process. [Database recovery](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) is the process SQL Server uses for each database to start at a transactionally consistent - or clean - state. A database, with accelerated database recovery enabled, completes recovery significantly faster after a fail over or other non-clean shutdown. 
-
-You can enable accelerated database recovery per-database on [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 or later using the following syntax:
+You can enable accelerated database recovery per-database on [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] using the following syntax:
 
 ```sql
-ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = { ON | OFF }
 ```
 
 > [!NOTE]
-> This syntax is not required to take advantage of this feature in Azure SQL DB, where it is on by default.
+> This syntax is not required on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], where accelerated database recovery is enabled by default.
 
-If you have critical databases that are prone to large transactions, experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
-
-##  <a name="RelatedContent"></a> Related Content  
- None.  
-  
-## See Also  
- [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
-  
-  
+## <a name="RelatedContent"></a> See Also  
+ [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)      
+ [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
+ [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     

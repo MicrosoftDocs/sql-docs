@@ -1,7 +1,7 @@
 ---
-title: Manage permissions for HDFS tiering
-titleSuffix: Manage permissions forSQL Server Big Data Clusters
-description: This article explains how to manage permissions for HDFS tiering on a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+title: HDFS tiering permissions for SQL Server Big Data Clusters
+titleSuffix: Manage permissions for SQL Server Big Data Clusters
+description: Manage security for HDFS tiering on SQL Server Big Data Clusters like permissions on other Linux-based systems.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray

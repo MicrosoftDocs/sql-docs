@@ -10,7 +10,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: ""
-ms.date: 11/05/2019
+ms.date: 11/04/2019
 ---
 
 # Download SQL Server extended features and tools

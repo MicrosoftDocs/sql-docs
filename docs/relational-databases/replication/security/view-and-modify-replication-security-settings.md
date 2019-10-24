@@ -212,7 +212,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 #### To change security settings for an immediate updating pull subscription  
   
-1.  In the **Subscription Properties - \<Subscription>** dialog box at the Subscriber, click the **Publisher Connection** row, and then click the properties (**?**) button in the row.  
+1.  In the **Subscription Properties - \<Subscription>** dialog box at the Subscriber, click the **Publisher Connection** row, and then click the properties (**&#x2026;**) button in the row.  
   
 2.  In the **Enter Connection Information** dialog box, select one of the following options:  
   

@@ -21,8 +21,6 @@ SQL Server big data cluster is deployed as docker containers on a Kubernetes clu
 - Install the cluster configuration tool **azdata** on your client machine.
 - Deploy a SQL Server big data cluster in a Kubernetes cluster.
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
 ## Install SQL Server 2019 big data tools
 
 Before deploying a SQL Server 2019 big data cluster, first [install the big data tools](deploy-big-data-tools.md):

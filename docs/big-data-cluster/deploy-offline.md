@@ -19,8 +19,6 @@ This article describes how to perform an offline deployment of a [!INCLUDE[big-d
 
 - Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
 ## Load images into a private repository
 
 The following steps describe how to pull the big data cluster container images from the Microsoft repository and then push them into your private repository.

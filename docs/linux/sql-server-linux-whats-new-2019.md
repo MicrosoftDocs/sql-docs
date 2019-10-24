@@ -13,10 +13,7 @@ ms.technology: linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article describes the major features and services available for SQL Server 2019 running on Linux.
-
-> [!NOTE]
-> For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes-2019.md?view=sql-server-linux-ver15).
+This article describes the major features and services available for SQL Server 2019 running on Linux. For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes-2019.md?view=sql-server-linux-ver15).
 
 ## Updates
 
@@ -24,7 +21,6 @@ The updates have been made in SQL Server 2019 on Linux:
 
 | New feature or update | Details |
 |:-----|:-----|
-|New container registry|[Get started with SQL Server containers on Docker](quickstart-install-connect-docker.md) |
 |Replication support |[SQL Server Replication on Linux](sql-server-linux-replication.md)
 |Support for the Microsoft Distributed Transaction Coordinator (MSDTC) |[How to configure MSDTC on Linux](sql-server-linux-configure-msdtc.md) |
 |OpenLDAP support for third-party AD providers |[Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md) |
@@ -34,7 +30,6 @@ The updates have been made in SQL Server 2019 on Linux:
 | Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for SQL Server 2019. |
 | Microsoft Container Registry | The [Microsoft Container Registry](https://www.ntweekly.com/2019/09/23/microsoft-container-registry-to-replace-docker-hub-for-new-images/) now replaces Docker Hub for new official Microsoft container images, including [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
 | Non-root containers | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces the ability to create safer containers by starting the [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] process as a non-root user by default. See [build and run SQL Server containers as a non-root user](sql-server-linux-configure-docker.md#buildnonrootcontainer) for more details. |
-| &nbsp; | &nbsp; |
 
 ## Next steps
 
@@ -46,9 +41,6 @@ To install SQL Server on Linux, use one of the following tutorials:
 - [Run on Docker](quickstart-install-connect-docker.md?view=sql-server-linux-ver15)
 - [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
-To see other improvements introduced in SQL Server 2019, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
-
-> [!TIP]
-> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
+For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md). To see other improvements introduced in SQL Server 2019, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

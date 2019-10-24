@@ -1,7 +1,7 @@
 ---
 title: Install big data tools
 titleSuffix: SQL Server big data clusters
-description: Learn how to install tools used with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview).
+description: Learn how to install tools used with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -16,8 +16,6 @@ ms.technology: big-data-cluster
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article describes the client tools that should be installed for creating, managing, and using [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview). The following section provides a list of tools and links to installation instructions. Before deploying a big data cluster, configure the tools marked required on Windows or Linux.
-
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## Big data cluster tools
 

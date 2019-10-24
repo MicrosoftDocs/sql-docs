@@ -19,8 +19,6 @@ Starting with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], [!INCLUDE
 
 For more information about new features and known issues for latest release, see the [release notes](release-notes-big-data-cluster.md).
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
 ## Scenarios
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide flexibility in how you interact with your big data. You can query external data sources, store big data in HDFS managed by SQL Server, or query data from multiple external data sources through the cluster. You can then use the data for AI, machine learning, and other analysis tasks. The following sections provide more information about these scenarios.

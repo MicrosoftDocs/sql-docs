@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversio
 # PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Generates a predicted value or scores based on a stored model.  
+Generates a predicted value or scores based on a stored model. For more information, see [Native scoring using the PREDICT T-SQL function](../../advanced-analytics/sql-native-scoring).
 
 ## Syntax
 
@@ -173,3 +173,7 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
   computeStdErr = 1, interval = 'confidence')
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
+
+## Next steps
+
+- [Native scoring using the PREDICT T-SQL function](../../advanced-analytics/sql-native-scoring)

@@ -49,6 +49,6 @@ Folders in a browser
   
  The maximum limit for a URL in Internet Explorer is 2,083 characters. For more information, see [Maximum URL length in Internet Explorer](https://support.microsoft.com/kb/208427).  
   
- For more information about how to access a report through a URL, including information on how a URL is constructed, see "URL Access" in the [Reporting Services documentation](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ For more information about how to access a report through a URL, including information on how a URL is constructed, see [URL Access](../../reporting-services/url-access-ssrs.md).  
   
   

@@ -134,4 +134,4 @@ If you are using Always Encrypted with VBS enclaves in a development or test env
 
 ## Next steps
 
-- [Deploy HGS for Always Encrypted with VBS Enclaves](always-encrypted-hgs-deploy.md)
+- Deploy HGS for Always Encrypted with VBS Enclaves

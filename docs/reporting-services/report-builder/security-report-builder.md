@@ -84,7 +84,7 @@ ms.author: maggies
   
  Credentials are not saved in the report definition. They are managed independently from the report on the report server or SharePoint site and on the report authoring client.  
   
- At report design time, credentials are used to run dataset queries and preview the report. At run time, credentials are used to run the report and cache query results. You can also cache shared dataset query results independently. Design time and run time credentials might differ. For more information, see [Specify Credentials in Report Builder](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ At report design time, credentials are used to run dataset queries and preview the report. At run time, credentials are used to run the report and cache query results. You can also cache shared dataset query results independently. Design time and run time credentials might differ. For more information, see [Specify Credentials in Report Builder](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
  For more information about securing data, see the following topic in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation:  
   

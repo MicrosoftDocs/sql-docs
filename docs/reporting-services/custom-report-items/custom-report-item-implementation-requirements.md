@@ -25,7 +25,7 @@ ms.author: maggies
   
 -   Access to the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation.  
   
--   Familiarity with component authoring and the component model namespaces in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. For more information, see "Component Authoring" and "Component Model Namespaces in Visual Studio" on msdn.microsoft.com.  
+-   Familiarity with component authoring and the component model namespaces in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
 ## Language and Namespace Requirements  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] custom report items fully support the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. You can develop custom report items using your choice of .NET-compliant languages.  

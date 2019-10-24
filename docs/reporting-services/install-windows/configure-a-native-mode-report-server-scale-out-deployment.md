@@ -150,4 +150,4 @@ The issue will be intermittent is that only the server who created the SQL Agent
 [Add and Remove Encryption Keys for Scale-Out Deployment](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
 [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -95,7 +95,7 @@ ms.author: maggies
   
 2.  Use the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to create a new folder or upload a file to test whether definitions are passed back to the report server database. If these operations are successful, the connection is functional.  
   
-     For more information, see [Web Portal &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     For more information, see [Web Portal &#40;SSRS Native Mode&#41;](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
 ### To verify that Report Designer is installed and running  
   

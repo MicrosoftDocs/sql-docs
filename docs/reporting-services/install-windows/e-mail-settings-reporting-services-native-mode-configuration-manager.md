@@ -41,7 +41,7 @@ To configure a report server for e-mail delivery, do the following:
 > [!NOTE] 
 > Report server e-mail settings are based on CDO. If you want more detail about specific settings, you can refer to the CDO production documentation.
 
-## <a name="rsconfigman"/>Configure report server e-mail using the Reporting Services Configuration Manager
+## Configure report server e-mail using the Reporting Services Configuration Manager
 
 1. Start the Reporting Services Configuration Manager and connect to the report server instance.
 

@@ -105,9 +105,8 @@ A document map provides a set of navigational links to report items in a rendere
 4.  Paste the URL in the web portal, and then press ENTER. The report runs, and the document map is hidden.  
   
 > [!NOTE]  
->  For more information about downloading sample reports, see [Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
+>  For more information about downloading sample reports, see [Report Builder and Report Designer sample reports](https://social.technet.microsoft.com/wiki/contents/articles/1093.reporting-services-samples-on-codeplex-sql-server-reporting-services-ssrs.aspx).  
 >   
   
 
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

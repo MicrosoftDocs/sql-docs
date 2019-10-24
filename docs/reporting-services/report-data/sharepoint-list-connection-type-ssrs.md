@@ -86,7 +86,7 @@ Use the information in this topic to build a data source. For step-by-step instr
   
  Selecting fields from multiple lists is not supported. You can create a dataset for each list and select fields from each dataset. If the lists have a common field, you can use the Lookup function in a tablix data region that is bound to one dataset to retrieve a value from the other dataset that is not bound to the data region. For more information, see [Lookup Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md).  
   
--   **Selected Fields**  Displays the fields that you have selected. The names of fields in this pane are friendly names that a SharePoint user has specified. When you close the query designer, you see these names in the dataset field collection in the Report Data pane. The relationship between unique names and friendly names is available in the [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) page.  
+-   **Selected Fields**  Displays the fields that you have selected. The names of fields in this pane are friendly names that a SharePoint user has specified. When you close the query designer, you see these names in the dataset field collection in the Report Data pane. The relationship between unique names and friendly names is available in the [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md) page.  
   
 -   **Applied Filters**  Limits the data that is returned from the SharePoint list, before the data is returned to the report. Select the field name, operator, and value to use to limit the data that is retrieved in the list. The operators vary depending on the data type of the value that you select.  
   
@@ -94,7 +94,7 @@ Use the information in this topic to build a data source. For step-by-step instr
   
 -   **Query Results**  Displays example rows that are returned when the query runs. If the SharePoint list values change frequently on the SharePoint site, the values that you see in the query results pane might differ from the values that you see in the report.  
   
--   **Selected Fields**  Displays the fields that you have selected. The names of fields in this pane are friendly names that a SharePoint user has specified. When you close the query designer, you see these names in the dataset field collection in the Report Data pane. The relationship between unique names and friendly names is available in the [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) page.  
+-   **Selected Fields**  Displays the fields that you have selected. The names of fields in this pane are friendly names that a SharePoint user has specified. When you close the query designer, you see these names in the dataset field collection in the Report Data pane. The relationship between unique names and friendly names is available in the [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md) page.  
   
 -   **Applied Filters**  Limits the data that is returned from the SharePoint list, before the data is returned to the report. Select the field name, operator, and value to use to limit the data that is retrieved in the list. The operators vary depending on the data type of the value that you select.  
   
@@ -183,4 +183,4 @@ Use the information in this topic to build a data source. For step-by-step instr
 [Filter, Group, and Sort Data](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+

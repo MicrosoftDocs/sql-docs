@@ -43,7 +43,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
     -   **Query View** Drag dimensions, members, member properties, measures, and KPIs from the metadata browser to the Query pane to build an MDX query. You can edit MDX text directly in the Query pane. Drag calculated members from the CalculatedMembers pane to the Query pane to define additional dataset fields.  
   
-     For more information, see [Hyperion Essbase Query Designer User Interface &#40;Report Builder&#41;](https://msdn.microsoft.com/library/d89a6773-dbe5-48e5-bda9-db0e67100696).  
+     For more information, see [Hyperion Essbase Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md).  
   
 -   Import an existing MDX query from a report. Use the **Import** query button to browse to an .rdl file and import a query. You can import a query from a report that contains an embedded dataset that is based on a [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] data source. Importing an MDX query directly from an .mdx file is not supported.  
   

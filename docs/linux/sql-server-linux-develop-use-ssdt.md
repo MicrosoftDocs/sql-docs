@@ -13,11 +13,11 @@ ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and database lifecycle management (DLM) environment for SQL Server on Linux. You can develop, build, test, and publish your database from a source-controlled project, just like you develop your application code.
+SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and database lifecycle management (DLM) environment for SQL Server on Linux. You can develop, build, test, and publish your database from a source-controlled project. Like you develop your application code.
 
 ## Install Visual Studio and SQL Server Data Tools
 
-1. If you have not already installed Visual Studio on your Windows machine, [Download and Install Visual Studio]. If you do not have a Visual Studio license, Visual Studio Community edition is a free, fully-featured IDE for students, open-source and individual developers.
+1. If you haven't already installed Visual Studio on your Windows machine, [Download and Install Visual Studio](https://visualstudio.microsoft.com/downloads/). If you don't have a Visual Studio license, Visual Studio Community edition is a free, fully featured IDE for students, open-source, and individual developers.
 
 2. During the Visual Studio installation, select **Custom** for the **Choose the type of installation** option. Click **Next**
 
@@ -43,7 +43,7 @@ SQL Server on Linux is supported by SSDT version 17.0 RC or later.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-3. Click **Create**. After the local Git repository is created, double click **SSDTRepo**.
+3. Click **Create**. After the local Git repository is created, double-click **SSDTRepo**.
 
 4. Click **New** in the **Solutions** section. Select **SQL Server** under **Other Languages** node in the **New Project** dialog.
 
@@ -95,16 +95,16 @@ SQL Server on Linux is supported by SSDT version 17.0 RC or later.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
-You have successfully created a new database on SQL Server instance on Linux and learned the basics of developing a database with a source-controlled database project.
+You've successfully created a new database on SQL Server instance on Linux and learned the basics of developing a database with a source-controlled database project.
 
 ## Next steps
 
-If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements] and the [Transact-SQL Reference (Database Engine)].
+If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md).
 
-For more information about developing a database with SQL Data Tools, see [SSDT MSDN documents]
+For more information about developing a database with SQL Data Tools, see the below articles.
 
-[Download and Install Visual Studio]:https://www.visualstudio.com/downloads/
-[Download and Install SSDT]:https://aka.ms/ssdt-download
-[SSDT MSDN documents]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[Tutorial: Writing Transact-SQL Statements]:https://msdn.microsoft.com/library/ms365303.aspx
-[Transact-SQL Reference (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx
+* [Download and Install Visual Studio](https://www.visualstudio.com/downloads/)
+* [Download and Install SSDT](https://aka.ms/ssdt-download)
+* [SSDT MSDN documents](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)
+* [Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx)
+* [Transact-SQL Reference (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx)

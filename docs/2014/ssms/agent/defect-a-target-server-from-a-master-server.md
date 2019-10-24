@@ -61,7 +61,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-```  
+```sql
 sp_msx_defect ;  
 ```  
   
@@ -74,5 +74,3 @@ sp_msx_defect ;
  [Create a Multiserver Environment](create-a-multiserver-environment.md)   
  [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)   
  [Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)  
-  
-  

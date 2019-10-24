@@ -105,8 +105,8 @@ When MIN/MAX aggregates are used in the SELECT list of materialized view definit
 A materialized view in Azure data warehouse is very similar to an indexed view in SQL Server.  It shares almost the same restrictions as indexed view (see [Create Indexed Views](/sql/relational-databases/views/create-indexed-views) for details) except that a materialized view supports aggregate functions.   Here are additional considerations for materialized view.  
  
 Only CLUSTERED COLUMNSTORE INDEX is supported by materialized view. 
- 
-A materialized view can be dropped via DROP VIEW.  You can use ALTER MATERIALIZED VIEW to disable or rebuild a materialized view.   
+
+A materialized view cannot reference other views.  
  
 Materialized Views can be created on partitioned tables.  SPLIT/MERGE operations are supported on tables referenced in materialized views.  SWITCH is not supported on tables referenced in materialized views. If attempted, the user will see the error,  `Msg 106104, Level 16, State 1, Line 9`
  
@@ -123,6 +123,8 @@ ALTER TABLE SWITCH is not supported on tables that are referenced in materialize
 Once created, materialized views are visible within SQL Server Management Studio under the views folder of the Azure SQL Data Warehouse instance.
 
 Users can run [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) and [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) to determine the space being consumed by an materialized view.  
+
+A materialized view can be dropped via DROP VIEW.  You can use ALTER MATERIALIZED VIEW to disable or rebuild a materialized view.   
 
 EXPLAIN plan and the graphical Estimated Execution Plan in SQL Server Management Studio can show whether a materialized view is considered by the query optimizer for query execution. and the graphical Estimated Execution Plan in SQL Server Management Studio can show whether a materialized view is considered by the query optimizer for query execution.
 

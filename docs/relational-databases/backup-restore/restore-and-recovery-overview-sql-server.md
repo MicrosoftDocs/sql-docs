@@ -41,22 +41,6 @@ ms.author: mathoma
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore work across all supported operating systems. For information about the supported operating systems, see [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). For information about support for backups from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the "Compatibility Support" section of [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
- **In this Topic:**  
-  
--   [Overview of Restore Scenarios](#RestoreScenariosOv)  
-  
--   [Recovery Models and Supported Restore Operations](#RMsAndSupportedRestoreOps)  
-  
--   [Restore Restrictions Under the Simple Recovery Model](#RMsimpleScenarios)  
-  
--   [Restore Under the Bulk-Logged Recovery Model](#RMblogRestore)  
-  
--   [Database Recovery Advisor (SQL Server Management Studio)](#DRA)  
-
--   [Accelerated database recovery](#adr)
-  
--   [Related Content](#RelatedContent)  
-  
 ##  <a name="RestoreScenariosOv"></a> Overview of Restore Scenarios  
  A *restore scenario* in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is the process of restoring data from one or more backups and then recovering the database. The supported restore scenarios depend on the recovery model of the database and the edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

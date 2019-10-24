@@ -232,12 +232,15 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 **Workaround**
 
+You can perform one of the following workarounds:
+
 1. Copy `libc++*` from `/opt/mssql/lib` to the default system path `/lib64`
+
 1. Add the following entries to `/var/opt/mssql/mssql.conf` to expose the path:
 
    ```text
    [extensibility]
-   dabledirectories = /opt/mssql
+   readabledirectories = /opt/mssql
    ```
 
 **Applies to:** SQL Server 2019 on Linux

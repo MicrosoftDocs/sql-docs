@@ -33,7 +33,7 @@ GeneMi.  2019/04/03.
 
 | Feature added | Details |
 | :------------ | :------ |
-| Support for additional Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md). |
+| Support for additional Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Support for setting data classification version | See [Data Classification](../data-classification.md#bkmk-version). |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
@@ -46,7 +46,7 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 
 | Feature added | Details |
 | :------------ | :------ |
-| Always Encrypted with Secure Enclaves. | See [Using Always Encrypted with the ODBC Driver](../../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md). |
+| Always Encrypted with Secure Enclaves. | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Dynamic loading of OpenSSL | See [Programming Guidelines](programming-guidelines.md#bkmk-openssl). |
 | Configurable TCP Keep Alive settings. | See [Connecting to SQL Server](connection-string-keywords-and-data-source-names-dsns.md). |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
@@ -58,7 +58,7 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 | :------- | :------ |
 | New distributions supported. | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Azure Active Directory Managed Service Identity (system and user-assigned) authentication mode. | See [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md). |
-| Ability to stream input parameters against Always Encrypted columns. | See , for more information see [Limitations of the ODBC driver when using Always Encrypted](../../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
+| Ability to stream input parameters against Always Encrypted columns. | See , for more information see [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | XA distributed transactions. | See [Using XA Transactions](../use-xa-with-dtc.md).<br/><br/>XA is an initialism for _eXtended Architecture_, which is a standard for the execution of a global transaction that accesses more than one server-side data storage system. |
 | &nbsp; | &nbsp; |
 
@@ -79,7 +79,7 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 
 | New item | Details |
 | :------- | :------ |
-| Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes. | &bull; &nbsp; &nbsp; `SQL_COPT_SS_CEKCACHETTL` allows controlling the time that the local cache of Column Encryption Keys exists, as well as flushing it.<br/><br/>&bull; &nbsp; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS` allows the application to restrict Always Encrypted operations to use only the specified list of Column Master Keys.<br/><br/>See [Using Always Encrypted with the ODBC Driver for SQL Server](../../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md)). |
+| Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes. | &bull; &nbsp; &nbsp; `SQL_COPT_SS_CEKCACHETTL` allows controlling the time that the local cache of Column Encryption Keys exists, as well as flushing it.<br/><br/>&bull; &nbsp; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS` allows the application to restrict Always Encrypted operations to use only the specified list of Column Master Keys.<br/><br/>See [Using Always Encrypted with the ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md)). |
 | Support for loading the `.rll` from default location. | See ['Resource File Loading' section in the Installation document](installing-the-microsoft-odbc-driver-for-sql-server.md#resource-file-loading). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |

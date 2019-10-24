@@ -36,7 +36,7 @@ This documentation for the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../.
 -   [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)  
 -   [Asynchronous Execution &#40;Notification Method&#41; Sample](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)  
 -   [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)  
--   [Using Always Encrypted with the ODBC Driver](../../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md)
+-   [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 -   [Using Azure Active Directory with the ODBC Driver](../../../connect/odbc/using-azure-active-directory.md) 
 -   [Using Transparent Network IP Resolution](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
 

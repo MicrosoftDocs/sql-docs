@@ -11,21 +11,21 @@ ms.author: "v-kaywon"
 manager: v-mabarw
 ---
 # Using Always Encrypted with the PHP Drivers for SQL Server
-[!INCLUDE[Driver_PHP_Download](../../../includes/driver_php_download.md)]
+[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 ## Applicable to
  -   Microsoft Drivers 5.2 for PHP for SQL Server
  
 ## Introduction
 
-This article provides information on how to develop PHP applications using [Always Encrypted (Database Engine)](always-encrypted-database-engine.md) and the [PHP Drivers for SQL Server](../../../connect/php/Microsoft-php-driver-for-sql-server.md).
+This article provides information on how to develop PHP applications using [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) and the [PHP Drivers for SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md).
 
-Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the ODBC Driver for SQL Server, transparently encrypts and decrypts sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Always Encrypted (Database Engine)](always-encrypted-database-engine.md). The PHP Drivers for SQL Server utilize the ODBC Driver for SQL Server to encrypt sensitive data.
+Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the ODBC Driver for SQL Server, transparently encrypts and decrypts sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). The PHP Drivers for SQL Server utilize the ODBC Driver for SQL Server to encrypt sensitive data.
 
 ## Prerequisites
 
- -   Configure Always Encrypted in your database. This configuration involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you do not already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](always-encrypted-database-engine.md#getting-started-with-always-encrypted). In particular, your database should contain the metadata definitions for a Column Master Key (CMK), a Column Encryption Key (CEK), and a table containing one or more columns encrypted using that CEK.
- -   Make sure ODBC Driver for SQL Server version 17 or higher is installed on your development machine. For details, see [ODBC Driver for SQL Server](../../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+ -   Configure Always Encrypted in your database. This configuration involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you do not already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). In particular, your database should contain the metadata definitions for a Column Master Key (CMK), a Column Encryption Key (CEK), and a table containing one or more columns encrypted using that CEK.
+ -   Make sure ODBC Driver for SQL Server version 17 or higher is installed on your development machine. For details, see [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
 
 ## Enabling Always Encrypted in a PHP Application
 
@@ -44,12 +44,12 @@ $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
 Enabling Always Encrypted is not sufficient for encryption or decryption to succeed; you also need to make sure that:
- -   The application has the VIEW ANY COLUMN MASTER KEY DEFINITION and VIEW ANY COLUMN ENCRYPTION KEY DEFINITION database permissions, required to access the metadata about Always Encrypted keys in the database. For details, see [Database Permission](always-encrypted-database-engine.md#database-permissions).
+ -   The application has the VIEW ANY COLUMN MASTER KEY DEFINITION and VIEW ANY COLUMN ENCRYPTION KEY DEFINITION database permissions, required to access the metadata about Always Encrypted keys in the database. For details, see [Database Permission](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
  -   The application can access the CMK that protects the CEKs for the queried encrypted columns. This requirement is dependent on the key store provider that stores the CMK. For more information, see [Working with Column Master Key Stores](#working-with-column-master-key-stores).
 
 ## Retrieving and Modifying Data in Encrypted Columns
 
-Once you enable Always Encrypted on a connection, you can use standard SQLSRV APIs (see [SQLSRV Driver API Reference](../../../connect/php/sqlsrv-driver-api-reference.md)) or PDO_SQLSRV APIs (see [PDO_SQLSRV Driver API Reference](../../../connect/php/pdo-sqlsrv-driver-reference.md)) to retrieve or modify data in encrypted database columns. Assuming your application has the required database permissions and can access the column master key, the driver encrypts any query parameters that target encrypted columns and decrypt data retrieved from encrypted columns, behaving transparently to the application as if the columns were not encrypted.
+Once you enable Always Encrypted on a connection, you can use standard SQLSRV APIs (see [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)) or PDO_SQLSRV APIs (see [PDO_SQLSRV Driver API Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)) to retrieve or modify data in encrypted database columns. Assuming your application has the required database permissions and can access the column master key, the driver encrypts any query parameters that target encrypted columns and decrypt data retrieved from encrypted columns, behaving transparently to the application as if the columns were not encrypted.
 
 If Always Encrypted is not enabled, queries with parameters that target encrypted columns fail. Data can still be retrieved from encrypted columns, as long as the query has no parameters targeting encrypted columns. However, the driver does not attempt any decryption and the application receives the binary encrypted data (as byte arrays).
 
@@ -83,7 +83,7 @@ CREATE TABLE [dbo].[Patients](
 The following examples demonstrate how to use the SQLSRV and PDO_SQLSRV drivers to insert a row into the Patient table. Note the following points:
  -   There is nothing specific to encryption in the sample code. The driver automatically detects and encrypts the values of the SSN and BirthDate parameters, which target encrypted columns. This mechanism makes encryption transparent to the application.
  -   The values inserted into database columns, including the encrypted columns, are passed as bound parameters. While using parameters is optional when sending values to non-encrypted columns (although it is highly recommended because it helps prevent SQL injection), it is required for values targeting encrypted columns. If the values inserted in the SSN or BirthDate columns were passed as literals embedded in the query statement, the query would fail because the driver does not attempt to encrypt or otherwise process literals in queries. As a result, the server would reject them as incompatible with the encrypted columns.
- -   When inserting values using bind parameters, a SQL type that is identical to the data type of the target column or whose conversion to the data type of the target column is supported must be passed to the database. This requirement is because Always Encrypted supports few type conversions (for details, see [Always Encrypted (Database Engine)](always-encrypted-database-engine.md)). The two PHP drivers, SQLSRV and PDO_SQLSRV, each has a mechanism to help the user determine the SQL type of the value. Therefore, the user does not have to provide the SQL type explicitly.
+ -   When inserting values using bind parameters, a SQL type that is identical to the data type of the target column or whose conversion to the data type of the target column is supported must be passed to the database. This requirement is because Always Encrypted supports few type conversions (for details, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)). The two PHP drivers, SQLSRV and PDO_SQLSRV, each has a mechanism to help the user determine the SQL type of the value. Therefore, the user does not have to provide the SQL type explicitly.
   -   For the SQLSRV driver, the user has two options:
    -   Rely on the PHP driver to determine and set the right SQL type. In this case, the user must use `sqlsrv_prepare` and `sqlsrv_execute` to execute a parameterized query.
    -   Set the SQL type explicitly.
@@ -96,7 +96,7 @@ The following examples demonstrate how to use the SQLSRV and PDO_SQLSRV drivers 
    -   The statement attribute `PDO::SQLSRV_ATTR_DIRECT_QUERY` is not supported in a parameterized query.
    -   The statement attribute `PDO::ATTR_EMULATE_PREPARES` is not supported in a parameterized query.
    
-SQLSRV driver and [sqlsrv_prepare](../../../connect/php/sqlsrv-prepare.md):
+SQLSRV driver and [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md):
 ```
 // insertion into encrypted columns must use a parameterized query
 $query = "INSERT INTO [dbo].[Patients] ([SSN], [FirstName], [LastName], [BirthDate]) VALUES (?, ?, ?, ?)";
@@ -110,7 +110,7 @@ $stmt = sqlsrv_prepare($conn, $query, $params);
 sqlsrv_execute($stmt);
 ```
 
-SQLSRV driver and [sqlsrv_query](../../../connect/php/sqlsrv-query.md):
+SQLSRV driver and [sqlsrv_query](../../connect/php/sqlsrv-query.md):
 ```
 // insertion into encrypted columns must use a parameterized query
 $query = "INSERT INTO [dbo].[Patients] ([SSN], [FirstName], [LastName], [BirthDate]) VALUES (?, ?, ?, ?)";
@@ -127,7 +127,7 @@ $params = array(array(&$ssn, null, null, SQLSRV_SQLTYPE_CHAR(11)),
 sqlsrv_query($conn, $query, $params);
 ```
 
-PDO_SQLSRV driver and [PDO::prepare](../../../connect/php/pdo-prepare.md):
+PDO_SQLSRV driver and [PDO::prepare](../../connect/php/pdo-prepare.md):
 ```
 // insertion into encrypted columns must use a parameterized query
 $query = "INSERT INTO [dbo].[Patients] ([SSN], [FirstName], [LastName], [BirthDate]) VALUES (?, ?, ?, ?)";
@@ -151,7 +151,7 @@ The following examples demonstrate filtering data based on encrypted values, and
  -   When executing a query  with bound parameters, the PHP drivers automatically determines the SQL type for the user unless the user explicitly specifies the SQL type when using the SQLSRV driver.
  -   All values printed by the program are in plaintext, since the driver transparently decrypts the data retrieved from the SSN and BirthDate columns.
  
-Note: Queries can perform equality comparisons on encrypted columns only if the encryption is deterministic. For more information, see [Selecting Deterministic or Randomized encryption](always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
+Note: Queries can perform equality comparisons on encrypted columns only if the encryption is deterministic. For more information, see [Selecting Deterministic or Randomized encryption](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 SQLSRV:
 ```
@@ -211,7 +211,7 @@ This section describes common categories of errors when querying encrypted colum
 
 #### Unsupported data type conversion errors
 
-Always Encrypted supports few conversions for encrypted data types. See [Always Encrypted (Database Engine)](always-encrypted-database-engine.md) for the detailed list of supported type conversions. Do the following to avoid data type conversion errors:
+Always Encrypted supports few conversions for encrypted data types. See [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) for the detailed list of supported type conversions. Do the following to avoid data type conversion errors:
  -   When using the SQLSRV driver with `sqlsrv_prepare` and `sqlsrv_execute` the SQL type, along with the column size and the number of decimal digits of the parameter is automatically determined.
  -   When using the PDO_SQLSRV driver to execute a query, the SQL type with the column size and the number of decimal digits of the parameter is also automatically determined
  -   When using the SQLSRV driver with `sqlsrv_query` to execute a query:
@@ -237,9 +237,9 @@ Because Always Encrypted is a client-side encryption technology, most of the per
  
 ### Round-trips to Retrieve Metadata for Query Parameters
 
-If Always Encrypted is enabled for a connection, the ODBC Driver will, by default, call [sys.sp_describe_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) for each parameterized query, passing the query statement (without any parameter values) to SQL Server. This stored procedure analyzes the query statement to find out if any parameters need to be encrypted, and if so, returns the encryption-related information for each parameter to allow the driver to encrypt them.
+If Always Encrypted is enabled for a connection, the ODBC Driver will, by default, call [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) for each parameterized query, passing the query statement (without any parameter values) to SQL Server. This stored procedure analyzes the query statement to find out if any parameters need to be encrypted, and if so, returns the encryption-related information for each parameter to allow the driver to encrypt them.
 
-Since the PHP drivers allow the user to bind a parameter in a prepared statement without providing the SQL type, when binding a parameter in an Always Encrypted enabled connection, the PHP Drivers call [SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md) on the parameter to get the SQL type, column size, and decimal digits. The metadata is then used to call [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md). These extra `SQLDescribeParam` calls do not require extra round-trips to the database as the ODBC Driver has already stored the information on the client side when `sys.sp_describe_parameter_encryption` was called.
+Since the PHP drivers allow the user to bind a parameter in a prepared statement without providing the SQL type, when binding a parameter in an Always Encrypted enabled connection, the PHP Drivers call [SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) on the parameter to get the SQL type, column size, and decimal digits. The metadata is then used to call [SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md). These extra `SQLDescribeParam` calls do not require extra round-trips to the database as the ODBC Driver has already stored the information on the client side when `sys.sp_describe_parameter_encryption` was called.
 
 The preceding behaviors ensure a high level of transparency to the client application (and the application developer) does not need to be aware of which queries access encrypted columns, as long as the values targeting encrypted columns are passed to the driver in parameters.
 
@@ -253,7 +253,7 @@ Note: In the ODBC Driver for SQL Server, the entries in the cache are evicted af
 
 ## Working with Column Master Key Stores
 
-To encrypt or decrypt data, the driver needs to obtain a CEK that is configured for the target column. CEKs are stored in encrypted form (ECEKs) in the database metadata. Each CEK has a corresponding CMK that was used to encrypt it. The [database metadata](../../../t-sql/statements/create-column-master-key-transact-sql.md) does not store the CMK itself; it only contains the name of the key store and information that the key store can use to locate the CMK.
+To encrypt or decrypt data, the driver needs to obtain a CEK that is configured for the target column. CEKs are stored in encrypted form (ECEKs) in the database metadata. Each CEK has a corresponding CMK that was used to encrypt it. The [database metadata](../../t-sql/statements/create-column-master-key-transact-sql.md) does not store the CMK itself; it only contains the name of the key store and information that the key store can use to locate the CMK.
 
 To obtain the plaintext value of an ECEK, the driver first obtains the metadata about both the CEK and its corresponding CMK, and then it uses this information to contact the key store containing the CMK and requests it to decrypt the ECEK. The driver communicates with a key store using a key store provider.
 
@@ -261,7 +261,7 @@ For Microsoft Driver 5.3.0 for PHP for SQL Server, only Windows Certificate Stor
 
 ### Using the Windows Certificate Store Provider
 
-The ODBC Driver for SQL Server on Windows includes a built-in column master key store provider for the Windows Certificate Store, named `MSSQL_CERTIFICATE_STORE`. (This provider is not available on macOS or Linux.) With this provider, the CMK is stored locally on the client machine and no additional configuration by the application is necessary to use it with the driver. However, the application must have access to the certificate and its private key in the store. For more information, see [Create and Store Column Master Keys (Always Encrypted)](create-and-store-column-master-keys-always-encrypted.md).
+The ODBC Driver for SQL Server on Windows includes a built-in column master key store provider for the Windows Certificate Store, named `MSSQL_CERTIFICATE_STORE`. (This provider is not available on macOS or Linux.) With this provider, the CMK is stored locally on the client machine and no additional configuration by the application is necessary to use it with the driver. However, the application must have access to the certificate and its private key in the store. For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ### Using Azure Key Vault
 
@@ -320,10 +320,10 @@ PDO_SQLSRV only:
  -   `PDO::ATTR_EMULATE_PREPARE` statement attribute specified in a parameterized query
  -   binding parameters in a batch of SQL statements
  
-The PHP drivers also inherit the limitations imposed by the ODBC Driver for SQL Server and the database. See [Limitations of the ODBC driver when using Always Encrypted](using-always-encrypted-with-the-odbc-driver.md) and [Always Encrypted Feature Details](always-encrypted-database-engine.md#feature-details).  
+The PHP drivers also inherit the limitations imposed by the ODBC Driver for SQL Server and the database. See [Limitations of the ODBC driver when using Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) and [Always Encrypted Feature Details](../../relational-databases/security/encryption/always-encrypted-database-engine.md#feature-details).  
   
 ## See Also  
-[Programming Guide for PHP SQL Driver](../../../connect/php/programming-guide-for-php-sql-driver.md)
-[SQLSRV Driver API Reference](../../../connect/php/sqlsrv-driver-api-reference.md)  
-[PDO_SQLSRV Driver API Reference](../../../connect/php/pdo-sqlsrv-driver-reference.md)  
+[Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+[PDO_SQLSRV Driver API Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)  
   

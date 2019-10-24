@@ -42,7 +42,7 @@ GeneMi (and CraigG).  2019/03/30.
 
 | Feature added | Details |
 | :------------ | :------ |
-| Support for additional Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md). |
+| Support for additional Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Support for setting data classification version | See [Data Classification](../data-classification.md#bkmk-version). |
 | Driver will now install Azure Active Drirectory Authentication Library (adal.dll) used for authentication to Azure | |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
@@ -52,7 +52,7 @@ GeneMi (and CraigG).  2019/03/30.
 
 | Feature added | Details |
 | :------------ | :------ |
-| Always Encrypted with Secure Enclaves. | See [Using Always Encrypted with the ODBC Driver](../../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md). |
+| Always Encrypted with Secure Enclaves. | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Configurable TCP Keep Alive settings. | See [Connecting to SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md). |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
@@ -62,7 +62,7 @@ GeneMi (and CraigG).  2019/03/30.
 | Feature added | Details |
 | :------------ | :------ |
 | Azure Active Directory Managed Service Identity (system and user-assigned) authentication mode. | See [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md). |
-| Ability to stream input parameters against Always Encrypted columns. | See [Limitations of the ODBC driver when using Always Encrypted](../../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
+| Ability to stream input parameters against Always Encrypted columns. | See [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | XA distributed transactions. | [Using XA Transactions](../use-xa-with-dtc.md). |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
@@ -80,7 +80,7 @@ GeneMi (and CraigG).  2019/03/30.
 
 | Feature added | Details |
 | :------------ | :------ |
-| Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes. | &bull; &nbsp; `SQL_COPT_SS_CEKCACHETTL`<br/>Allows controlling the time that the local cache of Column Encryption Keys exists, as well as flushing it.<br/><br/>&bull; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS`<br/>Allows the application to restrict AE operations to only use the specified list of Column Master Keys.<br/><br/> For more information, see [Using Always Encrypted with the ODBC Driver for SQL Server](../../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md). |
+| Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes. | &bull; &nbsp; `SQL_COPT_SS_CEKCACHETTL`<br/>Allows controlling the time that the local cache of Column Encryption Keys exists, as well as flushing it.<br/><br/>&bull; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS`<br/>Allows the application to restrict AE operations to only use the specified list of Column Master Keys.<br/><br/> For more information, see [Using Always Encrypted with the ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
 | Azure Active Directory Interactive Authentication Support | &nbsp; |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
@@ -121,7 +121,7 @@ This version of ODBC contains support for Azure SQL Managed Instance (Extended P
 
 | Feature added | Details |
 | :------------ | :------ |
-| ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] adds support for [Always Encrypted](../../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md) and [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md). | These added supports are available when connecting to Microsoft SQL Server 2016, or to a later version. |
+| ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] adds support for [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) and [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md). | These added supports are available when connecting to Microsoft SQL Server 2016, or to a later version. |
 | There are connection pooling keywords and attributes, that correspond to the supports for Always Encrypted and Azure Active Directory. | These keywords and attribute are described in [Driver Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 

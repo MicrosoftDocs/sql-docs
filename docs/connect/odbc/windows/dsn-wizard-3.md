@@ -69,7 +69,7 @@ Alters the behavior of **Multi-subnet failover** to allow for faster reconnectio
 
 ### Column Encryption.
 
-Enables automatic decryption and encryption of data transfers to and from columns encrypted with the [Always Encrypted](../../../relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md) feature available in SQL Server 2016 and later.
+Enables automatic decryption and encryption of data transfers to and from columns encrypted with the [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) feature available in SQL Server 2016 and later.
 
 ### Use FMTONLY metadata discovery:
 

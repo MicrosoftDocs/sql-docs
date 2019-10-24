@@ -1,0 +1,179 @@
+### YamlMime:Landing
+
+title: SQL Server Education Center
+summary: Tutorials, quickstarts, and other educational resources meant to teach you to work with SQL Server and Azure SQL Database.  
+
+metadata:
+  title: SQL Server Education Center 
+  description: A collection of tutorials and quickstarts meant to teach you to use SQL Server and Azure SQL Database. 
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MashaMSFT
+  ms.author: mathoma
+  ms.date: 10/14/2019  
+
+
+landingContent:
+  - title: Azure SQL Database single database
+    linkLists:
+    - linkListType: quickstart
+      links:
+      - text: Create DB with portal
+        url: /azure/sql-database/sql-database-single-database
+      - text: Create DB with template
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Configure Server-level IP firewall rules
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+    - linkListType: tutorial
+      links:
+      - text: Migrate using Azure Database Migration Service
+        url: /azure/sql-database/sql-database-single-database
+      - text: Add single DB to a failover group
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Add elastic pool to a failover group
+      - text: Configure active geo-replication
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+      - text: Configure security
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+
+
+  - title: SQL Server on Azure VM (IaaS)
+    linkLists:
+    - linkListType: quickstart
+      links:
+      - text: Create VM with portal
+        url: /azure/sql-database/sql-database-single-database
+      - text: Create VM with PowerShell
+        url: /azure/sql-database/sql-database-managed-instance
+    - linkListType: tutorial
+      links:
+      - text: Register with resource provider
+        url: /azure/sql-database/sql-database-single-database
+      - text: Create FCI using premium file share
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Configure Always On availablity group with Az CLI
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Use Azure storage for backup & restore
+        url: /azure/sql-database/sql-database-managed-instance
+
+
+
+  - title: SQL Server
+    linkLists:
+    - linkListType: quickstart
+      links:
+      - text: Connect & query with Azure Data Studio
+        url: /azure/sql-database/sql-database-single-database
+      - text: Connect & query with SSMS
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Extended events 
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+      - text: Backup & restore on-premises
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+      - text: Backup & restore to Azure blob storage
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+    - linkListType: tutorial
+      links:
+      - text: Configure availability group 
+        url: /azure/sql-database/sql-database-single-database
+      - text: Configure transactional replication 
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Configure merge replication
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Policy-based management
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+      - text: Advanced review of xEvents
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+      - text: Convert SQL Trace script to session
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+      - text: Create in-memory table
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+      - text: Sign stored procedure with certificate
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+      - text: Use Azure Blob storage service
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+    - linkListType: architecture
+      links: 
+      - text: Index architecture & design
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+      - text: Pages & extents architecture
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview         
+      - text: Post migration validation & optimization
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+      - text: Query processing Architecture
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+      - text: Thread & task architecture
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+      - text: Transaction log architecture
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+      - text: Transaction locking & row versioning
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+      - text: Memory management architecture
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+
+
+  - title: Azure SQL Database managed instance 
+    linkLists:
+    - linkListType: quickstart
+      links:
+      - text: Create instance with portal
+        url: /azure/sql-database/sql-database-single-database
+      - text: Create instance with PowerShell
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Create instance pool
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+      - text: Configure public endpoint
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+      - text: Connect a client VM
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+      - text: Configure point-to-site connection
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+      - text: Restore databse backup
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+    - linkListType: tutorial
+      links:
+      - text: Migrate using Azure Database Migration Service
+        url: /azure/sql-database/sql-database-single-database
+      - text: Configure transactional replication
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Add to a failover group
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+      - text: Migrate on-premises users and groups
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+      - text: Configure security
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+
+  - title: SQL Server on Linux
+    linkLists:
+    - linkListType: quickstart
+      links:
+      - text: Red hat
+        url: /azure/sql-database/sql-database-single-database
+      - text: SUSE
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Ubuntu
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Docker
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: On Azure
+        url: /azure/sql-database/sql-database-managed-instance
+    - linkListType: tutorial
+      links:
+      - text: Migrate from Windows
+        url: /azure/sql-database/sql-database-single-database
+      - text: Migrate to docker
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Create a job
+        url: /azure/sql-database/sql-database-single-database
+      - text: Setup AD authentication 
+        url: /azure/sql-database/sql-database-single-database
+      - text: Create FCI
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Operate FCI
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Deploy a Pacemaker cluster
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Create & configure availability group
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Deploy on Kubernetes
+        url: /azure/sql-database/sql-database-managed-instance

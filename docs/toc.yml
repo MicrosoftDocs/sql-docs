@@ -10550,6 +10550,8 @@
   items:
   - name: Learn
     items:
+    - name: Education center
+      href: education-center/index.yml
     - name: Microsoft Virtual Academy >>
       href: https://mva.microsoft.com/product-training/sql-server  # TODO: MVA website is being retired in 2019.  (Removed trailing '#!lang=1033'.)
     - name: SQL on Channel 9 >>

@@ -1,6 +1,21 @@
 {
     "redirections": [
         {
+            "source_path": "docs/database-engine/whats-new-in-sql-server-2016.md",
+            "redirect_url": "sql-server/what-s-new-in-sql-server-2016",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/database-engine/whats-new-in-sql-server-2017.md",
+            "redirect_url": "sql-server/what-s-new-in-sql-server-2017",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/database-engine/sql-server-database-engine-overview.md",
+            "redirect_url": "sql-server/what-s-new-in-sql-server-ver15",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/sql-server/sql-server-ver15-release-notes.md",
             "redirect_url": "/sql/sql-server/sql-server-version-15-release-notes.md",
             "redirect_document_id": false

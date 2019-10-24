@@ -37,9 +37,9 @@ Currently, there is no in place upgrade for big data clusters, the only way to u
 
 1. Uninstall the old version of `azdata`
 
-  ```powershell
-  pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
-  ```
+   ```powershell
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
+   ```
 
 1. Install the latest version of `azdata`. The following commands install `azdata` from the latest release:
 

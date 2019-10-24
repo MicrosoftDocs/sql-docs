@@ -2,7 +2,7 @@
 title: Known issues for Python and R
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/07/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -462,7 +462,7 @@ The previous long running external script against master will terminate with the
 
 Don’t run the library install in parallel to the long-running query. Or rerun the long running query after the installation is complete.
 
-**Applies to:** SQL Server 2019 on Linux & Aris, Big Data Cluster only.
+**Applies to:** SQL Server 2019 on Linux & Big Data Clusters only.
 
 ## Python script execution issues
 

@@ -68,12 +68,13 @@ SQL Server Management Studio 18.4:
 ## New in this release (SSMS 18.4)
 
 | New item | Details |
-|-----|-----|
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Data Classification | Added support for custom information protection policy for data classification. |
 | Query Store | Added the *Max Plan per query* value in the dialog properties. |
 | Query Store | Added support for the new Custom Capture Policies. |
 | SMO/Scripting | Support Script of materialized view in SQL DW. |
 | SMO/Scripting | Added support for *SQL On Demand*. |
+
 For details about what's new in this release, see [the SSMS release notes](release-notes-ssms.md).
 
 ## Supported SQL offerings (SSMS 18.4)

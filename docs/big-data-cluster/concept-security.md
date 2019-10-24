@@ -1,7 +1,7 @@
 ---
 title: Security concepts
 titleSuffix: SQL Server big data clusters
-description: This article describes security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. This includes describing the cluster endpoints and cluster authentication.
+description: This article describes security concepts for SQL Server Big Data Clusters. This includes describing the cluster endpoints and cluster authentication.
 author: nelgson 
 ms.author: negust
 ms.reviewer: mikeray
@@ -17,7 +17,7 @@ ms.technology: big-data-cluster
 
 This article will cover the key security-related concepts in the big data cluster
 
-For big data cluster security, coherent and consistent authorization and authentication are the centerpieces. Big data clusters can be integrated with Active Directory through a fully automated deployment that sets up Active Directory integration against an existing domain. Once a big data cluster is configured with Active Directory integration, you can leverage existing identities and user groups for unified access across all endpoints. In addition, once you have created external tables in SQL Server, you can control access to data sources by granting access to external tables to Active Directory users and groups, thus centralizing the data access policies to a single location.
+!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md) provide coherent and consistent authorization and authentication. A big data cluster can be integrated with Active Directory through a fully automated deployment that sets up Active Directory integration against an existing domain. Once a big data cluster is configured with Active Directory integration, you can leverage existing identities and user groups for unified access across all endpoints. In addition, once you have created external tables in SQL Server, you can control access to data sources by granting access to external tables to Active Directory users and groups, thus centralizing the data access policies to a single location.
 
 ## Authentication
 
@@ -51,7 +51,7 @@ A secure big data cluster implies consistent and coherent support for authentica
 
 Authorization in Big Data context is usually performed through access control lists (ACLs), which associate user identities with specific permissions. HDFS supports authorization by limiting access to service APIs, HDFS files and job execution.
 
-# Encryption and other security mechanisms
+## Encryption and other security mechanisms
 
 Encryption of communication between clients to the external endpoints, as well as between components inside the cluster are secured with TLS/SSL, using certificates.
 
@@ -70,10 +70,10 @@ Hadoop components do not support mixed mode authentication, which means that a b
 These are the login credentials you need to define upon deployment.
 
 Cluster admin username:
- + AZDATA_USERNAME=<username>
+ + `AZDATA_USERNAME=<username>`
 
 Cluster admin password:  
- + AZDATA_PASSWORD=<password>
+ + `AZDATA_PASSWORD=<password>`
 
 > [!NOTE]
 > Note that in non-AD mode, the username "root" has to be used in combination with the above password, for authenticating to the Gateway (Knox) for access to HDFS/Spark.

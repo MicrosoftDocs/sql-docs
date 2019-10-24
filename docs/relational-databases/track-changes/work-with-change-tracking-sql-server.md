@@ -261,6 +261,11 @@ COMMIT TRAN
   
  For more information about snapshot transactions, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
+#### Cleanup and snapshot isolation   
+Enabling both snapshot isolation and change tracking on either the same database, or on two different databases within the same instance 
+can result in the cleanup process leaving expired rows in sys.syscommittab when there is an open transaction in the database with snapshot isolation. This can happen as the change tracking cleanup process takes an instance-wide low water mark (which is the safe cleanup version) into account when performing the cleanup. This is done to ensure the change tracking auto clean up process doesn't remove any rows that might be required by the open transaction in the database that has snapshot isolation enabled. Keep read committed snapshot isolation, and snapshot isolation transactions as short as possible to ensure expired rows from sys.syscommittab are cleaned up in a timely manner. 
+
+
 #### Alternatives to Using Snapshot Isolation  
  There are alternatives to using snapshot isolation, but they require more work to make sure all application requirements are met. To make sure the *last_synchronization_version* is valid and data is not removed by the cleanup process before changes are obtained, do the following:  
   

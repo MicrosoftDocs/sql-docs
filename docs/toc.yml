@@ -8175,17 +8175,11 @@
             href: relational-databases/security/encryption/always-encrypted-client-development.md
           - name: Develop aplications with .NET Framework
             href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
-          - name: Using Always Encrypted with the JDBC Driver
-            href: relational-databases/security/encryption/using-always-encrypted-with-the-jdbc-driver.md
-          - name: Using Always Encrypted with the ODBC Driver
-            href: relational-databases/security/encryption/using-always-encrypted-with-the-odbc-driver.md
-          - name: Using Always Encrypted with the PHP Drivers
-            href: relational-databases/security/encryption/using-always-encrypted-php-drivers.md
       - name: Configure Always Encrypted with Secure Enclaves
         href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
         items:
           - name: Manage keys for Always Encrypted with secure enclaves
-            item:
+            items:
               - name: Manage enclave-enabled keys
                 href: relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md
               - name: Provision enclave-enabled keys
@@ -8193,7 +8187,7 @@
               - name: Rotate enclave-enabled keys
                 href: relational-databases/security/encryption/always-encrypted-enclaves-rotate-keys.md
           - name: Configure columns with Always Encrypted with secure enclaves
-            item:
+            items:
               - name: Configure column encryption
                 href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
               - name: Configure column encryption in-place with Transact-SQL 
@@ -8201,7 +8195,7 @@
               - name: Enable Always Encrypted with secure enclaves for existing encrypted columns
                 href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
           - name: Query columns using Always Encrypted with secure enclaves
-            item:
+            items:
               - name: Query columns using Always Encrypted with secure enclaves
                 href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
               - name: Query columns using Always Encrypted with secure enclaves with SSMS

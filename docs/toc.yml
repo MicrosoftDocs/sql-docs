@@ -149,6 +149,8 @@
           href: big-data-cluster/hdfs-tiering-mount-adlsgen2.md
         - name: Mount S3 for HDFS tiering
           href: big-data-cluster/hdfs-tiering-mount-s3.md
+        - name: Manage HDFS permissions
+          href: big-data-cluster/hdfs-tiering-manage-permissions.md
     - name: Data ingestion
       items:
       - name: Load data with curl
@@ -10390,18 +10392,18 @@
         href: linux/sql-server-linux-configure-mssql-conf.md
       - name: Environment variables
         href: linux/sql-server-linux-configure-environment-variables.md
-      - name: Configure Docker containers
-        href: linux/sql-server-linux-configure-docker.md
-      - name: MSDTC
-        items:
-        - name: Configure MSDTC
-          href: linux/sql-server-linux-configure-msdtc.md
-        - name: Configure Docker for MSDTC
-          href: linux/sql-server-linux-configure-msdtc-docker.md
+      - name: Configure MSDTC
+        href: linux/sql-server-linux-configure-msdtc.md
       - name: Configure persistent memory PMEM
         href: linux/sql-server-linux-configure-pmem.md
       - name: Configure to send usage and diagnostic data to Microsoft
         href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
+    - name: Containers
+      items:
+      - name: Configure Docker containers
+        href: linux/sql-server-linux-configure-docker.md
+      - name: Configure Docker for MSDTC
+        href: linux/sql-server-linux-configure-msdtc-docker.md
     - name: Develop
       href: linux/sql-server-linux-develop-overview.md
       items:

@@ -13,10 +13,7 @@ ms.technology: linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article describes the major features and services available for SQL Server 2019 running on Linux.
-
-> [!NOTE]
-> For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes-2019.md?view=sql-server-linux-ver15).
+This article describes the major features and services available for SQL Server 2019 running on Linux. For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes-2019.md?view=sql-server-linux-ver15).
 
 ## Updates
 
@@ -44,9 +41,6 @@ To install SQL Server on Linux, use one of the following tutorials:
 - [Run on Docker](quickstart-install-connect-docker.md?view=sql-server-linux-ver15)
 - [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
-To see other improvements introduced in SQL Server 2019, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
-
-> [!TIP]
-> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
+For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md). To see other improvements introduced in SQL Server 2019, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

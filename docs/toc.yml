@@ -10374,12 +10374,6 @@
         href: linux/sql-server-linux-change-repo.md
     - name: Configure
       items:
-      - name: Containers
-        items:
-        - name: Configure Docker containers
-          href: linux/sql-server-linux-configure-docker.md
-        - name: Configure Docker for MSDTC
-          href: linux/sql-server-linux-configure-msdtc-docker.md
       - name: Configure with mssql-conf
         href: linux/sql-server-linux-configure-mssql-conf.md
       - name: Environment variables
@@ -10390,6 +10384,12 @@
         href: linux/sql-server-linux-configure-pmem.md
       - name: Configure to send usage and diagnostic data to Microsoft
         href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
+    - name: Containers
+      items:
+      - name: Configure Docker containers
+        href: linux/sql-server-linux-configure-docker.md
+      - name: Configure Docker for MSDTC
+        href: linux/sql-server-linux-configure-msdtc-docker.md
     - name: Develop
       href: linux/sql-server-linux-develop-overview.md
       items:

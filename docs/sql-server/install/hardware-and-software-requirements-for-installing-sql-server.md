@@ -138,9 +138,7 @@ Installing SQL Server 2016 and 2017 on Server Core mode is supported by the foll
 | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
 | Windows Server 2012 R2 Standard | Windows Server 2012 R2  Datacenter|
 | Windows Server 2012 Standard | Windows Server 2012 Datacenter |
-| Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
-| Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
-   | &nbsp; | &nbsp; |
+| &nbsp; | &nbsp; |
 ::: moniker-end
 
 For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  

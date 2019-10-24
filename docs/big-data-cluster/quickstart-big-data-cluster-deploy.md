@@ -22,8 +22,6 @@ In this tutorial, you use a sample python deployment script to deploy [!INCLUDE[
 
 The default big data cluster deployment used here consists of a SQL Master instance, one compute pool instance, two data pool instances, and two storage pool instances. Data is persisted using Kubernetes persistent volumes that use the AKS default storage classes. The default configuration used in this tutorial is suitable for dev/test environments.
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
 ## Prerequisites
 
 - An Azure subscription.

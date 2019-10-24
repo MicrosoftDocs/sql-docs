@@ -21,6 +21,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/sql-server/sql-server-technical-documentation.md",
+            "redirect_url": "/sql/sql-server/",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/relational-databases/system-catalog-views/sys-sql-feature-restrictions.md",
             "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
             "redirect_document_id": false

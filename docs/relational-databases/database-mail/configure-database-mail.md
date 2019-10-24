@@ -68,8 +68,6 @@ ms.author: sstein
   
 4.  Complete the Wizard dialogs  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     -   [Welcome Page](#Welcome)  
   
     -   [Select Configuration Task Page](#ConfigTask)  

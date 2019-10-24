@@ -64,8 +64,6 @@ ms.author: mathoma
   
 2.  Right-click the collection set that you want to start, and then click **Start Data Collection Set**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
      A message box displays the results of this action, and a green arrow on the icon for the collection set indicates that the collection set has started.  
   
 #### To stop a collection set  

@@ -95,8 +95,6 @@ On multiprocessor systems that are running [!INCLUDE[ssNoVersion](../../includes
   
 8.  Click **OK**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To set max degree of parallelism on an existing index  

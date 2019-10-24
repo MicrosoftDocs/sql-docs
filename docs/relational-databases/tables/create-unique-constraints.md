@@ -56,8 +56,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 5.  On the **File** menu, click **Save**_table name_.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To create a unique constraint  

@@ -83,6 +83,10 @@ RECONFIGURE
 ## Remarks  
  Use **sp_configure** to display or change server-level settings. To change database-level settings, use ALTER DATABASE. To change settings that affect only the current user session, use the SET statement.  
   
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
+
 ## Updating the Running Configuration Value  
  When you specify a new *value* for an *option*, the result set shows this value in the **config_value** column. This value initially differs from the value in the **run_value** column, which shows the currently running configuration value. To update the running configuration value in the **run_value** column, the system administrator must run either RECONFIGURE or RECONFIGURE WITH OVERRIDE.  
   

@@ -86,7 +86,7 @@ ms.author: maggies
   
  At report design time, credentials are used to run dataset queries and preview the report. At run time, credentials are used to run the report and cache query results. You can also cache shared dataset query results independently. Design time and run time credentials might differ. For more information, see [Specify Credentials in Report Builder](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
- For more information about securing data, see the following topic in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation:  
+ For more information about securing data, see [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md). 
   
   
  For more information about data sources, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  

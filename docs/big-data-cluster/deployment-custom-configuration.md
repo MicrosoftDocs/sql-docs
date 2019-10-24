@@ -19,7 +19,7 @@ ms.technology: big-data-cluster
 Starting from a pre-defined set of configuration profiles that are built into the azdata management tool, you can easily modify the default settings to better suit your BDC workload requirements. Starting with the release candidate release, the structure of the configuration files was updated to enable you to granularly update settings per each service of the resource. 
 
 > [!TIP]
-> Please reference the articles on how to configure **high availability** for mission critical components like [SQL Server master](deployment-high-availability.md) or [HDFS name node](deployment-high-availability-hdfs-spark.md),  for details on how to deploy highly available services. Similarly, you can find details on security related configurations for Active Directory integration [here](security-active-directory.md)
+> Please reference the articles on how to configure **high availability** for mission critical components like [SQL Server master](deployment-high-availability.md) or [HDFS name node](deployment-high-availability-hdfs-spark.md),  for details on how to deploy highly available services.
 
 You can also set resource level configurations or update the configurations for all services in a resource. Here is a summary of the structure for `bdc.json`:
 

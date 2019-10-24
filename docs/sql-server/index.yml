@@ -42,7 +42,7 @@ landingContent:
       links:
       - text: Transact-SQL 
         url: ../t-sql/language-reference.md
-      - text: SQL Powershell
+      - text: SQL PowerShell
         url: ../powershell/sql-server-powershell.md
       - text: Sample databases
         url: https://docs.microsoft.com/sql/samples/sql-samples-where-are

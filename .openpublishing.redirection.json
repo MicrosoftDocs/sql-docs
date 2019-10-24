@@ -22,7 +22,7 @@
         },
         {
             "source_path": "docs/sql-server/sql-server-technical-documentation.md",
-            "redirect_url": "/sql/sql-server/index.yml",
+            "redirect_url": "/sql/sql-server/",
             "redirect_document_id": false
         },
         {

@@ -16,6 +16,12 @@ metadata:
 landingContent:
   - title: Azure SQL Database single database
     linkLists:
+    - linkListType: learn
+      links:
+      - text: Secure your cloud data
+        url: /azure/sql-database/sql-database-single-database
+      - text: Secure your Azure SQL Database
+        url: /azure/sql-database/sql-database-managed-instance
     - linkListType: quickstart
       links:
       - text: Create DB with portal
@@ -31,6 +37,7 @@ landingContent:
       - text: Add single DB to a failover group
         url: /azure/sql-database/sql-database-managed-instance
       - text: Add elastic pool to a failover group
+        url: /azure/sql-database/sql-database-managed-instance
       - text: Configure active geo-replication
         url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
       - text: Configure security
@@ -60,6 +67,16 @@ landingContent:
 
   - title: SQL Server
     linkLists:
+    - linkListType: learn
+      links:
+      - text: Upgrade SQL Server
+        url: /azure/sql-database/sql-database-single-database
+      - text: Use the Query Tuning Assistant
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Use the Database Experimentation Assistant (DEA)
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Use Datab Migration Assistant (DMA) 
+        url: /azure/sql-database/sql-database-managed-instance
     - linkListType: quickstart
       links:
       - text: Connect & query with Azure Data Studio
@@ -92,6 +109,8 @@ landingContent:
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
       - text: Use Azure Blob storage service
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+      - text: Database tuning advisor 
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview 
     - linkListType: architecture
       links: 
       - text: Index architecture & design
@@ -145,6 +164,16 @@ landingContent:
 
   - title: SQL Server on Linux
     linkLists:
+    - linkListType: learn
+      links:
+      - text: Introduction
+        url: /azure/sql-database/sql-database-single-database
+      - text: Deploy
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Automatically tune
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Containers  
+        url: /azure/sql-database/sql-database-managed-instance
     - linkListType: quickstart
       links:
       - text: Red hat
@@ -176,4 +205,20 @@ landingContent:
       - text: Create & configure availability group
         url: /azure/sql-database/sql-database-managed-instance
       - text: Deploy on Kubernetes
+        url: /azure/sql-database/sql-database-managed-instance
+
+
+  - title: Additional resources 
+    linkLists:
+    - linkListType: reference 
+      links:
+      - text: Microsoft Learn
+        url: /azure/sql-database/sql-database-single-database
+      - text: LinkedIn Learning
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Microsoft Virtual Academy
+        url: /azure/sql-database/sql-database-single-database
+      - text: Pluralsight
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Channel 9
         url: /azure/sql-database/sql-database-managed-instance

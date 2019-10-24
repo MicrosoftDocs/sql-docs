@@ -66,8 +66,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 5.  The **Publisher Properties - \<Publisher>** dialog box. For more information about accessing this dialog box, [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### To change the password for an account used by one or more agents  
   
 1.  If the account is a SQL Server account, this dialog box will also change the password for the SQL Server account. If the account is a Windows account, change the password in Windows first. For more information, see the Windows documentation.  
@@ -214,7 +212,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 #### To change security settings for an immediate updating pull subscription  
   
-1.  In the **Subscription Properties - \<Subscription>** dialog box at the Subscriber, click the **Publisher Connection** row, and then click the properties (**…**) button in the row.  
+1.  In the **Subscription Properties - \<Subscription>** dialog box at the Subscriber, click the **Publisher Connection** row, and then click the properties (**?**) button in the row.  
   
 2.  In the **Enter Connection Information** dialog box, select one of the following options:  
   

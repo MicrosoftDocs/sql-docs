@@ -63,8 +63,6 @@ ms.author: vanto
   
 3.  When you are finished selecting options, click **OK**.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### To create a database-level audit specification  
   
 1.  In Object Explorer, expand the database where you want to create an audit specification.  

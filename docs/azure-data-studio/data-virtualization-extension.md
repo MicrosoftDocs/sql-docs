@@ -1,31 +1,31 @@
 ---
-title: SQL Server 2019 extension (preview)
+title: Data Virtualization Extension
 titleSuffix: Azure Data Studio
-description: SQL Server 2019 Preview extension for Azure Data Studio
+description: Data Virtualization extension for Azure Data Studio
 ms.custom: "seodec18"
-ms.date: "09/11/2019"
+ms.date: "10/24/2019"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: "yualan"
-ms.author: "alayu"
+author: "rajmera3"
+ms.author: "rajmera3"
 ---
-# SQL Server 2019 extension for Azure Data Studio (preview)
+# Data Virtualization extension for Azure Data Studio
 
-The SQL Server 2019 extension for Azure Data Studio (preview) provides preview support for new features and tools shipping in support of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Support includes preview support for [SQL Server 2019 big data clusters](../big-data-cluster/big-data-cluster-overview.md), an integrated [notebook experience](../big-data-cluster/notebooks-guidance.md), and a PolyBase [Create External Table wizard](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
+The Data Virtualization extension for Azure Data Studio provides support for the PolyBase [Create External Table wizard](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
 
-## Install the SQL Server 2019 extension (preview)
+## Install the Data Virtualization extension
 
-To install the SQL Server 2019 extension (preview), download and install the associated .vsix file.
+To install the Data Virtualization extension, download and install the associated .vsix file.
 
-1. Download the SQL Server 2019 extension (preview) .vsix file to a local directory:
+1. Download the Data Virtualization extension .vsix file to a local directory:
 
    |Platform|Download|Release date|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|September 11, 2019 |0.16.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|September 11, 2019 |0.16.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|September 11, 2019 |0.16.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|November 4, 2019 |1.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|November 4, 2019 |1.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|November 4, 2019 |1.0
 
    > [!NOTE]
    > There is a known issue with Internet Explorer where the VSIX will be downloaded as zip files. Use Edge or another browser to  download the VSIX correctly. 
@@ -39,6 +39,12 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 1. After reloading, the extension will install dependencies. You can see the progress in the Output window, and it could take several minutes.
 
 1. After the dependencies finish installing, close and reopen Azure Data Studio. The **SQL Server big data cluster** connection type is not available until you restart Azure Data Studio.
+
+## Changes in release 1.0
+* Extension renamed to Data Virtualization.
+* Create External Table wizard:
+    * Included guided notebooks for virtualization MongoDB and Teradata sources.
+    * Added dialog to fill out variables in MongoDB and Teradata virtualization notebooks. 
 
 ## Changes in release 0.16
 * Create External Table wizard:

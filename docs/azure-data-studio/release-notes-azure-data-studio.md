@@ -16,6 +16,24 @@ ms.date: "10/11/2019"
 
 **[Download and install the latest release!](download.md)**
 
+## November 2019
+
+November 4, 2019 &nbsp; / &nbsp; version: 1.13.0 
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| New SQL Server 2019 support | &bull; &nbsp; Deploy SQL Server 2019 big data cluster with BDC Deploy wizard <br/>&bull; &nbsp; Manage cluster health with controller dashboard <br/>&bull; &nbsp; Manage HDFS access control lists using Security ACLs Dialog <br/> &bull; &nbsp; Add mounts using HDFS Tiering Dialog <br/> &bull; &nbsp; Troubleshoot using built-in Jupyter Book, SQL Server 2019 guide <br/> &bull; &nbsp; Renamed to SQL vNext extension Data virtualization extension <br/> &bull; &nbsp; Added Teradata and Mongo support in External Table Wizard|
+| New notebook features | &bull; &nbsp; Announcing Powershell notebooks &bull; &nbsp; Announcing collapsible code cells <br/>&bull; &nbsp; Perf improvements in Notebooks <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22) |
+| Announcing Jupyter Books  | Jupyter Books are a collection of notebooks and markdown files organized in a table of contents. |
+| New SQL Server Deploy wizard  | Now includes support for deploying: <br/> &bull; &nbsp; SQL Server 2019 on Windows <br/> &bull; &nbsp; SQL Server 2017 on Windows <br/> &bull; &nbsp; SQL Server 2019 on Docker <br/> &bull; &nbsp; SQL Server 2017 on Docker |
+| Announcing GA of Schema Compare extension| &bull; &nbsp; SQLCMD mode <br/> &bull; &nbsp; Localization support <br/> &bull; &nbsp; Accessibility fixes <br/> &bull; &nbsp; Security bugs  |
+| Announcing GA of SQL Server Dacpac extension| <br/> &bull; &nbsp; Localization support <br/> &bull; &nbsp; Accessibility fixes <br/> &bull; &nbsp; Security bugs |
+| Announcing Visual Studio IntelliCode extension | Visual Studio IntelliCode now supports SQL, which allows for smarter suggestions of reserved keywords. |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
+
 ## October 2019 (hotfix 2)
 
 October 11, 2019 &nbsp; / &nbsp; version: 1.12.2

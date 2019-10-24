@@ -8175,7 +8175,7 @@
             href: relational-databases/security/encryption/always-encrypted-client-development.md
           - name: Develop aplications with .NET Framework
             href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
-      - name: Configure Always Encrypted with Secure Enclaves
+      - name: Always Encrypted with secure enclaves
         href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
         items:
           - name: Manage keys for Always Encrypted with secure enclaves
@@ -8317,7 +8317,7 @@
           href: relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md
         - name: Always Encrypted cryptography
           href: relational-databases/security/encryption/always-encrypted-cryptography.md
-      - name: Always Encrypted with Secure Enclaves
+      - name: Always Encrypted with secure enclaves
         href: relational-databases/security/encryption/always-encrypted-enclaves.md
       - name: Encryption keys
         href: relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md

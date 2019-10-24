@@ -13,7 +13,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 # Plan for Host Guardian Service attestation
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly]()]
 
 When you use [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), you want to make sure that your client application is talking to a trustworthy enclave within the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] process. For a virtualization-based security (VBS) enclave, you need to ensure that both the code inside the enclave is valid and the computer hosting [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is trustworthy. Remote attestation achieves this goal by introducing a third party that can validate the identity (and optionally, the configuration) of the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer. Before [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] can use an enclave to run a query, it must provide information to the attestation service about its operating environment to obtain a certificate of health. This certificate of health is then sent to the client, which can independently verify its authenticity with the attestation service. Once the client trusts the certificate of health, it knows it is talking to a trustworthy VBS enclave and will issue the query that will use the enclave.
 
@@ -134,4 +133,4 @@ If you are using Always Encrypted with VBS enclaves in a development or test env
 
 ## Next steps
 
-- [Deploy HGS for Always Encrypted with VBS Enclaves](always-encrypted-hgs-deploy.md)
+- Deploy HGS for Always Encrypted with VBS Enclaves

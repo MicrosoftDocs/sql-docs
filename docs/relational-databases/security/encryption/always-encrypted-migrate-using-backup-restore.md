@@ -6,12 +6,6 @@ ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
-f1_keywords: 
-  - "SQL13.SWB.COLUMNMASTERKEY.PAGE.F1"
-  - "SQL13.SWB.COLUMNENCRYPTIONKEY.PAGE.F1"
-  - "SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1"
-helpviewer_keywords: 
-  - "Always Encrypted, configure with SSMS"
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas

@@ -9,7 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.alwaysencryptedwizard.encryption.f1"
   - "sql13.swb.alwaysencryptedwizard.f1"
-  - "sql.swb.alwaysencryptedwizard.masterkey.f1"
+  - "sql13.swb.alwaysencryptedwizard.masterkey.f1"
+  
 helpviewer_keywords: 
   - "Wizard, Always Encrypted"
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5

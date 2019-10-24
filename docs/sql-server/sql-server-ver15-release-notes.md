@@ -107,9 +107,9 @@ The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15
 
 - **Issue and customer impact**: Rich computations are pending performance optimizations and error-handling enhancements, and are currently disabled by default.
 
-- **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
+- **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. 
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2, CTP 3.1
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] release candidate, CTP 3.2, CTP 3.1
 
 ## SQL Server Configuration Manager may not start
 

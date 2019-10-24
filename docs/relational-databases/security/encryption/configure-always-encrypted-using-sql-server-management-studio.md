@@ -6,15 +6,11 @@ ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
-f1_keywords: 
-  - "SQL13.SWB.COLUMNMASTERKEY.PAGE.F1"
-  - "SQL13.SWB.COLUMNENCRYPTIONKEY.PAGE.F1"
-  - "SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1"
 helpviewer_keywords: 
   - "Always Encrypted, configure with SSMS"
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure Always Encrypted using SQL Server Management Studio

@@ -1,7 +1,7 @@
 ---
 title: Deployment guidance
-titleSuffix: SQL Server big data clusters
-description: Learn how to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview) on Kubernetes.
+titleSuffix: SQL Server Big Data Clusters
+description: Learn how to deploy SQL Server Big Data Clusters on Kubernetes.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -15,20 +15,20 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-SQL Server big data cluster is deployed as docker containers on a Kubernetes cluster. This is an overview of the setup and configuration steps:
+A SQL Server big data cluster is deployed as docker containers on a Kubernetes cluster. This is an overview of the setup and configuration steps:
 
 - Set up a Kubernetes cluster on a single VM, cluster of VMs, or in Azure Kubernetes Service (AKS).
-- Install the cluster configuration tool **azdata** on your client machine.
+- Install the cluster configuration tool `azdata` on your client machine.
 - Deploy a SQL Server big data cluster in a Kubernetes cluster.
 
-## Install SQL Server 2019 big data tools
+## Install SQL Server 2019 Big Data tools
 
 Before deploying a SQL Server 2019 big data cluster, first [install the big data tools](deploy-big-data-tools.md):
 
-- **azdata**
-- **kubectl**
-- **Azure Data Studio**
-- **SQL Server 2019 extension**
+- `azdata`
+- `kubectl`
+- Azure Data Studio
+- SQL Server 2019 extension for Azure Data Studio
 
 ## <a id="prereqs"></a> Kubernetes prerequisites
 
@@ -46,21 +46,21 @@ You can choose to deploy Kubernetes in any of three ways:
 | Deploy Kubernetes on: | Description | Link |
 |---|---|---|
 | **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. | [Instructions](deploy-on-aks.md) |
-| **Single or Multiple machines (kubeadm)** | A Kubernetes cluster deployed on physical or virtual machines using **kubeadm** | [Instructions](deploy-with-kubeadm.md) |
+| **Single or Multiple machines (`kubeadm`)** | A Kubernetes cluster deployed on physical or virtual machines using `kubeadm` | [Instructions](deploy-with-kubeadm.md) |
 
 > [!TIP]
 > You can also script the deployment of AKS and a big data cluster in one step. For more information, see how to do this in a [python script](quickstart-big-data-cluster-deploy.md) or an Azure Data Studio [notebook](deploy-notebooks.md).
 
 ### Verify Kubernetes configuration
 
-Run the **kubectl** command to view the cluster configuration. Ensure that kubectl is pointed to the correct cluster context.
+Run the `kubectl` command to view the cluster configuration. Ensure that kubectl is pointed to the correct cluster context.
 
 ```bash
 kubectl config view
 ```
 
 > [!Important] 
-> If you are deploying on a multi node Kuberntes cluster that you bootstrapped using kubeadm, before starting the big data cluster deployment, ensure the clocks are synchronized across all the Kubernetes nodes the deployment is targeting. The big data cluster has built-in health properties for various services that are time sensitive and clock skews can result in incorrect status.
+> If you are deploying on a multi node Kuberntes cluster that you bootstrapped using **kubeadm**, before starting the big data cluster deployment, ensure the clocks are synchronized across all the Kubernetes nodes the deployment is targeting. The big data cluster has built-in health properties for various services that are time sensitive and clock skews can result in incorrect status.
 
 After you have configured your Kubernetes cluster, you can proceed with the deployment of a new SQL Server big data cluster. If you are upgrading from a previous release, please see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
@@ -72,7 +72,7 @@ The following sections provide more details on how to configure your big data cl
 
 ## <a id="configfile"></a> Default configurations
 
-Big data cluster deployment options are defined in JSON configuration files. You can start your customization of the cluster deployment from the built-in deployment profiles that are available in the **azdata**. 
+Big data cluster deployment options are defined in JSON configuration files. You can start your customization of the cluster deployment from the built-in deployment profiles that are available in the `azdata`. 
 
 > [!NOTE]
 > The container images required for the big data cluster deployment are hosted on Microsoft Container Registry (`mcr.microsoft.com`), in the `mssql/bdc` repository. By default, these settings are already included in the `control.json` configuration file in each of the deployment profiles included with `azdata`. In addition, the container image tag for each release is also pre-populated in the same configuration file. If you need to pull the container images into your own private container registry and or modify the container registry/repository settings, follow the instructions in the [Offline installation article](deploy-offline.md)
@@ -82,7 +82,9 @@ Run this command to find what are the templates available:
 ```
 azdata bdc config list -o table 
 ```
-For example, for SQL Server 2019 GDR1 service update release, the outcome of the above command is:
+
+For example, for SQL Server 2019 RTM Servicing Update (GDR1) release, the above returns:
+
 ```
 Result
 ----------------
@@ -110,7 +112,7 @@ azdata bdc create --accept-eula=yes
 In this scenario, you are prompted for any settings that are not part of the default configuration, such as passwords. 
 
 > [!IMPORTANT]
-> The default name of the big data cluster is **mssql-cluster**. This is important to know in order to run any of the **kubectl** commands that specify the Kubernetes namespace with the `-n` parameter.
+> The default name of the big data cluster is **mssql-cluster**. This is important to know in order to run any of the `kubectl` commands that specify the Kubernetes namespace with the `-n` parameter.
 
 ## <a id="customconfig"></a> Custom configurations
 
@@ -229,7 +231,7 @@ Cluster deployed successfully.
 
 After the deployment script has completed successfully, you can obtain the addresses of the external endpoints for the big data cluster using the following steps.
 
-1. After the deployment, find the IP address of the controller endpoint either from the deployment standard output or by looking at the EXTERNAL-IP output of the following **kubectl** command:
+1. After the deployment, find the IP address of the controller endpoint either from the deployment standard output or by looking at the EXTERNAL-IP output of the following `kubectl` command:
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
@@ -273,7 +275,7 @@ After the deployment script has completed successfully, you can obtain the addre
    Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
 
-You can also get all the service endpoints deployed for the cluster by running the following **kubectl** command:
+You can also get all the service endpoints deployed for the cluster by running the following `kubectl` command:
 
 ```bash
 kubectl get svc -n <your-big-data-cluster-name>
@@ -407,7 +409,7 @@ Sql: ready                                                                      
 > [!IMPORTANT]
 > When using **--all** parameter the output from these commands contain URLs to Kibana and Grafana dashboards for more detailed analysis.
 
-In addition to using **azdata**, you can also use Azure Data Studio to find both endpoints and status information. For more information about viewing cluster status with **azdata** and Azure Data Studio, see [How to view the status of a big data cluster](view-cluster-status.md).
+In addition to using `azdata`, you can also use Azure Data Studio to find both endpoints and status information. For more information about viewing cluster status with `azdata` and Azure Data Studio, see [How to view the status of a big data cluster](view-cluster-status.md).
 
 ## <a id="connect"></a> Connect to the cluster
 

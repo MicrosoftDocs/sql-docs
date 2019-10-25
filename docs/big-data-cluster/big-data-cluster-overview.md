@@ -5,7 +5,7 @@ description: Learn about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdata
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster

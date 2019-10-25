@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 07/26/2019
+ms.date: 11/04/2019
 ---
 
 # SQL Assessment API

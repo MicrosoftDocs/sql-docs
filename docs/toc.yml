@@ -12496,6 +12496,12 @@
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md
       - name: sys.dm_tcp_listener_states
         href: relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md
+    - name: Big Data Clusters
+      items:
+      - name: sys.dm_cluster_endpoints
+        href: relational-databases/system-dynamic-management-views/sys-dm-cluster-endpoints.md
+      - name: sys.dm_exec_compute_pools
+        href: relational-databases/system-dynamic-management-views/sys-dm-exec-compute-pools.md
     - name: Change Data Capture
       items:
       - name: sys.dm_cdc_errors
@@ -12556,12 +12562,6 @@
         href: relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md
       - name: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
         href: relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database.md
-    - name: Big Data Clusters
-      items:
-      - name: sys.dm_cluster_endpoints
-        href: relational-databases/system-dynamic-management-views/sys-dm-cluster-endpoints.md
-      - name: sys.dm_exec_compute_pools
-        href: relational-databases/system-dynamic-management-views/sys-dm-exec-compute-pools.md
     - name: Database Mirroring
       items:
       - name: sys.dm_db_mirroring_auto_page_repair

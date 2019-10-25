@@ -25,7 +25,7 @@ The following table lists common big data cluster tools and how to install them:
 |---|---|---|---|
 | `python` | Yes | Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Many parts of big data clusters for SQL Server use python. | [Install python](#python)|
 | `azdata` | Yes | Command-line tool for installing and managing a big data cluster. | [Install](deploy-install-azdata.md) |
-| `kubectl`<sup>1</sup> | Yes | Command-line tool for monitoring the underlying Kuberentes cluster ([More info](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
+| `kubectl`<sup>1</sup> | Yes | Command-line tool for monitoring the underlying Kubernetes cluster ([More info](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Azure Data Studio** | Yes | Cross-platform graphical tool for querying SQL Server. | [Install](https://aka.ms/getazuredatastudio) |
 | **Data Virtualization extension** | Yes | Extension for Azure Data Studio that provides a Data Virtualization wizard. | [Install](../azure-data-studio/data-virtualization-extension.md) |
 | **Azure CLI**<sup>2</sup> | For AKS | Modern command-line interface for managing Azure services. Used with AKS big data cluster deployments ([More info](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Install](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
@@ -81,7 +81,7 @@ Azure Data Studio provides capabilities and features specifically for SQL Server
 
 [Get the latest Azure Data Studio](https://aka.ms/getazuredatastudio).
 
-For details about the latest release, see the [release notes](../big-data-cluster/release-notes-big-data-cluster.md). < point to tools>
+For details about the latest release, see the [release notes](../big-data-cluster/release-notes-big-data-cluster.md).
 
 ## Next steps
 

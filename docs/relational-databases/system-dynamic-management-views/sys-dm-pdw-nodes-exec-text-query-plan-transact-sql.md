@@ -11,7 +11,7 @@ dev_langs:
 ms.assetid: 
 author: XiaoyuMSFT 
 ms.author: xiaoyul
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 
 # sys.dm_pdw_nodes_exec_text_query_plan  (Transact-SQL)

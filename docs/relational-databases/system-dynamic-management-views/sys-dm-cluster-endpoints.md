@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-lin
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |name|`sysname`|ID of the node.|  
-|node_state_desc|**nvarchar(256)**|Name of the service exposed externally in a SQL big data cluster. Unique identifier for the endpoint. Key for this view. Is not nullable. |
+|node_state_desc|`nvarchar(256)`|Name of the service exposed externally in a SQL big data cluster. Unique identifier for the endpoint. Key for this view. Is not nullable. |
 |description|`nvarchar(4000)`|Description of the service. Is not nullable. |
 |endpoint|`sysname`|Endpoint url or connection attribute. Is not nullable. |
 |protocol_desc|`sysname`|Description of the endpoint protocol |

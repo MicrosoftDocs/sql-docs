@@ -30,10 +30,11 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|dms_core_id|**int**|Unique numeric id associated with the DMS core. Key for this view.|Unique ID.|  
-|compute_node_id|**int**|ID of the node on which this DMS service is running|See *compute_node_id* in [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|status|**nvarchar(32)**|Current status of the DMS service||  
-  
+|dms_core_id|`int`|Unique numeric id associated with the DMS core. Key for this view.|Unique ID.|  
+|compute_node_id|`int`|ID of the node on which this DMS service is running|See *compute_node_id* in [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|status|`nvarchar(32)`|Current status of the DMS service||
+|compute_pool_id|`int`|Unique identifier for the pool.|
+
 ## See Also  
  [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

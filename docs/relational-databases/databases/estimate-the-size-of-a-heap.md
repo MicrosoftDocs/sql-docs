@@ -77,8 +77,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 8.  Calculate the amount of space that is required to store the data in the heap (8192 total bytes per page):  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
      Heap size (bytes) = 8192 x **_Num_Pages_**  
   
  This calculation does not consider the following:  

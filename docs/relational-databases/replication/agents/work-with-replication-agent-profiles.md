@@ -65,8 +65,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 1.  On the **General** page of the **Distributor Properties - \<Distributor>** dialog box, click **Profile Defaults**.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### To access the Agent Profiles dialog box from Replication Monitor  
   
 -   To open the dialog box for all agents, right-click a Publisher, and then click **Agent Profiles**.  

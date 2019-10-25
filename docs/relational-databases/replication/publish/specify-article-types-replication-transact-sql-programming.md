@@ -43,8 +43,6 @@ ms.author: "mathoma"
   
 3.  For `logbased manualboth`, `logbased manualview`, and `logbased manualfilter` articles, execute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) to generate the view that defines the vertically filtered article. For more information, see [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### To publish a view or indexed view article in a transactional or snapshot publication  
   
 1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify one of the following values for `@type` to define the type of article:  

@@ -57,8 +57,6 @@ ms.author: mikeray
   
 5.  Look in the **Database files** grid for a list of the data and log files and their properties.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To view the data and log files in a backup set  

@@ -39,18 +39,16 @@ pip3 install -U requests
 
 1. Open a new Windows PowerShell session so that it gets the latest path with Python in it.
 
-1. If you have any previous releases of the tool installed (prior to CTP 3.2, the tool was called `mssqlctl`), it is important to uninstall it first before installing the latest version of `azdata`. The following command removes the CTP 3.1 version of `mssqlctl`.
-
-   ```powershell
-   pip3 uninstall -r https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
-   ```
-
 1. If you have any previous releases of `azdata` installed, it is important to uninstall it first before installing the latest version.
 
-   For CTP 3.2, run the following command.
+   For CTP 3.2 or RC1, run the following command.
 
-   ```powershell
+   ```bash
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
+   ```
+   or
+   ```bash
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
 1. Install `azdata` with the following command:
@@ -78,12 +76,6 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
 
    ```bash
    sudo -H pip3 install --upgrade pip
-   ```
-
-1. If you have any previous releases of the tool installed (prior to CTP 3.2, the tool was called `mssqlctl`), it is important to uninstall it first before installing the latest version of `azdata`. The following command removes the CTP 3.1 version of `mssqlctl`.
-
-   ```bash
-   pip3 uninstall -r https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
 1. If you have any previous releases of `azdata` installed, it is important to uninstall it first before installing the latest version.

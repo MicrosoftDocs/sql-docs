@@ -10,7 +10,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 10/03/2019
+ms.date: 11/04/2019
 ---
 # Release notes for SQL Server Management Studio (SSMS)
 

@@ -5,7 +5,7 @@ description: This article describes the compute pool in a [!INCLUDE[big-data-clu
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab 
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

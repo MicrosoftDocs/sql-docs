@@ -3,7 +3,7 @@ title: Data Virtualization Extension
 titleSuffix: Azure Data Studio
 description: Data Virtualization extension for Azure Data Studio
 ms.custom: "seodec18"
-ms.date: "10/24/2019"
+ms.date: 11/04/2019
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio

@@ -18,6 +18,9 @@ ms.technology: big-data-cluster
 
 Starting from a pre-defined set of configuration profiles that are built into the azdata management tool, you can easily modify the default settings to better suit your BDC workload requirements. Starting with the release candidate release, the structure of the configuration files was updated to enable you to granularly update settings per each service of the resource. 
 
+> [!TIP]
+> Please reference the articles on how to configure **high availability** for mission critical components like [SQL Server master](deployment-high-availability.md) or [HDFS name node](deployment-high-availability-hdfs-spark.md),  for details on how to deploy highly available services.
+
 You can also set resource level configurations or update the configurations for all services in a resource. Here is a summary of the structure for `bdc.json`:
 
 ```json
@@ -252,7 +255,7 @@ The following example uses inline JSON to change the port for the `controller` e
 azdata bdc config replace --config-file custom-bdc/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
-## <a id="replicas"></a> Configure pool replicas
+## <a id="replicas"></a> Configure scale
 
 The configurations of each resource, such as the storage pool, is defined in the `bdc.json` configuration file. For example, the following portion of the `bdc.json` shows a `storage-0` resource definition:
 
@@ -283,12 +286,16 @@ The configurations of each resource, such as the storage pool, is defined in the
 }
 ```
 
-You can configure the number of instances in a pool by modifying the `replicas` value for each pool. The following example uses inline JSON to change these values for the storage and data pools to `10` and `4` respectively:
+You can configure the number of instances in a storage, compute and/or data pool by modifying the `replicas` value for each pool. The following example uses inline JSON to change these values for the storage, compute and data pools to `10`, `4` and `4` respectively:
 
 ```bash
 azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.storage-0.spec.replicas=10"
+azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.compute-0.spec.replicas=4"
 azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.data-0.spec.replicas=4"
 ```
+
+> [!NOTE]
+> The maximum number of instances validated for compute and data pools is `8` each. There is no enforcement of this limit at deployment time, but we do not recommend configuring a higher scale in production deployments.
 
 ## <a id="storage"></a> Configure storage
 

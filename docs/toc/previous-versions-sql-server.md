@@ -3,7 +3,7 @@ title: Previous versions of SQL Server | Microsoft Docs
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
-ms.date: "08/08/2019"
+ms.date: "10/15/2019"
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: ""
@@ -14,7 +14,6 @@ monikerRange: "=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-
 
 The documentation for several older versions of Microsoft SQL Server has been archived. Yet the archived documentation remains available at:
 
-- [An explanation, with direct links to previous versions of SQL Server documentation](../sql-server/sql-server-technical-documentation.md#previous-versions-gm66), recommended.
 - [A direct link to previous versions of SQL Server documentation](https://docs.microsoft.com/previous-versions/sql/).
 
 > [!TIP]
@@ -22,7 +21,7 @@ The documentation for several older versions of Microsoft SQL Server has been ar
 >
 > In the dropdown list, the value labeled **SQL Server previous versions** allows this article to be displayed. This version value also hides most other articles. Almost every other version value hides this article.
 >
-> The documentation for a _newer_ version of SQL Server is available [here](../sql-server/sql-server-technical-documentation.md?view=sql-server-2017).
+> The documentation for a _newer_ version of SQL Server is available [here](../sql-server/index.yml?view=sql-server-2017).
 
 ## Archived documentation
 
@@ -71,5 +70,5 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 
 ## See also
 
-[SQL Server Documentation, start](../sql-server/sql-server-technical-documentation.md?view=sql-server-2016)  
+[SQL Server Documentation, start](../sql-server/index.yml?view=sql-server-2016)  
 [Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)  

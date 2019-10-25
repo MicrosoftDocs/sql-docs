@@ -65,8 +65,6 @@ ms.author: vanto
   
 4.  When finished, click **OK**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To configure Policy-Based Management  

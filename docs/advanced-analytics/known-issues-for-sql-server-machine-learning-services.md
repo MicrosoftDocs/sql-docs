@@ -200,6 +200,51 @@ If you encounter resource limitations, check the current default. If 20 percent 
 
 **Applies to:** SQL Server 2016 R Services, Enterprise Edition
 
+
+### 14. Error when using `sp_execute_external_script` without `libc++.so` on Linux
+
+On a clean Linux machine that does not have `libc++.so` installed, running a `sp_execute_external_script` (SPEES) query with Java or an external language fails because `commonlauncher.so` fails to load `libc++.so`.
+
+For example:
+
+```sql
+EXECUTE sp_execute_external_script @language = N'Java'
+    , @script = N'JavaTestPackage.PassThrough'
+    , @parallel = 0
+    , @input_data_1 = N'select 1'
+WITH RESULT SETS((col1 INT NOT NULL))
+GO
+```
+
+This fails with a message similar to the following:
+
+```text
+Msg 39012, Level 16, State 14, Line 0
+
+Unable to communicate with the runtime for 'Java' script for request id: 94257840-1704-45E8-83D2-2F74AEB46CF7. Please check the requirements of 'Java' runtime.
+```
+
+The `mssql-launchpadd` logs will show an error message similar to the following:
+
+```text
+Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WARNING: PopulateLauncher failed: Library /opt/mssql-extensibility/lib/commonlauncher.so not loaded. Error: libc++.so.1: cannot open shared object file: No such file or directory
+```
+
+**Workaround**
+
+You can perform one of the following workarounds:
+
+1. Copy `libc++*` from `/opt/mssql/lib` to the default system path `/lib64`
+
+1. Add the following entries to `/var/opt/mssql/mssql.conf` to expose the path:
+
+   ```text
+   [extensibility]
+   readabledirectories = /opt/mssql
+   ```
+
+**Applies to:** SQL Server 2019 on Linux
+
 ## R script execution issues
 
 This section contains known issues that are specific to running R on SQL Server, as well as some issues that are related to the R libraries and tools published by Microsoft, including RevoScaleR.
@@ -462,7 +507,7 @@ The previous long running external script against master will terminate with the
 
 Don’t run the library install in parallel to the long-running query. Or rerun the long running query after the installation is complete.
 
-**Applies to:** SQL Server 2019 on Linux & Aris, Big Data Cluster only.
+**Applies to:** SQL Server 2019 on Linux & Big Data Clusters only.
 
 ## Python script execution issues
 

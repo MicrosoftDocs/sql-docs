@@ -66,8 +66,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 3.  Complete the wizard.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### To modify a synchronization schedule for a push subscription in Replication Monitor  
   
 1.  Expand a Publisher group in the left pane of Replication Monitor, expand a Publisher, and then click a publication.  

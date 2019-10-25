@@ -107,8 +107,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 2.  For each published table that includes an identity column:  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     1.  In the subscription database at each Subscriber, execute `IDENT_CURRENT('<TableName>')`.  
   
     2.  Record the highest value found across all Subscribers.  

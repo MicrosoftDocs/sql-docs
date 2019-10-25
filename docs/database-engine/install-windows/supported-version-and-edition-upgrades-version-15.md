@@ -23,18 +23,16 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
   You can upgrade from [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], and [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]. This article lists the supported upgrade paths from these [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions, and the supported edition upgrades for [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)].  
   
 ## Pre upgrade Checklist  
-  
+
 - Before upgrading from one edition of [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] to another, verify that the functionality you are currently using is supported in the edition to which you are moving.  
-  
-- Before upgrading [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enable Windows Authentication for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent and verify the default configuration: that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account is a member of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin group.  
-  
+- Verify supported [hardware and software](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).
+- Before upgrading [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enable Windows Authentication for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent and verify the default configuration: that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account is a member of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin group.
 - To upgrade to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], you must be running a supported operating system. For more information, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).  
-  
 - Upgrade will be blocked if there is a pending restart.  
-- Upgrade will be blocked if the Windows Installer service is not running.  
-  
-## Unsupported Scenarios  
-  
+- Upgrade will be blocked if the Windows Installer service is not running.
+
+## Unsupported Scenarios
+
 - Cross-version instances of [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] are not supported. Version numbers of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] components must be the same in an instance of [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)].  
   
 - [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] is only available for 64-bit platforms. Cross-platform upgrade is not supported. You cannot upgrade a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to native 64-bit using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. However, you can back up or detach databases from a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then restore or attach them to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-bit) if the databases are not published in replication. You must re-create any logins and other user objects in master, msdb, and model system databases.  
@@ -46,8 +44,8 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] supports upgrade from the following versions of SQL Server:
 
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 or later
-- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 or later
-- [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 13.0.1601.5 or later
+- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3 or later
+- [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP2 or later
 - [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 The table below lists the supported upgrade scenarios from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)].  
@@ -55,7 +53,7 @@ The table below lists the supported upgrade scenarios from earlier versions of [
 |Upgrade from|Supported upgrade path|  
 |:------|:------|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 Enterprise|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 Developer|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 Developer|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard <br/> <br/>[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise <br/> |
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 Standard|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 Web|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 Express |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Express <br/> <br/> |  
@@ -87,13 +85,15 @@ The table below lists the supported upgrade scenarios from earlier versions of [
 
  \* Microsoft support to upgrade from release candidate software is specifically for customers who participated in the Early Adopter Program.
 
-### Upgrades for older versions of SQL Server are not supported
+## Upgrades for older versions
+
+An in-place upgrade [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] is not supported. You can [migrate to a new installation](choose-a-database-engine-upgrade-method.md#migrate-to-a-new-installation).
+
+To migrate, you will need to either detach the database and log files and attach them, or back up and restore the databases.
 
 For [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] and older, the following actions are not supported:
 
 - Upgrade to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)].
-- Attach database and log files.
-- Restore database from backup.
 - Installing [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] on same computer (side by side).
 - Using a [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] or older instance as a member of the replication topology that involves a [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] instance.  
 - Configuring database mirroring between [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] and [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] or older instances.
@@ -105,9 +105,10 @@ For [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] and older,
 - Managing a [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] or older  SSIS service from [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Management Studio.
 - Support for [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] or older third party custom Integration Services components, such as execute and upgrade.
   
-## [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Edition Upgrade  
+## [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Edition Upgrade 
+
 The following table lists the supported edition upgrade scenarios in [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)].  
-  
+
 For step-by-step instructions on how to perform an edition upgrade, see [Upgrade to a Different Edition of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
   
 |Upgrade From|Upgrade To|  

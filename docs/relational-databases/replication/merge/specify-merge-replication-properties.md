@@ -40,8 +40,6 @@ On the **Articles** page of the New Publication Wizard select a table, and then 
     -   **Download to Subscriber, allow Subscriber changes**    
 4.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ###  Use Transact-SQL  
   
 #### New article  

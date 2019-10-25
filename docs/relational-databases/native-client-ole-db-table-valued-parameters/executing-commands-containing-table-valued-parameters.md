@@ -24,8 +24,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 2.  Bind the parameter data.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Table-Valued Parameter Specification  
  The consumer can specify the type of the table-valued parameter. This information includes the table-valued parameter type name. It also includes the schema name, if the user-defined table type for the table-valued parameter is not in the current default schema for the connection. Depending on server support, the consumer can also specify optional metadata information, such as ordering of columns, and can specify that all rows for particular columns have the default values.  
   

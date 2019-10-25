@@ -39,8 +39,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 4.  Execute IRow::GetColumns() until all the columns you need are accessed. The columns must be accessed in sequence.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Example  
  This sample shows how to use the IRow interface to allow direct access to columns of a single row in the result set. The example shows:  
   

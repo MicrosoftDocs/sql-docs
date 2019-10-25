@@ -95,11 +95,6 @@ The following tips and tools can help you plan and implement your migration.
 
 - Migration tools: Migration is supported through [Data Migration Assistant (DMA)](https://aka.ms/dma).
 - Backup and restore: A backup taken on SQL Server 2008 or SQL Server 2008 R2 can be restored to SQL Server 2019.
-- Database mirroring: Database mirroring is supported if principal is running SQL Server 2008 SP3 or later, or SQL Server 2008 R2 SP2 or later, and mirror is running SQL Server 2019.
-
-   > [!WARNING]
-   > If an automatic or manual failover happens, and the SQL Server 2019 instance becomes principal, SQL Server 2008 or SQL Server 2008 R2 instance becomes mirror and cannot receive changes from principal.
-
 - Log shipping: Log shipping is supported if primary is running SQL Server 2008 SP3 or later, or SQL Server 2008 R2 SP2 or later, and secondary is running SQL Server 2019. 
 
    > [!WARNING]

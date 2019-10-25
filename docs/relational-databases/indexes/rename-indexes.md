@@ -65,8 +65,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 8.  On the **File** menu, click **Save**_table_name_.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### To rename an index by using Object Explorer  
   
 1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to rename an index.  

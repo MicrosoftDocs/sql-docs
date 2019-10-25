@@ -39,8 +39,6 @@ ms.author: "sstein"
   
 4.  Select the **Deployed Data-tier Applications** node in the **Utility Explorer**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  The information in the **Deployed Data-tier Applications** detail page comes from the data in the utility management data warehouse, which defaults to collecting the data every 15 minutes. The interval can also be tailored using the **Utility Administration** details page.  
   
 ## Using Object Explorer  

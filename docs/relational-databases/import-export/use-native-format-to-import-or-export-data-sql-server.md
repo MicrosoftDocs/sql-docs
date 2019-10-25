@@ -28,8 +28,6 @@ Native format maintains the native data types of a database. Native format is in
   
 2.  Bulk importing the data from the data file into the target table  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 The use of native format between identical tables avoids unnecessary conversion of data types to and from character format, saving time and space. To achieve the optimum transfer rate, however, few checks are performed regarding data formatting. To prevent problems with the loaded data, see the following restrictions list.  
 
 |In this Topic:|

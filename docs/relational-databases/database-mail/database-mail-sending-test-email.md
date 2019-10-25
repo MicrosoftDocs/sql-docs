@@ -43,8 +43,6 @@ You must be a member of the sysadmin fixed server role to use the Send Test E-Ma
 
 1. If errors occurred, execute the following statement to view the error message:
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 
     WHERE mailitem_id = <the mailitem_id from the previous step> ;

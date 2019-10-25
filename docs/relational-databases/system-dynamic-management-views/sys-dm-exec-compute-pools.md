@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=sql-server-2019||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sys.dm_dm_compute_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -35,4 +35,4 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW 
 
 ## See Also
 
-[What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](../../big-data-cluster/big-data-cluster-overview.md)
+[What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]](../../big-data-cluster/big-data-cluster-overview.md)?

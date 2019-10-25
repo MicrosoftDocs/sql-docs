@@ -34,8 +34,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 6.  Initialize the subscriptions.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  If you use merge replication in a republishing topology, all republishing Subscribers must use server subscriptions. For more information about subscription types, see [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md).  
   

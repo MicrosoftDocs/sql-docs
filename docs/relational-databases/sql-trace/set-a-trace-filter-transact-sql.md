@@ -24,8 +24,6 @@ ms.author: "mathoma"
   
 2.  Execute **sp_trace_setfilter** to configure the type of information to retrieve for the event being traced.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!IMPORTANT]  
 >  Unlike regular stored procedures, parameters of all [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] stored procedures (**sp_trace\__xx_**) are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure will return an error.  
   

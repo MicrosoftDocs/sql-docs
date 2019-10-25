@@ -69,8 +69,6 @@ Use the following steps to rename a SQL Server or Azure SQL database using SQL S
   
 5. Optionally, if the database was your default database, see [Reset your default database after rename](#reset-your-default-database-after-rename).
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Rename a database using Transact-SQL  
   
 ### To rename a SQL Server database by placing it in single-user mode

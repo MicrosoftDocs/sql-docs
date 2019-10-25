@@ -36,8 +36,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 5.  Use **IRowsetLocate::GetRowsAt** to fetch rows, starting with the row specified by an offset from the bookmark.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Example  
  This sample shows how to fetch rows using a bookmark. This sample is not supported on IA64.  
   

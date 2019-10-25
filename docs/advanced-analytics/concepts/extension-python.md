@@ -4,7 +4,7 @@ description: Learn about Python code execution and built-in Python libraries in 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/30/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

@@ -36,6 +36,10 @@ Use SQL Server Big Data Clusters to:
 - Virtualize data with [PolyBase](../relational-databases/polybase/polybase-guide.md). Query data from external SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources with external tables.
 - Provide high availability for the SQL Server master instance and all databases by using Always On availability group technology.
 
+## SQL Server version
+
+The current version of SQL Server is `15.0.2070.34`.
+
 ## Image tags
 
 The image tag for this release is `2019-GDR1-ubuntu-1604`.
@@ -64,7 +68,7 @@ This section explains platforms that are supported with [!INCLUDE[big-data-clust
 
 |Platform|Supported versions|
 |---------|---------|
-|`azdata`|Must be same minor version as the server (same as SQL Server master instance).<br/>Run `azdata –-version` to validate the version.|
+|`azdata`|Must be same minor version as the server (same as SQL Server master instance).<br/>Run `azdata –-version` to validate the version. Currently, this version is `15.0.2070`.|
 |Azure Data Studio|Get the latest build of [Azure Data Studio](https://aka.ms/getazuredatastudio).|
 
 ### SQL Server Editions

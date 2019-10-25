@@ -28,6 +28,16 @@ This article addresses special considerations for upgrading a database when the 
 
 Deploying a DAC package may also result in creating or removing metadata objects for column master keys or column encryption keys for Always Encrypted.
 
+## Performance considerations
+To perform cryptographic operations, a tool you use to deploy a DACPAC needs to move the data out of the database. The tool creates a new table (or tables) with the desired encryption configuration in the database, loads all data from the original tables, performs the requested cryptographic operations, uploads the data to the new table(s), and then swaps the original table(s) with the new table(s). Running cryptographic operations can take a long time. During that time, your database is not available to write transactions. 
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> If you are using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can run cryptographic operations in-place, without moving data out of the database. See [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md). Note that in-place encryption is not available for DACPAC deployments.
+
+::: moniker-end
+
 ## Permissions for publishing a DAC package if Always Encrypted is set up
 
 To publish DAC package if Always Encrypted is set up in the DACPAC or/and in the target database, you might need some or all of the below permissions, depending on the differences between the schema in the DACPAC and the target database schema.
@@ -46,7 +56,7 @@ For more information, see [Create and Store Column Master Keys (Always Encrypted
 
  
 ## Next Steps
-- [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
+- [Develop aplications using Always Encrypted](always-encrypted-client-development.md)
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 
 ## See Also  

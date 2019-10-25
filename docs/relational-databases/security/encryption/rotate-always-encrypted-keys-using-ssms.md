@@ -135,7 +135,7 @@ You also need to be able to access column master keys for both the new and the o
 - **Key Store Provider (CNG)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the KSP configuration.
 - **Cryptographic Service Provider (CAPI)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the CSP configuration.
 
-For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+For more information, see [Create and store column master keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ## Next Steps
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)

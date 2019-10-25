@@ -16,6 +16,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 This article provides the steps for setting the target Always Encrypted configuration for database columns using the [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) cmdlet (in the *SqlServer* PowerShell module). The **Set-SqlColumnEncryption** cmdlet modifies both the schema of the target database as well as the data stored in the selected columns. The data stored in a column can be encrypted, re-encrypted, or decrypted, depending on the specified target encryption settings for the columns and the current encryption configuration.
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> If you are using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can run cryptographic operations in-place, without moving data out of the database. See [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md). Note that the PowerShell does not support in-place encryption.
+
+::: moniker-end
 For more information about Always Encrypted support in the SqlServer PowerShell module, see [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
 ## Prerequisites
@@ -61,19 +68,16 @@ Step 5. Set the desired encryption configuration, specified in the array of SqlC
 The below example demonstrates setting the target encryption configuration for a couple of columns.  If either column is not already encrypted, it will be encrypted. If any column is already encrypted using a different key and/or a different encryption type, it will be decrypted and then re-encrypted with the specified target key/type.
 
 
-```
+```PowerShell
 # Import the SqlServer module.
 Import-Module "SqlServer"
 
 # Connect to your database.
 $serverName = "<server name>"
 $databaseName = "<database name>"
+# Change the authentication method in the connection string, if needed.
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Integrated Security = True"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName]
+$database = Get-SqlDatabase -ConnectionString $connStr
 
 # Encrypt the selected columns (or re-encrypt, if they are already encrypted using keys/encrypt types, different than the specified keys/types.
 $ces = @()
@@ -86,19 +90,16 @@ Set-SqlColumnEncryption -InputObject $database -ColumnEncryptionSettings $ces -L
 
 The below example demonstrates setting the target encryption configuration for a couple of columns using the online approach. If either column is not already encrypted, it will be encrypted. If any column is already encrypted using a different key and/or a different encryption type, it will be decrypted and then re-encrypted with the specified target key/type.
 
-```
+```PowerShell
 # Import the SqlServer module.
 Import-Module "SqlServer"
 
 # Connect to your database.
 $serverName = "<server name>"
 $databaseName = "<database name>"
+# Change the authentication method in the connection string, if needed.
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Integrated Security = True"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName]
+$database = Get-SqlDatabase -ConnectionString $connStr
 
 # Encrypt the selected columns (or re-encrypt, if they are already encrypted using keys/encrypt types, different than the specified keys/types.
 $ces = @()
@@ -111,19 +112,16 @@ Set-SqlColumnEncryption -InputObject $database -ColumnEncryptionSettings $ces -U
 The following example shows how to decrypt all columns that are currently encrypted in a database.
 
 
-```
+```PowerShell
 # Import the SqlServer module.
 Import-Module "SqlServer"
 
 # Connect to your database.
 $serverName = "<server name>"
 $databaseName = "<database name>"
+# Change the authentication method in the connection string, if needed.
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Integrated Security = True"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName]
+$database = Get-SqlDatabase -ConnectionString $connStr
 
 # Find all encrypted columns, and create a SqlColumnEncryptionSetting object for each column.
 $ces = @()

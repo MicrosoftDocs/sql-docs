@@ -25,6 +25,20 @@ The Always Encrypted Wizard is a powerful tool that allows you to set the desire
 
 The wizard allows you to encrypt columns with existing column encryption keys, or you can choose to generate a new column encryption key or both a new column encryption key and a new column master key. 
 
+The wizard works by moving data out of the database and performing cryptographic operations within the SSMS process. The wizard creates a new table (or tables) with the desired encryption configuration in the database, loads all data from the original tables, performs the requested cryptographic operations, uploads the data to the new table(s), and then swaps the original table(s) with the new table(s).
+
+> [!NOTE]
+> Running cryptographic operations can take a long time. During that time, your database is not available to write transactions. PowerShell is a recommended tool for cryptographic operations on larger tables. See [Configure column encryption using Always Encrypted with PowerShell](configure-column-encryption-using-powershell.md).
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> If you are using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can run cryptographic operations in-place, without moving data out of the database. See [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md). Note that the wizard does not support in-place encryption.
+
+::: moniker-end
+
+Use PowerShell is a recommended 
+
  - For an end-to-end walk-through that shows how to configure Always Encrypted with the wizard and use it in a client application, see the following Azure SQL Database tutorials:
     - [Protect sensitive data in Azure SQL Database with Always Encrypted and column master keys in Windows certificate store](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
     - [Protect sensitive data in Azure SQL Database with Always Encrypted and column master keys in Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-always-encrypted-azure-key-vault)

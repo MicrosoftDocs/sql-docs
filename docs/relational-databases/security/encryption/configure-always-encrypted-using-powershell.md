@@ -14,13 +14,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Configure Always Encrypted using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-The SqlServer PowerShell module provides cmdlets for configuring [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) in both Azure SQL Database and SQL Server 2016.
+The SqlServer PowerShell module provides cmdlets for configuring [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) in both [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
-Always Encrypted cmdlets in the SqlServer module work with keys or sensitive data, so it is important that you run the cmdlets on a secure computer. When managing Always Encrypted, execute the cmdlets from a different computer than the computer hosting your SQL Server instance.
+## Security Considerations when using PowerShell to Configure Always Encrypted
 
 Because the primary goal of Always Encrypted is to ensure encrypted sensitive data is safe, even if the database system gets compromised, executing a PowerShell script that processes keys or sensitive data on the SQL Server computer can reduce or defeat the benefits of the feature. For additional security-related recommendations, see [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
-Links to the individual cmdlet articles are at the [bottom of this page](#aecmdletreference).
+You can use PowerShell to manage Always Encrypted keys both with and without role separation, providing control over who has access to the actual encryption keys in the key store, and who has access to the database.
+
+ For additional recommendations, see [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
 ## Prerequisites
 
@@ -44,8 +46,8 @@ Import-Module "SqlServer"
 ## <a name="connectingtodatabase"></a> Connecting to a Database
 
 Some of the Always Encrypted cmdlets work with data or metadata in the database and require that you connect to the database first. There are two recommended methods of connecting to a database when configuring Always Encrypted using the SqlServer module: 
-1. Connect using SQL Server PowerShell.
-2. Connect using SQL Server Management Objects (SMO).
+1. Connect using the **Get-SqlDatabase** cmdlet.
+2. Connect using SQL Server PowerShell Provider.
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -57,7 +59,8 @@ The **Get-SqlDatabase** cmdlet allows you to connect to a database in SQL Server
 # Import the SqlServer module
 Import-Module "SqlServer"  
 
-# Connect to your database (Azure SQL database).
+# Connect to your database
+# Set the valid server name, database name and authentication keywords in the connection string
 $serverName = "<Azure SQL server name>.database.windows.net"
 $databaseName = "<database name>"
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Authentication = Active Directory Integrated"

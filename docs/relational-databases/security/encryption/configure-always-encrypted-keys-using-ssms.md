@@ -43,17 +43,13 @@ The **New Column Master Key** dialog allows you to generate a column master key 
    
     For more information about the above key stores, see [Create and store column master keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-
-    If your SQL Server instance is configured with a secure enclave, you can select the **Allow enclave computations** checkbox to make the master key enclave-enabled. See [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) for details.
+5. If you are using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can select the **Allow enclave computations** checkbox to make the master key enclave-enabled. See [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) for details.
 
     > [!NOTE]
     > The **Allow enclave computations** checkbox does not appear if your SQL Server instance is not correctly configured with a secure enclave.
 
-::: moniker-end
-
-5.	Pick an existing key in your key store, or click the **Generate Key** or **Generate Certificate** button, to create a key in the key store. 
-6.	Click **OK** and the new key will show up in the list. 
+6.	Pick an existing key in your key store, or click the **Generate Key** or **Generate Certificate** button, to create a key in the key store. 
+7.	Click **OK** and the new key will show up in the list. 
 
 Once you complete the dialog, SQL Server Management Studio creates metadata for your column master key in the database. The dialog achieves this by generating and issuing a [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) statement.
 
@@ -67,13 +63,7 @@ If you are configuring an enclave-enabled column master key, SSMS also signs the
 
 You need the *ALTER ANY COLUMN MASTER KEY* database permission in the database for the dialog to create a column master key. To use the dialog to create a new column master key or use an existing key in a key store create, you might require permissions on the key store or/and the key:
 - **Certificate Store - Local computer** - you must have Read access to the certificate that is used as a column master key, or be the administrator on the computer.
-- **Azure Key Vault** - you need the *get* and *list* permissions to select and use a key, the *create* permission to create a new key. 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-
-To configure an enclave-enabled column master key, you also need the *sign* permission to generate a signature of the key metadata.
-
-::: moniker-end
-
+- **Azure Key Vault** - you need the *get* and *list* permissions to select and use a key, the *create* permission to create a new key. To configure an enclave-enabled column master key, you also need the *sign* permission to generate a signature of the key metadata.
 - **Key Store Provider (CNG)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the KSP configuration.
 - **Cryptographic Service Provider (CAPI)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the CSP configuration.
 
@@ -101,25 +91,25 @@ To access a key store and use the column master key, you might require permissio
 - **Key Store Provider (CNG)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the KSP configuration.
 - **Cryptographic Service Provider (CAPI)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the CSP configuration.
 
-For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+For more information, see [Create and store column master keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ## Provision Always Encrypted Keys using the Always Encrypted Wizard
 
-The [Always Encrypted Wizard](../../../relational-databases/security/encryption/always-encrypted-wizard.md) is a tool for encrypting, decrypting and re-encrypting selected database columns. While it can use already configured keys, it also also allows you to generate a new column master key and a new column encryption. For details of how to use the wizard.
+The [Always Encrypted Wizard](../../../relational-databases/security/encryption/always-encrypted-wizard.md) is a tool for encrypting, decrypting and re-encrypting selected database columns. While it can use already configured keys, it also also allows you to generate a new column master key and a new column encryption. 
 
 ## Next Steps
 - [Configure column encryption using Always Encrypted Wizard](always-encrypted-wizard.md)
 - [Configure column encryption using Always Encrypted with a DAC package](configure-always-encrypted-using-dacpac.md)
 - [Rotate Always Encrypted keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
 - [Develop applications using Always Encrypted](always-encrypted-client-development.md)
-- [Migrate Data to or from columns using Always Encrypted with SQL Server Import and Export Wizard](always-encrypted-migrate-using-import-export-wizard.md)
+- [Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard](always-encrypted-migrate-using-import-export-wizard.md)
 
 ## See Also
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Overview of key management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Create and store column master keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
 - [Configure Always Encrypted using SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
-- [Provision Always Encrypted Keys using PowerShell](configure-always-encrypted-keys-using-powershell.md)
+- [Provision Always Encrypted keys using PowerShell](configure-always-encrypted-keys-using-powershell.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)
 - [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md)
 - [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)

@@ -73,7 +73,8 @@ You also need access to column master keys, configured for the columns, storing 
 For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ## Next Steps
-- [Develop Applications using Always Encrypted](always-encrypted-client-development.md)
+- [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
 ## See Also
 - [Always Encrypted](always-encrypted-database-engine.md)

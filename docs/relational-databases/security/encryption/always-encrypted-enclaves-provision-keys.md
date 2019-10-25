@@ -139,9 +139,10 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 ## Next Steps
+- [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md)
 - [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
 - [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md)
-- [Rotate enclave-enabled keys](always-encrypted-enclaves-rotate-keys.md)
+- [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 
 ## See Also  
 - [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)

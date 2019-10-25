@@ -25,7 +25,7 @@ For information about how to start using the SqlServer PowerShell module for Alw
 
 The key provisioning method described in this section does not support role separation between Security Administrators and DBAs. Some of the below steps combine operations on physical keys with operations on key metadata. Therefore, this method of provisioning the keys is  recommended for organizations using the DevOps model, or if the database is hosted in the cloud and the primary goal is to restrict cloud administrators (but not on-premises DBAs), from accessing sensitive data. It is not recommended if potential adversaries include DBAs, or if DBAs should not have access to sensitive data.
 
-Before running any steps that involves access to plaintext keys or the key store (identified in the **Accesses plaintext keys/key store** column in the below table), make sure that the PowerShell environment runs on a secure machine that is different from a computer hosting your database. For more information, see ***Security Considerations for Key Management***.
+Before running any steps that involves access to plaintext keys or the key store (identified in the **Accesses plaintext keys/key store** column in the below table), make sure that the PowerShell environment runs on a secure machine that is different from a computer hosting your database. For more information, see [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
 
 Task  |Article  |Accesses plaintext keys/key store  |Accesses database   
@@ -262,7 +262,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ## Seel Also    
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)    
 - [Overview of key management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [create and store column master keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
+- [Create and store column master keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
 - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

@@ -64,7 +64,7 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 | &nbsp; | &nbsp; |
 
 ### Intelligent performance
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on Intelligent Database innovations in previous releases to ensure that [It Just Runs Faster](https://blogs.msdn.microsoft.com/bobsql/tag/it-just-runs-faster/). These improvements help overcome known resource bottlenecks and provide options for configuring your database server to provide predictable performance across all your workloads.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on Intelligent Database innovations in previous releases to ensure that [it just runs faster](https://blogs.msdn.microsoft.com/bobsql/tag/it-just-runs-faster/). These improvements help overcome known resource bottlenecks afd provide options for configuring your database server to provide predictable performance across all your workloads.
 
 |New feature or update | Details |
 |:---|:---|
@@ -248,7 +248,8 @@ This release introduces new features and improvements for performance, resource 
 
 ## Next steps
 
-- See [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release notes](sql-server-version-15-release-notes.md).
-- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Technical white paper](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br>Published September 2018. Applies to Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 for Windows, Linux, and Docker containers.
+- [SQL Server Workshops](https://aka.ms/sqlworkshops)
+- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release notes](sql-server-version-15-release-notes.md)
+- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Technical white paper](https://aka.ms/sql2019whitepaper)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

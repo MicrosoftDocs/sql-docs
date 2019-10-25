@@ -1,7 +1,7 @@
 ---
 title: Install azdata with installer on Linux
 titleSuffix: SQL Server big data clusters
-description: Learn how to install the azdata tool for installing and managing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview) with the installer (Linux). 
+description: Learn how to install the azdata tool for installing and managing SQL Server Big Data Clusters with the installer (Linux). 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab

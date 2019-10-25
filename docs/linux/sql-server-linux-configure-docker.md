@@ -1,6 +1,6 @@
 ---
 title: Configuration options for SQL Server on Docker
-description: Explore different ways of using and interacting with SQL Server 2017 and 2019 preview container images in Docker. This includes persisting data, copying files, and troubleshooting.
+description: Explore different ways of using and interacting with SQL Server 2017 and 2019 container images in Docker. This includes persisting data, copying files, and troubleshooting.
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -25,10 +25,10 @@ This article explains how to configure and use the [mssql-server-linux container
 
 ## Pull and run the container image
 
-To pull and run the Docker container images for SQL Server 2017 and SQL Server 2019 preview, follow the prerequisites and steps in the following quickstart:
+To pull and run the Docker container images for SQL Server 2017 and SQL Server 2019, follow the prerequisites and steps in the following quickstart:
 
 - [Run the SQL Server 2017 container image with Docker](quickstart-install-connect-docker.md?view=sql-server-2017)
-- [Run the SQL Server 2019 preview container image with Docker](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- [Run the SQL Server 2019 container image with Docker](quickstart-install-connect-docker.md?view=sql-server-ver15)
 
 This configuration article provides additional usage scenarios in the following sections.
 
@@ -37,9 +37,9 @@ This configuration article provides additional usage scenarios in the following 
 
 ## <a id="rhel"></a> Run RHEL-based container images
 
-All of the documentation on SQL Server Linux container images point to Ubuntu-based containers. Beginning with SQL Server 2019 preview, you can use containers based on Red Hat Enterprise Linux (RHEL). Change the container repository from **mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu** to **mcr.microsoft.com/mssql/rhel/server:2019-CTP3.2** in all of your docker commands.
+All of the documentation on SQL Server Linux container images point to Ubuntu-based containers. Beginning with SQL Server 2019, you can use containers based on Red Hat Enterprise Linux (RHEL). Change the container repository from **mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu** to **mcr.microsoft.com/mssql/rhel/server:2019-CTP3.2** in all of your docker commands.
 
-For example, the following command pulls the latest SQL Server 2019 preview container that uses RHEL:
+For example, the following command pulls the latest SQL Server 2019 container that uses RHEL:
 
 ```bash
 sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP3.2
@@ -121,7 +121,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
 
 ### Tools inside the container
 
-Starting with SQL Server 2017 preview, the [SQL Server command-line tools](sql-server-linux-setup-tools.md) are included in the container image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
+Starting with SQL Server 2017, the [SQL Server command-line tools](sql-server-linux-setup-tools.md) are included in the container image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
 
 1. Use the `docker exec -it` command to start an interactive bash shell inside your running container. In the following example `e69e056c702d` is the container ID.
 
@@ -165,7 +165,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-The following example creates two SQL Server 2019 preview containers and maps them to ports **1401** and **1402** on the host machine.
+The following example creates two SQL Server 2019 containers and maps them to ports **1401** and **1402** on the host machine.
 
 ```bash
 docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu

@@ -60,8 +60,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 7.  To save the updated procedure definition as a [!INCLUDE[tsql](../../includes/tsql-md.md)] script, on the **File** menu, click **Save As**. Accept the file name or replace it with a new name, and then click **Save**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!IMPORTANT]  
 >  Validate all user input. Do not concatenate user input before you validate it. Never execute a command constructed from unvalidated user input.  
   

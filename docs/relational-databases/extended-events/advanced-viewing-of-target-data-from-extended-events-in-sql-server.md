@@ -175,8 +175,6 @@ After you have the target data in SSMS, you can export the data to various forma
 
 1. Give focus to the data display.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     - Suddenly a new toolbar and a new menu item for extended events both become visible.
 
 	![Export displayed data, Extended Events > Export to > (.csv, or .xel, or to a table)](../../relational-databases/extended-events/media/xevents-ssms-ui75-menuextevent-exportto-xel.png)

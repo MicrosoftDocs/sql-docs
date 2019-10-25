@@ -64,8 +64,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 3.  Complete the steps in the Disable Publishing and Distribution Wizard.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  Publishing and distributing can be disabled programmatically using replication stored procedures.  
   

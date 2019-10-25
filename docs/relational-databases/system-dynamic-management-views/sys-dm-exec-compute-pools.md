@@ -25,8 +25,8 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-lin
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|compute_pool_id|int|Unique identifier for the pool. Key for this view.|  
 |name|`sysname`|Name of the compute pool. Is not nullable. Returns `default` for the default compute pool. |
+|compute_pool_id|`int`|Unique identifier for the pool. Key for this view.|  
 |location|`sysname`|Endpoint to controller in a SQL Big Data cluster. Is not nullable. |
 
 ## Permissions

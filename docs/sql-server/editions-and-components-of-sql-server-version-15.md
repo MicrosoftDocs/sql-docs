@@ -1,7 +1,7 @@
 ---
 title: "Editions and supported features of SQL Server 2019 | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2019"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

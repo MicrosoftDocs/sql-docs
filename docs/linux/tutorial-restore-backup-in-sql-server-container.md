@@ -3,7 +3,7 @@ title: Restore a SQL Server database in Docker
 description: This tutorial shows how restore a SQL Server database backup in a new Linux Docker container.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 10/02/2017
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux

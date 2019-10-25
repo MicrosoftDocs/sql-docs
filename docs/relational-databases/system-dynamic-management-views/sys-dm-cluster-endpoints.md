@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_cluster_endpoints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/01/2019"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "database-engine, big-data-clusters"
 ms.reviewer: ""

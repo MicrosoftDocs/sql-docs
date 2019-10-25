@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
-ms.date: 08/08/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: language-extensions

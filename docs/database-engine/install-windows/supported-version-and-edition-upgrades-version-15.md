@@ -1,7 +1,7 @@
 ---
 title: "Supported Version and Edition Upgrades - SQL Server 2019| Microsoft Docs"
 ms.custom: ""
-ms.date: "11/01/2019"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

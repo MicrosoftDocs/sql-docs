@@ -5,7 +5,7 @@ description: Learn how to use the MSSQL Spark Connector in Spark to read and wri
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 11/01/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

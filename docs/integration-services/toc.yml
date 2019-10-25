@@ -2,7 +2,7 @@
   href: ../integration-services/sql-server-integration-services.md
 
 - name: Welcome to SQL Server >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 
 - name: Overview
   items:

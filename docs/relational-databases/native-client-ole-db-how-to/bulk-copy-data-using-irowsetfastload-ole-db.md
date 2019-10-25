@@ -48,8 +48,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 7.  Call **IRowsetFastLoad::InsertRow** to bulk copy the data in to the table.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Example  
  In this example, 10 records are added to the table IRFLTable. You need to create the table IRFLTable in the database. This sample is not supported on IA64.  
   

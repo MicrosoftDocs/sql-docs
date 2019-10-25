@@ -1,7 +1,7 @@
 ---
 title: "The Transaction Log (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/04/2018"
+ms.date: "10/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -33,7 +33,7 @@ For information about the transaction log architecture and internals, see the [S
  The transaction log supports the following operations:  
   
 -   Individual transaction recovery.  
--   Recovery of all incomplete transactions when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started.  
+-   Recovery of all incomplete transactions when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started. 
 -   Rolling a restored database, file, filegroup, or page forward to the point of failure.  
 -   Supporting transactional replication.  
 -   Supporting high availability and disaster recovery solutions: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], database mirroring, and log shipping.
@@ -42,12 +42,12 @@ For information about the transaction log architecture and internals, see the [S
 If an application issues a `ROLLBACK` statement, or if the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects an error such as the loss of communication with a client, the log records are used to roll back the modifications made by an incomplete transaction. 
 
 ### Recovery of all incomplete transactions when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started
-If a server fails, the databases may be left in a state where some modifications were never written from the buffer cache to the data files, and there may be some modifications from incomplete transactions in the data files. When an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started, it runs a recovery of each database. Every modification recorded in the log which may not have been written to the data files is rolled forward. Every incomplete transaction found in the transaction log is then rolled back to make sure the integrity of the database is preserved. For more information, see [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
+If a server fails, the databases may be left in a state where some modifications were never written from the buffer cache to the data files, and there may be some modifications from incomplete transactions in the data files. When an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started, it runs a recovery of each database. Every modification recorded in the log that may not have been written to the data files is rolled forward. Every incomplete transaction found in the transaction log is then rolled back to make sure the integrity of the database is preserved. For more information, see [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### Rolling a restored database, file, filegroup, or page forward to the point of failure
 After a hardware loss or disk failure affecting the database files, you can restore the database to the point of failure. You first restore the last full database backup and the last differential database backup, and then restore the subsequent sequence of the transaction log backups to the point of failure. 
 
-As you restore each log backup, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reapplies all the modifications recorded in the log to roll forward all the transactions. When the last log backup is restored, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] then uses the log information to roll back all transactions that were not complete at that point. For more information, see [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
+As you restore each log backup, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reapplies all the modifications recorded in the log to roll forward all the transactions. When the last log backup is restored, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] then uses the log information to roll back all transactions that were not complete at that point. For more information, see [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### Supporting transactional replication
 The Log Reader Agent monitors the transaction log of each database configured for transactional replication and copies the transactions marked for replication from the transaction log into the distribution database. For more information, see [How Transactional Replication Works](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).
@@ -55,11 +55,11 @@ The Log Reader Agent monitors the transaction log of each database configured fo
 ### Supporting high availability and disaster recovery solutions
 The standby-server solutions, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], database mirroring, and log shipping, rely heavily on the transaction log. 
 
-In an **[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] scenario**, every update to a database, the primary replica, is immediately reproduced in separate, full copies of the database, the secondary replicas. The primary replica sends each log record immediately to the secondary replicas which applies the incoming log records to availability group databases, continually rolling it forward. For more information, see [Always On Failover Cluster Instances](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
+In an **[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] scenario**, every update to a database, the primary replica, is immediately reproduced in separate, full copies of the database, the secondary replicas. The primary replica sends each log record immediately to the secondary replicas, that applies the incoming log records to availability group databases, continually rolling it forward. For more information, see [Always On Failover Cluster Instances](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 
 In a **log shipping scenario**, the primary server sends the active transaction log of the primary database to one or more destinations. Each secondary server restores the log to its local secondary database. For more information, see [About Log Shipping](../../database-engine/log-shipping/about-log-shipping-sql-server.md). 
 
-In a **database mirroring scenario**, every update to a database, the principal database, is immediately reproduced in a separate, full copy of the database, the mirror database. The principal server instance sends each log record immediately to the mirror server instance which applies the incoming log records to the mirror database, continually rolling it forward. For more information, see [Database Mirroring](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
+In a **database mirroring scenario**, every update to a database, the principal database, is immediately reproduced in a separate, full copy of the database, the mirror database. The principal server instance sends each log record immediately to the mirror server instance, which applies the incoming log records to the mirror database, continually rolling it forward. For more information, see [Database Mirroring](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
 
 ##  <a name="Characteristics"></a>Transaction log characteristics
 Characteristics of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] transaction log: 
@@ -74,7 +74,7 @@ Characteristics of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.
 For information about the transaction log architecture and internals, see the [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
 
 ##  <a name="Truncation"></a> Transaction log truncation  
-Log truncation frees space in the log file for reuse by the transaction log. You must regularly truncate your transaction log to keep it from filling the alotted space. Several factors can delay log truncation, so monitoring log size matters. Some operations can be minimally logged to reduce their impact on transaction log size.  
+Log truncation frees space in the log file for reuse by the transaction log. You must regularly truncate your transaction log to keep it from filling the allotted space. Several factors can delay log truncation, so monitoring log size matters. Some operations can be minimally logged to reduce their impact on transaction log size.  
  
 Log truncation deletes inactive [virtual log files (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) from the logical transaction log of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, freeing space in the logical log for reuse by the Physical transaction log. If a transaction log is never truncated, it will eventually fill all the disk space allocated to physical log files.  
   
@@ -174,7 +174,8 @@ When transactional replication is enabled, `SELECT INTO` operations are fully lo
 [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
 [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md)   
 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
-[Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+[Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
+[Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)      
 [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
 [View or Change the Properties of a Database](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)   
 [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  

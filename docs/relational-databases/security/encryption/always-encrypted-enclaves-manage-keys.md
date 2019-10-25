@@ -14,7 +14,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 # Manage keys for Always Encrypted with secure enclaves
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-[Always Encrypted with secure enclaves](always-encrypted-enclaves.md) extends key management for [Always Encrypted](always-encrypted-database-engine.md) by introducing enclave-enabled keys:
+[Always Encrypted with secure enclaves](always-encrypted-enclaves.md) extends key management for [Always Encrypted](always-encrypted-database-engine.md) by introducing enclave-enabled keys: 
 
 - **Enclave-enabled column master key** - a column master key that is created with the `ENCLAVE_COMPUTATIONS` property specified in the column master key metadata object inside the database. 
 - **Enclave-enabled column encryption key** - a column encryption key that is encrypted with an enclave-enabled column master key. Only enclave-enabled column encryption keys can be used for computations inside a server-side secure enclave. 

@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-[Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) uses two types of cryptographic keys to protect your data - one key to encrypt your data, and another key to encrypt the key that encrypts your data. The column encryption key encrypts your data, the column master key encrypts the column encryption key. This article provides a detailed overview for managing these encryption keys.
+[Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) uses two types of cryptographic keys to protect your data - one key to encrypt your data, and another key to encrypt the key that encrypts your data. The column encryption key encrypts your data, the column master key encrypts the column encryption key. This article provides a detailed overview for managing these encryption keys.  
 
 When discussing Always Encrypted keys and key management it is important to understand the distinction between the actual cryptographic keys, and the metadata objects that *describe* the keys. We use the terms **column encryption key** and **column master key** to refer to the actual cryptographic keys, and we use **column encryption key metadata** and **column master key metadata** to refer to the Always Encrypted key *descriptions* in the database.
 

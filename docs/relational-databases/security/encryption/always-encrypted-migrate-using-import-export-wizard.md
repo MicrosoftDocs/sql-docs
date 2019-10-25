@@ -70,7 +70,7 @@ You also need access to column master keys, configured for the columns, storing 
 - **Azure Key Vault** - you need the get, unwrapKey, and verify permissions on the vault containing the column master key.
 - **Key Store Provider (CNG)** - the required permission and credentials, you might be prompted for when using a key store or a key, depend on the store and the KSP configuration.
 - **Cryptographic Service Provider (CAPI)** - the required permission and credentials, you might be prompted for when using a key store or a key, depend on the store and the CSP configuration.
-For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md). 
 
 ## Next Steps
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)

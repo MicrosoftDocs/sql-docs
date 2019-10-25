@@ -298,7 +298,7 @@ You can rotate a column encryption key using an offline or an online approach. T
 
 ### Example - Rotating a Column Encryption Key
 
-The below script demonstrates rotating a column encryption key.  The script assumes, the target database contains some columns encrypted with a column encryption key, named CEK1 (to be rotated), which is protected using a column master key, named CMK1 (the column master key isn't stored in Azure Key Vault).
+The below script demonstrates rotating a column encryption key.  The script assumes, the target database contains some columns encrypted with a column encryption key, named CEK1 (to be rotated), which is protected using a column master key, named CMK1 (the column master key isn't stored in Azure Key Vault). 
 
 
 ```powershell

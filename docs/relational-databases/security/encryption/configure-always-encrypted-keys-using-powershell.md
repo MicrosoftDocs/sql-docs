@@ -41,7 +41,7 @@ Step 7.  Generate a new column encryption key, encrypt it with the column master
 
 ## Windows Certificate Store without Role Separation (Example)
 
-This script is an end-to-end example for generating a column master key that is a certificate in Windows Certificate Store, generating and encrypting a column encryption key, and creating key metadata in a SQL Server database.
+This script is an end-to-end example for generating a column master key that is a certificate in Windows Certificate Store, generating and encrypting a column encryption key, and creating key metadata in a SQL Server database. 
 
 
 ```powershell

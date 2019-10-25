@@ -14,7 +14,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 # Enable Always Encrypted with secure enclaves for existing encrypted columns 
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-This article describes how to unlock the functionality of Always Encrypted with secure enclaves and enable enclave computations for existing encrypted columns. 
+This article describes how to unlock the functionality of Always Encrypted with secure enclaves and enable enclave computations for existing encrypted columns.  
 
 If you have existing columns, encrypted with keys that are not enclave-enabled, you can make the columns encrypted with enclave-enabled keys. Doing so will enable you to use of a secure enclave in queries on your columns. 
 

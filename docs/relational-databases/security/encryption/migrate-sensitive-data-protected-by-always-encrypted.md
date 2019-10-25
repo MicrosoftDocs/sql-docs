@@ -63,7 +63,7 @@ Use designated user accounts for long running workloads using this option.
  
 For short running bulk copy applications or tools that need to move encrypted data without decrypting it, set the option to ON immediately before running the application and set it back to OFF immediately after running the operation.  
  
-Do not use this option for developing new applications. Instead, use a client driver that offers an API for suppressing cryptographic metadata checks for a single session, such as the he AllowEncryptedValueModifications option in .NET Framework Data Provider for SQL Server - see [Copying Encrypted Data using SqlBulkCopy](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy).
+Do not use this option for developing new applications. Instead, use a client driver that offers an API for suppressing cryptographic metadata checks for a single session, such as the he AllowEncryptedValueModifications option in .NET Framework Data Provider for SQL Server - see [Copying Encrypted Data using SqlBulkCopy](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy). 
 
 ## Next Steps
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)

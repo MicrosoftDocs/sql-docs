@@ -17,7 +17,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 This articles describes how to use SQL Server Management Studio to issue queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), including:
 - Queries that trigger in-place cryptographic operations.
 - Queries triggering rich computations, including range comparisons or pattern matching operations on columns encrypted with enclave-enabled keys.
-- Queries that create or update indexes on encrypted columns using randomized encryption and enclave-enabled keys.
+- Queries that create or update indexes on encrypted columns using randomized encryption and enclave-enabled keys.  
 
 To use SSMS to run queries on encrypted columns using a secure enclave, follow  general instructions in [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md). Here are a few things that are specific to enclaves, you should be aware of:
 

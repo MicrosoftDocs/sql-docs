@@ -28,7 +28,7 @@ For detailed information about how to back up and restore a database, see:
 
 ## Next Steps
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
-- [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
+- [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md) 
 
 ## See Also
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

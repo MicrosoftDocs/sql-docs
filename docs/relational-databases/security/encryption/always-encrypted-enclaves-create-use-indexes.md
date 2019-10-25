@@ -14,7 +14,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 # Create and use indexes on columns using Always Encrypted with secure enclaves
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-This articles describes how to create and use indexes on columns encrypted using enclave-enabled column encryption keys with [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
+This articles describes how to create and use indexes on columns encrypted using enclave-enabled column encryption keys with [Always Encrypted with secure enclaves](always-encrypted-enclaves.md). 
 
 Always Encrypted with secure enclaves supports:
 - Clustered and non-clustered indexes on columns encrypted using deterministic encryption and enclave-enabled keys. Such indexes are sorted based on ciphertext. No special considerations apply to such indexes - you can manage and use them the same way as indexes on columns encrypted using deterministic encryption and keys that are not enclave-enabled (as with Always Encrypted). 

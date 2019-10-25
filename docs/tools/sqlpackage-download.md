@@ -23,7 +23,7 @@ Download and install the latest .NET Framework release and macOS and Linux previ
 |Linux .NET Core (x64) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2108814)|October 29, 2019| 18.4|15.0.4573.2|
 |Windows .NET Core (x64) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2109019)|October 29, 2019| 18.4|15.0.4573.2|
 
-For details about the latest release, see the [release notes](release-notes-sqlpackage.md). To download additional lanuages, see the [Available Languages](#Available-Languages) section.
+For details about the latest release, see the [release notes](release-notes-sqlpackage.md). To download additional lanuages, see the [Available Languages](#Available_Languages) section.
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -132,7 +132,7 @@ sqlpackage runs on Windows, macOS, and Linux, and is supported on the following 
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
-## Available languages
+## Available Languages
 
 This release of sqlpackage can be installed in the following languages:
 

@@ -68,8 +68,6 @@ The `__$command_id` column was column was introduced in a cumulative update in v
   
 3.  Alter the source table by specifying the new data type. The data type change is propagated successfully to the change table.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Data Manipulation Language Modifications  
  When insert, update, and delete operations are performed on a change data capture enabled source table, a record of those DML operations appears in the database transaction log. The change data capture process retrieves information about those changes from the transaction log, and adds either one or two rows to the change table to record the change. Entries are added to the change table in the same order that they were committed to the source table, although the commit of change table entries must typically be performed on a group of changes instead of for a single entry.  
   

@@ -1,9 +1,10 @@
-- name: Welcome to SQL Server
-  href: sql-server/sql-server-technical-documentation.md
 
-- name: SQL docs navigation tips
+- name: SQL Server
+  href: sql-server/index.yml
+
+- name: Docs navigation tips
   href: sql-server/sql-docs-navigation-guide.md
-- name: Previous versions 2014-2005
+- name: Previous versions 2005-2014
   href: toc/previous-versions-sql-server.md
 
 - name: Overview
@@ -10271,6 +10272,10 @@
       href: relational-databases/sqltoolsvsnativehelpers.md
     - name: FrameWindowVisible
       href: relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
+  - name: Extended Features
+    items: 
+      - name: Extended features and tools
+        href: tools/download-sql-feature-packs.md
 - name: Tutorials
   items:
   - name: SQL Server

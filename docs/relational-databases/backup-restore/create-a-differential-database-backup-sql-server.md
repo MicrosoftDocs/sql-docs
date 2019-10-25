@@ -63,8 +63,6 @@ ms.author: mikeray
   
 #### Create a differential database backup  
 
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 1.  After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
 2.  Expand **Databases**, and depending on the database, either select a user database or expand **System Databases** and select a system database.  

@@ -46,8 +46,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversio
   
 5.  In the confirmation dialog box, select whether to connect to the Subscriber to delete subscription information. If you clear the **Connect to Subscriber** checkbox, you should connect to the Subscriber later to delete the information.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### To delete a push subscription at the Subscriber  
   
 1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node.  

@@ -44,8 +44,6 @@ ms.author: mathoma
   
 2.  Right-click **Data Collection**, and then click **Enable Data Collection**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### To disable the data collector  
   
 1.  In Object Explorer, expand the **Management** node.  

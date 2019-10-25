@@ -32,8 +32,6 @@ There are a number of options to specify when [initializing a subscription with 
   
 2.  Select **OK**.   
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Snapshot Folder Locations
 
 ### Default snapshot location

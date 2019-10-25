@@ -42,8 +42,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 5.  Now create a new subscription. In the **New Subscription Wizard** set **Memory Optimized Subscription** to **true**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Memory-optimized tables should now start receiving updates from the publisher.  
   
 #### Reconfigure an existing transaction replication  

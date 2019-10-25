@@ -82,8 +82,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 6.  When the wizard completes, verify that your database was successfully stretch-enabled. Notice the icons in Object Explorer indicating the database was stretched  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > **NOTE:** If the Enable Database for Stretch fails, review the error log. A common error is improperly configuring the firewall rule.  
   
  See also:  

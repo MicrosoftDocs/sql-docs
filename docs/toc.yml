@@ -1,14 +1,15 @@
-- name: Welcome to SQL Server
-  href: sql-server/sql-server-technical-documentation.md
 
-- name: SQL docs navigation tips
+- name: SQL Server
+  href: sql-server/index.yml
+
+- name: Docs navigation tips
   href: sql-server/sql-docs-navigation-guide.md
-- name: Previous versions 2014-2005
+- name: Previous versions 2005-2014
   href: toc/previous-versions-sql-server.md
 
 - name: Overview
   items:
-  - name: New with SQL Server
+  - name: What's New
     items:
     - name: SQL Server 2019
       href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -25,6 +26,8 @@
       href: database-engine/whats-new-in-sql-server-2016.md
   - name: Editions & Features
     items:
+    - name: SQL Server 2019
+      href: sql-server/editions-and-components-of-sql-server-version-15.md
     - name: SQL Server 2017
       href: sql-server/editions-and-components-of-sql-server-2017.md
     - name: SQL Server 2016
@@ -91,8 +94,6 @@
           href: big-data-cluster/deploy-on-aks.md
         - name: Kubeadm
           href: big-data-cluster/deploy-with-kubeadm.md
-        - name: Minikube
-          href: big-data-cluster/deploy-on-minikube.md
       - name: Deployment scripts
         items:
         - name: AKS python script
@@ -209,8 +210,6 @@
         items:
         - name: azdata
           href: big-data-cluster/reference-azdata.md
-        - name: control
-          href: big-data-cluster/reference-azdata-control.md
         - name: notebook
           href: big-data-cluster/reference-azdata-notebook.md
         - name: sql
@@ -4162,8 +4161,8 @@
       href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
     - name: Deprecated in SQL Server 2016
       href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-    - name: Discontinued functionality in SQL Server 2016
-      href: database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md
+    - name: Discontinued functionality in SQL Server
+      href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
     - name: Breaking changes in SQL Server 2017
       href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
     - name: Breaking changes in SQL Server 2016
@@ -4185,8 +4184,12 @@
       href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
     - name: Usage and diagnostic data collection
       items:
-      - name: Privacy supplement
-        href: sql-server/sql-server-privacy.md
+      - name: SQL Server Privacy supplement
+        items:
+        - name: SQL Server 2017 and prior
+          href: sql-server/sql-server-privacy.md
+        - name: SQL Server 2019
+          href: sql-server/sql-server-privacy-ver15.md
       - name: Configure SQL Server usage and diagnostic data
         href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
       - name: Configure tools usage and diagnostic data
@@ -4286,6 +4289,8 @@
         href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
       - name: Change the Database Compatibility Mode with Query Tuning Assistant
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
+      - name: Latest updates for SQL Server
+        href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
   - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:
@@ -5064,10 +5069,6 @@
           href: relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
         - name: Define a logical record relationship
           href: relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
-        - name: Configure web synchronization
-          href: relational-databases/replication/configure-web-synchronization.md
-        - name: Configure IIS for Web Synchronization
-          href: relational-databases/replication/configure-iis-for-web-synchronization.md
         - name: Configure IIS 7 for Web Synchronization
           href: relational-databases/replication/configure-iis-7-for-web-synchronization.md
         - name: Resolve data conflicts
@@ -6497,6 +6498,12 @@
   items:
   - name: Manage
     items:
+    - name: Accelerated Database Recovery
+      items:
+      - name: Overview
+        href: relational-databases/accelerated-database-recovery-concepts.md
+      - name: Management
+        href: relational-databases/accelerated-database-recovery-management.md
     - name: Central Management Servers
       href: relational-databases/administer-multiple-servers-using-central-management-servers.md
     - name: Configuration Manager
@@ -8344,25 +8351,27 @@
     - name: Extensions
       href: azure-data-studio/extensions.md
       items:
-      - name: PostgreSQL extension (preview)
+      - name: PostgreSQL extension
         href: azure-data-studio/postgres-extension.md
-      - name: SQL Server 2019 (preview)
+      - name: SQL Server 2019
         href: azure-data-studio/sql-server-2019-extension.md
-      - name: SQL Server Agent (preview)
+      - name: SQL Server Agent
         href: azure-data-studio/sql-server-agent-extension.md
-      - name: SQL Server Central Management Servers extension (preview)
+      - name: SQL Server Central Management Servers extension
         href: azure-data-studio/sql-server-cms-extension.md        
-      - name: SQL Server dacpac extension (preview)
+      - name: SQL Server dacpac extension
         href: azure-data-studio/sql-server-dacpac-extension.md
-      - name: SQL Server Import (preview)
+      - name: SQL Server Import
         href: azure-data-studio/sql-server-import-extension.md
-      - name: SQL Server Profiler (preview)
+      - name: SQL Server Profiler
         href: azure-data-studio/sql-server-profiler-extension.md
-      - name: Schema Compare extension (preview)
+      - name: Schema Compare extension
         href: azure-data-studio/schema-compare-extension.md        
       - name: PowerShell extension
         href: azure-data-studio/powershell-extension.md        
-      - name: SandDance extension (preview)
+      - name: Managed Instance extension
+        href: azure-data-studio/azure-sql-managed-instance-extension.md        
+      - name: SandDance extension
         href: azure-data-studio/sanddance-extension.md
     - name: Extension Authoring
       items:
@@ -10283,14 +10292,18 @@
   items:
   - name: Overview
     items:
+    - name: What's new?
+      items:    
+      - name: SQL Server 2019
+        href: linux/sql-server-linux-whats-new-2019.md
+      - name: SQL Server 2017
+        href: linux/sql-server-linux-whats-new.md
     - name: Release notes
       items:
+      - name: SQL Server 2019
+        href: linux/sql-server-linux-release-notes-2019.md
       - name: SQL Server 2017
         href: linux/sql-server-linux-release-notes.md
-      - name: SQL Server 2019 preview
-        href: linux/sql-server-linux-release-notes-2019.md
-    - name: What's new?
-      href: linux/sql-server-linux-whats-new.md
     - name: Editions & supported features
       href: linux/sql-server-linux-editions-and-components-2017.md
     - name: FAQ
@@ -10366,18 +10379,18 @@
         href: linux/sql-server-linux-configure-mssql-conf.md
       - name: Environment variables
         href: linux/sql-server-linux-configure-environment-variables.md
-      - name: Configure Docker containers
-        href: linux/sql-server-linux-configure-docker.md
-      - name: MSDTC
-        items:
-        - name: Configure MSDTC
-          href: linux/sql-server-linux-configure-msdtc.md
-        - name: Configure Docker for MSDTC
-          href: linux/sql-server-linux-configure-msdtc-docker.md
+      - name: Configure MSDTC
+        href: linux/sql-server-linux-configure-msdtc.md
       - name: Configure persistent memory PMEM
         href: linux/sql-server-linux-configure-pmem.md
       - name: Configure to send usage and diagnostic data to Microsoft
         href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
+    - name: Containers
+      items:
+      - name: Configure Docker containers
+        href: linux/sql-server-linux-configure-docker.md
+      - name: Configure Docker for MSDTC
+        href: linux/sql-server-linux-configure-msdtc-docker.md
     - name: Develop
       href: linux/sql-server-linux-develop-overview.md
       items:
@@ -12931,6 +12944,8 @@
         href: relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md
       - name: sys.dm_os_dispatcher_pools
         href: relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql.md
+      - name: sys.dm_os_enumerate_fixed_drives
+        href: relational-databases/system-dynamic-management-views/sys-dm-os-enumerate-fixed-drives.md
       - name: sys.dm_os_host_info
         href: relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md
       - name: sys.dm_os_hosts

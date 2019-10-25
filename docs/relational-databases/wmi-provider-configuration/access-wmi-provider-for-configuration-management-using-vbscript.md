@@ -37,8 +37,6 @@ ms.author: "carlrab"
   
 6.  Run the script by typing **cscript test.vbs** at the command prompt.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Example  
   
 ```  

@@ -51,9 +51,7 @@ The sample databases and samples are not included with [!INCLUDE[ssNoVersion](..
 1.  Log into Windows as a member of the Administrators group, and open [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
 2.  In the **Connect to Server** dialog box, click **Cancel**.  
 3.  If Registered Servers is not displayed, on the **View** menu, click **Registered Servers**.
-4.  With **Database Engine** selected on the Registered Servers toolbar, expand **Database Engine**, right-click **Local Server Groups**, point to **Tasks**, and then click **Register Local Servers**. All instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)] installed on the computer are displayed. The default instance is unnamed and is shown as the computer name. A named instance displays as the computer name followed by a backward slash (\\) and then the name of the instance. For [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], the instance is named *<computer_name>*\sqlexpress unless the name was changed during setup.  
-
-[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4.  With **Database Engine** selected on the Registered Servers toolbar, expand **Database Engine**, right-click **Local Server Groups**, point to **Tasks**, and then click **Register Local Servers**. Expand **Local Server Groups** to see all the instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)] installed on the computer displayed. The default instance is unnamed and is shown as the computer name. A named instance displays as the computer name followed by a backward slash (\\) and then the name of the instance. For [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], the instance is named *<computer_name>*\sqlexpress unless the name was changed during setup.  
 
 ##### To verify that the Database Engine is running
 

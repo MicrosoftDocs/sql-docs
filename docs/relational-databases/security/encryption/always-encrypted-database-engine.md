@@ -77,8 +77,6 @@ To successfully update the column, do the following:
 1. SELECT the data out of the SSN column, and store it as a result set in the application. This will allow for the application (client *driver*) to decrypt the column.
 2. INSERT the data from the result set into SQL Server. 
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  >[!IMPORTANT]
  > In this scenario, the data will be unencrypted when sent back to the server because the destination column is a regular varchar that does not accept encrypted data. 
   

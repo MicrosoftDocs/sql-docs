@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "ODBC, bulk copy operations"
   - "bulk copy [ODBC], data files"
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Data Files and Format Files
@@ -38,8 +38,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 2.  Call [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) with *eOption* set to BCPHINTS and *iValue* set to a pointer to a SQLTCHAR string containing the Transact-SQL statement.  
   
 3.  Call **bcp_exec** to execute the bulk copy operation.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  The [!INCLUDE[tsql](../../includes/tsql-md.md)] statement can be any statement that generates a result set. The data file is created containing the first result set of the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. Bulk copy ignores any result set after the first if the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement generates multiple result sets.  
   

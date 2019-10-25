@@ -137,10 +137,10 @@ manager: craigg
 ### Example (PowerShell)  
  The following example registers a database named MyDB as a DAC.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Specify the database to register as a DAC.  
 $dbname = "MyDB"  
@@ -158,5 +158,3 @@ $registerunit.Register()
   
 ## See Also  
  [Data-tier Applications](data-tier-applications.md)  
-  
-  

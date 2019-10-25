@@ -181,7 +181,7 @@ In part four of this tutorial series, you completed these steps:
 
 To learn more about using Python in SQL Server Machine Learning Services, see:
 
-* [Quickstart: Run a "Hello world" Python script on SQL Server Machine Learning Services](quickstart-python-run-using-t-sql.md)
+* [Quickstart: Create and run simple Python scripts with SQL Server Machine Learning Services](quickstart-python-create-script.md)
 * [Other Python tutorials for SQL Server Machine Learning Services](sql-server-python-tutorials.md)
 * [Install Python packages with sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md)
 

@@ -34,7 +34,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ```  
   
 ## Arguments  
- *dbcc_statement* | *@dbcc_statement_var*  
+ *dbcc_statement* | *\@dbcc_statement_var*  
  Is the name of the DBCC command for which to receive syntax information. Provide only the part of the DBCC command that follows DBCC, for example, CHECKDB instead of DBCC CHECKDB.  
   
  ?  

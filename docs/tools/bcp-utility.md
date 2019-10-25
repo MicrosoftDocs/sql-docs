@@ -1,10 +1,7 @@
 ﻿---
 title: "bcp Utility | Microsoft Docs"
-ms.custom: ""
-ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -27,6 +24,9 @@ helpviewer_keywords:
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 01/14/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 
@@ -38,10 +38,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 >
 > For detailed information about using bcp with Azure SQL Data Warehouse, see [Load data with bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
-  The **b**ulk **c**opy **p**rogram utility (**bcp**) bulk copies data between an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format. The **bcp** utility can be used to import large numbers of new rows into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables or to export data out of tables into data files. Except when used with the **queryout** option, the utility requires no knowledge of [!INCLUDE[tsql](../includes/tsql-md.md)]. To import data into a table, you must either use a format file created for that table or understand the structure of the table and the types of data that are valid for its columns.  
-  
- ![Topic link icon](../database-engine/configure-windows/media/topic-link.gif "Topic link icon") For the syntax conventions that are used for the **bcp** syntax, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
-  
+The **b**ulk **c**opy **p**rogram utility (**bcp**) bulk copies data between an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format. The **bcp** utility can be used to import large numbers of new rows into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables or to export data out of tables into data files. Except when used with the **queryout** option, the utility requires no knowledge of [!INCLUDE[tsql](../includes/tsql-md.md)]. To import data into a table, you must either use a format file created for that table or understand the structure of the table and the types of data that are valid for its columns.  
+
+![Topic link icon](../database-engine/configure-windows/media/topic-link.gif "Topic link icon") For the syntax conventions that are used for the **bcp** syntax, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+
 > [!NOTE]
 > If you use **bcp** to back up your data, create a format file to record the data format. **bcp** data files **do not include** any schema or format information, so if a table or view is dropped and you do not have a format file, you may be unable to import the data.
 
@@ -50,7 +50,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 **[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15.0 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2043518)**
 <br>**[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15.0 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2043622)**
 
-The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+The command-line tools are General Availability (GA), however they're being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 ### Version Information
 
@@ -63,7 +63,7 @@ The new BCP supports Azure AD authentication, including Multi-Factor Authenticat
 
 ### System Requirements
 
-Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2
+Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2
 
 This component requires both [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) and [Microsoft ODBC Driver 17.3 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
 
@@ -105,7 +105,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#V">-V (80 | 90 | 100 | 110 | 120 | 130 ) </a>]
     [<a href="#w">-w</a>]
     [<a href="#x">-x</a>]
-</pre></td></tr></table>  
+</pre></td></tr></table>
 
 ## Arguments
 
@@ -143,7 +143,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  Is the name of the destination view when copying data into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (**in**), and the source view when copying data from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (**out**). Only views in which all columns refer to the same table can be used as destination views. For more information on the restrictions for copying data into views, see [INSERT &#40;Transact-SQL&#41;](../t-sql/statements/insert-transact-sql.md).  
   
  **-a** _**packet\_size**_<a name="a"></a>  
- Specifies the number of bytes, per network packet, sent to and from the server. A server configuration option can be set by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (or the **sp_configure** system stored procedure). However, the server configuration option can be overridden on an individual basis by using this option. *packet_size* can be from 4096 to 65535 bytes; the default is 4096.  
+ Specifies the number of bytes, per network packet, sent to and from the server. A server configuration option can be set by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (or the **sp_configure** system stored procedure). However, the server configuration option can be overridden on an individual basis by using this option. *packet_size* can be from 4096 bytes to 65535 bytes; the default is 4096.  
   
  Increased packet size can enhance performance of bulk-copy operations. If a larger packet is requested but cannot be granted, the default is used. The performance statistics generated by the **bcp** utility show the packet size used.  
   
@@ -171,7 +171,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*code_page*|Specific code page number; for example, 850.<br /><br /> Versions prior to version 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) do not support code page 65001 (UTF-8 encoding). Versions beginning with 13 can import UTF-8 encoding to earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
  **-d** _**database\_name**_<a name="d"></a>   
- Specifies the database to connect to. By default, bcp.exe connects to the user's default database. If **-d** *database_name* and a three part name (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice.If *database_name* begins with a hyphen (-) or a forward slash (/), do not add a space between **-d** and the database name.  
+ Specifies the database to connect to. By default, bcp.exe connects to the user's default database. If **-d database_name and a three part name (database_name.schema.table, passed as the first parameter to bcp.exe) are specified, an error will occur because you cannot specify the database name twice. If *database_name* begins with a hyphen (-) or a forward slash (/), do not add a space between **-d** and the database name.  
   
  **-e** _**err\_file**_<a name="e"></a>  
  Specifies the full path of an error file used to store any rows that the **bcp** utility cannot transfer from the file to the database. Error messages from the **bcp** command go to the workstation of the user. If this option is not used, an error file is not created.  
@@ -226,19 +226,17 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
+- **Azure Active Directory Integrated**
 
-
-- **Azure Active Directory Integrated** 
- 
     For Azure Active Directory Integrated authentication, provide the **-G** option without a user name or password. This configuration assumes that the current Windows user account (the account the bcp command is running under) is federated with Azure AD: 
 
-    The following example exports data using Azure AD Integrated account. The example exports table `bcptest` from database `testdb` using Azure AD Integrated from Azure server `aadserver.database.windows.net` and stores the data in file `c:\last\data2.dat`:
+    The following example exports data using Azure AD-Integrated account. The example exports table `bcptest` from database `testdb` using Azure AD Integrated from Azure server `aadserver.database.windows.net` and stores the data in file `c:\last\data2.dat`:
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    The following example imports data using Azure AD Integrated auth. The example imports data from file `c:\last\data2.txt` into table `bcptest` for database `testdb` on Azure server `aadserver.database.windows.net` using Azure AD Integrated auth:
+    The following example imports data using Azure AD-Integrated auth. The example imports data from file `c:\last\data2.txt` into table `bcptest` for database `testdb` on Azure server `aadserver.database.windows.net` using Azure AD Integrated auth:
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -246,7 +244,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory Interactive**  
 
-   The Azure AD Interactive authentication for Azure SQL Database and SQL Data Warehouse, allows you to use an interactive method supporting multi-factor authentication. For additional information, see [Active Directory Interactive Authentication](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
+   The Azure AD Interactive authentication for Azure SQL Database and SQL Data Warehouse, allows you to use an interactive method supporting multi-factor authentication. For more information, see [Active Directory Interactive Authentication](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
    Azure AD interactive requires **bcp** [version 15.0.1000.34](#download-the-latest-version-of-bcp-utility) or later as well as [ODBC version 17.2 or later](https://www.microsoft.com/download/details.aspx?id=56567).  
 
@@ -266,7 +264,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
    ```
 
-   If guest users exist in a specific Azure AD and are part of a group that exist in SQL DB that has database permissions to execute the bcp command, their guest user alias is used (for example, *keith0@adventureworks.com*).
+   If guest users exist in a specific Azure AD and are part of a group that exists in SQL DB that has database permissions to execute the bcp command, their guest user alias is used (for example, *keith0@adventureworks.com*).
   
 **-h** _**"load hints**_[ ,... *n*]**"**<a name="h"></a>
 Specifies the hint or hints to be used during a bulk import of data into a table or view.  
@@ -275,19 +273,19 @@ Specifies the hint or hints to be used during a bulk import of data into a table
 The sort order of the data in the data file. Bulk import performance is improved if the data being imported is sorted according to the clustered index on the table, if any. If the data file is sorted in a different order, that is other than the order of a clustered index key, or if there is no clustered index on the table, the ORDER clause is ignored. The column names supplied must be valid column names in the destination table. By default, **bcp** assumes the data file is unordered. For optimized bulk import, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] also validates that the imported data is sorted.  
   
 * **ROWS_PER_BATCH** **=** _**bb**_  
-Number of rows of data per batch (as *bb*). Used when **-b** is not specified, resulting in the entire data file being sent to the server as a single transaction. The server optimizes the bulk load according to the value *bb*. By default, ROWS_PER_BATCH is unknown.  
+Number of rows of data per batch (as *bb*). Used when **-b** is not specified, resulting in the entire data file being sent to the server as a single transaction. The server optimizes the bulkload according to the value *bb*. By default, ROWS_PER_BATCH is unknown.  
   
 * **KILOBYTES_PER_BATCH** **=** _**cc**_  
 Approximate number of kilobytes of data per batch (as *cc*). By default, KILOBYTES_PER_BATCH is unknown.  
   
 * **TABLOCK**  
-Specifies that a bulk update table-level lock is acquired for the duration of the bulk load operation; otherwise, a row-level lock is acquired. This hint significantly improves performance because holding a lock for the duration of the bulk-copy operation reduces lock contention on the table. A table can be loaded concurrently by multiple clients if the table has no indexes and **TABLOCK** is specified. By default, locking behavior is determined by the table option **table lock on bulk load**.  
+Specifies that a bulk update table-level lock is acquired for the duration of the bulkload operation; otherwise, a row-level lock is acquired. This hint significantly improves performance because holding a lock for the duration of the bulk-copy operation reduces lock contention on the table. A table can be loaded concurrently by multiple clients if the table has no indexes and **TABLOCK** is specified. By default, locking behavior is determined by the table option **table lock on bulkload**.  
   
   > [!NOTE]
   > If the target table is clustered columnstore index,  TABLOCK hint is not required for loading by multiple concurrent clients because each concurrent thread is assigned a separate rowgroup  within the index and loads data into it. Please refer to columnstore index conceptual topics for details,
   
   **CHECK_CONSTRAINTS**  
-  Specifies that all constraints on the target table or view must be checked during the bulk-import operation. Without the CHECK_CONSTRAINTS hint, any CHECK and FOREIGN KEY constraints are ignored, and after the operation the constraint on the table is marked as not-trusted.  
+  Specifies that all constraints on the target table or view must be checked during the bulk-import operation. Without the CHECK_CONSTRAINTS hint, any CHECK, and FOREIGN KEY constraints are ignored, and after the operation the constraint on the table is marked as not-trusted.  
   
   > [!NOTE]
   > UNIQUE, PRIMARY KEY, and NOT NULL constraints are always enforced.
@@ -297,7 +295,7 @@ Specifies that a bulk update table-level lock is acquired for the duration of th
   A situation in which you might want constraints disabled (the default behavior) is if the input data contains rows that violate constraints. With CHECK constraints disabled, you can import the data and then use [!INCLUDE[tsql](../includes/tsql-md.md)] statements to remove data that is not valid.  
   
   > [!NOTE]
-  > **bcp** now enforces data validation and data checks that might cause scripts to fail if they are executed on invalid data in a data file.
+  > **bcp** now enforces data validation and data checks that might cause scripts to fail if they're executed on invalid data in a data file.
   
   > [!NOTE]
   > The **-m** *max_errors* switch does not apply to constraint checking.
@@ -405,7 +403,7 @@ Performs the bulk-copy operation using the native (database) data types of the d
  **-v**<a name="v"></a>  
  Reports the **bcp** utility version number and copyright.  
   
- **-V** (**80** | **90** | **100** | **110** | **120** | **130** )<a name="V"></a>  
+ **-V** (**80** | **90** | **100** | **110** | **120** | **130)<a name="V"></a>  
  Performs the bulk-copy operation using data types from an earlier version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This option does not prompt for each field; it uses the default values.  
   
  **80** = [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]  
@@ -479,13 +477,13 @@ The bcp utility can also be downloaded separately from the [Microsoft SQL Server
 
 ## Data Validation
 
- **bcp** now enforces data validation and data checks that might cause scripts to fail if they are executed on invalid data in a data file. For example, **bcp** now verifies that:  
+ **bcp** now enforces data validation and data checks that might cause scripts to fail if they're executed on invalid data in a data file. For example, **bcp** now verifies that:  
   
--   The native representation of **float** or **real** data types are valid.  
+-   The native representations of float or real data types are valid.  
   
 -   Unicode data has an even-byte length.  
   
- Forms of invalid data that could be bulk imported in earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] might fail to load now; whereas, in earlier versions, the failure did not occur until a client tried to access the invalid data. The added validation minimizes surprises when querying the data after bulk load.  
+ Forms of invalid data that could be bulk imported in earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] might fail to load now; whereas, in earlier versions, the failure did not occur until a client tried to access the invalid data. The added validation minimizes surprises when querying the data after bulkload.  
 
 ## Bulk Exporting or Importing SQLXML Documents
 
@@ -524,32 +522,33 @@ The bcp utility can also be downloaded separately from the [Microsoft SQL Server
   
 -   (Administrator/User) When possible, use native format (-n) to avoid the separator issue. Use the native format to export and import using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Export data from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using the -c or -w option if the data will be imported to a non-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  
   
--   (Administrator) Verify data when using BCP OUT. For example, when you use BCP OUT, BCP IN, and then BCP OUT verify that the data is properly exported and the terminator values are not used as part of some data value. Please consider overriding the default terminators (using -t and -r options) with random hexadecimal values to avoid conflicts between terminator values and data values.  
+-   (Administrator) Verify data when using BCP OUT. For example, when you use BCP OUT, BCP IN, and then BCP OUT verify that the data is properly exported and the terminator values are not used as part of some data value. Consider overriding the default terminators (using -t and -r options) with random hexadecimal values to avoid conflicts between terminator values and data values.  
   
 -   (User) Use a long and unique terminator (any sequence of bytes or characters) to minimize the possibility of a conflict with the actual string value. This can be done by using the -t and -r options.  
 
 ## Examples
 
- This section contains the following examples:  
- 
--   A. Identify **bcp** utility version
-  
--   B. Copying table rows into a data file (with a trusted connection)  
-  
--   [C.](#c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication) Copying table rows into a data file (with Mixed-mode Authentication)  
-  
--   D. Copying data from a file to a table  
-  
--   E. Copying a specific column into a data file  
-  
--   F. Copying a specific row into a data file  
-  
--   G. Copying data from a query to a data file  
-  
--   H. Creating format files
-    
--   I. Using a format file to bulk import with **bcp**  
+This section contains the following examples:
 
+A. Identify **bcp** utility version
+
+B. Copying table rows into a data file (with a trusted connection)
+
+C. Copying table rows into a data file (with Mixed-mode Authentication)
+
+D. Copying data from a file to a table
+
+E. Copying a specific column into a data file
+
+F. Copying a specific row into a data file
+
+G. Copying data from a query to a data file
+
+H. Creating format files
+
+I. Using a format file to bulk import with **bcp**
+
+J. Specifying a code page
 
 ### **Example Test Conditions**
 
@@ -581,93 +580,109 @@ END
 > TRUNCATE TABLE WideWorldImporters.Warehouse.StockItemTransactions_bcp;
 
 ### A.  Identify **bcp** utility version
+
 At a command prompt, enter the following command:
+
 ```
 bcp -v
 ```
   
-### B. Copying table rows into a data file (with a trusted connection)  
-The following examples illustrates the **out** option on the `WideWorldImporters.Warehouse.StockItemTransactions` table.
+### B. Copying table rows into a data file (with a trusted connection)
 
-- **Basic**  
+The following examples illustrate the **out** option on the `WideWorldImporters.Warehouse.StockItemTransactions` table.
+
+- **Basic**
 This example creates a data file named `StockItemTransactions_character.bcp` and copies the table data into it using **character** format.
 
   At a command prompt, enter the following command:
+
   ```
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
- 
+
  - **Expanded**  
 This example creates a data file named `StockItemTransactions_native.bcp` and copies the table data into it using the **native** format.  The example also: specifies the maximum number of syntax errors, an error file, and an output file.
 
     At a command prompt, enter the following command:
     ```
     bcp WideWorldImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
-    ``` 
- 
+    ```
+
 Review `Error_out.log` and `Output_out.log`.  `Error_out.log` should be blank.  Compare the file sizes between `StockItemTransactions_character.bcp` and `StockItemTransactions_native.bcp`. 
-   
-### C. Copying table rows into a data file (with mixed-mode authentication)  
+
+### C. Copying table rows into a data file (with mixed-mode authentication)
+
 The following example illustrates the **out** option on the `WideWorldImporters.Warehouse.StockItemTransactions` table.  This example creates a data file named `StockItemTransactions_character.bcp` and copies the table data into it using **character** format.  
   
  The example assumes that you are using mixed-mode authentication, you must use the **-U** switch to specify your login ID. Also, unless you are connecting to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer, use the **-S** switch to specify the system name and, optionally, an instance name.  
 
 At a command prompt, enter the following command: \(The system will prompt you for your password.\)
-```  
+
+```
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
-```  
-  
-### D. Copying data from a file to a table  
+```
+
+### D. Copying data from a file to a table
+
 The following examples illustrate the **in** option on the `WideWorldImporters.Warehouse.StockItemTransactions_bcp` table using files created above.
-  
-- **Basic**  
+
+- **Basic**
 This example uses the `StockItemTransactions_character.bcp` data file previously created.
 
   At a command prompt, enter the following command:
-  ```  
-  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
-  ```  
 
-- **Expanded**  
+  ```
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
+  ```
+
+- **Expanded**
 This example uses the `StockItemTransactions_native.bcp` data file previously created.  The example also: use the hint **TABLOCK**, specifies the batch size, the maximum number of syntax errors, an error file, and an output file.
   
-  At a command prompt, enter the following command:
-  ```  
-  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
-  ```    
+At a command prompt, enter the following command:
+
+```
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
+```
+
   Review `Error_in.log` and `Output_in.log`.
-   
-### E. Copying a specific column into a data file  
-To copy a specific column, you can use the **queryout** option.  The following example copies only the `StockItemTransactionID` column of the `Warehouse.StockItemTransactions` table into a data file. 
+
+### E. Copying a specific column into a data file
+
+To copy a specific column, you can use the **queryout** option.  The following example copies only the `StockItemTransactionID` column of the `Warehouse.StockItemTransactions` table into a data file.
   
 At a command prompt, enter the following command:
-  
-```  
+
+```
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
-```  
-  
-### F. Copying a specific row into a data file  
+```
+
+### F. Copying a specific row into a data file
+
 To copy a specific row, you can use the **queryout** option. The following example copies only the row for the person named `Amy Trefl` from the `WideWorldImporters.Application.People` table into a data file `Amy_Trefl_c.bcp`.  Note: the **-d** switch is used identify the database.
   
-At a command prompt, enter the following command: 
-```  
-bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
-```  
-  
-### G. Copying data from a query to a data file  
-To copy the result set from a Transact-SQL statement to a data file, use the **queryout** option.  The following example copies the names from the `WideWorldImporters.Application.People` table, ordered by full name, into the `People.txt` data file.  Note: the **-t** switch is used to create a comma delimited file.
-  
 At a command prompt, enter the following command:
-```  
+
+```
+bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
+```
+
+### G. Copying data from a query to a data file
+
+To copy the result set from a Transact-SQL statement to a data file, use the **queryout** option.  The following example copies the names from the `WideWorldImporters.Application.People` table, ordered by full name, into the `People.txt` data file.  Note: the **-t** switch is used to create a comma-delimited file.
+
+At a command prompt, enter the following command:
+
+```
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
-```  
-  
-### H. Creating format files  
+```
+
+### H. Creating format files
+
 The following example creates three different format files for the `Warehouse.StockItemTransactions` table in the `WideWorldImporters` database.  Review the contents of each created file.
-  
+
 At a command prompt, enter the following commands:
-  
-```  
+
+```
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -676,37 +691,33 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 
 REM XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
- 
-```  
+```
+
+> [!NOTE]
+> To use the **-x** switch, you must be using a **bcp** 9.0 client. For information about how to use the **bcp** 9.0 client, see "[Remarks](#remarks)."
   
-> [!NOTE]  
->  To use the **-x** switch, you must be using a **bcp** 9.0 client. For information about how to use the **bcp** 9.0 client, see "[Remarks](#remarks)."  
+ For more information, see [Non-XML Format Files &#40;SQL Server&#41;](../relational-databases/import-export/non-xml-format-files-sql-server.md) and [XML Format Files &#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md).
   
- For more information, see [Non-XML Format Files &#40;SQL Server&#41;](../relational-databases/import-export/non-xml-format-files-sql-server.md) and [XML Format Files &#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md).  
-  
-### I. Using a format file to bulk import with bcp  
+### I. Using a format file to bulk import with bcp
+
 To use a previously created format file when importing data into an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use the **-f** switch with the **in** option.  For example, the following command bulk copies the contents of a data file, `StockItemTransactions_character.bcp`, into a copy of the `Warehouse.StockItemTransactions_bcp` table by using the previously created format file, `StockItemTransactions_c.xml`.  Note: the **-L** switch is used to import only the first 100 records.
-  
+
 At a command prompt, enter the following command:
-```  
-bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
-```  
-  
+
+```
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
+```
+
 > [!NOTE]  
 >  Format files are useful when the data file fields are different from the table columns; for example, in their number, ordering, or data types. For more information, see [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
-  
-### J. Specifying a code page  
- The following partial code example shows bcp import while specifying a code page 65001:  
-  
-```  
+
+### J. Specifying a code page
+
+The following partial code example shows bcp import while specifying a code page 65001:
+
+```
 bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...  
-```  
-  
- The following partial code example shows bcp export while specifying a code page 65001:  
-  
-```  
-bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...  
-```  
+```
 
 ## Additional Examples
 

@@ -32,7 +32,7 @@ productDirectory:
       - url: https://docs.microsoft.com/azure/sql-database/
         text: Azure SQL Database
       - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
-        text: Azure SQL Data Warehouse
+        text: Azure Synapse Analytics (SQL DW)
   - title: SQL Server on Windows
     imageSrc: media/index/windows.png
     links:
@@ -199,7 +199,7 @@ additionalContent:
             url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
           - text: Data Virtualization with Polybase
             url: relational-databases/polybase/polybase-guide.md
-          - text: Azure SQL Data Warehouse
+          - text: Azure Synapse Analytics (SQL DW)
             url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
           - text: Azure SQL Database Hyperscale
             url: https://docs.microsoft.com/azure/sql-database/sql-database-service-tier-hyperscale

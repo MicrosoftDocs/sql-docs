@@ -48,11 +48,11 @@
       href: sql-server/sql-server-2012-release-notes.md
     - name: SQL Server 2008 R2 SP2
       href: sql-server/sql-server-2008-r2-sp2-release-notes.md
-- name: Big data cluster
+- name: Big Data Clusters
   items:
   - name: Overview
     items:
-    - name: What are SQL Server big data clusters?
+    - name: What are SQL Server Big Data Clusters?
       href: big-data-cluster/big-data-cluster-overview.md
     - name: Release notes
       href: big-data-cluster/release-notes-big-data-cluster.md
@@ -60,7 +60,7 @@
     items:
     - name: Get Started
       items:
-      - name: Deploy a big data cluster
+      - name: Deploy
         href: big-data-cluster/deploy-get-started.md
       - name: Load sample data
         href: big-data-cluster/tutorial-load-sample-data.md
@@ -150,6 +150,8 @@
           href: big-data-cluster/hdfs-tiering-mount-adlsgen2.md
         - name: Mount S3 for HDFS tiering
           href: big-data-cluster/hdfs-tiering-mount-s3.md
+        - name: Manage HDFS permissions
+          href: big-data-cluster/hdfs-tiering-manage-permissions.md
     - name: Data ingestion
       items:
       - name: Load data with curl
@@ -178,9 +180,9 @@
         href: big-data-cluster/sparklyr-from-RStudio.md
       - name: Integrate Spark with SQL Server
         href: big-data-cluster/spark-mssql-connector.md
-    - name: Manage SQL Server big data cluster
+    - name: Manage
       items:
-      - name: Connect to a big data cluster
+      - name: Connect
         href: big-data-cluster/connect-to-big-data-cluster.md
       - name: View cluster status
         href: big-data-cluster/view-cluster-status.md
@@ -10270,6 +10272,10 @@
       href: relational-databases/sqltoolsvsnativehelpers.md
     - name: FrameWindowVisible
       href: relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
+  - name: Extended Features
+    items: 
+      - name: Extended features and tools
+        href: tools/download-sql-feature-packs.md
 - name: Tutorials
   items:
   - name: SQL Server

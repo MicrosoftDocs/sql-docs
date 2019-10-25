@@ -18,6 +18,9 @@ ms.technology: big-data-cluster
 
 Starting from a pre-defined set of configuration profiles that are built into the azdata management tool, you can easily modify the default settings to better suit your BDC workload requirements. Starting with the release candidate release, the structure of the configuration files was updated to enable you to granularly update settings per each service of the resource. 
 
+> [!TIP]
+> Please reference the articles on how to configure **high availability** for mission critical components like [SQL Server master](deployment-high-availability.md) or [HDFS name node](deployment-high-availability-hdfs-spark.md),  for details on how to deploy highly available services.
+
 You can also set resource level configurations or update the configurations for all services in a resource. Here is a summary of the structure for `bdc.json`:
 
 ```json
@@ -191,9 +194,6 @@ The built-in configuration files, specifically control.json includes a `docker` 
 }
 ```
 
-> [!TIP]
-> As a best practice, you must use a version specific image tag and avoid using `latest` image tag, as this can result in version mismatch that will cause cluster health issues.
-
 Before deployment, you can customize the `docker` settings by either directly editing the `control.json` configuration file or using `azdata bdc config` commands. For example, following commands are updating a `custom-bdc` control.json configuration file with a different `<registry>`, `<repository>` and `<image_tag>`:
 
 ```bash
@@ -203,7 +203,10 @@ azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.imageTag=
 ```
 
 > [!TIP]
-> Big data clusters must have access to the container registry and repository from which to pull container images. If your environment does not have access to the default Microsoft Container Registry, you can perform an offline installation where the required images are first placed into a private Docker repository. For more information about offline installations, see [Perform an offline deployment of a SQL Server big data cluster](deploy-offline.md).
+> As a best practice, you must use a version specific image tag and avoid using `latest` image tag, as this can result in version mismatch that will cause cluster health issues.
+
+> [!TIP]
+> Big data clusters deployment must have access to the container registry and repository from which to pull container images. If your environment does not have access to the default Microsoft Container Registry, you can perform an offline installation where the required images are first placed into a private Docker repository. For more information about offline installations, see [Perform an offline deployment of a SQL Server big data cluster](deploy-offline.md). Note that you must set the `DOCKER_USERNAME` and `DOCKER_PASSWORD` [environment variables](deployment-guidance.md#env) before issuing the deployment to ensure the deployment workflow has acces to your private repository to pull the images from.
 
 ## <a id="clustername"></a> Change cluster name
 
@@ -252,7 +255,7 @@ The following example uses inline JSON to change the port for the `controller` e
 azdata bdc config replace --config-file custom-bdc/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
-## <a id="replicas"></a> Configure pool replicas
+## <a id="replicas"></a> Configure scale
 
 The configurations of each resource, such as the storage pool, is defined in the `bdc.json` configuration file. For example, the following portion of the `bdc.json` shows a `storage-0` resource definition:
 
@@ -283,12 +286,16 @@ The configurations of each resource, such as the storage pool, is defined in the
 }
 ```
 
-You can configure the number of instances in a pool by modifying the `replicas` value for each pool. The following example uses inline JSON to change these values for the storage and data pools to `10` and `4` respectively:
+You can configure the number of instances in a storage, compute and/or data pool by modifying the `replicas` value for each pool. The following example uses inline JSON to change these values for the storage, compute and data pools to `10`, `4` and `4` respectively:
 
 ```bash
 azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.storage-0.spec.replicas=10"
+azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.compute-0.spec.replicas=4"
 azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.data-0.spec.replicas=4"
 ```
+
+> [!NOTE]
+> The maximum number of instances validated for compute and data pools is `8` each. There is no enforcement of this limit at deployment time, but we do not recommend configuring a higher scale in production deployments.
 
 ## <a id="storage"></a> Configure storage
 

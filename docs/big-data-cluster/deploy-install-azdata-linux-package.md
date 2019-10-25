@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to install `azdata` for SQL Server 2019 Big Data Clusters release candidate on Linux. Before these package managers were available, the installation of `azdata` required `pip`.
+This article describes how to install `azdata` for SQL Server 2019 Big Data Clusters on Linux. Before these package managers were available, the installation of `azdata` required `pip`.
 
 The package managers are designed for various operating systems and distributions.
 

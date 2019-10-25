@@ -47,7 +47,7 @@ The RTM build number for SQL Server 2019 is `15.0.2000.5`.
   > [!NOTE]
   > Uninstall is required.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] release candidate.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
 
 ## UTF-8 collations
 

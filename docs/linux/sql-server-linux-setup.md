@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios. 
 author: VanMSFT 
 ms.author: vanto
-ms.date: 05/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sqlfreshmay19"
@@ -28,7 +28,7 @@ For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../
 
 ## <a id="supportedplatforms"></a> Supported platforms
 
-SQL Server 2017 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also supported as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
+SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also supported as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
 
 | Platform | Supported version(s) | Get
 |-----|-----|-----
@@ -44,7 +44,7 @@ Microsoft also supports deploying and managing SQL Server containers by using Op
 
 ## <a id="system"></a> System requirements
 
-SQL Server 2017 has the following system requirements for Linux:
+SQL Server has the following system requirements for Linux:
 
 |||
 |-----|-----|
@@ -69,7 +69,7 @@ When you install or upgrade SQL Server, you get the latest version of SQL Server
 
 You can install SQL Server 2017 or SQL Server 2019 on Linux from the command line. For step-by-step instructions, see one of the following quickstarts:
 
-| Platform | Installation quickstart |
+| Platform | Installation quickstarts |
 |---|---|
 | Red Hat Enterprise Linux (RHEL) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15) |
 | SUSE Linux Enterprise Server (SLES) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15) |

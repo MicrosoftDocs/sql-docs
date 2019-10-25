@@ -49,7 +49,7 @@ At this time, there are no package managers to install `azdata` on other operati
 3. Add the `azdata` repository information:
 
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-gdr.list)"
     ```
 
 4. Update repository information and install `azdata`:

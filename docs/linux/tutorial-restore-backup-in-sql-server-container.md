@@ -22,7 +22,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-This tutorial demonstrates how to move and restore a SQL Server backup file into a SQL Server 2019 preview Linux container image running on Docker.
+This tutorial demonstrates how to move and restore a SQL Server backup file into a SQL Server 2019 Linux container image running on Docker.
 
 ::: moniker-end
 
@@ -106,7 +106,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 
 1. Open a bash terminal on Linux/Mac or an elevated PowerShell session on Windows.
 
-1. Pull the SQL Server 2019 preview Linux container image from Docker Hub.
+1. Pull the SQL Server 2019 Linux container image from Docker Hub.
 
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
@@ -135,7 +135,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
       -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
-   This command creates a SQL Server 2019 preview container with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1ddata**. This is used to persist the data created by SQL Server.
+   This command creates a SQL Server 2019 container with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1ddata**. This is used to persist the data created by SQL Server.
 
 1. To view your Docker containers, use the `docker ps` command.
 
@@ -525,7 +525,7 @@ In this tutorial, you learned how to back up a database on Windows and move it t
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server 2019 preview. You learned how to:
+In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server 2019. You learned how to:
 
 ::: moniker-end
 

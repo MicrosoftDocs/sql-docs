@@ -12,6 +12,7 @@ ms.reviewer: ""
 ms.custom: ""
 ms.date: 11/04/2019
 ---
+
 # Release notes for SQL Server Management Studio (SSMS)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -55,6 +56,7 @@ SSMS 18.4 is the latest general availability (GA) release of SSMS. If you need a
 | Query Store | Added support for the new Custom Capture Policies. |
 | SMO/Scripting | Support Script of materialized view in SQL DW. |
 | SMO/Scripting | Added support for *SQL On Demand*. |
+| XEvent Profiler | Added *error_reported* event to XEvent Profiler sessions. |
 
 ## Bug fixes in 18.4
 
@@ -77,6 +79,10 @@ SSMS 18.4 is the latest general availability (GA) release of SSMS. If you need a
 | SQL Agent | Fixed an issue where the agent operator UI would not update the operator name when it was changed in the UI nor would it be scripted. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/32897647) for more details.|
 
 ### Known issues (18.4)
+
+* Database Diagram created from SSMS running on machine A cannot be modified from machine B (SSMS crashes). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
+
+* There are redraw issues when switching between multiple query windows. See UserVoice for more details. A workaround for this issue is to disable hardware acceleration under *Tools > Options*.
 
 You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 

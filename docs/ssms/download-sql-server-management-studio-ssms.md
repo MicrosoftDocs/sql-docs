@@ -74,6 +74,7 @@ SQL Server Management Studio 18.4:
 | Query Store | Added support for the new Custom Capture Policies. |
 | SMO/Scripting | Support Script of materialized view in SQL DW. |
 | SMO/Scripting | Added support for *SQL On Demand*. |
+| XEvent Profiler | Added *error_reported* event to XEvent Profiler sessions. |
 
 For details about what's new in this release, see [the SSMS release notes](release-notes-ssms.md).
 

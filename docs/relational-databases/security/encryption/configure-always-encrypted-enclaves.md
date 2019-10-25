@@ -35,6 +35,9 @@ See the following articles for details:
 - [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
 - [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 
+> [!NOTE]
+> For a step-by-step tutorial on how to set up a test environment and try the functionality of Always Encrypted with secure enclaves in SSMS, see [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+
 ## Query columns using Always Encrypted with secure enclaves
 See the following articles for details:
 - [Query columns using Always Encrypted with secure enclaves - overview](always-encrypted-enclaves-query-columns.md)

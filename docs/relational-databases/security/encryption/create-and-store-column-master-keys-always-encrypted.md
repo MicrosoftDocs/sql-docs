@@ -95,8 +95,6 @@ To grant a user the *Read* permission for a certificate stored in the local mach
 8.  From the **Certificates** snap-in, locate the certificate in the **Certificates > Personal** folder, right-click the Certificate, point to **All Tasks**, and then click **Manage Private Keys**.
 9.  In the **Security** dialog box, add read permission for a user account if needed.
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Creating Column Master Keys in Azure Key Vault
 
 Azure Key Vault helps safeguard cryptographic keys and secrets, and is a convenient option for storing column master keys for Always Encrypted, especially if your applications are hosted in Azure. To create a key in [Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), you need an [Azure subscription](https://azure.microsoft.com/free/) and an Azure Key Vault.

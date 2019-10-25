@@ -69,8 +69,6 @@ The following procedures show you have to create a database protected by TDE usi
   
 8.  When finished, click **OK**.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ###  <a name="TsqlCreate"></a> Using Transact-SQL  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  

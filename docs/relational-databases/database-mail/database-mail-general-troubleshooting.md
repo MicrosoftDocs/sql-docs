@@ -50,8 +50,6 @@ You must be a member of the sysadmin fixed server role to troubleshoot all aspec
 
 1. To restore the sp_configure procedure to its default state, which does not show advanced options, execute the following code:
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```sql 
     sp_configure 'show advanced', 0; 
     GO

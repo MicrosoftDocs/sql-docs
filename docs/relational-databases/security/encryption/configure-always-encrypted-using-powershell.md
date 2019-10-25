@@ -54,6 +54,7 @@ Some of the Always Encrypted cmdlets work with data or metadata in the database 
 ### Using Get-SqlDatabase
 The **Get-SqlDatabase** cmdlet allows you to connect to a database in SQL Server or in Azure SQL Database. It returns a database object, which you can then pass using the using the **InputObject** parameter of a cmdlet that connects to the database. 
 
+### Using SQL Server PowerShell
 
 ```
 # Import the SqlServer module

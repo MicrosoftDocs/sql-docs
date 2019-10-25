@@ -87,8 +87,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 10. In the code, before the namespace statement, type the following **using** statements to qualify the types in the RMO namespaces:  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```  
     // These namespaces are required.  
     using Microsoft.SqlServer.Replication;  

@@ -1,9 +1,10 @@
-- name: Welcome to SQL Server
-  href: sql-server/sql-server-technical-documentation.md
 
-- name: SQL docs navigation tips
+- name: SQL Server
+  href: sql-server/index.yml
+
+- name: Docs navigation tips
   href: sql-server/sql-docs-navigation-guide.md
-- name: Previous versions 2014-2005
+- name: Previous versions 2005-2014
   href: toc/previous-versions-sql-server.md
 
 - name: Overview
@@ -10438,18 +10439,18 @@
         href: linux/sql-server-linux-configure-mssql-conf.md
       - name: Environment variables
         href: linux/sql-server-linux-configure-environment-variables.md
-      - name: Configure Docker containers
-        href: linux/sql-server-linux-configure-docker.md
-      - name: MSDTC
-        items:
-        - name: Configure MSDTC
-          href: linux/sql-server-linux-configure-msdtc.md
-        - name: Configure Docker for MSDTC
-          href: linux/sql-server-linux-configure-msdtc-docker.md
+      - name: Configure MSDTC
+        href: linux/sql-server-linux-configure-msdtc.md
       - name: Configure persistent memory PMEM
         href: linux/sql-server-linux-configure-pmem.md
       - name: Configure to send usage and diagnostic data to Microsoft
         href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
+    - name: Containers
+      items:
+      - name: Configure Docker containers
+        href: linux/sql-server-linux-configure-docker.md
+      - name: Configure Docker for MSDTC
+        href: linux/sql-server-linux-configure-msdtc-docker.md
     - name: Develop
       href: linux/sql-server-linux-develop-overview.md
       items:

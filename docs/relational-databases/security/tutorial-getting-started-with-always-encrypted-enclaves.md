@@ -84,8 +84,6 @@ In this step, you will configure the HGS computer to run Host Guardian Service s
 
 4. Find the IP address of the HGS computer by running the following command. Save this IP address for later steps.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
    ```powershell
    Get-NetIPAddress  
    ```

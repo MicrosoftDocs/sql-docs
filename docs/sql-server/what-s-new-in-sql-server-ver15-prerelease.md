@@ -374,7 +374,7 @@ For the current information, see [What's New in SQL Server 2019](what-s-new-in-s
 | New feature or update | Details |
 |:-----|:-----|
 |[Azure Data Studio](../azure-data-studio/what-is.md) supports Connect and manage [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters. |[What is Azure Data Studio](../azure-data-studio/what-is.md)|
-|Supports scenarios using SQL Server big data clusters. |[SQL Server 2019 extension (preview)](../azure-data-studio/sql-server-2019-extension.md)|
+|Supports scenarios using SQL Server big data clusters. |[Data Virtualization extension](../azure-data-studio/data-virtualization-extension.md)|
 |[**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md): Supports [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].| |
 |Support for Always Encrypted with secure enclaves. |[Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md)|
 | &nbsp; | &nbsp; |
@@ -800,7 +800,7 @@ FROM sys.dm_exec_requests AS d
 
 ### <a id="tools"></a>Tools
 
-- [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio and the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Preview extension](../azure-data-studio/sql-server-2019-extension.md) you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
+- [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio and the [Data Virtualization extension](../azure-data-studio/data-virtualization-extension.md) you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
 
 <a name = "tools-ctp23"></a>
 

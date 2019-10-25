@@ -9,7 +9,7 @@ ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "rajmera3"
-ms.author: "rajmera3"
+ms.author: "raajmera"
 ---
 # Data Virtualization extension for Azure Data Studio
 
@@ -17,28 +17,7 @@ The Data Virtualization extension for Azure Data Studio provides support for the
 
 ## Install the Data Virtualization extension
 
-To install the Data Virtualization extension, download and install the associated .vsix file.
-
-1. Download the Data Virtualization extension .vsix file to a local directory:
-
-   |Platform|Download|Release date|Version
-   |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|November 4, 2019 |1.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|November 4, 2019 |1.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|November 4, 2019 |1.0
-
-   > [!NOTE]
-   > There is a known issue with Internet Explorer where the VSIX will be downloaded as zip files. Use Edge or another browser to  download the VSIX correctly. 
-
-1. In Azure Data Studio, choose **Install Extension from VSIX Package** from the **File** menu and select the downloaded .vsix file.
-
-1. Choose **Yes** when prompted to confirm installation and wait for the notification that the installation succeeded.
-
-1. Select **Reload** to enable the extension (only required the first time you install an extension).
-
-1. After reloading, the extension will install dependencies. You can see the progress in the Output window, and it could take several minutes.
-
-1. After the dependencies finish installing, close and reopen Azure Data Studio. The **SQL Server big data cluster** connection type is not available until you restart Azure Data Studio.
+To install the Data Virtualization extension, open Azure Data Studio and download it from the Extensions tab. Follow the instructions [here](extensions.md).
 
 ## Changes in release 1.0
 * Extension renamed to Data Virtualization.

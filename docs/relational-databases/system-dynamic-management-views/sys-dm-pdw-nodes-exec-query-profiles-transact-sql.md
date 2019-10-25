@@ -11,11 +11,11 @@ dev_langs:
 ms.assetid: 
 author: XiaoyuMSFT 
 ms.author: xiaoyul
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 
 # sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Monitors real time data warehouse query progress while the query is in execution.   
   
@@ -24,6 +24,7 @@ The counters returned are per operator per thread. The results are dynamic and d
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
+|pdw_node_id|**int**|Unique numeric id associated with the node.|
 |session_id|**smallint**|Identifies the session in which this query runs. References dm_exec_sessions.session_id.|  
 |request_id|**int**|Identifies the target request. References dm_exec_sessions.request_id.|  
 |sql_handle|**varbinary(64)**|Is a token that uniquely identifies the batch or stored procedure that the query is part of. References dm_exec_query_stats.sql_handle.|  
@@ -60,7 +61,6 @@ The counters returned are per operator per thread. The results are dynamic and d
 |segment_skip_count|**int**|Number of segments skipped so far.| 
 |actual_read_row_count|**bigint**|Number of rows read by an operator before the residual predicate was applied.| 
 |estimated_read_row_count|**bigint**|**Applies to:** Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Number of rows estimated to be read by an operator before the residual predicate was applied.|  
-|pdw_node_id|**int**|Unique numeric id associated with the node.|
   
 ## Remarks  
 The same remarks in [sys.dm_exec_query_profiles](https://docs.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15) apply.  

@@ -4,7 +4,7 @@ description: Set up a Python local environment (Jupyter Notebook or PyCharm) for
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: Learn about SQL Server 2019 language extensions (preview) that run external scripts within SQL Server. 
 author: dphansen
 ms.author: davidph 
-ms.date: 10/15/2019
+ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions

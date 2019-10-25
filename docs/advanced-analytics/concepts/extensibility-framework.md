@@ -4,7 +4,7 @@ description: This article describes the architecture of the extensibility framew
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/08/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye

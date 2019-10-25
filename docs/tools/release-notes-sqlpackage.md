@@ -43,31 +43,21 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Feature | Details |
 | :------ | :------ |
 | Deployment | Add support to deploy to Azure SQL Data Warehouse (GA). | 
-| Deployment | sqlpackage .NET Core GA. | 
+| Platform | sqlpackage .NET Core GA for macOS, Linux, and Windows. | 
 | Security | Remove SHA1 code signing. |
 | Deployment | Add support for new Azure database editions: GeneralPurpose, BusinessCritical, Hyperscale |
 | Deployment | Add Managed Instance support for AAD user and groups. |
 | Deployment | Support the /AccessToken parameter for sqlpackage on .NET Core. |
 | &nbsp; | &nbsp; |
 
-### Fixes
-
-| Fix | Details |
-| :-- | :------ |
-| Deployment | Fix to ignore automatic indexes so that they are not dropped on deployment. | 
-| Always Encrypted | Fix for handling Always Encrypted varchar columns. | 
-| Build/Deployment | Fix to resolve the nodes() method for xml column sets.| 
-| ScriptDom | Fix additional cases where the 'URL' string was interpreted as a top level token. | 
-| Graph | Fix generated TSQL for pseudo column references in constraints.  | 
-| Export | Generate random passwords that meet complexity requirements. | 
-| Deployment | Fix to honor command timeouts when retrieving constraints. | 
-| .NET Core (preview) | Fix diagnostic logging to a file. | 
-| .NET Core (preview) | Use streaming to export table data to support large tables. | 
-| &nbsp; | &nbsp; |
-
 ### Known Issues 
 
-sqlpackage for .NET Core has the following known issues:
+| Feature | Details |
+| :------ | :------ |
+| ScriptDom |  A ScriptDom parsing regression was introduced in 18.3.1 where 'RENAME' is incorrectly treated as a top level token, cause parsing to fail. This will be fixed in the next sqlpackage release. | 
+| &nbsp; | &nbsp; |
+
+### Known Issues for .NET Core
 
 | Feature | Details |
 | :------ | :------ |
@@ -75,6 +65,7 @@ sqlpackage for .NET Core has the following known issues:
 | Deployment | The parameter /p:Storage=File is not supported. Only Memory is supported on .NET Core. | 
 | Always Encrypted | sqlpackage .NET Core does not support Always Encrypted columns. | 
 | Security | sqlpackage .NET Core does not support the /ua parameter for multi-factor authenticaion. | 
+| Deployment | Older V2 .dacpac and .bacpac files that use json data serialization aren't supported. |
 | &nbsp; | &nbsp; |
 
 ## 18.3.1 sqlpackage
@@ -125,19 +116,19 @@ sqlpackage for .NET Core has the following known issues:
 
 | Feature | Details |
 | :------ | :------ |
-| Add graph table support for edge constraints and edge constraint clauses. | &nbsp; |
-| Enabled model validation rule to support 32 columns for index keys for SQL Server 2016 and up. | &nbsp; |
+| Graph | Add graph table support for edge constraints and edge constraint clauses. |
+| Deployment | Enabled model validation rule to support 32 columns for index keys for SQL Server 2016 and up. |
 | &nbsp; | &nbsp; |
 
 ### Fixes
 
 | Fix | Details |
 | :-- | :------ |
-| Fix reverse engineering a SQL Server 2016 RTM database due to an unsupported query hint being used. | &nbsp; |
-| Fix deployment ordering of auto close alter statements to occur before create filegroup statements. | &nbsp; |
-| Fix ScriptDom parsing regression where the 'URL' string was interpreted as a top level token. | &nbsp; |
-| Fix a null reference exception when parsing an alter table add index statement. | &nbsp; |
-| Fixed schema compare for nullable persisted computed columns always showing as different.| &nbsp; |
+| Deployment | Fix reverse engineering a SQL Server 2016 RTM database due to an unsupported query hint being used. |
+| Deployment | Fix deployment ordering of auto close alter statements to occur before create filegroup statements. |
+| ScriptDom | Fix ScriptDom parsing regression where the 'URL' string was interpreted as a top level token. |
+| Deployment | Fix a null reference exception when parsing an alter table add index statement. | 
+| Schema Compare | Fixed schema compare for nullable persisted computed columns always showing as different.|
 | &nbsp; | &nbsp; |
 
 ## 18.1 sqlpackage
@@ -150,10 +141,10 @@ Preview release.
 
 | Feature | Details |
 | :------ | :------ |
-| Added support for UTF8 collations. | &nbsp; |
-| Enabled nonclustered columnstore indexes on an indexed view. | &nbsp; |
-| Moved to .NET Core 2.2. | &nbsp; |
-| Use memory backed storage for schema compare on .NET Core. | &nbsp; |
+| Deployment | Added support for UTF8 collations. |
+| Deployment | Enabled nonclustered columnstore indexes on an indexed view. |
+| Platform | Moved to .NET Core 2.2. | 
+| Schema Compare | Use memory backed storage for schema compare on .NET Core. |
 | &nbsp; | &nbsp; |
 
 ### Fixes
@@ -266,5 +257,5 @@ Build: &nbsp; 14.0.3881.1
 
 | Fix | Details |
 | :-- | :------ |
-| Desployment | Do not block when encountering a database compatibility level that is not understood. Instead, the latest Azure SQL Database or on-premises platform will be assumed. |
+| Deployment | Do not block when encountering a database compatibility level that is not understood. Instead, the latest Azure SQL Database or on-premises platform will be assumed. |
 | &nbsp; | &nbsp; |

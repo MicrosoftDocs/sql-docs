@@ -210,7 +210,7 @@ The following features and services are not available SQL Server 2019 on Linux. 
 
 | Area | Unsupported feature or service |
 |-----|-----|
-| **Database engine** | Transactional replication |
+| **Database engine** | Merge replication |
 | &nbsp; | Stretch DB |
 | &nbsp; | Distributed query with 3rd-party connections |
 | &nbsp; | Linked Servers to data sources other than [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |

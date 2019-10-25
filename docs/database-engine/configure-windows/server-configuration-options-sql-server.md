@@ -117,7 +117,7 @@ Self-configuring options are those that [!INCLUDE[ssNoVersion](../../includes/ss
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, obsolete)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|
-    |[polybase enabled] (RR) **Applies to**: SQL 2019|0|1|0|
+    |[PolyBase enabled] (RR) **Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)])|0|1|0|
     |[PolyBase Hadoop and Azure blob storage](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|7|0|   
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  

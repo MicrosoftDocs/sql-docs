@@ -41,9 +41,6 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 This topic provides details of features supported by the various editions of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)].
 
-> [!NOTE]
-> This content is being updated for SQL Server 2019. The information in the article is not final.
-
 For information about older versions, see:
 
 * [SQL Server 2017](editions-and-components-of-sql-server-2017.md)

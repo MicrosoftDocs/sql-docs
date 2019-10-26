@@ -196,8 +196,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Row-level security|Yes|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|  
 |Always Encrypted|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>| 
 |Dynamic data masking|Yes|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|   
-|Basic auditing|Yes|Yes|Yes|Yes|Yes| 
-|Fine grained auditing|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>| 
+|Server audit|Yes|Yes|Yes|Yes|Yes| 
+|Database audit|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>| 
 |Transparent database encryption|Yes|No|No|No|No|   
 |Extensible key management|Yes|No|No|No|No| 
 |User-defined roles|Yes|Yes|Yes|Yes|Yes| 

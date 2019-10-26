@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: Language extensions installation steps for SQL Server 2019 in Windows.
 author: dphansen
 ms.author: davidph 
-ms.date: 10/17/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions

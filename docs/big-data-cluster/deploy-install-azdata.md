@@ -1,11 +1,11 @@
 ---
 title: Install azdata using pip
 titleSuffix: SQL Server big data clusters
-description: Learn how to install the azdata tool for installing and managing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview) with pip.
+description: Learn how to install the azdata tool for installing and managing Big Data Clusters with pip.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/01/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to install the `azdata` tool for the release candidate on Windows or Linux using `pip`.
+This article describes how to install the `azdata` tool Windows or Linux using `pip`.
 
 For Windows and Linux (Ubuntu distribution), you can install with a [package manager](./deploy-install-azdata-installer.md) for a simpler experience.
 
@@ -23,6 +23,7 @@ For Windows and Linux (Ubuntu distribution), you can install with a [package man
 
 `azdata` is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. `pip` is required to download and install `azdata` tool. The instructions below provide examples for Windows and Ubuntu. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
 In addition, install and update the latest version of `requests` Python package:
+
 ```bash
 pip3 install -U requests
 ```
@@ -122,7 +123,7 @@ To install `azdata` on macOS or OS X complete these steps. For each step, run th
    brew install freetds
    ```
 
-1. If you have any previous releases of the tool installed, it is important to uninstall it first before installing the latest version of `azdata`. The following command removes the release candidate version of `azdata`.
+1. If you have any previous releases of the tool installed, it is important to uninstall it first before installing the latest version of `azdata`. The following command removes the version of `azdata`.
 
    ```
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt

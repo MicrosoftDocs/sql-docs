@@ -1,7 +1,7 @@
 ---
 title: "sp_configure (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/07/2018"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""

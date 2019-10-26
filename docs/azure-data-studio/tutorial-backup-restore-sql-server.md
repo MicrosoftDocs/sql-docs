@@ -9,7 +9,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
-ms.date: "11/04/2019"
+ms.date: 11/04/2019
 ---
 
 # Backup and Restore databases using [!INCLUDE[name-sos](../includes/name-sos-short.md)]

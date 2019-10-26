@@ -5,7 +5,7 @@ description: Learn how to upgrade [!INCLUDE[big-data-clusters-2019](../includes/
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article provides guidance on how to upgrade a SQL Server big data cluster to a new release. The steps in this article specifically apply to how to upgrade between preview releases or from a preview release to SQL Server 2019 service update release.
+This article provides guidance on how to upgrade a SQL Server big data cluster to a new release. The steps in this article specifically apply to how to upgrade from a preview release to SQL Server 2019 service update release.
 
 ## Backup and delete the old cluster
 

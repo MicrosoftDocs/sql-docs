@@ -4,7 +4,7 @@ description: External code support for the SQL Server database engine, with dual
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/30/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

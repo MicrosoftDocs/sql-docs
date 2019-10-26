@@ -47,7 +47,7 @@ Once removed, [install `azdata` on Windows](#install-azdata-windows).
 
 Use the Windows Installer to install or update `azdata` on Windows.
 
-[Download the `azdata` Windows Installer](http://aka.ms/azdata-msi).
+[Download the `azdata` Windows Installer](httpss://aka.ms/azdata-msi).
 
 When the installer asks if it can make changes to your computer, click `Yes`.
 

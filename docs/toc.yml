@@ -17,13 +17,6 @@
       href: sql-server/what-s-new-in-sql-server-2017.md
     - name: SQL Server 2016
       href: sql-server/what-s-new-in-sql-server-2016.md
-  - name: New with the database engine
-    href: database-engine/sql-server-database-engine-overview.md
-    items:
-    - name: SQL Server 2017
-      href: database-engine/whats-new-in-sql-server-2017.md
-    - name: SQL Server 2016
-      href: database-engine/whats-new-in-sql-server-2016.md
   - name: Editions & Features
     items:
     - name: SQL Server 2019
@@ -8367,8 +8360,8 @@
       items:
       - name: PostgreSQL extension
         href: azure-data-studio/postgres-extension.md
-      - name: SQL Server 2019
-        href: azure-data-studio/sql-server-2019-extension.md
+      - name: Data Virtualization extension
+        href: azure-data-studio/data-virtualization-extension.md
       - name: SQL Server Agent
         href: azure-data-studio/sql-server-agent-extension.md
       - name: SQL Server Central Management Servers extension
@@ -10322,8 +10315,12 @@
         href: linux/sql-server-linux-release-notes-2019.md
       - name: SQL Server 2017
         href: linux/sql-server-linux-release-notes.md
-    - name: Editions & supported features
-      href: linux/sql-server-linux-editions-and-components-2017.md
+    - name: Editions & Features
+      items:
+      - name: SQL Server 2019
+        href: linux/sql-server-linux-editions-and-components-2019.md
+      - name: SQL Server 2017
+        href: linux/sql-server-linux-editions-and-components-2017.md
     - name: FAQ
       href: linux/sql-server-linux-faq.md
   - name: Quickstarts
@@ -12496,6 +12493,12 @@
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md
       - name: sys.dm_tcp_listener_states
         href: relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md
+    - name: Big Data Clusters
+      items:
+      - name: sys.dm_cluster_endpoints
+        href: relational-databases/system-dynamic-management-views/sys-dm-cluster-endpoints.md
+      - name: sys.dm_exec_compute_pools
+        href: relational-databases/system-dynamic-management-views/sys-dm-exec-compute-pools.md
     - name: Change Data Capture
       items:
       - name: sys.dm_cdc_errors

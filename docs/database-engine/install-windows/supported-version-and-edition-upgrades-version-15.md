@@ -1,7 +1,7 @@
 ---
 title: "Supported Version and Edition Upgrades - SQL Server 2019| Microsoft Docs"
 ms.custom: ""
-ms.date: "11/01/2019"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -85,26 +85,23 @@ The table below lists the supported upgrade scenarios from earlier versions of [
 
  \* Microsoft support to upgrade from release candidate software is specifically for customers who participated in the Early Adopter Program.
 
-## Upgrades for older versions
+## Migrate to SQL Server 2019
 
-An in-place upgrade [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] is not supported. You can [migrate to a new installation](choose-a-database-engine-upgrade-method.md#migrate-to-a-new-installation).
+You can migrate databases from older versions. For example, you can migrate databases from [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] to SQL Server 2019.
 
-To migrate, you will need to either detach the database and log files and attach them, or back up and restore the databases.
+For information, see [Azure Database Migration Guide](https://datamigration.microsoft.com/scenario/sql-to-sqlserver).
 
-For [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] and older, the following actions are not supported:
+The following tips and tools can help you plan and implement your migration.
 
-- Upgrade to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)].
-- Installing [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] on same computer (side by side).
-- Using a [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] or older instance as a member of the replication topology that involves a [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] instance.  
-- Configuring database mirroring between [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] and [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] or older instances.
-- Backing up the transaction log with log shipping between [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] and [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] instances.
-- Configuring linked servers between [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] and [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instances.
-- Managing a [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] or older instance from a [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Management Studio or Azure Data Studio.
-- Attaching a [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] or older cube in [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Management Studio.
-- Connecting to [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] or older SSIS service from [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Management Studio or Azure Data Studio.
-- Managing a [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] or older  SSIS service from [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Management Studio.
-- Support for [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] or older third party custom Integration Services components, such as execute and upgrade.
-  
+- Migration tools: Migration is supported through [Data Migration Assistant (DMA)](https://aka.ms/dma).
+- Backup and restore: A backup taken on SQL Server 2008 or SQL Server 2008 R2 can be restored to SQL Server 2019.
+- Log shipping: Log shipping is supported if primary is running SQL Server 2008 SP3 or later, or SQL Server 2008 R2 SP2 or later, and secondary is running SQL Server 2019. 
+
+   > [!WARNING]
+   > If an automatic or manual failover happens and the SQL Server 2019 instance becomes primary, SQL Server 2008 or SQL Server 2008 R2 instance becomes secondary and cannot receive changes from primary.
+
+- Bulk load: Tables can be bulk copied from SQL Server 2008 or SQL Server 2008 R2 to SQL Server 2019.
+
 ## [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Edition Upgrade 
 
 The following table lists the supported edition upgrade scenarios in [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)].  

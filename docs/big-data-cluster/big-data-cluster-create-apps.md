@@ -5,7 +5,7 @@ description: Deploy a Python or R script as an application on [!INCLUDE[big-data
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 11/01/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

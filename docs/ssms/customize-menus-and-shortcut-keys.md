@@ -1,7 +1,7 @@
 ---
 title: "Customize Menus and Shortcut Keys | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

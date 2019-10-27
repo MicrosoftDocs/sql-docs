@@ -5,7 +5,7 @@ description: Manage security for HDFS tiering on SQL Server Big Data Clusters li
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 10/03/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

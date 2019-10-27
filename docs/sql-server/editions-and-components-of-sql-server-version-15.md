@@ -1,7 +1,7 @@
 ---
 title: "Editions and supported features of SQL Server 2019 | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2019"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -40,9 +40,6 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This topic provides details of features supported by the various editions of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)].
-
-> [!NOTE]
-> This content is being updated for SQL Server 2019. The information in the article is not final.
 
 For information about older versions, see:
 
@@ -223,8 +220,8 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Always Encrypted|Yes|Yes|Yes|Yes|Yes|
 |Always Encrypted with Secure Enclaves|Yes|Yes|Yes|Yes|Yes|
 |Dynamic data masking|Yes|Yes|Yes|Yes|Yes|
-|Basic auditing|Yes|Yes|Yes|Yes|Yes|
-|Fine grained auditing|Yes|Yes|Yes|Yes|Yes|
+|Server audit|Yes|Yes|Yes|Yes|Yes|
+|Database audit|Yes|Yes|Yes|Yes|Yes|
 |Transparent database encryption|Yes|Yes|No|No|No|
 |Extensible key management|Yes|No|No|No|No|
 |User-defined roles|Yes|Yes|Yes|Yes|Yes|

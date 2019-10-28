@@ -48,12 +48,13 @@ After a distribution database in the AG is configured based on the steps describ
 
 ## Limitations or exclusions
 
-- Local distributor is not supported. For example, publisher and distributor must be different SQL Server instances. A publisher using itself as distributor (a.k.a. local distributor) cannot support distribution databases in an AG.
+- Local distributor is not supported. For example, publisher and distributor must be different SQL Server instances. These instances can be hosted on the same sets of nodes.  A publisher using itself as distributor (a.k.a. local distributor) cannot support distribution databases in an AG.
 - Oracle publisher is not supported.
 - Merge replication is not supported.
 - Transactional replication with immediate or queued updating subscriber is not supported.
 - Peer to peer replication is not supported.
-- All SQL Server instances hosting distribution database replicas must be SQL Server 2017 CU 6 or later. 
+- All SQL Server 2017 instances hosting distribution database replicas must be SQL Server 2017 CU 6 or later. 
+- All SQL Server 2016 instances hosting distribution database replicas must be SQL Server 2016 SP2-CU3 or later.
 - All SQL Server instances hosting distribution database replicas must be the same version, except during the narrow timeframe when upgrade takes place.
 - The distribution database must be in full recovery mode.
 - For recovery and to allow transaction log truncation, configure full and transaction log backups.
@@ -110,8 +111,6 @@ This example configures a new distributor and publisher and puts the distributio
    The value of `@working_directory` should be a network path independent of DIST1, DIST2, and DIST3.
 
 1. On DIST2 and DIST3, run:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'

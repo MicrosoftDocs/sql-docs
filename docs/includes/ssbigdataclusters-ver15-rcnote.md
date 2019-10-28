@@ -1,0 +1,1 @@
+To experience SQL Server 2019 Big Data Clusters, use the bits provided for SQL Server 2019 CTP 3.2. Release candidate bits for SQL Server 2019 Big Data Clusters will be available soon. 

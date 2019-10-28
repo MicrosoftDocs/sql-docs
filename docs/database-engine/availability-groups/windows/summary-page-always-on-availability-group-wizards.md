@@ -35,7 +35,7 @@ ms.author: mathoma
  **Cancel**  
  Click to cancel the wizard. On the **Summary** page, cancelling the wizard causes it to exit without performing any actions.  
   
- ![Arrow icon used with Back to Top link](../../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [&#91;Top&#93;](#Top)  
+ ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [&#91;Top&#93;](#Top)  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -47,7 +47,7 @@ ms.author: mathoma
   
 -   [Use the Fail Over Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
- ![Arrow icon used with Back to Top link](../../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [&#91;Top&#93;](#Top)  
+ ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [&#91;Top&#93;](#Top)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

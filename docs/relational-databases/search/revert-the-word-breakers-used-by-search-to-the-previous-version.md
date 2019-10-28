@@ -74,7 +74,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Neutral|Neutral|0000|  
 |Norwegial Bokmaal|nor|1044|  
 |Punjabi|pan|1094|  
-|Brazilian Portuguese|ptb|1046|  
+|Portuguese (Brazil)|ptb|1046|  
 |Portuguese|ptg|2070|  
 |Romanian|rom|1048|  
 |Slovak|sky|1051|  
@@ -102,8 +102,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
   
 4.  Restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="nl6nl6restore"></a> To restore the current components  
   

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "database objects [SMO]"
   - "objects [SMO]"
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Database Objects
@@ -30,8 +30,6 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 4.  Set the child object properties.  
   
 5.  Create the object.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  When instances of SMO objects are created in an SMO application, they do not exist on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] until the **Create** method is issued. However, it is not necessary to issue a **Create** method for every individual object. If an object has a set of child objects, only the parent object is required to run the **Create** method. For example, the definition of a table requires that it contains at least one column to exist. Also, a column cannot exist in isolation without a table. There is a codependent relationship between the table and its columns.  
   

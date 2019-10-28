@@ -9,7 +9,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Data sync"
   - "SQL Database"
-  - "Windows Azure Training Kit"
+  - "Azure Training Kit"
   - "Database development"
   - "Database backup"
   - "Database connection management"
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "Backup and restore"
   - "Database import and export"
   - "SQL Data Sync"
-  - "Windows Azure Service Dashboard"
+  - "Azure Service Dashboard"
   - "SQL Server Management Studio"
   - "Database management"
   - "Database export"
@@ -39,10 +39,10 @@ manager: craigg
  To read the complete topic, see [Database Lifecycle Management (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## See Also  
- [Windows Azure Home Page](http://www.windowsazure.com/)   
- [Windows Azure Developer Center](http://www.windowsazure.com/develop/overview/)   
- [Windows Azure Manage Center](http://www.windowsazure.com/manage/overview/)   
- [Windows Azure Team Blog](http://www.windowsazure.com/community/blog/)   
- [Windows Azure Support Options](http://www.windowsazure.com/support/contact/)  
+ [Azure Home Page](http://www.windowsazure.com/)   
+ [Azure Developer Center](http://www.windowsazure.com/develop/overview/)   
+ [Azure Manage Center](http://www.windowsazure.com/manage/overview/)   
+ [Azure Team Blog](http://www.windowsazure.com/community/blog/)   
+ [Azure Support Options](http://www.windowsazure.com/support/contact/)  
   
   

@@ -59,8 +59,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### To configure an alert for a threshold in Replication Monitor  
   
 1.  On the **Warnings** tab click **Configure Alerts**.  

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Events property"
   - "Script task [Integration Services], events"
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Raising Events in the Script Task
 

@@ -38,4 +38,5 @@ ms.author: genemi
 ## Related Content  
  [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
  [XQuery Language Reference &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
+ [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)
   

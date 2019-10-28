@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Send a test email with database mail  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 Use the Send Test E-Mail dialog box to test the ability to send mail using a specific profile.
 
@@ -42,8 +42,6 @@ You must be a member of the sysadmin fixed server role to use the Send Test E-Ma
     The sent_status column indicates if the test e-mail message was sent.
 
 1. If errors occurred, execute the following statement to view the error message:
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 

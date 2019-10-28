@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "regenerating package GUID"
   - "updating package properties"
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Copy a Package in SQL Server Data Tools
 

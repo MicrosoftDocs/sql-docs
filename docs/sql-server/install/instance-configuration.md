@@ -1,7 +1,7 @@
 ---
 title: "Installation Wizard Help | Microsoft Docs"
 ms.custom: ""
-ms.date: 05/22/2019
+ms.date: 08/16/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -118,7 +118,7 @@ If you're installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md
   
 ### See also
   
-* [Configure service accounts &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)
+* [Configure service accounts &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services)
 * [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
 ## Analysis Services Configuration - Data Directories page
@@ -395,7 +395,7 @@ The following recommendations apply to the SMB file server:
   
 * The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account must be a domain account if an SMB file server is used.  
   
-* The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should have Full Control NTFS permissions on the SMB file share folder used as the data directory.  
+* The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should have **Full Control** NTFS permissions on the SMB file share folder used as the data directory.  
   
 * The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should be granted SeSecurityPrivilege privileges on the SMB file server. To grant this privilege, use the Local Security Policy console on the file server to add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup account to the **Manage auditing and security log** policy. This setting is in the **User Rights Assignments** section under **Local Policies** in the Local Security Policy console.  
   
@@ -413,11 +413,35 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## Database Engine Configuration - MaxDOP page
+## <a name="maxdop"><a/> Database Engine Configuration - MaxDOP page
 
-**Max degree of parallelism (MaxDOP)** determines the maximum number of processors that a single statement can use. SQL Server 2019 introduces the ability to configure this option during installation. SQL Server 2019 also automatically detects the recommended MaxDOP setting for the server based on the number of cores. The default maximum value is 8.  
+**Max degree of parallelism (MaxDOP)** determines the maximum number of processors that a single statement can use. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces the ability to configure this option during installation. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] also automatically detects the recommended MaxDOP setting for the server based on the number of cores.  
 
-You can manually configure this setting on this page, and you can modify this setting after installation. For more information, see [Max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+If this page is skipped during setup, the default MaxDOP value is the recommended value displayed in this page instead of the default [!INCLUDE[ssde_md](../../includes/ssde_md.md)] value for previous versions (0). You can also manually configure this setting on this page, and you can modify this setting after installation. 
+
+### UIElement list
+
+* **Max degree of parallelism (MaxDOP)** is the value for the maximum number of processors to use during parallel execution of a single statement. The default value will align with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).
+
+## <a name="memory"><a/> Database Engine Configuration - Memory page
+
+**min server memory** determines the lower memory limit that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will use for the buffer pool and other caches. The default value is 0 and the recommended value is also 0. For more information on the effects of **min server memory**, see the [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
+
+**max server memory** determines the upper memory limit that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will use for the buffer pool and other caches. The default value is 2,147,483,647 megabytes (MB) and the calculated recommended values will align with the memory configuration guidelines in [Server Memory Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually) for a standalone [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, based on the existing system memory. For more information on the effects of **max server memory**, see the [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
+
+If this page is skipped during setup, the default **max server memory** value used is the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] default value (2,147,483,647 megabytes). You can manually configure these settings on this page once you've chosen the **Recommended** radio button, and you can modify these setting after installation. For more information, see [Server Memory Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
+
+### UIElement list
+  
+**Default**: This radio button is selected by default and sets the **min server memory** and **max server memory** settings to the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] default values. 
+
+**Recommended**: This radio button must be selected to accept the calculated recommended values or to change the calculated values to user configured values.  
+  
+**Min Server Memory (MB)**: If changing from the calculated recommended value to a user configured value, enter the value for **min server memory**.  
+  
+**Max Server Memory (MB)**: If changing from the calculated recommended value to a user configured value, enter the value for **max server memory**.  
+
+**Click here to accept the recommended memory configurations for the SQL Server Database Engine**: Select this check box to accept the calculated recommended memory configurations on this server. If the **Recommended** radio button was selected, setup cannot continue without this check box being selected.
 
 ::: moniker-end
 

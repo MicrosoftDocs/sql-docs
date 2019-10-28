@@ -85,8 +85,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 4.  Modify any properties if necessary, and then click **OK**.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### To view and modify publication properties in Replication Monitor  
   
 1.  Expand a Publisher group in the left pane of Replication Monitor, and then expand a Publisher.  
@@ -100,29 +98,29 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 #### To view the properties of a snapshot or transactional publication  
   
-1.  Execute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md), specifying the name of the publication for the **@publication** parameter. If you do not specify this parameter, information on all publications at the Publisher is returned.  
+1.  Execute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md), specifying the name of the publication for the **\@publication** parameter. If you do not specify this parameter, information on all publications at the Publisher is returned.  
   
 #### To change the properties of a snapshot or transactional publication  
   
-1.  Execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying the publication property to change in the **@property** parameter and the new value of this property in the **@value** parameter.  
+1.  Execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying the publication property to change in the **\@property** parameter and the new value of this property in the **\@value** parameter.  
   
     > [!NOTE]  
-    >  If the change will require the generation of a new snapshot, you must also specify a value of **1** for **@force_invalidate_snapshot**, and if the change will require that Subscribers be reinitialized, you must specify a value of **1** for **@force_reinit_subscription**. For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  If the change will require the generation of a new snapshot, you must also specify a value of **1** for **\@force_invalidate_snapshot**, and if the change will require that Subscribers be reinitialized, you must specify a value of **1** for **\@force_reinit_subscription**. For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### To view the properties of a merge publication  
   
-1.  Execute [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), specifying the name of the publication for the **@publication** parameter. If you do not specify this parameter, information on all publications at the Publisher is returned.  
+1.  Execute [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), specifying the name of the publication for the **\@publication** parameter. If you do not specify this parameter, information on all publications at the Publisher is returned.  
   
 #### To change the properties of a merge publication  
   
-1.  Execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying the publication property being changed in the **@property** parameter and the new value of this property in the **@value** parameter.  
+1.  Execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying the publication property being changed in the **\@property** parameter and the new value of this property in the **\@value** parameter.  
   
     > [!NOTE]  
-    >  If the change will require the generation of a new snapshot, you must also specify a value of **1** for **@force_invalidate_snapshot**, and if the change will require that Subscribers be reinitialized, you must specify a value of **1** for **@force_reinit_subscription** For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  If the change will require the generation of a new snapshot, you must also specify a value of **1** for **\@force_invalidate_snapshot**, and if the change will require that Subscribers be reinitialized, you must specify a value of **1** for **\@force_reinit_subscription** For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### To view the properties of a snapshot  
   
-1.  Execute [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md), specifying the name of the publication for the **@publication** parameter.  
+1.  Execute [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md), specifying the name of the publication for the **\@publication** parameter.  
   
 #### To change the properties of a snapshot  
   

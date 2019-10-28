@@ -1,8 +1,8 @@
 ---
-title: Virtualize external data in SQL Server 2019 CTP 2.0 | Microsoft Docs
+title: Virtualize external data in SQL Server 2019 | Microsoft Docs
 description: This page details the steps for using the Create external table wizard for relational Data sources
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 ms.date: 07/24/2019
 ms.topic: conceptual
@@ -13,7 +13,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 # Use the External Table Wizard with relational data sources
 
-One of the key scenarios for SQL Server 2019 CTP 2.0 is the ability to virtualize data. This process allows the data to stay in its original location. You can *virtualize* the data in a SQL Server instance so that it can be queried there like any other table in SQL Server. This process minimizes the need for ETL processes. This process is possible with the use of PolyBase connectors. For more information on data virtualization, see [Get started with PolyBase](polybase-guide.md).
+One of the key scenarios for SQL Server 2019 is the ability to virtualize data. This process allows the data to stay in its original location. You can *virtualize* the data in a SQL Server instance so that it can be queried there like any other table in SQL Server. This process minimizes the need for ETL processes. This process is possible with the use of PolyBase connectors. For more information on data virtualization, see [Get started with PolyBase](polybase-guide.md).
 
 ## Start the External Table wizard
 
@@ -39,10 +39,7 @@ In this step, you create a database master key. Creating a master key is require
 ![Create a database master key](media/data-virtualization/virtualize-data-master-key.png)
 
 > [!IMPORTANT]
-> If you already have a database master key, the input fields are restricted and you can bypass this step. Select **Next** to proceed.
-
-> [!NOTE]
-> If you don't choose a strong password, the wizard does so in the last step. This is a known issue.
+> If you already have a database master key, this step will be automatically bypassed.
 
 ## Enter external data source credentials
 

@@ -110,8 +110,6 @@ In this section, you create a transactional publication by using [!INCLUDE[ssMan
   
 14. After the publication is created, select **Close** to complete the wizard. 
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 You might encounter the following error if your SQL Server Agent is not running when you try to create the publication. This error indicates that your publication was created successfully but your Snapshot Agent was unable to start. If this happens, you'll need to start the SQL Server Agent, and then manually start the Snapshot Agent. The next section gives instructions. 
 
 ![Warning that the Snapshot Agent has failed to start](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagenterror.png)

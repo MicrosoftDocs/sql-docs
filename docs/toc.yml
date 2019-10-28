@@ -8204,7 +8204,7 @@
           - name: Create and use indexes on enclave-enabled columns
             href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
           - name: Develop applications using Always Encrypted with secure enclaves
-            href: relational-databases/security/encryption/always-encrypted-client-development.md          
+            href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md          
       - name: Troubleshoot TDE
         href: relational-databases/security/encryption/troubleshoot-tde.md
       - name: Move a TDE protected database
@@ -8348,6 +8348,8 @@
         href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
       - name: Create and use indexes on Always Encrypted with secure enclaves columns
         href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
+      - name: Develop a .NET Framework application using Always Encrypted with secure enclaves
+        href: relational-databases/security/tutorial-always-encrypted-enclaves-develop-net-framework-apps.md
   - name: Reference
     items:
     - name: Permissions or Securables page

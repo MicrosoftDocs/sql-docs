@@ -17,15 +17,9 @@ highlightedContent:
    - title: Get an Azure VM with SQL Server
      itemType: overview
      url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm
-<<<<<<< HEAD
    - title: Download query data tools
      itemType: download
      url: tools/overview-sql-tools.md
-=======
-   - title: SQL data tools
-     itemType: overview
-     url: tools/sql-tools-hub.yml
->>>>>>> cd8c2d2164... Apply changes
    - title: SQL Server Education Center
      itemType: learn
      url: lp/sql-server/sql-education-center.md

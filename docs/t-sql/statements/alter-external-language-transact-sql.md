@@ -104,7 +104,7 @@ This parameter is needed for hybrid OS scenarios. In a hybrid architecture, the 
 
 ## Remarks
 
-In CTP 3.0, **PARAMETERS** and **ENVIRONMENT_VARIABLES** are not supported.
+Currently, **PARAMETERS** and **ENVIRONMENT_VARIABLES** are not supported.
 
 ## Permissions
 

@@ -31,8 +31,8 @@ Set the environment variable `'MKL_CBWR'=AUTO` to ensure conditional numerical r
 
 2. Create a new User or System variable. 
 
-  + Set variable name to 'MKL_CBWR'.
-  + Set the 'Variable value' to 'AUTO'.
+   + Set variable name to 'MKL_CBWR'.
+   + Set the 'Variable value' to 'AUTO'.
 
 3. Restart R_SERVER. On SQL Server, you can restart SQL Server Launchpad Service.
 
@@ -74,9 +74,9 @@ The following example shows the commands with the default instance "MSSQL14.MSSQ
 If you try to install SQL Server 2016 R Services or SQL Server Machine Learning Services on a domain controller, setup fails, with these errors:
 
 > *An error occurred during the setup process of the feature*
-> 
+>
 > *Cannot find group with identity*
-> 
+>
 > *Component error code: 0x80131509*
 
 The failure occurs because, on a domain controller, the service cannot create the 20 local accounts required to run machine learning. In general, we do not recommend installing SQL Server on a domain controller. For more information, see [Support bulletin 2032911](https://support.microsoft.com/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
@@ -176,7 +176,7 @@ If upgrade is not feasible, as a workaround, use  a SQL login to run remote R jo
 
 ### 11. Performance limits when libraries used by SQL Server are called from other tools
 
-It is possible to call the machine learning libraries that are installed for SQL Server from an external application, such as RGui. Doing so might be the most convenient way to accomplish certain tasks, such as installing new packages, or running ad hoc tests on very short code samples. However, outside of SQL Server, performance might be limited. 
+It is possible to call the machine learning libraries that are installed for SQL Server from an external application, such as RGui. Doing so might be the most convenient way to accomplish certain tasks, such as installing new packages, or running ad hoc tests on very short code samples. However, outside of SQL Server, performance might be limited.
 
 For example, even if you are using the Enterprise Edition of SQL Server, R runs in single-threaded mode when you run your R code by using external tools. To get the benefits of performance in SQL Server, initiate a SQL Server connection and use [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to call the external script runtime.
 
@@ -199,6 +199,51 @@ In Enterprise Edition, you can use resource pools to manage external script proc
 If you encounter resource limitations, check the current default. If 20 percent is not enough, see the documentation for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on how to change this value.
 
 **Applies to:** SQL Server 2016 R Services, Enterprise Edition
+
+
+### 14. Error when using `sp_execute_external_script` without `libc++.so` on Linux
+
+On a clean Linux machine that does not have `libc++.so` installed, running a `sp_execute_external_script` (SPEES) query with Java or an external language fails because `commonlauncher.so` fails to load `libc++.so`.
+
+For example:
+
+```sql
+EXECUTE sp_execute_external_script @language = N'Java'
+    , @script = N'JavaTestPackage.PassThrough'
+    , @parallel = 0
+    , @input_data_1 = N'select 1'
+WITH RESULT SETS((col1 INT NOT NULL))
+GO
+```
+
+This fails with a message similar to the following:
+
+```text
+Msg 39012, Level 16, State 14, Line 0
+
+Unable to communicate with the runtime for 'Java' script for request id: 94257840-1704-45E8-83D2-2F74AEB46CF7. Please check the requirements of 'Java' runtime.
+```
+
+The `mssql-launchpadd` logs will show an error message similar to the following:
+
+```text
+Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WARNING: PopulateLauncher failed: Library /opt/mssql-extensibility/lib/commonlauncher.so not loaded. Error: libc++.so.1: cannot open shared object file: No such file or directory
+```
+
+**Workaround**
+
+You can perform one of the following workarounds:
+
+1. Copy `libc++*` from `/opt/mssql/lib` to the default system path `/lib64`
+
+1. Add the following entries to `/var/opt/mssql/mssql.conf` to expose the path:
+
+   ```text
+   [extensibility]
+   readabledirectories = /opt/mssql
+   ```
+
+**Applies to:** SQL Server 2019 on Linux
 
 ## R script execution issues
 
@@ -289,8 +334,8 @@ If you use an R command to clear your workspace of objects while running R code 
 
 As a workaround, avoid indiscriminate clearing of variables and other objects while you're running R in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Although clearing the workspace is common when working in the R console, it can have unintended consequences.
 
-* To delete specific variables, use the R `remove` function: for example, `remove('name1', 'name2', ...)`
-* If there are multiple variables to delete, save the names of temporary variables to a list and perform periodic garbage collection.
++ To delete specific variables, use the R `remove` function: for example, `remove('name1', 'name2', ...)`
++ If there are multiple variables to delete, save the names of temporary variables to a list and perform periodic garbage collection.
 
 ### 8. Restrictions on data that can be provided as input to an R script
 
@@ -404,7 +449,7 @@ Ordered factors are treated the same as factors in all RevoScaleR analysis funct
 
 Using `data.table` as an `OutputDataSet` in R is not supported in SQL Server 2017 Cumulative Update 13 (CU13) and earlier. The following message might appear:
 
-```
+``` text
 Msg 39004, Level 16, State 20, Line 2
 A 'R' script error occurred during execution of 
 'sp_execute_external_script' with HRESULT 0x80004004.
@@ -423,6 +468,47 @@ Execution halted
 
 `data.table` as an `OutputDataSet` in R is supported in SQL Server 2017 Cumulative Update 14 (CU14) and later.
 
+### 21. Running a long script fails while installing a library
+
+Running a long running external script session and having the dbo in parallel trying to install a library on a different database can terminate the script.
+
+For example, running this external script against master:
+
+```sql
+USE MASTER
+DECLARE @language nvarchar(1) = N'R'
+DECLARE @script nvarchar(max) = N'Sys.sleep(100)'
+DECLARE @input_data_1 nvarchar(max) = N'select 1'
+EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1 with result sets none
+go
+```
+
+While the dbo in parallel installs a library in LibraryManagementFunctional:
+
+```sql
+USE [LibraryManagementFunctional]
+go
+
+CREATE EXTERNAL LIBRARY [RODBC] FROM (CONTENT = N'/home/ani/var/opt/mssql/data/RODBC_1.3-16.tar.gz') WITH (LANGUAGE = 'R')
+go
+
+DECLARE @language nvarchar(1) = N'R'
+DECLARE @script nvarchar(14) = N'library(RODBC)'
+DECLARE @input_data_1 nvarchar(8) = N'select 1'
+EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1
+go
+```
+
+The previous long running external script against master will terminate with the following error message:
+
+> *A 'R' script error occurred during execution of 'sp_execute_external_script' with HRESULT 0x800704d4.*
+
+**Workaround**
+
+Don’t run the library install in parallel to the long-running query. Or rerun the long running query after the installation is complete.
+
+**Applies to:** SQL Server 2019 on Linux & Big Data Clusters only.
+
 ## Python script execution issues
 
 This section contains known issues that are specific to running Python on SQL Server, as well as issues that are related to the Python packages published by Microsoft, including [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
@@ -431,7 +517,7 @@ This section contains known issues that are specific to running Python on SQL Se
 
 If you installed the pretrained models in an early release of SQL Server 2017, the complete path to the trained model file might be too long for Python to read. This limitation is fixed in a later service release.
 
-There are several potential workarounds: 
+There are several potential workarounds:
 
 + When you install the pretrained models, choose a custom location.
 + If possible, install the SQL Server instance under a custom installation path with a shorter path, such as C:\SQL\MSSQL14.MSSQLSERVER.
@@ -489,9 +575,9 @@ This issue has been fixed in SQL Server 2017 Cumulative Update 3 (CU3).
 Beginning with SQL Server 2017 Cumulative Update 12 (CU12), numeric, decimal and money data types in WITH RESULT SETS are unsupported when using Python with `sp_execute_external_script`. The following messages might appear:
 
 > *[Code: 39004, SQL State: S1000]  A 'Python' script error occurred during execution of'sp_execute_external_script' with HRESULT 0x80004004.*
-
+>
 > *[Code: 39019, SQL State: S1000]  An external script error occurred:*
-> 
+>
 > *SqlSatelliteCall error: Unsupported type in output schema. Supported types: bit, smallint, int, datetime, smallmoney, real and float. char, varchar are partially supported.*
 
 This has been fixed in SQL Server 2017 Cumulative Update 14 (CU14).
@@ -520,6 +606,80 @@ wget 'https://bootstrap.pypa.io/get-pip.py'
 **Recommendation**
 
 See [Install Python packages with sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md).
+
+**Applies to:** SQL Server 2019 on Linux
+
+### 7. Unable to install Python packages using pip after installing SQL Server 2019 on Windows
+
+After installing SQL Server 2019 on Windows, attempting to install a python package via **pip** from a DOS command line will fail. For example:
+
+```bash
+pip install quantfolio
+```
+
+This will return the following error:
+
+> *pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.*
+
+This is a problem specific to the Anaconda package. It will be fixed in an upcoming service release.
+
+**Workaround**
+
+Copy the following files:
+
++ `libssl-1_1-x64.dll`
++ `libcrypto-1_1-x64.dll`
+
+from the folder <br>
+`C:\Program Files\Microsoft SQL Server\MSSSQL15.MSSQLSERVER\PYTHON_SERVICES\Library\bin`
+
+to the folder <br>
+`C:\Program Files\Microsoft SQL Server\MSSSQL15.MSSQLSERVER\PYTHON_SERVICES\DLLs`
+
+Then open a new DOS command shell prompt.
+
+**Applies to:** SQL Server 2019 on Windows
+
+### 8. Error when using `sp_execute_external_script` without `libc++abo.so` on Linux
+
+On a clean Linux machine that does not have `libc++abi.so` installed, running a `sp_execute_external_script` (SPEES) query fails with a "No such file or directory" error.
+
+For example:
+
+```text
+EXEC sp_execute_external_script
+    @language = N'Python'
+    , @script = N'
+OutputDataSet = InputDataSet'
+    , @input_data_1 = N'select 1'
+    , @input_data_1_name = N'InputDataSet'
+    , @output_data_1_name = N'OutputDataSet'
+    WITH RESULT SETS (([output] int not null));
+Msg 39012, Level 16, State 14, Line 0
+Unable to communicate with the runtime for 'Python' script for request id: 94257840-1704-45E8-83D2-2F74AEB46CF7. Please check the requirements of 'Python' runtime.
+STDERR message(s) from external script:
+
+Failed to load library /opt/mssql-extensibility/lib/sqlsatellite.so with error libc++abi.so.1: cannot open shared object file: No such file or directory.
+
+SqlSatelliteCall error: Failed to load library /opt/mssql-extensibility/lib/sqlsatellite.so with error libc++abi.so.1: cannot open shared object file: No such file or directory.
+STDOUT message(s) from external script:
+SqlSatelliteCall function failed. Please see the console output for more information.
+Traceback (most recent call last):
+  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/computecontext/RxInSqlServer.py", line 605, in rx_sql_satellite_call
+    rx_native_call("SqlSatelliteCall", params)
+  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/RxSerializable.py", line 375, in rx_native_call
+    ret = px_call(functionname, params)
+RuntimeError: revoscalepy function failed.
+Total execution time: 00:01:00.387
+```
+
+**Workaround**
+
+Run the following command:
+
+```bash
+sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
+```
 
 **Applies to:** SQL Server 2019 on Linux
 

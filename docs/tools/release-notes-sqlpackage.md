@@ -234,7 +234,7 @@ Build: &nbsp; 14.0.3917.1
 
 | Fix | Details |
 | :-- | :------ |
-| Import | When importing an Azure SQL Database .bacpac to an on-premise instance, fixed errors due to _Database master keys without password are not supported in this version of SQL Server_. |
+| Import | When importing an Azure SQL Database .bacpac to an on-premises instance, fixed errors due to _Database master keys without password are not supported in this version of SQL Server_. |
 | Graph | Fixed an unresolved pseudo column error for graph tables. |
 | Schema Compare | Fixed SQL authentication to compare schemas. | 
 | &nbsp; | &nbsp; |

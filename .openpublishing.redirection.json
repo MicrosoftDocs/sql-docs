@@ -2651,6 +2651,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs//connect/jdbc/redistributing-the-microsoft-jdbc-driver.md",
+            "redirect_url": "/sql/connect/jdbc/deploying-the-jdbc-driver",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/connect/php/release-notes-for-the-php-sql-driver.md",
             "redirect_url": "/sql/connect/php/release-notes-php-sql-driver",
             "redirect_document_id": false

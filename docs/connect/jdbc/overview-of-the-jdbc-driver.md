@@ -34,8 +34,7 @@ The topics in this section provide a general overview of the JDBC driver, includ
 |[System requirements for the JDBC driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)|Describes the system requirements needed to use the Microsoft JDBC driver.|  
 |[Using the JDBC driver](../../connect/jdbc/using-the-jdbc-driver.md)|Describes how to configure your environment to use the Microsoft JDBC driver and how to make a simple connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.|  
 |[Understanding Java EE support](../../connect/jdbc/understanding-java-ee-support.md)|Describes how to use the Microsoft JDBC driver within a Java Platform, Enterprise Edition (Java EE) environment.|  
-|[Deploying the JDBC driver](../../connect/jdbc/deploying-the-jdbc-driver.md)|Describes how to deploy the Microsoft JDBC driver on Windows and Unix operating systems.|  
-|[Redistributing the Microsoft JDBC Driver](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|Describes how to register to redistribute the Microsoft JDBC driver.|  
+|[Deploying the JDBC driver](../../connect/jdbc/deploying-the-jdbc-driver.md)|Describes how to redistribute and deploy the Microsoft JDBC driver on Windows and Unix operating systems.|  
 |[Finding additional JDBC driver information](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Describes where to find additional resources about the Microsoft JDBC driver, including links to external resources.|  
 |[Microsoft JDBC Driver for SQL Server support matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Support matrix and support lifecycle policy for the Microsoft JDBC driver for SQL Server.|  
 |[Frequently asked questions &#40;FAQ&#41; for JDBC driver](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Frequently asked questions about the Microsoft JDBC driver.|  

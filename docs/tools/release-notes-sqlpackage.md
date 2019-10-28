@@ -54,17 +54,17 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Feature | Details |
 | :------ | :------ |
-| ScriptDom |  A ScriptDom parsing regression was introduced in 18.3.1 where 'RENAME' is incorrectly treated as a top level token, cause parsing to fail. This will be fixed in the next sqlpackage release. | 
+| ScriptDom |  A ScriptDom parsing regression was introduced in 18.3.1 where 'RENAME' is incorrectly treated as a top-level token, cause parsing to fail. This will be fixed in the next sqlpackage release. | 
 | &nbsp; | &nbsp; |
 
 ### Known Issues for .NET Core
 
 | Feature | Details |
 | :------ | :------ |
-| Import |  For .bacpac files with compressed files over 4GB in size, you must use the .NET Core version of sqlpackage to perform the import.  This is due to how .NET Core generates zip headers, which although valid, are not readable by the .NET Full Framework version of sqlpackage. | 
+| Import |  For .bacpac files with compressed files over 4GB in size, you might need to use the .NET Core version of sqlpackage to perform the import.  This behavior is due to how .NET Core generates zip headers, which although valid, are not readable by the .NET Full Framework version of sqlpackage. | 
 | Deployment | The parameter /p:Storage=File is not supported. Only Memory is supported on .NET Core. | 
 | Always Encrypted | sqlpackage .NET Core does not support Always Encrypted columns. | 
-| Security | sqlpackage .NET Core does not support the /ua parameter for multi-factor authenticaion. | 
+| Security | sqlpackage .NET Core does not support the /ua parameter for multi-factor authentication. | 
 | Deployment | Older V2 .dacpac and .bacpac files that use json data serialization aren't supported. |
 | &nbsp; | &nbsp; |
 
@@ -152,7 +152,7 @@ Preview release.
 | Fix | Details |
 | :-- | :------ |
 | Performance | Performance fix to use the legacy cardinality estimator for reverse engineering queries. | 
-| Performacne | Fixed a significant schema compare performance issue when generating a script. | 
+| Performance | Fixed a significant schema compare performance issue when generating a script. | 
 | Schema Compare | Fixed the schema drift detection logic to ignore certain extended event (xevent) sessions. |
 | Graph | Fixed import ordering for graph tables. | 
 | Export | Fixed exporting external tables with object permissions. |

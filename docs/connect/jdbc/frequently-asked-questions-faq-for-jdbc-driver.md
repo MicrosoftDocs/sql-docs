@@ -92,7 +92,7 @@ In general, the driver is designed to be backward compatible so that you do not 
 **How much does the driver cost?**  
 The Microsoft JDBC Driver for SQL Server is available at no additional charge.
 
-**Can I redistribute the driver?**
+**Can I redistribute the driver?**\
 The JDBC Drivers 6.0, 6.2, 6.4, and 7.0 are redistributable. Review the "Distributable Code" clause in the license agreements.
 
 **Can I use the driver to access Microsoft SQL Server from a Linux computer?**

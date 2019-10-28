@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 08/07/2019
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -330,7 +330,7 @@ The `PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` option determines how long (
 
 - The default value is set to 1 day (1440 minutes)
 - The minimum duration is set to 1 minute
-- The maximum duration is a week (7 days; 7 X 24 X 60 = 10080 minutes)
+- The maximum duration is 71582 minutes
 - When set to 0, a paused operation will never automatically abort
 
 The current value for this option is displayed in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).

@@ -1,7 +1,7 @@
 ---
 title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/14/2018"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""

@@ -1,7 +1,7 @@
 ---
 title: "RESTORE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -367,6 +367,10 @@ The RESTORE statement also can be used to perform restores to alternate location
 
 > [!NOTE]
 > Full-text catalogs imported from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] are still treated as database files. For these, the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] procedure for backing up full-text catalogs remains applicable, except that pausing and resuming during the backup operation are no longer necessary. For more information, see [Backing Up and Restoring Full-Text Catalogs](https://go.microsoft.com/fwlink/?LinkId=107381).
+
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
 
 ## Metadata
 

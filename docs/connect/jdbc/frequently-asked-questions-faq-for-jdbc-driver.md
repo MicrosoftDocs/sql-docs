@@ -1,7 +1,7 @@
 ---
-title: "Frequently Asked Questions (FAQ) for JDBC Driver | Microsoft Docs"
+title: "Frequently asked questions (FAQ) for JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/16/2019"
+ms.date: "10/28/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,31 +11,40 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 ---
-
-# Frequently Asked Questions (FAQ) for JDBC Driver
+# Frequently asked questions (FAQ) for JDBC driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 This page provides answers to frequently asked questions about the Microsoft JDBC Driver for SQL Server.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 **How can I help improve the JDBC Driver?**  
 The JDBC Driver is open-source and the source code can be found on [GitHub](https://github.com/microsoft/mssql-jdbc). You can help improve the driver by filing issues and contributing to the code base.
 
 **Which versions of SQL Server and Java do the driver support?**  
-See the [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) page for details.
+See the [Microsoft JDBC Driver for SQL Server support matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) page for details.
 
 **What is the difference between the JDBC driver packages available on the Microsoft Download Center and the JDBC driver available on GitHub?**  
 The JDBC driver files available on the GitHub repository for the Microsoft JDBC driver are the core of the JDBC driver and are under the open-source license listed in the repository. The driver packages on the Microsoft Download Center include additional libraries for Windows-integrated authentication and enabling XA transactions with the JDBC driver. Those additional libraries are under the license included with the downloadable package.
 
 **What should I know when upgrading my driver?**
+ The Microsoft JDBC Driver 7.4 supports the JDBC 4.2, and 4.3 (partially) specifications and includes three JAR class libraries in the installation package as follows:
+
+| JAR                        | JDBC Specification            | JDK Version |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-7.4.1.jre12.jar | JDBC 4.3 (partially), and 4.2 | JDK 12.0    |
+| mssql-jdbc-7.4.1.jre11.jar | JDBC 4.3 (partially), and 4.2 | JDK 11.0    |
+| mssql-jdbc-7.4.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
+
  The Microsoft JDBC Driver 7.2 supports the JDBC 4.2, and 4.3 (partially) specifications and includes two JAR class libraries in the installation package as follows:
 
 | JAR                        | JDBC Specification            | JDK Version |
 | -------------------------- | ----------------------------- | ----------- |
 | mssql-jdbc-7.2.2.jre11.jar | JDBC 4.3 (partially), and 4.2 | JDK 11.0    |
 | mssql-jdbc-7.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
 
  The Microsoft JDBC Driver 7.0 supports the JDBC 4.2, and 4.3 (partially) specifications and includes two JAR class libraries in the installation package as follows:
 
@@ -43,6 +52,7 @@ The JDBC driver files available on the GitHub repository for the Microsoft JDBC 
 | -------------------------- | ----------------------------- | ----------- |
 | mssql-jdbc-7.0.0.jre10.jar | JDBC 4.3 (partially), and 4.2 | JDK 10.0    |
 | mssql-jdbc-7.0.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 The Microsoft JDBC Driver 6.4 supports the JDBC 4.1, 4.2, and 4.3 (partially) specifications and includes three JAR class libraries in the installation package as follows:
 
@@ -51,6 +61,7 @@ The Microsoft JDBC Driver 6.4 supports the JDBC 4.1, 4.2, and 4.3 (partially) sp
 | mssql-jdbc-6.4.0.jre9.jar | JDBC 4.3 (partially), 4.2, and 4.1 | JDK 9.0     |
 | mssql-jdbc-6.4.0.jre8.jar | JDBC 4.2, and 4.1                  | JDK 8.0     |
 | mssql-jdbc-6.4.0.jre7.jar | JDBC 4.1                           | JDK 7.0     |
+| &nbsp;                    | &nbsp;                             | &nbsp;      |
 
 The Microsoft JDBC Driver 6.2 supports the JDBC 4.0, 4.1, and 4.2 specifications and includes two JAR class libraries in the installation package as follows:
 
@@ -58,6 +69,7 @@ The Microsoft JDBC Driver 6.2 supports the JDBC 4.0, 4.1, and 4.2 specifications
 | ------------------------- | ---------------------- | ----------- |
 | mssql-jdbc-6.2.2.jre8.jar | JDBC 4.2, 4.1, and 4.0 | JDK 8.0     |
 | mssql-jdbc-6.2.2.jre7.jar | JDBC 4.1 and 4.0       | JDK 7.0     |
+| &nbsp;                    | &nbsp;                 | &nbsp;      |
 
 The Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server supports JDBC 4.0, 4.1, and 4.2 specifications and include two JAR class libraries in the installation package as follows:
 
@@ -65,12 +77,14 @@ The Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server supports JDBC 4.0, 4.1, an
 | ------------- | ---------------------- | ----------- |
 | sqljdbc42.jar | JDBC 4.2, 4.1, and 4.0 | JDK 8.0     |
 | sqljdbc41.jar | JDBC 4.1 and 4.0       | JDK 7.0     |
+| &nbsp;        | &nbsp;                 | &nbsp;      |
 
 The Microsoft JDBC Driver 4.1 for SQL Server supports the JDBC 4.0 specification and includes one JAR class library in the installation package as follows:
 
 | JAR           | JDBC Specification | JDK Version     |
 | ------------- | ------------------ | --------------- |
 | sqljdbc41.jar | JDBC 4.0           | JDK 7.0 and 6.0 |
+| &nbsp;        | &nbsp;             | &nbsp;      |
 
 **Do I need to make any code changes in my application to use the latest driver with my existing SQL Server version?**  
 In general, the driver is designed to be backward compatible so that you do not need to change your existing applications when upgrading the driver. In the event that a new driver version introduces a breaking change, the [Release Notes for the JDBC Driver](../../connect/jdbc/release-notes-for-the-jdbc-driver.md) section provides clear details on the change and the impact to existing applications. In addition, you can review the release notes included with the driver for a list of bugs fixed in that release and known issues.
@@ -78,8 +92,8 @@ In general, the driver is designed to be backward compatible so that you do not 
 **How much does the driver cost?**  
 The Microsoft JDBC Driver for SQL Server is available at no additional charge.
 
-**Can I redistribute the driver?**
-The JDBC Drivers 4.1, 4.2, 6.0, 6.2, 6.4, and 7.0 are redistributable. Review the "Distributable Code" clause in the license agreements.
+**Can I redistribute the driver?**\
+The JDBC Drivers 6.0, 6.2, 6.4, and 7.0 are redistributable. Review the "Distributable Code" clause in the license agreements.
 
 **Can I use the driver to access Microsoft SQL Server from a Linux computer?**
 Yes! You can use the driver to access SQL Server from Linux, Unix, and other non-Windows platforms. For more information, see [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
@@ -90,9 +104,8 @@ Starting with version 1.2, the driver supports Secure Sockets Layer (SSL) encryp
 **Which authentication types are supported by the Microsoft JDBC Driver for SQL Server?**  
 The table below lists available authentication options. A pure Java Kerberos authentication is available starting with the 4.0 release of the driver.
 
-|             |                                       |
-| ----------- | ------------------------------------- |
 | Platform    | Authentication                        |
+| ----------- | ------------------------------------- |
 | Non-Windows | Pure Java Kerberos                    |
 | Non-Windows | SQL Server                            |
 | Non-Windows | Azure Active Directory Authentication |
@@ -101,6 +114,7 @@ The table below lists available authentication options. A pure Java Kerberos aut
 | Windows     | Kerberos with NTLM backup             |
 | Windows     | NTLM                                  |
 | Windows     | Azure Active Directory Authentication |
+| &nbsp;      | &nbsp;                                |
 
 **Does the driver support Internet Protocol version 6 (IPv6) addresses?**  
 Yes. The driver supports the use of IPv6 addresses. Use the connection properties collection and the serverName connection string property. For more information, see [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).
@@ -129,6 +143,6 @@ For customers who are using SAP products and require JRE 1.4 support, you may co
 **Can the driver communicate using FIPS validated algorithms?**  
 The Microsoft JDBC Driver does not contain any cryptographic algorithms. If a customer leverages operating system, application, and JVM algorithms that are deemed acceptable by Federal Information Processing Standards (FIPS) and configures the driver to use those algorithms then the driver uses only the designated algorithms for communication.
 
-## See Also
+## See also
 
-[Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)

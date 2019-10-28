@@ -60,8 +60,6 @@ For a **MultiLineString** instance to be valid it must meet the following criter
   
 2.  No two **LineString** instances comprising the **MultiLineString** instance may overlap over an interval. The **LineString** instances can only intersect or touch themselves or other **LineString** instances at a finite number of points.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 The following example shows three valid **MultiLineString** instances and one **MultiLineString** instance that is not valid.  
   
 ```sql  

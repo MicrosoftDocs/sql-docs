@@ -51,7 +51,7 @@ manager: craigg
  Display a view of the status of all activities (both current and historical) that are related to the connected [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. The types of activities monitored include Knowledge Management, Data Quality Project, and SSIS-based data correction.  
   
  **Configuration**  
- Display the configuration properties for reference data service accounts (both through Windows Azure Marketplace and directly to reference data services), general settings (interactive cleansing, matching, and profiling) and log severity settings.  
+ Display the configuration properties for reference data service accounts (both through Azure Marketplace and directly to reference data services), general settings (interactive cleansing, matching, and profiling) and log severity settings.  
   
 ## See Also  
  [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   

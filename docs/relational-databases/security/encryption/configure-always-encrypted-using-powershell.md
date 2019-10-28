@@ -47,8 +47,6 @@ Some of the Always Encrypted cmdlets work with data or metadata in the database 
 1. Connect using SQL Server PowerShell.
 2. Connect using SQL Server Management Objects (SMO).
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### Using SQL Server PowerShell
 
 This method works only for SQL Server (it is not supported in Azure SQL Database).

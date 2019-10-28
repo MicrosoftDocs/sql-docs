@@ -1,7 +1,7 @@
 ---
 title: "Errors and Events Reference (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/03/2016"
+ms.date: "10/15/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -32,7 +32,7 @@ ms.author: mathoma
 |Resource|Description|  
 |--------------|-----------------|  
 |[SQL Server Community](https://go.microsoft.com/fwlink/?LinkId=42455)|This site has links to newsgroups and forums monitored by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] community. It also lists community information sources, such as blogs and Web sites. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] community is very helpful in answering questions, although an answer cannot be guaranteed.|  
-|[SQL Server Developer Center Community](/sql/sql-server/sql-server-technical-documentation)|This site focuses on the newsgroups, forums, and other community resources that are useful to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] developers.|  
+|[SQL Server Developer Center Community](/sql/sql-server/index.yml)|This site focuses on the newsgroups, forums, and other community resources that are useful to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] developers.|  
 |[Microsoft Help and Support](https://go.microsoft.com/fwlink/?linkid=16419)|You can use this Web site to open a case with a [!INCLUDE[msCoName](../../includes/msconame-md.md)] support professional.|  
   
   

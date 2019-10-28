@@ -52,8 +52,6 @@ Complete the **Connect to Server** dialog box if you are not already connected t
 
 4.  Click **OK**.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   
   

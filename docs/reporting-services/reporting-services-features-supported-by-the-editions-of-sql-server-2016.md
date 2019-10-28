@@ -19,9 +19,9 @@ This topic explains the SQL Server Reporting Services (SSRS) features supported 
 
  ## Try SQL Server 2017
 
-> [![Download SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Download SQL Server 2017 from the Evaluation Center](https://go.microsoft.com/fwlink/?LinkID=829477)**    
+> [![Download SQL Server 2017](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Download SQL Server 2017 from the Evaluation Center](https://go.microsoft.com/fwlink/?LinkID=829477)**    
 >
-> ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2017 already installed](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+> ![Azure Virtual Machine small](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2017 already installed](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 For features supported by the Evaluation and Developer editions, see the SQL Server Enterprise edition column in the following table.
 

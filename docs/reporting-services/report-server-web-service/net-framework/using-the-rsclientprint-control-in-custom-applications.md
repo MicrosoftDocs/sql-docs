@@ -87,7 +87,7 @@ ms.author: maggies
   
 -   60677965-AB8B-464f-9B04-4BA871A2F17F  
   
- When you are running the report in Windows Azure SQL Reporting, you use the following CLSID values.  
+ When you are running the report in Azure SQL Reporting, you use the following CLSID values.  
   
 -   3DD32426-554D-48C0-A200-65D3BF880E38  
   

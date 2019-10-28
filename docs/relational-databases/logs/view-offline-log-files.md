@@ -69,7 +69,7 @@ ms.author: "mathoma"
   
     3.  Enter the remote computer name, and then click **OK**.  
   
-3.  Right-click **WMI Control (Local)** or **WMI Control (***RemoteComputerName***)**, and then click **Properties**.  
+3.  Right-click **WMI Control (Local)** or **WMI Control (**_RemoteComputerName_**)**, and then click **Properties**.  
   
 4.  In the **WMI Control Properties** dialog box, click the **Security** tab.  
   
@@ -80,8 +80,6 @@ ms.author: "mathoma"
 6.  Click **Security**.  
   
 7.  Make sure that the account that will be used has the **Enable Account** permission. This permission allows Read access to WMI objects.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### View Log Files  
  The following procedure shows how to view offline log files through Registered Servers. The procedure assumes the following:  

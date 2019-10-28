@@ -20,8 +20,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```
       Object1  
       [<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]<FilterExpression>::=  
 <PropertyExpression> [and <PropertyExpression>][...n]  
@@ -154,5 +153,3 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
 ## See Also  
  [Invoke-PolicyEvaluation cmdlet](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
-  
-  

@@ -34,8 +34,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 6.  Initialize the subscriptions.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  If you use merge replication in a republishing topology, all republishing Subscribers must use server subscriptions. For more information about subscription types, see [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md).  
   
@@ -62,7 +60,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 |Merge publication|Merge subscription/merge publication|Merge subscription|  
 |Merge publication|Merge subscription/transactional publication|Transactional subscription|  
   
- \*You should set the **@published_in_tran_pub** property on the merge publication. By default, transactional replication expects tables at the Subscriber to be treated as read-only. If merge replication makes data changes to a table in a transactional subscription, non-convergence of data can occur. To avoid this risk, we recommend that any such table be specified as download-only in the merge publication. This prevents a merge Subscriber from uploading data changes to the table. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+ \*You should set the `@published_in_tran_pub` property on the merge publication. By default, transactional replication expects tables at the Subscriber to be treated as read-only. If merge replication makes data changes to a table in a transactional subscription, non-convergence of data can occur. To avoid this risk, we recommend that any such table be specified as download-only in the merge publication. This prevents a merge Subscriber from uploading data changes to the table. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 ## See Also  
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   

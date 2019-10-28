@@ -41,7 +41,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  The name of a data mining algorithm, as defined by the current provider.  
   
 > [!NOTE]  
->  A list of the algorithms supported by the current provider can be retrieved by using [DMSCHEMA_MINING_SERVICES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). To view the algorithms supported in the current instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], see [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
+>  A list of the algorithms supported by the current provider can be retrieved by using [DMSCHEMA_MINING_SERVICES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). To view the algorithms supported in the current instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], see [Data Mining Properties](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *parameter list*  
  Optional. A comma-separated list of provider-defined parameters for the algorithm.  
@@ -88,13 +88,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  For a list of the data types, content types, column distributions, and modeling flags that you can use to define a column, see the following topics:  
   
--   [Data Types &#40;Data Mining&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Data Types &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [Content Types &#40;Data Mining&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Content Types &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [Column Distributions &#40;Data Mining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Column Distributions &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Modeling Flags &#40;Data Mining&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Modeling Flags &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
  You can add a clause to the statement to describe the relationship between two columns. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports the use of the following \<Column relationship> clause.  
   
@@ -115,7 +115,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
- For a list of the parameters that are associated with each algorithm, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ For a list of the parameters that are associated with each algorithm, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
 ## Remarks  
  If you want to create a model that has a built-in testing data set, you should use the statement CREATE MINING STRUCTURE followed by ALTER MINING STRUCTURE. However, not all model types support a holdout data set. For more information, see [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  

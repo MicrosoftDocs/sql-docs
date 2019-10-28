@@ -1,21 +1,21 @@
 ---
 title: Configure HDFS tiering
 titleSuffix: SQL Server big data clusters
-description: This article explains how to configure HDFS tiering to mount an external Azure Data Lake Storage file system into HDFS on a SQL Server 2019 big data cluster (preview).
+description: This article explains how to configure HDFS tiering to mount an external Azure Data Lake Storage file system into HDFS on a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Configure HDFS tiering on SQL Server big data clusters
+# Configure HDFS tiering on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-HDFS Tiering provides the ability to mount external, HDFS-compatible file system in HDFS. This article explains how to configure HDFS tiering for SQL Server 2019 big data clusters (preview). At this time, we support connecting to Azure Data Lake Storage Gen2, and Amazon S3. 
+HDFS Tiering provides the ability to mount external, HDFS-compatible file system in HDFS. This article explains how to configure HDFS tiering for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview). At this time, we support connecting to Azure Data Lake Storage Gen2, and Amazon S3. 
 
 ## HDFS tiering overview
 
@@ -49,7 +49,7 @@ We support connecting to Azure Data Lake Storage Gen2 and Amazon S3. Instruction
 
 ## <a id="issues"></a> Known issues and limitations
 
-The following list provides known issues and current limitations when using HDFS tiering in SQL Server big data clusters:
+The following list provides known issues and current limitations when using HDFS tiering in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]:
 
 - If the mount is stuck in a `CREATING` state for a long time, it has most likely failed. In this situation, cancel the command and delete the mount if necessary. Verify that your parameters and credentials are correct before retrying.
 
@@ -71,4 +71,4 @@ The following list provides known issues and current limitations when using HDFS
 
 ## Next steps
 
-For more information about SQL Server 2019 big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

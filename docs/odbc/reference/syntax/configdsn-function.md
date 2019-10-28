@@ -110,6 +110,9 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
 ## Deleting a Data Source  
  To delete a data source, a data source name must be passed to **ConfigDSN** in *lpszAttributes*. **ConfigDSN** checks that the data source name is in the Odbc.ini file (or registry). It then calls **SQLRemoveDSNFromIni** in the installer DLL to remove the data source.  
   
+## Note
+ If writing a Unicode version of this routine, it must be called **ConfigDSNW**, with LPCWSTR arguments instead of LPCSTR.
+  
 ## Related Functions  
   
 |For information about|See|  

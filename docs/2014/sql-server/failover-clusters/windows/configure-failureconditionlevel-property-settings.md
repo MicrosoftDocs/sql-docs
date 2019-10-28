@@ -30,7 +30,7 @@ manager: craigg
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
   
-##### To configure FailureConditionLevel settings  
+### To configure FailureConditionLevel settings  
   
 1.  Start an elevated Windows PowerShell via **Run as Administrator**.  
   
@@ -40,16 +40,14 @@ manager: craigg
   
 > [!TIP]  
 >  Every time you open a new PowerShell window, you need to import the `FailoverClusters` module.  
-  
-### Example (PowerShell)  
+
  The following example changes the FailureConditionLevel setting on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource "`SQL Server (INST1)`" to fail over or restart on critical server errors.  
   
 ```powershell  
 Import-Module FailoverClusters  
   
 $fci = "SQL Server (INST1)"  
-Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3  
-  
+Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 ```  
   
 ### Related Content (PowerShell)  
@@ -61,7 +59,8 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 -   [Cluster resource commands and equivalent Windows PowerShell cmdlets](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ##  <a name="WSFC"></a> Using the Failover Cluster Manager Snap-in  
- **To configure FailureConditionLevel property settings:**  
+
+### To configure FailureConditionLevel property settings
   
 1.  Open the Failover Cluster Manager snap-in.  
   
@@ -72,19 +71,18 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 4.  Select the **Properties** tab, enter the desired value for the **FaliureConditionLevel** property, and then click **OK** to apply the change.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
- **To configure FailureConditionLevel property settings:**  
+
+### To configure FailureConditionLevel property settings
   
  Using the [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement, you can specify the FailureConditionLevel property value.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  The following example sets the FailureConditionLevel property to 0, indicating that failover or restart will not be triggered automatically on any failure conditions.  
   
-```  
+```sql
 ALTER SERVER CONFIGURATION SET FAILOVER CLUSTER PROPERTY FailureConditionLevel = 0;  
 ```  
   
 ## See Also  
  [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)   
  [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  
-  
-  

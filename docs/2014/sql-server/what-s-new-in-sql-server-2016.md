@@ -25,7 +25,7 @@ manager: craigg
   
 -   [What's New &#40;Database Engine&#41;](../database-engine/whats-new-in-sql-server-2016.md)  
   
--   [What's New in Analysis Services and Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md)  
+-   [What's New in Analysis Services and Business Intelligence](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)  
   
 -   [What's New in SQL Server Installation](install/what-s-new-in-sql-server-installation.md)  
   

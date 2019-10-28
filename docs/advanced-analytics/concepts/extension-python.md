@@ -4,7 +4,7 @@ description: Learn about Python code execution and built-in Python libraries in 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/05/2018
+ms.date: 09/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -87,9 +87,11 @@ The following diagram summarizes the overall workflow when scripts are sent from
 8. SQL Satellite manages communication with SQL Server and cleanup of related job objects.
 9. SQL Server passes results back to the client.
 
-## See also
+## Next steps
 
 + [revoscalepy module in SQL Server](../python/ref-py-revoscalepy.md)
 + [revoscalepy function reference](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [Extensibility framework in SQL Server](extensibility-framework.md)
 + [R and machine learning extensions in SQL Server](extension-r.md)
++ [Get Python package information](../package-management/python-package-information.md)
++ [Install Python packages with sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md)

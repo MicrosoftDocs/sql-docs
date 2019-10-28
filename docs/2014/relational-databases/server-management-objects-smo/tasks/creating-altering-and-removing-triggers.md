@@ -29,7 +29,7 @@ manager: craigg
 ## Creating, Altering, and Removing a Trigger in Visual C#  
  This code example shows how to create and insert an update trigger on an existing table, named `Sales`, in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The trigger sends a reminder message when the table is updated or a new record is inserted.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server mysrv;  
@@ -62,19 +62,18 @@ manager: craigg
 ## Creating, Altering, and Removing a Trigger in PowerShell  
  This code example shows how to create and insert an update trigger on an existing table, named `Sales`, in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The trigger sends a reminder message when the table is updated or a new record is inserted.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and to the  
 #database tables in Adventureworks2012  
 CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
   
 #Get reference to the trigger's target table  
-$mytab = get-item Sales.Customer  
+$mytab = Get-Item Sales.Customer  
   
 # Define a Trigger object variable by supplying the parent table, schema ,and name in the constructor.  
-$tr  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Trigger `  
--argumentlist $mytab, "Sales"  
+$tr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Trigger -argumentlist $mytab, "Sales"  
   
-# Set TextMode property to False, then set other properties to define the trigger.   
+# Set TextMode property to False, then set other properties to define the trigger.
 $tr.TextMode = $false  
 $tr.Insert = $true  
 $tr.Update = $true  
@@ -82,11 +81,9 @@ $tr.InsertOrder = [Microsoft.SqlServer.Management.SMO.Agent.ActivationOrder]::Fi
 $tr.TextBody = " RAISERROR('Notify Customer Relations',16,10) "  
 $tr.ImplementationType = [Microsoft.SqlServer.Management.SMO.ImplementationType]::TransactSql  
   
-# Create the trigger on the instance of SQL Server.   
+# Create the trigger on the instance of SQL Server.
 $tr.Create()  
   
-#Remove the trigger.   
+#Remove the trigger.
 $tr.Drop()  
 ```  
-  
-  

@@ -1,23 +1,40 @@
 ---
 title: Release notes
 titleSuffix: SQL Server big data clusters
-description: This article describes the latest updates and known issues for SQL Server 2019 big data clusters (preview). 
+description: This article describes the latest updates and known issues for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview). 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Release notes for big data clusters on SQL Server
+# Release notes for SQL Server Big Data Clusters
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article lists the updates and know issues for the most recent releases of SQL Server big data clusters.
+This article lists the updates and know issues for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+## <a id="rc"></a> Release candidate (August)
+
+The following sections describe the new features and known issues for big data clusters in SQL Server 2019 release candidate.
+
+### What's New
+
+|New feature or update | Details |
+|:---|:---|
+|SQL Server Always On Availability Group |When you deploy a SQL Server Big Data Cluster, you can configure the deployment to create an availability group to provide:<br/><br/>- High availability <br/><br/>- Read-scale out <br/><br/>- Scale-out data insertion into data pool<br/><br>See [Deploy with high availability](../big-data-cluster/deployment-high-availability.md). |
+|`azdata` |Simplified installation for the tool with [installation manager](./deploy-install-azdata-linux-package.md)<br/><br/>[`azdata notebook` command](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status` command](./reference-azdata-bdc-status.md) |
+|Azure Data Studio|[Download the Release Candidate build of Azure Data Studio](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Added troubleshooting notebooks through SQL Server 2019 guide Jupyter Book.<br/><br/>Added controller login experience.<br/><br/>Added controller dashboard to view service endpoints, view cluster health status, and access troubleshooting notebooks.<br/><br/>Improved notebook cell output/editing performance.|
+| &nbsp; | &nbsp; |
+
+### Known issues
+
+* SQL Server 2019 Big Data Clusters release candidate refresh build number is `15.0.1900.47`.
+
+* The "kubeadm-prod" deployment profile is not supported in SQL Server 2019 Big Data Clusters release candidate with the above build number. Instead, use "kubeadm-dev-test" profile for Kubeadm deployments.
 
 ## <a id="ctp32"></a> CTP 3.2 (July)
 
@@ -27,7 +44,7 @@ The following sections describe the new features and known issues for big data c
 
 |New feature or update | Details |
 |:---|:---|
-|Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. <br/><br/> See [Get started with SQL Server big data clusters](deploy-get-started.md).|
+|Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. <br/><br/> See [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).|
 |`azdata` |CTP 3.2 introduces `azdata` - a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. `azdata` replaces `mssqlctl`. See [Install `azdata`](deploy-install-azdata.md). |
 |PolyBase |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources. In previous CTP releases, columns in the external data source was bound based on the ordinal position only and the names specified in the EXTERNAL TABLE definition was not used. |
 |HDFS tiering refresh |Introducing refresh functionality for HDFS tiering so that an existing mount can be refreshed for the latest snapshot of the remote data. See [HDFS tiering](hdfs-tiering.md) |
@@ -40,13 +57,13 @@ The following sections describe the known issues and limitations with this relea
 
 #### PolyBase
 
-- Push-down of TOP clause when the count is > 1000 is not supported in this release. All rows will be read from the remote data source in such cases.
+- Push-down of TOP clause when the count is > 1000 is not supported in this release. All rows will be read from the remote data source in such cases. (Fixed in release candidate)
 
 - Push-down of colocated joins to external data sources is not supported in this release. For example, push-down of two data pool tables of ROUND_ROBIN distribution type will get the data to SQL Master instance or Compute Pool instance to perform the join operation.
 
 #### Compute Pool
 
-- Big data cluster deployment only supports compute pool with one instance.
+- Big data cluster deployment only supports compute pool with one instance. (Fixed in release candidate)
 
 #### Storage Pool
 
@@ -147,7 +164,7 @@ The following sections describe the known issues and limitations with this relea
 
 #### Kibana logs dashboards
 
-- Between Aris CTP 3.0 and 3.1, the Kibana version was upgraded from 6.3.1 to 7.0.1.  This has made the Edge browser incompatible with Kibana. Users will see a blank page when loading the current version of the Kibana dashboards in Edge. See [here]( https://www.elastic.co/support/matrix#matrix_browse) for supported browsers for Kibana.rs 
+- Between CTP 3.0 and 3.1, Kibana version was upgraded from 6.3.1 to 7.0.1.  This has made the Microsoft Edge browser incompatible with Kibana. Users will see a blank page when loading the current version of the Kibana dashboards in Microsoft Edge. See [here]( https://www.elastic.co/support/matrix#matrix_browse) for supported browsers for Kibana.
 
 
 ## <a id="ctp30"></a> CTP 3.0 (May)
@@ -476,9 +493,9 @@ The following sections describe the new features and known issues for big data c
 
 | New feature or update | Details |
 | :---------- | :------ |
-| Submit Spark jobs on big data clusters in IntelliJ. | [Submit Spark jobs on SQL Server big data clusters in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| Common CLI for application deployment and cluster management. | [How to deploy an app on SQL Server 2019 big data cluster (preview)](big-data-cluster-create-apps.md) |
-| VS Code extension to deploy applications to a big data cluster. | [How to use VS Code to deploy applications to SQL Server big data clusters](app-deployment-extension.md) |
+| Submit Spark jobs on big data clusters in IntelliJ. | [Submit Spark jobs on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
+| Common CLI for application deployment and cluster management. | [How to deploy an app on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
+| VS Code extension to deploy applications to a big data cluster. | [How to use VS Code to deploy applications to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
 | Changes to the **azdata** tool command usage. | For more details see the [known issues for azdata](#azdatactp23). |
 | Use Sparklyr in big data cluster | [Use Sparklyr in SQL Server 2019 big data cluster](sparklyr-from-RStudio.md) |
 | Mount external HDFS-compatible storage into big data cluster with **HDFS tiering**. | See [HDFS tiering](hdfs-tiering.md). |
@@ -671,7 +688,7 @@ The following sections describe the new features and known issues for big data c
 
 ### Known issues
 
-The following sections provide known issues for SQL Server big data clusters in CTP 2.1.
+The following sections provide known issues for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in CTP 2.1.
 
 #### Deployment
 
@@ -746,7 +763,7 @@ The following sections describe the new features and known issues for big data c
 
 ### Known issues
 
-The following sections provide known issues for SQL Server big data clusters in CTP 2.0.
+The following sections provide known issues for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in CTP 2.0.
 
 #### Deployment
 
@@ -796,4 +813,4 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 ## Next steps
 
-For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

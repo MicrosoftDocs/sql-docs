@@ -12,6 +12,7 @@ ms.reviewer: ""
 ms.custom: ""
 ms.date: 11/04/2019
 ---
+
 # Release notes for SQL Server Management Studio (SSMS)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +37,60 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## SSMS 18.3.1
+## SSMS 18.4
+
+Download: [Download SSMS 18.4](download-sql-server-management-studio-ssms.md)  
+Build number: 15.0.18183.0  
+Release date: November 04, 2019
+
+SSMS 18.4 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+
+18.4 is an update to 18.3.1 with the following new items and bug fixes.
+
+## What's new in 18.4
+
+| New item | Details |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Data Classification | Added support for custom information protection policy for data classification. |
+| Query Store | Added the *Max Plan per query* value in the dialog properties. |
+| Query Store | Added support for the new Custom Capture Policies. |
+| SMO/Scripting | Support Script of materialized view in SQL DW. |
+| SMO/Scripting | Added support for *SQL On Demand*. |
+| XEvent Profiler | Added *error_reported* event to XEvent Profiler sessions. |
+
+## Bug fixes in 18.4
+
+| New Item | Details |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Analysis Services | Fixed an issue where the DAX Script editor for multi-dimensional databases did not show tables in the intellisense. |
+| Analysis Services | Use DAX Parser to convert to an Engine string. This is for international spearators, decimal, and whitespace. |
+| Always Encrypted | Fixed an issue where the *claim validation* was not *case insensitive*. |
+| Always Encrypted | Fixed an issue where error/warning reporting was not properly working. |
+| Copy Database Wizard | Fixed assorted truncation and layout issues in the rendering of this dialog. |
+| General SSMS | Fixed a long outstanding issue where SSMS was not honoring the connection info passed at the command line when SQL files were also specified. |
+| General SSMS | Fixed a crash in SSMS while trying to display Securables on "Replication Filter" objects. |
+| General SSMS | Mitigated the removal of the -P command line option by having SSMS look at its cache of credentials: if the required credential was found, the connection would be established using it. |
+| Import flat file | Fixed an issue where *Import Flat File* functionality not handling text qualifiers correctly. |
+| Object Explorer | Fixed an issue where dropping an Azure SQL Database in Object Explorer was showing an inaccurate error message. |
+| Query Results | Fixing an issue introduced in SSMS 18.3.1, where grids would be drawn slightly too narrow and show *...* at the end of the longest string in every column. |
+| Replication Tools | Fixed an issue that was causing the application to thrown an error ("Could not load file or assembly…") when trying to edit SQL Agent jobs. |
+| SMO/Scripting | Fixed an issue when *Script Table As…* for SQL DW whose collation is Japanese_BIN2 was not working.|
+| SMO/Scripting | Fixed an issue where ScriptAlter() ended up executing the statements on the server.|
+| SQL Agent | Fixed an issue where the agent operator UI would not update the operator name when it was changed in the UI nor would it be scripted. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/32897647) for more details.|
+
+### Known issues (18.4)
+
+* Database Diagram created from SSMS running on machine A cannot be modified from machine B (SSMS crashes). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
+
+* There are redraw issues when switching between multiple query windows. See UserVoice for more details. A workaround for this issue is to disable hardware acceleration under *Tools > Options*.
+
+You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
+
+## Previous SSMS releases
+
+Download previous SSMS versions by clicking the title links in the following sections:
+
+## ![download](../ssdt/media/download.png) [SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
 
 Download: [Download SSMS 18.3.1](download-sql-server-management-studio-ssms.md)  
 Build number: 15.0.18183.0  
@@ -68,7 +122,7 @@ SSMS 18.3.1 is the latest general availability (GA) release of SSMS. If you need
 | Analysis Services | Fixed an issue in XEvent UI that prevents the users from being able to create a new session. |
 | Database Deployment to SQL Azure | Fixed an issue (in DacFx) which was causing this feature not to work.|
 | General SSMS | Fixed an issue, which was causing SSMS to crash when using the sorting feature in the XEvent viewer. |
-| General SSMS | Fixed long outstanding issues where SSMS Restore database may hang indefinitely. </br></br> See UserVoice items for more details:  </br> [Restore Database - Select Backup Devices Slow to Load](https://feedback.azure.com/forums/908035/suggestions/32899099/).  </br> [SSMS 2016 very slow in the database restore dialogs](https://feedback.azure.com/forums/908035/suggestions/32900767/). </br> [Restoring database is slow](https://feedback.azure.com/forums/908035/suggestions/32900224/).  </br> [Restore Database from Device HANGS on clicking "..."](https://feedback.azure.com/forums/908035/suggestions/34281658/).  |
+| General SSMS | Fixed long outstanding issues where SSMS Restore database may hang indefinitely. </br></br> See UserVoice items for more details: </br> [Restore Database - Select Backup Devices Slow to Load](https://feedback.azure.com/forums/908035/suggestions/32899099/).  </br> [SSMS 2016 very slow in the database restore dialogs](https://feedback.azure.com/forums/908035/suggestions/32900767/). </br> [Restoring database is slow](https://feedback.azure.com/forums/908035/suggestions/32900224/).  </br> [Restore Database from Device HANGS on clicking "..."](https://feedback.azure.com/forums/908035/suggestions/34281658/).  |
 | General SSMS | Fixed an issue where the default language for all logins was shown as Arabic. </br></br> See UserVoice item for more details: [SSMS 18.2 default language display bug](https://feedback.azure.com/forums/908035/suggestions/38236363). |
 | General SSMS | Fixed the hard to see the dialog for *Query Options* (when the user right-clicks on the T-SQL editor window) by making it resizable.|
 | General SSMS | The *Completion time* message visible in the Result Grid/File (introduced in SSMS 18.2) is now configurable under Tools > Options >  Query Execution > SQL Server > Advanced > Show completion time. |
@@ -89,10 +143,6 @@ SSMS 18.3.1 is the latest general availability (GA) release of SSMS. If you need
 - There are redraw issues when switching between multiple query windows. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042) for more details. A workaround for this issue is to disable hardware acceleration under Tools > Options.
 
 You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
-
-## Previous SSMS releases
-
-Download previous SSMS versions by clicking the title links in the following sections:
 
 ## ![download](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
 

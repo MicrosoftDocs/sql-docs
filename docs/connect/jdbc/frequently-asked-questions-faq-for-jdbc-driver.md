@@ -28,8 +28,8 @@ See the [Microsoft JDBC Driver for SQL Server support matrix](../../connect/jdbc
 **What is the difference between the JDBC driver packages available on the Microsoft Download Center and the JDBC driver available on GitHub?**  
 The JDBC driver files available on the GitHub repository for the Microsoft JDBC driver are the core of the JDBC driver and are under the open-source license listed in the repository. The driver packages on the Microsoft Download Center include additional libraries for Windows-integrated authentication and enabling XA transactions with the JDBC driver. Those additional libraries are under the license included with the downloadable package.
 
-**What should I know when upgrading my driver?**
- The Microsoft JDBC Driver 7.4 supports the JDBC 4.2, and 4.3 (partially) specifications and includes three JAR class libraries in the installation package as follows:
+**What should I know when upgrading my driver?**  
+The Microsoft JDBC Driver 7.4 supports the JDBC 4.2, and 4.3 (partially) specifications and includes three JAR class libraries in the installation package as follows:
 
 | JAR                        | JDBC Specification            | JDK Version |
 | -------------------------- | ----------------------------- | ----------- |
@@ -38,7 +38,7 @@ The JDBC driver files available on the GitHub repository for the Microsoft JDBC 
 | mssql-jdbc-7.4.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
- The Microsoft JDBC Driver 7.2 supports the JDBC 4.2, and 4.3 (partially) specifications and includes two JAR class libraries in the installation package as follows:
+The Microsoft JDBC Driver 7.2 supports the JDBC 4.2, and 4.3 (partially) specifications and includes two JAR class libraries in the installation package as follows:
 
 | JAR                        | JDBC Specification            | JDK Version |
 | -------------------------- | ----------------------------- | ----------- |
@@ -46,7 +46,7 @@ The JDBC driver files available on the GitHub repository for the Microsoft JDBC 
 | mssql-jdbc-7.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
- The Microsoft JDBC Driver 7.0 supports the JDBC 4.2, and 4.3 (partially) specifications and includes two JAR class libraries in the installation package as follows:
+The Microsoft JDBC Driver 7.0 supports the JDBC 4.2, and 4.3 (partially) specifications and includes two JAR class libraries in the installation package as follows:
 
 | JAR                        | JDBC Specification            | JDK Version |
 | -------------------------- | ----------------------------- | ----------- |
@@ -92,13 +92,13 @@ In general, the driver is designed to be backward compatible so that you do not 
 **How much does the driver cost?**  
 The Microsoft JDBC Driver for SQL Server is available at no additional charge.
 
-**Can I redistribute the driver?**\
+**Can I redistribute the driver?**  
 The JDBC Drivers 6.0, 6.2, 6.4, and 7.0 are redistributable. Review the "Distributable Code" clause in the license agreements.
 
-**Can I use the driver to access Microsoft SQL Server from a Linux computer?**
+**Can I use the driver to access Microsoft SQL Server from a Linux computer?**  
 Yes! You can use the driver to access SQL Server from Linux, Unix, and other non-Windows platforms. For more information, see [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
 
-**Does the driver support Secure Sockets Layer (SSL) encryption?**
+**Does the driver support Secure Sockets Layer (SSL) encryption?**  
 Starting with version 1.2, the driver supports Secure Sockets Layer (SSL) encryption. For more information, see [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md).
 
 **Which authentication types are supported by the Microsoft JDBC Driver for SQL Server?**  
@@ -128,7 +128,7 @@ The driver provides support for Java Platform, Enterprise Edition 5 (Java EE 5) 
 **Is support available for the driver?**  
 Several support options are available. You may post your question or issue to our [GitHub repository](https://github.com/microsoft/mssql-jdbc) which is monitored by Microsoft. [Forums](https://go.microsoft.com/fwlink/?LinkID=246673) are monitored by Microsoft, MVPs, and the community. You may also contact Microsoft Customer Support. The development team may ask you to reproduce the issue outside any third-party application servers. If the issue cannot be reproduced outside the hosting Java container environment, you will need to involve the related third-party so that the team can continue to assist you. The team may also ask you to reproduce your issue on an operating system such as Windows so the problem can be best supported.
 
-**Is the driver certified for use with any third-party application servers?**
+**Is the driver certified for use with any third-party application servers?**  
 The driver has been tested against various application servers including IBM WebSphere and SAP Netweaver.
 
 **How do I enable tracing?**  

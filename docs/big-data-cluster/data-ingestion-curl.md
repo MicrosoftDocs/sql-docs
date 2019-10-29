@@ -17,6 +17,10 @@ ms.technology: big-data-cluster
 
 This article explains how to use **curl** to load data into HDFS on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview).
 
+## <a id="prereqs"></a> Prerequisites
+
+- [Load sample data into your big data cluster](tutorial-load-sample-data.md)
+
 ## Obtain the service external IP
 
 WebHDFS is started when deployment is completed, and its access goes through Knox. The Knox endpoint is exposed through a Kubernetes service called **gateway-svc-external**.  To create the necessary WebHDFS URL to upload/download files, you need the **gateway-svc-external** service external IP address and the name of your big data cluster. You can get the **gateway-svc-external** service external IP address by running the following command:
@@ -40,18 +44,18 @@ For example:
 
 ## List a file
 
-To list file under **hdfs:///airlinedata**, use the following curl command:
+To list file under **hdfs:///product_review_data**, use the following curl command:
 
 ```bash
-curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
+curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 ## Put a local file into HDFS
 
-To put a new file **test.csv** from local directory to airlinedata directory, use the following curl command (the **Content-Type** parameter is required):
+To put a new file **test.csv** from local directory to product_review_data directory, use the following curl command (the **Content-Type** parameter is required):
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## Create a directory

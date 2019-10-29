@@ -89,7 +89,7 @@ Requires the **ALTER ANY COLUMN ENCRYPTION KEY** permission.
 ### A. Creating a column encryption key  
 The following example creates a column encryption key called `MyCEK`.  
   
-```  
+```sql  
 CREATE COLUMN ENCRYPTION KEY MyCEK   
 WITH VALUES  
 (  
@@ -103,8 +103,8 @@ GO
 ### Creating a Column Encryption Key with Two Values  
 The following example creates a column encryption key called `TwoValueCEK` with two values.  
   
-```  
-  
+```sql
+
 CREATE COLUMN ENCRYPTION KEY TwoValueCEK   
 WITH VALUES  
 (  

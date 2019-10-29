@@ -1283,7 +1283,7 @@ BACKUP DATABASE errors under the following conditions:
 - Attempt to start a backup within a transaction.
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016|>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016|>=sql-server-2016|>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## General Remarks
 
 Before you perform a database backup, use [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) to decrease the size of your database.

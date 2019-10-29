@@ -48,6 +48,8 @@ The following steps create an external table in the data pool named **web_clicks
 1. Create an external data source to the data pool if it does not already exist.
 
    ```sql
+   USE Sales
+   GO
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
      WITH (LOCATION = 'sqldatapool://controller-svc/default');

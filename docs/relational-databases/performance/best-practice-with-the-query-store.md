@@ -65,7 +65,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- **Data Flush Interval (Minutes)**: It defines the frequency to persist collected runtime statistics to disk. The graphical user interface it's expressed in minutes, but in [!INCLUDE[tsql](../../includes/tsql-md.md)] it's expressed in seconds. The default is 900 seconds, which is 15 minutes in the graphical user interface. Consider using a higher value if your workload doesn't generate a large number of different queries and plans, or if you can withstand longer time to persist data before a database shutdown.
+ **Data Flush Interval (Minutes)**: It defines the frequency to persist collected runtime statistics to disk. It's expressed in minutes in the graphical user interface (GUI), but in [!INCLUDE[tsql](../../includes/tsql-md.md)] it's expressed in seconds. The default is 900 seconds, which is 15 minutes in the graphical user interface. Consider using a higher value if your workload doesn't generate a large number of different queries and plans, or if you can withstand longer time to persist data before a database shutdown.
  
 > [!NOTE]
 > Using trace flag 7745 prevents Query Store data from being written to disk in case of a failover or shutdown command. For more information, see the [Use trace flags on mission-critical servers to improve recovery from disaster](#Recovery) section.

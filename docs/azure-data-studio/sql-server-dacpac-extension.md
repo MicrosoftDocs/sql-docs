@@ -3,7 +3,7 @@ title: SQL Server dacpac extension
 titleSuffix: Azure Data Studio
 description: Install and use the SQL Server dacpac extension for Azure Data Studio
 ms.custom: "seodec18"
-ms.date: "11/04/2019"
+ms.date: 11/04/2019
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio

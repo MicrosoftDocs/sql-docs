@@ -1,11 +1,11 @@
 ---
 title: Install azdata with Windows Installer
 titleSuffix: SQL Server big data clusters
-description: Learn how to install the azdata tool for installing and managing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview) with the installer. 
+description: Learn how to install the azdata tool for installing and managing SQL Server Big Data Clusters with the installer. 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/01/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to install `azdata` for SQL Server 2019 Big Data Clusters release candidate on Windows. Before the Windows Installation was available, the installation of `azdata` required `pip`.
+This article describes how to install `azdata` for SQL Server 2019 Big Data Clusters on Windows. Before the Windows Installation was available, the installation of `azdata` required `pip`.
 
 >For Linux (Ubuntu), see [install `azdata` with installer](./deploy-install-azdata-linux-package.md).
 
@@ -32,7 +32,7 @@ To install `azdata` on with the Microsoft Windows Installer,
 
 If you have any previous releases of `azdata` installed, it is important to uninstall it first before installing the latest version.
 
-   To remove the releace candidate version of `azdata`, run the following command.
+   To remove the release candidate version of `azdata`, run the following command.
 
    ```bash
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt

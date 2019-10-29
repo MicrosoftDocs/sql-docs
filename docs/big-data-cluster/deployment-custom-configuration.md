@@ -5,7 +5,7 @@ description: Learn how to customize a big data cluster deployment with configura
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -16,7 +16,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Starting from a pre-defined set of configuration profiles that are built into the azdata management tool, you can easily modify the default settings to better suit your BDC workload requirements. Starting with the release candidate release, the structure of the configuration files was updated to enable you to granularly update settings per each service of the resource. 
+Starting from a pre-defined set of configuration profiles that are built into the `azdata` management tool, you can easily modify the default settings to better suit your BDC workload requirements. The structure of the configuration files enables you to granularly update settings for each service of the resource.
 
 > [!TIP]
 > Please reference the articles on how to configure **high availability** for mission critical components like [SQL Server master](deployment-high-availability.md) or [HDFS name node](deployment-high-availability-hdfs-spark.md),  for details on how to deploy highly available services.
@@ -186,7 +186,7 @@ The built-in configuration files, specifically control.json includes a `docker` 
         "docker": {
             "registry": "mcr.microsoft.com",
             "repository": "mssql/bdc",
-            "imageTag": "2019-GDR1-ubuntu-1604",
+            "imageTag": "2019-GDR1-ubuntu-16.04",
             "imagePullPolicy": "Always"
         },
         ...

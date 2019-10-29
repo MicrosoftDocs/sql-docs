@@ -355,7 +355,7 @@ In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later
 
 At installation, the default behavior is no backup compression. But this default can be changed by setting the [backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) server configuration option. For information about viewing the current value of this option, see [View or Change Server Properties](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
 
-For information about using backup compression with [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases, see the [Remarks](#general-remarks) section.
+For information about using backup compression with [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases, see the [Remarks](/sql/t-sql/statements/backup-transact-sql#general-remarks) section.
 
 COMPRESSION
 Explicitly enables backup compression.
@@ -482,7 +482,7 @@ Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssN
 
 > [!NOTE]
 > For [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, the default `MAXTRANSFERSIZE` is 65536 (64 KB). For non-TDE encrypted databases the default `MAXTRANSFERSIZE` is 1048576 (1 MB) when using backup to DISK, and 65536 (64 KB) when using VDI or TAPE.
-> For more information about using backup compression with TDE encrypted databases, see the [Remarks](#general-remarks) section.
+> For more information about using backup compression with TDE encrypted databases, see the [Remarks](/sql/t-sql/statements/backup-transact-sql#general-remarks) section.
 
 **Error Management Options**
 

@@ -91,6 +91,7 @@ The blob endpoint is available for ADLS Gen2 only for backward compatibility - u
 ​	Wildcards cards can be included in the path where
 
 - Wildcard path name matching is case sensitive
+- Wildcard can be escaped using the backslash character (\\)
 - Wildcard expansion is applied recursively. For instance, all CSV files under Customer1 (including subdirectories of Customer1 will be loaded in the following example: ‘Account/Container/Customer1/*.csv’
 
 [!NOTE]  
@@ -152,11 +153,11 @@ When authenticating using AAD or to a public storage account, CREDENTIAL does no
   Minimum RBAC roles required: Storage blob data contributor, Storage blob data owner, or Storage blob data reader for the AAD user
 
 *ERRORFILE = Directory Location*
-*ERRORFILE* only applies to CSV. Specifies the directory within the COPY FROM clause where the rejected rows and the corresponding error file should be written. If the specified path doesn't exist, one will be created on your behalf. A child directory is created with the name "_rejectedrows". The "_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. 
+*ERRORFILE* only applies to CSV. Specifies the directory within the COPY statement where the rejected rows and the corresponding error file should be written. The full path from the storage account can be specified or the path relative to the container can be specified. If the specified path doesn't exist, one will be created on your behalf. A child directory is created with the name "_rejectedrows". The "_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. 
 
-Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the reason file and the data file. The reason files and the data files both have the queryID associated with the CTAS statement. Because the data and the reason are in separate files, corresponding files have a matching suffix.
+Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the reason (Error) file and the data (Row) file each pre-appending with the queryID, distributionID, and a file guid. Because the data and the reason are in separate files, corresponding files have a matching prefix.
 
-If ERRORFILE has the storage account defined, then the ERRORFILE_CREDENTIAL will be used to connect to that storage. Otherwise, the value mentioned for CREDENTIAL will be used.
+If ERRORFILE has the full path of the storage account defined, then the ERRORFILE_CREDENTIAL will be used to connect to that storage. Otherwise, the value mentioned for CREDENTIAL will be used.
 
 *ERRORFILE_CREDENTIAL = (IDENTITY= ‘’, SECRET = ‘’)*
 *ERRORFILE_CREDENTIAL* only applies to CSV. Supported data source and authentication methods in public preview are the following:

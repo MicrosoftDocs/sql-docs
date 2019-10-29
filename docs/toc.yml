@@ -12891,7 +12891,7 @@
       - name: sys.dm_pdw_exec_sessions
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md
       - name: sys.dm_pdw_nodes_exec_query_plan
-        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md 
       - name: sys.dm_pdw_nodes_exec_query_profiles
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-profiles-transact-sql.md
       - name: sys.dm_pdw_nodes_exec_query_statistics_xml

@@ -85,9 +85,9 @@ This section explains platforms that are supported with [!INCLUDE[big-data-clust
 
 - **Workaround**: To create memory optimized tables when SQL Server master instance is an availability group configuration, [connect to the SQL Server instance](deployment-high-availability.md#instance-connect), expose an endpoint, connect to the SQL Server database, and create the memory optimized tables in the session created with the new connection.
 
-### Insert to external tables when master instance in an availability group
+### Insert to external tables Active Directory authentication mode
 
-- **Issue and customer impact**: When SQL Server master instance is in an availability group configuration, a query that selects only from external tables, where at least one of the external tables is in a storage pool, and inserts into another external table, the query returns:
+- **Issue and customer impact**: When SQL Server master instance is in Active Directory authentication mode, a query that selects only from external tables, where at least one of the external tables is in a storage pool, and inserts into another external table, the query returns:
 
    ```
    Msg 7320, Level 16, State 102, Line 1

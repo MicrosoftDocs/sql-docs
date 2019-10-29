@@ -186,7 +186,7 @@ The built-in configuration files, specifically control.json includes a `docker` 
         "docker": {
             "registry": "mcr.microsoft.com",
             "repository": "mssql/bdc",
-            "imageTag": "2019-GDR1-ubuntu-1604",
+            "imageTag": "2019-GDR1-ubuntu-16.04",
             "imagePullPolicy": "Always"
         },
         ...

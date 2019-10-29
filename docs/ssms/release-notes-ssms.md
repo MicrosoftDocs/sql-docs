@@ -40,7 +40,7 @@ GeneMi. 2019/04/02.
 ## SSMS 18.4
 
 Download: [Download SSMS 18.4](download-sql-server-management-studio-ssms.md)  
-Build number: 15.0.18183.0  
+Build number: 15.0.18206.0  
 Release date: November 04, 2019
 
 SSMS 18.4 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
@@ -70,17 +70,17 @@ SSMS 18.4 is the latest general availability (GA) release of SSMS. If you need a
 | New Item | Details |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Analysis Services | Fixed an issue where the DAX Script editor for multi-dimensional databases did not show tables in the intellisense. |
-| Analysis Services | Use DAX Parser to convert to an Engine string. This is for international spearators, decimal, and whitespace. |
+| Analysis Services | Use DAX Parser to convert to an Engine string. This is for international separators, decimal, and whitespace. |
 | Always Encrypted | Fixed an issue where the *claim validation* was not *case insensitive*. |
 | Always Encrypted | Fixed an issue where error/warning reporting was not properly working. |
 | Copy Database Wizard | Fixed assorted truncation and layout issues in the rendering of this dialog. |
 | General SSMS | Fixed a long outstanding issue where SSMS was not honoring the connection info passed at the command line when SQL files were also specified. |
 | General SSMS | Fixed a crash in SSMS while trying to display Securables on "Replication Filter" objects. |
-| General SSMS | Mitigated the removal of the -P command line option by having SSMS look at its cache of credentials: if the required credential was found, the connection would be established using it. |
+| General SSMS | Mitigated the removal of the -P command-line option by having SSMS look at its cache of credentials: if the required credential was found, the connection would be established using it. |
 | Import flat file | Fixed an issue where *Import Flat File* functionality not handling text qualifiers correctly. |
 | Object Explorer | Fixed an issue where dropping an Azure SQL Database in Object Explorer was showing an inaccurate error message. |
 | Query Results | Fixing an issue introduced in SSMS 18.3.1, where grids would be drawn slightly too narrow and show *...* at the end of the longest string in every column. |
-| Replication Tools | Fixed an issue that was causing the application to thrown an error ("Could not load file or assembly…") when trying to edit SQL Agent jobs. |
+| Replication Tools | Fixed an issue that was causing the application to throw an error ("Could not load file or assembly…") when trying to edit SQL Agent jobs. |
 | SMO/Scripting | Fixed an issue when *Script Table As…* for SQL DW whose collation is Japanese_BIN2 was not working.|
 | SMO/Scripting | Fixed an issue where ScriptAlter() ended up executing the statements on the server.|
 | SQL Agent | Fixed an issue where the agent operator UI would not update the operator name when it was changed in the UI nor would it be scripted. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/32897647) for more details.|
@@ -448,7 +448,7 @@ Release date: July 25, 2019
 |Flat File Import Wizard|Fixed an issue where the "Import Flat File Wizard" wasn't handling double quotes correctly (escaping). For details, see [https://feedback.azure.com/forums/908035/suggestions/32897998](https://feedback.azure.com/forums/908035/suggestions/32897998). |
 |Flat File Import Wizard|Fixed an issue where related to incorrect handling of floating-point types (on locales that use a different delimiter for floating points).|
 |Flat File Import Wizard|Fixed an issue related to importing of bits when values are 0 or 1. For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535). |
-|Flat File Import Wizard|Fixed an issue where *floats* were entered as *nulls*.|
+|Flat File Import Wizard|Fixed an issue where the *float* data-type were entered as *nulls*.|
 |Flat File Import Wizard|Fixed an issue where the import wizard wasn't able to process negative decimal values.|
 |Flat File Import Wizard|Fixed an issue where the wizard wasn't able to import from single column CSV files.|
 |Flat File Import Wizard|will be in SSMS 17.9] Fixed issue where Flat File Import does not allow changing destination table when table is already existing. For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186). |
@@ -500,7 +500,7 @@ Release date: July 25, 2019
 |Results Grid|Fixed an issue, which resulted in an "Index out of range" exception when clicking on the grid.|
 |Results Grid|Fixed an issue where the grid result background color was being ignored. For details, see [https://feedback.azure.com/forums/908035/suggestions/32895916](https://feedback.azure.com/forums/908035/suggestions/32895916). |
 |ShowPlan|New memory grant operator properties display incorrectly when there is more than one thread.|
-|ShowPlan|Add the following 4 attributes in RunTimeCountersPerThread of actual execution xml plan: HpcRowCount (Number of rows processed by hpc device), HpcKernelElapsedUs (elapsed time wait for kernel execution in use), HpcHostToDeviceBytes (bytes transferred from host to device), and HpcDeviceToHostBytes (bytes transferred from device to host).|
+|ShowPlan|Add the following 4 attributes in RunTimeCountersPerThread of actual execution xml plan: HpcRowCount (Number of rows processed by a *hpc* device), HpcKernelElapsedUs (elapsed time wait for kernel execution in use), HpcHostToDeviceBytes (bytes transferred from host to device), and HpcDeviceToHostBytes (bytes transferred from device to host).|
 |ShowPlan|Fixed an issue where the similar plan nodes are highlighted in the wrong position.|
 |SMO|Fixed an issue where SMO/ServerConnection did not SqlCredential-based connections correctly. For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941](https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941). |
 |SMO|Fixed an issue where an application written using SMO would encounter an error if it tried to enumerate databases from the same server on multiple threads even though it uses separate SqlConnection instances on each thread.|

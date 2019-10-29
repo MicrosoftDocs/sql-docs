@@ -10,7 +10,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""
-ms.date: "09/11/2019"
+ms.date: 11/04/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 
@@ -19,10 +19,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 To manage (query, monitor, etc.) your database you need a tool. While your databases can be running in the cloud, on Windows, or on [Linux](../linux/sql-server-linux-overview.md), your tool doesn't need to run on the same platform as the database.
-
 There are many database tools available, so this article provides descriptions and pointers to some of the available tools for working with your SQL databases. If you need help deciding which tool you need, see [Which tool should I use?](#which-tool-should-i-choose).
 
-For additional information, and to download a tool, select the links in the Tool column in the following tables. To download SQL Server, see [Install SQL Server](../database-engine/install-windows/install-sql-server.md).
+The [SQL Server tools hub page](index.yml) provides an overview for finding relevant SQL tools content. For additional information, you can also view the links in the Tool column in the following tables. To download SQL Server, see [Install SQL Server](../database-engine/install-windows/install-sql-server.md).
 
 ## GUI tools to manage databases
 

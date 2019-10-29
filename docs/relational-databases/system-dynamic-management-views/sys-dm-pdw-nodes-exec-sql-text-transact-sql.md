@@ -19,7 +19,7 @@ monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 
 Returns the text of the SQL batch that is identified by the specified *sql_handle*. This table-valued function replaces the system function **fn_get_sql**.  
    
-## Table Returned  
+## Table returned  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**pdw_node_id**|**int**|Unique numeric ID associated with the node.|
@@ -35,5 +35,8 @@ The same remarks in [sys.dm_exec_sql_text](https://docs.microsoft.com/sql/relati
 ## Permissions  
  Require **sysadmin** server role or `VIEW SERVER STATE` permission on the server.  
   
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+
+  ## Next steps
+ For more development tips, see [SQL Data Warehouse development overview](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).

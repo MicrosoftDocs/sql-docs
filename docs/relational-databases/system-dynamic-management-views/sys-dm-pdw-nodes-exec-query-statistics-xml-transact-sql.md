@@ -19,7 +19,7 @@ monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 
 Returns query execution plan for in-flight requests. Use this DMV to retrieve showplan XML with transient statistics.
 
-## Table Returned
+## Table returned
 
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|
@@ -36,8 +36,9 @@ The same remarks in [sys.dm_exec_query_statistics_xml](https://docs.microsoft.co
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  
 
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
-
+ ## Next steps
+ For more development tips, see [SQL Data Warehouse development overview](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
 

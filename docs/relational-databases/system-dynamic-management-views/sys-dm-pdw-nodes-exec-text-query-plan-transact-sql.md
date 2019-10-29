@@ -19,7 +19,7 @@ monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 
 Returns the Showplan in text format for a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch or for a specific statement within the batch.
 
-## Table Returned  
+## Table returned  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -36,5 +36,8 @@ The same remarks in [sys.dm_exec_text_query_plan](https://docs.microsoft.com/sql
 ## Permissions  
  Require **sysadmin** server role or `VIEW SERVER STATE` permission on the server.  
   
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+
+  ## Next steps
+ For more development tips, see [SQL Data Warehouse development overview](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).

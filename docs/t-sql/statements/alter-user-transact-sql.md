@@ -640,7 +640,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
  - [Contained Databases](../../relational-databases/databases/contained-databases.md)
  - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
  - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
- - [Tutorial: Migrating SQL Server on-premises Windows users and groups to Azure SQL Database managed instance using T-SQL DDL syntax](/azure/sql-database/sql-database-managed-instance-aad-migration-tutorial)
+ - [Tutorial: Migrating SQL Server on-premises Windows users and groups to Azure SQL Database managed instance using T-SQL DDL syntax](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"

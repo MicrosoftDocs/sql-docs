@@ -31,7 +31,7 @@ Returns query execution plan for in-flight requests. Use this DMV to retrieve sh
 |query_plan|**xml**|Contains the runtime Showplan representation of the query execution plan that is specified with *plan_handle* containing partial statistics. The Showplan is in XML format. One plan is generated for each batch that contains, for example ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, stored procedure calls, and user-defined function calls. Nullable.|
 
 ## Remarks
-The same remarks in [sys.dm_exec_query_statistics_xml](https://docs.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql?view=sql-server-ver15) apply.   
+The same remarks in [sys.dm_exec_query_statistics_xml](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql?view=sql-server-ver15) apply.   
 
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  

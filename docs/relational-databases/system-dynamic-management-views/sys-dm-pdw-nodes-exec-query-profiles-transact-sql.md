@@ -24,7 +24,7 @@ The counters returned are per operator per thread. The results are dynamic and d
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|pdw_node_id|**int**|Unique numeric id associated with the node.|
+|pdw_node_id|**int**|Unique numeric ID associated with the node.|
 |session_id|**smallint**|Identifies the session in which this query runs. References dm_exec_sessions.session_id.|  
 |request_id|**int**|Identifies the target request. References dm_exec_sessions.request_id.|  
 |sql_handle|**varbinary(64)**|Is a token that uniquely identifies the batch or stored procedure that the query is part of. References dm_exec_query_stats.sql_handle.|  

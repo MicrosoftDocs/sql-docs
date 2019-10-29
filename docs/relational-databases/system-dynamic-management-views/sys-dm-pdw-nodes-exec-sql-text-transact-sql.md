@@ -22,7 +22,7 @@ Returns the text of the SQL batch that is identified by the specified *sql_handl
 ## Table Returned  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**pdw_node_id**|**int**|Unique numeric id associated with the node.|
+|**pdw_node_id**|**int**|Unique numeric ID associated with the node.|
 |**dbid**|**smallint**|ID of database.<br /><br /> For unplanned and prepared SQL statements, the ID of the database where the statements were compiled.|  
 |**objectid**|**int**|ID of object.<br /><br /> Is NULL for ad hoc and prepared SQL statements.|  
 |**number**|**smallint**|For a numbered stored procedure, this column returns the number of the stored procedure. For more information, see [sys.numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Is NULL for ad hoc and prepared SQL statements.|  

@@ -22,7 +22,7 @@ Returns the Showplan in XML format for the batch specified by the plan handle. T
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**pdw_node_id**|**int**|Unique numeric id associated with the node.| 
+|**pdw_node_id**|**int**|Unique numeric ID associated with the node.| 
 |**dbid**|**smallint**|ID of the context database that was in effect when the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement corresponding to this plan was compiled. For unplanned and prepared SQL statements, the ID of the database where the statements were compiled.<br /><br /> Column is nullable.|  
 |**objectid**|**int**|ID of the object (for example, stored procedure or user-defined function) for this query plan. For ad hoc and prepared batches, this column is **null**.<br /><br /> Column is nullable.|  
 |**number**|**smallint**|Numbered stored procedure integer. For ad hoc and prepared batches, this column is **null**.<br /><br /> Column is nullable.| 

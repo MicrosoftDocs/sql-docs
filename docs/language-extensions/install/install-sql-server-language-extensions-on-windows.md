@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: Language extensions installation steps for SQL Server 2019 in Windows.
 author: dphansen
 ms.author: davidph 
-ms.date: 08/21/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -66,7 +66,7 @@ For local installations, you must run Setup as an administrator. If you install 
   
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
-    ![SQL Server 2019 installation](../media/ctp32-install.png) 
+    ![SQL Server 2019 installation](../media/sql-install.png) 
 
 3. On the **Feature Selection** page, select these options:
   
@@ -84,13 +84,13 @@ For local installations, you must run Setup as an administrator. If you install 
 
         If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install).
 
-    ![Feature options for Language Extensions](../media/ctp32-feature-selection.png)
+    ![Feature options for Language Extensions](../media/sql-install-feature-selection.png)
 
 4. If you choose **Java** in the previous step to install the default Java runtime, the **Java Install Location** page will show up.
 
     Select the **Install Open JRE 11.0.3 included with this installation**.
 
-    ![Choose Java install location](../media/ctp32-openjdk.png)
+    ![Choose Java install location](../media/sql-install-openjdk.png)
 
     > [!NOTE]
     > The **Provide the location of a different version that has been installed on this computer** is not used for Language Extensions.

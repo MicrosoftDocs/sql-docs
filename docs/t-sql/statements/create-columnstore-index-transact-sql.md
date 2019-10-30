@@ -1,7 +1,7 @@
 ---
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/13/2018"
+ms.date: "09/25/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -390,7 +390,7 @@ You cannot use cursors or triggers on a table with a clustered columnstore index
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] specific limitations**  
 These limitations apply only to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. In this release, we introduced updateable clustered columnstore indexes. Nonclustered columnstore indexes were still read-only.  
 
--   Change tracking. You cannot use change tracking with nonclustered columnstore indexes (NCCI) because they are read-only. It does work for clustered columnstore indexes (CCI).  
+-   Change tracking. You cannot use change tracking with columnstore indexes.  
 -   Change data capture. You cannot use change data capture for nonclustered columnstore index (NCCI) because they are read-only. It does work for clustered columnstore indexes (CCI).  
 -   Readable secondary. You cannot access  a clustered columnstore index (CCI) from a readable secondary of an Always OnReadable availability group.  You can access a nonclustered columnstore index (NCCI) from a readable secondary.  
 -   Multiple Active Result Sets (MARS). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] uses MARS for  read-only connections to tables with a columnstore index. However, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] does not support MARS for concurrent data manipulation language (DML) operations on a table with a columnstore index. When this occurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] terminates the connections and aborts the transactions.  

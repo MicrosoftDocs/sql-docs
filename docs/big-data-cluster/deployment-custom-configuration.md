@@ -573,7 +573,7 @@ For disabling the container that runs ElasticSearch to run in privileged mode, y
 }
 ```
 
-You can manully edit the **control.json** and add the above section to the **spec**, or you can create a patch file **elasticsearch-patch.json** like below and use **azdata** CLI to patch the **config.json** file:
+You can manully edit the **control.json** and add the above section to the **spec**, or you can create a patch file **elasticsearch-patch.json** like below and use **azdata** CLI to patch the **control.json** file:
 
 ```json
 {

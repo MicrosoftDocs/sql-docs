@@ -1,7 +1,7 @@
 ---
 title: "DROP WORKLOAD Classifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/01/2019"
+ms.date: "10/29/2019"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"
@@ -24,7 +24,7 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Drops an existing user-defined Workload Management Classifier. .  If requests are running or in the request queue in suspended state, they will keep their classification and the classifier can be dropped immediately. Dropping and recreating the classifier with different importance will not affect an already classified request.
+Drops an existing user-defined workload management classifier.  If requests are running or in the request queue in suspended state, they will keep their classification and the classifier can be dropped immediately. Dropping and recreating the classifier with different importance will not affect an already classified request.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   

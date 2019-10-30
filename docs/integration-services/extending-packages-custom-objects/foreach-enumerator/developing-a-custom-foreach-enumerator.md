@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "custom foreach enumerators [Integration Services], about custom foreach enumerators"
   - "foreach enumerators [Integration Services]"
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Developing a Custom ForEach Enumerator
 

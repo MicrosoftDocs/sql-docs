@@ -6,8 +6,8 @@ ms.prod: sql
 ms.prod_service: "integration-services"
 ms.custom: ""
 ms.technology: integration-services
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Deploy an SSIS project from the command prompt with ISDeploymentWizard.exe
 

@@ -209,8 +209,6 @@
         items:
         - name: azdata
           href: big-data-cluster/reference-azdata.md
-        - name: control
-          href: big-data-cluster/reference-azdata-control.md
         - name: notebook
           href: big-data-cluster/reference-azdata-notebook.md
         - name: sql
@@ -4162,8 +4160,8 @@
       href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
     - name: Deprecated in SQL Server 2016
       href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-    - name: Discontinued functionality in SQL Server 2016
-      href: database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md
+    - name: Discontinued functionality in SQL Server
+      href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
     - name: Breaking changes in SQL Server 2017
       href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
     - name: Breaking changes in SQL Server 2016
@@ -4185,8 +4183,12 @@
       href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
     - name: Usage and diagnostic data collection
       items:
-      - name: Privacy supplement
-        href: sql-server/sql-server-privacy.md
+      - name: SQL Server Privacy supplement
+        items:
+        - name: SQL Server 2017 and prior
+          href: sql-server/sql-server-privacy.md
+        - name: SQL Server 2019
+          href: sql-server/sql-server-privacy-ver15.md
       - name: Configure SQL Server usage and diagnostic data
         href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
       - name: Configure tools usage and diagnostic data
@@ -4286,6 +4288,8 @@
         href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
       - name: Change the Database Compatibility Mode with Query Tuning Assistant
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
+      - name: Latest updates for SQL Server
+        href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
   - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:
@@ -5064,10 +5068,6 @@
           href: relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
         - name: Define a logical record relationship
           href: relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
-        - name: Configure web synchronization
-          href: relational-databases/replication/configure-web-synchronization.md
-        - name: Configure IIS for Web Synchronization
-          href: relational-databases/replication/configure-iis-for-web-synchronization.md
         - name: Configure IIS 7 for Web Synchronization
           href: relational-databases/replication/configure-iis-7-for-web-synchronization.md
         - name: Resolve data conflicts
@@ -6497,6 +6497,12 @@
   items:
   - name: Manage
     items:
+    - name: Accelerated Database Recovery
+      items:
+      - name: Overview
+        href: relational-databases/accelerated-database-recovery-concepts.md
+      - name: Management
+        href: relational-databases/accelerated-database-recovery-management.md
     - name: Central Management Servers
       href: relational-databases/administer-multiple-servers-using-central-management-servers.md
     - name: Configuration Manager
@@ -8362,6 +8368,8 @@
         href: azure-data-studio/schema-compare-extension.md        
       - name: PowerShell extension
         href: azure-data-studio/powershell-extension.md        
+      - name: Managed Instance extension (preview)
+        href: azure-data-studio/azure-sql-managed-instance-extension.md        
       - name: SandDance extension (preview)
         href: azure-data-studio/sanddance-extension.md
     - name: Extension Authoring
@@ -12931,6 +12939,8 @@
         href: relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md
       - name: sys.dm_os_dispatcher_pools
         href: relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql.md
+      - name: sys.dm_os_enumerate_fixed_drives
+        href: relational-databases/system-dynamic-management-views/sys-dm-os-enumerate-fixed-drives.md
       - name: sys.dm_os_host_info
         href: relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md
       - name: sys.dm_os_hosts

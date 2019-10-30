@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "multiple sorts"
   - "duplicate data [Integration Services]"
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Sort Transformation
 

@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.collection: linux-container
-moniker: ">= sql-server-linux-ver15 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Run SQL Server Machine Learning Services in a container
 

@@ -42,9 +42,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  The fully qualified address of the Azure server.  
   
--   If you provide a value for **@database_name**, but the specified database is not Stretch-enabled, then you have to provide a value for **@server_address**.  
+-   If you provide a value for **\@database_name**, but the specified database is not Stretch-enabled, then you have to provide a value for **\@server_address**.  
   
--   If you provide a value for **@database_name**, and the specified database is Stretch-enabled, then you don't have to provide a value for **@server_address**. If you provide a value for **@server_address**, the stored procedure ignores it and uses existing Azure server already associated with the Stretch-enabled database.  
+-   If you provide a value for **\@database_name**, and the specified database is Stretch-enabled, then you don't have to provide a value for **\@server_address**. If you provide a value for **\@server_address**, the stored procedure ignores it and uses existing Azure server already associated with the Stretch-enabled database.  
   
  @azure_username = N'*azure_username*  
  The user name for the remote Azure server.  

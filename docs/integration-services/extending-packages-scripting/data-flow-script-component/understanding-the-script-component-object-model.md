@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Script component [Integration Services], object model"
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Understanding the Script Component Object Model
 

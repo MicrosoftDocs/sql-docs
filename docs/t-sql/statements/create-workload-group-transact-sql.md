@@ -103,7 +103,8 @@ REQUEST_MAX_CPU_TIME_SEC = *value*
 Specifies the maximum amount of CPU time, in seconds, that a request can use. *value* must be 0 or a positive integer. The default setting for *value* is 0, which means unlimited.
 
 > [!NOTE]
-> By default, Resource Governor will not prevent a request from continuing if the maximum time is exceeded. However, an event will be generated. For more information, see [CPU Threshold Exceeded Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).
+> By default, Resource Governor will not prevent a request from continuing if the maximum time is exceeded. However, an event will be generated. For more information, see [CPU Threshold Exceeded Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).     
+
 > [!IMPORTANT]
 > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, and using [trace flag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor will abort a request when the maximum time is exceeded.
 
@@ -114,13 +115,17 @@ Specifies the maximum time, in seconds, that a query can wait for a memory grant
 > A query does not always fail when memory grant time-out is reached. A query will only fail if there are too many concurrent queries running. Otherwise, the query may only get the minimum memory grant, resulting in reduced query performance.
 
 MAX_DOP = *value*     
-Specifies the maximum degree of parallelism (DOP) for parallel requests. *value* must be 0 or a positive integer. The allowed range for *value* is from 0 through 64. The default setting for *value*, 0, uses the global setting. MAX_DOP is handled as follows:
+Specifies the **maximum degree of parallelism (MAXDOP)** for parallel query execution. *value* must be 0 or a positive integer. The allowed range for *value* is from 0 through 64. The default setting for *value*, 0, uses the global setting. MAX_DOP is handled as follows:
 
-- MAX_DOP as a query hint is effective as long as it does not exceed workload group MAX_DOP. If the MAXDOP query hint value exceeds the value that is configured by using the Resource Governor, the Database Engine uses the Resource Governor MAXDOP value.
-- MAX_DOP as a query hint always overrides sp_configure 'max degree of parallelism'.
-- Workload group MAX_DOP overrides sp_configure 'max degree of parallelism'.
-- If the query is marked as serial at compile time, it cannot be changed back to parallel at run time regardless of the workload group or sp_configure setting.
-- After DOP is configured, it can only be lowered on grant memory pressure. Workload group reconfiguration is not visible while waiting in the grant memory queue.
+> [!NOTE]
+> Workload group MAX_DOP overrides the [server configuration for max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) and the **MAXDOP** [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+
+> [!TIP]
+> To accomplish this at the query level, use the **MAXDOP** [query hint](../../t-sql/queries/hints-transact-sql-query.md). Setting the maximum degree of parallelism as a query hint is effective as long as it does not exceed the workload group MAX_DOP. If the MAXDOP query hint value exceeds the value that is configured by using the Resource Governor, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uses the Resource Governor `MAX_DOP` value. The MAXDOP [query hint](../../t-sql/queries/hints-transact-sql-query.md) always overrides the [server configuration for max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).      
+>   
+> To accomplish this at the database level, use the **MAXDOP** [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).      
+>   
+> To accomplish this at the server level, use the **max degree of parallelism (MAXDOP)** [server configuration option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).     
 
 GROUP_MAX_REQUESTS = *value*     
 Specifies the maximum number of simultaneous requests that are allowed to execute in the workload group. *value* must be a 0 or a positive integer. The default setting for *value* is 0, and allows unlimited requests. When the maximum concurrent requests are reached, a user in that group can log in, but is placed in a wait state until concurrent requests are dropped below the value specified.
@@ -144,19 +149,20 @@ Workload group can specify an external resource pool. You can define a workload 
 ## Remarks
 When `REQUEST_MEMORY_GRANT_PERCENT` is used, index creation is allowed to use more workspace memory than what is initially granted for improved performance. This special handling is supported by Resource Governor in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. However, the initial grant and any additional memory grant are limited by resource pool and workload group settings.
 
+The `MAX_DOP` limit is set per [task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks which are assigned to a [scheduler](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). For more information, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
+
+When `MAX_DOP` is used and a query is marked as serial at compile time, it cannot be changed back to parallel at run time regardless of the workload group or server configuration setting. After `MAX_DOP` is configured, it can only be lowered due to memory pressure. Workload group reconfiguration is not visible while waiting in the grant memory queue.
+
 ### Index Creation on a Partitioned Table
 
 The memory consumed by index creation on non-aligned partitioned table is proportional to the number of partitions involved. If the total required memory exceeds the per-query limit `REQUEST_MAX_MEMORY_GRANT_PERCENT` imposed by the Resource Governor workload group setting, this index creation may fail to execute. Because the *"default"* workload group allows a query to exceed the per-query limit with the minimum required memory, the user may be able to run the same index creation in *"default"* workload group, if the *"default"* resource pool has enough total memory configured to run such query.
 
 ## Permissions
-
 Requires `CONTROL SERVER` permission.
 
 ## Example
 
-- Create a workload group named newReports
-
-It uses the Resource Governor default settings and is in the Resource Governor default pool. The example specifies the `default` pool, but this is not required.
+Create a workload group named `newReports` which uses the Resource Governor default settings, and is in the Resource Governor default pool. The example specifies the `default` pool, but this is not required.
 
 ```sql
 CREATE WORKLOAD GROUP newReports
@@ -182,9 +188,9 @@ GO
 
 &nbsp;
 
-## SQL Data Warehouse
+## SQL Data Warehouse (Preview)
 
-Creates a workload group.  Workload groups are used to define the amount of resources that are allocated per request.  The workload group can be used for reserving or limiting resources for a classified request.  Workload groups can also be used limit the query execution time.  Once the statement completes, the settings are in effect.
+Creates a workload group.  Workload groups are containers for a set of requests and are the basis for how workload management is configured on a system.  Workload groups provide the ability to reserve resources for workload isolation, contain resources, define resources per request, and adhere to execution rules.  Once the statement completes, the settings are in effect.
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
@@ -204,13 +210,13 @@ CREATE WORKLOAD GROUP group_name
 Specifies the name by which the workload group is identified.  group_name is a sysname.  It can be up to 128 characters long and must be unique within the instance.
 
 *MIN_PERCENTAGE_RESOURCE* = value</br>
-Specifies a guaranteed minimum resource allocation for this workload group that is not shared with other workload groups.  value is an integer range from 0 to 100.  The sum of min_percentage_resource across all workload groups cannot exceed 100.  The value for min_percentage_resource cannot be greater than cap_percentage_resource.
+Specifies a guaranteed minimum resource allocation for this workload group that is not shared with other workload groups.  value is an integer range from 0 to 100.  The sum of min_percentage_resource across all workload groups cannot exceed 100.  The value for min_percentage_resource cannot be greater than cap_percentage_resource.  There are minimum effective values allowed per service level.  See Effective Values<link> for more details.
 
 *CAP_PERCENTAGE_RESOURCE* = value</br>
-Specifies the maximum resource utilization for all requests in a workload group.  The allowed range for value is 1 through 100.  The value for cap_percentage_resource must be greater than min_percentage_resource.
+Specifies the maximum resource utilization for all requests in a workload group.  The allowed range for value is 1 through 100.  The value for cap_percentage_resource must be greater than min_percentage_resource.  The effective value for cap_percentage_resource can be reduced if min_percentage_resource is configured greater than zero in other workload groups.
 
 *REQUEST_MIN_RESOURCE_GRANT_PERCENT* = value</br>
-Sets the minimum amount of resources allocated per request.  value is a required parameter with a decimal range between 0.75 to 100.00.  The value for request_min_resource_grant_percent must be a multiple of 0.25, must be a factor of min_percentage_resource, and be less than cap_percentage_resource.
+Sets the minimum amount of resources allocated per request.  value is a required parameter with a decimal range between 0.75 to 100.00.  The value for request_min_resource_grant_percent must be a multiple of 0.25, must be a factor of min_percentage_resource, and be less than cap_percentage_resource.  There are minimum effective values allowed per service level.  See Effective Values<link> for more details.
 
 For example:
 
@@ -236,16 +242,19 @@ Sets the maximum amount of resources allocated per request.  value is an optiona
 
 *IMPORTANCE* = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>
 Specifies the default importance of a request for the workload group.  Importance is one of the following, with NORMAL being the default:
-•	LOW
-•	BELOW_NORMAL
-•	NORMAL (default)
-•	ABOVE_NORMAL
-•	HIGH
+- LOW
+- BELOW_NORMAL
+- NORMAL (default)
+- ABOVE_NORMAL
+- HIGH  
 
 Importance set at the workload group is a default importance for all requests in the workload group.  A user can also set importance at the classifier level, which can override the workload group importance setting.  This allows for differentiation of importance for requests within a workload group to get access to non-reserved resources quicker.  When the sum of min_percentage_resource across workload groups is less than 100, there are non-reserved resources that are assigned on a basis of importance.
 
 *QUERY_EXECUTION_TIMEOUT_SEC* = value</br>
 Specifies the maximum time, in seconds, that a query can execute before it is canceled.  value must be 0 or a positive integer.  The default setting for value is 0, which means unlimited.  The time spent waiting in the request queue is not counted towards query execution.
+
+## Remarks
+Workload groups corresponding to resource classes are created automatically for backward compatibility.  These system defined workload groups cannot be dropped.  An additional 8 user defined workload groups can be created.
 
 ## Effective Values
 
@@ -253,7 +262,9 @@ The parameters min_percentage_resource, cap_percentage_resource, request_min_res
 
 The supported concurrency per service level remains the same as when resource classes were used to define resource grants per query, hence, the supported values for request_min_resource_grant_percent is dependent on the service level the instance is set to.  At the lowest service level, DW100c, 4 concurrency is supported.  The effective request_min_resource_grant_percent for a configured workload group can be 25% or higher.  See the below table for further details.
 
-|Service Level|Maximum concurrent queries|Min % supported for REQUEST_MIN_RESOURCE_GRANT_PERCENT|
+|Service Level|Maximum concurrent queries|Min % supported for 
+REQUEST_MIN_RESOURCE_GRANT_PERCENT and
+ MIN_PERCENTAGE_RESOURCE|
 |---|---|---|
 |DW100c|4|25%|
 |DW200c|8|12.5%|
@@ -284,5 +295,6 @@ The easiest way to understand the run-time values for your workload groups is to
 Requires CONTROL DATABASE permission
 
 ## See also
+[DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)
 
 ::: moniker-end

@@ -160,35 +160,35 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 *ERRORFILE_CREDENTIAL* only applies to CSV files. Supported data source and authentication methods in public preview are:
 
 - Azure Blob Storage  - SAS/SERVICE PRINCIPAL/KEY/AAD
-
 - Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/KEY/AAD
   
-  Authenticating with Shared Access Signatures (SAS)
-  *IDENTITY: A constant with a value of ‘Shared Access Signature’*
-  *SECRET: The* [*shared access signature*](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature) *provides delegated access to resources in your storage account.*
-  Minimum permissions required: READ, LIST, WRITE, CREATE
+Authenticating with Shared Access Signatures (SAS)
+- *IDENTITY: A constant with a value of ‘Shared Access Signature’*
+- *SECRET: The* [*shared access signature*](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature) *provides delegated access to resources in your storage account.*
+- Minimum permissions required: READ, LIST, WRITE, CREATE
   
-  Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
-  *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
-  *SECRET: AAD Application Service Principal key*
-  Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner
+Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
+- *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
+- *SECRET: AAD Application Service Principal key*
+- Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner
   
-  > [!NOTE]  
-  > Use the OAuth 2.0 token endpoint **V1**
+> [!NOTE]  
+> Use the OAuth 2.0 token endpoint **V1**
   
-  Authenticating with Storage account key
-  *IDENTITY: A constant with a value of ‘Storage Account Key’*
-  *SECRET: Storage account key*
+Authenticating with Storage account key
+- *IDENTITY: A constant with a value of ‘Storage Account Key’*
+- *SECRET: Storage account key*
   
-  Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
-  *IDENTITY: A constant with a value of ‘Managed Identity’*
-  Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD registered SQL Database server 
+Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
+- *IDENTITY: A constant with a value of ‘Managed Identity’*
+- Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD registered SQL Database server 
   
-  Authenticating with an AAD user
-  *CREDENTIAL is not required*
-  Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD user
-  > [!NOTE]  
-  > If you are using the same storage account for your ERRORFILE and specifying the ERRORFILE path relative to the root of the container, you do not need to specify the ERROR_CREDENTIAL.
+Authenticating with an AAD user
+- *CREDENTIAL is not required*
+- Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD user
+
+> [!NOTE]  
+> If you are using the same storage account for your ERRORFILE and specifying the ERRORFILE path relative to the root of the container, you do not need to specify the ERROR_CREDENTIAL.
 
 *MAXERRORS = max_errors*</br>
 *MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation is canceled. Each row that cannot be imported by the COPY operation is ignored and counted as one error. If max_errors is not specified, the default is 0.

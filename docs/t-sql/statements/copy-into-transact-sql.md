@@ -64,8 +64,8 @@ Is an optional list of one or more columns used to map source data fields to tar
 [(Column_name [Default_value] [Field_number] [,...n])]
 
 - *Column_name* - the name of the column in the target table.
-- ​*Default_value* - the default value that will replace any NULL value in the input file. Default value applies to all file formats. COPY will attempt to load NULL from the input file when a column is omitted from the column list or when there is an empty input file field.
-- ​*Field_number* - the input file field number that will be mapped to the target column name.
+- *Default_value* - the default value that will replace any NULL value in the input file. Default value applies to all file formats. COPY will attempt to load NULL from the input file when a column is omitted from the column list or when there is an empty input file field.
+- *Field_number* - the input file field number that will be mapped to the target column name.
 - The field indexing starts at 1.
 
 When a column list is not specified, COPY will map columns based on the source and target ordinality: Input field 1 will go to target column 1, field 2 will go to column 2, etc.
@@ -73,21 +73,21 @@ When a column list is not specified, COPY will map columns based on the source a
 *External locations(s)*</br>
 Is where the files containing the data is staged. Currently Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage are supported:
 
-- ​Blob Storage -https://<account>.blob.core.windows.net/<container>/<path>
-- ​ADLS Gen2: https://<account>. dfs.core.windows.net/<container>/<path>
+- *External location* for Blob Storage: https://<account>.blob.core.windows.net/<container>/<path>
+- *External location* for ADLS Gen2: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
 > The blob endpoint is available for ADLS Gen2 and is only for backward compatibility. Use the **dfs** endpoint for ADLS Gen2 for best performance.
 
 NEED THE SYNTAX FOR THE EXTERNAL LOCATION
 
-- ​*Account* - The storage account name
+- *Account* - The storage account name
 
-- ​*Container* - The blob container name
+- *Container* - The blob container name
 
-- ​*Path* - the folder or file path for the data. The location starts from the container. If a folder is specified, COPY will retrieve all files from the folder and all its subfolders. COPY ignores hidden folders and doesn't return files that begin with an underline (_) or a period (.) unless explicitly specified in the path. This behavior is the same even when specifying a path with a wildcard.
+- *Path* - the folder or file path for the data. The location starts from the container. If a folder is specified, COPY will retrieve all files from the folder and all its subfolders. COPY ignores hidden folders and doesn't return files that begin with an underline (_) or a period (.) unless explicitly specified in the path. This behavior is the same even when specifying a path with a wildcard.
 
-​Wildcards cards can be included in the path where
+Wildcards cards can be included in the path where
 
 - Wildcard path name matching is case-sensitive
 - Wildcard can be escaped using the backslash character (\\)
@@ -162,11 +162,13 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 - Azure Blob Storage  - SAS/SERVICE PRINCIPAL/KEY/AAD
 - Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/KEY/AAD
   
+
 Authenticating with Shared Access Signatures (SAS)
 - *IDENTITY: A constant with a value of ‘Shared Access Signature’*
 - *SECRET: The* [*shared access signature*](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature) *provides delegated access to resources in your storage account.*
-- Minimum permissions required: READ, LIST, WRITE, CREATE
+- Minimum permissions required: READ, LIST, WRITE, CREATE, DELETE
   
+
 Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
 - *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
 - *SECRET: AAD Application Service Principal key*
@@ -174,15 +176,17 @@ Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-wa
   
 > [!NOTE]  
 > Use the OAuth 2.0 token endpoint **V1**
-  
+
 Authenticating with Storage account key
 - *IDENTITY: A constant with a value of ‘Storage Account Key’*
 - *SECRET: Storage account key*
   
+
 Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
 - *IDENTITY: A constant with a value of ‘Managed Identity’*
 - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD registered SQL Database server 
   
+
 Authenticating with an AAD user
 - *CREDENTIAL is not required*
 - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD user
@@ -218,7 +222,12 @@ The COPY command will autodetect the compression type based on the file extensio
 field terminator can be multi-character. The default field terminator is a (,).
 For more information, see [Specify Field and Row Terminators (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017).
 
-ROW TERMINATOR NEEDED
+ROW TERMINATOR = 'row_terminator'</br>
+*ROW TERMINATOR* Only applies to CSV. Specifies the row terminator that will be used in the CSV file. The row terminator can be multi-character. By default, the row terminator is \r\n. 
+
+Note the COPY command prefixes the \r character when specifying \n (newline) resulting in \r\n. To specify only the \n character, use hexadecimal (0x0A). When specifying multi-character row terminators in hexadecimal, do not specify 0x between each character.
+
+Please review the following [documentation](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators) for additional guidance on specifying row terminators. 
 
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* applies to CSV and specifies the row number that is read first in all files for the COPY command. Values start from 1, which is the default value. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators.

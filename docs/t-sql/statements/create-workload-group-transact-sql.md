@@ -190,7 +190,7 @@ GO
 
 ## SQL Data Warehouse (Preview)
 
-Creates a workload group.  Workload groups are used to define the amount of resources that are allocated per request.  The workload group can be used for reserving or limiting resources for a classified request.  Workload groups can also be used limit the query execution time.  Once the statement completes, the settings are in effect.
+Creates a workload group.  Workload groups are containers for a set of requests and are the basis for how workload management is configured on a system.  Workload groups provide the ability to reserve resources for workload isolation, contain resources, define resources per request, and adhere to execution rules.  Once the statement completes, the settings are in effect.
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
@@ -210,13 +210,13 @@ CREATE WORKLOAD GROUP group_name
 Specifies the name by which the workload group is identified.  group_name is a sysname.  It can be up to 128 characters long and must be unique within the instance.
 
 *MIN_PERCENTAGE_RESOURCE* = value</br>
-Specifies a guaranteed minimum resource allocation for this workload group that is not shared with other workload groups.  value is an integer range from 0 to 100.  The sum of min_percentage_resource across all workload groups cannot exceed 100.  The value for min_percentage_resource cannot be greater than cap_percentage_resource.
+Specifies a guaranteed minimum resource allocation for this workload group that is not shared with other workload groups.  value is an integer range from 0 to 100.  The sum of min_percentage_resource across all workload groups cannot exceed 100.  The value for min_percentage_resource cannot be greater than cap_percentage_resource.  There are minimum effective values allowed per service level.  See Effective Values<link> for more details.
 
 *CAP_PERCENTAGE_RESOURCE* = value</br>
-Specifies the maximum resource utilization for all requests in a workload group.  The allowed range for value is 1 through 100.  The value for cap_percentage_resource must be greater than min_percentage_resource.
+Specifies the maximum resource utilization for all requests in a workload group.  The allowed range for value is 1 through 100.  The value for cap_percentage_resource must be greater than min_percentage_resource.  The effective value for cap_percentage_resource can be reduced if min_percentage_resource is configured greater than zero in other workload groups.
 
 *REQUEST_MIN_RESOURCE_GRANT_PERCENT* = value</br>
-Sets the minimum amount of resources allocated per request.  value is a required parameter with a decimal range between 0.75 to 100.00.  The value for request_min_resource_grant_percent must be a multiple of 0.25, must be a factor of min_percentage_resource, and be less than cap_percentage_resource.
+Sets the minimum amount of resources allocated per request.  value is a required parameter with a decimal range between 0.75 to 100.00.  The value for request_min_resource_grant_percent must be a multiple of 0.25, must be a factor of min_percentage_resource, and be less than cap_percentage_resource.  There are minimum effective values allowed per service level.  See Effective Values<link> for more details.
 
 For example:
 
@@ -262,7 +262,9 @@ The parameters min_percentage_resource, cap_percentage_resource, request_min_res
 
 The supported concurrency per service level remains the same as when resource classes were used to define resource grants per query, hence, the supported values for request_min_resource_grant_percent is dependent on the service level the instance is set to.  At the lowest service level, DW100c, 4 concurrency is supported.  The effective request_min_resource_grant_percent for a configured workload group can be 25% or higher.  See the below table for further details.
 
-|Service Level|Maximum concurrent queries|Min % supported for REQUEST_MIN_RESOURCE_GRANT_PERCENT|
+|Service Level|Maximum concurrent queries|Min % supported for 
+REQUEST_MIN_RESOURCE_GRANT_PERCENT and
+ MIN_PERCENTAGE_RESOURCE|
 |---|---|---|
 |DW100c|4|25%|
 |DW200c|8|12.5%|

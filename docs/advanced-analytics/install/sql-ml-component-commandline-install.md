@@ -139,7 +139,7 @@ Two more tasks are required to complete the installation:
 
 ## <a name="add-existing"></a> Add advanced analytics to an existing database engine instance
 
-When adding in-database advanced analytics to an existing database engine instance, provide the instance name. For example, if you previously installed a SQL Server 2017 database engine and Python, you could use this command to add R.
+When adding in-database advanced analytics to an existing database engine instance, provide the instance name. For example, if you previously installed a SQL Server 2017 or later database engine and Python, you could use this command to add R.
 
 ```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER 

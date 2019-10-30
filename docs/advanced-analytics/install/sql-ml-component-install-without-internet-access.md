@@ -114,12 +114,6 @@ Copy the SQL Server installation media (.iso or .cab) and in-database analytics 
 
 The %TEMP% folder is required for Python CAB files. For R, you can use %TEMP% or set the `myrcachedirectory` parameter to the CAB path.
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-The following screenshot shows SQL Server CAB and ISO files. 
-
-![List of files to be transferred](media/offline-file-list.png "File list")
-::: moniker-end
-
 ## Run Setup
 
 When you run SQL Server Setup on a computer disconnected from the internet, Setup adds an **Offline installation** page to the wizard so that you can specify the location of the CAB files you copied in the previous step.

@@ -12,6 +12,10 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Extensibility Framework API for Microsoft SQL Server
 
+## What is the Extensibility Framework API?
+
+*We need something here...*
+
 ## API Calls
 
 ### Return value for all the calls

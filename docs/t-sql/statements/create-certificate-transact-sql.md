@@ -185,7 +185,7 @@ CREATE CERTIFICATE certificate_name
 ### A. Creating a self-signed certificate  
  The following example creates a certificate called `Shipping04`. The private key of this certificate is protected using a password.  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping04   
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
    WITH SUBJECT = 'Sammamish Shipping Records',   
@@ -196,7 +196,7 @@ GO
 ### B. Creating a certificate from a file  
  The following example creates a certificate in the database, loading the key pair from files.  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping11   
     FROM FILE = 'c:\Shipping\Certs\Shipping11.cer'   
     WITH PRIVATE KEY (FILE = 'c:\Shipping\Certs\Shipping11.pvk',   
@@ -209,7 +209,7 @@ GO
    
 ### C. Creating a certificate from a signed executable file  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping19   
     FROM EXECUTABLE FILE = 'c:\Shipping\Certs\Shipping19.dll';  
 GO  
@@ -217,7 +217,7 @@ GO
   
  Alternatively, you can create an assembly from the `dll` file, and then create a certificate from the assembly.  
   
-```  
+```sql  
 CREATE ASSEMBLY Shipping19   
     FROM ' c:\Shipping\Certs\Shipping19.dll'   
     WITH PERMISSION_SET = SAFE;  
@@ -234,7 +234,7 @@ GO
 ### D. Creating a self-signed certificate  
  The following example creates a certificate called `Shipping04` without specifying an encryption password. This example can be used with [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping04   
    WITH SUBJECT = 'Sammamish Shipping Records';  
 GO  

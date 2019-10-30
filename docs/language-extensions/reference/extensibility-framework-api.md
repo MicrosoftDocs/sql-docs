@@ -12,4 +12,8 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Extensibility Framework API for Microsoft SQL Server
 
-## Test
+## API Calls
+
+### Return value for all the calls
+
+All the functions return a **SQLRETURN** parameter. If the value is anything other than **SQL_SUCCESS**, the execution of the script stops.

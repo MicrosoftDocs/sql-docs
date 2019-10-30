@@ -80,7 +80,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
 ### A. Creating a new full-text stoplist  
  The following example creates a new full-text stoplist named `myStoplist`.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist;  
 GO  
 ```  
@@ -88,7 +88,7 @@ GO
 ### B. Copying a full-text stoplist from an existing full-text stoplist  
  The following example creates a new full-text stoplist named `myStoplist2` by copying an existing AdventureWorks stoplist named `Customers.otherStoplist`.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist2 FROM AdventureWorks.otherStoplist;  
 GO  
 ```  
@@ -96,7 +96,7 @@ GO
 ### C. Copying a full-text stoplist from the system full-text stoplist  
  The following example creates a new full-text stoplist named `myStoplist3` by copying from the system stoplist.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist3 FROM SYSTEM STOPLIST;  
 GO  
 ```  

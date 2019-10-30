@@ -123,7 +123,7 @@ CREATE ASYMMETRIC KEY asym_key_name
 ### A. Creating an asymmetric key  
  The following example creates an asymmetric key named `PacificSales09` by using the `RSA_2048` algorithm, and protects the private key with a password.  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY PacificSales09   
     WITH ALGORITHM = RSA_2048   
     ENCRYPTION BY PASSWORD = '<enterStrongPasswordHere>';   
@@ -133,7 +133,7 @@ GO
 ### B. Creating an asymmetric key from a file, giving authorization to a user  
  The following example creates the asymmetric key `PacificSales19` from a key pair stored in a file, and assigns ownership of the asymmetric key to user `Christina`. The private key is protected by the database master key, which must be created prior to creating the asymmetric key.  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY PacificSales19  
     AUTHORIZATION Christina  
     FROM FILE = 'c:\PacSales\Managers\ChristinaCerts.tmp';  
@@ -143,7 +143,7 @@ GO
 ### C. Creating an asymmetric key from an EKM provider  
  The following example creates the asymmetric key `EKM_askey1` from a key pair stored in an Extensible Key Management provider called `EKM_Provider1`, and a key on that provider called `key10_user1`.  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY EKM_askey1   
     FROM PROVIDER EKM_Provider1  
     WITH   

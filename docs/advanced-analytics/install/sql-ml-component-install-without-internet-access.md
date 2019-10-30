@@ -126,8 +126,6 @@ When you run SQL Server Setup on a computer disconnected from the internet, Setu
 
 4. When you get to the **Offline installation** page, in **Install Path**, specify the folder containing the CAB files you copied earlier.
 
-   ![Wizard page for cab folder selection](media/screenshot-sql-offline-cab-page.png "CAB folder")
-
 5. Continue following the on-screen prompts to complete the installation.
 
 <a name="apply-cu"></a>

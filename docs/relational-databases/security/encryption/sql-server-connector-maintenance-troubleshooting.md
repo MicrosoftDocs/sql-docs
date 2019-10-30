@@ -244,6 +244,8 @@ If you don't see your error code in this table, here are some other reasons the 
 -   You may have dropped the asymmetric key from Azure Key Vault or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Restore the key.  
   
 -   If you receive a "Cannot load library" error, make sure you have the appropriate version of the Visual Studio C++ redistributable installed based on the version of SQL Server that you are running. The table below specifies which version to install from the Microsoft Download Center.   
+
+The Windows Event Logs also logs errors associated with the SQL Server Connnector which can help with additional context on why the error is actually happening. The source in the Windows Application Event logs would be "SQL Server Connector for Microsoft Azure Key Vault".
   
 SQL Server Version  |Redistributable Install Link    
 ---------|--------- 

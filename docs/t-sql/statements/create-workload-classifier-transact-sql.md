@@ -1,7 +1,7 @@
 ---
 title: "CREATE WORKLOAD Classifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/02/2019"
+ms.date: "10/29/2019"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"
@@ -25,10 +25,10 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Creates a Workload Management Classifier.  The classifier assigns incoming requests to a workload group based on the parameters specified in the classifier statement definition.  Classifiers are evaluated with every request submitted.  If a request is not matched to a classifier, it is assigned to the default workload group.  The default workload group is the smallrc resource class.
+Creates a classifer object for use in workload management.  The classifier assigns incoming requests to a workload group based on the parameters specified in the classifier statement definition.  Classifiers are evaluated with every request submitted.  If a request is not matched to a classifier, it is assigned to the default workload group.  The default workload group is the smallrc resource class.
 
 > [!NOTE]
-> Workload groups and resources classes are used interchangeably.  The workload classifier takes the place of sp_addrolemember resource class assignment.  After workload classifiers are created, execute sp_droprolemember to remove any redundant resource class mappings.
+> The workload classifier takes the place of sp_addrolemember resource class assignment.  After workload classifiers are created, execute sp_droprolemember to remove any redundant resource class mappings.
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
@@ -62,7 +62,7 @@ WITH
  This is the security account being added to the role.  Security_account is a sysname, with no default. Security_account can be a database user, database role, Azure Active Directory login, or Azure Active Directory group.
  
  *WLM_LABEL*   
- Specifies the label value that a request can be classified against.  Label is an optional parameter of type nvarchar(255).  Use the OPTION (LABEL) [link TDB] in the request to match the classifier configuration.
+ Specifies the label value that a request can be classified against.  Label is an optional parameter of type nvarchar(255).  Use the [OPTION (LABEL)](azure/sql-data-warehouse/sql-data-warehouse-develop-label) in the request to match the classifier configuration.
 
 Example:
 
@@ -70,15 +70,15 @@ Example:
 CREATE WORKLOAD CLASSIFIER wcELTLoads WITH  
 ( WORKLOAD_GROUP = 'wgDataLoad'
  ,MEMBERNAME     = 'ELTRole'  
- ,WLM_LABEL      = 'fact_loads' )
+ ,WLM_LABEL      = 'dimension_loads' )
 
 SELECT COUNT(*) 
   FROM DimCustomer
-  OPTION (LABEL = 'fact_loads')
+  OPTION (LABEL = 'dimension_loads')
 ```
 
 *WLM_CONTEXT*  
-Specifies the session context value that a request can be classified against.  context is an optional parameter of type nvarchar(255).  Use the sys.sp_set_session_context with the variable name equal to ‘wlm_context’ prior to submitting a request to set the session context.
+Specifies the session context value that a request can be classified against.  context is an optional parameter of type nvarchar(255).  Use the [sys.sp_set_session_context](sql/relational-databases/system-stored-procedures/sp-set-session-context-transact-sql?view=azure-sqldw-latest) with the variable name equal to `wlm_context` prior to submitting a request to set the session context.
 
 Example:
 
@@ -87,6 +87,7 @@ CREATE WORKLOAD CLASSIFIER wcDataLoad WITH
 ( WORKLOAD_GROUP = 'wgDataLoad'
  ,MEMBERNAME     = 'ELTRole'
  ,WLM_CONTEXT    = 'dim_load' )
+ 
 --set session context
 EXEC sys.sp_set_session_context @key = 'wlm_context', @value = 'dim_load'
 
@@ -148,7 +149,7 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
  ,END_TIME       = '07:00' )
 ```
 
-The user ‘userloginA’ is configured for both classifiers.  If userloginA runs a query with a label equal to ‘salesreport’ between 6PM and 7AM UTC, the request will be classified to the wgDashboards workload group with HIGH importance.  The expectation may be to classify the request to wgUserQueries with LOW importance for off-hours reporting, but the precedence of WLM_LABEL is higher than START_TIME/END_TIME.  In this case, you can add START_TIME/END_TIME to classiferA.
+The user `userloginA` is configured for both classifiers.  If userloginA runs a query with a label equal to `salesreport` between 6PM and 7AM UTC, the request will be classified to the wgDashboards workload group with HIGH importance.  The expectation may be to classify the request to wgUserQueries with LOW importance for off-hours reporting, but the precedence of WLM_LABEL is higher than START_TIME/END_TIME.  In this case, you can add START_TIME/END_TIME to classiferA.
 
  For more information see, [workload classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence).
 

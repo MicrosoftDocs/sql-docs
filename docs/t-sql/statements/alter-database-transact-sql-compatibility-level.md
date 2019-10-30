@@ -152,7 +152,7 @@ The fundamental plan-affecting changes added only to the default compatibility l
 
 1.  **Query Optimizer fixes released for previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions under trace flag 4199 become automatically enabled in the default compatibility level of a newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version**. **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-    For example, when [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] was released, all the Query Optimizer fixes released for previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions (and respective compatibility levels 100 through 120) became automatically enabled for databases that use the [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] default compatibility level (130). Only post-RTM Query Optimizer fixes need to be explicitely enabled.
+    For example, when [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] was released, all the Query Optimizer fixes released for previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions (and respective compatibility levels 100 through 120) became automatically enabled for databases that use the [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] default compatibility level (130). Only post-RTM Query Optimizer fixes need to be explicitly enabled.
     
     > [!NOTE]
     > To enable Query Optimizer fixes, you can use the following methods:    
@@ -161,7 +161,7 @@ The fundamental plan-affecting changes added only to the default compatibility l
     > - At the database level, with the `QUERY_OPTIMIZER_HOTFIXES` option in [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
     > - At the query level, with the `USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'` [query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint).
     
-    Later, when [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] was released, all the Query Optimizer fixes released after [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM became automatically enabled for databases using the [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] default compatibility level (140). This is a cumulative behavior that includes all previous versions fixes as well. Again, only post-RTM Query Optimizer fixes need to be explicitely enabled.  
+    Later, when [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] was released, all the Query Optimizer fixes released after [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM became automatically enabled for databases using the [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] default compatibility level (140). This is a cumulative behavior that includes all previous versions fixes as well. Again, only post-RTM Query Optimizer fixes need to be explicitly enabled.  
     
     The following table summarizes this behavior:
     

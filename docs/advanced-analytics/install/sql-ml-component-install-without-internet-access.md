@@ -134,7 +134,15 @@ When you run SQL Server Setup on a computer disconnected from the internet, Setu
 
 We recommend that you apply the latest cumulative update to both the database engine and machine learning components. Cumulative updates are installed through the Setup program. 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+1. Start with a baseline instance. You can only apply cumulative updates to existing installations of the initial release of SQL Server.
+
+2. On an internet connected device, go to the cumulative update list for your version of SQL Server:
+
+  + SQL Server 2019 updates *(updates are not yet available for 2019)*
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 1. Start with a baseline instance. You can only apply cumulative updates to existing installations of the initial release of SQL Server.
 
 2. On an internet connected device, go to the cumulative update list for your version of SQL Server:

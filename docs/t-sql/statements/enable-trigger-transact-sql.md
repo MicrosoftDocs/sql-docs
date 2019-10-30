@@ -74,7 +74,7 @@ To enable a DDL trigger with server scope (ON ALL SERVER) or a logon trigger, a 
 ### A. Enabling a DML trigger on a table  
 The following example disables trigger `uAddress` that was created on table `Address` in the AdventureWorks database, and then enables it.  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ENABLE Trigger Person.uAddress ON Person.Address;  
@@ -84,7 +84,7 @@ GO
 ### B. Enabling a DDL trigger  
 The following example creates a DDL trigger `safety` with database scope, and then disables and enables it.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   
@@ -103,7 +103,7 @@ The following example enables all DDL triggers that were created at the server s
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 ENABLE Trigger ALL ON ALL SERVER;  
 GO  
 ```  

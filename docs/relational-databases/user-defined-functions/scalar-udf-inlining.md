@@ -18,7 +18,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-a
 ---
 # Scalar UDF Inlining
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article introduces Scalar UDF inlining, a feature under the intelligent query processing suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
@@ -128,8 +128,6 @@ As mentioned earlier, the query plan no longer has a user-defined function opera
 1. SQL Server has inferred the implicit join between `CUSTOMER` and `ORDERS` and made that explicit via a join operator.
 2. SQL Server has also inferred the implicit `GROUP BY O_CUSTKEY on ORDERS` and has used the IndexSpool + StreamAggregate to implement it.
 3. SQL Server is now using parallelism across all operators.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Depending upon the complexity of the logic in the UDF, the resulting query plan might also get bigger and more complex. As we can see, the operations inside the UDF are now no longer a black box, and hence the query optimizer is able to cost and optimize those operations. Also, since the UDF is no longer in the plan, iterative UDF invocation is replaced by a plan that completely avoids function call overhead.
 

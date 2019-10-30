@@ -43,8 +43,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 4.  Each call to [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) or [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) retrieves R rows and transfers the data into the bound columns.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### To use row-wise binding  
   
 1.  Allocate an array[R] of structures, where R is the number of rows in the rowset. The structure has one element for each column, and each element has two parts:  

@@ -103,8 +103,8 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
     [ORDER (column [,...n] ) ] -- in preview
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
+
 ```
-  
 ## Arguments  
 
 Some of the options are not available in all database engine versions. The following table shows the versions when the options are introduced in CLUSTERED COLUMNSTORE and NONCLUSTERED COLUMNSTORE indexes:

@@ -76,7 +76,7 @@ manager: craigg
   
  Use SQL Server Management Studio to connect to the UCP, then run this script:  
   
-```  
+```sql
 EXEC msdb.dbo.sp_sysutility_ucp_remove;  
 ```  
   
@@ -213,14 +213,12 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="PowerShell_create_UCP"></a> Create a New Utility Control Point Using PowerShell  
  Use the following example to create a new utility control point:  
   
-```  
-> $UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
-> $SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
-> $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
+```powershell
+$UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
+$SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
+$Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  
   
 ## See Also  
  [SQL Server Utility Features and Tasks](sql-server-utility-features-and-tasks.md)   
  [Troubleshoot the SQL Server Utility](../../database-engine/troubleshoot-the-sql-server-utility.md)  
-  
-  

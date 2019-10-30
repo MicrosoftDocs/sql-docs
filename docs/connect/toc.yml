@@ -2,7 +2,7 @@
   href: ../connect/homepage-sql-connection-programming.md
 
 - name: Welcome to SQL Server >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 
 - name: SQL Server Drivers
   href: ../connect/sql-connection-libraries.md
@@ -2513,8 +2513,6 @@
       href: ../connect/jdbc/understanding-java-ee-support.md
     - name: Deploying the JDBC Driver
       href: ../connect/jdbc/deploying-the-jdbc-driver.md
-    - name: Redistributing the Microsoft JDBC Driver
-      href: ../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md
     - name: Finding Additional JDBC Driver Information
       href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
     - name: Microsoft JDBC Driver for SQL Server Support Matrix

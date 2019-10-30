@@ -47,8 +47,6 @@ ms.author: jrasnick
   
 4.  In the **Delete Object** dialog box, ensure that the correct plan guide is selected and then click **OK**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To delete a single plan guide  

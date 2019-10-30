@@ -103,8 +103,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 4.  Restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ###  <a name="nl6nl6restore"></a> To restore the current components  
   
 1.  Navigate to the location where you backed up the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of NaturalLanguage6.dll.  

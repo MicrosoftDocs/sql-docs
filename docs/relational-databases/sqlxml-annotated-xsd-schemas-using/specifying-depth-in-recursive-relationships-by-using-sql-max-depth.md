@@ -142,8 +142,6 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
 5.  Create and use the SQLXML 4.0 Test Script (Sqlxml4test.vbs) to execute the template. For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  This is the result:  
   
 ```  

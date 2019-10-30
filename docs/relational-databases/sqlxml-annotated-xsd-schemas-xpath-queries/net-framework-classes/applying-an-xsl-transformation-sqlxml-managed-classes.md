@@ -105,8 +105,6 @@ class Test
   
 4.  At the command prompt, execute DocSample.exe.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Applying an XSL Transformation in the .NET Framework  
  Instead of applying an XSL transformation in the middle tier, as described previously, you can apply an XSL transformation on the client side (in the .NET Framework). The following revised C# code shows how the XSL transformation is applied in the .NET Framework.  
   

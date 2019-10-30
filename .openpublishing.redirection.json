@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/big-data-cluster/deploy-on-minikube.md",
+            "redirect_url": "/sql/big-data-cluster/deploy-get-started",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/big-data-cluster/reference-azdata-control.md",
             "redirect_url": "/sql/big-data-cluster/reference-azdata",
             "redirect_document_id": false
@@ -14,6 +19,11 @@
             "source_path": "docs/big-data-cluster/deploy-install-azdata-installer.md",
             "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql-server/sql-server-technical-documentation.md",
+            "redirect_url": "/sql/sql-server/",
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/relational-databases/system-catalog-views/sys-sql-feature-restrictions.md",
@@ -2636,8 +2646,13 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/tools/dta/ lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md",
+            "source_path": "docs/tools/dta/lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md",
             "redirect_url": "/sql/tools/dta/lesson-3-using-the-dta-command-prompt-utility",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/jdbc/redistributing-the-microsoft-jdbc-driver.md",
+            "redirect_url": "/sql/connect/jdbc/deploying-the-jdbc-driver",
             "redirect_document_id": false
         },
         {
@@ -14069,6 +14084,11 @@
             "source_path": "docs/relational-databases/indexes/columnstore-indexes-defragmentation.md",
             "redirect_url": "/sql/relational-databases/indexes/reorganize-and-rebuild-indexes",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-develop-use-vscode.md",
+            "redirect_url": "/sql/visual-studio-code/sql-server-develop-use-vscode",
+            "redirect_document_id": true
         }
     ]
 }

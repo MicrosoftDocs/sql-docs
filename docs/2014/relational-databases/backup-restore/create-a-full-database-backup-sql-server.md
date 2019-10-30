@@ -270,8 +270,7 @@ GO
   
      The following example creates a full database backup of the `MyDB` database to the default backup location of the server instance `Computer\Instance`. Optionally, this example specifies `-BackupAction Database`.  
   
-    ```  
-    --Enter this command at the PowerShell command prompt, C:\PS>  
+    ```powershell
     Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Database  
     ```  
   
@@ -305,5 +304,3 @@ GO
  [Back Up Database &#40;Backup Options Page&#41;](back-up-database-backup-options-page.md)   
  [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Full Database Backups &#40;SQL Server&#41;](full-database-backups-sql-server.md)  
-  
-  

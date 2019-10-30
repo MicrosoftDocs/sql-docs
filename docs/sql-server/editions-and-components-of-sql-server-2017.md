@@ -159,8 +159,6 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Azure (backup to URL)|Yes|Yes|No|No|No|
 |Read-scale availability group|Yes|Yes|No|No|No|No|
-|Minimum replica commit availability group|Yes|Yes|Yes|No|No|No|
-  
 
 <sup>1</sup> For more information on installing SQL Server on Server Core,  see [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
@@ -211,8 +209,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Row-level security|Yes|Yes|Yes|Yes|Yes|  
 |Always Encrypted|Yes|Yes|Yes|Yes|Yes| 
 |Dynamic data masking|Yes|Yes|Yes|Yes|Yes|   
-|Basic auditing|Yes|Yes|Yes|Yes|Yes| 
-|Fine grained auditing|Yes|Yes|Yes|Yes|Yes| 
+|Server Audit|Yes|Yes|Yes|Yes|Yes| 
+|Database Audit|Yes|Yes|Yes|Yes|Yes| 
 |Transparent database encryption|Yes|No|No|No|No|   
 |Extensible key management|Yes|No|No|No|No| 
 |User-defined roles|Yes|Yes|Yes|Yes|Yes| 

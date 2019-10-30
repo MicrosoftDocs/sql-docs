@@ -70,8 +70,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  Schema options are specified as a hexadecimal value that is the [| (Bitwise OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) result of one or more options. For more information, see [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) and [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
   

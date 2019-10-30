@@ -60,8 +60,6 @@ You can use the Object Explorer to specify a default value for a table column.
 
 4. On the **File** menu, click **Save** _table name_.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="TsqlProcedure"></a> Use Transact-SQL to specify a default
 
 There are various ways that you can specify a default value for a column, by using SSMS to submit T-SQL.

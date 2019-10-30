@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```sql  
 CREATE ROLE role_name [ AUTHORIZATION owner_name ]  
 ```  
   
@@ -73,7 +73,7 @@ The following examples all use the AdventureWorks database.
 ### A. Creating a database role that is owned by a database user  
  The following example creates the database role `buyers` that is owned by user `BenMiller`.  
   
-```  
+```sql  
 CREATE ROLE buyers AUTHORIZATION BenMiller;  
 GO  
 ```  
@@ -81,7 +81,7 @@ GO
 ### B. Creating a database role that is owned by a fixed database role  
  The following example creates the database role `auditors` that is owned the `db_securityadmin` fixed database role.  
   
-```  
+```sql  
 CREATE ROLE auditors AUTHORIZATION db_securityadmin;  
 GO  
 ```  

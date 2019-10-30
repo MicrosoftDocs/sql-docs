@@ -186,7 +186,7 @@ WITH (
   
 Create a column master key metadata entry for a column master key. Client applications, which use the MSSQL_CNG_STORE provider, access the column master key:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'MSSQL_CNG_STORE',    
@@ -196,7 +196,7 @@ WITH (
   
 Create a column master key metadata entry for a column master key. The column master key is stored in the Azure Key Vault, for client applications that use the AZURE_KEY_VAULT provider, to access the column master key.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
@@ -206,7 +206,7 @@ WITH (
   
 Create a column master key metadata entry for a column master key. The column master key is stored in a custom column master key store:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
@@ -216,7 +216,7 @@ WITH (
 ### B. Creating an enclave-enabled column master key  
 The following example creates a column master key metadata entry for an enclave-enabled column master key. The enclave-enabled column master key is stored in a Certificate Store, for client applications that use the MSSQL_CERTIFICATE_STORE provider to access the column master key:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -227,7 +227,7 @@ WITH (
   
 Create a column master key metadata entry for an enclave-enabled column master key. The enclave-enabled column master key is stored in the Azure Key Vault, for client applications that use the AZURE_KEY_VAULT provider, to access the column master key.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  

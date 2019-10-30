@@ -24,7 +24,7 @@ To enable Active Directory (AD) authentication, the BDC automatically creates th
 
 To automatically create all the required objects in Active Directory, the BDC needs an AD account during deployment. This account needs to have permissions to create users, groups, and machine accounts inside the provided OU.
 
-The steps below will assume you already have an Active Directory domain controller. If you don't have a domain controller, the following [guide](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) includes steps that can be helpful.
+The steps below assume you already have an Active Directory domain controller. If you don't have a domain controller, the following [guide](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) includes steps that can be helpful.
 
 ## Create AD objects
 
@@ -41,7 +41,7 @@ To create a new user in AD, you can right-click the domain or the OU and select 
 
 ![image12](./media/deploy-active-directory/image12.png)
 
-This user will be referred to as the "BDC domain service account" in this article.
+This user will be referred to as the *BDC domain service account* in this article.
 
 ### Creating an OU
 
@@ -57,7 +57,7 @@ In the examples in this article, we are naming the OU: `bdc`
 
 ![image14](./media/deploy-active-directory/image14.png)
 
-### Setting permissions for the bdc AD account
+### Setting permissions the BDC AD account
 
 Whether you have created a new AD user or using an existing AD user, there are certain permissions the user needs to have. Note that this is the user account that the BDC controller will use when joining the cluster to AD.
 
@@ -141,7 +141,7 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
 For deployment of BDC with AD integration, there is some additional information that needs to be provided for creating the BDC-related objects in AD.
 
-By using the 'kubeadm-prod' profile, you will automatically have the placeholders for the Security related information and endpoint related information that is required for AD integration.
+By using the `kubeadm-prod` profile, you will automatically have the placeholders for the Security related information and endpoint related information that is required for AD integration.
 
 Furthermore, you need to provide credentials that [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] will use to create the necessary objects in AD. These credentials are provided as environment variables.
 
@@ -156,39 +156,41 @@ export DOMAIN_SERVICE_ACCOUNT_USERNAME=<AD principal password>
 
 ## Provide security and endpoint parameters
 
-In addition to environment variables for credentials, you also need to provide security and endpoint information for AD integration to work. The parameters needed are automatically part of the "kubeadm-prod" deployment profile. **TODO: Link to article about deployment profiles.**
+In addition to environment variables for credentials, you also need to provide security and endpoint information for AD integration to work. The parameters needed are automatically part of the `kubeadm-prod` [deployment profile](deployment-guidance.md#configfile).
 
-The following parameters are needed. These parameters can be added to the control.json and bdc.json files using *config replace* commands shown further down in this article. All the examples below are using the example domain "contoso.local".
+The following parameters are needed. These parameters can be added to the control.json and bdc.json files using `config replace` commands shown further down in this article. All the examples below are using the example domain `contoso.local`.
 
-* `security.ouDistinguishedName`: distinguished name of an organizational unit (OU) where all AD accounts created by cluster deployment will be added. If the domain is called "contoso.local", the OU distinguished name is: `OU=BDC,DC=contoso,DC=local`.
+- `security.ouDistinguishedName`: distinguished name of an organizational unit (OU) where all AD accounts created by cluster deployment will be added. If the domain is called `contoso.local`, the OU distinguished name is: `OU=BDC,DC=contoso,DC=local`.
 
-* `security.dnsIpAddresses`: list of IP addresses of domain controllers
+- `security.dnsIpAddresses`: list of IP addresses of domain controllers
 
-* `security.domainControllerFullyQualifiedDns`: List of FQDN of domain controller. The FQDN contains the machine/host name of the domain controller. If you have multiple domain controllers, you can provide a list here. Example: `HOSTNAME.CONTOSO.LOCAL`
+- `security.domainControllerFullyQualifiedDns`: List of FQDN of domain controller. The FQDN contains the machine/host name of the domain controller. If you have multiple domain controllers, you can provide a list here. Example: `HOSTNAME.CONTOSO.LOCAL`
 
-* `security.realm` **Optional parameter**: This is an optional parameter and is not required. In the majority of cases, the realm equals domain name. For cases where this is not the case, you can use this parameter to define name of realm (e.g. `CONTOSO.LOCAL`).
+- `security.realm` **Optional parameter**: This is an optional parameter and is not required. In the majority of cases, the realm equals domain name. For cases where this is not the case, you can use this parameter to define name of realm (e.g. `CONTOSO.LOCAL`).
 
-* `security.domainDnsName`: Name of your domain (e.g. `contoso.local`).
+- `security.domainDnsName`: Name of your domain (e.g. `contoso.local`).
 
 
-* `security.clusterAdmins`: This parameter takes *one* AD group. Members of this group will get administrator permissions in the cluster. TThis means that they will have sysadmin permissions in SQL Server, superuser permissions in HDFS and administrators in Controller.
+- `security.clusterAdmins`: This parameter takes *one- AD group. Members of this group will get administrator permissions in the cluster. TThis means that they will have sysadmin permissions in SQL Server, superuser permissions in HDFS and administrators in Controller.
 
-* `security.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster.
+- `security.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster.
 
-* `security.appOwners` **Optional parameter** : List of the AD groups who have permissions to create, delete and run any application.
+- `security.appOwners` **Optional parameter**: List of the AD groups who have permissions to create, delete and run any application.
 
-* `security.appReaders` **Optional parameter** : list of the AD users or Groups who have permissions to run any application. For example:
+- `security.appReaders` **Optional parameter**: list of the AD users or Groups who have permissions to run any application. For example:
 
 To replace the above parameters in the `control.json` file, you can use the following azdata commands to replace the config and provide your own values before deployment. You need to run the below commands after running.
 
-If you have not already initiaqlized the deployment configuration file, you can run this command to get a copy of the configuration.
+If you have not already initialized the deployment configuration file, you can run this command to get a copy of the configuration.
 
 ```bash
 azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 ```
+
+The example below replaces the AD related parameter values in deployment config. The domain details below are example values.
+
+
 ```bash
-# The below commands will replace the AD related parameter values in deployment config.
-# Note that the below domain details are only example values.
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dnsIpAddresses=[\"10.100.10.100\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
@@ -197,10 +199,10 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clu
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusers1\,bdcusers2\"]"
 ```
 
-In addition to the above information, you also need to provide DNS names for the different cluster endpoints. The DNS entries using your provided DNS names will automatically be created in your DNS Server upon deployment. You will use these names when connecting to the different cluster endpoints. For example, if the DNS name for SQL master instance is "mastersql", you will use "mastersql.contoso.local,31433" to connect to the master instance from the tools.
+In addition to the above information, you also need to provide DNS names for the different cluster endpoints. The DNS entries using your provided DNS names will automatically be created in your DNS Server upon deployment. You will use these names when connecting to the different cluster endpoints. For example, if the DNS name for SQL master instance is `mastersql`, you will use `mastersql.contoso.local,31433` to connect to the master instance from the tools.
 
 > [!NOTE]
-> Make sure to create DNS entries in the DNS Server for the names you are defining below. For Kubeadm deployments, you can for example use the IP address of the Kubernetes master node when creating the DNS entries.
+> Make sure to create DNS entries in the DNS Server for the names you are defining below. For `kubeadm` deployments, you can for example use the IP address of the Kubernetes master node when creating the DNS entries.
 
 ```bash
 # DNS names for BDC services
@@ -220,24 +222,24 @@ For full documentation of how to deploy [!INCLUDE[big-data-clusters](../includes
 
 ## Verify reverse DNS entry for domain controller
 
-Make sure that there is a reverse DNS entry (PTR record) for the domain controller itself, registered in the DNS server. You can verify this by running "nslookup" of the domain name on the domain controller, to see that it can be resolved to the domain controller IP address.
+Make sure that there is a reverse DNS entry (PTR record) for the domain controller itself, registered in the DNS server. You can verify this by running `nslookup` of the domain name on the domain controller, to see that it can be resolved to the domain controller IP address.
 
 ## Connect to cluster endpoints in AD mode
 
-### Login to SQL Server master instance with AD Auth
+Log in to SQL Server master instance with AD Auth.
 
-To verify that AD connections to the SQL Server instance works, connect to SQL master instance with `sqlcmd`. Logins will automatically be created for the provided groups upon deployment (`clusterUsers` and `clusterAdmins`).
+To verify AD connections to the SQL Server instance, connect to the SQL master instance with `sqlcmd`. Logins are automatically be created for the provided groups upon deployment (`clusterUsers` and `clusterAdmins`).
 
 If you are using Linux, first run `kinit` as the AD user, then run `sqlcmd`. If you are using Windows, simply login as your desired user from a **domain joined client machine**.
 
-#### Connect to master instance from Linux/Mac
+### Connect to master instance from Linux/Mac
 
 ```bash
 kinit <username>@<domain name>
 sqlcmd -S <DNS name for master instance>,31433 -E
 ```
 
-#### Connect to master instance from Windows
+### Connect to master instance from Windows
 
 ```cmd
 sqlcmd -S <DNS name for master instance>,31433 -E
@@ -255,9 +257,9 @@ From Azure Data Studio:
 
 ![image24](./media/deploy-active-directory/image24.png)}
 
-### Login to controller with AD auth
+### Login to controller with AD authentication
 
-#### Connect to controller with AD auth from Linux/Mac
+#### Connect to controller with AD authentication from Linux/Mac
 
 You can connect to the controller endpoint using azdata and AD authentication.
 
@@ -266,7 +268,7 @@ kinit <username>@<domain name>
 azdata login -e https://<controller DNS name>:30080 --auth ad
 ```
 
-#### Connect to controller with AD auth from Windows
+#### Connect to controller with AD authentication from Windows
 
 ```cmd
 azdata login -e https://<controller DNS name>:30080 --auth ad
@@ -274,7 +276,7 @@ azdata login -e https://<controller DNS name>:30080 --auth ad
 
 ### Use AD authentication to Knox gateway (webHDFS)
 
-You can also issue HDFS commands using curl through the Knox gateway endpoint. That requires AD authentication to Knox. The below curl command issues a webHDFS REST call through the Knox gateway to create a directory called "products"
+You can also issue HDFS commands using curl through the Knox gateway endpoint. That requires AD authentication to Knox. The below curl command issues a webHDFS REST call through the Knox gateway to create a directory called `products`
 
 ```bash
 curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/webhdfs/v1/products?op=MKDIRS -X PUT
@@ -284,8 +286,8 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 **Limitations to be aware of in this release:**
 
-* Currently, the Log Search Dashboard and Metrics Dashboard do not support AD authentication. AD support for this endpoint is planned for a future release. Basic username and password set upon deployment can be used for authentication to these dashboards. All other cluster endpoint support AD authentication.
+- Currently, the Log Search Dashboard and Metrics Dashboard do not support AD authentication. AD support for this endpoint is planned for a future release. Basic username and password set upon deployment can be used for authentication to these dashboards. All other cluster endpoint support AD authentication.
 
-* The secure AD mode will only work on kubeadm deployment environments and not on AKS right now. The kubeadm-prod deployment profile includes the security sections by default.
+- The secure AD mode will only work on `kubeadm` deployment environments and not on AKS right now. The `kubeadm-prod` deployment profile includes the security sections by default.
 
-* Only one BDC per domain is allowed at this time. Enabling multiple BDCs per domain is planned for a future release.
+- Only one BDC per domain is allowed at this time. Enabling multiple BDCs per domain is planned for a future release.

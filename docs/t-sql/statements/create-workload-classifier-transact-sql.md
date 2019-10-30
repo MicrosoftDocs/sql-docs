@@ -56,13 +56,13 @@ WITH
  *WORKLOAD_GROUP* = *'name'*   
  When the conditions are met by the classifier rules, name maps the request to a workload group.  name is a sysname.  It can be up to 128 characters long and must be a valid workload group name at the time of classifier creation.
 
- Available workload groups can be found in [sys.workload_management_workload_groups](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) catalog view.
+ Available workload groups can be found in [sys.workload_management_workload_groups](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md?view=azure-sqldw-latest) catalog view.
 
  *MEMBERNAME* ='security_account'*    
  This is the security account being added to the role.  Security_account is a sysname, with no default. Security_account can be a database user, database role, Azure Active Directory login, or Azure Active Directory group.
  
  *WLM_LABEL*   
- Specifies the label value that a request can be classified against.  Label is an optional parameter of type nvarchar(255).  Use the [OPTION (LABEL)](azure/sql-data-warehouse/sql-data-warehouse-develop-label) in the request to match the classifier configuration.
+ Specifies the label value that a request can be classified against.  Label is an optional parameter of type nvarchar(255).  Use the [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label) in the request to match the classifier configuration.
 
 Example:
 
@@ -78,7 +78,7 @@ SELECT COUNT(*)
 ```
 
 *WLM_CONTEXT*  
-Specifies the session context value that a request can be classified against.  context is an optional parameter of type nvarchar(255).  Use the [sys.sp_set_session_context](sql/relational-databases/system-stored-procedures/sp-set-session-context-transact-sql?view=azure-sqldw-latest) with the variable name equal to `wlm_context` prior to submitting a request to set the session context.
+Specifies the session context value that a request can be classified against.  context is an optional parameter of type nvarchar(255).  Use the [sys.sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest) with the variable name equal to `wlm_context` prior to submitting a request to set the session context.
 
 Example:
 

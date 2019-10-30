@@ -16,9 +16,9 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 This article describes how to perform cryptographic operations in-place on columns using Always Encrypted with secure enclaves with the [ALTER TABLE Statement](../../../odbc/microsoft/alter-table-statement.md)/`ALTER COLUMN` statement. For basic information about in-place encryption and general pre-requisites, see [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
 
-With the `ALTER TABLE`/`ALTER COLUMN` statement you can set the target encryption configuration for a column. When your execute the statement, the server-side secure enclave will encrypt, re-encrypt, or decrypt the data stored in the column, depending on the current and the target encryption configuration, specified in the column definition in the statement. 
+With the `ALTER TABLE` or `ALTER COLUMN` statement, you can set the target encryption configuration for a column. When you execute the statement, the server-side secure enclave will encrypt, re-encrypt, or decrypt the data stored in the column, depending on the current and the target encryption configuration, specified in the column definition in the statement. 
 - If the column is currently not encrypted, it will be encrypted if you specify the `ENCRYPTED WITH` clause in the column definition.
-- If the column is currently encrypted, it will be decrypted (converted to a plaintext column), if you do not specify the `ENCRYPTED WITH` clause in the column definition.
+- If the column is currently encrypted, it will be decrypted (converted to a plaintext column), if you don't specify the `ENCRYPTED WITH` clause in the column definition.
 - If the column is currently encrypted, it will be re-encrypted if you specify the `ENCRYPTED WITH` clause and the specified column encryption type or the column encryption key are different from the currently used encryption type or the column encryption key. 
 
 > [!NOTE]
@@ -26,10 +26,10 @@ With the `ALTER TABLE`/`ALTER COLUMN` statement you can set the target encryptio
 
 As any query that uses a server-side secure enclave, an `ALTER TABLE`/`ALTER COLUMN` statement that triggers in-place encryption must be sent over a connection with Always Encrypted and enclave computations enabled. 
 
-The remainder of this article describes how to trigger in-place encryption  using `ALTER TABLE`/`ALTER COLUMN` from SQL Server Management Studio. Alternatively, you can issue `ALTER TABLE`/`ALTER COLUMN` from your application. 
+The remainder of this article describes how to trigger in-place encryption using the `ALTER TABLE`/`ALTER COLUMN` statement from SQL Server Management Studio. Alternatively, you can issue `ALTER TABLE`/`ALTER COLUMN` from your application. 
 
 > [!NOTE]
-> Currently, tools other than SSMS, including the [Invoke-Sqlcmd](https://docs.microsoft.com/en-us/powershell/module/sqlserver/invoke-sqlcmd) cmdlet in the SqlServer PowerShell module and [sqlcmd](../../../tools/sqlcmd-utility.md), do not support using `ALTER TABLE`/`ALTER COLUMN` for in-place cryptographic operations.
+> Currently, tools other than SSMS, including the [Invoke-Sqlcmd](https://docs.microsoft.com/powershell/module/sqlserver/invoke-sqlcmd) cmdlet in the SqlServer PowerShell module and [sqlcmd](../../../tools/sqlcmd-utility.md), do not support using `ALTER TABLE`/`ALTER COLUMN` for in-place cryptographic operations.
 
 ## Perform in-place encryption with Transact-SQL in SSMS
 ### Pre-requisites
@@ -64,7 +64,7 @@ The below example assumes:
 
 The statement encrypts the `SSN` column using randomized encryption and the enclave-enabled column encryption key in-place. It also overwrites the default database collation with the corresponding (in the same code page) BIN2 collation.
 
-The operation is performed online (`ONLINE = ON`). Also note the call to `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` which recreates the plans of the queries impacted by the table schema change.
+The operation is performed online (`ONLINE = ON`). Also note the call to `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`, which recreates the plans of the queries is affected by the table schema change.
 
 ```sql
 ALTER TABLE [dbo].[Employees]

@@ -1,7 +1,7 @@
 ---
 title: "Export and import databases using Always Encrypted  | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/26/2019
+ms.date: 10/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -27,8 +27,8 @@ If you have an application that is configured to query encrypted columns stored 
 For detailed information about how to export and import a database, see:
 - [Export a Data-tier Application](../../data-tier-applications/export-a-data-tier-application.md)
 - [Import a BACPAC File to Create a New User Database](../../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)
-- [Export an Azure SQL database to a BACPAC file](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-export)
-- [Import a BACPAC file to a database in Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-import)
+- [Export an Azure SQL database to a BACPAC file](https://docs.microsoft.com/azure/sql-database/sql-database-export)
+- [Import a BACPAC file to a database in Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-import)
 - [SqlPackage.exe](../../../tools/sqlpackage.md)
 
 ## Permissions for migrating databases with encrypted columns

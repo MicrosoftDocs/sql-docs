@@ -1,7 +1,7 @@
 ---
 title: "Develop applications using Always Encrypted | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/01/2019"
+ms.date: "10/30/2019"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security

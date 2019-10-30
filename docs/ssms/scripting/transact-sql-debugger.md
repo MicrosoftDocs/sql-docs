@@ -11,7 +11,7 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 10/20/2019
-monikerRange: "sql-server/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+monikerRange: "sql-server/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
 # Transact-SQL Debugger

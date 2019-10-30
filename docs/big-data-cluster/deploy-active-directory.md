@@ -11,11 +11,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode
+# Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This document describes how to deploy a SQL Server 2019 big data cluster (BDC) in the Active Directory
+This document describes Deploy a SQL Server 2019 big data cluster (BDC) in the Active Directory
 authentication mode, which will use an existing AD domain for authentication.
 
 ## Background

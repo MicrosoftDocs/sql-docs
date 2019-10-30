@@ -3055,7 +3055,7 @@ WHERE request_id = <'Your_Query_Request_ID'>
 > [!IMPORTANT]
 > The operations to create result set cache and retrieve data from the cache happen on the control node of a data warehouse instance. When result set caching is turned ON, running queries that return large result set (for example, >1 million rows) can cause high CPU usage on the control node and slow down the overall query response on the instance. Those queries are commonly used during data exploration or ETL operations. To avoid stressing the control node and cause performance issue, users should turn OFF result set caching on the database before running those types of queries.  
 
-For details on performance tuning with result set caching, check [Performance tuning guidance](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching?branch=pr-en-us-94002).
+For details on performance tuning with result set caching, check [Performance tuning guidance](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-result-set-caching?branch=pr-en-us-94002).
 
 ### Permissions
 To set the RESULT_SET_CACHING option, a user needs server-level principal login (the one created by the provisioning process) or be a member of the `dbmanager` database role.  

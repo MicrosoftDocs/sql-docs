@@ -12899,6 +12899,16 @@
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md
       - name: sys.dm_pdw_exec_sessions
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_query_plan
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md 
+      - name: sys.dm_pdw_nodes_exec_query_profiles
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-profiles-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_query_statistics_xml
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-statistics-xml-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_sql_text
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-sql-text-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_text_query_plan
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-text-query-plan-transact-sql.md
       - name: sys.dm_pdw_hadoop_operations
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-hadoop-operations-transact-sql.md
       - name: sys.dm_pdw_lock_waits

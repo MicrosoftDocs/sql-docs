@@ -78,7 +78,7 @@ SSMS 18.4 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Fixed a crash in SSMS while trying to display Securables on "Replication Filter" objects. |
 | General SSMS | Mitigated the removal of the -P command-line option by having SSMS look at its cache of credentials: if the required credential were found, the connection would be established using it. |
 | Import flat file | Fixed an issue where *Import Flat File* functionality not handling text qualifiers correctly. |
-| Object Explorer | Fixed an issue where dropping an Azure SQL Database in Object Explorer was showing a wrong error message. |
+| Object Explorer | Fixed an issue where dropping an Azure SQL Database in Object Explorer was showing an incorrect message. |
 | Query Results | Fixing an issue introduced in SSMS 18.3.1, where grids would be drawn slightly too narrow and show *...* at the end of the longest string in every column. |
 | Replication Tools | Fixed an issue that was causing the application to throw an error ("Could not load file or assembly…") when trying to edit SQL Agent jobs. |
 | SMO/Scripting | Fixed an issue when *Script Table As…* for SQL DW whose collation is Japanese_BIN2 was not working.|
@@ -262,7 +262,7 @@ Release date: July 25, 2019
 | Intellisense/editor | Reduced SMO-based query traffic to Azure SQL databases for IntelliSense. |
 | Intellisense/editor | Fixed grammatical error in the tooltip displayed when typing T-SQL to create a user. Also, fixed the error message to disambiguate between users and logins. |
 | Log Viewer | Fixed an issue where SSMS always opens the current server (or agent) log, even if double-clicking an older archive sign in the Object Explorer. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37633648) for more details. |
-| SSMS setup | Fixed the issue that was causing SSMS set up to fail when the setup log path contained spaces. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37496110) for more details. |
+| SSMS setup | Fixed the issue that was causing SSMS setup to fail when the setup log path contained spaces. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37496110) for more details. |
 | SSMS setup | Fixed an issue where SSMS was exiting immediately after showing the splash screen. </br> See these sites for more details: [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37502512), [SSMS Refuses to Start](https://dba.stackexchange.com/questions/238609/ssms-refuses-to-start), and [Database Administrators](https://dba.stackexchange.com/questions/237086/sql-server-management-studio-18-wont-open-only-splash-screen-pops-up). |
 | Object explorer | Lifted restriction on enabling *start PowerShell* when connected to SQL on Linux. |
 | Object explorer | Fixed an issue that was causing SSMS to crash when trying to expand the Polybase/Scale-out Group node (when connected to a compute node). |

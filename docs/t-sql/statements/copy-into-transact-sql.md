@@ -1,0 +1,364 @@
+---
+title: "COPY INTO (Transact-SQL) | Microsoft Docs"
+ms.custom: ""
+ms.date: 11/04/2019
+ms.prod: sql
+ms.prod_service: "database-engine, sql-data-warehouse"
+ms.reviewer: "jrasnick"
+ms.technology: t-sql
+ms.topic: "language-reference"
+f1_keywords: 
+  - "COPY_TSQL"
+  - "COPY INTO"
+  - "COPY"
+  - "LOAD"
+dev_langs: 
+  - "TSQL"
+ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
+author: kevinvngo
+ms.author: kevin
+---
+# COPY (Transact-SQL)
+
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+
+This topic explains how to use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into SQL Data Warehouse. 
+
+[!NOTE]  
+The COPY statement is currently in public preview. 
+
+## Syntax  
+
+```
+COPY INTO [schema.]table_name
+[(Column_list)] 
+FROM ‘<external_location>’ [,...n]
+WITH  
+ ( 
+ [FILE_TYPE = {'CSV' | 'PARQUET' | 'ORC'} ]
+ [,FILE_FORMAT = EXTERNAL FILE FORMAT OBJECT ]	
+ [,CREDENTIAL = (AZURE CREDENTIAL) ]
+ [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]] 
+ [,ERRORFILE_CREDENTIAL = (AZURE CREDENTIAL) ]
+ [,MAXERRORS = max_errors ] 
+ [,COMPRESSION = { 'Gzip' | 'DefaultCodec'|’Snappy’}] 
+ [,FIELDQUOTE = ‘string_delimiter’] 
+ [,FIELDTERMINATOR =  ‘field_terminator’]  
+ [,ROWTERMINATOR = ‘row_terminator’]
+ [,FIRSTROW = first_row]
+ [,DATEFORMAT = ‘date_format’] 
+ [,ENCODING = {'UTF8'|'UTF16'}] 
+ [,IDENTITY_INSERT = {‘ON’ | ‘OFF’}]
+)     
+```
+
+## Arguments  
+
+ *schema_name*  
+ *schema_name* is optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* is not specified and the default schema of the user performing the COPY operation is different from the specified table, COPY will be cancelled and an error message will be returned.  
+
+ *table_name*  
+ *table_name* is the name of the table to COPY data into. The target table can be a temporary table or permanent table.
+
+ *column_list*  
+*column list* is optional and can be provided which enables you to map source data fields to target table columns for the load. The column list is of the following format:
+
+​	[(Column_name [Default_value] [Field_number] [,...n])] 
+
+​	*Column_name* - the name of the column in the target table.
+
+​	*Default_value* - the default value which will replace any NULL value in the input file. Default value applies to all file formats. COPY will attempt to load NULL from the input file when a column is omitted from the column list or when there is an empty input file field. 
+
+​	*Field_number* - the input file field number which will be mapped to the target column name. The field indexing starts at 1. 
+
+When a column list is not specified, COPY will canonically map based on the source and target ordinality: Input field 1 will go to target column 1, field 2 will go to column 2, etc.
+
+*External_location(s)* 
+*External location(s)* is where the files containing the data is staged. Currently Azure Data Lake Storage (ADLS) Gen2 and Azure Blob Storage are supported:
+
+​	Blob Storage -https://<account>.blob.core.windows.net/<container>/<path>
+​	ADLS Gen2: https://<account>. dfs.core.windows.net/<container>/<path>
+
+[!NOTE]  
+The blob endpoint is available for ADLS Gen2 only for backward compatibility - use the **dfs** endpoint for ADLS Gen2 for best performance.
+
+​	*Account* - the storage account name
+
+​	*Container* - the blob container name 
+
+​	*Path* -  the folder or file path for the data. The location starts from the container. If a folder is specified, COPY will retrieve all files from the folder and all its subfolders. COPY ignores hidden folders and doesn't return files which begin with an underline (_) or a period (.) unless explicitly specified in the path. This behavior is the same even when specifying a path with a wildcard.
+
+​	Wildcards cards can be included in the path where
+
+- Wildcard path name matching is case sensitive
+- Wildcard can be escaped using the backslash character (\\)
+- Wildcard expansion is applied recursively. For instance, all CSV files under Customer1 (including subdirectories of Customer1 will be loaded in the following example: ‘Account/Container/Customer1/*.csv’
+
+[!NOTE]  
+For best performance, avoid specifying wildcards that would expand over a larger number of files. If possible, list multiple file locations instead of specifying wildcards.
+
+Multiple file locations can only be specified from the same storage account and container via a comma-separated list such as:
+
+​	‘https://<account>.blob.core.windows.net/<container>/<path>’,
+​	‘https://<account>.blob.core.windows.net/<container>/<path>’…
+
+*FILE_TYPE = { ‘CSV’ | ‘PARQUET’ | ‘ORC’ }*
+*FILE_TYPE* specifies the format of the external data.
+
+- CSV: Specifies a comma separated values file compliant to the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
+
+[!NOTE]  
+PolyBase loading ‘Delimited Text’ is replaced by the ‘CSV’ file format where the default comma delimiter can be configured via the FIELDTERMINATOR parameter.  
+
+- PARQUET: Specifies a Parquet format.
+- ORC: Specifies an Optimized Row Columnar (ORC) format.
+
+*FILE_FORMAT = external_file_format_name*
+*FILE_FORMAT* applies to Parquet and ORC files only and specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-external-file-format-transact-sql?view=azure-sqldw-latest). 
+
+*CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*
+*CREDENTIAL* specifies the authentication mechanism to access the external storage account. Authentication methods in Public Preview are the following:
+
+|                          |                CSV                |              Parquet              |                ORC                |
+| :----------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |
+|  **Azure blob storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY              |              SAS/KEY              |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |
+
+When authenticating using AAD or to a public storage account, CREDENTIAL does not need to be specified. 
+
+- Authenticating with Shared Access Signatures (SAS)
+  *IDENTITY: A constant with a value of ‘Shared Access Signature’*
+  *SECRET: The* [*shared access signature*](https://docs.microsoft.com//azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature) *provides delegated access to resources in your storage account.*
+  Minimum permissions required: READ and LIST
+
+- Authenticating with [*Service Principals*](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
+
+  *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
+  *SECRET: AAD Application Service Principal key*
+  Minimum RBAC roles required: Storage blob data contributor, Storage blob data contributor, Storage blob data owner, or Storage blob data reader
+
+  [!NOTE]  
+  Use the OAuth 2.0 token endpoint **V1**
+
+- Authenticating with Storage account key
+  *IDENTITY: A constant with a value of ‘Storage Account Key’*
+  *SECRET: Storage account key*
+  
+- Authenticating with [Managed Identity](https://docs.microsoft.com/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
+  *IDENTITY: A constant with a value of ‘Managed Identity’*
+  Minimum RBAC roles required: Storage blob data contributor, Storage blob data owner, or Storage blob data reader for the AAD registered SQL Database server 
+  
+- Authenticating with an AAD user
+  *CREDENTIAL is not required*
+  Minimum RBAC roles required: Storage blob data contributor, Storage blob data owner, or Storage blob data reader for the AAD user
+
+*ERRORFILE = Directory Location*
+*ERRORFILE* only applies to CSV. Specifies the directory within the COPY statement where the rejected rows and the corresponding error file should be written. The full path from the storage account can be specified or the path relative to the container can be specified. If the specified path doesn't exist, one will be created on your behalf. A child directory is created with the name "_rejectedrows". The "_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. 
+
+Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the reason (Error) file and the data (Row) file each pre-appending with the queryID, distributionID, and a file guid. Because the data and the reason are in separate files, corresponding files have a matching prefix.
+
+If ERRORFILE has the full path of the storage account defined, then the ERRORFILE_CREDENTIAL will be used to connect to that storage. Otherwise, the value mentioned for CREDENTIAL will be used.
+
+*ERRORFILE_CREDENTIAL = (IDENTITY= ‘’, SECRET = ‘’)*
+*ERRORFILE_CREDENTIAL* only applies to CSV. Supported data source and authentication methods in public preview are the following:
+
+- Azure Blob Storage  - SAS/SERVICE PRINCIPAL/KEY/AAD
+
+- Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/KEY/AAD
+  
+  Authenticating with Shared Access Signatures (SAS)
+  *IDENTITY: A constant with a value of ‘Shared Access Signature’*
+  *SECRET: The* [*shared access signature*](https://docs.microsoft.com//azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature) *provides delegated access to resources in your storage account.*
+  Minimum permissions required: READ, LIST, WRITE, CREATE
+  
+  Authenticating with [*Service Principals*](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
+  *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
+  *SECRET: AAD Application Service Principal key*
+  Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner
+  
+  [!NOTE]  
+  Use the OAuth 2.0 token endpoint **V1**
+  
+  Authenticating with Storage account key
+  *IDENTITY: A constant with a value of ‘Storage Account Key’*
+  *SECRET: Storage account key*
+  
+  Authenticating with [Managed Identity](https://docs.microsoft.com/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
+  *IDENTITY: A constant with a value of ‘Managed Identity’*
+  Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD registered SQL Database server 
+  
+  Authenticating with an AAD user
+  *CREDENTIAL is not required*
+  Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD user
+  
+
+[!NOTE]  
+If you are using the same storage account for your ERRORFILE and specifying the ERROFILE path relative to the root of the container, you do not need to specify the ERROR_CREDENTIAL.
+
+*MAXERRORS = max_errors*
+*MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation is cancelled. Each row that cannot be imported by the COPY operation is ignored and counted as one error. If max_errors is not specified, the default is 0.
+
+*COMPRESSION = { 'DefaultCodec '| ’Snappy’ | ‘GZIP’ | ‘NONE’}*
+
+*COMPRESSION* is optional and specifies the data compression method for the external data. 
+
+- CSV supports GZIP
+- Parquet supports GZIP and Snappy
+- ORC supports DefaultCodec and Snappy. Zlib is the default compression for ORC
+
+The COPY command will auto-detect the compression type based on the file extension when this parameter is not specified:
+
+- .gz  - **GZIP**
+- .snappy – **Snappy**
+- .deflate - **DefaultCodec**
+
+ *FIELDQUOTE = 'field_quote'*
+*FIELDQUOTE* applies to CSV and specifies a single character that will be used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") will be used as the quote character as defined in the RFC 4180 standard. Extended ASCII characters are not supported with UTF-8 for FIELDQUOTE.
+
+[!NOTE]  
+FIELDQUOTE characters are escaped in string columns where there is a presence of a double FIELDQUOTE (delimiter). 
+
+*FIELDTERMINATOR = 'field_terminator’*
+*FIELDTERMINATOR* Only applies to CSV. Specifies the field terminator that will be used in the CSV file. The
+field terminator can be multi-character. The default field terminator is , (comma).
+For more information, see [Specify Field and Row Terminators (SQL Server)](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017).
+
+*FIRSTROW  = First_row_int*
+*FIRSTROW* applies to CSV and specifies the row number that is read first in all files for the COPY command. Values start from 1 which is the default value. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators.
+
+*DATEFORMAT = { ‘mdy’ | ‘dmy’ | ‘ymd’ | ‘ydm’ | ‘myd’ | ‘dym’ }*
+DATEFORMAT only applies to CSV and specifies the date format of the date mapping to SQL Server date formats. For an overview of all Transact-SQL date and time data types and functions, see [Date and Time Data Types and Functions (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-ver15) DATEFORMAT within the COPY command takes precedence over [DATEFORMAT configured at the session level](https://docs.microsoft.com/sql/t-sql/statements/set-dateformat-transact-sql?view=sql-server-ver15).
+
+*ENCODING = ‘UTF8’ | ‘UTF16’*
+*ENCODING* only applies to CSV. Default is UTF8. Specifies the data encoding standard for the files loaded by the COPY command. 
+
+*IDENTITY_INSERT = ‘ON’ | ‘OFF’*
+IDENTITY_INSERT specifies whether the identity value or values in the imported data file are to be used for the identity column. If IDENTITY_INSERT is OFF (default), the identity values for this column are verified but not imported and SQL DW automatically assigns unique values based on the seed and increment values specified during table creation. Note the following behavior with the COPY command:
+
+- If IDENTITY_INSERT is OFF and table has an identity column
+  - A column list must be specified which does not map an input field to the identity column
+- If IDENTITY_INSERT is ON and table has an identity column
+  - If a column list is passed, it must map an input field to the identity column
+- Default value is not supported for the IDENTITY COLUMN in the column list
+- IDENTITY_INSERT can only be set for one table at a time
+
+### Permissions  
+
+The user executing the Copy Command must have the following: 
+
+- [ADMINISTER DATABASE BULK OPERATIONS](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql?view=azure-sqldw-latest#remarks)
+- [INSERT ](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql?view=azure-sqldw-latest#remarks)
+
+Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Data Warehouse, INSERT and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
+
+## Examples  
+
+### A. Load from a public storage account
+
+
+ The following example is the simplest form of the COPY command which loads data from a public storage account. For this example, the COPY statement's defaults match the format of the lineitem csv file.
+
+```sql
+COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv’
+```
+
+The default values of the COPY command are:
+
+- DATEFORMAT = Session DATEFORMAT 
+
+- MAXERRORS = 0
+
+- COMPRESSION default is uncompressed
+
+- FIELDQUOTE = “” 
+
+- FIELDTERMINATOR = “,” 
+
+- ROWTERMINATOR = ‘\n'
+
+> [!IMPORTANT]
+> COPY treats ‘\n’ as ‘\r\n’ internally. For additional details, visit the ROWTERMINATOR section.
+
+- FIRSTROW = 1
+
+- ENCODING = ‘UTF8’
+
+- FILE_TYPE = ‘CSV’
+
+- IDENTITY_INSERT = ‘OFF’
+
+
+### B. Load authenticating via Share Access Signature (SAS)   
+
+The following example loads files that use the line feed as a row terminator such as a UNIX output. This example also uses a SAS key to authenticate to Azure blob storage.
+
+```sql
+COPY INTO test_1
+FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/'
+WITH (
+    FILE_TYPE = 'CSV',
+    CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>'),
+	--CREDENTIAL should look something like this:
+    --CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='?sv=2018-03-28&ss=bfqt&srt=sco&sp=rl&st=2016-10-17T20%3A14%3A55Z&se=2021-10-18T20%3A19%3A00Z&sig=IEoOdmeYnE9%2FKiJDSHFSYsz4AkNa%2F%2BTx61FuQ%2FfKHefqoBE%3D'),
+    FIELDQUOTE = '"',
+    FIELDTERMINATOR=';',
+    ROWTERMINATOR='0X0A',
+    ENCODING = 'UTF8',
+    DATEFORMAT = 'ymd',
+	MAXERRORS = 10,
+	ERRORFILE = '/errorsfolder/',--path starting from the storage container
+	IDENTITY_INSERT = ‘ON’
+)
+```
+
+### C. Load with a column list with default values authenticating via Storage Account Key 
+
+This example loads files specifying a column list with default values. 
+
+```sql
+--Note when specifying the column list, input field numbers start from 1
+COPY INTO test_1 (Col_one default 'myStringDefault' 1, Col_two default 1 3)
+FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/'
+WITH (
+    FILE_TYPE = 'CSV',
+    CREDENTIAL=(IDENTITY= 'Storage Account Key', SECRET='<Your_Account_Key>'),
+	--CREDENTIAL should look something like this:
+    --CREDENTIAL=(IDENTITY= 'Storage Account Key', SECRET='x6RWv4It5F2msnjelv3H4DA80n0PQW0daPdw43jM0nyetx4c6CpDkdj3986DX5AHFMIf/YN4y6kkCnU8lb+Wx0Pj+6MDw=='),
+    FIELDQUOTE = '"',
+    FIELDTERMINATOR=',',
+    ROWTERMINATOR='0x0A',
+    ENCODING = 'UTF8',
+    FIRSTROW = 2
+)
+```
+
+### D. Load Parquet or ORC using existing file format object
+
+ This example uses a wildcard to load all parquet files under a folder. 
+
+```sql
+COPY INTO test_parquet
+FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/*.parquet'
+WITH (
+    FILE_FORMAT = myFileFormat
+    CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>')
+)
+```
+
+### E. Load specifying wild cards and multiple files   
+
+```sql
+COPY INTO t1
+FROM 
+'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt', 
+	'https://myaccount.blob.core.windows.net/myblobcontainer/folder1'
+WITH ( 
+	FILE_TYPE = 'CSV'
+	CREDENTIAL=(IDENTITY= '<client_id>@<OAuth_2.0_Token_EndPoint>',SECRET='<key>'),
+	FIELDTERMINATOR = '|'
+)
+```
+
+## See Also  
+
+ [Loading overview with SQL Data Warehouse](<https://docs.microsoft.com/azure/sql-data-warehouse/design-elt-data-loading>) 

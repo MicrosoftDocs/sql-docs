@@ -139,7 +139,7 @@ We recommend that you apply the latest cumulative update to both the database en
 
 2. On an internet connected device, go to the cumulative update list for your version of SQL Server:
 
-  + SQL Server 2019 updates *(updates are not yet available for 2019)*
+   + SQL Server 2019 updates *(updates are not yet available for 2019)*
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -147,7 +147,7 @@ We recommend that you apply the latest cumulative update to both the database en
 
 2. On an internet connected device, go to the cumulative update list for your version of SQL Server:
 
-  + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
+   + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
@@ -155,7 +155,7 @@ We recommend that you apply the latest cumulative update to both the database en
 
 2. On an internet connected device, go to the cumulative update list for your version of SQL Server:
 
-  + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
+   + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
 ::: moniker-end
 
 3. Select the latest cumulative update to download the executable.
@@ -166,7 +166,7 @@ We recommend that you apply the latest cumulative update to both the database en
 
 6. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features.
 
-    ![Select features from the feature tree](media/cumulative-update-feature-selection.png "feature list")
+   ![Select features from the feature tree](media/cumulative-update-feature-selection.png "feature list")
 
 5. Continue through the wizard, accepting the licensing terms for R and Python distributions. During installation, you are prompted to choose the folder location containing the updated CAB files.
 
@@ -178,8 +178,8 @@ For R feature integration only, you should set the **MKL_CBWR** environment vari
 
 2. Create a new User or System variable. 
 
-  + Set variable name to `MKL_CBWR`
-  + Set the variable value to `AUTO`
+   + Set variable name to `MKL_CBWR`
+   + Set the variable value to `AUTO`
 
 This step requires a server restart. If you are about to enable script execution, you can hold off on the restart until all of the configuration work is done.
 

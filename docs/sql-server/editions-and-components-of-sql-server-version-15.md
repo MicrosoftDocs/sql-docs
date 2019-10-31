@@ -48,7 +48,7 @@ For information about older versions, see:
 
 * [SQL Server 2017](editions-and-components-of-sql-server-2017.md)
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md)
-* [SQL Server 2014](http://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014)
+* [SQL Server 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014)
 
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
@@ -177,7 +177,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 
 <sup>4</sup> Standard Edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).
 
-<sup>5</sup> [Software assurance](http://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default) required.
+<sup>5</sup> [Software assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) required.
 
 ##  <a name="RDBMSSP"></a> RDBMS scalability and performance
 

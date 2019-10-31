@@ -20,7 +20,7 @@ authentication mode, which will use an existing AD domain for authentication.
 
 ## Background
 
-To enable Active Directory (AD) authentication, the BDC automatically creates the users, groups, machine accounts, and service principal names (SPN) that the various services in the cluster need. To provide some containment of these accounts and allow scoping permissions, nominate an organizational unit (OU) during deployment, where all BDC related AD objects will be created. Create this OU before cluster deployment.
+To enable Active Directory (AD) authentication, the BDC automatically creates the users, groups, machine accounts, and service principal names (SPN) that the various services in the cluster need. To provide some containment of these accounts and allow scoping permissions, nominate an organizational unit (OU) during deployment, where all BDC-related AD objects will be created. Create this OU before cluster deployment.
 
 To automatically create all the required objects in Active Directory, the BDC needs an AD account during deployment. This account needs to have permissions to create users, groups, and machine accounts inside the provided OU.
 
@@ -28,14 +28,14 @@ The steps below assume you already have an Active Directory domain controller. I
 
 ## Create AD objects
 
-There are three things in AD that need to be done before a BDC can be deployed with AD integration.
+Do the following things before you deploy a BDC with AD integration:
 
 1. Create an organizational unit (OU) where all BDC AD objects will be stored. You can also choose to nominate an existing OU upon deployment.
 1. Create an AD account for BDC, or use an existing account, and provide this BDC AD account the right permissions.
 
 ### Create a user in AD for BDC domain service account
 
-The big data cluster requires an account with specific permissions. Before you proceed, please make sure that you have an existing AD account or create a new account which the big data cluster can use to set up the necessary objects.
+The big data cluster requires an account with specific permissions. Before you proceed, make sure that you have an existing AD account or create a new account, which the big data cluster can use to set up the necessary objects.
 
 To create a new user in AD, you can right-click the domain or the OU and select **New** > **User**:
 
@@ -59,7 +59,7 @@ In the examples in this article, we are naming the OU: `bdc`
 
 ### Setting permissions the BDC AD account
 
-Whether you have created a new AD user or using an existing AD user, there are certain permissions the user needs to have. Note that this is the user account that the BDC controller will use when joining the cluster to AD.
+Whether you have created a new AD user or using an existing AD user, there are certain permissions the user needs to have. This account is the user account that the BDC controller will use when joining the cluster to AD.
 
 The BDC domain service account (DSA) needs to be able to create users, groups, and computer accounts in the OU. In the following steps, we have named the BDC domain service account `bdcDSA`. You can choose any name for this account.
 
@@ -79,7 +79,7 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
     ![image17](./media/deploy-active-directory/image17.png)
 
-1. Select the **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** user and un-check all permissions, then click **Advanced**
+1. Select the **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** user and clear all permissions, then click **Advanced**
 
 1. Click **Add**
 
@@ -141,13 +141,13 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
 For deployment of BDC with AD integration, there is some additional information that needs to be provided for creating the BDC-related objects in AD.
 
-By using the `kubeadm-prod` profile, you will automatically have the placeholders for the Security related information and endpoint related information that is required for AD integration.
+By using the `kubeadm-prod` profile, you will automatically have the placeholders for the security-related information and endpoint-related information that is required for AD integration.
 
 Furthermore, you need to provide credentials that [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] will use to create the necessary objects in AD. These credentials are provided as environment variables.
 
 ## Set security environment variables
 
-The following environment variables are providing the credentials for the BDC domain service account, which will be used to set up the AD integration. This account is also used by BDC to maintain the BDC related AD objects going forward.
+The following environment variables are providing the credentials for the BDC domain service account, which will be used to set up the AD integration. This account is also used by BDC to maintain the BDC-related AD objects going forward.
 
 ```bash
 export DOMAIN_SERVICE_ACCOUNT_USERNAME=<AD principal account name>
@@ -158,7 +158,7 @@ export DOMAIN_SERVICE_ACCOUNT_USERNAME=<AD principal password>
 
 In addition to environment variables for credentials, you also need to provide security and endpoint information for AD integration to work. The parameters needed are automatically part of the `kubeadm-prod` [deployment profile](deployment-guidance.md#configfile).
 
-The following parameters are needed. These parameters can be added to the control.json and bdc.json files using `config replace` commands shown further down in this article. All the examples below are using the example domain `contoso.local`.
+AD integration requires the following parameters. Add these parameters to the `control.json` and `bdc.json` files using `config replace` commands shown further down in this article. All the examples below are using the example domain `contoso.local`.
 
 - `security.ouDistinguishedName`: distinguished name of an organizational unit (OU) where all AD accounts created by cluster deployment will be added. If the domain is called `contoso.local`, the OU distinguished name is: `OU=BDC,DC=contoso,DC=local`.
 
@@ -166,20 +166,17 @@ The following parameters are needed. These parameters can be added to the contro
 
 - `security.domainControllerFullyQualifiedDns`: List of FQDN of domain controller. The FQDN contains the machine/host name of the domain controller. If you have multiple domain controllers, you can provide a list here. Example: `HOSTNAME.CONTOSO.LOCAL`
 
-- `security.realm` **Optional parameter**: This is an optional parameter and is not required. In the majority of cases, the realm equals domain name. For cases where this is not the case, you can use this parameter to define name of realm (e.g. `CONTOSO.LOCAL`).
+- `security.realm` **Optional parameter**: In the majority of cases, the realm equals domain name. For cases where they are not the same, use this parameter to define name of realm (e.g. `CONTOSO.LOCAL`).
 
 - `security.domainDnsName`: Name of your domain (e.g. `contoso.local`).
-
 
 - `security.clusterAdmins`: This parameter takes *one- AD group. Members of this group will get administrator permissions in the cluster. TThis means that they will have sysadmin permissions in SQL Server, superuser permissions in HDFS and administrators in Controller.
 
 - `security.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster.
 
-- `security.appOwners` **Optional parameter**: List of the AD groups who have permissions to create, delete and run any application.
+- `security.appOwners` **Optional parameter**: List of the AD groups who have permissions to create, delete, and run any application.
 
-- `security.appReaders` **Optional parameter**: list of the AD users or Groups who have permissions to run any application. For example:
-
-To replace the above parameters in the `control.json` file, you can use the following azdata commands to replace the config and provide your own values before deployment. You need to run the below commands after running.
+- `security.appReaders` **Optional parameter**: list of the AD users or Groups who have permissions to run any application. 
 
 If you have not already initialized the deployment configuration file, you can run this command to get a copy of the configuration.
 
@@ -187,8 +184,9 @@ If you have not already initialized the deployment configuration file, you can r
 azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 ```
 
-The example below replaces the AD related parameter values in deployment config. The domain details below are example values.
+To set the above parameters in the `control.json` file, use the following `azdata` commands. The commands replace the config and provide your own values before deployment.
 
+The example below replaces the AD-related parameter values in deployment config. The domain details below are example values.
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"
@@ -230,7 +228,7 @@ Log in to SQL Server master instance with AD Auth.
 
 To verify AD connections to the SQL Server instance, connect to the SQL master instance with `sqlcmd`. Logins are automatically be created for the provided groups upon deployment (`clusterUsers` and `clusterAdmins`).
 
-If you are using Linux, first run `kinit` as the AD user, then run `sqlcmd`. If you are using Windows, simply login as your desired user from a **domain joined client machine**.
+If you are using Linux, first run `kinit` as the AD user, then run `sqlcmd`. If you are using Windows, simply log in as your desired user from a **domain joined client machine**.
 
 ### Connect to master instance from Linux/Mac
 
@@ -245,7 +243,7 @@ sqlcmd -S <DNS name for master instance>,31433 -E
 sqlcmd -S <DNS name for master instance>,31433 -E
 ```
 
-### Login to SQL Server master instance using Azure Data Studio or SSMS
+### Log in to SQL Server master instance using Azure Data Studio or SSMS
 
 From a domain joined client, you can open SSMS or Azure Data Studio and connect to the master instance. This is the same experience as connecting to any SQL Server instance using AD authentication.
 
@@ -257,11 +255,11 @@ From Azure Data Studio:
 
 ![image24](./media/deploy-active-directory/image24.png)}
 
-### Login to controller with AD authentication
+### Log in to controller with AD authentication
 
 #### Connect to controller with AD authentication from Linux/Mac
 
-You can connect to the controller endpoint using azdata and AD authentication.
+You can connect to the controller endpoint using `azdata` and AD authentication.
 
 ```bash
 kinit <username>@<domain name>

@@ -38,6 +38,25 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## 17.4.2, October 2019
+
+| Feature added | Details |
+| :------------ | :------ |
+| Support for additional Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
+| Support for setting data classification version | See [Data Classification](../data-classification.md#bkmk-version). |
+| Driver will now install Azure Active Drirectory Authentication Library (adal.dll) used for authentication to Azure | |
+| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## 17.4, July 2019
+
+| Feature added | Details |
+| :------------ | :------ |
+| Always Encrypted with Secure Enclaves. | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
+| Configurable TCP Keep Alive settings. | See [Connecting to SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md). |
+| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## 17.3, February 2019
 
 | Feature added | Details |

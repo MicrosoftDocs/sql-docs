@@ -1,28 +1,33 @@
 ---
 title: CAB downloads for SQL Server cumulative updates
-description: R and Python CAB and package downloads for SQL Server 2017 Machine Learning Services and SQL Server 2016 R Services.
+description: R and Python CAB and package downloads for SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 05/30/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # CAB downloads for cumulative updates of SQL Server in-database analytics instances
 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 SQL Server instances that are configured for in-database analytics include R and Python features. These features ship in CAB files, installed and serviced through SQL Server Setup. On internet-connected devices, CAB updates are typically applied through Windows Update. On disconnected servers, CAB files must be downloaded and applied manually. 
 
-This article provides download links to CAB files for each cumulative update. Links are provided for both SQL Server 2017 Machine Learning Services (R and Python), as well as SQL Server 2016 R Services. For more information about offline installs, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md#apply-cu).
+This article provides download links to CAB files for each cumulative update. For more information about offline installs, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md#apply-cu).
 
 ## Prerequisites
 
 Start with a baseline installation.
 
-+ On SQL Server 2017 Machine Learning Services, the initial release is the baseline installation. 
++ On SQL Server Machine Learning Services, the initial release is the baseline installation. 
 + On SQL Server 2016 R Services, you can start with the initial release, SP1, or SP2. 
 
 You can also apply cumulative updates to a standalone server.
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 ## SQL Server 2017 CABs
 
@@ -30,7 +35,7 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 |Release  |Component | Download link  | Issues addressed | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)** |  |  |  |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| Binaries within the package are now signed. |
 | | R Server      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| Binaries within the package are now signed. |
 | | Microsoft Python Open     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| Binaries within the package are now signed. |
@@ -81,6 +86,9 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 | | Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 | | Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
+::: moniker-end
+
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 
@@ -127,7 +135,9 @@ For SQL Server 2016 R Services, baseline releases are either the RTM version or 
 
 If you would like to view the source code for Microsoft R, it is available for download as an archive in .tar format: [Download R Server installers](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
-## See also
+::: moniker-end
+
+## Next steps
 
 [Apply cumulative updates on computers without internet access](sql-ml-component-install-without-internet-access.md#apply-cu)
 

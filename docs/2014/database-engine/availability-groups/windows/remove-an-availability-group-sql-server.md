@@ -87,7 +87,7 @@ manager: craigg
   
      The following example deletes the `MyAG` availability group.  
   
-    ```  
+    ```sql
     DROP AVAILABILITY GROUP MyAG;  
     ```  
   
@@ -102,9 +102,8 @@ manager: craigg
   
      For example, the following command removes the availability group named `MyAg`. This command can be executed on any server instance that hosts an availability replica for the availability group.  
   
-    ```  
-    Remove-SqlAvailabilityGroup `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg  
+    ```powershell
+    Remove-SqlAvailabilityGroup -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg  
     ```  
   
     > [!NOTE]  
@@ -121,5 +120,3 @@ manager: craigg
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)  
-  
-  

@@ -1,7 +1,7 @@
 ---
 title: "Recompile a Stored Procedure | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "10/28/2019"
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ""
@@ -62,7 +62,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
-#### To recompile a stored procedure by using the WITH RECOMPILE option  
+### To recompile a stored procedure by using the WITH RECOMPILE option  
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -70,9 +70,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example creates the procedure definition.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
@@ -92,38 +90,34 @@ AS
   
 ```  
   
-#### To recompile a stored procedure by using the WITH RECOMPILE option  
+### To recompile a stored procedure by using the WITH RECOMPILE option  
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example creates a simple procedure that returns all employees (first and last names supplied), their job titles, and their department names from a view.  
-  
-     And then copy and paste the second code example into the query window and click **Execute**. This executes the procedure and recompiles the procedure's query plan.  
+3.  Copy and paste the following code example into the query window and click **Execute**. This executes the procedure and recompiles the procedure's query plan.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
+EXECUTE HumanResources.uspProductByVendor WITH RECOMPILE;  
 GO  
   
 ```  
   
-#### To recompile a stored procedure by using sp_recompile  
+### To recompile a stored procedure by using sp_recompile  
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example creates a simple procedure that returns all employees (first and last names supplied), their job titles, and their department names from a view.  
-  
-     Then, copy and paste the following example into the query window and click **Execute**. This does not execute the procedure but it does mark the procedure to be recompiled so that its query plan is updated the next time that the procedure is executed.  
+3.  Copy and paste the following example into the query window and click **Execute**. This does not execute the procedure but it does mark the procedure to be recompiled so that its query plan is updated the next time that the procedure is executed.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  
+EXEC sp_recompile N'dbo.uspProductByVendor';   
 GO  
   
 ```  

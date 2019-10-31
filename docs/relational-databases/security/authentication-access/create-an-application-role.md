@@ -64,8 +64,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### Additional Options  
  The **Application Role - New** dialog box also offers options on two additional pages: **Securables** and **Extended Properties**.  
   

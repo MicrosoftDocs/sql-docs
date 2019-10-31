@@ -22,11 +22,10 @@ This article provides directions for installing the **SqlServer** PowerShell mod
 > * **SqlServer**: This module includes new cmdlets to support the latest SQL features. The module also contains updated versions of the cmdlets in **SQLPS**. 
 
 Previous versions of the **SqlServer** module *were* included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS. To use PowerShell with SSMS 17.0 and later, the **SqlServer** module must be installed from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
-The current version of the **SqlServer** module is 21.1.18080. This is based on version v150 of Microsoft.SQLServer.SMO and supports the next version of SQL Server. The last version of the module based on version v140 of Microsoft.SQLServer.SMO) is 21.0.17279.
 
 Pre-release versions of the module may become available more frequently: please refer to the section at the bottom of this page on how to get such versions of the module.
 
-To install the **SqlServer** module from the PowerShell Gallery, start a [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) session and use the following commands. If you run into problems installing, see the [Install-Module documentation](https://docs.microsoft.com/powershell/gallery/psget/module/psget_install-module) and [Install-Module reference](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
+To install the **SqlServer** module from the PowerShell Gallery, start a [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) session and use the following commands. If you run into problems installing, see the [Install-Module documentation](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1) and [Install-Module reference](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
 
 To install the **SqlServer** module:
 

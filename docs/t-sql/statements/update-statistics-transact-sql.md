@@ -119,6 +119,9 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
  > If AUTO_UPDATE_STATISTICS is executed, it uses the persisted sampling percentage if available, or use default sampling percentage if not.
  > RESAMPLE behavior is not affected by this option.
  
+ > [!NOTE]
+ > If the table is truncated, all statistics built on the truncated HoBT will revert to using the default sampling percentage.
+ 
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) and [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) expose the persisted sample percent value for the selected statistic.
  

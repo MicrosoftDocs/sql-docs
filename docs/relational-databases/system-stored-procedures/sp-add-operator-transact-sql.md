@@ -19,7 +19,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # sp_add_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Creates an operator (notification recipient) for use with alerts and jobs.  
   
@@ -63,7 +63,7 @@ sp_add_operator [ @name = ] 'name'
 >  You must use the e-mail address for Database Mail.  
   
 `[ @pager_address = ] 'pager_address'`
- The pager address of the operator. This string is passed directly to the e-mail system. *pager_address* is **narchar(100)**, with a default of NULL.  
+ The pager address of the operator. This string is passed directly to the e-mail system. *pager_address* is **nvarchar(100)**, with a default of NULL.  
   
 `[ @weekday_pager_start_time = ] weekday_pager_start_time`
  The time after which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sends pager notification to the specified operator on the weekdays, from Monday through Friday. *weekday_pager_start_time*is **int**, with a default of **090000**, which indicates 9:00 A.M. on a 24-hour clock, and must be entered using the form HHMMSS.  

@@ -1,7 +1,7 @@
 ---
 title: "CREATE TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "10/30/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -201,9 +201,7 @@ Ensures that tables referenced by a trigger can't be dropped or altered.
 This option is required for triggers on memory-optimized tables and isn't supported for triggers on traditional tables.  
   
 FOR | AFTER  
-AFTER specifies that the DML trigger fires only when all operations specified in the triggering SQL statement have launched successfully. All referential cascade actions and constraint checks must also succeed before this trigger fires.  
-  
-AFTER is the default when FOR is the only keyword specified.  
+FOR or AFTER specifies that the DML trigger fires only when all operations specified in the triggering SQL statement have launched successfully. All referential cascade actions and constraint checks must also succeed before this trigger fires.  
   
 You can't define AFTER triggers on views.  
   
@@ -499,7 +497,7 @@ FOR DROP_SYNONYM
 AS   
 IF (@@ROWCOUNT = 0)
 RETURN;
-   RAISERROR ('You must disable Trigger "safety" to drop synonyms!',10, 1)  
+   RAISERROR ('You must disable Trigger "safety" to remove synonyms!', 10, 1)  
    ROLLBACK  
 GO  
 DROP TRIGGER safety  

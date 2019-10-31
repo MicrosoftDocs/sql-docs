@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "MSMQ connection manager"
   - "message queue connections [Integration Services]"
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # MSMQ Connection Manager
 

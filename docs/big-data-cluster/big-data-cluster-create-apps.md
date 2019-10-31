@@ -1,33 +1,33 @@
 ---
 title: Deploy applications using azdata
 titleSuffix: SQL Server big data clusters
-description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster (preview).
+description: Deploy a Python or R script as an application on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# How to deploy an app on SQL Server big data cluster (preview)
+# How to deploy an app on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to deploy and manage R and Python script as an application inside a SQL Server 2019 big data cluster (preview).
+This article describes how to deploy and manage R and Python script as an application inside a SQL Server 2019 big data cluster.
 
 ## What's new and improved
 
 - A single command-line utility to manage cluster and app.
 - Simplified app deployment while providing granular control through spec files.
-- Support hosting additional application types - SSIS and MLeap (new in CTP 2.3)
-- [VS Code Extension](app-deployment-extension.md) to manage application deployment
+- Support hosting additional application types - SSIS and MLeap (new in CTP 2.3).
+- [Visual Studio Code Extension](app-deployment-extension.md) to manage application deployment.
 
-Applications are deployed and managed using `azdata` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [VS Code Extension](app-deployment-extension.md).
+Applications are deployed and managed using `azdata` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [Visual Studio Code Extension](app-deployment-extension.md).
 
 The following types of apps are supported:
-- R and Python apps (functions, models and apps)
+- R and Python apps (functions, models, and apps)
 - MLeap Serving
 - SQL Server Integration Services (SSIS)
 
@@ -69,16 +69,16 @@ azdata login --controller-endpoint https://<ip-address-of-controller-svc-externa
 
 ## AKS
 
-If you are using AKS, you need to run the following command to get the IP address of the `mgmtproxy-svc-external` service by running this command in a bash or cmd window:
+If you are using AKS, you need to run the following command to get the IP address of the `controller-svc-external` service by running this command in a bash or cmd window:
 
 
 ```bash
-kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
+kubectl get svc controller-svc-external -n <name of your big data cluster>
 ```
 
 ## Kubeadm or Minikube
 
-If you are using Kubeadm or Minikube run the following command to get the IP address to login in to the cluster
+If you are using Kubeadm or Minikube run the following command to get the IP address to sign in in to the cluster
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -100,17 +100,17 @@ The following command shows an example of what this command might look like:
 azdata app create --spec ./addpy
 ```
 
-This assumes that you have your application stored in the `addpy` folder. This folder should also contain a specification file for the application, called `spec.yaml`. Please see [the Application Deployment page](concept-application-deployment.md) for more information on the `spec.yaml` file.
+This assumes that you have your application stored in the `addpy` folder. This folder should also contain a specification file for the application, called `spec.yaml`. See [the Application Deployment page](concept-application-deployment.md) for more information on the `spec.yaml` file.
 
 To deploy this app sample app, create the following files in a directory called `addpy`:
 
 - `add.py`. Copy the following Python code into this file:
    ```py
    #add.py
-   def add(x,y):
-        result = x+y
-        return result
-    result=add(x,y)
+  def add(x, y):
+    result = x+y
+    return result
+  result=add(x,y)
    ```
 - `spec.yaml`. Copy the following code into this file:
    ```yaml
@@ -236,16 +236,14 @@ The init command provides a scaffold with the relevant artifacts that is require
 azdata app init --name hello --version v1 --template python
 ```
 
-This will create a folder called hello.  You can `cd` into the directory and inspect the generated files in the folder. spec.yaml defines the app, such as name, version and source code. You can edit the spec to change name, version, input and outputs.
+This will create a folder called hello.  You can `cd` into the directory and inspect the generated files in the folder. spec.yaml defines the app, such as name, version, and source code. You can edit the spec to change name, version, input, and outputs.
 
 Here is a sample output from the init command that you will see in the folder
 
 ```
 hello.py
-README.md
 run-spec.yaml
 spec.yaml
-
 ```
 
 ## Describe an app
@@ -265,8 +263,8 @@ The describe command provides detailed information about the app including the e
     }
   ],
   "links": {
-    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
-    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+    "app": "https://10.1.1.3:30080/api/app/add-app/v1",
+    "swagger": "https://10.1.1.3:30080/api/app/add-app/v1/swagger.json"
   },
   "name": "add-app",
   "output_param_defs": [
@@ -290,6 +288,6 @@ azdata app delete --name add-app --version v1
 
 ## Next steps
 
-Explore how to integrate apps deployed on SQL Server big data clusters in your own applications at [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information. You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
+Explore how to integrate apps deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in your own applications at [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information. You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
 
-For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

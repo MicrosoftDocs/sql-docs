@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # General database mail troubleshooting steps 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 Troubleshooting Database Mail involves checking the following general areas of the Database Mail system. These procedures are presented in a logical order, but can be evaluated in any order.
 
@@ -49,8 +49,6 @@ You must be a member of the sysadmin fixed server role to troubleshoot all aspec
     ```
 
 1. To restore the sp_configure procedure to its default state, which does not show advanced options, execute the following code:
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql 
     sp_configure 'show advanced', 0; 

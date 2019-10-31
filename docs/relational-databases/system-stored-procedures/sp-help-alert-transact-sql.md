@@ -56,7 +56,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
  **0** (success) or **1** (failure)  
   
 ## Result Sets  
- When **@legacy_format** is **0**, **sp_help_alert** produces the following result set.  
+ When **\@legacy_format** is **0**, **sp_help_alert** produces the following result set.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -90,7 +90,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**wmi_query**|**nvarchar(512)**|If **type** is **3**, this column shows the query for the WMI event.|  
 |**type**|**int**|Type of the event:<br /><br /> **1** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] event alert<br /><br /> **2** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance alert<br /><br /> **3** = WMI event alert|  
   
- When **@legacy_format** is **1**, **sp_help_alert** produces the following result set.  
+ When **\@legacy_format** is **1**, **sp_help_alert** produces the following result set.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

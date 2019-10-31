@@ -9,11 +9,11 @@ ms.date: 03/27/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 #customer intent: As an R developer, I want to model/train/score partitioned data to avoid manually subsetting data.
 ---
 # Tutorial: Create partition-based models in R on SQL Server
-[!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In SQL Server 2019, partition-based modeling is the ability to create and train models over partitioned data. For stratified data that naturally segments into a given classification scheme - such as geographic regions, date and time, age or gender - you can execute script over the entire data set, with the ability to model, train, and score over partitions that remain intact over all these operations. 
 
@@ -163,14 +163,12 @@ GO
 
 ### Parallel execution
 
-Notice that the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) inputs include **@parallel=1**, used to enable parallel processing. In contrast with previous releases, in SQL Server 2019, setting **@parallel=1** delivers a stronger hint to the query optimizer, making parallel execution a much more likely outcome.
+Notice that the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) inputs include `@parallel=1`, used to enable parallel processing. In contrast with previous releases, in SQL Server 2019, setting `@parallel=1` delivers a stronger hint to the query optimizer, making parallel execution a much more likely outcome.
 
-By default, the query optimizer tends to operate under **@parallel=1** on tables having more than 256 rows, but if you can handle this explicitly by setting **@parallel=1** as shown in this script.
+By default, the query optimizer tends to operate under `@parallel=1` on tables having more than 256 rows, but if you can handle this explicitly by setting `@parallel=1` as shown in this script.
 
 > [!Tip]
-> For training workoads, you can use **@parallel** with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions, including open-source R functions, not specifically engineered with that capability. This works because partitions have affinity to specific threads, so all operations called in a script execute on a per-partition basis, on the given thread.
-
-<a name="training-step"></a>
+> For training workoads, you can use `@parallel` with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions, including open-source R functions, not specifically engineered with that capability. This works because partitions have affinity to specific threads, so all operations called in a script execute on a per-partition basis, on the give`thread.`<a name="training-step"></a>
 
 ## Run the procedure and train the model
 

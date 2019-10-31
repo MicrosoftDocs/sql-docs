@@ -32,7 +32,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## Arguments  
- [**@publication=**] **'***publication***'**  
+ [**\@publication=**] **'***publication***'**  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 `[ @level = ] level`

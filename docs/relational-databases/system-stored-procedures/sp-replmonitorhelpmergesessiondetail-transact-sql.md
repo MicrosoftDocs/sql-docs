@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_replmonitorhelpmergesessiondetail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns detailed, article-level information about a specific replication Merge Agent session, which is used to monitor merge replication. The result set includes a detail row for each article that was synchronized during the session. It also includes a row that represents the session initialization and rows that summarize both the upload and download phases of the session. This stored procedure is executed at the Distributor on the distribution database, or at the Subscriber on the subscription database.  
   

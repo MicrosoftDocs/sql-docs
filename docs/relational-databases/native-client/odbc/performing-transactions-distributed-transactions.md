@@ -48,8 +48,6 @@ MSDTC is called by the SQL Server Native Client driver for Open Database Connect
 
 4. Finally, the application ends the transaction by calling [SQLEndTran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md), with either the SQL_COMMIT or SQL_ROLLBACK option.
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 _(1)_ MSDTC can be invoked without ODBC. In such a case, MSDTC becomes the transaction manager, and the application no longer uses **SQLEndTran**.
 
 ### Only one distributed transaction

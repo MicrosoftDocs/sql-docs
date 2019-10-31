@@ -1,5 +1,5 @@
 ---
-title: "Monitor SQL Server Managed Backup to Windows Azure | Microsoft Docs"
+title: "Monitor SQL Server Managed Backup to Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ---
-# Monitor SQL Server Managed Backup to Windows Azure
+# Monitor SQL Server Managed Backup to Azure
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] has built-in measures to identify problems and errors during backup processes and remedy with corrective action when possible.  However there are certain situations where user intervention is required. This topic describes the tools that you can use to determine the overall health status of backups, and identify any errors that need to be addressed.  
   
 ## Overview of [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Built-in Debugging  
- The [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] periodically reviews scheduled backups and attempts to reschedule any failed backups. It polls the storage account periodically to identify breaks in log chains affecting recoverability of the database, and schedules new backups accordingly. It also takes into account Windows Azure throttling policies, and has mechanisms in place to manage multiple database backups. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] uses extended events to track all activity. The Extended Event channels used by [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] agent include, Admin, Operational, Analytical, and Debug. Events that fall under the Admin category usually are related to errors and require user intervention and are enabled by default. Analytical events are also turned on by default, but usually are not related to errors that require user intervention. Operation events are typically informational. For example, operational events include scheduling a backup, a successful completion of backup, etc. The Debug is the most verbose and is used internally by [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] to determine issues and correct them if required.  
+ The [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] periodically reviews scheduled backups and attempts to reschedule any failed backups. It polls the storage account periodically to identify breaks in log chains affecting recoverability of the database, and schedules new backups accordingly. It also takes into account Azure throttling policies, and has mechanisms in place to manage multiple database backups. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] uses extended events to track all activity. The Extended Event channels used by [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] agent include, Admin, Operational, Analytical, and Debug. Events that fall under the Admin category usually are related to errors and require user intervention and are enabled by default. Analytical events are also turned on by default, but usually are not related to errors that require user intervention. Operation events are typically informational. For example, operational events include scheduling a backup, a successful completion of backup, etc. The Debug is the most verbose and is used internally by [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] to determine issues and correct them if required.  
   
 ### Configure Monitoring Parameters for [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  The **smart_admin.sp_set_parameter** system stored procedure allows you to specify monitoring settings. The following sections walks through the process of enabling Extended Events,  and enabling email notification for errors and warnings.  
@@ -28,7 +28,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and then click **Execute**. This will return the current configuration for Extended Events, and e-mail notifications.  
   
-```  
+```sql
 Use msdb  
 Go  
 SELECT * FROM smart_admin.fn_get_parameter (NULL)  
@@ -47,7 +47,7 @@ GO
   
 1.  To view available Extended Event channels and their current status by running the following query:  
   
-    ```  
+    ```sql
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
     ```  
   
@@ -55,32 +55,30 @@ GO
   
 2.  To enable debug events, run the following query:  
   
-    ```  
+    ```sql
     --  to enable debug events  
     Use msdb;  
-    Go  
-             EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
-  
+    GO 
+    EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
     ```  
   
      For more information about the stored procedure, see [smart_admin.sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql).  
   
 3.  To view the logged events run the following query:  
   
-    ```  
+    ```sql
     --  View all events in the current week  
     Use msdb;  
     Go  
     DECLARE @startofweek datetime  
     DECLARE @endofweek datetime  
-    SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
+    SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)
     SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
   
-    EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
-  
+    EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;
     ```  
   
-    ```  
+    ```sql
     --  view all admin events  
     Use msdb;  
     Go  
@@ -100,8 +98,7 @@ GO
     EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek  
   
     SELECT * from @eventresult  
-    WHERE event_type LIKE '%admin%'  
-  
+    WHERE event_type LIKE '%admin%'
     ```  
   
 ### Aggregated Error Counts/Health Status  
@@ -131,18 +128,17 @@ These aggregated counts can be used to monitor system health. For example, if th
   
 3.  Run the following query in a query window and provide the e-mail address where you want the notification to be sent to:  
   
-    ```  
+    ```sql
     Use msdb  
     Go  
-    EXEC smart_admin.sp_set_parameter @parameter_name = 'SSMBackup2WANotificationEmailIds', @parameter_value = '<email address>'  
-  
+    EXEC smart_admin.sp_set_parameter @parameter_name = 'SSMBackup2WANotificationEmailIds', @parameter_value = '<email address>'
     ```  
   
      This creates a SQL Server Agent job that is used to gather health status and send notifications when there is an error or an issue with backups.  
   
  Following is a sample script  to enable DB Mail and set up the e-mail notification through SQL Server Agent Job  
   
-```  
+```sql
 -- Prereq: Make sure that SQL Server service runs in a service account that has  
 --  access to SMTP Server   
 -- set SQL Server service account as domain account   
@@ -186,8 +182,7 @@ EXEC msdb.smart_admin.sp_set_parameter
 @parameter_value = @emailid  
   
 -- To test is you are receiving notifications  
--- delete few backup files from your storage container, Wait for 15 minutes & see if you get any email notification  
-  
+-- delete few backup files from your storage container, Wait for 15 minutes & see if you get any email notification
 ```  
   
 ### Using PowerShell to Setup Custom Health Monitoring  
@@ -197,27 +192,25 @@ EXEC msdb.smart_admin.sp_set_parameter
   
  Following is a sample PowerShell script that returns a report of errors and warnings based on the system policies and any user policies created:  
   
+```powershell
+$policyResults = Get-SqlSmartAdmin | Test-SqlSmartAdmin -AllowUserPolicies  
+$policyResults.PolicyEvaluationDetails | Select Name, Category, Expression, Result, Exception | fl
 ```  
-$policyResults = get-sqlsmartadmin | test-sqlsmartadmin -AllowUserPolicies  
-$policyResults.PolicyEvaluationDetails | select Name, Category, Expression, Result, Exception | fl  
   
-```  
+ The following script returns a detailed report of the errors and warnings for the default instance (`\SQL\COMPUTER\DEFAULT`):  
   
- The following script returns a detailed report of the errors and warnings for the default instance:  
-  
-```  
-PS C:\>PS SQLSERVER:\SQL\COMPUTER\DEFAULT> (get-sqlsmartadmin ).EnumHealthStatus()  
+```powershell
+(Get-SqlSmartAdmin ).EnumHealthStatus()  
 ```  
   
 ### Objects in MSDB database  
  There are objects that are installed to implement the functionality. These objects are reserved for internal use. However, there is one system table that can be useful in monitoring the backup status: smart_backup_files. Most of the Information   stored in this table relevant to monitoring like the type of backup, database name, first and last lsn, backup expiry dates are exposed through the system function [smart_admin.fn_available_backups &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql). However the status column in the smart_backup_files table which indicates the status of the backup file is not available using the function. Following is a sample query you can use to retrieve the some information including the status from the system table:  
   
-```  
+```sql
 USE msdb  
 GO  
 SELECT  
- database_name AS [Database Name]  
-,backup_path AS [Backup Destination and File]  
+ database_name AS [Database Name] ,backup_path AS [Backup Destination and File]  
 ,[Backup Type] =  
 CASE backup_type  
 WHEN 1 THEN 'FULL'  
@@ -238,22 +231,19 @@ END
 ,backup_finish_date AS [Backup Completion Time]  
 ,expiration_date AS [Backup Expiry Date/Time]  
 FROM  
-smart_backup_files;  
-  
+smart_backup_files;
 ```  
   
  Following is a detailed explanation of the different status returned:  
   
--   **Available - A:** This is a normal backup file. The backup has been completed, and also verified that it is available in the Windows Azure storage.  
+-   **Available - A:** This is a normal backup file. The backup has been completed, and also verified that it is available in the Azure storage.  
   
--   **Copy in Progress -B:** This status is specifically for Availability Group databases. If [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] detects a break in the backup log chain, it will first attempt identify the  backup that might have caused the break in backup chain. On finding the backup file it attempts to copy the file to Windows Azure storage. When the copying process is in progress it will display this status.  
+-   **Copy in Progress -B:** This status is specifically for Availability Group databases. If [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] detects a break in the backup log chain, it will first attempt identify the  backup that might have caused the break in backup chain. On finding the backup file it attempts to copy the file to Azure storage. When the copying process is in progress it will display this status.  
   
 -   **Copy Failed - F:** Similar to Copy In Progress, this is specific t Availability Group databases. If the copy process fails, the status is marked as F.  
   
 -   **Corrupted - C:** If [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is unable to verify the backup file in the storage by performing a RESTORE HEADER_ONLY command even after multiple attempts, it marks this file as corrupted. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will schedule a backup to ensure that the corrupted file does not result in a break of the backup chain.  
   
--   **Deleted - D:** The corresponding file cannot be found in the Windows Azure storage. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will schedule a backup if the deleted file results in a break in the backup chain.  
+-   **Deleted - D:** The corresponding file cannot be found in the Azure storage. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will schedule a backup if the deleted file results in a break in the backup chain.  
   
--   **Unknown - U:** This status indicated that [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] has not yet been able to verify file existence and its properties in the Windows Azure storage. The next time the process runs, which is approximately every 15 minutes, this status will be updated.  
-  
-  
+-   **Unknown - U:** This status indicated that [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] has not yet been able to verify file existence and its properties in the Azure storage. The next time the process runs, which is approximately every 15 minutes, this status will be updated.  

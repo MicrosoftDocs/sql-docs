@@ -48,7 +48,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 2.  Right-click **SQL Server Agent**, and then click **Properties**.  
   
-3.  Select the **History** page, and then confirm that **Limit size of job history log**is checked.  
+3.  Select the **History** page, and then confirm that **Limit size of job history log** is checked.  
   
 4.  In the **Maximum job history log size** box, enter the maximum number of rows the job history log should allow.  
   

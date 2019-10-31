@@ -22,7 +22,7 @@ Transactional replication is a good solution to the problem of moving data betwe
 This tutorial shows you how to configure a transactional replication topology for continuously connected servers. For more information about how transactional replication works, see the [overview of transactional replication](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication). 
   
 ## What you will learn  
-This tutorial teaches you to publish data from one database to another by using transactional replication. 
+This tutorial teaches you to publish data from one database to another by using transactional replication.  
 
 In this tutorial, you will learn how to:
 > [!div class="checklist"]
@@ -109,8 +109,6 @@ In this section, you create a transactional publication by using [!INCLUDE[ssMan
     !["Complete the Wizard" page with publication name](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. After the publication is created, select **Close** to complete the wizard. 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 You might encounter the following error if your SQL Server Agent is not running when you try to create the publication. This error indicates that your publication was created successfully but your Snapshot Agent was unable to start. If this happens, you'll need to start the SQL Server Agent, and then manually start the Snapshot Agent. The next section gives instructions. 
 

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],applying changes"
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Apply the Changes to the Destination
 

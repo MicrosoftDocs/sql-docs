@@ -7,7 +7,7 @@ ms.reviewer: jrasnick
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
-author: XiaoyuL-Preview 
+author: XiaoyuMSFT 
 ms.author: xiaoyul
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
@@ -15,7 +15,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  Returns the query plan for a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use **EXPLAIN** to preview which operations will require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to Azure SQL Data Warehouse (preview).
+  Returns the query plan for a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use EXPLAIN to preview which operations will require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to Azure SQL Data Warehouse (preview).
   
  For more information about query plans, see "Understanding Query Plans" in the [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
   
@@ -29,9 +29,11 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 ## Arguments
 
  *SQL_statement*  
- The [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement on which **EXPLAIN** will run. *SQL_statement* can be any of these commands: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.
 
-*WITH_RECOMMENDATIONS*
+ The [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement on which EXPLAIN will run. *SQL_statement* can be any of these commands: SELECT, INSERT, UPDATE, DELETE, CREATE TABLE AS SELECT, CREATE REMOTE TABLE.
+
+*WITH_RECOMMENDATIONS* (Preview)
+
 Return the query plan with recommendations to optimize the SQL statement performance.  
   
 ## Permissions
@@ -305,7 +307,7 @@ GO
 **Submitting an EXPLAIN statement WITH_RECOMMENDATIONS**
 
 ```sql
--- EXPLAIN WITH_RECOMMENDATIONS
+EXPLAIN WITH_RECOMMENDATIONS
 select count(*)
 from ((select distinct c_last_name, c_first_name, d_date
        from store_sales, date_dim, customer
@@ -321,7 +323,7 @@ from ((select distinct c_last_name, c_first_name, d_date
 ) top_customers
 ```
 
-**Example output for EXPLAIN WITH_RECOMMENDATIONS** (preview)
+**Example output for EXPLAIN WITH_RECOMMENDATIONS**  
 
 The output below includes the creation of a recommended materialized view called View1.  
 

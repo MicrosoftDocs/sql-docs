@@ -72,7 +72,7 @@ ALTER FULLTEXT INDEX ON table_name
  Specifies whether changes (updates, deletes, or inserts) made to table columns that are covered by the full-text index will be propagated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the full-text index. Data changes through WRITETEXT and UPDATETEXT are not reflected in the full-text index, and are not picked up with change tracking.  
   
 > [!NOTE]  
->  For information about the interaction of change tracking and WITH NO POPULATION, see "Remarks," later in this topic.  
+>  For more information, see [Interactions of Change Tracking and NO POPULATION Parameter](#change-tracking-no-population).
   
  MANUAL  
  Specifies that the tracked changes will be propagated manually by calling the ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] statement (*manual population*). You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement periodically.  
@@ -91,7 +91,8 @@ ALTER FULLTEXT INDEX ON table_name
  Use TYPE COLUMN and LANGUAGE with the ADD clause to set these properties on the *column_name*. When a column is added, the full-text index on the table must be repopulated in order for full-text queries against this column to work.  
   
 > [!NOTE]  
->  Whether the full-text index is populated after a column is added or dropped from a full-text index depends on whether change-tracking is enabled and whether WITH NO POPULATION is specified. For more information, see "Remarks," later in this topic.  
+>  Whether the full-text index is populated after a column is added or dropped from a full-text index depends on whether change-tracking is enabled and whether WITH NO POPULATION is specified. 
+>  For more information, see [Interactions of Change Tracking and NO POPULATION Parameter](#change-tracking-no-population).
   
  TYPE COLUMN *type_column_name*  
  Specifies the name of a table column, *type_column_name*, that is used to hold the document type for a **varbinary**, **varbinary(max)**, or **image** document. This column, known as the type column, contains a user-supplied file extension (.doc, .pdf, .xls, and so forth). The type column must be of type **char**, **nchar**, **varchar**, or **nvarchar**.  
@@ -132,7 +133,7 @@ ALTER FULLTEXT INDEX ON table_name
  If CHANGE_TRACKING is enabled and WITH NO POPULATION is specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error. If CHANGE_TRACKING is enabled and WITH NO POPULATION is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performs a full population on the index.  
   
 > [!NOTE]  
->  For more information about the interaction of change tracking and WITH NO POPULATION, see "Remarks," later in this topic.  
+>  For more information, see [Interactions of Change Tracking and NO POPULATION Parameter](#change-tracking-no-population).
   
  {ADD | DROP } STATISTICAL_SEMANTICS  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -188,7 +189,7 @@ ALTER FULLTEXT INDEX ON table_name
  Adding a search property list to a full-text index requires repopulating the index to index the search properties that are registered for the associated search property list. If you specify WITH NO POPULATION when adding the search property list, you will need to run a population on the index, at an appropriate time.  
   
 > [!IMPORTANT]  
->  If the full-text index was previously associated with a different search it must be rebuilt property list in order to bring the index into a consistent state. The index is truncated immediately and is empty until the full population runs. For more information about when changing the search property list causes rebuilding, see "Remarks," later in this topic.  
+>  If the full-text index was previously associated with a different search it must be rebuilt property list in order to bring the index into a consistent state. The index is truncated immediately and is empty until the full population runs. For more information, see [Changing the Search Property List Causes Rebuilding the Index](#change-search-property-rebuild-index). 
   
 > [!NOTE]  
 >  You can associate a given search property list with more than one full-text index in the same database.  
@@ -199,7 +200,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  For more information about search property lists, see [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## Interactions of Change Tracking and NO POPULATION Parameter  
+## <a name="change-tracking-no-population"></a> Interactions of Change Tracking and NO POPULATION Parameter  
  Whether the full-text index is populated depends on whether change-tracking is enabled and whether WITH NO POPULATION is specified in the ALTER FULLTEXT INDEX statement. The following table summarizes the result of their interaction.  
   
 |Change Tracking|WITH NO POPULATION|Result|  
@@ -211,7 +212,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  For more information about populating full-text indexes, see [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md).  
   
-## Changing the Search Property List Causes Rebuilding the Index  
+## <a name="change-search-property-rebuild-index"></a> Changing the Search Property List Causes Rebuilding the Index  
  The first time that a full-text index is associated with a search property list, the index must be repopulated to index property-specific search terms. The existing index data is not truncated.  
   
  However, if you associate the full-text index with a different property list, the index is rebuilt. Rebuilding immediately truncates the full-text index, removing all existing data, and the index must be repopulated. While the population progresses, full-text queries on the base table search only on the table rows that have already been indexed by the population. The repopulated index data will include metadata from the registered properties of the newly added search property list.  

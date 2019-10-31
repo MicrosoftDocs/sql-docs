@@ -1,6 +1,6 @@
 ---
 title: Use R package managers
-description: Use standard R commands like install.packages to add new R packages to SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services (In-Database).
+description: Use standard R commands like install.packages to add new R packages to SQL Server 2016 R Services or SQL Server Machine Learning Services (In-Database).
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -8,10 +8,11 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # Use R package managers to install R packages on SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 You can use standard R tools to install new packages on an instance of SQL Server 2016 or SQL Server 2017, providing the computer has an open port 80 and you have administrator rights.
 
@@ -22,7 +23,7 @@ This procedure uses RGui but you can use RTerm or any other R command-line tool 
 
 ## Install a package using RGui
 
-1. [Determine the location of the instance library](../package-management/default-packages.md). Navigate to the folder where the R tools are installed. For example, the default path for a SQL Server 2017 default instance is as follows: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [Determine the location of the instance library](../package-management/r-package-information.md). Navigate to the folder where the R tools are installed. For example, the default path for a SQL Server 2017 default instance is as follows: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. Right-click RGui.exe, and select **Run as administrator**. If you do not have the required permissions, contact the database administrator and provide a list of the packages you need.
 
@@ -33,7 +34,7 @@ This procedure uses RGui but you can use RTerm or any other R command-line tool 
 
 If the target package depends on additional packages, the R installer automatically downloads the dependencies and installs them for you.
 
-If you have multiple instances of SQL Server, such as side-by-side instances of SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services, run installation separately for each instance if you want to use the package in both contexts. Packages cannot be shared across instances.
+If you have multiple instances of SQL Server, such as side-by-side instances of SQL Server 2016 R Services and SQL Server Machine Learning Services, run installation separately for each instance if you want to use the package in both contexts. Packages cannot be shared across instances.
 
 ## <a name = "bkmk_offlineInstall"></a> Offline installation using R tools
 

@@ -4,15 +4,15 @@ titleSuffix: SQL Server Language Extensions
 description: Language extensions installation steps for SQL Server 2019 in Windows.
 author: dphansen
 ms.author: davidph 
-ms.date: 07/24/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server Machine Learning Services on Windows
+# Install SQL Server Language Extensions on Windows
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Starting in SQL Server 2019, Language Extensions and Java support are provided. This article explains how to install the Language Extensions component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 
@@ -40,15 +40,17 @@ Starting in SQL Server 2019, Language Extensions and Java support are provided. 
 
 ## Java JRE or JDK
 
-In CTP 3.2, Zulu Open JRE version 11.0.3 is supported and is included with the SQL Server installation.
+In SQL Server 2019 Release Candidate 1, there are two ways to install and use Java with SQL Server:
 
-You can also use your preferred Java distribution instead of Zulu Open JRE. If you chose to use another Java distribution, you need to install it before installing SQL Server.
+1. Use the default Java runtime, Zulu Open JRE version 11.0.3. This runtime is supported and included with the SQL Server installation.
 
-Java 11 is currently the supported version on Windows. The Java Runtime Environment (JRE) is the minimum requirement, but Java Development Kit (JDK) is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary. On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
+1. Use your preferred Java distribution instead of the default Java runtime.
 
-> [!NOTE]
-> Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for the CTP 3.2 release is Java 11.
+    Java 11 is currently the supported version on Windows. The Java Runtime Environment (JRE) is the minimum requirement, but Java Development Kit (JDK) is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary. On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
+    > [!NOTE]
+    > Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for the Release Candidate 1 release is Java 11.
+    
 ## Get the installation media
 
 The preview version of SQL Server 2019 is available at the [SQL Server 2019 install site](https://www.microsoft.com/sql-server/sql-server-2019#Install).
@@ -64,7 +66,7 @@ For local installations, you must run Setup as an administrator. If you install 
   
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
-    ![SQL Server 2019 installation](../media/ctp32-install.png) 
+    ![SQL Server 2019 installation](../media/sql-install.png) 
 
 3. On the **Feature Selection** page, select these options:
   
@@ -76,22 +78,27 @@ For local installations, you must run Setup as an administrator. If you install 
   
         This option installs the Language Extensions component that support Java code execution.
 
-        Select Java. You can omit R and Python if you wish.
+        - If you want to install the default Java runtime, Zulu Open JRE 11.0.3, select **Machine Learning Services and Language Extensions** and **Java**.
 
-        ![Feature options for Language Extensions](../media/ctp32-feature-selection.png)
+        - If you want to use your own Java runtime, select **Machine Learning Services and Language Extensions**. Do not select Java.
 
-4. On the **Java Install Location** page, select either of these options:
+        If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install).
 
-    - **Install Open JRE 11.0.3 included with this installation**. Choose this option if you want to install Zulu Open JRE 11.0.3 that is included with SQL Server. You do not need to install your JRE or JDE before you install SQL Server.
+    ![Feature options for Language Extensions](../media/sql-install-feature-selection.png)
 
-    - **Provide the location of a different version that has been installed on this computer**. Choose the option if you want to install your own JDK or JRE. The JDK or JRE needs to be installed before you install see SQL Server.
+4. If you choose **Java** in the previous step to install the default Java runtime, the **Java Install Location** page will show up.
 
-    ![Choose Java install location](../media/ctp32-openjdk.png)
+    Select the **Install Open JRE 11.0.3 included with this installation**.
+
+    ![Choose Java install location](../media/sql-install-openjdk.png)
+
+    > [!NOTE]
+    > The **Provide the location of a different version that has been installed on this computer** is not used for Language Extensions.
 
 5. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   
     + Database Engine Services
-    + Machine Learning Services (in-database)
+    + Machine Learning Services and Language Extensions
 
     Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
@@ -101,9 +108,11 @@ For local installations, you must run Setup as an administrator. If you install 
 
 `JRE_HOME` is a system environment variable that specifies the location of the Java interpreter. In this step, create a system environment variable for it on Windows.
 
-1. Find and copy the JRE home path (for example, `C:\Program Files\Zulu\zulu-8\jre\`).
+1. Find and copy the JRE home path.
 
-    Depending on your preferred Java distribution, your location of the JDK or JRE might be different than the example path above. Even if you have a JDK installed, you often times will get a JRE sub folder as part of that installation, so point to the JRE folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
+    For example, the JRE home path for the default Java runtime Zulu JRE 11.0.3 is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Binn\AZUL-OpenJDK-JRE\`.
+
+    Depending on your SQL Server installation path or if you chose another Java runtime, your location of the JDK or JRE might be different than the example path above. Even if you have a JDK installed, you often times will get a JRE sub folder as part of that installation, so point to the JRE folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
 
 2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
 
@@ -121,7 +130,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 ## Grant access to non-default JRE folder
 
-If you did not use the Zulu Open JRE that was included with SQL Server and did not install the JDK or JRE under program files, you need to perform the following steps. Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
+If you did not install the default Zulu Open JRE that was included with SQL Server and did not install the JDK or JRE under program files, you need to perform the following steps. Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
 
 1. Give SQLRUserGroup permissions
 

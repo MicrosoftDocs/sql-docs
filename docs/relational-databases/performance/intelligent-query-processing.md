@@ -43,7 +43,7 @@ The following table details all intelligent query processing features, along wit
 ## Batch mode Adaptive joins
 The batch mode Adaptive Joins feature enables the choice of a [Hash Join or Nested Loops Join](../../relational-databases/performance/joins.md) method to be deferred until **after** the first input has been scanned, by using a single cached plan. The Adaptive Join operator defines a threshold that is used to decide when to switch to a Nested Loops plan. Your plan can therefore dynamically switch to a better join strategy during execution.
 
-For more information, see [Understanding Adaptive joins](../../relational-databases/performance/joins.md#adaptive).
+For more information, including how to disable Adaptive joins without changing the compatibility level, see [Understanding Adaptive joins](../../relational-databases/performance/joins.md#adaptive).
 
 ## Batch mode memory grant feedback
 A query's post-execution plan in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the minimum required memory needed for execution and the ideal memory grant size to have all rows fit in memory. Performance suffers when memory grant sizes are incorrectly sized. Excessive grants result in wasted memory and reduced concurrency. Insufficient memory grants cause expensive spills to disk. By addressing repeating workloads, batch mode memory grant feedback recalculates the actual memory required for a query and then updates the grant value for the cached plan. When an identical query statement is executed, the query uses the revised memory grant size, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
@@ -89,7 +89,7 @@ Memory grant feedback can be disabled at the database or statement scope while s
 -- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 
--- Azure SQL Database, SQL Server 2019 and higher
+-- Starting with SQL Server 2019, and in Azure SQL Database
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
@@ -117,7 +117,7 @@ A USE HINT query hint takes precedence over a database scoped configuration or t
 
 ## Row mode memory grant feedback
 
-**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as a public preview feature
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (public preview)
 
 > [!NOTE]
 > Row mode memory grant feedback is a public preview feature.  
@@ -167,7 +167,6 @@ OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'));
 A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
 ## Interleaved execution for MSTVFs
-
 With interleaved execution, the actual row counts from the function are used to make better-informed downstream query plan decisions. For more information on multi-statement table-valued functions (MSTVFs), see [Table-valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 Interleaved execution changes the unidirectional boundary between the optimization and execution phases for a single-query execution and enables plans to adapt based on the revised cardinality estimates. During optimization if we encounter a candidate for interleaved execution, which is currently **multi-statement table-valued functions (MSTVFs)**, we will pause optimization, execute the applicable subtree, capture accurate cardinality estimates, and then resume optimization for downstream operations.   
@@ -232,14 +231,13 @@ A statement using `OPTION (RECOMPILE)` will create a new plan using interleaved 
 Plans using interleaved execution can be forced. The plan is the version that has corrected cardinality estimates based on initial execution.    
 
 ### Disabling interleaved execution without changing the compatibility level
-
 Interleaved execution can be disabled at the database or statement scope while still maintaining database compatibility level 140 and higher.  To disable interleaved execution for all query executions originating from the database, execute the following within the context of the applicable database:
 
 ```sql
 -- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
 
--- Azure SQL Database, SQL Server 2019 and higher
+-- Starting with SQL Server 2019, and in Azure SQL Database
 ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
@@ -250,7 +248,7 @@ To re-enable interleaved execution for all query executions originating from the
 -- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 
--- Azure SQL Database, SQL Server 2019 and higher
+-- Starting with SQL Server 2019, and in Azure SQL Database
 ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
@@ -274,11 +272,9 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 
 A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
-
 ## Table variable deferred compilation
 
-> [!NOTE]
-> Table variable deferred compilation is a public preview feature.  
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (public preview)
 
 Table variable deferred compilation improves plan quality and overall performance for queries that reference table variables. During optimization and initial compilation, this feature propagates cardinality estimates that are based on actual table variable row counts. This accurate row count information optimizes downstream plan operations.
 
@@ -290,8 +286,7 @@ For more information, see [Table variable deferred compilation](../../t-sql/data
 
 ## Scalar UDF inlining
 
-> [!NOTE]
-> Scalar user-defined function (UDF) inlining is a public preview feature.  
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (public preview)
 
 Scalar UDF inlining automatically transforms [scalar UDFs](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) into relational expressions. It embeds them in the calling SQL query. This transformation improves the performance of workloads that take advantage of scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs. The results are efficient, set-oriented, and parallel instead of inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
 
@@ -299,8 +294,7 @@ For more information, see [Scalar UDF inlining](../user-defined-functions/scalar
 
 ## Approximate query processing
 
-> [!NOTE]
-> **APPROX_COUNT_DISTINCT** is a public preview feature.  
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (public preview)
 
 Approximate query processing is a new feature family. It aggregates across large datasets where responsiveness is more critical than absolute precision. An example is calculating a **COUNT(DISTINCT())** across 10 billion rows, for display on a dashboard. In this case, absolute precision isn't important, but responsiveness is critical. The new **APPROX_COUNT_DISTINCT** aggregate function returns the approximate number of unique non-null values in a group.
 
@@ -308,13 +302,11 @@ For more information, see [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/fun
 
 ## Batch mode on rowstore 
 
-> [!NOTE]
-> Batch mode on rowstore is a public preview feature.  
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (public preview) 
 
 Batch mode on rowstore enables batch mode execution for analytic workloads without requiring columnstore indexes.  This feature supports batch mode execution and bitmap filters for on-disk heaps and B-tree indexes. Batch mode on rowstore enables support for all existing batch mode-enabled operators.
 
 ### Background
-
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduced a new feature to accelerate analytical workloads: columnstore indexes. We expanded the use cases and improved the performance of columnstore indexes in each subsequent release. Until now, we surfaced and documented all these capabilities as a single feature. You create columnstore indexes on your tables. And your analytical workload goes faster. However, there are two related but distinct sets of technologies:
 - With **columnstore** indexes, analytical queries access only the data in the columns they need. Page compression in the columnstore format is also more effective than compression in traditional **rowstore** indexes. 
 - With **batch mode** processing, query operators process data more efficiently. They work on a batch of rows instead of one row at a time. A number of other scalability improvements are tied to batch mode processing. For more information on batch mode, see [Execution modes](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
@@ -336,7 +328,6 @@ Columnstore indexes aren't a good option for some applications. An application m
 For some hybrid transactional-analytical workloads, the overhead on a workload's transactional aspects outweighs the benefits of columnstore indexes. Such scenarios can improve CPU use from batch mode processing alone. That's why the batch mode on rowstore feature considers batch mode for all queries. It doesn't matter which indexes are involved.
 
 ### Workloads that might benefit from batch mode on rowstore
-
 The following workloads might benefit from batch mode on rowstore:
 * A significant part of the workload consists of analytical queries. Usually, these queries have operators like joins or aggregates that process hundreds of thousands of rows or more.
 * The workload is CPU bound. If the bottleneck is I/O, we still recommend that you consider a columnstore index, if possible.
@@ -346,7 +337,6 @@ The following workloads might benefit from batch mode on rowstore:
 > Batch mode on rowstore helps only by reducing CPU consumption. If your bottleneck is I/O related, and data isn't already cached ("cold" cache), batch mode on rowstore won't improve elapsed time. Similarly, if there isn't enough memory on the machine to cache all the data, a performance improvement is unlikely.
 
 ### What changes with batch mode on rowstore?
-
 Other than moving to compatibility level 150, you don't have to change anything on your side to enable batch mode on rowstore for candidate workloads.
 
 Even if a query doesn't involve any table with a columnstore index, the query processor now uses heuristics to decide whether to consider batch mode. The heuristics consist of these checks:
@@ -356,17 +346,19 @@ Even if a query doesn't involve any table with a columnstore index, the query pr
 If batch mode on rowstore is used, you see the actual run mode as **batch mode** in the query plan. The scan operator uses batch mode for on-disk heaps and B-tree indexes. This batch mode scan can evaluate batch mode bitmap filters. You might also see other batch mode operators in the plan. Examples are hash joins, hash-based aggregates, sorts, window aggregates, filters, concatenation, and compute scalar operators.
 
 ### Remarks
+Query plans don't always use batch mode. The Query Optimizer might decide that batch mode isn't beneficial for the query. 
 
-* Query plans don't always use batch mode. The query optimizer might decide that batch mode isn't beneficial for the query. 
-* The query optimizer's search space is changing. So if you get a row mode plan, it might not be the same as the plan you get in a lower compatibility level. And if you get a batch mode plan, it might not be the same as the plan you get with a columnstore index. 
-* Plans might also change for queries that mix columnstore and rowstore indexes because of the new batch mode rowstore scan.
-* There are current limitations for the new batch mode on rowstore scan: 
-    * It won't kick in for in-memory OLTP tables or for any index other than on-disk heaps and B-trees. 
-    * It also won't kick in if a large object (LOB) column is fetched or filtered. This limitation includes sparse column sets and XML columns.
-* There are queries that batch mode isn't used for even with columnstore indexes. Examples are queries that involve cursors. These same exclusions also extend to batch mode on rowstore.
+The Query Optimizer's search space is changing. So if you get a row mode plan, it might not be the same as the plan you get in a lower compatibility level. And if you get a batch mode plan, it might not be the same as the plan you get with a columnstore index. 
+
+Plans might also change for queries that mix columnstore and rowstore indexes because of the new batch mode rowstore scan.
+
+There are current limitations for the new batch mode on rowstore scan: 
+- It won't kick in for in-memory OLTP tables or for any index other than on-disk heaps and B-trees. 
+- It also won't kick in if a large object (LOB) column is fetched or filtered. This limitation includes sparse column sets and XML columns.
+
+There are queries that batch mode isn't used for even with columnstore indexes. Examples are queries that involve cursors. These same exclusions also extend to batch mode on rowstore.
 
 ### Configure batch mode on rowstore
-
 The **BATCH_MODE_ON_ROWSTORE** database scoped configuration is on by default. It disables batch mode on rowstore without requiring a change in database compatibility level:
 
 ```sql
@@ -400,10 +392,9 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 ```
 
 ## See also
-
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Query processing architecture guide](../../relational-databases/query-processing-architecture-guide.md)    
 [Showplan logical and physical operators reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Joins](../../relational-databases/performance/joins.md)    
-[Demonstrating adaptive query processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
-[Demonstrating intelligent QP](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   
+[Demonstrating Adaptive Query Processing](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)       
+[Demonstrating Intelligent Query Processing](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

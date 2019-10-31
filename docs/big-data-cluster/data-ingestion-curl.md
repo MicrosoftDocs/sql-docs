@@ -1,21 +1,25 @@
 ---
 title: Use curl to load data into HDFS | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: Use curl to load data into HDFS on SQL Server 2019 big data clusters.
+description: Use curl to load data into HDFS on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab 
-ms.date: 04/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Use curl to load data into HDFS on SQL Server big data clusters
+# Use curl to load data into HDFS on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article explains how to use **curl** to load data into HDFS on SQL Server 2019 big data clusters (preview).
+This article explains how to use **curl** to load data into HDFS on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview).
+
+## <a id="prereqs"></a> Prerequisites
+
+- [Load sample data into your big data cluster](tutorial-load-sample-data.md)
 
 ## Obtain the service external IP
 
@@ -40,18 +44,18 @@ For example:
 
 ## List a file
 
-To list file under **hdfs:///airlinedata**, use the following curl command:
+To list file under **hdfs:///product_review_data**, use the following curl command:
 
 ```bash
-curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
+curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 ## Put a local file into HDFS
 
-To put a new file **test.csv** from local directory to airlinedata directory, use the following curl command (the **Content-Type** parameter is required):
+To put a new file **test.csv** from local directory to product_review_data directory, use the following curl command (the **Content-Type** parameter is required):
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## Create a directory

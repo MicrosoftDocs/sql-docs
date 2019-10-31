@@ -26,7 +26,7 @@ manager: craigg
   
 -   Enables DQS administrators to monitor the DQS activities on a [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] from a [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], and *terminate* a running activity or *stop* a running process within an activity, if required.  
   
--   Configure reference data service settings such as setting up connectivity with Windows Azure Marketplace and managing direct third-party reference data service providers.  
+-   Configure reference data service settings such as setting up connectivity with Azure Marketplace and managing direct third-party reference data service providers.  
   
 -   Configure threshold values for the cleansing and matching activities.  
   
@@ -43,7 +43,7 @@ manager: craigg
 ### Configuration  
  The **Configuration** screen in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] enables the DQS administrator to do the following things:  
   
--   **Reference Data**: Configure reference data service providers: Windows Azure Marketplace or direct reference data service providers. After you set up the reference data service providers, you can map a domain/composite domain with the reference data during domain management activity in a knowledge base, and then use the same knowledge base for the cleansing activity in a data quality project. It also enables you to specify the proxy settings for connecting to the Internet to use Windows Azure Marketplace.  
+-   **Reference Data**: Configure reference data service providers: Azure Marketplace or direct reference data service providers. After you set up the reference data service providers, you can map a domain/composite domain with the reference data during domain management activity in a knowledge base, and then use the same knowledge base for the cleansing activity in a data quality project. It also enables you to specify the proxy settings for connecting to the Internet to use Azure Marketplace.  
   
 -   **General Settings**: Specify the threshold values for data cleansing and data matching, and whether to enable notifications for profiling in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. These threshold values are used by DQS during the computer-assisted cleansing and matching activities in a data quality project.  
   

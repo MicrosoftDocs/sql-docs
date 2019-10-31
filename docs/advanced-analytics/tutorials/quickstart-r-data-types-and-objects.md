@@ -1,33 +1,41 @@
 ---
-title: Quickstart about R and SQL data types and objects
-description: In this quickstart, learn how to work with data types and data objects in R and SQL Server.
+title: Work with R and SQL data types and objects
+titleSuffix: SQL Server Machine Learning Services
+description: In this quickstart, learn how to work with data types and data objects in R and SQL Server with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 01/04/2019
+ms.date: 10/04/2019  
 ms.topic: quickstart
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
+ms.reviewer: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Quickstart: Handle data types and objects using R in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this quickstart, get a hands-on introduction to common issues that occur when moving data between R and SQL Server. The experience you gain through this exercise provides essential background when working with data in your own script.
+# Quickstart: Handle data types and objects using R in SQL Server Machine Learning Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+In this quickstart, you'll learn about common issues that occur when moving data between R and SQL Server. The experience you gain through this exercise provides essential background when working with data in your own script.
 
 Common issues to know up front include:
 
-+ Data types sometimes do not match
-+ Implicit conversions might take place
-+ Cast and convert operations are sometimes required
-+ R and SQL use different data objects
+- Data types sometimes don't match
+- Implicit conversions might take place
+- Cast and convert operations are sometimes required
+- R and SQL use different data objects
 
 ## Prerequisites
 
-A previous quickstart, [Verify R exists in SQL Server](quickstart-r-verify.md), provides information and links for setting up the R environment required for this quickstart.
+- This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R language installed.
+
+  Your SQL Server instance can be in an Azure virtual machine or on-premises. Just be aware that the external scripting feature is disabled by default, so you might need to [enable external scripting](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) and verify that **SQL Server Launchpad service** is running before you start.
+
+- You also need a tool for running SQL queries that contain R scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## Always return a data frame
 
-When your script returns results from R to SQL Server, it must return the data as a **data.frame**. Any other type of object that you generate in your script - whether that be a list, factor, vector, or binary data - must be converted to a data frame if you want to output it as part of the stored procedure results. Fortunately, there are multiple R functions to support changing other objects to a data frame. You can even serialize a binary model and return it in a data frame, which you'll do later in this tutorial.
+When your script returns results from R to SQL Server, it must return the data as a **data.frame**. Any other type of object that you generate in your script - whether that be a list, factor, vector, or binary data - must be converted to a data frame if you want to output it as part of the stored procedure results. Fortunately, there are multiple R functions to support changing other objects to a data frame. You can even serialize a binary model and return it in a data frame, which you'll do later in this quickstart.
 
 First, let's experiment with some R basic R objects - vectors, matrices, and lists - and see how conversion to a data frame changes the output passed to SQL Server.
 
@@ -54,7 +62,7 @@ EXECUTE sp_execute_external_script
 
 ## Identify schema and data types
 
-Why are the results so different? 
+Why are the results so different?
 
 The answer can usually be found by using the R `str()` command. Add the function `str(object_name)` anywhere in your R script to have the data schema of the specified R object returned as an informational message. To view messages, see in the **Messages** pane of Visual Studio Code, or the **Messages** tab in SSMS.
 
@@ -113,6 +121,22 @@ For now, just be aware that you need to check the expected results when coercing
 
 Each R data object has its own rules for how values are handled when combined with other data objects if the two data objects have the same number of dimensions, or if any data object contains heterogenous data types.
 
+First, create a small table of test data.
+
+```sql
+CREATE TABLE RTestData (col1 INT NOT NULL)
+
+INSERT INTO RTestData
+VALUES (1);
+
+INSERT INTO RTestData
+VALUES (10);
+
+INSERT INTO RTestData
+VALUES (100);
+GO
+```
+
 For example, assume you run the following statement to perform matrix multiplication using R. You multiply a single-column matrix with the three values by an array with four values, and expect a 4x3 matrix as a result.
 
 ```sql
@@ -152,7 +176,7 @@ execute sp_execute_external_script
 Now R returns a single value as the result.
 
 **Results**
-    
+
 |Col1|
 |---|
 |1542|
@@ -161,10 +185,8 @@ Why? In this case, because the two arguments can be handled as vectors of the sa
 
 > [!TIP]
 > 
-> Getting errors? These examples require the table **RTestData**. If you haven't created the test data table, go back to this topic to create the table: [Handle inputs and outputs](../tutorials/rtsql-working-with-inputs-and-outputs.md).
-> 
-> If you have created the table but still get an error, make sure that you are running the stored procedure in the context of the database that contains the table, and not in **master** or another database.
-> 
+> Getting errors? Make sure that you're running the stored procedure in the context of the database that contains the table, and not in **master** or another database.
+>
 > Also, we suggest that you avoid using temporary tables for these examples. Some R clients will terminate a connection between batches, deleting temporary tables.
 
 ## Merge or multiply columns of different length
@@ -187,7 +209,7 @@ EXECUTE sp_execute_external_script
 To fill out the data frame, R repeats the elements retrieved from RTestData as many times as needed to match the number of elements in the array `df1`.
 
 **Results**
-    
+
 |*Col2*|*Col3*|
 |----|----|
 |1|1|
@@ -223,7 +245,7 @@ SELECT ReportingDate
 ```
 
 > [!NOTE]
-> 
+>
 > You can use any version of AdventureWorks, or create a different query using a database of your own. The point is to try to handle some data that contains text, datetime and numeric values.
 
 Now, try pasting this query as the input to the stored procedure.
@@ -256,25 +278,30 @@ STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M20
 STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 16950 16950
 ```
 
-+ The datetime column has been processed using the R data type, **POSIXct**.
-+ The text column "ProductSeries" has been identified as a **factor**, meaning a categorical variable. String values are handled as factors by default. If you pass a string to R, it is converted to an integer for internal use, and then mapped back to the string on output.
+- The datetime column has been processed using the R data type, **POSIXct**.
+- The text column "ProductSeries" has been identified as a **factor**, meaning a categorical variable. String values are handled as factors by default. If you pass a string to R, it is converted to an integer for internal use, and then mapped back to the string on output.
 
 ### Summary
 
 From even these short examples, you can see the need to check the effects of data conversion when passing SQL queries as input. Because some SQL Server data types are not supported by R, consider these ways to avoid errors:
 
-+ Test your data in advance and verify columns or values in your schema that could be a problem when passed to R code.
-+ Specify columns in your input data source individually, rather than using `SELECT *`, and know how each column will be handled.
-+ Perform explicit casts as necessary when preparing your input data, to avoid surprises.
-+ Avoid passing columns of data (such as GUIDS or rowguids) that cause errors and aren't useful for modeling.
+- Test your data in advance and verify columns or values in your schema that could be a problem when passed to R code.
+- Specify columns in your input data source individually, rather than using `SELECT *`, and know how each column will be handled.
+- Perform explicit casts as necessary when preparing your input data, to avoid surprises.
+- Avoid passing columns of data (such as GUIDS or rowguids) that cause errors and aren't useful for modeling.
 
 For more information on supported and unsupported data types, see [R libraries and data types](../r/r-libraries-and-data-types.md).
 
 For information about the performance impact of run-time conversion of strings to numerical factors, see [SQL Server R Services performance tuning](../r/sql-server-r-services-performance-tuning.md).
 
-## Next step
+## Next steps
 
-In the next quickstart, you'll learn how to apply R functions to SQL Server data.
+To learn about writing advanced R functions in SQL Server, follow this quickstart:
 
 > [!div class="nextstepaction"]
-> [Quickstart: Use R functions with SQL Server data](quickstart-r-functions.md)
+> [Write advanced R functions with SQL Server Machine Learning Services](quickstart-r-functions.md)
+
+For more information on using R in SQL Server Machine Learning Services, see the following articles:
+
+- [Create and score a predictive model in R with SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
+- [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

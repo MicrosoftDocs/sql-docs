@@ -71,7 +71,7 @@ Samba, which is the Linux variant of server message block (SMB), can also be use
 
 Windows-based SMB shares can also be used; SMB shares do not need to be Linux-based, as long as the client portion of Samba is configured properly on the Linux server hosting [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] and the share has the right access. For those in a mixed environment, this would be one way to leverage existing infrastructure for Linux-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deployments.
 
-One thing that is important is that the version of Samba deployed should be SMB 3.0 compliant. When SMB support was added in [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], it required all shares to support SMB 3.0. If using Samba for the share and not Windows Server, the Samba-based share should be using Samba 4.0 or later, and ideally 4.3 or later, which supports SMB 3.1.1. A good source of information on SMB and Linux is [SMB3 in Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
+One thing that is important is that the version of Samba deployed should be SMB 3.0 compliant. When SMB support was added in [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], it required all shares to support SMB 3.0. If using Samba for the share and not Windows Server, the Samba-based share should be using Samba 4.0 or later, and ideally 4.3 or later, which supports SMB 3.1.1. A good source of information on SMB and Linux is [SMB3 in Samba](https://events.static.linuxfound.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
 
 Finally, using a network file system (NFS) share is an option. Using NFS is not an option on Windows-based deployments of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], and can only be used for Linux-based deployments.
 
@@ -210,9 +210,6 @@ For more specifics, consult:
 -   Hyper-V Documentation - [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
 -   Whitepaper (written for Windows-based deployments, but most of the concepts still apply) - [Planning Highly Available, Mission Critical SQL Server Deployments with VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
->[!NOTE]
->RHEL with a Pacemaker cluster with STONITH is not yet supported by Hyper-V. Until that is supported, for more information and updates, consult [Support Policies for RHEL High Availability Clusters](https://access.redhat.com/articles/29440#3physical_host_mixing).
-
 ### Networking
 Unlike a WSFC, Pacemaker does not require a dedicated name or at least one dedicated IP address for the Pacemaker cluster itself. AGs and FCIs will require IP addresses (see the documentation for each for more information), but not names, since there is no network name resource. SLES does allow the configuration of an IP address for administration purposes, but it is not required, as can be seen in [Create the Pacemaker cluster](sql-server-linux-deploy-pacemaker-cluster.md#create).
 
@@ -224,9 +221,6 @@ One difference with multiple NICs and Pacemaker versus a WSFC is that Pacemaker 
 Quorum configuration and requirements are related to AG or FCI-specific deployments of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
 STONITH is required for a supported Pacemaker cluster. Use the documentation from the distribution to configure STONITH. An example is at [Storage-based Fencing](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html) for SLES. There is also a STONITH agent for VMware vCenter for ESXI-based solutions. For more information, see [Stonith Plugin Agent for VMWare VM VCenter SOAP Fencing (Unofficial)](https://github.com/olafrv/fence_vmware_soap).
-
-> [!NOTE]
-> As of the writing of this article, Hyper-V does not have a solution for STONITH. This is true for on premises deployments and also impacts Azure-based Pacemaker deployments using certain distributions such as RHEL.
 
 ### Interoperability
 This section documents how a Linux-based cluster can interact with a WSFC or with other distributions of Linux.

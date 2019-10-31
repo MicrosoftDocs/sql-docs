@@ -47,7 +47,7 @@ manager: craigg
  Click **View available Azure DataMarket datasets** to display available datasets.  
   
  **Account key**  
- Specify the account key used to access your Windows Azure Marketplace dataset subscriptions.  
+ Specify the account key used to access your Azure Marketplace dataset subscriptions.  
   
  **Find**  
  Locate an account key associated with a Windows Live account.  

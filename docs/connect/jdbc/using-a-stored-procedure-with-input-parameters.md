@@ -1,7 +1,7 @@
 ---
-title: "Using a Stored Procedure with Input Parameters | Microsoft Docs"
+title: "Using a stored procedure with input parameters | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -12,7 +12,7 @@ author: MightyPen
 ms.author: genemi
 ---
 
-# Using a Stored Procedure with Input Parameters
+# Using a stored procedure with input parameters
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -23,7 +23,7 @@ When you use the JDBC driver to call a stored procedure with IN parameters, you 
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> For more information about the SQL escape sequences, see [Using SQL Escape Sequences](../../connect/jdbc/using-sql-escape-sequences.md).
+> For more information about the SQL escape sequences, see [Using SQL escape sequences](../../connect/jdbc/using-sql-escape-sequences.md).
 
 When you construct the `call` escape sequence, specify the IN parameters by using the ? (question mark) character. This character acts as a placeholder for the parameter values that will be passed into the stored procedure. To specify a value for a parameter, you can use one of the setter methods of the SQLServerPreparedStatement class. The setter method that you can use is determined by the data type of the IN parameter.
 
@@ -49,6 +49,6 @@ public static void executeSprocInParams(Connection con) throws SQLException {
 }
 ```
 
-## See Also
+## See also
 
-[Using Statements with Stored Procedures](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Using statements with stored procedures](../../connect/jdbc/using-statements-with-stored-procedures.md)

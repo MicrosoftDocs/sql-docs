@@ -26,7 +26,7 @@ Modifies the content of an existing external package library.
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> In SQL Server 2017, R language and Windows platform are supported. R, Python, and external languages on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4 and later.
+> In SQL Server 2017, R language and Windows platform are supported. R, Python, and external languages on the Windows and Linux platforms are supported in SQL Server 2019 and later.
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current"

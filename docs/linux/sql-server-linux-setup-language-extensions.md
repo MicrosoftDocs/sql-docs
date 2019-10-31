@@ -23,9 +23,11 @@ Package location for the Java extensions is in the SQL Server Linux source repos
 
 Language Extensions is also supported on Linux containers. We do not provide pre-built containers with Language Extensions, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-## Uninstall previous CTP version
+Language Extensions and [Machine Learning Services](../advanced-analytics/index.yml) are installed by default on SQL Server Big Data Clusters. If you use Big Data Clusters, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md).
 
-The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling the CTP version to remove all previous packages before installing RC 1. Side-by-side installation of multiple versions is not supported.
+## Uninstall preview version
+
+If you have installed a preview release (Community Technical Preview (CTP) or Release Candidate (RC)), we recommend uninstalling this version to remove all previous packages before installing SQL Server 2019. Side-by-side installation of multiple versions is not supported, and the package list has changed over the last several preview (CTP/RC) releases.
 
 ### 1. Confirm package installation
 
@@ -35,7 +37,7 @@ You might want to check for the existence of a previous installation as a first 
 ls /opt/microsoft/mssql/bin
 ```
 
-### 2. Uninstall previous CTP packages
+### 2. Uninstall previous CTP/RC packages
 
 Uninstall at the lowest package level. Any upstream package dependent on a lower-level package is automatically uninstalled.
 
@@ -49,7 +51,7 @@ Commands for removing packages appear in the following table.
 | SLES	| `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu	| `sudo apt-get remove msssql-server-extensibility-java`|
 
-### 3. Install Release Candidate 1 (RC 1)
+### 3. Install SQL Server 2019
 
 Install at the highest package level using the instructions in this article for your operating system.
 
@@ -280,12 +282,9 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## Limitations in the RC 1 release
-
-Language Extensions and Java extensibility on Linux is still under active development. The following features are not yet enabled in the preview version.
+## Limitations
 
 + Implied authentication is currently not available on Linux at this time, which means you cannot connect back to the server from in-progress Java to access data or other resources.
-
 
 ### Resource governance
 

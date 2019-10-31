@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 Supports the management of package libraries related to external runtimes such as R, Python, and Java.
 
 > [!NOTE]
-> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4.
+> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 and later.
 
 ## sys.external_libraries
 

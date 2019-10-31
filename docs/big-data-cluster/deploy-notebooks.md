@@ -23,7 +23,7 @@ You can use notebooks to deploy big data clusters for [!INCLUDE[sql-server-2019]
 
 ## Prerequisites
 
-Following prerequisites are required to be able to launch the notebook:
+Following prerequisites are required to also launch the notebook:
 
 * Latest version of [Azure Data Studio Insiders build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master) installed
 * [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] extension installed in Azure Data Studio
@@ -48,7 +48,7 @@ In addition to above, deploying SQL Server 2019 big data cluster also requires:
 
 5. Accept the Privacy and license terms
 
-6. This dialog also checks whether the required tools for the chosen type of SQL deployment exist on the host. The **Select** button is not enabled until the tools check is successful.
+6. This dialog also checks whether the required tools for the chosen type of SQL deployment exist on the host. The **Select** button isn't enabled until the tools check is successful.
 
 7. Select the **Select** button. This action launches the deployment experience.
 
@@ -66,7 +66,7 @@ You can customize the settings of the deployment profile by following the instru
 
 #### Azure settings
 
-1. If the deployment target is a new AKS, additional information such as Azure Subscription Id, resource group, AKS cluster name, VM count, size etc. will be required to create the AKS cluster.
+1. If the deployment target is a new AKS, additional information such as Azure Subscription ID, resource group, AKS cluster name, VM count, size etc. will be required to create the AKS cluster.
 
    ![Azure settings](media/deploy-notebooks/azure-settings.png)
 
@@ -74,9 +74,9 @@ You can customize the settings of the deployment profile by following the instru
 
    ![Target cluster context](media/deploy-notebooks/target-cluster-context.png)
 
-#### Cluster, docker and AD settings
+#### Cluster, docker, and AD settings
 
-1. Enter the cluster name for the SQL Server 2019 BDC, admin username and password.
+1. Enter the cluster name for the SQL Server 2019 BDC, admin username, and password.
 Note: The same account is used for controller and SQL Server.
 
    ![Cluster settings](media/deploy-notebooks/cluster-settings.png)
@@ -91,7 +91,7 @@ Note: The same account is used for controller and SQL Server.
 
 #### Service settings
 
-This screen has inputs for various settings such as **Scale**, **Endpoints**, **Storage** and other advanced storage settings. Please enter the appropriate values and select **Next**.
+This screen has inputs for various settings such as **Scale**, **Endpoints**, **Storage, and other advanced storage settings. Please enter the appropriate values and select **Next**.
 
 ##### Scale settings
 
@@ -107,17 +107,17 @@ For additional information on each of these components refer [master instance](c
 
 The default endpoints have been pre-filled. However, they can be changed as appropriate. More on endpoints.
 
-   ![Enpoint settings](media/deploy-notebooks/endpoint-settings.png)
+   ![Endpoint settings](media/deploy-notebooks/endpoint-settings.png)
 
 ##### Storage settings
 
-The storage settings include storage class and claim size for Data and Logs. The settings can be applied across Storage, Data and SQL Server master pool.
+The storage settings include storage class and claim size for Data and Logs. The settings can be applied across Storage, Data, and SQL Server master pool.
 
    ![Storage settings](media/deploy-notebooks/storage-settings.png)
 
 ##### Advanced storage settings
 
-You can additional storage settings under **Advanced storage settings**
+You can add additional storage settings under **Advanced storage settings**
 
 * Storage ool (HDFS)
 * Data pool

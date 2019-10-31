@@ -81,6 +81,8 @@
         href: big-data-cluster/concept-data-persistence.md
       - name: Offline deployments
         href: big-data-cluster/deploy-offline.md
+      - name: Active Directory mode
+        href: big-data-cluster/deploy-active-directory.md
       - name: Deploy with high availability
         items:
         - name: Master instance

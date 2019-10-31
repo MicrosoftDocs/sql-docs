@@ -24,7 +24,7 @@ For other deployment scenarios, see:
 - [Kubernetes - Big Data Clusters](../big-data-cluster/deploy-get-started.md)
 
 > [!TIP]
-> This guide coves several deployment scenarios. If you are only looking for step-by-step installation instructions, jump to one of the quickstarts:
+> This guide covers several deployment scenarios. If you are only looking for step-by-step installation instructions, jump to one of the quickstarts:
 > - [RHEL quickstart](quickstart-install-connect-red-hat.md)
 > - [SLES quickstart](quickstart-install-connect-suse.md)
 > - [Ubuntu quickstart](quickstart-install-connect-ubuntu.md)

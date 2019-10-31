@@ -1,7 +1,7 @@
 ---
 title: "Hybrid Buffer Pool | Microsoft Docs"
 ms.custom: ""
-ms.date: 05/22/2019
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -14,12 +14,13 @@ ms.author: brcarrig
 # Hybrid Buffer Pool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Hybrid Buffer Pool allows the database engine to directly access data pages in database files stored on persistent memory (PMEM) devices. This feature is introduced in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
+Hybrid Buffer Pool enables buffer pool objects to reference data pages in database files residing on persistent memory (PMEM) devices, instead of copies of the data pages cached in volatile DRAM. This feature is introduced in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
 
-In a traditional system without PMEM, SQL Server caches data pages in the buffer pool. With hybrid buffer pool, SQL Server skips performing a copy of the page into the DRAM-based portion of the buffer pool, and instead accesses the page directly on the database file that lives on a PMEM device. Read access to data files on PMEM devices for hybrid buffer pool is performed directly by following a pointer to the data pages on the PMEM device.  
+Persistent memory (PMEM) devices are byte-addressable and if a direct access (DAX) persistent-memory aware file system (XFS, EXT4 or NTFS) is used, files on the file system can be accessed using the usual file system APIs in the OS. Alternatively, it can perform what is known as load and store operations against memory mapped regions corresponding to portions of files on the device. This allows an application such as SQL Server to access data files without traversing the traditional storage stack by-passing the kernel and performing file operations in user-space.
 
-Only clean pages can be accessed directly on a PMEM device. When a page is marked as dirty it is copied to the DRAM buffer pool before eventually being written back to the PMEM device and marked as clean again. This will occur during regular checkpoint operations. The mechanism to copy the file from the PMEM device to DRAM is direct memory-mapped I/O (MMIO) and is also referred to as the *enlightenment* of data files within SQL Server.
+The hybrid buffer pool uses this ability to perform load/store/flush operations against memory mapped regions of the persistent memory device to use the PMEM device as a cache for buffer pool objects to read data pages from the data files. This creates the unique situation where the storage for the persistent memory device, also serves as the cache for database data files rather than regions of volatile DRAM on the server. Persistent memory devices are accessible via the memory bus and connect to memory channels just like DRAM.
 
+Only clean pages are cached on the device as part of the Hybrid Buffer Pool. When a cached page is marked as dirty it is copied to the DRAM buffer pool before eventually being written back to the PMEM device and marked as clean again. This will occur during regular checkpoint operations in a manner similar to that performed against a block device.
 
 The hybrid buffer pool feature is available for both Windows and Linux. The PMEM device must be formatted with a filesystem that supports DAX (DirectAccess). The XFS, EXT4, and NTFS file systems all have support for DAX. SQL Server will automatically detect if data files reside on an appropriately formatted PMEM device and perform memory mapping in user space. This mapping happens upon startup, when a new database is attached, restored, created, or when the hybrid buffer pool feature is enabled for a database.
 

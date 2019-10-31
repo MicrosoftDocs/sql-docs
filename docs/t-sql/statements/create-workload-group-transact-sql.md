@@ -188,9 +188,9 @@ GO
 
 &nbsp;
 
-## SQL Data Warehouse (Preview)
+## SQL Data Warehouse 
 
-Creates a workload group.  Workload groups are containers for a set of requests and are the basis for how workload management is configured on a system.  Workload groups provide the ability to reserve resources for workload isolation, contain resources, define resources per request, and adhere to execution rules.  Once the statement completes, the settings are in effect.
+CREATE WORKLOAD GROUP (Transact-SQL) (preview) creates a workload group.  Workload groups are containers for a set of requests and are the basis for how workload management is configured on a system.  Workload groups provide the ability to reserve resources for workload isolation, contain resources, define resources per request, and adhere to execution rules.  Once the statement completes, the settings are in effect.
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
@@ -229,7 +229,7 @@ CREATE WORKLOAD GROUP wgSample WITH
 
 Consider the values that are used for resource classes as a guideline for request_min_resource_grant_percent.  The table below contains resource allocations for Gen2.
 
-|Resource Class|Percent Resources|
+|Resource Class|Percent of Resources|
 |---|---|
 |Smallrc|3%|
 |Mediumrc|10%|
@@ -262,9 +262,7 @@ The parameters min_percentage_resource, cap_percentage_resource, request_min_res
 
 The supported concurrency per service level remains the same as when resource classes were used to define resource grants per query, hence, the supported values for request_min_resource_grant_percent is dependent on the service level the instance is set to.  At the lowest service level, DW100c, 4 concurrency is supported.  The effective request_min_resource_grant_percent for a configured workload group can be 25% or higher.  See the below table for further details.
 
-|Service Level|Maximum concurrent queries|Min % supported for 
-REQUEST_MIN_RESOURCE_GRANT_PERCENT and
- MIN_PERCENTAGE_RESOURCE|
+|Service Level|Maximum concurrent queries|Min % supported for REQUEST_MIN_RESOURCE_GRANT_PERCENT and MIN_PERCENTAGE_RESOURCE|
 |---|---|---|
 |DW100c|4|25%|
 |DW200c|8|12.5%|
@@ -288,13 +286,13 @@ Similarly, request_min_resource_grant_percent, min_percentage_resource must be g
 
 Cap_percentage_resource also has an effective value.  If a workload group wgAdhoc is configured with a cap_percentage_resource of 100% and another workload group wgDashboards is created with 25% min_percentage_resource, the effective cap_percentage_resource for wgAdhoc becomes 75%.
 
-The easiest way to understand the run-time values for your workload groups is to query the system view sys.dm_workload_management_workload_groups_stats (link tbd).
+The easiest way to understand the run-time values for your workload groups is to query the system view [sys.dm_workload_management_workload_groups_stats] (../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md?view=azure-sqldw-latest).
 
 ## Permissions
 
 Requires CONTROL DATABASE permission
 
 ## See also
-[DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)
+[DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](drop-workload-group-transact-sql.md)
 
 ::: moniker-end

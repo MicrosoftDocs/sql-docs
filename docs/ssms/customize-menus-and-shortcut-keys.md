@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,8 +19,13 @@ helpviewer_keywords:
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: "markingmyname"
 ms.author: "maghan"
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "01/19/2017"
 ---
+
 # Customize Menus and Shortcut Keys
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 A keyboard accelerator allows you to select a menu command or button by pressing ALT+*\<single letter>*. For example, to open the **Edit** menu, press ALT+E. You can rearrange and modify toolbar buttons, menus, and menu commands by using the **Customize** dialog box. Instructions are provided for changing the settings using the mouse and using only the keyboard.  
   

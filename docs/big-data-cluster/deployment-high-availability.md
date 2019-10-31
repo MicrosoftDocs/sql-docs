@@ -199,4 +199,4 @@ The known issues and limitations with availability groups for SQL Server master 
 ## Next steps
 
 - For more information about using configuration files in big data cluster deployments, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).
-- For more information about Availability Groups feature for SQL Server, see [Overview of Always On Availability Groups (SQL Server)](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2017).
+- For more information about Availability Groups feature for SQL Server, see [Overview of Always On Availability Groups (SQL Server)](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).

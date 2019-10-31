@@ -241,6 +241,10 @@ This release introduces new features and improvements for performance, resource 
 | Online attach  | Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more, see [Online attach](/analysis-services/what-s-new-in-sql-server-analysis-services#online-attach). |
 | &nbsp; | &nbsp; |
 
+## SQL Server Reporting Services
+
+This release of SQL Server Reporting Services features support for Azure SQL Managed Instances, Power BI Premium datasets, enhanced accessibility, Azure Active Directory Application Proxy, and Transparent Database Encryption. It also brings an update to Microsoft Report Builder. See [What's new in SQL Server Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) for details.
+
 ## See also
 
 - [`SqlServer` PowerShell module](https://www.powershellgallery.com/packages/Sqlserver)

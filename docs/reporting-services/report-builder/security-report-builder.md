@@ -61,7 +61,7 @@ ms.author: maggies
   
  To enable others to browse to and find items that you published to be shared, you must work with the report server administrator to set up a folder organization that provides access to your users. Access must be available for authoring reports and for running published reports.  
   
- For more information, see the following topics in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation:  
+ For more information, see the following topics:  
   
 -   [Roles and Permissions &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   

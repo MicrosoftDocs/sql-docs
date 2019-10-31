@@ -225,9 +225,9 @@ For more information, see [Specify Field and Row Terminators (SQL Server)](../..
 ROW TERMINATOR = 'row_terminator'</br>
 *ROW TERMINATOR* Only applies to CSV. Specifies the row terminator that will be used in the CSV file. The row terminator can be multi-character. By default, the row terminator is \r\n. 
 
-Note the COPY command prefixes the \r character when specifying \n (newline) resulting in \r\n. To specify only the \n character, use hexadecimal (0x0A). When specifying multi-character row terminators in hexadecimal, do not specify 0x between each character.
+The COPY command prefixes the \r character when specifying \n (newline) resulting in \r\n. To specify only the \n character, use hexadecimal (0x0A). When specifying multi-character row terminators in hexadecimal, do not specify 0x between each character.
 
-Please review the following [documentation](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators) for additional guidance on specifying row terminators. 
+Please review the following [documentation](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators) for additional guidance on specifying row terminators.
 
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* applies to CSV and specifies the row number that is read first in all files for the COPY command. Values start from 1, which is the default value. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators.

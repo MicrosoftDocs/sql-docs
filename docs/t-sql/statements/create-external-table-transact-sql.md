@@ -589,9 +589,7 @@ WITH
 
 ## Overview: Azure SQL Database
 
-In Azure SQL Database, creates an external table for [elastic queries](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) for use with Azure SQL Database.
-
-Use an external table to create an external table for use with an elastic query.
+In Azure SQL Database, creates an external table for [elastic queries (in preview)](../azure/sql-database/sql-database-elastic-query-overview/).
 
 See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -676,7 +674,7 @@ You can create many external tables that reference the same or different externa
 
 ## Limitations and Restrictions
 
-Since the data for an external table is in another SQL Database, it can be changed or removed at any time. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
+Access to data via an external table doesn't adhere to the isolation semantics within SQL Server. This means that querying an external doesn't impose any locking or snapshot isolation and thus data return can change if the data in the external data source is changing.  The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
 
 You can create multiple external tables that each reference different external data sources.
 
@@ -689,6 +687,12 @@ Constructs and operations not supported:
 
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
+
+Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined durig query execution can be used, i.e. when used in connjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined to.    
+
+Use of External Tables prevents parallel plans.
+
+External tables are implemented as Remote Query and as such the estimated number of rows returned will be 1000. The optimiser doesn't access the remote data source to obtain a more accurate estimate.
 
 ## Locking
 

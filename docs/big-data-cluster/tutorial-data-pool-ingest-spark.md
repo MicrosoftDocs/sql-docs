@@ -126,9 +126,9 @@ The next step is to create a Spark streaming job that loads web clickstream data
 
 The following steps show that the Spark streaming job loaded the data from HDFS into the data pool.
 
-1. Before querying the ingested data, look at the task history output to see that the job completed.
+1. Before querying the ingested data, look at the Spark Execution Status including Yarn App ID, Spark UI and Driver Logs.
 
-   ![Spark job history](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
+   ![Spark Execution Details](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
 1. Return to the SQL Server master instance query window that you opened at the beginning of this tutorial.
 

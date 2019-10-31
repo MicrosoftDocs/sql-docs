@@ -42,7 +42,7 @@ The current version of SQL Server is `15.0.2070.34`.
 
 ## Image tags
 
-The image tag for this release is `2019-GDR1-ubuntu-1604`.
+The image tag for this release is `2019-GDR1-ubuntu-16.04`.
 
 [!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 

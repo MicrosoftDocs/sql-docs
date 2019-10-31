@@ -1,10 +1,9 @@
 ---
 title: How to configure persistent memory (PMEM) for SQL Server on Linux
 description: This article provides a walk-through for configuring PMEM on Linux.
-author: DBArgenis 
-ms.author: argenisf
-ms.reviewer: vanto
-ms.date: 11/06/2018
+author: briancarrig 
+ms.author: brcarrig
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -14,32 +13,32 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article describes how to configure the persistent memory (PMEM) for SQL Server on Linux. PMEM support on Linux was introduced in SQL Server 2019 preview.
+This article describes how to configure persistent memory (PMEM) for SQL Server on Linux.
 
 ## Overview
 
-SQL Server 2016 introduced support for Non-Volatile DIMMs, and an optimization called [Tail of the Log Caching on NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). These optimizations reduced the number of operations needed to harden a log buffer to persistent storage. This leverages Windows Server direct access to a persistent memory device in DAX mode.
+[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] has a number of in-memory features that use persistent memory. This document covers the steps required to configure persistent memory for SQL Server on Linux.
 
-SQL Server 2019 preview extends the support for persistent memory (PMEM) devices to Linux, providing full enlightenment of data and transaction log files placed on PMEM. Enlightenment refers to the method of access to the storage device using efficient user-space `memcpy()` operations. Rather than going through the file system and storage stack, SQL Server leverages  DAX support on Linux to directly place data into devices, which reduces latency.
+> [!NOTE]
+> The term "enlightenment" was introduced to convey the concept of working with a persistent memory aware file system which provides direct access to applications in user-space. When a file is memory mapped from this type of file system (XFS/EXT4) load/store, non-paged access to the file is provided. The application can use memory regions on this file system in a manner similar to memory regions in volatile memory.
 
-## Enable enlightenment of database files
-To enable enlightenment of database files in SQL Server on Linux, follow the following steps:
+## Create namespaces for PMEM devices
 
 1. Configure the devices.
 
   In Linux, use the `ndctl` utility.
 
   - Install `ndctl` to configure PMEM device. You can find it [here](https://docs.pmem.io/getting-started-guide/installing-ndctl).
-  - Use [ndctl] to create a namespace.
+  - Use `ndctl` to create a namespace. Namespaces are interleaved across PMEM NVDIMMs and can provide different types of user-space access to memory regions on the device. `fsdax` is default and desired mode for SQL Server.
 
   ```bash 
   ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=mem
   ```
+  Note that we have chosen `fsdax` mode and are using system memory to store per-page metadata. With very large persistent memory devices and considerably smaller amounts of system memory, it might be advisable to consider `--map=dev`. This will store the meta data on the namespace directly.
 
-  >[!NOTE]
-  >If you are using `ndctl` version lower than 59, use `--mode=memory`.
-
-  Use `ndctl` to verify the namespace. Sample output follows:
+  Use `ndctl` to verify the namespace. 
+  
+  Sample output follows:
 
 ```bash
 ndctl list
@@ -71,7 +70,14 @@ ndctl list
     mount -o dax,noatime /dev/pmem0 /mnt/dax
     ```
 
-  Once the device has been configured with ndctl, formatted and mounted, you can place database files in it. You can also create a new database 
+    Important to note the following
+
+    - Block allocation of 2MB for either XFS/EXT4 as described above.
+    - Misalignment between block allocation and mmap will result in silent fallback to 4KB.
+    - Transparent Huge Pages should be enabled.
+    - Huge pagefaults should be set to 2MB.
+
+  Once the device has been configured with ndctl, formatted and mounted, you can place database files in it. You can also create a new database.
 
 1. Since PMEM devices are O_DIRECT safe, enable trace flag 3979 to disable the forced flush mechanism. This trace flag is a startup trace flag, and as such needs to be enabled using the mssql-conf utility. Please note that this is a server-wide configuration change, and you should not use this trace flag if you have any O_DIRECT non-compliant devices that need the forced flush mechanism to ensure data integrity. For more information see https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
 

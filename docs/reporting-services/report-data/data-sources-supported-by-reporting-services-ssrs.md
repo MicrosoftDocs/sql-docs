@@ -300,7 +300,7 @@ To install the Oracle Client tools you can do the following.
   
  For more information, see [Hyperion Essbase Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md). For more information about the associated query designer, see [Hyperion Essbase Query Designer User Interface](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md).  
   
- For more information about [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], see [Using SQL Server 2005 Reporting Services with Hyperion Essbase](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md).  
+ For more information about [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], see [Using SQL Server Reporting Services with Hyperion Essbase](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md). 
   
  [Return to Data sources table](#DataSourcesTable)  
   

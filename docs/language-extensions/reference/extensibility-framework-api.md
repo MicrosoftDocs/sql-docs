@@ -32,4 +32,31 @@ SQLRETURN Init(
 );
 ```
 
-**PropertyBag:** The property bag defined for the extension when it was registered.
+- **PropertyBag:** The property bag defined for the extension when it was registered.
+
+### InitSession
+
+Initialize per-session information.
+
+```C++
+SQLRETURN InitSession(
+    SQLGUID		    SessionId,
+    SQLUSMALLINT    TaskId,
+    SQLCHAR*       	Script,
+    SQLULEN         ScriptLength,
+    SQLUSMALLINT    InputSchemaColumnsNumber,
+    SQLUSMALLINT    ParametersNumber
+    SQLCHAR*       	InputDataName,
+    SQLUSMALLINT	InputDataNameLength,
+    SQLCHAR*       	OutputDataName,
+    SQLUSMALLINT	OutputDataNameLength
+);
+```
+
+- **Script:** Pointer to a null-terminated buffer that contains the external language script.
+- **ScriptLength:** Length of the *Script buffer in bytes ([excluding the null-termination character](https://docs.microsoft.com/sql/odbc/reference/syntax/sqldescribecol-function)).
+- **InputSchemaColumnsNumber:** Number of columns in the input schema.
+- **ParametersNumber:** Number of input parameters.
+- **InputDataName & OutputDataName:** Pointer to a null-terminated buffer that contains the name of the input/output datasets. These parameters are N/A for pre-compiled languages.
+- **InputDataNameLength & OutputDataNameLength:** Length of *InputDataName and *OutputDataName in bytes, respectively ([excluding the null-termination character](https://docs.microsoft.com/en-us/sql/odbc/reference/syntax/sqldescribecol-function)). These parameters are N/A for pre-compiled languages.
+

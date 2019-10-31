@@ -16,7 +16,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Fetch Columns Using IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The **IRow** interface allows direct access to columns of a single row in the result set. Thus, **IRow** is an efficient way to retrieve columns from a result set with one row.  
   

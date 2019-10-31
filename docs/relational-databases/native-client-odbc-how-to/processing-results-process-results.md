@@ -16,7 +16,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Processing Results - Process Results
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
 Processing results in an ODBC application involves first determining the characteristics of the result set, then retrieving the data into program variables by using either [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) or [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
   

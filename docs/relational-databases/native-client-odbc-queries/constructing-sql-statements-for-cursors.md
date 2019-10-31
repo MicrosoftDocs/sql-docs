@@ -21,7 +21,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Constructing SQL Statements for Cursors
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver uses server cursors to implement the cursor functionality defined in the ODBC specification. An ODBC application controls the cursor behavior by using [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) to set different statement attributes. These are the attributes and their defaults.  
   

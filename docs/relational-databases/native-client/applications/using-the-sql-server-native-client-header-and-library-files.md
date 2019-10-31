@@ -25,7 +25,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Using the SQL Server Native Client Header and Library Files
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client header and library files are installed with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. When developing an application, it is important to copy and install all of the required files for development to your development environment. For more information about installing and redistributing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, see [Installing SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   

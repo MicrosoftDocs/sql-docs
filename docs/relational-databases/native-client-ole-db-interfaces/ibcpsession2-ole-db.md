@@ -16,7 +16,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # IBCPSession2 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The IBCPSession2 interface is an extension to IBCPSession that provides a member function that is an alternative to calling IBCPSession::BCPColFmt for each column.  IBCPSession2 inherits from IBCPSession and adds one new method: [IBCPSession2::BCPSetBulkMode](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md).  
   

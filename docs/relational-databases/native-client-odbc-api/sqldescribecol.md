@@ -17,7 +17,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # SQLDescribeCol
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   For executed statements, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver does not need to query the server to describe columns in a result set. In this case, **SQLDescribeCol** does not cause a server roundtrip. Like [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)and[SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md), calling **SQLDescribeCol** on prepared but not executed statements generates a server roundtrip.  
   

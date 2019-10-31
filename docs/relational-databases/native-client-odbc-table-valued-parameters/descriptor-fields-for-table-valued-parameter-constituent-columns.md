@@ -16,7 +16,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Descriptor Fields for Table-Valued Parameter Constituent Columns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The table-valued parameter descriptor fields described in this section are manipulated by using [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) and [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) with the handle for the implementation parameter descriptor (IPD).  
   

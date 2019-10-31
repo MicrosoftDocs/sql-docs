@@ -16,7 +16,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Profiling ODBC Driver Performance Data - Log Long-Running Queries
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   This sample shows the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC driver-specific options to log long-running queries. When run, this sample creates Odbcqry.log, which contains a list of queries whose execution exceeds an interval set by the application. This sample is not supported on IA64. This sample was developed for ODBC version 3.0 or later.  
   

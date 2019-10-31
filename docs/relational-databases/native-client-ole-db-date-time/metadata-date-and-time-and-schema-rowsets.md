@@ -17,7 +17,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Metadata - Date and Time and Schema Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   This topic provides information about COLUMNS rowset and PROCEDURE_PARAMETERS rowset. This information relates to the OLE DB date and time enhancements introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   

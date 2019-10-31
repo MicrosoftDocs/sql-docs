@@ -16,7 +16,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Inserting Data into Table-Valued Parameters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider supports two models for the consumer to specify data for table valued parameter rows: a push model and a pull model. A sample that demonstrates the pull model is available; see [SQL Server Data Programming Samples](https://msftdpprodsamples.codeplex.com/).  
   

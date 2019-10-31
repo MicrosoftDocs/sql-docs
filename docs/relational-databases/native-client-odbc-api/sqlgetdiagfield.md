@@ -17,7 +17,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver specifies the following additional diagnostics fields for **SQLGetDiagField**. These fields support rich error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications and are available in all diagnostics records generated on connected ODBC connection handles and ODBC statement handles. The fields are defined in sqlncli.h.  
   

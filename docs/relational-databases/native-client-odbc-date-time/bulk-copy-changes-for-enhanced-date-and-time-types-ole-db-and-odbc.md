@@ -16,7 +16,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   This topic describes the date/time enhancements to support bulk copy functionality. The information in this topic is valid for both OLE DB and ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   

@@ -19,7 +19,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Managing Bulk Copy Batch Sizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The primary purpose of a batch in bulk copy operations is to define the scope of a transaction. If a batch size is not set, then bulk copy functions consider an entire bulk copy to be one transaction. If a batch size is set, then each batch constitutes a transaction that is committed when the batch finishes.  
   

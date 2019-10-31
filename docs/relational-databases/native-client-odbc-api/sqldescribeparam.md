@@ -17,7 +17,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # SQLDescribeParam
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   To describe the parameters of any SQL statement, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver builds and executes a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement when SQLDescribeParam is called on a prepared ODBC statement handle. The metadata of the result set determines the characteristics of the parameters in the prepared statement. SQLDescribeParam can return any error code that SQLExecute or SQLExecDirect might return.  
   

@@ -24,7 +24,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Using Statement Parameters - Binding Parameters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Each parameter marker in an SQL statement must be associated, or bound, to a variable in the application before the statement can be executed. This is done by calling the [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) function. **SQLBindParameter** describes the program variable (address, C data type, and so on) to the driver. It also identifies the parameter marker by indicating its ordinal value and then describes the characteristics of the SQL object it represents (SQL data type, precision, and so on).  
   

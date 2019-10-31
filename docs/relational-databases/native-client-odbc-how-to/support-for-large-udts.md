@@ -14,7 +14,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Support for Large UDTs
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   This sample solution contains two projects. One project creates an assembly (DLL) from C# source code. This assembly contains the CLR type. A table will be added to the database. A column in the table will be of a type defined in the assembly, By default, this sample will use the master database. The second project is a native C application that reads data from the table.  
   

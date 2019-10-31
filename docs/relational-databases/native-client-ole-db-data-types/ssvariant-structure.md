@@ -18,7 +18,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # SSVARIANT Structure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The **SSVARIANT** structure, which is defined in sqlncli.h, corresponds to a DBTYPE_SQLVARIANT value in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLEDB provider.  
   

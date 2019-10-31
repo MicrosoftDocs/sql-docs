@@ -14,7 +14,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Use Enhanced Date and Time Features (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   This sample shows how to use the date/time features that were introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. The sample uses the four new date and time types (**date**, **time**, **datetime2**, and **datetimeoffset**) to execute commands with parameters and retrieve rowset results.  
   

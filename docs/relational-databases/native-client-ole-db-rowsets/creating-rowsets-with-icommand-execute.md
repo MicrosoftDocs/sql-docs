@@ -19,7 +19,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Creating Rowsets with ICommand::Execute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   For rowsets created by using the **ICommand::Execute** method, the properties that you want in the resulting rowset can constrain the text of the command. This is especially critical for consumers that support dynamic command text.  
   

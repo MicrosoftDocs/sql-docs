@@ -13,9 +13,7 @@ ms.author: jroth
 ---
 # Generate and analyze the CLUSTER.LOG for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  As a failover cluster resource, there are external interactions between SQL Server, the Windows Server Failover Cluster service (WSFC) cluster, and the SQL Server resource DLL (hadrres.dll), that cannot be monitored within SQL Server. The WSFC log, CLUSTER.LOG, can diagnose issues in the WSFC cluster or in the SQL Server resource DLL.  
-  
- The following diagram demonstrates the relationship between applications like SQL Server and Windows Cluster Manager that initiate availability group resource creation, destruction, or state changes.  
+  As a failover cluster resource, there are external interactions between SQL Server, the Windows Server Failover Cluster service (WSFC) cluster, and the SQL Server resource DLL (hadrres.dll), that cannot be monitored within SQL Server. The WSFC log, CLUSTER.LOG, can diagnose issues in the WSFC cluster or in the SQL Server resource DLL. 
   
 ## Generate cluster log  
  You can generate the cluster logs in two ways:  

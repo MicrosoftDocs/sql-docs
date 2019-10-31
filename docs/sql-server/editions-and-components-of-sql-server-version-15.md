@@ -162,6 +162,9 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|
 |Cluster-less availability group|Yes|Yes|No|No|No|
+|Failover servers for disaster recovery <sup>5</sup>|Yes|Yes|No|No|No|
+|Failover servers for high availability <sup>5</sup>|Yes|Yes|No|No|No|
+|Failover servers for disaster recovery in Azure <sup>5</sup>|Yes|Yes|No|No|No|
 
 <sup>1</sup> For more information on installing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Server Core,  see [Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).
 

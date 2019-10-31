@@ -21,3 +21,15 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ### Return value for all the calls
 
 All the functions return a **SQLRETURN** parameter. If the value is anything other than **SQL_SUCCESS**, the execution of the script stops.
+
+### Init
+
+Initialize global, shared information. For example, jvm. 
+
+```C++
+SQLRETURN Init(
+    SQLPOINTER		PropertyBag
+);
+```
+
+**PropertyBag:** The property bag defined for the extension when it was registered.

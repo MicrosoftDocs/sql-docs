@@ -202,6 +202,6 @@ ms.author: maggies
   
 ## See Also  
  [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Troubleshoot Report Builder](https://docs.microsoft.com/en-us/sql/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
+ [Troubleshoot Report Builder](https://docs.microsoft.com/sql/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
   
   

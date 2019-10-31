@@ -21,7 +21,7 @@ manager: amitban
 ---
 # Add Persisted Log Buffer to a Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to add a Persisted Log Buffer to a database in [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to add a Persisted Log Buffer to a database in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## Permissions
 
@@ -51,7 +51,7 @@ Database must be placed in single user mode in order to drain the persisted log 
 
 ## Limitations
 
-[Transparent Data Encryption (TDE)](..//security/encryption/transparent-data-encryption.md) is not compatible with persisted log buffer.
+[Transparent Data Encryption (TDE)](../security/encryption/transparent-data-encryption.md) is not compatible with persisted log buffer.
 
 [Availability Groups](../../t-sql/statements/create-availability-group-transact-sql.md) can only use this feature on secondary replicas due to need for normal log writing semantics on the primary. However, the small log file must be created on all nodes (ideally on DAX volumes or mounts).
 

@@ -128,7 +128,7 @@ ms.author: maggies
 > [!NOTE]
 >  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data processing extension is not supported at this time.  
   
- For more information about data processing extensions supported by Report Builder, see [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) in the [Report Builder documentation](../../reporting-services/report-builder-tutorials.md)
+ For more information about data processing extensions supported by Report Builder, see [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
   
 ###  <a name="MicrosoftSQLServer"></a> Microsoft SQL Server Data Processing Extension  
  The data source type **Microsoft SQL Server** wraps and extends the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This data processing extension is natively compiled for and runs on x86 and [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]-based platforms.  

@@ -107,7 +107,7 @@ A document map provides a set of navigational links to report items in a rendere
 > [!NOTE]  
 >  For more information about downloading sample reports, see [Report Builder and Report Designer sample reports](https://social.technet.microsoft.com/wiki/contents/articles/1093.reporting-services-samples-on-codeplex-sql-server-reporting-services-ssrs.aspx).  
 >   
-  
+  >  For more information, see [URL Access](../url-access-ssrs.md). 
 
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

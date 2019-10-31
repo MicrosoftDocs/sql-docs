@@ -18,11 +18,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) extends [Always Encrypted](always-encrypted-database-engine.md) to enable richer functionality of application queries on encrypted sensitive database columns. It leverages secure enclave technologies to allow the query executor in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to delegate computations on encrypted columns to a secure enclave inside the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]  process.
 
-To develop applications using Always Encrypted with secure enclaves, you need a SQL client driver version that supports secure enclaves. The client driver plays a key role:
-- Before submitting a query that uses a secure enclave to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] for execution, the driver initiates enclave attestation to verify the secure enclave is trustworthy and can be safely used to process sensitive data. See [Secure Enclave Attestation](always-encrypted-enclaves.md#secure-enclave-attestation) for more information about attestation.
-- Once attestation succeeds, the client driver establishes a secure session with the enclave, by negotiating a shared secret. 
+To develop applications using Always Encrypted with secure enclaves, you need a SQL client driver version that supports secure enclaves. The client driver plays the following key role:
+- Before submitting a query that uses a secure enclave to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] for execution, the driver initiates enclave attestation to verify the secure enclave is trustworthy and can be safely used to process sensitive data. For more information about attestation, see [Secure Enclave Attestation](always-encrypted-enclaves.md#secure-enclave-attestation).
+- Once attestation succeeds, the client driver establishes a secure session with the enclave by negotiating a shared secret.
 - The driver uses the shared secret to encrypt the column encryption keys the enclave will need to process the query, and sends the keys to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], which forwards them to the secure enclave that decrypts the keys. 
-- Finally, the drive submits the query for execution, which triggers computations inside the secure enclave.
+- Finally, the driver submits the query for execution, which triggers computations inside the secure enclave.
 
 To use the functionality of the secure enclave, you need to configure your application and your client driver to enable enclave computations when connecting to the database and specify an attestation service endpoint (an enclave attestation URL) that points to an attestation service for your enclave. The details depend on a driver and an attestation service/protocol, you are using.
 

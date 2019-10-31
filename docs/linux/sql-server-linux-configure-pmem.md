@@ -1,10 +1,10 @@
 ---
 title: How to configure persistent memory (PMEM) for SQL Server on Linux | Microsoft Docs
 description: This article provides a walk-through for configuring PMEM on Linux.
-author: DBArgenis 
-ms.author: argenisf 
-manager: craigg
-ms.date: 11/06/2018
+author: briancarrig 
+ms.author: brcarrig 
+manager: amitban
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -15,13 +15,13 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article describes how to configure the persistent memory (PMEM) for SQL Server on Linux. PMEM support on Linux was introduced in SQL Server 2019 preview.
+This article describes how to configure the persistent memory (PMEM) for SQL Server on Linux. PMEM support on Linux was introduced in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
 
 ## Overview
 
 SQL Server 2016 introduced support for Non-Volatile DIMMs, and an optimization called [Tail of the Log Caching on NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). These optimizations reduced the number of operations needed to harden a log buffer to persistent storage. This leverages Windows Server direct access to a persistent memory device in DAX mode.
 
-SQL Server 2019 preview extends the support for persistent memory (PMEM) devices to Linux, providing full enlightenment of data and transaction log files placed on PMEM. Enlightenment refers to the method of access to the storage device using efficient user-space `memcpy()` operations. Rather than going through the file system and storage stack, SQL Server leverages  DAX support on Linux to directly place data into devices, which reduces latency.
+SQL Server 2019 preview extends the support for persistent memory (PMEM) devices to Linux, providing full enlightenment of data and transaction log files placed on PMEM. Enlightenment refers to the method of access to the storage device using efficient user-space `memcpy()` operations. Rather than going through the file system and storage stack, SQL Server leverages DAX support on Linux to directly place data into devices, which reduces latency.
 
 ## Enable enlightenment of database files
 To enable enlightenment of database files in SQL Server on Linux, follow the following steps:

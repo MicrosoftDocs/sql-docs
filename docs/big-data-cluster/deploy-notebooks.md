@@ -5,7 +5,7 @@ description: Use a notebook from Azure Data Studio to deploy a big data cluster.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -38,18 +38,98 @@ In addition to above, deploying SQL Server 2019 big data cluster also requires:
 
 1. Launch the Azure Data Studio Insiders.
 
-1. On the **Connections** tab, click **...** and select **Deploy SQL Server big data cluster...**.
+2. On the **Connections** tab, click **...** and select **Deploy SQL Server...**.
 
    ![AI and ML](media/deploy-notebooks/deploy-notebooks-1.png)
 
-1. From the **Deployment Target**, under **Options**, select either **New Azure Kubernetes Cluster** or **Existing Azure Kubernetes Service cluster**.
+3. From the deployment options, select **SQL Server Big Data Cluster**.
 
-1. Click **Select** button.
+4. From the **Deployment Target**, under **Options**, select either **New Azure Kubernetes Cluster** or **Existing Azure Kubernetes Service cluster**.
 
-1. This action launches a dialog to collect the user input, provide the required information and review the default values.
+5. Accept the Privacy and license terms
 
-1. Click **Open Notebook** button.
-This action launches the appropriate notebook. To complete the deployment, follow the instructions in the notebook to deploy a big data cluster for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on an existing or new Azure Kubernetes Service cluster.
+6. This dialog also checks whether the required tools for the chosen type of SQL deployment exist on the host. The **Select** button is not enabled until the tools check is successful.
+
+7. Select the **Select** button. This action launches the deployment experience.
+
+## The deployment experience
+
+### Deployment configuration template
+
+You can customize the settings of the deployment profile by following the instructions below.
+
+#### Target configuration template
+
+1. Select the target configuration template from the available templates. The available profiles are filtered depending on the type of deployment target chosen in the previous dialog.
+
+   ![Deployment configuration template Step 1](media/deploy-notebooks/deployment-configuration-template-01.png)
+
+#### Azure settings
+
+1. If the deployment target is a new AKS, additional information such as Azure Subscription Id, resource group, AKS cluster name, VM count, size etc. will be required to create the AKS cluster.
+
+   ![Azure settings](media/deploy-notebooks/azure-settings.png)
+
+2. If the deployment target is an existing Kubernetes cluster, the wizard will prompt for the path to the kube config file to import the Kubernetes cluster settings. Ensure the appropriate cluster context is selected where the SQL Server 2019 Big Data Cluster will be deployed.
+
+   ![Target cluster context](media/deploy-notebooks/target-cluster-context.png)
+
+#### Cluster, docker and AD settings
+
+1. Enter the cluster name for the SQL Server 2019 BDC, admin username and password.
+Note: The same account is used for controller and SQL Server.
+
+   ![Cluster settings](media/deploy-notebooks/cluster-settings.png)
+
+2. Enter the Docker settings as appropriate
+
+   ![Docker settings](media/deploy-notebooks/docker-settings.png)
+
+3. If the AD authentication is available, enter the AD settings
+
+   ![Active Directory settings](media/deploy-notebooks/active-directory-settings.png)
+
+#### Service settings
+
+This screen has inputs for various settings such as **Scale**, **Endpoints**, **Storage** and other advanced storage settings. Please enter the appropriate values and select **Next**.
+
+##### Scale settings
+
+1. Enter the number of instances of each of the components in the big data cluster.
+
+   * Spark Instance can be included along with HDFS in the storage pool or on its own in the Spark pool.
+
+   ![Service settings](media/deploy-notebooks/service-settings.png)
+
+For additional information on each of these components refer [master instance](concept-master-instance.md), [data pool](concept-data-pool.md), [storage pool](concept-storage-pool.md), [compute pool](concept-compute-pool.md).
+
+##### Endpoint settings
+
+The default endpoints have been pre-filled. However, they can be changed as appropriate. More on endpoints.
+
+   ![Enpoint settings](media/deploy-notebooks/endpoint-settings.png)
+
+##### Storage settings
+
+The storage settings include storage class and claim size for Data and Logs. The settings can be applied across Storage, Data and SQL Server master pool.
+
+   ![Storage settings](media/deploy-notebooks/storage-settings.png)
+
+##### Advanced storage settings
+
+You can additional storage settings under **Advanced storage settings**
+
+* Storage ool (HDFS)
+* Data pool
+* SQL Server Master
+
+   ![Advanced storage settings](media/deploy-notebooks/advanced-storage-settings.png)
+
+#### Summary
+
+This screen summarizes all the input that was provided to deploy SQL Server 2019 Big Data Cluster. The config files can be downloaded via the **Save config files** button. Select **Script to Notebook** to script out the entire deployment configuration to a Notebook. Once the Notebook is open, select **Run Cells** to start deploying the SQL Server 2019 BDC to the selected target.
+
+   ![Summary](media/deploy-notebooks/deploy-sql-server-big-data-cluster-on-a-new-AKS-cluster.png)
 
 ## Next steps
 

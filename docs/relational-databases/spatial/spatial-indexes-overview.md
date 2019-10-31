@@ -117,10 +117,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 >  The **tessellation_scheme** setting of a spatial index is visible in the [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) catalog view.  
   
 #### Geometry Grid Tessellation Scheme  
- GEOMETRY_AUTO_GRID tessellation is the default tessellation scheme for the **geometry** data type for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and later.  GEOMETRY_GRID tessellation is the only tessellation scheme available for geometry data types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This section discusses aspects of geometry grid tessellation that are relevant to working with spatial indexes: supported methods and bounding boxes.  
+ GEOMETRY_AUTO_GRID tessellation is the default tessellation scheme for the **geometry** data type for [!INCLUDE[ssNoVersion](../../includes/sssql11-md.md)] and later.  GEOMETRY_GRID tessellation is the only tessellation scheme available for geometry data types in [!INCLUDE[ssNoVersion](../../includes/sskatmai-md.md)]. This section discusses aspects of geometry grid tessellation that are relevant to working with spatial indexes: supported methods and bounding boxes.  
   
 > [!NOTE]  
->  You can explicitly specify this tessellation scheme by using the USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) clause of the [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
+>  You can explicitly specify this tessellation scheme by using the USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) clause of the [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
 ##### The Bounding Box  
  Geometric data occupies a plane that can be infinite. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], however, a spatial index requires a finite space. To establish a finite space for decomposition, the geometry grid tessellation scheme requires a rectangular *bounding box*. The bounding box is defined by four coordinates, **(**_x-min_**,**_y-min_**)** and **(**_x-max_**,**_y-max_**)**, which are stored as properties of the spatial index. These coordinates represent the following:  
@@ -164,9 +164,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  Joins the flattened pyramids to form a non-Euclidean plane.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- The following illustration shows a schematic view of the three-step decomposition process. In the pyramids, the dotted lines represent the boundaries of the four facets of each pyramid. Steps 1 and 2 illustrate the geodetic ellipsoid, using a green horizontal line to represent the equatorial longitude line and a series of green vertical lines to represent several latitude lines. Step 1 shows the pyramids being projected over the two hemispheres. Step 2 shows the pyramids being flattened. Step 3 illustrates the flattened pyramids, after they have been combined to form a plane, showing a number of projected longitude lines. Notice that these projected lines are straightened and vary in length, depending on where they fall on the pyramids.  
+ The following illustration shows a schematic view of the three-step decomposition process. In the pyramids, the dotted lines represent the boundaries of the four facets of each pyramid. Steps 1 and 2 illustrate the geodetic ellipsoid, using a green horizontal line to represent the equatorial latitude line and a series of green vertical lines to represent several longitude lines. Step 1 shows the pyramids being projected over the two hemispheres. Step 2 shows the pyramids being flattened. Step 3 illustrates the flattened pyramids, after they have been combined to form a plane, showing a number of projected longitude lines. Notice that these projected lines are straightened and vary in length, depending on where they fall on the pyramids.  
   
  ![Projection of the ellipsoid onto a plane](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "Projection of the ellipsoid onto a plane")  
   

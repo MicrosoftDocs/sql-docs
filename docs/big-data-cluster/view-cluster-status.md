@@ -5,7 +5,7 @@ description: This article explains how to view the status of a big data cluster 
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -209,4 +209,4 @@ You can view the controller status with the [azdata bdc control status show](ref
 
 ## Next steps
 
-For more information about big data clusters, see [What are SQL Server big data clusters](big-data-cluster-overview.md).
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

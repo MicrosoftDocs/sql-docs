@@ -1,25 +1,25 @@
 ---
-title: Install SQL Server Machine Learning Services (In-Database) on Windows
-description: R in SQL Server or Python on SQL Server installation steps for SQL Server 2017 Machine Learning Services on Windows.
+title: Install SQL Server Machine Learning Services (Python, R) on Windows
+titleSuffix: 
+description: This article explains how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/22/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server Machine Learning Services on Windows
+# Install SQL Server Machine Learning Services (Python and R) on Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Starting in SQL Server 2017, R and Python support for in-database analytics is provided in **SQL Server Machine Learning Services**, the successor to [SQL Server R Services](../r/sql-server-r-services.md) introduced in SQL Server 2016. Function libraries are available in R and Python and run as external script on a database engine instance. 
-
-This article explains how to install the machine learning component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard, and following the on-screen prompts.
+This article explains how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
-+ SQL Server 2017 (or greater) Setup is required if you want to install Machine Learning Services with R or Python language support. If instead you have SQL Server 2016 installation media, you can  install [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) to get R language support.
++ SQL Server 2017 (or greater) Setup is required if you want to install Machine Learning Services with R or Python language support. If instead you have SQL Server 2016 installation media, you can  install [SQL Server R Services (In-Database)](sql-r-services-windows-install.md) to get R language support.
 
 + A database engine instance is required. You cannot install just R or Python features, although you can add them incrementally to an existing instance.
 
@@ -191,21 +191,13 @@ Use the following steps to verify that all components used to launch external sc
     GO
     ```
 
- **Results**
+    **Results**
 
     The script can take a little while to run, the first time the external script runtime is loaded. The results should be something like this:
 
     | hello |
     |----|
     | 1|
-
-
-<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
-Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
-due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
-I will inform HeidiSteen  [GeneMi, 2019/01/17]
--->
-
 
 > [!NOTE]
 > Columns or headings used in the Python script are not returned, by design. To add column names for your output, you must specify the schema for the return data set. Do this by using the WITH RESULTS parameter of the stored procedure, naming the columns and specifying the SQL data type.
@@ -248,6 +240,10 @@ At the instance level, additional configuration might include:
 * [Create a login for SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 * [Manage disk quotas](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) to avoid external scripts running tasks that exhaust disk space
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+In SQL Server 2019 on Windows, the isolation mechanism has changed. This affects **SQLRUserGroup**, firewall rules, file permission, and implied authentication. For more information, see [Isolation changes for Machine Learning Services](sql-server-machine-learning-services-2019.md).
+::: moniker-end
+
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
@@ -262,9 +258,11 @@ On the database, you might need the following configuration updates:
 
 Now that you have everything working, you might also want to optimize the server to support machine learning, or install pretrained models.
 
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ### Add more worker accounts
 
 If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the user account pool for SQL Server Machine Learning Services](../administration/modify-user-account-pool.md).
+::: moniker-end
 
 ### Optimize the server for script execution
 
@@ -286,14 +284,13 @@ The R solutions you create for SQL Server can call basic R functions, functions 
 
 Packages that you want to use from SQL Server must be installed in the default library that is used by the instance. If you have a separate installation of R on the computer, or if you installed packages to user libraries, you won't be able to use those packages from T-SQL.
 
-The process for installing and managing R packages is different in SQL Server 2016 and SQL Server 2017. In SQL Server 2016, a database administrator must install R packages that users need. In SQL Server 2017, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Install new R packages in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
-
+To install and manage R packages, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Install new R packages in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ## Next steps
 
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
-+ [Tutorial: Run R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutorial: Run R in T-SQL](../tutorials/quickstart-r-create-script.md)
 + [Tutorial: In-database analytics for R developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:

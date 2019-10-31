@@ -7,7 +7,7 @@ ms.technology: application-integration
 
 ms.topic: reference
 ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
-ms.reviewer: maghan
+ms.reviewer: maggies
 author: RhysSchmidtke
 ms.author: rhys
 ---

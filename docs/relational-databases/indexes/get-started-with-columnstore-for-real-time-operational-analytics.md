@@ -1,5 +1,5 @@
 ---
-title: "Get started with Columnstore for real time operational analytics | Microsoft Docs"
+title: "Get started with Columnstore for real-time operational analytics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2016"
 ms.prod: sql
@@ -12,19 +12,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Get started with Columnstore for real time operational analytics
+# Get started with Columnstore for real-time operational analytics
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 introduces real-time operational analytics, the ability to run both analytics and OLTP workloads on the same database tables at the same time. Besides running analytics in real-time, you can also eliminate the need for ETL and a data warehouse.  
+  SQL Server 2016 introduces real-time operational analytics, the ability to run both analytics and OLTP workloads on the same database tables at the same time. Besides running analytics in real time, you can also eliminate the need for ETL and a data warehouse.  
   
 ## Real-Time Operational Analytics Explained  
- Traditionally, businesses have had separate systems for operational (i.e. OLTP) and analytics workloads. For such systems, Extract, Transform, and Load (ETL) jobs regularly move the data from the operational store to an analytics store. The analytics data is usually stored in a data warehouse or data mart dedicated to running analytics queries. While this solution has been the standard, it has these three key challenges:  
+ Traditionally, businesses have had separate systems for operational (that is, OLTP) and analytics workloads. For such systems, Extract, Transform, and Load (ETL) jobs regularly move the data from the operational store to an analytics store. The analytics data is usually stored in a data warehouse or data mart dedicated to running analytics queries. While this solution has been the standard, it has these three key challenges:  
   
 -   **Complexity.** Implementing  ETL can require considerable coding especially to load only the modified rows. It can be complex to identify which rows have been modified.  
   
 -   **Cost.** Implementing ETL requires the cost of purchasing additional hardware and software licenses.  
   
--   **Data Latency.** Implementing ETL adds a time delay for running the analytics. For example, if the ETL job runs at the at end of each business day, the analytics queries will run on data that is at least a day old. For many businesses this delay is unacceptable because the business depends on analyzing data in real-time. For example, fraud-detection requires real-time analytics on operational data.  
+-   **Data Latency.** Implementing ETL adds a time delay for running the analytics. For example, if the ETL job runs at the end of each business day, the analytics queries will run on data that is at least a day old. For many businesses this delay is unacceptable because the business depends on analyzing data in real time. For example, fraud-detection requires real-time analytics on operational data.  
   
  ![real-time operational analytics overview](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "real-time operational analytics overview")  
   
@@ -34,7 +34,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 > [!NOTE]  
 >  Real-time operational analytics targets the scenario of a single data source such as an enterprise resource planning (ERP) application on which you can run both the operational and the analytics workload. This does not replace the need for a separate data warehouse when you need to integrate data from multiple sources before running the analytics workload or when you require extreme analytics performance using pre-aggregated data such as cubes.  
   
- Real-time analytics uses an updateable columnstore index on a rowstore table.  The columnstore index maintains a copy of the data, so the OLTP and analytics workloads run against separate copies of the data. This minimizes the performance impact of both workloads running at the same time.  SQL Server automatically maintains index changes so OLTP changes are always up-to-date for analytics. With this design, it is possible and practical to run analytics in real-time on up-to-date data. This works for both disk-based and memory-optimized tables.  
+ Real-time analytics uses an updateable columnstore index on a rowstore table.  The columnstore index maintains a copy of the data, so the OLTP and analytics workloads run against separate copies of the data. This minimizes the performance impact of both workloads running at the same time.  SQL Server automatically maintains index changes so OLTP changes are always up-to-date for analytics. With this design, it is possible and practical to run analytics in real time on up-to-date data. This works for both disk-based and memory-optimized tables.  
   
 ## Get Started Example  
  To get started with real-time analytics:  
@@ -78,8 +78,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  This is all you need to do!  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  You are now ready to run  real-time operational analytics without making any changes to your application.  Analytics queries will run against the columnstore index and OLTP operations will keep running against your OLTP btree indexes. The OLTP workloads will continue to perform, but will incur some additional overhead to maintain the columnstore index. See the performance optimizations in the next section.  
   
 ## Blog Posts  
@@ -99,18 +97,16 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   [Minimizing impact of a nonclustered columnstore index maintenance by using compression delay - performance numbers](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
   
--   [Real time operational analytics with memory-optimized tables](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
-  
--   [Minimize index fragmentation in a columnstore indes](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)  
+-   [Real-time operational analytics with memory-optimized tables](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
   
 -   [Columnstore index and the merge policy for rowgroups](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
 ## Performance tip #1: Use filtered indexes to improve query performance  
- Running real-time operational analytics can impact the performance of the OLTP workload.  This impact should be minimal. The example below shows how to use filtered indexes to minimize impact of nonclustered columnstore index on transactional workload while still delivering analytics in real-time.  
+ Running real-time operational analytics can impact the performance of the OLTP workload.  This impact should be minimal. The example below shows how to use filtered indexes to minimize impact of nonclustered columnstore index on transactional workload while still delivering analytics in real time.  
   
  To minimize the overhead  of maintaining a nonclustered columnstore index  on an operational workload, you can use a filtered condition to create a nonclustered columnstore index only on the *warm* or slowly changing data. For example, in an order management application, you can create a nonclustered columnstore index on the orders that have already been shipped. Once the order has shipped, it  rarely changes and therefore can be considered warm data. With Filtered index, the data in nonclustered columnstore index requires fewer updates thereby lowering the impact on transactional workload.  
   
- Analytics queries transparently access both warm and hot data as needed to provide real-time analytics. If a  significant part of the operational workload is touching the 'hot' data, those operations will not require additional maintenance of the columnstore index. A best practice is to have a rowstore clustered index on the column(s) used in the filtered index definition.   SQL Server uses the clustered index to quickly scan the rows that did not meet the filtered condition. Without this clustered index, a full table scan of the rowstore table will be required to find these rows which can negatively impact the performance of analytics query significantly. In the absence of clustered index, you could create a complementary filtered nonclustered btree  index to identify such rows but it is not recommended because accessing large range of rows through  nonclustered btree indexes is expensive.  
+ Analytics queries transparently access both warm and hot data as needed to provide real-time analytics. If a  significant part of the operational workload is touching the 'hot' data, those operations will not require additional maintenance of the columnstore index. A best practice is to have a rowstore clustered index on the column(s) used in the filtered index definition.   SQL Server uses the clustered index to quickly scan the rows that did not meet the filtered condition. Without this clustered index, a full table scan of the rowstore table will be required to find these rows, which can negatively impact the performance of analytics query significantly. In the absence of clustered index, you could create a complementary filtered nonclustered btree  index to identify such rows but it is not recommended because accessing large range of rows through  nonclustered btree indexes is expensive.  
   
 > [!NOTE]  
 >  A filtered nonclustered columnstore index is only supported on disk-based tables. It is not supported on memory-optimized tables  
@@ -169,7 +165,7 @@ Group By customername
  Even though you can minimize the columnstore index maintenance by using a filtered columnstore index, the analytics queries can still require significant computing resources (CPU, IO, memory) which impact the operational workload performance. For most mission critical workloads, our recommendation is to use the Always On configuration. In this configuration, you can eliminate the impact of running analytics by offloading it to a readable secondary.  
   
 ## Performance Tip #3: Reducing Index fragmentation by keeping hot data in delta rowgroups  
- Tables with columnstore index may get significantly fragmented (i.e. deleted rows) if the workload updates/deletes rows that have been compressed. A fragmented columnstore index leads to inefficient utilization of memory/storage. Besides inefficient use of resources, it also negatively impacts the analytics query performance because of extra IO and the need to filter the deleted rows from the result set.  
+ Tables with columnstore index may get significantly fragmented (that is, deleted rows) if the workload updates/deletes rows that have been compressed. A fragmented columnstore index leads to inefficient utilization of memory/storage. Besides inefficient use of resources, it also negatively impacts the analytics query performance because of extra IO and the need to filter the deleted rows from the result set.  
   
  The deleted rows are not physically removed until you run index defragmentation with REORGANIZE command or rebuild the columnstore index on the entire table or the affected partition(s). Both REORGANIZE and Index REBUILD are expensive operations taking resources away which otherwise could be used for the workload. Additionally, if rows compressed too early, it may need to be re-compressed multiple times due to updates leading to wasted compression overhead.  
 You can minimize index fragmentation using COMPRESSION_DELAY option.  
@@ -196,9 +192,9 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
  Here are the recommended best practices  
   
 -   **Insert/Query workload:**If your workload is primarily inserting data and querying it, the default COMPRESSION_DELAY of 0 is the recommended option. The newly inserted rows will get compressed once 1 million rows have been inserted into a single delta rowgroup.  
-    Some example of such workload are (a) traditional DW workload (b) click-stream analysis when you need to analyze the click pattern in a web application.  
+    Some examples of such workload are (a) traditional DW workload (b) click-stream analysis when you need to analyze the click pattern in a web application.  
   
--   **OLTP workload:** If the workload is DML heavy (i.e. heavy mix of Update, Delete and Insert), you may see columnstore index fragmentation by examining the DMV sys. dm_db_column_store_row_group_physical_stats. If you see that > 10% rows are marked deleted in recently compressed rowgroups, you can use COMPRESSION_DELAY option to add time delay when rows become eligible for compression. For example, if for your workload, the newly inserted stays 'hot' (i.e. gets updated multiple times) for say 60 minutes, you should choose COMPRESSION_DELAY to be 60.  
+-   **OLTP workload:** If the workload is DML heavy (that is, heavy mix of Update, Delete and Insert), you may see columnstore index fragmentation by examining the DMV sys. dm_db_column_store_row_group_physical_stats. If you see that > 10% rows are marked deleted in recently compressed rowgroups, you can use COMPRESSION_DELAY option to add time delay when rows become eligible for compression. For example, if for your workload, the newly inserted stays 'hot' (that is, gets updated multiple times) for say 60 minutes, you should choose COMPRESSION_DELAY to be 60.  
   
  We expect most customers do not need to do anything. The default value of COMPRESSION_DELAY option should work for them.  
 For advance users, we recommend running the query below and collect % of deleted rows over the last 7 days.  
@@ -220,6 +216,5 @@ ORDER BY created_time DESC
  [Columnstore Indexes Data Loading](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Columnstore Indexes for Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Columnstore Indexes Defragmentation](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
-  
+ [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
   

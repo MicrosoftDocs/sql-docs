@@ -23,9 +23,9 @@ ms.author: "mathoma"
   
 ### To delete a trace  
   
-1.  Execute **sp_trace_setstatus** by specifying **@status = 0** to stop the trace.  
+1.  Execute **sp_trace_setstatus** by specifying `@status = 0` to stop the trace.  
   
-2.  Execute **sp_trace_setstatus** by specifying **@status = 2** to close the trace and delete its information from the server.  
+2.  Execute **sp_trace_setstatus** by specifying `@status = 2` to close the trace and delete its information from the server.  
   
 > [!NOTE]  
 >  A trace must be stopped first before it can be closed.  

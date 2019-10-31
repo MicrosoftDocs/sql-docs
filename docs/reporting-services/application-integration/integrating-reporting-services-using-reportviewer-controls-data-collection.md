@@ -1,6 +1,5 @@
 ---
 title: Data collection in ReportViewer Control 2016
-uthor: markingmyname
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""

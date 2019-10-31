@@ -1,6 +1,6 @@
 ---
 title: Generate forecasts and predictions using machine learning models
-description: Use rxPredict, or sp_rxPredict for real-time scoring, or PREDICT T-SQL for native scoring for predictions and forecasting in R and Pythin in SQL Server Machine Learning.
+description: Use rxPredict, or sp_rxPredict for real-time scoring, or PREDICT T-SQL for native scoring for predictions and forecasting in R and Python in SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -8,9 +8,10 @@ ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # How to generate forecasts and predictions using machine learning models in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Using an existing model to forecast or predict outcomes for new data inputs is a core task in machine learning. This article enumerates the approaches for generating predictions in SQL Server. Among the approaches are internal processing methodologies for high-speed predictions, where speed is based on incremental reductions of run time dependencies. Fewer dependencies mean faster predictions.
 
@@ -78,7 +79,7 @@ To use a model with either of the fast scoring options, save the model using a s
 
 **Using SQL**
 
-From SQL code, you can train the model using [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), and directly insert the trained models into a table, in a column of type **varbinary(max)**. For a simple example, see [Create a preditive model in R](../tutorials/rtsql-create-a-predictive-model-r.md)
+From SQL code, you can train the model using [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), and directly insert the trained models into a table, in a column of type **varbinary(max)**. For a simple example, see [Create a preditive model in R](../tutorials/quickstart-r-train-score-model.md)
 
 **Using R**
 

@@ -20,7 +20,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Examples of Bulk Import and Export of XML Documents (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
     
 ##  <a name="top"></a>

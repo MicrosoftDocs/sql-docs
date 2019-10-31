@@ -10,16 +10,17 @@ helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Troubleshooter: Find errors with SQL Server transactional replication 
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
 Troubleshooting replication errors can be frustrating without a basic understanding of how transactional replication works. The first step in creating a publication is having the Snapshot Agent create the snapshot and save it to the snapshot folder. Next, the Distribution Agent applies the snapshot to the subscriber. 
 
 This process creates the publication and puts it in the *synchronizing* state. Synchronization works in three phases:
 1. Transactions occur on objects that are replicated, and are marked "for replication" in the transaction log. 
 2. The Log Reader Agent scans through the transaction log and looks for transactions that are marked "for replication." These transactions are then saved to the distribution database. 
 3. The Distribution Agent scans through the distribution database by using the reader thread. Then, by using the writer thread, this agent connects to the subscriber to apply those changes to the subscriber.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Errors can occur in any step of this process. Finding those errors can be the most challenging aspect of troubleshooting synchronization issues. Thankfully, the use of Replication Monitor makes this process easy. 
 

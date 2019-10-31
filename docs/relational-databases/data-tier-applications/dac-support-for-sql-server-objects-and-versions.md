@@ -43,7 +43,7 @@ ms.author: "sstein"
 |-|-|  
 |DATABASE ROLE|FUNCTION: Inline Table-valued|  
 |FUNCTION: Multistatement Table-valued|FUNCTION: Scalar|  
-|INDEX: Clustered|INDEX: Non-clustered|  
+|INDEX: Clustered|INDEX: Nonclustered|  
 |INDEX: Spacial|INDEX: Unique|  
 |LOGIN|Permissions|  
 |Role Memberships|SCHEMA|  

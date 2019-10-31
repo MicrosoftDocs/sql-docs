@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -   Snapshot isolation for database compatibility level 130 and higher.  
   
 ## Improve performance by combining nonclustered and columnstore indexes  
- Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can define nonclustered indexes on a clustered columnstore index.   
+ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can define nonclustered indexes on a clustered columnstore index.   
   
 ### Example: Improve efficiency of table seeks with a nonclustered index  
  To improve efficiency of table seeks in a data warehouse, you can create a nonclustered index designed to run queries that perform best with table seeks. For example, queries that look for matching values or return a small range of values will perform better against a B-tree index rather than a columnstore index. They don't require a full table scan through the columnstore index and will return the correct result faster by doing a binary search through a B-tree index.  
@@ -125,6 +125,6 @@ END TRAN
  [Columnstore Indexes Data Loading Guidance](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Get started with Columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Columnstore Indexes Defragmentation](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+ [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) 
   

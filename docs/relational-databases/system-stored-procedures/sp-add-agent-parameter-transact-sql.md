@@ -17,7 +17,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # sp_add_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Adds a new parameter and its value to an agent profile. This stored procedure is executed at the Distributor on any database.  
   

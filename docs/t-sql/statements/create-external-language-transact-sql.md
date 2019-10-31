@@ -1,10 +1,10 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
-ms.date: 06/26/2019
+ms.date: 08/08/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.technology: language-extensions
 ms.topic: language-reference
 author: nelgson
 ms.author: negust
@@ -19,7 +19,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 Registers external language extensions in the database from the specified file path or byte stream. This statement serves as a generic mechanism for the database administrator to register new external language extensions on any OS platform supported by SQL Server. For more information, see [Language Extensions](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 
 > [!NOTE]
-> Currently, only **Java** is supported as an external language. **R** and **Python** are reserved names and no external language can be created with those specific names. For more information on how to use **R** and **Python**, see [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/sql-server-machine-learning-services).
+> Currently, only **Java** is supported as an external language. **R** and **Python** are reserved names and no external language can be created with those specific names. For more information on how to use **R** and **Python**, see [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/).
 
 ## Syntax
 
@@ -152,6 +152,15 @@ FROM
 (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so', PLATFORM = LINUX);
 GO
 ```
+### C. Grant permissions to execute external script
+
+The following example grants the **mylogin** principal access to execute scripts using the **Java** external language.
+
+```sql
+GRANT EXECUTE EXTERNAL SCRIPT ON EXTERNAL LANGUAGE ::Java 
+TO mylogin;
+```
+
 
 ## See also
 

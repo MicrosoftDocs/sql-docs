@@ -8,16 +8,17 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Upgrade and installation FAQ for SQL Server Machine Learning or R Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This topic provides answers to some common questions about installation of machine learning features in SQL Server. It also covers common questions about upgrades.
 
 + Some problems occur only with upgrades from pre-release versions. Therefore, we recommend that you identify your version and edition first before reading these notes. To get version information, run `@@VERSION` in a query from SQL Server Management Studio.
 + Upgrade to the most current release or service release as soon as possible to resolve any issues that were fixed in recent releases.
 
-**Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (In-Database)
+**Applies to:** SQL Server 2016 R Services, SQL Server Machine Learning Services (In-Database)
 
 ## Requirements and restrictions on older versions of SQL Server 2016 
 

@@ -9,7 +9,7 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-author: XiaoyuL-Preview 
+author: XiaoyuMSFT 
 ms.author: xiaoyul
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
@@ -31,9 +31,18 @@ DBCC DROPRESULTSETCACHE
 ## Permissions
 
 Requires membership in the DB_OWNER fixed server role.
-  
+
+## Remarks
+
+- This command empties the result set cache for all queries.  
+
+- Turning OFF the result set cache feature for a database also deletes all cached results.  
+
+- Pausing a database enabled with result set caching won't delete the cached results.  
+
 ## See also
 
+[Performance tuning with result set caching](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

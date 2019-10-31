@@ -29,7 +29,7 @@ ms.author: "mathoma"
   
 -   A linked server that replication creates; the connection is made with the credentials of the user making the change at the Subscriber.  
   
- The first two options can be specified in this wizard. The last option can only be specified using [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); specify a value of **1** for the parameter **@security_mode**.  
+ The first two options can be specified in this wizard. The last option can only be specified using [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); specify a value of **1** for the parameter `@security_mode`.  
   
 ## Options  
  **Create a linked server that connects using the following SQL Server Authentication login:**  

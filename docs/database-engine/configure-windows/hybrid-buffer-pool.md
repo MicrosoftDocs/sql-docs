@@ -75,10 +75,8 @@ By default, hybrid buffer pool is set to enable at the database scope.
 The following example returns the current status, of the hybrid buffer pool system configuration, for an instance of SQL Server.
 
 ```sql
-SELECT *
-FROM sys.configurations
-WHERE
-    name = 'hybrid_buffer_pool';
+SELECT * FROM
+sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
 The following example returns two tables:
@@ -94,11 +92,11 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## Best Practices for hybrid buffer pool
 
-It is not recommended to enable hybrid buffer pool on instances with less than 16-GB RAM.
-
 When formatting your PMEM device on Windows, use the largest allocation unit size available for NTFS (2 MB in Windows Server 2019) and ensure the device has been formatted for DAX (Direct Access).
 
 Enable large pages.
+
+For optimal performance, enable [Locked Pages in Memory](./enable-the-lock-pages-in-memory-option-windows.md) on Windows.
 
 Files sizes should be a multiple of 2 MB (modulo 2 MB should equal zero).
 

@@ -1,17 +1,17 @@
 ---
 title: Debug/Diagnose Spark Applications 
 titleSuffix: SQL Server big data clusters
-description: Use Spark History Server to debug and diagnose Spark applications running on SQL Server 2019 big data clusters.
+description: Use Spark History Server to debug and diagnose Spark applications running on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Debug and Diagnose Spark Applications on SQL Server big data clusters in Spark History Server
+# Debug and Diagnose Spark Applications on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Spark History Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -22,7 +22,7 @@ This article provides guidance on how to use extended Spark History Server to de
 The Spark history server user experience from open source is enhanced with information, which includes job-specific data and interactive visualization of job graph and data flows for big data cluster. 
 
 ### Open the Spark History Server Web UI by URL
-Open the Spark History Server by browsing to the following URL, replace `<Ipaddress>` and `<Port>` with big data cluster specific information. More information can be referred to: [Deploy SQL Server big data cluster](quickstart-big-data-cluster-deploy.md)
+Open the Spark History Server by browsing to the following URL, replace `<Ipaddress>` and `<Port>` with big data cluster specific information. Note that in a basic authentication (username/password) big data cluster setup, you must provide user **root** when prompted to login to gateway (Knox) endpoints. More information can be referred to: [Deploy SQL Server big data cluster](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -86,7 +86,7 @@ Select job ID then click **Graph** on the tool menu to get the job graph view.
 
     ![graph job ID](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ We leave **Progress** as default value. User can check  data flow by selecting **Read** or **Written**** in the dropdown list of **Display**.
++ We leave **Progress** as default value. User can check  data flow by selecting **Read** or **Written** in the dropdown list of **Display**.
 
     ![graph display](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 
@@ -198,5 +198,5 @@ The Spark History Server has the following known issues:
 
 ## Next steps
 
-* [Manage resources for a Spark cluster on HDInsight](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-resource-manager)
+* [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
 * [Configure Spark settings](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

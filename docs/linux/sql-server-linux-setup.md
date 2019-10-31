@@ -15,7 +15,13 @@ ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article provides guidance for installing, updating, and uninstalling SQL Server 2017 and SQL Server 2019 preview on Linux.
+This article provides guidance for installing, updating, and uninstalling SQL Server 2017 and SQL Server 2019 on Linux.
+
+For other deployment scenarios, see:
+
+- [Windows](../database-engine/install-windows/install-sql-server.md)
+- [Docker containers](../linux/sql-server-linux-configure-docker.md)
+- [Kubernetes - Big Data Clusters](../big-data-cluster/deploy-get-started.md)
 
 > [!TIP]
 > This guide coves several deployment scenarios. If you are only looking for step-by-step installation instructions, jump to one of the quickstarts:

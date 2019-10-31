@@ -37,9 +37,9 @@ ms.author: maggies
   
 -   Send a notification in the Subject: line of an e-mail message. By default, the Subject: line in the subscription definition includes the following variables that are replaced by report-specific information when the subscription is processed:  
   
-     **@ReportName** specifies the name of the report.  
+     **\@ReportName** specifies the name of the report.  
   
-     **@ExecutionTime** specifies when the report was executed.  
+     **\@ExecutionTime** specifies when the report was executed.  
   
      You can combine these variables with static text or modify the text in the Subject: line for each subscription.  
   

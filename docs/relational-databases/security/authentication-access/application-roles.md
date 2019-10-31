@@ -1,7 +1,7 @@
 ---
 title: "Application Roles | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/06/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Application Roles
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  An application role is a database principal that enables an application to run with its own, user-like permissions. You can use application roles to enable access to specific data to only those users who connect through a particular application. Unlike database roles, application roles contain no members and are inactive by default. Application roles work with both authentication modes. Application roles are enabled by using **sp_setapprole**, which requires a password. Because application roles are a database-level principal, they can access other databases only through permissions granted in those databases to **guest**. Therefore, any database in which **guest** has been disabled will be inaccessible to application roles in other databases.  
+  An application role is a database principal that enables an application to run with its own, user-like permissions. You can use application roles to enable access to specific data to only those users who connect through a particular application. Unlike database roles, application roles contain no members and are inactive by default. Application roles are enabled by using **sp_setapprole**, which requires a password. Because application roles are a database-level principal, they can access other databases only through permissions granted in those databases to **guest**. Therefore, any database in which **guest** has been disabled will be inaccessible to application roles in other databases.  
   
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], application roles cannot access server-level metadata because they are not associated with a server-level principal. To disable this restriction and thereby allow application roles to access server-level metadata, set the global flag 4616. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) and [DBCC TRACEON &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).  
   
@@ -40,8 +40,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 4.  If the application role name and password are valid, the application role is enabled.  
   
 5.  At this point the connection loses the permissions of the user and assumes the permissions of the application role.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  The permissions acquired through the application role remain in effect for the duration of the connection.  
   

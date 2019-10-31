@@ -2,7 +2,7 @@
 title: "What is a distributed availability groups"
 description: "A distributed availability group is a special type of availability group that spans two separate availability groups. The availability groups that participate in a distributed availability group do not need to be in the same location."
 ms.custom: "seodec18"
-ms.date: "07/31/2018"
+ms.date: "10/15/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -15,7 +15,7 @@ ms.author: mathoma
 ---
 # Distributed availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Distributed availability groups are a new feature introduced in SQL Server 2016, as a variation of the existing Always On availability groups feature. This article clarifies some aspects of distributed availability groups and complements the existing [SQL Server documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation).
+Distributed availability groups are a new feature introduced in SQL Server 2016, as a variation of the existing Always On availability groups feature. This article clarifies some aspects of distributed availability groups and complements the existing [SQL Server documentation](https://docs.microsoft.com/sql/sql-server/).
 
 > [!NOTE]
 > "DAG" is not the official abbreviation for *distributed availability group*, because the abbreviation is already used for the Exchange Database Availability Group feature. This Exchange feature has no relation to SQL Server availability groups or distributed availability groups.
@@ -229,7 +229,7 @@ An example of output from the second WSFC cluster that's participating in a dist
 
 ![Example output of the preceding query](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 
-### DMV to list Distribtued AG health
+### DMV to list Distributed AG health
 
 In SQL Server Management Studio, any status shown on the Dashboard and other areas are for local synchronization only within that availability group. To display the health of a distributed availability group, query the dynamic management views. The following example query extends and refines the previous query:
 

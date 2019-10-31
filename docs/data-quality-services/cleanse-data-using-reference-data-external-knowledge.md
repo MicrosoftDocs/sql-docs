@@ -50,7 +50,7 @@ ms.author: lle
  You must have the dqs_kb_editor or dqs_kb_operator role on the DQS_MAIN database to perform data cleansing.  
   
 ##  <a name="Cleanse"></a> Cleanse Your Data Using Reference Data Knowledge  
- We will continue with the same example of using the domains that we mapped in the previous topic, [Attach Domain or Composite Domain to Reference Data](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md), with the Melissa Data service in Windows Azure Marketplace. Now, we will use the same domains to cleanse some sample US addresses. The steps to cleanse data are the same as described in [Cleanse Data Using DQS &#40;Internal&#41; Knowledge](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). However, we will draw you attention wherever necessary during the process.  
+ We will continue with the same example of using the domains that we mapped in the previous topic, [Attach Domain or Composite Domain to Reference Data](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md), with the Melissa Data service in Azure Marketplace. Now, we will use the same domains to cleanse some sample US addresses. The steps to cleanse data are the same as described in [Cleanse Data Using DQS &#40;Internal&#41; Knowledge](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). However, we will draw you attention wherever necessary during the process.  
   
 1.  Create a data quality project, and select the **Cleansing** activity. See [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md).  
   

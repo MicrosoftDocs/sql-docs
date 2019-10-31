@@ -33,8 +33,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 6.  Call the MS DTC OLE ITransaction::Commit function to commit the MS DTC transaction. The Transaction object is no longer valid.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  To perform a series of MS DTC transactions, repeat Steps 3 through 6.  
   
  To release the reference to the Transaction object, call the MS DTC OLE ITransaction::Return function.  

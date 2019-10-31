@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.afpextfiledest.f1"
   - "sql14.dts.designer.afpextfiledest.f1"
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Flexible File Destination
 
@@ -33,7 +33,7 @@ Following properties are available on the **Flexible File Destination Editor**.
 - **File Connection Manager Type:** Specifies the source connection manager type. Then choose an existing one of the specified type or create a new one.
 - **Folder Path:** Specifies the destination folder path.
 - **File Name:** Specifies the destination file name.
-- **File Format:** Specifies the destination file format. Supported formats are **Text**, **Avro**, **ORC**, **Parquet**.
+- **File Format:** Specifies the destination file format. Supported formats are **Text**, **Avro**, **ORC**, **Parquet**. Java is required for ORC/Parquet. See [here](../../integration-services/azure-feature-pack-for-integration-services-ssis.md#dependency-on-java) for details.
 - **Column delimiter character:** Specifies the character to use as column delimiter (multi-character delimiters are not supported).
 - **First row as the column name:** Specifies whether to write column names to first row.
 - **Compress the file:** Specifies whether to compress the file.
@@ -68,30 +68,3 @@ Alternatively, if the security principal does not have an RBAC assignment, or th
 For write permission, grant at least **Execute** permission starting from the sink file system, along with **Write** permission for the sink folder.
 Alternatively, grant at least the **Storage Blob Data Contributor** role with RBAC.
 See [this](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) article for details.
-
-**Prerequisite for ORC/Parquet File Format**
-
-Java is required to use ORC/Parquet file format.
-Architecture (32/64-bit) of the Java build should match that of the SSIS runtime to use.
-The following Java builds have been tested.
-
-- [Zulu's OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
-- [Oracle's Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-
-**Set Up Zulu's OpenJDK**
-
-1. Download and extract the installation zip package.
-2. From the Command Prompt, run `sysdm.cpl`.
-3. On the **Advanced** tab, select **Environment Variables**.
-4. Under the **System variables** section, select **New**.
-5. Enter `JAVA_HOME` for the **Variable name**.
-6. Select **Browse Directory**, navigate to the extracted folder, and select the `jre` subfolder.
-   Then select **OK**, and the **Variable value** is populated automatically.
-7. Select **OK** to close the **New System Variable** dialog box.
-8. Select **OK** to close the **Environment Variables** dialog box.
-9. Select **OK** to close the **System Properties** dialog box.
-
-**Set Up Oracle's Java SE Runtime Environment**
-
-1. Download and run the exe installer.
-2. Follow the installer instructions to complete setup.

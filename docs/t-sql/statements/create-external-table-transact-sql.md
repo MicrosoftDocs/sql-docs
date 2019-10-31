@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 05/29/2019
+ms.date: 07/29/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -353,7 +353,7 @@ SELECT DISTINCT user.FirstName, user.LastName
 INTO ms_user
 FROM user INNER JOIN (
     SELECT * FROM ClickStream WHERE cs.url = 'www.microsoft.com'
-    ) AS ms_user
+    ) AS ms
 ON user.user_ip = ms.user_ip
 ;
 ```
@@ -591,7 +591,7 @@ WITH
 
 In Azure SQL Database, creates an external table for [elastic queries](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) for use with Azure SQL Database.
 
-Use an external table toc reate an external table for use with an elastic query.
+Use an external table to create an external table for use with an elastic query.
 
 See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -625,6 +625,9 @@ The one to three-part name of the table to create. For an external table, SQL st
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
+
+> [!NOTE]
+> `Text`, `nText` and `XML` are not supported data types for columns in external tables for Azure SQL Database.
 
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
@@ -763,6 +766,9 @@ The one to three-part name of the table to create. For an external table, SQL Da
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
+
+> [!NOTE]
+> `Text`, `nText` and `XML` are not supported data types for columns in external tables for Azure SQL Warehouse.
 
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
@@ -911,10 +917,10 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat
 WITH
 (
     FORMAT_TYPE = DELIMITEDTEXT 
-    , FORMAT_OPTIONS ( FIELDTERMINATOR = '|'
-       , STRINGDELIMITER = ''
-      , DATEFORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
-      , USETYPE_DEFAULT = FALSE
+    , FORMAT_OPTIONS ( FIELD_TERMINATOR = '|'
+       , STRING_DELIMITER = ''
+      , DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
+      , USE_TYPE_DEFAULT = FALSE
       )
 )
 

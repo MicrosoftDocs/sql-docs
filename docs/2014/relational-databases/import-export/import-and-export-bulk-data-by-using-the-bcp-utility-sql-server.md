@@ -1,9 +1,6 @@
 ---
 title: "Import and Export Bulk Data by Using the bcp Utility (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -11,12 +8,17 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], bcp utility"
   - "bcp utility [SQL Server], about bcp utility"
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "06/14/2017"
 ---
+
 # Import and Export Bulk Data by Using the bcp Utility (SQL Server)
-  This topic provides an overview for using the [bcp utility](../../tools/bcp-utility.md) to export data from anywhere in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database where a SELECT statement works, including partitioned views.  
+
+This topic provides an overview for using the [bcp utility](../../tools/bcp-utility.md) to export data from anywhere in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database where a SELECT statement works, including partitioned views.  
   
  The bcp utility (Bcp.exe) is a command-line tool that uses the Bulk Copy Program (BCP) API. The bcp utility performs the following tasks:  
   
@@ -39,7 +41,8 @@ manager: craigg
   
  For a description of the **bcp** command syntax, see [bcp Utility](../../tools/bcp-utility.md).  
   
-## Examples  
+## Examples
+
  For **bcp** examples, see:  
   
 -   [bcp Utility](../../tools/bcp-utility.md)  
@@ -63,15 +66,14 @@ manager: craigg
 -   [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
-  
-## See Also  
- [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [SELECT Clause &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
- [bcp Utility](../../tools/bcp-utility.md)   
- [Prepare to Bulk Import Data &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [Bulk Import and Export of Data &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Create a Format File &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
-  
-  
+
+## See Also
+
+[INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)
+[SELECT Clause &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)
+[bcp Utility](../../tools/bcp-utility.md)   
+[Prepare to Bulk Import Data &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md)
+[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)
+[Bulk Import and Export of Data &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)
+[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)
+[Create a Format File &#40;SQL Server&#41;](create-a-format-file-sql-server.md)

@@ -5,7 +5,7 @@ description: Reference article for azdata bdc hdfs commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,13 +13,14 @@ ms.technology: big-data-cluster
 
 # azdata bdc hdfs
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-The following article provides reference for the **bdc hdfs** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
+This article is a reference article for **azdata**. 
 
 ## Commands
 |     |     |
 | --- | --- |
+[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Hdfs service status commands.
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | The HDFS shell is a simple interactive command shell for HDFS file system.
 [azdata bdc hdfs ls](#azdata-bdc-hdfs-ls) | List the status of the given file or directory.
 [azdata bdc hdfs exists](#azdata-bdc-hdfs-exists) | Determine if a file or directory exists.  Returns True if exists and False otherwise.
@@ -322,4 +323,6 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).
+- For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
+
+- For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

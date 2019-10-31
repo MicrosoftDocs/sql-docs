@@ -37,8 +37,8 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |max_session_percent|**decimal (5,2)**|Maximum concurrent sessions in percentage of the limit of the database's service tier.|  
 |dtu_limit|**int**|Current max database DTU setting for this database during this interval. For databases using the vCore-based model, this column is NULL.|
 |cpu_limit|**decimal (5,2)**|Number of vCores for this database during this interval. For databases using the DTU-based model, this column is NULL.|
-|avg_instance_cpu_percent|**decimal (5,2)**|Average database CPU usage in percentage.|
-|avg_instance_memory_percent|**decimal (5,2)**|Average database memory usage in percentage.|
+|avg_instance_cpu_percent|**decimal (5,2)**|Average database CPU usage as a percentage of the SQL DB process.|
+|avg_instance_memory_percent|**decimal (5,2)**|Average database memory usage as a percentage of the SQL DB process.|
 |avg_login_rate_percent|**decimal (5,2)**|Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
 |replica_role|**int**|Represents the current replica’s role with 0 as primary, 1 as secondary, and 2 as forwarder (geo-secondary’s primary). You will see “1” when connected with ReadOnly intent to all readable secondaries. If connecting to a geo-secondary without specifying ReadOnly intent, you should see “2” (connecting to the forwarder).|
 |||

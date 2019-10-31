@@ -314,7 +314,7 @@ GO
 ```  
 
 ### D. Creating a user-defined table type with primary key and index
-The following example creates a user-defined table type that has three columns, one of which (`Name`) is the primary key and another (`Price`) has a non-clustered index.  For more information about how to create and use table-valued parameters, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).
+The following example creates a user-defined table type that has three columns, one of which (`Name`) is the primary key and another (`Price`) has a nonclustered index.  For more information about how to create and use table-valued parameters, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).
 
 ```sql
 CREATE TYPE InventoryItem AS TABLE

@@ -74,7 +74,7 @@ The account that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A
 ## Supported Service Account Types  
 The following table lists the Windows account types that can be used for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service.  
   
-|Service account type|Non-clustered Server|Clustered server|Domain controller (non-clustered)|  
+|Service account type|Nonclustered Server|Clustered server|Domain controller (nonclustered)|  
 |------------------------|-------------------------|--------------------|--------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows domain account (member of Windows Administrators group)|Supported|Supported|Supported|  
 |Windows domain account (non-administrative)|Supported<br /><br />See Limitation 1 below.|Supported<br /><br />See Limitation 1 below.|Supported<br /><br />See Limitation 1 below.|  

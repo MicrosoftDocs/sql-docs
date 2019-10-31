@@ -25,7 +25,7 @@ manager: kfile
   
  For information about other [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] products and technologies, see [What's New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
- For more information on changes related to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, see [What's New in Analysis Services and Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md).  
+ For more information on changes related to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, see [What's New in Analysis Services and Business Intelligence](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services).  
   
 ## See Also  
  [Reporting Services Backward Compatibility](reporting-services-backward-compatibility.md)   

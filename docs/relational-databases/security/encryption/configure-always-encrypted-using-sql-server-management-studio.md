@@ -1,7 +1,7 @@
 ---
 title: "Configure Always Encrypted using SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/01/2019
+ms.date: 10/31/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -22,7 +22,7 @@ This article describes tasks for configuring Always Encrypted and managing datab
 
 When you use SSMS to configure Always Encrypted, SSMS handles both Always Encrypted keys and sensitive data, so both the keys and the data appear in plaintext inside the SSMS process. Therefore, it's important you run SSMS on a secure computer. If your database is hosted in SQL Server, make sure SSMS runs on a different computer than the computer hosting your SQL Server instance. As the primary goal of Always Encrypted is to ensure encrypted sensitive data is safe even if the database system gets compromised, executing a PowerShell script that processes keys or sensitive data on the SQL Server computer can reduce or defeat the benefits of the feature. For additional recommendations, see [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
-SSMS does not support role separation between those who manage the database (DBAs) and those who manage cryptographic secrets and have access to plaintext data (Security Administrators and/or Application Administrators). If your organization enforces role separation, you should use PowerShell to configure Always Encrypted. For more information, see [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) and [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md). 
+SSMS doesn't support role separation between those who manage the database (DBAs) and those who manage cryptographic secrets and have access to plaintext data (Security Administrators and/or Application Administrators). If your organization enforces role separation, you should use PowerShell to configure Always Encrypted. For more information, see [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) and [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md). 
 
 ## Always Encrypted Tasks using SSMS
 

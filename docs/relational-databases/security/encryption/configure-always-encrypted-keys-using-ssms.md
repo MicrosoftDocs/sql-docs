@@ -34,7 +34,7 @@ The **New Column Master Key** dialog allows you to generate a column master key 
 4.	Select a key store:
     - **Certificate Store - Current User** - indicates the Current User certificate store location in the Windows Certificate Store, which is your personal store. 
     - **Certificate Store - Local computer** - indicates the Local computer certificate store location in the Windows Certificate Store. 
-    - **Azure Key Vault** -  you will need to sign in to Azure (click **Sign in**). Once you sign in, you will be able to pick one of your Azure subscriptions and a key vault.
+    - **Azure Key Vault** -  you'll need to sign in to Azure (click **Sign in**). Once you sign in, you'll be able to pick one of your Azure subscriptions and a key vault.
     - **Key Store Provider (KSP)** - indicates a key store that is accessible via a key store provider (KSP) that implements the Cryptography Next Generation (CNG) API. Typically, this type of a store is a hardware security module (HSM). After you select this option, you'll need to pick a KSP. **Microsoft Software Key Store Provider** is selected by default. If you want to use a column master key stored in an HSM, select a KSP for your device (it must be installed and configured on the computer before you open the dialog).
     -	**Cryptographic Service Provider (CSP)** - a key store that is accessible via a cryptographic service provider (CSP) that implements the Cryptography API (CAPI). Typically, such a store is a hardware security module (HSM). After you select this option, you'll need to pick a CSP.  If you want to use a column master key stored in an HSM, select a CSP for your device (it must be installed and configured on the computer before you open the dialog).
     
@@ -43,7 +43,7 @@ The **New Column Master Key** dialog allows you to generate a column master key 
    
     For more information about the above key stores, see [Create and store column master keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-5. If you are using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can select the **Allow enclave computations** checkbox to make the master key enclave-enabled. See [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) for details. 
+5. If you're using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can select the **Allow enclave computations** checkbox to make the master key enclave-enabled. See [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) for details. 
 
     > [!NOTE]
     > The **Allow enclave computations** checkbox does not appear if your SQL Server instance is not correctly configured with a secure enclave.
@@ -55,7 +55,7 @@ Once you complete the dialog, SQL Server Management Studio creates metadata for 
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-If you are configuring an enclave-enabled column master key, SSMS also signs the metadata using the column master key. 
+If you're configuring an enclave-enabled column master key, SSMS also signs the metadata using the column master key. 
 
 ::: moniker-end
 
@@ -95,7 +95,7 @@ For more information, see [Create and store column master keys (Always Encrypted
 
 ## Provision Always Encrypted Keys using the Always Encrypted Wizard
 
-The [Always Encrypted Wizard](../../../relational-databases/security/encryption/always-encrypted-wizard.md) is a tool for encrypting, decrypting and re-encrypting selected database columns. While it can use already configured keys, it also also allows you to generate a new column master key and a new column encryption. 
+The [Always Encrypted Wizard](../../../relational-databases/security/encryption/always-encrypted-wizard.md) is a tool for encrypting, decrypting, and re-encrypting selected database columns. While it can use already configured keys, it also allows you to generate a new column master key and a new column encryption. 
 
 ## Next Steps
 - [Configure column encryption using Always Encrypted Wizard](always-encrypted-wizard.md)

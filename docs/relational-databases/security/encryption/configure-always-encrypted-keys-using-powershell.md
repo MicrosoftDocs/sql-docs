@@ -17,13 +17,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     
 This article provides the steps to provision keys for Always Encrypted using the [SqlServer PowerShell module](../../../relational-databases/scripting/sql-server-powershell-provider.md). You can use PowerShell to provision Always Encrypted keys both [with and without role separation](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#KeyManagementRoles), providing control over who has access to the actual encryption keys in the key store, and who has access to the database. 
 
-For an overview of Always Encrypted key management, including some high-level best practice recommendations, see [Overview of key kanagement for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
+For an overview of Always Encrypted key management, including some high-level best practice recommendations, see [Overview of key management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 For information about how to start using the SqlServer PowerShell module for Always Encrypted, see [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
 
 ## <a name="KeyProvisionWithoutRoles"></a> Key Provisioning without Role Separation
 
-The key provisioning method described in this section does not support role separation between Security Administrators and DBAs. Some of the below steps combine operations on physical keys with operations on key metadata. Therefore, this method of provisioning the keys is  recommended for organizations using the DevOps model, or if the database is hosted in the cloud and the primary goal is to restrict cloud administrators (but not on-premises DBAs), from accessing sensitive data. It is not recommended if potential adversaries include DBAs, or if DBAs should not have access to sensitive data.
+The key provisioning method described in this section doesn't support role separation between Security Administrators and DBAs. Some of the below steps combine operations on physical keys with operations on key metadata. Therefore, this method of provisioning the keys is recommended for organizations using the DevOps model, or if the database is hosted in the cloud and the primary goal is to restrict cloud administrators (but not on-premises DBAs) from accessing sensitive data. It is not recommended if potential adversaries include DBAs, or if DBAs shouldn't have access to sensitive data.
 
 Before running any steps that involves access to plaintext keys or the key store (identified in the **Accesses plaintext keys/key store** column in the below table), make sure that the PowerShell environment runs on a secure machine that is different from a computer hosting your database. For more information, see [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
@@ -118,7 +118,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 The below script is an end-to-end example for generating a column master key in a key store that implements Cryptography Next Generation API (CNG), generating and encrypting a column encryption key, and creating key metadata in a SQL Server database.
 
-The example leverages the key store that uses Microsoft Software Key Storage Provider. You may choose to modify the example to use another store, such as your hardware security module. For that, you'll need to make sure the key store provider (KSP) that implements CNG for your device is installed and properly on your machine. You'll need to replace "Microsoft Software Key Storage Provider" with your device's KSP name.
+The example leverages the key store that uses Microsoft Software Key Storage Provider. You may choose to modify the example to use another store, such as your hardware security module. For that, you'll need to make sure the key store provider (KSP) that implements CNG for your device is installed and properly on your machine. You'll need to replace `Microsoft Software Key Storage Provider` with your device's KSP name.
 
 
 ```powershell
@@ -189,7 +189,7 @@ Task  |Article  |Accesses plaintext keys  |Accesses database
 ---------|---------|---------|---------
 Step 1.  Obtain the location of the column master key and encrypted value of the column encryption key from your Security Administrator. |See the examples below. | No | No
 Step 2.  Start a PowerShell environment and import the SqlServer module.  | [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)  | No | No
-Step 3.  Connect to your server and a database. | [Connect to a aatabase](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
+Step 3.  Connect to your server and a database. | [Connect to a database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
 Step 4.  Create a SqlColumnMasterKeySettings object that contains information about the location of your column master key. SqlColumnMasterKeySettings is an object that exists in memory. | New-SqlColumnMasterKeySettings | No | No
 Step 5. Create the metadata about the column master key in your database | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br>**Note:** under the covers, the cmdlet issues the [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) statement to create column master key metadata. | No | Yes
 Step 6. Create the column encryption key metadata in the database. | New-SqlColumnEncryptionKey<br>**Note:** DBAs use a variation of the cmdlet that only creates column encryption key metadata.<br>Under the covers, the cmdlet issues the [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) statement to create column encryption key metadata. | No | Yes
@@ -259,7 +259,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 - [Rotate Always Encrypted keys using PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 - [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
-## Seel Also    
+## See Also    
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)    
 - [Overview of key management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Create and store column master keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)

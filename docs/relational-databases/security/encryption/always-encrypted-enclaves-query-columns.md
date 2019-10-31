@@ -1,7 +1,7 @@
 ---
 title: "Query columns using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/01/2019
+ms.date: 10/31/2019
 ms.reviewer: vanto
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -19,7 +19,7 @@ This article captures general considerations for running queries on encrypted co
 The following types of queries involve the use of a secure enclave:
 - Queries that trigger in-place cryptographic operations using enclave-enabled keys - see [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md).
 - *Rich queries* - range comparisons or pattern matching operations on columns encrypted using randomized encryption and enclave-enabled keys.
-- Queries that create or update indexes on encrypted columns using randomized encryption and enclave-enabled keys - see [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md).
+- Queries that create or update indexes on encrypted columns using randomized encryption and enclave-enabled keys. For more information, see [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md).
 
 > [!NOTE]
 > Rich queries and indexes are only supported on enclave-enabled columns (columns encrypted with enclave-enabled column encryption keys) that use randomized encryption. Deterministic encryption does not support rich queries or indexes.

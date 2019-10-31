@@ -1,7 +1,7 @@
 ---
 title: "Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/18/2019
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -110,7 +110,7 @@ You can create nonclustered indexes on enclave-enabled columns using randomized 
 
 Creating indexes on columns that use randomized encryption and are not enclave-enabled remains unsupported.
 
-For more details, see [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md). For general information, not specific to Always Encrypted, on how indexing in SQL Server works, see [Clustered and Nonclustered Indexes Described](../../indexes/clustered-and-nonclustered-indexes-described.md).
+For more information, see [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md). For general information, not specific to Always Encrypted, on how indexing in SQL Server works, see [Clustered and Nonclustered Indexes Described](../../indexes/clustered-and-nonclustered-indexes-described.md).
 
 #### Database Recovery
 

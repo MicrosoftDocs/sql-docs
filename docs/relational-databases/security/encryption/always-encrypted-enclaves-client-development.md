@@ -26,6 +26,8 @@ To develop applications using Always Encrypted with secure enclaves, you need a 
 
 To use the functionality of the secure enclave, you need to configure your application and your client driver to enable enclave computations when connecting to the database and specify an attestation service endpoint (an enclave attestation URL) that points to an attestation service for your enclave. The details depend on a driver and an attestation service/protocol, you are using.
 
+## Next steps
+
 The following client drivers support Always Encrypted with secure enclaves:
 - .NET Framework Data Provider for SQL Server in .NET Framework 4.7.2 or higher. 
     - For more information, see [Using Always Encrypted with the .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md).
@@ -33,4 +35,3 @@ The following client drivers support Always Encrypted with secure enclaves:
 - Microsoft ODBC Driver for SQL Server, version 17.4 or higher. 
     - For more information, see [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md). 
     - For information, on how to enable enclave computations for a database connection using ODBC, see the [Enabling Always Encrypted with Secure Enclaves](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) section.
-

@@ -1,7 +1,7 @@
 ---
 title: "Query columns using Always Encrypted with SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/01/2019
+ms.date: 10/31/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Query columns using Always Encrypted with SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-This article describes how to query columns, encrypted with with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) using [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md). With SSMS, you can:
+This article describes how to query columns, encrypted with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) using [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md). With SSMS, you can:
 - Retrieve ciphertext values stored in encrypted columns. 
 - Retrieve plaintext values stored in encrypted columns.   
 - Send plaintext values targeting encrypted columns (for example, in `INSERT` or `UPDATE` statements and as a lookup parameter of the `WHERE` clauses in `SELECT` statements).
@@ -47,7 +47,7 @@ Assuming SSN is an encrypted `char(11)` column in the `Patients` table, the quer
 ## Sending plaintext values targeting encrypted columns       
 To execute a query that sends a value that targets an encrypted column, for example a query that inserts, updates or filters by a value stored in an encrypted column:
 
-1. Make sure you can access the column master keys and the metadata about the keys protecting the columns, you are running your query against. For details, see [Permissions for querying encrypted columns](#permissions-for-querying-encrypted-columns) below.
+1. Make sure you can access the column master keys and the metadata for the keys protecting the columns that your query runs against. For more information, see [Permissions for querying encrypted columns](#permissions-for-querying-encrypted-columns) below.
 1.	Make sure you have enabled Always Encrypted for the database connection for the Query Editor window, from which you will run a `SELECT` query retrieving and decrypting your data. This will instruct the .NET Framework Data Provider for SQL Server (used by SSMS) to decrypt the encrypted columns in the query result set. See [Enabling and disabling Always Encrypted for a database connection](#en-dis) below.
 1. Ensure Parameterization for Always Encrypted is enabled for the Query Editor window. (Requires at least SSMS version 17.0.) Declare a Transact-SQL variable and initialize it with a value, you want to send (insert, update, or filter by) to the database. See [Parameterization for Always Encrypted](#param) below for details.
 
@@ -78,17 +78,17 @@ Enabling Always Encrypted for a database connection instructs the .NET Framework
 -	Decrypt any values that are retrieved from encrypted columns and returned in query results.   
 -	Encrypt the values of the parameterized Transact-SQL variables that target encrypted database columns.   
 
-If you do not enable Always Encrypted for a connection, the .NET Framework Data Provider for SQL Server, SSMS uses, will not try to encrypt query parameters or decrypt results.
+If you don't enable Always Encrypted for a connection, the .NET Framework Data Provider for SQL Server, SSMS uses, won't try to encrypt query parameters or decrypt results.
 
 You can enable or disable Always Encrypted when you create a new connection or you change an existing connection using the **Connect to Server** dialog. 
 
 To enable (disable) Always Encrypted:
 1. Open **Connect To Server** dialog (see [Connect to a SQL Server instance](../../../ssms/tutorials/connect-query-sql-server.md#connect-to-a-sql-server-instance) for details).
 1. Click **Options >>**.
-1. If you are using SSMS 18 or newer:
+1. If you're using SSMS 18 or newer:
     1. Select the **Always Encrypted** tab.
-    1. To enable Always Encrypted, select **Enable Always Encrypted (column encryption)**. To disable Always Encrypted, make sure **Enable Always Encrypted (column encryption)** is not selected.
-    1. If you are using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can specify an enclave attestation url. If you SQL Server instance does not use a secure enclave, make sure you leave the **Enclave Attestation URL** textbox blank. See [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) for more information.
+    1. To enable Always Encrypted, select **Enable Always Encrypted (column encryption)**. To disable Always Encrypted, make sure **Enable Always Encrypted (column encryption)** isn't selected.
+    1. If you're using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can specify an enclave attestation url. If your SQL Server instance doesn't use a secure enclave, make sure you leave the **Enclave Attestation URL** textbox blank. For more information, see [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
 1. If you are using SSMS 17 or older:
     1. Select the **Additional Properties** tab.
     1. To enable Always Encrypted, type `Column Encryption Setting = Enabled`. To disable Always Encrypted, specify `Column Encryption Setting = Disabled` or remove the setting of **Column Encryption Setting** from the **Additional Properties** tab (its default value is **Disabled**).   

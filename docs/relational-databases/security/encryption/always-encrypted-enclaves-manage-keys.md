@@ -1,7 +1,7 @@
 ---
 title: "Manage keys for Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/01/2019
+ms.date: 10/30/2019
 ms.reviewer: vanto
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

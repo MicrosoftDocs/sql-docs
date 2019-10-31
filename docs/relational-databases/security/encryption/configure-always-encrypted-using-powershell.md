@@ -52,7 +52,7 @@ Some of the Always Encrypted cmdlets work with data or metadata in the database 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### Using Get-SqlDatabase
-The **Get-SqlDatabase** cmdlet allows you to connect to a database in SQL Server or in Azure SQL Database. It returns a database object, which you can then pass using the using the **InputObject** parameter of a cmdlet that connects to the database. 
+The **Get-SqlDatabase** cmdlet allows you to connect to a database in SQL Server or in Azure SQL Database. It returns a database object, which you can then pass using the **InputObject** parameter of a cmdlet that connects to the database. 
 
 ### Using SQL Server PowerShell
 
@@ -108,7 +108,7 @@ Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\you
 
 - [Provision Always Encrypted Keys using PowerShell](configure-always-encrypted-keys-using-powershell.md)
 - [Rotate Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Encrypt, Re-Encrypt or Decrypt Columns with Always Encrypted using PowerShell](configure-column-encryption-using-powershell.md)
+- [Encrypt, Re-Encrypt, or Decrypt Columns with Always Encrypted using PowerShell](configure-column-encryption-using-powershell.md)
 
 
 ##  <a name="aecmdletreference"></a> Always Encrypted Cmdlet Reference

@@ -688,11 +688,23 @@ Constructs and operations not supported:
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
 
-Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined durig query execution can be used, i.e. when used in connjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined to.    
+Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, i.e. when used in connjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined to.    
 
-Use of External Tables prevents parallel plans.
+```sql
+  \\ Assuming External.Orders is an external table and Customer is a local table. 
+  \\ This query  will copy the whole of the external locally as the predicate needed
+  \\ to filter isn't known at compile time. Its only known during execution of the query
+  
+  SELECT Orders.OrderId, Orders.OrderTotal 
+    FROM External.Orders
+   WHERE CustomerId in (SELECT TOP 1 CustomerId 
+                          FROM Customer 
+	                     WHERE CustomerName = 'MyCompany')
+```
 
-External tables are implemented as Remote Query and as such the estimated number of rows returned will be 1000. The optimiser doesn't access the remote data source to obtain a more accurate estimate.
+Use of External Tables prevents use of parallelism in the query plan.
+
+External tables are implemented as Remote Query and as such the estimated number of rows returned is generally 1000, there are other rules based on the type of predicate used to filter the external table. They are rules based estimates rather than estimates based on the actual data in the external table. The optimiser doesn't access the remote data source to obtain a more accurate estimate.
 
 ## Locking
 

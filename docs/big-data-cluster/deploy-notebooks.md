@@ -28,7 +28,7 @@ Following prerequisites are required to also launch the notebook:
 * Latest version of [Azure Data Studio Insiders build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master) installed
 * [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] extension installed in Azure Data Studio
 
-Also, deploying SQL Server 2019 big data cluster also requires:
+In addition to above, deploying SQL Server 2019 big data cluster also requires:
 
 * [azdata](deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
@@ -38,7 +38,7 @@ Also, deploying SQL Server 2019 big data cluster also requires:
 
 1. Launch the Azure Data Studio Insiders.
 
-2. On the **Connections** tab, click **...** and select **Deploy SQL Server...**.
+2. On the **Connections** tab, select the ellipses (**...**), then select **Deploy SQL Server...**.
 
    ![AI and ML](media/deploy-notebooks/deploy-notebooks-1.png)
 
@@ -54,9 +54,9 @@ Also, deploying SQL Server 2019 big data cluster also requires:
 
 ## The deployment experience
 
-### Deployment configuration template
-
 You can customize the settings of the deployment profile by following the instructions below.
+
+### Deployment configuration template
 
 #### Target configuration template
 
@@ -95,13 +95,13 @@ This screen has inputs for various settings such as **Scale**, **Endpoints**, **
 
 ##### Scale settings
 
-1. Enter the number of instances of each of the components in the big data cluster.
+Enter the number of instances of each of the components in the big data cluster.
 
-   * Spark Instance can be included along with HDFS. It's included in the storage pool or on its own in the Spark pool.
+A Spark Instance can be included along with HDFS. It's included in the storage pool or on its own in the Spark pool.
 
    ![Service settings](media/deploy-notebooks/service-settings.png)
 
-For additional information on each of these components refer [master instance](concept-master-instance.md), [data pool](concept-data-pool.md), [storage pool](concept-storage-pool.md), [compute pool](concept-compute-pool.md).
+For additional information on each of these components, you can refer to [master instance](concept-master-instance.md), [data pool](concept-data-pool.md), [storage pool](concept-storage-pool.md), or [compute pool](concept-compute-pool.md).
 
 ##### Endpoint settings
 

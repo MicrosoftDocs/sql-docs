@@ -90,7 +90,7 @@ Note: The same account is used for controller and SQL Server.
 
 #### Service settings
 
-This screen has inputs for various settings such as **Scale**, **Endpoints**, **Storage, and other advanced storage settings. Please enter the appropriate values and select **Next**.
+This screen has inputs for various settings such as **Scale**, **Endpoints**, **Storage**, and other **advanced storage** settings. Please enter the appropriate values and select **Next**.
 
 ##### Scale settings
 

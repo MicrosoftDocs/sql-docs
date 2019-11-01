@@ -26,7 +26,6 @@ You can use notebooks to deploy big data clusters for [!INCLUDE[sql-server-2019]
 Following prerequisites are required to also launch the notebook:
 
 * Latest version of [Azure Data Studio Insiders build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master) installed
-* [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] extension installed in Azure Data Studio
 
 In addition to above, deploying SQL Server 2019 big data cluster also requires:
 

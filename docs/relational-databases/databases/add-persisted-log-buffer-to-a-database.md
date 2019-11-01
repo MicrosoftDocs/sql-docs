@@ -37,7 +37,7 @@ To configure a persistent memory device in [Windows](/windows-server/storage/sto
   
 ## Add a persisted log buffer to a database  
   
-```ALTER DATABASE <MyDB> ADD LOG FILE (NAME = <DAXlog>, FILENAME = '<Filepath to DAX Log File>', SIZE = 20 MB;```
+```ALTER DATABASE <MyDB> ADD LOG FILE (NAME = <DAXlog>, FILENAME = '<Filepath to DAX Log File>', SIZE = 20MB);```
 
 The volume or mount the new log file is placed must be formatted with DAX (NTFS) or mounted with the DAX option (XFS/EXT4).
 

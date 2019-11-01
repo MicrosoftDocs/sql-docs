@@ -5,7 +5,7 @@ description: Learn the steps and resources for deploying [!INCLUDE[big-data-clus
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -48,8 +48,6 @@ Big data clusters are deployed as a series of interrelated containers that are m
 - **Azure Kubernetes Service (AKS)**: AKS allows you to deploy a managed Kubernetes cluster in Azure. You only manage and maintain the agent nodes. With AKS, you don't have to provision your own hardware for the cluster. It is also easy to use a [python script](quickstart-big-data-cluster-deploy.md) or a [deployment notebook](deploy-notebooks.md) to create the AKS cluster and deploy the big data cluster in one step. For more information about configuring AKS for a big data cluster deployment, see [Configure Azure Kubernetes Service for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments](deploy-on-aks.md).
 
 - **Multiple machines**: You can also deploy Kubernetes to multiple Linux machines, which could be physical servers or virtual machines. The [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) tool can be used to create the Kubernetes cluster. You can use a [bash script](deployment-script-single-node-kubeadm.md) to automate this type of deployment. This method works well if you already have existing infrastructure that you want to use for your big data cluster. For more information about using **kubeadm** deployments with big data clusters, see [Configure Kubernetes on multiple machines for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments](deploy-with-kubeadm.md).
-
-- **Minikube**: Minikube allows you to run Kubernetes locally on a single server. It is a good option if you are trying out big data clusters or need to use it in a testing or development scenario. For more information about using Minikube, see the [Minikube documentation](https://kubernetes.io/docs/setup/minikube/). For specific requirements for using Minikube with big data clusters, see [Configure minikube for SQL Server 2019 big data cluster deployments](deploy-on-minikube.md).
 
 ## Deploy a big data cluster
 

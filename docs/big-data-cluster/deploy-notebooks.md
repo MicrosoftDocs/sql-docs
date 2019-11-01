@@ -17,7 +17,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] provides an extension for Azure Data Studio that includes deployment notebooks. A deployment notebook includes documentation and code that you can use in Azure Data Studio to create a SQL Server big data cluster.
 
-Originally implemented as an open source project, [notebooks](notebooks-guidance.md) have been implemented into [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download). You can use markdown for text in the text cells and one of the available kernels to write code in the code cells.
+Implemented initially as an open-source project, [notebooks](notebooks-guidance.md) have been implemented into [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download). You can use markdown for text in the text cells and one of the available kernels to write code in the code cells.
 
 You can use notebooks to deploy big data clusters for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -28,7 +28,7 @@ Following prerequisites are required to also launch the notebook:
 * Latest version of [Azure Data Studio Insiders build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master) installed
 * [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] extension installed in Azure Data Studio
 
-In addition to above, deploying SQL Server 2019 big data cluster also requires:
+Also, deploying SQL Server 2019 big data cluster also requires:
 
 * [azdata](deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
@@ -60,17 +60,17 @@ You can customize the settings of the deployment profile by following the instru
 
 #### Target configuration template
 
-1. Select the target configuration template from the available templates. The available profiles are filtered depending on the type of deployment target chosen in the previous dialog.
+1. Select the target configuration template from the available templates. The available profiles are filtered depending on the type of deployment target that's chosen in the previous dialog.
 
-   ![Deployment configuration template Step 1](media/deploy-notebooks/deployment-configuration-template-01.png)
+   ![Deployment configuration template Step 1](media/deploy-notebooks/deployment-configuration-template.png)
 
 #### Azure settings
 
-1. If the deployment target is a new AKS, additional information such as Azure Subscription ID, resource group, AKS cluster name, VM count, size etc. will be required to create the AKS cluster.
+1. If the deployment target is a new AKS, additional information such as Azure Subscription ID, resource group, AKS cluster name, VM count, size, and other additional information are required to create the AKS cluster.
 
    ![Azure settings](media/deploy-notebooks/azure-settings.png)
 
-2. If the deployment target is an existing Kubernetes cluster, the wizard will prompt for the path to the kube config file to import the Kubernetes cluster settings. Ensure the appropriate cluster context is selected where the SQL Server 2019 Big Data Cluster will be deployed.
+2. If the deployment target is an existing Kubernetes cluster, the wizard prompts for the path to the *kube* config file to import the Kubernetes cluster settings. Ensure the appropriate cluster context is selected where the SQL Server 2019 Big Data Cluster can be deployed.
 
    ![Target cluster context](media/deploy-notebooks/target-cluster-context.png)
 
@@ -97,7 +97,7 @@ This screen has inputs for various settings such as **Scale**, **Endpoints**, **
 
 1. Enter the number of instances of each of the components in the big data cluster.
 
-   * Spark Instance can be included along with HDFS in the storage pool or on its own in the Spark pool.
+   * Spark Instance can be included along with HDFS. It's included in the storage pool or on its own in the Spark pool.
 
    ![Service settings](media/deploy-notebooks/service-settings.png)
 
@@ -105,7 +105,7 @@ For additional information on each of these components refer [master instance](c
 
 ##### Endpoint settings
 
-The default endpoints have been pre-filled. However, they can be changed as appropriate. More on endpoints.
+The default endpoints have been pre-filled. However, they can be changed as appropriate.
 
    ![Endpoint settings](media/deploy-notebooks/endpoint-settings.png)
 
@@ -119,7 +119,7 @@ The storage settings include storage class and claim size for Data and Logs. The
 
 You can add additional storage settings under **Advanced storage settings**
 
-* Storage ool (HDFS)
+* Storage pool (HDFS)
 * Data pool
 * SQL Server Master
 

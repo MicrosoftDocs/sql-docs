@@ -112,7 +112,7 @@ azdata bdc create --accept-eula=yes
 In this scenario, you are prompted for any settings that are not part of the default configuration, such as passwords. 
 
 > [!IMPORTANT]
-> The default name of the big data cluster is ``mssql-cluster`. This is important to know in order to run any of the `kubectl` commands that specify the Kubernetes namespace with the `-n` parameter.
+> The default name of the big data cluster is `mssql-cluster`. This is important to know in order to run any of the `kubectl` commands that specify the Kubernetes namespace with the `-n` parameter.
 
 ## <a id="customconfig"></a> Custom configurations
 

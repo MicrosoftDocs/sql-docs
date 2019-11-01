@@ -81,7 +81,7 @@ This section explains platforms that are supported with [!INCLUDE[big-data-clust
 
 ### Livy job submission from Azure Data Studio (ADS) or curl fail with 500 error
 
-**Issue and customer impact**: When Spark shared resources (sparkhead) is configured with multiple replicas, you might experience failures with Livy job submission from Azure Data Studio (ADS) or `curl`. To verify, `curl` to any sparkhead pod results in refused connection. For example, `curl https://sparkhead-0:8998/` or `curl https://sparkhead-1:8998` returns 500 error.
+**Issue and customer impact**: In an HA configuration, Spark shared resources (sparkhead) are configured with multiple replicas. In this case, you might experience failures with Livy job submission from Azure Data Studio (ADS) or `curl`. To verify, `curl` to any sparkhead pod results in refused connection. For example, `curl https://sparkhead-0:8998/` or `curl https://sparkhead-1:8998` returns 500 error.
 
 This happens in the following scenarios:
 

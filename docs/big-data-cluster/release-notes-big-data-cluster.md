@@ -77,6 +77,44 @@ This section explains platforms that are supported with [!INCLUDE[big-data-clust
 |---------|---------|
 |Enterprise<br/>Standard<br/>Developer| Big Data Cluster edition is determined by the edition of SQL Server master instance. At deployment time Developer edition is deployed by default. You can change the edition after deployment. See [Configure SQL Server master instance](../big-data-cluster/configure-sql-server-master-instance.md). |
 
+## Known issues
+
+### Livy job submission from Azure Data Studio (ADS) or curl fail with 500 error
+
+**Issue and customer impact**: In an HA configuration, Spark shared resources (sparkhead) are configured with multiple replicas. In this case, you might experience failures with Livy job submission from Azure Data Studio (ADS) or `curl`. To verify, `curl` to any sparkhead pod results in refused connection. For example, `curl https://sparkhead-0:8998/` or `curl https://sparkhead-1:8998` returns 500 error.
+
+This happens in the following scenarios:
+
+- Zookeeper pods or process for each zookeeper instance are restarted a few times.
+- When networking connectivity is unreliable between Sparkhead pod and Zookeeper pods.
+
+**Workaround**: Restarting both Livy servers.
+
+```bash
+kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
+```
+
+```bash
+kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisorctl restart livy
+```
+
+### Create memory optimized table when master instance in an availability group
+
+- **Issue and customer impact**: You cannot use the primary endpoint exposed for connecting to availability group databases (listener) to create memory optimized tables.
+
+- **Workaround**: To create memory optimized tables when SQL Server master instance is an availability group configuration, [connect to the SQL Server instance](deployment-high-availability.md#instance-connect), expose an endpoint, connect to the SQL Server database, and create the memory optimized tables in the session created with the new connection.
+
+### Insert to external tables Active Directory authentication mode
+
+- **Issue and customer impact**: When SQL Server master instance is in Active Directory authentication mode, a query that selects only from external tables, where at least one of the external tables is in a storage pool, and inserts into another external table, the query returns:
+
+   ```
+   Msg 7320, Level 16, State 102, Line 1
+   Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "SQLNCLI11". Only domain logins can be used to query Kerberized storage pool.
+   ```
+
+- **Workaround**: Modify the query in one of the following ways. Either join the storage pool table to a local table, or insert into the local table first, then read from the local table to insert into the data pool.
+
 ## Next steps
 
 For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

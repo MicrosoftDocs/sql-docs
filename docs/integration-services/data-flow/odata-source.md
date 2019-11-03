@@ -43,6 +43,8 @@ The OData source supports the following simple data types: int, byte[], bool, by
 
 To discover the data types of columns in your data source, check the `https://<OData feed endpoint>/$metadata` page.
 
+For Decimal data type, the Precision and Scale are defined based on the source metadata. If the source metadata does not specify the "Precision" and "Scale" properties, the data may be truncated.
+
 > [!IMPORTANT]
 > The OData Source component does not support complex types, such as multiple-choice items, in SharePoint lists.
 

@@ -43,7 +43,7 @@ sp_validatemergesubscription [@publication=] 'publication'
 `[ @subscriber_db = ] 'subscriber_db'`
  Is the name of the subscription database. *subscriber_db* is **sysname**, with no default.  
   
-`[ @level = ] level`
+`[ @level = ] 'level'`
  Is the type of validation to perform. *level* is **tinyint**, with no default. Level can be one of these values.  
   
 |Level value|Description|  

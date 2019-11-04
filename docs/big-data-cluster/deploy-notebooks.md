@@ -29,9 +29,9 @@ Following prerequisites are required to also launch the notebook:
 
 In addition to above, deploying SQL Server 2019 big data cluster also requires:
 
-* `azdata`
-* `kubectl`
-* Azure CLI
+* [azdata](deploy-install-azdata.md)
+* [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
+* [Azure CLI (if deploying in Azure)]()https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest
 
 ## Launch the notebook
 
@@ -57,17 +57,17 @@ You can customize the settings of the deployment profile by following the instru
 
 ### Target configuration template
 
-1. Select the target configuration template from the available templates. The available profiles are filtered depending on the type of deployment target that's chosen in the previous dialog.
+Select the target configuration template from the available templates. The available profiles are filtered depending on the type of deployment target that's chosen in the previous dialog.
 
    ![Deployment configuration template Step 1](media/deploy-notebooks/deployment-configuration-template.png)
 
 ### Azure settings
 
-1. If the deployment target is a new AKS, additional information such as Azure Subscription ID, resource group, AKS cluster name, VM count, size, and other additional information are required to create the AKS cluster.
+If the deployment target is a new AKS, additional information such as Azure Subscription ID, resource group, AKS cluster name, VM count, size, and other additional information are required to create the AKS cluster.
 
    ![Azure settings](media/deploy-notebooks/azure-settings.png)
 
-2. If the deployment target is an existing Kubernetes cluster, the wizard prompts for the path to the *kube* config file to import the Kubernetes cluster settings. Ensure the appropriate cluster context is selected where the SQL Server 2019 Big Data Cluster can be deployed.
+If the deployment target is an existing Kubernetes cluster, the wizard prompts for the path to the *kube* config file to import the Kubernetes cluster settings. Ensure the appropriate cluster context is selected where the SQL Server 2019 Big Data Cluster can be deployed.
 
    ![Target cluster context](media/deploy-notebooks/target-cluster-context.png)
 

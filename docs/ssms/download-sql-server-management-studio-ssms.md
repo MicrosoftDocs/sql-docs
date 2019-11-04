@@ -53,7 +53,7 @@ The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earl
 If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**
 
 > [!Note]
-> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms). You can download different languages from the US-English version site by selecting [available languages](#available-languages-ssms-1831).
+> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms). You can download different languages from the US-English version site by selecting [available languages](#available-languages-ssms-184).
 
 ## Available languages
 

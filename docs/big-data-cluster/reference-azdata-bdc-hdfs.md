@@ -5,7 +5,7 @@ description: Reference article for azdata bdc hdfs commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-This article is a reference article for **azdata**. 
+The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
 |     |     |
@@ -32,6 +32,7 @@ This article is a reference article for **azdata**.
 [azdata bdc hdfs rmr](#azdata-bdc-hdfs-rmr) | Recursively remove a file or directory.
 [azdata bdc hdfs chmod](#azdata-bdc-hdfs-chmod) | Change the permission on the specified file or directory.
 [azdata bdc hdfs chown](#azdata-bdc-hdfs-chown) | Change the owner or group of the specified file.
+[azdata bdc hdfs cp](#azdata-bdc-hdfs-cp) | Copy a file or directory between the local machine and HDFS.
 [azdata bdc hdfs mount](reference-azdata-bdc-hdfs-mount.md) | Manage mounting of remote stores in HDFS.
 ## azdata bdc hdfs shell
 The HDFS shell is a simple interactive command shell for HDFS file system.
@@ -51,15 +52,14 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc hdfs ls
 List the status of the given file or directory.
 ```bash
 azdata bdc hdfs ls --path -p 
-                   
-```
+ ```
 ### Examples
 List Status
 ```bash
@@ -76,15 +76,14 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc hdfs exists
 Determine if a file or directory exists.  Returns True if exists and False otherwise.
 ```bash
 azdata bdc hdfs exists --path -p 
-                       
-```
+     ```
 ### Examples
 Check for file or directory existance.
 ```bash
@@ -101,15 +100,14 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc hdfs mkdir
 Create a directory at the specified path.
 ```bash
 azdata bdc hdfs mkdir --path -p 
-                      
-```
+    ```
 ### Examples
 Make directory.
 ```bash
@@ -126,7 +124,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc hdfs mv
@@ -153,7 +151,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc hdfs create
@@ -180,7 +178,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc hdfs cat
@@ -210,15 +208,14 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc hdfs rm
 Remove a file or directory.
 ```bash
 azdata bdc hdfs rm --path -p 
-                   
-```
+ ```
 ### Examples
 Remove a file or directory.
 ```bash
@@ -235,15 +232,14 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc hdfs rmr
 Recursively remove a file or directory.
 ```bash
 azdata bdc hdfs rmr --path -p 
-                    
-```
+  ```
 ### Examples
 Recursive remove directory.
 ```bash
@@ -260,7 +256,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc hdfs chmod
@@ -287,7 +283,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc hdfs chown
@@ -317,12 +313,37 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+#### `--verbose`
+Increase logging verbosity. Use --debug for full debug logs.
+## azdata bdc hdfs cp
+Copy a file or directory between the local machine and HDFS.  If the input is a directory then the whole directory tree is copied.  If the target file or directory exists the command will fail.  To specify the remote HDFS directory prefix the path with "hdfs:"
+```bash
+azdata bdc hdfs cp --from-path -f 
+                   --to-path -t
+```
+### Examples
+Copy file or directory between the local machine and HDFS.
+```bash
+azdata bdc hdfs cp --from_path '/tmp/test.txt --to-path 'hdfs:/user/me/test.txt'
+```
+### Required Parameters
+#### `--from-path -f`
+Name of the path to copy from.  Prefix the path with "hdfs:" to indicate an HDFS path.
+#### `--to-path -t`
+Name of the path to copy to.  Prefix the path with "hdfs:" to indicate an HDFS path.
+### Global Arguments
+#### `--debug`
+Increase logging verbosity to show all debug logs.
+#### `--help -h`
+Show this help message and exit.
+#### `--output -o`
+Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+#### `--query -q`
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-- For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
-
-- For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).
+For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

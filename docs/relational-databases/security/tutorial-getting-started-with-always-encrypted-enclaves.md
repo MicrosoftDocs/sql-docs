@@ -34,7 +34,7 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 - CPU support for virtualization technologies:
   - Intel VT-x with Extended Page Tables.
   - AMD-V with Rapid Virtualization Indexing.
-  - If you're running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] in a VM, the hypervisor and physical CPU must offer nested virtualization capabilities. 
+  - If you're running [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] in a VM, the hypervisor and physical CPU must offer nested virtualization capabilities. 
     - On Hyper-V 2016 or later, [enable nested virtualization extensions on the VM processor](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
     - In Azure, select a VM size that supports nested virtualization. This includes all v3 series VMs, for example Dv3 and Ev3. See [Create a nesting capable Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
     - On VMWare vSphere 6.7 or later, enable Virtualization Based Security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).

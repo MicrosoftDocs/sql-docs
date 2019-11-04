@@ -157,4 +157,4 @@ On any page of the analysis report, select the **Print** button on the top right
 
 - For a 19-minute introduction to DEA and demonstration, watch the following video:
 
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player?WT.mc_id=dataexposed-c9-niner]

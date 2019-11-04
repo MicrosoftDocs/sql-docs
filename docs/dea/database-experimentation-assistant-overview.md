@@ -27,7 +27,7 @@ Comparison data can lead to higher confidence and a successful upgrade experienc
 
 For a 19-minute introduction to DEA and a demonstration, watch the following video:
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player?WT.mc_id=dataexposed-c9-niner]
 
 ## Get DEA
 

@@ -21,11 +21,12 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 The general guidelines and processes for [managing Always Encrypted keys](overview-of-key-management-for-always-encrypted.md) apply to managing enclave-enabled keys. 
 
+## Managing keys
+
 The following articles discuss the aspects specific to managing enclave-enabled keys.
 
 - [Provision enclave-enabled keys](always-encrypted-enclaves-provision-keys.md)
 - [Rotate enclave-enabled keys](always-encrypted-enclaves-rotate-keys.md)
-
 
 ## Next Steps
 - [Provision enclave-enabled keys](always-encrypted-enclaves-provision-keys.md)

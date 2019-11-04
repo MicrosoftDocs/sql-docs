@@ -16,7 +16,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Develop applications using Always Encrypted with secure enclaves
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-[Always Encrypted with secure enclaves](always-encrypted-enclaves.md) extends [Always Encrypted](always-encrypted-database-engine.md) to enable richer functionality of application queries on encrypted sensitive database columns. It leverages secure enclave technologies to allow the query executor in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to delegate computations on encrypted columns to a secure enclave inside the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]  process.
+[Always Encrypted with secure enclaves](always-encrypted-enclaves.md) extends [Always Encrypted](always-encrypted-database-engine.md) to enable richer functionality of application queries on encrypted sensitive database columns. It leverages secure enclave technologies to allow the query executor in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to delegate computations on encrypted columns to a secure enclave inside the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] process.
+
+## Client driver for Always Encrypted with secure enclaves
 
 To develop applications using Always Encrypted with secure enclaves, you need a SQL client driver version that supports secure enclaves. The client driver plays the following key role:
 - Before submitting a query that uses a secure enclave to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] for execution, the driver initiates enclave attestation to verify the secure enclave is trustworthy and can be safely used to process sensitive data. For more information about attestation, see [Secure Enclave Attestation](always-encrypted-enclaves.md#secure-enclave-attestation).

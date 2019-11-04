@@ -8190,6 +8190,12 @@
       - name: Always Encrypted with secure enclaves
         href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
         items:
+          - name: Set up your environment to support enclaves and attestation
+            items:
+              - name: Set up VBS enclaves with Host Guardian Service attestation 
+                items:
+                  - name: Plan for Host Guardian Service attestation
+                    href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
           - name: Manage keys for Always Encrypted with secure enclaves
             items:
               - name: Manage enclave-enabled keys
@@ -12919,6 +12925,8 @@
         href: relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md
       - name: sys.dm_audit_class_type_map
         href: relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md
+      - name: sys.dm_column_encryption_enclave
+        href: relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md
       - name: sys.dm_cryptographic_provider_algorithms
         href: relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql.md
       - name: sys.dm_cryptographic_provider_keys

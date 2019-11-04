@@ -98,6 +98,9 @@ DMA replaces all previous versions of SQL Server Upgrade Advisor and should be u
 ## See also
 
 [Assess your SQL Server Migration](../dma/dma-assesssqlonprem.md)
+
 [Data Migration Assistant: Configuration settings](../dma/dma-configurationsettings.md)
+
 [Migrate On-Premises SQL Server using Data Migration Assistant](../dma/dma-migrateonpremsql.md)
+
 [Data Migration Assistant: Best Practices](../dma/dma-bestpractices.md)

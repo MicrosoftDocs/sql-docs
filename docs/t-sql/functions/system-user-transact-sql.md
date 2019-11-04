@@ -41,7 +41,7 @@ SYSTEM_USER
 ```  
   
 ## Return Types  
- **nchar**  
+ **nvarchar(256)**  
   
 ## Remarks  
  You can use the SYSTEM_USER function with DEFAULT constraints in the CREATE TABLE and ALTER TABLE statements. You can also use it as any standard function.  

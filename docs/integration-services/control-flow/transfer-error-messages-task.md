@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Error Messages task [Integration Services]"
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Transfer Error Messages Task
 

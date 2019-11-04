@@ -27,8 +27,6 @@ ms.author: mathoma
   
 3.  To view specific collection set logs, clear the check box next to each collection set whose log you do not want to view. The log information for that collection set is removed from the **Log File Viewer** details pane.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### To view a specific collection set log file  
   
 1.  In Object Explorer, expand the **Management** folder, and then expand **Data Collection**.  

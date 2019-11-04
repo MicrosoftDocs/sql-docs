@@ -73,8 +73,6 @@ See [Structure of Non-XML Format Files](../../relational-databases/import-export
 2.  Ensure the host file field order values are sequential.
 3.  Ensure there is a carriage return after the last format-file row.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 Compare the changes:	 
 **Before**
 ```

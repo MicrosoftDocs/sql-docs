@@ -73,7 +73,7 @@ sp_table_validation [ @table = ] 'table'
  If the Distribution Agent is executing **sp_table_validation**, specifies whether the Distribution Agent should shut down immediately upon completion of the validation. *shutdown_agent* is **bit**, with a default of **0**. If **0**, the replication agent does not shut down. If **1**, error 20578 is raised and the replication agent is signaled to shut down. This parameter is ignored when **sp_table_validation** is executed directly by a user.  
   
 `[ @table_name = ] table_name`
- Is the table name of the view used for output messages. *table_name* is **sysname**, with a default of **@table**.  
+ Is the table name of the view used for output messages. *table_name* is **sysname**, with a default of **\@table**.  
   
 `[ @column_list = ] 'column_list'`
  Is the list of columns that should be used in the checksum function. *column_list* is **nvarchar(4000)**, with a default of NULL. Enables validation of merge articles to specify a column list that excludes computed and timestamp columns.  

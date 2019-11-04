@@ -41,8 +41,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversio
   
 6.  Click **Close**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### To synchronize a push subscription on demand in Management Studio (at the Subscriber)  
   
 1.  Connect to the Subscriber in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], and then expand the server node.  

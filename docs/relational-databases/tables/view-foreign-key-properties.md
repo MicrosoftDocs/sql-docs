@@ -48,8 +48,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 2.  In the **Foreign Key Relationships** dialog box, select the relationship with properties you want to view.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  If the foreign key columns are related to a primary key, the primary key columns are identified in **Table Designer** by a primary key symbol in the row selector.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  

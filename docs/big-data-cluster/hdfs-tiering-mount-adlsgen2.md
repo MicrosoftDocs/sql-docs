@@ -5,7 +5,7 @@ description: This article explains how to configure HDFS tiering to mount an ext
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 08/27/2019
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -62,16 +62,20 @@ Wait for 5-10 minutes before using the credentials for mounting
 
 ### Set environment variable for OAuth credentials
 
-Open a command-prompt on a client machine that can access your big data cluster. Set an environment variable using the following format:
-Note that the credentials need to be in a comma separated list. The 'set' command is used on Windows. If you are using Linux, then use 'export' instead.
+Open a command-prompt on a client machine that can access your big data cluster. Set an environment variable using the following format.The credentials need to be in a comma separated list. The 'set' command is used on Windows. If you are using Linux, then use 'export' instead.
+
+**Note** that you need to remove any line breaks or space between the commas "," when you provide the credentials. The below formatting is just to make it easier to read.
 
    ```text
 	set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
 	fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
 	fs.azure.account.oauth2.client.endpoint=[token endpoint],
 	fs.azure.account.oauth2.client.id=[Application client ID],
-	fs.azure.account.oauth2.client.secret=[client secret]
+	fs.azure.account.oauth2.client.secret=[client secret],
+	fs.abfs.impl.disable.cache=true
    ```
+   
+The default behaviour in the ADLS driver is to cache the credentials. This means that incorrect credentials will also be cached, and can result in issues if your first attempt to mount enters the wrong credentials. The last part (fs.abfs.impl.disable.cache=true) of the credential above disables this caching.
 
 ## Use Access keys to mount
 
@@ -84,12 +88,17 @@ You can also mount using access keys which you can get for your ADLS account on 
 
 1. Open a command-prompt on a client machine that can access your big data cluster.
 
-1. Open a command-prompt on a client machine that can access your big data cluster. Set an environment variable using the following format. Note that the credentials need to be in a comma separated list. The 'set' command is used on Windows. If you are using Linux, then use 'export' instead.
+1. Open a command-prompt on a client machine that can access your big data cluster. Set an environment variable using the following format. The credentials need to be in a comma separated list. The 'set' command is used on Windows. If you are using Linux, then use 'export' instead.
+
+**Note** that you need to remove any line breaks or space between the commas "," when you provide the credentials. The below formatting is just to make it easier to read.
 
    ```text
    set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
+   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>,
+   fs.abfs.impl.disable.cache=true
    ```
+   
+The default behaviour in the ADLS driver is to cache the credentials. This means that incorrect credentials will also be cached, and can result in issues if your first attempt to mount enters the wrong credentials. The last part (fs.abfs.impl.disable.cache=true) of the credential above disables this caching.
 
 ## <a id="mount"></a> Mount the remote HDFS storage
 
@@ -104,7 +113,7 @@ Now that you have set the MOUNT_CREDENTIALS environment variable for access keys
 1. Log in with **azdata** using the external IP address of the controller endpoint with your cluster username and password:
 
    ```bash
-   azdata login -e https://<IP-of-controller-svc-external>:30080/
+   azdata login -e https://<IP-of-controller-svc-external>:30080
    ```
 1. Set environment variable MOUNT_CREDENTIALS (scroll up for instructions)
 

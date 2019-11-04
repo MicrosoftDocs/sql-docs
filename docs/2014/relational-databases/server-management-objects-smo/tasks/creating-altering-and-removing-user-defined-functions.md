@@ -33,7 +33,7 @@ manager: craigg
 ## Creating a Scalar User-Defined Function in Visual C#  
  This code example shows how to create and remove a scalar user-defined function that has an input <xref:System.DateTime> object parameter and an integer return type in [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. The user-defined function is created on the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The example creates the user-defined function. `ISOweek`. This function takes a date argument and calculates the ISO week number. For this function to calculate correctly, the database `DATEFIRST` option must be set to `1` before the function is called.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
            Server srv = new Server();  
@@ -69,41 +69,37 @@ manager: craigg
 ## Creating a Scalar User-Defined Function in PowerShell  
  This code example shows how to create and remove a scalar user-defined function that has an input <xref:System.DateTime> object parameter and an integer return type in [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. The user-defined function is created on the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The example creates the user-defined function. `ISOweek`. This function takes a date argument and calculates the ISO week number. For this function to calculate correctly, the database `DATEFIRST` option must be set to `1` before the function is called.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
-# Define a user defined function object variable by supplying the parent database and name arguments in the constructor.   
-$udf  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunction `  
--argumentlist $db, "IsOWeek"  
+# Define a user defined function object variable by supplying the parent database and name arguments in the constructor.
+$udf  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunction -argumentlist $db, "IsOWeek"  
   
-# Set the TextMode property to false and then set the other properties.   
+# Set the TextMode property to false and then set the other properties.
 $udf.TextMode = $false  
-$udf.DataType = [Microsoft.SqlServer.Management.SMO.DataType]::Int   
+$udf.DataType = [Microsoft.SqlServer.Management.SMO.DataType]::Int
 $udf.ExecutionContext = [Microsoft.SqlServer.Management.SMO.ExecutionContext]::Caller  
 $udf.FunctionType = [Microsoft.SqlServer.Management.SMO.UserDefinedFunctionType]::Scalar  
 $udf.ImplementationType = [Microsoft.SqlServer.Management.SMO.ImplementationType]::TransactSql  
   
 # Define a Parameter object variable by supplying the parent function, name and type arguments in the constructor.  
 $type = [Microsoft.SqlServer.Management.SMO.DataType]::DateTime  
-$par  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunctionParameter `  
--argumentlist $udf, "@DATE",$type  
+$par  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunctionParameter -argumentlist $udf, "@DATE",$type  
   
 # Add the parameter to the function  
 $udf.Parameters.Add($par)  
   
-#Set the TextBody property to define the user-defined function.   
+#Set the TextBody property to define the user-defined function.
 $udf.TextBody = "BEGIN DECLARE @ISOweek int SET @ISOweek= DATEPART(wk,@DATE)+1 -DATEPART(wk,CAST(DATEPART(yy,@DATE) as CHAR(4))+'0104') IF (@ISOweek=0) SET @ISOweek=dbo.ISOweek(CAST(DATEPART(yy,@DATE)-1 AS CHAR(4))+'12'+ CAST(24+DATEPART(DAY,@DATE) AS CHAR(2)))+1 IF ((DATEPART(mm,@DATE)=12) AND ((DATEPART(dd,@DATE)-DATEPART(dw,@DATE))>= 28)) SET @ISOweek=1 RETURN(@ISOweek) END;"  
   
-# Create the user-defined function on the instance of SQL Server.   
+# Create the user-defined function on the instance of SQL Server.
 $udf.Create()  
   
-# Remove the user-defined function.   
+# Remove the user-defined function.
 $udf.Drop()  
 ```  
   
 ## See Also  
  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>  
-  
-  

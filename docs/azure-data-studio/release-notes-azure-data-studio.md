@@ -9,12 +9,70 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
-ms.date: "09/11/2019"
+ms.date: 11/04/2019
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## November 2019
+
+November 4, 2019 &nbsp; / &nbsp; version: 1.13.0 
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| New SQL Server 2019 support | &bull; &nbsp; Deploy SQL Server 2019 big data cluster with BDC Deploy wizard <br/>&bull; &nbsp; Manage cluster health with controller dashboard <br/>&bull; &nbsp; Manage HDFS access control lists using Security ACLs Dialog <br/> &bull; &nbsp; Add mounts using HDFS Tiering Dialog <br/> &bull; &nbsp; Troubleshoot using built-in Jupyter Book, SQL Server 2019 guide <br/> &bull; &nbsp; Renamed to SQL vNext extension Data virtualization extension <br/> &bull; &nbsp; Added Teradata and Mongo support in External Table Wizard|
+| New notebook features | &bull; &nbsp; Announcing Powershell notebooks &bull; &nbsp; Announcing collapsible code cells <br/>&bull; &nbsp; Perf improvements in Notebooks <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22) |
+| Announcing Jupyter Books  | Jupyter Books are a collection of notebooks and markdown files organized in a table of contents. |
+| New SQL Server Deploy wizard  | Now includes support for deploying: <br/> &bull; &nbsp; SQL Server 2019 on Windows <br/> &bull; &nbsp; SQL Server 2017 on Windows <br/> &bull; &nbsp; SQL Server 2019 on Docker <br/> &bull; &nbsp; SQL Server 2017 on Docker |
+| Announcing GA of Schema Compare extension| &bull; &nbsp; SQLCMD mode <br/> &bull; &nbsp; Localization support <br/> &bull; &nbsp; Accessibility fixes <br/> &bull; &nbsp; Security bugs  |
+| Announcing GA of SQL Server Dacpac extension| <br/> &bull; &nbsp; Localization support <br/> &bull; &nbsp; Accessibility fixes <br/> &bull; &nbsp; Security bugs |
+| Announcing Visual Studio IntelliCode extension | Visual Studio IntelliCode now supports SQL, which allows for smarter suggestions of reserved keywords. |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
+
+## October 2019 (hotfix 2)
+
+October 11, 2019 &nbsp; / &nbsp; version: 1.12.2
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Disable automatically starting the EH in inspect mode |  |
+| &nbsp; | &nbsp; |
+
+## October 2019 (hotfix)
+
+October 8, 2019 &nbsp; / &nbsp; version: 1.12.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Fixed issue for quotes and backslashes in Notebooks to escape correctly. |  |
+| &nbsp; | &nbsp; |
+
+## October 2019
+
+October 2, 2019 &nbsp; / &nbsp; version: 1.12.0
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Release of Query History extension | The SQL History extension saves all past queries executed in an Azure Data Studio session and lists them in execution order. Users can see open the query, execute the query, delete the query, pause query history, or delete all query history entries. |
+| New Copy/Paste Results | We have added additional ways to copy/paste results from the results grid. |
+| Update to Powershell extension |  |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/42?closed=1). |
+| &nbsp; | &nbsp; |
+
+### Known Issues
+- Notebooks
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare Case when Notebook is Serialized Incorrectly
 
 ## September 2019
 
@@ -185,7 +243,7 @@ February 13, 2019 &nbsp; / &nbsp; version: 1.4.5
 | Added filtering extended event support in Profiler extension. | &nbsp; |
 | Added Save as XML feature that can save T-SQL results as XML. | &nbsp; |
 | Added Data-Tier Application Wizard improvements. | &bull; &nbsp; Added Generate script button<br/>&bull; &nbsp; Added view to give warnings of possible data loss during deployment. |
-| Updates to the SQL Server 2019 Preview extension. | See [SQL Server 2019 Preview extension](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Updates to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md?view=sql-server-ver15). |
 | Results streaming enabled by default for long running queries. | &nbsp; |
 | Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1). |
 | &nbsp; | &nbsp; |
@@ -213,7 +271,7 @@ January 09, 2019 &nbsp; / &nbsp; version: 1.3.8
 | Added Azure Active Directory Authentication support. | &nbsp; |
 | Announcing Idera SQL DM Performance Insights (Preview). | &nbsp; |
 | Data-Tier Application Wizard support in SQL Server Import extension. | &nbsp; |
-| Update to the SQL Server 2019 Preview extension. | See [SQL Server 2019 Preview extension](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md?view=sql-server-ver15). |
 | SQL Server Profiler improvements. | &nbsp; |
 | Results Streaming for large queries (preview). | &nbsp; |
 | Community extensions: sp_executesql to sql and New Database. | &nbsp; |
@@ -228,7 +286,7 @@ November 6, 2018 &nbsp; / &nbsp; version: 1.2.4
 
 | Change | Details |
 | :----- | :------ |
-| Update to the SQL Server 2019 Preview extension. | See [SQL Server 2019 Preview extension](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md?view=sql-server-ver15). |
 | Introducing Paste the Plan extension. | &nbsp; |
 | Introducing High Color queries extension, including SSMS editor theme. | &nbsp; |
 | Fixes in SQL Server Agent, Profiler, and Import extensions. | &nbsp; |
@@ -258,7 +316,7 @@ October 29, 2018 &nbsp; / &nbsp; version: 1.1.4
 | Introducing the Azure Resource Explorer to browse Azure SQL Databases. | &nbsp; |
 | Improve Object Explorer and Query Editor connectivity robustness. | &nbsp; |
 | SQL Agent extensions improvements. | &nbsp; |
-| Update to the SQL Server 2019 Preview extension. | See [SQL Server 2019 Preview extension](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md?view=sql-server-ver15). |
 | &nbsp; | &nbsp; |
 
 ### Bug Fixes, October 2018

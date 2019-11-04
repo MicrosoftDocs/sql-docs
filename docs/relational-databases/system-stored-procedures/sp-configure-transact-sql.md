@@ -1,7 +1,7 @@
 ---
 title: "sp_configure (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/07/2018"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
@@ -25,7 +25,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlal
   Displays or changes global configuration settings for the current server.
 
 > [!NOTE]  
->  For database-level configuration options, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). To configure Soft-NUMA, see [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+> For database-level configuration options, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). To configure Soft-NUMA, see [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,13 +83,17 @@ RECONFIGURE
 ## Remarks  
  Use **sp_configure** to display or change server-level settings. To change database-level settings, use ALTER DATABASE. To change settings that affect only the current user session, use the SET statement.  
   
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
+
 ## Updating the Running Configuration Value  
  When you specify a new *value* for an *option*, the result set shows this value in the **config_value** column. This value initially differs from the value in the **run_value** column, which shows the currently running configuration value. To update the running configuration value in the **run_value** column, the system administrator must run either RECONFIGURE or RECONFIGURE WITH OVERRIDE.  
   
  Both RECONFIGURE and RECONFIGURE WITH OVERRIDE work with every configuration option. However, the basic RECONFIGURE statement rejects any option value that is outside a reasonable range or that may cause conflicts among options. For example, RECONFIGURE generates an error if the **recovery interval** value is larger than 60 minutes or if the **affinity mask** value overlaps with the **affinity I/O mask** value. RECONFIGURE WITH OVERRIDE, in contrast, accepts any option value with the correct data type and forces reconfiguration with the specified value.  
   
 > [!CAUTION]  
->  An inappropriate option value can adversely affect the configuration of the server instance. Use RECONFIGURE WITH OVERRIDE cautiously.  
+> An inappropriate option value can adversely affect the configuration of the server instance. Use RECONFIGURE WITH OVERRIDE cautiously.  
   
  The RECONFIGURE statement updates some options dynamically; other options require a server stop and restart. For example, the **min server memory** and **max server memory** server memory options are updated dynamically in the [!INCLUDE[ssDE](../../includes/ssde-md.md)]; therefore, you can change them without restarting the server. By contrast, reconfiguring the running value of the **fill factor** option requires restarting the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -115,7 +119,7 @@ RECONFIGURE
 ### A. Listing the advanced configuration options  
  The following example shows how to set and list all configuration options. Advanced configuration options are displayed by first setting `show advanced option` to `1`. After this option has been changed, executing `sp_configure` with no parameters displays all configuration options.  
   
-```  
+```sql  
 USE master;  
 GO  
 EXEC sp_configure 'show advanced option', '1';  
@@ -125,7 +129,7 @@ EXEC sp_configure 'show advanced option', '1';
   
  Run `RECONFIGURE` and show all configuration options:  
   
-```  
+```sql  
 RECONFIGURE;  
 EXEC sp_configure;  
 ```  
@@ -133,7 +137,7 @@ EXEC sp_configure;
 ### B. Changing a configuration option  
  The following example sets the system `recovery interval` to `3` minutes.  
   
-```  
+```sql  
 USE master;  
 GO  
 EXEC sp_configure 'recovery interval', '3';  
@@ -145,7 +149,7 @@ RECONFIGURE WITH OVERRIDE;
 ### C. List all available configuration settings  
  The following example shows how to list all configuration options.  
   
-```  
+```sql  
 EXEC sp_configure;  
 ```  
   
@@ -153,7 +157,7 @@ EXEC sp_configure;
   
 ### D. List the configuration settings for one configuration name  
   
-```  
+```sql  
 EXEC sp_configure @configname='hadoop connectivity';  
 ```  
   

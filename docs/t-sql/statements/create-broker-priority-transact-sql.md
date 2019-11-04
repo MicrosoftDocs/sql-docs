@@ -214,7 +214,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ### D. Creating three priority levels for a target service by using services  
  Supports a system that provides three levels of performance: Gold (high), Silver (medium), and Bronze (low). There is one contract, but each level has a separate initiator service. All initiator services communicate to a central target service.  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -256,7 +256,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ### E. Creating three priority levels for multiple services using contracts  
  Supports a system that provides three levels of performance: Gold (high), Silver (medium), and Bronze (low). Each level has a separate contract. These priorities apply to any services that are referenced by conversations that use the contracts.  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = GoldContract,  

@@ -514,8 +514,6 @@ To test the event session, we purposely prevented to acquired locks from being r
 3. Purposely not issue a COMMIT TRANSACTION, until after we examined the targets.
 4. Later after testing, we issued a COMMIT TRANSACTION.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 The simple **event_counter** target provided the following output rows. Because 52-50=2, the output tells us we should see 2 unpaired lock_acquired events when we examine the output from the pair-matching target.
 
 

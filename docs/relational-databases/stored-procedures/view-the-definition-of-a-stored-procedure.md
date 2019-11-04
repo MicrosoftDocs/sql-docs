@@ -57,8 +57,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 4.  Select **New Query Editor Window**. This will display the procedure definition.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ###  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To view the definition of a procedure in Query Editor**  
   

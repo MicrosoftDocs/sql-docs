@@ -51,8 +51,6 @@ ms.author: jrasnick
   
 7.  To save the changes, click **OK**  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="CreRPTSQL"></a> Create a Workload Group Using Transact-SQL  
  **To create a workload group by using [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   

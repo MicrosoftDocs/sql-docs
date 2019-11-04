@@ -4,7 +4,7 @@ description: Set up a Python local environment (Jupyter Notebook or PyCharm) for
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 06/13/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Set up a data science client for Python development on SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Python integration is available starting in SQL Server 2017 or later when you include the Python option in a [Machine Learning Services (In-Database) installation](../install/sql-machine-learning-services-windows-install.md). 
+Python integration is available in SQL Server 2017 and later, when you include the Python option in a [Machine Learning Services (In-Database) installation](../install/sql-machine-learning-services-windows-install.md). 
 
 To develop and deploy Python solutions for SQL Server, install Microsoft's [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and other Python libraries your development workstation. The revoscalepy library, which is also on the remote SQL Server instance, coordinates computing requests between both systems. 
 
@@ -35,7 +35,7 @@ Whether you are a Python developer new to SQL, or a SQL developer new to Python 
 
 For Python development, you can use Jupyter Notebooks, which comes bundled in the Anaconda distribution installed by SQL Server. This article explains how to start Jupyter Notebooks so that you can run Python code locally and remotely on SQL Server.
 
-SSMS is a separate download, useful for creating and running stored procedures on SQL Server, including those containing Python code. Almost any Python code that you write in Jupyter Notebooks can be embedded in a stored procedure. You can step through other quickstarts to learn about [SSMS and embedded Python](../tutorials/quickstart-python-verify.md).
+SSMS is a separate download, useful for creating and running stored procedures on SQL Server, including those containing Python code. Almost any Python code that you write in Jupyter Notebooks can be embedded in a stored procedure. You can step through other quickstarts to learn about [SSMS and embedded Python](../tutorials/quickstart-python-create-script.md).
 
 ## 1 - Install Python packages
 
@@ -300,4 +300,4 @@ You can now import **revoscalepy**, **microsoftml**, or **azureml** modules. You
 Now that you have tools and a working connection to SQL Server, expand your skills by running through the Python quickstarts using [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 > [!div class="nextstepaction"]
-> [Quickstart: Verify Python exists in SQL Server](../tutorials/quickstart-python-verify.md)
+> [Quickstart: Create and run simple Python scripts with SQL Server Machine Learning Services](../tutorials/quickstart-python-create-script.md)

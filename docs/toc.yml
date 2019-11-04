@@ -1,14 +1,15 @@
-- name: Welcome to SQL Server
-  href: sql-server/sql-server-technical-documentation.md
 
-- name: SQL docs navigation tips
+- name: SQL Server
+  href: sql-server/index.yml
+
+- name: Docs navigation tips
   href: sql-server/sql-docs-navigation-guide.md
-- name: Previous versions 2014-2005
+- name: Previous versions 2005-2014
   href: toc/previous-versions-sql-server.md
 
 - name: Overview
   items:
-  - name: New with SQL Server
+  - name: What's New
     items:
     - name: SQL Server 2019
       href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -16,15 +17,10 @@
       href: sql-server/what-s-new-in-sql-server-2017.md
     - name: SQL Server 2016
       href: sql-server/what-s-new-in-sql-server-2016.md
-  - name: New with the database engine
-    href: database-engine/sql-server-database-engine-overview.md
-    items:
-    - name: SQL Server 2017
-      href: database-engine/whats-new-in-sql-server-2017.md
-    - name: SQL Server 2016
-      href: database-engine/whats-new-in-sql-server-2016.md
   - name: Editions & Features
     items:
+    - name: SQL Server 2019
+      href: sql-server/editions-and-components-of-sql-server-version-15.md
     - name: SQL Server 2017
       href: sql-server/editions-and-components-of-sql-server-2017.md
     - name: SQL Server 2016
@@ -32,7 +28,7 @@
   - name: Release Notes
     items:
     - name: SQL Server 2019
-      href: sql-server/sql-server-ver15-release-notes.md
+      href: sql-server/sql-server-version-15-release-notes.md
     - name: SQL Server 2017
       href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: SQL Server 2016
@@ -45,11 +41,11 @@
       href: sql-server/sql-server-2012-release-notes.md
     - name: SQL Server 2008 R2 SP2
       href: sql-server/sql-server-2008-r2-sp2-release-notes.md
-- name: Big data cluster
+- name: Big Data Clusters
   items:
   - name: Overview
     items:
-    - name: What are SQL Server big data clusters?
+    - name: What are SQL Server Big Data Clusters?
       href: big-data-cluster/big-data-cluster-overview.md
     - name: Release notes
       href: big-data-cluster/release-notes-big-data-cluster.md
@@ -57,7 +53,7 @@
     items:
     - name: Get Started
       items:
-      - name: Deploy a big data cluster
+      - name: Deploy
         href: big-data-cluster/deploy-get-started.md
       - name: Load sample data
         href: big-data-cluster/tutorial-load-sample-data.md
@@ -67,6 +63,8 @@
         href: big-data-cluster/deploy-big-data-tools.md
       - name: Install azdata
         items:
+        - name: With Windows Installer
+          href: big-data-cluster/deploy-install-azdata-installer.md
         - name: With Linux package manager
           href: big-data-cluster/deploy-install-azdata-linux-package.md
         - name: With pip
@@ -83,16 +81,20 @@
         href: big-data-cluster/concept-data-persistence.md
       - name: Offline deployments
         href: big-data-cluster/deploy-offline.md
+      - name: Active Directory mode
+        href: big-data-cluster/deploy-active-directory.md
       - name: Deploy with high availability
-        href: big-data-cluster/deployment-high-availability.md
+        items:
+        - name: Master instance
+          href: big-data-cluster/deployment-high-availability.md
+        - name: HDFS node name and Spark
+          href: big-data-cluster/deployment-high-availability-hdfs-spark.md
       - name: Kubernetes clusters
         items:
         - name: Azure Kubernetes Service
           href: big-data-cluster/deploy-on-aks.md
         - name: Kubeadm
           href: big-data-cluster/deploy-with-kubeadm.md
-        - name: Minikube
-          href: big-data-cluster/deploy-on-minikube.md
       - name: Deployment scripts
         items:
         - name: AKS python script
@@ -119,6 +121,10 @@
       href: big-data-cluster/concept-security.md
   - name: How-to guides
     items:
+    - name: Configuration
+      items:
+      - name: SQL Server master instance
+        href: big-data-cluster/configure-sql-server-master-instance.md
     - name: Data virtualization
       items:
       - name: Relational data
@@ -139,6 +145,8 @@
           href: big-data-cluster/hdfs-tiering-mount-adlsgen2.md
         - name: Mount S3 for HDFS tiering
           href: big-data-cluster/hdfs-tiering-mount-s3.md
+        - name: Manage HDFS permissions
+          href: big-data-cluster/hdfs-tiering-manage-permissions.md
     - name: Data ingestion
       items:
       - name: Load data with curl
@@ -159,6 +167,8 @@
         href: big-data-cluster/big-data-cluster-consume-apps.md
     - name: Big Data/Machine Learning
       items:
+      - name: Use Machine Learning Services (Python, R)
+        href: big-data-cluster/machine-learning-services.md
       - name: Data wrangling using PROSE Code Accelerator
         href: big-data-cluster/use-prose-for-big-data-automation.md
       - name: Spark machine learning models with MLeap
@@ -167,9 +177,9 @@
         href: big-data-cluster/sparklyr-from-RStudio.md
       - name: Integrate Spark with SQL Server
         href: big-data-cluster/spark-mssql-connector.md
-    - name: Manage SQL Server big data cluster
+    - name: Manage
       items:
-      - name: Connect to a big data cluster
+      - name: Connect
         href: big-data-cluster/connect-to-big-data-cluster.md
       - name: View cluster status
         href: big-data-cluster/view-cluster-status.md
@@ -209,8 +219,6 @@
         items:
         - name: azdata
           href: big-data-cluster/reference-azdata.md
-        - name: control
-          href: big-data-cluster/reference-azdata-control.md
         - name: notebook
           href: big-data-cluster/reference-azdata-notebook.md
         - name: sql
@@ -249,10 +257,6 @@
           href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
         - name: bdc hdfs status
           href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
-        - name: bdc pool
-          href: big-data-cluster/reference-azdata-bdc-pool.md
-        - name: bdc pool status
-          href: big-data-cluster/reference-azdata-bdc-pool-status.md               
         - name: bdc spark
           href: big-data-cluster/reference-azdata-bdc-spark.md        
         - name: bdc spark batch
@@ -4162,8 +4166,8 @@
       href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
     - name: Deprecated in SQL Server 2016
       href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-    - name: Discontinued functionality in SQL Server 2016
-      href: database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md
+    - name: Discontinued functionality in SQL Server
+      href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
     - name: Breaking changes in SQL Server 2017
       href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
     - name: Breaking changes in SQL Server 2016
@@ -4172,7 +4176,11 @@
     href: sql-server/install/planning-a-sql-server-installation.md
     items:
     - name: Hardware & Software Requirements
-      href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
+      items:
+      - name: SQL Server 2019
+        href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
+      - name: SQL Server 2017 & prior
+        href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
     - name: Security Considerations
       href: sql-server/install/security-considerations-for-a-sql-server-installation.md
     - name: Network Protocols & Network Libraries
@@ -4185,8 +4193,12 @@
       href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
     - name: Usage and diagnostic data collection
       items:
-      - name: Privacy supplement
-        href: sql-server/sql-server-privacy.md
+      - name: SQL Server Privacy supplement
+        items:
+        - name: SQL Server 2017 and prior
+          href: sql-server/sql-server-privacy.md
+        - name: SQL Server 2019
+          href: sql-server/sql-server-privacy-ver15.md
       - name: Configure SQL Server usage and diagnostic data
         href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
       - name: Configure tools usage and diagnostic data
@@ -4247,6 +4259,8 @@
     items:
     - name: Compatibility Certification
       href: database-engine/install-windows/compatibility-certification.md
+    - name: Supported Version & Edition Upgrades SQL Server 2019
+      href: database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md
     - name: Supported Version & Edition Upgrades SQL Server 2017
       href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Supported Version & Edition Upgrades SQL Server 2016
@@ -4286,6 +4300,8 @@
         href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
       - name: Change the Database Compatibility Mode with Query Tuning Assistant
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
+      - name: Latest updates for SQL Server
+        href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
   - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:
@@ -5064,10 +5080,6 @@
           href: relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
         - name: Define a logical record relationship
           href: relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
-        - name: Configure web synchronization
-          href: relational-databases/replication/configure-web-synchronization.md
-        - name: Configure IIS for Web Synchronization
-          href: relational-databases/replication/configure-iis-for-web-synchronization.md
         - name: Configure IIS 7 for Web Synchronization
           href: relational-databases/replication/configure-iis-7-for-web-synchronization.md
         - name: Resolve data conflicts
@@ -6497,6 +6509,12 @@
   items:
   - name: Manage
     items:
+    - name: Accelerated Database Recovery
+      items:
+      - name: Overview
+        href: relational-databases/accelerated-database-recovery-concepts.md
+      - name: Management
+        href: relational-databases/accelerated-database-recovery-management.md
     - name: Central Management Servers
       href: relational-databases/administer-multiple-servers-using-central-management-servers.md
     - name: Configuration Manager
@@ -8344,25 +8362,27 @@
     - name: Extensions
       href: azure-data-studio/extensions.md
       items:
-      - name: PostgreSQL extension (preview)
+      - name: PostgreSQL extension
         href: azure-data-studio/postgres-extension.md
-      - name: SQL Server 2019 (preview)
-        href: azure-data-studio/sql-server-2019-extension.md
-      - name: SQL Server Agent (preview)
+      - name: Data Virtualization extension
+        href: azure-data-studio/data-virtualization-extension.md
+      - name: SQL Server Agent
         href: azure-data-studio/sql-server-agent-extension.md
-      - name: SQL Server Central Management Servers extension (preview)
+      - name: SQL Server Central Management Servers extension
         href: azure-data-studio/sql-server-cms-extension.md        
-      - name: SQL Server dacpac extension (preview)
+      - name: SQL Server dacpac extension
         href: azure-data-studio/sql-server-dacpac-extension.md
-      - name: SQL Server Import (preview)
+      - name: SQL Server Import
         href: azure-data-studio/sql-server-import-extension.md
-      - name: SQL Server Profiler (preview)
+      - name: SQL Server Profiler
         href: azure-data-studio/sql-server-profiler-extension.md
-      - name: Schema Compare extension (preview)
+      - name: Schema Compare extension
         href: azure-data-studio/schema-compare-extension.md        
       - name: PowerShell extension
         href: azure-data-studio/powershell-extension.md        
-      - name: SandDance extension (preview)
+      - name: Managed Instance extension
+        href: azure-data-studio/azure-sql-managed-instance-extension.md        
+      - name: SandDance extension
         href: azure-data-studio/sanddance-extension.md
     - name: Extension Authoring
       items:
@@ -10249,6 +10269,10 @@
       href: relational-databases/sqltoolsvsnativehelpers.md
     - name: FrameWindowVisible
       href: relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
+  - name: Extended Features
+    items: 
+      - name: Extended features and tools
+        href: tools/download-sql-feature-packs.md
 - name: Tutorials
   items:
   - name: SQL Server
@@ -10283,16 +10307,24 @@
   items:
   - name: Overview
     items:
+    - name: What's new?
+      items:    
+      - name: SQL Server 2019
+        href: linux/sql-server-linux-whats-new-2019.md
+      - name: SQL Server 2017
+        href: linux/sql-server-linux-whats-new.md
     - name: Release notes
       items:
+      - name: SQL Server 2019
+        href: linux/sql-server-linux-release-notes-2019.md
       - name: SQL Server 2017
         href: linux/sql-server-linux-release-notes.md
-      - name: SQL Server 2019 preview
-        href: linux/sql-server-linux-release-notes-2019.md
-    - name: What's new?
-      href: linux/sql-server-linux-whats-new.md
-    - name: Editions & supported features
-      href: linux/sql-server-linux-editions-and-components-2017.md
+    - name: Editions & Features
+      items:
+      - name: SQL Server 2019
+        href: linux/sql-server-linux-editions-and-components-2019.md
+      - name: SQL Server 2017
+        href: linux/sql-server-linux-editions-and-components-2017.md
     - name: FAQ
       href: linux/sql-server-linux-faq.md
   - name: Quickstarts
@@ -10338,8 +10370,6 @@
       href: linux/tutorial-sql-server-containers-kubernetes.md
     - name: Configure replication
       href: linux/sql-server-linux-replication-tutorial-tsql.md
-    - name: Machine learning in a container
-      href: linux/sql-server-linux-machine-learning-services-container.md
   - name: Concepts
     items:
     - name: Install
@@ -10366,18 +10396,18 @@
         href: linux/sql-server-linux-configure-mssql-conf.md
       - name: Environment variables
         href: linux/sql-server-linux-configure-environment-variables.md
-      - name: Configure Docker containers
-        href: linux/sql-server-linux-configure-docker.md
-      - name: MSDTC
-        items:
-        - name: Configure MSDTC
-          href: linux/sql-server-linux-configure-msdtc.md
-        - name: Configure Docker for MSDTC
-          href: linux/sql-server-linux-configure-msdtc-docker.md
+      - name: Configure MSDTC
+        href: linux/sql-server-linux-configure-msdtc.md
       - name: Configure persistent memory PMEM
         href: linux/sql-server-linux-configure-pmem.md
       - name: Configure to send usage and diagnostic data to Microsoft
         href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
+    - name: Containers
+      items:
+      - name: Configure Docker containers
+        href: linux/sql-server-linux-configure-docker.md
+      - name: Configure Docker for MSDTC
+        href: linux/sql-server-linux-configure-msdtc-docker.md
     - name: Develop
       href: linux/sql-server-linux-develop-overview.md
       items:
@@ -12465,6 +12495,12 @@
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md
       - name: sys.dm_tcp_listener_states
         href: relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md
+    - name: Big Data Clusters
+      items:
+      - name: sys.dm_cluster_endpoints
+        href: relational-databases/system-dynamic-management-views/sys-dm-cluster-endpoints.md
+      - name: sys.dm_exec_compute_pools
+        href: relational-databases/system-dynamic-management-views/sys-dm-exec-compute-pools.md
     - name: Change Data Capture
       items:
       - name: sys.dm_cdc_errors
@@ -12882,6 +12918,16 @@
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md
       - name: sys.dm_pdw_exec_sessions
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_query_plan
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md 
+      - name: sys.dm_pdw_nodes_exec_query_profiles
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-profiles-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_query_statistics_xml
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-statistics-xml-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_sql_text
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-sql-text-transact-sql.md
+      - name: sys.dm_pdw_nodes_exec_text_query_plan
+        href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-text-query-plan-transact-sql.md
       - name: sys.dm_pdw_hadoop_operations
         href: relational-databases/system-dynamic-management-views/sys-dm-pdw-hadoop-operations-transact-sql.md
       - name: sys.dm_pdw_lock_waits
@@ -12931,6 +12977,8 @@
         href: relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md
       - name: sys.dm_os_dispatcher_pools
         href: relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql.md
+      - name: sys.dm_os_enumerate_fixed_drives
+        href: relational-databases/system-dynamic-management-views/sys-dm-os-enumerate-fixed-drives.md
       - name: sys.dm_os_host_info
         href: relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md
       - name: sys.dm_os_hosts

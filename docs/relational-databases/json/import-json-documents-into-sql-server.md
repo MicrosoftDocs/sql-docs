@@ -1,7 +1,7 @@
 ---
 title: "Import JSON documents into SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/19/2019
+ms.date: 10/28/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -46,23 +46,6 @@ SELECT BulkColumn
 
 After loading the contents of the JSON file, you can save the JSON text in a table.
 
-## Import multiple JSON documents
-
-You can use the same approach to load a set of JSON files from the file system into a local variable one at a time. Assume that the files are named `book<index>.json`.
-  
-```sql
-DECLARE @i INT = 1
-DECLARE @json AS NVARCHAR(MAX)
-
-WHILE(@i < 10)
-BEGIN
-    SET @file = 'C:\JSON\Books\book' + cast(@i AS VARCHAR(5)) + '.json';
-    SELECT @json = BulkColumn FROM OPENROWSET (BULK (@file), SINGLE_CLOB) AS j
-    SELECT * FROM OPENJSON(@json) AS json
-    -- Optionally, save the JSON text in a table.
-    SET @i = @i + 1 ;
-END
-```
 
 ## Import JSON documents from Azure File Storage
 

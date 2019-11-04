@@ -23,7 +23,10 @@ In this quickstart, you install SQL Server 2017 or SQL Server 2019 on SUSE Linux
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In this quickstart, you install SQL Server 2019 on SUSE Linux Enterprise Server (SLES) v12 SP2. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2019 on SUSE Linux Enterprise Server (SLES) v12. You then connect with **sqlcmd** to create your first database and run queries.
+
+> [!IMPORTANT]
+> SQL Server 2019 is supported on SUSE Enterprise Linux Server v12 SP2, SP3, or SP4.
 
 ::: moniker-end
 
@@ -32,7 +35,17 @@ In this quickstart, you install SQL Server 2019 on SUSE Linux Enterprise Server 
 
 ## Prerequisites
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 You must have a SLES v12 SP2 machine with **at least 2 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
+
+::: moniker-end
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || 
+You must have a SLES v12 SP2, SP3, or SP4 machine with **at least 2 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
+
+::: moniker-end
 
 To install SUSE Linux Enterprise Server on your own machine, go to [https://www.suse.com/products/server](https://www.suse.com/products/server). You can also create SLES virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image SLES` in the call to `az vm create`.
 

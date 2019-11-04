@@ -99,7 +99,7 @@ Download previous SSMS versions by clicking the title links in the following sec
 
 ## ![download](../ssdt/media/download.png) [SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
 
-Download: [Download SSMS 18.3.1](download-sql-server-management-studio-ssms.md)  
+Release number: 18.3.1  
 Build number: 15.0.18183.0  
 Release date: October 02, 2019
 

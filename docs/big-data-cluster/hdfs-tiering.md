@@ -21,6 +21,11 @@ HDFS Tiering provides the ability to mount external, HDFS-compatible file system
 
 With tiering, applications can seamlessly access data in a variety of external stores as though the data resides in the local HDFS. Mounting is a metadata operation, where the metadata that describes the namespace on the external file system is copied over to your local HDFS. This metadata includes information about the external directories and files along with their permissions and ACLs. The corresponding data is only copied on-demand, when the data itself is accessed through for example a query. The external file-system data can now be accessed from the SQL Server big data cluster. You can run Spark jobs and SQL queries on this data in the same way that you would run them on any local data stored in HDFS on the cluster.
 
+This 7-minute video provides an overview of HDFS tiering:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Unify-your-data-lakes-with-HDFS-tiering/player?WT.mc_id=dataexposed-c9-niner]
+
+
 ### Caching
 Today, by default, 1% of the total HDFS storage will be reserved for caching of mounted data. Caching is a global setting across mounts.
 

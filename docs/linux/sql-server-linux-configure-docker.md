@@ -31,6 +31,11 @@ This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can
 > [!IMPORTANT]
 > Before choosing to run a SQL Server container for production use cases, please review our [support policy for SQL Server Containers](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server) to ensure that you are running on a supported configuration.
 
+This 6-minute video provides an introduction into running SQL Server on containers:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2019-in-Containers/player?WT.mc_id=dataexposed-c9-niner]
+
+
 ## Pull and run the container image
 
 To pull and run the Docker container images for SQL Server 2017 and SQL Server 2019, follow the prerequisites and steps in the following quickstart:

@@ -1,7 +1,7 @@
 ---
 title: "Editions and supported features of SQL Server 2019 | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2019"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -41,9 +41,6 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 This topic provides details of features supported by the various editions of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)].
 
-> [!NOTE]
-> This content is being updated for SQL Server 2019. The information in the article is not final.
-
 For information about older versions, see:
 
 * [SQL Server 2017](editions-and-components-of-sql-server-2017.md)
@@ -61,7 +58,7 @@ For the latest release notes and what's new information, see the following:
 
 ### Try [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]!
 
->**[Download [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] from the Evaluation Center](http://www.microsoft.com//evalcenter/evaluate-sql-server)**
+>**[Download [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] from the Evaluation Center](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
 
 ## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] editions
 The following table describes the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].

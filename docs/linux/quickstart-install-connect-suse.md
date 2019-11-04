@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description:  This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on SUSE Linux Enterprise Server and then create and query a database with sqlcmd.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 07/16/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -17,13 +17,13 @@ ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In this quickstart, you install SQL Server 2017 or SQL Server 2019 preview on SUSE Linux Enterprise Server (SLES) v12 SP2. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2017 or SQL Server 2019 on SUSE Linux Enterprise Server (SLES) v12 SP2. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In this quickstart, you install SQL Server 2019 preview on SUSE Linux Enterprise Server (SLES) v12 SP2. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2019 on SUSE Linux Enterprise Server (SLES) v12 SP2. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 
@@ -36,7 +36,7 @@ You must have a SLES v12 SP2 machine with **at least 2 GB** of memory. The file 
 
 To install SUSE Linux Enterprise Server on your own machine, go to [https://www.suse.com/products/server](https://www.suse.com/products/server). You can also create SLES virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image SLES` in the call to `az vm create`.
 
-If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server 2017 and 2019](sql-server-linux-change-repo.md).
+If you have previously installed a CTP or RC release of SQL Server, you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server 2017 and 2019](sql-server-linux-change-repo.md).
 
 > [!NOTE]
 > At this time, the [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) for Windows 10 is not supported as an installation target.
@@ -57,10 +57,10 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    ```
 
    > [!TIP]
-   > If you want to try SQL Server 2019 , you must instead register the **Preview (2019)** repository. Use the following command for SQL Server 2019 installations:
+   > If you want to install SQL Server 2019 , you must instead register the SQL Server 2019 repository. Use the following command for SQL Server 2019 installations:
    >
    > ```bash
-   > sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo
+   > sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
    > ```
 
 2. Refresh your repositories.
@@ -109,10 +109,10 @@ At this point, SQL Server is running on your SLES machine and is ready to use!
 
 To configure SQL Server on SLES, run the following commands in a terminal to install the **mssql-server** package:
 
-1. Download the Microsoft SQL Server 2019 preview SLES repository configuration file:
+1. Download the Microsoft SQL Server 2019 SLES repository configuration file:
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
    ```
 
 2. Refresh your repositories.
@@ -148,7 +148,7 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-At this point, SQL Server 2019 preview is running on your SLES machine and is ready to use!
+At this point, SQL Server 2019 is running on your SLES machine and is ready to use!
 
 ::: moniker-end
 

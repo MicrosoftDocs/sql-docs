@@ -28,7 +28,7 @@ ms.author: maggies
   
 -   Stored credentials that are used by a report server to connect to external data sources that provide data to a report.  
   
-     These values are defined when you configure data source information for a report, and then stored as encrypted values in a report server database. The report server uses a symmetric key to encrypt and decrypt this data. For more information about stored credentials, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+     These values are defined when you configure data source information for a report, and then stored as encrypted values in a report server database. The report server uses a symmetric key to encrypt and decrypt this data. For more information about stored credentials, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 -   An unattended user account used by the report server to connect to other computers to retrieve external images files or external data that is used in a report.  
   

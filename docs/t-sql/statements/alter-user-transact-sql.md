@@ -1,7 +1,7 @@
 ---
 title: "ALTER USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/22/2019"
+ms.date: "11/04/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -519,6 +519,9 @@ The name of a user mapped to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 ### Remarks for Windows users in SQL on-premises migrated to managed instance
 
 These remarks apply to authenticating as Windows users that have been federated and synchronized with Azure AD.
+
+> [!NOTE]
+> The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 - Validation of Windows users or groups that are mapped to Azure AD is done by default through Graph API in all versions of the ALTER USER syntax used for migration purpose.
 - On-premises users that were aliased (use a different name from the original Windows account) will keep the aliased name.

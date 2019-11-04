@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
-ms.date: 08/08/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: language-extensions
@@ -10,7 +10,7 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # CREATE EXTERNAL LANGUAGE (Transact-SQL)
@@ -106,7 +106,7 @@ This parameter is needed for hybrid OS scenarios. In a hybrid architecture, the 
 
 ## Remarks
 
-In CTP 3.0, **PARAMETERS** and **ENVIRONMENT_VARIABLES** are not supported.
+Currently, **PARAMETERS** and **ENVIRONMENT_VARIABLES** are not supported.
 
 ## Permissions
 
@@ -116,7 +116,7 @@ To modify a library requires the separate permission, `ALTER ANY EXTERNAL LANGUA
 
 ### EXECUTE EXTERNAL SCRIPT permission
 
-In SQL Server 2019, we are introducing EXECUTE EXTERNAL SCRIPT permissions, so that external script execution can be granted on specific languages. Previously, we only had EXECUTE ANY EXTERNAL SCRIPT database permission, which did not allow granting execution permission on a specific language.
+You can use EXECUTE EXTERNAL SCRIPT permissions, so that external script execution can be granted on specific languages. This is different from EXECUTE ANY EXTERNAL SCRIPT database permission, which do not allow granting execution permission on a specific language.
 
 This means that non-**dbo** users need to be granted permission to execute a specific language:
 

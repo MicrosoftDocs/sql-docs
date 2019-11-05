@@ -1,6 +1,7 @@
 ---
-title: What's new
-description: New feature announcements for each release of SQL Server 2016 R Services, R Server, SQL Server Machine Learning Services.
+title: What's new in SQL Server Machine Learning Services?
+titleSuffix: 
+description: New feature announcements for each release of SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
@@ -22,7 +23,7 @@ Machine learning capabilities are added to SQL Server in each release as we cont
 This release adds the top-requested features for Python and R machine learning operations in SQL Server. For more information about all of the features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
 
 > [!NOTE]
-> For the what's new documentation on Java in SQL Server 2019, see the [What new in SQL Server Language Extensions?](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
+> For the what's new documentation on Java in SQL Server 2019, see the [What's new in SQL Server Language Extensions?](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
 
 Below are the new features for SQL Server Machine Learning Services:
 

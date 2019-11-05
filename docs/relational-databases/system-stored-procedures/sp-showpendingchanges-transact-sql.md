@@ -37,16 +37,16 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## Arguments  
- [ @destination_server**=** ] **'***destination_server***'**  
+`[ @destination_server = ] 'destination_server'`
  Is the name of the server where the replicated changes are applied. *destination_server* is **sysname**, with default value of NULL.  
   
- [ @publication**=** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default value of NULL. When *publication* is specified, results are limited only to the specified publication.  
   
- [ @article **=** ] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article. *article* is **sysname**, with a default value of NULL. When *article* is specified, results are limited only to the specified article.  
   
- [ @show_rows **=** ] *show_rows*  
+`[ @show_rows = ] 'show_rows'`
  Specifies whether the result set contains more specific information about pending changes, with a default value of **0**. If a value of **1** is specified, the result set contains the columns is_delete and rowguid.  
   
 ## Result Set  

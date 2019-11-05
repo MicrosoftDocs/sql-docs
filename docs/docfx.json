@@ -127,7 +127,7 @@
         "2014/database-engine/availability-groups/**/*.md": "SQL Server 2014 Always On",
         "2014/database-engine/**/*.md": "SQL Server 2014",
         "2014/integration-services/**/*.md": "SQL Server 2014 Integration Services",
-        "2014/relational-database/replication/**/*.md": "SQL Server Replication",
+        "2014/relational-database/replication/**/*.md": "2014 SQL Server Replication",
         "2014/reporting-services/**/*.md": "SQL Server 2014 Reporting Services",
         "2014/sql-server/failover-clusters/**/*.md": "SQL Server 2014 Always On",
     

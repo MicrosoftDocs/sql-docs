@@ -1,7 +1,7 @@
 ---
-title: Create analysis reports in Database Experimentation Assistant for SQL Server upgrades
+title: Create analysis reports in Database Experimentation Assistant
 description: Create Analysis Reports in Database Experimentation Assistant
-ms.custom: ""
+ms.custom: "seo-lt-2019"​
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -14,7 +14,7 @@ ms.author: ajaykar
 ms.reviewer: mathoma
 ---
 
-# Create analysis reports in Database Experimentation Assistant
+# Create analysis reports in Database Experimentation Assistant (SQL Server)
 
 After you replay the source trace on both of your target servers, you can generate an analysis report in Database Experimentation Assistant (DEA). Analysis reports help you gain insights about the performance implications of proposed changes.
 

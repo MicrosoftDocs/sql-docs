@@ -58,7 +58,7 @@ SQLRETURN InitSession(
 - **InputSchemaColumnsNumber:** Number of columns in the input schema.
 - **ParametersNumber:** Number of input parameters.
 - **InputDataName & OutputDataName:** Pointer to a null-terminated buffer that contains the name of the input/output datasets. These parameters are N/A for pre-compiled languages.
-- **InputDataNameLength & OutputDataNameLength:** Length of *InputDataName and *OutputDataName in bytes, respectively ([excluding the null-termination character](https://docs.microsoft.com/en-us/sql/odbc/reference/syntax/sqldescribecol-function)). These parameters are N/A for pre-compiled languages.
+- **InputDataNameLength & OutputDataNameLength:** Length of *InputDataName and *OutputDataName in bytes, respectively ([excluding the null-termination character](https://docs.microsoft.com/sql/odbc/reference/syntax/sqldescribecol-function)). These parameters are N/A for pre-compiled languages.
 
 ### InitColumn
 

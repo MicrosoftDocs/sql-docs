@@ -1,7 +1,7 @@
 ---
 title: Microsoft Extensibility SDK for Java for SQL Server
-titleSuffix: SQL Server Language Extensions
-description: How to implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java.
+titleSuffix: 
+description: Learn how you can implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java. The SDK is an interface for the Java language extension that is used to exchange data with SQL Server and to execute Java code from SQL Server.
 ms.prod: sql
 ms.technology: language-extensions
 ms.date: 11/05/2019
@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 # Microsoft Extensibility SDK for Java for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes how you can implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java. The SDK is an interface for the Java language extension that is used to exchange data with SQL Server and to execute Java code from SQL Server.
+Learn how you can implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java. The SDK is an interface for the Java language extension that is used to exchange data with SQL Server and to execute Java code from SQL Server.
 
 The SDK is installed as part of SQL Server 2019 Release Candidate 1 on both Windows as Linux:
 

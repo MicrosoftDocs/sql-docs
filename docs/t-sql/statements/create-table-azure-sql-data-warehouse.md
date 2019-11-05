@@ -163,9 +163,13 @@ Creates one or more table partitions. These partitions are horizontal table slic
 
 ### Ordered Clustered columnstore index option (Preview for Azure SQL Data Warehouse)
 
-Clustered columnstore index (CCI) is the default for creating tables in Azure SQL Data Warehouse.  Data in CCI is not sorted before being compressed into columnstore segments.  When creating a CCI with ORDER, data is sorted before being added to index segments and query performance can be improved. Check [Performance tuning with ordered clustered columnstore index](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci) for details.  
+Clustered columnstore index (CCI) is the default for creating tables in Azure SQL Data Warehouse.  Data in CCI is not sorted before being compressed into columnstore segments.  When creating a CCI with ORDER, data is sorted before being added to index segments and query performance can be improved.  
 
-Users can query column_store_order_ordinal column in sys.index_columns for the column(s) a table is ordered on and the sequence in the ordering.  
+An ordered CCI can be created on columns of any data types supported in Azure SQL Data Warehouse except for string columns.  
+
+Users can query **column_store_order_ordinal** column in **sys.index_columns** for the column(s) a table is ordered on and the sequence in the ordering.  
+
+Check [Performance tuning with ordered clustered columnstore index](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci) for details.   
 
 ### <a name="DataTypes"></a> Data type
 

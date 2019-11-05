@@ -1,7 +1,7 @@
 ---
 title: "sys.workload_management_workload_classifier_details (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/01/2019"
+ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: system-objects
 ms.prod_service: "sql-data-warehouse"

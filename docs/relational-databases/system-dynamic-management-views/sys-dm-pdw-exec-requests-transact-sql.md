@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/29/2019"
+ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""

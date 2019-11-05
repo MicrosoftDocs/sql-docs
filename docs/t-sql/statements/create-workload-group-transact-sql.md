@@ -1,7 +1,7 @@
 ---
 title: "CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/03/2019"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""

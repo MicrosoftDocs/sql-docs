@@ -4,12 +4,12 @@ hide_bc: true
 experimental: true
 experiment_id: "81ba5f65-59fb-4d"
 title: SQL Server Education Center
-description: A summary of resources you can use to learn SQL Server abd Azure SQL Database.  From quickstars and tutorials, to Microsoft Learn and LinkedIn Learning.
+description: A summary of resources you can use to learn SQL Server and Azure SQL Database. From quickstarts and tutorials, to Microsoft Learn and LinkedIn Learning.
 ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 featureFlags:
 - clicktale
 ---

@@ -124,21 +124,22 @@
 
       "titleSuffix": {
         "2014/analysis-services/**/*.md": "SQL Server 2014 Analysis Services",
-        "2014/database-engine/availability-groups/**/*.md": "SQL Server Always On",
+        "2014/database-engine/availability-groups/**/*.md": "Always On availability group",
         "2014/integration-services/**/*.md": "SQL Server 2014 Integration Services",
         "2014/relational-database/replication/**/*.md": "SQL Server Replication",
         "2014/reporting-services/**/*.md": "SQL Server 2014 Reporting Services",
-        "2014/sql-server/failover-clusters/**/*.md": "SQL Server Always On",
+        "2014/sql-server/failover-clusters/**/*.md": "Always On failover cluster instance",
     
         "advanced-analytics/**/*.md": "SQL Server Machine Learning Services",
         "analysis-services/**/*.md": "",
         "azure-data-studio/**/*.md": "Azure Data Studio",
-        "database-engine/availability-groups/**/*.md": "SQL Server Always On",
+        "database-engine/availability-groups/**/*.md": "Always On availability group",
         "integration-services/**/*.md": "SQL Server Integration Services (SSIS)",
         "language-extensions/**/*.md": "SQL Server Language Extensions",
         "relational-database/replication/**/*.md": "SQL Server Replication",
         "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
-        "sql-server/failover-clusters/**/*.md": "SQL Server Always On"
+        "sql-server/failover-clusters/**/*.md": "Always On failover cluster instance",
+        "sql-server/relational-databases/replication/**/*.md": "SQL Server Replication"
       },
 
       "breadcrumb_path": {

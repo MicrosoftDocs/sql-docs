@@ -1,7 +1,7 @@
 ---
 title: Install SQL Server Language Extensions on Linux
 titleSuffix:
-description: Learn how to install SQL Server Language Extensions (Java) on Red Hat, Ubuntu, and SUSE.
+description: Learn how to install SQL Server Language Extensions on Red Hat, Ubuntu, and SUSE. 
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
@@ -12,11 +12,11 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server 2019 Language Extensions (Java) on Linux
+# Install SQL Server Language Extensions on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Language Extensions are an add-on to the database engine. Although you can [install the database engine and Language Extensions concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
+Language Extensions is an add-on to the database engine. Although you can [install the database engine and Language Extensions concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
 
 Follow the steps in this article to install the Java language extension.
 

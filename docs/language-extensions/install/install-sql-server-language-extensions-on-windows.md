@@ -1,7 +1,7 @@
 ---
 title: Install SQL Server Language Extensions on Windows
 titleSuffix:
-description: Language Extensions installation steps for SQL Server pn Windows.
+description: Learn how to install SQL Server Language Extensions on Windows. 
 author: dphansen
 ms.author: davidph 
 ms.date: 11/05/2019

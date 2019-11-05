@@ -1,6 +1,6 @@
 ---
-title: "Import and export data from SQL Server and Azure SQL Database | Microsoft Docs"
-ms.custom: ""
+title: "Import & export data from SQL Server & Azure SQL Database"
+ms.custom: "seo-lt-2019"​
 ms.date: "10/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

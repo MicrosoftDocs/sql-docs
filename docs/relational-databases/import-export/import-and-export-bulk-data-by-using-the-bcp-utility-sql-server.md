@@ -1,6 +1,7 @@
 ---
-title: "Import and Export Bulk Data by Using the bcp Utility (SQL Server) | Microsoft Docs"
+title: "Import & export bulk data with bcp"
 ms.prod: sql
+ms.custom: "seo-lt-2019"​
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.technology: data-movement
 ms.topic: conceptual
@@ -18,7 +19,7 @@ ms.date: "09/28/2016"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-# Import and Export Bulk Data by Using the bcp Utility (SQL Server)
+# Import and export bulk data using bcp (SQL Server)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 

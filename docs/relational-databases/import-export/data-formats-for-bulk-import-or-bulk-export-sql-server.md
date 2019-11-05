@@ -1,6 +1,6 @@
 ---
-title: "Data Formats for Bulk Import or Bulk Export (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Data formats for bulk import & bulk export"
+ms.custom: "seo-lt-2019"​
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Data Formats for Bulk Import or Bulk Export (SQL Server)
+# Data formats for bulk import or bulk export (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can accept data in character data format or native binary data format. Use character format when you move data between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and another application (such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) or another database server (such as Oracle or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). You can use native format only when you transfer data between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

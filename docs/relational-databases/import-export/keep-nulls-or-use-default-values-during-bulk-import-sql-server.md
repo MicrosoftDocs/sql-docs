@@ -1,6 +1,6 @@
 ---
-title: "Keep Nulls or Use Default Values During Bulk Import (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Keep nulls or default values during bulk import"
+ms.custom: "seo-lt-2019"​
 ms.date: "09/20/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -22,7 +22,7 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Keep Nulls or Use Default Values During Bulk Import (SQL Server)
+# Keep nulls or default values during bulk import (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 By default, when data is imported into a table, the [bcp](../../tools/bcp-utility.md) command and [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) statement observe any defaults that are defined for the columns in the table.  For example, if there is a null field in a data file, the default value for the column is loaded instead.  The [bcp](../../tools/bcp-utility.md) command and [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) statement both allow you to specify that nulls values be retained.

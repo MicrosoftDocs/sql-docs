@@ -1,6 +1,6 @@
 ---
-title: "Use a Format File to Skip a Data Field (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Use a format file to skip a data field"
+ms.custom: "seo-lt-2019"​
 ms.date: "09/19/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Use a Format File to Skip a Data Field (SQL Server)
+# Use a format file to skip a data field (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 A data file can contain more fields than the number of columns in the table. This topic describes modifying both non-XML and XML format files to accommodate a data file with more fields by mapping the table columns to the corresponding data fields and ignoring the extra fields.  Please review [Create a Format File (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) for additional information.
 

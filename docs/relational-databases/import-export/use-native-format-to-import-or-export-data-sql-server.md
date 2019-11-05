@@ -1,6 +1,6 @@
 ---
-title: "Use Native Format to Import or Export Data (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Use native format to import & export data"
+ms.custom: "seo-lt-2019"​
 ms.date: "09/30/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Use Native Format to Import or Export Data (SQL Server)
+# Use native format to import or export data (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Native format is recommended when you bulk transfer data between multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using a data file that does not contain any extended/double-byte character set (DBCS) characters.  
 

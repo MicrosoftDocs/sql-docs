@@ -1,6 +1,6 @@
 ---
-title: "Keep Identity Values When Bulk Importing Data (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Keep identity values when bulk importing data"
+ms.custom: "seo-lt-2019"​
 ms.date: "09/21/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -16,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Keep Identity Values When Bulk Importing Data (SQL Server)
+# Keep identity values when bulk importing data (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Data files that contain identity values can be bulk imported into an instance of Microsoft SQL Server.  By default, the values for the identity column in the data file that is imported are ignored and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns unique values automatically.  The unique values are based on the seed and increment values that are specified during table creation.
 

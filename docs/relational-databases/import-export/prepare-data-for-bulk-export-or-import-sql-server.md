@@ -1,6 +1,6 @@
 ---
-title: "Prepare Data for Bulk Export or Import (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Prepare data for bulk export or import"
+ms.custom: "seo-lt-2019"​
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -18,7 +18,7 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Prepare Data for Bulk Export or Import (SQL Server)
+# Prepare data for bulk export or import
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   This section discusses the considerations involved in planning for bulk-export operations and the requirements for bulk-import operations.  

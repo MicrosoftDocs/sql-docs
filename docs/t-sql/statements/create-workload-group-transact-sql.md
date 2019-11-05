@@ -1,7 +1,7 @@
 ---
 title: "CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/23/2019"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -16,13 +16,26 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "CREATE WORKLOAD GROUP statement"
-ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # CREATE WORKLOAD GROUP (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+## Click a product!
+
+In the following row, click whichever product name you're interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> |||||
+> |---|---|---|---|
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />managed instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+
+&nbsp;
+
+## SQL Server and SQL Database managed instance
 
 Creates a Resource Governor workload group and associates the workload group with a Resource Governor resource pool. Resource Governor is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).
 
@@ -128,7 +141,7 @@ Associates the workload group with the user-defined resource pool identified by 
 EXTERNAL external_pool_name | "default"     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
-Workload group can specify an external resource pool. You can define a workload group and associate with 2 pools:
+Workload group can specify an external resource pool. You can define a workload group and associate with two pools:
 
 - A resource pool for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] workloads and queries
 - An external resource pool for external processes. For more information, see [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
@@ -165,3 +178,121 @@ GO
 - [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
 - [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)
 - [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)
+
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||
+> |---|---|---|
+> |[SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)||[SQL Database<br />managed instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
+
+&nbsp;
+
+## SQL Data Warehouse 
+
+CREATE WORKLOAD GROUP (Transact-SQL) (preview) creates a workload group.  Workload groups are containers for a set of requests and are the basis for how workload management is configured on a system.  Workload groups provide the ability to reserve resources for workload isolation, contain resources, define resources per request, and adhere to execution rules.  Once the statement completes, the settings are in effect.
+
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
+
+```
+CREATE WORKLOAD GROUP group_name  
+ WITH  
+ (        MIN_PERCENTAGE_RESOURCE = value  
+      ,   CAP_PERCENTAGE_RESOURCE = value 
+      ,   REQUEST_MIN_RESOURCE_GRANT_PERCENT = value   
+  [ [ , ] REQUEST_MAX_RESOURCE_GRANT_PERCENT = value ]  
+  [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]
+  [ [ , ] QUERY_EXECUTION_TIMEOUT_SEC = value ] )  
+  [ ; ]
+```
+
+*group_name*</br>
+Specifies the name by which the workload group is identified.  group_name is a sysname.  It can be up to 128 characters long and must be unique within the instance.
+
+*MIN_PERCENTAGE_RESOURCE* = value</br>
+Specifies a guaranteed minimum resource allocation for this workload group that is not shared with other workload groups.  value is an integer range from 0 to 100.  The sum of min_percentage_resource across all workload groups cannot exceed 100.  The value for min_percentage_resource cannot be greater than cap_percentage_resource.  There are minimum effective values allowed per service level.  See Effective Values<link> for more details.
+
+*CAP_PERCENTAGE_RESOURCE* = value</br>
+Specifies the maximum resource utilization for all requests in a workload group.  The allowed range for value is 1 through 100.  The value for cap_percentage_resource must be greater than min_percentage_resource.  The effective value for cap_percentage_resource can be reduced if min_percentage_resource is configured greater than zero in other workload groups.
+
+*REQUEST_MIN_RESOURCE_GRANT_PERCENT* = value</br>
+Sets the minimum amount of resources allocated per request.  value is a required parameter with a decimal range between 0.75 to 100.00.  The value for request_min_resource_grant_percent must be a multiple of 0.25, must be a factor of min_percentage_resource, and be less than cap_percentage_resource.  There are minimum effective values allowed per service level.  See Effective Values<link> for more details.
+
+For example:
+
+```sql
+CREATE WORKLOAD GROUP wgSample WITH  
+( MIN_PERCENTAGE_RESOURCE = 26              -- integer value
+ ,REQUEST_MIN_RESOURCE_GRANT_PERCENT = 3.25 -- factor of 26 (guaranteed a minimum of 8 concurrency)
+ ,CAP_PERCENTAGE_RESOURCE = 100 )
+```
+
+Consider the values that are used for resource classes as a guideline for request_min_resource_grant_percent.  The table below contains resource allocations for Gen2.
+
+|Resource Class|Percent of Resources|
+|---|---|
+|Smallrc|3%|
+|Mediumrc|10%|
+|Largerc|22%|
+|Xlargerc|70%|
+|||
+
+*REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>
+Sets the maximum amount of resources allocated per request.  value is an optional parameter with a default value equal to the request_min_resource_grant_percent.  value must be greater than or equal to request_min_resource_grant_percent.  When the value of request_max_resource_grant_percent is greater than request_min_resource_grant_percent and system resources are available, additional resources are allocated to a request.
+
+*IMPORTANCE* = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>
+Specifies the default importance of a request for the workload group.  Importance is one of the following, with NORMAL being the default:
+- LOW
+- BELOW_NORMAL
+- NORMAL (default)
+- ABOVE_NORMAL
+- HIGH  
+
+Importance set at the workload group is a default importance for all requests in the workload group.  A user can also set importance at the classifier level, which can override the workload group importance setting.  This allows for differentiation of importance for requests within a workload group to get access to non-reserved resources quicker.  When the sum of min_percentage_resource across workload groups is less than 100, there are non-reserved resources that are assigned on a basis of importance.
+
+*QUERY_EXECUTION_TIMEOUT_SEC* = value</br>
+Specifies the maximum time, in seconds, that a query can execute before it is canceled.  value must be 0 or a positive integer.  The default setting for value is 0, which means unlimited.  The time spent waiting in the request queue is not counted towards query execution.
+
+## Remarks
+Workload groups corresponding to resource classes are created automatically for backward compatibility.  These system defined workload groups cannot be dropped.  An additional 8 user defined workload groups can be created.
+
+## Effective Values
+
+The parameters min_percentage_resource, cap_percentage_resource, request_min_resource_grant_percent and request_max_resource_grant_percent have effective values that are adjusted in the context of the current service level and the configuration of other workload groups.
+
+The supported concurrency per service level remains the same as when resource classes were used to define resource grants per query, hence, the supported values for request_min_resource_grant_percent is dependent on the service level the instance is set to.  At the lowest service level, DW100c, 4 concurrency is supported.  The effective request_min_resource_grant_percent for a configured workload group can be 25% or higher.  See the below table for further details.
+
+|Service Level|Maximum concurrent queries|Min % supported for REQUEST_MIN_RESOURCE_GRANT_PERCENT and MIN_PERCENTAGE_RESOURCE|
+|---|---|---|
+|DW100c|4|25%|
+|DW200c|8|12.5%|
+|DW300c|12|8%|
+|DW400c|16|6.25%|
+|DW500c|20|5%|
+|DW1000c|32|3%|
+|DW1500c|32|3%|
+|DW2000c|48|2%|
+|DW2500c|48|2%|
+|DW3000c|64|1.5%|
+|DW5000c|64|1.5%|
+|DW6000c|128|0.75%|
+|DW7500c|128|0.75%|
+|DW10000c|128|0.75%|
+|DW15000c|128|0.75%|
+|DW30000c|128|0.75%|
+||||
+
+Similarly, request_min_resource_grant_percent, min_percentage_resource must be greater than or equal to the effective request_min_resource_grant_percent.  A workload group with min_percentage_resource configured that is less than effective min_percentage_resource has the value adjusted to zero at run time.  When this happens, the resources configured for min_percentage_resource are sharable across all workload groups.  For example, the workload group wgAdHoc with a min_percentage_resource of 10% running at DW1000c would have an effective min_percentage_resource of 10% (3.25% is the minimum supported value at DW1000c).  wgAdhoc at DW100c would have an effective min_percentage_resource of 0%.  The 10% configured for wgAdhoc would be shared across all workload groups.
+
+Cap_percentage_resource also has an effective value.  If a workload group wgAdhoc is configured with a cap_percentage_resource of 100% and another workload group wgDashboards is created with 25% min_percentage_resource, the effective cap_percentage_resource for wgAdhoc becomes 75%.
+
+The easiest way to understand the run-time values for your workload groups is to query the system view [sys.dm_workload_management_workload_groups_stats] (../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md?view=azure-sqldw-latest).
+
+## Permissions
+
+Requires CONTROL DATABASE permission
+
+## See also
+[DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](drop-workload-group-transact-sql.md)
+
+::: moniker-end

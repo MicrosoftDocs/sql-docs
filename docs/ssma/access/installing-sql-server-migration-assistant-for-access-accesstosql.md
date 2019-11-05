@@ -39,7 +39,7 @@ Before you install SSMA, make sure that your system meets the following requirem
   
 -   Microsoft Data Access Object (DAO) provider version 12.0 or 14.0. You can install DAO provider from Microsoft Office 2010/2007 product or download it from Microsoft web site.  
   
--   The SQL Server Native Access Client (SNAC) version 10.5 and above for migration to SQL Azure. You can obtain the latest version of SNAC from [Microsoft® SQL Server® 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=196940)  
+-   The SQL Server Native Access Client (SNAC) version 10.5 and above for migration to SQL Azure. You can obtain the latest version of SNAC from [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=16978)  
   
 -   4 GB RAM (recommended).  
   

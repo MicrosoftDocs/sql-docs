@@ -5,7 +5,7 @@ description: This article explains how to configure HDFS tiering to mount an ext
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 08/27/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -62,8 +62,9 @@ Wait for 5-10 minutes before using the credentials for mounting
 
 ### Set environment variable for OAuth credentials
 
-Open a command-prompt on a client machine that can access your big data cluster. Set an environment variable using the following format:
-Note that the credentials need to be in a comma separated list. The 'set' command is used on Windows. If you are using Linux, then use 'export' instead.
+Open a command-prompt on a client machine that can access your big data cluster. Set an environment variable using the following format.The credentials need to be in a comma separated list. The 'set' command is used on Windows. If you are using Linux, then use 'export' instead.
+
+**Note** that you need to remove any line breaks or space between the commas "," when you provide the credentials. The below formatting is just to make it easier to read.
 
    ```text
 	set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
@@ -84,7 +85,9 @@ You can also mount using access keys which you can get for your ADLS account on 
 
 1. Open a command-prompt on a client machine that can access your big data cluster.
 
-1. Open a command-prompt on a client machine that can access your big data cluster. Set an environment variable using the following format. Note that the credentials need to be in a comma separated list. The 'set' command is used on Windows. If you are using Linux, then use 'export' instead.
+1. Open a command-prompt on a client machine that can access your big data cluster. Set an environment variable using the following format. The credentials need to be in a comma separated list. The 'set' command is used on Windows. If you are using Linux, then use 'export' instead.
+
+**Note** that you need to remove any line breaks or space between the commas "," when you provide the credentials. The below formatting is just to make it easier to read.
 
    ```text
    set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,

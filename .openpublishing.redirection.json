@@ -14120,6 +14120,11 @@
             "redirect_url": "/sql/relational-databases/indexes/reorganize-and-rebuild-indexes",
             "redirect_document_id": false
         },
+        {        
+            "source_path": "docs/t-sql/queries/select-sql-graph.md",
+            "redirect_url": "/sql/t-sql/queries/select-transact-sql",
+            "redirect_document_id": false
+        },
         {
             "source_path": "docs/linux/sql-server-linux-develop-use-vscode.md",
             "redirect_url": "/sql/visual-studio-code/sql-server-develop-use-vscode",

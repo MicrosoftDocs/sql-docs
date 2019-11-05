@@ -169,7 +169,7 @@ An ordered CCI can be created on columns of any data types supported in Azure SQ
 
 Users can query **column_store_order_ordinal** column in **sys.index_columns** for the column(s) a table is ordered on and the sequence in the ordering.  
 
-Check [Performance tuning with ordered clustered columnstore index](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci) for details.   
+Check [Performance tuning with ordered clustered columnstore index](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci) for details.   
 
 ### <a name="DataTypes"></a> Data type
 

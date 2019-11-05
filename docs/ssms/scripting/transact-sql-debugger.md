@@ -11,7 +11,7 @@ ms.date: 11/04/2019
 helpviewer_keywords: 
   - "Transact-SQL debugger, introduction"
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
-monikerRange: "sql-server/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2014 || = sqlallproducts-allversions" 
 ---
 
 # Transact-SQL Debugger

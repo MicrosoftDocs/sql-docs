@@ -11,7 +11,7 @@ ms.date: 11/04/2019
 helpviewer_keywords: 
   - "Breakpoints Window [Transact-SQL]"
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
-monikerRange: "sql-server/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2014 || = sqlallproducts-allversions"
 ---
 
 # Transact-SQL Debugger - Breakpoints Window

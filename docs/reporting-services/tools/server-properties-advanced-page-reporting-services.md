@@ -1,15 +1,15 @@
 ---
-title: "Server Properties (Advanced Page) - Reporting Services | Microsoft Docs"
+title: "Server Properties Advanced Page - Reporting Services | Microsoft Docs"
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/15/2019
+ms.date: 11/05/2019
 ---
 
-# Server Properties (Advanced Page) - Reporting Services
+# Server Properties Advanced Page - Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -97,8 +97,8 @@ A comma-separated list of headers that the server will expose to clients. The de
 **AccessControlMaxAge**
 Specifies the number of seconds the results of the preflight request can be cached. The default value is 600 (10 minutes).
 
-**AllowedResourceExtensionsForUpload (Power BI Report Server & Reporting Services 2017 and later only)**
-Set of extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
+**AllowedResourceExtensionsForUpload**
+(Power BI Report Server & Reporting Services 2017 and later only) Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
 
 **RestrictedResourceMimeTypeForUpload**
 Set of mime types users aren't allowed to upload content with. Any resources that are already stored with a restricted mime type can only be downloaded as an application/octet-stream instead of being opened/executed by the browser.  By default, there are no restricted items in this list, but we recommended that organizations populate this to provide the most secure experience.

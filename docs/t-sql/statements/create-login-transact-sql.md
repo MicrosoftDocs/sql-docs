@@ -1,7 +1,7 @@
 ---
 title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "10/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -408,9 +408,6 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
     | DEFAULT_LANGUAGE = language
 ```
 
-> [!IMPORTANT]
-> Azure AD logins for SQL Database managed instance is in **public preview**. This is introduced with the syntax **FROM EXTERNAL PROVIDER**.
-
 ## Arguments
 
 *login_name*
@@ -437,12 +434,6 @@ Used to recreate a login. Applies to SQL Server authentication logins only. Spec
     - UserPrincipalName of the Azure AD object for Azure AD Users.
     - DisplayName of Azure AD object for Azure AD Groups and Azure AD Applications.
   - The **PASSWORD** option cannot be used.
-  - Currently, the first Azure AD login must be created by the standard SQL Server account (non Azure AD) that is a `sysadmin` using the syntax above.
-  - When creating an Azure AD login using an Azure AD admin for the SQL Database managed instance, the following error occurs:</br>
-      `Msg 15247, Level 16, State 1, Line 1
-      User does not have permission to perform this action.`
-  - This is a known limitation for **public preview** and will be fixed at a later date.
-  - Once the first Azure AD login is created, this login can create other Azure AD logins once it is granted the necessary permissions.
 - By default, when the **FROM EXTERNAL PROVIDER** clause is omitted, a regular SQL login is created.
 - Azure AD logins are visible in sys.server_principals, with type column value set to **E** and type_desc set to **EXTERNAL_LOGIN** for logins mapped to Azure AD users, or type column value set to **X** and type_desc value set to **EXTERNAL_GROUP** for logins mapped to Azure AD groups.
 - For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](https://support.microsoft.com/kb/918992).
@@ -479,6 +470,7 @@ After creating a login, the login can connect to a SQL Database managed instance
 - Only SQL server-level principals (logins) that are part of the `sysadmin` role can execute the following operations targeting Azure AD principals:
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
+- External (guest) users imported from another Azure AD directory cannot be directly configured as an Azure AD admin for managed instance. Instead, join external user to an Azure AD security-enabled group and configure the group as the instance administrator.
 
 ## Examples
 

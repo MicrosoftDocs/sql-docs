@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description:  This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on Red Hat Enterprise Linux and then create and query a database with sqlcmd.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 07/16/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -23,7 +23,7 @@ In this quickstart, you install SQL Server 2017 or SQL Server 2019 on Red Hat En
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In this quickstart, you install SQL Server 2019 preview on Red Hat Enterprise Linux (RHEL) 7.3+. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2019 on Red Hat Enterprise Linux (RHEL) 7.3+. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 
@@ -36,7 +36,7 @@ You must have a RHEL 7.3, 7.4, 7.5, or 7.6 machine with **at least 2 GB** of mem
 
 To install Red Hat Enterprise Linux on your own machine, go to [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
 
-If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server 2017 and 2019](sql-server-linux-change-repo.md).
+If you have previously installed a CTP or RC release of SQL Server, you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server 2017 and 2019](sql-server-linux-change-repo.md).
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -54,10 +54,10 @@ To configure SQL Server on RHEL, run the following commands in a terminal to ins
    ```
 
    > [!TIP]
-   > If you want to try SQL Server 2019 , you must instead register the **Preview (2019)** repository. Use the following command for SQL Server 2019 installations:
+   > If you want to install SQL Server 2019 , you must instead register the SQL Server 2019 repository. Use the following command for SQL Server 2019 installations:
    >
    > ```bash
-   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
+   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
    > ```
 
 2. Run the following commands to install SQL Server:
@@ -101,10 +101,10 @@ At this point, SQL Server is running on your RHEL machine and is ready to use!
 
 To configure SQL Server on RHEL, run the following commands in a terminal to install the **mssql-server** package:
 
-1. Download the Microsoft SQL Server 2019 preview Red Hat repository configuration file:
+1. Download the Microsoft SQL Server 2019 Red Hat repository configuration file:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
    ```
 
 2. Run the following commands to install SQL Server:
@@ -135,7 +135,7 @@ To configure SQL Server on RHEL, run the following commands in a terminal to ins
    sudo firewall-cmd --reload
    ```
 
-At this point, SQL Server 2019 preview is running on your RHEL machine and is ready to use!
+At this point, SQL Server 2019 is running on your RHEL machine and is ready to use!
 
 ::: moniker-end
 

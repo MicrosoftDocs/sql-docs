@@ -1,11 +1,11 @@
 ---
 title: Install azdata with installer on Linux
 titleSuffix: SQL Server big data clusters
-description: Learn how to install the azdata tool for installing and managing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview) with the installer (Linux). 
+description: Learn how to install the azdata tool for installing and managing SQL Server Big Data Clusters with the installer (Linux). 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,10 +15,11 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to install `azdata` for SQL Server 2019 Big Data Clusters release candidate on Linux. Before these package managers were available, the installation of `azdata` required `pip`.
+This article describes how to install `azdata` for SQL Server 2019 Big Data Clusters on Linux. Before these package managers were available, the installation of `azdata` required `pip`.
 
 The package managers are designed for various operating systems and distributions.
 
+- For Windows and Linux (Ubuntu distribution), you can install with a [package manager](./deploy-install-azdata-installer.md) for a simpler experience.
 - For Linux (Ubuntu), [install `azdata` with `apt`](#azdata-apt)
 
 At this time, there are no package managers to install `azdata` on other operating systems or distributions. For these platforms, see [Install `azdata` without package manager](./deploy-install-azdata.md).
@@ -48,7 +49,7 @@ At this time, there are no package managers to install `azdata` on other operati
 3. Add the `azdata` repository information:
 
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
     ```
 
 4. Update repository information and install `azdata`:

@@ -17,7 +17,7 @@ ms.reviewer: "alayu; sstein"
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
 
 
-Download and install the latest release, the *October Release*:
+Download and install the latest release:
 
 > [!NOTE]
 > If you're updating from SQL Operations Studio and want to keep your settings, keyboard shortcuts, or code snippets, see [Move user settings](#move-user-settings).

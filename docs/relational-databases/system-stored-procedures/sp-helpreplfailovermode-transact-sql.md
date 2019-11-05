@@ -47,7 +47,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT`
  Returns the integer value of the failover mode and is an **OUTPUT** parameter. *failover_mode_id* is a **tinyint** with a default of **0**. It returns **0** for immediate updating and **1** for queued updating.  
   
- [**\@failover_mode=**] **'***failover_mode***'OUTPUT**  
+`[ @failover_mode = ] 'failover_mode' OUTPUT`
  Returns the mode in which data modifications are made at the Subscriber. *failover_mode* is a **nvarchar(10)** with a default of NULL. Is an **OUTPUT** parameter.  
   
 |Value|Description|  

@@ -110,7 +110,7 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 ## Release notes (SSMS 18.4)
 
-There are a few [known issues](release-notes-ssms.md#known-issues-1831) with this release.
+There are a few [known issues](release-notes-ssms.md#known-issues-184) with this release.
 
 For details about this release, see [the SSMS release notes](release-notes-ssms.md).
 

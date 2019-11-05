@@ -19,7 +19,7 @@ ms.author: maggies
 ## Prerequisites  
  The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data source must be published in a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery on a SharePoint site.  
   
- To support connections from Report Builder to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook, you must have SQL Server 2008 R2 ADOMD.NET on your workstation computer. This client library is installed with [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel, but if you are using a computer that does not have this application, you must download and install ADOMD.NET from the [SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=192565).  
+ To support connections from Report Builder to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook, you must have SQL Server 2008 R2 ADOMD.NET on your workstation computer. This client library is installed with [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel, but if you are using a computer that does not have this application, you must download and install ADOMD.NET from the [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).  
   
 ## Data Source Type  
  Use report data source type **Microsoft SQL Server Analysis Services**.  

@@ -54,7 +54,7 @@ manager: craigg
   
  You run **filtdump.exe** from the command prompt and provide a single argument. This argument is the name of an individual file that has a file type for which an IFilter is installed. The utility displays a list of all the properties discovered by the IFilter in the document, with their property set GUIDs, integer IDs, and additional information.  
   
- For information about installing this software, see [Microsoft Windows SDK for Windows 7 and .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980). After you download and install the SDK, look in the following folders for the filtdump.exe utility.  
+ For information about installing this software, see [Microsoft Windows SDK for Windows 7 and .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=8279). After you download and install the SDK, look in the following folders for the filtdump.exe utility.  
   
 -   For the 64-bit version, look in `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`.  
   

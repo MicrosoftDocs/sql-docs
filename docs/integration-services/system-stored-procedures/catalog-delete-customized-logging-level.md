@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.delete_customized_logging_level 
 

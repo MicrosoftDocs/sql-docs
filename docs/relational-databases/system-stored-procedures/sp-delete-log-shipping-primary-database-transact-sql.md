@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_delete_log_shipping_primary_database
 6.  Removes the entry in **log_shipping_primary_databases** for this primary database.  
   
 7.  Calls **sp_delete_log_shipping_alert_job** on the monitor server.  
-  
+
 ## Permissions  
  Only members of the **sysadmin** fixed server role can run this procedure.  
   

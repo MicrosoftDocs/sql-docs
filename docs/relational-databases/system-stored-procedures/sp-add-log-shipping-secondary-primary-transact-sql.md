@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +107,7 @@ sp_add_log_shipping_secondary_primary
 1.  Generates a secondary ID for the specified primary server and primary database.  
   
 2.  Does the following:  
-  
+
     1.  Adds an entry for the secondary ID in **log_shipping_secondary** using the supplied arguments.  
   
     2.  Creates a copy job for the secondary ID that is disabled.  

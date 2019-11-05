@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Groups Collection Properties, Methods, and Events
 ## Properties  

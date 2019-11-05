@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Business Rule Examples (Master Data Services)
 

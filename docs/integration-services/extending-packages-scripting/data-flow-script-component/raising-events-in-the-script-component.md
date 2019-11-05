@@ -10,9 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "Script component [Integration Services], raising events"
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Raising Events in the Script Component
 

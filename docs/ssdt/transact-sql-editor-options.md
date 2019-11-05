@@ -27,7 +27,6 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # Transact-SQL Editor Options
 This topic contains information about some of the options of the Transact-SQL Editor. To set these options, navigate to the **Option** dialog through the **Tools\Options** menu.  

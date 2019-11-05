@@ -7,9 +7,8 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
-manager: jroth
 ms.custom: "seodec18"
-ms.date: "06/06/2019"
+ms.date: 11/04/2019
 ms.reviewer: "alayu; sstein"
 ---
 
@@ -18,16 +17,16 @@ ms.reviewer: "alayu; sstein"
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
 
 
-Download and install the latest release, the *June Release*:
+Download and install the latest release, the *October Release*:
 
 > [!NOTE]
 > If you're updating from SQL Operations Studio and want to keep your settings, keyboard shortcuts, or code snippets, see [Move user settings](#move-user-settings).
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2094100)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2094200)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2094201)|June 6, 2019 |1.8.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2094202)|June 6, 2019 |1.8.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2094203)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2094102)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2094101)|June 6, 2019 |1.8.0|
+|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2109256)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2109085)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2109255)|November 04,2019|1.13.0|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2109180)|November 04, 2019|1.13.0|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2109254)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2109178)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2109179)|November 04, 2019|1.13.0|
 
 For details about the latest release, see the [release notes](release-notes.md).
 
@@ -37,28 +36,26 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 The *user installer* is recommended because it does not require administrator privileges, which simplifies both installs and upgrades. The user installer does not require Administrator privileges as the location is under your user Local AppData (LOCALAPPDATA) folder. The user installer also provides a smoother background update experience. For more information, see [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
 
-
 **User Installer** (recommended)
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2094100).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2109256).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 **System Installer**
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2094200).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2109085).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
-
 
 **.zip file**
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2094201).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2109255).
 2. Browse to the downloaded file and extract it.
 3. Run `\azuredatastudio-windows\azuredatastudio.exe`
 
 
 ## Get Azure Data Studio for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2094202).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2109180).
 2. To expand the contents of the zip, double-click it.
 3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
 
@@ -66,9 +63,9 @@ The *user installer* is recommended because it does not require administrator pr
 ## Get Azure Data Studio for Linux
 
 1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux by using one of the installers or the tar.gz archive:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2094203)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2094102)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2094101)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2109254)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2109178)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2109179)
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
    **Debian Installation:**
@@ -119,7 +116,8 @@ The *user installer* is recommended because it does not require administrator pr
 
    sudo apt-get install libunwind8
    ```
-
+## Download Insiders build of Azure Data Studio
+In general, users should download the stable release of Azure Data Studio above. However, if you want to try out our beta features and give us feedback, you can download an [Insiders build of Azure Data Studio.](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)
 
 ## Uninstall Azure Data Studio
 
@@ -136,6 +134,7 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 - Windows 8.1 (64-bit)
 - Windows 8 (64-bit)
 - Windows 7 (SP1) (64-bit) - Requires [KB2533623](https://www.microsoft.com/download/details.aspx?id=26767)
+- Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2 (64-bit)
 - Windows Server 2012 (64-bit)
@@ -152,8 +151,6 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 - Ubuntu 16.04
 
 ## Recommended System Requirements
-For an optimal experience, please use the recommended system requirements.
-[Need update here to quantify memory]
 
 |             | CPU Cores | Memory/RAM |
 |:-----------|:---------|:----------|

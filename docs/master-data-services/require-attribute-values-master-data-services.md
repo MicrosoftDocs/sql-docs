@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Require Attribute Values (Master Data Services)
 

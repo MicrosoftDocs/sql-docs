@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Log Shipping Transaction Log Backup Settings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

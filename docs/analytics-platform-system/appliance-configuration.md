@@ -2,7 +2,6 @@
 title: Configuration checklists - Analytics Platform System | Microsoft Docs
 description: Provides checklists for the tasks required to configure Analytics Platform System for your own environment. These configuration tasks are necessary before you can use the appliance.  
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

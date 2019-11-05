@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 9d33749f-9653-4691-9a0f-06ed7dd6166f
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Proxy Editor - Add Principal

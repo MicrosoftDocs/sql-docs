@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "v-thobro"
+manager: shamikg
 ---
 # Setting Project Options (OracleToSQL)
 For each SSMA project you can set project level options. These options specify object conversion, object loading, user interface and data migration settings. Before you convert objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verify that the configuration options are appropriate for the project.  

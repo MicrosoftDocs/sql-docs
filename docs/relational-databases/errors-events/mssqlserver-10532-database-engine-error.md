@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_10532
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,13 +24,13 @@ manager: craigg
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|PG_NO_ELIGIBLE_STMT|  
-|Message Text|Cannot create plan guide '%.\*ls' because the batch or module specified by **@plan_handle** does not contain a statement that is eligible for a plan guide. Specify a different value for **@plan_handle**.|  
+|Message Text|Cannot create plan guide '%.\*ls' because the batch or module specified by **\@plan_handle** does not contain a statement that is eligible for a plan guide. Specify a different value for **\@plan_handle**.|  
   
 ## Explanation  
-The batch or module specified by **@plan_handle** does not contain a statement that is eligible for a plan guide.  
+The batch or module specified by **\@plan_handle** does not contain a statement that is eligible for a plan guide.  
   
 ## User Action  
-Specify a different value for **@plan_handle**.  
+Specify a different value for **\@plan_handle**.  
   
 ## See Also  
 [Plan Guides](~/relational-databases/performance/plan-guides.md)  

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Edit Rows in the Results Pane (Visual Database Tools)

@@ -14,7 +14,6 @@ f1_keywords:
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Import Values from an Excel File into a Domain
 

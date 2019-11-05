@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # GetRows Method Example (VB)
 This example uses the [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) method to retrieve a specified number of rows from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) and to fill an array with the resulting data. The **GetRows** method will return fewer than the desired number of rows in two cases: either if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) has been reached, or if **GetRows** tried to retrieve a record that was deleted by another user. The function returns **False** only if the second case occurs. The GetRowsOK function is required for this procedure to run.  

@@ -11,6 +11,7 @@ apiname:
   - "SQLBindCol"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLBindCol"
@@ -19,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLBindCol Function
 **Conformance**  
@@ -61,9 +61,9 @@ SQLRETURN SQLBindCol(
  If *TargetValuePtr* is a null pointer, the driver unbinds the data buffer for the column. An application can unbind all columns by calling **SQLFreeStmt** with the SQL_UNBIND option. An application can unbind the data buffer for a column but still have a length/indicator buffer bound for the column, if the *TargetValuePtr* argument in the call to **SQLBindCol** is a null pointer but the *StrLen_or_IndPtr* argument is a valid value.  
   
  *BufferLength*  
- [Input] Length of the **TargetValuePtr* buffer in bytes.  
+ [Input] Length of the \**TargetValuePtr* buffer in bytes.  
   
- The driver uses *BufferLength* to avoid writing past the end of the \**TargetValuePtr* buffer when it returns variable-length data, such as character or binary data. Notice that the driver counts the null-termination character when it returns character data to \**TargetValuePtr*. **TargetValuePtr* must therefore contain space for the null-termination character or the driver will truncate the data.  
+ The driver uses *BufferLength* to avoid writing past the end of the \**TargetValuePtr* buffer when it returns variable-length data, such as character or binary data. Notice that the driver counts the null-termination character when it returns character data to \**TargetValuePtr*. \**TargetValuePtr* must therefore contain space for the null-termination character or the driver will truncate the data.  
   
  When the driver returns fixed-length data, such as an integer or a date structure, the driver ignores *BufferLength* and assumes the buffer is large enough to hold the data. Therefore, it is important for the application to allocate a large enough buffer for fixed-length data or the driver will write past the end of the buffer.  
   

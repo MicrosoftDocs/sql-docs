@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Introduction to Data Quality Services
 

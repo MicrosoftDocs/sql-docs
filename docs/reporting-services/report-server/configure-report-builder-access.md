@@ -6,7 +6,6 @@ ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.date: 06/06/2019
 ---
 

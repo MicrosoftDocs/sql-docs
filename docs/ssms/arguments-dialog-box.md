@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Arguments Dialog Box
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create and Execute an Entity Sync Relationship (Master Data Services)
 

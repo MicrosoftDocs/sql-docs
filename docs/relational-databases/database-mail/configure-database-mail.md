@@ -39,7 +39,6 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Configure Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ manager: craigg
 3.  Right-click **Database Mail**, and then click **Configure Database Mail**.  
   
 4.  Complete the Wizard dialogs  
-  
+
     -   [Welcome Page](#Welcome)  
   
     -   [Select Configuration Task Page](#ConfigTask)  

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ce5d2e32-01da-4e18-b8ed-a08b61d84456
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # VARP (Transact-SQL)

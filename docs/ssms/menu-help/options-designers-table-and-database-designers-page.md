@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Options (Designers - Table and Database Designers Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

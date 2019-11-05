@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Example: Piecemeal Restore of Only Some Filegroups (Full Recovery Model)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,17 +65,17 @@ manager: craigg
      At this point the primary and filegroups `A` and `C` are online. Files in filegroup `B` remain recovery pending, with the filegroup offline.  
   
 4.  Online restore of filegroup `B`.  
+
+   Files in filegroup `B` are restored any time thereafter.  
   
-     Files in filegroup `B` are restored any time thereafter.  
+   > [!NOTE]  
+   >  The backup of filegroup `B` was taken after the filegroup became read-only; therefore, these files do not have to be rolled forward.  
   
-    > [!NOTE]  
-    >  The backup of filegroup `B` was taken after the filegroup became read-only; therefore, these files do not have to be rolled forward.  
+   ```sql  
+   RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
+   ```  
   
-    ```  
-    RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
-    ```  
-  
-     All filegroups are now online.  
+   All filegroups are now online.  
   
 ## Additional Examples  
   

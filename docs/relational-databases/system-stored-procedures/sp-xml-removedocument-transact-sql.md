@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # sp_xml_removedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

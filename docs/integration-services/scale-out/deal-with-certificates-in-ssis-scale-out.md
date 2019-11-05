@@ -10,7 +10,6 @@ ms.custom: performance
 ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-manager: craigg
 ---
 # Manage certificates for SQL Server Integration Services Scale Out
 

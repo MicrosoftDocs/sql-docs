@@ -22,9 +22,8 @@ helpviewer_keywords:
   - "Script component [Integration Services]"
   - "data flow [Integration Services], components"
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Extending the Data Flow with the Script Component
 

@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEADD (Transact-SQL)

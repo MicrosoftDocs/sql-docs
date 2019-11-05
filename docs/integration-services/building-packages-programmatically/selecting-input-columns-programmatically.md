@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "data flow [Integration Services], column mapping"
   - "data flow [Integration Services], components"
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Selecting Input Columns Programmatically
 

@@ -2,7 +2,6 @@
 title: "Claims to Windows Token Service (c2WTS) and Reporting Services | Microsoft Docs"
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
 ms.topic: conceptual

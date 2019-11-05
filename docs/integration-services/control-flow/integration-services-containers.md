@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "control flow [Integration Services], containers"
   - "SQL Server Integration Services containers"
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services Containers
 

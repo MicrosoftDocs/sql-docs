@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "packages [Integration Services], managing"
   - "custom enumerators [Integration Services]"
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Managing Packages and Folders Programmatically
 

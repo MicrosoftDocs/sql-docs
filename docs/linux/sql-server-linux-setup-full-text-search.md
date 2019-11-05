@@ -1,9 +1,8 @@
 ---
-title: Install SQL Server Full-Text Search on Linux | Microsoft Docs
+title: Install SQL Server Full-Text Search on Linux
 description: This article describes how to install SQL Server Full-Text Search on Linux.
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
@@ -87,7 +86,7 @@ Full-Text Search uses [word breakers](../relational-databases/search/configure-a
 | Arabic | 1025 |
 | Bengali (India) | 1093 |
 | Bokmål | 1044 |
-| Brazilian | 1046 |
+| Portuguese (Brazil) | 1046 |
 | British English | 2057 |
 | Bulgarian | 1026 |
 | Catalan | 1027 |

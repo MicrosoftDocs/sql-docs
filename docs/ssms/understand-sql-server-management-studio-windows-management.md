@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Understand SQL Server Management Studio Windows Management
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

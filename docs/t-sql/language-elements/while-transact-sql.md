@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # WHILE (Transact-SQL)
@@ -91,19 +90,24 @@ PRINT 'Too much for the market to bear';
  The following example uses `@@FETCH_STATUS` to control cursor activities in a `WHILE` loop.  
   
 ```  
+DECLARE @EmployeeID as nvarchar(256)
+DECLARE @Title as nvarchar(50)
+
 DECLARE Employee_Cursor CURSOR FOR  
-SELECT EmployeeID, Title   
+SELECT LoginID, JobTitle   
 FROM AdventureWorks2012.HumanResources.Employee  
 WHERE JobTitle = 'Marketing Specialist';  
 OPEN Employee_Cursor;  
 FETCH NEXT FROM Employee_Cursor;  
+FETCH NEXT FROM Employee_Cursor INTO @EmployeeID, @Title;  
 WHILE @@FETCH_STATUS = 0  
    BEGIN  
+      Print '   ' + @EmployeeID + '      '+  @Title 
       FETCH NEXT FROM Employee_Cursor;  
    END;  
 CLOSE Employee_Cursor;  
 DEALLOCATE Employee_Cursor;  
-GO  
+GO 
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

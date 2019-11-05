@@ -34,7 +34,6 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -107,7 +106,7 @@ REPAIR_FAST
  Maintains syntax for backward compatibility only. No repair actions are performed.  
     
 REPAIR_REBUILD  
- Performs repairs that have no possibility of data loss. This can include quick repairs, such as repairing missing rows in non-clustered indexes, and more time-consuming repairs, such as rebuilding an index.  
+ Performs repairs that have no possibility of data loss. This can include quick repairs, such as repairing missing rows in nonclustered indexes, and more time-consuming repairs, such as rebuilding an index.  
  This argument does not repair errors involving FILESTREAM data.  
     
 > [!IMPORTANT] 

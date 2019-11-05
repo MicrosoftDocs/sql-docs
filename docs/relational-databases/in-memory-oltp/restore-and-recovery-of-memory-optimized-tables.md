@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Restore and recovery of memory-optimized tables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts, each da
     When the preceding operations on disk-based and memory-optimized tables are complete, the database is available for access.  
   
 3.  **Undo**. In this phase, the uncommitted transactions are rolled back.  
-  
+
 ## Process for improving load time
 Loading memory-optimized tables into memory can affect performance of the recovery time objective (RTO). To improve the load time of memory-optimized data from data and delta files, the In-Memory OLTP engine loads the data/delta files in parallel as follows:  
   

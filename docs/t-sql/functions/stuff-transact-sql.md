@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STUFF (Transact-SQL)
@@ -47,7 +46,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  Is an integer value that specifies the location to start deletion and insertion. If *start* is negative or zero, a null string is returned. If *start* is longer than the first *character_expression*, a null string is returned. *start* can be of type **bigint**.  
   
  *length*  
- Is an integer that specifies the number of characters to delete. If *length* is negative, a null string is returned. If *length* is longer than the first *character_expression*, deletion occurs up to the last character in the last *character_expression*.  If *length* is zero, insertion occurs before the first character in the string. *length* can be of type **bigint**.
+ Is an integer that specifies the number of characters to delete. If *length* is negative, a null string is returned. If *length* is longer than the first *character_expression*, deletion occurs up to the last character in the last *character_expression*.  If *length* is zero, insertion occurs at *start* location and no characters are deleted. *length* can be of type **bigint**.
 
  *replaceWith_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character data. *character_expression* can be a constant, variable, or column of either character or binary data. This expression replaces *length* characters of *character_expression* beginning at *start*. Providing `NULL` as the *replaceWith_expression*, removes characters without inserting anything.   

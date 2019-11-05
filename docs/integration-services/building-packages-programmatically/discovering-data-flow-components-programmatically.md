@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "components [Integration Services], data flow"
   - "data flow [Integration Services], components"
 ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Discovering Data Flow Components Programmatically
 

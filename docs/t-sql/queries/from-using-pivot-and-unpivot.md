@@ -1,7 +1,7 @@
 ---
 title: "Using PIVOT and UNPIVOT | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "10/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FROM - Using PIVOT and UNPIVOT
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-You can use the `PIVOT` and `UNPIVOT` relational operators to change a table-valued expression into another table. `PIVOT` rotates a table-valued expression by turning the unique values from one column in the expression into multiple columns in the output, and runs aggregations where they're required on any left over column values that are wanted in the final output. `UNPIVOT` carries out the opposite operation to PIVOT by rotating columns of a table-valued expression into column values.  
+You can use the `PIVOT` and `UNPIVOT` relational operators to change a table-valued expression into another table. `PIVOT` rotates a table-valued expression by turning the unique values from one column in the expression into multiple columns in the output. And `PIVOT` runs aggregations where they're required on any remaining column values that are wanted in the final output. `UNPIVOT` carries out the opposite operation to PIVOT by rotating columns of a table-valued expression into column values.  
   
 The syntax for `PIVOT` provides is simpler and more readable than the syntax that may otherwise be specified in a complex series of `SELECT...CASE` statements. For a complete description of the syntax for `PIVOT`, see [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
   
@@ -69,7 +69,6 @@ GO
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
 FROM Production.Product  
 GROUP BY DaysToManufacture;  
-  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -148,7 +147,7 @@ SELECT PurchaseOrderID, EmployeeID, VendorID
 FROM PurchaseOrderHeader;  
 ```  
   
-The unique values returned by the `EmployeeID` column become fields in the final result set. As such, there's a column for each `EmployeeID` number specified in the pivot clause: in this case employees `164`, `198`, `223`, `231`, and `233`. The `PurchaseOrderID` column serves as the value column, against which the columns returned in the final output, which are called the grouping columns, are grouped. In this case, the grouping columns are aggregated by the `COUNT` function. Notice that a warning message appears that indicates that any null values appearing in the `PurchaseOrderID` column weren't considered when computing the `COUNT` for each employee.  
+The unique values returned by the `EmployeeID` column become fields in the final result set. As such, there's a column for each `EmployeeID` number specified in the pivot clause: in this case employees `250`, `251`, `256`, `257`, and `260`. The `PurchaseOrderID` column serves as the value column, against which the columns returned in the final output, which are called the grouping columns, are grouped. In this case, the grouping columns are aggregated by the `COUNT` function. Notice that a warning message appears that indicates that any null values appearing in the `PurchaseOrderID` column weren't considered when computing the `COUNT` for each employee.  
   
 > [!IMPORTANT]  
 >  When aggregate functions are used with `PIVOT`, the presence of any null values in the value column are not considered when computing an aggregation.  

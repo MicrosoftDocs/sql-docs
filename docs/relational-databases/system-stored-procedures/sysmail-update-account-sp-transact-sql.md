@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  The new password to use to log on to the mail server. *password* is **sysname**, with no default.  
   
 `[ @use_default_credentials = ] use_default_credentials`
- Specifies whether to send the mail to the SMTP server using the credentials of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. **use_default_credentials** is bit, with no default. When this parameter is 1, Database Mail uses the credentials of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. When this parameter is 0, Database Mail uses the **@username** and **@password** for authentication on the SMTP server. If **@username** and **@password** are NULL then it will use anonymous authentication. Consult with your SMTP administrator before specifying this parameter  
+ Specifies whether to send the mail to the SMTP server using the credentials of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. **use_default_credentials** is bit, with no default. When this parameter is 1, Database Mail uses the credentials of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. When this parameter is 0, Database Mail uses the **\@username** and **\@password** for authentication on the SMTP server. If **\@username** and **\@password** are NULL then it will use anonymous authentication. Consult with your SMTP administrator before specifying this parameter  
   
 `[ @enable_ssl = ] enable_ssl`
  Specifies whether Database Mail encrypts communication using Secure Sockets Layer (SSL). Use this option if SSL is required on your SMTP server. **enable_ssl** is bit, with no default.  

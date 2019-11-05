@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Validate a Version against Business Rules (Master Data Services)
 

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Export a Knowledge Base to a .dqs File
 

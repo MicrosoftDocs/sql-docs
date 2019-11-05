@@ -1,7 +1,7 @@
 ---
-title: "Wrappers and Interfaces | Microsoft Docs"
+title: "Wrappers and interfaces | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,10 +10,9 @@ ms.topic: conceptual
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
-# Wrappers and Interfaces
+# Wrappers and interfaces
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -107,6 +106,6 @@ public class UnWrapTest {
 }  
 ```
 
-## See Also
+## See also
 
-[Understanding the JDBC Driver Data Types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)
+[Understanding the JDBC driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

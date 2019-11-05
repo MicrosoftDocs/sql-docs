@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ---
 # sp_grant_proxy_to_subsystem (Transact-SQL)
 

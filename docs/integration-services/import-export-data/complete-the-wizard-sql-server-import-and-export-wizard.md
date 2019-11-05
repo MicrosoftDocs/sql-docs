@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.completewizard.f1"
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Complete the Wizard (SQL Server Import and Export Wizard)
 

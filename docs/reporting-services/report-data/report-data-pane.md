@@ -2,7 +2,6 @@
 title: Report Data pane
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ""
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

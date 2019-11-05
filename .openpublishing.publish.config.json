@@ -6,6 +6,7 @@
       "build_source_folder": "docs",
       "build_output_subfolder": "sql",
       "locale": "en-us",
+      "xref_query_tags": ["/uwp/api", "/dotnet"],
       "monikers": [],
       "moniker_ranges": [
         "sql-server-2014",
@@ -44,8 +45,27 @@
       "branch_mapping": {}
     },
     {
+      "path_to_root": "samples",
+      "url": "https://github.com/dotnet/samples",
+      "branch": "master",
+      "branch_mapping": {
+        "live": "live"
+      }
+    },
+    {
+      "path_to_root": "sqlclient",
+      "url": "https://github.com/dotnet/sqlclient",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master"
+    },
+    {
+      "path_to_root": "sql-server-samples",
+      "url": "https://github.com/Microsoft/sql-server-samples",
       "branch": "master"
     }
   ],

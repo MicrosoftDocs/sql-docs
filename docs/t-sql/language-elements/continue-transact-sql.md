@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 0f1def4e-b0ca-4175-ad58-7c8c9153dab7
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # CONTINUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

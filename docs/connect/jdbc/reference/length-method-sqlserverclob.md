@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 18bea01e-7d3d-40aa-961f-2318513fab1c
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # length Method (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

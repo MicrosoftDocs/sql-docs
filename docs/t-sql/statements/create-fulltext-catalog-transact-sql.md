@@ -26,7 +26,6 @@ helpviewer_keywords:
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,7 +100,7 @@ CREATE FULLTEXT CATALOG catalog_name
 ## Examples  
  The following example creates a full-text catalog and also a full-text index.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  

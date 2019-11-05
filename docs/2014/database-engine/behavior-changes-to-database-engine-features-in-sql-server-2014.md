@@ -18,10 +18,10 @@ manager: craigg
 # Behavior Changes to Database Engine Features in SQL Server 2014
   This topic describes behavior changes in the [!INCLUDE[ssDE](../includes/ssde-md.md)]. Behavior changes affect how features work or interact in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] as compared to earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## Behavior Changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a> Behavior Changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], queries against an XML document that contains strings over a certain length (more than 4020 characters) can return incorrect results. In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], such queries return the correct results.  
   
-## Behavior Changes in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a> Behavior Changes in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### Metadata Discovery  
  Improvements in the [!INCLUDE[ssDE](../includes/ssde-md.md)] beginning with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] allow SQLDescribeCol to obtain more accurate descriptions of the expected results than those returned by SQLDescribeCol in previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Metadata Discovery](../relational-databases/native-client/features/metadata-discovery.md).  
@@ -29,7 +29,7 @@ manager: craigg
  The [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) option for determining the format of a response without actually running the query is replaced with [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), and [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
   
 ### Changes to Behavior in Scripting a SQL Server Agent Task  
- In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], if you create a new job by copying the script from an existing job, the new job might inadvertently affect the existing job. To create a new job using the script from an existing job, manually delete the parameter *@schedule_uid* which is usually the last parameter of the section which creates the job schedule in the existing job. This will create a new independent schedule for the new job without affecting existing jobs.  
+ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], if you create a new job by copying the script from an existing job, the new job might inadvertently affect the existing job. To create a new job using the script from an existing job, manually delete the parameter *\@schedule_uid* which is usually the last parameter of the section which creates the job schedule in the existing job. This will create a new independent schedule for the new job without affecting existing jobs.  
   
 ### Constant Folding for CLR User-Defined Functions and Methods  
  In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the following user-defined CLR objects are now foldable:  

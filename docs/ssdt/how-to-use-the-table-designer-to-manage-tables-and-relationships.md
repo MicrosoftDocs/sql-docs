@@ -14,7 +14,6 @@ f1_keywords:
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # How to: Use the Table Designer to Manage Tables and Relationships
 The Table Designer provides a visual experience alongside the Transact\-SQL Editor for creating and editing table structure, including table-specific programming objects, for SQL Server databases.  It is launched when you create a new table for a connected database or a project, or when you double-click to edit a table in either SQL Server Object Explorer or Solution Explorer.  

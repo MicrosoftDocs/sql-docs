@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Export a Data-tier Application
@@ -35,7 +34,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 1.  The export builds a DAC definition in the export file - BACPAC file - in the same way a DAC extract builds a DAC definition in a DAC package file. The exported DAC definition includes all of the objects in the current database. If the export process is run against a database that was originally deployed from a DAC, and changes were made directly to the database after deployment, the exported definition matches the object set in the database, not what was defined in the original DAC.  
   
 2.  The export bulk copies out the data from all of the tables in the database and incorporates the data into the export file.  
-  
+
  The export process sets the DAC version to 1.0.0.0 and the DAC description in the export file to an empty string. If the database was deployed from a DAC, the DAC definition in the export file contains the name given to the original DAC, otherwise the DAC name is set to the database name.  
   
 
@@ -91,7 +90,7 @@ On Azure SQL DB you need to grant **for each database** VIEW DEFINITION and SELE
   
 -   **Save to local disk** - Creates a BACPAC file in a directory on the local computer. Click **Browse...** to navigate the local computer, or specify the path in the space provided. The path name must include a file name and the .bacpac extension.  
   
--   **Save to Windows Azure** - Creates a BACPAC file in a Windows Azure container. You must connect to a Windows Azure container in order to validate this option. Note that this option also requires that you specify a local directory for the temporary file. Note that the temporary file will be created at the specified location and will remain there after the operation completes.  
+-   **Save to Azure** - Creates a BACPAC file in an Azure container. You must connect to an Azure container in order to validate this option. Note that this option also requires that you specify a local directory for the temporary file. Note that the temporary file will be created at the specified location and will remain there after the operation completes.  
   
  To specify a subset of tables to export, use the **Advanced** option.  
   

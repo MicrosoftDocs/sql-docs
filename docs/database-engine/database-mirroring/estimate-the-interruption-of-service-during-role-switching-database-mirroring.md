@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # Estimate the Interruption of Service During Role Switching (Database Mirroring)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ manager: jroth
 -   For a manual failover, only the time required to fail over the database after the failover command is issued.  
   
 ## Error detection  
- The time for the system to notice an error depends on the type of error; for example, a network error is noticed almost instantly, while noticing a server hang by default takes 10 seconds, which is the default timeout period.  
+ The time for the system to notice an error depends on the type of error; for example, a network error is noticed almost instantly, while noticing a server that is not responding takes 10 seconds (with the default timeout).  
   
  For information on errors that can cause a failure during a database mirroring session and timeout detection in high-safety mode with automatic failover, see [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)).  
   

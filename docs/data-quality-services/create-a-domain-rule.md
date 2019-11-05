@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Create a Domain Rule
 

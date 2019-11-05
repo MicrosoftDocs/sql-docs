@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: b2a8ec0b-40a2-44d1-90d9-a810d4132e56
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setClientInfo Method (java.util.Properties)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,9 +1,8 @@
 ---
-title: Configure log shipping for SQL Server on Linux | Microsoft Docs
+title: Configure log shipping for SQL Server on Linux
 description: This tutorial shows a basic example of how to replicate a SQL Server instance on Linux to a secondary instance using log shipping.
-author: meet-bhagdev 
-ms.author: meetb 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 04/19/2017
 ms.topic: conceptual
 ms.prod: sql
@@ -300,6 +299,13 @@ As described in the this picture, a log shipping session involves the following 
     GO  
     EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
     GO  
+    ```
+ - Verify that Log Shipping failover works by executing the following command
+ 
+    > [!WARNING]
+    > This command will bring the secondary database online and break the Log Shipping configuration. You will need to reconfigure Log    Shipping after running this command.
+ 
+    ```sql
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
 

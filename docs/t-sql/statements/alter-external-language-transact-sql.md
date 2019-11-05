@@ -1,10 +1,10 @@
 ---
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
-ms.date: 05/22/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.technology: language-extensions
 ms.topic: language-reference
 author: nelgson
 ms.author: negust
@@ -104,7 +104,7 @@ This parameter is needed for hybrid OS scenarios. In a hybrid architecture, the 
 
 ## Remarks
 
-In CTP 3.0, **PARAMETERS** and **ENVIRONMENT_VARIABLES** are not supported.
+Currently, **PARAMETERS** and **ENVIRONMENT_VARIABLES** are not supported.
 
 ## Permissions
 

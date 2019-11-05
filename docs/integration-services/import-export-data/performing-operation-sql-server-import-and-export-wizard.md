@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.performingoperation.f1"
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Performing Operation (SQL Server Import and Export Wizard)
 

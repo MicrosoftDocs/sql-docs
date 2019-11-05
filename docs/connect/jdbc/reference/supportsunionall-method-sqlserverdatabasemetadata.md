@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: ed8344eb-4d1d-43d3-ade8-935ec677f73c
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # supportsUnionAll Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

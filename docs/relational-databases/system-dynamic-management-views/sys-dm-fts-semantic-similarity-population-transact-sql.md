@@ -18,7 +18,6 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl 
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 ---
 # sys.dm_fts_semantic_similarity_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

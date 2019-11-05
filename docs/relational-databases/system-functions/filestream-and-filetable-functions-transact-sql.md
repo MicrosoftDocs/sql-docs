@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 71f729df-d340-4cf9-9a6d-305fcb39b009
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Filestream and FileTable Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

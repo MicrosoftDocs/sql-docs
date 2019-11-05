@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Copy a Version (Master Data Services)
 

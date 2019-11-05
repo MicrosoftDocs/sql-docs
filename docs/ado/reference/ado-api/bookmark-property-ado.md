@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Bookmark Property (ADO)
 Indicates a bookmark that uniquely identifies the current record in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object or sets the current record in a **Recordset** object to the record identified by a valid bookmark.  

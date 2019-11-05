@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Visual C++ Extensions for ADO
 The preferred method of programming ADO with Visual C++ is using the **#import** directive, as discussed in [Microsoft Visual C++ ADO Programming](../../../ado/guide/appendixes/visual-c-ado-programming.md). However, earlier versions of ADO shipped with an alternate method of programming using Visual C++: the Visual C++ Extensions. This section documents this feature for those who must maintain Visual C++ Extensions code, but new ADO code should be written using #**import**.

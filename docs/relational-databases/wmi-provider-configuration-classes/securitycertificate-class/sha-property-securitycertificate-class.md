@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 73dfe0b7-0237-4d92-8161-9264a10a28a7
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SHA Property (SecurityCertificate Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

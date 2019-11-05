@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Assign Functional Area Permissions (Master Data Services)
 

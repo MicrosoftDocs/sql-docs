@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Script component [Integration Services], examples"
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Additional Script Component Examples
 

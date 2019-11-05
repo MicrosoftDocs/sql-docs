@@ -29,7 +29,7 @@ manager: craigg
   
  For examples of using the cmdlet, in Windows PowerShell, run:  
   
-```  
+```powershell
 Get-Help Convert-UrnToPath -Examples  
 ```  
   
@@ -37,5 +37,3 @@ Get-Help Convert-UrnToPath -Examples
  [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)   
  [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)  
-  
-  

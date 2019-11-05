@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Web Configuration Page (Master Data Services Configuration Manager)
 

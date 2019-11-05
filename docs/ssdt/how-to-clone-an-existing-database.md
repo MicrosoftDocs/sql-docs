@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # How to: Clone an Existing Database
 This task uses some of the steps you learned in previous procedures to create a new database and port existing data over. In addition, it uses the steps discussed in [How to: Use Schema Compare to Compare Different Database Definitions](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) to synchronize the schema of a source and project database.  

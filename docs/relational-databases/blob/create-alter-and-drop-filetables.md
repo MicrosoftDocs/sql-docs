@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Create, Alter, and Drop FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ manager: craigg
     2.  If you do not provide a value for **FILETABLE_COLLATE_FILENAME**, or you specify **database_default**, the column inherits the collation of the current database. If the current database collation is case-sensitive, an error is raised and the **CREATE TABLE** operation fails.  
   
 3.  You can also specify the names to be used for the 3 primary key and unique constraints that are automatically created. If you do not provide names, then the system generates names as described later in this topic.  
-  
+
     -   **FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME**  
   
     -   **FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME**  
@@ -157,9 +156,9 @@ GO
 |||  
 |-|-|  
 |**Columns**|**Index type**|  
-|[path_locator] ASC|Primary Key, non-clustered|  
-|[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, non-clustered|  
-|[stream_id] ASC|Unique, non-clustered|  
+|[path_locator] ASC|Primary Key, nonclustered|  
+|[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, nonclustered|  
+|[stream_id] ASC|Unique, nonclustered|  
   
  **Constraints that are created when you create a new FileTable**  
  When you create a new FileTable, the following system-defined constraints are also created:  

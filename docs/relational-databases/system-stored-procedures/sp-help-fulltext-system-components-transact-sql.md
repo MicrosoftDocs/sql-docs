@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_help_fulltext_system_components (Transact-SQL)
@@ -103,7 +102,7 @@ GO
 ```  
   
 ### C. Determining whether a specific word breaker is registered  
- The following example will list the word breaker for the Turkish language (LCID = 1055) if it has been installed on the system and registered on the service instance. This example specifies the parameter names, **@component_type** and **@param**.  
+ The following example will list the word breaker for the Turkish language (LCID = 1055) if it has been installed on the system and registered on the service instance. This example specifies the parameter names, **\@component_type** and **\@param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  

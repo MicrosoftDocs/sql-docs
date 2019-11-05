@@ -103,7 +103,7 @@ manager: craigg
   
  Thorough testing will require the use of network monitoring tools that can capture Kerberos requests and responses on the network. The Network Monitor utility (netmon.exe), filtered for Kerberos, can be used for this task. For more information about using Netmon 3.4 and other tools for testing Kerberos authentication, see [Configuring Kerberos authentication: Core configuration (SharePoint Server 2010)](https://technet.microsoft.com/library/gg502602\(v=office.14\).aspx).  
   
- Additionally, see [The Most Confusing Dialog Box in Active Directory](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) for a thorough description of each option in the Delegation tab of the Active Directory object's property dialog box. This article also explains how to use LDP to test and interpret test results.  
+ Additionally, see [The Most Confusing Dialog Box in Active Directory](https://www.itprotoday.com/active-directory/most-confusing-dialog-box-active-directory) for a thorough description of each option in the Delegation tab of the Active Directory object's property dialog box. This article also explains how to use LDP to test and interpret test results.  
   
 ## See Also  
  [Microsoft BI Authentication and Identity Delegation](https://go.microsoft.com/fwlink/?LinkID=286576)   

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Master Data Services Add-in for Microsoft Excel
 

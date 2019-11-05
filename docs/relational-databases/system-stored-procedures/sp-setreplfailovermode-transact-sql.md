@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
  Is the name of the publication database. *publisher_db* is **sysname**, with no default.  
   
 `[ @publication = ] 'publication'`
- Is the name of the publication. *publication*is **sysname**, with no default.  
+ Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [**@failover_mode=**] **'***failover_mode***'**  
+`[ @failover_mode = ] 'failover_mode'`
  Is the failover mode for the subscription. *failover_mode* is **nvarchar(10)** and can be one of these values.  
   
 |Value|Description|  

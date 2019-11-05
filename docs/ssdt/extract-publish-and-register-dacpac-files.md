@@ -16,7 +16,6 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # Extract, Publish, and Register .dacpac Files
 This topic describes four procedures that you can perform by right clicking a connected database in SQL Server Object Explorer:  
@@ -45,7 +44,7 @@ When checked, the **Register as a Data-tier Application** check box causes the r
 Additional publishing configuration is available in the **Advanced Publish Settings** dialog box, which you can access by clicking the **Advanced** button.  
   
 ## Extract Data-tier Application  
-You can extract a .dacpac from a database. Extract creates a database snapshot file (.dacpac) from a live SQL Server or Windows Azure SQL Database that might contain data from user tables, in addition to the database schema.  
+You can extract a .dacpac from a database. Extract creates a database snapshot file (.dacpac) from a live SQL Server or Azure SQL Database that might contain data from user tables, in addition to the database schema.  
   
 Specify the .dacpac file to create. The **DAC Properties** button displays the **DAC Properties** dialog box, which lets you specify properties of the .dacpac file.  
   

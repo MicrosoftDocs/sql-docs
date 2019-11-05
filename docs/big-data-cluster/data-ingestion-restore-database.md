@@ -1,22 +1,21 @@
 ---
 title: Restore a database
 titleSuffix: SQL Server big data clusters
-description: This article shows how to restore a database into the master instance of a SQL Server 2019 big data cluster (preview).
-author: rothja
-ms.author: jroth
-manager: jroth
-ms.date: 05/22/2019
+description: This article shows how to restore a database into the master instance of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab 
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # Restore a database into the SQL Server big data cluster master instance
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to restore an existing database into the master instance of a SQL Server 2019 big data cluster (preview). The recommended method is to use a backup, copy, and restore approach.
+This article describes how to restore an existing database into the master instance of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The recommended method is to use a backup, copy, and restore approach.
 
 ## Backup your existing database
 
@@ -32,19 +31,19 @@ This article shows how to restore the AdventureWorks database, but you can use a
 Copy the backup file to the SQL Server container in the master instance pod of the Kubernetes cluster.
 
 ```bash
-kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your big data cluster>
+kubectl cp <path to .bak file> master-0:/tmp -c mssql-server -n <name of your big data cluster>
 ```
 
 Example:
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c mssql-server -n clustertest
+kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n clustertest
 ```
 
 Then, verify that the backup file was copied to the pod container.
 
 ```bash
-kubectl exec -it mssql-master-pool-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
+kubectl exec -it master-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
 cd /var/
 ls /tmp
 exit
@@ -53,7 +52,7 @@ exit
 Example:
 
 ```bash
-kubectl exec -it mssql-master-pool-0 -n clustertest -c mssql-server -- bin/bash
+kubectl exec -it master-0 -n clustertest -c mssql-server -- bin/bash
 ls /tmp
 exit
 ```
@@ -94,12 +93,12 @@ GO
 -- Create the SqlDataPool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
   CREATE EXTERNAL DATA SOURCE SqlDataPool
-  WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+  WITH (LOCATION = 'sqldatapool://controller-svc/default');
 
 -- Create the SqlStoragePool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
    CREATE EXTERNAL DATA SOURCE SqlStoragePool
-   WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+   WITH (LOCATION = 'sqlhdfs://controller-svc/default');
 GO
 ```
 
@@ -108,6 +107,6 @@ GO
 
 ## Next steps
 
-To learn more about the SQL Server big data clusters, see the following overview:
+To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following overview:
 
-- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

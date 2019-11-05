@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "custom connection managers [Integration Services], developing user interface"
   - "custom user interface [Integration Services], custom connection manager"
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Developing a User Interface for a Custom Connection Manager
 

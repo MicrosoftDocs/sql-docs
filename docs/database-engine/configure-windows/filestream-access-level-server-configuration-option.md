@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # filestream access level Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

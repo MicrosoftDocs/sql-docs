@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "Excel [Integration Services]"
   - "connection managers [Integration Services], Excel"
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Loop through Excel Files and Tables by Using a Foreach Loop Container
 

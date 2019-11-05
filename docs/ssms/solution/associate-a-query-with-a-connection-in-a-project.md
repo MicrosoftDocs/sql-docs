@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Associate a Query with a Connection in a Project
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

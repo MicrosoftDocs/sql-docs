@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "Data Conversion transformation"
   - "data types [Integration Services], converting"
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Conversion Transformation
 

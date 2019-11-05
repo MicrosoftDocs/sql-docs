@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Table-Valued Object Properties (Visual Database Tools)

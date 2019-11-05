@@ -9,7 +9,6 @@ ms.technology: integration-services
 ms.topic: "language-reference"
 author: "haoqian"
 ms.author: "haoqian"
-manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # catalog.update_master_address (SSISDB Database)

@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], upgrade issues"
 ms.assetid: 9a154455-c68f-4403-a3a7-b90f4d35eecb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # IP address restriction detected (Upgrade Advisor)

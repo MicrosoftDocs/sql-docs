@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # IS_OBJECTSIGNED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,20 +38,20 @@ IS_OBJECTSIGNED (
  **'OBJECT'**  
  The type of securable class.  
   
- *@object_id*  
- The object_id of the object being tested. *@object_id* is type **int**.  
+ *\@object_id*  
+ The object_id of the object being tested. *\@object_id* is type **int**.  
   
- *@class*  
+ *\@class*  
  The class of the object:  
   
 -   'certificate'  
   
 -   'asymmetric key'  
   
- *@class* is **sysname**.  
+ *\@class* is **sysname**.  
   
- *@thumbprint*  
- The SHA thumbprint of the object. *@thumbprint* is type **varbinary(32)**.  
+ *\@thumbprint*  
+ The SHA thumbprint of the object. *\@thumbprint* is type **varbinary(32)**.  
   
 ## Returned Types  
  **int**  

@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REPLACE (Transact-SQL)

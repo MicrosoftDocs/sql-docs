@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Change Existing Columns to XML Columns
 

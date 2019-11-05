@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Nullability and Three-Value Logic Comparisons
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

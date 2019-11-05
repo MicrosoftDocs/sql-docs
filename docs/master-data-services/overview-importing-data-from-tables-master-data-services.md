@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Overview: Importing Data from Tables (Master Data Services)
 

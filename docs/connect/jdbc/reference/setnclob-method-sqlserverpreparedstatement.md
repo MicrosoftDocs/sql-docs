@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 7ec1d24d-f732-44f3-9608-734ce2df4489
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setNClob Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

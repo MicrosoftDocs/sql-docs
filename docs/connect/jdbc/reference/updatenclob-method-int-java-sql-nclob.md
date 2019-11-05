@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 6e9bca18-f64e-46a4-8541-2c9c39b393b5
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # updateNClob Method (int, java.sql.NClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

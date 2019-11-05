@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Create or Edit a Server Group (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

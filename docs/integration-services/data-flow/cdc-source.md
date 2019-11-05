@@ -13,9 +13,8 @@ f1_keywords:
   - "sql13.ssis.designer.cdcsource.columns.f1"
   - "sql13.ssis.designer.cdcsource.errorhandling.f1"
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # CDC Source
 

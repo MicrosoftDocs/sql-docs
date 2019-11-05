@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # PropertyAttributesEnum
 Specifies the attributes of a [Property](../../../ado/reference/ado-api/property-object-ado.md) object.  

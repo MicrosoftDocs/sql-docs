@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetInfo Support
 When an ODBC 2.*x* application calls **SQLGetInfo** to an ODBC 3*.x* driver, the *InfoType* arguments in the following table must be supported.  

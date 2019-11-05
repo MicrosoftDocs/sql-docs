@@ -129,7 +129,8 @@ manager: craigg
  Click to create the specified availability group listener.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
- **To create or configure an availability group listener**  
+
+### To create or configure an availability group listener
   
 1.  Connect to the server instance that hosts the primary replica.  
   
@@ -137,15 +138,15 @@ manager: craigg
   
      The following example adds an availability group listener to an existing availability group named `MyAg2`. A unique DNS name, `MyAg2ListenerIvP6`, is specified for this listener. The two replicas are on different subnets, so , as recommended, the listener uses static IP addresses. For each of the two availability replicas, the WITH IP clause specifies a static IP address, `2001:4898:f0:f00f::cf3c and 2001:4898:e0:f213::4ce2`, which use the IPv6 format. This example also specifies uses the optional PORT argument to specify port `60173` as the listener port.  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAg2   
           ADD LISTENER 'MyAg2ListenerIvP6' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
     GO  
-  
     ```  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
- **To create or configure an availability group listener**  
+
+### To create or configure an availability group listener 
   
 1.  Change directory (`cd`) to the server instance that hosts the primary replica.  
   
@@ -156,11 +157,10 @@ manager: craigg
   
      For example, the following `New-SqlAvailabilityGroupListener` command creates an availability group listener named `MyListener` for the availability group `MyAg`. This listener will use the IPv4 address passed to the `-StaticIp` parameter as its virtual IP address.  
   
-    ```  
-    New-SqlAvailabilityGroupListener -Name MyListener `   
-    -StaticIp '192.168.3.1/255.255.252.0' `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg  
-  
+    ```powershell
+    New-SqlAvailabilityGroupListener -Name MyListener `
+    -StaticIp '192.168.3.1/255.255.252.0' `
+    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg
     ```  
   
      `Set-SqlAvailabilityGroupListener`  
@@ -168,10 +168,9 @@ manager: craigg
   
      For example, the following `Set-SqlAvailabilityGroupListener` command sets the port number for the availability group listener named `MyListener` to `1535`. This port is used to listen for connections to the listener.  
   
-    ```  
-    Set-SqlAvailabilityGroupListener -Port 1535 `   
+    ```powershell
+    Set-SqlAvailabilityGroupListener -Port 1535 `
     -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\MyListener  
-  
     ```  
   
      `Add-SqlAGListenerstaticIp`  
@@ -179,18 +178,16 @@ manager: craigg
   
      For example, the following `Add-SqlAGListenerstaticIp` command adds a static IPv4 address to the availability group listener `MyListener` on the availability group `MyAg`. This IPv6 address serves as the virtual IP address of the listener on the subnet `255.255.252.0`. If the availability group spans multiple subnets, you should add a static IP address for each subnet to the listener.  
   
-    ```  
-    $path = "SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\ MyListener" `   
-    Add-SqlAGListenerstaticIp -Path $path `   
+    ```powershell
+    $path = "SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\ MyListener" `
+    Add-SqlAGListenerstaticIp -Path $path `
     -StaticIp "2001:0db8:85a3:0000:0000:8a2e:0370:7334"  
     ```  
   
     > [!NOTE]  
     >  To view the syntax of a cmdlet, use the **Get-Help**  cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
- **To set up and use the SQL Server PowerShell provider**  
-  
--   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
+To set up and use the SQL Server PowerShell provider, see [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md).
   
 ## Troubleshooting  
   
@@ -263,9 +260,9 @@ manager: craigg
 ###  <a name="SampleScript"></a> Sample PowerShell Script to Disable RegisterAllProvidersIP and Reduce TTL  
  The following PowerShell example demonstrates how to configure both the `RegisterAllProvidersIP` and `HostRecordTTL` cluster parameters for the listener resource.  The DNS record will be cached for 5 minutes rather than the default 20 minutes.  Modifying both cluster parameters may reduce the time to connect to the correct IP address after a failover for legacy clients that cannot use the `MultiSubnetFailover` parameter.  Replace `yourListenerName` with the name of the listener that you are changing.  
   
-```  
+```powershell
 Import-Module FailoverClusters  
-Get-ClusterResource yourListenerName | Set-ClusterParameter RegisterAllProvidersIP 0   
+Get-ClusterResource yourListenerName | Set-ClusterParameter RegisterAllProvidersIP 0
 Get-ClusterResource yourListenerName|Set-ClusterParameter HostRecordTTL 300  
 Stop-ClusterResource yourListenerName  
 Start-ClusterResource yourAGResource  
@@ -327,5 +324,3 @@ Start-ClusterResource yourAGResource
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
-  
-  

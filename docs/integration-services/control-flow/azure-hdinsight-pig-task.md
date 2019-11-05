@@ -11,9 +11,8 @@ f1_keywords:
   - "sql13.dts.designer.afppigtask.f1"
   - "sql14.dts.designer.afppigtask.f1"
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Azure HDInsight Pig Task
 

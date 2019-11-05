@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: b4f8db0c-2eaf-476b-b916-3e83355778f7
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # supportsDifferentTableCorrelationNames Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

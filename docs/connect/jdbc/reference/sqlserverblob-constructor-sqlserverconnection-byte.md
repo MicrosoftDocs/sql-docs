@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 9fe573e3-30db-4828-abab-e9346493e931
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # SQLServerBlob Constructor (SQLServerConnection, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # CreateRecordset Method Example (VBScript)
 > [!IMPORTANT]

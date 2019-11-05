@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ADORecordConstruction Interface
 The **ADORecordConstruction**interface is used to construct an ADO **Record** object from an OLE DB **Row** object in a C/C++ application.  

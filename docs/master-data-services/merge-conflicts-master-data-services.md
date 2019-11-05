@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Merge Conflicts (Master Data Services)
 

@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "smallest integer great than or equal to expression"
   - "CEILING function [SSIS]"
 ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # CEILING (SSIS Expression)
 

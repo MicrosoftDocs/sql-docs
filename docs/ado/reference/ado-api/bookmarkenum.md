@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # BookmarkEnum
 Specifies a bookmark indicating where the operation should begin.  

@@ -12,7 +12,6 @@ dev_langs:
 ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.fn_db_backup_file_snapshots (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

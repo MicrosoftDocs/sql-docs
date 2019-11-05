@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 1c43d9e4-6fb1-4d15-a5fb-cd572daf2951
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # Extending the Database Features
 You can create feature extensions that let you extend features such as unit testing, and database code analysis. For more information, see the following topics:  

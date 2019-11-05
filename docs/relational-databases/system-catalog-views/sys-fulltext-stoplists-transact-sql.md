@@ -22,7 +22,6 @@ ms.assetid: eb69fb8f-f6d9-446e-83c0-67afd05dfba0
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_stoplists (Transact-SQL)

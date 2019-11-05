@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 802416f6-5177-4db5-bca5-976dec5faf53
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.set_folder_description (SSISDB Database)
 

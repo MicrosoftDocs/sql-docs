@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addlogreader_agent"
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: mashamsft
+ms.author: mathoma
 ---
 # sp_addlogreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Adds a Log Reader agent for a given database. This stored procedure is executed at the Publisher on the publication database.  
   

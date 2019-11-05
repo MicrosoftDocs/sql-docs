@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 40178471-4f35-4df9-b3fb-80cdf43de274
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getFloat Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: eb340450-45a7-49c8-84bc-1b9dd5ee842f
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # allTablesAreSelectable Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

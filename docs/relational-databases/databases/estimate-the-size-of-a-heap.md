@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Estimate the Size of a Heap
@@ -77,7 +76,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
      The number of pages estimated should be rounded up to the nearest whole page.  
   
 8.  Calculate the amount of space that is required to store the data in the heap (8192 total bytes per page):  
-  
+
      Heap size (bytes) = 8192 x **_Num_Pages_**  
   
  This calculation does not consider the following:  

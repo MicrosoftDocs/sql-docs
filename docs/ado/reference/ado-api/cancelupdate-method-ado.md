@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # CancelUpdate Method (ADO)
 Cancels any changes made to the current or new row of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object, or the [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection of a [Record](../../../ado/reference/ado-api/record-object-ado.md) object, before calling the [Update](../../../ado/reference/ado-api/update-method.md) method.  

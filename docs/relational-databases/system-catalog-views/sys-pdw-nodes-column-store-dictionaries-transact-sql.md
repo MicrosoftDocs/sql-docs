@@ -11,7 +11,6 @@ dev_langs:
 ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
@@ -22,7 +21,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Indicates the partition ID. Is unique within a database.|  
-|**hobt_id**|**bigint**|ID of the heap or B-tree index (hobt) for the table that has this columnstore index.|  
+|**hobt_id**|**bigint**|ID of the heap or B-tree index (HoBT) for the table that has this columnstore index.|  
 |**column_id**|**int**|ID of the columnstore column.|  
 |**dictionary_id**|**int**|Id of the dictionary.|  
 |**version**|**int**|Version of the dictionary format.|  
@@ -33,7 +32,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |**pdw_node_id**|**int**|Unique identifier of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node.|  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission.  
+ Requires `VIEW SERVER STATE` permission.  
   
 ## See Also  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   

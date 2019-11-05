@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: f81ce28b-eaad-4c47-9efd-8f23f0f25870
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # Filter and Sort Dialog Box
 In SQL Server Object Explorer, you can right click a table or view and select **View Data** (for more information see [How to: View and Edit Data in a Table](../ssdt/how-to-view-and-edit-data-in-a-table.md)). Beginning in the March 2014 release of SQL Server Data Tools, the **Data Editor** has a Sort and filter button in the toolbar. You can modify the data that is displayed in a table or view.  

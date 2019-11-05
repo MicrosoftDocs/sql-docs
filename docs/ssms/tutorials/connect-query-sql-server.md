@@ -1,10 +1,9 @@
 ---
 title: Connect to and query a SQL Server instance by using SQL Server Management Studio (SSMS)
-description: A quickstart tutorial for connecting to a SQL Server instance by using SQL Server Management Studio and running basic T-SQL queries.
+description: A tutorial for connecting to a SQL Server instance by using SQL Server Management Studio and running basic T-SQL queries.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ms.reviewer: sstein
 ms.topic: quickstart
 ms.prod_service: sql-tools
@@ -13,9 +12,10 @@ ms.technology: ssms
 ms.custom: ""
 ms.date: 03/13/2018
 ---
-# Quickstart: Connect to and query a SQL Server instance by using SQL Server Management Studio (SSMS)
 
-This tutorial teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands. The article demonstrates how to do the following:
+# Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio (SSMS)
+
+This tutorial teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands. The article demonstrates how to follow the below steps:
 
 > [!div class="checklist"]
 > * Connect to a SQL Server instance
@@ -48,9 +48,9 @@ If you don't have access to a SQL Server instance, select your platform from the
     * For **Server type**, select **Database Engine** (usually the default option).
     * For **Server name**, enter the name of your SQL Server instance. (This article uses the instance name SQL2016ST on the hostname NODE5 [NODE5\SQL2016ST].) If you're unsure how to determine your SQL Server instance name, see [Additional tips and tricks for using SSMS](ssms-tricks.md#determine-sql-server-name).
 
-    !["Server name" field with option of using SQL Server instance](media/connect-query-sql-server/connection2.png)
+    * For **Authentication**, select **Windows Authentication**. This article uses Windows Authentication, but SQL Server login is also supported. If you select **SQL Login**, you're prompted for a username and password. For more information about authentication types, see [Connect to the server (database engine)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
 
-    * For **Authentication**, select **Windows Authentication**. This article uses Windows Authentication, but SQL Server login is also supported. If you select **SQL Login**, you are prompted for a username and password. For more information about authentication types, see [Connect to the server (database engine)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
+    !["Server name" field with option of using SQL Server instance](media/connect-query-sql-server/connection2.png)
 
     You can also modify additional connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
 
@@ -106,9 +106,10 @@ In this section, you create a table in the newly created TutorialDB database. Be
    ![Change database](media/connect-query-sql-server/changedb.png)
 
 2. Paste the following T-SQL code snippet into the query window, select it, and then select **Execute** (or select F5 on your keyboard).  
-   You can either replace the existing text in the query window or append it to the end. To execute everything in the query window, select **Execute**. To execute a portion of the text, highlight that portion, and then select **Execute**.  
+   You can either replace the existing text in the query window or append it to the end. To execute everything in the query window, select **Execute**. If you've appended the text, you will want to execute just the portion of the text, so highlight that portion, and then select **Execute**.  
   
    ```sql
+   USE [TutorialDB]
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
@@ -125,7 +126,7 @@ In this section, you create a table in the newly created TutorialDB database. Be
    GO
    ```
 
-After the query is complete, the new Customers table is displayed in the list of tables in Object Explorer. If the table is not displayed, right-click the **TutorialDB** > **Tables** node in Object Explorer, and then select **Refresh**.
+After the query is complete, the new Customers table is displayed in the list of tables in Object Explorer. If the table isn't displayed, right-click the **TutorialDB** > **Tables** node in Object Explorer, and then select **Refresh**.
 
 ## Insert rows into the new table
 
@@ -184,7 +185,7 @@ You can change the server that your current query window is connected to by foll
 
 1. Right-click in the query window, and then select **Connection** > **Change connection**. The **Connect to Server** window opens again.
 
-2. Change the server that your query uses. 
+2. Change the server that your query uses.
 
    ![The Change Connection command](media/connect-query-sql-server/changeconnection.png)
 
@@ -193,8 +194,9 @@ You can change the server that your current query window is connected to by foll
 
 ## Next steps
 
-The next article teaches you how to script various objects within SQL Server Management Studio.
+The best way to get acquainted with SSMS is through hands-on practice. These articles help you with various features available within SSMS.  These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
-Go to the next article to learn more:
-> [!div class="nextstepaction"]
-> [Next steps](scripting-ssms.md)
+* [Scripting](scripting-ssms.md)
+* [Using Templates in SSMS](../template/templates-ssms.md)
+* [SSMS Configuration](ssms-configuration.md)
+* [Additional Tips and Tricks for using SSMS](ssms-tricks.md)

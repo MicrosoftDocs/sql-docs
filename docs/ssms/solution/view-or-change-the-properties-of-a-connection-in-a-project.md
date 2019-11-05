@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # View or Change the Properties of a Connection in a Project
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

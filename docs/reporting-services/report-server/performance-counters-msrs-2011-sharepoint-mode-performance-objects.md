@@ -1,6 +1,6 @@
 ---
 title: "Performance Counters MSRS 2011 SharePoint Mode Performance Objects | Microsoft Docs"
-ms.date: 03/14/2017
+ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server
@@ -17,6 +17,8 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+
 ---
 # Performance Counters MSRS 2011 SharePoint Mode Performance Objects
   This topic describes performance counters for the **MSRS 2011 Web Service SharePoint Mode** and **MSRS 2011 Windows Service SharePoint Mode** performance objects that are part of a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint mode deployment.  
@@ -114,7 +116,7 @@ ms.author: maggies
 |**Total Snapshot Updates**|Total number of report execution snapshot updates.|  
   
 ##  <a name="bkmk_powershell"></a> Use PowerShell Cmdlets to return lists  
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script will return the counter sets where the CounterSetName starts with "msr"  
+ ![PowerShell related content](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script will return the counter sets where the CounterSetName starts with "msr"  
   
 ```  
 get-counter -listset msr*  

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 7f520e96-5313-468f-b987-535ddaea027e
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getConnection Method ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

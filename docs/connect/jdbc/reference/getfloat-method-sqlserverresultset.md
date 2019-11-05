@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: eb4efa8c-c269-457c-9acb-39b8cd6d081c
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getFloat Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

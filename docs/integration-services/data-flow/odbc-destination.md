@@ -13,9 +13,8 @@ f1_keywords:
   - "sql13.ssis.designer.odbcdest.columns.f1"
   - "sql13.ssis.designer.odbcdest.errorhandling.f1"
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # ODBC Destination
 

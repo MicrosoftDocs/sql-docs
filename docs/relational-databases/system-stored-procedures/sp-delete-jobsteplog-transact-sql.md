@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 > **NOTE:** Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
 `[ @step_id = ] step_id`
- The identification number of the step in the job for which the job step log is to be deleted. If not included, all job step logs in the job are deleted unless **@older_than** or **@larger_than** are specified. *step_id* is **int**, with a default of NULL.  
+ The identification number of the step in the job for which the job step log is to be deleted. If not included, all job step logs in the job are deleted unless **\@older_than** or **\@larger_than** are specified. *step_id* is **int**, with a default of NULL.  
   
 `[ @step_name = ] 'step_name'`
  The name of the step in the job for which the job step log is to be deleted. *step_name* is **sysname**, with a default of NULL.  
@@ -55,10 +54,10 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 > **NOTE:** Either *step_id* or *step_name* can be specified, but both cannot be specified.  
   
 `[ @older_than = ] 'date'`
- The date and time of the oldest job step log you want to keep. All job step logs that are older than this date and time are removed. *date* is **datetime**, with a default of NULL. Both **@older_than** and **@larger_than** can be specified.  
+ The date and time of the oldest job step log you want to keep. All job step logs that are older than this date and time are removed. *date* is **datetime**, with a default of NULL. Both **\@older_than** and **\@larger_than** can be specified.  
   
 `[ @larger_than = ] 'size_in_bytes'`
- The size in bytes of the largest job step log you want to keep. All job step logs that are larger that this size are removed. Both **@larger_than** and **@older_than** can be specified.  
+ The size in bytes of the largest job step log you want to keep. All job step logs that are larger that this size are removed. Both **\@larger_than** and **\@older_than** can be specified.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  
@@ -69,7 +68,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## Remarks  
  **sp_delete_jobsteplog** is in the **msdb** database.  
   
- If no arguments except **@job_id** or **@job_name** are specified, all job step logs for the specified job are deleted.  
+ If no arguments except **\@job_id** or **\@job_name** are specified, all job step logs for the specified job are deleted.  
   
 ## Permissions  
  By default, members of the **sysadmin** fixed server role can execute this stored procedure. Other users must be granted one of the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles in the **msdb** database:  

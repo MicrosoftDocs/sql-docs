@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 630a93b0-6e3c-4255-a007-1097ce0ee243
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # createBlob Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

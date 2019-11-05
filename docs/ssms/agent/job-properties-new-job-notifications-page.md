@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: ed393cbd-4496-4399-a177-e5baa92fb689
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Job Properties - New Job (Notifications Page)

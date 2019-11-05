@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ---
 # Change Roles Between Primary and Secondary Log Shipping Servers (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,17 +36,17 @@ manager: jroth
   
     3.  In the **Secondary Database Settings** dialog box, select **No, the secondary database is initialized**.  
   
-4.  If log shipping monitoring was enabled on your former log shipping configuration, reconfigure log shipping monitoring to monitor the new log shipping configuration.  Execute the following commands, replacing *database_name* with the name of your database:  
+4.  If log shipping monitoring was enabled on your former log shipping configuration, reconfigure log shipping monitoring to monitor the new log shipping configuration.  Setting the threshold_alert_enabled to 1 specifies that an alert will be raised when restore_threshold is exceeded. Execute the following commands, replacing *database_name* with the name of your database:  
   
     1.  **On the new primary server**  
   
          Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new primary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   
@@ -55,11 +54,11 @@ manager: jroth
   
          Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new secondary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   

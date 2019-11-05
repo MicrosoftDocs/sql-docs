@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 8ce8024f-153f-4066-b607-0d36fefc79ed
 author: "Lingxi-Li"
 ms.author: "lingxl"
-manager: craigg
 ---
 # Azure Resource Manager Connection Manager
 

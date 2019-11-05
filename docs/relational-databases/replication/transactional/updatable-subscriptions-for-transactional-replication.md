@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Updatable Subscriptions - For Transactional Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

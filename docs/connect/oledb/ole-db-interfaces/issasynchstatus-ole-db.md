@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "ISSAsynchStatus interface"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # ISSAsynchStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,22 +1,21 @@
 ---
 title: Ingest data into a SQL Server data pool
 titleSuffix: SQL Server big data clusters
-description: This tutorial demonstrates how to ingest data into the data pool of a SQL Server 2019 big data cluster (preview).
-author: rothja 
-ms.author: jroth 
-manager: jroth
-ms.date: 05/22/2019
+description: This tutorial demonstrates how to ingest data into the data pool of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # Tutorial: Ingest data into a SQL Server data pool with Transact-SQL
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This tutorial demonstrates how to use Transact-SQL to load data into the [data pool](concept-data-pool.md) of a SQL Server 2019 big data cluster (preview). With SQL Server big data clusters, data from a variety of sources can be ingested and distributed across data pool instances.
+This tutorial demonstrates how to use Transact-SQL to load data into the [data pool](concept-data-pool.md) of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. With [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], data from a variety of sources can be ingested and distributed across data pool instances.
 
 In this tutorial, you learn how to:
 
@@ -58,7 +57,7 @@ The following steps create an external table in the data pool named **web_clicks
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
 1. Create an external table named **web_clickstream_clicks_data_pool** in the data pool.
@@ -74,7 +73,7 @@ The following steps create an external table in the data pool named **web_clicks
       );
    ```
   
-1. In CTP 3.0, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
+1. In CTP 3.1, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
 
 ## Load data
 
@@ -85,7 +84,7 @@ The following steps ingest sample web clickstream data into the data pool using 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool
    SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-     FROM sales.dbo.web_clickstreams_hdfs_parquet
+     FROM sales.dbo.web_clickstreams_hdfs
    INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
                            AND wcs_user_sk IS NOT NULL)
    GROUP BY wcs_user_sk, i_category_id

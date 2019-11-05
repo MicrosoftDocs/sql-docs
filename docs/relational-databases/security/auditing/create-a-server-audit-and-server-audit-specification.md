@@ -1,7 +1,7 @@
 ---
 title: "Create a Server Audit and Server Audit Specification | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "10/16/2019"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Create a Server Audit and Server Audit Specification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +106,7 @@ manager: craigg
      Specifies the number of audit files to be created, up to 2,147,483,647. This option is only available if **Unlimited** is unchecked.  
   
      **Maximum file size**  
-     Specifies the maximum size for an audit file in either megabytes (MB), gigabytes (GB), or terabytes (TB). You can specify between 1024 MB and 2,147,483,647 TB. Selecting the **Unlimited** check box does not place a limit on the size of the file. Specifying a value lower than 1024 MB will fail, returning an error. The **Unlimited** check box is selected by default.  
+     Specifies the maximum size for an audit file in either megabytes (MB), gigabytes (GB), or terabytes (TB). You can specify a number up to 2,147,483,647 TB. Selecting the **Unlimited** check box does not place a limit on the size of the file. The **Unlimited** check box is selected by default.  
   
      **Reserve disk space** check box  
      Specifies that space is pre-allocated on the disk equal to the specified maximum file size. This setting can only be used if the **Unlimited** check box under **Maximum file size** is not selected. This check box is not selected by default.  

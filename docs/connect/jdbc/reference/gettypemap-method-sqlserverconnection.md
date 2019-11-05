@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: c81bcf9a-2e24-4dfc-8c04-d612e9b7baca
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getTypeMap Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

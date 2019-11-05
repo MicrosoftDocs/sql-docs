@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Executing Positioned Update and Delete Statements
 > [!IMPORTANT]  

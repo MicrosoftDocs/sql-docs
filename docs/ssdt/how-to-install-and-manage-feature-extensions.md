@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # How to: Install and Manage Feature Extensions
 You can add rules for analyzing database code, conditions for database unit tests and build/deployment contributors to increase the functionality that Visual Studio editions including SQL Server Data Tools offer. However, you must first install a feature extension before you can use it, whether you created the extension or you installed one that someone else created.  

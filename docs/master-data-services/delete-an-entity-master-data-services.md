@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete an Entity (Master Data Services)
 

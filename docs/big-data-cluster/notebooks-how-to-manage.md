@@ -2,14 +2,13 @@
 title: Manage notebooks in Azure Data Studio
 titleSuffix: SQL Server big data clusters
 description: Learn how to manage notebooks in Azure Data Studio. This includes opening notebooks, saving them, and changing your big data cluster connection.
-author: rothja 
-ms.author: jroth 
-manager: jroth
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # How to manage notebooks in Azure Data Studio

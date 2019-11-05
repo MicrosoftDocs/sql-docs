@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Work with Directories and Paths in FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ GO
 2.  The **DIRECTORY_NAME** specified at the database level.  
   
 3.  The **FILETABLE_DIRECTORY** specified at the FileTable level.  
-  
+
  The resulting hierarchy looks like this:  
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\`  

@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XACT_STATE (Transact-SQL)

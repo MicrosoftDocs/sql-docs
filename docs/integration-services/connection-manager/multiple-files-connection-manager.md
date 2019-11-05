@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "connections [Integration Services], files"
   - "multiple file connections"
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Multiple Files Connection Manager
 

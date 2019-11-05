@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Type Property Example (Field) (VC++)
 This example demonstrates the [Type](../../../ado/reference/ado-api/type-property-ado.md) property by displaying the name of the constant that corresponds to the value of the **Type** property of all the [Field](../../../ado/reference/ado-api/field-object.md) objects in the ***Employees*** table. The FieldType function is required for this procedure to run.  

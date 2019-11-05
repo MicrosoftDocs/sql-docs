@@ -14,9 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Master Stored Procedures task [Integration Services]"
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Transfer Master Stored Procedures Task
 

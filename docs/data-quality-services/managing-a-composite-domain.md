@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Managing a Composite Domain
 

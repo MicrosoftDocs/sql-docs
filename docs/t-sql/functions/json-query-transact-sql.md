@@ -18,7 +18,6 @@ ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: genemi
-manager: craigg
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # JSON_QUERY (Transact-SQL)

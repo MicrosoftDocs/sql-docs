@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 7dbbdacb-74ef-42e7-9bdc-a3229505dad8
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getParameterCount Method (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Add Tables to Diagrams (Visual Database Tools)

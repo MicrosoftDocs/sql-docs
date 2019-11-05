@@ -11,7 +11,6 @@ ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
 ms.reviewer: maghan
-manager: craigg
 ---
 # Change the account for Scale Out logging
 

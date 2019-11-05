@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete a Stored Procedure
@@ -56,7 +55,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 5.  Confirm the correct procedure is selected, and then click **OK**.  
   
 6.  Remove references to the procedure from any dependent objects and scripts.  
-  
+
 ###  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To delete a procedure in Query Editor**  
   

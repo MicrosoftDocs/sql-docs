@@ -45,7 +45,7 @@ The script can be used to copy content between report servers of the same mode o
 |Item|Migrated|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |Passwords|**No**|**No**|Passwords are **NOT** migrated. After content items are migrated, update the credential information on the destination server. For example, data sources with stored credentials.|  
-|My Reports|**No**|**No**|The Native mode "My Reports" feature is based on individual user sign-ins therefore the scripting service does not have access to content in "My Reports" folders for users other than the **-u** parameter used to run the rss script. Also, "My Reports" isn't a feature of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode and items in the folders cannot be copied to a SharePoint environment. Therefore, the script does not copy report items that are in the "My Reports" folders on a source native mode report server<br /><br /> To migrate the content in "My Reports" folders with this script, complete the following steps:<br /><br /> 1.  Create new folder(s) in the web portal. Optionally, you can create folders or subfolders for each user.<br />2.  Sign in as one of the users with "My Reports" content.<br />3.  In the web portal, select the **My Reports** folder.<br />4.  Select the **Details** view for the folder.<br />5.  Select each report that you want to copy.<br />6.  Select **Move** in the the web portal toolbar.<br />7.  Select the desired destination folder.<br />8.  Repeat steps 2-7 for each user.<br />9. Run the script.|  
+|My Reports|**No**|**No**|The Native mode "My Reports" feature is based on individual user sign-ins therefore the scripting service does not have access to content in "My Reports" folders for users other than the **-u** parameter used to run the rss script. Also, "My Reports" isn't a feature of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode and items in the folders cannot be copied to a SharePoint environment. Therefore, the script does not copy report items that are in the "My Reports" folders on a source native mode report server<br /><br /> To migrate the content in "My Reports" folders with this script, complete the following steps:<br /><br /> 1.  Create new folder(s) in the web portal. Optionally, you can create folders or subfolders for each user.<br />2.  Sign in as one of the users with "My Reports" content.<br />3.  In the web portal, select the **My Reports** folder.<br />4.  Select the **Details** view for the folder.<br />5.  Select each report that you want to copy.<br />6.  Select **Move** in the web portal toolbar.<br />7.  Select the desired destination folder.<br />8.  Repeat steps 2-7 for each user.<br />9. Run the script.|  
 |History|**No**|**No**||  
 |History settings|Yes|Yes|The history settings are migrated however the history details are NOT migrated.|  
 |Schedules|Yes|Yes|To migrate schedules, it is required that SQL Server Agent is running on the target server. If SQL Server Agent isn't running on the target, you will see an error message similar to this one:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
@@ -249,26 +249,26 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"></a> Native mode to native mode - Windows Azure virtual machine  
+###  <a name="bkmk_native_to_native_Azure_vm"></a> Native mode to native mode - Azure virtual machine  
  The following example migrates content:  
   
 -   From a Native mode report server **SourceServer**.  
   
--   To a **TargetServer** Native mode report server running on a Windows Azure virtual machine. The **TargetServer** isn't joined to the domain of the **SourceServer** and the **User2** is an administrator on the Windows Azure virtual machine **TargetServer**.  
+-   To a **TargetServer** Native mode report server running on an Azure virtual machine. The **TargetServer** isn't joined to the domain of the **SourceServer** and the **User2** is an administrator on the Azure virtual machine **TargetServer**.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
 ```  
   
 > [!TIP]  
-> For information on how to use Windows PowerShell to create [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers on Windows Azure virtual machines, see [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
+> For information on how to use Windows PowerShell to create [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers on Azure virtual machines, see [Use PowerShell to Create an Azure VM With a Native Mode Report Server](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint mode -'bi' site collection to a native mode server on a Windows Azure virtual machine. 
+##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint mode -'bi' site collection to a native mode server on an Azure virtual machine. 
  The following example migrates content:  
   
 -   From a SharePoint mode report server **SourceServer** that contains a site collection of "sites/bi" and a shared documents library.  
   
--   To a **TargetServer** Native mode report server running on a Windows Azure virtual machine. The **TargetServer** isn't joined to the domain of the **SourceServer** and the **User2** is an administrator on the Windows Azure virtual machine **TargetServer**.  
+-   To a **TargetServer** Native mode report server running on an Azure virtual machine. The **TargetServer** isn't joined to the domain of the **SourceServer** and the **User2** is an administrator on the Azure virtual machine **TargetServer**.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  

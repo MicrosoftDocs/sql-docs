@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Type Property (Column) (ADOX)
 Indicates the data type of a column.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Deploy a Model Deployment Package by Using the Wizard
 

@@ -1,16 +1,15 @@
 ---
 title: "CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/14/2017"
+ms.date: "07/03/2019"
 ms.service: sql-data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # CREATE TABLE (Azure SQL Data Warehouse)
@@ -46,7 +45,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 <table_option> ::=
     {
-        <cci_option> --default for Azure SQL Data Warehouse
+       CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+      | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
@@ -58,8 +58,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) )
 
-<cci_option> ::= [CLUSTERED COLUMNSTORE INDEX] [ORDER (column [,…n])]
-  
 <data type> ::=
       datetimeoffset [ ( n ) ]  
     | datetime2 [ ( n ) ]  
@@ -163,22 +161,11 @@ Creates one or more table partitions. These partitions are horizontal table slic
 
  See [Create a partitioned table](#PartitionedTable) in the Examples section.
 
-### Ordered Clustered columnstore index option (Preview)
+### Ordered Clustered columnstore index option (Preview for Azure SQL Data Warehouse)
 
-Clustered columnstore index is the default for creating tables in Azure SQL Data Warehouse.  The ORDER specification defaults to COMPOUND keys.  Sorting will always be ascending order. If no ORDER clause is specified, columnstore will not be sorted. Due to the ordering process, a table with ordered clustered columnstore index may experience longer data loading times than non-ordered clustered columnstore indexes. If you need more tempdb space while loading data, you can decrease the amount of data per insert.
+Clustered columnstore index (CCI) is the default for creating tables in Azure SQL Data Warehouse.  Data in CCI is not sorted before being compressed into columnstore segments.  When creating a CCI with ORDER, data is sorted before being added to index segments and query performance can be improved. Check [Performance tuning with ordered clustered columnstore index](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci) for details.  
 
-During preview, you can run this query to check the column(s) with ORDER enabled.  A catalog view will be provided later to provide this information and the column ordinal if multiple columns are specified in ORDER.
-
-```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
-FROM sys.objects o 
-INNER JOIN sys.columns c ON o.object_id = c.object_id 
-INNER JOIN sys.partitions p ON o.object_id = p.object_id   
-INNER JOIN sys.column_store_segments s 
-    ON p.hobt_id = s.hobt_id AND s.column_id = c.column_id  
-WHERE o.name = 't1' and c.name = 'col1' 
-ORDER BY c.name, s.min_data_id, s.segment_id;
-```
+Users can query column_store_order_ordinal column in sys.index_columns for the column(s) a table is ordered on and the sequence in the ordering.  
 
 ### <a name="DataTypes"></a> Data type
 
@@ -390,17 +377,6 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ;  
 ```
 
-### <a name="OrderedClusteredColumnstoreIndex"></a> C. Create an ordered clustered columnstore index
-
-The following example shows how to create an ordered clustered columnstore index. The index is ordered on SHIPDATE.
-
-```sql
-CREATE TABLE Lineitem  
-WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
-AS  
-SELECT * FROM ext_Lineitem
-```
-
 <a name="ExamplesTemporaryTables"></a> 
 ## Examples for temporary tables
 
@@ -443,11 +419,22 @@ WITH
   )  
 ;  
 ```  
- 
+
+### <a name="OrderedClusteredColumnstoreIndex"></a> E. Create an ordered clustered columnstore index
+
+The following example shows how to create an ordered clustered columnstore index. The index is ordered on SHIPDATE.
+
+```sql
+CREATE TABLE Lineitem  
+WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
+AS  
+SELECT * FROM ext_Lineitem
+```
+
 <a name="ExTableDistribution"></a> 
 ## Examples for table distribution
 
-### <a name="RoundRobin"></a> E. Create a ROUND_ROBIN table  
+### <a name="RoundRobin"></a> F. Create a ROUND_ROBIN table  
  The following example creates a ROUND_ROBIN table with three columns and without partitions. The data is spread across all distributions. The table is created with a CLUSTERED COLUMNSTORE INDEX, which gives better performance and data compression than a heap or rowstore clustered index.  
   
 ```sql
@@ -460,7 +447,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> F. Create a hash-distributed table
+### <a name="HashDistributed"></a> G. Create a hash-distributed table
 
  The following example creates the same table as the previous example. However, for this table, rows are distributed (on the `id` column) instead of randomly spread like a ROUND_ROBIN table. The table is created with a CLUSTERED COLUMNSTORE INDEX, which gives better performance and data compression than a heap or rowstore clustered index.  
   
@@ -478,7 +465,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a> G. Create a replicated table  
+### <a name="Replicated"></a> H. Create a replicated table  
  The following example creates a replicated table similar to the previous examples. Replicated tables are copied in full to each Compute node. With this copy on each Compute node, data movement is reduced for queries. This example is created with a CLUSTERED INDEX, which gives better data compression than a heap. A heap may not contain enough rows to achieve good CLUSTERED COLUMNSTORE INDEX compression.  
   
 ```sql
@@ -498,7 +485,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## Examples for table partitions
 
-###  <a name="PartitionedTable"></a> H. Create a partitioned table
+###  <a name="PartitionedTable"></a> I. Create a partitioned table
 
  The following example creates the same table as shown in example A, with the addition of RANGE LEFT partitioning on the `id` column. It specifies four partition boundary values, which results in five partitions.  
   
@@ -533,7 +520,7 @@ WITH
 - Partition 4: 30 <= col < 40
 - Partition 5: 40 <= col  
   
-### <a name="OnePartition"></a> I. Create a partitioned table with one partition
+### <a name="OnePartition"></a> J. Create a partitioned table with one partition
 
  The following example creates a partitioned table with one partition. It doesn't specify any boundary value, which results in one partition.  
   
@@ -550,7 +537,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> J. Create a table with date partitioning
+### <a name="DatePartition"></a> K. Create a table with date partitioning
 
  The following example creates a new table named `myTable`, with partitioning on a `date` column. By using RANGE RIGHT and dates for the boundary values, it puts a month of data in each partition.  
   
@@ -593,7 +580,8 @@ WITH
 <a name="SeeAlso"></a>
 ## See also
  
- [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
+[CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+[sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 
   

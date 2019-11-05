@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 6ff97d37-befc-47b1-8092-505917216a41
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # nullsAreSortedHigh Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

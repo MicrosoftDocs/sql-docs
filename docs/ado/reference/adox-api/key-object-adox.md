@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Key Object (ADOX)
 Represents a primary, foreign, or unique key field from a database table.  

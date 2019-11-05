@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 354e2150-fa2a-4583-b1aa-6b78ae4378b6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # FOR XML Support for the User-Defined Data Types (UDT)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # DateModified Property (ADOX)
 Indicates the date the object was last modified.  

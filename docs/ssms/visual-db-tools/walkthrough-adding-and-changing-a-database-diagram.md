@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Walkthrough: Adding and Changing a Database Diagram

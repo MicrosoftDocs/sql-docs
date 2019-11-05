@@ -1,10 +1,7 @@
 ---
 title: "Query and Text Editors (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Editor [SQL Server Management Studio]"
@@ -24,18 +21,24 @@ helpviewer_keywords:
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
-manager: craigg
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "03/14/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Query and Text Editors (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   You can use one of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editors to interactively edit and test a [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX, or XML/A script, or to edit an XML or plain text file. Each editor is supported by a language-specific service that colors keywords, and checks for syntax and usage errors. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor includes a [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger that you can use to help fix problems in [!INCLUDE[tsql](../../includes/tsql-md.md)] code.  
   
-## SQL Server Management Studio Editors  
+## SQL Server Management Studio Editors
+
  The four editors in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] share a common architecture. The text editor implements the base level of functionality, and can be used as a basic editor for text files. The other three editors, or query editors, extend this base of functionality by including a language service that defines the syntax of one of the languages supported in SQL Server. The query editors also implement varying levels of support for editor features such as IntelliSense and debugging. The query editors include the Database Engine Query Editor for use in building scripts containing Transact-SQL and XQuery statements, the MDX editor for the MDX language, the DMX editor for the DMX language, and the XML/A editor for the XML for Analysis language.  
   
-## Common Components  
+## Common Components
+
  All of the editors in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] share these components:  
   
  **Code Pane**  
@@ -55,7 +58,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  **Word Wrap**  
  Displays long lines of text or code as multiple lines, enabling you to see all the text on the line. Word wrap does not affect the way text appears when it is executed or printed. Word wrap is turned on from the **Tools**, **Options** dialog box, on either the Text Editor, All Languages, General page, or on a specific editor page.  
   
-## Code Editor Components  
+## Code Editor Components
+
  The code editors contain these features in addition to the ones shared with the text and XML editors:  
   
  **Results**  
@@ -79,7 +83,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  **Status Bar**  
  Displays system information that is associated with the Query Editor window, such as which instance the Query Editor is connected to.  
   
-## Database Engine Query Editor Components  
+## Database Engine Query Editor Components
+
  These components are only available in the Database Engine Query Editor:  
   
  **Debugger**  
@@ -125,7 +130,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Describes how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger to step through code and view debugging information such as the values in variables and parameters.|[Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |Describes how to set custom colors for different instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], and have those colors set as the background of the status bar in [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor windows.|[Status Bar &#40;Database Engine Query Editor&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## See Also  
- [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  
+## Next steps
+
+ [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)

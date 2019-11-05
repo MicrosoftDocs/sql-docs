@@ -1,28 +1,39 @@
 ---
-title: Install SQL Server Machine Learning Services (R, Python) on Linux | Microsoft Docs
-description: Learn how to install SQL Server Machine Learning Services (R, Python) on Red Hat, Ubuntu, and SUSE.
+title: Install SQL Server Machine Learning Services (Python, R) on Linux
+description: 'Learn how to install SQL Server Machine Learning Services (Python and R) on Linux: Red Hat, Ubuntu, and SUSE.'
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server 2019 Machine Learning Services (R, Python) on Linux
+# Install SQL Server Machine Learning Services (Python and R) on Linux
 
-[SQL Server Machine Learning Services](../advanced-analytics/what-is-sql-server-machine-learning.md) runs on Linux operating systems starting in this preview release of SQL Server 2019. Follow the steps in this article to install the machine learning extensions for R and Python. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Machine learning and programming extensions are an add-on to the database engine. Although you can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
+This article explains how to install [SQL Server Machine Learning Services](../advanced-analytics/index.yml) on Linux. You can use Machine Learning Services to execute Python and R scripts in-database.
 
-Package location for the R and Python extensions is in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
+The following Linux distributions are supported:
+
+- Red Hat Enterprise Linux (RHEL)
+- SUSE Linux Enterprise Server (SLES)
+- Ubuntu
+
+Machine Learning Services are a feature add-on to the database engine. Although you can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
+
+Package location for the Python and R extensions is in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
 
 Machine Learning Services is also supported on Linux containers. We do not provide pre-built containers with Machine Learning Services, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-## Uninstall previous CTP
+Machine Learning Services is installed by default on SQL Server Big Data Clusters, and you do not need to follow the steps in this case. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md).
 
-The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 3.0. Side-by-side installation of multiple versions is not supported.
+## Uninstall preview release
+
+If you have installed a preview release (Community Technical Preview (CTP) or Release Candidate), we recommend uninstalling this version to remove all previous packages before installing SQL Server 2019. Side-by-side installation of multiple versions is not supported, and the package list has changed over the last several preview (CTP/RC) releases.
 
 ### 1. Confirm package installation
 
@@ -32,7 +43,7 @@ You might want to check for the existence of a previous installation as a first 
 ls /opt/microsoft/mssql/bin
 ```
 
-### 2. Uninstall previous CTP 2.x packages
+### 2. Uninstall CTP/RC packages
 
 Uninstall at the lowest package level. Any upstream package dependent on a lower-level package is automatically uninstalled.
 
@@ -43,19 +54,19 @@ Commands for removing packages appear in the following table.
 
 | Platform	| Package removal command(s) | 
 |-----------|----------------------------|
-| RHEL	| `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
-| SLES	| `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
+| Red Hat	| `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
+| SUSE	| `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
 | Ubuntu	| `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
-> Microsoft R Open 3.4.4 is composed of two or three packages, depending on which CTP release you previously installed. (The foreachiterators package was combined into the main mro package in CTP 2.2.) If any of these packages remain after removing microsoft-r-open-mro-3.4.4, you should remove them individually.
+> Microsoft R Open 3.4.4 is composed of two packages, depending on which CTP release you previously installed. (The foreachiterators package was combined into the main mro package in CTP 2.2.) If any of these packages remain after removing microsoft-r-open-mro-3.4.4, you should remove them individually.
 > ```
 > microsoft-r-open-foreachiterators-3.4.4
 > microsoft-r-open-mkl-3.4.4
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### 3. Proceed with CTP 3.0 install
+### 3. Proceed with install
 
 Install at the highest package level using the instructions in this article for your operating system.
 
@@ -65,7 +76,7 @@ For each OS-specific set of installation instructions, *highest package level* i
 
 2. Run install commands using the package managers and syntax for your operating system: 
 
-   + [RedHat](#RHEL)
+   + [Red Hat](#RHEL)
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
@@ -119,7 +130,7 @@ dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
 ```
 
-#### MRO on RHEL
+#### MRO on Red Hat
 
 ```bash
 # Import the Microsoft repository key
@@ -134,6 +145,7 @@ rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rp
 # Update packages on your system (optional)
 yum update
 ```
+
 #### MRO on SUSE
 
 ```bash
@@ -162,8 +174,6 @@ On an internet-connected device, packages are downloaded and installed independe
 | [microsoft-r-open*](#mro) | R | Open-source distribution of R, composed of three packages. |
 |mssql-mlservices-mlm-r  | R | *Full install*. Provides RevoScaleR, MicrosoftML, sqlRUtils, olapR, pre-trained models for image featurization and text sentiment analysis.| 
 |mssql-mlservices-packages-r  | R | *Minimum install*. Provides RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Excludes pre-trained models. | 
-|mssql-mlservices-mml-py  | CTP 2.0-2.1 only | Obsolete in CTP 2.2 due to Python package consolidation into mssql-mslservices-python. Provides revoscalepy. Excludes pre-trained models and microsoftml.| 
-|mssql-mlservices-mml-r  | CTP 2.0-2.1 only | Obsolete in CTP 2.2 due to R package consolidation into mssql-mslservices-python. Provides RevoScaleR, sqlRUtils, olapR. Excludes pre-trained models and MicrosoftML.  |
 
 <a name="RHEL"></a>
 
@@ -404,7 +414,7 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 
 #### Download site
 
-You can download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for R and Python are colocated with database engine package. Base version for the mlservices packages is 9.4.5 (for CTP 2.0) 9.4.6 (for CTP 2.1 and later). Recall that the microsoft-r-open packages are in a [different repository](#mro).
+You can download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for R and Python are colocated with database engine package. Base version for the mlservices packages is 9.4.6. Recall that the microsoft-r-open packages are in a [different repository](#mro).
 
 #### RHEL/7 paths
 
@@ -499,30 +509,93 @@ You can install other R and Python packages and use them in script that executes
    @script = N'import httpie' 
    ```
 
-## Limitations in CTP releases
+## Run in a container
 
-R and Python integration on Linux is still under active development. The following features are not yet enabled in the preview version.
+Follow the steps below to build and run SQL Server Machine Learning Services in a Docker container. For more information, see [Configure SQL Server container images on Docker](sql-server-linux-configure-docker.md).
 
-+ Implied authentication is currently not available in Machine Learning Services on Linux at this time, which means you cannot connect back to the server from an in-progress R or Python script to access data or other resources. 
+### Prerequisites
 
-### Resource governance
+- Git command-line interface.
+- Docker Engine 1.8+ on any supported Linux distribution, or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
+- Minimum of 2 gigabytes (GB) of disk space.
+- Minimum of 2 GB of RAM.
+- [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
-There is parity between Linux and Windows for [Resource governance](../t-sql/statements/create-external-resource-pool-transact-sql.md) for external resource pools, but the statistics for [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) currently have different units on Linux. Units will align in an upcoming CTP.
- 
-| Column name   | Description | Value on Linux | 
-|---------------|--------------|---------------|
-|peak_memory_kb | The maximum amount of memory used for the resource pool. | On Linux, this statistic is sourced from the CGroups memory subsystem, where the value is memory.max_usage_in_bytes |
-|write_io_count | The total write IOs issued since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the CGroups blkio subsystem, where the value on the write row is blkio.throttle.io_serviced | 
-|read_io_count | The total read IOs issued since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the CGroups blkio subsystem, where value on the read row is blkio.throttle.io_serviced | 
-|total_cpu_kernel_ms | The cumulative CPU user kernel time in milliseconds since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the CGroups cpuacct subsystem, where the value on the user row is cpuacct.stat |  
-|total_cpu_user_ms | The cumulative CPU user time in milliseconds since the Resource Governor statistics were reset.| On Linux, this statistic is sourced from the CGroups cpuacct subsystem, where the value on the system row value is cpuacct.stat | 
-|active_processes_count | The number of external processes running at the moment of the request.| On Linux, this statistic is sourced from the GGroups pids subsystem, where the value is pids.current | 
+### Clone the mssql-docker repository
+
+1. Open a Bash terminal on Linux or Mac, or open a WSL terminal on Windows.
+
+1. Create a local directory to hold a local copy of the mssql-docker repository.
+
+1. Run the git clone command to clone the mssql-docker repository:
+
+    ```bash
+    git clone https://github.com/microsoft/mssql-docker mssql-docker
+    ```
+
+### Build a SQL Server Linux container image with Machine Learning Services
+
+1. Change the directory to the mssql-mlservices directory:
+
+    ```bash
+    cd mssql-docker/linux/preview/examples/mssql-mlservices
+    ```
+
+1. Run the build.sh script:
+
+   ```bash
+   ./build.sh
+   ```
+
+   > [!NOTE]
+   > To build the Docker image, you must install packages that are several GBs in size. The script may take up to 20 minutes to finish running, depending on network bandwidth.
+
+### Run the SQL Server Linux container image with Machine Learning Services
+
+1. Set your environment variables before running the container. Set the PATH_TO_MSSQL environment variable to a host directory:
+
+   ```bash
+    export MSSQL_PID='Developer'
+    export ACCEPT_EULA='Y'
+    export ACCEPT_EULA_ML='Y'
+    export PATH_TO_MSSQL='/home/mssql/'
+   ```
+
+1. Run the run.sh script:
+
+   ```bash
+   ./run.sh
+   ```
+
+   This command creates a SQL Server container with Machine Learning Services, using the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**.
+
+   > [!NOTE]
+   > The process for running production SQL Server editions in containers is slightly different. For more information, see [Configure SQL Server container images on Docker](sql-server-linux-configure-docker.md). If you use the same container names and ports, the rest of this walk-through still works with production containers.
+
+1. To view your Docker containers, run the `docker ps` command:
+
+   ```bash
+   sudo docker ps -a
+   ```
+
+1. If the **STATUS** column shows a status of **Up**, SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
+
+   ```bash
+   $ sudo docker ps -a
+   ```
+
+    Output: 
+    
+    ```
+    CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
+    941e1bdf8e1d        mcr.microsoft.com/mssql/server/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour     0.0.0.0:1401->1433/tcp   sql1
+    ```
 
 ## Next steps
 
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
-+ [Tutorial: Run R in T-SQL](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutorial: Run R in T-SQL](../advanced-analytics/tutorials/quickstart-r-create-script.md)
 + [Tutorial: In-database analytics for R developers](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:

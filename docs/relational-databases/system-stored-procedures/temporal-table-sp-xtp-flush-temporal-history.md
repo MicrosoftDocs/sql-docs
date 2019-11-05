@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_xtp_flush_temporal_history (Transact-SQL)
@@ -36,10 +35,10 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
 ```  
   
 ## Arguments  
- *@schema_name*  
+ *\@schema_name*  
  The schema name for the current or temporal table  
   
- *@object_name*  
+ *\@object_name*  
  The name of the current or temporal table  
   
 ## Return Code Values  

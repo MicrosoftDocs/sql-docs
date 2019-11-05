@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # The SQL Server Management Studio Environment
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 363c84d6-b9fa-49ba-9a75-e44f27535ff6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RAND (Transact-SQL)

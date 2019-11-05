@@ -40,7 +40,6 @@ f1_keywords:
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # Database Project Settings
 You use database project settings to control aspects of your database, debugging and build configurations. These settings fall into the following categories.  

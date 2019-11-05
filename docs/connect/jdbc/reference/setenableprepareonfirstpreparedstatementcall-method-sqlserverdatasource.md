@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid:
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setEnablePrepareOnFirstPreparedStatementCall Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

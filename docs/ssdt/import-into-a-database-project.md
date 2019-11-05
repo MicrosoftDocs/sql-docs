@@ -14,7 +14,6 @@ f1_keywords:
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # Import into a Database Project
 You can use Import to populate a project with new objects from a live database or a .dacpac, or to update existing objects in your project with a new definition from a script. There are some behavior differences to note between these three paths, which are described below.  

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ GO
 1.  Checks that there are no semantic populations in progress for the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 2.  Removes all metadata associated with the specified Semantic Language Statistics database.  
-  
+
  For more information, see [Install and Configure Semantic Search](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
 ## Metadata  

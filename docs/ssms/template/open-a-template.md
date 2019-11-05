@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Open a Template
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

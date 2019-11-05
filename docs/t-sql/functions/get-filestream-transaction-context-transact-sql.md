@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

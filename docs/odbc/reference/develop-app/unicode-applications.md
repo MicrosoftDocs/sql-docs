@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Unicode Applications
 You can recompile an application as a Unicode application in one of two ways:  

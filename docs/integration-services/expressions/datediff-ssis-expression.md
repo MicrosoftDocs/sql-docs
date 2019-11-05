@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "DATEDIFF statement"
   - "dates [Integration Services], DATEDIFF"
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # DATEDIFF (SSIS Expression)
 

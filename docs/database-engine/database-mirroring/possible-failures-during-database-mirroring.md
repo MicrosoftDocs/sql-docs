@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # Possible Failures During Database Mirroring
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ manager: jroth
   
 -   Network errors such as TCP link time-outs, dropped or corrupted packets, or packets that are in an incorrect order.  
   
--   A hanging operating system, server, or database state.  
+-   An operating system, server, or database that is not responding.  
   
 -   A Windows server timing out.  
   

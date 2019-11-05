@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 481d5b13-657e-4b51-8783-ccac3595bd45
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Broker:Activation Event Class

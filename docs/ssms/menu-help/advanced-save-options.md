@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Advanced Save Options
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

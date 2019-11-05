@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete a Row (MDS Add-in for Excel)
 

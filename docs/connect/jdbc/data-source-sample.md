@@ -1,7 +1,7 @@
 ---
-title: "Data Source Sample | Microsoft Docs"
+title: "Data source sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,10 +10,9 @@ ms.topic: conceptual
 ms.assetid: b4a933ee-f2c6-4e0d-a96d-6dd061abf759
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
-# Data Source Sample
+# Data source sample
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -81,6 +80,6 @@ public class ConnectDataSource {
 }
 ```
 
-## See Also
+## See also
 
-[Connecting and Retrieving Data](../../connect/jdbc/connecting-and-retrieving-data.md)
+[Connecting and retrieving data](../../connect/jdbc/connecting-and-retrieving-data.md)

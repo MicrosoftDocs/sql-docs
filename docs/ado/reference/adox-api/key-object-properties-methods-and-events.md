@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Key Object Properties, Methods, and Events
 ## Properties/Collections  

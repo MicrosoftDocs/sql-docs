@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Deploying Models (Master Data Services)
 

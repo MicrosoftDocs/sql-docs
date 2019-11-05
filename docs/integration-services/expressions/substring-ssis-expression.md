@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "SUBSTRING function"
   - "part of expression returned [Integration Services]"
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SUBSTRING (SSIS Expression)
 

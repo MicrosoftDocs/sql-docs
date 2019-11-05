@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Microsoft ODBC Driver for SQL Server
 
@@ -35,6 +34,7 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 ### Features
 
 - [Custom Keystore Providers](../../connect/odbc/custom-keystore-providers.md)
+- [Data Classification](../../connect/odbc/data-classification.md)
 - [DSN and Connection String Keywords and Attributes](dsn-connection-string-attribute.md)
 - [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (the features available also apply, without OLEDB, to the ODBC Driver for SQL Server)
 - [Using Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)

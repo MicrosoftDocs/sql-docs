@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 858f3c02-4531-4775-97e9-a03b316bdaba
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # supportsExpressionsInOrderBy Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

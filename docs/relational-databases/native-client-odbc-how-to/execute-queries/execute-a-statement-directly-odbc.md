@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Execute a Statement Directly (ODBC)
@@ -27,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 2.  Call [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) to execute the statement.  
   
 3.  If data-at-execution input parameters are used, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
-  
+
 ### To execute a statement multiple times by using column-wise parameter binding  
   
 1.  Call [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) to set the following attributes:  

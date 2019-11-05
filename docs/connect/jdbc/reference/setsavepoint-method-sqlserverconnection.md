@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: c39c6b4f-b9e2-423b-94ae-9f82d9e6d08d
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setSavepoint Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

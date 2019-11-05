@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 493dd3d0-50c6-4d8d-aba1-cd7c3030a581
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # SQL Server Management Studio Web Browser
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

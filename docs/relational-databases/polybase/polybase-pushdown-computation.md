@@ -1,14 +1,12 @@
 ---
 title: "Pushdown computations in PolyBase | Microsoft Docs"
-ms.custom: ""
 ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Pushdown computations in PolyBase

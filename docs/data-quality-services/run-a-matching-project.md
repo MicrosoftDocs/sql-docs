@@ -14,7 +14,6 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Run a Matching Project
 

@@ -11,7 +11,6 @@ ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
 ms.reviewer: maghan
-manager: craigg
 ---
 # Get started with Integration Services (SSIS) Scale Out on a single computer
 

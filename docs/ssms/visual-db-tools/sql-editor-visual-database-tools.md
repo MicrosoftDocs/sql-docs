@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # SQL Editor (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # SeekEnum
 Specifies the type of [Seek](../../../ado/reference/ado-api/seek-method.md) to execute.  

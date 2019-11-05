@@ -12,9 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Property Expressions Editor dialog box"
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Property Expressions Editor
 

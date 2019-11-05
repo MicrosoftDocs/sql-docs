@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create an Entity (MDS Add-in for Excel)
 

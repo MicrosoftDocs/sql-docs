@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 10bc2dd1-0505-4527-8ec7-d3b4e5d6352b
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Recycle SQL Server Agent Error Logs

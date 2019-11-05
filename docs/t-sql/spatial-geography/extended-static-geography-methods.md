@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # Extended Static Geography Methods
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

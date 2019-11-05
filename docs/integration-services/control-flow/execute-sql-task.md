@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "batches [Integration Services]"
   - "Execute SQL task [Integration Services]"
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Execute SQL Task
 

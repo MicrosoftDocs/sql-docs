@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLCancelHandle Function
 **Conformance**  

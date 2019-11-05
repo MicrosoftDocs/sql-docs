@@ -12,7 +12,6 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
 ---
 
 # Configure replay in Database Experimentation Assistant

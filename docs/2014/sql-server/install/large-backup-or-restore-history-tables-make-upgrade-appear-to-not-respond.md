@@ -21,7 +21,7 @@ manager: craigg
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Description  
- Upgrade can appear to hang if any of the following backup or restore history tables contains a large number of rows:  
+ Upgrade can appear to stop responding if any of the following backup or restore history tables contains a large number of rows:  
   
 -   **backupfile**  
   

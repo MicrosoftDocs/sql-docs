@@ -20,7 +20,6 @@ ms.assetid: 08904cbd-9c86-493d-90c3-f5e1d13ce59d
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying the sql:inverse Attribute on sql:relationship (SQLXML 4.0)

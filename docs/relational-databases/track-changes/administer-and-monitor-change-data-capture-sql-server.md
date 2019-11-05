@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Administer and Monitor Change Data Capture (SQL Server)
 
@@ -169,7 +168,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data collector let
 3. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Management**, and then expand **Data Collection**. Right-click **CDC Performance Data Collector**, and then click **Start Data Collection Set**.  
   
 4. In the data warehouse you configured in step 1, locate the table custom_snapshots.cdc_log_scan_data. This table provides a historical snapshot of data from log scan sessions. This data can be used to analyze latency, throughput, and other performance measures over time.  
-  
+
 ## <a name="ScriptUpgrade"></a> Script upgrade mode
 
 When you apply cumulatives updates or service packs to an instance, at restart, the instance can enter in Script Upgrade mode. In this mode, SQL Server may run a step to analyze and upgrade internal CDC tables, which could result in recreating objects like indexes on capture tables. Depending on the amount of data involved, this step might take some time or cause high transaction log usage for enabled CDC databases.

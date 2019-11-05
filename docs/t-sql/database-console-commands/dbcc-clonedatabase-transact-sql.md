@@ -36,7 +36,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: "bluefooted" 
 ms.author: "pamela"
-manager: "amitban"
+manager: amitban
 ---
 # DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

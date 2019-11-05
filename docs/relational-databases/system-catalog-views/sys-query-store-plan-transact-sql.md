@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_plan (Transact-SQL)
@@ -63,8 +62,11 @@ First, if the plan contains following constructions:
 * Reference to an external table
 * Distributed query or full-text operations
 * Use of Global queries 
-* Cursors
+* Dynamic or keyset cursors 
 * Invalid star join specification 
+
+> [!NOTE]
+> Azure SQL Database and SQL Server 2019 (preview) support plan forcing for static and fast forward cursors.
 
 Second, when objects that plan relies on, are no longer available:
 * Database (if Database, where plan originated, does not exist anymore)

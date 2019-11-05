@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 55ce9e4f-6e3f-482a-93a5-b9ae1b91d7a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # supportsSchemasInIndexDefinitions Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

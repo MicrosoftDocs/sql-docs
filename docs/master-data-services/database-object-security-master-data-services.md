@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Database Object Security (Master Data Services)
 

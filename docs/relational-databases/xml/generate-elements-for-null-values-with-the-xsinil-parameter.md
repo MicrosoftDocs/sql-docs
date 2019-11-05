@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 2dbc4e48-1cae-4d83-b371-3265da9687cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Generate Elements for NULL Values with the XSINIL Parameter
 

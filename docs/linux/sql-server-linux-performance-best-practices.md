@@ -1,9 +1,9 @@
 ---
-title: Performance best practices for SQL Server on Linux | Microsoft Docs
+title: Performance best practices for SQL Server on Linux
 description: This article provide performance best practices and guidelines for running SQL Server on Linux.
 author: rgward 
-ms.author: bobward 
-manager: craigg
+ms.author: bobward
+ms.reviewer: vanto
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
@@ -68,7 +68,7 @@ The following table provides recommendations for disk settings:
 | Setting | Value | More information |
 |---|---|---|
 | disk readahead | 4096 | See the **blockdev** command |
-| sysctl settings | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | See the **sysctl** command |
+| sysctl settings | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 10 | See the **sysctl** command |
 
 ### Kernel setting auto numa balancing for multi-node NUMA systems
 

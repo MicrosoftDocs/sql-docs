@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "output columns [Integration Services]"
   - "sources [Integration Services], components"
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Creating a Source with the Script Component
 

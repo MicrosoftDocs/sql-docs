@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # AsBinaryZM (geometry DataType)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 8ac2b772-6673-4ba1-a7ab-3b4b5841560b
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STLineFromWKB (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -6,9 +6,8 @@ ms.prod: sql
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ms.reviewer: ""
 ---
 # Lesson 1-6: Add and configure the Lookup transformations

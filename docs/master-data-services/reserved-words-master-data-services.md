@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Reserved Words (Master Data Services)
 

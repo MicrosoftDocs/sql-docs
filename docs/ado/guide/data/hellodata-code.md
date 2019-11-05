@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 6da136c5-fa93-4fe6-9bf5-90f4d92441fb
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # HelloData Code
 ```  

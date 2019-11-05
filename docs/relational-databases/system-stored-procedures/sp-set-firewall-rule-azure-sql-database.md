@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_set_firewall_rule (Azure SQL Database)
@@ -59,7 +58,7 @@ sp_set_firewall_rule [@name =] 'name',
  The following code creates a server-level firewall setting called `Allow Azure` that enables access from Azure. Execute the following in the virtual master database.  
   
 ```  
--- Enable Windows Azure connections.  
+-- Enable Azure connections.  
 exec sp_set_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';  
   
 ```  

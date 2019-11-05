@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Before Installing Failover Clustering
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Before you install a SQL Server failover cluster, you must select the hardware and the operating system on which SQL Server will run. You must also configure Windows Server Failover Clustering (WSFC), and review network, security, and considerations for other software that will run on your failover cluster.  
   
- If a Windows cluster has a local disk drive and the same drive letter is also used on one or more cluster nodes as a shared drive, you cannot install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that drive.  
+ If a Windows cluster has a local disk drive and the same drive letter is also used on one or more cluster nodes as a shared drive, you cannot install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that drive. This restriction applies to both SQL Server failover cluster instances and standalone instances on a server that is part of a Windows Failover Cluster Instance.
   
  You may also want to review the following topics to learn more about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustering concepts, features and tasks.  
   

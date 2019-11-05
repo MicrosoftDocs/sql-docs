@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "inserting data"
   - "truncate options [Integration Services]"
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Export Column Transformation
 

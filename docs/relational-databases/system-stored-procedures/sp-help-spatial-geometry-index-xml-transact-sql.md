@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  Properties containing NULL values are not included in the XML return set.  
   
 ## Example  
- The following example uses `sp_help_spatial_geometry_index_xml` to investigate the spatial index **SIndx_SpatialTable_geometry_col2** defined on table **geometry_col** for the given query sample in **@qs**. This example returns the core properties of the specified index in an XML fragment that displays the name and value of the properties selected.  
+ The following example uses `sp_help_spatial_geometry_index_xml` to investigate the spatial index **SIndx_SpatialTable_geometry_col2** defined on table **geometry_col** for the given query sample in **\@qs**. This example returns the core properties of the specified index in an XML fragment that displays the name and value of the properties selected.  
   
  An [XQuery](../../xquery/xquery-basics.md) is then run on the result set, returning a specific property.  
   

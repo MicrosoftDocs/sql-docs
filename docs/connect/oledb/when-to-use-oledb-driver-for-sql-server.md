@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # When to Use OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

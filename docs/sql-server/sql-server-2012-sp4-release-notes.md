@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 ---
 # SQL Server 2012 Service Pack release notes
@@ -26,9 +25,9 @@ The Service Packs are available online only, not on the installation media, and 
 
 ### Download pages
 
-- [SQL Server 2012 SP4 Feature Pack](https://go.microsoft.com/fwlink/?linkid=846907)
-- [SQL Server 2012 SP4 Patch installation](https://go.microsoft.com/fwlink/?linkid=846829)
-- [SQL Server 2012 SP4 Express](https://go.microsoft.com/fwlink/?linkid=846905)
+- [SQL Server 2012 SP4 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041)
+- [SQL Server 2012 SP4 Patch installation](https://www.microsoft.com/download/details.aspx?id=56040)
+- [SQL Server 2012 SP4 Express](https://www.microsoft.com/download/details.aspx?id=56042)
 
 
 ### Performance and scale improvements
@@ -220,11 +219,11 @@ Previously, DACFx did not preserve the state (WITH CHECK/NOCHECK) of check const
   
 **Updates to SqlPackage.exe (DACFx command-line tool)**  
   
--   Extract DACPAC with data - Creates a database snapshot file (.dacpac) from a live SQL Server or Windows Azure SQL Database that contains data from user tables in addition to the database schema. These packages can be published to a new or existing SQL Server or Windows Azure SQL Database using the SqlPackage.exe Publish action. Data contained in package replaces the existing data in the target database.  
+-   Extract DACPAC with data - Creates a database snapshot file (.dacpac) from a live SQL Server or Azure SQL Database that contains data from user tables in addition to the database schema. These packages can be published to a new or existing SQL Server or Azure SQL Database using the SqlPackage.exe Publish action. Data contained in package replaces the existing data in the target database.  
   
--   Export BACPAC - Creates a logical backup file (.bacpac) of a live SQL Server or Windows Azure SQL Database containing the database schema and user data which can be used to migrate a database from on-premise SQL Server to Windows Azure SQL Database. Databases compatible with Azure can be exported and then later imported between supported versions of SQL Server.  
+-   Export BACPAC - Creates a logical backup file (.bacpac) of a live SQL Server or Azure SQL Database containing the database schema and user data which can be used to migrate a database from on-premise SQL Server to Azure SQL Database. Databases compatible with Azure can be exported and then later imported between supported versions of SQL Server.  
   
--   Import BACPAC - Import a .bacpac file to create a new or populate an empty SQL Server or Windows Azure SQL Database.  
+-   Import BACPAC - Import a .bacpac file to create a new or populate an empty SQL Server or Azure SQL Database.  
   
 Full SqlPackage.exe documentation on MSDN can be found [here](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx).  
   

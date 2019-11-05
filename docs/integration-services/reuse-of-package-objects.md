@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "copying packages"
   - "regenerating package GUID"
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Reuse of Package Objects
 

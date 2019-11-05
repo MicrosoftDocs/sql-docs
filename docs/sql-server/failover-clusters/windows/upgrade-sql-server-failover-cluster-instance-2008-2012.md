@@ -10,7 +10,6 @@ helpviewer_keywords:
   - "failover clustering [SQL Server], upgrading"
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 
 # Upgrade SQL Server instances running on Windows Server 2008/2008 R2/2012 clusters

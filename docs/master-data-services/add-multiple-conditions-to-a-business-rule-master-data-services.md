@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Add Multiple Conditions to a Business Rule (Master Data Services)
 

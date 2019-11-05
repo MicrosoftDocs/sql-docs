@@ -1,10 +1,10 @@
 ---
 title: "sp_rxPredict | Microsoft Docs"
-ms.date: "08/20/2018"
+ms.date: "07/24/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
+ms.technology: machine-learning
   
 ms.topic: "language-reference"
 f1_keywords: 
@@ -14,12 +14,12 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sp_rxPredict procedure"
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: craigg
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # sp_rxPredict  
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Generates a predicted value for a given input consisting of a machine learning model stored in a binary format in a SQL Server database.
 
@@ -130,7 +130,7 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-In addition to being a valid SQL query, the input data in *@inputData* must include columns compatible with the columns in the stored model.
+In addition to being a valid SQL query, the input data in *\@inputData* must include columns compatible with the columns in the stored model.
 
 `sp_rxPredict` supports only the following .NET column types: double, float, short, ushort, long, ulong and string. You may need to filter out unsupported types in your input data before using it for real-time scoring. 
 

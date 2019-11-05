@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 29d01bd9-8b38-43b1-b937-67f8aea57c0f
 author: "Lingxi-Li"
 ms.author: "lingxl"
-manager: craigg
 ---
 # Azure HDInsight Connection Manager
 

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying a Node Test in the Location Path (SQLXML 4.0)

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 98db9631-eb9b-4962-abe4-96f495133a5d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetStmtOption (Desktop Database Drivers)
 

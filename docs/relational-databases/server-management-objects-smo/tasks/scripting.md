@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "dependencies [SMO]"
   - "scripts [SMO]"
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scripting
@@ -29,7 +28,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 2.  List generation  
   
 3.  Script generation  
-  
+
  The discovery phase uses the <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> object. Given an URN list of objects, the <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> method of the <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> object returns a <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> object for the objects in the URN list. The Boolean *fParents* parameter is used to select whether the parents or the children of the specified object are to be discovered. The dependency tree can be modified at this stage.  
   
  In the list generation phase, the tree is passed in and the resulting list is returned. This object list is in scripting order and can be manipulated.  

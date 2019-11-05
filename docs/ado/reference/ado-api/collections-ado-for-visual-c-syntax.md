@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Collections (ADO for Visual C++ Syntax)
 ## Parameters  

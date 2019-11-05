@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetConnectInfo Function
 **Conformance**  

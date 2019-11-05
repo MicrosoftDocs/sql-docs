@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # FlagValue Property (ClientSettingsGeneralFlag Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

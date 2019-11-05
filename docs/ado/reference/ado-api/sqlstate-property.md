@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # SQLState Property
 Indicates the SQL state for a given [Error](../../../ado/reference/ado-api/error-object.md) object.  

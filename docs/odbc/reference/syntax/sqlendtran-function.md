@@ -1,7 +1,7 @@
 ---
 title: "SQLEndTran Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,6 +11,7 @@ apiname:
   - "SQLEndTran"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLEndTran"
@@ -19,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLEndTran Function
 **Conformance**  

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # How to: Create Test Conditions for the SQL Server Unit Test Designer
 You can use the extensible [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) class to create new test conditions. For example, you might create a new test condition that verifies the number of columns or the values in a result set.  

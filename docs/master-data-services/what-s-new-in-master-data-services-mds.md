@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # What&#39;s New in Master Data Services (MDS)
 
@@ -172,7 +171,7 @@ manager: craigg
     
  **Custom Indexes**  
   
- You can create a non-clustered index on one attribute (single index) or on a list of attributes (composite index), in an entity, to help improve the query performance. For more information, see [Custom Index &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md).  
+ You can create a nonclustered index on one attribute (single index) or on a list of attributes (composite index), in an entity, to help improve the query performance. For more information, see [Custom Index &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md).  
  
   **Attribute Filters**  
   

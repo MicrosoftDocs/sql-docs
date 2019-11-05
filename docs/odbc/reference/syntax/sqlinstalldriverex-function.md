@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLInstallDriverEx Function
 **Conformance**  

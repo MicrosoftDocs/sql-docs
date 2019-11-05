@@ -1,7 +1,7 @@
 ---
 title: "OPENJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
+ms.date: "06/21/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -18,7 +18,6 @@ ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: genemi
-manager: craigg
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # OPENJSON (Transact-SQL)
@@ -69,33 +68,37 @@ By default, the **OPENJSON** table-valued function returns three columns, which 
 Is a Unicode character expression containing JSON text.  
   
 OPENJSON iterates over the elements of the array or the properties of the object in the JSON expression and returns one row for each element or property. The following example returns each property of the object provided as *jsonExpression*:  
-  
-```sql  
-DECLARE @json NVARCHAR(4000) = N'{  
-   "StringValue":"John",  
-   "IntValue":45,  
-   "TrueValue":true,  
-   "FalseValue":false,  
-   "NullValue":null,  
-   "ArrayValue":["a","r","r","a","y"],  
-   "ObjectValue":{"obj":"ect"}  
-}'
 
-SELECT *
-FROM OPENJSON(@json)
-```  
-  
-**Results**
-  
-|key|value|type|  
-|---------|-----------|----------|  
-|StringValue|John|1|  
-|IntValue|45|2|  
-|TrueValue|true|3|  
-|FalseValue|false|3|  
-|NullValue|NULL|0|  
-|ArrayValue|["a","r","r","a","y"]|4|  
-|ObjectValue|{"obj":"ect"}|5|  
+```sql
+DECLARE @json NVarChar(2048) = N'{
+   "String_value": "John",
+   "DoublePrecisionFloatingPoint_value": 45,
+   "DoublePrecisionFloatingPoint_value": 2.3456,
+   "BooleanTrue_value": true,
+   "BooleanFalse_value": false,
+   "Null_value": null,
+   "Array_value": ["a","r","r","a","y"],
+   "Object_value": {"obj":"ect"}
+}';
+
+SELECT * FROM OpenJson(@json);
+```
+
+**Results:**
+
+| key                                | value                 | type |
+| :--                                | :----                 | :--- |
+| String_value                       | John                  | 1 |
+| DoublePrecisionFloatingPoint_value | 45                    | 2 |
+| DoublePrecisionFloatingPoint_value | 2.3456                | 2 |
+| BooleanTrue_value                  | true                  | 3 |
+| BooleanFalse_value                 | false                 | 3 |
+| Null_value                         | NULL                  | 0 |
+| Array_value                        | ["a","r","r","a","y"] | 4 |
+| Object_value                       | {"obj":"ect"}         | 5 |
+| &nbsp; | &nbsp; | &nbsp; |
+
+- The DoublePrecisionFloatingPoint_value conforms to IEEE-754.
 
 ### *path*
 
@@ -231,7 +234,10 @@ The columns that the OPENJSON function returns depend on the WITH option.
   
      Only first-level properties are returned. The statement fails if the JSON text is not properly formatted.  
 
-2. When you call OPENJSON and you specify an explicit schema in the WITH clause, the function returns a table with the schema that you defined in the WITH clause.  
+2. When you call OPENJSON and you specify an explicit schema in the WITH clause, the function returns a table with the schema that you defined in the WITH clause.
+
+> [!NOTE]  
+> The **Key**, **Value**, and **Type** columns are returned only when you use OPENJSON with the default schema and are not available with an explicit schema.
 
 ## Remarks  
 
@@ -359,7 +365,7 @@ DECLARE @json NVARCHAR(max)  = N'{
   INSERT INTO Person  
   SELECT *   
   FROM OPENJSON(@json)  
-  WITH id int,  
+  WITH (id int,  
         firstName nvarchar(50), lastName nvarchar(50),   
         isAlive bit, age int,  
         dateOfBirth datetime2, spouse nvarchar(50))

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6117ac77-1020-4f0c-8eed-e671c34c1f21
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLStatistics (Access Driver)
 > [!NOTE]  

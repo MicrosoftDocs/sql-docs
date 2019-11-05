@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Overlapping Model and Member Permissions (Master Data Services)
 

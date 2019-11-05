@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Microsoft OLE DB Provider for Oracle Overview
 > [!IMPORTANT]

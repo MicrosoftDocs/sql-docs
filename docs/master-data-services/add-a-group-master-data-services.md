@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Add a Group (Master Data Services)
 

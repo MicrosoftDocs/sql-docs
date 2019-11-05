@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Common Language Runtime Integration
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

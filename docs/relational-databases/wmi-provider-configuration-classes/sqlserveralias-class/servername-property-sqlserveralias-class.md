@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ServerName Property (SqlServerAlias Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

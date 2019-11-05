@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 155a4f09-9321-4887-a7d4-aa2ce6b51277
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Copy Tables from One Database Diagrams to Another (Visual Database Tools)

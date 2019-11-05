@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5dac737a-b77e-47d3-9228-cd52b7a97b0a
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # CubeDef Object Properties, Methods, and Events
 ## Properties/Collections  

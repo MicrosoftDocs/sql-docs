@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: db803266-57df-4864-a41b-901247549c1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLRemoveDefaultDataSource Function
 **Conformance**  

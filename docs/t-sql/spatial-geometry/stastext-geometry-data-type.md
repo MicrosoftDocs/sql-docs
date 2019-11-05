@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STAsText (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

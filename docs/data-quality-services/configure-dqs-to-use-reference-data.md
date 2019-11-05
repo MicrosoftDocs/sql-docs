@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Configure DQS to Use Reference Data
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  This topic describes how to configure [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) to use reference data for cleansing your data. You could either use reference data from Windows Azure Marketplace or from direct online third-party reference data providers.  
+  This topic describes how to configure [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) to use reference data for cleansing your data. You could either use reference data from Azure Marketplace or from direct online third-party reference data providers.  
 
 > [!IMPORTANT]
 > This article mentions third-party reference data services that were previously available from the Azure DataMarket. DataMarket and Data Services - including Melissa address data, for example - were discontinued after 12/31/2016. As a result, you can no longer run the examples in this article with the specified services from DataMarket. You can still use reference data services that are available directly online from third-party reference data providers.

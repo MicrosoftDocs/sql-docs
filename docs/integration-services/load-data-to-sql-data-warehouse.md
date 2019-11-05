@@ -8,9 +8,8 @@ ms.technology: integration-services
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/09/2018
-ms.author: janinez
-author: janinezhang
-manager: craigg
+ms.author: chugu
+author: chugugrace
 ---
 # Load data into Azure SQL Data Warehouse with SQL Server Integration Services (SSIS)
 

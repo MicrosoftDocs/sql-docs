@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Columns with a Name Specified as a Wildcard Character
 

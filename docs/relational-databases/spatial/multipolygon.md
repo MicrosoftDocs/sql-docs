@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MultiPolygon
@@ -59,7 +58,7 @@ The second instance in the MultiPolygon is a LineString instance and not an acce
 1.  All of the instances comprising the **MultiPolygon** instance are valid **Polygon** instances. For valid **Polygon** instances, see [Polygon](../../relational-databases/spatial/polygon.md).  
   
 2.  None of the **Polygon** instances comprising the **MultiPolygon** instance overlap.  
-  
+
 The following example shows two valid **MultiPolygon** instances and one invalid **MultiPolygon** instance.  
   
 ```sql  

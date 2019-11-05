@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 179b11e0-665f-45a2-b926-c3d870a0dab8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLDrivers (Visual FoxPro ODBC Driver)
 > [!NOTE]  

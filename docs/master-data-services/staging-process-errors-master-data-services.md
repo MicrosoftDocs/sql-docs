@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Staging Process Errors (Master Data Services)
 

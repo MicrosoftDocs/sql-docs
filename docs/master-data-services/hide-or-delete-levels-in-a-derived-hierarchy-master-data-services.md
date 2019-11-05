@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e00582b9-9415-4b66-b4a7-9f590d83875f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Hide or Delete Levels in a Derived Hierarchy (Master Data Services)
 

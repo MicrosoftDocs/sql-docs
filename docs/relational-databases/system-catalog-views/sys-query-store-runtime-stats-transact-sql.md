@@ -1,7 +1,7 @@
 ---
 title: "sys.query_store_runtime_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/03/2019"
+ms.date: "07/24/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_runtime_stats (Transact-SQL)
@@ -48,21 +47,21 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sq
 |**min_cpu_time**|**bigint**|Minimum CPU time for the query plan within the aggregation interval (reported in microseconds).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
 |**max_cpu_time**|**bigint**|Maximum CPU time for the query plan within the aggregation interval (reported in microseconds).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
 |**stdev_cpu_time**|**float**|CPU time standard deviation for the query plan within the aggregation interval (reported in microseconds).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**avg_logical_io_reads**|**float**|Average number of logical IO reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**last_logical_io_reads**|**bigint**|Last number of logical IO reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**min_logical_io_reads**|**bigint**|Minimum number of logical IO reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**max_logical_io_reads**|**bigint**|Maximum number of logical IO reads for the query plan within the aggregation interval.(expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**stdev_logical_io_reads**|**float**|Number of logical IO reads standard deviation for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**avg_logical_io_writes**|**float**|Average number of logical IO writes for the query plan within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**last_logical_io_writes**|**bigint**|Last number of logical IO writes for the query plan within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**min_logical_io_writes**|**bigint**|Minimum number of logical IO writes for the query plan within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**max_logical_io_writes**|**bigint**|Maximum number of logical IO writes for the query plan within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**stdev_logical_io_writes**|**float**|Number of logical IO writes standard deviation for the query plan within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**avg_physical_io_reads**|**float**|Average number of physical IO reads for the query plan within the aggregation interval (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**last_physical_io_reads**|**bigint**|Last number of physical IO reads for the query plan within the aggregation interval (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**min_physical_io_reads**|**bigint**|Minimum number of physical IO reads for the query plan within the aggregation interval (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**max_physical_io_reads**|**bigint**|Maximum number of physical IO reads for the query plan within the aggregation interval (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**stdev_physical_io_reads**|**float**|Number of physical IO reads standard deviation for the query plan within the aggregation interval (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**avg_logical_io_reads**|**float**|Average number of logical I/O reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**last_logical_io_reads**|**bigint**|Last number of logical I/O reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**min_logical_io_reads**|**bigint**|Minimum number of logical I/O reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**max_logical_io_reads**|**bigint**|Maximum number of logical I/O reads for the query plan within the aggregation interval.(expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**stdev_logical_io_reads**|**float**|Number of logical I/O reads standard deviation for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**avg_logical_io_writes**|**float**|Average number of logical I/O writes for the query plan within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**last_logical_io_writes**|**bigint**|Last number of logical I/O writes for the query plan within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**min_logical_io_writes**|**bigint**|Minimum number of logical I/O writes for the query plan within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**max_logical_io_writes**|**bigint**|Maximum number of logical I/O writes for the query plan within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**stdev_logical_io_writes**|**float**|Number of logical I/O writes standard deviation for the query plan within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**avg_physical_io_reads**|**float**|Average number of physical I/O reads for the query plan within the aggregation interval (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**last_physical_io_reads**|**bigint**|Last number of physical I/O reads for the query plan within the aggregation interval (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**min_physical_io_reads**|**bigint**|Minimum number of physical I/O reads for the query plan within the aggregation interval (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**max_physical_io_reads**|**bigint**|Maximum number of physical I/O reads for the query plan within the aggregation interval (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**stdev_physical_io_reads**|**float**|Number of physical I/O reads standard deviation for the query plan within the aggregation interval (expressed as a number of 8KB pages read).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
 |**avg_clr_time**|**float**|Average CLR time for the query plan within the aggregation interval (reported in microseconds).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
 |**last_clr_time**|**bigint**|Last CLR time for the query plan within the aggregation interval (reported in microseconds).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
 |**min_clr_time**|**bigint**|Minimum CLR time for the query plan within the aggregation interval (reported in microseconds).<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
@@ -88,14 +87,19 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sq
 |**min_log_bytes_used**|**bigint**|Minimum number of bytes in the database log used by the query plan, within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
 |**max_log_bytes_used**|**bigint**|Maximum number of bytes in the database log used by the query plan, within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
 |**stdev_log_bytes_used**|**float**|Standard deviation of the number of bytes in the database log used by a query plan, within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|  
-|**avg_page_server_io_reads**|**float**|Average number of page server IO reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Note:** Applies To: Azure SQL Database Hyperscale</br> Azure SQL Data Warehouse, Azure SQL DB, MI (non-hyperscale) will always return zero (0).|
-|**last_page_server_io_reads**|**bigint**|Last number of page server IO reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Note:** Applies To: Azure SQL Database Hyperscale </br> Azure SQL Data Warehouse, Azure SQL DB, MI (non-hyperscale) will always return zero (0).|
-|**min_page_server_io_reads**|**bigint**|Minimum number of page server IO reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Note:** Applies To: Azure SQL Database Hyperscale </br> Azure SQL Data Warehouse, Azure SQL DB, MI (non-hyperscale) will always return zero (0).|
-|**max_page_server_io_reads**|**bigint**|Maximum number of page server IO reads for the query plan within the aggregation interval.(expressed as a number of 8KB pages read).<br><br/>**Note:** Applies To: Azure SQL Database Hyperscale </br> Azure SQL Data Warehouse, Azure SQL DB, MI (non-hyperscale) will always return zero (0).|
-|**stdev_page_server_io_reads**|**float**|Number of page server IO reads standard deviation for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Note:** Applies To: Azure SQL Database Hyperscale </br> Azure SQL Data Warehouse, Azure SQL DB, MI (non-hyperscale) will always return zero (0).|
+|**avg_tempdb_space_used**|**float**|Average number of page reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**last_tempdb_space_used**|**bigint**|Last number of page reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**min_tempdb_space_used**|**bigint**|Minimum number of page reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**max_tempdb_space_used**|**bigint**|Maximum number of page reads for the query plan within the aggregation interval.(expressed as a number of 8KB pages read).<br><br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**stdev_tempdb_space_used**|**float**|Number of page reads standard deviation for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**avg_page_server_io_reads**|**float**|Average number of page server I/O reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Applies to:** Azure SQL Database Hyperscale</br>**Note:** Azure SQL Data Warehouse, Azure SQL DB, MI (non-hyperscale) will always return zero (0).|
+|**last_page_server_io_reads**|**bigint**|Last number of page server I/O reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Applies to:** Azure SQL Database Hyperscale</br>**Note:** Azure SQL Data Warehouse, Azure SQL DB, MI (non-hyperscale) will always return zero (0).|
+|**min_page_server_io_reads**|**bigint**|Minimum number of page server I/O reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Applies to:** Azure SQL Database Hyperscale</br>**Note:** Azure SQL Data Warehouse, Azure SQL DB, MI (non-hyperscale) will always return zero (0).|
+|**max_page_server_io_reads**|**bigint**|Maximum number of page server I/O reads for the query plan within the aggregation interval.(expressed as a number of 8KB pages read).<br><br/>**Applies to:** Azure SQL Database Hyperscale</br>**Note:** Azure SQL Data Warehouse, Azure SQL DB, MI (non-hyperscale) will always return zero (0).|
+|**stdev_page_server_io_reads**|**float**|Number of page server I/O reads standard deviation for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Applies to:** Azure SQL Database Hyperscale</br>**Note:** Azure SQL Data Warehouse, Azure SQL DB, MI (non-hyperscale) will always return zero (0).|
   
 ## Permissions  
- Requires the **VIEW DATABASE STATE** permission.  
+Requires the `VIEW DATABASE STATE` permission.  
   
 ## See Also  
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
@@ -107,6 +111,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sq
  [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
-  
+ [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
+ [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)   
   

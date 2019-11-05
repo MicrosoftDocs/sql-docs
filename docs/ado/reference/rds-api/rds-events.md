@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # RDS Events
 > [!IMPORTANT]

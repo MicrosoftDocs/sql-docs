@@ -15,7 +15,6 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Perform Knowledge Discovery
 

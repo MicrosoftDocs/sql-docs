@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetDriverConnectInfo Function
 **Conformance**  

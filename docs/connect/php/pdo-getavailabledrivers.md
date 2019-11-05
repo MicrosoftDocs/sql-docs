@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: eab561e6-1229-401a-9482-008c23f9a4e6
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # PDO::getAvailableDrivers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

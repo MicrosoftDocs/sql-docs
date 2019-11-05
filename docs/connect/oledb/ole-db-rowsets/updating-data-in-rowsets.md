@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "data updates [SQL Server], OLE DB"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Updating Data in Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

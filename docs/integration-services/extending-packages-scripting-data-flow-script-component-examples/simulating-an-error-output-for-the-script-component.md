@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "Script component [Integration Services], error output"
   - "error outputs [Integration Services], Script component"
 ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Simulating an Error Output for the Script Component
 

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: e18c84f5-7171-4057-8c9e-fe1d43ae9c20
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getTime Method (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

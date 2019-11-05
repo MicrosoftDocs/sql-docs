@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # ALTER APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ ALTER APPLICATION ROLE application_role_name
 ### A. Changing the name of application role  
  The following example changes the name of the application role `weekly_receipts` to `receipts_ledger`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 CREATE APPLICATION ROLE weekly_receipts   
     WITH PASSWORD = '987Gbv8$76sPYY5m23' ,   
@@ -88,7 +87,7 @@ GO
 ### B. Changing the password of application role  
  The following example changes the password of the application role `receipts_ledger`.  
   
-```  
+```sql  
 ALTER APPLICATION ROLE receipts_ledger   
     WITH PASSWORD = '897yUUbv867y$200nk2i';  
 GO  
@@ -97,7 +96,7 @@ GO
 ### C. Changing the name, password, and default schema  
  The following example changes the name, password, and default schema of the application role `receipts_ledger` all at the same time.  
   
-```  
+```sql  
 ALTER APPLICATION ROLE receipts_ledger   
     WITH NAME = weekly_ledger,   
     PASSWORD = '897yUUbv77bsrEE00nk2i',   

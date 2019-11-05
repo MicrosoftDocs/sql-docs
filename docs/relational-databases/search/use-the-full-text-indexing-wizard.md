@@ -22,7 +22,6 @@ ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the Full-Text Indexing Wizard
@@ -41,6 +40,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 4. **Language for Word Breaker.** Select a language from the drop-down list. This choice will be used  to identify the correct word breakers for the index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses word breakers to identify word boundaries in the full-text indexed data.  
   
 5.  **Type Column.** Select the name of the column that holds the document type of column being full-text indexed.  
+
 > **NOTE:** The  **Type Column** is enabled only when the column named in the **Available Columns** column is of type **varbinary(max)** or **image**.  
   
 6. **Statistical Semantics.** Select whether to enable semantic indexing for the selected column. For more information, see [Semantic Search &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  

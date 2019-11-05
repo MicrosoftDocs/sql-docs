@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1"
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Streaming Destination
 

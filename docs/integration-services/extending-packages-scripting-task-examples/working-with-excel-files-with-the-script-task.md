@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], examples"
   - "Excel [Integration Services]"
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Working with Excel Files with the Script Task
 

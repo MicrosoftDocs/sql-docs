@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 6940a83d-5374-4af3-bb27-5d89c8af83ac
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # String Functions (Transact-SQL)

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # View Offline Log Files
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ manager: craigg
   
     3.  Enter the remote computer name, and then click **OK**.  
   
-3.  Right-click **WMI Control (Local)** or **WMI Control (***RemoteComputerName***)**, and then click **Properties**.  
+3.  Right-click **WMI Control (Local)** or **WMI Control (**_RemoteComputerName_**)**, and then click **Properties**.  
   
 4.  In the **WMI Control Properties** dialog box, click the **Security** tab.  
   
@@ -81,7 +80,7 @@ manager: craigg
 6.  Click **Security**.  
   
 7.  Make sure that the account that will be used has the **Enable Account** permission. This permission allows Read access to WMI objects.  
-  
+
 ### View Log Files  
  The following procedure shows how to view offline log files through Registered Servers. The procedure assumes the following:  
   

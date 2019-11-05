@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONCAT_WS (Transact-SQL)

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 0c513265-cd0c-4b38-9494-94458c17a16d
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setQueryTimeout Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

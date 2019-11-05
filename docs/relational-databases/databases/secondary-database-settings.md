@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Secondary Database Settings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

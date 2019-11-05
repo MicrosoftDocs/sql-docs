@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 98101a52-53a6-4287-a8d9-2a7c76c3e0b9
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Tables Collection Properties, Methods, and Events
 ## Properties  

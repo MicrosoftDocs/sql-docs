@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-manager: craigg
 ---
 # sp_enum_proxy_for_subsystem (Transact-SQL)
 

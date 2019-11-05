@@ -1,7 +1,7 @@
 ---
-title: "Application Security | Microsoft Docs"
+title: "Application security | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
-# Application Security
+# Application security
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   When you use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], it is important to take precautions to ensure the security of your application. The following sections provide information regarding steps you can take to help secure your application.  
   
-## Using Java Policy Permissions  
+## Using Java policy permissions  
  When you use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], it is important to specify the required Java policy permissions that the JDBC driver requires. The Java Runtime Environment (JRE) provides an extensive security model that you can use at runtime to determine whether a thread has access to a resource. Security policy files can control this access. The policy files themselves are managed by the deployer and the sysadmin for the container, but the permissions listed in this topic are those that affect the functioning of the JDBC driver.  
   
  A typical permission in the policy file looks like the following.  
@@ -53,12 +52,12 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 > [!NOTE]  
 >  The code "file:/install_dir/lib/-" refers to the installation directory of the JDBC driver.  
   
-## Protecting Server Communication  
+## Protecting server communication  
  When you use the JDBC driver to communicate with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, you can secure the communication channel by using either Internet Protocol Security (IPSEC) or Secure Sockets Layer (SSL); or you can use both.  
   
- SSL support can be used to provide an additional level of protection besides IPSEC. For more information about using SSL, see [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md).  
+ SSL support can be used to provide an additional level of protection besides IPSEC. For more information about using SSL, see [Using SSL encryption](../../connect/jdbc/using-ssl-encryption.md).  
   
-## See Also  
- [Securing JDBC Driver Applications](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+## See also  
+ [Securing JDBC driver applications](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

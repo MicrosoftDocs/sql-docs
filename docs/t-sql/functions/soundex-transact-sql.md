@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SOUNDEX (Transact-SQL)

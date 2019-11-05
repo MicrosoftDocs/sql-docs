@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 04eebd6a-016f-4462-82f5-ab34b945eec4
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # beforeFirst Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

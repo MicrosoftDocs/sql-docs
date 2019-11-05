@@ -2,10 +2,9 @@
 title: Unattended install for SQL Server on SUSE Linux Enterprise Server
 titleSuffix: SQL Server
 description: SQL Server Script Sample - Unattended Install on SUSE Linux Enterprise Server
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 10/02/2017
+author: VanMSFT 
+ms.author: vanto
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux

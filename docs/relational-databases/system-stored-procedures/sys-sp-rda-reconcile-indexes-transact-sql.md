@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # sys.sp_rda_reconcile_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

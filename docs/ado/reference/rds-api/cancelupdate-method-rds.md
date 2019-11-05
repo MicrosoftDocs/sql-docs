@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # CancelUpdate Method (RDS)
 Cancels any changes made to the current or new row of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

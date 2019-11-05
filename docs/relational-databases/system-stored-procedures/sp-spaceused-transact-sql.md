@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_spaceused (Transact-SQL)
@@ -70,8 +69,8 @@ If *objname* is not specified, results are returned for the whole database.
   
 |Value|Description|  
 |-----------|-----------------|  
-|0|When *@objname* is null or is not specified, two result sets are returned. Two result sets is the default behavior.|  
-|1|When *@objname* = null or is not specified, a single result set is returned.|  
+|0|When *\@objname* is null or is not specified, two result sets are returned. Two result sets is the default behavior.|  
+|1|When *\@objname* = null or is not specified, a single result set is returned.|  
   
  *oneresultset* is **bit**, with a default of **0**.  
 
@@ -175,7 +174,7 @@ If *objname* is omitted, the value of oneresultset is 1, and *include_total_xtp_
 >  When you drop or rebuild large indexes, or drop or truncate large tables, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits. Deferred drop operations do not release allocated space immediately. Therefore, the values returned by **sp_spaceused** immediately after dropping or truncating a large object may not reflect the actual disk space available.  
   
 ## Permissions  
- Permission to execute **sp_spaceused** is granted to the **public** role. Only members of the **db_owner** fixed database role can specify the **@updateusage** parameter.  
+ Permission to execute **sp_spaceused** is granted to the **public** role. Only members of the **db_owner** fixed database role can specify the **\@updateusage** parameter.  
   
 ## Examples  
   
@@ -200,7 +199,7 @@ GO
 ```  
   
 ### C. Displaying space usage information about the remote table associated with a Stretch-enabled table  
- The following example summarizes the space used by the remote table associated with a Stretch-enabled table by using the **@mode** argument to specify the remote target. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+ The following example summarizes the space used by the remote table associated with a Stretch-enabled table by using the **\@mode** argument to specify the remote target. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
 ```sql  
 USE StretchedAdventureWorks2016  

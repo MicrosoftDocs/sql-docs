@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "prepSqlSrv"
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Prepare SQL Server for CDC
 

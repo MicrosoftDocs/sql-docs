@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "data flow task [Integration Services], adding"
   - "MainPipe object"
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Adding the Data Flow Task Programmatically
 

@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "child packages"
   - "parent packages [Integration Services]"
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Execute Package Task
 

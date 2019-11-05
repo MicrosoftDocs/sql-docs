@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # execute Method (java.lang.String, int[])
 

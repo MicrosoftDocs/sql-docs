@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

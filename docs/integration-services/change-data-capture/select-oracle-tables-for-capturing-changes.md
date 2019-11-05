@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "selOraTabDia"
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Select Oracle Tables for Capturing Changes
 

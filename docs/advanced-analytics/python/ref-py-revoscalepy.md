@@ -1,6 +1,6 @@
 ---
-title: revoscalepy Python package - SQL Server Machine Learning Services
-description: Introduction to the revoscalepy module in SQL Server 2017 Machine Learning Services with Python.
+title: revoscalepy Python package
+description: Introduction to the revoscalepy module in SQL Server Machine Learning Services with Python.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -8,10 +8,10 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # revoscalepy (Python module in SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **revoscalepy** is a Python35-compatible module from Microsoft that supports distributed computing, remote compute contexts, and high-performance data science algorithms. It is based on the **RevoScaleR** package for R (distributed with Microsoft R Server and SQL Server R Services), offering similar functionality:
 
@@ -30,7 +30,7 @@ The **revoscalepy** library is distributed in multiple Microsoft products, but u
 
 The **revoscalepy** module is based on Python 3.5 and available only when you install one of the following Microsoft products or downloads:
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 or later](https://docs.microsoft.com/machine-learning-server/)
 + [Python client libraries for a data science client](setup-python-client-tools-sql.md)
 
@@ -85,7 +85,7 @@ You should also review the functions in [microsoftml](https://docs.microsoft.com
 
 | Function| Description|
 | ------- | ---------- |
-| [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Generate predictions from a trained model|) | Generates predictions from a trained model and can be used for realtime scoring. |
+| [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Generate predictions from a trained model|) | Generates predictions from a trained model and can be used for real-time scoring. |
 |[rx_predict_default](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | Compute predicted values and residuals using rx_lin_mod and rx_logit objects. |
 |[rx_predict_rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dforest) | Calculate predicted or fitted values for a data set from an rx_dforest or rx_btrees object. |
 |[rx_predict_rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dtree) | Calculate predicted or fitted values for a data set from an rx_dtree object. |

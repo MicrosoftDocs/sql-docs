@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_validate_replica_hosts_as_publishers
  None.  
   
 ## Remarks  
- If no entry exists for the publisher and the publishing database, **sp_validate_redirected_publisher** returns null for the output parameter *@redirected_publisher*. Otherwise, the associated redirected publisher is returned, both on success and failure.  
+ If no entry exists for the publisher and the publishing database, **sp_validate_redirected_publisher** returns null for the output parameter *\@redirected_publisher*. Otherwise, the associated redirected publisher is returned, both on success and failure.  
   
  If the validation succeeds, **sp_validate_redirected_publisher** returns a success indication.  
   

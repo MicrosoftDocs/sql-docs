@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: d6af9bb4-c55d-41f4-a266-d10ebee61194
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getMaxColumnsInOrderBy Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

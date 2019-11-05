@@ -11,7 +11,6 @@ f1_keywords:
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import Flat File to SQL Wizard

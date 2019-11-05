@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "azure active directory, authentication, access token"
 author: "david-puglielli"
 ms.author: "v-dapugl"
-manager: "mbarwin"
+manager: v-mabarw
 ---
 # Connect Using Azure Active Directory Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

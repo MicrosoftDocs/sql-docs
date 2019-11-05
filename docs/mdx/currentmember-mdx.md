@@ -8,7 +8,6 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # CurrentMember (MDX)
 
@@ -69,7 +68,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- The current member changes on a hierarchy used on an axis in a query. Therefore, the current member on other hierarchies on the same dimension that are not used on an axis can also change; this behavior is called 'auto-exists' and more details can be found in [Key Concepts in MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). For example, the query below shows how the current member on the Calendar Year hierarchy of the Date dimension changes with the current member on the Calendar hierarchy, when the latter is displayed on the Rows axis:  
+ The current member changes on a hierarchy used on an axis in a query. Therefore, the current member on other hierarchies on the same dimension that are not used on an axis can also change; this behavior is called 'auto-exists' and more details can be found in [Key Concepts in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). For example, the query below shows how the current member on the Calendar Year hierarchy of the Date dimension changes with the current member on the Calendar hierarchy, when the latter is displayed on the Rows axis:  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   

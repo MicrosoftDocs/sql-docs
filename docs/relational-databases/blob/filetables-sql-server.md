@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # FileTables (SQL Server)
 

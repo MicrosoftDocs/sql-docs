@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Add Existing Items to a Project
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

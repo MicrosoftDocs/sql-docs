@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 2bcf4f2e-a103-4374-abc4-ffad4ce8e3c0
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setHostNameInCertificate Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

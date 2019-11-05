@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 1bb909f1-4a96-4be1-adea-36c8d9703112
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # updateNString Method (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

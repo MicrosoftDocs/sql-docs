@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Save Selected Tables on a Diagram (Visual Database Tools)

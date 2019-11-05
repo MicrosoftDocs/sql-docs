@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change Font Color, Size, and Style

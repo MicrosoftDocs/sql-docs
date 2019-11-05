@@ -19,9 +19,9 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Set up replication distribution database in Always On availability group
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article explains how to set up a SQL Server replication distribution databases in an Always On availability group (AG).
 
@@ -48,12 +48,13 @@ After a distribution database in the AG is configured based on the steps describ
 
 ## Limitations or exclusions
 
-- Local distributor is not supported. For example, publisher and distributor must be different SQL Server instances. A publisher using itself as distributor (a.k.a. local distributor) cannot support distribution databases in an AG.
+- Local distributor is not supported. For example, publisher and distributor must be different SQL Server instances. These instances can be hosted on the same sets of nodes.  A publisher using itself as distributor (a.k.a. local distributor) cannot support distribution databases in an AG.
 - Oracle publisher is not supported.
 - Merge replication is not supported.
 - Transactional replication with immediate or queued updating subscriber is not supported.
 - Peer to peer replication is not supported.
-- All SQL Server instances hosting distribution database replicas must be SQL Server 2017 CU 6 or later. 
+- All SQL Server 2017 instances hosting distribution database replicas must be SQL Server 2017 CU 6 or later. 
+- All SQL Server 2016 instances hosting distribution database replicas must be SQL Server 2016 SP2-CU3 or later.
 - All SQL Server instances hosting distribution database replicas must be the same version, except during the narrow timeframe when upgrade takes place.
 - The distribution database must be in full recovery mode.
 - For recovery and to allow transaction log truncation, configure full and transaction log backups.
@@ -232,7 +233,7 @@ This example removes a distributor from a current distribution database AG while
 
 ## Remove a publisher from distribution database AG
 
-This example removes a publisher from a distributor’s current distribution database AG while the rest of the publishers served by this distribution database AG are not affected. In this example, an existing configuration has distribution database in an AG. DIST1, DIST2, and DIST3 are the distributors, `distribution` is the distribution database in AG, and PUB1 and PUB2 are the publishers served by `distribution` database. The example removes PUB1 from these distributors.
+This example removes a publisher from a distributor's current distribution database AG while the rest of the publishers served by this distribution database AG are not affected. In this example, an existing configuration has distribution database in an AG. DIST1, DIST2, and DIST3 are the distributors, `distribution` is the distribution database in AG, and PUB1 and PUB2 are the publishers served by `distribution` database. The example removes PUB1 from these distributors.
 
 ### Publisher workflow
 
@@ -389,9 +390,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
  /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## See Also  

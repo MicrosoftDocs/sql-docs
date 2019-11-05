@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a3591295-0a76-4e3c-b4fa-8bd4f1cde705
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Importing Visual FoxPro Data into Microsoft Access
 You can import data stored in a Visual FoxPro database into a Microsoft Access database using the Import option.  

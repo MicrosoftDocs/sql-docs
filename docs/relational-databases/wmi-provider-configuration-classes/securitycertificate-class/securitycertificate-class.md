@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SecurityCertificate Class
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

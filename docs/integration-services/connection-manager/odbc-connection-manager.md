@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "data sources [Integration Services], connections"
   - "connection managers [Integration Services], ODBC"
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # ODBC Connection Manager
 

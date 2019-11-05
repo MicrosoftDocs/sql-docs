@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # View and Work with the Output from the Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ manager: craigg
 5.  Uncheck **Show existing objects** at the bottom of the **Recommendations** tabbed page. This causes the grid to display only those database objects that are referenced in the recommendation. Use the bottom scroll bar to view the right-most column in the recommendations grid, and click an item in the **Definition** column to view or copy the [!INCLUDE[tsql](../../includes/tsql-md.md)] script that creates that object in your database.  
   
 6.  If you want to save all of the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts that create or drop all database objects in this recommendation into one script file, click **Save Recommendations** on the **Actions** menu.  
-  
+
 #### To view the tuning summary and reports with the Database Engine Tuning Advisor GUI  
   
 1.  Tune a database using the Database Engine Tuning Advisor GUI or the **dta** command-line utility. For more information, see [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). If you want to use an existing tuning session, skip this step and proceed to step 2.  
@@ -278,7 +277,7 @@ manager: craigg
  The index or view affected by the recommendation. The icon in this column reflects the recommendation to drop or add the **Target of Recommendation**.  
   
  **Details**  
- A description of the **Target of Recommendation**. Possible values include clustered, indexed view, or blank indicating a non-clustered index. Also indicates whether the index is unique.  
+ A description of the **Target of Recommendation**. Possible values include clustered, indexed view, or blank indicating a nonclustered index. Also indicates whether the index is unique.  
   
  **Partition Scheme**  
  The partition scheme is provided in this column if partitioning is recommended.  

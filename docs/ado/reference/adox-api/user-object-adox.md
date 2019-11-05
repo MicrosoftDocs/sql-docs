@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # User Object (ADOX)
 Represents a user account that has access permissions within a secured database.  

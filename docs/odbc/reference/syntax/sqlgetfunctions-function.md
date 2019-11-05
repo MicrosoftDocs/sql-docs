@@ -1,7 +1,7 @@
 ---
 title: "SQLGetFunctions Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,6 +11,7 @@ apiname:
   - "SQLGetFunctions"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLGetFunctions"
@@ -19,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetFunctions Function
 **Conformance**  

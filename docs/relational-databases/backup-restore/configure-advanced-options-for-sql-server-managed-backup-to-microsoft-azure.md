@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,8 +24,6 @@ manager: craigg
   
 ## Configure Encryption  
  The following steps describe how to specify encryption settings using the stored procedure  [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md).  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 1.  **Determine the Encryption Algorithm:** First determine the name of the encryption algorithm to use. Select from one of the following algorithms.  
   

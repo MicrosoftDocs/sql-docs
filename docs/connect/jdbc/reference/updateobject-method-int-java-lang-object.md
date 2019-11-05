@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 4993dfe1-2232-4b3c-b931-dfdb35dd225a
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # updateObject Method (int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

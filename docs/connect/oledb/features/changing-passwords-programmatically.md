@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "modifying passwords"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Changing Passwords Programmatically
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

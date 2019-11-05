@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.loaddimwizard.welcome.f1"
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Welcome to the Slowly Changing Dimension Wizard
 

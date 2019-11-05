@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 5f8e7f4a-f157-442a-8fe5-32b8774776dc
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # DAC Framework Compatibility
 When you attempt an action that uses the DAC Framework, SQL Server Data Tools (SSDT) verifies the version of DACFx on the computer. If SSDT does not work with the installed version of DACFx, the following error displays:  

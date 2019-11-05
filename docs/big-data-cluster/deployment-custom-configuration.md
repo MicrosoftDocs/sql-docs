@@ -2,93 +2,109 @@
 title: Configure deployments
 titleSuffix: SQL Server big data clusters
 description: Learn how to customize a big data cluster deployment with configuration files.
-author: rothja 
-ms.author: jroth 
-manager: jroth
-ms.date: 05/22/2019
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Configure deployment settings for big data clusters
+
+# Configure deployment settings for cluster resources and services
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-To customize your cluster deployment configuration file, you can use any json format editor like VSCode. For scripting these edits for automation purposes, we provide a **mssqlctl cluster config section** command. This article explains how to configure big data cluster deployments by modifying deployment configuration files. It provides examples for how to change the configuration for different scenarios. For more information about how configuration files are used in deployments, see the [deployment guidance](deployment-guidance.md#configfile).
+Starting from a pre-defined set of configuration profiles that are built into the `azdata` management tool, you can easily modify the default settings to better suit your BDC workload requirements. The structure of the configuration files enables you to granularly update settings for each service of the resource.
 
-## Prerequisites
+> [!TIP]
+> Please reference the articles on how to configure **high availability** for mission critical components like [SQL Server master](deployment-high-availability.md) or [HDFS name node](deployment-high-availability-hdfs-spark.md),  for details on how to deploy highly available services.
 
-- [Install mssqlctl](deploy-install-mssqlctl.md).
-
-- Each of the examples in this section assume that you have created a copy of one of the standard configuration files. For more information, see [Create a custom configuration file](deployment-guidance.md#customconfig). For example, the following command creates a **custom.json** file based on the default **aks-dev-test.json** configuration:
-
-   ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
-   ```
-
-## <a id="clustername"></a> Change cluster name
-
-The cluster name is both the name of the big data cluster and the Kubernetes namespace that will be created on deployment. It is specified in the following portion of the deployment configuration file:
+You can also set resource level configurations or update the configurations for all services in a resource. Here is a summary of the structure for `bdc.json`:
 
 ```json
-"metadata": {
-    "kind": "Cluster",
-    "name": "mssql-cluster"
-},
-```
-
-The following command sends a key-value pair to the **--json-values** parameter to change the big data cluster name to **test-cluster**:
-
-```bash
-mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-cluster"
-```
-
-> [!IMPORTANT]
-> The name of your big data cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
-
-## <a id="ports"></a> Update endpoint ports
-
-Endpoints are defined for the control plane as well as for individual pools. The following portion of the configuration file shows the endpoint definitions for the control plane:
-
-```json
-"endpoints": [
-    {
-        "name": "Controller",
-        "serviceType": "LoadBalancer",
-        "port": 30080
+{
+    "apiVersion": "v1",
+    "metadata": {
+        "kind": "BigDataCluster",
+        "name": "mssql-cluster"
     },
-    {
-        "name": "ServiceProxy",
-        "serviceType": "LoadBalancer",
-        "port": 30777
-    },
-    {
-        "name": "AppServiceProxy",
-        "serviceType": "LoadBalancer",
-        "port": 30778
-    },
-    {
-        "name": "Knox",
-        "serviceType": "LoadBalancer",
-        "port": 30443
+    "spec": {
+        "resources": {
+            "nmnode-0": {...
+            },
+            "sparkhead": {...
+            },
+            "zookeeper": {...
+            },
+            "gateway": {...
+            },
+            "appproxy": {...
+            },
+            "master": {...
+            },
+            "compute-0": {...
+            },
+            "data-0": {...
+            },
+            "storage-0": {...
+        },
+        "services": {
+            "sql": {
+                "resources": [
+                    "master",
+                    "compute-0",
+                    "data-0",
+                    "storage-0"
+                ]
+            },
+            "hdfs": {
+                "resources": [
+                    "nmnode-0",
+                    "zookeeper",
+                    "storage-0",
+                    "sparkhead"
+                ],
+                "settings": {...
+            },
+            "spark": {
+                "resources": [
+                    "sparkhead",
+                    "storage-0"
+                ],
+                "settings": {...
+            }
+        }
     }
-]
+}
 ```
 
-The following example uses inline JSON to change the port for the **Controller** endpoint:
-
-```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
-```
-
-## <a id="replicas"></a> Configure pool replicas
-
-The characteristics of each pool, such as the storage pool, is defined in the configuration file. For example, the following portion shows a storage pool definition:
+For updating resource level configurations like instances in a pool, you will update the resource spec. For example, to update the number of instances in the compute pool you will modify this section in `bdc.json` configuration file:
 
 ```json
-"pools": [
-    {
+"resources": {
+    ...
+    "compute-0": {
+        "metadata": {
+            "kind": "Pool",
+            "name": "default"
+        },
+        "spec": {
+            "type": "Compute",
+            "replicas": 4
+        }
+    }
+    ...
+}
+``` 
+
+Similarly for changing the settings of a single service within a specific resource. For example, if you want to change the Spark memory settings only for the Spark component in the Storage pool, you will update the `storage-0` resource with a `settings` section for `spark` service in the `bdc.json` configuration file.
+
+```json
+"resources":{
+    ...
+     "storage-0": {
         "metadata": {
             "kind": "Pool",
             "name": "default"
@@ -96,94 +112,381 @@ The characteristics of each pool, such as the storage pool, is defined in the co
         "spec": {
             "type": "Storage",
             "replicas": 2,
-            "storage": {
-               "data": {
-                  "className": "default",
-                  "accessMode": "ReadWriteOnce",
-                  "size": "15Gi"
-               },
-               "logs": {
-                  "className": "default",
-                  "accessMode": "ReadWriteOnce",
-                  "size": "10Gi"
-               }
-           },
+            "settings": {
+                "spark": {
+                    "spark-defaults-conf.spark.driver.memory": "2g",
+                    "spark-defaults-conf.spark.driver.cores": "1",
+                    "spark-defaults-conf.spark.executor.instances": "3",
+                    "spark-defaults-conf.spark.executor.memory": "1536m",
+                    "spark-defaults-conf.spark.executor.cores": "1",
+                    "yarn-site.yarn.nodemanager.resource.memory-mb": "18432",
+                    "yarn-site.yarn.nodemanager.resource.cpu-vcores": "6",
+                    "yarn-site.yarn.scheduler.maximum-allocation-mb": "18432",
+                    "yarn-site.yarn.scheduler.maximum-allocation-vcores": "6",
+                    "yarn-site.yarn.scheduler.capacity.maximum-am-resource-percent": "0.3"
+                }
+            }
         }
     }
-]
+    ...
+}
 ```
 
-You can configure the number of instances in a pool by modifying the **replicas** value for each pool. The following example uses inline JSON to change these values for the storage and data pools to `10` and `4` respectively:
+If you want to apply same configurations for a service associated with multiple resources, you will update the corresponding `settings` in the `services` section. For example, if you would like to set same settings for Spark across both storage pool and Spark pools, you will update the `settings` section in the `spark` service section in the `bdc.json` configuration file.
 
-```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
+```json
+"services": {
+    ...
+    "spark": {
+        "resources": [
+            "sparkhead",
+            "storage-0"
+        ],
+        "settings": {
+            "spark-defaults-conf.spark.driver.memory": "2g",
+            "spark-defaults-conf.spark.driver.cores": "1",
+            "spark-defaults-conf.spark.executor.instances": "3",
+            "spark-defaults-conf.spark.executor.memory": "1536m",
+            "spark-defaults-conf.spark.executor.cores": "1",
+            "yarn-site.yarn.nodemanager.resource.memory-mb": "18432",
+            "yarn-site.yarn.nodemanager.resource.cpu-vcores": "6",
+            "yarn-site.yarn.scheduler.maximum-allocation-mb": "18432",
+            "yarn-site.yarn.scheduler.maximum-allocation-vcores": "6",
+            "yarn-site.yarn.scheduler.capacity.maximum-am-resource-percent": "0.3"
+        }
+    }
+    ...
+}
 ```
 
-## <a id="storage"></a> Configure storage
+To customize your cluster deployment configuration files, you can use any JSON format editor, such as VSCode. For scripting these edits for automation purposes, use the `azdata bdc config` command. This article explains how to configure big data cluster deployments by modifying deployment configuration files. It provides examples for how to change the configuration for different scenarios. For more information about how configuration files are used in deployments, see the [deployment guidance](deployment-guidance.md#configfile).
 
-You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage pool and updates the size of the persistent volume claim for storing data to 100Gb. You must have this section in the configuration file to update the settings using the *mssqlctl cluster config set* command, see below how to use a patch file to add this section:
+## Prerequisites
 
-```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
-```
+- [Install azdata](deploy-install-azdata.md).
 
-> [!NOTE]
-> A configuration file based on **kubeadm-dev-test.json** does not have a storage definition for each pool, but this can be added manually if needed.
+- Each of the examples in this section assume that you have created a copy of one of the standard configurations. For more information, see [Create a custom configuration](deployment-guidance.md#customconfig). For example, the following command creates a directory called `custom-bdc` that contains two JSON deployment configuration files, `bdc.json` and `control.json`, based on the default `aks-dev-test` configuration:
 
-For more information about storage configuration, see [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
+   ```bash
+   azdata bdc config init --source aks-dev-test --target custom-bdc
+   ```
 
-## <a id="podplacement"></a> Configure pod placement using Kubernetes labels
+## <a id="docker"></a> Change default Docker registry, repository, and images tag
 
-You can control pod placement on Kubernetes nodes that have specific resources to accommodate various types of workload requirements. For example, you might want to ensure the storage pool pods are placed on nodes with more storage, or SQL Server master instances are placed on nodes that have higher CPU and memory resources. In this case, you will first build a heterogeneous Kubernetes cluster with different types of hardware and then [assign node labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) accordingly. At the time of deploying big data cluster, you can specify same labels at pool level in the cluster deployment configuration file. Kubernetes will then take care of  affinitizing the pods on nodes that match the specified labels.
-
-The following example shows how to edit a custom configuration file to include a node label setting for the SQL Server master instance. Note that there is no *nodeLabel* key in the built in configurations so you will need to either edit a custom configuration file manually or create a patch file and apply it to the custom configuration file.
-
-Create a file named **patch.json** in your current directory with the following contents:
+The built-in configuration files, specifically control.json includes a `docker` section where container registry, repository, and images tag are pre-populated. By default, images required for big data clusters are in the Microsoft Container Registry (`mcr.microsoft.com`), in the `mssql/bdc` repository:
 
 ```json
 {
-  "patch": [
-     {
-      "op": "add",
-      "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
-      "value": {
-      "nodeLabel": "<yourNodeLabel>"
-       }
+    "apiVersion": "v1",
+    "metadata": {
+        "kind": "Cluster",
+        "name": "mssql-cluster"
+    },
+    "spec": {
+        "docker": {
+            "registry": "mcr.microsoft.com",
+            "repository": "mssql/bdc",
+            "imageTag": "2019-GDR1-ubuntu-16.04",
+            "imagePullPolicy": "Always"
+        },
+        ...
+    }
+}
+```
+
+Before deployment, you can customize the `docker` settings by either directly editing the `control.json` configuration file or using `azdata bdc config` commands. For example, following commands are updating a `custom-bdc` control.json configuration file with a different `<registry>`, `<repository>` and `<image_tag>`:
+
+```bash
+azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.registry=<registry>"
+azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.repository=<repository>"
+azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.imageTag=<image_tag>"
+```
+
+> [!TIP]
+> As a best practice, you must use a version specific image tag and avoid using `latest` image tag, as this can result in version mismatch that will cause cluster health issues.
+
+> [!TIP]
+> Big data clusters deployment must have access to the container registry and repository from which to pull container images. If your environment does not have access to the default Microsoft Container Registry, you can perform an offline installation where the required images are first placed into a private Docker repository. For more information about offline installations, see [Perform an offline deployment of a SQL Server big data cluster](deploy-offline.md). Note that you must set the `DOCKER_USERNAME` and `DOCKER_PASSWORD` [environment variables](deployment-guidance.md#env) before issuing the deployment to ensure the deployment workflow has acces to your private repository to pull the images from.
+
+## <a id="clustername"></a> Change cluster name
+
+The cluster name is both the name of the big data cluster and the Kubernetes namespace that will be created on deployment. It is specified in the following portion of the `bdc.json` deployment configuration file:
+
+```json
+"metadata": {
+    "kind": "BigDataCluster",
+    "name": "mssql-cluster"
+},
+```
+
+The following command sends a key-value pair to the `--json-values` parameter to change the big data cluster name to `test-cluster`:
+
+```bash
+azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "metadata.name=test-cluster"
+```
+
+> [!IMPORTANT]
+> The name of your big data cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
+
+## <a id="ports"></a> Update endpoint ports
+
+Endpoints are defined for the controller in the `control.json` and for gateway and SQL Server master instance in the corresponding sections in `bdc.json`. The following portion of the `control.json` configuration file shows the endpoint definitions for the controller:
+
+```json
+{
+  "endpoints": [
+    {
+      "name": "Controller",
+      "serviceType": "LoadBalancer",
+      "port": 30080
+    },
+    {
+      "name": "ServiceProxy",
+      "serviceType": "LoadBalancer",
+      "port": 30777
     }
   ]
 }
 ```
 
+The following example uses inline JSON to change the port for the `controller` endpoint:
+
 ```bash
-mssqlctl cluster config section set -c custom.json -p ./patch.json
+azdata bdc config replace --config-file custom-bdc/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
-## <a id="jsonpatch"></a> JSON patch files
+## <a id="replicas"></a> Configure scale
 
-JSON patch files configure multiple settings at once. For more information about JSON patches, see [JSON Patches in Python](https://github.com/stefankoegl/python-json-patch) and the [JSONPath Online Evaluator](https://jsonpath.com/).
+The configurations of each resource, such as the storage pool, is defined in the `bdc.json` configuration file. For example, the following portion of the `bdc.json` shows a `storage-0` resource definition:
 
-The following **patch.json** file performs the following changes:
+```json
+"storage-0": {
+    "metadata": {
+        "kind": "Pool",
+        "name": "default"
+    },
+    "spec": {
+        "type": "Storage",
+        "replicas": 2,
+        "settings": {
+            "spark": {
+                "spark-defaults-conf.spark.driver.memory": "2g",
+                "spark-defaults-conf.spark.driver.cores": "1",
+                "spark-defaults-conf.spark.executor.instances": "3",
+                "spark-defaults-conf.spark.executor.memory": "1536m",
+                "spark-defaults-conf.spark.executor.cores": "1",
+                "yarn-site.yarn.nodemanager.resource.memory-mb": "18432",
+                "yarn-site.yarn.nodemanager.resource.cpu-vcores": "6",
+                "yarn-site.yarn.scheduler.maximum-allocation-mb": "18432",
+                "yarn-site.yarn.scheduler.maximum-allocation-vcores": "6",
+                "yarn-site.yarn.scheduler.capacity.maximum-am-resource-percent": "0.3"
+            }
+        }
+    }
+}
+```
 
-- Updates the port of single endpoint.
-- Updates all endpoints (**port** and **serviceType**).
-- Updates the control plane storage. These settings are applicable to all cluster components, unless overridden at pool level.
-- Updates the storage class name in control plane storage.
-- Updates pool storage settings for storage pool.
-- Updates Spark settings for storage pool.
+You can configure the number of instances in a storage, compute and/or data pool by modifying the `replicas` value for each pool. The following example uses inline JSON to change these values for the storage, compute and data pools to `10`, `4` and `4` respectively:
+
+```bash
+azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.storage-0.spec.replicas=10"
+azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.compute-0.spec.replicas=4"
+azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.data-0.spec.replicas=4"
+```
+
+> [!NOTE]
+> The maximum number of instances validated for compute and data pools is `8` each. There is no enforcement of this limit at deployment time, but we do not recommend configuring a higher scale in production deployments.
+
+## <a id="storage"></a> Configure storage
+
+You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage and data pools and updates the size of the persistent volume claim for storing data to 500 Gb for HDFS (storage pool) and 100 Gb for data pool. 
+
+> [!TIP]
+> For more information about storage configuration, see [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
+
+First create a patch.json file as below that includes the new *storage* section, in addition to *type* and *replicas*
 
 ```json
 {
   "patch": [
     {
       "op": "replace",
-      "path": "$.spec.controlPlane.spec.endpoints[?(@.name=='Controller')].port",
-      "value": 30000
+      "path": "spec.resources.storage-0.spec",
+      "value": {
+        "type": "Storage",
+        "replicas": 2,
+        "storage": {
+          "data": {
+            "size": "500Gi",
+            "className": "myHDFSStorageClass",
+            "accessMode": "ReadWriteOnce"
+          },
+          "logs": {
+            "size": "32Gi",
+            "className": "myHDFSStorageClass",
+            "accessMode": "ReadWriteOnce"
+          }
+        }
+      }
     },
     {
       "op": "replace",
-      "path": "spec.controlPlane.spec.endpoints",
+      "path": "spec.resources.data-0.spec",
+      "value": {
+        "type": "Data",
+        "replicas": 2,
+        "storage": {
+          "data": {
+            "size": "100Gi",
+            "className": "myDataStorageClass",
+            "accessMode": "ReadWriteOnce"
+          },
+          "logs": {
+            "size": "32Gi",
+            "className": "myDataStorageClass",
+            "accessMode": "ReadWriteOnce"
+          }
+        }
+      }
+    }
+  ]
+}
+```
+
+You can then use the `azdata bdc config patch` command to update the `bdc.json` configuration file.
+```bash
+azdata bdc config patch --config-file custom-bdc/bdc.json --patch ./patch.json
+```
+
+> [!NOTE]
+> A configuration file based on `kubeadm-dev-test` does not have a storage definition for each pool, but you can use above process to added if needed.
+
+## <a id="sparkstorage"></a> Configure storage pool without spark
+
+You can also configure the storage pools to run without spark and create a separate spark pool. This configuration enables you to scale spark compute power independent of storage. To see how to configure the spark pool, see the [Create a spark pool](#sparkpool) section in this article.
+
+> [!NOTE]
+> Deploying a big data cluster without Spark is not supported. So you must either have `includeSpark` set to `true` or you must create a separate [spark pool](#sparkpool) with at least one instance. You can also have Spark running both in storage pool (`includeSpark` is `true`) and have a separate Spark pool.
+
+By default, the `includeSpark` setting for the storage pool resource is set to true, so you must edit the `includeSpark` field into the storage configuration in order to make changes. The following command shows how to edit this value using inline json.
+
+```bash
+azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.storage-0.spec.settings.spark.includeSpark=false"
+```
+
+## <a id="sparkpool"></a> Create a spark pool
+
+You can create a Spark pool in addition, or instead of Spark instances running in the storage pool. Following example shows how to create a spark pool with two instances by patching the `bdc.json` configuration file. 
+
+First, create a `spark-pool-patch.json` file as below:
+
+```json
+{
+    "patch": [
+        {
+            "op": "add",
+            "path": "spec.resources.spark-0",
+            "value": {
+                "metadata": {
+                    "kind": "Pool",
+                    "name": "default"
+                },
+                "spec": {
+                    "type": "Spark",
+                    "replicas": 2
+                }
+            }
+        },
+        {
+            "op": "add",
+            "path": "spec.services.spark.resources/-",
+            "value": "spark-0"
+        },
+        {
+            "op": "add",
+            "path": "spec.services.hdfs.resources/-",
+            "value": "spark-0"
+        }
+    ]
+}
+```
+
+Then run the `azdata bdc config patch` command:
+
+```bash
+azdata bdc config patch -c custom-bdc/bdc.json -p spark-pool-patch.json
+```
+
+## <a id="podplacement"></a> Configure pod placement using Kubernetes labels
+
+You can control pod placement on Kubernetes nodes that have specific resources to accommodate various types of workload requirements. Using Kubernetes labels, you can customize which are the nodes in your Kubernetes cluster will be used for deploying big data cluster resources, but also restrict which nodes are used for specific resources.
+For example, you might want to ensure the storage pool resource pods are placed on nodes with more storage, while SQL Server master instances are placed on nodes that have higher CPU and memory resources. In this case, you will first build a heterogeneous Kubernetes cluster with different types of hardware and then [assign node labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) accordingly. At the time of deploying big data cluster, you can specify same labels at cluster level to indicate which nodes are used for big data cluster using the `clusterLabel` attribute in the `control.json` file. Then, different labels will be used for pool level placement. These labels can be specified in the big data cluster deployment configuration files using `nodeLabel` attribute. Kubernetes assigns the pods on nodes that match the specified labels. The specific label keys that needs to be added to the nodes in the kubernetes cluster are `mssql-cluster` (for indicating which nodes are used for big data cluster) and `mssql-resource` (to indicate which specific nodes the pods are placed on for various resources). The values of these labels can be any string that you choose.
+
+> [!NOTE]
+> Due to the nature of the pods that do node level metrics collection, `metricsdc` pods are deployed on all nodes with the `mssql-cluster` label, and the `mssql-resource` will not apply to these pods.
+
+The following example shows how to edit a custom configuration file to include a node label `bdc` for the entire big data cluster, a label `bdc-master` for placing SQL Server master instance pods on a specific node, `bdc-storage-pool` for storage pool resources, `bdc-compute-pool` for compute pool and data pool pods, and `bdc-shared` for rest of the resources. 
+
+First label the Kubernetes nodes:
+
+```bash
+kubectl label node <kubernetesNodeName1> mssql-cluster=bdc mssql-resource=bdc-shared --overwrite=true
+kubectl label node <kubernetesNodeName2> mssql-cluster=bdc mssql-resource=bdc-master --overwrite=true
+kubectl label node <kubernetesNodeName3> mssql-cluster=bdc mssql-resource=bdc-compute-pool --overwrite=true
+kubectl label node <kubernetesNodeName4> mssql-cluster=bdc mssql-resource=bdc-compute-pool --overwrite=true
+kubectl label node <kubernetesNodeName5> mssql-cluster=bdc mssql-resource=bdc-storage-pool --overwrite=true
+kubectl label node <kubernetesNodeName6> mssql-cluster=bdc mssql-resource=bdc-storage-pool --overwrite=true
+kubectl label node <kubernetesNodeName7> mssql-cluster=bdc mssql-resource=bdc-storage-pool --overwrite=true
+kubectl label node <kubernetesNodeName8> mssql-cluster=bdc mssql-resource=bdc-storage-pool --overwrite=true
+```
+
+Then update the cluster deployment configuration files to include the label values. This example assumes that you are customizing configuration files in a `custom-bdc` profile. By default, there are no `nodeLabel` and `clusterLabel` keys in the built-in configurations so you will need to either edit a custom configuration file manually or use the `azdata bdc config add` commands to make the necessary edits.
+
+```bash
+azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc"
+azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc-shared"
+
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.master.spec.nodeLabel=bdc-master"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.compute-0.spec.nodeLabel=bdc-compute-pool"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.data-0.spec.nodeLabel=bdc-compute-pool"
+azdata bdc config add -c custom-bdc/bdc.json-j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
+
+# below can be omitted in which case we will take the node label default from the control.json
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.nmnode-0.spec.nodeLabel=bdc-shared"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.sparkhead.spec.nodeLabel=bdc-shared"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.zookeeper.spec.nodeLabel=bdc-shared"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.nodeLabel=bdc-shared"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
+```
+
+## <a id="jsonpatch"></a> Other customizations using JSON patch files
+
+JSON patch files configure multiple settings at once. For more information about JSON patches, see [JSON Patches in Python](https://github.com/stefankoegl/python-json-patch) and the [JSONPath Online Evaluator](https://jsonpath.com/).
+
+The following `patch.json` files perform the following changes:
+
+- Update the port of single endpoint in `control.json`.
+
+```json
+{
+  "patch": [
+    {
+      "op": "replace",
+      "path": "$.spec.endpoints[?(@.name=='Controller')].port",
+      "value": 30000
+    }
+  ]
+}
+```
+
+- Update all endpoints (`port` and `serviceType`) in `control.json`.
+
+```json
+{
+  "patch": [
+    {
+      "op": "replace",
+      "path": "spec.endpoints",
       "value": [
         {
           "serviceType": "LoadBalancer",
@@ -191,69 +494,103 @@ The following **patch.json** file performs the following changes:
           "name": "Controller"
         },
         {
-            "serviceType": "LoadBalancer",
-            "port": 30778,
-            "name": "ServiceProxy"
-        },
-        {
-            "serviceType": "LoadBalancer",
-            "port": 30778,
-            "name": "AppServiceProxy"
-        },
-        {
-            "serviceType": "LoadBalancer",
-            "port": 30443,
-            "name": "Knox"
+          "serviceType": "LoadBalancer",
+          "port": 30778,
+          "name": "ServiceProxy"
         }
       ]
-    },
+    }
+  ]
+}
+```
+
+- Update the controller storage settings in `control.json`. These settings are applicable to all cluster components, unless overridden at pool level.
+
+```json
+{
+  "patch": [
     {
       "op": "replace",
-      "path": "spec.controlPlane.spec.controlPlane",
+      "path": "spec.storage",
       "value": {
-          "data": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "100Gi"
-          },
-          "logs": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "32Gi"
-          }
+        "data": {
+          "className": "managed-premium",
+          "accessMode": "ReadWriteOnce",
+          "size": "100Gi"
+        },
+        "logs": {
+          "className": "managed-premium",
+          "accessMode": "ReadWriteOnce",
+          "size": "32Gi"
         }
-    },
+      }
+    }
+  ]
+}
+```
+
+- Update the storage class name in `control.json`.
+
+```json
+{
+  "patch": [
     {
       "op": "replace",
-      "path": "spec.controlPlane.spec.storage.data.className",
+      "path": "spec.storage.data.className",
       "value": "managed-premium"
-    },
+    }
+  ]
+}
+```
+
+- Update pool storage settings for storage pool in `bdc.json`.
+
+```json
+{
+  "patch": [
     {
-      "op": "add",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
+      "op": "replace",
+      "path": "spec.resources.storage-0.spec",
       "value": {
+        "type": "Storage",
+        "replicas": 2,
+        "storage": {
           "data": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "100Gi"
+            "size": "100Gi",
+            "className": "myStorageClass",
+            "accessMode": "ReadWriteOnce"
           },
           "logs": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "32Gi"
+            "size": "32Gi",
+            "className": "myStorageClass",
+            "accessMode": "ReadWriteOnce"
           }
         }
       }
-    },
+    }
+  ]
+}
+```
+
+- Update Spark settings for storage pool in `bdc.json`.
+
+```json
+{
+  "patch": [
     {
       "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].hadoop.spark",
+      "path": "spec.services.spark.settings",
       "value": {
-        "driverMemory": "2g",
-        "driverCores": 1,
-        "executorInstances": 3,
-        "executorCores": 1,
-        "executorMemory": "1536m"
+            "spark-defaults-conf.spark.driver.memory": "2g",
+            "spark-defaults-conf.spark.driver.cores": "1",
+            "spark-defaults-conf.spark.executor.instances": "3",
+            "spark-defaults-conf.spark.executor.memory": "1536m",
+            "spark-defaults-conf.spark.executor.cores": "1",
+            "yarn-site.yarn.nodemanager.resource.memory-mb": "18432",
+            "yarn-site.yarn.nodemanager.resource.cpu-vcores": "6",
+            "yarn-site.yarn.scheduler.maximum-allocation-mb": "18432",
+            "yarn-site.yarn.scheduler.maximum-allocation-vcores": "6",
+            "yarn-site.yarn.scheduler.capacity.maximum-am-resource-percent": "0.3"
       }
     }
   ]
@@ -263,12 +600,62 @@ The following **patch.json** file performs the following changes:
 > [!TIP]
 > For more information about the structure and options for changing a deployment configuration file, see [Deployment configuration file reference for big data clusters](reference-deployment-config.md).
 
-Use **mssqlctl cluster config section set** to apply the changes in the JSON patch file. The following example applies the **patch.json** file to a target deployment configuration file **custom.json**.
+Use `azdata bdc config` commands to apply the changes in the JSON patch file. The following example applies the `patch.json` file to a target deployment configuration file `custom-bdc/bdc.json`.
 
 ```bash
-mssqlctl cluster config section set -c custom.json -p ./patch.json
+azdata bdc config patch --config-file custom-bdc/bdc.json --patch-file ./patch.json
 ```
+
+## Disable ElasticSearch to run in privileged mode
+
+By default, ElasticSearch container runs in privilege mode in big data cluster. This setting ensures that at container initialization time, the container has enough permissions to update a setting on the host required when ElasticSearch processes higher amount of logs. You can find more information about this topic in [this article](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html). 
+
+For disabling the container that runs ElasticSearch to run in privileged mode, you  must updated the `settings` section in the `control.json` and specify the value of `vm.max_map_count` to `-1`. Here is a sample of how this section would look like:
+
+```json
+{
+    "apiVersion": "v1",
+    "metadata": {...},
+    "spec": {
+        "docker": {...},
+        "storage": {...},
+        "endpoints": [...],
+        "settings": {
+            "ElasticSearch": {
+                "vm.max_map_count": "-1"
+            }
+        }
+    }
+}
+```
+
+You can manually edit the `control.json` and add the above section to the `spec`, or you can create a patch file `elasticsearch-patch.json` like below and use `azdata` CLI to patch the `control.json` file:
+
+```json
+{
+  "patch": [
+    {
+      "op": "add",
+      "path": "spec.settings",
+      "value": {
+            "ElasticSearch": {
+                "vm.max_map_count": "-1"
+        }
+      }
+    }
+  ]
+}
+```
+
+Run this command to patch the configuration file:
+
+```bash
+azdata bdc config patch --config-file custom-bdc/control.json --patch-file elasticsearch-patch.json
+```
+
+> [!IMPORTANT]
+> We recommend as a best practice to manually update the `max_map_count` setting manually on each host in the Kubernetes cluster as per instructions in [this article](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
 
 ## Next steps
 
-For more information about using configuration files in big data cluster deployments, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md#configfile).
+For more information about using configuration files in big data cluster deployments, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).

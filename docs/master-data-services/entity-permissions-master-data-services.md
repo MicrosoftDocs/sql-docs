@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Entity Permissions (Master Data Services)
 

@@ -33,7 +33,8 @@ ms.author: maggies
 ##  <a name="bkmk_config_file_Summary_native_mode"></a> Summary of configuration files (native mode)  
  The following table provides a description of where configuration settings are stored. Most configuration settings are stored in configuration files that are included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. By default, the installation directory is the following:  
   
-```Install Paths  
+```
+Install Paths  
 C:\Program Files\Microsoft SQL Server\MSRSxx.MSSQLSERVER  (where xx is the MS SQL version number)
   or  
 C:\Program Files\Microsoft SQL Server Reporting Services\SSRS  
@@ -57,7 +58,8 @@ C:\Program Files\Microsoft SQL Server Reporting Services\SSRS
   
  By default, the installation directory for SharePoint mode is the following:  
   
-```Install path
+```
+Install path
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
 ```  
   

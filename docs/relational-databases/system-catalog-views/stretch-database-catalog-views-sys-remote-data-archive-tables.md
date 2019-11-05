@@ -18,7 +18,6 @@ ms.assetid: 765069b7-60fd-414c-875f-3455460b75cd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 ---
 # Stretch Database Catalog Views - sys.remote_data_archive_tables
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

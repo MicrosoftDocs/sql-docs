@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 7fba3296-5bd0-4f9e-8f63-9565fe1ee15f
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Levels Collection Properties, Methods, and Events
 ## Properties  

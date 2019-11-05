@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLTablePrivileges Function
 **Conformance**  
@@ -108,9 +107,9 @@ SQLRETURN SQLTablePrivileges(
 > [!NOTE]  
 >  For more information about the general use, arguments, and returned data of ODBC catalog functions, see [Catalog Functions](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- The following columns have been renamed for ODBC 3*.x*. The column name changes do not affect backward compatibility because applications bind by column number.  
+ The following columns have been renamed for ODBC *3.x*. The column name changes do not affect backward compatibility because applications bind by column number.  
   
-|ODBC 2.0 column|ODBC 3*.x* column|  
+|ODBC 2.0 column|ODBC *3.x* column|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

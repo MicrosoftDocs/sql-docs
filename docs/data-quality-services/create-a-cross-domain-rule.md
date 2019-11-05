@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Create a Cross-Domain Rule
 

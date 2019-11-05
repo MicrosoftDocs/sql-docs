@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Value Property (ADO)
 

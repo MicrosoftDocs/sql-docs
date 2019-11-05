@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Domain Management: Domain List
 

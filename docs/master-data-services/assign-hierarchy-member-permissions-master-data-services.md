@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Assign Hierarchy Member Permissions (Master Data Services)
 

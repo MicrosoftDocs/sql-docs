@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Remove or Delete an Item or Project
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

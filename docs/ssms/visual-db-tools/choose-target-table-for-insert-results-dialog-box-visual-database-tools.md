@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Choose Target Table for Insert Results Dialog Box (Visual Database Tools)

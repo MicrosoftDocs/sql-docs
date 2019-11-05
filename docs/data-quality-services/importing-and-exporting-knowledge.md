@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Importing and Exporting Knowledge
 

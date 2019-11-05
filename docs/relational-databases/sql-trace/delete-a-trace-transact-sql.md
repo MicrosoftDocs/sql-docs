@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Delete a Trace (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,9 +23,9 @@ manager: craigg
   
 ### To delete a trace  
   
-1.  Execute **sp_trace_setstatus** by specifying **@status = 0** to stop the trace.  
+1.  Execute **sp_trace_setstatus** by specifying `@status = 0` to stop the trace.  
   
-2.  Execute **sp_trace_setstatus** by specifying **@status = 2** to close the trace and delete its information from the server.  
+2.  Execute **sp_trace_setstatus** by specifying `@status = 2` to close the trace and delete its information from the server.  
   
 > [!NOTE]  
 >  A trace must be stopped first before it can be closed.  

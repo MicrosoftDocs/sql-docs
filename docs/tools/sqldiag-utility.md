@@ -27,9 +27,8 @@ helpviewer_keywords:
   - "automatic diagnostic collection"
   - "clusters [SQL Server], diagnostic collection"
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # SQLdiag Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,10 +106,10 @@ sqldiag
 > [!NOTE]  
 >  **SQLdiag** does not append output to the current output folder when it starts up. It can only overwrite the default output folder (option 1) or rename the folder (option 2), and then it writes output to the new default output folder named SQLDIAG.  
   
- **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2* *machineN*] | *\@machinelistfile*  
  Overrides the machines specified in the configuration file. By default the configuration file is SQLDiag.Xml, or is set with the **/I** parameter. When specifying more than one machine, separate each machine name with a space.  
   
- Using *@machinelistfile* specifies a machine list filename to be stored in the configuration file.  
+ Using *\@machinelistfile* specifies a machine list filename to be stored in the configuration file.  
   
  **/C** _file_compression_type_  
  Sets the type of file compression used on the **SQLdiag** output folder files. Available options:  

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a distributed transaction
@@ -47,7 +46,7 @@ MSDTC is called by the SQL Server Native Client driver for Open Database Connect
 3. The application updates some data on SQL Server Y on computer B.
     - If an update on SQL Server Y fails, all the uncommitted updates on both SQL Server instances are rolled back.
 
-4. Finally, the the application ends the transaction by calling [SQLEndTran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md), with either the SQL_COMMIT or SQL_ROLLBACK option.
+4. Finally, the application ends the transaction by calling [SQLEndTran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md), with either the SQL_COMMIT or SQL_ROLLBACK option.
 
 _(1)_ MSDTC can be invoked without ODBC. In such a case, MSDTC becomes the transaction manager, and the application no longer uses **SQLEndTran**.
 

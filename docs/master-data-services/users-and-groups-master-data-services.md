@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Users and Groups (Master Data Services)
 

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Create Relationships Between Tables on a Diagram (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

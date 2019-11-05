@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Domain-based Attribute (MDS Add-in for Excel)
 

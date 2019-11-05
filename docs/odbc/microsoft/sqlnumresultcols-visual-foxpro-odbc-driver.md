@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a83d826c-6908-4115-b6e6-4d0615ff1738
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLNumResultCols (Visual FoxPro ODBC Driver)
 > [!NOTE]  

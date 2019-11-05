@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.syslanguages (Transact-SQL)
@@ -73,7 +72,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Estonian|1061|1061|  
 |Latvian|1062|1062|  
 |Lithuanian|1063|1063|  
-|Brazilian|1046|1046|  
+|Portuguese (Brazil)|1046|1046|  
 |Traditional Chinese|1028|1028|  
 |Korean|1042|1042|  
 |Simplified Chinese|2052|2052|  

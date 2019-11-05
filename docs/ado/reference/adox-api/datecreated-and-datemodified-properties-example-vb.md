@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # DateCreated and DateModified Properties Example (VB)
 This example demonstrates the [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) and [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) properties by adding a new [Column](../../../ado/reference/adox-api/column-object-adox.md) to an existing [Table](../../../ado/reference/adox-api/table-object-adox.md) and by creating a new **Table**. The DateOutput procedure is required for this example to run.  

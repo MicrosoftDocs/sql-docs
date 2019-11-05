@@ -24,9 +24,8 @@ helpviewer_keywords:
   - "data preparation tasks [Integration Services]"
   - "directory operations [Integration Services]"
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services Tasks
 

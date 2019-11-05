@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STEnvelope (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "cursors [OLE DB]"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Rowsets and SQL Server Cursors
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -8,7 +8,6 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-manager: craigg
 ---
 # Open and save files on premises and in Azure with SSIS packages deployed in Azure
 

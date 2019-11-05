@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Parameter (ADO for Visual C++ Syntax)
 ## Methods  

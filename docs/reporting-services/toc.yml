@@ -1,7 +1,9 @@
-- name: SQL Server >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: What is SQL Server Reporting Services (SSRS)?
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+
+- name: Welcome to SQL Server >
+  href: ../sql-server/index.yml
+
 - name: Overview
   items:
   - name: What's new in Reporting Services
@@ -123,12 +125,12 @@
     href: ../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md
   - name: Reporting Services features in editions of SQL Server
     href: ../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
-- name: Install Reporting Services
+- name: Install Reporting Services versions
   items:
-  - name: Install Reporting Services 2017
+  - name: Install Reporting Services
     href: ../reporting-services/install-windows/install-reporting-services.md
     items:
-    - name: Find the product key for Reporting Services 2017
+    - name: Find the product key for Reporting Services
       href: ../reporting-services/install-windows/find-reporting-services-product-key-ssrs.md
   - name: Install Reporting Services 2016 in native mode
     href: ../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
@@ -284,10 +286,8 @@
   - name: Report Server Content Management (SSRS Native Mode)
     href: ../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md
     items:
-    - name: Create, Delete, or Modify a Folder (web portal)
-      href: ../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md
     - name: Create, Delete, or Modify a Folder
-      href: ../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md
+      href: ../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md
     - name: Move or Delete an Item
       href: ../reporting-services/report-server/move-or-delete-an-item-report-manager.md
     - name: Upload Files to a Folder
@@ -974,8 +974,6 @@
     href: ../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md
   - name: Limit Report History
     href: ../reporting-services/reports/limit-report-history-report-manager.md
-  - name: Open and Close a Report
-    href: ../reporting-services/reports/open-and-close-a-report-report-manager.md
   - name: Upload a File or Report
     href: ../reporting-services/reports/upload-a-file-or-report-report-manager.md
   - name: Create a Linked Report
@@ -1680,7 +1678,7 @@
   items:
   - name: REST API
     href: ../reporting-services/developer/rest-api.md
-  - name: REST API samples >
+  - name: REST API samples >>
     href: https://github.com/Microsoft/Reporting-Services
   - name: Integrating Reporting Services into Applications
     href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md

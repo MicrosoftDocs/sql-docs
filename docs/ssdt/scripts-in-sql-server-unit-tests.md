@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # Scripts in SQL Server Unit Tests
 Each SQL Server unit test contains a single pre-test action, test action, and post-test action. Each of these actions in turn contains the following:  

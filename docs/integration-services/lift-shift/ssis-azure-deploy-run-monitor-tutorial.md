@@ -10,7 +10,6 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-manager: craigg
 ---
 # Tutorial: Deploy and run a SQL Server Integration Services (SSIS) package in Azure
 

@@ -10,7 +10,6 @@ f1_keywords:
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ms.custom: ""
 ms.date: 05/23/2019
 ---

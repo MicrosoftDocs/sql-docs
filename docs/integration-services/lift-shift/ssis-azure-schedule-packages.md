@@ -10,7 +10,6 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-manager: craigg
 ---
 # Schedule the execution of SQL Server Integration Services (SSIS) packages deployed in Azure
 

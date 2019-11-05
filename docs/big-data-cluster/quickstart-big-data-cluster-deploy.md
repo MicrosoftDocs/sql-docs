@@ -1,35 +1,32 @@
 ---
-title: Deployment quickstart
+title: Deploy with a python script
 titleSuffix: SQL Server big data clusters
-description: Walkthrough a deployment of SQL Server 2019 big data clusters (preview) on Azure Kubernetes Service (AKS).
-author: rothja 
-ms.author: jroth 
-manager: jroth
-ms.date: 05/22/2019
-ms.topic: quickstart
+description: Learn how to use a deployment script to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview) on Azure Kubernetes Service (AKS).
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 11/04/2019
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
-# Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)
+# Use a python script to deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In this quickstart, you use a sample deployment script to deploy SQL Server 2019 big data cluster (preview) to Azure Kubernetes Service (AKS). 
+In this tutorial, you use a sample python deployment script to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] to Azure Kubernetes Service (AKS).
 
 > [!TIP]
-> AKS is only one option for hosting Kubernetes for your big data cluster. To learn about other deployment options as well as how to customize deployment options, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md).
+> AKS is only one option for hosting Kubernetes for your big data cluster. To learn about other deployment options as well as how to customize deployment options, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).
 
-The default big data cluster deployment used here consists of a SQL Master instance, one compute pool instance, two data pool instances, and two storage pool instances. Data is persisted using Kubernetes persistent volumes that use the AKS default storage classes. The default configuration used in this quickstart is suitable for dev/test environments.
-
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+The default big data cluster deployment used here consists of a SQL Master instance, one compute pool instance, two data pool instances, and two storage pool instances. Data is persisted using Kubernetes persistent volumes that use the AKS default storage classes. The default configuration used in this tutorial is suitable for dev/test environments.
 
 ## Prerequisites
 
 - An Azure subscription.
 - [Big data tools](deploy-big-data-tools.md):
-   - **mssqlctl**
+   - **azdata**
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 extension**
@@ -45,7 +42,7 @@ az login
 
 ## Download the deployment script
 
-This quickstart automates the creation of the big data cluster on AKS using a python script **deploy-sql-big-data-aks.py**. If you already installed python for **mssqlctl**, you should be able to run the script successfully in this quickstart. 
+This tutorial automates the creation of the big data cluster on AKS using a python script **deploy-sql-big-data-aks.py**. If you already installed python for **azdata**, you should be able to run the script successfully in this tutorial. 
 
 In a Windows PowerShell or Linux bash prompt, run the following command to download the deployment script from GitHub.
 
@@ -72,20 +69,20 @@ Use the following steps to run the deployment script. This script will create an
    |---|---|
    | **Azure subscription ID** | The Azure subscription ID to use for AKS. You can list all of your subscriptions and their IDs by running `az account list` from another command line. |
    | **Azure resource group** | The Azure resource group name to create for the AKS cluster. |
-   | **Docker username** | The Docker username provided to you as part of the limited public preview. |
-   | **Docker password** | The Docker password provided to you as part of the limited public preview. |
    | **Azure region** | The Azure region for the new AKS cluster (default **westus**). |
    | **Machine size** | The [machine size](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) to use for nodes in the AKS cluster (default **Standard_L8s**). |
    | **Worker nodes** | The number of worker nodes in the AKS cluster (default **1**). |
    | **Cluster name** | The name of both the AKS cluster and the big data cluster. The name of your big data cluster must be only lower case alpha-numeric characters, and no spaces. (default **sqlbigdata**). |
    | **Password** | Password for the controller, HDFS/Spark gateway, and master instance (default **MySQLBigData2019**). |
-   | **Controller user** | Username for the controller user (default: **admin**). |
+   | **Username** | Username for the controller user (default: **admin**). |
+
+The following parameters were required for participants in the SQL Server 2019 big data cluster early adopter program: **Docker username**, and **Docker password**. As of CTP 3.2 they are no longer required.
 
    > [!IMPORTANT]
    > The default **Standard_L8s** machine size may not be available in every Azure region. If you do select a different machine size, make sure that the total number of disks that can be attached across the nodes in the cluster is greater than or equal to 24. Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 24 persistent volume claims. For example, the [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) machine size supports 32 attached disks, so you are able to evaluate big data clusters with a single node of this machine size.
 
    > [!NOTE]
-   > The `sa` account is a system administrator on the SQL Server master instance that gets created during setup. After creating deployment, the `MSSQL_SA_PASSWORD` environment variable is discoverable by running `echo $MSSQL_SA_PASSWORD` in the master instance container. For security purposes, change your `sa` password on the master instance after deployment. For more information, see [Change the SA password](../linux/quickstart-install-connect-docker.md#sapassword).
+   > The SQL Server `sa` account is disabled during big data cluster deployment. A new sysadmin login is provisioned in SQL Server master instance the same name specified for **Username** input and the password corrsponding to the **Password** input. Same **Username** and **Password** values are used for provisioning a controller admin user. Only user supported for gateway (Knox) is **root** and the password is the same as above.
 
 1. The script will start by creating an AKS cluster using the parameters you specified. This step takes several minutes.
 
@@ -93,7 +90,7 @@ Use the following steps to run the deployment script. This script will create an
 
 ## Monitor the status
 
-After the script creates the AKS cluster, it proceeds to set necessary environment variables with the settings you specified earlier. It then calls **mssqlctl** to deploy the big data cluster on AKS.
+After the script creates the AKS cluster, it proceeds to set necessary environment variables with the settings you specified earlier. It then calls **azdata** to deploy the big data cluster on AKS.
 
 The client command window will output the deployment status. During the deployment process, you should see a series of messages where it is waiting for the controller pod:
 
@@ -109,11 +106,11 @@ After 10 to 20 minutes, you should be notified that the controller pod is runnin
 ```
 
 > [!IMPORTANT]
-> The entire deployment can take a long time due to the time required to download the container images for the components of the big data cluster. However, it should not take several hours. If you are experiencing problems with your deployment, see [Monitoring and troubleshoot SQL Server big data clusters](cluster-troubleshooting-commands.md).
+> The entire deployment can take a long time due to the time required to download the container images for the components of the big data cluster. However, it should not take several hours. If you are experiencing problems with your deployment, see [Monitoring and troubleshoot [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 ## Inspect the cluster
 
-At any time during deployment, you can use **kubectl** or **mssqlctl** to inspect the status and details about the running big data cluster.
+At any time during deployment, you can use **kubectl** or **azdata** to inspect the status and details about the running big data cluster.
 
 ### Use kubectl
 
@@ -147,7 +144,7 @@ Open a new command window to use **kubectl** during the deployment process.
    ```
 
 > [!TIP]
-> For more details about how to monitor and troubleshoot a deployment, see [Monitoring and troubleshoot SQL Server big data clusters](cluster-troubleshooting-commands.md).
+> For more details about how to monitor and troubleshoot a deployment, see [Monitoring and troubleshoot [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 ## Connect to the cluster
 
@@ -162,7 +159,7 @@ The SQL Server big data cluster is now deployed on AKS. You can now use Azure Da
 
 ## Clean up
 
-If you are testing SQL Server big data clusters in Azure, you should delete the AKS cluster when finished to avoid unexpected charges. Do not remove the cluster if you intend to continue using it.
+If you are testing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Azure, you should delete the AKS cluster when finished to avoid unexpected charges. Do not remove the cluster if you intend to continue using it.
 
 > [!WARNING]
 > The following steps tears down the AKS cluster which removes the SQL Server big data cluster as well. If you have any databases or HDFS data that you want to keep, back that data up before deleting the cluster.
@@ -175,7 +172,7 @@ az group delete -n <resource group name>
 
 ## Next steps
 
-The deployment script configured Azure Kubernetes Service and also deployed a SQL Server 2019 big data cluster. You can also choose to customize future deployments through manual installations. To learn more about how big data clusters are deployed as well as how to customize deployments, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md).
+The deployment script configured Azure Kubernetes Service and also deployed a SQL Server 2019 big data cluster. You can also choose to customize future deployments through manual installations. To learn more about how big data clusters are deployed as well as how to customize deployments, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).
 
 Now that the SQL Server big data cluster is deployed, you can load sample data and explore the tutorials:
 

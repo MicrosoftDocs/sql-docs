@@ -14,7 +14,6 @@ ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Format Query Results as JSON with FOR JSON (SQL Server)
@@ -190,7 +189,7 @@ The output of the **FOR JSON** clause has the following characteristics:
     -   Each column in the results of the SELECT statement (before the FOR JSON clause is applied) becomes a property of the JSON object.  
   
 3.  Both the names of columns and their values are escaped according to JSON syntax. For more info, see [How FOR JSON escapes special characters and control characters &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md).
-  
+
 ### Example
 Here's an example that demonstrates how the **FOR JSON** clause formats the JSON output.  
   

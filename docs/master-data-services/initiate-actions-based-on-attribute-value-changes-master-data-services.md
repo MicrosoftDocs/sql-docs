@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Initiate Actions Based on Attribute Value Changes (Master Data Services)
 

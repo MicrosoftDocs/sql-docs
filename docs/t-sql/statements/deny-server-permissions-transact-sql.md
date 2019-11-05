@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DENY Server Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,13 +53,16 @@ DENY permission [ ,...n ]
  Specifies a permission that can be denied on a server. For a list of the permissions, see the Remarks section later in this topic.  
   
  CASCADE  
- Indicates that the permission being denied is also denied to other principals to which it has been granted by this principal.  
+ Indicates that the permission is denied to the specified principal and to all other principals to which the principal granted the permission. Required when the principal has the permission with GRANT OPTION. 
   
  TO \<server_principal>  
  Specifies the principal to which the permission is denied.  
   
  AS \<grantor_principal>  
- Specifies the principal from which the principal executing this query derives its right to deny the permission.  
+ Specifies the principal from which the principal executing this query derives its right to deny the permission.
+ Use the AS principal clause to indicate that the principal recorded as the denier of the permission should be a principal other than the person executing the statement. For example, presume that user Mary is principal_id 12 and user Raul is principal 15. Mary executes `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` Now the sys.database_permissions table will indicate that the grantor_prinicpal_id of the deny statement was 15 (Raul) even though the statement was actually executed by user 13 (Mary).
+  
+The use of AS in this statement does not imply the ability to impersonate another user.    
   
  *SQL_Server_login*  
  Specifies a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  

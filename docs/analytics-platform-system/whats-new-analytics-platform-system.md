@@ -14,6 +14,19 @@ ms.reviewer: "martinle"
 See what's new in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.5"></a>
+## APS CU7.5
+Release date - September 2019
+
+### Alter External Data Source
+Customers will be able to alter external data source definition with the CU7.5 update. Customers with Hadoop name node high availability can now alter the data source to change the arguments when a failover happens. For APS, only the LOCATION, RESOURCE_MANAGER_LOCATION and CREDENTIAL can be changed. See [alter external data source](https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql?view=sql-server-2017) for more information.
+
+### CDH 5.15 and 5.16 support with PolyBase
+PolyBase on APS with CU7.5 update now supports CDH 5.15 and 5.16 versions of Hadoop distribution from Cloudera. Use option 6 for CDH 5.x versions. 
+
+### Try_Convert and Try_Cast support
+CU7.5 APS now supports [TRY_CAST](https://docs.microsoft.com/sql/t-sql/functions/try-cast-transact-sql?view=sql-server-2017) and [TRY_CONVERT](https://docs.microsoft.com/sql/t-sql/functions/try-convert-transact-sql?view=sql-server-2017) tsql functions. Both of these functions returns a value converted to the specified data type if the convert succeeds; otherwise, returns null.
+
 <a name="h2-aps-cu7.4"></a>
 ## APS CU7.4
 Release date - May 2019

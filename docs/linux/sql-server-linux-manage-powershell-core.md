@@ -1,14 +1,13 @@
 ---
-title: Manage SQL Server on Linux with PowerShell Core | Microsoft Docs
+title: Manage SQL Server on Linux with PowerShell Core
 description: This article provides an overview of using PowerShell Core with SQL Server on Linux.
-ms.date: "04/22/2019"
-ms.reviewer: jroth
+ms.date: 04/22/2019
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
-author: "SQLvariant"
-ms.author: "aanelson"
-manager: craigg
+author: SQLvariant
+ms.author: aanelson
+ms.reviewer: vanto
 ---
 # Manage SQL Server on Linux with PowerShell Core
 
@@ -193,7 +192,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## Explore cmdlets currently available in PS Core
-While the SqlServer module currently has 106 cmdlets available in Windows PowerShell, only 59 of the 106 are available in PSCore. A full list of 59 cmdlets currently available is included below.  For in-depth documentation of all cmdlets in the SqlServer module, see the SqlServer [cmdlet reference](https://docs.microsoft.com/powershell/module/sqlserver/).
+While the SqlServer module currently has 109 cmdlets available in Windows PowerShell, only 62 of the 109 are available in PSCore. A full list of 59 cmdlets currently available is included below.  For in-depth documentation of all cmdlets in the SqlServer module, see the SqlServer [cmdlet reference](https://docs.microsoft.com/powershell/module/sqlserver/).
 
 The following command will show you all of the cmdlets available on the version of PowerShell you are using.
 
@@ -211,6 +210,8 @@ SELECT Name
 - Get-SqlAgentJobSchedule
 - Get-SqlAgentJobStep
 - Get-SqlAgentSchedule
+- Invoke-SqlAssessment
+- Get-SqlAssessmentItem
 - Remove-SqlAvailabilityDatabase
 - Resume-SqlAvailabilityDatabase
 - Add-SqlAvailabilityDatabase
@@ -261,6 +262,7 @@ SELECT Name
 - Read-SqlTableData
 - Write-SqlTableData
 - Read-SqlViewData
+- Read-SqlXEvent
 - Convert-UrnToPath
 
 ## See also

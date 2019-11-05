@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # Enable and configure FILESTREAM
 
@@ -52,8 +51,7 @@ manager: jroth
 12. Click **Execute**.  
   
 13. Restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
-  
-  
+
 ##  <a name="best"></a> Best practices  
   
 ###  <a name="config"></a> Physical configuration and maintenance  

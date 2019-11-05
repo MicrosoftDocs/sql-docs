@@ -71,7 +71,7 @@ The web portal typically contains folders, reports, data sources, as well as the
   
 After you run a report, you can export it to another format, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel or PDF. You can also export the report using a data rendering extension such as the Comma-Separated Value (CSV) rendering extension and then use the CSV data file as input to another application. For more information about exporting reports, see [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).
   
- The easiest way to select and run a report is to open the web portal and then search for or browse to the report that you want to view. For step-by-step instruction on how to open reports, see [Open and Close a Report](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ The easiest way to select and run a report is to open the web portal and then search for or browse to the report that you want to view.  
   
  After you run a report, you can refresh it to see new data.  
   

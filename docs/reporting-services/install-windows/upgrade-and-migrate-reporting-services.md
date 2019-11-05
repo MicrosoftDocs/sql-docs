@@ -9,7 +9,6 @@ helpviewer_keywords:
   - "upgrading Reporting Services"
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.topic: conceptual
 ms.date: 08/17/2017
 ---

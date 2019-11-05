@@ -16,9 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Database task [Integration Services]"
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Transfer Database Task
 

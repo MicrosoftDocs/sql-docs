@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # How to: Run SQL Server Unit Tests
 You can run a SQL Server unit test in any one of several ways, such as using various windows and the Command Prompt window.  

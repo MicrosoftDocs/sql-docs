@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Reorder Output Columns (Visual Database Tools)

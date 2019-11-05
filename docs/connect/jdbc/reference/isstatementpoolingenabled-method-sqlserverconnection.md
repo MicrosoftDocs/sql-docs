@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid:
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # isStatementPoolingEnabled Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

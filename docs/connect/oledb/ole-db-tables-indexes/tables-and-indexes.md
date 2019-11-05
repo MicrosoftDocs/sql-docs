@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "indexes [OLE DB]"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

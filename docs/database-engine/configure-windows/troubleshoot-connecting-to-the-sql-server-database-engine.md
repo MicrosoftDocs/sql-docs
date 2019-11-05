@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # Troubleshoot Connecting to the SQL Server Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +176,7 @@ Both of these problems are related to the SQL Server Browser service, which prov
   * Start the SQL Server Browser service. See the instructions to [start browser in SQL Server Configuration Manager](#startbrowser).
   * The SQL Server Browser service is being blocked by the firewall. Open UDP port 1434 in the firewall. Go back to the section [Opening a Port in the Firewall](#opening-a-port-in-the-firewall). Make sure you are opening a UDP port, not a TCP port.
   * The UDP port 1434 information is being blocked by a router. UDP communication (user datagram protocol) is not designed to pass through routers. This keeps the network from getting filled with low-priority traffic. You might be able to configure your router to forward UDP traffic, or you can decide to always provide the port number when you connect.
-  * If the client computer is using Windows 7 or Windows Server 2008, (or a more recent operating system,) the UDP traffic might be dropped by the client operating system because the response from the server is returned from a different IP address than was queried. This is a security feature blocking "loose source mapping." For more information, see the **Multiple Server IP Addresses** section of the Books Online topic [Troubleshooting: Timeout Expired](http://msdn.microsoft.com/library/ms190181.aspx). This is an article from SQL Server 2008 R2, but the principals still apply. You might be able to configure the client to use the correct IP address, or you can decide to always provide the port number when you connect.
+  * If the client computer is using Windows 7 or Windows Server 2008, (or a more recent operating system,) the UDP traffic might be dropped by the client operating system because the response from the server is returned from a different IP address than was queried. This is a security feature blocking "loose source mapping." For more information, see the **Multiple Server IP Addresses** section of the Books Online topic [Troubleshooting: Timeout Expired](https://msdn.microsoft.com/library/ms190181.aspx). This is an article from SQL Server 2008 R2, but the principals still apply. You might be able to configure the client to use the correct IP address, or you can decide to always provide the port number when you connect.
 
 3. Once you can connect using the IP address (or IP address and instance name for a named instance), attempt to connect using the computer name (or computer name and instance name for a named instance). Put `tcp:` in front of the computer name to force a TCP/IP connection. For example, for the default instance on a computer named `ACCNT27`, use `tcp:ACCNT27` For a named instance called `PAYROLL`, on that computer use `tcp:ACCNT27\PAYROLL` If you can connect using the IP address but not using the computer name, then you have a name resolution problem. Go back to the section **Testing TCP/IP Connectivity**, section 4.
 

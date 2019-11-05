@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 158be08f-387d-4c5b-b567-a1fe590d6f16
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # supportsNamedParameters Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

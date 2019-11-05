@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_sys_info (Transact-SQL)
@@ -64,7 +63,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |**time_source**|**int**|**Applies to:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indicates the API that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is using to retrieve wall clock time. Not nullable.<br /><br /> 0 = QUERY_PERFORMANCE_COUNTER<br /><br /> 1 = MULTIMEDIA_TIMER|  
 |**time_source_desc**|**nvarchar(60)**|**Applies to:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Describes the **time_source** column. Not nullable.<br /><br /> QUERY_PERFORMANCE_COUNTER = the [QueryPerformanceCounter](https://go.microsoft.com/fwlink/?LinkId=163095) API retrieves wall clock time.<br /><br /> MULTIMEDIA_TIMER = The [multimedia timer](https://go.microsoft.com/fwlink/?LinkId=163094) API that retrieves wall clock time.|  
 |**virtual_machine_type**|**int**|**Applies to:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indicates whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running in a virtualized environment.  Not nullable.<br /><br /> 0 = NONE<br /><br /> 1 = HYPERVISOR<br /><br /> 2 = OTHER|  
-|**virtual_machine_type_desc**|**nvarchar(60)**|**Applies to:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Describes the **virtual_machine_type** column. Not nullable.<br /><br /> NONE = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not running inside a virtual machine.<br /><br /> HYPERVISOR = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running inside a hypervisor, which implies a hardware-assisted virtualization. When the Hyper_V role is installed, the hypervisor hosts the OS, so an instance running on the host OS is running in the hypervisor.<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running inside a virtual machine that does not employ hardware assistant such as Microsoft Virtual PC.|  
+|**virtual_machine_type_desc**|**nvarchar(60)**|**Applies to:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Describes the **virtual_machine_type** column. Not nullable.<br /><br /> NONE = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not running inside a virtual machine.<br /><br /> HYPERVISOR = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running inside a virtual machine hosted by an OS running hypervisor (a host OS that employs hardware-assisted virtualization).<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running inside a virtual machine hosted by an OS that does not employ hardware assistant such as Microsoft Virtual PC.|  
 |**softnuma_configuration**|**int**|**Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Specifies the way NUMA nodes are configured. Not nullable.<br /><br /> 0 = OFF indicates hardware default<br /><br /> 1 = Automated soft-NUMA<br /><br /> 2 = Manual soft-NUMA via registry|  
 |**softnuma_configuration_desc**|**nvarchar(60)**|**Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> OFF = Soft-NUMA feature is OFF<br /><br /> ON = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically determines the NUMA node sizes for Soft-NUMA<br /><br /> MANUAL = Manually configured soft-NUMA|
 |**process_physical_affinity**|**nvarchar(3072)** |**Applies to:** Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].<br /><br />Information yet to come. |
@@ -78,7 +77,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
 
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

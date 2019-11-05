@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 57bd55f4-8945-4d8d-9f58-d30c81d2a514
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Autofetch with ODBC Cursors

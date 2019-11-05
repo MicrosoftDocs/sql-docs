@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Model Permissions (Master Data Services)
 

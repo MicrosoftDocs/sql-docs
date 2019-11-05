@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Database Logins, Users, and Roles (Master Data Services)
 

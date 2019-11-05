@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # DQS Knowledge Bases and Domains
 

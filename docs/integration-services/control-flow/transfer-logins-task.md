@@ -14,9 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Logins task [Integration Services]"
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Transfer Logins Task
 

@@ -1,7 +1,7 @@
 ---
-title: "Finding Additional JDBC Driver Information | Microsoft Docs"
+title: "Finding additional JDBC driver information | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,9 +10,8 @@ ms.topic: conceptual
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
-# Finding Additional JDBC Driver Information
+# Finding additional JDBC driver information
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -27,6 +26,6 @@ manager: jroth
 |[SQL Server Data Access Forum](https://go.microsoft.com/fwlink/?LinkId=70651)|This site serves as a community forum for data access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, OLE DB, ODBC, ADO, MDAC, JDBC, or SOAP/HTTP.|  
 |[JDBC Blog](https://go.microsoft.com/fwlink/?LinkId=124746)|This blog is used to provide information about the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].|  
   
-## See Also  
+## See also  
 
- [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

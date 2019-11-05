@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 1ffa599c-d0c8-43b6-8e9b-7c856a846630
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # storesMixedCaseQuotedIdentifiers Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Mixed Cursors
 

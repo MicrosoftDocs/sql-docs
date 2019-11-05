@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DTAInput element"
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # DTAInput Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

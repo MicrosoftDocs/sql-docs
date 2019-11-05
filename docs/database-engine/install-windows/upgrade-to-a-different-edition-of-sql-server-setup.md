@@ -10,7 +10,6 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: jroth
 ---
 # Upgrade to a Different Edition of SQL Server (Setup)
 

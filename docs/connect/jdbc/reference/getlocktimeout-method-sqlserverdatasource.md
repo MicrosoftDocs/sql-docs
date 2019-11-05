@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 676094e9-ec18-4524-9b21-1f9c5b16dd52
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getLockTimeout Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

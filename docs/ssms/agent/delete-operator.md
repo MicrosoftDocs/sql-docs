@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Delete Operator

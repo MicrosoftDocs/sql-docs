@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "table-valued parameters, rowset creation"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Table-Valued Parameter Rowset Creation
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

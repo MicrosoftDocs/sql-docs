@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, stored procedures"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Stored Procedures - Calling
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

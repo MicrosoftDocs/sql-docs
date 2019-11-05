@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "page info"
 author: "bluefooted"
 ms.author: "pamela"
-manager: "amitban"
+manager: amitban
 ---
 # sys.fn_PageResCracker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]

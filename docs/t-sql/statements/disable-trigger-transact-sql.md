@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ The following examples are described in the AdventureWorks2012 database.
 ### A. Disabling a DML trigger on a table  
  The following example disables trigger `uAddress` that was created on table `Address`.  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ```  
@@ -90,7 +89,7 @@ GO
 ### B. Disabling a DDL trigger  
  The following example creates a DDL trigger `safety` with database scope, and then disables it.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   

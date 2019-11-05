@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Item Property Example (VC++)
 This example demonstrates how the [Item](../../../ado/reference/ado-api/item-property-ado.md) property accesses members of a collection. The example opens the ***Authors*** table of the ***Pubs*** database with a parameterized command.  

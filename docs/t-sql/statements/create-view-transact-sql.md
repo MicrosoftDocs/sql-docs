@@ -36,7 +36,6 @@ helpviewer_keywords:
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE VIEW (Transact-SQL)
@@ -160,7 +159,7 @@ OR ALTER
   
  If a view depends on a table or view that was dropped, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] produces an error message when anyone tries to use the view. If a new table or view is created and the table structure does not change from the previous base table to replace the one dropped, the view again becomes usable. If the new table or view structure changes, the view must be dropped and re-created.  
   
- If a view is not created with the SCHEMABINDING clause, [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) should be run when changes are made to the objects underlying the view that affect the definition of the view. Otherwise, the view might produce unexpected results when it is queried.  
+ If a view is not created with the SCHEMABINDING clause, run [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) when changes are made to the objects underlying the view that affect the definition of the view. Otherwise, the view might produce unexpected results when it is queried.  
   
  When a view is created, information about the view is stored in the following catalog views: [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), and [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). The text of the CREATE VIEW statement is stored in the [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) catalog view.  
   
@@ -240,11 +239,11 @@ FROM Tn;
   
 1.  The select `list`  
   
-    -   All columns in the member tables should be selected in the column list of the view definition.  
+    -   In the column list of the view definition, select all columns in the member tables.  
   
-    -   The columns in the same ordinal position of each `select list` should be of the same type, including collations. It is not sufficient for the columns to be implicitly convertible types, as is generally the case for UNION.  
+    -   Ensure that the columns in the same ordinal position of each `select list` are of the same type, including collations. It is not sufficient for the columns to be implicitly convertible types, as is generally the case for UNION.  
   
-         Also, at least one column (for example `<col>`) must appear in all the select lists in the same ordinal position. This `<col>` should be defined in a way that the member tables `T1, ..., Tn` have CHECK constraints `C1, ..., Cn` defined on `<col>`, respectively.  
+         Also, at least one column (for example `<col>`) must appear in all the select lists in the same ordinal position. Define `<col>` in a way that the member tables `T1, ..., Tn` have CHECK constraints `C1, ..., Cn` defined on `<col>`, respectively.  
   
          Constraint `C1` defined on table `T1` must be of the following form:  
   
@@ -258,7 +257,7 @@ FROM Tn;
         < col > { < | <= } < value2 >  
         ```  
   
-    -   The constraints should be in such a way that any specified value of `<col>` can satisfy, at most, one of the constraints `C1, ..., Cn` so that the constraints should form a set of disjointed or nonoverlapping intervals. The column `<col>` on which the disjointed constraints are defined is called the partitioning column. Note that the partitioning column may have different names in the underlying tables. The constraints should be in an enabled and trusted state for them to meet the previously mentioned conditions of the partitioning column. If the constraints are disabled, re-enable constraint checking by using the CHECK CONSTRAINT *constraint_name* option of ALTER TABLE, and using the WITH CHECK option to validate them.  
+    -   The constraints must be in such a way that any specified value of `<col>` can satisfy, at most, one of the constraints `C1, ..., Cn` so that the constraints form a set of disjointed or nonoverlapping intervals. The column `<col>` on which the disjointed constraints are defined is called the partitioning column. Note that the partitioning column may have different names in the underlying tables. The constraints must be in an enabled and trusted state for them to meet the previously mentioned conditions of the partitioning column. If the constraints are disabled, re-enable constraint checking by using the CHECK CONSTRAINT *constraint_name* option of ALTER TABLE, and using the WITH CHECK option to validate them.  
   
          The following examples show valid sets of constraints:  
   
@@ -275,7 +274,7 @@ FROM Tn;
   
     -   It cannot be a computed, identity, default, or **timestamp** column.  
   
-    -   If there is more than one constraint on the same column in a member table, the Database Engine ignores all the constraints and does not consider them when determining whether the view is a partitioned view. To meet the conditions of the partitioned view, there should be only one partitioning constraint on the partitioning column.  
+    -   If there is more than one constraint on the same column in a member table, the Database Engine ignores all the constraints and does not consider them when determining whether the view is a partitioned view. To meet the conditions of the partitioned view, ensure that there is only one partitioning constraint on the partitioning column.  
   
     -   There are no restrictions on the updatability of the partitioning column.  
   
@@ -289,16 +288,16 @@ FROM Tn;
   
     -   The member tables cannot have indexes created on computed columns in the table.  
   
-    -   The member tables should have all PRIMARY KEY constraints on the same number of columns.  
+    -   The member tables have all PRIMARY KEY constraints on the same number of columns.  
   
-    -   All member tables in the view should have the same ANSI padding setting. This can be set by using either the **user options** option in **sp_configure** or the SET statement.  
+    -   All member tables in the view have the same ANSI padding setting. This can be set by using either the **user options** option in **sp_configure** or the SET statement.  
   
 ## Conditions for Modifying Data in Partitioned Views  
  The following restrictions apply to statements that modify data in partitioned views:  
   
--   The INSERT statement must supply values for all the columns in the view, even if the underlying member tables have a DEFAULT constraint for those columns or if they allow for null values. For those member table columns that have DEFAULT definitions, the statements cannot explicitly use the keyword DEFAULT.  
+-   The INSERT statement supplies values for all the columns in the view, even if the underlying member tables have a DEFAULT constraint for those columns or if they allow for null values. For those member table columns that have DEFAULT definitions, the statements cannot explicitly use the keyword DEFAULT.  
   
--   The value being inserted into the partitioning column should satisfy at least one of the underlying constraints; otherwise, the insert action will fail with a constraint violation.  
+-   The value being inserted into the partitioning column satisfies at least one of the underlying constraints; otherwise, the insert action will fail with a constraint violation.  
   
 -   UPDATE statements cannot specify the DEFAULT keyword as a value in the SET clause, even if the column has a DEFAULT value defined in the corresponding member table.  
   
@@ -320,7 +319,7 @@ FROM Tn;
   
 -   A distributed transaction will be started to guarantee atomicity across all nodes affected by the update.  
   
--   The XACT_ABORT SET option should be set to ON for INSERT, UPDATE, or DELETE statements to work.  
+-   Set the XACT_ABORT SET option to ON for INSERT, UPDATE, or DELETE statements to work.  
   
 -   Any columns in remote tables of type **smallmoney** that are referenced in a partitioned view are mapped as **money**. Therefore, the corresponding columns (in the same ordinal position in the select list) in the local tables must also be of type **money**.  
   
@@ -335,7 +334,7 @@ FROM Tn;
 ## Considerations for Replication  
  To create partitioned views on member tables that are involved in replication, the following considerations apply:  
   
--   If the underlying tables are involved in merge replication or transactional replication with updating subscriptions, the **uniqueidentifier** column should also be included in the select list.  
+-   If the underlying tables are involved in merge replication or transactional replication with updating subscriptions, ensure that the **uniqueidentifier** column is also included in the select list. 
   
      Any INSERT actions into the partitioned view must provide a NEWID() value for the **uniqueidentifier** column. Any UPDATE actions against the **uniqueidentifier** column must supply NEWID() as the value because the DEFAULT keyword cannot be used.  
   

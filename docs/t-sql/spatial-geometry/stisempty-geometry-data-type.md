@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: dcbd6ae1-5d63-485f-9d58-28bfd504524e
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STIsEmpty (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

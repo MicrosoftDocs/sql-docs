@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "table-valued parameters (OLE DB)"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Table-Valued Parameters (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

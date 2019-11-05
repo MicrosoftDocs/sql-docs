@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: df957b79-536f-4db7-b6ac-3d59343559fc
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # SQLServerXAResource Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

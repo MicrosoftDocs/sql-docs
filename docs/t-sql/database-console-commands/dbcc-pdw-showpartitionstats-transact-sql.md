@@ -10,7 +10,6 @@ dev_langs:
   - "TSQL"
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)

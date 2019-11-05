@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General"
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # General Page of Integration Services Designers Options
 

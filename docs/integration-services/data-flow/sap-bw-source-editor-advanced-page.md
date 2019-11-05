@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sapbwsource.advanced.f1"
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SAP BW Source Editor (Advanced Page)
 

@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Import Cleansing Project Values into a Domain
 

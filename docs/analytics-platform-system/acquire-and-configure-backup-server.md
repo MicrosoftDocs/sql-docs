@@ -2,7 +2,6 @@
 title: Acquire and configure a backup server - Parallel Data Warehouse | Microsoft Docs
 description: This article describes how to configure a non-appliance Windows system as a backup server for use with the backup and restore features in Analytics Platform System (APS) and Parallel Data Warehouse (PDW). 
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

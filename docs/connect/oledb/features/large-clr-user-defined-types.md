@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "large CLR user-defined types"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Large CLR User-Defined Types
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

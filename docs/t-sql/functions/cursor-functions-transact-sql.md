@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7d9daa10-4c50-4212-9400-42120222b2b8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Cursor Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

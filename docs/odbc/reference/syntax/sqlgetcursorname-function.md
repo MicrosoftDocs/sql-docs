@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetCursorName Function
 **Conformance**  

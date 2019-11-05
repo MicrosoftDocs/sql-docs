@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # IndexNulls Property (ADOX)
 Indicates whether records that have null values in their index fields have index entries.  

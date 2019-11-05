@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 5014dba9-1755-4769-b070-6cbeecee864e
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setDateTimeOffset Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

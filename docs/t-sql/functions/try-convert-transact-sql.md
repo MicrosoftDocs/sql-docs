@@ -3,7 +3,7 @@ title: "TRY_CONVERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -17,10 +17,10 @@ helpviewer_keywords:
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+monikerRange: "= azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest"
 ---
 # TRY_CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Returns a value cast to the specified data type if the cast succeeds; otherwise, returns null.  
   

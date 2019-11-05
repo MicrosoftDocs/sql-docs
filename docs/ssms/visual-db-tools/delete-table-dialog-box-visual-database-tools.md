@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Delete Table Dialog Box (Visual Database Tools)

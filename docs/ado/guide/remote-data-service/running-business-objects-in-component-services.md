@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Running Business Objects in Component Services
 > [!IMPORTANT]

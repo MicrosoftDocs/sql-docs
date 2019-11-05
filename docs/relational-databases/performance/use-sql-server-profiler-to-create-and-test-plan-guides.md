@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Use SQL Server Profiler to Create and Test Plan Guides
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Open the batch text file in Notepad and copy the text to the copy and paste buffer.  
   
-8.  Create the plan guide and paste the copied text inside the quotation marks (**''**) specified for the **@stmt** argument. You must escape any single quotation marks in the **@stmt** argument by preceding them with another single quotation mark. Be careful not to add or remove any other characters when you insert these single quotation marks. For example, the date literal **'**20000101**'** must be delimited as **''**20000101**''**.  
+8.  Create the plan guide and paste the copied text inside the quotation marks (**''**) specified for the **\@stmt** argument. You must escape any single quotation marks in the **\@stmt** argument by preceding them with another single quotation mark. Be careful not to add or remove any other characters when you insert these single quotation marks. For example, the date literal **'**20000101**'** must be delimited as **''**20000101**''**.  
   
  Here is the plan guide:  
   

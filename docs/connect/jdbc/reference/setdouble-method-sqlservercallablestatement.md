@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: c054bb84-1292-4b70-b574-2ae189cd4e68
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setDouble Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

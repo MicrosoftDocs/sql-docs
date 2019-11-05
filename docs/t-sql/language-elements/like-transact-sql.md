@@ -30,7 +30,6 @@ helpviewer_keywords:
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LIKE (Transact-SQL)
@@ -113,16 +112,16 @@ GO
 EXEC FindEmployee @EmpLName = 'Barb';  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
- FirstName      LastName            City
- ----------     -------------------- --------------- 
- Angela         Barbariol            Snohomish
- David          Barber               Snohomish
- (2 row(s) affected)  
- ``` 
- 
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+FirstName      LastName            City
+----------     -------------------- --------------- 
+Angela         Barbariol            Snohomish
+David          Barber               Snohomish
+(2 row(s) affected)  
+```
+
 ## Pattern Matching by Using LIKE  
  LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks aren't significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -149,7 +148,7 @@ INSERT INTO t VALUES ('Robert King');
 SELECT *   
 FROM t   
 WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row  
-```  
+```
   
 > [!NOTE]  
 >  LIKE comparisons are affected by collation. For more information, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
@@ -187,7 +186,7 @@ GO
 |LIKE 'abc[def]'|abcd, abce, and abcf|  
   
 ## Pattern Matching with the ESCAPE Clause  
- You can search for character strings that include one or more of the special wildcard characters. For example, the discounts table in a customers database may store discount values that include a percent sign (%). To search for the percent sign as a character instead of as a wildcard character, the ESCAPE keyword and escape character must be provided. For example, a sample database contains a column named comment that contains the text 30%. To search for any rows that contain the string 30% anywhere in the comment column, specify a WHERE clause such as `WHERE comment LIKE '%30!%%' ESCAPE '!'`. If ESCAPE and the escape character aren't specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] returns any rows with the string 30.  
+ You can search for character strings that include one or more of the special wildcard characters. For example, the discounts table in a customers database may store discount values that include a percent sign (%). To search for the percent sign as a character instead of as a wildcard character, the ESCAPE keyword and escape character must be provided. For example, a sample database contains a column named comment that contains the text 30%. To search for any rows that contain the string 30% anywhere in the comment column, specify a WHERE clause such as `WHERE comment LIKE '%30!%%' ESCAPE '!'`. If ESCAPE and the escape character aren't specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] returns any rows with the string 30!.  
   
  If there is no character after an escape character in the LIKE pattern, the pattern isn't valid and the LIKE returns FALSE. If the character after an escape character isn't a wildcard character, the escape character is discarded and the following character is treated as a regular character in the pattern. These characters include the percent sign (%), underscore (_), and left bracket ([) wildcard characters when they are enclosed in double brackets ([ ]). Escape characters can be used within the double bracket characters ([ ]), including to escape a caret (^), hyphen (-), or right bracket (]).  
   

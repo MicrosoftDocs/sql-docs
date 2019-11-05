@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "= azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions" 
 ---
 # Date and Time Data Types and Functions (Transact-SQL)

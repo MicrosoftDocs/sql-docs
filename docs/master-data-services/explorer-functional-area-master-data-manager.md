@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Explorer Functional Area (Master Data Manager)
 

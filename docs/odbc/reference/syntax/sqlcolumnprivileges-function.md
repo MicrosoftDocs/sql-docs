@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLColumnPrivileges Function
 **Conformance**  

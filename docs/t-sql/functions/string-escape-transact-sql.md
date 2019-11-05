@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # STRING_ESCAPE (Transact-SQL)
@@ -49,7 +48,7 @@ STRING_ESCAPE( text , type )
 |Special character|Encoded sequence|  
 |-----------------------|----------------------|  
 |Quotation mark (")|\\"|  
-|Reverse solidus (\\)|\\\|  
+|Reverse solidus (\\)| \\\\ |  
 |Solidus (/)|\\/|  
 |Backspace|\b|  
 |Form feed|\f|  

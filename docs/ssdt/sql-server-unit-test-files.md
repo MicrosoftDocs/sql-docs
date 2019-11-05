@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: cee093c9-b97d-4fb0-b80f-806d071259dc
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # SQL Server Unit Test Files
 Like the unit tests for managed code, SQL Server unit tests reside in test projects. You can see the items that compose a SQL Server unit test in the hierarchy of a test project in **Solution Explorer**.  

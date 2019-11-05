@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "logs [Integration Services], tutorials"
   - "walkthroughs [Integration Services]"
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SSIS How to Create an ETL Package
 

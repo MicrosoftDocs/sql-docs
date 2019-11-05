@@ -133,10 +133,10 @@ manager: craigg
 ### Example (PowerShell)  
  The following example extracts a DAC named MyApplication from a database named MyDB.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Specify the database to extract to a DAC.  
 $dbname = "MyDB"  
@@ -157,5 +157,3 @@ $extractionunit.Extract($dacpacPath)
   
 ## See Also  
  [Data-tier Applications](data-tier-applications.md)  
-  
-  

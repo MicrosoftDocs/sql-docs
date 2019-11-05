@@ -4,9 +4,8 @@ titleSuffix: SQL Server
 description: 
 author: Dylan-MSFT
 ms.author: dygray
-ms.reviewer: rothja
+ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -192,9 +191,9 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
    ```
 
    > [!NOTE]
-   > - If **id user@contoso.com** returns, `No such user`, make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
+   > - If **id user\@contoso.com** returns, `No such user`, make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
    >
-   > - If **kinit user@CONTOSO.COM** returns, `KDC reply did not match expectations while getting initial credentials`, make sure you specified the realm in uppercase.
+   > - If **kinit user\@CONTOSO.COM** returns, `KDC reply did not match expectations while getting initial credentials`, make sure you specified the realm in uppercase.
 
 For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
 

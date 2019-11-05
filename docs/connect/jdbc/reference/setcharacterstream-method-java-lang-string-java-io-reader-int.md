@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 88a8e89e-8817-4161-85b1-9a9a2fd01cdb
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setCharacterStream Method (java.lang.String, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

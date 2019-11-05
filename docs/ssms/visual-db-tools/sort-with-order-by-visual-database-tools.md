@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Sort with ORDER BY (Visual Database Tools)

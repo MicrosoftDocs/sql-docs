@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Managing text and image Columns - Use Data-at-Execution Columns
@@ -37,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     -   Call [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) one or more times to send the column data, until length is sent.  
   
 4.  Call [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) to indicate that all the data for the final data-at-execution column is sent. It will not return SQL_NEED_DATA.  
-  
+
 ## Example  
  The sample shows how to read a SQL_LONG variable character data using SQLGetData. This sample is not supported on IA64.  
   

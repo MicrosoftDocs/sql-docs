@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Show Column Names in the Diagram Pane (Visual Database Tools)

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Columns Collection (ADOX)
 Contains all [Column](../../../ado/reference/adox-api/column-object-adox.md) objects of a table, index, or key.  

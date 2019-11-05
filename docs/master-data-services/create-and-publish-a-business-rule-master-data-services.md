@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create and Publish a Business Rule (Master Data Services)
 

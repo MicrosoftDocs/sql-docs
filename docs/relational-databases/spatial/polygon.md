@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Polygon
@@ -37,14 +36,14 @@ As shown in the illustration:
 2.  Figure 2 is a **Polygon** instance whose boundary is defined by an exterior ring and two interior rings. The area inside the interior rings is part of the exterior of the **Polygon** instance.  
   
 3.  Figure 3 is a valid **Polygon** instance because its interior rings intersect at a single tangent point.  
-  
+
 ### Accepted instances  
  Accepted **Polygon** instances are instances that can be stored in a **geometry** or **geography** variable without throwing an exception. The following are accepted **Polygon** instances:  
   
 -   An Empty **Polygon** instance  
--   A **Polygon** instance that has an acceptable exterior ring and zero or more acceptable interior rings  
+-   A **Polygon** instance that has an acceptable exterior ring (**LineString**) and zero or more acceptable interior rings (**LineString**s)  
   
-The following criteria are needed for a ring to be acceptable.  
+The following criteria are needed for a ring (**LineString**) to be acceptable.  
   
 -   The **LineString** instance must be accepted.  
 -   The **LineString** instance must have at least four points.  

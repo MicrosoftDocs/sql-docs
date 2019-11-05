@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Views and Fields Collections Example (VB)
 The following code demonstrates how to use the [Command](../../../ado/reference/adox-api/command-property-adox.md) property and the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object to retrieve field information for the view.  

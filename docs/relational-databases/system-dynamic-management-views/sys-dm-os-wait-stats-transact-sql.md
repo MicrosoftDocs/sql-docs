@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_wait_stats (Transact-SQL)
@@ -42,7 +41,7 @@ Returns information about all the waits encountered by threads that executed. Yo
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
 
 ##  <a name="WaitTypes"></a> Types of Waits  
  **Resource waits** 
@@ -109,11 +108,11 @@ This command resets all counters to 0.
 |BACKUPTHREAD |Occurs when a task is waiting for a backup task to finish. Wait times may be long, from several minutes to several hours. If the task that is being waited on is in an I/O process, this type does not indicate a problem.| 
 |BAD_PAGE_PROCESS |Occurs when the background suspect page logger is trying to avoid running more than every five seconds. Excessive suspect pages cause the logger to run frequently.| 
 |BLOB_METADATA |Internal use only. <br />**Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPALLOCATION |Internal use only. <br />**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPBUILD |Internal use only. <br />**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPREPARTITION |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPREPLICATION |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BPSORT |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPALLOCATION |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br />**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPBUILD |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br />**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPREPARTITION |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPREPLICATION |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BPSORT |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_CONNECTION_RECEIVE_TASK |Occurs when waiting for access to receive a message on a connection endpoint. Receive access to the endpoint is serialized.| 
 |BROKER_DISPATCHER |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_ENDPOINT_STATE_MUTEX |Occurs when there is contention to access the state of a Service Broker connection endpoint. Access to the state for changes is serialized.| 
@@ -341,6 +340,7 @@ This command resets all counters to 0.
 |HADR_TDS_LISTENER_SYNC |Either the internal Always On system or the WSFC cluster will request that listeners are started or stopped. The processing of this request is always asynchronous, and there is a mechanism to remove redundant requests. There are also moments that this process is suspended because of configuration changes. All waits related with this listener synchronization mechanism use this wait type. Internal use only., <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |Used at the end of an Always On Transact-SQL statement that requires starting and/or stopping an availability group listener. Since the start/stop operation is done asynchronously, the user thread will block using this wait type until the situation of the listener is known., <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | Occurs when a geo-replication secondary is configured with lower compute size (lower SLO) than the primary. A primary database is throttled due to delayed log consumption by the secondary. This is caused  by the secondary database having insufficient compute capacity to keep up with the primary database's rate of change. <br /> **Applies to**: Azure SQL Database| 
 |HADR_THROTTLE_LOG_RATE_LOG_SIZE |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_THROTTLE_LOG_RATE_SEEDING |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -355,11 +355,11 @@ This command resets all counters to 0.
 |HK_RESTORE_FILEMAP |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HKCS_PARALLEL_MIGRATION |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HKCS_PARALLEL_RECOVERY |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTBUILD |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTDELETE |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTMEMO |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTREINIT |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTREPARTITION |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTBUILD |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTDELETE |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTMEMO |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTREINIT |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTREPARTITION |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HTTP_ENUMERATION |Occurs at startup to enumerate the HTTP endpoints to start HTTP.| 
 |HTTP_START |Occurs when a connection is waiting for HTTP to complete initialization.| 
 |HTTP_STORAGE_CONNECTION |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

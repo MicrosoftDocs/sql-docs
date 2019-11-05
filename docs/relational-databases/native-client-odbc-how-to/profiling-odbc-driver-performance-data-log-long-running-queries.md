@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Profiling ODBC Driver Performance Data - Log Long-Running Queries
@@ -39,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 6.  Select **Save long-running queries to the log file**. In the box, place the name of the file where the long-running queries should be logged. Optionally, click **Browse** to browse the file system for the query log.  
   
 7.  Set a query time-out interval, in milliseconds, in the **Long query time (milliseconds)** box.  
-  
+
 ### To log long-running queries data programmatically  
   
 1.  Call [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) with SQL_COPT_SS_PERF_QUERY_LOG and the full path and file name of the long-running query log file. For example:  

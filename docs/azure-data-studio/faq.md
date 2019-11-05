@@ -7,7 +7,6 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
-manager: jroth
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
 ms.date: "09/24/2018"

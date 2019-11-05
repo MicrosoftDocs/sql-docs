@@ -10,7 +10,6 @@ ms.reviewer: "alayu; sstein"
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-manager: jroth
 ---
 # Manage servers and databases with Insight widgets in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

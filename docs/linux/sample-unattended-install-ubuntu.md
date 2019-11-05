@@ -2,9 +2,8 @@
 title: Unattended install for SQL Server on Ubuntu
 titleSuffix: SQL Server
 description: SQL Server Script Sample - Unattended Install on Ubuntu
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql

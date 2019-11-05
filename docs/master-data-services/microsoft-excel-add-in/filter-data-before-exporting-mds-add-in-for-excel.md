@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Filter Data before Exporting (MDS Add-in for Excel)
 

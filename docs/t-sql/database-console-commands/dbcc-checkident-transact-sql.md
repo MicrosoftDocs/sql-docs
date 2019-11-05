@@ -28,7 +28,6 @@ helpviewer_keywords:
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions"
 ---
 # DBCC CHECKIDENT (Transact-SQL)
@@ -42,7 +41,9 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 ## Syntax  
   
 ```console
-  
+
+-- Syntax for SQL Server and Azure SQL Database  
+
 DBCC CHECKIDENT
  (
     table_name  
@@ -50,7 +51,17 @@ DBCC CHECKIDENT
 )  
 [ WITH NO_INFOMSGS ]  
 ```  
-  
+
+```console
+-- Syntax for Azure SQL Data Warehouse
+DBCC CHECKIDENT   
+ (   
+    table_name  
+        [RESEED, new_reseed_value ]   
+)  
+[ WITH NO_INFOMSGS ]  
+
+```
 ## Arguments
 
  *table_name*  

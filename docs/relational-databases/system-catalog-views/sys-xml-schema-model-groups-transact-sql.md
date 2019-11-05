@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # sys.xml_schema_model_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -4,7 +4,6 @@ titleSuffix: SQL Server
 description: This quickstart shows how to run SQL Server on Linux in the cloud of your choice.
 author: MashaMSFT 
 ms.author: mathoma 
-manager: jroth
 ms.date: 05/25/2019
 ms.topic: conceptual
 ms.prod: sql  

@@ -19,7 +19,6 @@ ms.assetid: 2d3c8828-e4b3-423d-bf11-990464c1341b
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 ---
 # sys.xml_schema_component_placements (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

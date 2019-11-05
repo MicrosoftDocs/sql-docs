@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: a2a0dfbb-11ec-429f-aea6-8f44148ebb8e
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getSQLKeywords Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

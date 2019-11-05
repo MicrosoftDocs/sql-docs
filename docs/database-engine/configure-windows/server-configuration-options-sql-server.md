@@ -29,7 +29,6 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # Server Configuration Options (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ Options that require [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] t
   
 Some options require a server restart before the new configuration value takes effect. If you set the new value and run sp_configure before restarting the server, the new value appears in the configuration options **value** column, but not in the **value_in_use** column. After restarting the server, the new value appears in the **value_in_use** column.  
   
-Self-configuring options are those that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adjusts according to the needs of the system. In most cases, this eliminates the need for setting the values manually. Examples include the **min server memory** and **max server memory** options and the user connections option.  
+Self-configuring options are those that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adjusts according to the needs of the system. In most cases, this eliminates the need for setting the values manually. Examples include the **max worker threads** option and the user connections option.  
   
 ## Configuration Options Table  
  The following table lists all available configuration options, the range of possible settings, and default values. Configuration options are marked with letter codes as follows:  

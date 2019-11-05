@@ -12,9 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Profiling Task Editor"
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Single Table Quick Profile Form (Data Profiling Task)
 

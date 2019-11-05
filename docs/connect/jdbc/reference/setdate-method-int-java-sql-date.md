@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 12e5a4cc-45a2-4779-bbfc-e4da66829588
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setDate Method (int, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

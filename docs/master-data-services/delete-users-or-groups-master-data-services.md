@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete Users or Groups (Master Data Services)
 

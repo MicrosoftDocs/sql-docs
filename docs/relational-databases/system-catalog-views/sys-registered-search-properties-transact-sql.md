@@ -23,7 +23,6 @@ ms.assetid: 1b9a7a5c-8c05-4819-83c3-7487dd08fcf7
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.registered_search_properties (Transact-SQL)

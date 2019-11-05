@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "Database Mail [SQL Server], components"
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # General database mail troubleshooting steps 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 Troubleshooting Database Mail involves checking the following general areas of the Database Mail system. These procedures are presented in a logical order, but can be evaluated in any order.
 

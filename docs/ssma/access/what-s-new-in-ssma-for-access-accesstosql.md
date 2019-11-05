@@ -2,18 +2,31 @@
 title: "What's New in SSMA for Access (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
-ms.date: "06/11/2019"
+ms.date: "09/06/2019"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: "HJToland3"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # What's New in SSMA for Access (AccessToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.  
+
+## SSMA v8.4
+
+The v8.4 release of SSMA for Access is enhanced with targeted fixes that are designed to address accessibility issues and fix a bug related to max index columns (to allow 32 instead of 16) for SQL Server 2016 and later versions.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
+
+## SSMA v8.3
+
+The v8.3 release of SSMA for Access is enhanced with targeted fixes that are designed to improve quality and conversion metrics. In addition, this release of SSMA for Access provides fixes that:
+
+* Address accessibility issues
+* Add basic support for 'hierarchyid' type in SQL Server
 
 ## SSMA v8.2
 
@@ -21,9 +34,6 @@ The v8.2 release of SSMA for Access is enhanced with targeted fixes that are des
 
 > [!NOTE]
 > A known issue with auto-update may cause the failure of an update from SSMA v8.1 to v8.2. If you encounter this error, please download the new version and install it manually.
-
-> [!IMPORTANT]
-> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
 
 ## SSMA v8.1
 

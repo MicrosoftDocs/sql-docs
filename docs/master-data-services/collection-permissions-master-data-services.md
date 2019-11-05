@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Collection Permissions (Master Data Services)
 

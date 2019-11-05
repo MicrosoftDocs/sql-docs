@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Create Delete Queries (Visual Database Tools)

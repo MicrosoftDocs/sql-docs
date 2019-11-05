@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 5913abfa-d280-43e4-a2f1-05a924388bf9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Escape Sequences
 ODBC defines escape sequences containing standard grammar for date, time, timestamp, and datetime interval literals, scalar function calls, **LIKE** predicate escape characters, outer joins, and procedure calls. Interoperable applications should use these sequences whenever possible.  

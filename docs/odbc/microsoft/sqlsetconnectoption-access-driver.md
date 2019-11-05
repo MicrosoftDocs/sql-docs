@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetConnectOption (Access Driver)
 > [!NOTE]  

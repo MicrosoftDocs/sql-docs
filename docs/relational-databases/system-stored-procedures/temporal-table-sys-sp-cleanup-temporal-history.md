@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.sp_cleanup_temporal_history (Transact-SQL)
@@ -25,7 +24,7 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
   
 ## Arguments  
 
-*@table_name*
+*\@table_name*
 
 The name of the temporal table for which retention cleanup is invoked.
 

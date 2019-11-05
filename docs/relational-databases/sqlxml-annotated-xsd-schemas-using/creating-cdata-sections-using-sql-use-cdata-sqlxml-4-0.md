@@ -19,7 +19,6 @@ ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating CDATA Sections Using sql:use-cdata (SQLXML 4.0)

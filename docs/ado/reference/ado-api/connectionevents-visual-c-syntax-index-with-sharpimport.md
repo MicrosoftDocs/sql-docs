@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: dd052d36-7730-4400-822b-0544fb1992b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ConnectionEvents (Visual C++ Syntax Index with #import)
 ## Events  

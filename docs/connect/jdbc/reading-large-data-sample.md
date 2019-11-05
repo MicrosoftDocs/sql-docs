@@ -1,7 +1,7 @@
 ---
-title: "Reading Large Data Sample | Microsoft Docs"
+title: "Reading large data sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,10 +10,9 @@ ms.topic: conceptual
 ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
-# Reading Large Data Sample
+# Reading large data sample
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -44,6 +43,6 @@ Finally, the sample code iterates through the rows of data that are in the resul
 
 [!code[JDBC#UsingAdaptiveBuffering1](../../connect/jdbc/codesnippet/Java/reading-large-data-sample_1.java)]
 
-## See Also
+## See also
 
-[Working with Large Data](../../connect/jdbc/working-with-large-data.md)
+[Working with large data](../../connect/jdbc/working-with-large-data.md)

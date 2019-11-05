@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLNativeSql Function
 **Conformance**  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Installing the Software (ODBC)
 > [!IMPORTANT]  

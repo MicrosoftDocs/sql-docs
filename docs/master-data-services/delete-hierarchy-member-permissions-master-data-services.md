@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete Hierarchy Member Permissions (Master Data Services)
 

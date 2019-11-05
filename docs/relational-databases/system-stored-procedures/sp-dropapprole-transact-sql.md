@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 author: VanMSFT
-manager: jroth
 ---
 # sp_dropapprole (Transact-SQL)
 

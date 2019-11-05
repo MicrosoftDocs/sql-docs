@@ -18,7 +18,6 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: jroth
 ---
 # View and Read SQL Server Setup Log Files
 

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Append Method (ADOX Groups)
 Adds a new [Group](../../../ado/reference/adox-api/group-object-adox.md) object to the [Groups](../../../ado/reference/adox-api/groups-collection-adox.md) collection.  

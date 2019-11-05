@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
-manager: jroth
 ---
 # DSN and Connection String Keywords and Attributes
 
@@ -40,6 +39,8 @@ The following table lists the available keywords and the attributes for each pla
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
+| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+, DSN only)| | LMW |
+| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+, DSN only) | | LMW |
 | [KeystoreAuthentication](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -109,6 +110,8 @@ The following table lists the available keywords and the attributes for each pla
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
+| [ClientCertificate](../../connect/odbc/dsn-connection-string-attribute.md#clientcertificate) | | LMW | 
+| [ClientKey](../../connect/odbc/dsn-connection-string-attribute.md#clientkey) | | LMW | 
 
 
 Here are some connection string keywords and connection attributes which are not documented in [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) and [SQLSetConnectAttr Function](../../odbc/reference/syntax/sqlsetconnectattr-function.md).
@@ -183,6 +186,31 @@ Controls the use of SET FMTONLY for metadata when connecting to SQL Server 2012 
 |-|-|
 |No|(Default) Use sp_describe_first_result_set for metadata if available. |
 |Yes| Use SET FMTONLY for metadata. |
+
+
+## ClientCertificate
+
+Specifies the certificate to be used for authentication. The options are: 
+
+| Option Value | Description |
+|-|-|
+| sha1:`<hash_value>` | The ODBC driver uses SHA1 hash to locate a certificate in Windows Certificate Store |
+| subject:`<subject>` | The ODBC driver uses subject to locate a certificate in Windows Certificate Store |
+| file:`<file_location>`[,password:`<password>`] | The ODBC driver uses a certificate file. |
+
+In case if certificate is in PFX format and private key inside the PFX certificate is password protected, the password keyword is required. For certificates in PEM and DER formats ClientKey attribute is required
+
+
+## ClientKey
+
+Specifies a file location of the private key for PEM or DER certificates specified by the ClientCertificate attribute. Format: 
+
+| Option Value | Description |
+|-|-|
+| file:`<file_location>`[,password:`<password>`] | Specifies location of the private key file. |
+
+In case if private key file is password protected then password keyword is required. If the password contains any "," characters, an extra "," character is added immediately after each one. For example, if the password is "a,b,c", the escaped password present in the connection string is "a,,b,,c". 
+    
 
 ### SQL_COPT_SS_ACCESS_TOKEN
 

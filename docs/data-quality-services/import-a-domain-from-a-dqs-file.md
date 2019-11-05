@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Import a Domain from a .dqs File
 

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 671fed35-3859-4b0d-8f38-4dd07436857e
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Tune Automated Administration Across an Enterprise

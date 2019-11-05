@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "row transformations [Integration Services]"
   - "rowset transformations [Integration Services]"
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services Transformations
 

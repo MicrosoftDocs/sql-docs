@@ -16,10 +16,10 @@ helpviewer_keywords:
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Manage Logins in the Publication Access List
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   This topic describes how to manage logins in the Publication Access List in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Access to a publication is controlled by the publication access list (PAL). Logins and groups can be added and removed from the PAL.  
   
  **In This Topic**  
@@ -56,15 +56,15 @@ manager: craigg
   
 #### To view groups and logins that belong to the PAL  
   
-1.  At the Publisher on the publication database, execute [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md). For **@publication**, specify the publication name. This displays information about the groups and logins in the PAL.  
+1.  At the Publisher on the publication database, execute [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md). For `@publication`, specify the publication name. This displays information about the groups and logins in the PAL.  
   
 #### To add groups and logins to the PAL  
   
-1.  At the Publisher on the publication database, execute [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md). For **@publication**, specify the publication name; and for **@login**, specify the name of the login or group that is being added.  
+1.  At the Publisher on the publication database, execute [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md). For `@publication`, specify the publication name; and for `@login`, specify the name of the login or group that is being added.  
   
 #### To remove groups and logins from the PAL  
   
-1.  At the Publisher on the publication database, execute [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). For **@publication**, specify the publication name; and for **@login**, specify the name of the login or group that is being removed.  
+1.  At the Publisher on the publication database, execute [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). For `@publication`, specify the publication name; and for `@login`, specify the name of the login or group that is being removed.  
   
 ## See Also  
  [Manage Logins in the Publication Access List](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   

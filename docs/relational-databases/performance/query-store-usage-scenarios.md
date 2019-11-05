@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query Store Usage Scenarios
@@ -61,7 +60,7 @@ When you identify a query with suboptimal performance, your action depends on th
 4.  Make sure that indexes used by the query are defragmented.  
   
 5.  Consider rewriting expensive query. For example, take advantages of query parameterization and reduce usage of dynamic SQL. Implement optimal logic when read the data (apply data filtering on database side, not on application side).  
-  
+
 ## A/B testing  
  Use Query Store to compare workload performance before and after the application change you plan to introduce. The following list contains several examples where you can use Query Store to assess impact of the environment or application change to the workload performance:  
   
@@ -127,7 +126,7 @@ Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] all Query Optimi
     b.  If there are query plans that fail to force, or if performance is still insufficient, consider reverting the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the prior setting, and then engaging Microsoft Customer Support.  
     
 > [!TIP]
-> Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] *Upgrade Database* task to upgrade the [database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades) of the database. See [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md) for details.
+> Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] *Upgrade Database* task to upgrade the [database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) of the database. See [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md) for details.
   
 ## Identify and improve ad hoc workloads  
 Some workloads do not have dominant queries that you can tune to improve overall application performance. Those workloads are typically characterized with relatively large number of different queries each of them consuming portion of system resources. Being unique, those queries are executed very rarely (usually only once, thus name ad hoc), so their runtime consumption is not critical. On the other hand, given that application is generating net new queries all the time, significant portion of system resources is spent on query compilation, which is not optimal. This is not ideal situation for Query Store either given that large number of queries and plans flood the space you have reserved which means that Query Store will likely end up in the read-only mode very quickly. If you activated **Size Based Cleanup Policy** ([highly recommended](best-practice-with-the-query-store.md) to keep Query Store always up and running), then background process will be cleaning Query Store structures most of the time also taking significant system resources.  
@@ -216,5 +215,4 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)         
  [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
-  
   

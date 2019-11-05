@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSsnapshot_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

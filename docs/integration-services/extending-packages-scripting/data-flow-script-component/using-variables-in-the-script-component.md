@@ -10,9 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "Script component [Integration Services], using variables"
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Using Variables in the Script Component
 

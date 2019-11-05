@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Monitor System Activity Using Extended Events
@@ -102,7 +101,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     ```  
   
 8.  Issue the following statements to stop the event session and remove it from the server.  
-  
+
     ```  
     ALTER EVENT SESSION test0  
     ON SERVER  

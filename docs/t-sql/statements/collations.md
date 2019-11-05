@@ -1,7 +1,7 @@
 ---
 title: "COLLATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "08/30/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COLLATE (Transact-SQL)
@@ -94,8 +93,6 @@ FROM fn_helpcollations();
 - When restoring or attaching a database, the default collation of the database and the collation of any **char**, **varchar**, and **text** columns or parameters in the database must be supported by the operating system.
 
 > [!NOTE]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance server collation is **SQL_Latin1_General_CP1_CI_AS** and cannot be changed.
->
 > Code page translations are supported for **char** and **varchar** data types, but not for **text** data type. Data loss during code page translations is not reported.
 >
 > If the collation specified or the collation used by the referenced object uses a code page not supported by Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] displays an error.
@@ -127,7 +124,7 @@ GO
 
 Here are the results from the first query.
 
-```
+```output
 Place
 -------------
 California
@@ -138,7 +135,7 @@ Colima
 
 Here are the results from the second query.
 
-```
+```output
 Place
 -------------
 California

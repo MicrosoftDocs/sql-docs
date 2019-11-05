@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Setting Properties for Master Data Services Add-in for Excel
 

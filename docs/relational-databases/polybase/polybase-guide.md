@@ -2,8 +2,6 @@
 title: "What is PolyBase? | Microsoft Docs"
 ms.date: 06/10/2019
 ms.prod: sql
-ms.reviewer: ""
-ms.custom: ""
 ms.technology: polybase
 ms.topic: "overview"
 f1_keywords: 
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "Hadoop export"
   - "Hadoop export, PolyBase overview"
   - "Hadoop import, PolyBase overview"
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # What is PolyBase?
@@ -35,13 +33,13 @@ PolyBase enables your SQL Server 2016 instance to process Transact-SQL queries t
 PolyBase pushes some computations to the Hadoop node to optimize the overall query. However, PolyBase external access is not limited to Hadoop. Other unstructured non-relational tables are also supported, such as delimited text files.
 
 > [!TIP]
-> SQL Server 2019 CTP 2.0 introduces new connectors for PolyBase, including SQL Server, Oracle, Teradata, and MongoDB. For more information, see the [PolyBase documentation for SQL Server 2019 CTP 2.0](polybase-guide.md?view=sql-server-ver15)
+> SQL Server 2019 introduces new connectors for PolyBase, including SQL Server, Oracle, Teradata, and MongoDB. For more information, see the [PolyBase documentation for SQL Server 2019](polybase-guide.md?view=sql-server-ver15)
 
 ::: moniker-end
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources. SQL Server 2016 and higher can access external data in Hadoop and Azure Blob Storage. Starting in SQL Server 2019 CTP 2.0, you can now use PolyBase to access external data in [SQL Server](polybase-configure-sql-server.md), [Oracle](polybase-configure-oracle.md), [Teradata](polybase-configure-teradata.md), and [MongoDB](polybase-configure-mongodb.md).
+PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources. SQL Server 2016 and higher can access external data in Hadoop and Azure Blob Storage. Starting in SQL Server 2019, you can now use PolyBase to access external data in [SQL Server](polybase-configure-sql-server.md), [Oracle](polybase-configure-oracle.md), [Teradata](polybase-configure-teradata.md), and [MongoDB](polybase-configure-mongodb.md).
 
 The same queries that access external data can also target relational tables in your SQL Server instance. This allows you to combine data from external sources with high-value relational data in your database. In SQL Server, an [external table](../../t-sql/statements/create-external-table-transact-sql.md) or [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md) provides the connection to Hadoop.
 
@@ -115,6 +113,6 @@ Before using PolyBase, you must [install the PolyBase feature](polybase-installa
 - [Oracle](polybase-configure-oracle.md)
 - [Teradata](polybase-configure-teradata.md)
 - [MongoDB](polybase-configure-mongodb.md)
-- [ODBC Generic Types](../../relational-databases/polybase/polybase-installation.md)
+- [ODBC Generic Types](polybase-configure-odbc-generic.md)
 
 ::: moniker-end

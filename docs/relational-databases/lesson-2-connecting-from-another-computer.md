@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Lesson 2: Connecting from Another Computer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ If you plan to connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] from anot
   
     > [!NOTE]  
     > You must restart the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service after you make changes to network protocols; however, this is completed in the next task.  
-  
+
 ## <a name="port"></a>Configuring a Fixed Port  
 To enhance security, Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)], and Windows 7 all turn on the Windows Firewall. When you want to connect to this instance from another computer, you must open a communication port in the firewall. The default instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] listens on port 1433; therefore, you do not have to configure a fixed port. However, named instances including [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] listen on dynamic ports. Before you can open a port in the firewall, you must first configure the [!INCLUDE[ssDE](../includes/ssde-md.md)] to listen on a specific port known as a fixed port or a static port; otherwise, the [!INCLUDE[ssDE](../includes/ssde-md.md)] might listen on a different port each time it is started. For more information about firewalls, the default Windows firewall settings, and a description of the TCP ports that affect the Database Engine, Analysis Services, Reporting Services, and Integration Services, see [Configure the Windows Firewall to Allow SQL Server Access](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   

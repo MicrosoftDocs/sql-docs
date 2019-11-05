@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],specifying interval"
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Specify an Interval of Change Data
 

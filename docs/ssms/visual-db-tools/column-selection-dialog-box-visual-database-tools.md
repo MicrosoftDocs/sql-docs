@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Column Selection Dialog Box (Visual Database Tools)

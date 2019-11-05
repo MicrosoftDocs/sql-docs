@@ -1,10 +1,7 @@
 ---
 title: "Automatically Delete a Job | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,10 +14,14 @@ helpviewer_keywords:
 ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "01/19/2017"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
+
 # Automatically Delete a Job
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -41,18 +42,6 @@ Job responses ensure that database administrators know when jobs complete and ho
 -   Automatically deleting the job.  
   
     Use this job response if you are certain that you do not need to rerun this job.  
-  
-**In This Topic**  
-  
--   **Before you begin:**  
-  
-    [Security](#Security)  
-  
--   **To specify job responses, using:**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [SQL Server Management Objects](#SMO)  
   
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   

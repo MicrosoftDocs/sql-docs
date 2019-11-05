@@ -28,7 +28,6 @@ helpviewer_keywords:
 ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COMMIT TRANSACTION (Transact-SQL)
@@ -61,7 +60,7 @@ COMMIT [ TRAN | TRANSACTION ]
  
  Is ignored by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *transaction_name* specifies a transaction name assigned by a previous BEGIN TRANSACTION. *transaction_name*must conform to the rules for identifiers, but can't exceed 32 characters. *transaction_name* indicates to programmers which nested BEGIN TRANSACTION the COMMIT TRANSACTION is associated with.  
   
- *@tran_name_variable*  
+ *\@tran_name_variable*  
  **APPLIES TO:** SQL Server and Azure SQL Database  
  
 Is the name of a user-defined variable containing a valid transaction name. The variable must be declared with a char, varchar, nchar, or nvarchar data type. If more than 32 characters are passed to the variable, only 32 characters will be used; the remaining characters are truncated.  

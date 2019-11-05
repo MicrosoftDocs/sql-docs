@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 0f68d9f7-0d8d-4d8d-9188-14e253a2576a
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # supportsMixedCaseIdentifiers Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

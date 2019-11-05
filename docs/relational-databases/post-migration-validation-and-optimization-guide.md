@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: "pelopes"
 ms.author: "harinid"
-manager: "craigg"
 ---
 # Post-migration Validation and Optimization Guide
 
@@ -47,7 +46,7 @@ For more information on this topic, see [Keep performance stability during the u
 **Applies to:** Foreign platform (such as Oracle, DB2, MySQL and Sybase) to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
 > [!NOTE]
-> For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migrations, if this issue existed in the source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrating to a newer version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as-is will not address this scenario. 
+> For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migrations, if this issue existed in the source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrating to a newer version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as-is will not address this scenario. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compiles query plans on stored procedures by using sniffing the input parameters at the first compile, generating a parameterized and reusable plan, optimized for that input data distribution. Even if not stored procedures, most statements generating trivial plans will be parameterized. After a plan is first cached, any future execution maps to a previously cached plan.
 A potential problem arises when that first compilation may not have used the most common sets of parameters for the usual workload. For different parameters, the same execution plan becomes inefficient. For more information on this topic, see [Parameter Sniffing](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
@@ -102,6 +101,7 @@ Some examples of non-SARGable predicates:
   -   This may involve comparing any user-defined code construct that is stored in the database (such as stored procedures, user-defined functions or views) with system tables that hold information on data types used in underlying tables (such as [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
 2. If unable to traverse all code to the previous point, then for the same purpose, change the data type on the table to match any variable/parameter declaration.
 3. Reason out the usefulness of the following constructs:
+
   -   Functions being used as predicates;
   -   Wildcard searches;
   -   Complex expressions based on columnar data - evaluate the need to instead create persisted computed columns, which can be indexed;

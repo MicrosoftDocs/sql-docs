@@ -1,5 +1,5 @@
 ---
-title: Tutorial for in-database analytics using R - SQL Server Machine Learning
+title: Tutorial for in-database analytics using R
 description: Learn how to embed R programming language code in SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,10 +8,10 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Tutorial: R data analytics for SQL developers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this tutorial for SQL programmers, learn about R integration by building and deploying an R-based machine learning solution using a [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database on SQL Server. You'll use T-SQL, SQL Server Management Studio, and a database engine instance with [Machine Learning Services]([Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) and the R language support
 
@@ -48,9 +48,9 @@ All tasks can be done using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored p
 
 This tutorial assumes familiarity with basic database operations such as creating databases and tables, importing data, and writing SQL queries. It does not assume you know R. As such, all R code is provided. 
 
-+ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) or [SQL Server 2017 Machine Learning Services with R enabled](../install/sql-machine-learning-services-windows-install.md#verify-installation)
++ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) or [SQL Server Machine Learning Services with R enabled](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [R libraries](../package-management/installed-package-information.md)
++ [R libraries](../package-management/r-package-information.md)
 
 + [Permissions](../security/user-permission.md)
 

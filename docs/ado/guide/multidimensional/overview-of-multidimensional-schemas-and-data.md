@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Overview of Multidimensional Schemas and Data
 ## Understanding Multidimensional Schemas  

@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Run the Data Quality Client Application
 

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Commit a Version (Master Data Services)
 

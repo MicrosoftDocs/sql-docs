@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Visual Basic for Applications functions
 The following Visual Basic for Applications functions can be used in data shaping CALC expressions:  

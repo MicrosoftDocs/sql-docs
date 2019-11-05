@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "editTabProps"
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Edit the Table Properties
 

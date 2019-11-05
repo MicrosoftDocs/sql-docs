@@ -1,7 +1,7 @@
 ---
-title: "Azure Key Vault Sample Version 6.0.0 | Microsoft Docs"
+title: "Azure Key Vault sample version 6.0.0 | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -9,9 +9,8 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
-# Azure Key Vault Sample Version 6.0.0
+# Azure Key Vault sample version 6.0.0
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -220,7 +219,7 @@ public class AKV_600 {
 }
 ```
 
-## See Also
+## See also
 
-[Azure Key Vault Sample Version 7.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
-[Azure Key Vault Sample Version 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)
+[Azure Key Vault sample version 7.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
+[Azure Key Vault sample version 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)

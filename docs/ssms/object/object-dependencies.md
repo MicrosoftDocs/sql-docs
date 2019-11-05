@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Object Dependencies
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

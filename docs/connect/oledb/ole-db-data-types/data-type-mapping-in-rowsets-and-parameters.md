@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "OLE DB, data types"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Data Type Mapping in Rowsets and Parameters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

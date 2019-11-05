@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Spatial Index Stored Procedures - Arguments and Properties
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ manager: craigg
  Is an output parameter that returns the result set in an XML fragment. *xml_output* is **xml** with no default.  
   
 ## Properties  
- Set **@verboseoutput** =0 to return core properties as shown in the table below; **@verboseoutput** > 0 to return all properties of the spatial index.  
+ Set **\@verboseoutput** =0 to return core properties as shown in the table below; **\@verboseoutput** > 0 to return all properties of the spatial index.  
   
  **Base_Table_Rows**  
  Number of rows in the base table. Value is **bigint**.  

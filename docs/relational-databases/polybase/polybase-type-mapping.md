@@ -2,12 +2,11 @@
 title: "Type mapping with PolyBase | Microsoft Docs"
 ms.date: 09/24/2018
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ---
 # Type mapping with PolyBase
 

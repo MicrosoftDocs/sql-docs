@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Column List Dialog Box (Visual Database Tools)

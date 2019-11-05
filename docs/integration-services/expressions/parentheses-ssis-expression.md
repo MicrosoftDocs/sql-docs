@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "evaluation order [Integration Services]"
   - "parentheses operator ()"
 ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # () (Parentheses) (SSIS Expression)
 

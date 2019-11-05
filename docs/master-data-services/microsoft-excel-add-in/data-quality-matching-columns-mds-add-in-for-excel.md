@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f683fdc6-0d4c-4793-8143-567616cb2094
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Data Quality Matching Columns (MDS Add-in for Excel)
 

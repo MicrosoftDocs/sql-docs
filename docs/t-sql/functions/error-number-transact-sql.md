@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ERROR_NUMBER (Transact-SQL)

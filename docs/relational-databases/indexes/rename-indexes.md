@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename Indexes
@@ -65,7 +64,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 7.  Click **Close**.  
   
 8.  On the **File** menu, click **Save**_table_name_.  
-  
+
 #### To rename an index by using Object Explorer  
   
 1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to rename an index.  

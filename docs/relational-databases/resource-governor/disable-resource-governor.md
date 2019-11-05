@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Disable Resource Governor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ manager: craigg
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open Object Explorer and recursively expand the **Management** node down to **Resource Governor**.  
   
 2.  Right-click **Resource Governor**, and then click **Disable**.  
-  
+
 ##  <a name="RGOffProp"></a> Disable Resource Governor Using Resource Governor Properties  
  **To disable the Resource Governor by using the Resource Governor Properties page**  
   

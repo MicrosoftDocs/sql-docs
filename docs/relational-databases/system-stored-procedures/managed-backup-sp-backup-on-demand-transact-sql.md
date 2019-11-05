@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # managed_backup.sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Requests [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] to perform a backup of the specified database.  
   
- Use this stored procedure to perform ad hoc backups for a database configured with [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. This prevents any break in the backup chain and [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] processes are aware and the backup is stored in the same Windows Azure Blob storage container.  
+ Use this stored procedure to perform ad hoc backups for a database configured with [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. This prevents any break in the backup chain and [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] processes are aware and the backup is stored in the same Azure Blob storage container.  
   
  Upon successful completion of the backup the full backup file path is returned. This includes the name and location of the new backup file resulting from the backup operation.  
   

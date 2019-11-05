@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 85ec53ed-d887-4d95-a028-08cb502a3356
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Device Not Ready Error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

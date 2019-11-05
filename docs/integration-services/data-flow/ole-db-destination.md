@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "fast load data access mode [Integration Services]"
   - "inserting data"
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # OLE DB Destination
 

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Running Stored Procedures - Process Return Codes and Output Parameters
@@ -36,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Execute the statement with **SQLExecDirect**.  
   
 4.  Process result sets until **SQLFetch** or **SQLFetchScroll** returns SQL_NO_DATA while processing the last result set or until **SQLMoreResults** returns SQL_NO_DATA. At this point, the variables bound to the return code and output parameters are filled with returned data values.  
-  
+
 ## Example  
  This sample shows processing a return code and output parameter. This sample is not supported on IA64. This sample was developed for ODBC version 3.0 or later.  
   

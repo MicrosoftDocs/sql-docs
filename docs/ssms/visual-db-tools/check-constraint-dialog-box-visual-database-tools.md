@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Check Constraint Dialog Box (Visual Database Tools)

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 3be393a1-b186-41ae-afb9-a3d07ff354bb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_10519
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,10 +24,10 @@ manager: craigg
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|PG_INCOMPATIBLE_STMT_AND_HINTS|  
-|Message Text|Cannot create plan guide '%.\*ls' because the hints specified in **@hints** cannot be applied to the statement specified by either **@stmt** or **@statement_start_offset**. Verify that the hints can be applied to the statement.|  
+|Message Text|Cannot create plan guide '%.\*ls' because the hints specified in **\@hints** cannot be applied to the statement specified by either **\@stmt** or **\@statement_start_offset**. Verify that the hints can be applied to the statement.|  
   
 ## Explanation  
-The hints specified in **@hints** cannot be applied to the statement specified by either **@stmt** or **@statement_start_offset**.  
+The hints specified in **\@hints** cannot be applied to the statement specified by either **\@stmt** or **\@statement_start_offset**.  
   
 ## User Action  
 Specify hints that can be applied to the statement.  

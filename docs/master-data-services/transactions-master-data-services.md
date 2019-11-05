@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Transactions (Master Data Services)
 

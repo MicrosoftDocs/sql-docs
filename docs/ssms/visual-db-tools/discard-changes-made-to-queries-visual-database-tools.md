@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Discard Changes Made to Queries (Visual Database Tools)

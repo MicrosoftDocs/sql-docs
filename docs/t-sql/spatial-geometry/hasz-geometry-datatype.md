@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: aa378943-252a-4079-848b-6c59344fcfce
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # HasZ (geometry DataType)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Types of Cursors (ADO)
 As a general rule, your application should use the simplest cursor that provides the required data access. Each additional cursor characteristic beyond the basics (forward-only, read-only, static, scrolling, unbuffered) has a price - in client memory, network load, or performance. In many cases, the default cursor options generate a more complex cursor than your application actually needs.  

@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "local transactions [OLE DB]"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Supporting Local Transactions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

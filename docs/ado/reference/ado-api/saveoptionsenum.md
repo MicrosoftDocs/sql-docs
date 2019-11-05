@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # SaveOptionsEnum
 Specifies whether a file should be created or overwritten when saving from a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object. The values can be **adSaveCreateNotExist** or **adSaveCreateOverWrite**..  

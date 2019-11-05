@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Adding Records Using AddNew Method
 This is the basic syntax of the **AddNew** method:

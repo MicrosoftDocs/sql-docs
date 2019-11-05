@@ -1,21 +1,19 @@
 ---
-title: "Improve PolyBase scale-out groups on Windows | Microsoft Docs"
+title: "Configure PolyBase scale-out groups on Windows | Microsoft Docs"
 ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ""
-ms.custom: ""
 ms.technology: polybase
 ms.topic: "tutorial"
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
-# Improve PolyBase scale-out groups on Windows
+# Configure PolyBase scale-out groups on Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how to setup a [PolyBase scale-out group](polybase-scale-out-groups.md) on Windows. This creates a cluster of SQL Server instances to process large data sets from external data sources, such as Hadoop or Azure Blob Storage, in a scale-out fashion for better query performance.
+This article describes how to set up a [PolyBase scale-out group](polybase-scale-out-groups.md) on Windows. This creates a cluster of SQL Server instances to process large data sets from external data sources, such as Hadoop or Azure Blob Storage, in a scale-out fashion for better query performance.
 
 ## Prerequisites
   

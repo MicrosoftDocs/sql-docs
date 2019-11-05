@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ISQLServerErrorInfo::GetErrorInfo (OLE DB)

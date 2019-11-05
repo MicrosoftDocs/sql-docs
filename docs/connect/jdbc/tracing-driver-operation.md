@@ -1,7 +1,7 @@
 ---
-title: "Tracing Driver Operation | Microsoft Docs"
+title: "Tracing driver operation | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,9 +10,8 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
-# Tracing Driver Operation
+# Tracing driver operation
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports the use of tracing (or logging) to help resolve issues and problems with the JDBC driver when it's used in your application. To enable the use of tracing, the JDBC driver uses the logging APIs in java.util.logging, which provides a set of classes for creating Logger and LogRecord objects.  
@@ -29,7 +28,7 @@ manager: jroth
   
  The following sections describe the logging levels and the categories that can be logged, and provide information about how to enable tracing in your application.  
   
-## Logging Levels  
+## Logging levels  
  Every log message that is created has an associated logging level. The logging level determines the importance of the log message, which is defined by the **Level** class in java.util.logging. Enabling logging at one level also enables logging at all higher levels. This section describes the logging levels for both public logging categories and internal logging categories. For more information about the logging categories, see the Logging Categories section in this article.  
   
  The following table describes each of the available logging levels for public logging categories.  
@@ -98,7 +97,7 @@ manager: jroth
 |SQLServerDriver|Logs messages in the [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) class. The applications can set the logging level as FINE.|  
 |SQLServerNClob|Logs messages in the [SQLServerNClob](../../connect/jdbc/reference/sqlservernclob-class.md) class. The applications can set the logging level as FINE.|  
   
-## Enabling Tracing Programmatically  
+## Enabling tracing programmatically  
  Tracing can be enabled programmatically by creating a Logger object and indicating the category to be logged. For example, the following code shows how to enable logging for SQL statements:  
   
 ```java
@@ -126,7 +125,7 @@ Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");
 logger.setLevel(Level.OFF);  
 ```  
   
-## Enabling Tracing by Using the Logging.Properties File  
+## Enabling tracing by using the logging.properties file  
  You can also enable tracing by using the `logging.properties` file, which can be found in the `lib` directory of your Java Runtime Environment (JRE) installation. This file can be used to set the default values for the loggers and handlers that will be used when tracing is enabled.  
   
  The following is an example of the settings that you can make in the `logging.properties` files:  
@@ -153,7 +152,7 @@ com.microsoft.sqlserver.jdbc.level=FINEST
 > [!NOTE]  
 >  You can set the properties in the `logging.properties` file by using the LogManager object that is part of java.util.logging.  
   
-## See Also  
- [Diagnosing Problems with the JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+## See also  
+ [Diagnosing problems with the JDBC driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

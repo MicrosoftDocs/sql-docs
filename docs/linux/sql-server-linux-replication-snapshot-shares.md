@@ -1,9 +1,9 @@
 ---
-title: Configure snapshot folder shares SQL Server Replication on Linux | Microsoft Docs
+title: Configure snapshot folder shares SQL Server Replication on Linux
 description: This article describes how to configure snapshot folder shares SQL Server replication on Linux.
-author: MikeRayMSFT 
+author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql

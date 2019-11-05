@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ADO Methods
 

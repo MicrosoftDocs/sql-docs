@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "connections [Integration Services], files"
   - "File connection manager"
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # File Connection Manager
 

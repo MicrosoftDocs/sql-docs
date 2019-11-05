@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "raw data [Integration Services]"
   - "Raw File source"
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Raw File Source
 

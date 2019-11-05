@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## Arguments  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- A parameter defined by the user and recorded in the **user_defined_event_id** column of the audit log. *@user_defined_event_id* is type **smallint**.  
+ A parameter defined by the user and recorded in the **user_defined_event_id** column of the audit log. *\@user_defined_event_id* is type **smallint**.  
   
  `[ @succeeded = ] succeeded`  
  A parameter passed by user to indicate whether the event was successful or not. This appears in the succeeded column of the audit log. `@succeeded` is **bit**.  

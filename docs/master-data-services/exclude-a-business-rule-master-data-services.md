@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Exclude a Business Rule (Master Data Services)
 

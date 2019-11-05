@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_syscollector_delete_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

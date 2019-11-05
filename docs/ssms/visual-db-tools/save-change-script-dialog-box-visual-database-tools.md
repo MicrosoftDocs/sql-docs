@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: fc9d1639-5efa-44fe-a04f-4d4d0def2833
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Save Change Script Dialog Box (Visual Database Tools)

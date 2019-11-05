@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ manager: craigg
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**hobt_id**|**bigint**|ID of the heap or B-tree index (hobt) for the table that has this columnstore index.|  
+|**hobt_id**|**bigint**|ID of the heap or B-tree index (HoBT) for the table that has this columnstore index.|  
 |**column_id**|**int**|ID of the columnstore column starting with 1. The first column has ID = 1, the second column has ID = 2, etc.|  
 |**dictionary_id**|**int**|There can be two kinds of dictionaries, global and local, associated with a column segment. A dictionary_id of 0 represents the global dictionary that is shared across all column segments (one for each row group) for that column.|  
 |**version**|**int**|Version of the dictionary format.|  
@@ -39,7 +38,7 @@ manager: craigg
 |**partition_id**|**bigint**|Indicates the partition ID. Is unique within a database.|  
   
 ## Permissions  
- All columns require at least VIEW DEFINITION permission on the table. The following columns return null unless the user also has **SELECT** permission: last_id, entry_count, data_ptr.  
+Requires `VIEW DEFINITION` permission on the table. The following columns return null unless the user also has `SELECT` permission: last_id, entry_count, data_ptr.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

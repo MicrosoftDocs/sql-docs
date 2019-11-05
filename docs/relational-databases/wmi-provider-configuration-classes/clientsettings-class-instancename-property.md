@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ClientSettings Class - InstanceName Property
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

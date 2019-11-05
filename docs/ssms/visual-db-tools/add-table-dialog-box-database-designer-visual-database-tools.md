@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Add Table Dialog Box (Database Designer) (Visual Database Tools)

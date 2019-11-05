@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 955d6fa9-0b31-4335-a3cd-e4c4d90ad308
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # IHconstrainttypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

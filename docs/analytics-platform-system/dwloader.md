@@ -2,7 +2,6 @@
 title: dwloader Command-Line Loader - Parallel Data Warehouse | Microsoft Docs
 description: dwloader is a Parallel Data Warehouse (PDW) command-line tool that loads table rows in bulk into an existing table.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -139,7 +138,7 @@ Examples:
   
 `rv=25`  
   
-**-S***target_appliance*  
+**-S** *target_appliance*  
 Specifies the SQL Server PDW appliance that will receive the loaded data.  
   
 *For Infiniband connections*, *target_appliance* is specified as <appliance-name>-SQLCTL01. To configure this named connection, see [Configure InfiniBand Network Adapters](configure-infiniband-network-adapters.md).  
@@ -155,7 +154,7 @@ For more information about this install option, see [Install dwloader Command-Li
 **-T** *target_database_name.*[*schema*].*table_name*  
 The three-part name for the destination table.  
   
-**-I***source_data_location*  
+**-I** *source_data_location*  
 The location of one or more source files to load. Each source file must be a text file or a text file that is compressed with gzip. Only one source file can be compressed into each gzip file.  
   
 To format a source file:  

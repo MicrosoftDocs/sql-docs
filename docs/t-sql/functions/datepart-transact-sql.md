@@ -26,7 +26,6 @@ helpviewer_keywords:
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEPART (Transact-SQL)
@@ -114,19 +113,16 @@ This table lists all *datepart* arguments, with corresponding return values, for
 ## Week and weekday datepart arguments
 For a **week** (**wk**, **ww**) or **weekday** (**dw**) *datepart*, the `DATEPART` return value depends on the value set by [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-January 1 of any year defines the starting number for the **week**_datepart_. For example:
+January 1 of any year defines the starting number for the **week** _datepart_. For example:
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 
 where *xxxx* is any year.
   
-This table shows the return value for the **week** and **weekday** *datepart* for
+This table shows the return value for the **week** and **weekday** *datepart* for '2007-04-21 ' for each SET DATEFIRST argument. 
+January 1, 2007 falls on a Monday. April 21, 2007 falls on a Saturday. For U.S. English,
 
-'2007-04-21 '
-
-for each SET DATEFIRST argument. January 1, 2007 falls on a Monday. April 21, 2007 falls on a Saturday. For U.S. English,
-
-SET DATEFIRST 7 -- ( Sunday )
+`SET DATEFIRST 7 -- ( Sunday )`
 
 serves as the default. After setting DATEFIRST, use this suggested SQL statement for the datepart table values:
 
@@ -189,7 +185,7 @@ SELECT DATEPART(year, '12:10:30.123')
     ,DATEPART(weekday, '12:10:30.123');  
 ```  
   
-If *date* is specified as a variable or table column, and the data type for that variable or column does not have the specified *datepart*, `DATEPART` will return error 9810. In this example, variable *@t* has a **time** data type. The example fails because the date part year is invalid for the **time** data type:
+If *date* is specified as a variable or table column, and the data type for that variable or column does not have the specified *datepart*, `DATEPART` will return error 9810. In this example, variable *\@t* has a **time** data type. The example fails because the date part year is invalid for the **time** data type:
   
 ```sql
 DECLARE @t time = '12:10:30.123';   

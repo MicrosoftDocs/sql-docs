@@ -39,9 +39,8 @@ helpviewer_keywords:
   - "Copy Column transformation custom properties [Integration Services]"
   - "Character Map transformation custom properties [Integration Services]"
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Transformation Custom Properties
 

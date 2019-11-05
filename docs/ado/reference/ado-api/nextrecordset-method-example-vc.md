@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # NextRecordset Method Example (VC++)
 This example uses the [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) method to view the data in a recordset that uses a compound command statement made up of three separate **SELECT** statements.  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: a18c12a9-59ad-4711-a862-39d8f28476b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Metadata Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

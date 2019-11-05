@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # CommandTypeEnum
 Specifies how a command argument should be interpreted.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Business Rules (Master Data Services)
 

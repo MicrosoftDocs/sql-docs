@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Create a New Database Diagram (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

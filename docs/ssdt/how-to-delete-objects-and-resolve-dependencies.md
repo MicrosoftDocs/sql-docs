@@ -14,7 +14,6 @@ f1_keywords:
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # How to: Delete Objects and Resolve Dependencies
 When you rename or delete an object in **SQL Server Object Explorer**, SQL Server Data Tools automatically detects all its dependency objects, and will prepare an ALTER script to rename or drop the dependency as needed.  

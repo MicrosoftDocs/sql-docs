@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.nomappingfile.f1"
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Convert Types without Conversion Checking (SQL Server Import and Export Wizard)
 

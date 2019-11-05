@@ -1,9 +1,9 @@
 ---
-title: Configure failover cluster instance storage SMB - SQL Server on Linux | Microsoft Docs
+title: Configure failover cluster instance storage SMB - SQL Server on Linux
 description: 
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql

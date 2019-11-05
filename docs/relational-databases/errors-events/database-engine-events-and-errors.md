@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Database Engine Errors
 
@@ -834,7 +833,7 @@ The table contains error message numbers and the description, which is the text 
 |	1724	|	16	|	No	|	Filegroup '%.*ls' is not a FILESTREAM filegroup or partition scheme of FILESTREAM filegroups.	|
 |	1725	|	16	|	No	|	Cannot add FILESTREAM column to %S_MSG '%.*ls' because an INSTEAD OF trigger exists on the %S_MSG.	|
 |	1726	|	16	|	No	|	Cannot add FILESTREAM filegroup or partition scheme since table '%.*ls' has a FILESTREAM filegroup or partition scheme already.	|
-|	1727	|	16	|	No	|	Cannot create non-clustered index '%.*ls' on table '%.*ls' with the FILESTREAM_ON clause.	|
+|	1727	|	16	|	No	|	Cannot create nonclustered index '%.*ls' on table '%.*ls' with the FILESTREAM_ON clause.	|
 |	1728	|	16	|	No	|	Cannot create index '%.*ls' on table '%.*ls' because the computed column '%.*ls' uses a FILESTREAM column.	|
 |	1729	|	16	|	No	|	Cannot create table '%.*ls' because the partitioning column '%.*ls' uses a FILESTREAM column.	|
 |	1730	|	16	|	No	|	Creating or altering compressed table '%.*ls' failed because the uncompressed row size would be %d, including %d bytes of internal overhead. This exceeds the maximum allowable table row size of %d bytes.	|
@@ -1308,7 +1307,7 @@ The table contains error message numbers and the description, which is the text 
 |	2720	|	16	|	No	|	Cannot schema bind %S_MSG '%.*ls' because it references system object '%.*ls'.	|
 |	2722	|	16	|	No	|	Xml data type methods are not allowed in expressions in this context.	|
 |	2724	|	10	|	No	|	Parameter or variable '%.*ls' has an invalid data type.	|
-|	2725	|	16	|	No	|	An online operation cannot be performed for %S_MSG '%.*ls' because the index contains column '%.*ls' of data type text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, or large CLR type. For a non-clustered index, the column could be an include column of the index. For a clustered index, the column could be any column of the table. If DROP_EXISTING is used, the column could be part of a new or old index. The operation must be performed offline.	|
+|	2725	|	16	|	No	|	An online operation cannot be performed for %S_MSG '%.*ls' because the index contains column '%.*ls' of data type text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, or large CLR type. For a nonclustered index, the column could be an include column of the index. For a clustered index, the column could be any column of the table. If DROP_EXISTING is used, the column could be part of a new or old index. The operation must be performed offline.	|
 |	2726	|	16	|	No	|	Partition function '%.*ls' uses %d columns which does not match with the number of partition columns used to partition the table or index.	|
 |	2727	|	11	|	No	|	Cannot find index '%.*ls'.	|
 |	2728	|	16	|	No	|	Cannot partition on more than %d columns.	|
@@ -1690,7 +1689,7 @@ The table contains error message numbers and the description, which is the text 
 |	3745	|	16	|	No	|	Only a clustered index can be dropped online.	|
 |	3746	|	16	|	No	|	Cannot drop the clustered index of view '%.*ls' because the view is being used for replication.	|
 |	3747	|	16	|	No	|	Cannot drop a clustered index created on a view using drop clustered index clause. Clustered index '%.*ls' is created on view '%.*ls'.	|
-|	3748	|	16	|	No	|	Cannot drop non-clustered index '%.*ls' using drop clustered index clause.	|
+|	3748	|	16	|	No	|	Cannot drop nonclustered index '%.*ls' using drop clustered index clause.	|
 |	3749	|	16	|	No	|	Cannot drop XML Index '%.*ls' using old 'Table.Index' syntax, use 'Index ON Table' syntax instead.	|
 |	3750	|	10	|	No	|	Warning: Index '%.*ls' on %S_MSG '%.*ls' was disabled as a result of disabling the clustered index on the %S_MSG.	|
 |	3751	|	16	|	No	|	Cannot use SP_DROPEXTENDEDPROC or DBCC DROPEXTENDEDPROC with '%.*ls' because '%.*ls' is a %S_MSG. Use %ls.	|
@@ -3935,7 +3934,7 @@ The table contains error message numbers and the description, which is the text 
 |	8604	|	16	|	No	|	ALTER TABLE SWITCH statement failed. Table '%.*ls' has a column level check constraint '%.*ls' on column '%.*ls' that is not loadable for semantic validation.	|
 |	8605	|	10	|	No	|	Index creation operation will use %ld KB of memory specified in the advanced sp_configure option "min memory per query (KB)" instead of %lu KB specified in "index create memory (KB)" option because the former has to be smaller than the latter.	|
 |	8606	|	17	|	No	|	This index operation requires %I64d KB of memory per DOP. The total requirement of %I64d KB for DOP of %lu is greater than the sp_configure value of %lu KB set for the advanced server configuration option "index create memory (KB)". Increase this setting or reduce DOP and rerun the query.	|
-|	8607	|	16	|	No	|	The table '%.*ls' cannot be modified because one or more non-clustered indexes reside in a filegroup which is not online.	|
+|	8607	|	16	|	No	|	The table '%.*ls' cannot be modified because one or more nonclustered indexes reside in a filegroup which is not online.	|
 |	8608	|	16	|	No	|	The query could not be completed due to an online index build operation and must be recompiled.	|
 |	8616	|	10	|	No	|	The index hints for table '%.*ls' were ignored because the table was considered a fact table in the star join.	|
 |	8618	|	16	|	No	|	The query processor could not produce a query plan because a worktable is required, and its minimum row size exceeds the maximum allowable of %d bytes. A typical reason why a worktable is required is a GROUP BY or ORDER BY clause in the query. If the query has a GROUP BY or ORDER BY clause, consider reducing the number and/or size of the fields in the clause. Consider using prefix (LEFT()) or hash (CHECKSUM()) of fields for grouping or prefix for ordering. Note however that this will change the behavior of the query.	|
@@ -4994,7 +4993,7 @@ The table contains error message numbers and the description, which is the text 
 |	11297	|	16	|	No	|	A corrupted message has been received. The private variable data segment offset is incorrect.	|
 |	11298	|	16	|	No	|	A corrupted message has been received. The public variable data segment offset is incorrect.	|
 |	11299	|	10	|	No	|	A corrupted message has been received. An unsequenced message had a non-zero sequence number. This occurred in the message with Conversation ID '%.*ls', Initiator: %d, and Message sequence number: %I64d.	|
-|	11300	|	10	|	Yes	|	Error wile committing a readonly or a TEMPDB XDES, Shutting down the server.	|
+|	11300	|	10	|	Yes	|	Error while committing a readonly or a TEMPDB XDES, Shutting down the server.	|
 |	11301	|	10	|	Yes	|	Error while performing transaction notification for object %p event %d.	|
 |	11302	|	10	|	Yes	|	Error during rollback. shutting down database (location: %d).	|
 |	11303	|	10	|	Yes	|	Error releasing reserved log space: %ls space %I64d, code %d, state %d.	|

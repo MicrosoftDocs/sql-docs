@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "data flow engine [Integration Services]"
   - "languages [Integration Services]"
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services Programming Overview
 

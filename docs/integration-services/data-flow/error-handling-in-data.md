@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "data flow [Integration Services], errors"
   - "expressions [Integration Services], errors"
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Error Handling in Data
 

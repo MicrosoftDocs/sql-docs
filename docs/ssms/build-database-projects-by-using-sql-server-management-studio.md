@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Build Database Projects by Using SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

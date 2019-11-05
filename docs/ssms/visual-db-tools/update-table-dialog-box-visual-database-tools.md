@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 174c7275-5b15-42a9-b172-5ff30de575a1
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Update Table Dialog Box (Visual Database Tools)

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RIGHT (Transact-SQL)
@@ -105,9 +104,7 @@ lters
  The following example uses `RIGHT` to return the two rightmost characters of the character string `abcdefg`.  
   
 ```  
--- Uses AdventureWorks  
-  
-SELECT TOP(1) RIGHT('abcdefg',2) FROM dbo.DimProduct;  
+SELECT RIGHT('abcdefg', 2); 
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

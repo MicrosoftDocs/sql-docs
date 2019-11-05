@@ -1,7 +1,7 @@
 ---
-title: "Reading Large Data with Stored Procedures Sample | Microsoft Docs"
+title: "Reading large data with stored procedures sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,10 +10,9 @@ ms.topic: conceptual
 ms.assetid: 58c76635-a117-4661-8781-d6cb231c5809
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
-# Reading Large Data with Stored Procedures Sample
+# Reading large data with stored procedures sample
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -42,6 +41,6 @@ Finally, the sample code displays the data returned with the OUT parameters and 
 
 [!code[JDBC#UsingAdaptiveBuffering2](../../connect/jdbc/codesnippet/Java/reading-large-data-with-_1_1.java)]
 
-## See Also
+## See also
 
-[Working with Large Data](../../connect/jdbc/working-with-large-data.md)
+[Working with large data](../../connect/jdbc/working-with-large-data.md)

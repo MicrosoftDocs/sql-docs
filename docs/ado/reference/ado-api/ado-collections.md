@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ADO Collections
 The relationships between these collections and the ADO objects are represented in the [ADO Object Model](../../../ado/reference/ado-api/ado-object-model.md).  

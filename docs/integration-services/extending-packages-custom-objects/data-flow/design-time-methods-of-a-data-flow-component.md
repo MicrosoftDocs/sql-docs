@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "PrimeOutput method"
   - "data flow components [Integration Services], method execution sequence"
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Design-time Methods of a Data Flow Component
 

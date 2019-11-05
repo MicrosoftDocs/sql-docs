@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helpindex (Transact-SQL)

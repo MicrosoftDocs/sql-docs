@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_delete_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

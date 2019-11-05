@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ADO Features for each Release
 

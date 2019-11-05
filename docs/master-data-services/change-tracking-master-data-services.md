@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Change Tracking (Master Data Services)
 

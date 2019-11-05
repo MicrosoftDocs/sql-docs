@@ -10,7 +10,6 @@ ms.custom: ""
 ms.date: "07/13/2017"
 ms.author: genemi
 author: MightyPen
-manager: craigg
 ---
 # Retrieve numeric data with SQL\_NUMERIC\_STRUCT
 

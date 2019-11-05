@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: a384b583-cec5-4f86-8353-954c989dd94d
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # SQL Comment Dialog Box (Visual Database Tools)

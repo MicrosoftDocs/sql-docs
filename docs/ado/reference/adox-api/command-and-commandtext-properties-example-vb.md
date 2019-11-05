@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Command and CommandText Properties Example (VB)
 The following code demonstrates how to use the [Command](../../../ado/reference/adox-api/command-property-adox.md) property to update the text of a procedure.  

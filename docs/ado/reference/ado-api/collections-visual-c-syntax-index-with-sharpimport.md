@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Collections (Visual C++ Syntax Index with #import)
 It is useful to know that collections inherit certain common methods and properties.  

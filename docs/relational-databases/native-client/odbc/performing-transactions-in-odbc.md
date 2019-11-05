@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Performing Transactions in ODBC

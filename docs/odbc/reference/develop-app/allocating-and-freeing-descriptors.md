@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c615ab7a-f631-4783-a37f-d429873b6047
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Allocating and Freeing Descriptors
 Descriptors are either implicitly or explicitly allocated, as described in the following sections.  

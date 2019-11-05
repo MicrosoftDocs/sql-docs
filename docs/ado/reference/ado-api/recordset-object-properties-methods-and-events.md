@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Recordset Object Properties, Methods, and Events
 ## Properties/Collections  

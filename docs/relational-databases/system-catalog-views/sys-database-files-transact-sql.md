@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_files (Transact-SQL)
@@ -30,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|ID of the file within database.|  
-|**file_guid**|**uniqueidentifier**|GUID for the file.<br /><br /> NULL = Database was upgraded from an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**file_guid**|**uniqueidentifier**|GUID for the file.<br /><br /> NULL = Database was upgraded from an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Valid for SQL Server 2005 and earlier).|  
 |**type**|**tinyint**|File type:<br /><br /> 0 = Rows (Includes files of full-text catalogs that are upgraded to or created in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].)<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Full-text (Full-text catalogs earlier than [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; full-text catalogs that are upgraded to or created in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] will report a file type 0.)|  
 |**type_desc**|**nvarchar(60)**|Description of the file type:<br /><br /> ROWS (Includes files of full-text catalogs that are upgraded to or created in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].)<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (Full-text catalogs earlier than [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].)|  
 |**data_space_id**|**int**|Value can be 0 or greater than 0. A value of 0 represents the database log file, and a value greater than 0 represents the ID of the filegroup where this data file is stored.|  

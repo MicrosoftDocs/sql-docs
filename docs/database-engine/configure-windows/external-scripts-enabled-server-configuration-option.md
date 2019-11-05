@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ---
 # External Scripts Enabled server configuration option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ You must enable the external script enabled option before you can execute an ext
 
     Install the **Advanced Analytics Extensions** feature during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup to enable the execution of R scripts. The R language is installed by default.
 
-+ For [[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
++ For [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] uses the same architecture as in SQL Server 2016, but provides support for the Python language.
 

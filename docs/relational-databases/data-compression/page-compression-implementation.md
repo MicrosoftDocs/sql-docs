@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Page Compression Implementation
@@ -30,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 2.  Prefix compression  
   
 3.  Dictionary compression  
-  
+
  When you use page compression, non-leaf-level pages of indexes are compressed by using only row compression. For more information about row compression, see [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md).  
   
 ## Prefix Compression  

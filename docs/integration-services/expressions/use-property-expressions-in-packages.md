@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], property expressions"
   - "property expressions [Integration Services]"
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Use Property Expressions in Packages
 

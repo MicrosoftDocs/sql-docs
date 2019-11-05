@@ -12,9 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Profiling Task Editor"
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Profiling Task Editor (General Page)
 

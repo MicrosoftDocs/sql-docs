@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "adding components"
   - "components [Integration Services], data flow"
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Add or Delete a Component in a Data Flow
 

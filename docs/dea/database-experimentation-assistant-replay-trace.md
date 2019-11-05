@@ -12,7 +12,6 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
 ---
 
 # Replay a trace in Database Experimentation Assistant

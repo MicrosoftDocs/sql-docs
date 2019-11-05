@@ -1,9 +1,9 @@
 ---
 title: "Row-Level Security | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/06/2018"
+ms.date: "05/14/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.reviewer: ""
 ms.technology: "security"
 ms.topic: conceptual
@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -33,8 +32,8 @@ Row-Level Security (RLS) simplifies the design and coding of security in your ap
 The access restriction logic is located in the database tier rather than away from the data in another application tier. The database system applies the access restrictions every time that data access is attempted from any tier. This makes your security system more reliable and robust by reducing the surface area of your security system.  
   
 Implement RLS by using the [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement, and predicates created as [inline table-valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
-  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
 > Azure SQL Data Warehouse supports filter predicates only. Block predicates aren't currently supported in Azure SQL Data Warehouse.
@@ -167,7 +166,7 @@ It is possible to cause information leakage through the use of carefully crafted
   
 - **Full-Text Search:** A performance hit is expected for queries using the following Full-Text Search and Semantic Search functions, because of an extra join introduced to apply row-level security and avoid leaking the primary keys of rows that should be filtered: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
   
-- **Columnstore Indexes:** RLS is compatible with both clustered and non-clustered columnstore indexes. However, because row-level security applies a function, it is possible that the optimizer may modify the query plan so that it doesn't use batch mode.  
+- **Columnstore Indexes:** RLS is compatible with both clustered and nonclustered columnstore indexes. However, because row-level security applies a function, it is possible that the optimizer may modify the query plan so that it doesn't use batch mode.  
   
 - **Partitioned Views:** Block predicates cannot be defined on partitioned views, and partitioned views cannot be created on top of tables that use block predicates. Filter predicates are compatible with partitioned views.  
   
@@ -417,7 +416,7 @@ DROP LOGIN Manager;
 ### <a name="MidTier"></a> C. Scenario for users who connect to the database through a middle-tier application
 
 > [!NOTE]
-> This example isn't applicable to Azure SQL Data Warehouse since both SESSION_CONTEXT and block predicates aren't currently supported.
+> In this example block predicates functionality isn't currently supported for Azure SQL Data Warehouse, hence inserting rows for the wrong user ID isn't blocked with Azure SQL Data Warehouse.
 
 This example shows how a middle-tier application can implement connection filtering, where application users (or tenants) share the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user (the application). The application sets the current application user ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) after connecting to the database, and then security policies transparently filter rows that shouldn't be visible to this ID, and also block the user from inserting rows for the wrong user ID. No other app changes are necessary.  
   

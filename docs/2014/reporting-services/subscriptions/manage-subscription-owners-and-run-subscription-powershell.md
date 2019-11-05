@@ -95,21 +95,21 @@ manager: kfile
 ##  <a name="bkmk_list_ownership_all"></a> Script: List the ownership of all subscriptions  
  This script lists all of the subscriptions on a site. You can use this script to test your connection or to verify the report path and subscription id for use in the other scripts. This is also a useful script to simply audit what subscriptions exist and who owns them.  
   
- **Native mode syntax:**  
+### Native mode syntax
   
-```  
+```cmd
 powershell c:\scripts\ListAll_SSRS_Subscriptions.ps1 "[server]/reportserver" "/"  
 ```  
   
- **SharePoint mode syntax:**  
+### SharePoint mode syntax
   
-```  
+```cmd
 powershell c:\scripts\ListAll_SSRS_Subscriptions.ps1 "[server]/_vti_bin/reportserver" "http://[server]"  
 ```  
   
- **Script:**  
+### Script
   
-```  
+```powershell
 # Parameters  
 #    server   - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
   
@@ -132,21 +132,21 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ##  <a name="bkmk_list_all_one_user"></a> Script: List all subscriptions owned by a specific user  
  This script lists all of the subscriptions owned by a specific user. You can use this script to test your connection or to verify the report path and subscription id for use in the other scripts. This script is useful when someone in your organization leaves and you want to verify what subscriptions they owned so you can change the owner or delete the subscription.  
   
- **Native mode syntax:**  
+### Native mode syntax
   
-```  
+```cmd
 powershell c:\scripts\ListAll_SSRS_Subscriptions4User.ps1 "[Domain]\[user]" "[server]/reportserver" "/"  
 ```  
   
- **SharePoint mode syntax:**  
+### SharePoint mode syntax
   
-```  
+```cmd
 powershell c:\scripts\ListAll_SSRS_Subscriptions4User.ps1 "[Domain]\[user]"  "[server]/_vti_bin/reportserver" "http://[server]"  
 ```  
   
- **Script:**  
+### Script  
   
-```  
+```powershell
 # Parameters:  
 #    currentOwner - DOMAIN\USER that owns the subscriptions you wish to change  
 #    server        - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
@@ -169,21 +169,21 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ##  <a name="bkmk_change_all"></a> Script: Change ownership for all subscriptions owned by a specific user  
  This script changes the ownership for all subscriptions owned by a specific user to the new owner parameter.  
   
- **Native mode syntax:**  
+### Native mode syntax
   
-```  
+```cmd
 powershell c:\scripts\ChangeALL_SSRS_SubscriptionOwner.ps1 "[Domain]\current owner]" "[Domain]\[new owner]" "[server]/reportserver"  
 ```  
   
- **SharePoint mode syntax:**  
+### SharePoint mode syntax
   
-```  
+```cmd
 powershell c:\scripts\ChangeALL_SSRS_SubscriptionOwner.ps1 "[Domain]\{current owner]" "[Domain]\[new owner]" "[server]/_vti_bin/reportserver"  
 ```  
   
- **Script:**  
+### Script
   
-```  
+```powershell
 # Parameters:  
 #    currentOwner - DOMAIN\USER that owns the subscriptions you wish to change  
 #    newOwner      - DOMAIN\USER that will own the subscriptions you wish to change  
@@ -207,7 +207,7 @@ ForEach ($item in $items)
         $curRepSubs = $rs2010.ListSubscriptions($item.Path);  
         ForEach ($curRepSub in $curRepSubs)  
         {  
-            if ($curRepSub.Owner -eq $previousOwner)  
+            if ($curRepSub.Owner -eq $currentOwner)  
             {  
                 $subscriptions += $curRepSub;  
             }  
@@ -239,21 +239,21 @@ ForEach ($item in $items)
 ##  <a name="bkmk_list_for_1_report"></a> Script: List all subscriptions associated with a specific report  
  This script lists all of the subscriptions associated with a specific report. The report path syntax is different SharePoint mode which requires a full URL. In the syntax examples, the report name used is "title only", which contains a space and therefore requires the single quotes around the report name.  
   
- **Native mode syntax:**  
+### Native mode syntax
   
-```  
+```cmd
 powershell c:\scripts\List_SSRS_One_Reports_Subscriptions.ps1 "[server]/reportserver" "'/reports/title only'" "/"  
 ```  
   
- **SharePoint mode syntax:**  
+### SharePoint mode syntax
   
-```  
+```cmd
 powershell c:\scripts\List_SSRS_One_Reports_Subscriptions.ps1 "[server]/_vti_bin/reportserver"  "'http://[server]/shared documents/title only.rdl'" "http://[server]"  
 ```  
   
- **Script:**  
+### Script
   
-```  
+```powershell
 # Parameters:  
 #    server      - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
 #    reportpath  - path to report in the report server, including report name e.g. /reports/test report >> pass in  "'/reports/title only'"  
@@ -277,21 +277,21 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ##  <a name="bkmk_change_all_1_subscription"></a> Script: Change ownership of a specific subscription  
  This script changes the ownership for a specific subscription. The subscription is identified by the SubscriptionID that you pass into the script. You can use one of the list subscription scripts to determine the correct SubscriptionID.  
   
- **Native mode syntax:**  
+### Native mode syntax
   
-```  
+```cmd
 powershell c:\scripts\Change_SSRS_Owner_One_Subscription.ps1 "[Domain]\[new owner]" "[server]/reportserver" "/" "ac5637a1-9982-4d89-9d69-a72a9c3b3150"  
 ```  
   
- **SharePoint mode syntax:**  
+### SharePoint mode syntax
   
-```  
+```cmd
 powershell c:\scripts\Change_SSRS_Owner_One_Subscription.ps1 "[Domain]\[new owner]" "[server]/_vti_bin/reportserver" "http://[server]" "9660674b-f020-453f-b1e3-d9ba37624519"  
 ```  
   
- **Script:**  
+### Script
   
-```  
+```powershell
 # Parameters:  
 #    newOwner       - DOMAIN\USER that will own the subscriptions you wish to change  
 #    server         - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
@@ -333,22 +333,21 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  The script includes delay logic "`Start-Sleep -s 6`" so there is time after the event fires, for the updated status to be available with the ListSubscription method.  
   
- **Native mode syntax:**  
+### Native mode syntax
   
-```  
+```cmd
 powershell c:\scripts\FireSubscription.ps1 "[server]/reportserver" $null "70366e82-2d3c-4edd-a216-b97e51e26de9"  
 ```  
   
- **SharePoint mode syntax:**  
+### SharePoint mode syntax
   
-```  
+```cmd
 powershell c:\scripts\FireSubscription.ps1 "[server]/_vti_bin/reportserver" "http://[server]" "c3425c72-580d-423e-805a-41cf9799fd25"  
 ```  
   
- **Script:**  
+### Script
   
-```  
-  
+```powershell
 # Parameters  
 #    server         - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
 #    site           - use $null for a native mode server  
@@ -369,8 +368,7 @@ Write-Host "----- Subscription ($subscriptionid) status: "
 #get list of subscriptions and filter to the specific ID to see the Status and LastExecuted  
 Start-Sleep -s 6 # slight delay in processing so ListSubscription returns the updated Status and LastExecuted  
 $subscriptions = $rs2010.ListSubscriptions($site);   
-$subscriptions | select Status, Path, report, Description, Owner, SubscriptionID, EventType, lastexecuted | where {$_.SubscriptionID -eq $subscriptionid}  
-  
+$subscriptions | select Status, Path, report, Description, Owner, SubscriptionID, EventType, lastexecuted | where {$_.SubscriptionID -eq $subscriptionid}
 ```  
   
 ## See Also  
@@ -378,5 +376,3 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
  <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>   
  <xref:ReportService2010.ReportingService2010.ListChildren%2A>   
  <xref:ReportService2010.ReportingService2010.FireEvent%2A>  
-  
-  

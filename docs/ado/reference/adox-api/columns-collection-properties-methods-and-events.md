@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3d9ec89a-cc85-4091-b6f0-2bb6a6826d5e
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Columns Collection Properties, Methods, and Events
 ## Properties  

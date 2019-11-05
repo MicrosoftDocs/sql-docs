@@ -13,7 +13,6 @@ ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XSD Annotations (SQLXML 4.0)

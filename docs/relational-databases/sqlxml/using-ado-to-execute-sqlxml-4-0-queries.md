@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using ADO to Execute SQLXML 4.0 Queries
@@ -101,7 +100,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 4.  Verify that you have created any additional files, such as XML templates or schemas that are part of the sample you are attempting to recreate locally on your computer. These files should be located in the same directory where you have saved the test script file (Sqlxml4test.vbs).  
   
 5.  Follow the instructions in the next section for how to use the SQLXML 4.0 test script.  
-  
+
 ## Using the SQLXML 4.0 Test Script  
  The following procedure describes how to use the Sqlxml4test.vbs files to test the example queries provided in this documentation.  
   

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
 ---
 # exist() Method (xml Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ select @f;
   
 -   The code `cast as xs:date?` is used to cast the value to **xs:date** type for purposes of comparison.  
   
--   The value of the **@Somedate** attribute is untyped. In comparing this value, it is implicitly cast to the type on the right side of the comparison, the **xs:date** type.  
+-   The value of the **\@Somedate** attribute is untyped. In comparing this value, it is implicitly cast to the type on the right side of the comparison, the **xs:date** type.  
   
 -   Instead of **cast as xs:date()**, you can use the **xs:date()** constructor function. For more information, see [Constructor Functions &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md).  
   

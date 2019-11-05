@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Supports Method
 Determines whether a specified [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object supports a particular type of functionality.  

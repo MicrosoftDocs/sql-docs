@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Always On Availability Groups Catalog Views (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

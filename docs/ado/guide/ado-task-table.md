@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ADO Programming Task Table
 The following table lists programming tasks contained in the *ADO Programmer's Guide* and provides references for each task. These references can be textual descriptions or code examples in which you can find information about the ADO feature that performs the task.

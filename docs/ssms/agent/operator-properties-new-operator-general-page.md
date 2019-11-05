@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: c036d1c9-83d1-4a95-b67e-29d283b1a046
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Operator Properties - New Operator (General Page)

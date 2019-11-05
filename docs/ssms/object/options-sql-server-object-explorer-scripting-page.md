@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Options (SQL Server Object Explorer - Scripting Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

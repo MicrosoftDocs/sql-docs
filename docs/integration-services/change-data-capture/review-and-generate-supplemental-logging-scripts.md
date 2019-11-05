@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "scripts"
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Review and Generate Supplemental Logging Scripts
 

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ---
 # Suspend an Availability Database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,9 +94,9 @@ manager: jroth
   
 1.  Connect to the server instance that hosts the replica whose database you want to suspend. For more information, see [Prerequisites](#Prerequisites), earlier in this topic.  
   
-2.  Suspend the database by using the following [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)statement:  
+2.  Suspend the database by using the following [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) statement:  
   
-     ALTER DATABASE *database_name* SET HADR SUSPEND  
+     ALTER DATABASE *database_name* SET HADR SUSPEND;
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To suspend a database**  

@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "InsertRow method"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

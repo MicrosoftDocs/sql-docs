@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "indexes [Integration Services]"
   - "Rebuild Index task"
 ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Rebuild Index Task
 

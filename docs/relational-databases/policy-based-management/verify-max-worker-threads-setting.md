@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2d94adfd-3ba1-493a-b29a-b436f9d583df
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Verify Max Worker Threads Setting
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

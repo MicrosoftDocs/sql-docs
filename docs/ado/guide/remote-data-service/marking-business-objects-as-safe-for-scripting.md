@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Marking Business Objects as Safe for Scripting
 > [!IMPORTANT]

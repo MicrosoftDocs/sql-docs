@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT`
  Returns the integer value of the failover mode and is an **OUTPUT** parameter. *failover_mode_id* is a **tinyint** with a default of **0**. It returns **0** for immediate updating and **1** for queued updating.  
   
- [**@failover_mode=**] **'***failover_mode***'OUTPUT**  
+`[ @failover_mode = ] 'failover_mode' OUTPUT`
  Returns the mode in which data modifications are made at the Subscriber. *failover_mode* is a **nvarchar(10)** with a default of NULL. Is an **OUTPUT** parameter.  
   
 |Value|Description|  

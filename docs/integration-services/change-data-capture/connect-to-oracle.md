@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "connOra"
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Connect to Oracle
 

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Views Refresh Method Example (VB)
 The following code shows how to refresh the [Views](../../../ado/reference/adox-api/views-collection-adox.md) collection of a [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md). This is required before [View](../../../ado/reference/adox-api/view-object-adox.md) objects from the **Catalog** can be accessed.  

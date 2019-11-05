@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Enable or Disable a Plan Guide
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ manager: craigg
 3.  Right-click the plan guide you want to disable or enable and select either **Disable** or **Enable**.  
   
 4.  In either the **Disable Plan Guide** or **Enable Plan Guide** dialog box, verify that the chosen action was successful and then click **Close**.  
-  
+
 #### To disable or enable all plan guides in a database  
   
 1.  Click the plus sign to expand the database in which you want to disable or enable a plan guide, and then click the plus sign to expand the **Programmability** folder.  

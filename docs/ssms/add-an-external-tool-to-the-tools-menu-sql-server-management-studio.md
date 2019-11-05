@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Add an External Tool to the Tools Menu (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

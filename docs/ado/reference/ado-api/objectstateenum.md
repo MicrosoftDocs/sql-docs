@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ObjectStateEnum
 Specifies whether an object is open or closed, connecting to a data source, executing a command, or retrieving data.  

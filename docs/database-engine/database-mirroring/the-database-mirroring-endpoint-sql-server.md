@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # The Database Mirroring Endpoint (SQL Server)

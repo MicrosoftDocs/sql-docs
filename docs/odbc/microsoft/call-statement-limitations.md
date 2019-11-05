@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5802891f-27f6-48b3-aeeb-aaef400b318c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # CALL Statement Limitations
 (This limitation applies to the Microsoft Access driver only.)  

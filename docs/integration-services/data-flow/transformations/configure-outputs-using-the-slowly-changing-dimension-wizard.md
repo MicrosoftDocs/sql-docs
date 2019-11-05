@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "slowly changing dimensions"
   - "Slowly Changing Dimension Wizard"
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configure Outputs Using the Slowly Changing Dimension Wizard
 

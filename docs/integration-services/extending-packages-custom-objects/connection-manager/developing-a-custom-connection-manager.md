@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services packages, connection managers"
   - "custom connection managers [Integration Services]"
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Developing a Custom Connection Manager
 

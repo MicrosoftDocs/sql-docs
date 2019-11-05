@@ -1,5 +1,5 @@
 ---
-title: Use Python with revoscalepy to create a model - SQL Server Machine Learning
+title: Use Python with revoscalepy to create a model
 description: Write Python script using revoscalepy functions to create data science models that run remotely in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,10 +8,10 @@ ms.date: 10/25/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Use Python with revoscalepy to create a model that runs remotely on SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 The [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python library from Microsoft provides data science algorithms for data exploration, visualization, transformations, and analysis. This library has strategic importance in Python integration scenarios in SQL Server. On a multi-core server, **revoscalepy** functions can run in parallel. In a distributed architecture with a central server and client workstations (separate physical computers, all having the same **revoscalepy** library), you can write Python code that starts locally, but then shifts execution to a remote SQL Server instance where data resides.
 

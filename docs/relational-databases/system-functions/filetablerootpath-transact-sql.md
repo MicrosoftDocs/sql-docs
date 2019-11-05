@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +34,8 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  *FileTable_name*  
  The name of the FileTable. *FileTable_name* is of type **nvarchar**. This is an optional parameter. The default value is the current database. Specifying *schema_name* is also optional. You can pass NULL for *FileTable_name* to use the default parameter value  
   
- *@option*  
- An integer expression that defines how the server component of the path should be formatted. *@option* can have one of the following values:  
+ *\@option*  
+ An integer expression that defines how the server component of the path should be formatted. *\@option* can have one of the following values:  
   
 |Value|Description|  
 |-----------|-----------------|  

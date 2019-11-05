@@ -1,7 +1,7 @@
 ---
 title: "DROP WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -14,13 +14,26 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "DROP WORKLOAD GROUP statement"
-ms.assetid: 1cd68450-5b58-4106-a2bc-54197ced8616
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # DROP WORKLOAD GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+## Click a product!
+
+In the following row, click whichever product name you're interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> |||||
+> |---|---|---|---|
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />managed instance](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+
+&nbsp;
+
+## SQL Server and SQL Database managed instance
+
 
   Drops an existing user-defined Resource Governor workload group.  
   
@@ -53,10 +66,12 @@ DROP WORKLOAD GROUP group_name
   
 -   In a scenario in which you have issued the DROP WORKLOAD GROUP statement but decide that you do not want to explicitly stop sessions to apply the change, you can re-create the group by using the same name that it had before you issued the DROP statement, and then move the group to the original resource pool. To apply the changes, run the ALTER RESOURCE GOVERNOR RECONFIGURE statement.  
   
-## Permissions  
+## Permissions
+
  Requires CONTROL SERVER permission.  
   
-## Examples  
+## Examples
+
  The following example drops the workload group named `adhoc`.  
   
 ```  
@@ -75,4 +90,54 @@ GO
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
-  
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||
+> |---|---|---|
+> |[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)||[SQL Database<br />managed instance](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
+
+&nbsp;
+
+## SQL Data Warehouse (Preview)
+
+Drops a workload group.  Once the statement completes, the settings are in effect.
+
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+
+## Syntax
+
+```
+DROP WORKLOAD GROUP group_name  
+```
+
+## Arguments
+
+ *group_name*  
+ Is the name of an existing user-defined workload group.
+
+## Remarks
+
+A workload group cannot be dropped if classifiers exist for the workload group.  Drop the classifiers before the workload group is dropped.  If there are active requests using resources from the workload group being dropped, the drop workload statement is blocked behind them.
+
+## Examples
+
+Use the following code example to determine which classifiers need to be dropped before the workload group can be dropped.
+
+```sql
+SELECT c.name as classifier_name
+      ,'DROP WORKLOAD CLASSIFIER '+c.name as drop_command
+  FROM sys.workload_management_workload_classifiers c
+  JOIN sys.workload_management_workload_groups g
+    ON c.group_name = g.name
+  WHERE g.name = 'wgXYZ' --change the filter to the workload being dropped
+```
+
+## Permissions
+
+Requires CONTROL DATABASE permission
+
+## See also
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
+ 
+::: moniker-end

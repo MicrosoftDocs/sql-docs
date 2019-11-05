@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.set_environment_variable_protection (SSISDB Database)
 

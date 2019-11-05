@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Selecting and Configuring Objects to Test (SybaseToSQL)
 At this step you select objects to test, and configure settings for comparing procedures' and functions' output parameters, as well as the return values of functions.  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Rename a Database Diagram (Visual Database Tools)

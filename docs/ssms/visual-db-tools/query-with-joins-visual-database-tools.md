@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Query with Joins (Visual Database Tools)

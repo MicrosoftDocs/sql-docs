@@ -1,7 +1,7 @@
 ---
-title: "Configuring How java.sql.Time Values are Sent to the Server | Microsoft Docs"
+title: "Configuring how java.sql.Time values are sent to the server | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,9 +10,8 @@ ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
-# Configuring How java.sql.Time Values are Sent to the Server
+# Configuring how java.sql.Time values are sent to the server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   If you use a java.sql.Time object or the java.sql.Types.TIME JDBC type to set a parameter, you can configure how the java.sql.Time value is sent to the server; either as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **time** type or as a **datetime** type.  
@@ -56,7 +55,7 @@ SendTimeAsDatetime must be false for encrypted columns as encrypted columns don'
   public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 ```
   
-## See Also  
- [Understanding the JDBC Driver Data Types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+## See also
+ [Understanding the JDBC driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

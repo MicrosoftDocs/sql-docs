@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Validation Statuses (Master Data Services)
 

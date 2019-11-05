@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Record (ADO for Visual C++ Syntax)
 ## Methods  

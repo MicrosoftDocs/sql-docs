@@ -9,7 +9,6 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: craigg
 helpviewer_keywords: 
   - "templates [SQL Server], SQL Server Management Studio"
   - "source controls [SQL Server Management Studio], tutorials"
@@ -21,6 +20,7 @@ helpviewer_keywords:
 ms.custom: ""
 ms.date: 03/13/2018
 ---
+
 # Use templates in SQL Server Management Studio
 
 This tutorial introduces you to the prebuilt Transact-SQL (T-SQL) templates that are available in SQL Server Management Studio (SSMS). In this article, you learn how to:
@@ -29,8 +29,9 @@ This tutorial introduces you to the prebuilt Transact-SQL (T-SQL) templates that
 
 To complete this tutorial, you need SQL Server Management Studio and access to a SQL server.
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+
+* Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
 ## Use Template Browser
 
@@ -103,15 +104,17 @@ You can also create a new template in Template Browser. The following steps show
 
 5. Right-click the template you created, and then select **Edit**. The New Query Window opens.
 
-6. Enter the T-SQL text that you want to save. 
+6. Enter the T-SQL text that you want to save.
 
 7. In the **File** menu, select **Save**.
 
-8. Close the existing query window, and then open your new custom template. 
+8. Close the existing query window, and then open your new custom template.
 
 ## Next steps
 
-The next article provides additional tips and tricks for using SQL Server Management Studio. 
+The best way to get acquainted with SSMS is through hands-on practice. These *tutorial* and *how-to* articles help you with various features available within SSMS.  These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
-> [!div class="nextstepaction"]
-> [Additional tips and tricks for using SSMS](../tutorials/ssms-tricks.md)
+* [Connect to and query an instance](../tutorials/connect-query-sql-server.md)
+* [Scripting](../tutorials/scripting-ssms.md)
+* [SSMS Configuration](../tutorials/ssms-configuration.md)
+* [Additional Tips and Tricks for using SSMS](../tutorials/ssms-tricks.md)

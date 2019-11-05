@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Attributes (Master Data Services)
 

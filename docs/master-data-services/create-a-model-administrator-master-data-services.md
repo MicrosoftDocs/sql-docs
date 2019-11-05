@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Model Administrator (Master Data Services)
 

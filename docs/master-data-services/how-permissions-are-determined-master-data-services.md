@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # How Permissions Are Determined (Master Data Services)
 

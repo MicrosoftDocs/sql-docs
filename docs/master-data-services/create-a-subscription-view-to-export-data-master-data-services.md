@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Subscription View to Export Data (Master Data Services)
 

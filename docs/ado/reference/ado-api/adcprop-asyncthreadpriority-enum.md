@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ADCPROP_ASYNCTHREADPRIORITY_ENUM
 For an RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object, specifies the execution priority of the asynchronous thread that retrieves data.  

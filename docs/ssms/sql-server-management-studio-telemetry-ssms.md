@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 
 # Local audit for SSMS usage and diagnostic data collection
@@ -60,4 +59,4 @@ To opt in or out of usage data collection for SSMS:
 ## See also
 
 - [Configure usage and diagnostic data collection for SQL Server](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
-- [Local audit for SQL Server usage and diagnostic data collection](http://msdn.microsoft.com/library/mt743085.aspx)
+- [Local audit for SQL Server usage and diagnostic data collection](https://msdn.microsoft.com/library/mt743085.aspx)

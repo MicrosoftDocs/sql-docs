@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Print Code and Results

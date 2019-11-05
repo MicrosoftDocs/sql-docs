@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Change the Target Recovery Time of a Database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ manager: craigg
 3.  In the **Database Properties** dialog box, click the **Options** page.  
   
 4.  In the **Recovery** panel, in the **Target Recovery Time (Seconds)** field, specify the number of seconds that you want as the upper-bound of the recovery time for this database.  
-  
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To change the target recovery time**  
   

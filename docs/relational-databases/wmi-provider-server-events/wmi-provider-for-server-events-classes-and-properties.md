@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # WMI Provider for Server Events Classes and Properties
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

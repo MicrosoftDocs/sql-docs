@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Dimensions Collection (ADO MD)
 Contains the [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) objects that make up a cube.  

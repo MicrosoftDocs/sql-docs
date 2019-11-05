@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: add3ba14-10b1-4723-b7c0-3e83689e9fdd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Dropping a SQL Server Index
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

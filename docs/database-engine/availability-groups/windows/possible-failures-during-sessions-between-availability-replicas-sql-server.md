@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 
 ---
 # "Determine possible reason for connectivity failures between availability replicas
@@ -72,7 +71,7 @@ Physical, operating system, or [!INCLUDE[ssNoVersion](../../../includes/ssnovers
   
 -   Network errors such as TCP link time-outs, dropped or corrupted packets, or packets that are in an incorrect order.  
   
--   A hanging operating system, server, or database state.  
+-   An operating system, server, or database that is not responding.  
   
 -   A Windows server timing out.  
   

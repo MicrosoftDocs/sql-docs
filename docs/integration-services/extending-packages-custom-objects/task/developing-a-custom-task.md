@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "tasks [Integration Services], custom"
   - "TaskHost object"
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Developing a Custom Task
 

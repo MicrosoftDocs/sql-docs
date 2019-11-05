@@ -33,7 +33,7 @@ manager: craigg
   
 3.  In the **Facet** list, select **Multipart Name**.  
   
-4.  In the **Expression** area, in the **Field** box, select **@Name**; in the **Operator** box, select **Like**; and in the **Value** box, type **'fintbl%'** to force all table names to start with the letters **fintbl**.  
+4.  In the **Expression** area, in the **Field** box, select **\@Name**; in the **Operator** box, select **Like**; and in the **Value** box, type **'fintbl%'** to force all table names to start with the letters **fintbl**.  
   
 5.  On the **Description** page, type **Finance table names must begin with fintbl**, and then click **OK** to create the condition.  
   
@@ -51,7 +51,7 @@ manager: craigg
   
 6.  In the **Create New Condition** dialog box, in the **Name** box, type **Finance Database**.  
   
-7.  In the **Expression** box, complete the expression to include **@Name = 'Finance'**, and then click **OK** to close the condition page.  
+7.  In the **Expression** box, complete the expression to include **\@Name = 'Finance'**, and then click **OK** to close the condition page.  
   
     > [!NOTE]  
     >  You might have to tab out of the **Value** box to enable the **OK** button.  

@@ -4,15 +4,14 @@ titleSuffix: SQL Server Language Extensions
 description: This tutorial shows you how to use SQL Server Language Extensions and run Java code that search a string with regular expressions.
 author: dphansen
 ms.author: davidph 
-manager: cgronlun
-ms.date: 05/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Tutorial: Search for a string using regular expressions (regex) in Java
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This tutorial shows you how to use [SQL Server Language Extensions](../language-extensions-overview.md) and create a Java class that receives two columns (ID and text) from SQL Server and a regular expression as an input parameter. The class returns two columns back to SQL Server (ID and text).
 
@@ -175,7 +174,7 @@ If you are not using a Java IDE, you can manually create a `.jar` file. For more
 
 ## Create external language
 
-In CTP 3.0, you need to create an external language in the database. The external language is a database scoped object, which means that external languages like Java need to be created for each database you want to use it in.
+You need to create an external language in the database. The external language is a database scoped object, which means that external languages like Java need to be created for each database you want to use it in.
 
 ### Create external language on Windows
 
@@ -183,29 +182,29 @@ If you are using Windows, follow the steps below to create an external language 
 
 1. Create a .zip file containing the extension.
 
-    As part of the SQL Server setup on Windows, the Java extension **.dll** file is installed in this location: `[SQL Server install path]\MSSQL\Binn\javaextension.dll`.
-
-    Compress the `javaextension.dll` into a **.zip** file. For example: `javaextension.zip`.
+    As part of the SQL Server setup on Windows, the Java extension **.zip** file is installed in this location: `[SQL Server install path]\MSSQL\Binn\java-lang-extension.zip`. This zip file contains the **javaextension.dll**.
 
 2. Create an external language Java from the .zip file:
 
     ```sql
     CREATE EXTERNAL LANGUAGE Java
     FROM
-    (CONTENT = N'[Path to .zip file]\javaextension.zip', FILE_NAME = 'javaextension.dll')
+    (CONTENT = N'[SQL Server install path]\MSSQL\Binn\java-lang-extension.zip', FILE_NAME = 'javaextension.dll',
+    ENVIRONMENT_VARIABLES = N'{"JRE_HOME":"<path to JRE>"}' );
     GO
     ```
 
 ### Create external language on Linux
 
-On Linux, you don't need to manually create a **.tar.gz** file. As part of setup, there is already generated a **.tar.gz** file under the following path:
-`/opt/mssql/lib/extensibility/java-lang-extension.tar.gz`.
+As part of setup, the extension **.tar.gz** file is saved under the following path:
+`/opt/mssql-extensibility/lib/java-lang-extension.tar.gz`.
 
 To create an external language Java, run the following T-SQL statement on Linux:
 
 ```sql
 CREATE EXTERNAL LANGUAGE Java
-FROM (CONTENT = N'/opt/mssql/lib/extensibility/java-lang-extension.tar.gz', file_name = 'javaextension.so');
+FROM (CONTENT = N'/opt/mssql-extensibility/lib/java-lang-extension.tar.gz', file_name = 'javaextension.so',
+ENVIRONMENT_VARIABLES = N'{"JRE_HOME":"<path to JRE>"}' );
 GO
 ```
 
@@ -221,7 +220,7 @@ Use [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/cr
 
 In this sample, you will create two external libraries. One for the SDK and one for the RegEx Java code.
 
-1. The SDK jar file **mssql-java-lang-extension.jar** is installed as part of SQL Server 2019 CTP 3.0 preview on both Windows and Linux.
+1. The SDK jar file **mssql-java-lang-extension.jar** is installed as part of SQL Server 2019 on both Windows and Linux.
 
     + Default installation path on Windows: **[instance installation home directory]\MSSQL\Binn\mssql-java-lang-extension.jar**
 

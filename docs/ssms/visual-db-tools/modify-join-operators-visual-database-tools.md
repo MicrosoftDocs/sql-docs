@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Modify Join Operators (Visual Database Tools)

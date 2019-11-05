@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: a9fd6496-c72e-4cc6-b46a-4aa9f13f90ff
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getTimestamp Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

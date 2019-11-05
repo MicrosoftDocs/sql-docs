@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # Example: Setting Up Database Mirroring Using Certificates (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -257,7 +256,7 @@ manager: jroth
     ```  
   
     > [!NOTE]  
-    >  If you intend to run in high-safety mode with automatic failover, leave transaction safety set to FULL (the default setting) and add the witness as soon as possible after executing the second SET PARTNER **'***partner_server***'** statement. Note that the witness must first be configured for outbound and inbound connections.  
+    >  If you intend to run in high-safety mode with automatic failover, leave transaction safety set to FULL (the default setting) and add the witness as soon as possible after executing the second SET PARTNER **'**_partner_server_**'** statement. Note that the witness must first be configured for outbound and inbound connections.  
   
  [&#91;Top of Example&#93;](#ExampleH2)  
   

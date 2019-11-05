@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Save Showplan XML events separately (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ manager: craigg
 10. Select **All XML Showplan batches in a single file** to save all **Showplan XML** events in a single XML file. Or select **Each XML Showplan batch in a distinct file** to create a new XML file for each **Showplan XML** event.  
   
 11. To view the **Showplan XML** event file in SQL Server Management Studio, on the **File** menu, point to **Open**, and select **File**. Browse to the directory where you saved the **Showplan XML** event file or files to select one and open it. **Showplan XML** event files have a .SQLPlan file extension.  
-  
+
 ## See also  
  [Analyze queries with Showplan results in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   

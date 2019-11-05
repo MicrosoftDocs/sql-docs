@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 26e244e8-e82d-4664-a445-1226230ee1c5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQRT (Transact-SQL)

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # SCM Services - Set an Instance to Start Automatically
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ manager: jroth
   
 3.  In the details pane, right-click the name of the instance you want to start automatically, and then click **Properties**.  
   
-4.  In the **SQL Server \<***instancename***> Properties** dialog box, set **Start Mode** to **Automatic**.  
+4.  In the **SQL Server \<**_instancename_**> Properties** dialog box, set **Start Mode** to **Automatic**.  
   
 5.  Click **OK**, and then close [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LOG (Transact-SQL)

@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.providesourcequery.f1"
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Provide a Source Query (SQL Server Import and Export Wizard)
 

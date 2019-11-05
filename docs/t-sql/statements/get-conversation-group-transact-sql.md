@@ -24,10 +24,9 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # GET CONVERSATION GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Returns the conversation group identifier for the next message to be received, and locks the conversation group for the conversation that contains the message. The conversation group identifier can be used to retrieve conversation state information before retrieving the message itself.  
   
@@ -51,7 +50,7 @@ manager: craigg
  WAITFOR  
  Specifies that the GET CONVERSATION GROUP statement waits for a message to arrive on the queue if no messages are currently present.  
   
- *@conversation_group_id*  
+ *\@conversation_group_id*  
  Is a variable used to store the conversation group ID returned by the GET CONVERSATION GROUP statement. The variable must be of type **uniqueidentifier**. If there are no conversation groups available, the variable is set to NULL.  
   
  FROM  
@@ -67,7 +66,7 @@ manager: craigg
  Is the name of the queue to get the conversation group from.  
   
  TIMEOUT *timeout*  
- Specifies the length of time, in milliseconds, that Service Broker waits for a message to arrive on the queue. This clause may only be used with the WAITFOR clause. If a statement that uses WAITFOR does not include this clause or the *timeout* is -1, the wait time is unlimited. If the timeout expires, GET CONVERSATION GROUP sets the *@conversation_group_id* variable to NULL.  
+ Specifies the length of time, in milliseconds, that Service Broker waits for a message to arrive on the queue. This clause may only be used with the WAITFOR clause. If a statement that uses WAITFOR does not include this clause or the *timeout* is -1, the wait time is unlimited. If the timeout expires, GET CONVERSATION GROUP sets the *\@conversation_group_id* variable to NULL.  
   
 ## Remarks  
   

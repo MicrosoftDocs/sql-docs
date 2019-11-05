@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "deployment utility [Integration Services]"
   - "deploying packages [Integration Services], configurations"
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Deploy Packages with SSIS
 

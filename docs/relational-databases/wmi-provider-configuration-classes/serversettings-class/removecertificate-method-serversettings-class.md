@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9ffdbc39-93f5-48fb-859a-86a3ad545827
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # RemoveCertificate Method (ServerSettings Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

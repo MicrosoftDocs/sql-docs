@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLPrepare Function
 **Conformance**  

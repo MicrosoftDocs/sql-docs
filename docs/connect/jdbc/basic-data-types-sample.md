@@ -1,7 +1,7 @@
 ---
-title: "Basic Data Types Sample | Microsoft Docs"
+title: "Basic data types sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,10 +10,9 @@ ms.topic: conceptual
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
-# Basic Data Types Sample
+# Basic data types sample
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -153,6 +152,6 @@ public class BasicDataTypes {
 
 ```
 
-## See Also
+## See also
 
-[Working with Data Types &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)
+[Working with data types &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)

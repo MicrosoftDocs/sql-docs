@@ -1,7 +1,7 @@
 ---
-title: "JDBC Driver Support for High Availability, Disaster Recovery | Microsoft Docs"
+title: "JDBC driver support for High Availability, disaster recovery | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/04/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,9 +10,8 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
-# JDBC Driver Support for High Availability, Disaster Recovery
+# JDBC driver support for High Availability, disaster recovery
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   This topic discusses [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] support for high-availability, disaster recovery -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. For more information about [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], see [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Books Online.  
@@ -43,7 +42,7 @@ Please note that:
   
  
   
-## Connecting With MultiSubnetFailover  
+## Connecting With multiSubnetFailover  
  Always specify **multiSubnetFailover=true** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] availability group or a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Failover Cluster Instance. **multiSubnetFailover** enables faster failover for all Availability Groups and failover cluster instances in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and will significantly reduce failover time for single and multi-subnet AlwaysOn topologies. During a multi-subnet failover, the client will attempt connections in parallel. During a subnet failover, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will aggressively retry the TCP connection.  
   
  The **multiSubnetFailover** connection property indicates that the application is being deployed in an availability group or Failover Cluster Instance and that the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will try to connect to the database on the primary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance by trying to connect to all the IP addresses. When **MultiSubnetFailover=true** is specified for a connection, the client retries TCP connection attempts faster than the operating system's default TCP retransmit intervals. This enables faster reconnection after failover of either an AlwaysOn Availability Group or an AlwaysOn Failover Cluster Instance, and is applicable to both single- and multi-subnet Availability Groups and Failover Cluster Instances.  
@@ -78,7 +77,7 @@ Please note that:
   
  A connection will fail if a primary replica is configured to reject read-only workloads and the connection string contains **ApplicationIntent=ReadOnly**.  
   
-## Upgrading to Use Multi-Subnet Clusters from Database Mirroring  
+## Upgrading to Use multi-subnet clusters from database mirroring  
  If you upgrade a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] application that currently uses database mirroring to a multi-subnet scenario, you should remove the **failoverPartner** connection property and replace it with **multiSubnetFailover** set to **true** and replace the server name in the connection string with a availability group listener. If a connection string uses **failoverPartner** and **multiSubnetFailover=true**, the driver will generate an error. However, if a connection string uses **failoverPartner** and **multiSubnetFailover=false** (or **ApplicationIntent=ReadWrite**), the application will use database mirroring.  
   
  The driver will return an error if database mirroring is used on the primary database in the AG, and if **multiSubnetFailover=true** is used in the connection string that connects to a primary database instead of to an availability group listener.  
@@ -87,7 +86,7 @@ Please note that:
 [!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
 
 
-## New Methods Supporting multiSubnetFailover and applicationIntent  
+## New Methods supporting multiSubnetFailover and applicationIntent  
  The following methods give you programmatic access to the **multiSubnetFailover**, **applicationIntent** and **transparentNetworkIPResolution** connection string keywords:  
   
 -   [SQLServerDataSource.getApplicationIntent](../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)  
@@ -106,11 +105,11 @@ Please note that:
   
  The **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **setApplicationIntent**, **getTransparentNetworkIPResolution** and **setTransparentNetworkIPResolution** methods are also added to [SQLServerDataSource Class](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource Class](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), and [SQLServerXADataSource Class](../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
   
-## SSL Certificate Validation  
- An availability group consists of multiple physical servers. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] added support for **Subject Alternate Name** in SSL certificates so multiple hosts can be associated with the same certificate. For more information on SSL, see [Understanding SSL Support](../../connect/jdbc/understanding-ssl-support.md).  
+## SSL certificate validation  
+ An availability group consists of multiple physical servers. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] added support for **Subject Alternate Name** in SSL certificates so multiple hosts can be associated with the same certificate. For more information on SSL, see [Understanding SSL support](../../connect/jdbc/understanding-ssl-support.md).  
   
-## See Also  
- [Connecting to SQL Server with the JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
- [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md)  
+## See also  
+ [Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
+ [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md)  
   
   

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Import Statuses (Master Data Services)
 

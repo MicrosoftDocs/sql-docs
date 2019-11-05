@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 6dea35a0-56a8-412c-8cd3-6539527ff597
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getIdentifierQuoteString Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

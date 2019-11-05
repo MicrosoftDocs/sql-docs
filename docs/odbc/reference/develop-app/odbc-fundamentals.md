@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: bdaa40d5-1c63-4aee-94fb-7b2edd0bdc47
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC Fundamentals
 This section contains the following topics.  

@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],preparing query"
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Prepare to Query for the Change Data
 

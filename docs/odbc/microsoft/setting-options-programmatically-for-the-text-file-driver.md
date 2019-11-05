@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Setting Options Programmatically for the Text File Driver
 

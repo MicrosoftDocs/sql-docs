@@ -14,7 +14,6 @@ f1_keywords:
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Post-Save Notifications Dialog Box (Visual Database Tools)

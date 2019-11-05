@@ -19,19 +19,17 @@ helpviewer_keywords:
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns the original seed value (returned as **numeric**(**@@**MAXPRECISION,0)) specified when creating an identity column in a table or a view. Changing the current value of an identity column by using DBCC CHECKIDENT doesn't change the value returned by this function.  
+  Returns the original seed value specified when creating an identity column in a table or a view. Changing the current value of an identity column by using DBCC CHECKIDENT doesn't change the value returned by this function.  
   
  ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 IDENT_SEED ( 'table_or_view' )  
 ```  
   
@@ -40,7 +38,7 @@ IDENT_SEED ( 'table_or_view' )
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) that specifies the table or view to check for an identity seed value. *table_or_view* can be a character string constant enclosed in quotation marks, a variable, a function, or a column name. *table_or_view* is **char**, **nchar**, **varchar**, or **nvarchar**.  
   
 ## Return Types  
- **numeric**  
+**numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## Exceptions  
  Returns NULL on error or if a caller doesn't have permission to view the object.  
@@ -52,7 +50,7 @@ IDENT_SEED ( 'table_or_view' )
 ### A. Returning the seed value from a specified table  
  The following example returns the seed value for the `Person.Address` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT IDENT_SEED('Person.Address') AS Identity_Seed;  
@@ -62,7 +60,7 @@ GO
 ### B. Returning the seed value from multiple tables  
  The following example returns the tables in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database with an identity column with a seed value.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TABLE_SCHEMA, TABLE_NAME,   

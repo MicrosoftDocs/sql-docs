@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 1ae81034-5de3-4f4a-b3f2-7d9d198a73af
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getUserName Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

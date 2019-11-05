@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "errors [Integration Services], troubleshooting"
   - "packages [Integration Services], troubleshooting"
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Troubleshooting Tools for Package Execution
 

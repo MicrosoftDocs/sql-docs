@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 70bbdde0-75f7-4169-88c5-dbbe2c4bcd03
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setSQLXML Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

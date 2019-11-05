@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "TaskResult property"
   - "SSIS Script task, status information"
 ms.assetid: ac06805b-c2db-44bd-af5c-5a0debe36dd7
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Returning Results from the Script Task
 

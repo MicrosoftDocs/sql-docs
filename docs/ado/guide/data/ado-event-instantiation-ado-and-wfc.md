@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ADO Event Instantiation: ADO and WFC
 ADO for Windows Foundation Classes (ADO/WFC) builds on the ADO event model and presents a simplified application programming interface. In general, ADO/WFC intercepts ADO events, consolidates the event parameters into a single event class, and then calls your event handler.  
@@ -35,7 +34,7 @@ ADO for Windows Foundation Classes (ADO/WFC) builds on the ADO event model and p
   
      The first argument of the **ConnectionEventHandler** constructor is a reference to the class that contains the event handler named in the second argument.  
   
-3.  Add your event handler to a list of handlers designated to process a particular type of event. Use the method with a name such as **addOn***EventName*(*handler*).  
+3.  Add your event handler to a list of handlers designated to process a particular type of event. Use the method with a name such as **addOn**_EventName_(*handler*).  
   
 4.  ADO/WFC internally implements all the ADO event handlers. Therefore, an event caused by a **Connection** or **Recordset** operation is intercepted by an ADO/WFC event handler.  
   
@@ -53,7 +52,7 @@ ADO for Windows Foundation Classes (ADO/WFC) builds on the ADO event model and p
   
 6.  Return from your event handler to the ADO/WFC handler for the ADO event. ADO/WFC copies pertinent ADO/WFC event data members back to the ADO event parameters, and then the ADO event handler returns.  
   
-7.  When you are finished processing, remove your handler from the list of ADO/WFC event handlers. Use the method with a name such as **removeOn***EventName*(*handler*).  
+7.  When you are finished processing, remove your handler from the list of ADO/WFC event handlers. Use the method with a name such as **removeOn**_EventName_(*handler*).  
   
 ## See Also  
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)   

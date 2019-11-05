@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "user interface [Integration Services]"
   - "SSIS custom tasks, user interface"
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Developing a User Interface for a Custom Task
 

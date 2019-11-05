@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Access WMI Provider for Configuration Management using VBScript
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ manager: craigg
 5.  Save the file.  
   
 6.  Run the script by typing **cscript test.vbs** at the command prompt.  
-  
+
 ## Example  
   
 ```  

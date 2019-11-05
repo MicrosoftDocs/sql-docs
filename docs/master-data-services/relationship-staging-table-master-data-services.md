@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Relationship Staging Table (Master Data Services)
 

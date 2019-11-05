@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # Server Properties - Misc Server Settings Page
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

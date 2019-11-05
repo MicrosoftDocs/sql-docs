@@ -14,9 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer SQL Server Objects task [Integration Services]"
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Transfer SQL Server Objects Task
 

@@ -21,7 +21,6 @@ ms.assetid: c34b8625-e53c-4281-ace6-d46230d5cb84
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_index_columns (Transact-SQL)

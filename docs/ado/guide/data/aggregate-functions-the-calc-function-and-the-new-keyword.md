@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Aggregate Functions, the CALC Function, and the NEW Keyword
 Data shaping supports the following functions. The name assigned to the chapter containing the column to be operated on is the *chapter-alias*.  

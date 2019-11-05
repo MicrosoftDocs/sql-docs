@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "converting string data"
   - "string comparisons"
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Comparing String Data
 

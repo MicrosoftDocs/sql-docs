@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "TRIM function"
   - "trailing blanks"
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # TRIM (SSIS Expression)
 

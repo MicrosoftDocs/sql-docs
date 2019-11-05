@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Broker:Conversation Group Event Class

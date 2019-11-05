@@ -1,7 +1,7 @@
 ---
-title: "JDBC 4.1 Compliance for the JDBC Driver | Microsoft Docs"
+title: "JDBC 4.1 compliance for the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,9 +10,8 @@ ms.topic: conceptual
 ms.assetid: f087fd40-8451-478e-b465-43112c711515
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
-# JDBC 4.1 Compliance for the JDBC Driver
+# JDBC 4.1 compliance for the JDBC driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
     

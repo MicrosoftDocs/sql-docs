@@ -9,7 +9,6 @@ ms.technology:
 ms.prod_service: "database-engine"
 ms.author: mikeray
 author: MikeRayMSFT
-manager: craigg
 ---
 # SQL Server development partners
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

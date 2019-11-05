@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 59c5fa23-bc1a-4142-af17-70e275f0b833
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setPortNumber Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

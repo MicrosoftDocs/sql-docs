@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ A variable of type **varbinary** containing data encrypted with the certificate.
 The password used to encrypt the private key of the certificate. *cert_password* must have a Unicode data format.  
   
  @cert_password  
-A variable of type **nchar** or **nvarchar** containing the password used to encrypt the private key of the certificate. *@cert_password* must have a Unicode data format.  
+A variable of type **nchar** or **nvarchar** containing the password used to encrypt the private key of the certificate. *\@cert_password* must have a Unicode data format.  
 
 ## Return Types  
 **varbinary**, with a maximum size of 8,000 bytes.  

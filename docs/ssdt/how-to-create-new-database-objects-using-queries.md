@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # How to: Create New Database Objects Using Queries
 If you prefer to use scripts to create or edit views, stored procedures, functions, triggers, or user-defined-types, you can use the Transact\-SQL Editor. The Transact\-SQL Editor provides IntelliSense and other language support. For more information, see [Use Transact-SQL Editor to Edit and Execute Scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  

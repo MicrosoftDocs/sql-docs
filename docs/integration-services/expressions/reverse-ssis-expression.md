@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "REVERSE function"
   - "reverse character expressions"
 ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # REVERSE (SSIS Expression)
 

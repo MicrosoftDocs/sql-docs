@@ -8,10 +8,9 @@ ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
-author: "haoqian"
+author: "HaoQian-MS"
 ms.author: "haoqian"
 ms.reviewer: maghan
-manager: craigg
 ---
 # Walkthrough: Set up Integration Services (SSIS) Scale Out
 
@@ -155,7 +154,7 @@ On the Scale Out Master computer, open the port specified during the Scale Out M
 
 If you didn't set the startup type of the services to **Automatic** during installation, start the following services:
 
--   SQL Server Integration Services Scale Out Master 14.0 (SSISScaleOutMaster140S
+-   SQL Server Integration Services Scale Out Master 14.0 (SSISScaleOutMaster140)
 
 -   SQL Server Integration Services Scale Out Worker 14.0 (SSISScaleOutWorker140)
 

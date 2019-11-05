@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 author: VanMSFT
-manager: jroth
 ---
 # sp_dropanonymousagent (Transact-SQL)
 

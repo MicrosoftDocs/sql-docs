@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetTypeInfo Function
 **Conformance**  

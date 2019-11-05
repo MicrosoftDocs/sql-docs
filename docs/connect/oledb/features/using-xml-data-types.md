@@ -30,7 +30,6 @@ helpviewer_keywords:
   - "COLUMNS rowset"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Using XML Data Types
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

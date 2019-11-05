@@ -3,14 +3,13 @@ title: "Quickstart: Connect and query PostgreSQL"
 titleSuffix: Azure Data Studio
 description: This quickstart shows how to use Azure Data Studio to connect to PostgreSQL and run a query
 ms.custom: "seodec18"
-ms.date: "03/19/2019"
+ms.date: "09/18/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
 ms.topic: "quickstart"
 author: "rachel-msft"
 ms.author: "raagyema"
-manager: jroth
 ---
 
 # Quickstart: Connect and query PostgreSQL using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -18,7 +17,7 @@ This quickstart shows how to use [!INCLUDE[name-sos](../includes/name-sos-short.
 
 ## Prerequisites
 
-To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], the PostgreSQL extension for [!INCLUDE[name-sos](../includes/name-sos-short.md), and access to a PostgreSQL server.
+To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], the PostgreSQL extension for [!INCLUDE[name-sos](../includes/name-sos-short.md)], and access to a PostgreSQL server.
 
 - [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 - [Install the PostgreSQL extension for Azure Data Studio](postgres-extension.md).

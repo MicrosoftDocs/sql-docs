@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetConnectAttrForDbcInfo Function
 **Conformance**  

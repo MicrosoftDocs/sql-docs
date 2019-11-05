@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC Driver for Oracle User&#39;s Guide
 > [!IMPORTANT]  

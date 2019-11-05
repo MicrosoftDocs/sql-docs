@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0025687e-e20d-4c36-8242-b9ab56e50706
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Dimensions Collection Properties, Methods, and Events
 ## Properties  

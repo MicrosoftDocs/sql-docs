@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Create a Domain
 

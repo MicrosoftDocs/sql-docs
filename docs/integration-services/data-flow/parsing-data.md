@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "parsing [Integration Services]"
   - "data parsing [Integration Services]"
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Parsing Data
 

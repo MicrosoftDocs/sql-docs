@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: e61e830d-9fcd-45e7-b7b4-93a42155dd56
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # Project-Oriented Offline Database Development
 This section describes features provided by SQL Server Data Tools (SSDT) for authoring, building, debugging and publishing a database project.  

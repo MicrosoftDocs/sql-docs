@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 4e19f582-ef8f-40f7-8ad1-4f08591cdd1a
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # Static Aggregate Geometry Methods
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

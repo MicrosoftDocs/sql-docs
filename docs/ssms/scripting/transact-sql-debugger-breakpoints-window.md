@@ -37,7 +37,7 @@ Displays the name of the breakpoint. Breakpoint names are provided by the debugg
 Displays **(no condition)**. The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger doesn't support setting breakpoint conditions.
 
 **Hit Count**  
-Displays**breaks always**.
+Displays **breaks always**.
 
 You can add and remove the following columns by selecting them on the **Columns** list.  
 

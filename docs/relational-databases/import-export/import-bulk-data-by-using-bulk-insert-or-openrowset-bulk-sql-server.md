@@ -1,7 +1,6 @@
 ---
 title: "Use BULK INSERT or OPENROWSET(BULK...) to import data to SQL Server"
 ms.prod: sql
-ms.custom: "seo-lt-2019"​
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: data-movement
@@ -25,6 +24,7 @@ ms.reviewer: ""
 ms.custom: ""
 ms.date: "09/25/2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # Use BULK INSERT or OPENROWSET(BULK...) to import data to SQL Server
 

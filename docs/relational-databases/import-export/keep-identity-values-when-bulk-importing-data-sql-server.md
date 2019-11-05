@@ -1,6 +1,5 @@
 ---
 title: "Keep identity values when bulk importing data"
-ms.custom: "seo-lt-2019"​
 ms.date: "09/21/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -15,6 +14,7 @@ ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # Keep identity values when bulk importing data (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

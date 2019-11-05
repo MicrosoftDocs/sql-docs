@@ -1,7 +1,6 @@
 ---
 title: "Create an SSIS migration assessment with the Data Migration Assistant"
 description: Learn how to use Data Migration Assistant to assess an on-premises SQL Server Integration Service (SSIS) before migrating to Azure SQL Database or Azure SQL Database managed instance
-ms.custom: "seo-lt-2019"​
 ms.date: "08/23/2019"
 ms.prod: sql
 ms.prod_service: "dma"
@@ -14,6 +13,7 @@ helpviewer_keywords:
 ms.assetid: ""
 author: chugugrace
 ms.author: chugu
+ms.custom: "seo-lt-2019"
 ---
 
 # Perform a SQL Server Integration Service migration assessment with Data Migration Assistant

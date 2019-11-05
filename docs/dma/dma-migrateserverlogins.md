@@ -1,7 +1,6 @@
 ---
 title: "Migrate SQL Server logins with Data Migration Assistant"
 description: Learn how to migrate SQL Server logins with Data Migration Assistant
-ms.custom: "seo-lt-2019"​
 ms.date: "10/22/2019"
 ms.prod: sql
 ms.prod_service: "dma"
@@ -14,6 +13,7 @@ helpviewer_keywords:
 ms.assetid: ""
 author: HJToland3
 ms.author: jtoland
+ms.custom: "seo-lt-2019"
 ---
 
 # Migrate SQL Server logins with Data Migration Assistant

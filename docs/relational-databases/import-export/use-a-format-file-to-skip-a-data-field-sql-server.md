@@ -1,6 +1,5 @@
 ---
 title: "Use a format file to skip a data field"
-ms.custom: "seo-lt-2019"​
 ms.date: "09/19/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -14,6 +13,7 @@ ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # Use a format file to skip a data field (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,6 +1,5 @@
 ---
 title: "Import & export data from SQL Server & Azure SQL Database"
-ms.custom: "seo-lt-2019"​
 ms.date: "10/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -10,6 +9,7 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # Import and export data from SQL Server and Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

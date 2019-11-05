@@ -1,5 +1,5 @@
 ---
-title: "WideWorldImporters generate data - SQL sample database | Microsoft Docs"
+title: "WideWorldImporters generate data - SQL Samples"
 ms.custom: ""
 ms.date: "04/04/2018"
 ms.reviewer: ""

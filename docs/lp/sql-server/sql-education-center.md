@@ -3,13 +3,13 @@ layout: HubPage
 hide_bc: true
 experimental: true
 experiment_id: "81ba5f65-59fb-4d"
-title: Microsoft Azure Documentation
-description: Learn how to build and manage powerful applications using Microsoft Azure cloud services. Get documentation, example code, tutorials, and more.
+title: SQL Server Education Center
+description: A summary of resources you can use to learn SQL Server abd Azure SQL Database.  From quickstars and tutorials, to Microsoft Learn and LinkedIn Learning.
 ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 12/15/2018
+ms.date: 11/04/2019
 featureFlags:
 - clicktale
 ---

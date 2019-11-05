@@ -52,8 +52,8 @@ manager: craigg
  [Upgrade Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Upgrade Master Data Services](upgrade-master-data-services.md)   
- [SQL Server 2005 Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=197134)   
- [SQL Server 2008 R2 Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=197135)   
+ [SQL Server 2005 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=23864)   
+ [SQL Server 2008 R2 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=15289)   
  [Backward Compatibility](../../../2014/getting-started/backward-compatibility.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Database Requirements (Master Data Services) | Microsoft Docs"
+title: Database Requirements
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

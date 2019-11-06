@@ -1,5 +1,5 @@
 ---
-title: "Learn SQL Server Master Data Services | Microsoft Docs"
+title: Learn SQL Server Master Data Services
 ms.custom: ""
 ms.date: "02/14/2017"
 ms.prod: sql

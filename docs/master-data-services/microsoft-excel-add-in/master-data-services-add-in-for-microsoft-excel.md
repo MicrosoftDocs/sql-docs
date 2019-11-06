@@ -1,6 +1,6 @@
 ---
-title: "Master Data Services Add-in for Microsoft Excel | Microsoft Docs"
-ms.custom: microsoft-excel-add-in
+title: Overview
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "07/25/2017"
 ms.prod: sql
 ms.prod_service: "mds"

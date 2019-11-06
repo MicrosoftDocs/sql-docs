@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services Installation and Configuration | Microsoft Docs"
+title: Installation and Configuration
 ms.custom: ""
 ms.date: 05/22/2019
 ms.prod: sql

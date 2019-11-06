@@ -1,5 +1,5 @@
 ---
-title: "Annotate a Transaction (Master Data Services) | Microsoft Docs"
+title: Annotate a Transaction
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

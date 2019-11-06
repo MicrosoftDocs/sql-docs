@@ -1,6 +1,6 @@
 ---
-title: "Associate a Master Data Services Database and Web Application | Microsoft Docs"
-ms.custom: ""
+title: Associate a Database and Web Application
+ms.custom: "seo-lt-2019"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "mds"

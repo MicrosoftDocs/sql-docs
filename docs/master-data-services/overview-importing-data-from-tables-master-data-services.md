@@ -1,5 +1,5 @@
 ---
-title: Overview: Importing Data from Tables
+title: Importing Data from Tables
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "WMI Provider for Server Events Classes and Properties | Microsoft Docs"
+title: "WMI Provider for Server Events Classes and Properties"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

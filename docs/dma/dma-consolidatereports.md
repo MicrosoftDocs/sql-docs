@@ -1,5 +1,5 @@
 ---
-title: "Assess an enterprise & consolidate assessment reports using Data Migration Assistant"
+title: "Assess an enterprise and consolidate assessment reports with Data Migration Assistant"
 description: Learn how to use DMA to assess an enterprise and consolidate assessment reports before upgrading SQL Server or migrating to Azure SQL Database.
 ms.date: "06/21/2019"
 ms.prod: sql

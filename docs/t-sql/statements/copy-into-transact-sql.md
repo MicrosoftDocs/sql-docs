@@ -81,8 +81,6 @@ Is where the files containing the data is staged. Currently Azure Data Lake Stor
 > [!NOTE]  
 > The blob endpoint is available for ADLS Gen2 and is only for backward compatibility. Use the **dfs** endpoint for ADLS Gen2 for best performance.
 
-NEED THE SYNTAX FOR THE EXTERNAL LOCATION
-
 - *Account* - The storage account name
 
 - *Container* - The blob container name
@@ -102,8 +100,8 @@ Multiple file locations can only be specified from the same storage account and 
 
 - ‘https://<account>.blob.core.windows.net/<container>/<path>’, ​‘https://<account>.blob.core.windows.net/<container>/<path>’…
 
-*FILE_TYPE = { ‘CSV’ | ‘PARQUET’ | ‘ORC’ }*</br>
-*FILE_TYPE* specifies the format of the external data.
+  *FILE_TYPE = { ‘CSV’ | ‘PARQUET’ | ‘ORC’ }*</br>
+  *FILE_TYPE* specifies the format of the external data.
 
 - CSV: Specifies a comma-separated values file compliant to the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
 - PARQUET: Specifies a Parquet format.
@@ -164,34 +162,30 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 - Azure Blob Storage  - SAS/SERVICE PRINCIPAL/KEY/AAD
 - Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/KEY/AAD
   
-
-Authenticating with Shared Access Signatures (SAS)
-- *IDENTITY: A constant with a value of ‘Shared Access Signature’*
-- *SECRET: The* [*shared access signature*](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature) *provides delegated access to resources in your storage account.*
-- Minimum permissions required: READ, LIST, WRITE, CREATE, DELETE
+- Authenticating with Shared Access Signatures (SAS)
+  - *IDENTITY: A constant with a value of ‘Shared Access Signature’*
+  - *SECRET: The* [*shared access signature*](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature) *provides delegated access to resources in your storage account.*
+  - Minimum permissions required: READ, LIST, WRITE, CREATE, DELETE
   
-
-Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
-- *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
-- *SECRET: AAD Application Service Principal key*
-- Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner
+- Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
+  - *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
+  - *SECRET: AAD Application Service Principal key*
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner
   
 > [!NOTE]  
 > Use the OAuth 2.0 token endpoint **V1**
 
-Authenticating with Storage account key
-- *IDENTITY: A constant with a value of ‘Storage Account Key’*
-- *SECRET: Storage account key*
+- Authenticating with Storage account key
+  - *IDENTITY: A constant with a value of ‘Storage Account Key’*
+  - *SECRET: Storage account key*
   
-
-Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
-- *IDENTITY: A constant with a value of ‘Managed Identity’*
-- Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD registered SQL Database server 
+- Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
+  - *IDENTITY: A constant with a value of ‘Managed Identity’*
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD registered SQL Database server
   
-
-Authenticating with an AAD user
-- *CREDENTIAL is not required*
-- Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD user
+- Authenticating with an AAD user
+  - *CREDENTIAL is not required*
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the AAD user
 
 > [!NOTE]  
 > If you are using the same storage account for your ERRORFILE and specifying the ERRORFILE path relative to the root of the container, you do not need to specify the ERROR_CREDENTIAL.

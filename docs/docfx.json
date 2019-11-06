@@ -139,7 +139,9 @@
         "language-extensions/**/*.md": "SQL Server Language Extensions",
         "relational-database/replication/**/*.md": "SQL Server Replication",
         "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
-        "sql-server/failover-clusters/**/*.md": "SQL Server Always On"
+        "sql-server/failover-clusters/**/*.md": "SQL Server Always On",
+        "master-data-services/**/*.md": "SQL Server Master Data Services",
+        "master-data-services/microsoft-excel-add-in/**/*.md": "SQL Server MDS Excel Add-in"
       },
 
       "breadcrumb_path": {

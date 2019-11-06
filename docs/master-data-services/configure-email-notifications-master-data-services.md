@@ -1,5 +1,5 @@
 ---
-title: "Configure Email Notifications (Master Data Services) | Microsoft Docs"
+title: Configure Email Notifications
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Create Database Wizard (Master Data Services Configuration Manager) | Microsoft Docs"
+title: Create Database Wizard
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Modify advanced properties of SQL Server (VBScript)"
+title: "Access the WMI Provider with VBScript"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,6 +1,5 @@
 ---
 title: Create a Java jar file from class files
-titleSuffix: SQL Server Language Extensions
 description: Learn how to create a Java jar file from class files 
 author: dphansen
 ms.author: davidph 

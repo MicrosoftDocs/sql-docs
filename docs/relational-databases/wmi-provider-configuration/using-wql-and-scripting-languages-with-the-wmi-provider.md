@@ -1,6 +1,6 @@
 ---
-title: "Using WQL and Scripting Languages with the WMI Provider | Microsoft Docs"
-ms.custom: ""
+title: "Access the WMI Provider with WQL and scripting"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

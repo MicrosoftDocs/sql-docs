@@ -1,6 +1,6 @@
 ---
-title: "NumberOfProps Property (ClientNetworkProtocol Class) | Microsoft Docs"
-ms.custom: ""
+title: "NumberOfProps Property (ClientNetworkProtocol)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

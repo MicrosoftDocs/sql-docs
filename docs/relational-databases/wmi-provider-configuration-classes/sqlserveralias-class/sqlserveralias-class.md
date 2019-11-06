@@ -1,5 +1,5 @@
 ---
-title: "SqlServerAlias Class | Microsoft Docs"
+title: "SqlServerAlias Class"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

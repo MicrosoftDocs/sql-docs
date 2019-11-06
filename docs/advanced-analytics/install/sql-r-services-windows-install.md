@@ -110,7 +110,7 @@ This step requires a server restart. If you are about to enable script execution
     > [!TIP]
     > You can download and install the appropriate version from this page: [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
-    > You can also try out the preview release of [Azure Data Studio](../../azure-data-studio/what-is.md), which supports administrative tasks and queries against SQL Server.
+    > You can also use [Azure Data Studio](../../azure-data-studio/what-is.md), which supports administrative tasks and queries against SQL Server.
   
 2. Connect to the instance where you installed Machine Learning Services, click **New Query** to open a query window, and run the following command:
 

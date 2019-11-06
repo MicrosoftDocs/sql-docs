@@ -1,6 +1,7 @@
 ---
-title: COPY INTO (Transact-SQL) (preview) | Microsoft Docs
-ms.date: 11/04/2019
+title: COPY INTO (Transact-SQL) (preview) 
+titleSuffix: (SQL Data Warehouse) - SQL Server
+ms.date: 11/07/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
 ms.reviewer: jrasnick
@@ -53,7 +54,7 @@ WITH
 ## Arguments  
 
 *schema_name*  
-Is optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* is not specified, and the default schema of the user performing the COPY operation is different from the specified table, COPY will be canceled and an error message will be returned.  
+Is optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* is not specified, and the default schema of the user performing the COPY operation is different from the specified table, COPY will be canceled, and an error message will be returned.  
 
 *table_name*  
 Is the name of the table to COPY data into. The target table can be a temporary table or permanent table.
@@ -233,20 +234,20 @@ Please review the following [documentation](https://docs.microsoft.com/sql/relat
 *FIRSTROW* applies to CSV and specifies the row number that is read first in all files for the COPY command. Values start from 1, which is the default value. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators.
 
 *DATEFORMAT = { ‘mdy’ | ‘dmy’ | ‘ymd’ | ‘ydm’ | ‘myd’ | ‘dym’ }*</br>
-DATEFORMAT only applies to CSV and specifies the date format of the date mapping to SQL Server date formats. For an overview of all Transact-SQL date and time data types and functions, see [Date and Time Data Types and Functions (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15) DATEFORMAT within the COPY command takes precedence over [DATEFORMAT configured at the session level](set-dateformat-transact-sql.md?view=sql-server-ver15).
+DATEFORMAT only applies to CSV and specifies the date format of the date mapping to SQL Server date formats. For an overview of all Transact-SQL date and time data types and functions, see [Date and Time Data Types and Functions (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15). DATEFORMAT within the COPY command takes precedence over [DATEFORMAT configured at the session level](set-dateformat-transact-sql.md?view=sql-server-ver15).
 
 *ENCODING = ‘UTF8’ | ‘UTF16’*</br>
 *ENCODING* only applies to CSV. Default is UTF8. Specifies the data encoding standard for the files loaded by the COPY command. 
 
 *IDENTITY_INSERT = ‘ON’ | ‘OFF’*</br>
-IDENTITY_INSERT specifies whether the identity value or values in the imported data file are to be used for the identity column. If IDENTITY_INSERT is OFF (default), the identity values for this column are verified but not imported and SQL DW automatically assigns unique values based on the seed and increment values specified during table creation. Note the following behavior with the COPY command:
+IDENTITY_INSERT specifies whether the identity value or values in the imported data file are to be used for the identity column. If IDENTITY_INSERT is OFF (default), the identity values for this column are verified, but not imported. SQL DW will automatically assign unique values based on the seed and increment values specified during table creation. Note the following behavior with the COPY command:
 
 - If IDENTITY_INSERT is OFF, and table has an identity column
-  - A column list must be specified which does not map an input field to the identity column
+  - A column list must be specified which does not map an input field to the identity column.
 - If IDENTITY_INSERT is ON, and table has an identity column
-  - If a column list is passed, it must map an input field to the identity column
-- Default value is not supported for the IDENTITY COLUMN in the column list
-- IDENTITY_INSERT can only be set for one table at a time
+  - If a column list is passed, it must map an input field to the identity column.
+- Default value is not supported for the IDENTITY COLUMN in the column list.
+- IDENTITY_INSERT can only be set for one table at a time.
 
 ### Permissions  
 
@@ -282,7 +283,7 @@ The default values of the COPY command are:
 - ROWTERMINATOR = ‘\n'
 
 > [!IMPORTANT]
-> COPY treats ‘\n’ as ‘\r\n’ internally. For additional details, see the [ROWTERMINATOR]() section.
+> COPY treats ‘\n’ as ‘\r\n’ internally. For more information, see the [ROWTERMINATOR]() section.
 
 - FIRSTROW = 1
 

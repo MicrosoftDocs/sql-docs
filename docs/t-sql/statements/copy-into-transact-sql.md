@@ -1,6 +1,7 @@
 ---
 title: COPY INTO (Transact-SQL) (preview) 
 titleSuffix: (SQL Data Warehouse) - SQL Server
+description: Use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts.
 ms.date: 11/07/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
@@ -359,6 +360,6 @@ WITH (
 )
 ```
 
-## See Also  
+## See also  
 
  [Loading overview with SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading>) 

@@ -4,7 +4,7 @@ titleSuffix:
 description: Learn how to install SQL Server Language Extensions on Windows. 
 author: dphansen
 ms.author: davidph 
-ms.date: 11/05/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -55,11 +55,8 @@ In SQL Server 2019 Release Candidate 1, there are two ways to install and use Ja
     
 ## Get the installation media
 
-The preview version of SQL Server 2019 is available at the [SQL Server 2019 install site](https://www.microsoft.com/sql-server/sql-server-2019#Install).
-
-<!-- We can use this include statement, once SQL Server 2019 is in GA
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
--->
+
 ## Run Setup
 
 For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.

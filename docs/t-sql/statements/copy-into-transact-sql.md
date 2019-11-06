@@ -114,7 +114,7 @@ Multiple file locations can only be specified from the same storage account and 
 *FILE_FORMAT* applies to Parquet and ORC files only and specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md?view=azure-sqldw-latest).
 
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
-*CREDENTIAL* specifies the authentication mechanism to access the external storage account. Authentication methods in Public Preview are: 
+*CREDENTIAL* specifies the authentication mechanism to access the external storage account. Authentication methods are:
 
 |                          |                CSV                |              Parquet              |                ORC                |
 | :----------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |
@@ -157,7 +157,7 @@ Within this directory, there's a folder created based on the time of load submis
 If ERRORFILE has the full path of the storage account defined, then the ERRORFILE_CREDENTIAL will be used to connect to that storage. Otherwise, the value mentioned for CREDENTIAL will be used.
 
 *ERRORFILE_CREDENTIAL = (IDENTITY= ‘’, SECRET = ‘’)*</br>
-*ERRORFILE_CREDENTIAL* only applies to CSV files. Supported data source and authentication methods in public preview are:
+*ERRORFILE_CREDENTIAL* only applies to CSV files. Supported data source and authentication methods are:
 
 - Azure Blob Storage  - SAS/SERVICE PRINCIPAL/KEY/AAD
 - Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/KEY/AAD

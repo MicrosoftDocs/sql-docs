@@ -4,7 +4,7 @@ titleSuffix:
 description: Learn how to install SQL Server Language Extensions on Windows. 
 author: dphansen
 ms.author: davidph 
-ms.date: 11/05/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions

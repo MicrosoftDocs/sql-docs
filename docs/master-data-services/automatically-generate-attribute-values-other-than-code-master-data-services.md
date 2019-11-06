@@ -1,5 +1,5 @@
 ---
-title: Automatically Generate Attribute Values Other Than Code
+title: Automatically Generate Attribute Values
 titleSuffix: Master Data Services
 ms.custom: "seo-lt-2019"
 ms.date: "03/01/2017"

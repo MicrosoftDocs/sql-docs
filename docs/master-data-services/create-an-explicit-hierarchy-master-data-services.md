@@ -1,5 +1,5 @@
 ---
-title: "Create an Explicit Hierarchy (Master Data Services) | Microsoft Docs"
+title: Create an Explicit Hierarchy
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql

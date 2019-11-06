@@ -1,5 +1,5 @@
 ---
-title: "Staging Process Errors (Master Data Services) | Microsoft Docs"
+title: Staging Process Errors
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

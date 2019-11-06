@@ -141,7 +141,7 @@ Output
 
 ## See also
 
-[Performance Tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views?view=azure-sqldw-latest)
+[Performance tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views?view=azure-sqldw-latest)
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

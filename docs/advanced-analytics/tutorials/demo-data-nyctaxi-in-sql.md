@@ -1,5 +1,5 @@
 ---
-title: Download NYC Taxi demo data and scripts for embedded R and Python
+title: NYC Taxi demo data for tutorials
 description: Instructions for downloading New York City taxi sample data and creating a database. Data is used in SQL Server Python and R language tutorials showing how to embed script in SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,7 @@ ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # NYC Taxi demo data for SQL Server Python and R tutorials

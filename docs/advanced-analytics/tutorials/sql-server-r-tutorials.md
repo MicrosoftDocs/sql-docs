@@ -1,5 +1,5 @@
 ---
-title: SQL Server R tutorial overview
+title: R tutorials
 description: Introduction to the R language tutorials for SQL Server in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,7 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # SQL Server R language tutorials

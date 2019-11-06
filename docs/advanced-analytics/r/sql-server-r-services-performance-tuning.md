@@ -1,5 +1,6 @@
 ---
-title: SQL Server R Services Performance Tuning
+title: Performance tuning for R
+description: This article describes performance optimization for R Services.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -7,6 +8,7 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Performance tuning for R in SQL Server

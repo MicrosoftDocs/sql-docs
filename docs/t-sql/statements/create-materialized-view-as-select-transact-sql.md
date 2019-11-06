@@ -136,7 +136,7 @@ Requires CREATE VIEW permission in the database and ALTER permission on the sche
   
 ## See also
 
-[Performance tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views?view=azure-sqldw-latest)
+[Performance tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)      
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   

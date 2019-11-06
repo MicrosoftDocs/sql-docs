@@ -1,5 +1,6 @@
 ---
-title: Upgrade and installation frequently asked questions (FAQ)
+title: Upgrade and installation FAQ
+description: Answers to some common questions about installation of machine learning features in SQL Server.
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +9,7 @@ ms.date: 11/06/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Upgrade and installation FAQ for SQL Server Machine Learning or R Server

@@ -1,5 +1,5 @@
 ---
-title: Manage Python and R workloads with Resource Governor
+title: Manage with Resource Governor
 description: Learn how to use Resource Governor to manage CPU, physical IO, and memory resources allocation for Python and R workloads in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,6 +7,7 @@ ms.date: 10/02/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Manage Python and R workloads with Resource Governor in SQL Server Machine Learning Services

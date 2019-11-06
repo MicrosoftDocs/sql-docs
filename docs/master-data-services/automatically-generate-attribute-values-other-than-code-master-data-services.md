@@ -1,6 +1,7 @@
 ---
-title: "Automatically Generate Attribute Values Other Than Code (Master Data Services) | Microsoft Docs"
-ms.custom: ""
+title: Automatically Generate Attribute Values Other Than Code
+titleSuffix: Master Data Services
+ms.custom: "seo-lt-2019"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"

@@ -1,7 +1,7 @@
 ---
 title: Deploy HDFS or Spark with high availability
 titleSuffix: Deploy HDFS or Spark with high availability 
-description: Learn how to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview) to with high availability.
+description: Learn how to deploySQL Server Big Data Clusters to with high availability.
 author: mihaelablendea
 ms.author: mihaelab 
 ms.reviewer: mikeray

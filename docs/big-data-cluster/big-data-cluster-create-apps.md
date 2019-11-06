@@ -38,7 +38,7 @@ The following types of apps are supported:
 
 ## Capabilities
 
-In SQL Server 2019 (preview) you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **azdata**.
+In SQL Server 2019 you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **azdata**.
 
 |Command |Description |
 |:---|:---|

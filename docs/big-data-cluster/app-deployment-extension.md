@@ -1,7 +1,7 @@
 ---
 title: App deployment extension
 titleSuffix: SQL Server big data clusters
-description: Deploy a Python or R script as an application on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview). 
+description: Deploy a Python or R script as an application on SQL Server Big Data Clusters. 
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: mikeray

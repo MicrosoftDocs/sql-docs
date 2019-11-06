@@ -4,7 +4,7 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 06/13/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
@@ -26,7 +26,7 @@ Depending on the build of SQL Server that you are installing, some of the follow
 
 - In early versions of SQL Server 2016 R Services, 8dot3 notation was required on the drive that contains the working directory. If you installed a pre-release version, upgrading to SQL Server 2016 Service Pack 1 should fix this issue. This requirement does not apply to releases after SP1.
 
-- Currently, you cannot install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a failover cluster. However, SQL Server 2019 preview does provide failover support if you would like to evaluate this capability in a test environment. For more information, see [What's New](../what-s-new-in-sql-server-machine-learning-services.md).
+- You cannot install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a failover cluster in SQL Server 2016. However, SQL Server 2019 does provide failover support. For more information, see [What's New](../what-s-new-in-sql-server-machine-learning-services.md).
 
 - On an Azure VM, some additional configuration might be necessary. For example, you might need to create a firewall exception to support remote access.
 

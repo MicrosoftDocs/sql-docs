@@ -124,8 +124,10 @@
 
       "titleSuffix": {
         "2014/analysis-services/**/*.md": "SQL Server 2014 Analysis Services",
+        "2014/database-engine/**/*.md": "SQL Server 2014",
+        "2014/**/*.md": "SQL Server 2014",
         "2014/integration-services/**/*.md": "SQL Server 2014 Integration Services",
-        "2014/relational-database/replication/**/*.md": "SQL Server Replication",
+        "2014/relational-database/replication/**/*.md": "SQL Server 2014 Replication",
         "2014/reporting-services/**/*.md": "SQL Server 2014 Reporting Services",
 
     
@@ -136,7 +138,6 @@
         "language-extensions/**/*.md": "SQL Server Language Extensions",
         "relational-database/replication/**/*.md": "SQL Server Replication",
         "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
-        "sql-server/relational-databases/replication/**/*.md": "SQL Server Replication",
         "dea/**/*.md": "Database Experimentation Assistant"
       },
 

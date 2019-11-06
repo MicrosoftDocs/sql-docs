@@ -31,7 +31,7 @@ The **MicrosoftML** library is based on R 3.4.3 and available only when you inst
 + [Microsoft R client](set-up-a-data-science-client.md)
 
 > [!NOTE]
-> Full product release versions are Windows-only, starting with SQL Server 2017. Linux support for **MicrosoftML** is new in [SQL Server 2019 Preview](../../linux/sql-server-linux-setup-machine-learning.md).
+> Full product release versions are Windows-only in SQL Server 2017. Both Windows and Linux are supported for **MicrosoftML** in [SQL Server 2019 Preview](../../linux/sql-server-linux-setup-machine-learning.md).
 
 ## Package dependencies
 

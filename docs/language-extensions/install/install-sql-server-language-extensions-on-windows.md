@@ -1,10 +1,10 @@
 ---
 title: Install SQL Server Language Extensions on Windows
-titleSuffix: SQL Server Language Extensions
-description: Language extensions installation steps for SQL Server 2019 in Windows.
+titleSuffix:
+description: Learn how to install SQL Server Language Extensions on Windows. 
 author: dphansen
 ms.author: davidph 
-ms.date: 09/17/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Starting in SQL Server 2019, Language Extensions and Java support are provided. This article explains how to install the Language Extensions component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
+Learn how to install the Language Extensions component on SQL Server by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 
 > [!NOTE]
 > This article is for installation of SQL Server Language Extensions on Windows. For Linux, see [Install SQL Server 2019 Language Extensions (Java) on Linux](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions)
@@ -32,6 +32,8 @@ Starting in SQL Server 2019, Language Extensions and Java support are provided. 
 + Installing Language Extensions is supported on a failover cluster in SQL Server 2019.
 
 + Do not install SQL Server Language Extensions on a domain controller. The Language Extensions portion of setup will fail.
+
++ Language Extensions and [Machine Learning Services](../../advanced-analytics/index.yml) are installed by default on SQL Server Big Data Clusters. If you use Big Data Clusters, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 
 > [!IMPORTANT]
 > After setup is complete, be sure to complete the post-configuration steps described in this article. These steps include enabling SQL Server to use external code, and adding accounts required for SQL Server to run Java code on your behalf. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.
@@ -181,6 +183,8 @@ When the installation is complete, restart the database engine before continuing
 Restarting the service also automatically restarts the related SQL Server Launchpad service.
 
 You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+
+<a name="register_external_language"></a>
 
 ## Register external language
 

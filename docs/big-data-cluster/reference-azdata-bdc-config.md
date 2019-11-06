@@ -5,7 +5,7 @@ description: Reference article for azdata bdc config commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-This article is a reference article for **azdata**. 
+The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
 |     |     |
@@ -46,13 +46,13 @@ azdata bdc config init --source aks-dev-test --target custom
 ```
 ### Optional Parameters
 #### `--target -t`
-File path of where you would like the config profile placed, defaults to cwd with custom-config.json.
+File path of where you would like the config profile placed, defaults to <cwd>/custom.
 #### `--source -s`
-Config profile source: ['aks-dev-test', 'kubeadm-prod', 'minikube-dev-test', 'kubeadm-dev-test']
+Config profile source: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
 #### `--force -f`
 Force overwrite of the target file.
 #### `--accept-eula -a`
-Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. 
+Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at https://aka.ms/eula-azdata-en.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -61,7 +61,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config list
@@ -82,12 +82,12 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### Optional Parameters
 #### `--config-profile -c`
-Default config profile: ['aks-dev-test', 'kubeadm-prod', 'minikube-dev-test', 'kubeadm-dev-test']
+Default config profile: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
 #### `--type -t`
 What config type you would like to see.
 `cluster`
 #### `--accept-eula -a`
-Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. 
+Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at https://aka.ms/eula-azdata-en.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -96,7 +96,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config show
@@ -118,7 +118,7 @@ azdata bdc config show --config-file custom-config/bdc.json --json-path 'metadat
 ```
 In a local config file, gets the resources within a service
 ```bash
-azdata bdc config show --config-file custom-config/bdc.json  --json-path '$.spec.services.sql.resources' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path '$.spec.services.sql.resources' --target section.json
 ```
 ### Optional Parameters
 #### `--config-file -c`
@@ -137,7 +137,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config add
@@ -164,7 +164,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config remove
@@ -191,7 +191,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config replace
@@ -226,7 +226,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config patch
@@ -240,21 +240,21 @@ Ex 1 - Replace the port of a single endpoint (Controller Endpoint) with patch fi
 ```bash
 azdata bdc config patch --config-file custom/control.json --patch ./patch.json
 
-    Patch File Example (patch.json): 
+    Patch File Example (patch.json):
         {"patch":[{"op":"replace","path":"$.spec.endpoints[?(@.name=='Controller')].port","value":30080}]}
 ```
 Ex 2 - Replace control plane storage with patch file.
 ```bash
 azdata bdc config patch --config-file custom/control.json --patch ./patch.json
 
-    Patch File Example (patch.json): 
+    Patch File Example (patch.json):
         {"patch":[{"op":"replace","path":".spec.storage","value":{"accessMode":"ReadWriteMany","className":"managed-premium","size":"10Gi"}}]}
 ```
 Ex 3 - Replace pool storage, including replicas (Storage Pool) with patch file.
 ```bash
 azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
 
-    Patch File Example (patch.json): 
+    Patch File Example (patch.json):
         {"patch":[{"op":"replace","path":"$.spec.resources.storage-0.spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
 ```
 ### Required Parameters
@@ -270,12 +270,10 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-- For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
-
-- For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).
+For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

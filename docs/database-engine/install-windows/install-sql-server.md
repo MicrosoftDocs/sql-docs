@@ -16,9 +16,18 @@ ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
- 
- Beginning with [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] is only available as a 64-bit application. Here are important details about how to get SQL Server and how to install it.
+
+This article provides guidance for installing SQL Server on Windows.
+
+For other deployment scenarios, see:
+
+- [Linux](../../linux/sql-server-linux-setup.md)
+- [Docker containers](../../linux/sql-server-linux-configure-docker.md)
+- [Kubernetes - Big Data Clusters](../../big-data-cluster/deploy-get-started.md)
+
+Beginning with [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] is only available as a 64-bit application. Here are important details about how to get SQL Server and how to install it.
 
 ## Installation details
   

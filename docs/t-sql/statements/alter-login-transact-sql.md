@@ -1,7 +1,7 @@
 ---
 title: "ALTER LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "11/06/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -484,8 +484,8 @@ ALTER LOGIN login_name
   | DROP CREDENTIAL credential_name
 ```
 
-> [!IMPORTANT]
-> Azure AD logins for SQL Database managed instance is in **public preview**.
+> [!NOTE]
+> The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```
 -- Syntax for Azure SQL Database managed instance using Azure AD logins

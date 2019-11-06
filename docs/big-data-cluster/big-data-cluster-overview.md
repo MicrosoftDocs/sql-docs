@@ -5,7 +5,7 @@ description: Learn about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdata
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -18,8 +18,6 @@ ms.technology: big-data-cluster
 Starting with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers running on Kubernetes. These components are running side by side to enable you to read, write, and process big data from Transact-SQL or Spark, allowing you to easily combine and analyze your high-value relational data with high-volume big data.
 
 For more information about new features and known issues for latest release, see the [release notes](release-notes-big-data-cluster.md).
-
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## Scenarios
 

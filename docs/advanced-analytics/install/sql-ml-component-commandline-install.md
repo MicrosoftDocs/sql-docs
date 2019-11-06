@@ -4,7 +4,7 @@ description: Run SQL Server command line setup to add R language and Python inte
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/30/2019  
+ms.date: 11/04/2019  
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -52,12 +52,28 @@ When installing through the command prompt, [!INCLUDE[ssNoVersion](../../include
 | /MRCACHEDIRECTORY | For offline setup, sets the folder containing the R component CAB files. |
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 | Arguments | Description |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Installs the in-database version: SQL Server Machine Learning Services (In-Database).  |
 | /FEATURES = SQL_INST_MR | Pair this with AdvancedAnalytics. Installs the (In-Database) R feature, including Microsoft R Open and the proprietary R packages. |
 | /FEATURES = SQL_INST_MPY | Pair this with AdvancedAnalytics. Installs the (In-Database) Python feature, including Anaconda and the proprietary Python packages. |
+| /FEATURES = SQL_SHARED_MR | Installs the R feature for the standalone version: SQL Server Machine Learning Server (Standalone). A standalone server is a "shared feature" not bound to a database engine instance.|
+| /FEATURES = SQL_SHARED_MPY | Installs the Python feature for the standalone version: SQL Server Machine Learning Server (Standalone). A standalone server is a "shared feature" not bound to a database engine instance.|
+| /IACCEPTROPENLICENSETERMS  | Indicates you have accepted the license terms for using the open source R components. |
+| /IACCEPTPYTHONLICENSETERMS | Indicates you have accepted the license terms for using the Python components. |
+| /IACCEPTSQLSERVERLICENSETERMS | Indicates you have accepted the license terms for using SQL Server.|
+| /MRCACHEDIRECTORY | For offline setup, sets the folder containing the R component CAB files. |
+| /MPYCACHEDIRECTORY | Reserved for future use. Use %TEMP% to store Python component CAB files for installation on computers that do not have an internet connection. |
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+| Arguments | Description |
+|-----------|-------------|
+| /FEATURES = AdvancedAnalytics | Installs the in-database version: SQL Server Machine Learning Services (In-Database).  |
+| /FEATURES = SQL_INST_MR | Pair this with AdvancedAnalytics. Installs the (In-Database) R feature, including Microsoft R Open and the proprietary R packages. |
+| /FEATURES = SQL_INST_MPY | Pair this with AdvancedAnalytics. Installs the (In-Database) Python feature, including Anaconda and the proprietary Python packages. |
+| /FEATURES = SQL_INST_MJAVA | Pair this with AdvancedAnalytics. Installs the (In-Database) Java feature, including Open JRE. |
 | /FEATURES = SQL_SHARED_MR | Installs the R feature for the standalone version: SQL Server Machine Learning Server (Standalone). A standalone server is a "shared feature" not bound to a database engine instance.|
 | /FEATURES = SQL_SHARED_MPY | Installs the Python feature for the standalone version: SQL Server Machine Learning Server (Standalone). A standalone server is a "shared feature" not bound to a database engine instance.|
 | /IACCEPTROPENLICENSETERMS  | Indicates you have accepted the license terms for using the open source R components. |
@@ -139,7 +155,7 @@ Two more tasks are required to complete the installation:
 
 ## <a name="add-existing"></a> Add advanced analytics to an existing database engine instance
 
-When adding in-database advanced analytics to an existing database engine instance, provide the instance name. For example, if you previously installed a SQL Server 2017 database engine and Python, you could use this command to add R.
+When adding in-database advanced analytics to an existing database engine instance, provide the instance name. For example, if you previously installed a SQL Server 2017 or later database engine and Python, you could use this command to add R.
 
 ```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER 

@@ -79,7 +79,7 @@ ms.author: chugu
   
     3.  **Consider capturing row count data**. Consider creating a separate table for row count information, where each instance of package execution is identified by its ExecutionID. Use the Row Count transformation to save the row count into a series of variables at critical points in the data flow. After the data flow ends, use an Execute SQL task to insert the series of values into a row in the table for later analysis and reporting.  
   
-     For more information about this approach, see the section, "ETL Auditing and Logging," in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] white paper, [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+     For more information about this approach, see the section, "ETL Auditing and Logging," in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] white paper, [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ## Troubleshoot Package Execution by Using Debug Dump Files  
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you can create debug dump files that provide information about the execution of a package. For more information, see [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  

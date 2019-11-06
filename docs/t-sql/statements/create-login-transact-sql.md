@@ -1,7 +1,7 @@
 ---
 title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/18/2019"
+ms.date: "11/06/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -447,6 +447,9 @@ By default, the standard permission granted to a newly created Azure AD login in
 **CONNECT SQL** and **VIEW ANY DATABASE**.
 
 ### SQL Database managed instance Logins
+
+> [!NOTE]
+> The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 - Must have **ALTER ANY LOGIN** permission on the server or membership in the one of the fixed server roles `securityadmin` or `sysadmin`. Only an Azure Active Directory (Azure AD) account with **ALTER ANY LOGIN** permission on the server or membership in one of those roles can execute the create command.
 - If the login is a SQL Principal, only logins that are part of the `sysadmin` role can use the create command to create logins for an Azure AD account.

@@ -1,10 +1,9 @@
 ---
-title: 'Tutorial: Search for a string using regular expressions (regex) in Java'
-titleSuffix: SQL Server Language Extensions
-description: This tutorial shows you how to use SQL Server Language Extensions and run Java code that search a string with regular expressions.
+title: 'Tutorial: Regex string search in Java'
+description: This tutorial shows you how to use SQL Server Language Extensions and run Java code that search a string with regular expressions (regex).
 author: dphansen
 ms.author: davidph 
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -13,11 +12,11 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 # Tutorial: Search for a string using regular expressions (regex) in Java
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This tutorial shows you how to use [SQL Server Language Extensions](../language-extensions-overview.md) and create a Java class that receives two columns (ID and text) from SQL Server and a regular expression as an input parameter. The class returns two columns back to SQL Server (ID and text).
+This tutorial shows you how to use [SQL Server Language Extensions](../language-extensions-overview.md) to create a Java class that receives two columns (ID and text) from SQL Server and a regular expression (regex) as an input parameter. The class returns two columns back to SQL Server (ID and text).
 
 For a given text in the text column sent to the Java class, the code checks if the given regular expression is fulfilled, and returns that text together with the original ID.
 
-This particular sample uses a regular expression that checks if a text contains the word "Java" or "java".
+This sample code uses a regular expression that checks if a text contains the word "Java" or "java".
 
 ## Prerequisites
 

@@ -1,7 +1,7 @@
 ---
 title: Upgrade to a new release
-titleSuffix: SQL Server big data clusters
-description: Learn how to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview) to a new release.
+titleSuffix: SQL Server Big Data Clusters
+description: Learn how to upgrade SQL Server Big Data Clusters to a new release.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab

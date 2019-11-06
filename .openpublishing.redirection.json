@@ -17,7 +17,7 @@
         },
         {
             "source_path": "docs/sql-server/sql-server-ver15-release-notes.md",
-            "redirect_url": "/sql/sql-server/sql-server-version-15-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-version-15-release-notes",
             "redirect_document_id": false
         },
         {

@@ -1,5 +1,5 @@
 ---
-title: "System Settings (Master Data Services) | Microsoft Docs"
+title: System Settings
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

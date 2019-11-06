@@ -1,6 +1,6 @@
 ---
-title: "GetCurrentCertificate Method (SInstance Class) | Microsoft Docs"
-ms.custom: ""
+title: "GetCurrentCertificate Method (SInstance)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

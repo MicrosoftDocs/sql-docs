@@ -1,5 +1,5 @@
 ---
-title: "Categorized Web Service Operations (Master Data Services) | Microsoft Docs"
+title: Categorized Web Service Operations
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql

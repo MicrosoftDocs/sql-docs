@@ -1,6 +1,6 @@
 ---
-title: "Master Data Services and Data Quality Services Features Support | Microsoft Docs"
-ms.custom: ""
+title: Data Quality Services Features Support
+ms.custom: "seo-lt-2019"
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "mds"

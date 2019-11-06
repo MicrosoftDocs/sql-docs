@@ -5,7 +5,7 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 11/04/2019
+ms.date: 11/06/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
@@ -39,7 +39,7 @@ To complete this tutorial, you must have the following:
 
 + [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), which you can [download and restore](demo-data-nyctaxi-in-sql.md) to your local database engine instance. File size is approximately 90 MB.
 
-+ SQL Server 2019 preview database engine instance, with Machine Learning Services and R integration.
++ SQL Server 2019 database engine instance, with Machine Learning Services and R integration.
 
 Check version by executing **`SELECT @@Version`** as a T-SQL query in a query tool.
 

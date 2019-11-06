@@ -75,4 +75,4 @@ To change the SQL Server big data cluster for a notebook:
 
 ## Next steps
 
-For more information about notebooks in Azure Data Studio, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
+For more information about notebooks in Azure Data Studio, see [How to use notebooks in SQL Server 2019](notebooks-guidance.md).

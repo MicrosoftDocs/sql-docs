@@ -37,7 +37,7 @@ Set the environment variable `'MKL_CBWR'=AUTO` to ensure conditional numerical r
 3. Restart R_SERVER. On SQL Server, you can restart SQL Server Launchpad Service.
 
 > [!NOTE]
-> If you are running the SQL Server 2019 Preview on Linux, edit or create *.bash_profile* in your user home directory, adding the line `export MKL_CBWR="AUTO"`. Execute this file by typing `source .bash_profile` at a bash command prompt. Restart R_SERVER by typing `Sys.getenv()` at the R command prompt.
+> If you are running the SQL Server 2019 on Linux, edit or create *.bash_profile* in your user home directory, adding the line `export MKL_CBWR="AUTO"`. Execute this file by typing `source .bash_profile` at a bash command prompt. Restart R_SERVER by typing `Sys.getenv()` at the R command prompt.
 
 ### 2. R Script runtime error (SQL Server 2017 CU5-CU7 Regression)
 

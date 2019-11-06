@@ -1,7 +1,7 @@
 ---
-title: Consume applications on SQL Server big data clusters
-titleSuffix: SQL Server big data clusters
-description: Consume an application deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] using a RESTful web service (preview).
+title: Consume applications
+titleSuffix: SQL Server Big Data Clusters
+description: Consume an application deployed on SQL Server Big Data Clusters using a RESTful web service.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -15,11 +15,11 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to consume an app deployed on a SQL Server 2019 big data cluster using a RESTful web service (preview).
+This article describes how to consume an app deployed on a SQL Server big data cluster using a RESTful web service.
 
 ## Prerequisites
 
-- [SQL Server 2019 big data cluster](deployment-guidance.md)
+- [SQL Server big data cluster](deployment-guidance.md)
 - [azdata command-line utility](deploy-install-azdata.md)
 - An app deployed using either [azdata](big-data-cluster-create-apps.md) or the [App Deploy extension](app-deployment-extension.md)
 

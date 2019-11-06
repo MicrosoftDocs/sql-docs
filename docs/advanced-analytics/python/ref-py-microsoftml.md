@@ -4,7 +4,7 @@ description: Introduces the Microsoft machine learning algorithms and models for
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/04/2018  
+ms.date: 11/06/2019  
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

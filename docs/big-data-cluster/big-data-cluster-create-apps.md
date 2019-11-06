@@ -21,7 +21,7 @@ This article describes how to deploy and manage R and Python script as an applic
 
 - A single command-line utility to manage cluster and app.
 - Simplified app deployment while providing granular control through spec files.
-- Support hosting additional application types - SSIS and MLeap (new in CTP 2.3).
+- Support hosting additional application types - SSIS and MLeap.
 - [Visual Studio Code Extension](app-deployment-extension.md) to manage application deployment.
 
 Applications are deployed and managed using `azdata` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [Visual Studio Code Extension](app-deployment-extension.md).

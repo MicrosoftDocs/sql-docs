@@ -54,7 +54,7 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Evaluation edition is
 For the latest release notes and what's new information, see the following:
 
 * [[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] release notes](../sql-server/sql-server-ver15-release-notes.md)
-* [What's new in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017](../sql-server/what-s-new-in-sql-server-ver15.md)
+* [What's new in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
 ### Try [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]!
 

@@ -6,7 +6,7 @@ brand: sql
 
 metadata:
   title: SQL tools and utilities documentation
-  description: Landing page for all SQL tools working with managing data and AI
+  description: Hub for all SQL tools working with managing data and AI
   ms.prod: sql
   ms.prod_service: sql-tools
   ms.topic: SQL tools hub-page

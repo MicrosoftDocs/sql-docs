@@ -1,0 +1,84 @@
+### YamlMime:Landing
+
+title: SQL query and management tools for SQL Server
+summary: This landing landing-page provides descriptions and pointers to some of the available tools for working with your SQL databases.
+
+metadata:
+  title: SQL tools and utilities documentation
+  description: Landing page for all SQL tools working with managing data and AI
+  ms.prod: sql
+  ms.prod_service: sql-tools
+  ms.topic: SQL tools hub-page
+  ms.collection: collection
+  author: markingmyname
+  ms.author: maghan
+  ms.date: 11/04/2019
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: About [service]
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is [service]?
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+
+  # Card (optional)
+  - title: Get started
+    linkLists:
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+
+  # Card
+  - title: cardtitle3
+    linkLists:
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+
+  # Card
+  - title: cardtitle4
+    linkLists:
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md
+      - linkListType: linkListType
+        links:
+          - text: linktext1
+            url: file1.md
+          - text: linktext2
+            url: file2.md

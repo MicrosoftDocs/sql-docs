@@ -1,6 +1,6 @@
 ---
 title: "Scalar UDF Inlining in Microsoft SQL databases | Microsoft Docs"
-description: "Scalar UDF Inlining feature to improve performance of queries that invoke scalar UDFs in SQL Server (2018 and later), and Azure SQL Database."
+description: "Scalar UDF Inlining feature to improve performance of queries that invoke scalar UDFs in SQL Server (starting with SQL Server 2019), and Azure SQL Database."
 ms.custom: ""
 ms.date: 09/13/2019
 ms.prod: sql
@@ -257,8 +257,8 @@ In certain situations (depending upon the logic in the UDF), inlining might be m
 1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, the value returned by the built-in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF.
 
 ## See Also
-[Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
-[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)
-[Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)
-[Joins](../../relational-databases/performance/joins.md)
-[Demonstrating Intelligent Query Processing](https://aka.ms/IQPDemos)
+[Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
+[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)     
+[Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
+[Joins](../../relational-databases/performance/joins.md)     
+[Demonstrating Intelligent Query Processing](https://aka.ms/IQPDemos)      

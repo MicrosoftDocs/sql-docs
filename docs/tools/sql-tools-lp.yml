@@ -20,65 +20,53 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
   # Card (optional)
-  - title: About [service]
+  - title: About SQL Server Tools
     linkLists:
       - linkListType: overview
         links:
-          - text: What is [service]?
-            url: file1.md
-          - text: linktext2
-            url: file2.md
-      - linkListType: linkListType
-        links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
+          - text: What is SQL Server Management STudio (SSMS)?
+            url: ssms/sql-server-management-studio-ssms.md
+          - text: What is Azure Data Studio?
+            url: azure-data-studio/what-is.md
+          - text: What is SQL Server Data Tools?
+            url: ssdt/sql-server-data-tools.md
 
   # Card (optional)
-  - title: Get started
+  - title: Download
     linkLists:
-      - linkListType: linkListType
+      - linkListType: download
         links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
-      - linkListType: linkListType
-        links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
+          - text: Download SSMS
+            url: ssms/download-sql-server-management-studio-ssms.md
+          - text: Download Azure Data Studio
+            url: azure-data-studio/download.md
+          - text: Download SSDT
+            url: ssdt/download-sql-server-data-tools-ssdt.md
 
   # Card
-  - title: cardtitle3
+  - title: Get Started
     linkLists:
-      - linkListType: linkListType
+      - linkListType: get-started
         links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
-      - linkListType: linkListType
-        links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
+          - text: Connect and query SQL Server with SSMS
+            url: ssms/tutorials/connect-query-sql-server.md
+          - text: Connect and query SQL Server with Azure Data Studio
+            url: azure-data-studio/quickstart-sql-server.md
+          - text: Project-Oriented Offline Database Development
+            url: ssdt/project-oriented-offline-database-development.md
 
   # Card
-  - title: cardtitle4
+  - title: Command line tools
     linkLists:
-      - linkListType: linkListType
+      - linkListType: concept
         links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
-      - linkListType: linkListType
-        links:
-          - text: linktext1
-            url: file1.md
-          - text: linktext2
-            url: file2.md
+          - text: SQL Server PowerShell
+            url: powershell/sql-server-powershell.md
+          - text: sqlcmd
+            url: tools/sqlcmd-utility.md
+          - text: bcp
+            url: tools/bcp-utility.md
+          - text: mssql-conf
+            url: linux/sql-server-linux-configure-mssql-conf.md
+          - text: mssql-cli
+            url: tools/mssql-cli.md

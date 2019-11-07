@@ -220,14 +220,6 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 |Windows Server Failover Cluster| You can configure high availability for Machine Learning Services on a Windows Server Failover Cluster.|
 | &nbsp; | &nbsp; |
 
-## [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
-
-| New feature or update | Details |
-|:---|:---|
-|Support for Azure SQL Database managed instance databases| Host [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] on a managed instance. See [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] installation and configuration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
-|New HTML controls| HTML controls replace all former Silverlight components. Silverlight dependency removed.|
-| &nbsp; | &nbsp; |
-
 ## SQL Server Analysis Services
 
 This release introduces new features and improvements for performance, resource governance, and client support.
@@ -240,6 +232,23 @@ This release introduces new features and improvements for performance, resource 
 |Property settings for resource governance| This release includes new memory settings: Memory\QueryMemoryLimit, DbpropMsmdRequestMemoryLimit, and OLAP\Query\RowsetSerializationLimit for resource governance. To learn more, see [Memory settings](/analysis-services/server-properties/memory-properties).|
 |Governance setting for Power BI cache refreshes | This release introduces the ClientCacheRefreshPolicy property, which overrides caching dashboard tile data and report data for initial load of Live connect reports by the Power BI service. To learn more, see [General Properties](/analysis-services/server-properties/general-properties). |
 | Online attach  | Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more, see [Online attach](/analysis-services/what-s-new-in-sql-server-analysis-services#online-attach). |
+| &nbsp; | &nbsp; |
+
+## SQL Server Integration Services
+
+This release introduces new features to improve file operations.
+
+| New feature or update | Details |
+|:---|:---|
+|Flexible file task |Perform file operations on Local File System, Azure Blob Storage, and Azure Data Lake Storage Gen2. See [Flexible File Task](../integration-services/control-flow/flexible-file-task.md).|
+|Flexible file source and destination |Read and write data for Azure Blob Storage, and Azure Data Lake Storage Gen2. See [Flexible File Source](../integration-services/data-flow/flexible-file-source.md) and [Flexible File Destination](../integration-services/data-flow/flexible-file-destination.md). |
+
+## SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| New feature or update | Details |
+|:---|:---|
+|Support for Azure SQL Database managed instance databases| Host [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] on a managed instance. See [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] installation and configuration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
+|New HTML controls| HTML controls replace all former Silverlight components. Silverlight dependency removed.|
 | &nbsp; | &nbsp; |
 
 ## SQL Server Reporting Services

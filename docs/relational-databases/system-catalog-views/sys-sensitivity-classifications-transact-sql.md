@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "classification [SQL]"
   - "labels [SQL]"
   - "information types"
+  - "rank"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.sensitivity_classifications (Transact-SQL)
@@ -38,6 +39,8 @@ Returns a row for each classified item in the database.
 |**label_id**|**sysname**|An ID associated with the label, which can be used by an information protection system such as Azure Information Protection (AIP)|  
 |**information_type**|**sysname**|The information type (human readable) assigned for the sensitivity classification|  
 |**information_type_id**|**sysname**|An ID associated with the information type, which can be used by an information protection system such as Azure Information Protection (AIP)|  
+|**rank**|**int**|A numerical value of the rank: <br><br>0 for NONE<br>10 for LOW<br>20 for MEDIUM<br>30 for HIGH<br>40 for CRITICAL| 
+|**rank_desc**|**sysname**|Textual representation of the rank:  <br><br>NONE, LOW, MEDIUM, HIGH, CRITICAL|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## Remarks  
@@ -62,7 +65,7 @@ The following example returns a table listing the table name, column name, label
 SELECT
     SCHEMA_NAME(sys.all_objects.schema_id) as SchemaName,
     sys.all_objects.name AS [TableName], sys.all_columns.name As [ColumnName],
-    [Label], [Label_ID], [Information_Type], [Information_Type_ID]
+    [Label], [Label_ID], [Information_Type], [Information_Type_ID], [Rank], [Rank_Desc]
 FROM
           sys.sensitivity_classifications
 left join sys.all_objects on sys.sensitivity_classifications.major_id = sys.all_objects.object_id

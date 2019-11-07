@@ -167,7 +167,7 @@ If a scalar UDF is inlineable, it does not imply that it will always be inlined.
 
 -  If the UDF definition runs into thousands of lines of code, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might choose not to inline it. 
 -  A UDF invocation in a `GROUP BY` clause will not be inlined. This decision is made when the query referencing a scalar UDF is compiled.
--  If the UDF is signed with a certificate. Because signatures could be added and dropped after a UDF has been created, the decision of whether to inline or not is done when the query referencing a scalar UDF is compiled. For example, system functions are tipicaly signed with a certificate and cannot be inlined. You can use [sys.crypt_properties](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md). 
+-  If the UDF is signed with a certificate. Because signatures could be added and dropped after a UDF has been created, the decision of whether to inline or not is done when the query referencing a scalar UDF is compiled. For example, system functions are typically signed with a certificate. You can use [sys.crypt_properties](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md) to find which objects are signed. 
 
    ```sql
    SELECT * 

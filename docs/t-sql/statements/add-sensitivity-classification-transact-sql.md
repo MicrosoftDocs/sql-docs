@@ -28,7 +28,8 @@ monikerRange: ">= sql-server-2016 || = azuresqldb-current || = sqlallproducts-al
 ---
 
 # ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 Adds metadata about the sensitivity classification to one or more database columns. The classification can include a sensitivity label and an information type.  
 

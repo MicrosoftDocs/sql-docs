@@ -182,7 +182,7 @@ If all the preconditions are satisfied and [!INCLUDE[ssNoVersion](../../includes
 - Certain XEvents are emitted.
 
 ## Enabling scalar UDF inlining
-You can make workloads automatically eligible for scalar UDF inlining by enabling compatibility level 150 for the database.? You can set this using Transact-SQL.?For example:  
+You can make workloads automatically eligible for scalar UDF inlining by enabling compatibility level 150 for the database. You can set this using [!INCLUDE[tsql](../../includes/tsql-md.md)]. For example:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;

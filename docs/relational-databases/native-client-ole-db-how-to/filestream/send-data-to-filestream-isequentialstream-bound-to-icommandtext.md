@@ -14,7 +14,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Send Data to FILESTREAM - ISequentialStream Bound to ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   This sample uses an ISequentialStream interface bound to an ICommandText parameter to send between 4MB and 4GB of data to a filestream column.  
   

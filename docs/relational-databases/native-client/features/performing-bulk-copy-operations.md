@@ -18,7 +18,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Performing Bulk Copy Operations
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bulk copy feature supports the transfer of large amounts of data into or out of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table or view. Data can also be transferred out by specifying a SELECT statement. The data can be moved between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and an operating-system data file, such as an ASCII file. The data file can have different formats; the format is defined to bulk copy in a format file. Optionally, data can be loaded into program variables and transferred to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using bulk copy functions and methods.  
   

@@ -26,7 +26,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Data-at-Execution and Text, ntext, or Image Columns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   ODBC data-at-execution is a feature that enables applications to work with extremely large amounts of data on bound columns or parameters. When retrieving very large **text**, **ntext**, or **image** columns, an application may not be able to simply allocate a huge buffer, bind the column into the buffer, and fetch the row. When updating very large **text**, **ntext**, or **image** columns, the application might not be able to simply allocate a huge buffer, bind it to a parameter marker in an SQL statement, and then execute the statement. In these cases, the application must use [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) or [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) with its data-at-execution options.  
   

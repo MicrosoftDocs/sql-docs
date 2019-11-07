@@ -14,7 +14,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Use Large CLR UDTs (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   This sample shows how to fetch rows with large user-defined types from a result set. For more information, see [Large CLR User-Defined Types &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). This sample works with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later.  
   

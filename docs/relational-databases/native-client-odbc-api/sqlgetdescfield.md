@@ -17,7 +17,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # SQLGetDescField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver exposes driver-specific descriptor fields for the implementation row descriptor (IRD) only. Within the IRD, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descriptor fields are referenced through driver-specific column attributes. For information about a complete list of available driver-specific descriptor fields, see [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md).  
   

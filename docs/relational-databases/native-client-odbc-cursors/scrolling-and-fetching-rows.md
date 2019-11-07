@@ -24,7 +24,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Scrolling and Fetching Rows
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   To use a scrollable cursor, an ODBC application must:  
   

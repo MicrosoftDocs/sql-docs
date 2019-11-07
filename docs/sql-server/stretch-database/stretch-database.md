@@ -1,5 +1,5 @@
 ---
-title: "Stretch Database | Microsoft Docs"
+title: "Stretch Database"
 ms.date: "06/27/2016"
 ms.service: sql-server-stretch-database
 ms.reviewer: ""
@@ -9,6 +9,7 @@ helpviewer_keywords:
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
+ms.custom: seo-lt-2019
 ---
 # Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

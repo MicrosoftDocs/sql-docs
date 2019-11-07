@@ -1,5 +1,6 @@
 ---
-title: "sys.database_service_objectives (Azure SQL Database) | Microsoft Docs"
+title: "sys.database_service_objectives"
+titleSuffix: Azure SQL Database
 ms.custom: ""
 ms.date: "03/21/2018"
 ms.service: sql-database
@@ -14,6 +15,7 @@ f1_keywords:
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
 author: stevestein
 ms.author: sstein
+ms.custom: seo-lt-2019
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.database_service_objectives (Azure SQL Database)

@@ -1,5 +1,5 @@
 ---
-title: "Get started by running the Enable Database for Stretch Wizard | Microsoft Docs"
+title: "Get started by running the Enable Database for Stretch Wizard"
 ms.date: "08/05/2016"
 ms.service: sql-server-stretch-database
 ms.reviewer: ""
@@ -20,6 +20,7 @@ helpviewer_keywords:
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
+ms.custom: seo-lt-2019
 ---
 # Get started by running the Enable Database for Stretch Wizard
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

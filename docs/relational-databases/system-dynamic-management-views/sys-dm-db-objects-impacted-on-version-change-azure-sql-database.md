@@ -1,6 +1,6 @@
 ---
-title: "sys.dm_db_objects_impacted_on_version_change (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_db_objects_impacted_on_version_change"
+titleSuffix: Azure SQL Database
 ms.date: "03/03/2017"
 ms.service: sql-database
 ms.reviewer: ""
@@ -19,6 +19,7 @@ ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 author: stevestein
 ms.author: sstein
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+ms.custom: seo-lt-2019
 ---
 # sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

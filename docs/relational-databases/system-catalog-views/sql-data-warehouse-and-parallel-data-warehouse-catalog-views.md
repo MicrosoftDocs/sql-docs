@@ -1,6 +1,6 @@
 ---
 title: 'Catalog Views'
-titleSuffix: Azure SQL Data Warehouse and Parallel Data Warehouse
+titleSuffix: Azure SQL Data Warehouse and Parallel Data Warehouse
 ms.date: "10/29/2019"
 ms.service: sql-data-warehouse
 ms.reviewer: "jrasnick"

@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "information types"
   - "data classification"
   - "rank"
-monikerRange: ">= sql-server-2016 |= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2016 || = azuresqldb-current || = sqlallproducts-allversions"
 ---
 
 # ADD SENSITIVITY CLASSIFICATION (Transact-SQL)

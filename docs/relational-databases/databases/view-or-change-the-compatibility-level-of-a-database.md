@@ -55,7 +55,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
      The current compatibility level is displayed in the **Compatibility level** list box.  
   
-5.  To change the compatibility level, select a different option from the list. The available options for different [!INCLUDE[ssde_md](../../includes/ssde_md.md)] versions are listed in the [ALTER DATABASE Compatibility Level (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level#supported-dbcompats) page.  
+5.  To change the compatibility level, select a different option from the list. The available options for different [!INCLUDE[ssde_md](../../includes/ssde_md.md)] versions are listed in the [ALTER DATABASE Compatibility Level (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) page.  
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

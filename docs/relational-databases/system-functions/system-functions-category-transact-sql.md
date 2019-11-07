@@ -1,5 +1,5 @@
 ---
-title: "System Functions by category | Microsoft Docs"
+title: "System Functions by category"
 ms.date: "11/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"

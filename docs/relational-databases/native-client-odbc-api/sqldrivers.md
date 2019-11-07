@@ -17,7 +17,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # SQLDrivers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The ODBC Driver Manager returns all **SQLDrivers** attribute specification strings. For more information about attribute string and value definition, see the [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?LinkId=4173), or you can view the [ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45250) online.  
   

@@ -27,7 +27,6 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 /includes/snac-deprecated.md
 -->
 
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
 A distributed transaction can be created for different Microsoft SQL systems in different ways.
 

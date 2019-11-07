@@ -33,7 +33,7 @@ Returns a row for each classified item in the database.
 |-----------------|---------------|-----------------|  
 |**class**|**int**|Identifies the class of the item on which the classification exists|  
 |**class_desc**|**varchar(16)**|A description of the class of the item on which the classification exists|  
-|**major_id**|**int**|ID of the item on which the classification exists.<br \><br \>If class is 0, major_id is always 0.<br>If class is 1, 2, or 7 major_id is object_id.|  
+|**major_id**|**int**|ID of the item on which the classification exists.<br><br>If class is 0, major_id is always 0.<br>If class is 1, 2, or 7 major_id is object_id.|  
 |**minor_id**|**int**|Secondary ID of the item on which the classification exists, interpreted according to its class.<br><br>If class = 1, minor_id is the column_id (if column), else 0 (if object).<br>If class = 2, minor_id is the parameter_id.<br>If class = 7, minor_id is the index_id. |  
 |**label**|**sysname**|The label (human readable) assigned for the sensitivity classification|  
 |**label_id**|**sysname**|An ID associated with the label, which can be used by an information protection system such as Azure Information Protection (AIP)|  

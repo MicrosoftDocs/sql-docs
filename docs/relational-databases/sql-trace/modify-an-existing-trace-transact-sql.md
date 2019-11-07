@@ -24,15 +24,15 @@ ms.author: "mathoma"
   
 2.  To modify trace events, execute **sp_trace_setevent** by specifying the changes through the parameters. Listed in order, the parameters are:  
 
-    -   **@traceid** (Trace ID)  
+    -   **\@traceid** (Trace ID)  
   
-    -   **@eventid** (Event ID)  
+    -   **\@eventid** (Event ID)  
   
-    -   **@columnid** (Column ID)  
+    -   **\@columnid** (Column ID)  
   
-    -   **@on** (ON)  
+    -   **\@on** (ON)  
   
-     When you modify the **@on** parameter, keep in mind its interaction with the **@columnid** parameter:  
+     When you modify the **\@on** parameter, keep in mind its interaction with the **\@columnid** parameter:  
   
     |ON|Column ID|Result|  
     |--------|---------------|------------|  

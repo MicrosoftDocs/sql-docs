@@ -1,5 +1,5 @@
 ---
-title: "Make an Attribute Group Visible to Users (Master Data Services) | Microsoft Docs"
+title: Make an Attribute Group Visible to Users
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql

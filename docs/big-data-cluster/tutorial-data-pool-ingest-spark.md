@@ -48,6 +48,8 @@ The following steps create an external table in the data pool named **web_clicks
 1. Create an external data source to the data pool if it does not already exist.
 
    ```sql
+   USE Sales
+   GO
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
      WITH (LOCATION = 'sqldatapool://controller-svc/default');
@@ -124,9 +126,9 @@ The next step is to create a Spark streaming job that loads web clickstream data
 
 The following steps show that the Spark streaming job loaded the data from HDFS into the data pool.
 
-1. Before querying the ingested data, look at the task history output to see that the job completed.
+1. Before querying the ingested data, look at the Spark Execution Status including Yarn App ID, Spark UI and Driver Logs.
 
-   ![Spark job history](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
+   ![Spark Execution Details](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
 1. Return to the SQL Server master instance query window that you opened at the beginning of this tutorial.
 

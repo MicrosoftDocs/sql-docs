@@ -1,5 +1,5 @@
 ---
-title: "Test a User&#39;s Permissions (Master Data Services) | Microsoft Docs"
+title: Test a User&#39;s Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

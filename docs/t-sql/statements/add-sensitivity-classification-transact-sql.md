@@ -23,6 +23,7 @@ helpviewer_keywords:
   - "labels [SQL]"
   - "information types"
   - "data classification"
+  - "rank"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 
@@ -38,19 +39,20 @@ Classifying sensitive data in your database environment helps achieve extended v
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO
     <object_name> [, ...n ]
-    WITH ( <sensitivity_label_option> [, ...n ] )     
+    WITH ( <sensitivity_option> [, ...n ] )     
 
 <object_name> ::=
 {
     [schema_name.]table_name.column_name
 }
 
-<sensitivity_label_option> ::=  
+<sensitivity_option> ::=  
 {   
     LABEL = string |
     LABEL_ID = guidOrString |
     INFORMATION_TYPE = string |
-    INFORMATION_TYPE_ID = guidOrString  
+    INFORMATION_TYPE_ID = guidOrString | 
+    RANK = NONE | LOW | MEDIUM | HIGH | CRITICAL
 }
 ```  
 
@@ -78,6 +80,10 @@ Is the human readable name of the information type. Information types are used t
 *INFORMATION_TYPE_ID*
 
 Is an identifier associated with the information type. This is often used by centralized information protection platforms to uniquely identify information types in the system.
+
+*RANK*
+
+Is an identifier based on a predefinied set of values which define sensitivity rank. Used by other services like Advanced Threat Protection to detect anomalies based on their rank.
 
 
 ## Remarks  

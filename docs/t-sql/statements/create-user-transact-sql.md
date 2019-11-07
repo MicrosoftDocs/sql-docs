@@ -1,7 +1,7 @@
 ---
 title: "CREATE USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/09/2019"
+ms.date: "11/06/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -133,8 +133,8 @@ CREATE USER user_name
     | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ] ] 
 ```
 
-> [!IMPORTANT]
-> Azure AD logins for SQL Database managed instance is in **public preview**.
+> [!NOTE]
+> The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -462,7 +462,7 @@ WITH
 
  To create an Azure AD user from an Azure AD login, use the following syntax.
 
- Sign into your managed instance with an Azure AD login granted with the `sysadmin` role. The following creates an Azure AD user bob@contoso.com, from the login bob@contoso.com. This login was created in the [CREATE LOGIN](create-login-transact-sql.md#examples-4) example.
+ Sign into your managed instance with an Azure AD login granted with the `sysadmin` role. The following creates an Azure AD user bob@contoso.com, from the login bob@contoso.com. This login was created in the [CREATE LOGIN](create-login-transact-sql.md#examples) example.
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];

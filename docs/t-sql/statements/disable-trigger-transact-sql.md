@@ -81,7 +81,7 @@ The following examples are described in the AdventureWorks2012 database.
 ### A. Disabling a DML trigger on a table  
  The following example disables trigger `uAddress` that was created on table `Address`.  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ```  
@@ -89,7 +89,7 @@ GO
 ### B. Disabling a DDL trigger  
  The following example creates a DDL trigger `safety` with database scope, and then disables it.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   

@@ -14,7 +14,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   This sample uses the IRowsetFastUpload interface to send between 4MB and 4GB of data to a filestream column.  
   

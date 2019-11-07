@@ -67,7 +67,7 @@ CREATE APPLICATION ROLE application_role_name
 ## Examples  
  The following example creates an application role called `weekly_receipts` that has the password `987Gbv876sPYY5m23` and `Sales` as its default schema.  
   
-```  
+```sql  
 CREATE APPLICATION ROLE weekly_receipts   
     WITH PASSWORD = '987G^bv876sPY)Y5m23'   
     , DEFAULT_SCHEMA = Sales;  

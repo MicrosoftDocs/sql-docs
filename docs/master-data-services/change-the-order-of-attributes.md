@@ -1,5 +1,5 @@
 ---
-title: "Change the Order of Attributes | Microsoft Docs"
+title: Change the Order of Attributes
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql

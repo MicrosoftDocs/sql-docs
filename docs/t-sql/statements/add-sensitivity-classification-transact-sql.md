@@ -24,11 +24,12 @@ helpviewer_keywords:
   - "information types"
   - "data classification"
   - "rank"
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2016 || = azuresqldb-current || = sqlallproducts-allversions"
 ---
 
 # ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 Adds metadata about the sensitivity classification to one or more database columns. The classification can include a sensitivity label and an information type.  
 
@@ -36,7 +37,7 @@ Classifying sensitive data in your database environment helps achieve extended v
 
 ## Syntax  
 
-```sql
+```
 ADD SENSITIVITY CLASSIFICATION TO
     <object_name> [, ...n ]
     WITH ( <sensitivity_option> [, ...n ] )     

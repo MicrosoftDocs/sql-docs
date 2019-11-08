@@ -16,7 +16,7 @@ ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
 author: "stevestein"
 ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: seo-lt-2019
+ms.custom: seo-dt-2019
 ---
 # Active Geo-Replication - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

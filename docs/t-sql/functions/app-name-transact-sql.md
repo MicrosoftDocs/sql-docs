@@ -61,7 +61,7 @@ GO
 ```  
   
 ## See also
-[System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+[System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
 [Functions](../../t-sql/functions/functions.md)
   
   

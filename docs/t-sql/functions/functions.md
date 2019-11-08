@@ -58,7 +58,7 @@ Operate on a single value and then return a single value. Scalar functions can b
 |[Metadata Functions](metadata-functions-transact-sql.md)|Return information about the database and database objects.|  
 |[Security Functions](security-functions-transact-sql.md)|Return information about users and roles.|  
 |[String Functions](string-functions-transact-sql.md)|Perform operations on a string (**char** or **varchar**) input value and return a string or numeric value.|  
-|[System Functions](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|Perform operations and return information about values, objects, and settings in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[System Functions](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|Perform operations and return information about values, objects, and settings in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[System Statistical Functions](system-statistical-functions-transact-sql.md)|Return statistical information about the system.|  
 |[Text and Image Functions](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Perform operations on text or image input values or columns, and return information about the value.|  
   

@@ -40,7 +40,7 @@ SSMS is free!
 
 SSMS 18.4 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.4 upgrades it to 18.4. If you have an older *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.4.
 
-**Version information**
+### Version information
 
 - Release number: 18.4  
 - Build number: 15.0.18206.0  
@@ -53,7 +53,7 @@ The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earl
 If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**
 
 > [!Note]
-> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
+> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](https://aka.ms/downloadssmsusenglish). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
 
 ## Available languages
 

@@ -1,10 +1,10 @@
 ---
-title: 'Catalog Views'
+title: Catalog Views
 titleSuffix: Azure SQL Data Warehouse and Parallel Data Warehouse
-ms.date: "10/29/2019"
+ms.date: 10/29/2019
 ms.service: sql-data-warehouse
-ms.reviewer: "jrasnick"
-ms.topic: "language-reference"
+ms.reviewer: jrasnick
+ms.topic: language-reference
 dev_langs: 
   - "TSQL"
 ms.assetid: ef6f58e2-0162-4bb2-951a-a786da7453e4

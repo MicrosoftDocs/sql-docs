@@ -65,7 +65,7 @@ landingContent:
           - text: sqlcmd
             url: "sql/tools/sqlcmd-utility"
           - text: bcp
-            url: "sql/tools/bcp-utility
+            url: "sql/tools/bcp-utility"
           - text: mssql-conf
             url: "sql/linux/sql-server-linux-configure-mssql-conf"
           - text: mssql-cli

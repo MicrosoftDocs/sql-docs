@@ -848,7 +848,7 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)      
 [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)     
 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)      
-[System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)      
+[System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)      
 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)      
 [Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md)       
   

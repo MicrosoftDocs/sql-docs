@@ -217,9 +217,9 @@ SELECT NCHAR(0x266A) AS [eighth-note]
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
 ```
-codepoint encoded to char bytes decoded to char
-------------------------- ---------------------
-♪                         ♪
+eighth-note context-dependent-convert context-dependent-cast
+----------- ------------------------- ----------------------
+♪           ♪                         ♪
 ```
 
 ### H. Using NCHAR instead of CHAR to look up UTF-8 characters

@@ -101,8 +101,8 @@ Multiple file locations can only be specified from the same storage account and 
 
 - ‘https://<account>.blob.core.windows.net/<container>/<path>’, ​‘https://<account>.blob.core.windows.net/<container>/<path>’…
 
-  *FILE_TYPE = { ‘CSV’ | ‘PARQUET’ | ‘ORC’ }*</br>
-  *FILE_TYPE* specifies the format of the external data.
+*FILE_TYPE = { ‘CSV’ | ‘PARQUET’ | ‘ORC’ }*</br>
+*FILE_TYPE* specifies the format of the external data.
 
 - CSV: Specifies a comma-separated values file compliant to the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
 - PARQUET: Specifies a Parquet format.

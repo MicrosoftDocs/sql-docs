@@ -25,11 +25,11 @@ landingContent:
       - linkListType: overview
         links:
           - text: What is SQL Server Management STudio (SSMS)?
-            url: sql/ssms/sql-server-management-studio-ssms.md
+            url: sql/ssms/sql-server-management-studio-ssms
           - text: What is Azure Data Studio?
-            url: sql/azure-data-studio/what-is.md
+            url: sql/azure-data-studio/what-is
           - text: What is SQL Server Data Tools?
-            url: sql/ssdt/sql-server-data-tools.md
+            url: sql/ssdt/sql-server-data-tools
 
   # Card (optional)
   - title: Download
@@ -37,11 +37,11 @@ landingContent:
       - linkListType: download
         links:
           - text: Download SSMS
-            url: sql/ssms/download-sql-server-management-studio-ssms.md
+            url: sql/ssms/download-sql-server-management-studio-ssms
           - text: Download Azure Data Studio
-            url: sql/azure-data-studio/download.md
+            url: sql/azure-data-studio/download
           - text: Download SSDT
-            url: sql/ssdt/download-sql-server-data-tools-ssdt.md
+            url: sql/ssdt/download-sql-server-data-tools-ssdt
 
   # Card
   - title: Get Started
@@ -49,11 +49,11 @@ landingContent:
       - linkListType: get-started
         links:
           - text: Connect and query SQL Server with SSMS
-            url: sql/ssms/tutorials/connect-query-sql-server.md
+            url: sql/ssms/tutorials/connect-query-sql-server
           - text: Connect and query SQL Server with Azure Data Studio
-            url: sql/azure-data-studio/quickstart-sql-server.md
+            url: sql/azure-data-studio/quickstart-sql-server
           - text: Project-Oriented Offline Database Development
-            url: sql/ssdt/project-oriented-offline-database-development.md
+            url: sql/ssdt/project-oriented-offline-database-development
 
   # Card
   - title: Command line tools
@@ -61,12 +61,12 @@ landingContent:
       - linkListType: concept
         links:
           - text: SQL Server PowerShell
-            url: sql/powershell/sql-server-powershell.md
+            url: sql/powershell/sql-server-powershell
           - text: sqlcmd
-            url: sql/tools/sqlcmd-utility.md
+            url: sql/tools/sqlcmd-utility
           - text: bcp
-            url: sql/tools/bcp-utility.md
+            url: sql/tools/bcp-utility
           - text: mssql-conf
-            url: sql/linux/sql-server-linux-configure-mssql-conf.md
+            url: sql/linux/sql-server-linux-configure-mssql-conf
           - text: mssql-cli
-            url: sql/tools/mssql-cli.md
+            url: sql/tools/mssql-cli

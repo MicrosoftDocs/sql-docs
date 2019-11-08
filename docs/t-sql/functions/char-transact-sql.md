@@ -181,8 +181,8 @@ single_byte_representing_complete_character single_byte_representing_complete_ch
 ### F. Using CHAR to return multibyte characters
 This example uses integer and hex values in the valid range for Extended ASCII.
 However, the `CHAR` function returns `NULL` because the parameter represents only the first byte of a multibyte character.
-A **char(2)** double-byte character can neither be partially represented nor be divided without some conversion operation.
-The individual bytes of a double-byte character don't generally represent valid **char(1)** values.
+A CHAR(2) double-byte character cannot be partially represented nor divided without some conversion operation.
+The individual bytes of a double-byte character don't generally represent valid CHAR(1) values.
   
 ```sql
 SELECT CHAR(129) AS first_byte_of_double_byte_character, 
@@ -198,12 +198,10 @@ first_byte_of_double_byte_character first_byte_of_double_byte_character
 NULL                                NULL                                         
 ```
   
-### G. Using CONVERT instead of CHAR to decode multibyte characters
-This example relies on the default codepage of the current database to decode a multibyte character.
-`CONVERT` here operates on a character encoding, SHIFT\_JIS.
-`CHAR` and `NCHAR` operate on character sets and codepoints,
-which works well with ASCII code 13 above, but not with JIS X 208 code 2-86 here.
-Encoding JIS X 208 ku-ten codes to SHIFT\_JIS is outside the scope of this example.
+### G. Using CONVERT instead of CHAR to return multibyte characters
+This example accepts the binary value as an encoded multibyte character consistent with the default codepage of the current database,
+subject to validation.
+Character conversion is more broadly supported and may be an alternative to working with encoding at a lower level.
 
 ```sql
 CREATE DATABASE [multibyte-char-context]
@@ -219,9 +217,9 @@ SELECT NCHAR(0x266A) AS [eighth-note]
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
 ```
-eighth-note context-dependent-convert context-dependent-cast
------------ ------------------------- ----------------------
-♪           ♪                         ♪
+codepoint encoded to char bytes decoded to char
+------------------------- ---------------------
+♪                         ♪
 ```
 
 ### H. Using NCHAR instead of CHAR to look up UTF-8 characters

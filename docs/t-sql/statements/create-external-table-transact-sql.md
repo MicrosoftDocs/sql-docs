@@ -591,6 +591,7 @@ WITH
 
 In Azure SQL Database, creates an external table for [elastic queries (in preview)](../azure/sql-database/sql-database-elastic-query-overview/).
 
+
 See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 ## Syntax

@@ -24,14 +24,16 @@ helpviewer_keywords:
   - "information types"
   - "data classification"
   - "rank"
-monikerRange: ">= sql-server-2016 || = azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
 ---
 
 # ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-Adds metadata about the sensitivity classification to one or more database columns. The classification can include a sensitivity label and an information type.  
+Adds metadata about the sensitivity classification to one or more database columns. The classification can include a sensitivity label and an information type.
+
+For SQL Server, this was introduced in SQL Server 2019.
 
 Classifying sensitive data in your database environment helps achieve extended visibility and better protection. Additional information can be found in [Getting started with SQL Information Protection](https://aka.ms/sqlip)
 

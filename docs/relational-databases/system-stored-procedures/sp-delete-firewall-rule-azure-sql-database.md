@@ -1,6 +1,6 @@
 ---
 title: "sp_delete_firewall_rule"
-titleSuffix: Azure SQL Database
+titleSuffix: Azure SQL Database
 ms.custom: ""
 ms.date: "07/27/2016"
 ms.service: sql-database

@@ -1,6 +1,6 @@
 ---
 title: "sys.dm_xe_database_session_targets"
-titleSuffix: Azure SQL Database
+titleSuffix: Azure SQL Database
 ms.date: "06/10/2016"
 ms.service: sql-database
 ms.prod_service: "sql-database"

@@ -1,6 +1,6 @@
 ---
 title: "Firewall Rules Stored Procedures"
-titleSuffix: Azure SQL Database
+titleSuffix: Azure SQL Database
 ms.date: "07/28/2016"
 ms.service: sql-database
 ms.reviewer: ""

@@ -1,6 +1,6 @@
 ---
 title: "sys.elastic_pool_resource_stats"
-titleSuffix: Azure SQL Data Warehouse
+titleSuffix: Azure SQL Database
 ms.date: "01/28/2019"
 ms.service: sql-database
 ms.prod_service: "sql-database"

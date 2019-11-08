@@ -1,6 +1,6 @@
 ---
 title: "sys.dm_db_objects_impacted_on_version_change"
-titleSuffix: Azure SQL Database
+titleSuffix: Azure SQL Database
 ms.date: "03/03/2017"
 ms.service: sql-database
 ms.reviewer: ""

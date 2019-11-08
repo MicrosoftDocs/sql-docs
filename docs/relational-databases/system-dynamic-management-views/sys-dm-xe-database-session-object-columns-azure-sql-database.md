@@ -1,6 +1,6 @@
 ---
 title: "sys.dm_xe_database_session_object_columns"
-titleSuffix: Azure SQL Database
+titleSuffix: Azure SQL Database
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.service: sql-database

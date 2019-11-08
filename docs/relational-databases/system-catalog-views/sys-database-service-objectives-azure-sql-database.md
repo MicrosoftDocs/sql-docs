@@ -1,6 +1,6 @@
 ---
 title: "sys.database_service_objectives"
-titleSuffix: Azure SQL Database
+titleSuffix: Azure SQL Database
 ms.custom: ""
 ms.date: "03/21/2018"
 ms.service: sql-database

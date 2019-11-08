@@ -46,7 +46,7 @@ For this sample, census data (**AdultCensusIncome.csv**) is used to build a Spar
 
    This notebook contains cells with the required commands for this section of the sample.
 
-1. Open the notebook in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
+1. Open the notebook in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks in SQL Server](notebooks-guidance.md).
 
 The data is first read into Spark and split into training and testing data sets. Then the code trains a pipeline model with the training data. Finally, it exports the model to an MLeap bundle.
 

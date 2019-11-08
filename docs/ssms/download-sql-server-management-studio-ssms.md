@@ -40,7 +40,7 @@ SSMS is free!
 
 SSMS 18.4 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.4 upgrades it to 18.4. If you have an older *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.4.
 
-**Version information**
+### Version information
 
 - Release number: 18.4  
 - Build number: 15.0.18206.0  

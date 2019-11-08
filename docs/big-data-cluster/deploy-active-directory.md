@@ -151,7 +151,7 @@ The following environment variables are providing the credentials for the BDC do
 
 ```bash
 export DOMAIN_SERVICE_ACCOUNT_USERNAME=<AD principal account name>
-export DOMAIN_SERVICE_ACCOUNT_USERNAME=<AD principal password>
+export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 ```
 
 ## Provide security and endpoint parameters

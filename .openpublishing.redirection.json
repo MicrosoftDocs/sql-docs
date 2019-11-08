@@ -61,6 +61,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/relational-databases/system-functions/system-functions-for-transact-sql.md",
+            "redirect_url": "/sql/relational-databases/system-functions/system-functions-category-transact-sql",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/relational-databases/security/feature-restrictions.md",
             "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
             "redirect_document_id": false

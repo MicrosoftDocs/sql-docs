@@ -43,7 +43,7 @@ USER_NAME ( [ id ] )
  Is the identification number associated with a database user. *id* is **int**. The parentheses are required.  
   
 ## Return Types  
- **nvarchar(256)**  
+ **nvarchar(128)**  
   
 ## Remarks  
  When *id* is omitted, the current user in the current context is assumed. If the parameter contains the word NULL will return NULL. When USER_NAME is called without specifying an *id* after an EXECUTE AS statement, USER_NAME returns the name of the impersonated user. If a Windows principal accesses the database by way of membership in a group, USER_NAME returns the name of the Windows principal instead of the group.  

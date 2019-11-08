@@ -170,7 +170,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 
 <sup>2</sup> On Enterprise Edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes.
 
-<sup>3</sup> On Enterprise Edition, provides support for up to 8 secondary replicas - including 2 synchronous secondary replicas.
+<sup>3</sup> On Enterprise Edition, provides support for up to 8 secondary replicas - including 5 synchronous secondary replicas.
 
 <sup>4</sup> Standard Edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).
 

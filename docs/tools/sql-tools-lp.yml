@@ -37,9 +37,9 @@ landingContent:
       - linkListType: download
         links:
           - text: Download SSMS
-            url: ../ssms//download-sql-server-management-studio-ssms.md
+            url: ../ssms/download-sql-server-management-studio-ssms.md
           - text: Download Azure Data Studio
-            url: ../azure-data-studio/azure-data-studio/download.md
+            url: ../azure-data-studio/download.md
           - text: Download SSDT
             url: ../ssdt/download-sql-server-data-tools-ssdt.md
 

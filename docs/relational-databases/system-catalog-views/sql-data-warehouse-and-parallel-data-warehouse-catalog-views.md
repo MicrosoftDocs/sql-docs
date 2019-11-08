@@ -10,8 +10,8 @@ dev_langs:
 ms.assetid: ef6f58e2-0162-4bb2-951a-a786da7453e4
 author: julieMSFT
 ms.author: jrasnick
-ms.custom: seo-lt-2019
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+ms.custom: seo-dt-2019
 ---
 # SQL Data Warehouse and Parallel Data Warehouse Catalog Views
 

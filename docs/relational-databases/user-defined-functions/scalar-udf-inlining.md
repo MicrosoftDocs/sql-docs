@@ -20,12 +20,12 @@ monikerRange: "= azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-a
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article introduces Scalar UDF inlining, a feature under the [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+This article introduces Scalar UDF Inlining, a feature under the [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
-## T-SQL Scalar User-Defined Functions
-User-Defined Functions that are implemented in [!INCLUDE[tsql](../../includes/tsql-md.md)] and return a single data value are referred to as T-SQL Scalar User-Defined Functions. T-SQL UDFs are an elegant way to achieve code reuse and modularity across [!INCLUDE[tsql](../../includes/tsql-md.md)] queries. Some computations (such as complex business rules) are easier to express in imperative UDF form. UDFs help in building up complex logic without requiring expertise in writing complex SQL queries.
+## T-SQL scalar User-Defined Functions
+User-Defined Functions (UDFs) that are implemented in [!INCLUDE[tsql](../../includes/tsql-md.md)] and return a single data value are referred to as T-SQL Scalar User-Defined Functions. T-SQL UDFs are an elegant way to achieve code reuse and modularity across [!INCLUDE[tsql](../../includes/tsql-md.md)] queries. Some computations (such as complex business rules) are easier to express in imperative UDF form. UDFs help in building up complex logic without requiring expertise in writing complex SQL queries.
 
-## Performance of Scalar UDFs
+## Performance of scalar UDFs
 Scalar UDFs typically end up performing poorly due to the following reasons:
 
 - **Iterative invocation:** UDFs are invoked in an iterative manner, once per qualifying tuple. This incurs additional costs of repeated context switching due to function invocation. Especially, UDFs that execute [!INCLUDE[tsql](../../includes/tsql-md.md)] queries in their definition are severely affected.
@@ -36,8 +36,8 @@ Scalar UDFs typically end up performing poorly due to the following reasons:
 
 - **Serial execution:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow intra-query parallelism in queries that invoke UDFs. 
 
-## Automatic Inlining of Scalar UDFs
-The goal of the Scalar UDF inlining feature is to improve performance of queries that invoke T-SQL scalar UDFs, where UDF execution is the main bottleneck.
+## Automatic inlining of scalar UDFs
+The goal of the scalar UDF inlining feature is to improve performance of queries that invoke T-SQL scalar UDFs, where UDF execution is the main bottleneck.
 
 With this new feature, scalar UDFs are automatically transformed into scalar expressions or scalar subqueries that are substituted in the calling query in place of the UDF operator. These expressions and subqueries are then optimized. As a result, the query plan will no longer have a user-defined function operator, but its effects will be observed in the plan, like views or inline TVFs.
 
@@ -81,7 +81,7 @@ Due to the reasons outlined earlier, the query with the UDF performs poorly. Now
 These numbers are based on a 10-GB CCI database (using the TPC-H schema), running on a machine with dual processor (12 core), 96-GB RAM, backed by SSD. The numbers include compilation and execution time with a cold procedure cache and buffer pool. The default configuration was used, and no other indexes were created.
 
 ### Example 2 - Multi-statement scalar UDF
-Scalar UDFs that are implemented using multiple T-SQL statements such as variable assignments and conditional branching can also be inlined. Consider the following scalar UDF that, given a customer key, determines the service category for that customer. It arrives at the category by first computing the total price of all orders placed by the customer using a SQL query. Then, it uses an `IF-ELSE` logic to decide the category based on the total price.
+Scalar UDFs that are implemented using multiple T-SQL statements such as variable assignments and conditional branching can also be inlined. Consider the following scalar UDF that, given a customer key, determines the service category for that customer. It arrives at the category by first computing the total price of all orders placed by the customer using a SQL query. Then, it uses an `IF (...) ELSE` logic to decide the category based on the total price.
 
 ```sql
 CREATE OR ALTER FUNCTION dbo.customer_category(@ckey INT) 
@@ -121,13 +121,13 @@ For the same query, the plan with the UDF inlined looks as below.
 
 As mentioned earlier, the query plan no longer has a user-defined function operator, but its effects are now observable in the plan, like views or inline TVFs. Here are some key observations from the above plan:
 
-1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has inferred the implicit join between `CUSTOMER` and `ORDERS` and made that explicit via a join operator.
-2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has also inferred the implicit `GROUP BY O_CUSTKEY on ORDERS` and has used the IndexSpool + StreamAggregate to implement it.
-3. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is now using parallelism across all operators.
+-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has inferred the implicit join between `CUSTOMER` and `ORDERS` and made that explicit via a join operator.
+-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has also inferred the implicit `GROUP BY O_CUSTKEY on ORDERS` and has used the IndexSpool + StreamAggregate to implement it.
+-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is now using parallelism across all operators.
 
 Depending upon the complexity of the logic in the UDF, the resulting query plan might also get bigger and more complex. As we can see, the operations inside the UDF are now no longer a black box, and hence the query optimizer is able to cost and optimize those operations. Also, since the UDF is no longer in the plan, iterative UDF invocation is replaced by a plan that completely avoids function call overhead.
 
-## Inlineable Scalar UDFs requirements
+## Inlineable scalar UDFs requirements
 A scalar T-SQL UDF can be inline if all of the following conditions are true:
 
 - The UDF is written using the following constructs:
@@ -181,8 +181,8 @@ If all the preconditions are satisfied and [!INCLUDE[ssNoVersion](../../includes
 - The plan xml will not have a `<UserDefinedFunction>` xml node for a UDF that has been inlined successfully. 
 - Certain XEvents are emitted.
 
-## Enabling scalar UDF inlining
-You can make workloads automatically eligible for scalar UDF inlining by enabling compatibility level 150 for the database. You can set this using [!INCLUDE[tsql](../../includes/tsql-md.md)]. For example:  
+## Enabling Scalar UDF Inlining
+You can make workloads automatically eligible for Scalar UDF Inlining by enabling compatibility level 150 for the database. You can set this using [!INCLUDE[tsql](../../includes/tsql-md.md)]. For example:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -190,21 +190,21 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 Apart from this, there are no other changes required to be made to UDFs or queries to take advantage of this feature.
 
-## Disabling Scalar UDF inlining without changing the compatibility level
+## Disabling Scalar UDF Inlining without changing the compatibility level
 Scalar UDF inlining can be disabled at the database, statement, or UDF scope while still maintaining database compatibility level 150 and higher. To disable scalar UDF inlining at the database scope, execute the following statement within the context of the applicable database: 
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF;
 ```
 
-To re-enable scalar UDF inlining for the database, execute the following statement within the context of the applicable database:
+To re-enable Scalar UDF Inlining for the database, execute the following statement within the context of the applicable database:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = ON;
 ```
 
 When ON, this setting will appear as enabled in [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md). 
-You can also disable scalar UDF inlining for a specific query by designating `DISABLE_TSQL_SCALAR_UDF_INLINING` as a `USE HINT` query hint. For example:
+You can also disable Scalar UDF Inlining for a specific query by designating `DISABLE_TSQL_SCALAR_UDF_INLINING` as a `USE HINT` query hint. For example:
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
@@ -217,7 +217,7 @@ OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 
 A `USE HINT` query hint takes precedence over the database scoped configuration or compatibility level setting.
 
-Scalar UDF inlining can also be disabled for a specific UDF using the INLINE clause in the `CREATE FUNCTION` or `ALTER FUNCTION` statement.
+Scalar UDF Inlining can also be disabled for a specific UDF using the INLINE clause in the `CREATE FUNCTION` or `ALTER FUNCTION` statement.
 For example:
 
 ```sql

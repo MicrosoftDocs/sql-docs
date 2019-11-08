@@ -19,7 +19,7 @@ ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 author: stevestein
 ms.author: sstein
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
-ms.custom: seo-lt-2019
+ms.custom: seo-dt-2019
 ---
 # sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

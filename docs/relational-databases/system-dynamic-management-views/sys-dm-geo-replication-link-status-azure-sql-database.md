@@ -18,7 +18,7 @@ ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 author: mashamsft
 ms.author: mathoma
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
-ms.custom: seo-lt-2019
+ms.custom: seo-dt-2019
 ---
 # sys.dm_geo_replication_link_status (Azure SQL Database)
 

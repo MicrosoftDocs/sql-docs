@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: rothja
 ms.author: jroth
-ms.custom: seo-lt-2019
+ms.custom: seo-dt-2019
 ---
 # Manage and troubleshoot Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

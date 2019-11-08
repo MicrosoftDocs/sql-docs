@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 author: rothja
 ms.author: jroth
-ms.custom: seo-lt-2019
+ms.custom: seo-dt-2019
 ---
 # Disable Stretch Database and bring back remote data
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

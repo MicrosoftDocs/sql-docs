@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 author: rothja
 ms.author: jroth
-ms.custom: seo-lt-2019
+ms.custom: seo-dt-2019
 ---
 # Monitor and troubleshoot data migration (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

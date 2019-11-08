@@ -1,6 +1,6 @@
 ---
 title: "sys.database_connection_stats"
-titleSuffix: Azure SQL Database
+titleSuffix: Azure SQL Database
 ms.date: "01/28/2019"
 ms.service: sql-database
 ms.reviewer: ""
@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: stevestein
 ms.author: sstein
-ms.custom: seo-lt-2019
+ms.custom: seo-dt-2019
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.database_connection_stats (Azure SQL Database)

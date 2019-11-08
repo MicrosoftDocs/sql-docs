@@ -10,7 +10,7 @@ ms.assetid: 7f353e2a-f8fc-4366-97e4-aa1c49eadaf4
 author: MightyPen
 ms.author: genemi
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
-ms.custom: seo-lt-2019
+ms.custom: seo-dt-2019
 ---
 # sys.dm_xe_database_session_targets (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

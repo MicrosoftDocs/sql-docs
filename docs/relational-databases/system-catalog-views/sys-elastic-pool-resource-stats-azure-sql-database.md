@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 author: "stevestein"
 ms.author: "sstein"
-ms.custom: seo-lt-2019
+ms.custom: seo-dt-2019
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.elastic_pool_resource_stats (Azure SQL Database)

@@ -1,6 +1,6 @@
 ---
-title: "sp_set_database_firewall_rule (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
+title: "sp_set_database_firewall_rule"
+titleSuffix: Azure SQL Database
 ms.date: "08/04/2017"
 ms.service: sql-database
 ms.prod_service: "sql-database"
@@ -20,6 +20,7 @@ ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
 author: VanMSFT
 ms.author: vanto
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+ms.custom: seo-dt-2019
 ---
 # sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

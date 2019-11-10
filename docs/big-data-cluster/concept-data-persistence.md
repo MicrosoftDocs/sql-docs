@@ -11,15 +11,15 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Data persistence with SQL Server big data cluster on Kubernetes
+# Data persistence with SQL Server big data cluster in Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[Persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) provide a plug-in model for storage in Kubernetes. How storage is provided is abstracted from how it's consumed. Therefore, you can bring your own highly available storage and plug it into the SQL Server big data cluster. This gives you full control over the type of storage, availability, and performance you require. Kubernetes supports various kinds of storage solutions including Azure disks and files, Network File System (NFS), and local storage.
+[Persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) provide a plug-in model for storage in Kubernetes. In this model, the way that storage is provided is abstracted from how it's consumed. Therefore, you can bring your own highly available storage and plug it into the SQL Server big data cluster. This gives you full control over the type of storage, availability, and performance you require. Kubernetes supports various kinds of storage solutions, including Azure disks and files, Network File System (NFS), and local storage.
 
 ## Configure persistent volumes
 
-A SQL Server big data cluster consumes these persistent volumes by using [storage classes](https://kubernetes.io/docs/concepts/storage/storage-classes/). You can create different storage classes for different kinds of storage and specify them at the time of big data cluster deployment. You can configure the storage class and the persistent volume claim size to use for a particular purpose at the pool level. A SQL Server big data cluster creates [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) with the specified storage class name for each component that requires persistent volumes. It then mounts the corresponding persistent volume (or volumes) in the pod. 
+A SQL Server big data cluster consumes these persistent volumes by using [storage classes](https://kubernetes.io/docs/concepts/storage/storage-classes/). You can create different storage classes for different kinds of storage and specify them at the time of big data cluster deployment. You can configure the storage class and the persistent volume claim size to use for a particular purpose at the pool level. A SQL Server big data cluster creates [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) by using the specified storage class name for each component that requires persistent volumes. It then mounts the corresponding persistent volume (or volumes) in the pod. 
 
 Here are some important aspects to consider when you're planning storage configuration for your big data cluster:
 
@@ -27,7 +27,7 @@ Here are some important aspects to consider when you're planning storage configu
 
 - If the storage provisioner for the storage class you're providing in the configuration doesn't support dynamic provisioning, you must pre-create the persisted volumes. For example, the `local-storage` provisioner doesn't enable dynamic provisioning. See this [sample script](https://github.com/microsoft/sql-server-samples/tree/cu1-bdc/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) for guidance on how to proceed in a Kubernetes cluster deployed with `kubeadm`.
 
-- When you deploy a big data cluster, you can configure the same storage class for use by all the components in the cluster. But as a best practice for a production deployment, various components will require different storage configurations to accommodate various workloads in terms of size or throughput. You can overwrite the default storage configuration specified in the controller for each of the SQL Server master instance, data, and storage pools. This article provides examples of how to do this.
+- When you deploy a big data cluster, you can configure the same storage class for use by all the components in the cluster. But as a best practice for a production deployment, various components will require different storage configurations to accommodate various workloads in terms of size or throughput. You can overwrite the default storage configuration specified in the controller for each of the SQL Server master instances, datasets, and storage pools. This article provides examples of how to do this.
 
 - As of the SQL Server 2019 CU1 release, you can't modify a storage configuration setting post-deployment. This constraint prevents you not only from modifying the size of the persistent volume claim for each instance but also from scaling operations post-deployment. Therefore, it's very important that you plan the storage layout before you deploy a big data cluster.
 
@@ -47,7 +47,7 @@ Here are some important aspects to consider when you're planning storage configu
 
 ## Configure big data cluster storage settings
 
-As in other customizations, you can specify storage settings in the cluster configuration files at deployment time for each pool in the `bdc.json` configuration file and for the control services in the `control.json` file. If there are no storage configuration settings in the pool specifications, the control storage settings will be used for all other components, including SQL Server master (`master` resource), HDFS (`storage-0` resource), and data pool. The following code sample represents the storage configuration section that you can include in the specification:
+As in other customizations, you can specify storage settings in the cluster configuration files at deployment time for each pool in the `bdc.json` configuration file and for the control services in the `control.json` file. If there are no storage configuration settings in the pool specifications, the control storage settings will be used for all other components, including SQL Server master (`master` resource), HDFS (`storage-0` resource), and data pool components. The following code sample represents the storage configuration section that you can include in the specification:
 
 ```json
     "storage": 
@@ -64,7 +64,7 @@ As in other customizations, you can specify storage settings in the cluster conf
     }
 ```
 
-Deployment of the big data cluster uses persistent storage to store data, metadata and logs for various components. You can customize the size of the persistent volume claims created as part of the deployment. As a best practice, we recommend that you use storage classes with a *Retain* [reclaim policy](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
+Deployment of the big data cluster uses persistent storage to store data, metadata, and logs for various components. You can customize the size of the persistent volume claims created as part of the deployment. As a best practice, we recommend that you use storage classes with a *Retain* [reclaim policy](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
 
 > [!WARNING]
 > Running without persistent storage can work in a test environment, but it could result in a non-functional cluster. When a pod restarts, cluster metadata and/or user data is lost permanently. We don't recommend that you run under this configuration.
@@ -94,26 +94,26 @@ For all customizations, you must first create a copy of the built-in configurati
 azdata bdc config init --source aks-dev-test --target custom
 ```
 
-This creates two files, `bdc.json` and `control.json`, which you can customize either by manually editing them or by using the `azdata bdc config` command. You can use a combination of jsonpath and jsonpatch libraries to provide ways to edit your config files.
+This process creates two files, `bdc.json` and `control.json`, which you can customize either by manually editing them or by using the `azdata bdc config` command. You can use a combination of jsonpath and jsonpatch libraries to provide ways to edit your config files.
 
 
 ### <a id="config-samples"></a> Configure storage class name and/or claims size
 
 By default, the size of the persistent volume claims provisioned for each of the pods provisioned in the cluster is 10 gigabytes (GB). You can update this value to accommodate the workloads you're running in a custom configuration file before cluster deployment.
 
-The following example updates the size of persistent volume claims size to 32Gi in the `control.json`. If not overridden at pool level, this setting will be applied to all pools:
+In the following example, the size of persistent volume claims is updated to 32 GB in the `control.json`. If it's not overridden at pool level, this setting will be applied to all pools.
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.size=100Gi"
 ```
 
-Following example shows how to modify the storage class for the `control.json` file:
+The following example shows how to modify the storage class for the `control.json` file:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.className=<yourStorageClassName>"
 ```
 
-Another option is to manually edit the custom configuration file or to use json patch like in the following example that changes the storage class for Storage pool. Create a `patch.json` file with this content:
+You also have the option to manually edit the custom configuration file or to use a .json patch that changes the storage class for Storage pool, as in the following example:
 
 ```json
 {
@@ -142,7 +142,7 @@ Another option is to manually edit the custom configuration file or to use json 
 }
 ```
 
-Apply the patch file. Use `azdata bdc config patch` command to apply the changes in the JSON patch file. The following example applies the `patch.json` file to a target deployment configuration file `custom.json`.
+Apply the patch file. Use the `azdata bdc config patch` command to apply the changes in the .json patch file. The following example applies the `patch.json` file to a target deployment configuration file, `custom.json`:
 
 ```bash
 azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
@@ -150,6 +150,6 @@ azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 
 ## Next steps
 
-For complete documentation about volumes in Kubernetes, see the [Kubernetes documentation on Volumes](https://kubernetes.io/docs/concepts/storage/volumes/).
+- For complete documentation about volumes in Kubernetes, see the [Kubernetes documentation on volumes](https://kubernetes.io/docs/concepts/storage/volumes/).
 
-For more information about deploying a SQL Server big data cluster, see [How to deploy SQL Server big data cluster on Kubernetes](deployment-guidance.md).
+- For more information about deploying a SQL Server big data cluster, see [How to deploy SQL Server big data cluster on Kubernetes](deployment-guidance.md).

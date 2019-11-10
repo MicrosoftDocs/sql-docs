@@ -24,8 +24,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
 # sys.index_resumable_operations (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
-**sys.index_resumable_operations** is a system view that monitors and checks the current execution status for resumable Index rebuild.  
-**Applies to**: SQL Server 2017 and Azure SQL Database
+**sys.index_resumable_operations** is a system view that monitors and checks the current execution status for resumable Index rebuild or creation.  
+**Applies to**: SQL Server 2017, SQL Server 2019 and Azure SQL Database
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -49,7 +49,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
 
 ## Example
 
- List all resumable index rebuild operations that are in the PAUSE state.
+ List all resumable index creation or rebuild operations that are in the PAUSE state.
 
 ```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  

@@ -20,7 +20,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-a
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article introduces Scalar UDF Inlining, a feature under the [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+This article introduces Scalar UDF Inlining, a feature under the [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ## T-SQL scalar User-Defined Functions
 User-Defined Functions (UDFs) that are implemented in [!INCLUDE[tsql](../../includes/tsql-md.md)] and return a single data value are referred to as T-SQL Scalar User-Defined Functions. T-SQL UDFs are an elegant way to achieve code reuse and modularity across [!INCLUDE[tsql](../../includes/tsql-md.md)] queries. Some computations (such as complex business rules) are easier to express in imperative UDF form. UDFs help in building up complex logic without requiring expertise in writing complex SQL queries.
@@ -128,7 +128,7 @@ As mentioned earlier, the query plan no longer has a user-defined function opera
 Depending upon the complexity of the logic in the UDF, the resulting query plan might also get bigger and more complex. As we can see, the operations inside the UDF are now no longer a black box, and hence the query optimizer is able to cost and optimize those operations. Also, since the UDF is no longer in the plan, iterative UDF invocation is replaced by a plan that completely avoids function call overhead.
 
 ## Inlineable scalar UDFs requirements
-A scalar T-SQL UDF can be inline if all of the following conditions are true:
+<a name="requirements"></a> A scalar T-SQL UDF can be inline if all of the following conditions are true:
 
 - The UDF is written using the following constructs:
     - `DECLARE`, `SET`: Variable declaration and assignments.
@@ -159,7 +159,7 @@ A scalar T-SQL UDF can be inline if all of the following conditions are true:
 For every T-SQL scalar UDF, the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view includes a property called `is_inlineable`, which indicates whether a UDF is inlineable or not. 
 
 > [!NOTE]
-> The `is_inlineable` property is derived from the constructs found inside the UDF definition. It does not check whether the UDF is in fact inlineable at compile time. For more information, see the conditions for inlining below.
+> The `is_inlineable` property is derived from the constructs found inside the UDF definition. It does not check whether the UDF is in fact inlineable at compile time. For more information, see the [conditions for inlining](#requirements).
 
 A value of 1 indicates that it is inlineable, and 0 indicates otherwise. This property will have a value of 1 for all inline TVFs as well. For all other modules, the value will be 0.
 

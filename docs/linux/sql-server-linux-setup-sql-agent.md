@@ -19,6 +19,9 @@ ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 - [For Versions 2017 CU4 and above, Enable the SQL Server Agent](#EnableAgentAfterCU4)
 - [For Versions 2017 CU3 and Below, Install the SQL Server Agent](#InstallAgentBelowCU4)
 
+> [!NOTE]
+> Make sure you have added the hostname (with and without domain) in the /etc/hosts files, otherwise the Agent won't be enabled properly.
+
 
 ## <a name="EnableAgentAfterCU4">For Versions 2017 CU4 and above, Enable the SQL Server Agent</a>
 

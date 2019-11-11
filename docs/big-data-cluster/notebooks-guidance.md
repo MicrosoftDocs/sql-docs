@@ -17,6 +17,11 @@ ms.technology: big-data-cluster
 
 This article describes how to launch the Notebook experience in the latest release of [**Azure Data Studio**](../azure-data-studio/download.md) and how to start authoring your own notebooks. It also shows how to write Notebooks using different kernels.
 
+Watch this short 5-minute video for an introduction into notebooks in Azure Data Studio:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introduction-to-Azure-Data-Studio-Notebooks/player?WT.mc_id=dataexposed-c9-niner]
+
+
 ## Connect to SQL Server
 
 You can connect to the Microsoft SQL Server connection type in Azure Data Studio.

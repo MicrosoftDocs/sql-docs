@@ -1,5 +1,5 @@
 ---
-title: How to create a stored procedure using sqlrutils
+title: Create an R stored procedure
 description: Use the sqlrutils R package in SQL Server to bundle R language code into a single function that can be passed as an argument to a stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,7 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Create a stored procedure using sqlrutils

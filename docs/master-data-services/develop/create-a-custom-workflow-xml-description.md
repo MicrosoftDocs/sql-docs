@@ -1,5 +1,5 @@
 ---
-title: "Custom Workflow XML Description (Master Data Services) | Microsoft Docs"
+title: Custom Workflow XML Description
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

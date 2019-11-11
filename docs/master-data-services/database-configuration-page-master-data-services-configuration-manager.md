@@ -1,6 +1,6 @@
 ---
-title: "Database Configuration Page (Master Data Services Configuration Manager) | Microsoft Docs"
-ms.custom: ""
+title: Database Configuration Page
+ms.custom: "seo-lt-2019"
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "mds"

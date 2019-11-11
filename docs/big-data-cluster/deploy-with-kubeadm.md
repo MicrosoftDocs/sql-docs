@@ -1,6 +1,6 @@
 ---
 title: Configure Kubernetes with kubeadm
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Learn how to configure Kubernetes on multiple Ubuntu 16.04 or 18.04 machines (physical or virtual) for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments.
 author: MikeRayMSFT 
 ms.author: mikeray

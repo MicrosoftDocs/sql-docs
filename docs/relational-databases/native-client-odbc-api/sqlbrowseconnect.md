@@ -17,7 +17,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   **SQLBrowseConnect** uses keywords that can be categorized into three levels of connection information. For each keyword, the following table indicates whether a list of valid values is returned and whether the keyword is optional.  
   

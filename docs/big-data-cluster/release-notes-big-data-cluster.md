@@ -1,7 +1,7 @@
 ---
 title: SQL Server Big Data Clusters release notes
 titleSuffix: SQL Server big data clusters
-description: This article describes the latest updates and known issues for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview). 
+description: This article describes the latest updates and known issues for SQL Server Big Data Clusters. 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab

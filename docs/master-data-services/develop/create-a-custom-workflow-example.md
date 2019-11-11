@@ -1,5 +1,5 @@
 ---
-title: "Custom Workflow Example (Master Data Services) | Microsoft Docs"
+title: Custom Workflow Example
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Explorer Functional Area (Master Data Manager) | Microsoft Docs"
+title: Explorer Functional Area
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql

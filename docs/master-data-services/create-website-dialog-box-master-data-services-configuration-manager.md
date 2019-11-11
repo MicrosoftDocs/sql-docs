@@ -1,6 +1,6 @@
 ---
-title: "Create Website Dialog Box (Master Data Services Configuration Manager) | Microsoft Docs"
-ms.custom: ""
+title: Create Website Dialog Box
+ms.custom: "seo-lt-2019"
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "mds"

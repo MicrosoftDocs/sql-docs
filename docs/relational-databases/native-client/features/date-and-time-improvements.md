@@ -13,7 +13,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Date and Time Improvements
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   This topic describes the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client support for the date and time data types that were added in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   

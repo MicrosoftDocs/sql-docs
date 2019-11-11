@@ -1,7 +1,7 @@
 ---
 title: Deploy with a python script
-titleSuffix: SQL Server big data clusters
-description: Learn how to use a deployment script to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview) on Azure Kubernetes Service (AKS).
+titleSuffix: SQL Server Big Data Clusters
+description: Learn how to use a deployment script to deploy SQL Server Big Data Clusters on Azure Kubernetes Service (AKS).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -75,8 +75,6 @@ Use the following steps to run the deployment script. This script will create an
    | **Cluster name** | The name of both the AKS cluster and the big data cluster. The name of your big data cluster must be only lower case alpha-numeric characters, and no spaces. (default **sqlbigdata**). |
    | **Password** | Password for the controller, HDFS/Spark gateway, and master instance (default **MySQLBigData2019**). |
    | **Username** | Username for the controller user (default: **admin**). |
-
-The following parameters were required for participants in the SQL Server 2019 big data cluster early adopter program: **Docker username**, and **Docker password**. As of CTP 3.2 they are no longer required.
 
    > [!IMPORTANT]
    > The default **Standard_L8s** machine size may not be available in every Azure region. If you do select a different machine size, make sure that the total number of disks that can be attached across the nodes in the cluster is greater than or equal to 24. Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 24 persistent volume claims. For example, the [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) machine size supports 32 attached disks, so you are able to evaluate big data clusters with a single node of this machine size.

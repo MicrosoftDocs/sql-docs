@@ -17,7 +17,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Execute Stored Procedure with ODBC CALL and Process Output
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedures can have integer return codes and output parameters. The return codes and output parameters are sent in the last packet from the server and are therefore not available to the application until the rowset is completely released. If the command returns multiple results, output parameter data is available when **IMultipleResults::GetResult** returns DB_S_NORESULT or the **IMultipleResults** interface is completely released, whichever occurs first.  
   

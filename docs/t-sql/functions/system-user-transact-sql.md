@@ -41,7 +41,7 @@ SYSTEM_USER
 ```  
   
 ## Return Types  
- **nchar**  
+ **nvarchar(128)**  
   
 ## Remarks  
  You can use the SYSTEM_USER function with DEFAULT constraints in the CREATE TABLE and ALTER TABLE statements. You can also use it as any standard function.  
@@ -136,7 +136,7 @@ SELECT SYSTEM_USER;
  [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)  
   
   

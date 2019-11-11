@@ -254,7 +254,7 @@ As described in this article, scalar UDF inlining transforms a query with scalar
 1. Views that reference inline scalar UDFs cannot be indexed. If you need to create an index on such views, disable inlining for the referenced UDFs.
 1. There might be some differences in the behavior of [Dynamic Data masking](../security/dynamic-data-masking.md) with UDF inlining. 
 In certain situations (depending upon the logic in the UDF), inlining might be more conservative w.r.t masking output columns. In scenarios where the columns referenced in a UDF are not output columns, they will not be masked. 
-1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, the value returned by the built-in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF.
+1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, `@@ROWCOUNT`, or `@@ERROR`, the value returned by the built-in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF.
 
 ## See Also
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

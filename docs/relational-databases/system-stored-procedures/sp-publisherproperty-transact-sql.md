@@ -33,10 +33,10 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [**@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the heterogeneous Publisher. *publisher* is **sysname**, with no default.  
   
- [**@propertyname** = ] **'***propertyname***'**  
+`[ @propertyname = ] 'propertyname'`
  Is the name of the property being set. *propertyname* is **sysname**, and can be one of the following values.  
   
 |Value|Description|  
@@ -47,7 +47,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  When *propertyname* is omitted all settable properties are returned.  
   
- [**@propertyvalue** = ] **'***propertyvalue***'**  
+ `[ @propertyvalue = ] 'propertyvalue'`  
  Is the new value for the property setting. *propertyvalue* is **sysname**, with a default value of NULL. When *propertyvalue* is omitted, the current setting for the property is returned.  
   
 ## Result Sets  

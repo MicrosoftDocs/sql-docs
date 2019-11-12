@@ -62,7 +62,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 ||  
 |-|  
-|SERVER applies to: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|SERVER applies to: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|  
   
 ## Return Code Values  
  0 (success) and 1 (failure)  

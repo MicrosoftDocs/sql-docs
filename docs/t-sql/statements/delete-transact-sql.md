@@ -242,7 +242,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- The following example shows a more complex WHERE clause. The WHERE clause defines two conditions that must be met to determine the rows to delete. The value in the `StandardCost` column must be between `12.00` and `14.00` and the value in the column `SellEndDate` must be null. The example also prints the value from the **@@ROWCOUNT** function to return the number of deleted rows.  
+ The following example shows a more complex WHERE clause. The WHERE clause defines two conditions that must be met to determine the rows to delete. The value in the `StandardCost` column must be between `12.00` and `14.00` and the value in the column `SellEndDate` must be null. The example also prints the value from the **\@\@ROWCOUNT** function to return the number of deleted rows.  
   
 ```sql
 DELETE Production.ProductCostHistory  

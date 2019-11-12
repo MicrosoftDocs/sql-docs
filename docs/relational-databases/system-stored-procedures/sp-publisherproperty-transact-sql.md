@@ -33,10 +33,10 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [**@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the heterogeneous Publisher. *publisher* is **sysname**, with no default.  
   
- [**@propertyname** = ] **'***propertyname***'**  
+`[ @propertyname = ] 'propertyname'`
  Is the name of the property being set. *propertyname* is **sysname**, and can be one of the following values.  
   
 |Value|Description|  

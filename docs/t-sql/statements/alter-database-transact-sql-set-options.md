@@ -3020,7 +3020,7 @@ Disables the Query Store. OFF is the default value.
 > For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], you must execute `ALTER DATABASE SET QUERY_STORE` from the user database. Executing the statement from another data warehouse instance isn't supported.
 
 **<result_set_caching_option> ::=**        
-**Applies to**: Azure SQL Data Warehouse (preview)
+**Applies to**: Azure SQL Data Warehouse  
 
 Controls whether query result is cached in the database.
 

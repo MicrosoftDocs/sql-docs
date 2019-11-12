@@ -49,7 +49,7 @@ Modifies the files and filegroups associated with the database. Adds or removes 
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## Click a product!
+## Click a product
 
 In the following row, click whichever product name you are interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
 
@@ -61,8 +61,6 @@ In the following row, click whichever product name you are interested in. The cl
 |||
 
 &nbsp;
-
-# SQL Server
 
 ## Syntax
 

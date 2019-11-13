@@ -31,13 +31,13 @@ ms.author: mathoma
 ## Shared Files for All Instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Common files used by all instances on a single computer are installed in the folder [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. \<*drive*> is the drive letter where components are installed. The default is usually drive C.  \<*nnn*> identifies the version. The following table identifies versions for the paths. \{nn} is the version value used in the instance ID, and registry path. 
 
-|\<*nnn*>|{nn}|Version|
+|Version\<*nnn*>|{nn}|
 |-----|-----|--------|
-|150| 15| [!INCLUDE[ssqlv15](../../includes/sssqlv15-md.md)]|
-|140| 14| [!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]|
-|130| 13 | [!INCLUDE[ssqlv13](../../includes/sssql15-md.md)]|
-|120|12 | [!INCLUDE[ssqlv12](../../includes/sssql14-md.md)] | 
-|110|11 | [!INCLUDE[sssql11](../../includes/sssql11-md.md)] |
+|[!INCLUDE[ssqlv15](../../includes/sssqlv15-md.md)]| |150| 15| 
+|[!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]| 140| 14| 
+|[!INCLUDE[ssqlv13](../../includes/sssql15-md.md)]| 130| 13 | 
+|[!INCLUDE[ssqlv12](../../includes/sssql14-md.md)]  | 120|12 | 
+|[!INCLUDE[sssql11](../../includes/sssql11-md.md)] | 110|11 | 
   
 ## File Locations and Registry Mapping  
  During [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, an instance ID is generated for each server component. The server components in this [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] release are the [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

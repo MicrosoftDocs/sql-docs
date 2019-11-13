@@ -67,7 +67,7 @@ After you have configured your Kubernetes cluster, you can proceed with the depl
 ## Ensure you have storage configured
 It's important for most big data cluster deployments to have persistent storage. At this time, you need to make sure you have a plan for how you're going to provide persistent storage on the Kubernetes cluster *before* you deploy the BDC tools. 
 
-If you're using AKS and you plan to use dynamically provisioned storage, you should set up a persistent volume claim on your preferred storage class now. If you aren't planning to use AKS's dynamically provisioned storage (e.g. because you're deploying on your own kubeadm cluster), you'll need to ensure you have sufficient storage for a cluster of your desired scale available and configured for use. If you wish to customize how your storage is used, you should do this now. [You can find detailed information about storage setup here.](concept-data-persistence.md)
+If you're using AKS and you plan to use dynamically provisioned storage, you should set up a persistent volume claim on your preferred storage class now. If you aren't planning to use AKS's dynamically provisioned storage (e.g. because you're deploying on your own kubeadm cluster), you'll need to ensure you have sufficient storage for a cluster of your desired scale available and configured for use. If you wish to customize how your storage is used, you should do this before proceeding. See [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
 
 ## <a id="deploy"></a> Deployment overview
 

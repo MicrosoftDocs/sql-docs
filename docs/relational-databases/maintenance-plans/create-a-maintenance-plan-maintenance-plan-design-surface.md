@@ -1,5 +1,5 @@
 ---
-title: "Create a Maintenance Plan (Maintenance Plan Design Surface) | Microsoft Docs"
+title: "Create a Maintenance Plan with the Design Surface"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,6 +12,7 @@ helpviewer_keywords:
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
+ms.custom: "seo-lt-2019"
 ---
 # Create a Maintenance Plan (Maintenance Plan Design Surface)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

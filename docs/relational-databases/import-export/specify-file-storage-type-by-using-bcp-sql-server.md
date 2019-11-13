@@ -1,6 +1,5 @@
 ---
-title: "Specify File Storage Type by Using bcp (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Specify file storage type with bcp"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -17,8 +16,9 @@ ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
-# Specify File Storage Type by Using bcp (SQL Server)
+# Specify file storage type using bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   The *file storage type* describes how data is stored in the data file. Data can be exported to a data file as its database table type (native format), in its character representation (character format), or as any data type where implicit conversion is supported; for example, copying a **smallint** as an **int**. User-defined data types are exported as their base types.  
   

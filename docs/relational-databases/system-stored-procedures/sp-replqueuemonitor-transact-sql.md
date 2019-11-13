@@ -47,7 +47,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 `[ @tranid = ] 'tranid' ]`
  Is the transaction ID. *tranid*is **sysname**, with a default of NULL. NULL for all transactions.  
   
- [**@queuetype=** ] **'***queuetype***'** ]  
+`[ @queuetype = ] 'queuetype' ]`
  Is the type of queue that stores transactions. *queuetype* is **tinyint** with a default of **0**, and can be one of these values.  
   
 |Value|Description|  

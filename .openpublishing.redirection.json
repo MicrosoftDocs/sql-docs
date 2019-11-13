@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/database-engine/sql-server-database-engine-backward-compatibility.md",
+            "redirect_url": "/sql/database-engine/discontinued-database-engine-functionality-in-sql-server",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/database-engine/whats-new-in-sql-server-2016.md",
             "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-2016",
             "redirect_document_id": false

@@ -33,7 +33,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## Arguments  
- [**@parameter_name** = ] **'***parameter_name***'**  
+`[ @parameter_name = ] parameter_name`
  The name of the configuration setting to retrieve. When specified, the value of the configuration setting is returned in the **\@parameter_value** OUTPUT parameter. When no **\@parameter_name** is specified, this stored procedure returns a result set containing all of the Database Mail configuration settings in the instance.  
   
 ## Return Code Values  

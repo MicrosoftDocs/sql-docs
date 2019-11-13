@@ -1521,7 +1521,7 @@
   - name: Oracle Connection Manager
     href: ../integration-services/data-flow/oracle-connection-manager.md
   - name: Oracle source
-    ref: ../integration-services/data-flow/oracle-source.md
+    href: ../integration-services/data-flow/oracle-source.md
   - name: Oracle destination
     href: ../integration-services/data-flow/oracle-destination.md
   - name: Data type support

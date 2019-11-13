@@ -38,13 +38,13 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## Arguments  
- **[@name** = ] [N]'*name*'  
+`[ @name = ] [N]'name'`
  The name used to describe and distinguish the database-level firewall setting. *name* is **nvarchar(128)** with no default value. The Unicode identifier `N` is optional for [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
- **[@start_ip_address** =] '*start_ip_address*'  
+`[ @start_ip_address = ] 'start_ip_address'`
  The lowest IP address in the range of the database-level firewall setting. IP addresses equal to or greater than this can attempt to connect to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] instance. The lowest possible IP address is `0.0.0.0`. *start_ip_address* is **varchar(50)** with no default value.  
   
- [**@end_ip_address** =] '*end_ip_address*'  
+`[ @end_ip_address = ] 'end_ip_address'`
  The highest IP address in the range of the database-level firewall setting. IP addresses equal to or less than this can attempt to connect to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] instance. The highest possible IP address is `255.255.255.255`. *end_ip_address* is **varchar(50)** with no default value.  
   
  The following table demonstrates the supported arguments and options in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

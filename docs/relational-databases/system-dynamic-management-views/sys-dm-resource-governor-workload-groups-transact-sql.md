@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |group_id|**int**|ID of the workload group. Is not nullable.|  
 |name|**sysname**|Name of the workload group. Is not nullable.|  
 |pool_id|**int**|ID of the resource pool. Is not nullable.|  
-|external_pool_id|**int**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID of the external resource pool. Is not nullable.|  
+|external_pool_id|**int**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.<br /><br /> ID of the external resource pool. Is not nullable.|  
 |statistics_start_time|**datetime**|Time that statistics collection was reset for the workload group. Is not nullable.|  
 |total_request_count|**bigint**|Cumulative count of completed requests in the workload group. Is not nullable.|  
 |total_queued_request_count|**bigint**|Cumulative count of requests queued after the GROUP_MAX_REQUESTS limit was reached. Is not nullable.|  

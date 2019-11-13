@@ -130,7 +130,7 @@ Is the name of the database to be modified.
 > This option is not available in a Contained Database.
 
 CURRENT
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.
 
 Designates that the current database in use should be altered.
 
@@ -148,7 +148,7 @@ When creating databases with other than the default collation, the data in the d
 For more information about the Windows and SQL collation names, see [COLLATE](~/t-sql/statements/collations.md).
 
 **\<delayed_durability_option> ::=**
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.
 
 For more information see [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md).
 
@@ -241,7 +241,7 @@ GO
 
 The following example creates a database named `testdb` with the `SQL_Latin1_General_CP1_CI_A`S collation, and then changes the collation of the `testdb` database to `COLLATE French_CI_AI`.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
 
 ```sql
 USE master;

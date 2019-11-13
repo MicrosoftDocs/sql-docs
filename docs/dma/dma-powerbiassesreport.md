@@ -1,7 +1,8 @@
 ---
-title: "Analyze consolidated Data Migration Assistant assessment reports with Power BI (SQL Server) | Microsoft Docs"
+title: "Analyze consolidated assessment reports with Power BI"
+titleSuffix: Data Migration Assistant
 description: Learn how to use Power BI to analyze Data Migration Assessment reports that you've imported and consolidated in SQL Server
-ms.custom: ""
+ms.custom: "seo-lt-2019"
 ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "dma"
@@ -25,7 +26,7 @@ For information about consolidating migration assessments created by the Data Mi
 
 ## Sample Power BI reports
 
-You can download examples of Power BI reports for consolidated migration assessments from this [Github repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant).
+You can download examples of Power BI reports for consolidated migration assessments from this [GitHub repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant).
 
 The following reports are included: 
 

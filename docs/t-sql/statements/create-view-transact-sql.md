@@ -136,7 +136,7 @@ OR ALTER
 >  Any updates performed directly to a view's underlying tables are not verified against the view, even if CHECK OPTION is specified.  
   
  ENCRYPTION  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Encrypts the entries in [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) that contain the text of the CREATE VIEW statement. Using WITH ENCRYPTION prevents the view from being published as part of SQL Server replication.  
   
@@ -363,7 +363,7 @@ GO
 ### B. Using WITH ENCRYPTION  
  The following example uses the `WITH ENCRYPTION` option and shows computed columns, renamed columns, and multiple columns.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```  
 CREATE VIEW Purchasing.PurchaseOrderReject  

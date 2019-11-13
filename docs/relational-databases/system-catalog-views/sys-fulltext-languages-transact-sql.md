@@ -52,7 +52,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |English|1033|  
 |French|1036|  
 |German|1031|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Greek|1032|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Greek|1032|  
 |Gujarati|1095|  
 |Hebrew|1037|  
 |Hindi|1081|  
@@ -69,7 +69,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Marathi|1102|  
 |Neutral|0|  
 |Norwegian (Bokmål)|1044|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Polish|1045|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Polish|1045|  
 |Portuguese (Brazil)|1046|  
 |Portuguese (Portugal)|2070|  
 |Punjabi|1094|  
@@ -86,7 +86,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Telugu|1098|  
 |Thai|1054|  
 |Traditional Chinese|1028|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Turkish|1055|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Turkish|1055|  
 |Ukrainian|1058|  
 |Urdu|1056|  
 |Vietnamese|1066|  

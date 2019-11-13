@@ -117,7 +117,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts. The property is now specified on a per-subscription basis when executing [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [**@frequency_interval=** ] *frequency_interval*  
+`[ @frequency_interval = ] frequency_interval`
  Is the value applied to the frequency set by *frequency_type*. *frequency_interval* is **int**, with a default of 1.  
   
 > [!NOTE]  

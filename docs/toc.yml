@@ -4160,8 +4160,6 @@
       href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
   - name: Release notes
     items:
-    - name: Backward compatibility
-      href: database-engine/sql-server-database-engine-backward-compatibility.md
     - name: Discontinued functionality in SQL Server
       href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
     - name: Deprecated in SQL Server 2019
@@ -4786,11 +4784,11 @@
     - name: Overview
       href: relational-databases/replication/sql-server-replication.md
       items:
-      - name: Backward Compatibility
+      - name: Backward compatibility
         href: relational-databases/replication/replication-backward-compatibility.md
-      - name: Deprecated Features
+      - name: Deprecated features
         href: relational-databases/replication/deprecated-features-in-sql-server-replication.md
-      - name: Breaking Changes
+      - name: Breaking changes
         href: relational-databases/replication/breaking-changes-in-sql-server-replication.md
       - name: Best practices
         href: relational-databases/replication/administration/best-practices-for-replication-administration.md

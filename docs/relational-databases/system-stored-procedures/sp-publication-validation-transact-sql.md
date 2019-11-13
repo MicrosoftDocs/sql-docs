@@ -35,10 +35,10 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [**@publication=**] **'**_publication'_  
+`[ @publication= = ] publication`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [**@rowcount_only=**] *rowcount_only*  
+`[ @rowcount_only = ] rowcount_only`
  Is whether to return only the rowcount for the table. *rowcount_only* is **smallint** and can be one of the following values.  
   
 |Value|Description|  
@@ -47,7 +47,7 @@ sp_publication_validation [ @publication = ] 'publication'
 |**1** (default)|Perform a rowcount check only.|  
 |**2**|Perform a rowcount and binary checksum.<br /><br /> Note: For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 Subscribers, only a rowcount validation is performed.|  
   
- [**@full_or_fast=**] *full_or_fast*  
+`[ @full_or_fast = ] full_or_fast`
  Is the method used to calculate the rowcount. *full_or_fast* is **tinyint** and can be one of the following values.  
   
 |Value|Description|  

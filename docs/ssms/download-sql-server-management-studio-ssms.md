@@ -36,7 +36,9 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 SSMS is free!
 
-## [Download SSMS](https://aka.ms/ssmsfullsetup)
+## Download SSMS
+
+The latest release of SSMS can be downloaded [here](https://aka.ms/sssmsfullsetup).
 
 SSMS 18.4 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.4 upgrades it to 18.4. If you have an older *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.4.
 

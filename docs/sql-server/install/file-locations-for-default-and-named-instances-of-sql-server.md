@@ -31,7 +31,7 @@ ms.author: mathoma
 ## Shared Files for All Instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Common files used by all instances on a single computer are installed in the folder [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. \<*drive*> is the drive letter where components are installed. The default is usually drive C.  \<*nnn*> identifies the version. The following table identifies versions for the paths. \{nn} is the version value used in the instance ID, and registry path. 
 
-|Version\<*nnn*>|{nn}|
+|Version|\<*nnn*>|{nn}|
 |-----|-----|--------|
 |[!INCLUDE[ssqlv15](../../includes/sssqlv15-md.md)]| 150| 15| 
 |[!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]| 140| 14| 

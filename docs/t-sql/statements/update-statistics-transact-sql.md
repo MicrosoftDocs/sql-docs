@@ -125,12 +125,12 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) and [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) expose the persisted sample percent value for the selected statistic.
  
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
+ **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) and later (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] 
  Forces the leaf-level statistics covering the partitions specified in the ON PARTITIONS clause to be recomputed, and then merged to build the global statistics. WITH RESAMPLE is required because partition statistics built with different sample rates cannot be merged together.  
   
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later
   
  ALL | COLUMNS | INDEX  
  Update all existing statistics, statistics created on one or more columns, or statistics created for indexes. If none of the options are specified, the UPDATE STATISTICS statement updates all statistics on the table or indexed view.  
@@ -158,7 +158,7 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
 -   Statistics created on internal tables.  
 -   Statistics created with spatial indexes or XML indexes.  
   
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later
 
 MAXDOP = *max_degree_of_parallelism*  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  

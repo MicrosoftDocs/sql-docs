@@ -59,7 +59,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 |||  
 |-|-|  
 |DATABASE_DDL_TRIGGER||  
-|SERVER_DDL_TRIGGER|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|SERVER_DDL_TRIGGER|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|  
   
 ## Return Code Values  
  0 (success) or a nonzero number (failure)  
@@ -154,7 +154,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|  
   
 ```  
 USE master;  

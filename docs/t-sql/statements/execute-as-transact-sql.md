@@ -50,7 +50,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
   
 ## Arguments  
  LOGIN  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Specifies the execution context to be impersonated is a login. The scope of impersonation is at the server level.  
   

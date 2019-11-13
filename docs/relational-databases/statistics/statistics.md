@@ -108,7 +108,7 @@ ORDER BY s.name;
 * Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and under the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a decreasing, dynamic statistics update threshold that adjusts according to the number of rows in the table. This is calculated as the square root of the product of 1000 and the current table cardinality. For example if your table contains 2 million rows, then the calculation is? sqrt (1000 * 2000000) = 44721.359. With this change, statistics on large tables will be updated more often. However, if a database has a compatibility level below 130, then the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] threshold applies. ?
 
 > [!IMPORTANT]
-> Starting with [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] under [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) lower than 130, use [trace flag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use a decreasing, dynamic statistics update threshold that adjusts according to the number of rows in the table.
+> Starting with [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later under [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) lower than 130, use [trace flag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use a decreasing, dynamic statistics update threshold that adjusts according to the number of rows in the table.
   
 The Query Optimizer checks for out-of-date statistics before compiling a query and before executing a cached query plan. Before compiling a query, the Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. Before executing a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.  
   
@@ -147,7 +147,7 @@ For more information about controlling AUTO_UPDATE_STATISTICS, see [Controlling 
 * Statistics created on internal tables.  
 * Statistics created with spatial indexes or XML indexes.  
   
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later. 
   
 ## <a name="CreateStatistics"></a> When to create statistics  
  The Query Optimizer already creates statistics in the following ways:  

@@ -205,7 +205,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.|  
   
  The following example uses NEAR to search for "`bracket`" and "`reflector`" close to each other in the `Production.Document` table. Only rows with a rank value of 50 or higher are returned.  
   

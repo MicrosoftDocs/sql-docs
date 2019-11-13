@@ -1,5 +1,5 @@
 ---
-title: "Administer and Monitor Change Data Capture (SQL Server) | Microsoft Docs"
+title: "Administer and Monitor Change Data Capture"
 ms.date: "01/02/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,6 +13,7 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
+ms.custom: seo-dt-2019
 ---
 # Administer and Monitor Change Data Capture (SQL Server)
 

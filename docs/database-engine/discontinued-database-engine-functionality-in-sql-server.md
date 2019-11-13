@@ -1,5 +1,5 @@
 ---
-title: "Discontinued Database Engine Functionality in SQL Server | Microsoft Docs"
+title: "Discontinued database engine functionality in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: sql
@@ -70,7 +70,12 @@ For current configuration options, see [ALTER DATABASE SCOPED CONFIGURATION (Tra
 
 - [Discontinued Database Engine Functionality in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
-## See Also
+### See also
 
-- [Deprecated Database Engine Features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
-- [Deprecated Features in SQL Server Replication](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)
+- [Deprecated database engine features in SQL Server 2019](deprecated-database-engine-features-in-sql-server-version-15.md)
+- [Deprecated database engine features in SQL Server 2017](deprecated-database-engine-features-in-sql-server-2017.md)
+- [Deprecated database engine features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
+- [Breaking changes to database engine features in SQL Server 2019](breaking-changes-to-database-engine-features-in-sql-server-version-15.md)
+- [Breaking changes to database engine features in SQL Server 2017](breaking-changes-to-database-engine-features-in-sql-server-2017.md)
+- [Breaking changes to database engine features in SQL Server 2016](breaking-changes-to-database-engine-features-in-sql-server-2016.md)
+- [Deprecated features in SQL Server replication](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)

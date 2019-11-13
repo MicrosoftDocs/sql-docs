@@ -1,6 +1,6 @@
 ---
-title: "Granting, Revoking, and Denying Permissions | Microsoft Docs"
-ms.custom: ""
+title: "Granting, Revoking, and Denying Permissions"
+ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

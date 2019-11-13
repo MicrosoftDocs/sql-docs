@@ -1,6 +1,5 @@
 ---
-title: "Date and Time Improvements (OLE DB) | Microsoft Docs"
-ms.custom: ""
+title: "Date and Time Improvements (OLE DB)"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -14,6 +13,7 @@ helpviewer_keywords:
 ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Date and Time Improvements (OLE DB)

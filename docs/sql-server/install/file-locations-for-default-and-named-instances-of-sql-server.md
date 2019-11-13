@@ -29,9 +29,9 @@ ms.author: mathoma
 >  Do not delete any of the following directories or their contents: Binn, Data, Ftdata, HTML, or 1033. You can delete other directories, if necessary; however, you might not be able to retrieve any lost functionality or data without uninstalling and then reinstalling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Do not delete or modify any of the .htm files in the HTML directory. They are required for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools to function properly.  
   
 ## Shared Files for All Instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Common files used by all instances on a single computer are installed in the folder [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. \<*drive*> is the drive letter where components are installed. The default is usually drive C.  \<*nnn*> identifies the version. The following table identifies versions for the paths. \{nn} is the version value used in the instance ID, and registry path. 
+ Common files used by all instances on a single computer are installed in the folder [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. \<*drive*> is the drive letter where components are installed. The default is usually drive C.  _nnn_ identifies the version. The following table identifies versions for the paths. \{nn} is the version value used in the instance ID, and registry path. 
 
-|Version|\<*nnn*>|{nn}|
+|Version|\*nnn*|{nn}|
 |-----|-----|--------|
 |[!INCLUDE[ssqlv15](../../includes/sssqlv15-md.md)]| 150| 15| 
 |[!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]| 140| 14| 
@@ -67,7 +67,7 @@ ms.author: mathoma
   
  You can specify any value for the instance ID, but avoid special characters and reserved keywords.  
   
- You can specify a non-default instance ID during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. Instead of \<Program Files>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a \<custom path>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is used if the user chooses to change the default installation directory. Note that instance IDs that begin with an underscore (_) or that contain the number sign (#) or the dollar sign ($) are not supported.  
+ You can specify a non-default instance ID during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. Instead of \\{Program Files}\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a \<custom path>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is used if the user chooses to change the default installation directory. Note that instance IDs that begin with an underscore (_) or that contain the number sign (#) or the dollar sign ($) are not supported.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and client components are not instance aware and, therefore are not assigned an instance ID. By default, non-instance-aware components are installed to a single directory: [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. Changing the installation path for one shared component also changes it for the other shared components. Subsequent installations install non-instance-aware components to the same directory as the original installation.  
@@ -101,8 +101,8 @@ ms.author: mathoma
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] data files|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceID>\ |Configurable|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS\{nn}.\<InstanceID>\ |Configurable|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data files|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS\{nn}.\<InstanceID>\ |Configurable|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS14.\<InstanceID>\Reporting Services\ReportServer\Bin\ |Configurable|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report manager|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS14.\<InstanceID>\Reporting Services\ReportManager\ |Fixed path|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS\{nn}.\<InstanceID>\Reporting Services\ReportServer\Bin\ |Configurable|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report manager|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS\{nn}.\<InstanceID>\Reporting Services\ReportManager\ |Fixed path|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Install Directory>\nnn\DTS\\ <sup>1</sup> |Configurable |  
 |Client Components (except bcp.exe and sqlcmd.exe)|\<Install Directory>\nnn\Tools\\ <sup>1</sup> |Configurable |  
 |Client Components (bcp.exe and sqlcmd.exe)|\<Install Directory>\Client SDK\ODBC\nnn\Tools\Binn|Fixed path|  

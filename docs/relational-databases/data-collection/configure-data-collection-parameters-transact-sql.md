@@ -1,5 +1,5 @@
 ---
-title: "Configure Data Collection Parameters (Transact-SQL) | Microsoft Docs"
+title: "Configure Data Collection Parameters (T-SQL)"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -11,6 +11,7 @@ helpviewer_keywords:
 ms.assetid: 850905b6-35d2-4ed1-ab51-de64daa832b2
 author: MashaMSFT
 ms.author: mathoma
+ms.custom: "seo-lt-2019"
 ---
 # Configure Data Collection Parameters (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

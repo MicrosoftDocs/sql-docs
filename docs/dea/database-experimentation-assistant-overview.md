@@ -1,5 +1,5 @@
 ---
-title: Overview of the Database Experimentation Assistant solution for SQL Server upgrades
+title: Overview of the Database Experimentation Assistant 
 description: Overview of Database Experimentation Assistant
 ms.custom: ""
 ms.date: 11/05/2019
@@ -12,6 +12,7 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
+ms.custom: "seo-lt-2019"
 ---
 
 # Overview of Database Experimentation Assistant

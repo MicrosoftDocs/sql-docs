@@ -748,8 +748,6 @@
           href: database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md
         - name: Failover & failover modes
           href: database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md
-        - name: Flexible failover policy for automatic failover
-          href: database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
         - name: Read-scale only
           href: database-engine/availability-groups/windows/read-scale-availability-groups.md
         - name: Read/write connection redirection

@@ -1,7 +1,6 @@
 ---
-title: Get started with Database Experimentation Assistant for SQL Server upgrades
-description: Get started with Database Experimentation Assistant
-ms.custom: ""
+title: Get started with Database Experimentation Assistant
+description: Database Experimentation Assistant (DEA) is an A/B testing solution for changes in SQL Server environments, such as upgrades or new indexes.
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,9 +11,10 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
+ms.custom: "seo-lt-2019"
 ---
 
-# Get started with Database Experimentation Assistant
+# Get started with Database Experimentation Assistant (SQL Server)
 
 Database Experimentation Assistant (DEA) is an A/B testing solution for changes in SQL Server environments, such as upgrades or new indexes. DEA helps you evaluate how the workload on your source server (in your current environment) will perform in your new environment. DEA guides you through running an A/B test by completing three steps: 
 

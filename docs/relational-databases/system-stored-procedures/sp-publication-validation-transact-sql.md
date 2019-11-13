@@ -35,7 +35,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
-`[ @publication= = ] 'publication'`
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 `[ @rowcount_only = ] 'rowcount_only'`

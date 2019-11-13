@@ -1,14 +1,14 @@
 ---
-title: "Install and configure AdventureWorks sample database - SQL | Microsoft Docs"
+title: "Install & configure AdventureWorks sample database"
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
-ms.custom: ""
 ms.date: "06/19/2018"
 ms.reviewer: ""
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
+ms.custom: "seo-lt-2019"
 ---
 # AdventureWorks Installation and configuration
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

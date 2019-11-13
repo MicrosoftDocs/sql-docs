@@ -1,5 +1,5 @@
 ---
-title: "Execute SQL Server Agent Job Task | Microsoft Docs"
+title: "Execute SQL Server Agent Job Task"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,6 +16,7 @@ helpviewer_keywords:
 ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
 author: chugugrace
 ms.author: chugu
+ms.custom: "seo-lt-2019"
 ---
 # Execute SQL Server Agent Job Task
 

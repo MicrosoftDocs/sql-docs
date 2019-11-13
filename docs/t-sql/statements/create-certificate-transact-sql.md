@@ -121,7 +121,7 @@ CREATE CERTIFICATE certificate_name
   
  BINARY =*asn_encoded_certificate*  
  ASN encoded certificate bytes specified as a binary constant.  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  WITH PRIVATE KEY  
  Specifies that the private key of the certificate is loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This clause is invalid when the certificate is being created from an assembly. To load the private key of a certificate created from an assembly, use [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
@@ -133,7 +133,7 @@ CREATE CERTIFICATE certificate_name
 >  This option is not available in a contained database or in Azure SQL Database.  
   
  BINARY =*private_key_bits*  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Private key bits specified as binary constant. These bits can be in encrypted form. If encrypted, the user must provide a decryption password. Password policy checks are not performed on this password. The private key bits should be in a PVK file format.  
   

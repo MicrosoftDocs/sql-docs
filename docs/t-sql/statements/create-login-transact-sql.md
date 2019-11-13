@@ -178,7 +178,7 @@ GO
 
 The following example creates a login for a particular user and assigns a password. The `MUST_CHANGE` option requires users to change this password the first time they connect to the server.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
 
 ```sql
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>'
@@ -193,7 +193,7 @@ GO
 
 The following example creates the login for a particular user, using the user. This login is mapped to the credential.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
 
 ```sql
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>',
@@ -205,7 +205,7 @@ GO
 
 The following example creates login for a particular user from a certificate in master.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
 
 ```sql
 USE MASTER;
@@ -221,7 +221,7 @@ GO
 
 The following example creates a login from a Windows domain account.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
 
 ```sql
 CREATE LOGIN [<domainName>\<login_name>] FROM WINDOWS;

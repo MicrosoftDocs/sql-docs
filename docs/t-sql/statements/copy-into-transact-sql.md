@@ -101,8 +101,8 @@ Multiple file locations can only be specified from the same storage account and 
 
 - ‘https://<account>.blob.core.windows.net/<container>/<path>’, ​‘https://<account>.blob.core.windows.net/<container>/<path>’…
 
-  *FILE_TYPE = { ‘CSV’ | ‘PARQUET’ | ‘ORC’ }*</br>
-  *FILE_TYPE* specifies the format of the external data.
+*FILE_TYPE = { ‘CSV’ | ‘PARQUET’ | ‘ORC’ }*</br>
+*FILE_TYPE* specifies the format of the external data.
 
 - CSV: Specifies a comma-separated values file compliant to the [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
 - PARQUET: Specifies a Parquet format.
@@ -126,7 +126,7 @@ When authenticating using AAD or to a public storage account, CREDENTIAL does no
 
 - Authenticating with Shared Access Signatures (SAS)
   *IDENTITY: A constant with a value of ‘Shared Access Signature’*
-  *SECRET: The* [*shared access signature*](/azure/storage/common/storage-sas-overview#what-is-a-shared-access-signature) *provides delegated access to resources in your storage account.*
+  *SECRET: The* [*shared access signature*](/azure/storage/common/storage-sas-overview) *provides delegated access to resources in your storage account.*
   Minimum permissions required: READ and LIST
 
 - Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -165,7 +165,7 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
   
 - Authenticating with Shared Access Signatures (SAS)
   - *IDENTITY: A constant with a value of ‘Shared Access Signature’*
-  - *SECRET: The* [*shared access signature*](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature) *provides delegated access to resources in your storage account.*
+  - *SECRET: The* [*shared access signature*](/azure/storage/common/storage-sas-overview) *provides delegated access to resources in your storage account.*
   - Minimum permissions required: READ, LIST, WRITE, CREATE, DELETE
   
 - Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -279,7 +279,7 @@ The default values of the COPY command are:
 - ROWTERMINATOR = ‘\n'
 
 > [!IMPORTANT]
-> COPY treats ‘\n’ as ‘\r\n’ internally. For more information, see the [ROWTERMINATOR]() section.
+> COPY treats ‘\n’ as ‘\r\n’ internally. For more information, see the ROWTERMINATOR section.
 
 - FIRSTROW = 1
 
@@ -362,4 +362,4 @@ WITH (
 
 ## See also  
 
- [Loading overview with SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading>) 
+ [Loading overview with SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading)

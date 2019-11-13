@@ -1,7 +1,7 @@
 ---
 title: "Breaking changes to database engine | Microsoft Docs"
 description: "Breaking changes to database engine features in SQL Server 2019"
-ms.date: "11/27/2018"
+ms.date: "11/13/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""

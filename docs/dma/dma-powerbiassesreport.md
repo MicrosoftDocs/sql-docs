@@ -26,7 +26,7 @@ For information about consolidating migration assessments created by the Data Mi
 
 ## Sample Power BI reports
 
-You can download examples of Power BI reports for consolidated migration assessments from this [Github repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant).
+You can download examples of Power BI reports for consolidated migration assessments from this [GitHub repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant).
 
 The following reports are included: 
 

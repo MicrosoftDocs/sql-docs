@@ -20,6 +20,8 @@ monikerRange: ">= sql-server-2014 || = sqlallproducts-allversions"
 
 The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger helps you find errors in [!INCLUDE[tsql](../../includes/tsql-md.md)] code by investigating the run-time behavior of the code. After you set the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window to debug mode, you can pause execution on specific lines of code and inspect information and data that is used by or returned by those [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
 
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## Stepping Through Transact-SQL Code
 
 The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger provides the following options that you can use to navigate through [!INCLUDE[tsql](../../includes/tsql-md.md)] code when the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window is in debug mode:

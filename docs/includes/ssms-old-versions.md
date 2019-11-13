@@ -1,0 +1,1 @@
+This feature works with SSMS version 17.9.1 and earlier.

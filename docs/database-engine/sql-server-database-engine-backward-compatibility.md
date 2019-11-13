@@ -22,9 +22,11 @@ ms.author: mikeray
   
 |Topic|Description|  
 |-----------|-----------------|  
+|[Discontinued Database Engine Functionality in SQL Server](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)|Discontinued [!INCLUDE[ssDE](../includes/ssde-md.md)] features in the 2016 release.|  
+|[Deprecated Database Engine Features in SQL Server 2019](../database-engine/deprecated-database-engine-features-in-sql-server-version-15.md)|Deprecated [!INCLUDE[ssDE](../includes/ssde-md.md)] features in the 2017 release.| 
 |[Deprecated Database Engine Features in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)|Deprecated [!INCLUDE[ssDE](../includes/ssde-md.md)] features in the 2017 release.| 
 |[Deprecated Database Engine Features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)|Deprecated [!INCLUDE[ssDE](../includes/ssde-md.md)] features in the 2016 release.|  
-|[Discontinued Database Engine Functionality in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)|Discontinued [!INCLUDE[ssDE](../includes/ssde-md.md)] features in the 2016 release.|  
+|[Breaking Changes to Database Engine Features in SQL Server 2019](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] feature changes that might require changes to applications.|  
 |[Breaking Changes to Database Engine Features in SQL Server 2017](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] feature changes that might require changes to applications.|  
 |[Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] feature changes that might require changes to applications.|  
   

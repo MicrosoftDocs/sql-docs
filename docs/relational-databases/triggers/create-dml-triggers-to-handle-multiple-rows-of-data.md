@@ -1,6 +1,6 @@
 ---
-title: "Create DML Triggers to Handle Multiple Rows of Data | Microsoft Docs"
-ms.custom: ""
+title: "Create DML Triggers to Handle Multiple Rows of Data"
+ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""

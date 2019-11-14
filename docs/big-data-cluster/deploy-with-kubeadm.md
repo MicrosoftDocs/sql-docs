@@ -59,7 +59,7 @@ On each machine, there are several required prerequisites. In a bash terminal, r
 1. Configure docker and Kubernetes prerequisites on the machine.
 
    ```bash
-   KUBE_DPKG_VERSION=1.15.0-00 #or your other target K8s version
+   KUBE_DPKG_VERSION=1.15.0-00 #or your other target K8s version, which should be at least 1.13.
    sudo apt-get update && \
    sudo apt-get install -y ebtables ethtool && \
    sudo apt-get install -y docker.io && \

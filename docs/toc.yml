@@ -1705,7 +1705,7 @@
     - name: Temporal tables
       href: relational-databases/tables/temporal-tables.md
       items:
-      - name: Manage
+      - name: Create and manage
         items:
         - name: Getting started
           href: relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
@@ -1733,17 +1733,17 @@
           href: relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
         - name: Metadata views & functions
           href: relational-databases/tables/temporal-table-metadata-views-and-functions.md
-    - name: Memory-optimized tables
-      href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
-      items:
-      - name: Create
-        href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
-      - name: Work with
-        href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
-      - name: Monitor
-        href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
-      - name: Performance considerations
-        href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
+      - name: Memory-optimized temporal tables
+        href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
+        items:
+        - name: Create
+          href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
+        - name: Work with
+          href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
+        - name: Monitor
+          href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
+        - name: Performance considerations
+          href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
     - name: Tutorials
       items:
       - name: Using hierarchyid data type

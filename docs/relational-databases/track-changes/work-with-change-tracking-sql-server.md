@@ -1,5 +1,6 @@
 ---
-title: "Work with Change Tracking (SQL Server) | Microsoft Docs"
+title: "Work with Change Tracking"
+ms.custom: seo-dt-2019
 ms.date: "08/08/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -1,6 +1,5 @@
 ---
-title: "Linked Servers (Database Engine) | Microsoft Docs"
-ms.custom: ""
+title: "Linked Servers"
 ms.date: "05/29/2019"
 ms.prod: sql
 ms.technology: 
@@ -19,6 +18,7 @@ helpviewer_keywords:
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
+ms.custom: seo-dt-2019
 ---
 # Linked Servers (Database Engine)
 

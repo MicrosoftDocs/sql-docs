@@ -1,6 +1,5 @@
 ---
-title: "Format Query Results as JSON with FOR JSON (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Format Query Results as JSON with FOR JSON"
 ms.date: "06/06/2019"
 ms.prod: sql
 ms.reviewer: ""
@@ -14,6 +13,7 @@ ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: genemi
+ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Format Query Results as JSON with FOR JSON (SQL Server)

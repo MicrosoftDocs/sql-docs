@@ -82,8 +82,10 @@ AKS comes with [two built-in storage classes](/azure/aks/azure-disks-dynamic-pv/
 
 Kubernetes clusters deployed using `kubeadm` do not have a built-in storage class. You must create your own storage classes and persistent volumes using local storage or your preferred provisioner, such as [Rook](https://github.com/rook/rook). In that case, you would set the `className` to the storage class you configured. 
 
-> [!NOTE]
->  In the built in deployment configuration files for kubeadm (`kubeadm-dev-test` or `kubeadm-prod`) there is no storage class name specified for the data and log storage. Before deployment, you must customize the configuration file and set the value for className otherwise the pre-deployment validations will fail. Deployment also has a validation step that checks for the existence of the storage class, but not for the necessary persistent volumes. You must ensure you create enough volumes depending on the scale of your cluster. For the default minimum cluster size (default scale, no high availability) you must create at least 24 persistent volumes. [Here](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) is an example on how to create persistent volumes using local provisioner.
+> [!IMPORTANT]
+>  In the built in deployment configuration files for kubeadm (`kubeadm-dev-test` or `kubeadm-prod`) there is no storage class name specified for the data and log storage. Before deployment, you must customize the configuration file and set the value for `className` otherwise the pre-deployment validations will fail. Deployment also has a validation step that checks for the existence of the storage class, but not for the necessary persistent volumes. You must ensure you create enough volumes depending on the scale of your cluster. For the default minimum cluster size (default scale, no high availability) you must create at least 24 persistent volumes.
+>
+>[Create a Kubernetes cluster](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) presents an example of how you can create persistent volumes using the local provisioner. This example introduces Kubernetes storage.
 
 
 ## Customize storage configurations for each pool

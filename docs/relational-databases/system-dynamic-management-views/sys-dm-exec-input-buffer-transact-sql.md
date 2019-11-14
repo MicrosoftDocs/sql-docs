@@ -36,7 +36,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 ## Arguments
 
 *session_id*
-Is the session id executing the batch to be looked up. *session_id* is **smallint**. *session_id* can be obtained from the following dynamic management objects:
+Is the session ID executing the batch to be looked up. *session_id* is **smallint**. *session_id* can be obtained from the following dynamic management objects:
 
 - [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
 - [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
@@ -73,7 +73,7 @@ This dynamic management function can be used in conjunction with sys.dm_exec_ses
 
 ### A. Simple example
 
-The following example demonstrates passing a session id (SPID) and a request id to the function.
+The following example demonstrates passing a session ID (SPID) and a request ID to the function.
 
 ```sql
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);
@@ -82,7 +82,7 @@ GO
 
 ### B. Using cross apply to additional information
 
-The following example lists the input buffer for sessions with session id greater than 50.
+The following example lists the input buffer for sessions with session ID greater than 50.
 
 ```sql
 SELECT es.session_id, ib.event_info

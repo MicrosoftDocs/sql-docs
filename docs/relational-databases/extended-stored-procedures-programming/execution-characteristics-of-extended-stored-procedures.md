@@ -1,6 +1,5 @@
 ---
-title: "Execution Characteristics of Extended Stored Procedures | Microsoft Docs"
-ms.custom: ""
+title: "Execution characteristics of extended stored procedures"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,6 +13,7 @@ helpviewer_keywords:
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: "rothja"
 ms.author: "jroth"
+ms.custom: seo-dt-2019
 ---
 # Execution Characteristics of Extended Stored Procedures
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

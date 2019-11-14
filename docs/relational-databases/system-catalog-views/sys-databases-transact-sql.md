@@ -1,7 +1,7 @@
 ---
 title: "sys.databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/09/2017"
+ms.date: "11/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -70,7 +70,7 @@ If a database is not `ONLINE`, or `AUTO_CLOSE` is set to `ON` and the database i
 |**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT is ON<br /> 0 = CURSOR_CLOSE_ON_COMMIT is OFF|  
 |**is_local_cursor_default**|**bit**|1 = CURSOR_DEFAULT is local<br /> 0 = CURSOR_DEFAULT is global|  
 |**is_fulltext_enabled**|**bit**|1 = Full-text is enabled for the database<br /> 0 = Full-text is disabled for the database|  
-|**is_trustworthy_on**|**bit**|1 = Database has been marked trustworthy<br /> 0 = Database has not been marked trustworthy|  
+|**is_trustworthy_on**|**bit**|1 = Database has been marked trustworthy<br /> 0 = Database has not been marked trustworthy<br /> By default, restored or attached databases have the broker disabled. The exception to this is database mirroring where the broker is enabled after failover.|  
 |**is_db_chaining_on**|**bit**|1 = Cross-database ownership chaining is ON<br /> 0 = Cross-database ownership chaining is OFF|  
 |**is_parameterization_forced**|**bit**|1 = Parameterization is FORCED<br /> 0 = Parameterization is SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = Database has an encrypted master key<br /> 0 = Database does not have an encrypted master key|  
@@ -87,7 +87,7 @@ If a database is not `ONLINE`, or `AUTO_CLOSE` is set to `ON` and the database i
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION is ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION is OFF|  
 |**is_cdc_enabled**|**bit**|1 = Database is enabled for change data capture. For more information, see [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md).|  
 |**is_encrypted**|**bit**|Indicates whether the database is encrypted (reflects the state last set by using the `ALTER DATABASE SET ENCRYPTION` clause). Can be one of the following values:<br /> 1 = Encrypted<br /> 0 = Not Encrypted<br /> For more information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).<br /> If the database is in the process of being decrypted, `is_encrypted` shows a value of 0. You can see the state of the encryption process by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.|  
-|**is_honor_broker_priority_on**|**bit**|Indicates whether the database honors conversation priorities (reflects the state last set by using the `ALTER DATABASE SET HONOR_BROKER_PRIORITY` clause). Can be one of the following values:<br /> 1 = HONOR_BROKER_PRIORITY is ON<br /> 0 = HONOR_BROKER_PRIORITY is OFF|  
+|**is_honor_broker_priority_on**|**bit**|Indicates whether the database honors conversation priorities (reflects the state last set by using the `ALTER DATABASE SET HONOR_BROKER_PRIORITY` clause). Can be one of the following values:<br /> 1 = HONOR_BROKER_PRIORITY is ON<br /> 0 = HONOR_BROKER_PRIORITY is OFF<br /> By default, restored or attached databases have the broker disabled. The exception to this is database mirroring where the broker is enabled after failover.|  
 |**replica_id**|**uniqueidentifier**|Unique identifier of the local [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] availability replica of the availability group, if any, in which the database is participating.<br /> NULL = database is not part of an availability replica of in availability group.<br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|Unique identifier of the database within an Always On availability group, if any, in which the database is participating. **group_database_id** is the same for this database on the primary replica and on every secondary replica on which the database has been joined to the availability group.<br /> NULL = database is not part of an availability replica in any availability group.<br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|The id of the resource pool that is mapped to this database. This resource pool controls total memory available to memory-optimized tables in this database.<br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later|  

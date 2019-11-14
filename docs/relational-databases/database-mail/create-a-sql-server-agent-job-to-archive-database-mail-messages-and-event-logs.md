@@ -1,6 +1,5 @@
 ---
-title: "Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs | Microsoft Docs"
-ms.custom: ""
+title: "Create SQL Server Agent job to archive Database Mail messages & events"
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,6 +14,7 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
+ms.custom: seo-dt-2019
 ---
 # Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

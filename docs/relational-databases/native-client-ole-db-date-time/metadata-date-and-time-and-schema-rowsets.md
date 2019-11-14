@@ -1,6 +1,5 @@
 ---
-title: "Date and Time and Schema Rowsets | Microsoft Docs"
-ms.custom: ""
+title: "Date and Time and Schema Rowsets"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -13,6 +12,7 @@ helpviewer_keywords:
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Metadata - Date and Time and Schema Rowsets

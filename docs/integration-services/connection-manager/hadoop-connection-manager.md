@@ -146,7 +146,7 @@ On the KDC server:
 
     Restart the KDC service after configuration.
 
-2.	Prepare a principal named **krbtgt/REALM.COM@AD.COM** on the KDC server. Use the following command:
+2.	Prepare a principal named **krbtgt/REALM.COM\@AD.COM** on the KDC server. Use the following command:
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
@@ -161,7 +161,7 @@ On the domain controller:
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-2.	Establish trust from the Windows domain to the Kerberos realm. In the following example, `[password]` is the password for the principal **krbtgt/REALM.COM@AD.COM**.
+2.	Establish trust from the Windows domain to the Kerberos realm. In the following example, `[password]` is the password for the principal **krbtgt/REALM.COM\@AD.COM**.
 
     `C:> netdom trust REALM.COM /Domain: AD.COM /add /realm /password:[password]`
 

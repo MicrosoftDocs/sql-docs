@@ -1,6 +1,5 @@
 ---
-title: "Bindings and Conversions (OLE DB) | Microsoft Docs"
-ms.custom: ""
+title: "Bindings and Conversions (OLE DB)"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -15,6 +14,7 @@ helpviewer_keywords:
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Conversions (OLE DB)

@@ -160,7 +160,7 @@ All attempts to start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger m
 
 - The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window must be connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) or later. You cannot run the debugger when the Query Editor window is connected to an instance that is in single-user mode.
 
-- The server needs to communicate back to the client via RPC. The account under which SQL Server service is running should have authenticate permissions to the client
+- The server needs to communicate back to the client via RPC. The account under which SQL Server service is running must have authenticated permissions to the client
 
 ## See Also
 

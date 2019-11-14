@@ -22,7 +22,7 @@ ms.author: sstein
 # sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns information about the SQL Server, Full-Text, and SQL Server Agent services in the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this dynamic management view to report status information about these services.  
+  Returns information about the SQL Server, Full-Text, SQL Server Launchpad service (SQL Server 2017+), and SQL Server Agent services in the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this dynamic management view to report status information about these services.  
   
  
 |Column name|Data type|Description|  

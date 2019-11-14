@@ -103,7 +103,7 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
        - **Create Group objects**
        - **Delete Group objects**
        - **Create User objects**
-       - **Create User objects**
+       - **Delete User objects**
 
     - Click **OK**
 

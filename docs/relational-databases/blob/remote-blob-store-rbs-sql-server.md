@@ -27,7 +27,7 @@ ms.author: mikeray
 |:---|:---|
 | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676) |
 | [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992) |
-| [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] download page](https://go.microsoft.com/fwlink/?linkid=2109005) |
+| [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] RBS download page](https://go.microsoft.com/fwlink/?linkid=2109005) |
 | &nbsp; | &nbsp; |
   
  

@@ -1,5 +1,5 @@
 ---
-title: "Transact-SQL Debugger | Microsoft Docs"
+title: "Transact-SQL debugger | Microsoft Docs"
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual

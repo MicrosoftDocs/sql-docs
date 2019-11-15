@@ -100,7 +100,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Visual Studio Code with the mssql extension
-            url:  ../visual-studio-code/sql-server-develop-use-vscode?view=azuresqldb-current.md
+            url:  ../visual-studio-code/sql-server-develop-use-vscode.md
           - text: Configuration Manager
             url:  configuration-manager/sql-server-configuration-manager-help.md
           - text: SQL Server Migration Assistant (SSMA)

@@ -1,6 +1,6 @@
 ---
-title: "Open Activity Monitor (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Open Activity Monitor (SQL Server Management Studio)"
+ms.custom: seo-dt-2019
 ms.date: "08/05/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"

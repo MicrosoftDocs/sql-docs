@@ -1,6 +1,6 @@
 ---
-title: "Create and Test a Classifier User-Defined Function | Microsoft Docs"
-ms.custom: ""
+title: "Create & test a classifier user-defined function"
+ms.custom: seo-dt-2019
 ms.date: "07/11/2017"
 ms.prod: sql
 ms.reviewer: ""

@@ -1,7 +1,7 @@
 ---
-title: "Intelligent query processing in Microsoft SQL databases | Microsoft Docs"
+title: "Intelligent query processing"
 description: "Intelligent query processing features to improve query performance in SQL Server and Azure SQL Database."
-ms.custom: ""
+ms.custom: seo-dt-2019
 ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

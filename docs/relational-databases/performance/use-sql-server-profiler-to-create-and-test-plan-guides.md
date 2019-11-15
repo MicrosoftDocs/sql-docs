@@ -1,6 +1,7 @@
 ---
-title: "Use SQL Server Profiler to Create and Test Plan Guides | Microsoft Docs"
-ms.custom: ""
+title: "Create and Test Plan Guides"
+titleSuffix:  SQL Server Profiler
+ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""

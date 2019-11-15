@@ -1,6 +1,6 @@
 ---
-title: "View the SQL Server error log (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "View the SQL Server error log (SQL Server Management Studio)"
+ms.custom: seo-dt-2019
 ms.date: "09/29/2017"
 ms.prod: sql
 ms.reviewer: ""

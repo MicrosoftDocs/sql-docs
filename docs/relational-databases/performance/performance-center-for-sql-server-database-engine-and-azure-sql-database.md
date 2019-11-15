@@ -1,6 +1,7 @@
 ---
-title: "Performance Center for SQL Server Database Engine and Azure SQL Database | Microsoft Docs"
-ms.custom: ""
+title: "Performance Center"
+titleSuffix: SQL Server & Azure SQL Database
+ms.custom: seo-dt-2019
 ms.date: "12/11/2018"
 ms.prod: sql
 ms.reviewer: ""

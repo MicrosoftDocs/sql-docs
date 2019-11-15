@@ -1,6 +1,6 @@
 ---
-title: "Performance Improvements using DTA recommendations | Microsoft Docs"
-ms.custom: ""
+title: "DTA recommended performance improvements"
+ms.custom: seo-dt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.reviewer: ""

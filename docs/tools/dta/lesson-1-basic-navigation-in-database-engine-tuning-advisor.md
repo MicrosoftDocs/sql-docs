@@ -1,6 +1,6 @@
 ---
-title: "Lesson 1: Basic Navigation in Database Engine Tuning Advisor | Microsoft Docs"
-ms.custom: ""
+title: "Basic navigation in Database Engine Tuning Advisor"
+ms.custom: seo-dt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

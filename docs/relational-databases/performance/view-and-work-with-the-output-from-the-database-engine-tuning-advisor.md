@@ -1,6 +1,6 @@
 ---
-title: "View and Work with the Output from the Database Engine Tuning Advisor | Microsoft Docs"
-ms.custom: ""
+title: "Output from the Database Engine Tuning Advisor"
+ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""

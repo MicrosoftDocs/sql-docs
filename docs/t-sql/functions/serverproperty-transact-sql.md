@@ -25,21 +25,26 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SERVERPROPERTY (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns property information about the server instance.  
+Returns property information about the server instance.  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
 SERVERPROPERTY ( 'propertyname' )  
 ```  
-  
+
+> [!IMPORTANT]
+> The database engine version numbers for SQL Server and Azure SQL Database are not comparable with each other, and rather are internal build numbers for these separate products. The database engine for Azure SQL Database is based on the same code base as the SQL Server database engine. Most importantly, the database engine in Azure SQL Database always has the newest SQL database engine bits. Version 12 of Azure SQL Database is newer than version 15 of SQL Server.
+
 ## Arguments  
- *propertyname*  
- Is an expression that contains the property information to be returned for the server. *propertyname* can be one of the following values.  
+
+*propertyname*  
+Is an expression that contains the property information to be returned for the server. *propertyname* can be one of the following values.  
   
 |Property|Values returned|  
 |--------------|---------------------|  
@@ -89,34 +94,39 @@ SERVERPROPERTY ( 'propertyname' )
 |FilestreamEffectiveLevel|The effective level of FILESTREAM access. This value can be different than the FilestreamConfiguredLevel if the level has changed and either an instance restart or a computer restart is pending. For more information, see [filestream access level](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md).|  
   
 ## Return Types  
- **sql_variant**  
+
+**sql_variant**
   
 ## Remarks  
   
-### ServerName Property  
- The `ServerName` property of the `SERVERPROPERTY` function and [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) return similar information. The `ServerName` property provides the Windows server and instance name that together make up the unique server instance. [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) provides the currently configured local server name.  
+### ServerName Property
+
+The `ServerName` property of the `SERVERPROPERTY` function and [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) return similar information. The `ServerName` property provides the Windows server and instance name that together make up the unique server instance. [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) provides the currently configured local server name.  
   
- The `ServerName` property and [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) return the same information if the default server name at the time of installation has not been changed. The local server name can be configured by executing the following:  
+The `ServerName` property and [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) return the same information if the default server name at the time of installation has not been changed. The local server name can be configured by executing the following:  
   
-```  
+```sql
 EXEC sp_dropserver 'current_server_name';  
 GO  
 EXEC sp_addserver 'new_server_name', 'local';  
 GO  
 ```  
   
- If the local server name has been changed from the default server name at installation time, [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) returns the new name.  
+If the local server name has been changed from the default server name at installation time, [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) returns the new name.  
   
-### Version Properties  
- The `SERVERPROPERTY` function returns individual properties that relate to the version information whereas the [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) function combines the output into one string. If your application requires individual property strings, you can use the `SERVERPROPERTY` function to return them instead of parsing the [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) results.  
+### Version Properties
+
+The `SERVERPROPERTY` function returns individual properties that relate to the version information whereas the [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) function combines the output into one string. If your application requires individual property strings, you can use the `SERVERPROPERTY` function to return them instead of parsing the [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) results.  
 
 ## Permissions
-All users can query the server properties. 
+
+All users can query the server properties.
   
-## Examples  
- The following example uses the `SERVERPROPERTY` function in a `SELECT` statement to return information about the current instance of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].   
+## Examples
+
+The following example uses the `SERVERPROPERTY` function in a `SELECT` statement to return information about the current instance of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
   
-```  
+```sql
 SELECT  
   SERVERPROPERTY('MachineName') AS ComputerName,
   SERVERPROPERTY('ServerName') AS InstanceName,  
@@ -126,7 +136,6 @@ SELECT
 GO  
 ```  
   
-## See Also  
- [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)  
-  
-  
+## See Also
+
+[Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)  

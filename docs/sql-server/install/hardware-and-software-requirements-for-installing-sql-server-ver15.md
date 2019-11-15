@@ -128,9 +128,9 @@ The following table shows which editions of SQL Server 2019 are compatible with 
 | Windows Server 2016 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2016 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2016 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows 10 Enterprise             |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows 10 Professional           |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows 10 Home                   |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows 10 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 10 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 10 Home                   |    No      |    Yes    |    Yes   | No  |   Yes   |
 | &nbsp; | &nbsp; |
 
 

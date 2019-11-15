@@ -82,7 +82,7 @@ ASCII       Extended_ASCII
 To verify if the results above map to the correct character code point, use the output values with the `CHAR` or `NCHAR` function:
 
 ```sql
-SELECT NCHAR(80) [CHARACTER], NCHAR(195) [CHARACTER];
+SELECT NCHAR(80) AS [CHARACTER], NCHAR(195) AS [CHARACTER];
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -93,18 +93,18 @@ CHARACTER CHARACTER
 P         Ã
 ```
 
-In the previous result, notice that the character for ASCII value 195 is **Ã** and not **æ**. This is because the `ASCII` fucntion is capable of reading the first 7-bit stream. The correct value for the character `æ` can be found using the `UNICODE` function, which is capable or returning the correct character code point:
+From the previous result, notice that the character for code point 195 is **Ã** and not **æ**. This is because the `ASCII` function is capable of reading the first 7-bit stream, but not the extra bit. The correct code point for character `æ` can be found using the `UNICODE` function, which is capable or returning the correct character code point:
 
 ```sql
-SELECT ASCII('P') AS [ASCII], ASCII('æ') AS [Extended_ASCII], UNICODE('æ') AS [Correct_Extended_ASCII];
+SELECT UNICODE('æ') AS [Extended_ASCII], NCHAR(230) AS [CHARACTER];
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
 ```
-ASCII       Extended_ASCII Correct_Extended_ASCII
------------ -------------- ----------------------
-80          195            230
+Extended_ASCII CHARACTER
+-------------- ---------
+230            æ
 ```
 
 ## See also
@@ -113,6 +113,3 @@ ASCII       Extended_ASCII Correct_Extended_ASCII
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
  [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
-  
-
-

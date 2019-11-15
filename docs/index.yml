@@ -224,4 +224,4 @@ additionalContent:
           - text: Distributed replay
             url: tools/distributed-replay/sql-server-distributed-replay.md
           - text: See more tools
-            url: tools/overview-sql-tools.md
+            url: tools/sql-tools-hub.yml

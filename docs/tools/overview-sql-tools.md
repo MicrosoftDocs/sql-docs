@@ -40,7 +40,7 @@ The following are the main command-line tools:
 
 | Tool | Description | Runs on |
 |:--|:--|:--|
-|[**mssql-cli (preview)**](mssql-cli.md)|**mssql-cli** is an interactive command-line tool for querying SQL Server. | Windows, macOS, and Linux|
+|[**mssql-cli**](mssql-cli.md)|**mssql-cli** is an interactive command-line tool for querying SQL Server. | Windows, macOS, and Linux|
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage** is a command-line utility that automates several database development tasks. macOS and Linux versions of sqlpackage are currently in preview. | Windows, macOS, and Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** provides cmdlets for working with SQL| Windows, macOS, and Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd** utility lets you enter Transact-SQL statements, system procedures, and script files at the command prompt. | Windows, macOS, and Linux|

@@ -6,7 +6,7 @@ ms.date: "11/14/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
-ms.topic: landing-page
+ms.topic: conceptual
 helpviewer_keywords: 
   - "AdventureWorks sample database"
   - "installing SQL Server, preparing to install"

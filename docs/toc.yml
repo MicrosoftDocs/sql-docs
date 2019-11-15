@@ -8377,7 +8377,7 @@
   - name: Overview
     items: 
     - name: Tools Overview
-      href: tools/overview-sql-tools
+      href: tools/overview-sql-tools.md
   - name: Azure Data Studio
     href: azure-data-studio/what-is.md
     items:

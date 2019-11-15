@@ -39,7 +39,7 @@ The database downloads and samples are in the [SQL Server Samples](https://githu
 
 ## AdventureWorks sample database
 
-AdventureWorks databases can be found in the [installation](adventureworks-install-configure.md) article or directly within the [SQL Server Samples](https://github.com/Microsoft/sql-server-samples) GitHub repository. 
+AdventureWorks databases can be found on the [installation](adventureworks-install-configure.md) page or directly within the [SQL Server Samples](https://github.com/Microsoft/sql-server-samples) GitHub repository. 
 
 
 ## Azure Samples and templates

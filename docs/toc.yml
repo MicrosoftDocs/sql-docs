@@ -4206,7 +4206,6 @@
       - name: Local audit for SQL Server
         href: sql-server/usage-and-diagnostic-data-in-local-audit.md
   - name: Install SQL Server
-    href: database-engine/install-windows/installation-for-sql-server.md
     items:
     - name: Overview
       href: database-engine/install-windows/install-sql-server.md

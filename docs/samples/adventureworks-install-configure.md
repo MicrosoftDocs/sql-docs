@@ -20,12 +20,6 @@ AdventureWorks download links and installation instructions.
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). For the Full version of the sample, use SQL Server Evaluation/Developer/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). For the best results use the June 2016 release or later.
  
-## Github links
-
-- [All AdventureWorks files for SQL 2014 - 2016](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
-- [All AdventureWorks files for SQL 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)
-- [All AdventureWorks files for SQL 2008 and 2008R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)
-
 ## OLTP downloads
 
 Direct links to the OLTP versions of AdventureWorks can be found below:
@@ -52,6 +46,12 @@ The below scripts can be used to create the entire AdventureWorks database, irre
 
 - [AdventureWorks OLTP Scripts Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks-oltp-install-script.zip)
 - [AdventureWorks DW Scripts Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW-data-warehouse-install-script.zip)
+
+## Github links
+
+- [All AdventureWorks files for SQL 2014 - 2016](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+- [All AdventureWorks files for SQL 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)
+- [All AdventureWorks files for SQL 2008 and 2008R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)
 
 ## Install to SQL Server
 
@@ -84,7 +84,7 @@ For more information on attaching database files, see [Attach a database](../rel
 ## Install to Azure SQL Database
 
 
-If you do not yet have a SQL Server in Azure, navigate to the [Azure portal](https://portal.azure.com/) and create a new SQL Database. In the process of create a database, you will create a server. Make note of the server. See [this tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database in minutes.
+If you do not yet have a SQL Server in Azure, navigate to the [Azure portal](https://portal.azure.com/) and create a new SQL Database. In the process of creating a database, you will create a server. Make note of the server. See [this tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database in minutes.
 
 1. Connect to your Azure portal.
 1. Select **Create a resource** in the top left of the navigation pane. 

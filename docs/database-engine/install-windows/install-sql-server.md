@@ -49,14 +49,14 @@ Beginning with [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssno
     * To install them for non-Express editions of SQL Server, see the [GitHub](https://github.com/Microsoft/sql-server-samples)
     
 
-## Get the installation media
+## Installation media
 
 The download location for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] depends on the edition:
 
 
 * **SQL Server Enterprise, Standard, and Express Editions** are licensed for production use. For the Enterprise and Standard Editions, contact your software vendor for the installation media. You can find purchasing information and a directory of Microsoft partners on the [Microsoft purchasing website](https://www.microsoft.com/en-us/server-cloud/products/sql-server/overview.aspx). 
 * [Latest free version of SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
-* [Other free editions of SQL Server](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server)
+* [Other free versions of SQL Server](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server)
 * [All cumulative updates](https://sqlserverbuilds.blogspot.com/)
 
 Other SQL Server components can be found here: 

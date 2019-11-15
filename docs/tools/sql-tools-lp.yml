@@ -100,8 +100,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Visual Studio Code with the mssql extension
-            url: https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql
-          - text: Configuration Manager
+            url: visual-studio-code/sql-server-develop-use-vscode.md
             url: configuration-manager/sql-server-configuration-manager-help.md
           - text: SQL Server Migration Assistant (SSMA)
             url: ../ssma/sql-server-migration-assistant.md

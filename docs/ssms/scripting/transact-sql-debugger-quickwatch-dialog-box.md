@@ -1,6 +1,5 @@
 ---
 title: QuickWatch Dialog Box
-titleSuffix: T-SQL Debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual

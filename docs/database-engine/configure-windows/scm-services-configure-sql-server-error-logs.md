@@ -32,7 +32,7 @@ ms.author: mikeray
   
       **Maximum number of error log files**
 
-      Specify the maximum number of error log files created before they are recycled. The default is 6, one current and the 5 previous backup logs that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retains before recycling them.
+      Specify the maximum number of archived error log files created before they are recycled. The default is 6, not including the current one. This value determines the number of previous backup logs that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retains before recycling them.
 
     b. Log file size
 

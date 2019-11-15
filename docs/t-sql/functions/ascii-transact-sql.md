@@ -1,7 +1,7 @@
 ---
 title: "ASCII (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/24/2017"
+ms.date: "11/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -45,8 +45,11 @@ An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of ty
 ## Remarks
 ASCII stands for **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange. It serves as a character encoding standard for modern computers. See the **Printable characters** section of [ASCII](https://www.wikipedia.org/wiki/ASCII) for a list of ASCII characters.
 
-## Examples  
-This example assumes an ASCII character set, and returns the `ASCII` value for 6 characters.
+ASCII is a 7-bit character set. Extended ASCII or High ASCII is an 8-bit character set that is not handled by the `ASCII` function. 
+
+## Examples 
+
+### A. This example assumes an ASCII character set, and returns the `ASCII` value for 6 characters.
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
@@ -56,12 +59,54 @@ ASCII(1) AS [1], ASCII(2) AS [2];
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 A           B           a           b           1           2  
 ----------- ----------- ----------- ----------- ----------- -----------  
 65          66          97          98          49          50  
 ```  
   
+### B. This examples shows how a 7-bit ASCII value is returned correctly, but an 8-bit Extended ASCII value is not handled.
+
+```sql
+SELECT ASCII('P') AS [ASCII], ASCII('æ') AS [Extended_ASCII];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+ASCII       Extended_ASCII
+----------- --------------
+80          195
+```
+
+To verify if the results above map to the correct character code point, use the output values with the `CHAR` or `NCHAR` function:
+
+```sql
+SELECT NCHAR(80) [CHARACTER], NCHAR(195) [CHARACTER];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+CHARACTER CHARACTER
+--------- ---------
+P         Ã
+```
+
+In the previous result, notice that the character for ASCII value 195 is **Ã** and not **æ**. This is because the `ASCII` fucntion is capable of reading the first 7-bit stream. The correct value for the character `æ` can be found using the `UNICODE` function, which is capable or returning the correct character code point:
+
+```sql
+SELECT ASCII('P') AS [ASCII], ASCII('æ') AS [Extended_ASCII], UNICODE('æ') AS [Correct_Extended_ASCII];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+ASCII       Extended_ASCII Correct_Extended_ASCII
+----------- -------------- ----------------------
+80          195            230
+```
+
 ## See also
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  

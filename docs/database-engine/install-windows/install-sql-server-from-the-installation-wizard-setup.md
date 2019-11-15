@@ -1,5 +1,5 @@
 ---
-title: "Install SQL Server 2016 from the Installation Wizard (Setup) | Microsoft Docs"
+title: "Install SQL Server using the Installation media GUI from the setup media"
 ms.custom: ""
 ms.date: 07/26/2019
 ms.prod: sql

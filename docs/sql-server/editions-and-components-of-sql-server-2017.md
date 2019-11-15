@@ -39,8 +39,9 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 
 This topic provides details of features supported by the various editions of SQL Server 2017. 
 
-For information about older versions, see:
+For information other versions, see:
 
+* [SQL Server 2019](editions-and-components-of-sql-server-version-15.md).  
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md).  
 * [SQL Server 2014](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx).
 

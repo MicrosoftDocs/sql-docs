@@ -246,8 +246,6 @@ ms.custom: seo-dt-2019
   
 -   [Create a Job](../../ssms/agent/create-a-job.md)  
   
--   [Create a Job](../../ssms/agent/create-a-job.md)  
-  
 #### Best Practices for Using a Script to Re-create a Job  
  We recommend that you start by scripting a simple job, re-creating the job on the other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service, and running the job to see whether it works as intended. This will let you identify incompatibilities and try to resolve them. If a scripted job does not work as intended in its new environment, we recommend that you create an equivalent job that works correctly in that environment.  
   

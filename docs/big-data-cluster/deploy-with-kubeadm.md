@@ -99,12 +99,14 @@ After running the previous commands on each machine, choose one of the machines 
    EOF
    ```
 
-1. Initialize the Kubernetes master on this machine. You should see output that the Kubernetes master was successfully initialized.
+1. Initialize the Kubernetes master on this machine. The example script below specifies Kubernetes version `1.15.0`. The version you use depends on your Kubernetes cluster.
 
    ```bash
-   KUBE_VERSION=1.11.3
+   KUBE_VERSION=1.15.0
    sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=$KUBE_VERSION
    ```
+
+   You should see output that the Kubernetes master was successfully initialized.
 
 1. Note the `kubeadm join` command that you need to use on the other servers to join the Kubernetes cluster. Copy this for later use.
 

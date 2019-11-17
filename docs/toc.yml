@@ -5811,7 +5811,7 @@
   - name: Database Experimentation Assistant (DEA)
     href: dea/database-experimentation-assistant-overview.md
     items:
-    - name: Get started
+    - name: Workload comparison overview
       href: dea/database-experimentation-assistant-get-started.md
     - name: Capture trace
       href: dea/database-experimentation-assistant-capture-trace.md

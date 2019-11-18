@@ -1,7 +1,7 @@
 ---
 title: "CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 11/04/2019
+ms.date: 11/18/2019
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -188,9 +188,9 @@ GO
 
 &nbsp;
 
-## SQL Data Warehouse 
+## SQL Data Warehouse (Preview)
 
-CREATE WORKLOAD GROUP (Transact-SQL) (preview) creates a workload group.  Workload groups are containers for a set of requests and are the basis for how workload management is configured on a system.  Workload groups provide the ability to reserve resources for workload isolation, contain resources, define resources per request, and adhere to execution rules.  Once the statement completes, the settings are in effect.
+Creates a workload group.  Workload groups are containers for a set of requests and are the basis for how workload management is configured on a system.  Workload groups provide the ability to reserve resources for workload isolation, contain resources, define resources per request, and adhere to execution rules.  Once the statement completes, the settings are in effect.
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
@@ -210,13 +210,13 @@ CREATE WORKLOAD GROUP group_name
 Specifies the name by which the workload group is identified.  group_name is a sysname.  It can be up to 128 characters long and must be unique within the instance.
 
 *MIN_PERCENTAGE_RESOURCE* = value</br>
-Specifies a guaranteed minimum resource allocation for this workload group that is not shared with other workload groups.  value is an integer range from 0 to 100.  The sum of min_percentage_resource across all workload groups cannot exceed 100.  The value for min_percentage_resource cannot be greater than cap_percentage_resource.  There are minimum effective values allowed per service level.  See Effective Values<link> for more details.
+Specifies a guaranteed minimum resource allocation for this workload group that is not shared with other workload groups.  value is an integer range from 0 to 100.  The sum of min_percentage_resource across all workload groups cannot exceed 100.  The value for min_percentage_resource cannot be greater than cap_percentage_resource.  There are minimum effective values allowed per service level.  See [Effective Values](#effective-values) for more details.
 
 *CAP_PERCENTAGE_RESOURCE* = value</br>
-Specifies the maximum resource utilization for all requests in a workload group.  The allowed range for value is 1 through 100.  The value for cap_percentage_resource must be greater than min_percentage_resource.  The effective value for cap_percentage_resource can be reduced if min_percentage_resource is configured greater than zero in other workload groups.
+Specifies the maximum resource utilization for all requests in a workload group.  The allowed integer range for value is 1 through 100.  The value for cap_percentage_resource must be greater than min_percentage_resource.  The effective value for cap_percentage_resource can be reduced if min_percentage_resource is configured greater than zero in other workload groups.
 
 *REQUEST_MIN_RESOURCE_GRANT_PERCENT* = value</br>
-Sets the minimum amount of resources allocated per request.  value is a required parameter with a decimal range between 0.75 to 100.00.  The value for request_min_resource_grant_percent must be a multiple of 0.25, must be a factor of min_percentage_resource, and be less than cap_percentage_resource.  There are minimum effective values allowed per service level.  See Effective Values<link> for more details.
+Sets the minimum amount of resources allocated per request.  value is a required parameter with a decimal range between 0.75 to 100.00.  The value for request_min_resource_grant_percent must be a multiple of 0.25, must be a factor of min_percentage_resource, and be less than cap_percentage_resource.  There are minimum effective values allowed per service level.  See [Effective Values](#effective-values) for more details.
 
 For example:
 
@@ -238,7 +238,7 @@ Consider the values that are used for resource classes as a guideline for reques
 |||
 
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>
-Sets the maximum amount of resources allocated per request.  value is an optional parameter with a default value equal to the request_min_resource_grant_percent.  value must be greater than or equal to request_min_resource_grant_percent.  When the value of request_max_resource_grant_percent is greater than request_min_resource_grant_percent and system resources are available, additional resources are allocated to a request.
+Sets the maximum amount of resources allocated per request.  value is an optional decimal parameter with a default value equal to the request_min_resource_grant_percent.  value must be greater than or equal to request_min_resource_grant_percent.  When the value of request_max_resource_grant_percent is greater than request_min_resource_grant_percent and system resources are available, additional resources are allocated to a request.
 
 *IMPORTANCE* = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>
 Specifies the default importance of a request for the workload group.  Importance is one of the following, with NORMAL being the default:
@@ -251,48 +251,54 @@ Specifies the default importance of a request for the workload group.  Importanc
 Importance set at the workload group is a default importance for all requests in the workload group.  A user can also set importance at the classifier level, which can override the workload group importance setting.  This allows for differentiation of importance for requests within a workload group to get access to non-reserved resources quicker.  When the sum of min_percentage_resource across workload groups is less than 100, there are non-reserved resources that are assigned on a basis of importance.
 
 *QUERY_EXECUTION_TIMEOUT_SEC* = value</br>
-Specifies the maximum time, in seconds, that a query can execute before it is canceled.  value must be 0 or a positive integer.  The default setting for value is 0, which means unlimited.  The time spent waiting in the request queue is not counted towards query execution.
+Specifies the maximum time, in seconds, that a query can execute before it is canceled.  value must be 0 or a positive integer.  The default setting for value is 0, which the query never times out.  QUERY_EXECUTION_TIMEOUT_SEC counts once the query is in running state, not when the query is queued.
 
 ## Remarks
 Workload groups corresponding to resource classes are created automatically for backward compatibility.  These system defined workload groups cannot be dropped.  An additional 8 user defined workload groups can be created.
+
+If a workload group is created with min_percentage_resource greater than zero, the `CREATE WORKLOAD GROUP` statement will queue until there are enough resources to create the workload group.
 
 ## Effective Values
 
 The parameters min_percentage_resource, cap_percentage_resource, request_min_resource_grant_percent and request_max_resource_grant_percent have effective values that are adjusted in the context of the current service level and the configuration of other workload groups.
 
-The supported concurrency per service level remains the same as when resource classes were used to define resource grants per query, hence, the supported values for request_min_resource_grant_percent is dependent on the service level the instance is set to.  At the lowest service level, DW100c, 4 concurrency is supported.  The effective request_min_resource_grant_percent for a configured workload group can be 25% or higher.  See the below table for further details.
+The supported concurrency per service level remains the same as when resource classes were used to define resource grants per query, hence, the supported values for request_min_resource_grant_percent is dependent on the service level the instance is set to.  At the lowest service level, DW100c, a minimum 25% resources per request is needed.  At DW100c, the effective request_min_resource_grant_percent for a configured workload group can be 25% or higher.  See the below table for further details on how effective values are derived.
 
-|Service Level|Maximum concurrent queries|Min % supported for REQUEST_MIN_RESOURCE_GRANT_PERCENT and MIN_PERCENTAGE_RESOURCE|
+|Service Level|Lowest effective value for REQUEST_MIN_RESOURCE_GRANT_PERCENT|Maximum concurrent queries|
 |---|---|---|
-|DW100c|4|25%|
-|DW200c|8|12.5%|
-|DW300c|12|8%|
-|DW400c|16|6.25%|
-|DW500c|20|5%|
-|DW1000c|32|3%|
-|DW1500c|32|3%|
-|DW2000c|48|2%|
-|DW2500c|48|2%|
-|DW3000c|64|1.5%|
-|DW5000c|64|1.5%|
-|DW6000c|128|0.75%|
-|DW7500c|128|0.75%|
-|DW10000c|128|0.75%|
-|DW15000c|128|0.75%|
-|DW30000c|128|0.75%|
+|DW100c|25%|4|
+|DW200c|12.5%|8|
+|DW300c|8%|12|
+|DW400c|6.25%|16|
+|DW500c|5%|20|
+|DW1000c|3%|32|
+|DW1500c|3%|32|
+|DW2000c|2%|48|
+|DW2500c|2%|48|
+|DW3000c|1.5%|64|
+|DW5000c|1.5%|64|
+|DW6000c|0.75%|128|
+|DW7500c|0.75%|128|
+|DW10000c|0.75%|128|
+|DW15000c|0.75%|128|
+|DW30000c|0.75%|128|
 ||||
 
 Similarly, request_min_resource_grant_percent, min_percentage_resource must be greater than or equal to the effective request_min_resource_grant_percent.  A workload group with min_percentage_resource configured that is less than effective min_percentage_resource has the value adjusted to zero at run time.  When this happens, the resources configured for min_percentage_resource are sharable across all workload groups.  For example, the workload group wgAdHoc with a min_percentage_resource of 10% running at DW1000c would have an effective min_percentage_resource of 10% (3.25% is the minimum supported value at DW1000c).  wgAdhoc at DW100c would have an effective min_percentage_resource of 0%.  The 10% configured for wgAdhoc would be shared across all workload groups.
 
 Cap_percentage_resource also has an effective value.  If a workload group wgAdhoc is configured with a cap_percentage_resource of 100% and another workload group wgDashboards is created with 25% min_percentage_resource, the effective cap_percentage_resource for wgAdhoc becomes 75%.
 
-The easiest way to understand the run-time values for your workload groups is to query the system view [sys.dm_workload_management_workload_groups_stats] (../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md?view=azure-sqldw-latest).
+The easiest way to understand the run-time values for your workload groups is to query the system view [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md).
+
 
 ## Permissions
 
 Requires CONTROL DATABASE permission
 
 ## See also
-[DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](drop-workload-group-transact-sql.md)
+[DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md) <br>
+[sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) <br>
+[sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) <br>
+Quickstart on how to create and use a [workload group](https://docs.microsoft.com/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
 
 ::: moniker-end

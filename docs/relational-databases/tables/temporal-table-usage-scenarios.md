@@ -21,7 +21,7 @@ Temporal Tables are generally useful in scenarios that require tracking history 
 
 Use temporal system-versioning on tables that store critical information for which you need to keep track of what has changed and when, and to perform data forensics at any point in time.
 
-Temporal system-versioned tables allows you to plan for data audit scenarios in the early stages of the development cycle or to add data auditing to existing applications or solutions when you need it.
+Temporal system-versioned tables allow you to plan for data audit scenarios in the early stages of the development cycle or to add data auditing to existing applications or solutions when you need it.
 
 The following diagram shows an Employee table scenario with the data sample including current (marked with blue color) and historical row versions (marked with grey color).
 The right-hand portion of the diagram visualizes row versions on time axis and what are the rows you select with different types of querying on temporal table with or without SYSTEM_TIME clause.
@@ -143,11 +143,11 @@ See also: [Querying Data in a System-Versioned Temporal Table](../../relational-
 
 ## Point in Time Analysis (Time Travel)
 
-Unlike data audit, where the focus is typically on changes that occurred to an individual records, in time travel scenarios users want to see how entire data sets changed over time. Sometimes time travel includes several related temporal tables, each changing at independent pace, for which you want to analyze:
+Unlike data audit, where the focus is typically on changes that occurred to individual records, in time travel scenarios users want to see how entire data sets changed over time. Sometimes time travel includes several related temporal tables, each changing at independent pace, for which you want to analyze:
 
 - Trends for the important indicators in the historical and current data
 - Exact snapshot of the entire data "as of" any point in time in the past (yesterday, a month ago, etc.)
-- Differences in between two point in time of interest (a month ago vs. three months ago, for instance)
+- Differences in between two points in time of interest (a month ago vs. three months ago, for instance)
 
 There are many real-world scenarios which require time travel analysis. To illustrate this usage scenario, let's look at OLTP with auto-generated history.
 
@@ -293,7 +293,7 @@ The diagram below shows the data history for one product which can be easily ren
 
 Temporal tables can be used in this scenario to perform other types of time travel analysis, such as reconstructing the state of the inventory AS OF any point in time in the past or comparing snapshots that belong to different moments in time.
 
-For this usage scenario, you can also extend the Product and Location tables to become temporal tables, which enables later analysis of the history of changes of UnitPrice and NumberOfEmployee.
+For this usage scenario, you can also extend the Product and Location tables to become temporal tables to enable later analysis of the history of changes of UnitPrice and NumberOfEmployee.
 
 ```sql
 ALTER TABLE Product
@@ -421,7 +421,7 @@ FROM CTE
 
 ## Slowly-Changing Dimensions
 
-Dimensions in data warehousing typically contain relatively static data about entities such as geographical locations, customers, or products. However, some scenarios require you to track data changes in dimension tables as well. Given that modification in dimensions happen much less frequently, in unpredictable manner and outside of the regular update schedule that applies to fact tables, these types of dimension tables are called slowly changing dimensions (SCD).
+Dimensions in data warehousing typically contain relatively static data about entities such as geographical locations, customers, or products. However, some scenarios require you to track data changes in dimension tables as well. Given that modifications in dimensions happen much less frequently, in unpredictable manner and outside of the regular update schedule that applies to fact tables, these types of dimension tables are called slowly changing dimensions (SCD).
 
 There are several categories of slowly changing dimensions based on how history of changes is preserved:
 
@@ -433,7 +433,7 @@ There are several categories of slowly changing dimensions based on how history 
 
 When you choose SCD strategy, it is responsibility of the ETL layer (Extract-Transform-Load) to keep dimension table(s) accurate and that usually requires a lot of code and complex maintenance.
 
-System-versioned temporal tables in SQL Server 2016 can be used to dramatically lower the complexity of your code as history of data is automatically preserved. Given its implementation using two tables, temporal tables in SQL Server 2016 is closest to Type 4 SCD. However, since temporal queries allows you to reference current table only, you can also consider temporal tables in environments where you plan to use Type 2 SCD.
+System-versioned temporal tables in SQL Server 2016 can be used to dramatically lower the complexity of your code as history of data is automatically preserved. Given its implementation using two tables, temporal tables in SQL Server 2016 are closest to Type 4 SCD. However, since temporal queries allows you to reference current table only, you can also consider temporal tables in environments where you plan to use Type 2 SCD.
 
 In order to convert your regular dimension to SCD, just create a new one or alter an existing one to become a system-versioned temporal table. If your existing dimension table contains historical data, create separate table and move historical data there and keep current (actual) dimension versions in your original dimension table. Then use ALTER TABLE syntax to convert your dimension table to a system-versioned temporal table with a predefined history table.
 
@@ -462,7 +462,7 @@ The following illustration shows how you can use Temporal Tables in a simple sce
 
 ![TemporalSCD](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
 
-In order to use above SCDs in reports, you need to effectively adjust querying. For example, you might want to calculate the total sales amount and the average number of sold products per capita for the last six months.Note that both metrics requires the correlation of data from the fact table and dimensions that might have changed their attributes important for the analysis (DimLocation.NumOfCustomers, DimProduct.UnitPrice). The following query properly calculates the required metrics:
+In order to use above SCDs in reports, you need to effectively adjust querying. For example, you might want to calculate the total sales amount and the average number of sold products per capita for the last six months. Note that both metrics requires the correlation of data from the fact table and dimensions that might have changed their attributes important for the analysis (DimLocation.NumOfCustomers, DimProduct.UnitPrice). The following query properly calculates the required metrics:
 
 ```sql
 DECLARE @now datetime2 = SYSUTCDATETIME()

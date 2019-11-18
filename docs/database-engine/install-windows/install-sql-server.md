@@ -1,6 +1,6 @@
 ---
 title: "SQL Server installation guide"
-ms.description: "An index of content that can help you install SQL Server and associated components through various options such as the installation wizard, command prompt, or sysprep. "
+ms.description: "An index of content that helps you install SQL Server and associated components through various options such as the installation wizard, command prompt, or sysprep. "
 ms.custom: ""
 ms.date: "11/14/2019"
 ms.prod: sql

@@ -1,6 +1,6 @@
 ---
-title: "Install SQL Server content guide"
-ms.description: "A reference of content to help you install SQL Server and associated components. SQL Server installation center."
+title: "SQL Server installation guide"
+ms.description: "SQL Server Installation Center: An index of content that can help you install SQL Server and associated components through various options such as the installation wizard, command prompt, or sysprep. "
 ms.custom: ""
 ms.date: "11/14/2019"
 ms.prod: sql
@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article provides guidance for installing SQL Server on Windows.
+This article is an index of content that provides guidance for installing SQL Server on Windows.
 
 For other deployment scenarios, see:
 
@@ -30,7 +30,7 @@ For other deployment scenarios, see:
 
 Beginning with [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] is only available as a 64-bit application. Here are important details about how to get SQL Server and how to install it.
 
-## Installation details
+## Getting started
   
 * **Editions and features**: Review the supported features for the different editions and versions of SQL Server to determine which best suits your business needs. 
     - [[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)]](~/sql-server/editions-and-components-of-sql-server-version-15.md).  
@@ -66,7 +66,7 @@ Other SQL Server components can be found here:
 * [Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2109256)
 
 
-## Install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 
+## Installation options
  
 |Title|Description|  
 |-----------|-----------------|  
@@ -104,7 +104,6 @@ Other SQL Server components can be found here:
 |[Configure the Windows Firewall (SSAS))](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Configure both port and firewall settings to allow access to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint.|  
 |[Configure a Multi-Homed Computer](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|Configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Firewall with Advanced Security to provide for network connections to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a multi-homed environment.|  
 
-  
  
 ## See also  
 

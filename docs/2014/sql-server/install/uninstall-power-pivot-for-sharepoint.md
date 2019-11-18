@@ -100,8 +100,8 @@ manager: craigg
   
  In the Configuration Tool, you can view error information in the Parameters pane for each action. For problems related to solution deployment or retraction, verify the SharePoint Administration service is started. This service runs the timer jobs that trigger configuration changes in a farm. If the service is not running, solution deployment or retraction will fail. Persistent errors indicate that an existing deployment or retraction job is already in the queue and blocking further action from the configuration tool. You can use the following PowerShell command to verify the service is running.  
   
-```  
-Get-Service | where {$_.displayname -like "*sharepoint* administration*"}  
+```powershell
+Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}  
 ```  
   
  To find and remove a deployment or retraction job that is already in the queue, do the following:  
@@ -110,16 +110,16 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 2.  Start the SharePoint Management Shell as an administrator and then run the following command to view jobs in the queue:  
   
-    ```  
-    Stsadm -o enumdeployments  
+    ```cmd
+    stsadm -o enumdeployments  
     ```  
   
 3.  Review existing deployments for the following information: **Type** is Retraction or Deployment, **File** is powerpivotwebapp.wsp or powerpivotfarm.wsp.  
   
 4.  For deployments or retractions related to PowerPivot solutions, copy the GUID value for **JobId** and then paste it into the following command (use the Mark, Copy, and Paste commands on the Shell's Edit menu to copy the GUID):  
   
-    ```  
-    Stsadm -o canceldeployment -id "<GUID>"  
+    ```cmd
+    stsadm -o canceldeployment -id "<GUID>"  
     ```  
   
 5.  Retry the task in the configuration tool by clicking **Validate** followed by **Run**.  
@@ -184,5 +184,3 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 ## See Also  
  [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
  [PowerPivot Configuration Tools](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
-  
-  

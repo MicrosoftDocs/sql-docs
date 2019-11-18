@@ -58,8 +58,6 @@ ms.author: "mathoma"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### To delete a partition  
   
 1.  On the **Data Partitions** page, select a partition in the grid.  

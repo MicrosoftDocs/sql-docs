@@ -48,8 +48,6 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
 
 8. Complete the wizard.
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Configure an updatable subscription from the Subscriber
 
 

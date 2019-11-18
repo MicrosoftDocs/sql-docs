@@ -43,14 +43,14 @@ manager: craigg
   
  The **sqldrive** function prompts you to enter the password for your login, masking the password as you type it in. Then, whenever you use the change directory command (`cd`) to connect to a path by using the virtual drive name, all operations are performed by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication login credentials that you supplied when you created the drive.  
   
-```  
+```powershell
 ## Create a function that specifies the login and prompts for the password.  
   
 function sqldrive  
 {  
     param( [string]$name, [string]$login = "MyLogin", [string]$root = "SQLSERVER:\SQL\MyComputer\MyInstance" )  
-    $pwd = read-host -AsSecureString -Prompt "Password"  
-    $cred = new-object System.Management.Automation.PSCredential -argumentlist $login,$pwd  
+    $pwd = Read-Host -AsSecureString -Prompt "Password"  
+    $cred = New-Object System.Management.Automation.PSCredential -argumentlist $login, $pwd  
     New-PSDrive $name -PSProvider SqlServer -Root $root -Credential $cred -Scope 1  
 }  
   
@@ -69,9 +69,9 @@ cd SQLAuth
 ### Example (Invoke-Sqlcmd)  
  This example uses the read-host cmdlet to prompt the user for a password, and then connects using SQL Server Authentication.  
   
-```  
+```powershell
 ## Prompt the user for their password.  
-$pwd = read-host -AsSecureString -Prompt "Password"  
+$pwd = Read-Host -AsSecureString -Prompt "Password"  
   
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" -Username "MyLogin" -Password $pwd  
 ```  
@@ -80,5 +80,3 @@ Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyCompu
  [SQL Server PowerShell](sql-server-powershell.md)   
  [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [Invoke-Sqlcmd cmdlet](../database-engine/invoke-sqlcmd-cmdlet.md)  
-  
-  

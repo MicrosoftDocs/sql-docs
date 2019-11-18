@@ -1,6 +1,6 @@
 ---
-title: "Quickstart: SQL backup and restore to Azure Blob storage service | Microsoft Docs"
-ms.custom: ""
+title: "Quickstart: SQL backup & restore to Azure Blob storage service"
+ms.custom: seo-dt-2019
 ms.date: "04/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -23,9 +23,6 @@ To complete this quickstart, you must be familiar with [!INCLUDE[ssNoVersion](..
 - Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) or deploy a [managed instance](/azure/sql-database/sql-database-managed-instance-get-started) with connectivity established through an [Azure SQL virtual machine](/azure/sql-database/sql-database-managed-instance-configure-vm) or [point-to-site](/azure/sql-database/sql-database-managed-instance-configure-p2s).
 - Assign the user account to the role of [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) and grant [alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) permissions. 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 
 ## Create Azure Blob container
 A container provides a grouping of a set of blobs. All blobs must be in a container. A storage account can contain an unlimited number of containers, but must have at least one container. A container can store an unlimited number of blobs. 

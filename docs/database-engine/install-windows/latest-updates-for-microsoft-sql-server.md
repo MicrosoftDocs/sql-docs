@@ -25,8 +25,9 @@ Each of the following links provides information for all of the applicable produ
 
 |Product Versions   | Latest Service Pack |  Latest GDR | Latest cumulative update | CU Release Date | General Guidance  |
 |--|--|--|--|--|--|
-|SQL Server 2017|N/A|KB 4505224|CU 16 [(KB 4508218)](https://support.microsoft.com/en-us/help/4508218)|8/1/2019|[SQL Server 2017 Installation](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/installation-for-sql-server) |
-|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/en-us/help/4052908)|[KB 4505220](https://support.microsoft.com/en-us/help/4505220)|CU 8 [(KB 4505830)](https://support.microsoft.com/en-us/kb/4505830)|7/31/2019|[SQL Server 2016 Installation](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
+|SQL Server 2019|N/A|[KB 4517790](https://support.microsoft.com/en-us/help/4517790)|N/A|N/A|[SQL Server 2019 Installation](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2017|N/A|[KB 4505224](https://support.microsoft.com/en-us/help/4505224)|CU 17 [(KB 4515579)](https://support.microsoft.com/en-us/help/4515579)|10/8/2019|[SQL Server 2017 Installation](https://docs.microsoft.com/en-us/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/en-us/help/4052908)|[KB 4505220](https://support.microsoft.com/en-us/help/4505220)|CU 10 [(KB 4524334)](https://support.microsoft.com/en-us/kb/4524334)|10/8/2019|[SQL Server 2016 Installation](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/en-us/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/en-us/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/en-us/help/4505221)|7/9/2019|[SQL Server 2016 Installation](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
 |SQL Server 2016|N/A|[KB4058560](https://support.microsoft.com/en-us/help/4058560)|CU 9 [(KB 4058559)](https://support.microsoft.com/en-us/help/4058559)|11/22/2017|[SQL Server 2016 Installation](https://technet.microsoft.com/en-us/library/bb500469.aspx)|
 |SQL Server 2014|SP3 [(KB 4022619)](https://support.microsoft.com/en-us/kb/4022619)|[KB 4505218](https://support.microsoft.com/en-us/help/4505218)|CU 4 [(KB 4500181)](https://support.microsoft.com/en-us/kb/4500181)|7/29/2019|[SQL Server 2014 Installation](https://technet.microsoft.com/en-us/library/cc281837(v=sql.120).aspx)|
@@ -44,7 +45,7 @@ Each of the following links provides information for all of the applicable produ
 |SQL Server 2005 |SP4 [(KB 2463332)](http://support.microsoft.com/kb/2463332)|N/A|N/A|N/A|[SQL Server 2005 Installation](https://msdn.microsoft.com/en-us/library/ms143516(sql.90).aspx)|
 |SQL Server 2000|SP4 [(KB 290211)](http://support.microsoft.com/kb/290211)|N/A|N/A|N/A|[SQL Server 2000 Installation](https://technet.microsoft.com/en-us/library/aa197941(sql.80).aspx)|
 
-**Learn how to test updates:** [Testing and Developing Supportability Roadmaps for ISV Applications (PDF)](http://blogs.technet.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-85-48-files/0827.testing-and-developing-supportability-roadmaps-for-isv-applications.pdf)
+**Learn how to test updates:** [Testing and Developing Supportability Roadmaps for ISV Applications (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
 ### Knowledge base
 

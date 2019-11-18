@@ -65,8 +65,6 @@ ms.author: mikeray
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To view the recovery model  

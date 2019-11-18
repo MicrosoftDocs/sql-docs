@@ -28,8 +28,6 @@ This topic describes the different options found within the Publisher properties
 1.  Disable publishing on the Publisher. For more information, see [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md).    
 2.  Reconfigure publishing and distribution. For more information, see [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md).  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Distributor 
 The **Publisher Properties** dialog box allows you to view and modify properties associated with the relationship between the Publisher and its Distributor.  
   

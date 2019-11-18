@@ -25,8 +25,6 @@ There are two basic steps to set up full-text search:
 1.  Create a full-text catalog.  
 2.  Create a full-text index on tables or indexed view you want to search. 
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 Each full-text index must belong to a full-text catalog. You can create a separate text catalog for each full-text index, or you can associate multiple full-text indexes with a given catalog. A full-text catalog is a virtual object and does not belong to any filegroup. The catalog is a logical concept that refers to a group of full-text indexes.
 
 > [!NOTE]

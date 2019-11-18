@@ -22,7 +22,7 @@ ms.author: sstein
 # sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns information about the SQL Server, Full-Text, and SQL Server Agent services in the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this dynamic management view to report status information about these services.  
+  Returns information about the SQL Server, Full-Text, SQL Server Launchpad service (SQL Server 2017+), and SQL Server Agent services in the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this dynamic management view to report status information about these services.  
   
  
 |Column name|Data type|Description|  
@@ -38,7 +38,7 @@ ms.author: sstein
 |filename|**nvarchar(256)**|The path and filename of the service executable. Cannot be null.|  
 |is_clustered|**nvarchar(1)**|Indicates whether the service is installed as a resource of a clustered server. Cannot be null.|  
 |cluster_nodename|**nvarchar(256)**|The name of the cluster node on which the service is installed. Is nullable.|
-|instant_file_initialization_enabled|**nvarchar(1)**|Specifies whether instant file initialization is enabled for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service.<br /><br />Y = instant file initialization is enabled for the service.<br /><br />N = instant file initialization is disabled for the service.<br /><br /> Is nullable.<br /><br /> **Note:** Does not apply to other services such as the SQL Server Agent.<br /><br /> **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
+|instant_file_initialization_enabled|**nvarchar(1)**|Specifies whether instant file initialization is enabled for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service.<br /><br />Y = instant file initialization is enabled for the service.<br /><br />N = instant file initialization is disabled for the service.<br /><br /> Is nullable.<br /><br /> **Note:** Does not apply to other services such as the SQL Server Agent.<br /><br /> **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later).|  
 
 ## Security  
   

@@ -164,8 +164,6 @@ To connect to a Kerberos-secured Hadoop cluster using MIT KDC:
 
 4. Create a database-scoped credential object to specify the authentication information for each Hadoop user. See [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md).  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Next steps  
 
 For more information, see the following articles:

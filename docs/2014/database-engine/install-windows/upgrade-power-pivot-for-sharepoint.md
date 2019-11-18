@@ -126,19 +126,19 @@ manager: craigg
   
 2.  Verify that the SharePoint 2010 Administration Windows service is running.  
   
-    ```  
-    Get-Service | where {$_.displayname -like "*SharePoint*"}  
+    ```powershell
+    Get-Service | Where {$_.displayname -like "*SharePoint*"}  
     ```  
   
 3.  Verify the **SharePoint** services **SQL Server Analysis Services** and **SQL Server PowerPivot System Service** are started in SharePoint Central Administration or use the following PowerShell command:.  
   
-    ```  
-    get-SPserviceinstance | where {$_.typename -like "*sql*"}  
+    ```powershell
+    Get-SPServiceInstance | where {$_.typename -like "*sql*"}  
     ```  
   
 4.  Verify the **Windows** service **SQL Server Analysis Services (PowerPivot)** is running.  
   
-    ```  
+    ```powershell
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
@@ -193,16 +193,16 @@ manager: craigg
   
     1.  Start the SharePoint 2010 Management Shell as an administrator and then run the following command to view jobs in the queue:  
   
-        ```  
-        Stsadm -o enumdeployments  
+        ```cmd
+        stsadm -o enumdeployments  
         ```  
   
     2.  Review existing deployments for the following information: **Type** is Retraction or Deployment, **File** is powerpivotwebapp.wsp or powerpivotfarm.wsp.  
   
     3.  For deployments or retractions related to PowerPivot solutions, copy the GUID value for **JobId** and then paste it into the following command (use the Mark, Copy, and Paste commands on the Shell's Edit menu to copy the GUID):  
   
-        ```  
-        Stsadm -o canceldeployment -id "<GUID>"  
+        ```cmd
+        stsadm -o canceldeployment -id "<GUID>"  
         ```  
   
     4.  Retry the task in the configuration tool by clicking **Validate** followed by **Run**.  
@@ -227,7 +227,7 @@ manager: craigg
 ### Verify the version of PowerPivot Solutions and the PowerPivot System Service  
  Run the following PowerShell command:  
   
-```  
+```powershell
 Get-PowerPivotSystemService  
 ```  
   
@@ -264,8 +264,8 @@ Get-PowerPivotSystemService
   
  You can use PowerShell to verify the product version. PowerShell is a good option if you want to script or automate version verification.  
   
-```  
-(get-childitem "C:\Program Files\Microsoft SQL Server\MSAS12.POWERPIVOT2000\OLAP\bin\msmdsrv.exe").VersionInfo  
+```powershell
+(Get-ChildItem "C:\Program Files\Microsoft SQL Server\MSAS12.POWERPIVOT2000\OLAP\bin\msmdsrv.exe").VersionInfo  
 ```  
   
  The above PowerShell command returns information similar to the following:  
@@ -296,17 +296,14 @@ Get-PowerPivotSystemService
   
 3.  Verify you have version 12.0.\<build number>.  
   
-  
-  
+
 ##  <a name="geminifarm"></a> Upgrading Multiple PowerPivot for SharePoint Servers in a SharePoint Farm  
  In a multi-server topology that includes more than one [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] server, all server instances and components must be the same version. The server that runs the highest version of the software sets the level for all servers in the farm. If you upgrade just some of the servers, the ones that are running older versions of the software will become unavailable until they are also upgraded.  
   
  After you upgrade the first server, additional servers that are not yet upgraded **will become unavailable**. Availability is restored after all servers run at the same level.  
   
  SQL Server Setup upgrades the PowerPivot solution files in place on the physical computer, but to upgrade the solutions in use by the farm, you must use the PowerPivot Configuration Tool described in a previous section of this topic..  
-  
- 
-  
+
 ##  <a name="qfe"></a> Applying a QFE to a PowerPivot instance in the farm  
  Patching a PowerPivot for SharePoint server updates existing program files with a newer version that includes a fix for a specific problem. When applying a QFE to a multi-server topology, there is no primary server that you must begin with. You can start with any server as long as you apply the same QFE to the other PowerPivot servers in the farm.  
   
@@ -345,11 +342,7 @@ Get-PowerPivotSystemService
  For more information about how to configure PowerPivot settings and features, see [PowerPivot Server Administration and Configuration in Central Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
   
  For step-by-step instructions that guide you through all of the post-installation configuration tasks, see [Initial Configuration &#40;PowerPivot for SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).  
-  
 
-  
 ## See Also  
  [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
-  
-  

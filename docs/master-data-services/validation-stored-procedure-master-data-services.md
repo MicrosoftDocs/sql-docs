@@ -1,5 +1,5 @@
 ---
-title: "Validation Stored Procedure (Master Data Services) | Microsoft Docs"
+title: Validation Stored Procedure
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

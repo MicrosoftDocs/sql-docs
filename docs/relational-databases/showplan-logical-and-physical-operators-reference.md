@@ -1,6 +1,6 @@
 ---
-title: "Showplan Logical and Physical Operators Reference | Microsoft Docs"
-ms.custom: ""
+title: "Showplan Logical & Physical Operators Reference"
+ms.custom: seo-dt-2019
 ms.date: "10/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

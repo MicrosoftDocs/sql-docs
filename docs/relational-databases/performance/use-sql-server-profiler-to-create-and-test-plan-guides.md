@@ -60,7 +60,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Open the batch text file in Notepad and copy the text to the copy and paste buffer.  
   
-8.  Create the plan guide and paste the copied text inside the quotation marks (**''**) specified for the **@stmt** argument. You must escape any single quotation marks in the **@stmt** argument by preceding them with another single quotation mark. Be careful not to add or remove any other characters when you insert these single quotation marks. For example, the date literal **'**20000101**'** must be delimited as **''**20000101**''**.  
+8.  Create the plan guide and paste the copied text inside the quotation marks (**''**) specified for the **\@stmt** argument. You must escape any single quotation marks in the **\@stmt** argument by preceding them with another single quotation mark. Be careful not to add or remove any other characters when you insert these single quotation marks. For example, the date literal **'**20000101**'** must be delimited as **''**20000101**''**.  
   
  Here is the plan guide:  
   

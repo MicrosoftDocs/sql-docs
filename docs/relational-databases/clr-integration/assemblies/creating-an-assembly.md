@@ -74,8 +74,6 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
 2.  The database owner (DBO) has **EXTERNAL ACCESS ASSEMBLY** (for **EXTERNAL ACCESS** assemblies) or **UNSAFE ASSEMBLY** (for **UNSAFE** assemblies) permission, and the database has the [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) set to **ON**.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  The two conditions listed above are also checked at assembly load time (which includes execution). At least one of the conditions must be met in order to load the assembly.  
   
  We recommend that the [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) on a database not be set to **ON** only to run common language runtime (CLR) code in the server process. Instead, we recommend that an asymmetric key be created from the assembly file in the master database. A login mapped to this asymmetric key must then be created, and the login must be granted **EXTERNAL ACCESS ASSEMBLY** or **UNSAFE ASSEMBLY** permission.  

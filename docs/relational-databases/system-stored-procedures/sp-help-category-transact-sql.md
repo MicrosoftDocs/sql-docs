@@ -64,7 +64,7 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** (success) or **1** (failure)  
   
 ## Result Sets  
- When **@suffix** is **0**, **sp_help_category** returns the following result set:  
+ When **\@suffix** is **0**, **sp_help_category** returns the following result set:  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -72,7 +72,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|Type of category:<br /><br /> **1** = Local<br /><br /> **2** = Multiserver<br /><br /> **3** = None|  
 |**name**|**sysname**|Category name|  
   
- When **@suffix** is **1**, **sp_help_category** returns the following result set:  
+ When **\@suffix** is **1**, **sp_help_category** returns the following result set:  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

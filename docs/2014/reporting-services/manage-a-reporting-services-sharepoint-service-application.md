@@ -143,8 +143,8 @@ manager: kfile
   
  The following is an example PowerShell command to return the list of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service applications with the UEAccount property:  
   
-```  
-Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
+```powershell
+Get-SPRSServiceApplication | Select typename, name, service, ueaccountname  
 ```  
   
  For more information, see [PowerShell cmdlets for Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  

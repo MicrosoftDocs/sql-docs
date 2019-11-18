@@ -34,7 +34,7 @@ There are three distinct generations of Microsoft OLE DB providers for SQL Serve
 
 ## ADO.NET
 
-ADO.NET was introduced with the Microsoft .NET Framework and continues to be improved and maintained. It is a core component of the Microsoft .NET Framework. For more information, see [Microsoft ADO.NET for SQL Server](ado-net/microsoft-ado-net-for-sql-server.md).
+ADO.NET was introduced with the Microsoft .NET Framework and continues to be improved and maintained. It is a core component of the Microsoft .NET Framework. For more information, see [Microsoft ADO.NET for SQL Server](ado-net/microsoft-ado-net-sql-server.md).
 
 ## JDBC
 

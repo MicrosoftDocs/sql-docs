@@ -29,8 +29,6 @@ ms.author: mikeray
   
 5.  Click the **Deployed Data-tier Applications** node to view list view data for data-tier applications (right-click to refresh). List view data is displayed in the content pane.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## See Also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)   

@@ -82,7 +82,7 @@ ALTER CERTIFICATE certificate_name
  If only a file name is specified, the file is saved in the default user data folder for the instance. This folder might (or might not) be the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA folder. For SQL Server Express LocalDB, the default user data folder for the instance is the path specified by the `%USERPROFILE%` environment variable for the account that created the instance.  
   
  BINARY ='*private_key_bits*'  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Private key bits specified as binary constant. These bits can be in encrypted form. If encrypted, the user must provide a decryption password. Password policy checks are not performed on this password. The private key bits should be in a PVK file format.  
   

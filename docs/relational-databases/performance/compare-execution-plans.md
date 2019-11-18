@@ -69,8 +69,6 @@ When two execution plans are compared, regions of the plan that **do essentially
 
 6.  The **Showplan Analysis** comparison navigation window also opens on the bottom. Three tabs are available:
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     1.  In the **Statement Options** tab, the default selection is *Highlight similar operations* and the same highlighted operator or node in compared plans share the same color and line pattern. Navigate between similar areas in compared plans by clicking on a lime pattern. You can also choose to highlight differences in plans rather similarities, by selecting *Highlight operations not matching similar segments*. 
     
        > [!NOTE]

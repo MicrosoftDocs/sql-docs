@@ -1,5 +1,5 @@
 ---
-title: Create a resource pool for Python and R
+title: Create a resource pool
 description: Learn how you can create and use a resource pool for managing Python and R workloads in SQL Server Machine Learning Services. 
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,6 +7,7 @@ ms.date: 10/01/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Create a resource pool for SQL Server Machine Learning Services

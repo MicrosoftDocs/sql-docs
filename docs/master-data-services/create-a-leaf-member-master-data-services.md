@@ -1,5 +1,5 @@
 ---
-title: "Create a Leaf Member (Master Data Services) | Microsoft Docs"
+title: Create a Leaf Member
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

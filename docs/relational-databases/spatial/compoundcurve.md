@@ -24,8 +24,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 2.  The sequence of **CircularString** or **LineString** instances must be continuous.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 If a **CompoundCurve** contains a sequence of multiple **CircularString** and **LineString** instances, the ending endpoint for every instance except for the last instance must be the starting endpoint for the next instance in the sequence. This means that if the ending point of a prior instance in the sequence is (4 3 7 2), the starting point for the next instance in the sequence must be (4 3 7 2). Note that Z(elevation) and M(measure) values for the point must also be the same. If there is a difference in the two points, a `System.FormatException` is thrown. Points in a **CircularString** do not have to have a Z or M value. If no Z or M values are given for the ending point of the prior instance, the starting point of the next instance cannot include Z or M values. If the ending point for the prior sequence is (4 3), the starting point for the next sequence must be (4 3); it cannot be (4 3 7 2). All points in a **CompoundCurve** instance must have either no Z value or the same Z value.  
   
 ## CompoundCurve instances  

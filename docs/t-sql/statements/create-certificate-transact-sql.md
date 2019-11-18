@@ -121,7 +121,7 @@ CREATE CERTIFICATE certificate_name
   
  BINARY =*asn_encoded_certificate*  
  ASN encoded certificate bytes specified as a binary constant.  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  WITH PRIVATE KEY  
  Specifies that the private key of the certificate is loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This clause is invalid when the certificate is being created from an assembly. To load the private key of a certificate created from an assembly, use [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
@@ -133,7 +133,7 @@ CREATE CERTIFICATE certificate_name
 >  This option is not available in a contained database or in Azure SQL Database.  
   
  BINARY =*private_key_bits*  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Private key bits specified as binary constant. These bits can be in encrypted form. If encrypted, the user must provide a decryption password. Password policy checks are not performed on this password. The private key bits should be in a PVK file format.  
   
@@ -185,7 +185,7 @@ CREATE CERTIFICATE certificate_name
 ### A. Creating a self-signed certificate  
  The following example creates a certificate called `Shipping04`. The private key of this certificate is protected using a password.  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping04   
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
    WITH SUBJECT = 'Sammamish Shipping Records',   
@@ -196,7 +196,7 @@ GO
 ### B. Creating a certificate from a file  
  The following example creates a certificate in the database, loading the key pair from files.  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping11   
     FROM FILE = 'c:\Shipping\Certs\Shipping11.cer'   
     WITH PRIVATE KEY (FILE = 'c:\Shipping\Certs\Shipping11.pvk',   
@@ -209,7 +209,7 @@ GO
    
 ### C. Creating a certificate from a signed executable file  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping19   
     FROM EXECUTABLE FILE = 'c:\Shipping\Certs\Shipping19.dll';  
 GO  
@@ -217,7 +217,7 @@ GO
   
  Alternatively, you can create an assembly from the `dll` file, and then create a certificate from the assembly.  
   
-```  
+```sql  
 CREATE ASSEMBLY Shipping19   
     FROM ' c:\Shipping\Certs\Shipping19.dll'   
     WITH PERMISSION_SET = SAFE;  
@@ -234,7 +234,7 @@ GO
 ### D. Creating a self-signed certificate  
  The following example creates a certificate called `Shipping04` without specifying an encryption password. This example can be used with [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping04   
    WITH SUBJECT = 'Sammamish Shipping Records';  
 GO  

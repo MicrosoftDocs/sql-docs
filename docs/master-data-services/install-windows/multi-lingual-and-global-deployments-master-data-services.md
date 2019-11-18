@@ -1,5 +1,5 @@
 ---
-title: "Multi-Lingual and Global Deployments (Master Data Services) | Microsoft Docs"
+title: Multi-Lingual and Global Deployments
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -95,7 +95,7 @@ This is the Cumulative Update 16 (CU16) release of [!INCLUDE[ssSQL17](../include
 
 |New feature or update | Details |
 |:---|:---|
-| MSDTC support | Support for the Microsoft Distributed Transaction Coordinator (MSDTC) for SQL Sever 2017. For more information see [How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux](sql-server-linux-configure-msdtc.md). |
+| MSDTC support | Support for the Microsoft Distributed Transaction Coordinator (MSDTC) for SQL Server 2017. For more information, see [How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux](sql-server-linux-configure-msdtc.md). |
 
 ### Package details
 
@@ -386,7 +386,7 @@ This is the General Availability (GA) release of [!INCLUDE[ssSQL17](../includes/
 
 ### Package details
 
-Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the following installation guides:
+Package details and download locations for the RPM and Debian packages are listed in the following table. You don't need to download these packages directly if you use the steps in the following installation guides:
 
 - [Install SQL Server package](sql-server-linux-setup.md)
 - [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
@@ -398,42 +398,6 @@ Package details and download locations for the RPM and Debian packages are liste
 | Red Hat RPM package | 14.0.1000.169-2 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[SSIS package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM package | 14.0.1000.169-2 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian package | 14.0.1000.169-2 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[SQL Server Agent Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[SSIS package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
-
-## <a name="Unsupported"></a> Unsupported features & services
-
-The following features and services are not available on Linux at the time of the GA release. The support of these features will be increasingly enabled over time.
-
-| Area | Unsupported feature or service |
-|-----|-----|
-| **Database engine** | Transactional replication |
-| &nbsp; | Merge replication |
-| &nbsp; | Change Data Capture (see SQL Server Agent) |
-| &nbsp; | Stretch DB |
-| &nbsp; | PolyBase |
-| &nbsp; | Distributed query with 3rd-party connections |
-| &nbsp; | Linked Servers to data sources other than [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |
-| &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
-| &nbsp; | Filetable, FILESTREAM |
-| &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
-| &nbsp; | Buffer Pool Extension |
-| **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
-| &nbsp; | Alerts |
-| &nbsp; | Log Reader Agent |
-| &nbsp; | Change Data Capture (CDC) |
-| &nbsp; | Managed Backup |
-| **High Availability** | Database mirroring  |
-| **Security** | Extensible Key Management |
-| &nbsp; | AD Authentication for Linked Servers | 
-| &nbsp; | AD Authentication for Availability Groups (AGs) | 
-| &nbsp; | 3rd party AD tools (Centrify, Vintela, Powerbroker) | 
-| **Services** | SQL Server Browser |
-| &nbsp; | SQL Server R services |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Data Quality Services |
-| &nbsp; | Master Data Services |
-| &nbsp; | Distributed Transaction Coordinator (DTC) |
 
 ## Known issues
 
@@ -461,13 +425,11 @@ The following sections describe known issues with the General Availability (GA) 
 
 #### Databases
 
-- The master database cannot be moved with the mssql-conf utility. Other system databases can be moved with mssql-conf.
+- The master database can't be moved with the mssql-conf utility. Other system databases can be moved with mssql-conf.
 
 - When restoring a database that was backed up on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
 
-- Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] running on Linux. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] linked servers are supported unless they involve the DTC. For more information, see [Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/).
-
-- Certain algorithms (cipher suites) for Transport Layer Security (TLS) do not work properly with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux. This results in connection failures when attempting to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], as well as problems establishing connections between replicas in high availability groups.
+- Certain algorithms (cipher suites) for Transport Layer Security (TLS) don't work properly with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux. This results in connection failures when attempting to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], as well as problems establishing connections between replicas in high availability groups.
 
    - **Resolution**: Modify the **mssql.conf** configuration script for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux to disable problematic cipher suites, by doing the following:
 
@@ -487,7 +449,7 @@ The following sections describe known issues with the General Availability (GA) 
       sudo systemctl restart mssql-server
       ```
 
-- [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] databases on Windows that use In-memory OLTP cannot be restored on [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Linux. To restore a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] database that uses in-memory OLTP, first upgrade the databases to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] or [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Windows before moving them to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux via backup/restore or detach/attach.
+- [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] databases on Windows that use In-memory OLTP can't be restored on [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Linux. To restore a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] database that uses in-memory OLTP, first upgrade the databases to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] or [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Windows before moving them to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux via backup/restore or detach/attach.
 
 - User permission **ADMINISTER BULK OPERATIONS** is not supported on Linux at this time.
 
@@ -509,12 +471,12 @@ To work around this issue, do one of the following:
 
 1. Use IPs instead of hostnames to specify the target of the TCP connection.
 
-1. Enable IPv6 in the kernel by removing `ipv6.disable=1` from the boot cmdline. The way to do this depends on the Linux distribution and the bootloader, such as grub. If you do want IPv6 to be disabled, you can still disable it by setting `net.ipv6.conf.all.disable_ipv6 = 1` in the `sysctl` configuration (eg `/etc/sysctl.conf`). This will still prevent the system's network adapter from getting an IPv6 address, but allow the sqlservr features to work.
+1. Enable IPv6 in the kernel by removing `ipv6.disable=1` from the boot cmdline. The way to do this depends on the Linux distribution and the bootloader, such as grub. If you do want IPv6 to be disabled, you can still disable it by setting `net.ipv6.conf.all.disable_ipv6 = 1` in the `sysctl` configuration (for example, `/etc/sysctl.conf`). This will still prevent the system's network adapter from getting an IPv6 address, but allow the sqlservr features to work.
 
 #### Network File System (NFS)
 If you use **Network File System (NFS)** remote shares in production, note the following support requirements:
 
-- Use NFS version **4.2 or higher**. Older versions of NFS do not support required features, such as fallocate and sparse file creation, common to modern file systems.
+- Use NFS version **4.2 or higher**. Older versions of NFS don't support required features, such as fallocate and sparse file creation, common to modern file systems.
 - Locate only the **/var/opt/mssql** directories on the NFS mount. Other files, such as the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system binaries, are not supported.
 - Ensure that NFS clients use the 'nolock' option when mounting the remote share.
 
@@ -526,13 +488,13 @@ If you use **Network File System (NFS)** remote shares in production, note the f
    UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 8: ordinal not in range(128)
    ```
 
-   If you cannot use UTF-8 encoding, run setup using the MSSQL_LCID environment variable to specify your language choice.
+   If you can't use UTF-8 encoding, run setup using the MSSQL_LCID environment variable to specify your language choice.
 
    ```bash
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
 
-- When running mssql-conf setup, and performing a non-English installation of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], incorrect extended characters are displayed after the localized text, "Configuring SQL Server...". Or, for non-Latin based installations, the sentence might be missing completely. The missing sentence should display the following localized string: "The licensing PID was successfully processed. The new edition is [\<Name\> edition]". This string is output for information purposes only, and the next [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cumulative Update will address this for all languages. This does not affect the successful installation of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in any way. 
+- When running mssql-conf setup, and performing a non-English installation of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], incorrect extended characters are displayed after the localized text, "Configuring SQL Server...". Or, for non-Latin based installations, the sentence might be missing completely. The missing sentence should display the following localized string: "The licensing PID was successfully processed. The new edition is [\<Name\> edition]". This string is output for information purposes only, and the next [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cumulative Update will address this for all languages. This doesn't affect the successful installation of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in any way. 
 
 #### Full-Text Search
 
@@ -540,11 +502,11 @@ If you use **Network File System (NFS)** remote shares in production, note the f
 
 #### <a id="ssis"></a> SQL Server Integration Services (SSIS)
 
-- The **mssql-server-is** package is not supported on SUSE in this release. It is currently supported on Ubuntu and on Red Hat Enterprise Linux (RHEL).
+- The **mssql-server-is** package isn't supported on SUSE in this release. It's currently supported on Ubuntu and on Red Hat Enterprise Linux (RHEL).
 
 - With [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] on Linux CTP 2.1 Refresh and later, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages can use ODBC connections on Linux. This functionality has been tested with the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
-- The following features are not supported in this release when you run SSIS packages on Linux:
+- The following features aren't supported in this release when you run SSIS packages on Linux:
   - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Catalog database
   - Scheduled package execution by SQL Agent
   - Windows Authentication
@@ -566,13 +528,13 @@ For more info about SSIS on Linux, see the following articles:
 
 The following limitations apply to [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] on Windows connected to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux.
 
-- Maintenance plans are not supported.
+- Maintenance plans aren't supported.
 
-- Management Data Warehouse (MDW) and the data collector in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] are not supported. 
+- Management Data Warehouse (MDW) and the data collector in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] aren't supported. 
 
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] UI components that have Windows Authentication or Windows event log options do not work with Linux. You can still use these features with other options, such as SQL logins. 
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] UI components that have Windows Authentication or Windows event log options don't work with Linux. You can still use these features with other options, such as SQL logins. 
 
-- Number of log files to retain cannot be modified.
+- Number of log files to retain can't be modified.
 
 ## Next steps
 

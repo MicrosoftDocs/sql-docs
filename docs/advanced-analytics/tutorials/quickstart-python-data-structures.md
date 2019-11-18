@@ -1,5 +1,5 @@
 ---
-title: Work with Python and SQL data types and objects
+title: "Quickstart: Python data types"
 titleSuffix: SQL Server Machine Learning Services
 description: In this quickstart, learn how to work with data types and data objects in Python and SQL Server with SQL Server Machine Learning Services.
 ms.prod: sql
@@ -10,6 +10,7 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Quickstart: Handle data types and objects using Python in SQL Server Machine Learning Services

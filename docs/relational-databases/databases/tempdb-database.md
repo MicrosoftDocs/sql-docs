@@ -42,8 +42,6 @@ The **TempDB** system database is a global resource that is available to all use
   
 Operations within **TempDB** are minimally logged so that transactions can be rolled back. **TempDB** is re-created every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started so that the system always starts with a clean copy of the database. Temporary tables and stored procedures are dropped automatically on disconnect, and no connections are active when the system is shut down. Therefore, there is never anything in **TempDB** to be saved from one session of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another. Backup and restore operations are not allowed on **TempDB**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Physical Properties of TempDB in SQL Server
 
 The following table lists the initial configuration values of the **TempDB** data and log files in SQL Server, which are based on the defaults for the Model database. The sizes of these files may vary slightly for different editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

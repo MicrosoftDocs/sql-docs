@@ -57,7 +57,7 @@ DEA connects to database servers by using Windows authentication. Be sure that a
 
 Capturing a trace requires that the:
 
-- User running DEA can connect to the source database server by using Windows authentication.
+- User running DEA can connect to the source database server using Windows authentication.
 - User running DEA has sysadmin rights on the source database server.
 - Service account running the source database server has write access to the trace folder path.
 
@@ -67,10 +67,10 @@ For more information, see [Frequently asked questions about trace capture](datab
 
 Replaying a trace requires that the:
 
-- User running DEA can connect to the target database server by using Windows authentication.
+- User running DEA can connect to the target database server using Windows authentication.
 - User running DEA has sysadmin rights on the target database server.
 - Service account running the target database servers has write access to the trace folder path.
-- Service account running Distributed Replay clients can connect to the target database server by using Windows authentication.
+- Service account running Distributed Replay clients can connect to the target database server using Windows authentication.
 - TCP ports are opened for incoming requests on the Distributed Replay controller. DEA communicates with the Distributed Replay controller by using COM interfaces.
 
 For more information, see [Frequently asked questions about trace replay](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)
@@ -79,7 +79,7 @@ For more information, see [Frequently asked questions about trace replay](databa
 
 Performing the analysis requires that the:
 
-- User running DEA can connect to the analysis database server by using Windows authentication.
+- User running DEA can connect to the analysis database server using Windows authentication.
 - User running DEA has sysadmin rights on the source database server.
 
 For more information, see [Frequently asked questions about analysis reports](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)
@@ -98,13 +98,13 @@ Telemetry data can be collected on four types of events:
 Collecting and sending telemetry data is optional. To specify which events are collected and whether collected events are sent to Microsoft, use the following steps:
 
 1. Go to the location in which DEA is installed (for example, C:\\Program Files (x86)\\Microsoft Corporation\\Database Experimentation Assistant).
-2. Open and modify the two .config files **DEA.exe.config** (for the application) and **DEACmd.exe.config** (for the CLI) as follows:
+2. Open and modify the .config files **DEA.exe.config** (for the application) and **DEACmd.exe.config** (for the CLI) to address your scenario as appropriate:
     - To stop collecting a type of event, set the value of *event* (for example, **TraceEvent**) to **false**. To start collecting the event again, set the value to **true**.
     - To stop saving local copies of events, set the value of **TraceLoggerEnabled** to **false**. To start saving local copies again, set the value to **true**.
     - To stop sending events to Microsoft, set the value of **AppInsightsLoggerEnabled** to **false**. To start sending events to Microsoft again, set the value to **true**.
 
 DEA is governed by the [Microsoft Privacy Statement](https://aka.ms/dea-privacy).
 
-## Next steps
+## See also
 
-[Get started](database-experimentation-assistant-get-started.md) walks you through the steps required to capture, replay, and analyze a trace.
+[Overview of the workload comparison process](database-experimentation-assistant-get-started.md), which explains the process involved in comparing workloads in two environments.

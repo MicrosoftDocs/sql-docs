@@ -26,7 +26,7 @@ ms.author: "carlrab"
  For example, by referring to the ALTER_DATABASE event, you will learn that its parent event is DDL_SERVER_LEVEL_EVENTS and its properties are **TSQLCommand** and **DatabaseName**. The event also inherits the properties **SQLInstance**, **PostTime**, **ComputerName**, **SPID**, and **LoginName**. The event has no children events.  
   
 > [!NOTE]  
->  System stored procedures that perform DDL-like operations can also fire event notifications. Test your event notifications to determine their responses to system stored procedures that are run. For example, the CREATE TYPE statement and **sp_addtype** stored procedure will both fire an event notification that is created on a CREATE_TYPE event. For more information, see[DDL Events](../../relational-databases/triggers/ddl-events.md).  
+>  System stored procedures that perform DDL-like operations can also fire event notifications. Test your event notifications to determine their responses to system stored procedures that are run. For example, the CREATE TYPE statement and **sp_addtype** stored procedure will both fire an event notification that is created on a CREATE_TYPE event. For more information, see [DDL Events](../../relational-databases/triggers/ddl-events.md).  
   
  **Data Definition Language Events and Event Groups**  
   

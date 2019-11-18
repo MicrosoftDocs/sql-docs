@@ -14,13 +14,13 @@ ms.author: maggies
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
  
-You can connect to data with either a shared or an embedded data source. A *shared data source* is defined independently from any report and can be used by multiple reports on a report server or SharePoint site. An *embedded data source*, also known as a *report-specific data source*,  is defined in the report and used only by that report. 
+You can connect to data with either a shared or an embedded data source. A *shared data source* is defined independent of any report. You can use it in multiple reports on a report server or SharePoint site. An *embedded data source* is defined in a report. You can only use it in that report. 
 
- Shared data sources are useful when you have data sources that you use often. It is recommended that you use shared data sources as much as possible. They make reports and report access easier to manage, and help to keep reports and the data sources they access more secure. If you need a shared data source, ask your system administrator to create one for you.  
+ Shared data sources are useful when you have data sources that you use often. We recommend that you create and use shared data sources as much as possible. They make reports and report access easier to manage, and help to keep reports and the data sources they access more secure. If you need a shared data source, you may need to ask your system administrator to create one for you.  
   
- An embedded data source is a data connection that is saved in the report definition. Embedded data source connection information can be used only by the report in which it is embedded. To define and manage embedded data sources, use the **Data Source Properties** dialog box.  
+ An embedded data source, also known as a *report-specific data source*, is a data connection that's saved in the report definition. Embedded data source connection information can be used only by the report in which it's embedded. To define and manage embedded data sources, use the **Data Source Properties** dialog box.  
   
- The difference between the embedded and shared data sources is in how they are created, stored, and managed.  
+ The difference between embedded and shared data sources is in how they are created, stored, and managed.  
   
 -   In Report Designer, create embedded or shared data sources as part of a [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] project. You can control whether to use them locally for preview or to deploy them as part of the project to a report server or SharePoint site. You can use custom data extensions that have been installed on your computer and on the report server or SharePoint site where you deploy your reports.  
   
@@ -28,7 +28,7 @@ You can connect to data with either a shared or an embedded data source. A *shar
   
      Developers can use the <xref:Microsoft.ReportingServices.DataProcessing> API to create data processing extensions to support additional types of data sources.  
   
--   In [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], browse to a report server or SharePoint site and select shared data sources or create embedded data sources in the report. You cannot create a shared data source in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. You cannot use custom data extensions in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
+-   In [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], browse to a report server or SharePoint site and select shared data sources or create embedded data sources in the report. You can't create a shared data source in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. You can't use custom data extensions in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
  The following table summarizes the differences between embedded and shared data sources.  
   

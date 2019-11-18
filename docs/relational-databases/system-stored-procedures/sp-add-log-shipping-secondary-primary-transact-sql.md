@@ -108,8 +108,6 @@ sp_add_log_shipping_secondary_primary
   
 2.  Does the following:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     1.  Adds an entry for the secondary ID in **log_shipping_secondary** using the supplied arguments.  
   
     2.  Creates a copy job for the secondary ID that is disabled.  

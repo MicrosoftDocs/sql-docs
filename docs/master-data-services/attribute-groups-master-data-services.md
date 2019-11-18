@@ -1,5 +1,5 @@
 ---
-title: "Attribute Groups (Master Data Services) | Microsoft Docs"
+title: Attribute Groups
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql

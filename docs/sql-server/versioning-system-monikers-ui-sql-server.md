@@ -1,6 +1,6 @@
 ---
 title: "Versioning system SQL docs | Microsoft Docs"
-ms.date: "08/09/2019"
+ms.date: "10/15/2019"
 ms.prod: sql
 ms.technology: ""
 ms.custom: ""
@@ -160,7 +160,7 @@ The versioning system is fully implemented for SQL Server version 2016 onward.
     - [SQL Server 2014 documentation](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
 
 - _2016 and later:_ &nbsp; The versioning system is fully implemented for SQL Server 2016 and later versions.
-    - [Welcome to SQL Server documentation 2016 and later](/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016)
+    - [Welcome to SQL Server documentation 2016 and later](/sql/sql-server/?view=sql-server-2016)
 
 ## See also
 

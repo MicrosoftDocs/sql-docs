@@ -1,6 +1,6 @@
 ---
-title: "Graph processing with SQL Server and Azure SQL Database | Microsoft Docs"
-ms.custom: ""
+title: "Graph processing"
+titleSuffix:  SQL Server and Azure SQL Database
 ms.date: "06/26/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -13,6 +13,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: shkale-msft
 ms.author: shkale
+ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Graph processing with SQL Server and Azure SQL Database

@@ -45,8 +45,6 @@ Requires CONTROL permission on the database.
   
 4. Copy and paste the following example into the query window and click **Execute**.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```sql
     -- Restores the database master key of the AdventureWorks2012 database.  
     USE AdventureWorks2012;  

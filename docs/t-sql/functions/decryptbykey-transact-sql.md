@@ -50,7 +50,7 @@ Indicates whether the original encryption process included, and encrypted, an au
 The data used as the basis for the generation of the authenticator. Must match the value supplied to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* has a **sysname** data type.  
 
 **\@authenticator**  
-A variable containing data from which an authenticator generates. Must match the value supplied to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* has a **sysname** data type.  
+A variable containing data from which an authenticator generates. Must match the value supplied to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *\@authenticator* has a **sysname** data type.  
 
 ## Return Types  
 **varbinary**, with a maximum size of 8,000 bytes. `DECRYPTBYKEY` returns NULL if the symmetric key used for data encryption is not open or if *ciphertext* is NULL.  

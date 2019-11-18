@@ -1,5 +1,5 @@
 ---
-title: "View the Size of the Sparse File of a Database Snapshot (Transact-SQL) | Microsoft Docs"
+title: "View size of sparse file of a Database Snapshot (T-SQL)"
 ms.date: "07/28/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -18,6 +18,7 @@ helpviewer_keywords:
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: "stevestein"
 ms.author: "sstein"
+ms.custom: "seo-lt-2019"
 ---
 # View the Size of the Sparse File of a Database Snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

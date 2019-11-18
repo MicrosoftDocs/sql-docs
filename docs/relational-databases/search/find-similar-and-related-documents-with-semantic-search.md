@@ -1,5 +1,5 @@
 ---
-title: "Find Similar and Related Documents with Semantic Search | Microsoft Docs"
+title: "Find similar & related documents with Semantic Search"
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
@@ -11,6 +11,7 @@ ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
+ms.custom: "seo-lt-2019"
 ---
 # Find Similar and Related Documents with Semantic Search
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.reviewer: mikeray
 >  The columns that you target must have full-text and semantic indexing enabled.  
   
 ###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
- The following example retrieves the top 10 candidates who are similar to the candidate specified by *@CandidateID* from the HumanResources.JobCandidate table in the AdventureWorks2012 sample database.  
+ The following example retrieves the top 10 candidates who are similar to the candidate specified by *\@CandidateID* from the HumanResources.JobCandidate table in the AdventureWorks2012 sample database.  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  

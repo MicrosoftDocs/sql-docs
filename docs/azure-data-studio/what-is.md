@@ -9,7 +9,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18, sqlfreshmay19"
-ms.date: "05/14/2019"
+ms.date: "10/15/2019"
 ---
 
 # What is Azure Data Studio?
@@ -63,6 +63,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 - Can execute most administrative tasks via the integrated terminal using sqlcmd or Powershell
 - Have minimal need for wizard experiences
 - Do not need to do deep administrative configuration
+- Want to 
 
 **Use SQL Server Management Studio if you:**
 - Spend most of your time on database administration tasks
@@ -112,6 +113,8 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |Results to Text||Yes|
 |Spatial Viewer||Yes|
 |SQLCMD||Yes|
+|Notebooks|Yes||
+|Save Query as snippet|Yes||
 
 ### Operating System Support
 
@@ -134,6 +137,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Backup / Restore|Yes|Yes|
+|Big Data Cluster Support|Yes||
 |Flat File Import|Preview|Yes|
 |SQL Agent|Preview|Yes|
 |SQL Profiler|Preview|Yes|
@@ -155,6 +159,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |Template Explorer||Yes|
 |Vulnerability Assessment||Yes|
 |XEvent Management||Yes|
+|SQL Assessment API Integration||Yes|
 
 ## Next steps
 

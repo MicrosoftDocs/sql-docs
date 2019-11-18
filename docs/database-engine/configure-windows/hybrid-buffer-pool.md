@@ -89,6 +89,8 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 When formatting your PMEM device on Windows, use the largest allocation unit size available for NTFS (2 MB in Windows Server 2019) and ensure the device has been formatted for DAX (Direct Access).
 
+For optimal performance, enable [Locked Pages in Memory](./enable-the-lock-pages-in-memory-option-windows.md) on Windows.
+
 Files sizes should be a multiple of 2 MB (modulo 2 MB should equal zero).
 
 If the server scoped setting for Hybrid buffer pool is set to disabled, Hybrid buffer pool will not be used by any user database.

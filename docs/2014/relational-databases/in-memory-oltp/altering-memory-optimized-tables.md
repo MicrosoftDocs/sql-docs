@@ -84,7 +84,9 @@ manager: craigg
 ## Changing Schema (PowerShell)  
  The following PowerShell scripts prepare and generate for schema changes by scripting the table and associated permissions.  
   
- Usage: prepare_schema_change.ps1 *server_name**db_name`schema_name`table_name*  
+```powershell
+prepare_schema_change.ps1 <serverName> <databaseName> <schemaName> <tableName>
+```
   
  This script takes as arguments a table, and scripts the object and its permissions and referencing schema-bound objects and their permissions in the current folder. A total of 7 scripts are generated for updating the schema of the input table:  
   
@@ -104,9 +106,8 @@ manager: craigg
   
  The script for step 4 should be updated to reflect the desired schema changes. If there are any changes in the columns of the table, the scripts for steps 5 (copy data from temporary table) and 6 (recreate stored procedures) should be updated as necessary.  
   
-```sql  
-# Prepare for schema changes by scripting out the table, as well as associated permissions  
-# --------  
+```powershell
+# Prepare for schema changes by scripting out the table, as well as associated permissions
 # Usage: prepare_schema_change.ps1 server_name db_name schema_name table_name  
 # stop execution once an error occurs  
 $ErrorActionPreference="Stop"  
@@ -123,7 +124,7 @@ $object = $args[3]
   
 $object_heap = "$object$(Get-Random)"  
   
-[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.SMO") | out-null  
+[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.SMO") | Out-Null  
   
 $server =  New-Object ("Microsoft.SqlServer.Management.SMO.Server") ($servername)  
 $scripter = New-Object ("Microsoft.SqlServer.Management.SMO.Scripter") ($server)  
@@ -136,18 +137,18 @@ if($tableUrn.Count -eq 0)
 }  
   
 ## initialize scripting object  
-$scriptingOptions = New-Object ("Microsoft.SqlServer.Management.SMO.ScriptingOptions")   
+$scriptingOptions = New-Object ("Microsoft.SqlServer.Management.SMO.ScriptingOptions")
 $scriptingOptions.Permissions = $True  
 $scriptingOptions.ScriptDrops = $True  
   
 $scripter.Options = $scriptingOptions;  
   
-write-host "(1) Scripting SELECT INTO $object_heap for table [$object] to 1_copy_to_heap_for_$schema`_$object.sql"  
+Write-Host "(1) Scripting SELECT INTO $object_heap for table [$object] to 1_copy_to_heap_for_$schema`_$object.sql"  
 Echo "SELECT * INTO $schema.$object_heap FROM $schema.$object WITH (SNAPSHOT)" | Out-File "1_copy_to_heap_$schema`_$object.sql";  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(2) Scripting DROP for procs schema-bound to [$object] 2_drop_procs_$schema`_$object.sql"  
+Write-Host "(2) Scripting DROP for procs schema-bound to [$object] 2_drop_procs_$schema`_$object.sql"  
 ## query referencing schema-bound objects  
 $dt = $server.Databases[$database].ExecuteWithResults("select r.referencing_schema_name, r.referencing_entity_name  
 from sys.dm_sql_referencing_entities ('$schema.$object', 'OBJECT') as r join sys.sql_modules m on r.referencing_id=m.object_id  
@@ -156,71 +157,69 @@ where r.is_caller_dependent = 0 and m.is_schema_bound=1;")
 ## initialize out file  
 Echo "" | Out-File "2_drop_procs_$schema`_$object.sql"  
 ## loop through schema-bound objects  
-Foreach ($t in $dt.Tables)  
+ForEach ($t In $dt.Tables)  
 {    
-   Foreach ($r in $t.Rows)  
+   ForEach ($r In $t.Rows)  
    {    
       ## script object   
       $so =  $server.Databases[$database].StoredProcedures[$r[1], $r[0]]  
       $scripter.Script($so) | Out-File -Append "2_drop_procs_$schema`_$object.sql"  
    }  
 }  
-write-host "--done--"  
-write-host ""  
-  
-write-host "(3) Scripting DROP table for [$object] to 3_drop_table_$schema`_$object.sql"  
-$scripter.Script($tableUrn) | Out-File "3_drop_table_$schema`_$object.sql";  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
+Write-Host "(3) Scripting DROP table for [$object] to 3_drop_table_$schema`_$object.sql"
+$scripter.Script($tableUrn) | Out-File "3_drop_table_$schema`_$object.sql";
+Write-Host "--done--"  
+Write-Host ""  
   
 ## now script creates  
 $scriptingOptions.ScriptDrops = $False  
   
-write-host "(4) Scripting CREATE table and permissions for [$object] to !please_edit_4_create_table_$schema`_$object.sql"  
-write-host "***** rename this script to 4_create_table.sql after completing the updates to the schema"  
+Write-Host "(4) Scripting CREATE table and permissions for [$object] to !please_edit_4_create_table_$schema`_$object.sql"  
+Write-Host "***** rename this script to 4_create_table.sql after completing the updates to the schema"
 $scripter.Script($tableUrn) | Out-File "!please_edit_4_create_table_$schema`_$object.sql";  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(5) Scripting INSERT INTO table from heap and UPDATE STATISTICS for [$object] to 5_copy_from_heap_$schema`_$object.sql"  
-write-host "[update this script if columns are added to or removed from the table]"  
+Write-Host "(5) Scripting INSERT INTO table from heap and UPDATE STATISTICS for [$object] to 5_copy_from_heap_$schema`_$object.sql"  
+Write-Host "[update this script if columns are added to or removed from the table]"  
 Echo "INSERT INTO [$schema].[$object] SELECT * FROM [$schema].[$object_heap]; UPDATE STATISTICS [$schema].[$object] WITH FULLSCAN, NORECOMPUTE" | Out-File "5_copy_from_heap_$schema`_$object.sql";  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(6) Scripting CREATE PROC and permissions for procedures schema-bound to [$object] to 6_create_procs_$schema`_$object.sql"  
-write-host "[update the procedure definitions if columns are renamed or removed]"  
+Write-Host "(6) Scripting CREATE PROC and permissions for procedures schema-bound to [$object] to 6_create_procs_$schema`_$object.sql"  
+Write-Host "[update the procedure definitions if columns are renamed or removed]"  
 ## initialize out file  
 Echo "" | Out-File "6_create_procs_$schema`_$object.sql"  
 ## loop through schema-bound objects  
-Foreach ($t in $dt.Tables)  
+ForEach ($t In $dt.Tables)  
 {    
-   Foreach ($r in $t.Rows)  
+   ForEach ($r In $t.Rows)  
    {    
       ## script the schema-bound object  
       $so =  $server.Databases[$database].StoredProcedures[$r[1], $r[0]]  
-      foreach($s in $scripter.Script($so))  
+      ForEach($s In $scripter.Script($so))  
         {  
             Echo $s | Out-File -Append "6_create_procs_$schema`_$object.sql"  
             Echo "GO" | Out-File -Append "6_create_procs_$schema`_$object.sql"  
         }  
    }  
 }  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(7) Scripting DROP $object_heap to 7_drop_heap_$schema`_$object.sql"  
+Write-Host "(7) Scripting DROP $object_heap to 7_drop_heap_$schema`_$object.sql"  
 Echo "DROP TABLE $schema.$object_heap" | Out-File "7_drop_heap_$schema`_$object.sql";  
-write-host "--done--"  
-write-host ""  
-  
+Write-Host "--done--"  
+Write-Host ""  
 ```  
   
  The following PowerShell script executes the schema changes that were scripted in the previous sample. This script takes as argument a table, and executes the schema change scripts that were generated for that table and the associated stored procedures.  
   
  Usage: execute_schema_change.ps1 *server_name**db_name`schema_name`table_name*  
   
-```sql  
+```powershell
 # stop execution once an error occurs  
 $ErrorActionPreference="Stop"  
   
@@ -234,7 +233,7 @@ $database = $args[1]
 $schema = $args[2]  
 $object = $args[3]  
   
-[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.SMO") | out-null  
+[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.SMO") | Out-Null  
   
 $server =  New-Object ("Microsoft.SqlServer.Management.SMO.Server") ($servername)  
 $database = $server.Databases[$database]  
@@ -252,43 +251,41 @@ $5 = Get-Item "5_copy_from_heap_$schema`_$object.sql"
 $6 = Get-Item "6_create_procs_$schema`_$object.sql"  
 $7 = Get-Item "7_drop_heap_$schema`_$object.sql"  
   
-write-host "(1) Running SELECT INTO heap for table [$object] from 1_copy_to_heap_for_$schema`_$object.sql"  
+Write-Host "(1) Running SELECT INTO heap for table [$object] from 1_copy_to_heap_for_$schema`_$object.sql"  
 $database.ExecuteNonQuery("$(Echo $1.OpenText().ReadToEnd())")  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(2) Running DROP for procs schema-bound from [$object] 2_drop_procs_$schema`_$object.sql"  
+Write-Host "(2) Running DROP for procs schema-bound from [$object] 2_drop_procs_$schema`_$object.sql"  
 $database.ExecuteNonQuery("$(Echo $2.OpenText().ReadToEnd())")  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(3) Running DROP table for [$object] to 4_drop_table_$schema`_$object.sql"  
+Write-Host "(3) Running DROP table for [$object] to 4_drop_table_$schema`_$object.sql"  
 $database.ExecuteNonQuery("$(Echo $3.OpenText().ReadToEnd())")  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(4) Running CREATE table and permissions for [$object] from 4_create_table_$schema`_$object.sql"  
+Write-Host "(4) Running CREATE table and permissions for [$object] from 4_create_table_$schema`_$object.sql"  
 $database.ExecuteNonQuery("$(Echo $4.OpenText().ReadToEnd())")  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(5) Running INSERT INTO table from heap for [$object] and UPDATE STATISTICS from 5_copy_from_heap_$schema`_$object.sql"  
+Write-Host "(5) Running INSERT INTO table from heap for [$object] and UPDATE STATISTICS from 5_copy_from_heap_$schema`_$object.sql"  
 $database.ExecuteNonQuery("$(Echo $5.OpenText().ReadToEnd())")  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(6) Running CREATE PROC and permissions for procedures schema-bound to [$object] from 6_create_procs_$schema`_$object.sql"  
+Write-Host "(6) Running CREATE PROC and permissions for procedures schema-bound to [$object] from 6_create_procs_$schema`_$object.sql"  
 $database.ExecuteNonQuery("$(Echo $6.OpenText().ReadToEnd())")  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
   
-write-host "(7) Running DROP heap from 7_drop_heap_$schema`_$object.sql"  
+Write-Host "(7) Running DROP heap from 7_drop_heap_$schema`_$object.sql"  
 $database.ExecuteNonQuery("$(Echo $7.OpenText().ReadToEnd())")  
-write-host "--done--"  
-write-host ""  
+Write-Host "--done--"  
+Write-Host ""  
 ```  
   
 ## See Also  
  [Memory-Optimized Tables](memory-optimized-tables.md)  
-  
-  

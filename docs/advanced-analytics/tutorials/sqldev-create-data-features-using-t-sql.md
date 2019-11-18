@@ -1,5 +1,5 @@
 ---
-title: Lesson 2 Create data features using R and T-SQL functions
+title: "R + T-SQL tutorial: Data features"
 description: Tutorial showing how to add calculations to stored procedures for use in R machine learning models.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,7 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Lesson 2: Create data features using R and T-SQL

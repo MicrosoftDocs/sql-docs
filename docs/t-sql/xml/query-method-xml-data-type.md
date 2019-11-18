@@ -35,7 +35,7 @@ Is a string, an XQuery expression, that queries for XML nodes, such as elements 
 This section provides examples of using the query() method of the **xml** data type.  
   
 ### A. Using the query() method against an xml type variable  
-The following example declares a variable **@myDoc** of **xml** type and assigns an XML instance to it. The **query()** method is then used to specify an XQuery against the document.  
+The following example declares a variable **\@myDoc** of **xml** type and assigns an XML instance to it. The **query()** method is then used to specify an XQuery against the document.  
   
 The query retrieves the <`Features`> child element of the <`ProductDescription`> element:  
   

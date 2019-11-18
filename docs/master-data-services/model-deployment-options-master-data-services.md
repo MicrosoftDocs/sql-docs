@@ -1,5 +1,5 @@
 ---
-title: "Model Deployment Options (Master Data Services) | Microsoft Docs"
+title: Model Deployment Options
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

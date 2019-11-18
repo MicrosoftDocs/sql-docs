@@ -138,7 +138,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  Specifies whether the query results include column headers. The query_result_header value is of type **bit**. When the value is 1, query results contain column headers. When the value is 0, query results do not include column headers. This parameter defaults to **1**. This parameter is only applicable if **\@query** is specified.  
  
    >[!NOTE]
-   > The following error may occur when setting @query_result_header to 0 and setting @query_no_truncate to 1: 
+   > The following error may occur when setting \@query_result_header to 0 and setting \@query_no_truncate to 1: 
    > <br> Msg 22050, Level 16, State 1, Line 12: Failed to initialize sqlcmd library with error number -2147024809.
   
 `[ @query_result_width = ] query_result_width`
@@ -157,24 +157,24 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  Specifies whether to execute the query with the option that avoids truncation of large variable length data types (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **text**, **ntext**, **image**, and user-defined data types). When set, query results do not include column headers. The *query_no_truncate* value is of type **bit**. When the value is 0 or not specified, columns in the query truncate to 256 characters. When the value is 1, columns in the query are not truncated. This parameter defaults to 0.  
   
 > [!NOTE]  
->  When used with large amounts of data, the @**query_no_truncate** option consumes additional resources and can slow server performance.  
+>  When used with large amounts of data, the \@**query_no_truncate** option consumes additional resources and can slow server performance.  
   
 `[ @query_result_no_padding ] @query_result_no_padding`
- The type is bit. The default is 0. When you set to 1, the query results are not padded, possibly reducing the file size.If you set @query_result_no_padding to 1 and you set the @query_result_width parameter, the @query_result_no_padding parameter overwrites the @query_result_width parameter.  
+ The type is bit. The default is 0. When you set to 1, the query results are not padded, possibly reducing the file size.If you set \@query_result_no_padding to 1 and you set the \@query_result_width parameter, the \@query_result_no_padding parameter overwrites the \@query_result_width parameter.  
   
  In this case no error occurs.  
  
   >[!NOTE]
-  > The following error may occur when setting @query_result_no_padding to 1 and providing a parameter for @query_no_truncate: 
-  > <br> Msg 22050, Level 16, State 1, Line 0: Failed to execute the query because the @query_result_no_append and @query_no_truncate    options are mutually exclusive. 
+  > The following error may occur when setting \@query_result_no_padding to 1 and providing a parameter for \@query_no_truncate: 
+  > <br> Msg 22050, Level 16, State 1, Line 0: Failed to execute the query because the \@query_result_no_append and \@query_no_truncate    options are mutually exclusive. 
   
- If you set the @query_result_no_padding to 1 and you set the @query_no_truncate parameter, an error is raised.  
+ If you set the \@query_result_no_padding to 1 and you set the \@query_no_truncate parameter, an error is raised.  
   
 `[ @mailitem_id = ] mailitem_id [ OUTPUT ]`
  Optional output parameter returns the *mailitem_id* of the message. The *mailitem_id* is of type **int**.  
   
 ## Return Code Values  
- A return code of 0 means success. Any other value means failure. The error code for the statement that failed is stored in the @@ERROR variable.  
+ A return code of 0 means success. Any other value means failure. The error code for the statement that failed is stored in the \@\@ERROR variable.  
   
 ## Result Sets  
  On success, returns the message "Mail queued."  

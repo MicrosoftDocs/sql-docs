@@ -70,7 +70,7 @@ For example, if the colors.json file had the following values.
     "primary":"#009900",   
     "primaryContrast":"#ffffff"   
   
-The processed output would look up the **@primaryButtonBg** LESS variable and see that it maps to the json property called **primary**, which in this example is #009900. It would therefore output the proper CSS.  
+The processed output would look up the **\@primaryButtonBg** LESS variable and see that it maps to the json property called **primary**, which in this example is #009900. It would therefore output the proper CSS.  
   
     .btn-primary {   
         color:#ffffff;   

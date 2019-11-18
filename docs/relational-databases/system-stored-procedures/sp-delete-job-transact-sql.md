@@ -63,9 +63,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  None  
   
 ## Remarks  
- The **@originating_server** argument is reserved for internal use.  
+ The **\@originating_server** argument is reserved for internal use.  
   
- The **@delete_unused_schedule** argument provides backward compatibility with previous versions of SQL Server by automatically removing schedules that are not attached to any job. Notice that this parameter defaults to the backward-compatible behavior. To retain schedules that are not attached to a job, you must provide the value **0** as the **@delete_unused_schedule** argument.  
+ The **\@delete_unused_schedule** argument provides backward compatibility with previous versions of SQL Server by automatically removing schedules that are not attached to any job. Notice that this parameter defaults to the backward-compatible behavior. To retain schedules that are not attached to a job, you must provide the value **0** as the **\@delete_unused_schedule** argument.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides an easy, graphical way to manage jobs, and is the recommended way to create and manage the job infrastructure.  
   

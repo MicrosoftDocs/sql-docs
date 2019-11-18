@@ -1,7 +1,7 @@
 ---
 title: "CURRENT_TIMEZONE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/09/2019"
+ms.date: "10/10/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -28,9 +28,9 @@ ms.author: mlandzic
 ---
 # CURRENT_TIMEZONE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-This function returns the name of the time zone observed by a server or an instance. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`CURRENT_TIMEZONE` derives the return value from the operating system of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs. For SQL Database Managed Instance return value is based on the time zone of the instance itself assigned during instance creation, not the time zone of the underlying operating system.
+This function returns the name of the time zone observed by a server or an instance. For SQL Database Managed Instance, return value is based on the time zone of the instance itself assigned during instance creation, not the time zone of the underlying operating system.
   
 > [!NOTE]  
 > For single and pooled SQL Databases time zone is always set to UTC and `CURRENT_TIMEZONE` returns the name of the UTC time zone.

@@ -98,5 +98,3 @@ End Sub
   
 7.  Execute the application. The result of the execution depends on what DiffGram you are executing.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-

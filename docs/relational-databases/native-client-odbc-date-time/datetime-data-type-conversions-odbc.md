@@ -18,7 +18,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # datetime Data Type Conversions (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The following conversions are either already defined by ODBC or are a consistent extension of ODBC. The conversions supplied by each provider are determined by the community served by the provider, and there are often inconsistencies between providers as a result. Values in square brackets are optional.  
   

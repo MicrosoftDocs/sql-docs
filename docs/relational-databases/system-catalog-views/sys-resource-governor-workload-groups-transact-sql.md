@@ -36,7 +36,7 @@ ms.author: "sstein"
 |max_dop|**int**|Maximum degree of parallelism for the workload group. The default value, 0, uses global settings. Is not nullable.<br /><br /> **Node:** This setting will override the query option **maxdop**.|  
 |group_max_requests|**int**|Maximum number of concurrent requests. The default value, 0, specifies no limit. Is not nullable.|  
 |pool_id|**int**|ID of the resource pool that this workload group uses.|  
-|external_pool_id|**int**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID of the external resource pool that this workload group uses.|  
+|external_pool_id|**int**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.<br /><br /> ID of the external resource pool that this workload group uses.|  
   
 ## Remarks  
  The catalog view displays the stored metadata. To see the in-memory configuration, use the corresponding dynamic management view, [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  

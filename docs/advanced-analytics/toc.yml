@@ -2,7 +2,7 @@
   href: ../advanced-analytics/index.yml
 
 - name: Welcome to SQL Server >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 
 - name: Overview
   expanded: true
@@ -53,6 +53,8 @@
       href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
     - name: Handle data types and objects
       href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
+    - name: Write Python functions
+      href: ../advanced-analytics/tutorials/quickstart-python-functions.md
     - name: Train and score a model
       href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
   - name: R

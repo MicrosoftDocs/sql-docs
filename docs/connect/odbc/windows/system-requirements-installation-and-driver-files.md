@@ -40,6 +40,7 @@ You can run applications with the driver on the following Windows operating syst
 - Windows Server 2008 R2
 - Windows Server 2012
 - Windows Server 2012 R2
+- Windows Server 2016
 - Windows Vista SP2 &nbsp; _(ODBC Driver 11 only.)_
 - Windows 7
 - Windows 8

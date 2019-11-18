@@ -5,7 +5,7 @@ description: Deploy a Python or R script as an application on [!INCLUDE[big-data
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -21,7 +21,7 @@ This article describes how to deploy and manage R and Python script as an applic
 
 - A single command-line utility to manage cluster and app.
 - Simplified app deployment while providing granular control through spec files.
-- Support hosting additional application types - SSIS and MLeap (new in CTP 2.3).
+- Support hosting additional application types - SSIS and MLeap.
 - [Visual Studio Code Extension](app-deployment-extension.md) to manage application deployment.
 
 Applications are deployed and managed using `azdata` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [Visual Studio Code Extension](app-deployment-extension.md).
@@ -38,7 +38,7 @@ The following types of apps are supported:
 
 ## Capabilities
 
-In SQL Server 2019 (preview) you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **azdata**.
+In SQL Server 2019 you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **azdata**.
 
 |Command |Description |
 |:---|:---|
@@ -76,9 +76,9 @@ If you are using AKS, you need to run the following command to get the IP addres
 kubectl get svc controller-svc-external -n <name of your big data cluster>
 ```
 
-## Kubeadm or Minikube
+## Kubernetes clusters created with kubeadm
 
-If you are using Kubeadm or Minikube run the following command to get the IP address to sign in in to the cluster
+Run the following command to get the IP address to sign in in to the cluster
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'

@@ -53,7 +53,7 @@ Used to modify the tree by moving nodes from _oldRoot_ to _newRoot_. GetReparent
 ## Examples  
   
 ### A. Comparing two node locations  
-The following example shows the current hierarchyid of a node. It also shows what the **hierarchyid** of the node would be if you move the node to become a descendant of the **@NewParent** node. It uses the `ToString()` method to show the hierarchical relationships.
+The following example shows the current hierarchyid of a node. It also shows what the **hierarchyid** of the node would be if you move the node to become a descendant of the **\@NewParent** node. It uses the `ToString()` method to show the hierarchical relationships.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  

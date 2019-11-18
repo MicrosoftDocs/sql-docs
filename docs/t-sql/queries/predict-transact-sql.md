@@ -1,11 +1,11 @@
 ---
 title: "PREDICT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2018"
+ms.date: "10/24/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.technology: 
+ms.technology: machine-learning
 ms.topic: "language-reference"
 f1_keywords: 
   - "PREDICT"
@@ -14,14 +14,14 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "PREDICT clause"
-author: VanMSFT
-ms.author: vanto
+author: dphansen
+ms.author: davidph
 monikerRange: ">=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Generates a predicted value or scores based on a stored model.  
+Generates a predicted value or scores based on a stored model. For more information, see [Native scoring using the PREDICT T-SQL function](../../advanced-analytics/sql-native-scoring.md).
 
 ## Syntax
 
@@ -86,7 +86,7 @@ It is not possible to view the internal model structure using `PREDICT`. If you 
 
 ## Remarks
 
-The `PREDICT` function is supported in all editions of SQL Server 2017 or later. This support includes SQL Server 2017 on Linux. `PREDICT` is also supported in Azure SQL Database in the cloud. All these supports are active regardless of whether other machine learning features are enabled.
+The `PREDICT` function is supported in all editions of SQL Server 2017 or later, on Windows and Linux. `PREDICT` is also supported in Azure SQL Database in the cloud. All these supports are active regardless of whether other machine learning features are enabled.
 
 It is not necessary that R, Python, or another machine learning language be installed on the server to use the `PREDICT` function. You can train the model in another environment and save it to a SQL Server table for use with `PREDICT`, or call the model from another instance of SQL Server that has the saved model.
 
@@ -173,3 +173,7 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
   computeStdErr = 1, interval = 'confidence')
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
+
+## Next steps
+
+- [Native scoring using the PREDICT T-SQL function](../../advanced-analytics/sql-native-scoring.md)

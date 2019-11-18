@@ -44,8 +44,6 @@ A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 ###  <a name="SSMSProcedure"></a> A. Using SQL Server Management Studio  
 In this example, a copy-only backup of the `Sales` database will be backed up to disk at the default backup location.
 
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 1. In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
 
 1. Expand **Databases**, right-click `Sales`, point to **Tasks**, and then click **Back Up...**.

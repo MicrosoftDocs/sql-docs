@@ -1,7 +1,7 @@
 ---
 title: SQL Server docs navigation tips 
 description: Tips and tricks for navigating the SQL Server technical documentation - explains such things as the hub page, the table of contents, the header, as well as how to use the breadcrumbs and how to use the version filter. 
-ms.date: 07/11/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""
@@ -87,6 +87,6 @@ You can also submit general documentation feedback and suggestions at [https://a
 
 ## Next steps
 
-- Get started with the [SQL Server technical documentation](sql-server-technical-documentation.md). 
+- Get started with the [SQL Server technical documentation](index.yml).
 - For more information about submitting feedback for or getting help with SQL Server, see the [Get help](sql-server-get-help.md) page. 
 - To quickly access all the quickstarts and tutorials, go to the [SQL Server Education Center](../lp/sql-server/sql-education-center.md).

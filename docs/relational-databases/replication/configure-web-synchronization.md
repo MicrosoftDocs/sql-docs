@@ -46,8 +46,6 @@ ms.author: "mathoma"
   
 4.  Configure one or more subscriptions to use Web synchronization.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  If you plan to replicate large volumes of data or use large data types such as **varchar(max)**, read the section "Replicating Large Volumes of Data" in this topic.  
   

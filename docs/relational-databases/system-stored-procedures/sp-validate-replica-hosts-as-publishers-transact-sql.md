@@ -50,7 +50,7 @@ sp_validate_replica_hosts_as_publishers
  None.  
   
 ## Remarks  
- If no entry exists for the publisher and the publishing database, **sp_validate_redirected_publisher** returns null for the output parameter *@redirected_publisher*. Otherwise, the associated redirected publisher is returned, both on success and failure.  
+ If no entry exists for the publisher and the publishing database, **sp_validate_redirected_publisher** returns null for the output parameter *\@redirected_publisher*. Otherwise, the associated redirected publisher is returned, both on success and failure.  
   
  If the validation succeeds, **sp_validate_redirected_publisher** returns a success indication.  
   

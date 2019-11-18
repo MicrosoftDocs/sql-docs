@@ -85,8 +85,6 @@ After you install PolyBase either standalone or in a scale-out group, you can't 
    
 6. On the PolyBase Configuration page, specify a port range with at least six ports. SQL Server setup  allocates the first six available ports from the range.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
    >[!IMPORTANT]
    > After installation, you must [enable the PolyBase feature](#enable).
 
@@ -149,7 +147,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 
 ## <a id="enable"></a> Enable PolyBase
 
-After installation, PolyBase must be enabled to access its features. To connect to SQL Server 2019 CTP 2.0, you must enable PolyBase after installation. Use the following Transact-SQL command.
+After installation, PolyBase must be enabled to access its features. Use the following Transact-SQL command. SQL 2019 instances deployed during Big Data Cluster installation have this setting enabled by default.
 
 
 ```sql

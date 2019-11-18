@@ -68,7 +68,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql
     -- creates a PowerShell job step that finds the processes that use more than 1000 MB of memory and kills them  
     USE msdb;  
     GO  
@@ -88,5 +88,3 @@ manager: craigg
  **To create a PowerShell Script job step**  
   
  Use the `JobStep` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell.  
-  
-  

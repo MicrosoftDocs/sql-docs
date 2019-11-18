@@ -1,6 +1,6 @@
 ---
-title: "srv_paramsetoutput (Extended Stored Procedure API) | Microsoft Docs"
-ms.custom: ""
+title: "srv_paramsetoutput (Extended Stored Procedure API)"
+ms.custom: seo-dt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

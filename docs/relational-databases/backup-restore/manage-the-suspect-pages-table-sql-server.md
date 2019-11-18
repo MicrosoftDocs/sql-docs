@@ -127,8 +127,6 @@ ms.author: mikeray
   
 4.  In the query window, edit, update, or delete the rows that you want.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To manage the suspect_pages table  

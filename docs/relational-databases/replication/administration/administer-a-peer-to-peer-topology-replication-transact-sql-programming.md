@@ -39,8 +39,6 @@ ms.author: "mathoma"
   
 6.  Restart the Distribution Agents at each node in the topology.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### To make schema changes to a publication database  
   
 1.  Quiesce the system.  

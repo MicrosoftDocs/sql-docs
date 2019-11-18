@@ -1,7 +1,7 @@
 ---
 title: "CompoundCurve | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: 10/18/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
@@ -131,7 +131,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- This produces the following output: 12.566370... which is the equivalent of 4???. The `CompoundCurve` instance in the example stores a circle with a radius of 2. Both of the previous code examples did not have to use a `CompoundCurve`. For the first example a `LineString` instance would have been simpler, and a `CircularString` instance would have been simpler for the second example. However, the next example shows where a `CompoundCurve` provides a better alternative.  
+ This produces the following output: 12.566370... which is the equivalent of 4&#x03c0; (4 * pi). The `CompoundCurve` instance in the example stores a circle with a radius of 2. Both of the previous code examples did not have to use a `CompoundCurve`. For the first example a `LineString` instance would have been simpler, and a `CircularString` instance would have been simpler for the second example. However, the next example shows where a `CompoundCurve` provides a better alternative.  
   
 ### F. Using a CompoundCurve to store a semicircle  
  The following example uses a `CompoundCurve` instance to store a semicircle.  
@@ -177,7 +177,7 @@ Circle One11.940039...
 Circle Two12.566370...  
 ```  
   
- The perimeter for Circle Two is approximately 4???, which is the actual value for the perimeter. However, the perimeter for Circle One is significantly inaccurate. Circle One's `CompoundCurve` instance stores one circular arc segment (ABC) and two line segments (CD, DA). The `CompoundCurve` instance has to store two circular arc segments (ABC, CDA) to define a circle. A `LineString` instance defines the second set of points (4 2, 2 4, 0 2) in Circle One's `CompoundCurve` instance. You have to explicitly declare a `CircularString` instance inside a `CompoundCurve`.  
+ The perimeter for Circle Two is approximately 4&#x03c0; (4 * pi), which is the actual value for the perimeter. However, the perimeter for Circle One is significantly inaccurate. Circle One's `CompoundCurve` instance stores one circular arc segment (ABC) and two line segments (CD, DA). The `CompoundCurve` instance has to store two circular arc segments (ABC, CDA) to define a circle. A `LineString` instance defines the second set of points (4 2, 2 4, 0 2) in Circle One's `CompoundCurve` instance. You have to explicitly declare a `CircularString` instance inside a `CompoundCurve`.  
   
 ## See Also  
  [STIsValid &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)   

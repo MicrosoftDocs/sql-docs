@@ -18,6 +18,14 @@ manager: kenvh
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+ - Fix for an issue where process ID and application name would not be sent correctly to SQL Server (for sys.dm_exec_sessions analysis) (Linux)
+ - Removed redundant dependency on libuuid (Linux)
+ - Fix for a bug with sending UTF8 data to SQL Server 2019
+ - Fix for a bug where locales that end in "@euro" were not being correctly detected (Linux)
+ - Fix for XML data being returned incorrectly when fetched as an output parameter while using Always Encrypted
+
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Fix for intermittent hang when Multiple Active Results Sets (MARS) is enabled

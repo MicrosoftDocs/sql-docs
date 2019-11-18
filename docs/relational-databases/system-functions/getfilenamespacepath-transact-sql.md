@@ -44,8 +44,8 @@ ms.author: "jroth"
 |**0**|Returns the relative path within the database-level directory.<br /><br /> This is the default value|  
 |**1**|Returns the full UNC path, starting with the `\\computer_name`.|  
   
- *@option*  
- An integer expression that defines how the server component of the path should be formatted. *@option* can have one of the following values:  
+ *\@option*  
+ An integer expression that defines how the server component of the path should be formatted. *\@option* can have one of the following values:  
   
 |Value|Description|  
 |-----------|-----------------|  

@@ -1,15 +1,16 @@
 ---
-title: Work with R and SQL data types and objects
+title: "Quickstart: R data types"
 titleSuffix: SQL Server Machine Learning Services
 description: In this quickstart, learn how to work with data types and data objects in R and SQL Server with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/17/2019  
+ms.date: 10/04/2019  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
@@ -301,6 +302,7 @@ To learn about writing advanced R functions in SQL Server, follow this quickstar
 > [!div class="nextstepaction"]
 > [Write advanced R functions with SQL Server Machine Learning Services](quickstart-r-functions.md)
 
-For more information on SQL Server Machine Learning Services, see:
+For more information on using R in SQL Server Machine Learning Services, see the following articles:
 
+- [Create and score a predictive model in R with SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
 - [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

@@ -28,7 +28,7 @@ LocalDB installation copies a minimal set of files necessary to start the [!INCL
 
 ## Try it out! 
 
-- To download and install SQL Server Express LocalDB, go to **[SQL Server downloads](https://www.microsoft.com/sql-server/sql-server-downloads)**. LocalDB is a feature you select during installation, and is available when you download the media. If you download the media, either choose **Express Advanced** or the LocalDB package. In the **Visual Studio Installer**, you can install SQL Server Express LocalDB as part of the **.NET desktop development** workload or as an individual component.
+- To download and install SQL Server Express LocalDB, go to **[SQL Server downloads](https://www.microsoft.com/sql-server/sql-server-editions-express)**. LocalDB is a feature you select during installation, and is available when you download the media. If you download the media, either choose **Express Advanced** or the LocalDB package. In the **Visual Studio Installer**, you can install SQL Server Express LocalDB as part of the **.NET desktop development** workload or as an individual component.
 
  >[!TIP]
  > You can also install LocalDB as part of Visual Studio. During Visual Studio installation, select the **.NET desktop development** workload, which includes SQL Server Express LocalDB.

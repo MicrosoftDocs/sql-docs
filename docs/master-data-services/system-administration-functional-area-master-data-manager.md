@@ -1,5 +1,5 @@
 ---
-title: "System Administration Functional Area (Master Data Manager) | Microsoft Docs"
+title: System Administration Functional Area
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql

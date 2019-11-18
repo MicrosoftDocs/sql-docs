@@ -1,6 +1,6 @@
 ---
 title: "Output from DTA"
-descripptionA: View and work with the out put form the Database Engine Tuning Advisor (DTA).
+description: View and work with the out put form the Database Engine Tuning Advisor (DTA).
 ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -57,6 +57,6 @@ EXEC sys.sp_cleanup_temporal_history 'dbo', 'Department', @rowcnt output
 select @rowcnt
 ```
 
-## See also
+## Next steps
 
 [Temporal tables retention policy](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)

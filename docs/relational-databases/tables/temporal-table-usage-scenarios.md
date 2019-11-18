@@ -11,13 +11,13 @@ ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: "CarlRabeler"
 ms.author: "carlrab"
 ---
-# Temporal Table Usage Scenarios
+# Temporal table usage scenarios
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Temporal Tables are generally useful in scenarios that require tracking history of data changes. We recommend you to consider Temporal Tables in the following use cases for major productivity benefits.
 
-## Data Audit
+## Data audit
 
 Use temporal system-versioning on tables that store critical information for which you need to keep track of what has changed and when, and to perform data forensics at any point in time.
 
@@ -141,7 +141,7 @@ Using AT TIME ZONE is helpful in all other scenarios where system-versioned tabl
 
 See also: [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).
 
-## Point in Time Analysis (Time Travel)
+## Point-in-time analysis (time travel)
 
 Unlike data audit, where the focus is typically on changes that occurred to individual records, in time travel scenarios users want to see how entire data sets changed over time. Sometimes time travel includes several related temporal tables, each changing at independent pace, for which you want to analyze:
 
@@ -151,7 +151,7 @@ Unlike data audit, where the focus is typically on changes that occurred to indi
 
 There are many real-world scenarios which require time travel analysis. To illustrate this usage scenario, let's look at OLTP with auto-generated history.
 
-### OLTP with Auto-Generated Data History
+### OLTP with auto-generated data history
 
 In transaction processing systems, it is not unusual to analyze how important metrics change over time. Ideally, analyzing history should not compromise performance of the OLTP application where access to the latest state of data must occur with minimal latency and data locking. System-versioned temporal tables are designed to allow users to transparently keep the full history of changes for later analysis, separately from the current data, with the minimal impact on the main OLTP workload.
 
@@ -362,7 +362,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
     ON inventoryDayAgo.ProductId = inventoryMonthAgo.ProductId AND inventoryDayAgo.LocationId = inventoryMonthAgo.LocationID;
 ```
 
-## Anomaly Detection
+## Anomaly detection
 
 Anomaly detection (or outlier detection) is the identification of items which do not conform to an expected pattern or other items in a dataset. You can use system-versioned temporal tables to detect anomalies that occur periodically or irregularly as you can utilize temporal querying to quickly locate specific patterns. What anomaly is depends on type of data you collect and your business logic.
 
@@ -419,7 +419,7 @@ FROM CTE
 > [!NOTE]
 > This example is intentionally simplified. In the production scenarios, you would likely use advanced statistical methods to identify samples which do not follow the common pattern.
 
-## Slowly-Changing Dimensions
+## Slowly-changing dimensions
 
 Dimensions in data warehousing typically contain relatively static data about entities such as geographical locations, customers, or products. However, some scenarios require you to track data changes in dimension tables as well. Given that modifications in dimensions happen much less frequently, in unpredictable manner and outside of the regular update schedule that applies to fact tables, these types of dimension tables are called slowly changing dimensions (SCD).
 
@@ -493,7 +493,7 @@ GROUP BY DimProduct_History.ProductId, DimLocation_History.LocationId ;
 - Temporal system-versioned tables generate row version on any column change. If you want to suppress new versions on certain column change you need to incorporate that limitation in the ETL logic.
 - If you expect a significant number of historical rows in SCD tables, consider using a clustered columnstore index as the main storage option for history table. That will reduce history table footprint and speed up your analytical queries.
 
-## Repairing Row-Level Data Corruption
+## Repairing row-level data corruption
 
 You can rely on historical data in system-versioned temporal tables to quickly repair individual rows to any of the previously captured states. This property of temporal tables is very useful when you are able to locate affected rows and/or when you know time of undesired data change so you can perform repair very efficiently without dealing with backups.
 
@@ -567,7 +567,7 @@ Data correction can become part of automated data loading in data warehousing an
 
 ![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
 
-## See Also
+## Next steps
 
 - [Temporal Tables](../../relational-databases/tables/temporal-tables.md)
  [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)

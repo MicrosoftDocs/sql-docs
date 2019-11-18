@@ -12,13 +12,13 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Temporal Tables
+# Temporal tables
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 SQL Server 2016 introduced support for temporal tables (also known as system-versioned temporal tables) as a database feature that brings built-in support for providing information about data stored in the table at any point in time rather than only the data that is correct at the current moment in time. Temporal is a database feature that was introduced in ANSI SQL 2011.
 
-**Quick Start**
+**Quickstart**
 
 - **Getting started:**
 
@@ -132,7 +132,7 @@ In the table below, SysStartTime in the Qualifying Rows column represents the va
 > [!NOTE]
 > Optionally, you can choose to hide these period columns such that queries that do not explicitly reference these period columns do not return these columns (the **SELECT \* FROM**_\<table\>_ scenario). To return a hidden column, simply explicitly refer to the hidden column in the query. Similarly **INSERT** and **BULK INSERT** statements will continue as if these new period columns were not present (and the column values will be auto-populated). For details on using the **HIDDEN** clause, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) and [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).
 
-## See Also
+## Next steps
 
 - [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)
 - [System-Versioned Temporal Tables with Memory-Optimized Tables](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)

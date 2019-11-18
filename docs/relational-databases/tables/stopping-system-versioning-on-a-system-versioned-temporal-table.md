@@ -12,7 +12,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Stopping System-Versioning on a System-Versioned Temporal Table
+# Stopping system-versioning on a system-versioned temporal table
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
@@ -71,7 +71,7 @@ SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.DepartmentHistory)
 COMMIT ;
 ```
 
-## See Also
+## Next steps
 
 - [Temporal Tables](../../relational-databases/tables/temporal-tables.md)
 - [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)

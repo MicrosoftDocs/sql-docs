@@ -12,7 +12,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Querying Data in a System-Versioned Temporal Table
+# Querying data in a system-versioned temporal table
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
@@ -127,7 +127,7 @@ FROM [dbo].[Department] FOR SYSTEM_TIME ALL
 ORDER BY [DeptID], [SysStartTime] Desc
 ```
 
-## See Also
+## Next steps
 
 - [Temporal Tables](../../relational-databases/tables/temporal-tables.md)
 - [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)

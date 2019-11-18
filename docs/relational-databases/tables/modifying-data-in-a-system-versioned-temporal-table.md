@@ -12,7 +12,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Modifying Data in a System-Versioned Temporal Table
+# Modifying data in a system-versioned temporal table
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
@@ -206,7 +206,7 @@ WHEN NOT MATCHED THEN
    VALUES (source.DeptName);
 ```
 
-## See Also
+## Next steps
 
 - [Temporal Tables](../../relational-databases/tables/temporal-tables.md)
 - [Creating a System-Versioned Temporal Table](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)

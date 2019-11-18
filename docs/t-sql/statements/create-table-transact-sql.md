@@ -880,7 +880,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 MEMORY_OPTIMIZED
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance does not support memory optimized tables.
 
-The value ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimized the performance of transaction processing. To get started with In-Memory OLTP see [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).
+The value ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimized the performance of transaction processing. To get started with In-Memory OLTP see [Quickstart 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).
 
 The default value OFF indicates that the table is disk-based.
 
@@ -1663,7 +1663,7 @@ SELECT * FROM tempdb.sys.columns;
 SELECT * FROM tempdb.sys.database_files;
 ```
 
-## See Also
+## Next steps
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)

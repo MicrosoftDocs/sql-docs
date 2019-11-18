@@ -12,7 +12,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Manage Retention of Historical Data in System-Versioned Temporal Tables
+# Manage retention of historical data in system-versioned temporal tables
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
@@ -38,7 +38,7 @@ Once you determine your data retention period, your next step is to develop a pl
 
 > **NOTE:** The examples in this topic use this [Temporal Table example](creating-a-system-versioned-temporal-table.md).
 
-## Using Stretch Database approach
+## Using stretch database approach
 
 > **NOTE:** Using the Stretch Database approach only applies to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
@@ -147,7 +147,7 @@ COMMIT ;
 
 Use SQL Server Agent or some other scheduling mechanism to ensure valid predicate function definition all the time.
 
-## Using Table Partitioning Approach
+## Using table partitioning approach
 
 [Table partitioning](../partitions/create-partitioned-tables-and-indexes.md) can make large tables more manageable and scalable. Using the table partitioning approach, you can use history table partitions to implement custom data cleanup or offline archival based on a time condition. Table partitioning will also give you performance benefits when querying temporal tables on a subset of data history by using partition elimination.
 
@@ -319,7 +319,7 @@ In sliding window scenario, we always remove lowest partition boundary.
 
 **Conclusion**: Using RANGE LEFT in sliding partition is much simpler for the partition management and avoids data movement. However, defining partition boundaries with RANGE RIGHT is slightly simpler as you don't have to deal with datetime time tick issues.
 
-## Using Custom Cleanup Script Approach
+## Using custom cleanup script approach
 
 In cases when the Stretch Database and table partitioning approached are not viable options, the third approach is to delete the data from history table using the custom cleanup script. Deleting data from history table is possible only when **SYSTEM_VERSIONING = OFF**. In order to avoid data inconsistency, perform cleanup either during the maintenance window (when workloads that modify data are not active) or within a transaction (effectively blocking other workloads). This operation requires **CONTROL** permission on current and history tables.
 
@@ -335,7 +335,7 @@ Here are some high-level guidelines for implementing the process. Schedule clean
 
 - Delete historical data in every temporal table starting from the oldest to the most recent rows in several iterations in small chunks and avoid deleting all rows in a single transaction as shown on picture above.
 - Implement every iteration as an invocation of generic stored procedure that removes a portion of data from the history table (see code example below for this procedure).
-- Calculate how many rows you need to delete for an individual temporal table every time you invoke the process. Based on that and number of number of iterations you want to havedetermine dynamically split points for every procedure invocation.
+- Calculate how many rows you need to delete for an individual temporal table every time you invoke the process. Based on that and number of number of iterations you want to have, determine dynamic split points for every procedure invocation.
 - Plan to have a period of delay between iterations for a single table to reduce impact on applications that access the temporal table.
 
 A stored procedure that deletes the data for a single temporal table might look like in the following code snippet (review this code carefully and adjust it before apply in your environment):
@@ -385,7 +385,7 @@ IF @historyTableName IS NULL OR @historyTableSchema IS NULL OR @periodColumnName
   (1) SET SYSTEM_VERSIONING = OFF,
   (2) DELETE FROM history_table,
   (3) SET SYSTEM_VERSIONING = ON
-  On SQL Server 2016, it is critical that (1) and (2) run in separate EXEC statements, or SQL Server will generate the following error: 
+  On SQL Server 2016, it is critical that (1) and (2) run in separate EXEC statements, or SQL Server will generate the following error:
   Msg 13560, Level 16, State 1, Line XXX
   Cannot delete rows from a temporal history table '<database_name>.<history_table_schema_name>.<history_table_name>'.
 */
@@ -402,23 +402,28 @@ BEGIN TRAN
 COMMIT;
 ```
 
-## Using Temporal History Retention Policy Approach
+## Using temporal history retention policy approach
 
 > **NOTE:** Using the Temporal History Retention Policy approach applies to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and SQL Server 2017 starting from CTP 1.3.
 
 Temporal history retention can be configured at the individual table level, which allows users to create flexible aging polices. Applying temporal retention is simple: it requires only one parameter to be set during table creation or schema change.
 
 After you define retention policy, Azure SQL Database starts checking regularly if there are historical rows that are eligible for automatic data cleanup. Identification of matching rows and their removal from the history table occur transparently, in the background task that is scheduled and run by the system. Age condition for the history table rows is checked based on the column representing end of SYSTEM_TIME period. If retention period, for example, is set to six months, table rows eligible for cleanup satisfy the following condition:
-```
+
+```sql
 ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
 ```
 In the preceding example, we assumed that ValidTo column corresponds to the end of SYSTEM_TIME period.
-### How to configure retention policy?
+
+### How to configure retention policy
+
 Before you configure retention policy for a temporal table, check first whether temporal historical retention is enabled at the database level:
-```
+
+```sql
 SELECT is_temporal_history_retention_enabled, name
 FROM sys.databases
 ```
+
 Database flag **is_temporal_history_retention_enabled** is set to ON by default, but users can change it with ALTER DATABASE statement. It is also automatically set to OFF after point in time restore operation. To enable temporal history retention cleanup for your database, execute the following statement:
 
 ```sql
@@ -483,7 +488,7 @@ Excellent data compression and efficient retention cleanup makes clustered colum
 
 Please check [Manage historical data in Temporal Tables with retention policy](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy) for more details.
 
-## See Also
+## Next steps
 
 - [Temporal Tables](../../relational-databases/tables/temporal-tables.md)
 - [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)

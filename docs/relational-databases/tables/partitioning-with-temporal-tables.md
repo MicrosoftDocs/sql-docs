@@ -12,7 +12,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Partitioning with Temporal Tables
+# Partitioning with temporal tables
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
@@ -31,7 +31,7 @@ You can use partitioning on both the current and the history table independently
   - **SWITCH OUT** from history table can performed while **SYSTEM_VERSIONING** is **ON** to purge portions of history data that is no longer relevant.
   - **SWITCH IN** is not allowed while **SYSTEM_VERSIONING** is **ON** since it can invalidate temporal data consistency.
 
-## See Also
+## Next steps
 
 - [Temporal Tables](../../relational-databases/tables/temporal-tables.md)
 - [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)

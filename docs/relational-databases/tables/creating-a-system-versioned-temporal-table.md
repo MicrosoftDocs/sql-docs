@@ -12,7 +12,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Creating a System-Versioned Temporal Table
+# Creating a system-versioned temporal table
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
@@ -118,7 +118,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 - If the primary use case is data audit (i.e. searching for historical changes for a single row from the current table), then a good choice is to create rowstore history table with a clustered index
 - The history table cannot have a primary key, foreign keys, unique indexes, table constraints or triggers. It cannot be configured for change data capture, change tracking, transactional or merge replication.
 
-## Alter Non-Temporal Table to be System-Versioned Temporal Table
+## Alter non-temporal table to be a system-versioned temporal table
 
 When you need to enable system-versioning using an existing table, such as when you wish to migrate a custom temporal solution to built-in support.
 For example, you may have a set of tables where versioning is implemented with triggers. Using temporal system-versioning is less complex and provides additional benefits including:
@@ -189,7 +189,7 @@ ALTER TABLE ProjectTaskCurrent
 - It is highly recommended to set **SYSTEM_VERSIONING** with **DATA_CONSISTENCY_CHECK = ON** to enforce data consistency checks on existing data.
 - If hidden columns are preferred, use the command `ALTER TABLE [tableName] ALTER COLUMN [columnName] ADD HIDDEN;`.
 
-## See Also
+## Next steps
 
 - [Temporal Tables](../../relational-databases/tables/temporal-tables.md)
  [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)

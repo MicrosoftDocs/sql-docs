@@ -12,17 +12,17 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Temporal Table System Consistency Checks
+# Temporal table system consistency checks
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 When using temporal tables, the system performs a number of consistency checks to ensure the schema complies with the requirements for temporal and the data is consistent, and remains consistent. In addition, temporal checks have been added to the **DBCC CHECKCONSTRAINTS** statement.
 
-## System Consistency Checks
+## System consistency checks
 
 Before **SYSTEM_VERSIONING** is set to **ON**, a set of checks are performed on the history table and the current table. These checks are grouped into schema checks and data checks (if history table is not empty). In addition, the system also performs a runtime consistency check.
 
-### Schema Check
+### Schema check
 
 When creating or alter a table to become a temporal table, the system verifies that requirements are met:
 
@@ -37,7 +37,7 @@ When creating or alter a table to become a temporal table, the system verifies t
 9. The history table is not placed in a read-only filegroup.
 10. The history table is not configured for change tracking or change data capture.
 
-### Data Consistency Check
+### Data consistency check
 
 Before **SYSTEM_VERSIONING** is set to **ON** and as part of any DML operation, the system performs the following check: **SysEndTime** ≥**SysStartTime**
 
@@ -50,7 +50,7 @@ When creating a link to an existing history table, you can choose to perform a d
 
 The **DBCC CHECKCONSTRAINTS** command includes temporal data consistency checks. For more information, see [DBCC CHECKCONSTRAINTS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md).
 
-## See Also
+## Next steps
 
 - [Temporal Tables](../../relational-databases/tables/temporal-tables.md)
 - [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)

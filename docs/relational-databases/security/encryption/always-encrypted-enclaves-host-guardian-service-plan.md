@@ -92,7 +92,7 @@ The computer(s) running the Host Guardian Service role should meet the following
 | Operating System | Windows Server 2019 Standard or Datacenter edition |
 | CPU | 2 cores (min), 4 cores (recommended) |
 | RAM | 8 GB (min) |
-| NICs | 2 NICs recommended (1 for cluster traffic, 1 for HGS service) |
+| NICs | 2 NICs with static IPs recommended (1 for cluster traffic, 1 for HGS service) |
 
 HGS is a CPU-bound role because of the number of actions that require encryption and decryption.
 Using modern processors with cryptographic acceleration capabilities will improve HGS performance.

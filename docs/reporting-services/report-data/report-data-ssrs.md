@@ -82,7 +82,7 @@ ms.date: 11/18/2019
   
 - Understand the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] client/server architectures and tools. For example, in Report Designer, you author reports on a client machine that uses built-in data source types. When you publish a report, the data source types must be supported on the report server or SharePoint site.  For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-- Data sources and datasets are authored in a report and published to a report server or SharePoint site from a client authoring tool. Data sources can be created directly on the report server. After they are published, you can configure credentials and other properties on the report server. For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) and [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md).  
+- Data sources and datasets are authored in a report and published to a report server or SharePoint site from a client authoring tool. Data sources can be created directly on the report server. After they are published, you can configure credentials and other properties on the report server. For more information, see [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) and [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md).  
   
 - The data sources you can use depend on which [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data extensions are installed. Support for data sources can differ by client authoring tool, report server version, and report server platform. For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
@@ -95,7 +95,7 @@ ms.date: 11/18/2019
 |||  
 |-|-|  
 |**Common Tasks**|**Links**|  
-|Create data connections|[Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
+|Create data connections|[Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Create datasets and queries|[Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |Manage data sources after they are published|[Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)|  
 |Manage shared datasets after they are published|[Manage Shared Datasets](../../reporting-services/report-data/manage-shared-datasets.md)|  

@@ -1,6 +1,6 @@
 ---
-title: "Manage Retention of Historical Data in System-Versioned Temporal Tables | Microsoft Docs"
-ms.custom: ""
+title: Manage historical data in System-Versioned Temporal Tables
+ms.custom: "seo-lt-2019"
 ms.date: "05/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -81,8 +81,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
      ![Select IP address page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-7.png "Select IP address page of the Stretch Database wizard")  
   
 6.  When the wizard completes, verify that your database was successfully stretch-enabled. Notice the icons in Object Explorer indicating the database was stretched  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > **NOTE:** If the Enable Database for Stretch fails, review the error log. A common error is improperly configuring the firewall rule.  
   

@@ -70,8 +70,6 @@ sys.sp_cdc_cleanup_change_table
   
 2.  Change table entries with __$start_lsn values less than the low watermark are then deleted. The delete threshold is used to limit the number of rows deleted in a single transaction. A failure to successfully delete entries is reported, but does not affect any change to the capture instance low watermark that might have been made based on the call.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Use sys.sp_cdc_cleanup_change_table in the following circumstances:  
   
 -   The cleanup Agent job reports delete failures.  

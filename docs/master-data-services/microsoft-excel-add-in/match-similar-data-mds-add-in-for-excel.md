@@ -1,5 +1,5 @@
 ---
-title: "Match Similar Data (MDS Add-in for Excel) | Microsoft Docs"
+title: Match Similar Data
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
 ms.prod: sql

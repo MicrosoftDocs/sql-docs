@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services Overview (MDS) | Microsoft Docs"
+title: Overview
 ms.custom: ""
 ms.date: "02/14/2017"
 ms.prod: sql

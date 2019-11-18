@@ -1,5 +1,5 @@
 ---
-title: "Secure a Master Data Manager Web Application | Microsoft Docs"
+title: Secure a Master Data Manager Web Application
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

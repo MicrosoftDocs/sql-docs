@@ -50,7 +50,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  Specifies the location where the stored procedure is executed. *fonpublisher* is **bit**, with a default value of 0. If 0, the execution is at the Subscriber, and if 1, the execution is at the Publisher.  
   
 ## Return Code Values  
- 0 indicates that the stored procedure is not being called within the context of an immediate-updating trigger. 1 indicates that it is being called within the context of an immediate-updating trigger and is the type of trigger being returned in *@trigger_op*.  
+ 0 indicates that the stored procedure is not being called within the context of an immediate-updating trigger. 1 indicates that it is being called within the context of an immediate-updating trigger and is the type of trigger being returned in *\@trigger_op*.  
   
 ## Remarks  
  **sp_check_for_sync_trigger** is used in snapshot replication and transactional replication.  

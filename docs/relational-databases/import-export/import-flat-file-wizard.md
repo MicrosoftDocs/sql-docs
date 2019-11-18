@@ -38,8 +38,6 @@ To access the Import Flat File Wizard, follow these steps:
 2. Connect to an instance of the SQL Server Database Engine or localhost.
 3. Expand **Databases**, right-click a database (test in the example below), point to **Tasks**, and click **Import Flat File** above Import Data.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ![Wizard menu](media/import-flat-file-wizard/importffmenu.png)
 
 To learn more about the different functions of the wizard, refer to the following tutorial:

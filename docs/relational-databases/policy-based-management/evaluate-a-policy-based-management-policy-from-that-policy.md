@@ -52,5 +52,3 @@ ms.author: vanto
   
 7.  When finished, click **Close**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-

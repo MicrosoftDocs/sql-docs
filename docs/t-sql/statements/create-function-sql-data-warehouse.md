@@ -149,7 +149,7 @@ RETURNS return_data_type
   
  [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : Displays the definition of [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined functions. For example:  
   
-```  
+```sql  
 SELECT definition, type   
 FROM sys.sql_modules AS m  
 JOIN sys.objects AS o   
@@ -171,7 +171,7 @@ GO
 ### A. Using a scalar-valued user-defined function to change a data type  
  This simple function takes a **int** data type as an input, and returns a **decimal(10,2)** data type as an output.  
   
-```  
+```sql  
 CREATE FUNCTION dbo.ConvertInput (@MyValueIn int)  
 RETURNS decimal(10,2)  
 AS  

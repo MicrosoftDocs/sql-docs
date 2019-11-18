@@ -275,8 +275,7 @@ manager: craigg
     ```powershell  
     # Get a reference to the ManagedComputer class.  
     CD SQLSERVER:\SQL\computername  
-    $Wmi = (get-item .).ManagedComputer  
-  
+    $Wmi = (Get-Item .).ManagedComputer
     ```  
   
 3.  Identify the service that you want to stop or start. Pick one of the following lines. Replace `instancename` with the name of the named instance.  
@@ -335,5 +334,3 @@ manager: craigg
 ## See Also  
  [Start SQL Server with Minimal Configuration](start-sql-server-with-minimal-configuration.md)   
  [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
-  
-  

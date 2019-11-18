@@ -57,7 +57,7 @@ sp_add_operator [ @name = ] 'name'
   
  You can specify either a physical e-mail address or an alias for *email_address*. For example:  
   
- '**jdoe**' or '**jdoe@xyz.com**'  
+ '**jdoe**' or '**jdoe\@xyz.com**'  
   
 > [!NOTE]  
 >  You must use the e-mail address for Database Mail.  

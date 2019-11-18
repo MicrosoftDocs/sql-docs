@@ -226,8 +226,6 @@ You can back up a database to URL through the Back Up task in SQL Server Managem
 > [!NOTE] 
 >  **Add** supports multiple backup files and storage containers for a single media set.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 When you select **URL** as the destination, certain options in the **Media Options** page are disabled.  The following topics have more information on the Back Up Database dialog:  
   
  [Back Up Database &#40;General Page&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)  

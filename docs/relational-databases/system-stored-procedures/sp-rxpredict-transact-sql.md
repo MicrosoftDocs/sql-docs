@@ -130,7 +130,7 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-In addition to being a valid SQL query, the input data in *@inputData* must include columns compatible with the columns in the stored model.
+In addition to being a valid SQL query, the input data in *\@inputData* must include columns compatible with the columns in the stored model.
 
 `sp_rxPredict` supports only the following .NET column types: double, float, short, ushort, long, ulong and string. You may need to filter out unsupported types in your input data before using it for real-time scoring. 
 

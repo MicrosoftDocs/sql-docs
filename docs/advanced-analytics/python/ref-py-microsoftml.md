@@ -4,7 +4,7 @@ description: Introduces the Microsoft machine learning algorithms and models for
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/04/2018  
+ms.date: 11/06/2019  
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -30,7 +30,7 @@ The **microsoftml** module is based on Python 3.5 and available only when you in
 + [Python client libraries for a data science client](setup-python-client-tools-sql.md)
 
 > [!NOTE]
-> Full product release versions are Windows-only, starting with SQL Server 2017. Linux support for **microsoftml** is new in [SQL Server 2019 Preview](../../linux/sql-server-linux-setup-machine-learning.md).
+> Full product release versions are Windows-only in SQL Server 2017. Both Windows and Linux are supported for **microsoftml** in [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md).
 
 ## Package dependencies
 

@@ -71,8 +71,8 @@ The .NET managed languages, such as C# and Visual Basic, are the most common use
 
 |||
 | :-- | :-- |
-| [Proof of concept connecting to SQL using ADO.NET](./ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md) | A small code example focused on connecting and querying SQL Server. |
-| [Connect resiliently to SQL with ADO.NET](./ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md) | Retry logic in a code example, because connections can occasionally experience moments of connectivity loss.<br /><br />Retry logic applies well to connections maintained through the internet into any cloud database, such as to Azure SQL Database. |
+| [Proof of concept connecting to SQL using ADO.NET](./ado-net/step-3-connect-sql-ado-net.md) | A small code example focused on connecting and querying SQL Server. |
+| [Connect resiliently to SQL with ADO.NET](./ado-net/step-4-connect-resiliently-sql-ado-net.md) | Retry logic in a code example, because connections can occasionally experience moments of connectivity loss.<br /><br />Retry logic applies well to connections maintained through the internet into any cloud database, such as to Azure SQL Database. |
 | [Azure SQL Database: Demonstration of how to use .NET Core on Windows/Linux/macOS to create a C# program, to connect and query](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL Database example. |
 | [Build-an-app: C#, ADO.NET, Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | Configuration information, along with code examples. |
 | &nbsp; | <br /> |

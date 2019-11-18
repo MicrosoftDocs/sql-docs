@@ -299,6 +299,13 @@ As described in the this picture, a log shipping session involves the following 
     GO  
     EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
     GO  
+    ```
+ - Verify that Log Shipping failover works by executing the following command
+ 
+    > [!WARNING]
+    > This command will bring the secondary database online and break the Log Shipping configuration. You will need to reconfigure Log    Shipping after running this command.
+ 
+    ```sql
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
 

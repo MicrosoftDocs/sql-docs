@@ -97,11 +97,10 @@ manager: craigg
   
      For example, the following command adds the secondary database `MyDd` to the `MyAG` availability group, whose primary replica is hosted by `PrimaryServer\InstanceName`.  
   
-    ```  
-  
+    ```powershell
     Add-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAG `   
-    -Database "MyDb"  
+     -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAG `   
+     -Database "MyDb"  
     ```  
   
     > [!NOTE]  
@@ -109,18 +108,13 @@ manager: craigg
   
 3.  After you add a database to an availability group, you need to configure the corresponding secondary database on each server instance that hosts a secondary replica. For more information, see [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
- **To set up and use the SQL Server PowerShell provider**  
-  
--   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
-  
- For a complete example, see [Example (PowerShell)](#PSExample), below.  
-  
-###  <a name="PSExample"></a> Example (PowerShell)  
+ To set up and use the SQL Server PowerShell provider, see [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md).
+
  The following example shows the full process for preparing a secondary database from a database on the server instance that hosts the primary replica of an availability group, adding the database to an availability group (as a primary database), and then joining the secondary database to the availability group. First, the example backs up the database and its transaction log. Then the example restores the database and log backups to the server instances that host a secondary replica.  
   
  The example calls `Add-SqlAvailabilityDatabase` twice: first on the primary replica to add the database to the availability group, and then on the secondary replica to join the secondary database on that replica to the availability group. If you have more than one secondary replica, restore and join the secondary database on each of them.  
   
-```  
+```powershell
 $DatabaseBackupFile = "\\share\backups\MyDatabase.bak"  
 $LogBackupFile = "\\share\backups\MyDatabase.trn"  
 $MyAgPrimaryPath = "SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg"  
@@ -133,8 +127,7 @@ Restore-SqlDatabase -Database "MyDatabase" -BackupFile $DatabaseBackupFile -Serv
 Restore-SqlDatabase -Database "MyDatabase" -BackupFile $LogBackupFile -ServerInstance "SecondaryServer\InstanceName" -RestoreAction 'Log' -NoRecovery  
   
 Add-SqlAvailabilityDatabase -Path $MyAgPrimaryPath -Database "MyDatabase"  
-Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"  
-  
+Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
 ```  
   
 ## See Also  
@@ -142,5 +135,3 @@ Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
  [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Monitor Availability Groups &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
-  
-  

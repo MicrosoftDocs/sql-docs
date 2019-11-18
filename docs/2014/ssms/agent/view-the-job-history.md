@@ -61,7 +61,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql
     -- lists all job information for the NightlyBackups job.  
     USE msdb ;  
     GO  
@@ -77,5 +77,3 @@ manager: craigg
  **To view the job history log**  
   
  Call the `EnumHistory` method of the `Job` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

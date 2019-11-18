@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on Ubuntu and then create and query a database with sqlcmd.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 05/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sqlfreshmay19"
@@ -18,13 +18,13 @@ ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In this quickstart, you install SQL Server 2017 or SQL Server 2019 preview on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2017 or SQL Server 2019 on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In this quickstart, you install SQL Server 2019 preview on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2019 on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 
@@ -65,10 +65,10 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
    ```
 
    > [!TIP]
-   > If you want to try SQL Server 2019 , you must instead register the **Preview (2019)** repository. Use the following command for SQL Server 2019 installations:
+   > If you want to install SQL Server 2019 , you must instead register the SQL Server 2019 repository. Use the following command for SQL Server 2019 installations:
    >
    > ```bash
-   > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
+   > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
    > ```
 
 3. Run the following commands to install SQL Server:
@@ -114,10 +114,10 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-2. Register the Microsoft SQL Server Ubuntu repository for SQL Server 2019 preview:
+2. Register the Microsoft SQL Server Ubuntu repository for SQL Server 2019:
 
    ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
    ```
 
 3. Run the following commands to install SQL Server:
@@ -144,7 +144,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 
 6. If you plan to connect remotely, you might also need to open the SQL Server TCP port (default 1433) on your firewall.
 
-At this point, SQL Server 2019 preview is running on your Ubuntu machine and is ready to use!
+At this point, SQL Server 2019 is running on your Ubuntu machine and is ready to use!
 
 ::: moniker-end
 

@@ -28,8 +28,6 @@ For columns included in the **Processes**, **Resource Waits**, **Data File I/O**
   
 3.  To filter on one or more columns, click the drop-down arrow in the column heading, and then select a value.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## More information  
    
 |||  

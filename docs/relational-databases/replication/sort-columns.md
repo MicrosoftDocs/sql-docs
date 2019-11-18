@@ -22,8 +22,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 2.  In the second row of the grid, select **Connection Type** from the **Column Name** column, and a value from the **Sort Order** column.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Options  
  **Column Name**  
  The name of the column on which you want to sort. You can sort on one or more columns. You cannot sort on the **Current Average Performance** or **Current Worst Performance** columns on the **Publications** tab, because of the way in which these column values are calculated.  

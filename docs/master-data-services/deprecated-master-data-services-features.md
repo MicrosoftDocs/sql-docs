@@ -1,5 +1,5 @@
 ---
-title: "Deprecated Master Data Services Features | Microsoft Docs"
+title: Deprecated Master Data Services Features
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

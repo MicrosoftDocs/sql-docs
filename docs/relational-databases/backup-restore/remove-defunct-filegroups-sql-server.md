@@ -73,8 +73,6 @@ ms.author: mikeray
   
 6.  In the **Rows** grid, select the filegroup to delete, click **Remove**, and then click **OK**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To remove defunct filegroups  

@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_addlinkedserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Creates a linked server. A linked server allows for access to distributed, heterogeneous queries against OLE DB data sources. After a linked server is created by using **sp_addlinkedserver**, distributed queries can be run against this server. If the linked server is defined as an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remote stored procedures can be executed.  
   
@@ -64,7 +64,7 @@ Is the unique programmatic identifier (PROGID) of the OLE DB provider that corre
  When the linked server is created against the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, the instance can be specified by using the SERVER keyword as SERVER=*servername*\\*instancename* to specify a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *servername* is the name of the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running, and *instancename* is the name of the specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which the user will be connected.  
   
 > [!NOTE]
-> To access a mirrored database, a connection string must contain the database name. This name is necessary to enable failover attempts by the data access provider. The database can be specified in the **@provstr** or **@catalog** parameter. Optionally, the connection string can also supply a failover partner name.  
+> To access a mirrored database, a connection string must contain the database name. This name is necessary to enable failover attempts by the data access provider. The database can be specified in the **\@provstr** or **\@catalog** parameter. Optionally, the connection string can also supply a failover partner name.  
   
 [ @catalog = ] *\'catalog\'*       
  Is the catalog to be used when a connection is made to the OLE DB provider. *catalog* is **sysname**, with a default of NULL. *catalog* is passed as the DBPROP_INIT_CATALOG property to initialize the OLE DB provider. When the linked server is defined against an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], catalog refers to the default database to which the linked server is mapped.  

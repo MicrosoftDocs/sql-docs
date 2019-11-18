@@ -49,7 +49,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  After an application lock has been acquired, only the first 32 characters can be retrieved in plain text; the remainder will be hashed.  
   
  [ @LockMode= ] '*lock_mode*'  
- Is the lock mode to be obtained for a particular resource. *lock_mode* is **nvarchar(32)** and has no default value. The value can be any of the following: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, or **Exclusive**.  
+ Is the lock mode to be obtained for a particular resource. *lock_mode* is **nvarchar(32)** and has no default value. The value can be any of the following: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, or **Exclusive**. For more information, see [lock modes](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
  [ @LockOwner= ] '*lock_owner*'  
  Is the owner of the lock, which is the *lock_owner* value when the lock was requested. *lock_owner* is **nvarchar(32)**. The value can be **Transaction** (the default) or **Session**. When the *lock_owner* value is **Transaction**, by default or specified explicitly, sp_getapplock must be executed from within a transaction.  

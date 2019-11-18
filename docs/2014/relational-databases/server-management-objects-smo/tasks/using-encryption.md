@@ -44,7 +44,7 @@ manager: craigg
 ## Adding a Certificate in Visual C#  
  The code example creates a simple certificate with an encryption password. Unlike other objects, the <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> method has several overloads. The overload used in the example creates a new certificate with an encryption password.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             {  
@@ -72,24 +72,20 @@ manager: craigg
 ## Adding a Certificate in PowerShell  
  The code example creates a simple certificate with an encryption password. Unlike other objects, the <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> method has several overloads. The overload used in the example creates a new certificate with an encryption password.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
 $db = get-item AdventureWorks2012  
   
-#Create a certificate  
-  
-$c = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Certificate -argumentlist $db, "Test_Certificate"  
+#Create a certificate
+$c = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Certificate -ArgumentList $db, "Test_Certificate"  
 $c.StartDate = "January 01, 2010"  
 $c.Subject = "This is a test certificate."  
 $c.ExpirationDate = "January 01, 2015"  
   
 #Create the certificate on the instance of SQL Server by supplying the certificate password argument.  
-$c.Create("pGFD4bb925DGvbd2439587y")  
-  
+$c.Create("pGFD4bb925DGvbd2439587y")
 ```  
   
 ## See Also  
  [Using Encryption Keys](using-encryption.md)  
-  
-  

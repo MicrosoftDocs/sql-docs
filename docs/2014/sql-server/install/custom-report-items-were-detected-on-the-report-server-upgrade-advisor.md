@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "custom report items, upgrading"
 ms.assetid: aee32006-65b2-4dfe-9570-d85a249d17b2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Custom report items were detected on the report server (Upgrade Advisor)

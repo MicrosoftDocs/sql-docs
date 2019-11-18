@@ -97,8 +97,6 @@ sp_change_log_shipping_secondary_database
   
 2.  Changes the local monitor record in **log_shipping_monitor_secondary** on the secondary server using supplied arguments, if necessary.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Permissions  
  Only members of the **sysadmin** fixed server role can run this procedure.  
   

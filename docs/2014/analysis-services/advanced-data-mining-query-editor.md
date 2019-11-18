@@ -43,11 +43,11 @@ manager: craigg
  **Select Input**  
  Click to choose the data to use as input to the mining model. If no data source has been specified, you can also click the **\<Input>** link, which is highlighted in red in the **DMX Query** pane.  
   
- Select **@InputRowset** from the dropdown list to open the **Replace InputRowset** dialog box and modify an existing input.  
+ Select **\@InputRowset** from the dropdown list to open the **Replace InputRowset** dialog box and modify an existing input.  
   
  Select **Add Input** to open the **Add Input** dialog box and specify a new data source.  
   
- You can also modify an existing input by clicking the **@InputRowset** link, which is highlighted in red in the DMX Query pane.  
+ You can also modify an existing input by clicking the **\@InputRowset** link, which is highlighted in red in the DMX Query pane.  
   
  **Map Columns**  
  Select columns from the mining model and then map them to columns in the external data source.  

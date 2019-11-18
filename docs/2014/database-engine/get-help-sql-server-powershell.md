@@ -50,7 +50,7 @@ manager: craigg
 ### Example: cmdlet Get-Help  
  The following examples return various levels of help for **Invoke-Sqlcmd**:  
   
-```  
+```powershell
 ## Get the basic help.  
 Get-Help Invoke-Sqlcmd  
   
@@ -68,7 +68,8 @@ Get-Help Invoke-Sqlcmd -Syntax
 ```  
   
 ## Get a List of Providers  
- **To get a list of active providers**  
+
+### To get a list of active providers
   
 1.  Run Get-Help specifying the provider category.  
   
@@ -77,7 +78,7 @@ Get-Help Invoke-Sqlcmd -Syntax
 ### Example: Get a List of Providers  
  This code returns a list of the providers currently enabled in your Windows PowerShell session:  
   
-```  
+```powershell
 Get-Help -Category provider  
 ```  
   
@@ -89,7 +90,7 @@ Get-Help -Category provider
 ### Example: Get SQL Server Provider Help  
  This example returns basic information about the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider:  
   
-```  
+```powershell
 Get-Help SQLServer  
 ```  
   
@@ -103,14 +104,14 @@ Get-Help SQLServer
 ### Examples: Listing Methods and Properties  
  This example lists the methods supported for the Databases node:  
   
-```  
+```powershell
 Set-Location SQL:\MyComputer\DEFAULT\Databases  
 Get-Item . | Get-Member -Type Methods  
 ```  
   
  This example lists the properties for a variable that has been set to an SMO Table object:  
   
-```  
+```powershell
 $MyVar = New-Object Microsoft.SqlServer.Management.SMO.Table  
 $MyVar | Get-Member -Type Properties  
 ```  
@@ -118,5 +119,3 @@ $MyVar | Get-Member -Type Properties
 ## See Also  
  [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
  [Use the Database Engine cmdlets](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
-  
-  

@@ -1,5 +1,5 @@
 ---
-title: Report Data
+title: Intro to Report Data in SQL Server Reporting Services (SSRS)
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
@@ -8,17 +8,33 @@ ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/14/2018
+ms.date: 11/18/2019
 ---
 
-# Report Data in SQL Server Reporting Services (SSRS)
+# Intro to Report Data in SQL Server Reporting Services (SSRS)
 
   Report data can come from multiple sources of data in your organization. Your first step in designing a report is to create data sources and datasets that represent the underlying report data. Each data source includes data connection information. Each dataset includes a query command that defines the set of fields to use as data from a data source. To visualize data from each dataset, add a data region, such as a table, matrix, chart, or map. When the report is processed, the queries run on the data source, and each data region expands as needed to display the query results for the dataset.  
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+
+## Data in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+ ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
-##  <a name="BkMk_ReportDataTerms"></a> Terms  
+1.  **Data sources in the Report Data pane** A data source appears in the Report Data pane after you create an embedded data source or add a shared data source.  
+  
+2.  **Connection Dialog Box** Use the Connection Dialog Box to build a connection string or to paste a connection string.  
+  
+3.  **Data connection information** The connection string is passed to the data extension.  
+  
+4.  **Credentials** Credentials are managed separately from the connection string.  
+  
+5.  **Data Extension/Data Provider** Connecting to the data can be through multiple data access layers.  
+  
+6.  **External data sources** Retrieve data from relational databases, multidimensional data bases, SharePoint lists, Web services, or report models.  
+
+
+##  <a name="BkMk_ReportDataTerms"></a> Defining terms  
   
 - **Data connection.** Also known as a *data source*. A data connection includes a name and connection properties that are dependent on the connection type. By design, a data connection does not include credentials. A data connection does not specify which data to retrieve from the external data source. To do that, you specify a query when you create a dataset.  
   

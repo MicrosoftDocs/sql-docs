@@ -1016,15 +1016,17 @@
     href: ../reporting-services/report-builder/print-a-report-reporting-services-in-sharepoint-mode.md
 - name: Report data in SSRS
   items:
-  - name: Report Data in SSRS Overview
+  - name: Intro to Report Data
     href: ../reporting-services/report-data/report-data-ssrs.md
-  - name: Data Sources Supported by Reporting Services
+  - name: Supported Data Sources
     href: ../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md
-  - name: Data Connections, Data Sources, and Connection Strings (Report Builder and SSRS)
+  - name: Create connection strings
     href: ../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md
   - name: Add and Verify a Data Connection
     href: ../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md
-  - name: Create, Modify, and Delete Shared Data Sources
+  - name: Compare Shared and Embedded Data Sources
+    href: ../reporting-services/report-data/compare-shared-embedded-data-sources-report-builder-ssrs.md
+  - name: Create and Modify Shared Data Sources
     href: ../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md
   - name: Create and Modify Embedded Data Sources
     href: ../reporting-services/report-data/create-and-modify-embedded-data-sources.md

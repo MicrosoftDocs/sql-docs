@@ -12,7 +12,7 @@ ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
 ---
-# Performance Improvements using DTA recommendations
+# Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 

@@ -1,5 +1,6 @@
 ---
-title: "Save Showplan XML Statistics Profile events separately (SQL Server Profiler)"
+title: "Save Showplan XML Statistics Profile events separately"
+titleSuffix: SQL Server Profiler
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

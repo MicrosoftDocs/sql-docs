@@ -1,5 +1,6 @@
 ---
-title: "View the SQL Server error log (SQL Server Management Studio)"
+title: "View the SQL Server error log (SSMS)"
+description: View the SQL Server error log in SQL Server Management Studio (SSMS).
 ms.custom: seo-dt-2019
 ms.date: "09/29/2017"
 ms.prod: sql
@@ -16,7 +17,8 @@ ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
 ---
-# View the SQL Server error log (SQL Server Management Studio)
+# View the SQL Server error log in SQL Server Management Studio (SSMS)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains user-defined events and certain system events you can use for troubleshooting. 
 

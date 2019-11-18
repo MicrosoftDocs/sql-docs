@@ -1,6 +1,5 @@
 ---
 title: "Performance Center"
-titleSuffix: SQL Server & Azure SQL Database
 ms.custom: seo-dt-2019
 ms.date: "12/11/2018"
 ms.prod: sql

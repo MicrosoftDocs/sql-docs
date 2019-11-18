@@ -24,14 +24,14 @@ ms.date: 11/18/2019
 Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard in one of the ways that is described in this topic to import data from and export data to any supported data source.
 
 > [!IMPORTANT]
-> This topic describes only how to **start** the wizard. If you're looking for something else, see [Related tasks and content](#related).
+> This topic describes only how to **start** the wizard. If you're looking for something else, see [Related tasks and content](#related-tasks-and-content).
 
 You can start the wizard:
 
-- From the [Start menu](#startStart).
-- From the [command prompt](#startCmd).
-- From [SQL Server Management Studio (SSMS)](#startSSMS).
-- From [Visual Studio with SQL Server Data Tools (SSDT)](#startVS).
+- From the [Start menu](#start-menu).
+- From the [command prompt](#command-prompt).
+- From [SQL Server Management Studio (SSMS)](#sql-server-management-studio-ssms).
+- From [Visual Studio with SQL Server Data Tools (SSDT)](#visual-studio).
 
 ## Prerequisite - Is the wizard installed on your computer?
 

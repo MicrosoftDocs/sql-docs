@@ -1,6 +1,6 @@
 ---
-title: "Quickstart: SQL backup and restore to Azure Blob storage service | Microsoft Docs"
-ms.custom: ""
+title: "Quickstart: SQL backup & restore to Azure Blob storage service"
+ms.custom: seo-dt-2019
 ms.date: "04/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"

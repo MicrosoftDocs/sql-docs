@@ -1,5 +1,5 @@
 ---
-title: "Model Object Permissions (Master Data Services) | Microsoft Docs"
+title: Model Object Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters in an Active Dire
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -103,7 +103,7 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
        - **Create Group objects**
        - **Delete Group objects**
        - **Create User objects**
-       - **Create User objects**
+       - **Delete User objects**
 
     - Click **OK**
 
@@ -151,7 +151,7 @@ The following environment variables are providing the credentials for the BDC do
 
 ```bash
 export DOMAIN_SERVICE_ACCOUNT_USERNAME=<AD principal account name>
-export DOMAIN_SERVICE_ACCOUNT_USERNAME=<AD principal password>
+export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 ```
 
 ## Provide security and endpoint parameters
@@ -193,8 +193,8 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouD
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dnsIpAddresses=[\"10.100.10.100\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
-azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadmins\"]"
-azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusers1\,bdcusers2\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
 ```
 
 In addition to the above information, you also need to provide DNS names for the different cluster endpoints. The DNS entries using your provided DNS names will automatically be created in your DNS Server upon deployment. You will use these names when connecting to the different cluster endpoints. For example, if the DNS name for SQL master instance is `mastersql`, you will use `mastersql.contoso.local,31433` to connect to the master instance from the tools.

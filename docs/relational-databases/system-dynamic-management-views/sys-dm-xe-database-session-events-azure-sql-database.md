@@ -1,6 +1,6 @@
 ---
-title: "sys.dm_xe_database_session_events (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_xe_database_session_events"
+titleSuffix: Azure SQL Database
 ms.date: "06/10/2016"
 ms.service: sql-database
 ms.prod_service: "sql-database"
@@ -10,6 +10,7 @@ ms.assetid: 9e985a19-f93f-4c56-b644-12c529298011
 author: MightyPen
 ms.author: genemi
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+ms.custom: seo-lt-2019
 ---
 # sys.dm_xe_database_session_events (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

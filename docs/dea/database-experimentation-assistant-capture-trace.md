@@ -1,7 +1,7 @@
 ---
-title: Capture a trace in Database Experimentation Assistant for SQL Server upgrades
-description: Capture a trace in Database Experimentation Assistant
-ms.custom: ""
+title: Capture a trace for SQL Server upgrades
+description: Capture a trace in Database Experimentation Assistant for SQL Server upgrades
+ms.custom: "seo-lt-2019"
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea

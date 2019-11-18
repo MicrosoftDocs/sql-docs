@@ -1,6 +1,6 @@
 ---
-title: "Setting Properties for Master Data Services Add-in for Excel | Microsoft Docs"
-ms.custom: microsoft-excel-add-in
+title: Setting Properties
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"

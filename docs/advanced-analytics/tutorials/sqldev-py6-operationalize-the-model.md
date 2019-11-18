@@ -1,5 +1,5 @@
 ---
-title: Predict potential outcomes using Python models
+title: "Python + T-SQL: Run predictions"
 description: Tutorial showing how to operationalize embedded PYthon script in SQL Server stored procedures with T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,7 @@ ms.date: 11/02/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Run predictions using Python embedded in a stored procedure

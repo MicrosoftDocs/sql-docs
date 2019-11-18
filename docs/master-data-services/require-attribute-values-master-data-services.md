@@ -1,5 +1,5 @@
 ---
-title: "Require Attribute Values (Master Data Services) | Microsoft Docs"
+title: Require Attribute Values
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

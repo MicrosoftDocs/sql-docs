@@ -22,7 +22,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # ODBC Cursor Library
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Some ODBC drivers only support the default cursor settings; these drivers also do not support positioned cursor operations, such as **SQLSetPos**. The ODBC cursor library is a component of the Microsoft Data Access Components (MDAC) used to implement block or static cursors on a driver that normally does not support them. The cursor library also implements positioned UPDATE and DELETE statements and **SQLSetPos** for the cursors it creates.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Configure the Management Data Warehouse (SQL Server Management Studio) | Microsoft Docs"
+title: "Configure the Management Data Warehouse (SSMS)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

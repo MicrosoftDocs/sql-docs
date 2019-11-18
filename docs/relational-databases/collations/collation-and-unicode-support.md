@@ -453,7 +453,7 @@ When you use only character columns and code pages, you must take care to ensure
 It would be difficult to select a code page for character data types that will support all the characters that are required by a worldwide audience. The easiest way to manage character data in international databases is to always use a data type that supports Unicode. 
 
 ### Unicode data types
-If you store character data that reflects multiple languages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use Unicode data types (**nchar**, **nvarchar**, and **ntext**) instead of non-Unicode data types (**char**, **varchar**, and **text**). 
+If you store character data that reflects multiple languages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later), use Unicode data types (**nchar**, **nvarchar**, and **ntext**) instead of non-Unicode data types (**char**, **varchar**, and **text**). 
 
 > [!NOTE]
 > For Unicode data types, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] can represent up to 65,535 characters using UCS-2, or the full Unicode range (‭1,114,111‬ characters) if supplementary characters are used. For more information about enabling supplementary characters, see [Supplementary Characters](#Supplementary_Characters).
@@ -468,7 +468,7 @@ When you move data from a server to a client, your server collation might not be
 > [!TIP]
 > You can also try to use a different collation for the data on the server. Choose a collation that maps to a code page on the client.    
 >
-> To use the UTF-16 collations that are available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) to improve searching and sorting of some Unicode characters (Windows collations only), you can select either one of the supplementary characters (\_SC) collations or one of the version 140 collations.    
+> To use the UTF-16 collations that are available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later) to improve searching and sorting of some Unicode characters (Windows collations only), you can select either one of the supplementary characters (\_SC) collations or one of the version 140 collations.    
  
 To use the UTF-8 collations that are available in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], and to improve searching and sorting of some Unicode characters (Windows collations only), you must select UTF-8 encoding-enabled collations(\_UTF8).
  

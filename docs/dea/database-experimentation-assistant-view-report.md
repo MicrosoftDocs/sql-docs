@@ -1,7 +1,7 @@
 ---
-title: View analysis reports in Database Experimentation Assistant for SQL Server upgrades
+title: View analysis reports  for SQL Server upgrades
 description: View analysis reports in Database Experimentation Assistant
-ms.custom: ""
+ms.custom: "seo-lt-2019"
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea

@@ -1,5 +1,5 @@
 ---
-title: Create and score a predictive model in Python
+title: "Quickstart: Train a model in Python"
 titleSuffix: SQL Server Machine Learning Services
 description: Create a simple predictive model in Python using SQL Server Machine Learning Services, then predict a result using new data.
 ms.prod: sql
@@ -10,6 +10,7 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 

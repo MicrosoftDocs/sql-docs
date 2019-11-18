@@ -152,6 +152,7 @@ When an extract, transform, and load (ETL) process fails because the source and 
 |:---|:---|
 |Always Encrypted with secure enclaves|Expands upon Always Encrypted with in-place encryption and rich computations by enabling computations on plaintext data inside a server-side secure enclave. In-place encryption improves the performance and the reliability of cryptographic operations (encrypting columns, rotating columns, encryption keys, and so on), because it avoids moving data out of the database.<br><br> Support for rich computations (pattern matching and comparison operations) unlocks Always Encrypted to a much broader set of scenarios and applications that demand sensitive data protection, while also requiring richer functionality in Transact-SQL queries. See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Certificate management in SQL Server Configuration Manager|See [Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md).|
+|Data Discovery & Classification|Data Discovery & Classification provides advanced capabilities natively built into SQL Server for classifying, labeling & protecting the sensitive data in your databases. Classifying your most sensitive data (business, financial, healthcare, PII, etc.) can play a pivotal role in your organizational information protection stature. It can serve as infrastructure for:<ul><li>Helping meet data privacy standards and regulatory compliance requirements</li><li>Various security scenarios, such as monitoring (auditing) and alerting on anomalous access to sensitive data</li><li>Making it easier to identify where sensitive data resides in the enterprise so admins can take the right steps securing the database</li></ul>[Auditing](../relational-databases/security/auditing/sql-server-audit-database-engine.md) has also been enhanced to include a new field in the audit log called `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. For details and examples, see[ ADD SENSITIVITY CLASSIFICATION](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ## High availability
@@ -225,14 +226,6 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 |Windows Server Failover Cluster| You can configure high availability for Machine Learning Services on a Windows Server Failover Cluster.|
 | &nbsp; | &nbsp; |
 
-## [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
-
-| New feature or update | Details |
-|:---|:---|
-|Support for Azure SQL Database managed instance databases| Host [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] on a managed instance. See [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] installation and configuration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
-|New HTML controls| HTML controls replace all former Silverlight components. Silverlight dependency removed.|
-| &nbsp; | &nbsp; |
-
 ## SQL Server Analysis Services
 
 This release introduces new features and improvements for performance, resource governance, and client support.
@@ -245,6 +238,23 @@ This release introduces new features and improvements for performance, resource 
 |Property settings for resource governance| This release includes new memory settings: Memory\QueryMemoryLimit, DbpropMsmdRequestMemoryLimit, and OLAP\Query\RowsetSerializationLimit for resource governance. To learn more, see [Memory settings](/analysis-services/server-properties/memory-properties).|
 |Governance setting for Power BI cache refreshes | This release introduces the ClientCacheRefreshPolicy property, which overrides caching dashboard tile data and report data for initial load of Live connect reports by the Power BI service. To learn more, see [General Properties](/analysis-services/server-properties/general-properties). |
 | Online attach  | Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more, see [Online attach](/analysis-services/what-s-new-in-sql-server-analysis-services#online-attach). |
+| &nbsp; | &nbsp; |
+
+## SQL Server Integration Services
+
+This release introduces new features to improve file operations.
+
+| New feature or update | Details |
+|:---|:---|
+|Flexible file task |Perform file operations on Local File System, Azure Blob Storage, and Azure Data Lake Storage Gen2. See [Flexible File Task](../integration-services/control-flow/flexible-file-task.md).|
+|Flexible file source and destination |Read and write data for Azure Blob Storage, and Azure Data Lake Storage Gen2. See [Flexible File Source](../integration-services/data-flow/flexible-file-source.md) and [Flexible File Destination](../integration-services/data-flow/flexible-file-destination.md). |
+
+## SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| New feature or update | Details |
+|:---|:---|
+|Support for Azure SQL Database managed instance databases| Host [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] on a managed instance. See [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] installation and configuration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
+|New HTML controls| HTML controls replace all former Silverlight components. Silverlight dependency removed.|
 | &nbsp; | &nbsp; |
 
 ## SQL Server Reporting Services

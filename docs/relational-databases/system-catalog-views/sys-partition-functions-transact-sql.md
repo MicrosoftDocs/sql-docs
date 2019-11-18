@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**type_desc**|**nvarchar(60)**|Function type.<br /><br /> RANGE|  
 |**fanout**|**int**|Number of partitions created by the function.|  
 |**boundary_value_on_right**|**bit**|For range partitioning.<br /><br /> 1 = Boundary value is included in the RIGHT range of the boundary.<br /><br /> 0 = LEFT.|  
-|**is_system**||**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Object is used for full-text index fragments.<br /><br /> 0 = Object is not used for full-text index fragments.|  
+|**is_system**||**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> 1 = Object is used for full-text index fragments.<br /><br /> 0 = Object is not used for full-text index fragments.|  
 |**create_date**|**datetime**|Date the function was created.|  
 |**modify_date**|**datetime**|Date the function was last modified using an ALTER statement.|  
   

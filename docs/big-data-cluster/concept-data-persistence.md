@@ -82,9 +82,8 @@ AKS comes with [two built-in storage classes](/azure/aks/azure-disks-dynamic-pv/
 
 Kubernetes clusters that are deployed by using `kubeadm` don't have a built-in storage class. You must create your own storage classes and persistent volumes by using local storage or your preferred provisioner, such as [Rook](https://github.com/rook/rook). In that situation, you set `className` to the storage class you configured.
 
-> [!NOTE]
+> [!IMPORTANT]
 >  In the built-in deployment configuration files for kubeadm (`kubeadm-dev-test` and `kubeadm-prod`), there's no storage class name specified for data and log storage. Before deployment, you must customize the configuration file and set the value for `className`. Otherwise, pre-deployment validations will fail. Deployment also has a validation step that checks for the existence of the storage class, but not for the necessary persistent volumes. Make sure you create enough volumes, depending on the scale of your cluster. For the default minimum cluster size (default scale, no high availability) you must create at least 24 persistent volumes. For an example of how to create persistent volumes by using a local provisioner, see [Create a Kubernetes cluster using Kubeadm](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu).
-
 
 ## Customize storage configurations for each pool
 

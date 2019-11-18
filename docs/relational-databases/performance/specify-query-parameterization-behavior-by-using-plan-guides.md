@@ -1,6 +1,6 @@
 ---
-title: "Specify Query Parameterization Behavior by Using Plan Guides | Microsoft Docs"
-ms.custom: ""
+title: "Set query parameterization behavior using plan guides"
+ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""

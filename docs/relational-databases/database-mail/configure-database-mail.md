@@ -189,13 +189,13 @@ ms.author: sstein
  View or update the description of the account. The description is optional.  
   
  **E-mail address**  
- View or update the name of the e-mail address for the account. This is the e-mail address that e-mail is sent from. For example, an account for Microsoft SQL Server Agent may send e-mail from the address **SqlAgent@Adventure-Works.com**.  
+ View or update the name of the e-mail address for the account. This is the e-mail address that e-mail is sent from. For example, an account for Microsoft SQL Server Agent may send e-mail from the address **SqlAgent\@Adventure-Works.com**.  
   
  **Display name**  
  View or update the name to show on e-mail messages sent from this account. The display name is optional. This is the name displayed on messages sent from this account. For example, an account for SQL Server Agent may display the name **SQL Server Agent Automated Mailer** on e-mail messages.  
   
  **Reply e-mail**  
- View or update the e-mail address that will be used for replies to e-mail messages sent from this account. The reply e-mail is optional. For example, replies to an account for SQL Server Agent may go to the database administrator, **danw@Adventure-Works.com**.  
+ View or update the e-mail address that will be used for replies to e-mail messages sent from this account. The reply e-mail is optional. For example, replies to an account for SQL Server Agent may go to the database administrator, **danw\@Adventure-Works.com**.  
   
  **Server name**  
  View or update the name of the SMTP server the account uses to send e-mail. Typically this is in a format similar to **smtp.<your_company>.com**. For help with this, consult your mail administrator.  

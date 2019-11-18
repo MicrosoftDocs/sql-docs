@@ -177,7 +177,7 @@ KEEPFIXED PLAN
 Forces the Query Optimizer not to recompile a query because of changes in statistics. Specifying KEEPFIXED PLAN makes sure that a query recompiles only if the schema of the underlying tables changes or if **sp_recompile** runs against those tables.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (staring with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (staring with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
 Prevents the query from using a nonclustered memory optimized columnstore index. If the query contains the query hint to avoid the use of the columnstore index, and an index hint to use a columnstore index, the hints are in conflict and the query returns an error.  
   

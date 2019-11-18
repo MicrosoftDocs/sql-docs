@@ -771,7 +771,7 @@ column_name <data_type>
     | REJECT_TYPE = value | percentage,  
     | REJECT_VALUE = reject_value,  
     | REJECT_SAMPLE_VALUE = reject_sample_value,
-    | REJECTED_ROW_LOCATION = '\REJECT_Directory'
+    | REJECTED_ROW_LOCATION = '/REJECT_Directory'
   
 }  
 ```  

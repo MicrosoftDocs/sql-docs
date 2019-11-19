@@ -21,6 +21,10 @@ The intelligent query processing (IQP) feature family includes features with bro
 
 ![Intelligent Query Processing](./media/iqp-feature-family.png)
 
+Watch this 6-minute video for an overview of intelligent query processing:
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Intelligent-Query-processing-in-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
+
+
 You can make workloads automatically eligible for intelligent query processing by enabling the applicable database compatibility level for the database. You can set this using [!INCLUDE[tsql](../../includes/tsql-md.md)]. For example:  
 
 ```sql

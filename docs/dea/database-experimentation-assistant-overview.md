@@ -27,6 +27,10 @@ DEA analysis metrics include:
 
 Comparison data can lead to higher confidence and a successful upgrade experience.
 
+For a 19-minute introduction to DEA and a demonstration, watch the following video:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player?WT.mc_id=dataexposed-c9-niner]
+
 ## Get DEA
 
 To install DEA, [download](https://www.microsoft.com/download/details.aspx?id=54090) the latest version of the tool. Then, run the **DatabaseExperimentationAssistant.exe** file.

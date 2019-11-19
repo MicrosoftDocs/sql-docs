@@ -163,14 +163,14 @@ This option is useful if you have the required permission to alter a library, bu
 Instead, you can pass the package contents as a variable in binary format.
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-**PLATFORM = WINDOWS**
+**platform = WINDOWS**
 
 Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform.
 In SQL Server 2017, Windows is the only supported platform.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-**PLATFORM**
+**platform**
 
 Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform. 
 In SQL Server 2019, Windows and Linux are the supported platforms.

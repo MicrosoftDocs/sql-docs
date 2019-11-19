@@ -56,7 +56,7 @@ By using SQL Server built-in functions and operators, you can do the following t
 The next sections discuss the key capabilities that SQL Server provides with its built-in JSON support. You can see how to use JSON functions and operators in the following video:
 
 *SQL Server 2016 and JSON Support*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player?WT.mc_id=dataexposed-c9-niner]
 
 ### Extract values from JSON text and use them in queries
 
@@ -399,7 +399,7 @@ Here's what you can do with the scripts that are included in the file:
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following video:
 
 *Using JSON in SQL Server 2016 and Azure SQL Database*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
 
 *Building REST API with SQL Server using JSON functions*
 > [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]

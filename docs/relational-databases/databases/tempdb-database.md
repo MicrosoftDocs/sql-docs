@@ -208,7 +208,14 @@ For more information on performance improvements in TempDB, see the following bl
 [TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
 
 ## Memory-Optimized TempDB Metadata
-TempDB metadata contention has historically been a bottleneck to scalability for many workloads running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new feature that is part of the [In-Memory Database](../in-memory-database.md) feature family, memory-optimized TempDB metadata, which effectively removes this bottleneck and unlocks a new level of scalability for TempDB-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the system tables involved in managing temporary table metadata can be moved into latch-free non-durable memory-optimized tables. In order to opt-in to this new feature, use the following script:
+TempDB metadata contention has historically been a bottleneck to scalability for many workloads running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new feature that is part of the [In-Memory Database](../in-memory-database.md) feature family, memory-optimized TempDB metadata, which effectively removes this bottleneck and unlocks a new level of scalability for TempDB-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the system tables involved in managing temporary table metadata can be moved into latch-free non-durable memory-optimized tables.
+
+Watch this 7-minute video for an overview of how and when to use memory optimized TempDB metadata:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
+
+
+In order to opt-in to this new feature, use the following script:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 

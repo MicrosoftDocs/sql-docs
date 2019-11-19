@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/16/2019"
+ms.date: "11/19/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -108,11 +108,11 @@ This command resets all counters to 0.
 |BACKUPTHREAD |Occurs when a task is waiting for a backup task to finish. Wait times may be long, from several minutes to several hours. If the task that is being waited on is in an I/O process, this type does not indicate a problem.| 
 |BAD_PAGE_PROCESS |Occurs when the background suspect page logger is trying to avoid running more than every five seconds. Excessive suspect pages cause the logger to run frequently.| 
 |BLOB_METADATA |Internal use only. <br />**Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
-|BMPALLOCATION |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br />**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|BMPBUILD |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br />**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|BMPREPARTITION |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|BMPREPLICATION |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|BPSORT |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
+|BMPALLOCATION |Occurs with parallel batch-mode plans when synchronizing the allocation of a large bitmap filter. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism.<br />**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|BMPBUILD |Occurs with parallel batch-mode plans when synchronizing the building of a large bitmap filter. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism. <br />**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|BMPREPARTITION |Occurs with parallel batch-mode plans when synchronizing the repartitioning of a large bitmap filter. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|BMPREPLICATION |Occurs with parallel batch-mode plans when synchronizing the replication of a large bitmap filter across worker threads. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|BPSORT |Occurs with parallel batch-mode plans when synchronizing the sorting of a dataset across multiple threads. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |BROKER_CONNECTION_RECEIVE_TASK |Occurs when waiting for access to receive a message on a connection endpoint. Receive access to the endpoint is serialized.| 
 |BROKER_DISPATCHER |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |BROKER_ENDPOINT_STATE_MUTEX |Occurs when there is contention to access the state of a Service Broker connection endpoint. Access to the state for changes is serialized.| 
@@ -355,11 +355,11 @@ This command resets all counters to 0.
 |HK_RESTORE_FILEMAP |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |HKCS_PARALLEL_MIGRATION |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |HKCS_PARALLEL_RECOVERY |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
-|HTBUILD |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|HTDELETE |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|HTMEMO |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|HTREINIT |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|HTREPARTITION |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HTBUILD |Occurs with parallel batch-mode plans when synchronizing the building of the hash table on the input side of a hash join/aggregation. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism. <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HTDELETE |Occurs with parallel batch-mode plans when synchronizing at the end of a hash join/aggregation. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|HTMEMO |Occurs with parallel batch-mode plans when synchronizing before scanning hash table to output matches / non-matches in hash join/aggregation. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|HTREINIT |Occurs with parallel batch-mode plans when synchronizing before resetting a hash join/aggregation for the next partial join. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|HTREPARTITION |Occurs with parallel batch-mode plans when synchronizing the repartitioning of the hash table on the input side of a hash join/aggregation. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism.<br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HTTP_ENUMERATION |Occurs at startup to enumerate the HTTP endpoints to start HTTP.| 
 |HTTP_START |Occurs when a connection is waiting for HTTP to complete initialization.| 
 |HTTP_STORAGE_CONNECTION |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 

@@ -15,6 +15,11 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 One of the key scenarios for SQL Server 2019 is the ability to virtualize data. This process allows the data to stay in its original location. You can *virtualize* the data in a SQL Server instance so that it can be queried there like any other table in SQL Server. This process minimizes the need for ETL processes. This process is possible with the use of PolyBase connectors. For more information on data virtualization, see [Get started with PolyBase](polybase-guide.md).
 
+This video provides an introduction into data virtualization:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-Data-Virtualization/player?WT.mc_id=dataexposed-c9-niner]
+
+
 ## Start the External Table wizard
 
 Connect to the master instance by using the IP address/port number of the **sql-server-master** endpoint obtained by using [**azdata cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints) command. Expand your **Databases** node in the Object Explorer. Then select one of the databases where you want to virtualize the data from an existing SQL Server instance. Right-click the database, and select **Create External Table** to start the Virtualize Data wizard. You also can start the Virtualize Data wizard from the command palette. Use Ctrl+Shift+P in Windows, or use Cmd+Shift+P with a Mac.

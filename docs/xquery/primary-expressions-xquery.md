@@ -30,11 +30,11 @@ ms.author: "jroth"
   
 |Entity reference|Represents|  
 |----------------------|----------------|  
-|&lt;|\<|  
-|&gt;|>|  
-|&amp;|&|  
-|&quot;|"|  
-|&apos;|'|  
+|`&lt;`|\<|  
+|`&gt;`|>|  
+|`&amp;`|&|  
+|`&quot;`|"|  
+|`&apos;`|'|  
   
  A string literal can also contain a character reference, an XML-style reference to a Unicode character, that is identified by its decimal or hexadecimal code point. For example, the Euro symbol can be represented by the character reference, "&\#8364;".  
   

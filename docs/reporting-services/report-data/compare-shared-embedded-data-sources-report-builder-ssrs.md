@@ -1,5 +1,5 @@
 ---
-title: "Compare shared and embedded  data sources - Report Builder & SSRS | Microsoft Docs"
+title: "Compare shared and embedded  data sources - Report Builder & Reporting Services (SSRS) | Microsoft Docs"
 ms.date: 11/18/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -10,7 +10,7 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Compare shared and embedded data sources - Report Builder & SSRS
+# Compare shared and embedded data sources - Report Builder & Reporting Services (SSRS)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
  
@@ -29,6 +29,8 @@ You can connect to data with either a shared or an embedded data source. A *shar
      Developers can use the <xref:Microsoft.ReportingServices.DataProcessing> API to create data processing extensions to support additional types of data sources.  
   
 -   In [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], browse to a report server or SharePoint site and select shared data sources or create embedded data sources in the report. You can't create a shared data source in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. You can't use custom data extensions in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
+
+## Summary of differences
   
  The following table summarizes the differences between embedded and shared data sources.  
   

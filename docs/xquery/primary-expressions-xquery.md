@@ -58,7 +58,7 @@ GO
 ```  
 DECLARE @var XML  
 SET @var = ''  
-SELECT @var.query(' <SalaryRange>Salary > 50000 and < 100000</SalaryRange>')  
+SELECT @var.query(' <SalaryRange>Salary &gt; 50000 and &lt; 100000</SalaryRange>')  
 GO  
 ```  
   
@@ -176,6 +176,5 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
 -   Function import is not supported.  
   
 ## See Also  
- [XML Construction &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
-  
-  
+ [XML Construction &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)
+ 

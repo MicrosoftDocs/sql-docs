@@ -75,7 +75,7 @@ ms.author: vanto
 ## E. Using correlated subqueries
 A correlated subquery is a query that depends on the outer query for its values. This query can be executed repeatedly, one time for each row that may be selected by the outer query.
 
- The following example shows queries that are semantically equivalent and illustrates the difference between using the `EXISTS` keyword and the `IN` keyword. Both are examples of a valid subquery that retrieves one instance of each product name for which the product model is a long sleeve logo jersey, and the `ProductModelID` numbers match between the `Product` and `ProductModel` tables.  
+The first example shows queries that are semantically equivalent to illustrate the difference between using the `EXISTS` keyword and the `IN` keyword. Both are examples of a valid subquery that retrieves one instance of each product name for which the product model is a long sleeve logo jersey, and the `ProductModelID` numbers match between the `Product` and `ProductModel` tables.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   

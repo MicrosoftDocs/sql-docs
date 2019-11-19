@@ -1024,6 +1024,8 @@
     href: ../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md
   - name: Add and Verify a Data Connection
     href: ../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md
+  - name: Specify Credential and Connection Information
+    href: ../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md
   - name: Compare Shared and Embedded Data Sources
     href: ../reporting-services/report-data/compare-shared-embedded-data-sources-report-builder-ssrs.md
   - name: Create and Modify Shared Data Sources

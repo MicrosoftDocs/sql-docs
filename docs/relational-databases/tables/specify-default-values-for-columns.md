@@ -19,7 +19,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to specify a default value that will be entered into the table column. You can use the Object Explorer of the user interface that, or you can the general control for submitting [!INCLUDE[tsql](../../includes/tsql-md.md)].
+You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to specify a default value that will be entered into the table column. You can set a default by using the Object Explorer of the user interface or by submitting [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 If you do not assign a default value to the column, and the user leaves the column blank, then:
 

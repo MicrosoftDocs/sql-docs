@@ -15,28 +15,44 @@ ms.reviewer: rothja
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-This page describes how the Microsoft.Data.SqlClient namespace offers additional functionality over the existing System.Data.SqlClient namespace.
-  
-## Release notes
-All release notes are available on the [GitHub Repository](https://github.com/dotnet/SqlClient/tree/master/release-notes).
 
-## New features
+## Release notes for Microsoft.Data.SqlClient v1.1.0
 
-### New features over .NET Framework 4.7.2 System.Data.SqlClient
+Release notes are also available on the GitHub Repository: [1.1 Release Notes](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.1).
 
-Data Classification - Available in Azure SQL Database and Microsoft SQL Server 2019 since CTP 2.0.
+### New Features
 
-UTF-8 support - Available in Microsoft SQL Server SQL Server 2019 since CTP 2.3.
+#### Always Encrypted with secure enclaves
+Always Encrypted is available starting in Microsoft SQL Server 2016. Secure enclaves are available starting in Microsoft SQL Server 2019. In order to use the enclave feature, connection strings should include the required attestation protocol and attestation URL. Examples:
 
-### New features over .NET Core 2.2 System.Data.SqlClient
+```
+Attestation Protocol=HGS;Enclave Attestation Url=<attestation_url_for_HGS>
+```
 
-Data Classification - Available in Azure SQL Database and Microsoft SQL Server 2019 since CTP 2.0.
+For more details, see: 
+- [SqlClient support for Always Encrypted](sql/sqlclient-support-always-encrypted.md)
+- [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
 
-UTF-8 support - Available in Microsoft SQL Server SQL Server 2019 since CTP 2.3.
+## Release notes for Microsoft.Data.SqlClient v1.0
 
-Always Encrypted with Enclaves - Always Encrypted is available in Microsoft SQL Server 2016 and higher. Enclave support was introduced in Microsoft Sql Server 2019 CTP 2.0.
+The initial release for the Microsoft.Data.SqlClient namespace offers additional functionality over the existing System.Data.SqlClient namespace.
+Release notes are also available on the GitHub Repository: [1.0 Release Notes](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.0).
 
-Authentication - Active Directory Password authentication mode.
+### New features
+
+#### New features over .NET Framework 4.7.2 System.Data.SqlClient
+
+- **Data Classification** - Available in Azure SQL Database and Microsoft SQL Server 2019 since CTP 2.0.
+
+- **UTF-8 support** - Available in Microsoft SQL Server SQL Server 2019 since CTP 2.3.
+
+#### New features over .NET Core 2.2 System.Data.SqlClient
+
+- **Data Classification** - Available in Azure SQL Database and Microsoft SQL Server 2019 since CTP 2.0.
+
+- **UTF-8 support** - Available in Microsoft SQL Server SQL Server 2019 since CTP 2.3.
+
+- **Authentication** - Active Directory Password authentication mode.
 
 ### Data Classification
 

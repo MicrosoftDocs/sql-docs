@@ -45,8 +45,12 @@ Describes support for snapshot isolation, a row versioning mechanism designed to
 Describes SqlClient support for high-availability, disaster recovery (AlwaysOn) availability groups.  
   
 [SqlClient support for LocalDB](sqlclient-support-localdb.md)  
-Describes SqlClient support for LocalDB databases.  
-  
+Describes SqlClient support for LocalDB databases.
+
+[SqlClient support for Always Encrypted](sqlclient-support-always-encrypted.md)  
+Describes SqlClient support for Always Encrypted feature.
+
+
 ## Next steps
 - [SQL Server data operations in ADO.NET](sql-server-data-operations.md)
 - [SQL Server and ADO.NET](index.md)

@@ -7,7 +7,7 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 author: cheenamalhotra
-ms.author: cheenamalhotra
+ms.author: v-chmalh
 ms.reviewer: rothja
 ---
 # SqlClient support for Always Encrypted

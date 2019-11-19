@@ -9,7 +9,7 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: tutorial
 author: karinazhou
-ms.author: karinazhou
+ms.author: v-jizho2
 ---
 # Tutorial: Develop a .NET application using Always Encrypted with secure enclaves
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]

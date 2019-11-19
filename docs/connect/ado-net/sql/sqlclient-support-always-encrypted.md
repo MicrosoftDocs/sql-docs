@@ -64,7 +64,7 @@ To configure your application:
 2. Enable enclave computations for a connection from your application to the database by setting the `Enclave Attestation URL` keyword in the connection string to an attestation endpoint. The value of the keyword should be set to the attestation endpoint of the HGS server, configured in your environment.
 3. Provide attestation protocol to be used by setting `Attestation Protocol` keyword in connection string. The value of this keyword should be set to "HGS".
 
-For a step-by-step tutorial, see [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md). @Karina
+For a step-by-step tutorial, see [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md).
 
 ## Retrieving and Modifying Data in Encrypted Columns
 

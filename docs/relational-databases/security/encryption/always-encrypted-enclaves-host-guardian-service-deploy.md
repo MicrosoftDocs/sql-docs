@@ -57,8 +57,6 @@ Before you start, ensure the computer you're using is running Windows Server 201
     Initialize-HgsAttestation -HgsServiceName 'hgs'
     ```
 
-4. Continue to [Step 2: Configure the attestation service](#step-2-configure-the-attestation-service).
-
 ## Step 2: Add more HGS computers to the cluster
 
 Once your first HGS computer and cluster is set up, you can add additional HGS servers to provide high availability.
@@ -109,7 +107,23 @@ As with the first HGS computer, ensure the computer you're joining to the cluste
 
 5. Repeat Step 2 for every computer you wish to add to your HGS cluster.
 
-## Step 3: Configure the attestation service
+## Step 3: Configure a DNS forwarder to your HGS cluster
+
+HGS runs its own DNS server which contains the name records needed to resolve the attestation service.
+Your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers will not be able to resolve these records until you configure your network's DNS server to forward requests to the HGS DNS servers.
+
+The process for configuring DNS forwarders is vendor-specific, so we recommend contacting your network administrator for the correct guidance for your particular network.
+
+If you're using the Windows Server DNS Server role for your corporate network, your DNS administrator can create a conditional forwarder to the HGS domain so that only requests for the HGS domain are forwarded.
+For example, if your HGS servers use the "bastion.local" domain name and have IP addresses of 172.16.10.20, 172.16.10.21, and 172.16.10.22, you can run the following command on the corporate DNS server to configure a conditional forwarder:
+
+```powershell
+# Tip: make sure to provide every HGS server's IP address
+# If you use separate NICs for cluster and application traffic, use the application traffic NIC IP addresses here
+Add-DnsServerConditionalForwarderZone -Name 'bastion.local' -ReplicationScope "Forest" -MasterServers "172.16.10.20", "172.16.10.21", "172.16.10.22"
+```
+
+## Step 4: Configure the attestation service
 
 HGS supports two attestation modes: TPM attestation for cryptographic verification of the integrity and identity of each [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer and Host Key attestation for simple verification of the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer's identity.
 If you haven't already selected an attestation mode, check out the attestation information in the [planning guide](./always-encrypted-enclaves-host-guardian-service-plan.md#attestation-modes) for more details about the security assurances and use cases for each mode.
@@ -190,7 +204,7 @@ Set-HgsServer -TrustHostKey
 
 All HGS computers in your cluster will now use host key mode when a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer tries to attest.
 
-## Configure the HGS HTTPS binding
+## Step 5: Configure the HGS HTTPS binding
 
 In a default installation, HGS only exposes an HTTP (port 80) binding.
 You can configure an HTTPS (port 443) binding to encrypt all communications between [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers and HGS.

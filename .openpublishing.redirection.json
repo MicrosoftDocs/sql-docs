@@ -623,12 +623,12 @@
         {
             "source_path": "docs/advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md",
             "redirect_url": "/sql/advanced-analytics/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/advanced-analytics/sql-server-machine-learning-services.md",
             "redirect_url": "/sql/advanced-analytics/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/advanced-analytics/install/sql-machine-learning-services-ver15.md",

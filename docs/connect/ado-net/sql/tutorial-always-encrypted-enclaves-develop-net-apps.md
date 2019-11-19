@@ -8,8 +8,8 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: tutorial
-author: v-jizho2
-ms.author: v-jizho2
+author: karinazhou
+ms.author: karinazhou
 ---
 # Tutorial: Develop a .NET application using Always Encrypted with secure enclaves
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]

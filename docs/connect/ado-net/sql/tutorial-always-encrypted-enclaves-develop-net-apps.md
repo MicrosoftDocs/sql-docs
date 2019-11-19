@@ -11,29 +11,32 @@ ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
 ---
+
 # Tutorial: Develop a .NET application using Always Encrypted with secure enclaves
+
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 [!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 
-This tutorial teaches you how to develop a simple application that issues database queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md). 
+This tutorial teaches you how to develop a simple application that issues database queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## Prerequisites
-This tutorial is the continuation of [Tutorial: Getting Started with Always Encrypted with secure enclaves using SSMS](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md). Make sure you've completed it, before following the below steps.
 
-In addition, you need Visual Studio (version 2019 is recommended) - you can download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). You application development environment must use .NET Framework 4.6 or later or .NET Core 2.1 or later.
+This tutorial is the continuation of [Tutorial: Getting Started with Always Encrypted with secure enclaves using SSMS](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md). Make sure you've completed it before following the below steps.
+
+In addition, you need Visual Studio (version 2019 is recommended) - you can download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Your application development environment must use .NET Framework 4.6 or later or .NET Core 2.1 or later.
 
 ## Step 1: Set up your Visual Studio Project
 
-To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application is built against .NET Framework 4.6 or higher. Whereas, to use Always Encrypted with secure enclaves in a .NET Core application, you need to make sure your application is built against .NET Core 2.1 or higher.
+To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application targets .NET Framework 4.6 or higher. To use Always Encrypted with secure enclaves in a .NET Core application, you need to make sure your application targets .NET Core 2.1 or higher.
 
-In addition, if you store you column master key in Azure Key Vault, you also need to integrate your application with the [Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider NuGet](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider). 
+In addition, if you store you column master key in Azure Key Vault, you also need to integrate your application with the [Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider NuGet](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider).
 
 1. Open Visual Studio.
 
 2. Create a new C\# Console App (.NET Framework / Core) project.
 
-3. Make sure your project targets at least .NET Framework 4.6 or .NET Core 2.1. Right-click on the project in Solution Explorer, select Properties and set Target framework.
+3. Make sure your project targets at least .NET Framework 4.6 or .NET Core 2.1. Right-click on the project in Solution Explorer, select Properties and set the Target framework.
 
 4. Install the following NuGet package by going to **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Console**. Run the following code in the Package Manager Console.
 
@@ -48,17 +51,17 @@ In addition, if you store you column master key in Azure Key Vault, you also nee
    Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
    ```
 
-6. Specify the `Attestation Protocol` and the `Enclave Attestation Url` in the connection string which will be used in your application to communicate with the SQL Server. 
+6. Specify the `Attestation Protocol` and the `Enclave Attestation Url` in the connection string, which will be used in your application to communicate with the SQL Server.
 
   ```cs
    Attestation Protocol = HGS; Enclave Attestation Url = http://hgs.bastion.local/Attestation; Column Encryption Setting = Enabled
    ```
 
-
 ## Step 2: Implement your application logic
-Your application will connect to the **ContosoHR** database from [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) and it will run a query that contains the `LIKE` predicate on the **SSN** column and and a range comparison on the **Salary** column.
 
-1. Replace the content of the Program.cs file (generated by Visual Studio) with the below code. Update the database connection string with your server name and the an enclave attestation URL for your environment. You may also update database authentication settings.
+Your application will connect to the **ContosoHR** database from the [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](tutorial-getting-started-with-always-encrypted-enclaves.md) and it will run a query that contains the `LIKE` predicate on the **SSN** column and a range comparison on the **Salary** column.
+
+1. Replace the content of the Program.cs file (generated by Visual Studio) with the following code. Update the database connection string with your server name and the enclave attestation URL for your environment. You may also update database authentication settings.
 
     ```cs
     using System;
@@ -71,7 +74,7 @@ Your application will connect to the **ContosoHR** database from [Tutorial: Gett
         {
             static void Main(string[] args)
             {
-    
+
                 string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Attestation Protocol = HGS; Enclave Attestation Url = http://hgs.bastion.local/Attestation; Integrated Security = true";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -100,22 +103,23 @@ Your application will connect to the **ContosoHR** database from [Tutorial: Gett
 
                     cmd.Parameters.Add(MinSalary);
                     cmd.ExecuteNonQuery();
-    
+
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
 
                     {
                         Console.WriteLine(reader);
                         Console.WriteLine(reader[0] + ", " + reader[1] + ", " + reader[2] + ", " + reader[3]);
-                    }   
+                    }
                     Console.ReadKey();
                 }
             }
         }
     }
     ```
-    
-2. Build and run the application.  
+
+2. Build and run the application.
 
 ## See Also
+
 - [Using Always Encrypted with the Microsoft .NET Data Provider for SQL Server](sqlclient-support-always-encrypted.md)

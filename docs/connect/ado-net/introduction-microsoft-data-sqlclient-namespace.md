@@ -15,21 +15,22 @@ ms.reviewer: rothja
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-
 ## Release notes for Microsoft.Data.SqlClient v1.1.0
 
-Release notes are also available on the GitHub Repository: [1.1 Release Notes](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.1).
+Release notes are also available in the GitHub Repository: [1.1 Release Notes](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.1).
 
 ### New Features
 
 #### Always Encrypted with secure enclaves
+
 Always Encrypted is available starting in Microsoft SQL Server 2016. Secure enclaves are available starting in Microsoft SQL Server 2019. In order to use the enclave feature, connection strings should include the required attestation protocol and attestation URL. Examples:
 
 ```
 Attestation Protocol=HGS;Enclave Attestation Url=<attestation_url_for_HGS>
 ```
 
-For more details, see: 
+For more details, see:
+
 - [SqlClient support for Always Encrypted](sql/sqlclient-support-always-encrypted.md)
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
 
@@ -42,15 +43,15 @@ Release notes are also available on the GitHub Repository: [1.0 Release Notes](h
 
 #### New features over .NET Framework 4.7.2 System.Data.SqlClient
 
-- **Data Classification** - Available in Azure SQL Database and Microsoft SQL Server 2019 since CTP 2.0.
+- **Data Classification** - Available in Azure SQL Database and Microsoft SQL Server 2019.
 
-- **UTF-8 support** - Available in Microsoft SQL Server SQL Server 2019 since CTP 2.3.
+- **UTF-8 support** - Available in Microsoft SQL Server 2019.
 
 #### New features over .NET Core 2.2 System.Data.SqlClient
 
-- **Data Classification** - Available in Azure SQL Database and Microsoft SQL Server 2019 since CTP 2.0.
+- **Data Classification** - Available in Azure SQL Database and Microsoft SQL Server 2019.
 
-- **UTF-8 support** - Available in Microsoft SQL Server SQL Server 2019 since CTP 2.3.
+- **UTF-8 support** - Available in Microsoft SQL Server 2019.
 
 - **Authentication** - Active Directory Password authentication mode.
 

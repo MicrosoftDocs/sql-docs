@@ -21,4 +21,4 @@ ms.author: genemi
 * [Step 3: Proof of concept connecting to SQL using pymssql](../../../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md)  
 
 ## Documentation
-* [pymssql documentation](https://pymssql.org)  
+* [pymssql documentation](https://pypi.org/project/pymssql/)  

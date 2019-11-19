@@ -22,7 +22,8 @@ ms.author: sstein
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns one row for each change table in the database. A change table is created when change data capture is enabled on a source table. We recommend that you do not query the system tables directly. Instead, execute the [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) stored procedure.  
-  |Column name|Data type|Description|  
+
+|Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID of the change table. Is unique within a database.|  
 |**version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> For [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], this column always returns 0.|  

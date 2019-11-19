@@ -1,6 +1,6 @@
 ---
-title: "Create a Visual C# SMO Project in Visual Studio .NET | Microsoft Docs"
-ms.custom: ""
+title: "Create a Visual C# SMO Project in Visual Studio .NET"
+ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

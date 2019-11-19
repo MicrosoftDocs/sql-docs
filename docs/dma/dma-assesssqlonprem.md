@@ -1,5 +1,6 @@
 ---
-title: "Perform a SQL Server migration assessment (Data Migration Assistant) | Microsoft Docs"
+title: "Perform a SQL Server migration assessment"
+titleSuffix: Data Migration Assistant
 description: Learn how to use Data Migration Assistant to assess an on-premises SQL Server before migrating to another SQL Server or to Azure SQL Database
 ms.custom: ""
 ms.date: "08/08/2019"
@@ -14,6 +15,7 @@ helpviewer_keywords:
 ms.assetid: ""
 author: HJToland3
 ms.author: rajpo
+ms.custom: "seo-lt-2019"
 ---
 
 # Perform a SQL Server migration assessment with Data Migration Assistant

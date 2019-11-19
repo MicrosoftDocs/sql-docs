@@ -19,7 +19,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], some changes are only enabled once the [database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) has been changed. This was done for several reasons:  
+In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, some changes are only enabled once the [database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) has been changed. This was done for several reasons:  
   
 - Since upgrade is a one-way operation (it is not possible to downgrade the file format), there is value in separating the enablement of new features to a separate operation within the database. It is possible to revert a setting to a prior database compatibility level.  The new model reduces the number of things that must happen during an outage window.  
   

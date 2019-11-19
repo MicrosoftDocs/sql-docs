@@ -217,6 +217,8 @@ WITH
 (    LOCATION   = 'oracle://145.145.145.145:1521'
 ,    CREDENTIAL = OracleProxyAccount
 ,    PUSHDOWN   = ON
+,    TYPE=BLOB_STORAGE
+)
 ;
 ```
 

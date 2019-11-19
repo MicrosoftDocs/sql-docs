@@ -1,7 +1,7 @@
 ---
 title: "Editions and supported features of SQL Server 2019 | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2019"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -41,9 +41,6 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 This topic provides details of features supported by the various editions of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)].
 
-> [!NOTE]
-> This content is being updated for SQL Server 2019. The information in the article is not final.
-
 For information about older versions, see:
 
 * [SQL Server 2017](editions-and-components-of-sql-server-2017.md)
@@ -56,12 +53,12 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Evaluation edition is
 
 For the latest release notes and what's new information, see the following:
 
-* [[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] release notes](../sql-server/sql-server-ver15-release-notes.md)
-* [What's new in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017](../sql-server/what-s-new-in-sql-server-ver15.md)
+* [[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] release notes](../sql-server/sql-server-version-15-release-notes.md)
+* [What's new in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
 ### Try [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]!
 
->**[Download [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] from the Evaluation Center](http://www.microsoft.com//evalcenter/evaluate-sql-server)**
+>**[Download [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] from the Evaluation Center](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
 
 ## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] editions
 The following table describes the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -173,7 +170,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 
 <sup>2</sup> On Enterprise Edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes.
 
-<sup>3</sup> On Enterprise Edition, provides support for up to 8 secondary replicas - including 2 synchronous secondary replicas.
+<sup>3</sup> On Enterprise Edition, provides support for up to 8 secondary replicas - including 5 synchronous secondary replicas.
 
 <sup>4</sup> Standard Edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).
 

@@ -1,6 +1,7 @@
 ---
-title: "Stretch Database Extended Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Extended Stored Procedures (Transact-SQL)"
+titleSuffix: SQL Server Stretch Database
+ms.custom: seo-dt-2019
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""

@@ -1,7 +1,7 @@
 ---
-title: Capture a trace in Database Experimentation Assistant for SQL Server upgrades
-description: Capture a trace in Database Experimentation Assistant
-ms.custom: ""
+title: Capture a trace for SQL Server upgrades
+description: Capture a trace in Database Experimentation Assistant for SQL Server upgrades
+ms.custom: "seo-lt-2019"
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -139,4 +139,4 @@ If you see any other errors labeled *Sql Error Code*, see [Database Engine Error
 
 - For a 19-minute introduction to DEA and demonstration, watch the following video:
 
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player?WT.mc_id=dataexposed-c9-niner]

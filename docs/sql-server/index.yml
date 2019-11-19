@@ -60,7 +60,7 @@ landingContent:
         url: /azure/sql-database/sql-database-single-database
       - text: Azure SQL Database managed instance
         url: /azure/sql-database/sql-database-managed-instance
-      - text: Azure SQL Data Warehouse
+      - text: Azure Synapse Analytics (SQL DW)
         url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
       - text: SQL Server on a Windows VM
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview

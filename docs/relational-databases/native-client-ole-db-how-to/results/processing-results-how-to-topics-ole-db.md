@@ -16,7 +16,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Processing Results How-to Topics (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Processing results in an OLE DB application involves first determining the characteristics of the result set, and then retrieving the data into program variables. If the command executes a stored procedure, you also must know how to process return codes and output parameters from the stored procedures.  
   

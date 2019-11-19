@@ -52,7 +52,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
 <Δ/>  
 ```  
   
- If the SQL target type is VARCHAR or NCHAR, the result is serialized in the encoding that corresponds to the database's collation code page without a byte order mark or XML declaration. If the target type is too small or the value cannot be mapped to the target collation code page, an error is raised.  
+ If the SQL target type is VARCHAR or CHAR, the result is serialized in the encoding that corresponds to the database's collation code page without a byte order mark or XML declaration. If the target type is too small or the value cannot be mapped to the target collation code page, an error is raised.  
   
  For example:  
   

@@ -1,5 +1,5 @@
 ---
-title: Real-time scoring using sp_rxPredict stored procedure
+title: Real-time scoring using sp_rxPredict
 description: Generate predictions using sp_rxPredict, scoring data inputs against a pre-trained model written in R on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,7 @@ ms.date: 07/26/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Real-time scoring with sp_rxPredict in SQL Server machine learning

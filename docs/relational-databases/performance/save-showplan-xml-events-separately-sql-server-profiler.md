@@ -1,6 +1,7 @@
 ---
-title: "Save Showplan XML events separately (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
+title: "Save Showplan XML events separately"
+titleSuffix: SQL Server Profiler
+ms.custom: seo-dt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.reviewer: ""

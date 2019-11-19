@@ -98,12 +98,11 @@ SELECT LoginID, JobTitle
 FROM AdventureWorks2012.HumanResources.Employee  
 WHERE JobTitle = 'Marketing Specialist';  
 OPEN Employee_Cursor;  
-FETCH NEXT FROM Employee_Cursor;  
 FETCH NEXT FROM Employee_Cursor INTO @EmployeeID, @Title;  
 WHILE @@FETCH_STATUS = 0  
    BEGIN  
       Print '   ' + @EmployeeID + '      '+  @Title 
-      FETCH NEXT FROM Employee_Cursor;  
+      FETCH NEXT FROM Employee_Cursor INTO @EmployeeID, @Title;  
    END;  
 CLOSE Employee_Cursor;  
 DEALLOCATE Employee_Cursor;  

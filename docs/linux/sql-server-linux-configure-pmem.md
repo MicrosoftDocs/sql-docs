@@ -14,6 +14,8 @@ monikerRange: ">= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallprod
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This article describes how to configure persistent memory (PMEM) for SQL Server on Linux.
+=======
+This article describes how to configure the persistent memory (PMEM) for SQL Server on Linux. PMEM support on Linux was introduced in SQL Server 2019.
 
 ## Overview
 
@@ -32,9 +34,9 @@ This article describes how to configure persistent memory (PMEM) for SQL Server 
   - Use `ndctl` to create a namespace. Namespaces are interleaved across PMEM NVDIMMs and can provide different types of user-space access to memory regions on the device. `fsdax` is default and desired mode for SQL Server.
 
   ```bash 
-  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=mem
+  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=dev
   ```
-  Note that we have chosen `fsdax` mode and are using system memory to store per-page metadata. With very large persistent memory devices and considerably smaller amounts of system memory, it might be advisable to consider `--map=dev`. This will store the meta data on the namespace directly.
+  Note that we have chosen `fsdax` mode and are using system memory to store per-page metadata. We recommend using `--map=dev`. This stores the meta data on the namespace directly. Storing meta data in memory using `--map=mem` is considered experimental at this time.
 
   Use `ndctl` to verify the namespace. 
   
@@ -86,3 +88,4 @@ ndctl list
 ## Next steps
 
 For more information about SQL Server on Linux, see [SQL Server on Linux](sql-server-linux-overview.md).
+For performance best practices for SQL Server on Linux, see [Performance Best Practices](sql-server-linux-performance-best-practices.md).

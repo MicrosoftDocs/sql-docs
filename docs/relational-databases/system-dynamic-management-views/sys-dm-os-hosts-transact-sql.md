@@ -60,7 +60,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.|  
   
 ```  
 SELECT h.type, SUM(mc.pages_kb) AS commited_memory  

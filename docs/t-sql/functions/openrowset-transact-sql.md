@@ -100,7 +100,7 @@ BULK
 Uses the BULK rowset provider for OPENROWSET to read data from a file. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], OPENROWSET can read from a data file without loading the data into a target table. This lets you use OPENROWSET with a simple SELECT statement.
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 The arguments of the BULK option allow for significant control over where to start and end reading data, how to deal with errors, and how data is interpreted. For example, you can specify that the data file be read as a single-row, single-column rowset of type **varbinary**, **varchar**, or **nvarchar**. The default behavior is described in the argument descriptions that follow.
 
@@ -117,7 +117,7 @@ Is the full path of the data file whose data is to be copied into the target tab
 Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the data_file can be in Azure blob storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 \<bulk_options>
 Specifies one or more arguments for the BULK option.
@@ -304,7 +304,7 @@ SELECT CustomerID, CompanyName
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### C. Using OPENROWSET and another table in an INNER JOIN
 
@@ -325,7 +325,7 @@ FROM Northwind.dbo.Customers AS c
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support reading from Windows files.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] only supports reading from Azure Blob Storage.
 
 ### D. Using OPENROWSET to bulk insert file data into a varbinary(max) column
 
@@ -346,7 +346,7 @@ GO
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### E. Using the OPENROWSET BULK provider with a format file to retrieve rows from a text file
 
@@ -375,7 +375,7 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### F. Specifying a format file and code page
 
@@ -400,7 +400,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support reading from Windows files.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] only supports reading from Azure Blob Storage.
 
 ### H. Accessing data from a CSV file without a format file
 
@@ -422,7 +422,7 @@ from openrowset
 > [!IMPORTANT]
 >
 > - The ODBC driver should be 64-bit. Open the **Drivers** tab of the [OBDC Data Sources](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) application in Windows to verify this. There is 32-bit `Microsoft Text Driver (*.txt, *.csv)` that will not work with a 64-bit version of sqlservr.exe.
-> - Azure SQL Database does not support reading from Windows files.
+> - Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### I. Accessing data from a file stored on Azure Blob storage
 
@@ -472,7 +472,7 @@ SELECT * FROM OPENROWSET(
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### Additional Examples
 

@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: SQL backup & restore to Azure Blob storage service"
+title: "Quickstart: Backup & restore to Azure Blob storage service"
 ms.custom: seo-dt-2019
 ms.date: "04/09/2018"
 ms.prod: sql

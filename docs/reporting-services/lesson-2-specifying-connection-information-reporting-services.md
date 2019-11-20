@@ -61,4 +61,4 @@ In this lesson, you've successfully defined a connection to the AdventureWorks20
 
 ## See also
 
-[Data Connections, Data Sources, and Connection Strings in Reporting Services](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+[Create data connection strings - Report Builder & SSRS](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

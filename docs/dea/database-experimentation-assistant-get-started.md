@@ -61,4 +61,8 @@ Considerations:
 
 ## See also
 
+- For a 19-minute introduction to DEA and demonstration, watch the following video:
+  
+  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player?WT.mc_id=dataexposed-c9-niner]
 - To learn how to produce a trace file with a log of events that occur on a server, see [Capture trace](database-experimentation-assistant-capture-trace.md).
+

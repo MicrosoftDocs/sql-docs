@@ -20,12 +20,12 @@ A _discontinued feature_ is one that is no longer supported. It might also be ph
 | Category | Deprecated feature | Replacement |
 | --- | --- | --- |
 | Report Server | HTML 4.0 Renderer | HTML 5 renderer |
-| Report Server | Customized Style Sheets for HTML Viewer and  Report Manager | You can still [brand the web portal](branding-the-web-portal?view=sql-server-ver15). |
+| Report Server | Customized Style Sheets for HTML Viewer and  Report Manager | You can still [brand the web portal](branding-the-web-portal.md). |
 
 ## See also
 
 - [Deprecated features in SQL Server 2019 Reporting Services](deprecated-features-in-sql-server-reporting-services-ssrs.md)
-* [Deprecated features in SQL Server 2016 Reporting Services](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+* [Deprecated features in SQL Server 2016 Reporting Services](deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 * [What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

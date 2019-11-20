@@ -135,6 +135,7 @@
     
         "advanced-analytics/**/*.md": "SQL Server Machine Learning Services",
         "analysis-services/**/*.md": "",
+        "analytics-platform-system": "Parallel Data Warehouse",
         "azure-data-studio/**/*.md": "Azure Data Studio",
         "integration-services/**/*.md": "SQL Server Integration Services (SSIS)",
         "language-extensions/**/*.md": "SQL Server Language Extensions",

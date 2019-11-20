@@ -175,7 +175,7 @@ Repeat the following steps for each [!INCLUDE [ssnoversion-md](../../../includes
     ```
 
     > [!TIP]
-    > If you encounter an error trying to register your unique TPM identifier, make sure you [imported the TPM endorsement key intermediate and root certificates](./always-encrypted-host-guardian-service-deploy.md#switch-to-tpm-attestation) on the HGS computer you're using.
+    > If you encounter an error trying to register your unique TPM identifier, make sure you [imported the TPM endorsement key intermediate and root certificates](./always-encrypted-enclaves-host-guardian-service-deploy.md#switch-to-tpm-attestation) on the HGS computer you're using.
 
 In addition to the platform identifier, TPM baseline, and code integrity policy, there are built-in policies configured and enforced by HGS that you may need to change.
 These built-in policies are measured from the TPM baseline you collect from the server and represent a variety of security settings that should be enabled to protect your computer.
@@ -273,4 +273,4 @@ The table below explains the most common values and how to remediate the errors.
 | HypervisorEnforcedCodeIntegrityPolicy | The computer is not configured to use a code integrity policy. Check your Group Policy or Local Group Policy > Computer Configuration > Administrative Templates > System > Device Guard > Turn on Virtualization Based Security > Virtualization based protection of code integrity. This policy item should be "Enabled without UEFI lock". |
 | Iommu | This computer does not have an IOMMU device enabled. If it's a physical computer, enable the IOMMU in your UEFI configuration menu. If it's a virtual machine and an IOMMU is not available, disable the Hgs_IommuEnabled policy on the HGS server. |
 | SecureBoot | Secure Boot is not enabled on this computer. Enable Secure Boot in your UEFI configuration menu to resolve this error. |
-| VirtualSecureMode | Virtualization Based Security is not running on this computer. Follow the guidance in [Step 2: Verify VBS is running on your computer](#step-2-verity-virtualization-based-security-is-running). |
+| VirtualSecureMode | Virtualization Based Security is not running on this computer. Follow the guidance in [Step 2: Verify VBS is running on your computer](#step-2-verify-virtualization-based-security-is-running). |

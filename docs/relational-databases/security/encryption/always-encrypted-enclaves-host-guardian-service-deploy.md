@@ -229,4 +229,4 @@ You can configure an HTTPS (port 443) binding to encrypt all communications betw
 
 ## Next steps
 
-- [Register computers with HGS](./always-encrypted-enclaves-host-guardian-service-register)
+- [Register computers with HGS](./always-encrypted-enclaves-host-guardian-service-register.md)

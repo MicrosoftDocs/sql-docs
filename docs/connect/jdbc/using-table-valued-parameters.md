@@ -42,7 +42,7 @@ Before table-valued parameters were introduced to SQL Server 2008, the options f
   
 - Create a series of individual SQL statements for data modifications that affect multiple rows. Changes can be submitted to the server individually or batched into groups. However, even when submitted in batches that contain multiple statements, each statement is executed separately on the server.  
   
-- Use the bcp utility program or [SQLServerBulkCopy](../../connect/jdbc/reference/using-bulk-copy-with-the-jdbc-driver.md) to load many rows of data into a table. Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.
+- Use the bcp utility program or [SQLServerBulkCopy](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md) to load many rows of data into a table. Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.
   
 ## Creating table-valued parameter types  
 

@@ -1,7 +1,7 @@
 ---
 title: "Mathematical Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/19/2019"
+ms.date: "07/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""

@@ -24,8 +24,6 @@ SQL Server provides support for creating snapshots from SQL Server data using Vo
 
 - **Virtual Device Interface**: SQL Server provides an application programming interface called Virtual Device Interface (VDI) that helps independent software vendors to integrate SQL Server into their products by providing support for backup and restore operations. These APIs are engineered to provide maximum reliability and performance, and support the full range of SQL Server backup and restore functionality, including the full range of hot and snapshot backup capabilities. For more details, see [SQL Server 2005 Virtual Backup Device Interface Specification](https://www.microsoft.com/download/details.aspx?id=17282). 
 
-- **The MSDE writer**: The default VSS writer for SQL Server shipped with the VSS framework in Microsoft® Windows® XP and Windows 2003. This writer coordinates with SQL Server 2000 and earlier versions to help in backup operations. In SQL Server installations, the SQL writer is the preferred writer, although the MSDE writer would continue to work and will be the default writer if the SQL writer is not enabled.
-
 - **Requestor**: A process (either automated or GUI) that requests that one or more snapshot sets be taken of one or more original volumes. In this paper, a requestor is also used to imply a backup application that is creating a snapshot of SQL Server databases.
 
 ## About VSS
@@ -62,12 +60,7 @@ The role of the SQL writer in a VSS snapshot backup operation:
 
 
 ## Configuring the SQL Writer
-The SQL writer service is installed in the system as part of the SQL Server installation but is not set to start by default. MSDE writer that ships with the Windows operating system is the default writer that is used by the VSS framework to backup SQL Server databases when SQL writer service is not running.
-
-### About the MSDE Writer
-The VSS framework that ships in Windows has a default writer (the MSDE writer) that works with SQL Server instances. This writer provides basic backup capabilities with installed SQL Server databases, but lacks the additional capabilities for doing differential backups and other advanced options that are enabled by the SQL writer on SQL Server instances.
-
-The SQL writer is the preferred writer for backing up databases in SQL Server instances due to its additional options described in Supported Backup Operations in this topic. 
+The SQL writer service is installed in the system as part of the SQL Server installation and is configured to start automatically when Windows starts. 
 
 ### SQL Writer Service Account
 During installation, the SQL writer account will be installed to use the Local System account. Since the SQL writer needs to talk to SQL Server using exclusive VDI APIs, the SQL writer account must have sufficient access rights for both SQL Server and VSS.  Configuring the service as a Local System account provides sufficient rights for the service to run correctly.
@@ -120,7 +113,7 @@ The rest of this topic assumes that component-based backups are used as part of 
 - **Differenced File by Last Modify Time**: The SQL writer uses the VSS Differenced File by Last Modify Time mechanism for reporting changed files in full-text catalogs.
 - **Restore with Move**: The SQL writer supports VSS's New Target specification during restore.  VSS's New Target specification allows for a database/log file or full-text catalog container to be re-located as part of the Restore operation.
 - **Database Rename**: A requestor may need to restore an SQL database with a new name, especially if the database is to be restored side by side with the original database. The SQL writer supports renaming a database during the restore operation, as long as the database remains within the original SQL instance.
-- **Copy-Only Backup**: It is sometimes necessary to take a backup that is intended for a special purpose, for example when you need to make a copy of a database for testing purposes.  This backup should not impact the overall backup and restore procedures for the database. Using the COPY_ONLY option specifies that the backup is done "out-of-band" and should not affect the normal sequence of backups. The SQL writer supports the "copy-only" backup type with SQL Server 2005 instances.
+- **Copy-Only Backup**: It is sometimes necessary to take a backup that is intended for a special purpose, for example when you need to make a copy of a database for testing purposes.  This backup should not impact the overall backup and restore procedures for the database. Using the COPY_ONLY option specifies that the backup is done "out-of-band" and should not affect the normal sequence of backups. The SQL writer supports the "copy-only" backup type with SQL Server instances.
 - **Autorecovery of Database Snapshot**:   Typically a snapshot of a SQL Server database obtained by using the VSS framework is in a non-recovered state. Data in the snapshot cannot be safely accessed prior to it going through the recovery phase to rollback in-flight transactions and place the database in a consistent state. It is possible for a VSS backup application to request auto-recovery of the snapshots, as part of the snapshot creation process.
 
 These new features and their usage are described in more detail in Backup and Restore Option Details in this topic.
@@ -130,21 +123,28 @@ These new features and their usage are described in more detail in Backup and Re
 - Log backups are not supported by the SQL writer.
 - File/Filegroup backup is not supported.
 - Page restore is not supported.
+- Database snapshots are not supported and are ignored while creating both component and non-component VSS snapshots. 
+- Autoclose databases, or databases that ha
 
 The following table lists the kinds of snapshot backups that are supported by the SQL writer/SQL Server working with the VSS framework for all editions of SQL Server.
 
-| **Backup/Restore Operation**                 | **Component-Based**           | **Noncomponent-Based** | **SQL writer** | **MSDE Writer**                    |
-|:-------------------------------------------- | :---------------------------- | :--------------------- | :------------- | :--------------------------------- |
-|Full Data Backup </br> (Including full-text catalog)| Yes                     | Yes                    | Yes            | Yes </br> (No full-text catalog support) |
-|Full Restore                                  | Yes                           | Yes                    | No             | Yes                                |
-|Full Restore (No recovery)                    | Yes                           | No                     | No             | Yes                                |
-|Differential Backup                           | Yes                           | No                     | No             | No                                 |
-|Differential Restore                          | Yes                           | No                     | No             | No                                 |
-|Restore With Move                             | Yes                           | No                     | No             | No                                 |
-|Database Rename                               | Yes                           | No                     | No             | No                                 |
-|Copy Only Backup                              | Yes                           | No                     | No             | No                                 |
-|AutoRecovered Snapshots                       | Yes                           | No                     | No             | No                                 |
-|Log Backup                                    | No                            | No                     | No             | No                                 |
+| **Backup/Restore Operation**                 | **Component-Based**           | **Noncomponent-Based** |
+|:-------------------------------------------- | :---------------------------- | :--------------------- |
+|Full Data Backup </br> (Including full-text catalog)| Yes                     | Yes                    |
+|Full Restore                                  | Yes                           | Yes                    |
+|Full Restore (No recovery)                    | Yes                           | No                     |
+|Differential Backup                           | Yes                           | No                     |
+|Differential Restore                          | Yes                           | No                     |
+|Restore With Move                             | Yes                           | No                     |
+|Database Rename                               | Yes                           | No                     |
+|Copy Only Backup                              | Yes                           | No                     |
+|AutoRecovered Snapshots                       | Yes                           | No                     |
+|Log Backup                                    | No                            | No                     |
+|Database snapshots                            | No                            | No                     |
+|Autoclose databases</br> Databases with shutdown | Yes                        | No                     |
+|Availability group databases                  | Yes                           | No on secondary        | 
+
+
 
 
 ## Snapshot Creation Process
@@ -189,7 +189,7 @@ This is an XML document created by a writer (the SQL writer in this case) using 
 - Writer Identification Information
     - **Writer name**  - L"SqlServerWriter"
     - **Writer class ID** -  0xa65faa63, 0x5ea8, 0x4ebc, 0x9d, 0xbd, 0xa0, 0xc4, 0xdb, 0x26, 0x91, 0x2a 
-    - **Writer instance ID**  - L"SQL Server 2005:SQLWriter" 
+    - **Writer instance ID**  - L"SQL Server:SQLWriter" 
     - **VSSUsageType** - VSS_UT_USERDATA 
     - **VSSSourceType** - VSS_ST_TRANSACTEDDB 
 - Writer Level Information - VSS_APP_BACK_END 
@@ -560,7 +560,7 @@ System databases in SQL Server include the master, model, and msdb databases tha
 ### System databases
 Master database can only be restored by stopping the instance, replacing the database files (done by the backup application), then restarting the instance. No roll forward is possible.
 
-The SQL writer supports restore of both model and msdb databases online, without shutting down the instance. (This is an additional improvement over MSDE writer behavior).
+The SQL writer supports restore of both model and msdb databases online, without shutting down the instance.
 
 
 #### Simple Recovery model user databases

@@ -1,7 +1,7 @@
 ---
 title: "table (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/11/2018"
+ms.date: "11/19/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -108,12 +108,9 @@ Table variables can't be altered after creation.
 ## Table variable deferred compilation
 **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial plan compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts. This exact row count information will then be used for optimizing downstream plan operations.
 
-> [!NOTE]
-> Table variable deferred compilation is a public preview feature in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
-
 With table variable deferred compilation, compilation of a statement that references a table variable is deferred until the first actual execution of the statement. This deferred compilation behavior is identical to the behavior of temporary tables. This change results in the use of actual cardinality instead of the original one-row guess. 
 
-To enable the public preview of table variable deferred compilation, enable database compatibility level 150 for the database you're connected to when the query runs.
+To enable table variable deferred compilation, enable database compatibility level 150 for the database you're connected to when the query runs.
 
 Table variable deferred compilation **doesn't** change any other characteristics of table variables. For example, this feature doesn't add column statistics to table variables.
 

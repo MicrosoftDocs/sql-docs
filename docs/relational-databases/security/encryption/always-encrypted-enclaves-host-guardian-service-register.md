@@ -255,7 +255,7 @@ The most common values that may appear in **AttestationStatus** are explained be
 | ----------------- | ----------- |
 | Expired | The host passed attestation previously, but the health certificate it was issued has expired. Ensure the host and HGS time are in sync. |
 | InsecureHostConfiguration | The computer did not meet one or more of the attestation policies configured on the HGS server. See AttestationSubStatus for more information. |
-| NotConfigured | The computer is not configured with an attestation URL. [Configure the attestation URL](#configure-the-attestation-url) |
+| NotConfigured | The computer is not configured with an attestation URL. [Configure the attestation URL](#step-3-configure-the-attestation-url) |
 | Passed | The computer passed attestation and is trusted to run [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] enclaves. |
 | TransientError | The attestation attempt failed due to a temporary error. This usually means there was an issue contacting HGS over the network. Check your network connection and ensure the computer can resolve and route to the HGS service name. |
 | TpmError | Your computer's TPM device reported an error during the attestation attempt. Check the TPM logs for more information. Clearing the TPM may resolve the issue, but take care to suspend BitLocker and other services that rely on your TPM before clearing the TPM. |

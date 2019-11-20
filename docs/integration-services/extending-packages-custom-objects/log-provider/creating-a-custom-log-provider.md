@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "custom log providers [Integration Services], creating"
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Creating a Custom Log Provider
 

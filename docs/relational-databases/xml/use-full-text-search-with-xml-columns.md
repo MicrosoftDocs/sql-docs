@@ -30,8 +30,6 @@ ms.author: genemi
   
 2.  Next, query those XML values that use XML index on the XML column.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Example: Combining Full-text Search with XML Querying  
  After the full-text index has been created on the XML column, the following query checks that an XML value contains the word "custom" in the title of a book:  
   

@@ -143,7 +143,7 @@ GROUP BY LastName, SalesTerritoryRegion;
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```sql
-LastName          TotalSales     SalesTerritoryGroup  RankResult
+LastName          TotalSales     SalesTerritoryRegion  RankResult
 ----------------  -------------  -------------------  --------
 Tsoflias          1687000.0000   Australia            1
 Saraiva           7098000.0000   Canada               1

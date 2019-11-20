@@ -30,11 +30,11 @@ manager: kfile
   
  The following figure shows the graphical query designer when it is used with tables or views.  
   
- ![Graphical designer for queries](../analysis-services/media/rsqd-relational-graphical.gif "Graphical designer for queries")  
+ ![Graphical designer for queries](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "Graphical designer for queries")  
   
  The following figure shows the graphical query designer when it is used with stored procedures or table-valued functions.  
   
- ![Stored procedure in graphical query designer](../analysis-services/media/rs-relational-graphical-sp.gif "Stored procedure in graphical query designer")  
+ ![Stored procedure in graphical query designer](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "Stored procedure in graphical query designer")  
   
  The following table describes the function of each pane.  
   

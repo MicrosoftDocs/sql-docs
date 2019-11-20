@@ -12,7 +12,7 @@ f1_keywords:
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Microsoft Replication Conflict Viewer (Transactional Replication)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

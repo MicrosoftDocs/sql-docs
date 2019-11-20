@@ -27,20 +27,6 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 
 This topic describes how to set notification options in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects, so [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can send notifications to operators about jobs.  
   
-**In This Topic**  
-  
--   **Before you begin:**  
-  
-    [Security](#Security)  
-  
--   **To notify an operator of job status, using:**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [Transact-SQL](#TSQL)  
-  
-    [SQL Server Management Objects](#SMO)  
-  
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Security"></a>Security  

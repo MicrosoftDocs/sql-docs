@@ -83,7 +83,7 @@ manager: craigg
 |-|-|  
 |**Disk**|Backs up to disk. This may be a system file or a disk-based logical backup device created for the database. The currently selected disks appear in the **Back up to** list. You can select up to 64 disk devices for your backup operation.|  
 |**Tape**|Backs up to tape. This may be a local tape drive or a tape-based logical backup device created for the database. The currently selected tapes appear in the **Back up to** list. The maximum number is 64. If there are no tape devices attached to the server, this option is deactivated. The tapes you select are listed in the **Back up to** list.<br /><br /> Note: Support for tape backup devices will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.|  
-|**URL**|Backs up to Windows Azure Blob storage.|  
+|**URL**|Backs up to Azure Blob storage.|  
   
  The next set of options displayed depends on the type of destination selected. If you select Disk or Tape, the following options are displayed.  
   
@@ -102,13 +102,13 @@ manager: craigg
  Specify the name of the backup file.  
   
  **SQL credential**  
- Select a SQL Credential used to authenticate to  Windows Azure Storage. If you do not have an existing SQL Credential you can use, click the **Create** button to create a new SQL Credential.  
+ Select a SQL Credential used to authenticate to  Azure Storage. If you do not have an existing SQL Credential you can use, click the **Create** button to create a new SQL Credential.  
   
 > [!IMPORTANT]  
 >  The dialog that opens when you click **Create** requires a management certificate or the publishing profile for the subscription. If you do not have access to the management certificate or publishing profile, you can create a SQL Credential by specifying the storage account name and access key information using Transact-SQL or SQL Server Management Studio. See the sample code in the in the [To create a credential](../security/authentication-access/create-a-credential.md#Credential) topic to create a credential using Transact-SQL. Alternatively, using SQL Server Management Studio, from the database engine instance, right click **Security**, select **New**, and select **Credential**. Specify the storage account name for **Identity** and the access key in the **Password** field.  
   
  **Azure storage container**  
- Specify the name of the Windows Azure storage container  
+ Specify the name of the Azure storage container  
   
  **URL prefix:**  
  This is automatically generated based on the storage account information stored in the SQL Credential, and Azure storage container name you specified. We recommend that you do not edit the information in this field unless you are using a domain that uses a format other than **\<storage account>.blob.core.windows.net**.  

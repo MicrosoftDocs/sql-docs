@@ -3,7 +3,7 @@ title: "CONCAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"

@@ -73,8 +73,8 @@ manager: craigg
 |Neutral|Neutral|0000|  
 |Norwegial Bokmaal|nor|1044|  
 |Punjabi|pan|1094|  
-|Brazilian Portuguese|ptb|1046|  
 |Portuguese|ptg|2070|  
+|Portuguese (Brazil) |ptb|1046|  
 |Romanian|rom|1048|  
 |Slovak|sky|1051|  
 |Slovenian|slv|1060|  

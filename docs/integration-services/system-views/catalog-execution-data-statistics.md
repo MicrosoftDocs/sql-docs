@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.execution_data_statistics 
 

@@ -64,8 +64,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 4.  Right-click the function of which you want to view the properties and select **Properties**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
      The following properties appear in the **Function Properties -** _function_name_ dialog box.  
   
      **Database**  

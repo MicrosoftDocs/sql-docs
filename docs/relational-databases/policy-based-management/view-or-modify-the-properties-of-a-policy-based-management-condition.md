@@ -43,8 +43,6 @@ ms.author: vanto
   
 6.  When finished, click **OK**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To view a condition's properties  

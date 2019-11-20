@@ -54,8 +54,6 @@ Always back up your database master key. For more information on database master
   
 3. Copy and paste the following example into the query window and click **Execute**.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```sql
     USE AdventureWorks2012;  
     GO  
@@ -71,7 +69,7 @@ Always back up your database master key. For more information on database master
   
     -- Create a column in which to store the encrypted data.  
     ALTER TABLE Sales.CreditCard   
-        ADD CardNumber_Encrypted varbinary(128);   
+        ADD CardNumber_Encrypted varbinary(160);   
     GO  
   
     -- Open the symmetric key with which to encrypt the data.  

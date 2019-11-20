@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_dropdistributor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Uninstalls the Distributor. This stored procedure is executed at the Distributor on any database except the distribution database.  
   
@@ -52,7 +52,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## Remarks  
  **sp_dropdistributor** is used in all types of replication.  
   
- If other Publisher or distribution objects exist on the server, **sp_dropdistributor** fails unless **@no_checks** is set to **1**.  
+ If other Publisher or distribution objects exist on the server, **sp_dropdistributor** fails unless **\@no_checks** is set to **1**.  
   
  This stored procedure must be executed after dropping the distribution database by executing **sp_dropdistributiondb**.  
   

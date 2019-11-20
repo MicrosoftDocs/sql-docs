@@ -12,7 +12,7 @@ f1_keywords:
 ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Microsoft Replication Interactive Conflict Resolver
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

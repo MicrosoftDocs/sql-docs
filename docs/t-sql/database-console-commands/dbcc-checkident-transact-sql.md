@@ -41,7 +41,9 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 ## Syntax  
   
 ```console
-  
+
+-- Syntax for SQL Server and Azure SQL Database  
+
 DBCC CHECKIDENT
  (
     table_name  
@@ -49,7 +51,17 @@ DBCC CHECKIDENT
 )  
 [ WITH NO_INFOMSGS ]  
 ```  
-  
+
+```console
+-- Syntax for Azure SQL Data Warehouse
+DBCC CHECKIDENT   
+ (   
+    table_name  
+        [RESEED, new_reseed_value ]   
+)  
+[ WITH NO_INFOMSGS ]  
+
+```
 ## Arguments
 
  *table_name*  

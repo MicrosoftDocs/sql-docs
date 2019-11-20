@@ -23,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # CREATE SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Creates a new service. A [!INCLUDE[ssSB](../../includes/sssb-md.md)] service is a name for a specific task or set of tasks. [!INCLUDE[ssSB](../../includes/sssb-md.md)] uses the name of the service to route messages, deliver messages to the correct queue within a database, and enforce the contract for a conversation.  
   

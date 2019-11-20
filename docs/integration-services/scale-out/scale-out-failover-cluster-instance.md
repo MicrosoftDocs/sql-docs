@@ -30,7 +30,7 @@ Install a SQL Server failover cluster. See [SQL Server Failover Cluster Installa
 Add secondary node to the SQL Server failover cluster.
 
 ## 3. Install Scale Out Master on the primary node
-Install Integration Services and Scale Out Master on the primary node with the setup wizard for non-clustered installation. 
+Install Integration Services and Scale Out Master on the primary node with the setup wizard for nonclustered installation. 
 
 During installation, include the SQL Server network name in the CNs of the Scale Out Master certificate.
 

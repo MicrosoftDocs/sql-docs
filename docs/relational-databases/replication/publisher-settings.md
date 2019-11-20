@@ -14,9 +14,10 @@ helpviewer_keywords:
 ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # SQL Server Replication 'Publisher Settings' dialog box
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Publisher Settings** dialog box allows you to change settings for Publishers that have been added to the left pane in Replication Monitor.  
   
 ## Options  

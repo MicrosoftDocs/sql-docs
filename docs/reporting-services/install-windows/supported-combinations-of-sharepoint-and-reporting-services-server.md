@@ -38,17 +38,18 @@ A SQL Server Reporting Services report server installed in SharePoint mode requi
 |2|SQL Server 2016|SQL Server 2016|SharePoint 2013|
 |3|SQL Server 2014|SQL Server 2014|SharePoint 2013|
 |4|SQL Server 2014|SQL Server 2014|SharePoint 2010|
-|5|SQL Server 2012 SP3|SQL Server 2014 and SQL Server 2012 SP3|SharePoint 2013|
-|6|SQL Server 2012 SP2|SQL Server 2014 and SQL Server 2012 SP2|SharePoint 2013|
-|7|SQL Server 2012 SP1|SQL Server 2014 and SQL Server 2012 SP1|SharePoint 2013|
-|8|SQL Server 2012 and SQL Server 2012 SP1*|SQL Server 2014|SharePoint 2010|
-|9|SQL Server 2012|SQL Server 2012|SharePoint 2010|
-|10|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
-|11|SQL Server 2008 R2|SQL Server 2012 and SQL Server 2012 SP1 or later|SharePoint 2010|
-|12|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
-|13|SQL Server 2008 R2|SQL Server 2008 SP2|SharePoint 2007|
-|14|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
-|15|SQL Server 2008 SP2|SQL Server 2008 and SQL Server 2008 SP2|SharePoint 2007|
+|5|SQL Server 2012 SP4|SQL Server 2014 and SQL Server 2012 SP4|SharePoint 2013|
+|6|SQL Server 2012 SP3|SQL Server 2014 and SQL Server 2012 SP3|SharePoint 2013|
+|7|SQL Server 2012 SP2|SQL Server 2014 and SQL Server 2012 SP2|SharePoint 2013|
+|8|SQL Server 2012 SP1|SQL Server 2014 and SQL Server 2012 SP1|SharePoint 2013|
+|9|SQL Server 2012 and SQL Server 2012 SP1*|SQL Server 2014|SharePoint 2010|
+|10|SQL Server 2012|SQL Server 2012|SharePoint 2010|
+|11|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
+|12|SQL Server 2008 R2|SQL Server 2012 and SQL Server 2012 SP1 or later|SharePoint 2010|
+|13|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
+|14|SQL Server 2008 R2|SQL Server 2008 SP2|SharePoint 2007|
+|15|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
+|16|SQL Server 2008 SP2|SQL Server 2008 and SQL Server 2008 SP2|SharePoint 2007|
 
  *Exception: Power view integration is not supported.
 

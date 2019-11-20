@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Installing the Microsoft Connector for SAP BW
 

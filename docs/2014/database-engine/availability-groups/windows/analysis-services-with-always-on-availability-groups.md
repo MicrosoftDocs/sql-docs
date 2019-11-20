@@ -214,7 +214,7 @@ manager: craigg
  [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [AlwaysOn Policies for Operational Issues with AlwaysOn Availability Groups &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
- [Create a Data Source &#40;SSAS Multidimensional&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Enable Dimension Writeback](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+ [Create a Data Source &#40;SSAS Multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [Enable Dimension Writeback](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   
   

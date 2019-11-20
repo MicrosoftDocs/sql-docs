@@ -1,7 +1,7 @@
 ---
 title: "BACKUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/27/2019"
+ms.date: "08/13/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -172,7 +172,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 --Encryption Options
  ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
-   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
+   `SERVER CERTIFICATE` = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
 ```
 
 ## Arguments
@@ -252,9 +252,9 @@ Specifies a disk file or tape device, or a Microsoft Azure Blob storage service.
 > [!NOTE]
 > The NUL disk device will discard all information sent to it and should only be used for testing. This is not for production use.
 > [!IMPORTANT]
-> Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], you can only backup to a single device when backing up to URL. In order to backup to multiple devices when backing up to URL, you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).
+> Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], you can only backup to a single device when backing up to URL. In order to backup to multiple devices when backing up to URL, you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).
 
-**URL applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**URL applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 and later).
 
 A disk device does not have to exist before it is specified in a BACKUP statement. If the physical device exists and the INIT option is not specified in the BACKUP statement, the backup is appended to the device.
 
@@ -293,11 +293,11 @@ Is a placeholder that indicates that a single BACKUP statement can contain up to
 Specifies options to be used with a backup operation.
 
 CREDENTIAL
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 and later).
 Used only when creating a backup to the Microsoft Azure Blob storage service.
 
 FILE_SNAPSHOT
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later).
 
 Used to create an Azure snapshot of the database files when all of the SQL Server database files are stored using the Azure Blob storage service. For more information, see [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Backup takes Azure snapshots of the database files (data and log files) at a consistent state. A consistent set of Azure snapshots make up a backup and are recorded in the backup file. The only difference between `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` and `BACKUP LOG TO URL WITH FILE_SNAPSHOT` is that the latter also truncates the transaction log while the former does not. With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Backup, after the initial full backup that is required by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to establish the backup chain, only a single transaction log backup is required to restore a database to the point in time of the transaction log backup. Furthermore, only two transaction log backups are required to restore a database to a point in time between the time of the two transaction log backups.
 
@@ -321,8 +321,10 @@ Used to specify encryption for a backup. You can specify an encryption algorithm
 
 If you choose to encrypt you will also have to specify the encryptor using the encryptor options:
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE` = Encryptor_Name
+- `SERVER ASYMMETRIC KEY` = Encryptor_Name
+
+The `SERVER CERTIFICATE` and `SERVER ASYMMETRIC KEY` are a certificate and an asymmetric key created in `master` database. For more information see [`CREATE CERTIFICATE`](../../t-sql/statements/create-certificate-transact-sql.md) and [`CREATE ASYMMETRIC KEY`](../../t-sql/statements/create-asymmetric-key-transact-sql.md) respectively.
 
 > [!WARNING]
 > When encryption is used in conjunction with the `FILE_SNAPSHOT` argument, the metadata file itself is encrypted using the specified encryption algorithm and the system verifies that [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) was completed for the database. No additional encryption happens for the data itself. The backup fails if the database was not encrypted or if the encryption was not completed before the backup statement was issued.
@@ -467,7 +469,7 @@ If you are taking a backup that you plan to copy onto and restore from a CD-ROM,
 BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
 Specifies the total number of I/O buffers to be used for the backup operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.
 
-The total space used by the buffers is determined by: *buffercount/maxtransfersize*.
+The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFERSIZE`.
 
 > [!NOTE]
 > For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.
@@ -654,7 +656,7 @@ DISK='Y:\SQLServerBackups\AdventureWorks2.bak',
 DISK='Z:\SQLServerBackups\AdventureWorks3.bak'
 WITH FORMAT,
   MEDIANAME = 'AdventureWorksStripedSet0',
-  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database;
+  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database';
 GO
 ```
 
@@ -1061,8 +1063,8 @@ Used to specify encryption for a backup. You can specify an encryption algorithm
 
 If you choose to encrypt you will also have to specify the encryptor using the encryptor options:
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE = <Encryptor_Name>`
+- `SERVER ASYMMETRIC KEY = <Encryptor_Name>`
 
 **Backup Set Options**
 
@@ -1073,8 +1075,6 @@ Specifies that the backup is a *copy-only backup*, which does not affect the nor
 Specifies whether [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) is performed on this backup, overriding the server-level default.
 
 The default behavior is no backup compression. But this default can be changed by setting the [backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) server configuration option. For information about viewing the current value of this option, see [View or Change Server Properties](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
-
-For information about using backup compression with [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases, see the [Remarks](#general-remarks) section.
 
 COMPRESSION
 Explicitly enables backup compression.
@@ -1102,7 +1102,7 @@ Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 
 BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
 Specifies the total number of I/O buffers to be used for the backup operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.
 
-The total space used by the buffers is determined by: *buffercount/maxtransfersize*.
+The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFERSIZE`.
 
 > [!NOTE]
 > For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.
@@ -1112,7 +1112,6 @@ Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssN
 
 > [!NOTE]
 > For [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, the default `MAXTRANSFERSIZE` is 65536 (64 KB). For non-TDE encrypted databases the default `MAXTRANSFERSIZE` is 1048576 (1 MB) when using backup to DISK, and 65536 (64 KB) when using VDI or TAPE.
-> For more information about using backup compression with TDE encrypted databases, see the [Remarks](#general-remarks) section.
 
 **Error Management Options**
 
@@ -1280,6 +1279,8 @@ BACKUP DATABASE errors under the following conditions:
 - The target network share does not have enough space for the backup. The BACKUP DATABASE command does not confirm that sufficient disk space exists prior to initiating the backup, making it possible to generate an out-of-disk-space error while running BACKUP DATABASE. When insufficient disk space occurs, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] rolls back the BACKUP DATABASE command. To decrease the size of your database, run [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
 - Attempt to start a backup within a transaction.
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## General Remarks
 
 Before you perform a database backup, use [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) to decrease the size of your database.
@@ -1292,6 +1293,8 @@ If you cancel a BACKUP command, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] wi
 
 Full backups and differential backups are stored in separate directories. Naming conventions are not enforced for specifying that a full backup and differential backup belong together. You can track this through your own naming conventions. Alternatively, you can track this by using the WITH DESCRIPTION option to add a description, and then by using the RESTORE HEADERONLY statement to retrieve the description.
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 ## Limitations and Restrictions
 
 You cannot perform a differential backup of the master database. Only full backups of the master database are supported.
@@ -1334,7 +1337,7 @@ Takes an ExclusiveUpdate lock on the DATABASE object.
 
 **Manage Network Credentials**
 
-Network access to the backup directory is based on standard Windows file sharing security. Before performing a backup, you need to create or designate a Windows account that will be used for authenticating [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] to the backup directory. This windows account must have permission to access, create, and write to the backup directory.
+Network access to the backup directory is based on standard operating system file sharing security. Before performing a backup, you need to create or designate a Windows account that will be used for authenticating [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] to the backup directory. This windows account must have permission to access, create, and write to the backup directory.
 
 > [!IMPORTANT]
 > To reduce security risks with your data, we advise that you designate one Windows account solely for the purpose of performing backup and restore operations. Allow this account to have permissions to the backup location and nowhere else.

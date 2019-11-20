@@ -23,7 +23,7 @@ monikerRange: "= azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sq
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
-Removes the space character `char(32)` or other specified characters from the start or end of a string.  
+Removes the space character `char(32)` or other specified characters from the start and end of a string.  
 
 ## Syntax
 
@@ -51,7 +51,7 @@ Returns a character expression with a type of string argument where the space ch
 
 ## Remarks
 
-By default `TRIM` function removes the space character `char(32)` from both sides. This behavior is equivalent to `LTRIM(RTRIM(@string))`. Behavior of `TRIM` function with specified characters is identical to behavior of `REPLACE` function where characters from start or end are replaced with empty strings.
+By default, the `TRIM` function removes the space character from both the beginning and the ending ends of the string. This behavior is equivalent to `LTRIM(RTRIM(@string))`.
 
 ## Examples
 
@@ -65,18 +65,22 @@ SELECT TRIM( '     test    ') AS Result;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-`test`
+```
+test
+```
 
 ### B.  Removes specified characters from both sides of string
 
-The following example removes a trailing period and trailing spaces.
+The following example removes a trailing period and spaces from before `#` and after the word `test`.
 
 ```sql
-SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
+SELECT TRIM( '.,! ' FROM  '     #     test    .') AS Result;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
-`#     test`
+```
+#     test
+```
 
 ## See Also
 

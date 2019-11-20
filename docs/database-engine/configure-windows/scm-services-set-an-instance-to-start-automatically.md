@@ -37,7 +37,7 @@ ms.author: mikeray
   
 3.  In the details pane, right-click the name of the instance you want to start automatically, and then click **Properties**.  
   
-4.  In the **SQL Server \<***instancename***> Properties** dialog box, set **Start Mode** to **Automatic**.  
+4.  In the **SQL Server \<**_instancename_**> Properties** dialog box, set **Start Mode** to **Automatic**.  
   
 5.  Click **OK**, and then close [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   

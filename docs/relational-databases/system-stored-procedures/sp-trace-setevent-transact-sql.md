@@ -311,7 +311,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  If *on* is set to **0**, and *column_id* is NULL, then the event is turned OFF and all columns are cleared. If *column_id* is not null, then the column is turned OFF.  
   
- This table illustrates the interaction between **@on** and **@columnid**.  
+ This table illustrates the interaction between **\@on** and **\@columnid**.  
   
 |@on|@columnid|Result|  
 |---------|---------------|------------|  
@@ -344,7 +344,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- Users must execute **sp_trace_setevent** for each column added for each event. During each execution, if **@on** is set to **1**, **sp_trace_setevent** adds the specified event to the list of events of the trace. If **@on** is set to **0**, **sp_trace_setevent** removes the specified event from the list.  
+ Users must execute **sp_trace_setevent** for each column added for each event. During each execution, if **\@on** is set to **1**, **sp_trace_setevent** adds the specified event to the list of events of the trace. If **\@on** is set to **0**, **sp_trace_setevent** removes the specified event from the list.  
   
  Parameters of all SQL Trace stored procedures (**sp_trace_xx**) are strictly typed. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure will return an error.  
   

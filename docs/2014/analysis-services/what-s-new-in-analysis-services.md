@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in Analysis Services and Business Intelligence | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/24/2017"
+ms.date: "06/07/2019"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: "analysis-services"
@@ -11,8 +11,8 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ---
-# What&#39;s New in Analysis Services and Business Intelligence
-  With exception to added functionality supporting Power View Reports against Multidimensional Models, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] is unchanged from the previous release.  
+# What&#39;s New in SQL Server 2014 Analysis Services
+  With exception to added functionality supporting Power View Reports against Multidimensional Models, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] is unchanged from the previous release.  
   
  For information about other [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] products and technologies that are different in this release, see [What's New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   

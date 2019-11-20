@@ -3,13 +3,13 @@ layout: HubPage
 hide_bc: true
 experimental: true
 experiment_id: "81ba5f65-59fb-4d"
-title: Microsoft Azure Documentation
-description: Learn how to build and manage powerful applications using Microsoft Azure cloud services. Get documentation, example code, tutorials, and more.
+title: SQL Server Education Center
+description: A summary of resources you can use to learn SQL Server and Azure SQL Database. From quickstarts and tutorials, to Microsoft Learn and LinkedIn Learning.
 ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 12/15/2018
+ms.date: 11/05/2019
 featureFlags:
 - clicktale
 ---
@@ -124,6 +124,60 @@ featureFlags:
                                         </div>
                                         <div class="cardText">
                                             <p>Running SQL Server on Linux</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/azure/sql-database/sql-database-single-database-get-started" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Azure SQL Database single database</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/azure/sql-database/sql-database-managed-instance-get-started" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Azure SQL Database managed instance</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+	                        <li>
+                            <a href="/azure/sql-data-warehouse/create-data-warehouse-portal" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Azure SQL Data Warehouse</p> 
                                         </div>
                                     </div>
                                 </div>
@@ -252,7 +306,7 @@ featureFlags:
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <p>SQL Server backup and restore to Windows Azure Blob Storage Service</p>
+                                            <p>SQL Server backup and restore to Azure Blob Storage Service</p>
                                         </div>
                                     </div>
                                 </div>

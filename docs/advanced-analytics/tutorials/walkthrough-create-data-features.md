@@ -1,5 +1,5 @@
 ---
-title: Create data features using R and SQL Server functions
+title: "R tutorial: Feature engineering"
 description: Tutorial showing how to create data features using SQL Server functions for in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,8 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Create data features using R and SQL Server (walkthrough)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +131,7 @@ Switch to [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/dow
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
     -- User-defined function calculates the direct distance between two geographical coordinates.
-    RETURNS
+    RETURNS decimal(28, 10)
     AS
     BEGIN
       DECLARE @distance decimal(28, 10)

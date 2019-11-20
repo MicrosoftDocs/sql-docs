@@ -69,8 +69,6 @@ ms.author: mikeray
   
 6.  To define the new device, click **OK**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  To back up to this new device, add it to the **Back up to:** field in the **Back up Database** (**General**) dialog box. For more information, see [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  

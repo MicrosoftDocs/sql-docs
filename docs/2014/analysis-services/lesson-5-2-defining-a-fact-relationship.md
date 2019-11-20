@@ -112,7 +112,7 @@ manager: craigg
      ![Dimensioning of Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensioning of Internet Sales-Sales Amount")  
   
 ## Next Task in Lesson  
- [Defining a Many-to-Many Relationship](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
+ [Defining a Many-to-Many Relationship](lesson-5-3-defining-a-many-to-many-relationship.md)  
   
 ## See Also  
  [Dimension Relationships](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

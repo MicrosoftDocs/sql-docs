@@ -27,7 +27,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # GET_TRANSMISSION_STATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Returns the status for the last transmission for one side of a conversation.  
   

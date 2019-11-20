@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.issuedetails.f1"
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)
 

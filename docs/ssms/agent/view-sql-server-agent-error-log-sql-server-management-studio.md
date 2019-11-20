@@ -28,16 +28,6 @@ This topic describes how to view the  [!INCLUDE[ssNoVersion](../../includes/ssno
   
 Log File Viewer displays log information from many different components. When Log File Viewer is open, use the **Select logs** pane to select the logs you want to display. Each log displays columns appropriate to that kind of log. The logs that are available depend on how Log File Viewer is opened.  
   
-**In This Topic**  
-  
--   **Before you begin:**  
-  
-    [Limitations and Restrictions](#Restrictions)  
-  
-    [Security](#Security)  
-  
--   [To view the SQL Server Agent error log, using SQL Server Management Studio](#SSMSProcedure)  
-  
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  

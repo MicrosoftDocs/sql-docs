@@ -4,8 +4,8 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 ---
@@ -73,9 +73,7 @@ The following Transact-SQL commands are used in this section:
 
 1. **Optional:** Create statistics on an external table.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    We recommend creating statistics on external table columns especially the ones used for joins, filters and aggregates,for optimal query performance.
+For optimal query performance, we recommend creating statistics on external table columns especially the ones used for joins, filters, and aggregates.
 
     ```sql
     CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 

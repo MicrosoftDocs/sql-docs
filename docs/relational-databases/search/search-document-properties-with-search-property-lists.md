@@ -1,5 +1,5 @@
 ---
-title: "Search Document Properties with Search Property Lists | Microsoft Docs"
+title: "Search document properties with search property lists"
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
@@ -18,6 +18,7 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # Search Document Properties with Search Property Lists
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

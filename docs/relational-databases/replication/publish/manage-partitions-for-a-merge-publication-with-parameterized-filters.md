@@ -58,8 +58,6 @@ ms.author: "mathoma"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### To delete a partition  
   
 1.  On the **Data Partitions** page, select a partition in the grid.  
@@ -97,25 +95,25 @@ ms.author: "mathoma"
   
 #### To view information on existing partitions  
   
-1.  At the Publisher on the publication database, execute [sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md). Specify the name of the publication for **@publication**. (Optional) Specify **@suser_sname** or **@host_name** to return only information based on a single filtering criterion.  
+1.  At the Publisher on the publication database, execute [sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md). Specify the name of the publication for `@publication`. (Optional) Specify `@suser_sname` or `@host_name` to return only information based on a single filtering criterion.  
   
 #### To define a new partition and generate a new partitioned snapshot  
   
-1.  At the Publisher on the publication database, execute [sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md). Specify the name of the publication for **@publication**, and the parameterized value that defines the partition for one of the following:  
+1.  At the Publisher on the publication database, execute [sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md). Specify the name of the publication for `@publication`, and the parameterized value that defines the partition for one of the following:  
   
-    -   **@suser_sname** - when the parameterized filter is defined by the value returned by [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md).  
+    -   `@suser_sname` - when the parameterized filter is defined by the value returned by [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md).  
   
-    -   **@host_name** - when the parameterized filter is defined by the value returned by [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
+    -   `@host_name` - when the parameterized filter is defined by the value returned by [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
   
 2.  Create and initialize the parameterized snapshot for this new partition. For more information, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### To delete a partition  
   
-1.  At the Publisher on the publication database, execute [sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md). Specify the name of the publication for **@publication** and the parameterized value that defines the partition for one of the following:  
+1.  At the Publisher on the publication database, execute [sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md). Specify the name of the publication for `@publication` and the parameterized value that defines the partition for one of the following:  
   
-    -   **@suser_sname** - when the parameterized filter is defined by the value returned by [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md).  
+    -   `@suser_sname` - when the parameterized filter is defined by the value returned by [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md).  
   
-    -   **@host_name** - when the parameterized filter is defined by the value returned by [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
+    -   `@host_name` - when the parameterized filter is defined by the value returned by [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
   
      This also removes the snapshot job and any snapshot files for the partition.  
   
@@ -159,5 +157,6 @@ ms.author: "mathoma"
 ## See Also  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+  
   
   

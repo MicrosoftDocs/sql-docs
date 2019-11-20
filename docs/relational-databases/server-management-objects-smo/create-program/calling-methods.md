@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Management Objects, method calling"
   - "SMO [SQL Server], method calling"
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Calling Methods

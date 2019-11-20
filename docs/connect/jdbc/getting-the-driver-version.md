@@ -1,7 +1,7 @@
 ---
-title: "Getting the Driver Version | Microsoft Docs"
+title: "Getting the driver version | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,7 +11,7 @@ ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: MightyPen
 ms.author: genemi
 ---
-# Getting the Driver Version
+# Getting the driver version
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   The version of the installed [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] can be found in the following ways:  
@@ -34,7 +34,7 @@ ms.author: genemi
   
  Where "xxx.x" is the final version number.  
   
-## See Also  
- [Diagnosing Problems with the JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+## See also  
+ [Diagnosing problems with the JDBC driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

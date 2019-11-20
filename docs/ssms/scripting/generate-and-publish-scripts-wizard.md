@@ -148,7 +148,7 @@ For a more detailed Tutorial on using the Generate and Publish Scripts wizard, p
   
 -   **Append to file** - When **True**, this script is added to the bottom of an existing script, specified on the **Set Scripting Options** page. When **False**, the new script overwrites a previous script. The default is **False**.  
   
--   **Continue scripting on error** - When **True**, scripting stops when an error occurs. When **False**, scripting continues. The default is **False**.  
+-   **Continue scripting on error** - When **False**, scripting stops when an error occurs. When **True**, scripting continues. The default is **False**.  
   
 -   **Convert UDDTs to base types** - When **True**, user-defined data types (UDDT) are converted into the underlying base data types that were used to create them. Use **True** when the UDDT does not exist in the database where the script will run. When **False**, UDDTs are used. The default is **False**.  
   

@@ -22,23 +22,15 @@ ms.author: genemi
 >  Starting with Windows XP and Windows Server 2003, ODBC is included in the Windows operation system. You should only explicitly install ODBC on earlier versions of Windows.  
   
  The installer DLL maintains information in the registry about each data source. In Microsoft Windows NT/Windows 2000 and Microsoft Windows 95/98, this information is stored in subkeys under one of the following two keys in the registry:  
-  
- HKEY_LOCAL_MACHINE  
-  
- SOFTWARE  
-  
- ODBC  
-  
- Odbc.ini  
-  
- HKEY_CURRENT_USER  
-  
- SOFTWARE  
-  
- ODBC  
-  
- Odbc.ini  
-  
+
+ ```console
+ HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbc.ini  
+ ```
+
+ ```console
+ HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini
+ ```
+
  Which key is used depends on whether the data source is a *system data source,* which is available to all users, or a *user data source,* which is available only to the current user. System data sources are stored on the HKEY_LOCAL_MACHINE tree, and user data sources are stored on the HKEY_CURRENT_USER tree. In all other respects, system data sources and user data sources are identical.  
   
  This section contains the following topics.  

@@ -50,5 +50,3 @@ ms.author: vanto
   
 6.  In the **Delete Object** dialog box, ensure that the correct condition is selected and then click **OK**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-

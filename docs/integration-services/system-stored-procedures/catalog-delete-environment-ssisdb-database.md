@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.delete_environment (SSISDB Database)
 

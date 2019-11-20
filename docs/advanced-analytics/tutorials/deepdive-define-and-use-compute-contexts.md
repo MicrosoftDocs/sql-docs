@@ -1,5 +1,5 @@
 ---
-title: Define and use RevoScaleR compute contexts
+title: Use RevoScaleR compute contexts
 description: Tutorial walkthrough on how to define a compute context using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,8 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Define and use compute contexts (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

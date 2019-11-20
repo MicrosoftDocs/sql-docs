@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "manIns"
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Manage a CDC Instance
 

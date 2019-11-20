@@ -1,5 +1,5 @@
 ---
-title: View and summarize SQL Server data using R functions
+title: "R tutorial: Explore data"
 description: Tutorial showing how to visualize and generate statistical summaries using R functions for in-database analytics on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,8 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # View and summarize SQL Server data using R (walkthrough)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # sp_adddistpublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Configures a Publisher to use a specified distribution database. This stored procedure is executed at the Distributor on any database. Note that the stored procedures [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) and [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) must have been run prior to using this stored procedure.  
   

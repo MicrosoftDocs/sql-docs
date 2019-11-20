@@ -1,7 +1,7 @@
 ---
 title: "Using Always Encrypted with the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -16,7 +16,7 @@ ms.author: genemi
 
 This page provides information on how to develop Java applications using [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) and the Microsoft JDBC Driver 6.0 (or higher) for SQL Server.
 
-Always Encrypted allows clients to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the Microsoft JDBC Driver 6.0 (or higher) for SQL Server, achieves this behavior by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to Always Encrypted database columns, and encrypts the values of those parameters before it sends them to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) and [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
+Always Encrypted allows clients to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the Microsoft JDBC Driver 6.0 (or higher) for SQL Server, achieves this behavior by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to Always Encrypted database columns, and encrypts the values of those parameters before it sends them to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) and [Always Encrypted API reference for the JDBC driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
 
 ## Prerequisites
 - Make sure Microsoft JDBC Driver 6.0 (or higher) for SQL Server is installed on your development machine. 
@@ -99,7 +99,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > For an example of how to include these dependencies in a Maven project, see [Download ADAL4J And AKV Dependencies with Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### Using Windows Certificate Store provider
-The SQLServerColumnEncryptionCertificateStoreProvider can be used to store column master keys in the Windows Certificate Store. Use the SQL Server Management Studio (SSMS) Always Encrypted wizard or other supported tools to create the column master key and column encryption key definitions in the database. The same wizard can be used to generate a self signed certificate in the Windows Certificate Store that can be used as a column master key for the always encrypted data. For more information on column master key and column encryption key T-SQL syntax, see [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) and [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) respectively.
+The SQLServerColumnEncryptionCertificateStoreProvider can be used to store column master keys in the Windows Certificate Store. Use the SQL Server Management Studio (SSMS) Always Encrypted wizard or other supported tools to create the column master key and column encryption key definitions in the database. The same wizard can be used to generate a self signed certificate in the Windows Certificate Store that can be used as a column master key for the Always Encrypted data. For more information on column master key and column encryption key T-SQL syntax, see [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) and [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) respectively.
 
 The name of the SQLServerColumnEncryptionCertificateStoreProvider is MSSQL_CERTIFICATE_STORE and can be queried by the getName() API of the provider object. It's automatically registered by the driver and can be used seamlessly without any application change.
 
@@ -538,7 +538,7 @@ com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is 
 
 To prevent such errors, make sure:
 
-- always Encrypted is enabled for application queries targeting encrypted columns (for the connection string or for a specific query).
+- Always Encrypted is enabled for application queries targeting encrypted columns (for the connection string or for a specific query).
 - you use prepared statements and parameters to send data targeting encrypted columns. The following example shows a query that incorrectly filters by a literal/constant on an encrypted column (SSN), instead of passing the literal inside as a parameter. This query will fail:
 
 ```java
@@ -639,11 +639,11 @@ With SQLServerBulkCopy, you can copy data that is already encrypted and stored i
 
 - Make sure the encryption configuration of the target table is identical to the configuration of the source table. In particular, both tables must have the same columns encrypted and the columns must be encrypted using the same encryption types and the same encryption keys. If any target column is encrypted differently than its corresponding source column, you won't be able to decrypt the data in the target table after the copy operation. The data will be corrupted.
 - Configure both database connections to the source table and to the target table without Always Encrypted enabled.
-- Set the allowEncryptedValueModifications option. For more information, see [Using Bulk Copy with the JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).
+- Set the allowEncryptedValueModifications option. For more information, see [Using bulk copy with the JDBC driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).
 
 > [!NOTE]
 > Use caution when specifying AllowEncryptedValueModifications as this option may lead to corrupting the database because the Microsoft JDBC Driver for SQL Server does not check if the data is indeed encrypted or if it is correctly encrypted using the same encryption type, algorithm, and key as the target column.
 
-## See Also
+## See also
 
 [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

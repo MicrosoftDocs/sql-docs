@@ -88,7 +88,7 @@ DBCC CHECKALLOC
  TABLOCK  
  Causes the DBCC command to obtain an exclusive database lock.
 
- ESTIMATE ONLY  
+ ESTIMATEONLY  
  Displays the estimated amount of tempdb space that is required to run DBCC CHECKALLOC when all the other options are specified.
   
 ## Remarks  

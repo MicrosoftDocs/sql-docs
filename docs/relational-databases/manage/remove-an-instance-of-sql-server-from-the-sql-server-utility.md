@@ -28,8 +28,6 @@ ms.author: mikeray
   
 4.  To confirm the operation, click **OK**. To quit the operation, click **Cancel**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Manually Remove a Managed Instance of SQL Server from a SQL Server Utility  
  This procedure removes the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the UCP list view and stops [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility data collection. The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not uninstalled.  
   

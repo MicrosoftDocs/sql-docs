@@ -1,7 +1,7 @@
 ---
 title: "Using PIVOT and UNPIVOT | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "10/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -147,7 +147,7 @@ SELECT PurchaseOrderID, EmployeeID, VendorID
 FROM PurchaseOrderHeader;  
 ```  
   
-The unique values returned by the `EmployeeID` column become fields in the final result set. As such, there's a column for each `EmployeeID` number specified in the pivot clause: in this case employees `164`, `198`, `223`, `231`, and `233`. The `PurchaseOrderID` column serves as the value column, against which the columns returned in the final output, which are called the grouping columns, are grouped. In this case, the grouping columns are aggregated by the `COUNT` function. Notice that a warning message appears that indicates that any null values appearing in the `PurchaseOrderID` column weren't considered when computing the `COUNT` for each employee.  
+The unique values returned by the `EmployeeID` column become fields in the final result set. As such, there's a column for each `EmployeeID` number specified in the pivot clause: in this case employees `250`, `251`, `256`, `257`, and `260`. The `PurchaseOrderID` column serves as the value column, against which the columns returned in the final output, which are called the grouping columns, are grouped. In this case, the grouping columns are aggregated by the `COUNT` function. Notice that a warning message appears that indicates that any null values appearing in the `PurchaseOrderID` column weren't considered when computing the `COUNT` for each employee.  
   
 > [!IMPORTANT]  
 >  When aggregate functions are used with `PIVOT`, the presence of any null values in the value column are not considered when computing an aggregation.  

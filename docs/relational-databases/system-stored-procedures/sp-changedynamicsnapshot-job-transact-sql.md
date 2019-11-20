@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_changedynamicsnapshot_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Modifies the agent job that generates the snapshot for a subscription to a publication with a parameterized row filter. This stored procedure is executed at the Publisher on the publication database.  
   

@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 3166107c-30c2-468e-bb1b-bb42b79b37c3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Install SQL Server BI Features with SharePoint (PowerPivot and Reporting Services)
@@ -39,7 +39,7 @@ manager: craigg
   
  [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
   
- [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)  
   
  [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
@@ -55,7 +55,7 @@ manager: craigg
 |1|SharePoint Only|Native Excel Services Features|Excel Services and other services included with SharePoint Server 2013.|  
 |**2**|SharePoint with Analysis Services in SharePoint Mode|Interactive PowerPivot workbooks in the browser|Install [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in SharePoint mode.<br /><br /> Register Analysis Services Server in Excel Services.|  
 |**3**|SharePoint with Reporting Services in SharePoint Mode|Power View|Install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode.<br /><br /> Install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in **(rsSharePoint.msi)** for SharePoint. For more information, see [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|  
-|**4**|All PowerPivot Features|Access to workbooks as a data source from outside the farm.<br /><br /> Schedule Data refresh.<br /><br /> PowerPivot Gallery.<br /><br /> Management Dashboard.<br /><br /> BISM link file content type.|Deploy PowerPivot for SharePoint 2013 add-in **(spPowerPivot.msi)**. For more information, see the following:<br /><br /> [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)<br /><br /> For information see on how to download **spPowerPivot.msi**, see [Download SQL Server 2014 PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473).|  
+|**4**|All PowerPivot Features|Access to workbooks as a data source from outside the farm.<br /><br /> Schedule Data refresh.<br /><br /> PowerPivot Gallery.<br /><br /> Management Dashboard.<br /><br /> BISM link file content type.|Deploy PowerPivot for SharePoint 2013 add-in **(spPowerPivot.msi)**. For more information, see the following:<br /><br /> [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)<br /><br /> For information see on how to download **spPowerPivot.msi**, see [Download SQL Server 2014 PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473).|  
   
  For additional information on enabling [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] features, see [The SQL Server BI Light-Up Story for SharePoint 2013](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx).  
   
@@ -86,11 +86,11 @@ manager: craigg
   
      The SQL Server installation wizard installs two [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configurations tools. One of the configuration tools supports SharePoint 2013 and the other tool supports SharePoint 2010.  
   
-     ![two powerpivot configuratoin tools](../../../2014/analysis-services/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
+     ![two powerpivot configuratoin tools](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
   
-5.  Configure Excel Services in SharePoint Server 2013 to use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. For more information, see the section "Configure Basic Analysis Services SharePoint Integration" in [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).and [Manage Excel Services data model settings (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx).  
+5.  Configure Excel Services in SharePoint Server 2013 to use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. For more information, see the section "Configure Basic Analysis Services SharePoint Integration" in [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).and [Manage Excel Services data model settings (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx).  
   
-6.  For more information, see [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+6.  For more information, see [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
   
  **[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010**  
   
@@ -152,7 +152,7 @@ manager: craigg
 > [!NOTE]  
 >  For more information on PowerPivot and SharePoint database-attach upgrade, see the following:  
   
--   [Migrate PowerPivot to SharePoint 2013](../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)  
+-   [Migrate PowerPivot to SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013)  
   
 -   [Overview of the upgrade process to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688).  
   

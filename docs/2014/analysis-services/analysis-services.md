@@ -1,7 +1,7 @@
 ---
-title: "Analysis Services | Microsoft Docs"
+title: "SQL Server 2014 Analysis Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/14/2017"
+ms.date: "06/07/2019"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: "analysis-services"
@@ -19,16 +19,30 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ---
-# Analysis Services
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] is an online analytical data engine used in decision support and business intelligence (BI) solutions, providing the analytical data for business reports and client applications such as Excel, Reporting Services reports, and other third-party BI tools. A typical workflow for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] includes building an OLAP or tabular data model, deploy the model as a database to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance, process the database to load it with data, and then assign permissions to allow data access. When it's ready to go, this multi-purpose data model can be accessed by any client application supporting [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] as a data source.  
+# SQL Server 2014 Analysis Services
+
+  SQL Server 2014 Analysis Services is an analytical data engine used in decision support and business intelligence (BI) solutions, providing the analytical data for business reports and client applications such as Excel, Reporting Services reports, and other third-party BI tools. 
+
+## About SQL Server Analysis Services documentation
+
+Documentation is separated by version. You are currently in SQL Server 2014 Analysis Services documentation.
+
+- To learn more about SQL Server 2012 and earlier, see [SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/).
+- To learn more about SQL Server 2014, see [Books Online for SQL Server 2014](../2014-toc/books-online-for-sql-server-2014.md)
+- To learn more about SQL Server 2016 and later, see [Microsoft SQL documentation](https://docs.microsoft.com/sql/).
+- To learn more about Azure Analysis Services, see [Azure Analysis Services Documentation](https://docs.microsoft.com/azure/analysis-services/).
+
+## Analysis Services workflow
+
+A typical workflow includes building an OLAP or tabular data model, deploy the model as a database to a server instance, process the database to load it with data, and then assign permissions to allow data access. When it's ready to go, this multi-purpose data model can be accessed by any client application supporting [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] as a data source.  
   
  To create a model, use SQL Server Data Tools (see [Tools and applications used in Analysis Services](tools-and-applications-used-in-analysis-services.md)), choosing either a Tabular or Multidimensional and Data Mining project template. The project template contains folders for all of the objects needed in a model. You can use wizards to create all of the basic elements, such as data sources, data source views, dimensions, cubes, and roles.  
   
  Models are populated with data from external data systems, usually data warehouses hosted on a SQL Server or Oracle relational database engine (Tabular models support additional data source types). Models specify query objects, such as cubes, but also specify dimensions that can be used in multiple cubes, calculations and KPIs that encapsulate business logic, and interactions such as navigation and drill-through behaviors.  
   
- To use a model, it's deployed to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance that runs databases in a particular server mode, making the data available to authorized users who connect through Excel or other applications.  
+ To use a model, it's deployed to a server instance that runs databases in a particular server mode, making the data available to authorized users who connect through Excel or other applications.  
   
- You can install an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance in one of three server modes:  
+ You can install an instance in one of three server modes:  
   
 -   As a Tabular instance, running Tabular models.  
   

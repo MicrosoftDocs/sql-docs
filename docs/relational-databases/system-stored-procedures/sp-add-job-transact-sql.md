@@ -19,12 +19,15 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # sp_add_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Adds a new job executed by the SQLServerAgent service.  
+  Adds a new job executed by the SQL Agent service.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+ 
+ > [!IMPORTANT]  
+ > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+ 
 ## Syntax  
   
 ```  
@@ -67,7 +70,7 @@ sp_add_job [ @job_name = ] 'job_name'
  A language-independent mechanism for specifying a job category. *category_id*is **int**, with a default of NULL.  
   
 `[ @owner_login_name = ] 'login'`
- The name of the login that owns the job. *login*is **sysname**, with a default of NULL, which is interpreted as the current login name. Only members of the **sysadmin** fixed server role can set or change the value for **@owner_login_name**. If users who are not members of the **sysadmin** role set or change the value of **@owner_login_name**, execution of this stored procedure fails and an error is returned.  
+ The name of the login that owns the job. *login*is **sysname**, with a default of NULL, which is interpreted as the current login name. Only members of the **sysadmin** fixed server role can set or change the value for **\@owner_login_name**. If users who are not members of the **sysadmin** role set or change the value of **\@owner_login_name**, execution of this stored procedure fails and an error is returned.  
   
 `[ @notify_level_eventlog = ] eventlog_level`
  A value indicating when to place an entry in the Microsoft Windows application log for this job. *eventlog_level*is **int**, and can be one of these values.  
@@ -113,7 +116,7 @@ sp_add_job [ @job_name = ] 'job_name'
  None  
   
 ## Remarks  
- **@originating_server** exists in **sp_add_job,** but is not listed under Arguments. **@originating_server** is reserved for internal use.  
+ **\@originating_server** exists in **sp_add_job,** but is not listed under Arguments. **\@originating_server** is reserved for internal use.  
   
  After **sp_add_job** has been executed to add a job, **sp_add_jobstep** can be used to add steps that perform the activities for the job. **sp_add_jobschedule** can be used to create the schedule that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service uses to execute the job. Use **sp_add_jobserver** to set the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance where the job executes, and **sp_delete_jobserver** to remove the job from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
@@ -132,7 +135,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  For information about the specific permissions that are associated with each of these fixed database roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Only members of the **sysadmin** fixed server role can set or change the value for **@owner_login_name**. If users who are not members of the **sysadmin** role set or change the value of **@owner_login_name**, execution of this stored procedure fails and an error is returned.  
+ Only members of the **sysadmin** fixed server role can set or change the value for **\@owner_login_name**. If users who are not members of the **sysadmin** role set or change the value of **\@owner_login_name**, execution of this stored procedure fails and an error is returned.  
   
 ## Examples  
   

@@ -68,8 +68,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 3.  A message box prompts you to confirm the deletion. Click **Yes**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     > [!NOTE]  
     >  Deleting a table automatically removes any relationships to it.  
   

@@ -46,19 +46,19 @@ This topic explains how to specify various properties for your merge replication
 ###  Using Transact-SQL  
   
 #### To specify that a new merge table article is download-only    
-1.  Execute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), specifying a value of **1** or **2** for the parameter **@subscriber_upload_options**. The numbers correspond to the following behavior:  
+1.  Execute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), specifying a value of **1** or **2** for the parameter **\@subscriber_upload_options**. The numbers correspond to the following behavior:  
   
     -   **0** - No restrictions (default). Changes made at the Subscriber are uploaded to the Publisher.    
     -   **1** - Changes are allowed at the Subscriber, but they are not uploaded to the Publisher.    
     -   **2** - Changes are not allowed at the Subscriber.  
   
         > [!NOTE]  
-        >  If the source table for an article is already published in another publication, the value of **@subscriber_upload_options** must be the same for both articles.  
+        >  If the source table for an article is already published in another publication, the value of **\@subscriber_upload_options** must be the same for both articles.  
   
 #### To modify an existing merge table article to be download-only  
   
 1.  To determine if an article is download-only, execute [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql). Note the value of **upload_options** for the article in the result set.    
-2.  If the value returned in step 1 is **0**, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specifying a value of **subscriber_upload_options** for **@property**, a value of **1** for **@force_invalidate_snapshot** and **@force_reinit_subscription**, and a value of **1** or **2** for **@value**, which corresponds to the following behavior:  
+2.  If the value returned in step 1 is **0**, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specifying a value of **subscriber_upload_options** for **\@property**, a value of **1** for **\@force_invalidate_snapshot** and **\@force_reinit_subscription**, and a value of **1** or **2** for **\@value**, which corresponds to the following behavior:  
   
     -   **1** - Changes are allowed at the Subscriber, but they are not uploaded to the Publisher.    
     -   **2** - Changes are not allowed at the Subscriber.  
@@ -95,21 +95,21 @@ This topic explains how to specify various properties for your merge replication
   
 #### Create a merge pull subscription that uses the Interactive Resolver  
   
-1.  At the Publisher on the publication database, execute [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), specifying **@publication**. Note the value of **allow_interactive_resolver** for each article in the result set for which the Interactive Resolver will be used.    
+1.  At the Publisher on the publication database, execute [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), specifying **\@publication**. Note the value of **allow_interactive_resolver** for each article in the result set for which the Interactive Resolver will be used.    
     -   If this value is **1**, the Interactive Resolver will be used.    
-    -   If this value is **0**, you must first enable the Interactive Resolver for each article. To do this, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specifying **@publication**, **@article**, a value of **allow_interactive_resolver** for **@property**, and a value of **true** for **@value**.    
+    -   If this value is **0**, you must first enable the Interactive Resolver for each article. To do this, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specifying **\@publication**, **\@article**, a value of **allow_interactive_resolver** for **\@property**, and a value of **true** for **\@value**.    
 2.  At the Subscriber on the subscription database, execute [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). For more information, see [Create a Pull Subscription](../create-a-pull-subscription.md).    
 3.  At the Subscriber on the subscription database, execute [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql), specifying the following parameters:  
   
-    -   **@publisher**, **@publisher_db** (the published database), and **@publication**.    
-    -   A value of **true** for **@enabled_for_syncmgr**.    
-    -   A value of **true** for **@use_interactive_resolver**.    
+    -   **\@publisher**, **\@publisher_db** (the published database), and **\@publication**.    
+    -   A value of **true** for **\@enabled_for_syncmgr**.    
+    -   A value of **true** for **\@use_interactive_resolver**.    
     -   The security account information required by the Merge Agent. For more information, see [Create a Pull Subscription](../create-a-pull-subscription.md).    
 4.  At the Publisher on the publication database, execute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql).  
   
 #### Define an article that supports the Interactive Resolver  
   
-At the Publisher on the publication database, execute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, and a value of **true** for **@allow_interactive_resolver**. For more information, see [Define an Article](define-an-article.md).  
+At the Publisher on the publication database, execute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specify the name of the publication to which the article belongs for **\@publication**, a name for the article for **\@article**, the database object being published for **\@source_object**, and a value of **true** for **\@allow_interactive_resolver**. For more information, see [Define an Article](define-an-article.md).  
 
 ## Specify the Conflict Tracking and Resolution Level 
 When a subscription to a merge publication is synchronized, replication checks for conflicts caused by changes to the same data made at both the Publisher and the Subscriber. You can specify whether conflicts are detected at the row-level, where any change to the row is considered a conflict, or column-level, where only changes to the same row and column are considered a conflict. Conflict resolution for articles is performed at the row-level. For more information about conflict detection and resolution when logical records are used, see [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
@@ -135,7 +135,7 @@ When a subscription to a merge publication is synchronized, replication checks f
   
 #### Specify conflict tracking options for a new merge article  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) and specify one of the following values for **@column_tracking**:  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) and specify one of the following values for **\@column_tracking**:  
   
     -   **true** - Use column-level tracking for the article.    
     -   **false** - Use row-level tracking, which is the default.  
@@ -143,11 +143,11 @@ When a subscription to a merge publication is synchronized, replication checks f
 #### Change conflict tracking options for a merge article  
   
 1.  To determine the conflict tracking options for a merge article, execute [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql). Note the value of the **column_tracking** option in the result set for the article. A value of **1** means that column-level tracking is being used, and a value of **0** means that row-level tracking is being used.    
-2.  At the Publisher on the publication database, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specify a value of **column_tracking** for **@property** and one of the following values for **@value**:
+2.  At the Publisher on the publication database, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specify a value of **column_tracking** for **\@property** and one of the following values for **\@value**:
     -   **true** - Use column-level tracking for the article.
     -   **false** - Use row-level tracking, which is the default.  
   
-     Specify a value of **1** for both **@force_invalidate_snapshot** and **@force_reinit_subscription**.  
+     Specify a value of **1** for both **\@force_invalidate_snapshot** and **\@force_reinit_subscription**.  
 
 ## Tracking deletes
 
@@ -161,7 +161,7 @@ When a subscription to a merge publication is synchronized, replication checks f
   
 ### Specify that deletes be ignored for a new merge article  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specify a value of `false` for **@delete_tracking**. For more information, see [Define an Article](../publish/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specify a value of `false` for **\@delete_tracking**. For more information, see [Define an Article](../publish/define-an-article.md).  
   
     > [!NOTE]  
     >  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
@@ -169,7 +169,7 @@ When a subscription to a merge publication is synchronized, replication checks f
 ### Specify that deletes be ignored for an existing merge article  
   
 1.  To determine if error compensation is enabled for an article, execute [sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) and note the value of **delete_tracking** in the result set. If this value is **0**, deletes are already being ignored.    
-2.  If the value from step 1 is **1**, execute [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) at the Publisher on the publication database. Specify a value of **delete_tracking** for **@property**, and a value of `false` for **@value**.  
+2.  If the value from step 1 is **1**, execute [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) at the Publisher on the publication database. Specify a value of **delete_tracking** for **\@property**, and a value of `false` for **\@value**.  
   
     > [!NOTE]  
     >  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
@@ -190,16 +190,16 @@ When a subscription to a merge publication is synchronized, replication checks f
 
 ### New Article
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specify an integer value that represents the processing order for the article for **@processing_order**. For more information, see [Define an Article](define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specify an integer value that represents the processing order for the article for **\@processing_order**. For more information, see [Define an Article](define-an-article.md).  
   
     > [!NOTE]  
-    >  When creating ordered articles, you should leave gaps between the article order values. This makes it easier to set new values in the future. For example, if you have three articles for which you need to specify a fixed processing order, set the value of **@processing_order** to 10, 20, and 30 rather than 1, 2, and 3, respectively.  
+    >  When creating ordered articles, you should leave gaps between the article order values. This makes it easier to set new values in the future. For example, if you have three articles for which you need to specify a fixed processing order, set the value of **\@processing_order** to 10, 20, and 30 rather than 1, 2, and 3, respectively.  
   
 ### Existing article
   
 1.  To determine processing order of an article, execute [sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) and note the value of **processing_order** in the result set.  
   
-2.  At the Publisher on the publication database, execute [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specify a value of **processing_order** for **@property** and an integer value that represents the processing order for **@value**.  
+2.  At the Publisher on the publication database, execute [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specify a value of **processing_order** for **\@property** and an integer value that represents the processing order for **\@value**.  
 
 
 

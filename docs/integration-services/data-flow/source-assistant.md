@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.dts.designer.sourceassistant.f1"
   - "sql13.dts.designer.addNewSource.f1"
 ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Source Assistant
 

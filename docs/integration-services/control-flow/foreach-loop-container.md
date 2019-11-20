@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "foreach enumerators [Integration Services]"
   - "containers [Integration Services], Foreach Loop"
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Foreach Loop Container
 
@@ -46,7 +46,7 @@ ms.author: janinez
   
 -   Foreach ADO.NET Schema Rowset enumerator to enumerate the schema information about a data source. For example, you can enumerate and get a list of the tables in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
--   Foreach File enumerator to enumerate files in a folder. The enumerator can traverse subfolders. For example, you can read all the files that have the *.log file name extension in the Windows folder and its subfolders.  
+-   Foreach File enumerator to enumerate files in a folder. The enumerator can traverse subfolders. For example, you can read all the files that have the *.log file name extension in the Windows folder and its subfolders. Note that the order in which the files are retrieved cannot be specified.  
   
 -   Foreach From Variable enumerator to enumerate the enumerable object that a specified variable contains. The enumerable object can be an array, an ADO.NET **DataTable**, an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enumerator, and so on. For example, you can enumerate the values of an array that contains the name of servers.  
   

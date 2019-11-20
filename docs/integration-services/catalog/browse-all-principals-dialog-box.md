@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.browseprincipals.f1"
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Browse All Principals Dialog Box
 

@@ -23,18 +23,6 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 
 This topic describes how to set the connection between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent and the [!INCLUDE[ssDE](../../includes/ssde_md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service can connect to a local instance of SQL Server by using Windows Authentication.  
   
-**In This Topic**  
-  
--   **Before you begin:**  
-  
-    [Limitations and Restrictions](#Restrictions)  
-  
-    [Security](#Security)  
-  
--   **To set the SQL Server Connection for the SQL Server Agent, using:**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  

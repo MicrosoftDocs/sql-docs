@@ -12,7 +12,7 @@ author: "yualan"
 ms.author: "alayu"
 ---
 # SandDance for Azure Data Studio (Preview)
-Azure Data Studio now offers a way to create quick visualizations for the .csv and .tsv files that you are working on. This includes local files or files on HDFS in your SQL Server 2019 Big Data Cluster. This extension is helpful when you are trying to have a quick look at the data and understand what's going on. We use a technology called SandDance from Microsoft Research, which can generate in-place visualizations of the data.
+Azure Data Studio now offers a way to create quick visualizations for your data. This extension is helpful when you are trying to look at the data and understand what's going on. We use a technology called SandDance from Microsoft Research, which can generate in-place visualizations of the data.
 
 ![sanddance-animation](https://user-images.githubusercontent.com/11507384/54236654-52d42800-44d1-11e9-859e-6c5d297a46d2.gif)
 
@@ -23,13 +23,18 @@ Smooth animated transitions between views help you to maintain context as you in
 
 ## Usage
 
+### View .csv or .tsv files
+This includes local files or files on HDFS in your SQL Server 2019 Big Data Cluster.
+ 
 Starting from the File menu, use Open Folder or [Ctrl+K Ctrl+O] to open the directory containing the .CSV file.  Next, from within the Explorer panel, Right-click on the .csv or .tsv file and choose *View in SandDance*.
 
 Right-click on a .csv or .tsv file in HDFS if you are connected to SQL Server 2019 Big Data Cluster and choose *View in SandDance*.
 
-## Known Issues
+### View SQL query results
 
-Currently, your data should have the first column as a unique identifier.
+Starting from a SQL query window, execute a query to get a results grid. Click the Visualizer icon on the right side of the Results pane.
+
+## Known Issues
 
 Currently, we do not cap the row count that is visualized. However, memory consumption goes up proportionally to the number of rows, so we recommend that the data set or view is limited to around 100k rows.
 

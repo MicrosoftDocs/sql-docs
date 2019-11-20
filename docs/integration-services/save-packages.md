@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SSIS packages, saving"
   - "SQL Server Integration Services packages, saving"
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Save Packages
 

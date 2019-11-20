@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.rename_folder (SSISDB Database)
 

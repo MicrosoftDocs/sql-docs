@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "packages [Integration Services], samples"
   - "datasets [Integration Services], sample"
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Row Sampling Transformation
 

@@ -1,7 +1,7 @@
 ---
-title: "Reading Large Data Sample | Microsoft Docs"
+title: "Reading large data sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -12,7 +12,7 @@ author: MightyPen
 ms.author: genemi
 ---
 
-# Reading Large Data Sample
+# Reading large data sample
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -26,10 +26,10 @@ The code file for this sample is named ReadLargeData.java, and it can be found i
 
 ## Requirements
 
-To run this sample application, you'll need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. Also set the classpath to include the mssql-jdbc jar file. For more information about how to set the classpath, see [Using the JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).
+To run this sample application, you'll need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. Also set the classpath to include the mssql-jdbc jar file. For more information about how to set the classpath, see [Using the JDBC driver](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
-> The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System requirements for the JDBC driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
 ## Example
 
@@ -43,6 +43,6 @@ Finally, the sample code iterates through the rows of data that are in the resul
 
 [!code[JDBC#UsingAdaptiveBuffering1](../../../connect/jdbc/codesnippet/Java/reading-large-data-sample_1.java)]
 
-## See Also
+## See also
 
-[Working with Large Data](../../../connect/jdbc/code-samples/working-with-large-data.md)
+[Working with large data](../../../connect/jdbc/code-samples/working-with-large-data.md)

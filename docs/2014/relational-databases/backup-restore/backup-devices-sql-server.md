@@ -55,7 +55,7 @@ manager: craigg
  physical backup device  
  Either a tape drive or a disk file that is provided by the operating system. A backup can be written to from 1 to 64 backup devices. If a backup requires multiple backup devices, the devices all must correspond to a single type of device (disk or tape).  
   
- SQL Server Backups can also be written to Windows Azure Blob storage service in addition to disk or tape.  
+ SQL Server Backups can also be written to Azure Blob storage service in addition to disk or tape.  
   
 ##  <a name="DiskBackups"></a> Using Disk Backup Devices  
  **In This Section:**  
@@ -203,8 +203,8 @@ GO
   
  If a tape has been accidentally left open, the fastest way to release the tape is by using the following command: RESTORE REWINDONLY FROM TAPE **=**_backup_device_name_. For more information, see [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
-## Using the Windows Azure Blob Storage Service  
- SQL Server Backups can be written to the Windows Azure Blob Storage Service.  For more information on how to use the Windows Azure Blob storage service for your backups, see [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+## Using the Azure Blob Storage Service  
+ SQL Server Backups can be written to the Azure Blob Storage Service.  For more information on how to use the Azure Blob storage service for your backups, see [SQL Server Backup and Restore with Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a> Using a Logical Backup Device  
  A *logical backup device* is an optional, user-defined name that points to a specific physical backup device (a disk file or tape drive). A logical backup device lets you use indirection when referencing the corresponding physical backup device.  
@@ -239,7 +239,7 @@ GO
 >  Mirrored backup media sets are supported only in [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] and later versions.  
   
 ##  <a name="Archiving"></a> Archiving SQL Server Backups  
- We recommend that you use a file system backup utility to archive the disk backups and that you store the archives off-site. Using disk has the advantage that you use the network to write the archived backups onto an off-site disk. The Windows Azure Blob storage service can be used as off-site archival option.  You can either upload your disk backups, or directly write the backups to the Windows Azure Blob storage service.  
+ We recommend that you use a file system backup utility to archive the disk backups and that you store the archives off-site. Using disk has the advantage that you use the network to write the archived backups onto an off-site disk. The Azure Blob storage service can be used as off-site archival option.  You can either upload your disk backups, or directly write the backups to the Azure Blob storage service.  
   
  Another common archiving approach is to write [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups onto a local backup disk, archive them to tape, and then store the tapes off-site.  
   

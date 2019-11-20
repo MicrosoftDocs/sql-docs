@@ -92,7 +92,7 @@ Call the stored procedure `[catalog].[update_logdb_info]` with the following par
 
 On Azure virtual machines, this configuration step requires additional steps. A full explanation of these concepts and these steps is beyond the scope of this article.
 
-1.  You have to set up an Azure domain. Windows Server Failover Clustering requires all computers in the cluster to be members of the same domain. For more info, see [Enable Azure Active Directory Domain Services using the Azure portal](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance).
+1.  You have to set up an Azure domain. Windows Server Failover Clustering requires all computers in the cluster to be members of the same domain. For more info, see [Enable Azure Active Directory Domain Services using the Azure portal](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
 
 2. You have to set up an Azure load balancer. This is a requirement for the availability group listener. For more info, see [Tutorial: Load balance internal traffic with Basic Load Balancer to VMs using the Azure portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 

@@ -17,7 +17,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # sp_change_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Changes a parameter of a replication agent profile stored in the [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) system table. This stored procedure is executed at the Distributor where the agent is running, on any database.  
   

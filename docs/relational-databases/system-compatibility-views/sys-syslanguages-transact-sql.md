@@ -72,7 +72,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Estonian|1061|1061|  
 |Latvian|1062|1062|  
 |Lithuanian|1063|1063|  
-|Brazilian|1046|1046|  
+|Portuguese (Brazil)|1046|1046|  
 |Traditional Chinese|1028|1028|  
 |Korean|1042|1042|  
 |Simplified Chinese|2052|2052|  

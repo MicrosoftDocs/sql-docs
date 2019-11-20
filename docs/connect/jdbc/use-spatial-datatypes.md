@@ -1,7 +1,7 @@
 ---
-title: "Using Spatial Datatypes | Microsoft Docs"
+title: "Using spatial datatypes | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/21/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,13 +11,13 @@ ms.assetid:
 author: MightyPen
 ms.author: genemi
 ---
-# Using Spatial Datatypes
+# Using spatial datatypes
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Spatial datatypes (Geometry and Geography) are supported starting JDBC Driver preview release 6.5.0. Spatial datatypes are currently not supported with stored procedures, Table Valued Parameters (TVP), BulkCopy, and Always Encrypted. This page shows various use cases of Geometry and Geography data types with the JDBC Driver. For an overview on spatial datatypes, check [Spatial Data Types Overview](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview) page.
 
-## Creating a Geometry / Geography object
+## Creating a geometry / geography object
 
 There are two main ways to create a Geometry / Geography object - either convert from a Well-Known Text (WKT) or a Well-Known Binary (WKB).
 
@@ -145,7 +145,7 @@ These are the new public APIs that have been introduced with this addition, in t
 |String asTextZM()| Returns the Well-Known Text (WKT) representation of the Geography object.
 |String toString()| Returns the String representation of the Geography object.
 
-## Limitations of Spatial Datatypes
+## Limitations of spatial datatypes
 
 1. The spatial sub-datatypes **CircularString**, **CompoundCurve**, **CurvePolygon**, and **FullGlobe** are only supported starting from SQL Server 2012 and above.
 
@@ -153,6 +153,6 @@ These are the new public APIs that have been introduced with this addition, in t
 
 3. Stored procedures, TVP, and BulkCopy operations are currently not supported with spatial datatypes.
 
-## See Also
+## See also
 
-[Spatial Data Types Sample (JDBC)](../../connect/jdbc/spatial-data-types-sample.md)
+[Spatial data types sample (JDBC)](../../connect/jdbc/spatial-data-types-sample.md)

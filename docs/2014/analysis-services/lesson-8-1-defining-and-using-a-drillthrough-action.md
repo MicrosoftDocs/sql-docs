@@ -137,13 +137,13 @@ manager: craigg
      ![Orders shipped to Adam Powell](../../2014/tutorials/media/l8-action8.gif "Orders shipped to Adam Powell")  
   
 ## Next Lesson  
- [Lesson 9: Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+ [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md)  
   
 ## See Also  
  [Actions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Actions in Multidimensional Models](multidimensional-models/actions-in-multidimensional-models.md)   
  [Dimension Relationships](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Defining a Fact Relationship](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)   
+ [Defining a Fact Relationship](lesson-5-2-defining-a-fact-relationship.md)   
  [Define a Fact Relationship and Fact Relationship Properties](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

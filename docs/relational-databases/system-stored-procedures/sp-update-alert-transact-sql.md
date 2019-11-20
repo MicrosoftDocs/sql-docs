@@ -125,7 +125,7 @@ sp_update_alert
  Reserved.  
   
 `[ @performance_condition = ] 'performance_condition'`
- A value expressed in the format **'***itemcomparatorvalue***'**. *performance_condition* is **nvarchar(512)**, with a default of NULL, and consists of these elements.  
+ A value expressed in the format **'**_itemcomparatorvalue_**'**. *performance_condition* is **nvarchar(512)**, with a default of NULL, and consists of these elements.  
   
 |Format element|Description|  
 |--------------------|-----------------|  

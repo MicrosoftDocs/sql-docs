@@ -24,18 +24,6 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 
 This topic describes how to define options for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)] job steps in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or SQL Server Management Objects.  
   
-**In This Topic**  
-  
--   **Before you begin:**  
-  
-    [Security](#Security)  
-  
--   **To define Transact-SQL job step options, using:** ,  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [SQL Server Management Objects](#SMO)  
-  
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Security"></a>Security  

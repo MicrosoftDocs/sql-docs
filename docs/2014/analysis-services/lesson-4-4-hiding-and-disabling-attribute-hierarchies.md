@@ -120,6 +120,6 @@ manager: craigg
      Notice that the hidden levels, **Postal Code** and **Full Name**, are visible in the user-defined hierarchy.  
   
 ## Next Task in Lesson  
- [Sorting Attribute Members Based on a Secondary Attribute](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
+ [Sorting Attribute Members Based on a Secondary Attribute](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
   
   

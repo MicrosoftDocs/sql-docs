@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.create_execution (SSISDB Database)
 

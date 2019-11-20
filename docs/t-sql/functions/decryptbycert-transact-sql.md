@@ -49,7 +49,7 @@ A variable of type **varbinary** containing data encrypted with the certificate.
 The password used to encrypt the private key of the certificate. *cert_password* must have a Unicode data format.  
   
  @cert_password  
-A variable of type **nchar** or **nvarchar** containing the password used to encrypt the private key of the certificate. *@cert_password* must have a Unicode data format.  
+A variable of type **nchar** or **nvarchar** containing the password used to encrypt the private key of the certificate. *\@cert_password* must have a Unicode data format.  
 
 ## Return Types  
 **varbinary**, with a maximum size of 8,000 bytes.  

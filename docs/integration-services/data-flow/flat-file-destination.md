@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "text file writing [Integration Services]"
   - "destinations [Integration Services], Flat File"
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Flat File Destination
 

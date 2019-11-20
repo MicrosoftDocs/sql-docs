@@ -102,8 +102,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 8.  Issue the following statements to stop the event session and remove it from the server.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```  
     ALTER EVENT SESSION test0  
     ON SERVER  

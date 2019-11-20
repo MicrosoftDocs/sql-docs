@@ -1,6 +1,6 @@
 ---
-title: "Implementing Endpoints | Microsoft Docs"
-ms.custom: ""
+title: "Implementing Endpoints"
+ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "endpoints [SMO]"
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing Endpoints

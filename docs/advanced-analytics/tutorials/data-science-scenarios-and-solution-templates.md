@@ -1,5 +1,6 @@
 ---
-title: Data science scenarios and solution templates
+title: Data science solution templates
+description: This article describes templates that demonstrate best practices and provide building blocks to help you implement a solution fast. Each template is designed to solve a specific problem, for a specific vertical or industry.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -7,6 +8,8 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Data science scenarios and solution templates
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
-title: "Connecting using Azure Active Directory Authentication | Microsoft Docs"
+title: "Connecting using Azure Active Directory authentication | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/29/2019"
+ms.date: "08/12/2019"
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,7 +11,7 @@ ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
 ---
-# Connecting using Azure Active Directory Authentication
+# Connecting using Azure Active Directory authentication
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -19,7 +19,7 @@ This article provides information on how to develop Java applications to use the
 
 You can use Azure Active Directory (AAD) authentication, which is a mechanism of connecting to Azure SQL Database v12 using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC Driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL DB. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
 
-Connection properties to support Azure Active Directory Authentication in the Microsoft JDBC Driver for SQL Server are:
+Connection properties to support Azure Active Directory authentication in the Microsoft JDBC Driver for SQL Server are:
 *	**authentication**:  Use this property to indicate which SQL authentication method to use for the connection. 
 Possible values are: 
     * **ActiveDirectoryMSI**
@@ -38,7 +38,7 @@ Possible values are:
 For more information, see the authentication property on the [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md) page.  
 
 
-## Client Setup Requirements
+## Client setup requirements
 For **ActiveDirectoryMSI** authentication, the below components must be installed on the client machine:
 * Java 8 or above
 * Microsoft JDBC Driver 7.2 (or higher) for SQL Server
@@ -49,10 +49,10 @@ For other authentication modes, the below components must be installed on the cl
 * Java 7 or above
 * Microsoft JDBC Driver 6.0 (or higher) for SQL Server
 * If you're using the access token-based authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies to run the examples from this article. For more information, see the **Connecting using Access Token** section.
-* If you're using the **ActiveDirectoryPassword** authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies. For more information, see the **Connecting using ActiveDirectoryPassword Authentication Mode** section.
+* If you're using the **ActiveDirectoryPassword** authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies. For more information, see the **Connecting using ActiveDirectoryPassword authentication mode** section.
 * If you're using the **ActiveDirectoryIntegrated** mode, you need azure-activedirectory-library-for-java and its dependencies. For more information, see the **Connecting using ActiveDirectoryIntegrated Authentication Mode** section.
 
-## Connecting using ActiveDirectoryMSI Authentication Mode
+## Connecting using ActiveDirectoryMSI authentication mode
 The following example shows how to use `authentication=ActiveDirectoryMSI` mode. Run this example from inside an Azure Resource, e,g an Azure Virtual Machine, App Service, or a Function App that is federated with Azure Active Directory.
 
 Replace the server/database name with your server/database name in the following lines before executing the example:
@@ -100,9 +100,9 @@ Running this example on an Azure Virtual Machine fetches an access token from _S
 You have successfully logged on as: <your MSI username>
 ```
 
-## Connecting using ActiveDirectoryIntegrated Authentication Mode
+## Connecting using ActiveDirectoryIntegrated authentication mode
 With version 6.4, Microsoft JDBC Driver adds support for ActiveDirectoryIntegrated Authentication using a Kerberos ticket on multiple platforms (Windows, Linux, and macOS).
-For more information, see [Set Kerberos ticket on Windows, Linux And Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) for more details. Alternatively, on Windows, sqljdbc_auth.dll can also be used for ActiveDirectoryIntegrated Authentication with JDBC Driver.
+For more information, see [Set Kerberos ticket on Windows, Linux And Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) for more details. Alternatively, on Windows, sqljdbc_auth.dll can also be used for ActiveDirectoryIntegrated authentication with JDBC Driver.
 
 > [!NOTE]
 >  If you are using an older version of the driver, check this [link](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) for the respective dependencies that are required to use this authentication mode. 
@@ -158,7 +158,7 @@ You need to set up a Kerberos ticket linking your current user to a Windows doma
 #### Windows
 JDK comes with `kinit`, which you can use to get a TGT from Key Distribution Center (KDC) on a domain joined machine that is federated with Azure Active Directory.
 
-##### Step 1: Ticket Granting Ticket retrieval
+##### Step 1: Ticket granting ticket retrieval
 - **Run on**: Windows
 - **Action**:
   - Use the command `kinit username@DOMAIN.COMPANY.COM` to get a TGT from KDC, then it will prompt you for your domain password.
@@ -202,13 +202,13 @@ Access to a Windows domain-joined machine to query your Kerberos Domain Controll
 > [!NOTE]
 >  Domain must be in ALL CAPS.
 
-##### Step 3: Testing the Ticket Granting Ticket retrieval
+##### Step 3: Testing the ticket granting ticket retrieval
 - **Run on**: Linux/Mac
 - **Action**:
   - Use the command `kinit username@DOMAIN.COMPANY.COM` to get a TGT from KDC, then it will prompt you for your domain password.
   - Use `klist` to see the available tickets. If the kinit was successful, you should see a ticket from krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
-## Connecting using ActiveDirectoryPassword Authentication Mode
+## Connecting using ActiveDirectoryPassword authentication mode
 The following example shows how to use `authentication=ActiveDirectoryPassword` mode.
 
 Before building and running the example:
@@ -261,7 +261,7 @@ You have successfully logged on as: <your user name>
 > [!NOTE]  
 > A contained user database must exist and a contained database user representing the specified Azure AD user or one of the groups, the specified Azure AD user belongs to, must exist in the database, and must have the CONNECT permission (except for Azure Active Directory server admin or group)
 
-## Connecting using Access Token
+## Connecting using access token
 Applications/services can retrieve an access token from the Azure Active Directory and use that to connect to Azure SQL Database/Data Warehouse.
 
 > [!NOTE] 
@@ -283,7 +283,7 @@ The example below contains a simple Java application that connects to Azure SQL 
 	
 	![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. Sign in to your Azure SQL Server's user database as an Azure Active Directory admin and using a T-SQL command
-provision a contained database user for your application principal. For more information, see the [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)
+provision a contained database user for your application principal. For more information, see the [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)
  for more details on how to create an Azure Active Directory admin and a contained database user.
 
 	```

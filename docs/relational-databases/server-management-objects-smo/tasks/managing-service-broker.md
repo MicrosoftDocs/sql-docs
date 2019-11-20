@@ -1,6 +1,6 @@
 ---
-title: "Managing Service Broker | Microsoft Docs"
-ms.custom: ""
+title: "Managing Service Broker"
+ms.custom: seo-dt-2019
 ms.date: "05/24/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "Service Broker [SMO]"
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Managing Service Broker

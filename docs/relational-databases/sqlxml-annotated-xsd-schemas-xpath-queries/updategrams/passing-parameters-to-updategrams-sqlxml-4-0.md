@@ -60,8 +60,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 2.  Prepare the SQLXML 4.0 test script (Sqlxml4test.vbs) in [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) to execute the updategram by adding the following lines after the `cmd.Properties("Output Stream").Value = outStream`:  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```  
     cmd.NamedParameters = True  
     ' CreateParameter arguments: Name, Type, Direction, Size, Value  

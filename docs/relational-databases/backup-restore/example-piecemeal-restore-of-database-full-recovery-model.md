@@ -69,15 +69,13 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 3.  Online restore of filegroup `B`.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     In the third restore sequence, the database administrator restores filegroup `B`. The backup of filegroup `B` was taken after the filegroup became read-only; therefore, it does not have to be rolled forward during recovery.  
+   In the third restore sequence, the database administrator restores filegroup `B`. The backup of filegroup `B` was taken after the filegroup became read-only; therefore, it does not have to be rolled forward during recovery.  
   
-    ```  
-    RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
-    ```  
+   ```sql  
+   RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
+   ```  
   
-     All filegroups are now online.  
+   All filegroups are now online.  
   
 ## Additional Examples  
   

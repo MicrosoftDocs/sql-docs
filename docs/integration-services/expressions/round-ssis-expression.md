@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "rounding expressions"
   - "ROUND function [SSIS]"
 ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # ROUND (SSIS Expression)
 

@@ -130,7 +130,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
      All proximity searches always look for only non-overlapping occurrences. Overlapping occurrences of search terms never qualify as matches. For example, consider the following proximity term, which searches "`A`" and "`AA`" in this order with a maximum distance of two terms:  
   
     ```  
-    CONTAINS(column_name, 'NEAR((A,AA),2, TRUE')  
+    CONTAINS(column_name, 'NEAR((A,AA), 2, TRUE)')
     ```  
   
      The possible matches are as "`AAA`", "`A.AA`", and "`A..AA`". Rows containing just "`AA`" would not match.  

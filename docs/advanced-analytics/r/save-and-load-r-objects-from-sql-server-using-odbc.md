@@ -1,5 +1,6 @@
 ---
-title: Save and load R objects from SQL Server using ODBC
+title: Save and load R objects using ODBC
+description: The RevoScaleR package includes serialization and deserialization functions that greatly improve performance, and store the object more compactly.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -7,6 +8,8 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Save and load R objects from SQL Server using ODBC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

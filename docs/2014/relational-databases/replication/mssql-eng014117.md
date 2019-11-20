@@ -46,7 +46,7 @@ manager: craigg
   
      10.193.17.129 inst1  
   
--   Disable distribution, register the instance, and then reestablish distribution. If the value of @@SERVERNAME is not correct for a non-clustered instance, follow these steps:  
+-   Disable distribution, register the instance, and then reestablish distribution. If the value of @@SERVERNAME is not correct for a nonclustered instance, follow these steps:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  

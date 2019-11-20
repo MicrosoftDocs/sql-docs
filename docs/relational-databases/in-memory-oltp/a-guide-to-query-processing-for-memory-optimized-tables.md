@@ -74,7 +74,7 @@ Query plan for join of disk-based tables.
   
 -   The rows from the Customer table are retrieved from the clustered index, which is the primary data structure and has the full table data.  
   
--   Data from the Order table is retrieved using the non-clustered index on the CustomerID column. This index contains both the CustomerID column, which is used for the join, and the primary key column OrderID, which is returned to the user. Returning additional columns from the Order table would require lookups in the clustered index for the Order table.  
+-   Data from the Order table is retrieved using the nonclustered index on the CustomerID column. This index contains both the CustomerID column, which is used for the join, and the primary key column OrderID, which is returned to the user. Returning additional columns from the Order table would require lookups in the clustered index for the Order table.  
   
 -   The logical operator **Inner Join** is implemented by the physical operator **Merge Join**. The other physical join types are **Nested Loops** and **Hash Join**. The **Merge Join** operator takes advantage of the fact that both indexes are sorted on the join column CustomerID.  
   
@@ -111,9 +111,7 @@ SQL Server query processing pipeline.
   
 6.  Access Methods retrieves the rows from the index and data pages in the buffer pool and loads pages from disk into the buffer pool as needed.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- For the first example query, the execution engine requests rows in the clustered index on Customer and the non-clustered index on Order from Access Methods. Access Methods traverses the B-tree index structures to retrieve the requested rows. In this case all rows are retrieved as the plan calls for full index scans.  
+ For the first example query, the execution engine requests rows in the clustered index on Customer and the nonclustered index on Order from Access Methods. Access Methods traverses the B-tree index structures to retrieve the requested rows. In this case all rows are retrieved as the plan calls for full index scans.  
   
 ## Interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] Access to Memory-Optimized Tables  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc batches and stored procedures are also referred to as interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)]. Interpreted refers to the fact that the query plan is interpreted by the query execution engine for each operator in the query plan. The execution engine reads the operator and its parameters and performs the operation.  

@@ -12,7 +12,7 @@ ms.author: lle
 manager: craigg
 ---
 # Task 9: Configuring a Reference Data Service
-  In this task, you configure DQS to use a Reference Data Service on Windows Azure Marketplace. In the next task, you will configure the **Address Validation** domain to use this service. At runtime, during cleansing activity, DQS passes the values of domains in the **Address Validation** domain to the service for cleansing. See [Configure DQS to Use Reference Data](https://msdn.microsoft.com/library/hh213070.aspx) for more details.  
+  In this task, you configure DQS to use a Reference Data Service on Azure Marketplace. In the next task, you will configure the **Address Validation** domain to use this service. At runtime, during cleansing activity, DQS passes the values of domains in the **Address Validation** domain to the service for cleansing. See [Configure DQS to Use Reference Data](https://msdn.microsoft.com/library/hh213070.aspx) for more details.  
   
 1.  In the main page of **DQS Client**, in the **Administration** pane, click **Configuration**.  
   
@@ -20,7 +20,7 @@ manager: craigg
   
 3.  In the **Network Settings** area, type appropriate values in the **Proxy Server** and **Port** fields if you need to use a proxy server to connect to Internet.  
   
-4.  Type your **Windows Azure Marketplace Account Key** for the **DataMarket Account ID** field.  
+4.  Type your **Azure Marketplace Account Key** for the **DataMarket Account ID** field.  
   
      ![Azure Data Market Reference Data Service Account](../../2014/tutorials/media/et-configuringareferencedataservice.jpg "Azure Data Market Reference Data Service Account")  
   

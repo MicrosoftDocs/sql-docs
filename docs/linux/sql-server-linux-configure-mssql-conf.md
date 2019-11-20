@@ -3,7 +3,7 @@ title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to  configure SQL Server settings on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 02/28/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -399,7 +399,7 @@ The first phase capture is controlled by the **coredump.coredumptype** setting, 
 The **sqlpagent.databasemailprofile** allows you to set the default DB Mail profile for email alerts.
 
 ```bash
-sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
 ## <a id="hadr"></a> High Availability
 
@@ -504,7 +504,7 @@ There are several other settings for mssql-conf that you can use to monitor and 
 | mssql-conf setting | Description |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Configure secure only RPC calls for distributed transactions |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | Configure security only RPC calls for distributed |transactions
+| distributedtransaction.fallbacktounsecurerpcifnecessary | Configure security only RPC calls for distributed transactions |
 | distributedtransaction.maxlogsize | DTC transaction log file size in MB. Default is 64MB |
 | distributedtransaction.memorybuffersize | Circular buffer size in which traces are stored. This size is in MB and default is 10MB |
 | distributedtransaction.servertcpport | MSDTC rpc server port |
@@ -567,7 +567,7 @@ After setting the property, restart SQL Server Launchpad service to read the upd
 sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
 
 # Turns off network access but preserves the setting
-/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
+sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
 
 # Removes the setting and rescinds network access
 sudo /opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess

@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 For more details about memory-optimization of temp table and table variable scenarios see: [Faster temp table and table variable by using memory optimization](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
-  The following example shows how the use of a temp table with three columns (id, ProductID, Quantity) can be replaced using a table variable **@OrderQuantityByProduct** of type **dbo.OrderQuantityByProduct**:  
+  The following example shows how the use of a temp table with three columns (id, ProductID, Quantity) can be replaced using a table variable **\@OrderQuantityByProduct** of type **dbo.OrderQuantityByProduct**:  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

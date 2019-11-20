@@ -12,9 +12,10 @@ helpviewer_keywords:
 ms.assetid: 636566db-ffcf-4109-8c11-15b8c7cb9cd9
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # MSSQL_ENG020572
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## Message Details  
   

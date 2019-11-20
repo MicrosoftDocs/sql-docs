@@ -40,7 +40,7 @@ ms.author: mikeray
 ## Concepts and Requirements  
   
 ### Azure Storage Concepts  
- When using SQL Server Data Files in Windows Azure feature, you need to create a storage account and a container in Windows Azure. Then, you need to create a SQL Server credential, which includes information on the policy of the container as well as a shared access signature that is necessary to access the container.  
+ When using SQL Server Data Files in Azure feature, you need to create a storage account and a container in Azure. Then, you need to create a SQL Server credential, which includes information on the policy of the container as well as a shared access signature that is necessary to access the container.  
   
  In [Microsoft Azure](https://azure.microsoft.com), an [Azure storage](https://azure.microsoft.com/services/storage/) account represents the highest level of the namespace for accessing Blobs. A storage account can contain an unlimited number of containers, as long as their total size is below the storage limits. For the latest information on storage limits, see [Azure Subscription and Service Limits, Quotas, and Constraints](https://docs.microsoft.com/azure/azure-subscription-service-limits). A container provides a grouping of a set of [Blobs](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). All Blobs must be in a container. An account can contain an unlimited number of containers. Similarly, a container can store an unlimited number of Blobs as well. There are two types of blobs that can be stored in Azure Storage: block and page blobs. This new feature uses Page blobs, which are more efficient when ranges of bytes in a file are modified frequently. You can access Blobs using the following URL format: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
@@ -109,7 +109,7 @@ ON
   
 -   **Always On availability groups** are supported as long as you do not add new database files to the primary database. If a database operation requires a new file to be created in the primary database, first disable Always On availability groups in the secondary node. Then, perform the database operation on the primary database and backup the database in the primary node. Next, restore the database to the secondary node, and enable Always On availability groups in the secondary node. Note that Always On failover cluster instances is not supported when using the SQL Server data files in Azure feature.  
   
--   During normal operation, SQL Server uses temporary leases to reserve Blobs for storage with a renewal of each Blob lease every 45 to 60 seconds. If a server crashes and another instance of SQL Server configured to use the same blobs is started, the new instance will wait up to 60 seconds for the existing lease on the Blob to expire. If you want to attach the database to another instance and you cannot wait for the lease to expire within 60 seconds, you can explicitly break the lease on the Blob to avoid any failures in attach operations.  
+-   During normal operation, SQL Server uses temporary leases to reserve Blobs for storage with a renewal of each Blob lease every 45 to 60 seconds. If a server crashes and another instance of SQL Server configured to use the same blobs is started, the new instance will wait up to 60 seconds for the existing lease on the Blob to expire. If you want to attach the database to another instance and you cannot wait for the lease to expire within 60 seconds, you can explicitly release the lease on the Blob to avoid any failures in attach operations.  
   
 ## Tools and programming reference support  
  This section describes which tools and programming reference libraries can be used when storing SQL Server data files in Azure Storage.  
@@ -118,7 +118,7 @@ ON
  Use PowerShell cmdlets to store SQL Server data files in Azure Blob Storage service by referencing a Blob Storage URL path instead of a file path. Access Blobs using the following URL format: `https://storageaccount.blob.core.windows.net/<container>/<blob>` .  
   
 ### SQL Server object and performance counters support  
- Starting with SQL Server 2014, a new SQL Server object has been added to be used with SQL Server Data Files in Azure Storage feature. The new SQL Server object is called as [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) and it can be used by System Monitor to monitor activity when running SQL Server with Windows Azure Storage.  
+ Starting with SQL Server 2014, a new SQL Server object has been added to be used with SQL Server Data Files in Azure Storage feature. The new SQL Server object is called as [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) and it can be used by System Monitor to monitor activity when running SQL Server with Azure Storage.  
   
 ### SQL Server Management Studio support  
  SQL Server Management Studio allows you to use this feature via several dialog windows. For example, you can type the URL path of the storage container, such as > https://teststorageaccnt.blob.core.windows.net/testcontainer/ :
@@ -141,7 +141,7 @@ ON
  **Authentication errors**  
   
 -   *Cannot drop the credential '%.\*ls' because it is used by an active database file.*   
-    Resolution: You may see this error when you try to drop a credential that is still being used by an active database file in Azure Storage. To drop the credential, first you must delete the associated blob that has this database file. To delete a blob that has an active lease, you must first break the lease.  
+    Resolution: You may see this error when you try to drop a credential that is still being used by an active database file in Azure Storage. To drop the credential, first you must delete the associated blob that has this database file. To delete a blob that has an active lease, you must first release the lease.  
   
 -   *Shared Access Signature has not been created on the container correctly.*   
      Resolution: Make sure that you have created a Shared Access Signature on the container correctly. Review the instructions given in Lesson 2 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
@@ -151,7 +151,7 @@ ON
   
  **Lease blob errors:**  
   
--   Error when trying to start SQL Server after another instance using the same blob files has crashed. Resolution: During normal operation, SQL Server uses temporary leases to reserve Blobs for storage with a renewal of each Blob lease every 45 to 60 seconds. If a server crashes and another instance of SQL Server configured to use the same blobs is started, the new instance will wait up to 60 seconds for the existing lease on the Blob to expire. If you want to attach the database to another instance and you cannot wait for the lease to expire within 60 seconds, you can explicitly break the lease on the Blob to avoid any failures in attach operations.  
+-   Error when trying to start SQL Server after another instance using the same blob files has crashed. Resolution: During normal operation, SQL Server uses temporary leases to reserve Blobs for storage with a renewal of each Blob lease every 45 to 60 seconds. If a server crashes and another instance of SQL Server configured to use the same blobs is started, the new instance will wait up to 60 seconds for the existing lease on the Blob to expire. If you want to attach the database to another instance and you cannot wait for the lease to expire within 60 seconds, you can explicitly release the lease on the Blob to avoid any failures in attach operations.  
   
  **Database errors**  
   
@@ -162,8 +162,6 @@ ON
     Resolution: Make sure to execute the Alter Database statement when the database is online. When copying the data files to Azure Storage, always create a page blob not a block blob. Otherwise, ALTER Database will fail. Review the instructions given in Lesson 7 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 3.  *Error code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*   
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidently started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  
   

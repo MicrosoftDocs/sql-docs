@@ -14,9 +14,10 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Replication Programming Concepts
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Before developing an application that uses replication functionalities, you should follow the following general planning steps:  
   

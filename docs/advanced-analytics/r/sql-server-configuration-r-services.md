@@ -1,5 +1,6 @@
 ---
-title: SQL Server Configuration (R Services)
+title: Configuration for use with R
+description: This article provides guidance about the hardware and network configuration of the computer used to run SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -7,6 +8,8 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # SQL Server configuration for use with R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

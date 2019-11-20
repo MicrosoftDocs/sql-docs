@@ -80,7 +80,7 @@ manager: craigg
   
      The following example removes a databases named `Db6` from the `MyAG` availability group.  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAG REMOVE DATABASE Db6;  
     ```  
   
@@ -93,9 +93,8 @@ manager: craigg
   
      For example, the following command removes the availability database `MyDb9` from the availability group named `MyAg`. Because the command is executed on the server instance that hosts the primary replica, the primary database and all its corresponding secondary databases are removed from the availability group. Data synchronization will no longer occur for this database on any secondary replica.  
   
-    ```  
-    Remove-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\PrimaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb9  
+    ```powershell
+    Remove-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\PrimaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb9  
     ```  
   
     > [!NOTE]  
@@ -121,5 +120,3 @@ manager: craigg
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Remove a Secondary Database from an Availability Group &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)  
-  
-  

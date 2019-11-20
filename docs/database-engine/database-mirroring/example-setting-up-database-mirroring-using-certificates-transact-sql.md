@@ -256,7 +256,7 @@ ms.author: mikeray
     ```  
   
     > [!NOTE]  
-    >  If you intend to run in high-safety mode with automatic failover, leave transaction safety set to FULL (the default setting) and add the witness as soon as possible after executing the second SET PARTNER **'***partner_server***'** statement. Note that the witness must first be configured for outbound and inbound connections.  
+    >  If you intend to run in high-safety mode with automatic failover, leave transaction safety set to FULL (the default setting) and add the witness as soon as possible after executing the second SET PARTNER **'**_partner_server_**'** statement. Note that the witness must first be configured for outbound and inbound connections.  
   
  [&#91;Top of Example&#93;](#ExampleH2)  
   

@@ -28,7 +28,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # CLR Integration Architecture - CLR Hosted Environment
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integration with the .NET Framework common language runtime (CLR) enables database programmers to use languages such as Visual C#, Visual Basic .NET, and Visual C++. Functions, stored procedures, triggers, data types, and aggregates are among the kinds of business logic that programmers can write with these languages.  
   
   The CLR features garbage-collected memory, preemptive threading, metadata services (type reflection), code verifiability, and code access security. The CLR uses metadata to locate and load classes, lay out instances in memory, resolve method invocations, generate native code, enforce security, and set run-time context boundaries.  
@@ -168,7 +168,7 @@ Thread.EndThreadAffinity();
   
  Given these considerations, we discourage the use of static variables and static data members of classes used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For SAFE and EXTERNAL_ACCESS assemblies, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examines the metadata of the assembly at CREATE ASSEMBLY time and fails the creation of such assemblies if it finds the use of static data members and variables.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also disallows calls to .NET Framework APIs that are annotated with the **SharedState**, **Synchronization, and **ExternalProcessMgmt** host protection attributes. This prevents SAFE and EXTERNAL_ACCESS assemblies from calling any APIs that enable sharing state, performing synchronization, and affecting the integrity of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. For more information, see [CLR Integration Programming Model Restrictions](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also disallows calls to .NET Framework APIs that are annotated with the **SharedState**, **Synchronization**, and **ExternalProcessMgmt** host protection attributes. This prevents SAFE and EXTERNAL_ACCESS assemblies from calling any APIs that enable sharing state, performing synchronization, and affecting the integrity of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. For more information, see [CLR Integration Programming Model Restrictions](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## See Also  
  [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)   

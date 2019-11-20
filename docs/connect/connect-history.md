@@ -34,7 +34,7 @@ There are three distinct generations of Microsoft OLE DB providers for SQL Serve
 
 ## ADO.NET
 
-ADO.NET was introduced with the Microsoft .NET Framework and continues to be improved and maintained. It is a core component of the Microsoft .NET Framework. For more information, see [Microsoft ADO.NET for SQL Server](ado-net/microsoft-ado-net-for-sql-server.md).
+ADO.NET was introduced with the Microsoft .NET Framework and continues to be improved and maintained. It is a core component of the Microsoft .NET Framework. For more information, see [Microsoft ADO.NET for SQL Server](ado-net/microsoft-ado-net-sql-server.md).
 
 ## JDBC
 
@@ -52,7 +52,7 @@ Introduced in 2009 as an open-source project, the Microsoft Drivers for PHP for 
 
 ### Microsoft Driver for Node.js for SQL Server
 
-The Microsoft Driver for Node.js for SQL Server allows Node.js applications on Microsoft Windows and Microsoft Windows Azure to access Microsoft SQL Server and Microsoft Windows Azure SQL Database. Development efforts are no longer being focused on this driver. It is not recommended to create new applications using the Microsoft Driver for Node.js for SQL Server.
+The Microsoft Driver for Node.js for SQL Server allows Node.js applications on Microsoft Windows and Microsoft Azure to access Microsoft SQL Server and Microsoft Azure SQL Database. Development efforts are no longer being focused on this driver. It is not recommended to create new applications using the Microsoft Driver for Node.js for SQL Server.
 
 For more information about the Microsoft Driver for Node.js for SQL Server, see [WindowsAzure / node-sqlserver](https://github.com/Azure/node-sqlserver).
 

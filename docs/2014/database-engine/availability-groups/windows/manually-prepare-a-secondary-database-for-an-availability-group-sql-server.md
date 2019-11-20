@@ -145,7 +145,7 @@ manager: craigg
   
 1.  To use the [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] database, modify it to use the full recovery model:  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     ALTER DATABASE MyDB1   
@@ -160,7 +160,7 @@ manager: craigg
   
      On the server instance that hosts the primary replica (`INSTANCE01`), create a full backup of the primary database as follows:  
   
-    ```  
+    ```sql
     BACKUP DATABASE MyDB1   
         TO DISK = 'C:\MyDB1.bak'   
         WITH FORMAT  
@@ -175,7 +175,7 @@ manager: craigg
   
          On the computer that hosts the secondary replica, restore the full backup as follows:  
   
-        ```  
+        ```sql
         RESTORE DATABASE MyDB1   
             FROM DISK = 'C:\MyDB1.bak'   
             WITH NORECOVERY  
@@ -191,7 +191,7 @@ manager: craigg
   
          For example, the following command restores a backup of a primary database that resides in the data directory of the default instance of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. The restore database operation must move the database to the data directory of a remote instance of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] named  (*AlwaysOn1*), which hosts the secondary replica on another cluster node. There, the data and log files are restored to the *C:\Program Files\Microsoft SQL Server\MSSQL12.ALWAYSON1\MSSQL\DATA* directory . The restore operation uses WITH NORECOVERY, to leave the secondary database in the restoring database.  
   
-        ```  
+        ```sql
         RESTORE DATABASE MyDB1  
           FROM DISK='C:\MyDB1.bak'  
          WITH NORECOVERY,   
@@ -204,7 +204,7 @@ manager: craigg
   
 5.  After you restore the full backup, you must create a log backup on the primary database. For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement backs up the log to the a backup file named *E:\MyDB1_log.bak*:  
   
-    ```  
+    ```sql
     BACKUP LOG MyDB1   
       TO DISK = 'E:\MyDB1_log.bak'   
     GO  
@@ -214,7 +214,7 @@ manager: craigg
   
      For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement restores the first log from *C:\MyDB1.bak*:  
   
-    ```  
+    ```sql
     RESTORE LOG MyDB1   
       FROM DISK = 'E:\MyDB1_log.bak'   
         WITH FILE=1, NORECOVERY  
@@ -225,7 +225,7 @@ manager: craigg
   
      For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement restores two additional logs from *E:\MyDB1_log.bak*:  
   
-    ```  
+    ```sql
     RESTORE LOG MyDB1   
       FROM DISK = 'E:\MyDB1_log.bak'   
         WITH FILE=2, NORECOVERY  
@@ -259,16 +259,15 @@ manager: craigg
 ###  <a name="ExamplePSscript"></a> Sample Backup and Restore Script and Command  
  The following PowerShell commands back up a full database backup and transaction log to a network share and restore those backups from that share. This example assumes that the file path to which the database is restored is the same as the file path on which the database was backed up.  
   
-```  
+```powershell
 # Create database backup  
 Backup-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -ServerInstance "SourceMachine\Instance"  
 # Create log backup  
 Backup-SqlDatabase -Database "MyDB1" -BackupAction "Log" -BackupFile "\\share\backups\MyDB1.trn" -ServerInstance "SourceMachine\Instance"  
-# Restore database backup   
+# Restore database backup
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
-# Restore log backup   
-Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
-  
+# Restore log backup
+Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"
 ```  
   
 ##  <a name="FollowUp"></a> Follow Up: After Preparing a Secondary Database  
@@ -280,5 +279,3 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
  [RESTORE Arguments &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Troubleshoot a Failed Add-File Operation &#40;AlwaysOn Availability Groups&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
-  
-  

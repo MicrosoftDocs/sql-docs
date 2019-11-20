@@ -54,7 +54,7 @@ ms.author: mikeray
   
 3.  In the details pane, right-click the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance for which you want to change the service startup account, and then click **Properties**.  
   
-4.  In the **SQL Server \<***instancename***> Properties** dialog box, click the **Log On** tab, and select a **Log on as** account type.  
+4.  In the **SQL Server \<**_instancename_**> Properties** dialog box, click the **Log On** tab, and select a **Log on as** account type.  
   
 5.  After selecting the new service startup account, click **OK**.  
   

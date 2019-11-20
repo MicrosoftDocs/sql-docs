@@ -36,7 +36,7 @@ manager: craigg
 ### Example (PowerShell)  
  The following example sets all three variables and lists their settings:  
   
-```  
+```powershell
 $SqlServerMaximumTabCompletion = 20  
 $SqlServerMaximumChildItems = 10  
 $SqlServerIncludeSystemObjects = $False  
@@ -45,5 +45,3 @@ dir variable:sqlserver*
   
 ## See Also  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

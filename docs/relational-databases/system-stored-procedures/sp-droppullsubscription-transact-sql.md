@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_droppullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Drops a subscription at the current database of the Subscriber. This stored procedure is executed at the Subscriber on the pull subscription database.  
   

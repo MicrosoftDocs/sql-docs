@@ -12,9 +12,10 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Publication Properties, Subscription Options
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Subscription Options** page of the **Publication Properties** dialog box allows you to view and set publication level properties associated with subscriptions. The properties are grouped into the following categories:  
   
 -   Properties that apply to all publications.  

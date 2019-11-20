@@ -22,7 +22,7 @@ ms.author: maggies
   
      \- Or -  
   
-     Open an exiting ASP.NET Web Site and add a new Web Form.  
+     Open an existing ASP.NET Web Site and add a new Web Form.  
   
 2.  Locate the **ScriptManager** control in the **AJAX Extensions** group in the **Toolbox** window, and drag it to the design surface of the Web form.  
   

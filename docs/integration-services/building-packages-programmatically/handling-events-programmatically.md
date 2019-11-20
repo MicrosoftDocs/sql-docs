@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "tasks [Integration Services], events"
   - "IDTSEvents interface"
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Handling Events Programmatically
 

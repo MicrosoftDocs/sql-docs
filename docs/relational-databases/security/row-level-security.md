@@ -166,7 +166,7 @@ It is possible to cause information leakage through the use of carefully crafted
   
 - **Full-Text Search:** A performance hit is expected for queries using the following Full-Text Search and Semantic Search functions, because of an extra join introduced to apply row-level security and avoid leaking the primary keys of rows that should be filtered: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
   
-- **Columnstore Indexes:** RLS is compatible with both clustered and non-clustered columnstore indexes. However, because row-level security applies a function, it is possible that the optimizer may modify the query plan so that it doesn't use batch mode.  
+- **Columnstore Indexes:** RLS is compatible with both clustered and nonclustered columnstore indexes. However, because row-level security applies a function, it is possible that the optimizer may modify the query plan so that it doesn't use batch mode.  
   
 - **Partitioned Views:** Block predicates cannot be defined on partitioned views, and partitioned views cannot be created on top of tables that use block predicates. Filter predicates are compatible with partitioned views.  
   

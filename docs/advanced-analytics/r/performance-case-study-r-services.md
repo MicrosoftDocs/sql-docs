@@ -1,5 +1,6 @@
 ---
-title: Performance for SQL Server R Services - results and resources
+title: Performance tuning for results
+description: This article summarizes the methods, findings, and conclusions of two case studies that tested various optimization methods.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -7,6 +8,8 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Performance for R Services: results and resources
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +27,7 @@ This topic lists the detailed results of the first case study. For the second ca
 
 This case study by the SQL Server R Services development team tested the effects of various optimizations. A single rxLogit model was created and scoring performed on the Airline data set. Optimizations were applied during the training and scoring processes to assess individual impacts.
 
-- Github: [Sample data and scripts](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning) for SQL Server optimizations study
+- GitHub: [Sample data and scripts](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning) for SQL Server optimizations study
 
 ### Test methods
 

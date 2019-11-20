@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Management Objects, exceptions"
   - "inner exceptions [SMO]"
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Handling SMO Exceptions

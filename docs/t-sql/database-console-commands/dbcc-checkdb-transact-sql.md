@@ -106,7 +106,7 @@ REPAIR_FAST
  Maintains syntax for backward compatibility only. No repair actions are performed.  
     
 REPAIR_REBUILD  
- Performs repairs that have no possibility of data loss. This can include quick repairs, such as repairing missing rows in non-clustered indexes, and more time-consuming repairs, such as rebuilding an index.  
+ Performs repairs that have no possibility of data loss. This can include quick repairs, such as repairing missing rows in nonclustered indexes, and more time-consuming repairs, such as rebuilding an index.  
  This argument does not repair errors involving FILESTREAM data.  
     
 > [!IMPORTANT] 
@@ -155,7 +155,7 @@ DATA_PURITY
  Validation errors reported by this option cannot be fixed by using DBCC repair options. For information about manually correcting these errors, see Knowledge Base article 923247: [Troubleshooting DBCC error 2570 in SQL Server 2005 and later versions](https://support.microsoft.com/kb/923247).  
     
  MAXDOP  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and later).  
     
  Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] uses the Resource Governor MAXDOP value, described in [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  

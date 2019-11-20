@@ -27,7 +27,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # ssbdiagnose Utility (Service Broker)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **ssbdiagnose** utility reports issues in [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversations or the configuration of [!INCLUDE[ssSB](../../includes/sssb-md.md)] services. Configuration checks can be made for either two services or a single service. Issues are reported either in the command prompt window as human-readable text, or as formatted XML that can be redirected to a file or another program.
 
 ## Syntax  

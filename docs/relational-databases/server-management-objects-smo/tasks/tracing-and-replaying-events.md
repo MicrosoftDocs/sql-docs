@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "events [SMO], replaying"
   - "events [SMO], tracing"
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tracing and Replaying Events

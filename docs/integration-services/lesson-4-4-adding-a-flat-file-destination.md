@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 4-4: Add a Flat File destination
 

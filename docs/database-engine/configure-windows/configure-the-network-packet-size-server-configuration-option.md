@@ -48,6 +48,9 @@ ms.author: mikeray
   
 -   The maximum network packet size for encrypted connections is 16,383 bytes.  
   
+> [!NOTE]  
+> If MARS is enabled, the SMUX provider will add a 16-byte header to the packet before SSL encryption, reducing the maximum network packet size to 16368 bytes.
+   
 ###  <a name="Recommendations"></a> Recommendations  
   
 -   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] professional.  

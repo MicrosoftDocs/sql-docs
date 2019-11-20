@@ -243,7 +243,7 @@ To learn how to write expressions that use many of the functions and operators a
 -   By specifying a key field, you can use the **Lookup** function to retrieve a value from a dataset for a one-to-one relationship, for example, a key-value pair. The following expression displays the product name from a dataset ("Product"), given the product identifier to match on:  
   
     ```  
-    =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+    =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
     ```  
   
 ### LookupSet  

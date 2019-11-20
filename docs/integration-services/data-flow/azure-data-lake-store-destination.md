@@ -11,8 +11,8 @@ f1_keywords:
   - "SQL13.DTS.DESIGNER.AFPADLSDEST.F1"
   - "sql14.dts.designer.afpadlsdest.f1"
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Azure Data Lake Store Destination
 
@@ -26,7 +26,8 @@ ms.author: janinez
 > [!NOTE]
 > To ensure that the Azure Data Lake Store Connection Manager and the components that use it - that is, the Azure Data Lake Store Source and the Azure Data Lake Store Destination - can connect to services, make sure you download the latest version of the Azure Feature Pack [here](https://www.microsoft.com/download/details.aspx?id=49492). 
 
-## Configure the Azure Data Lake Store Destination  
+**Configure the Azure Data Lake Store Destination**
+
 1. Drag-drop **Azure Data Lake Store Destination** to the data flow designer and double-click it to see the editor.  
 
 2.  For the **Azure Data Lake Store connection manager** field, specify an existing Azure Data Lake Store Connection Manager or create a new one that refers to an Azure Data Lake Store service.  
@@ -37,30 +38,6 @@ ms.author: janinez
   
        If the file format is Text, you must specify the **Column delimiter character** value. Also  select **Column names in the first data row** if the first row in the file contains column names.  
 
-       If the file format is ORC, you need to install the Java Runtime Environment (JRE) for the appropriate platform.
+       If the file format is ORC, Java is required. See [here](../../integration-services/azure-feature-pack-for-integration-services-ssis.md#dependency-on-java) for details.
   
 3.  After specifying the connection information, switch to the **Columns** page to map source columns to destination columns for the SSIS data flow.  
-
-## Prerequisite for ORC File Format
-Java is required to use ORC file format.
-Architecture (32/64-bit) of the Java build should match that of the SSIS runtime to use.
-The following Java builds have been tested.
-
-- [Zulu's OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
-- [Oracle's Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-
-### Set Up Zulu's OpenJDK
-1. Download and extract the installation zip package.
-2. From the Command Prompt, run `sysdm.cpl`.
-3. On the **Advanced** tab, select **Environment Variables**.
-4. Under the **System variables** section, select **New**.
-5. Enter `JAVA_HOME` for the **Variable name**.
-6. Select **Browse Directory**, navigate to the extracted folder, and select the `jre` subfolder.
-   Then select **OK**, and the **Variable value** is populated automatically.
-7. Select **OK** to close the **New System Variable** dialog box.
-8. Select **OK** to close the **Environment Variables** dialog box.
-9. Select **OK** to close the **System Properties** dialog box.
-
-### Set Up Oracle's Java SE Runtime Environment
-1. Download and run the exe installer.
-2. Follow the installer instructions to complete setup.

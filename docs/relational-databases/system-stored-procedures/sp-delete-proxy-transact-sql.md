@@ -47,7 +47,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  None  
   
 ## Remarks  
- Either **@proxy_name** or **@proxy_id** must be specified. If both arguments are specified, the arguments must both refer to the same proxy or the stored procedure fails.  
+ Either **\@proxy_name** or **\@proxy_id** must be specified. If both arguments are specified, the arguments must both refer to the same proxy or the stored procedure fails.  
   
  If a job step refers to the proxy specified, the proxy cannot be deleted and the stored procedure fails.  
   

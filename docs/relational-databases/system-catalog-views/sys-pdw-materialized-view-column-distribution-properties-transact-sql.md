@@ -9,11 +9,11 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview 
+author: XiaoyuMSFT 
 ms.author: xiaoyul
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# sys.pdw_materialized_view_column_distribution_properties (Transact-SQL) (preview)
+# sys.pdw_materialized_view_column_distribution_properties (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -28,9 +28,10 @@ Displays distribution information for columns in a materialized view.
 ## Permissions 
 
 Requires VIEW DATABASE STATE permission.
- 
+
 ## See also
 
+[Performance tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

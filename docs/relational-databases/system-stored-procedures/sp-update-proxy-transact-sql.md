@@ -66,9 +66,9 @@ sp_update_proxy
  **0** (success) or **1** (failure)  
   
 ## Remarks  
- Either **@proxy_name** or **@proxy_id** must be specified. If both arguments are specified, the arguments must both refer to the same proxy or the stored procedure fails.  
+ Either **\@proxy_name** or **\@proxy_id** must be specified. If both arguments are specified, the arguments must both refer to the same proxy or the stored procedure fails.  
   
- Either **@credential_name** or **@credential_id** must be specified to change the credential for the proxy. If both arguments are specified, the arguments must refer to the same credential or the stored procedure fails.  
+ Either **\@credential_name** or **\@credential_id** must be specified to change the credential for the proxy. If both arguments are specified, the arguments must refer to the same credential or the stored procedure fails.  
   
  This procedure changes the proxy, but does not change access to the proxy. To change access to a proxy, use **sp_grant_login_to_proxy** and **sp_revoke_login_from_proxy**.  
   

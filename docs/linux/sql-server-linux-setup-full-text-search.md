@@ -86,7 +86,7 @@ Full-Text Search uses [word breakers](../relational-databases/search/configure-a
 | Arabic | 1025 |
 | Bengali (India) | 1093 |
 | Bokmål | 1044 |
-| Brazilian | 1046 |
+| Portuguese (Brazil) | 1046 |
 | British English | 2057 |
 | Bulgarian | 1026 |
 | Catalan | 1027 |

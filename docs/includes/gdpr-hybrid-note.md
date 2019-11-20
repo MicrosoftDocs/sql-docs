@@ -1,15 +1,15 @@
 ---
- title: include file
- description: include file
- ms.prod: reporting-services
- services: 
- author: eross-msft
+title: include file
+description: include file
+ms.prod: reporting-services
+services: 
+author: eross-msft
  
 ms.service: 
- ms.topic: include
- ms.date: 05/01/2018
- ms.author: lizross
- ms.custom: include file
+ms.topic: include
+ms.date: 05/01/2018
+ms.author: lizross
+ms.custom: include file
 ---
 
 >[!Note]

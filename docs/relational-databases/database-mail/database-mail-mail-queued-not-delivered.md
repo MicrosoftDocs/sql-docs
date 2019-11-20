@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Database mail: Mail queued, not delivered 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 This topic describes how to troubleshoot a problem where e-mail messages are successfully queued, but the messages are not delivered.
 

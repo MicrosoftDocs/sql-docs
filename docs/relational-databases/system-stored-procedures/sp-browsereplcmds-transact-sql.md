@@ -17,7 +17,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # sp_browsereplcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns a result set in a readable version of the replicated commands stored in the distribution database, and is used as a diagnostic tool. This stored procedure is executed at the Distributor on the distribution database.  
   

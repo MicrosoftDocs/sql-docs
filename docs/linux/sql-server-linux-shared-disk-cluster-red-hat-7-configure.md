@@ -110,7 +110,7 @@ There are a variety of solutions for providing shared storage. This walk-through
 ### Configure shared storage with NFS
 
 > [!IMPORTANT] 
-> Hosting database files on a NFS server with version <4 is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on non-clustered instances. We are working on enabling other NFS server versions in the upcoming releases. 
+> Hosting database files on a NFS server with version <4 is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on nonclustered instances. We are working on enabling other NFS server versions in the upcoming releases. 
 
 On the NFS Server do the following:
 
@@ -302,6 +302,10 @@ At this point both instances of SQL Server are configured to run with the databa
    sudo yum install mssql-server-ha
    ```
 
+## Configure fencing agent
+
+A STONITH device provides a fencing agent. [Setting up Pacemaker on Red Hat Enterprise Linux in Azure](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices) provides an example of how to create a STONITH device for this cluster in Azure. Modify the instructions for your environment.
+
 ## Create the cluster 
 
 1. On one of the nodes, create the cluster.
@@ -310,15 +314,6 @@ At this point both instances of SQL Server are configured to run with the databa
    sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
    sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
-   ```
-
-   > RHEL HA add-on has fencing agents for VMWare and KVM. Fencing needs to be disabled on all other hypervisors. Disabling fencing agents is not recommended in production environments. As of timeframe, there are no fencing agents for HyperV or cloud environments. If you are running one of these configurations, you need to disable fencing. \**This is NOT recommended in a production system!**
-
-   The following command disables the fencing agents.
-
-   ```bash
-   sudo pcs property set stonith-enabled=false
-   sudo pcs property set start-failure-is-fatal=false
    ```
 
 2. Configure the cluster resources for SQL Server, File System and virtual IP resources and push the configuration to the cluster. You need the following information:

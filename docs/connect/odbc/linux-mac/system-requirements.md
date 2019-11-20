@@ -33,8 +33,10 @@ The Linux and macOS drivers are available only for the 64-bit versions of the fo
 |Apple macOS 10.14 (Mojave)|17| 
 |Debian Linux 8|13, 13.1, 17|
 |Debian Linux 9|17|
+|Debian Linux 10|17.4|
 |RedHat Enterprise Linux 6|13, 13.1, 17|
 |RedHat Enterprise Linux 7|13, 13.1, 17|
+|RedHat Enterprise Linux 8|17.4|
 |SuSE Linux Enterprise Server 11|13, 13.1, 17 <br /><br /> **NOTE:** ODBC Driver 17 supports SuSE Linux Enterprise Server 11 SP4 only|
 |SuSE Linux Enterprise Server 12|13, 13.1, 17|
 |SuSE Linux Enterprise Server 15|17|
@@ -46,6 +48,7 @@ The Linux and macOS drivers are available only for the 64-bit versions of the fo
 |Ubuntu Linux 17.10|17|
 |Ubuntu Linux 18.04|17| 
 |Ubuntu Linux 18.10|17| 
+|Ubuntu Linux 19.04|17.3| 
 
 The installation packages for the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13, 13.1, and 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS resolve the driver's dependencies automatically when installed using the package management system of your distribution, as described in [Installing the Driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 

@@ -5,7 +5,7 @@ description: Learn how to use the MSSQL Spark Connector in Spark to read and wri
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 06/26/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -30,7 +30,7 @@ The sample performs the following tasks:
 
 ## MSSQL Spark Connector Interface
 
-SQL Server 2019 preview provides the **MSSQL Spark connector** for big data clusters that uses SQL Server bulk write APIs for Spark to SQL writes. MSSQL Spark Connector is based on Spark data source APIs and provides a familiar Spark JDBC connector interface. For interface parameters refer [Apache Spark documentation](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). The MSSQL Spark connector is referenced by the name **com.microsoft.sqlserver.jdbc.spark**.
+SQL Server 2019 provides the **MSSQL Spark connector** for big data clusters that uses SQL Server bulk write APIs for Spark to SQL writes. MSSQL Spark Connector is based on Spark data source APIs and provides a familiar Spark JDBC connector interface. For interface parameters refer [Apache Spark documentation](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). The MSSQL Spark connector is referenced by the name **com.microsoft.sqlserver.jdbc.spark**.
 
 The following table describes interface parameters that have changed or are new:
 
@@ -44,7 +44,7 @@ The connector uses SQL Server Bulk write APIs. Any bulk write parameters can be 
 
 - A [SQL Server big data cluster](deploy-get-started.md).
 
-- [Azure Data Studio](https://aka.ms/azdata-insiders).
+- [Azure Data Studio](https://aka.ms/getazuredatastudio).
 
 ## Create the target database
 
@@ -71,7 +71,7 @@ The connector uses SQL Server Bulk write APIs. Any bulk write parameters can be 
 
 ## Run the sample notebook
 
-To demonstrate the use of the MSSQL Spark Connector with this data, you can download a sample notebook, open it in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
+To demonstrate the use of the MSSQL Spark Connector with this data, you can download a sample notebook, open it in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks in SQL Server](notebooks-guidance.md).
 
 1. From a PowerShell or bash command line, run the following command to download the **mssql_spark_connector.ipynb** sample notebook:
 
@@ -85,4 +85,4 @@ To demonstrate the use of the MSSQL Spark Connector with this data, you can down
 
 ## Next steps
 
-For more information about big data clusters, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md)
+For more information about big data clusters, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)

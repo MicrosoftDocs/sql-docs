@@ -64,7 +64,7 @@ manager: kfile
   
 -   You ran the PowerShell command in Windows PowerShell or Windows PowerShell ISE instead of the SharePoint Management Shell. Use the SharePoint Management shell or add the SharePoint Snap-in to the Windows PowerShell window with the following command:  
   
-    ```  
+    ```powershell
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
@@ -130,36 +130,36 @@ manager: kfile
 ##  <a name="bkmk_basic_samples"></a> Basic Samples  
  Return a list of cmdlets that contain 'SPRS' in the name. This will be the full list of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] cmdlets.  
   
-```  
+```powershell
 Get-command -noun *SPRS*  
 ```  
   
  Or with a little more detail, piped to a text file named commandlist.txt  
   
-```  
-Get-command -noun *SPRS* | Select name, definition | Format-List | Out-File c:\commandlist.txt  
+```powershell
+Get-Command -Noun *SPRS* | Select name, definition | Format-List | Out-File c:\commandlist.txt  
 ```  
   
  Install the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint service and service proxy.  
   
-```  
+```powershell
 Install-SPRSService  
 ```  
   
-```  
+```powershell
 Install-SPRSServiceProxy  
 ```  
   
  Start the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service  
   
-```  
-get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
+```powershell
+Get-SPServiceInstance -all | where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
 ```  
   
  Type the following command from the SharePoint Management Shell to return a filtered list of rows from the a log file. The command will filter for lines that contain "ssrscustomactionerror". This example is looking at the log file created when the rssharepoint.msi was installed.  
   
-```  
-Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  
+```powershell
+Get-Content -Path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | Select-String "ssrscustomactionerror"  
 ```  
   
 ##  <a name="bkmk_detailedsamples"></a> Detailed Samples  
@@ -174,7 +174,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 3.  Grant the service app access to the port 80 web app's content database. The script assumes site "http://sitename" already exists.  
   
-```  
+```powershell
 # Create service application and service application proxy  
 $appPool = Get-SPServiceApplicationPool "My App Pool"  
 $serviceApp = New-SPRSServiceApplication "My RS Service App" -ApplicationPool $appPool  
@@ -186,50 +186,49 @@ Get-SPServiceApplicationProxyGroup -default | Add-SPServiceApplicationProxyGroup
 # Grant application pool account access to the port 80 web application's content database.  
 $webApp = Get-SPWebApplication "http://sitename"  
 $appPoolAccountName = $appPool.ProcessAccount.LookupName()  
-$webApp.GrantAccessToProcessIdentity($appPoolAccountName)  
-  
+$webApp.GrantAccessToProcessIdentity($appPoolAccountName)
 ```  
   
 ###  <a name="bkmk_example_delivery_extension"></a> Review and update a Reporting Services delivery extension  
  The following PowerShell script example, updates the configuration for the report server e-mail delivery extension for the service application named `My RS Service App`. Update the values for the SMTP server (`<email server name>`) and the FROM email alias (`<your FROM email address>`).  
   
-```  
-$app=get-sprsserviceapplication -Name "My RS Service App"  
-$emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
-$emailXml = [xml]$emailCfg   
+```powershell
+$app = Get-SPRSServiceApplication -Name "My RS Service App"  
+$emailCfg = Get-SPRSExtension -Identity $app -ExtensionType "Delivery" -Name "Report Server Email" | Select -ExpandProperty ConfigurationXml
+$emailXml = [xml]$emailCfg
 $emailXml.SelectSingleNode("//SMTPServer").InnerText = "<email server name>"  
 $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
 $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
 $emailXml.SelectSingleNode("//From").InnerText = '<your FROM email address>'  
-Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
+Set-SPRSExtension -Identity $app -ExtensionType "Delivery" -Name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
 ```  
   
  In the above example if you did not know the exact name of the service application, you could rewrite the first statement to get the service application based on a search of the partial name. For example:  
   
-```  
-$app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}  
+```powershell
+$app = Get-SPRSServiceApplication | Where {$_.name -like " ssrs_testapp *"}  
 ```  
   
  The following script will return the current configuration values for the report server e-mail delivery extension for the service application named "Reporting Services Application". The first step sets the value of the variable $app to the object of the service application that has a name of " My RS Service App "  
   
  The second statement will Get the 'Report Server Email' delivery extension for the service application object in variable $app, and select the configurationXML  
   
-```  
-$app=get-sprsserviceapplication -Name "Reporting Services Application"  
-Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
+```powershell
+$app = Get-SPRSServiceapplication -Name "Reporting Services Application"  
+Get-SPRSExtension -Identity $app -ExtensionType "Delivery" -Name "Report Server Email" | Select -ExpandProperty ConfigurationXml  
 ```  
   
  You can also rewrite the above two statements as one:  
   
-```  
-get-sprsserviceapplication -Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
+```powershell
+Get-SPRSServiceApplication -Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -Name "Report Server Email" | Select -ExpandProperty ConfigurationXml  
 ```  
   
 ###  <a name="bkmk_example_db_properties"></a> Get and set properties of the Reporting Servicea application database, for example database timeout  
  The following example first returns a list of the databases and properties so you can determine the database guid (ID) that you then supply to the set command. For a full list of the properties, use `Get-SPRSDatabase | format-list`.  
   
-```  
-get-SPRSDatabase | select id, querytimeout,connectiontimeout, status, server, ServiceInstance   
+```powershell
+Get-SPRSDatabase | Select id, querytimeout,connectiontimeout, status, server, ServiceInstance
 ```  
   
  The following is an example of the output. Determine the ID for the database you want to modify and use the ID in the SET cmdlet.  
@@ -246,25 +245,25 @@ get-SPRSDatabase | select id, querytimeout,connectiontimeout, status, server, Se
   
      `ServiceInstance   : SPDatabaseServiceInstance`  
   
-```  
-Set-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
+```powershell
+Set-SPRSDatabase -Identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
 ```  
   
  To verify the value is set, run the GET cmdlet again.  
   
-```  
-Get-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
+```powershell
+Get-SPRSDatabase -Identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | Select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
 ```  
   
 ###  <a name="bkmk_example_list_data_extensions"></a> List reporting services data extensions - SharePoint mode  
  The following example loops through each [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application and lists the current data extensions for each.  
   
-```  
+```powershell
 $apps = Get-SPRSServiceApplication  
-foreach ($app in $apps)   
+foreach ($app in $apps)
 {  
 Write-host -ForegroundColor "yellow" Service App Name $app.Name  
-Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensiontype | Format-Table -AutoSize  
+Get-SPRSExtension -identity $app -ExtensionType "Data" | select name, extensiontype | Format-Table -AutoSize  
 }  
 ```  
   
@@ -297,8 +296,6 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
   
 ## See Also  
  [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [CheckList: Use PowerShell to Verify PowerPivot for SharePoint](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+ [CheckList: Use PowerShell to Verify PowerPivot for SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
  [CodePlex SharePoint Management PowerShell scripts](http://sharepointpsscripts.codeplex.com/)   
  [How to Administer SSRS using PowerShell](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
-  
-  

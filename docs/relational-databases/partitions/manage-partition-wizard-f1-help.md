@@ -83,7 +83,7 @@ ms.author: jrasnick
  **Manage partitioned data in a sliding window scenario**  
  Appends an empty partition to the existing table that can be used for switching in data. The wizard currently supports switching into the last partition and switching out the first partition.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ##  <a name="SwitchIn"></a> Select Partition Switching-In Options Page  
  Use the **Select Partition Switching-In options** page to select the staging table you are switching into the partitioned table.  
@@ -98,7 +98,7 @@ ms.author: jrasnick
  **Switch in table**  
  Select the staging table that contains the partition that you want to add to your partitioned table. You must create this staging table before you switch-in partitions with the **Manage PartitionsWizard**.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ##  <a name="SwitchOut"></a> Select Partition Switching-Out Options Page  
  Use the **Select Partition Switching-Out options** page to select the partition and the staging table to hold the partitioned data that you are switching out of the partitioned table.  
@@ -116,7 +116,7 @@ ms.author: jrasnick
  **Existing**  
  Select an existing staging table you want to use for the partition you want to switch out of the current source table. If the existing table contains data, this data will be overwritten with the data you are switching out.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ##  <a name="StagingTableOptions"></a> Select the Staging Table Options Page  
  Use the **Select the Staging Table Options** page to create the staging table you want to use for switching your partitioned data.  
@@ -138,7 +138,7 @@ ms.author: jrasnick
  **Filegroup**  
  Select a filegroup for the new table.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ##  <a name="OutputOption"></a> Select Output Option Page  
  Use the **Select Output Option** page to specify how you want to complete the modifications to your partitions.  
@@ -165,7 +165,7 @@ ms.author: jrasnick
  **Change schedule**  
  Opens the **New Job Schedule** dialog box, where you can select, change, or view the properties of the scheduled job.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ##  <a name="NewJob"></a> New Job Schedule Page  
  Use the **New Job Schedule** page to view and change the properties of the schedule.  
@@ -248,7 +248,7 @@ ms.author: jrasnick
  **Time**  
  Select the time for the job to run.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ##  <a name="Summary"></a> Summary Page  
  Use the **Summary** page to review the options that you have selected on the previous pages.  
@@ -257,7 +257,7 @@ ms.author: jrasnick
  **Review your selections**  
  Displays the selections you have made for each page of the wizard. Click a node to expand and view your previously selected options.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ##  <a name="Progress"></a> Progress Page  
  Use the **Progress** page to monitor status information about the actions of the **Manage Partition Wizard**. Depending on the options that you selected in the wizard, the **Progress** page might contain one or more actions. The top box displays the overall status of the wizard and the number of status, error, and warning messages that the wizard has received.  
@@ -295,7 +295,7 @@ ms.author: jrasnick
  **Close**  
  Close the wizard.  
   
- ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
+ ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ## See Also  
  [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  

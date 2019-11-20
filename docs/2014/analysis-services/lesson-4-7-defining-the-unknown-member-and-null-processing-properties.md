@@ -172,6 +172,6 @@ manager: craigg
      ![Product Name level showing assembly components](../../2014/tutorials/media/l4-assemblycomponents-1.gif "Product Name level showing assembly components")  
   
 ## Next Lesson  
- [Lesson 5: Defining Relationships Between Dimensions and Measure Groups](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [Lesson 5: Defining Relationships Between Dimensions and Measure Groups](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   

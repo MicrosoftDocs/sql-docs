@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "parent packages [Integration Services]"
   - "SQL Server Agent [Integration Services]"
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Load-Balancing Packages on Remote Servers by Using SQL Server Agent
 

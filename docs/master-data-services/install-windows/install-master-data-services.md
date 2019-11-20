@@ -1,5 +1,5 @@
 ---
-title: "Installation Tasks for Master Data Services | Microsoft Docs"
+title: Installation Tasks
 ms.custom: ""
 ms.date: "03/24/2017"
 ms.prod: sql

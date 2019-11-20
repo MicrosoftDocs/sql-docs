@@ -28,7 +28,7 @@ manager: craigg
  [Automatically Grouping Attribute Members](lesson-4-3-automatically-grouping-attribute-members.md)  
  In this task, you automatically create groupings of attribute members based on the distribution of the members within the attribute hierarchy. For more information, see [Group Attribute Members &#40;Discretization&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
- [Hiding and Disabling Attribute Hierarchies](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+ [Hiding and Disabling Attribute Hierarchies](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  In this task, you learn how and when to disable or hide attribute hierarchies.  
   
  [Sorting Attribute Members Based on a Secondary Attribute](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  

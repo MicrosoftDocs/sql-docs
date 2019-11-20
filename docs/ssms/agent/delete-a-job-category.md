@@ -28,22 +28,6 @@ This topic describes how to delete a [!INCLUDE[msCoName](../../includes/msconame
   
 Job categories help you organize your jobs for easy filtering and grouping. For example, you can organize all your database backup jobs in the Database Maintenance category.  
   
-**In This Topic**  
-  
--   **Before you begin:**  
-  
-    [Limitations and Restrictions](#Restrictions)  
-  
-    [Security](#Security)  
-  
--   **To delete a job category, using:**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [Transact-SQL](#TSQL)  
-  
-    [SQL Server Management Objects](#SMO)  
-  
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  

@@ -5,7 +5,7 @@ description: Reference article for azdata bdc spark batch commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,9 +13,9 @@ ms.technology: big-data-cluster
 
 # azdata bdc spark batch
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-The following article provides reference for the **bdc spark batch** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
+The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
 |     |     |
@@ -90,7 +90,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc spark batch list
@@ -111,15 +111,14 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc spark batch info
 This gets the information for an Spark batch with the given ID.  The batch id is returned from 'spark batch create'.
 ```bash
 azdata bdc spark batch info --batch-id -i 
-                            
-```
+          ```
 ### Examples
 Get batch info for batch with ID of 0.
 ```bash
@@ -136,15 +135,14 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc spark batch log
 This gets the batch log entries for a Spark batch with the given ID.  The batch id is returned from 'spark batch create'.
 ```bash
 azdata bdc spark batch log --batch-id -i 
-                           
-```
+         ```
 ### Examples
 Get batch log for batch with ID of 0.
 ```bash
@@ -161,15 +159,14 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc spark batch state
 This gets the batch state for a Spark batch with the given ID.  The batch id is returned from 'spark batch create'.
 ```bash
 azdata bdc spark batch state --batch-id -i 
-                             
-```
+           ```
 ### Examples
 Get batch state for batch with ID of 0.
 ```bash
@@ -186,15 +183,14 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc spark batch delete
 This deletes a Spark batch. The batch id is returned from 'spark batch create'.
 ```bash
 azdata bdc spark batch delete --batch-id -i 
-                              
-```
+            ```
 ### Examples
 Delete a batch.
 ```bash
@@ -211,10 +207,10 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).
+For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

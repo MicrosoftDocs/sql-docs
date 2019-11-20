@@ -1,7 +1,7 @@
 ---
-title: "Working with Large Data | Microsoft Docs"
+title: "Working with large data | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -12,7 +12,7 @@ author: MightyPen
 ms.author: genemi
 ---
 
-# Working with Large Data
+# Working with large data
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -20,19 +20,19 @@ The JDBC driver provides support for adaptive buffering, which allows you to ret
   
 In the [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] JDBC Driver version 1.2, the buffering mode was "**full**" by default. If your application did not set the "responseBuffering" connection property to "**adaptive**" either in the connection properties or by using the [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) method of the [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) object, the driver supported reading the entire result from the server at once. In order to get the adaptive buffering behavior, your application had to set the "responseBuffering" connection property to "**adaptive**" explicitly.  
   
-The **adaptive** value is the default buffering mode and the JDBC driver buffers the minimum possible data when necessary. For more information about using adaptive buffering, see [Using Adaptive Buffering](../../../connect/jdbc/using-adaptive-buffering.md).  
+The **adaptive** value is the default buffering mode and the JDBC driver buffers the minimum possible data when necessary. For more information about using adaptive buffering, see [Using adaptive buffering](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 The topics in this section describe different ways that you can use to retrieve large-value data from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.  
   
-## In This Section  
+## In this section  
   
 | Topic                                                                                                                         | Description                                                              |
 | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [Reading Large Data Sample](../../../connect/jdbc/code-samples/reading-large-data-sample.md)                                               | Describes how to use a SQL statement to retrieve large-value data.       |
-| [Reading Large Data with Stored Procedures Sample](../../../connect/jdbc/code-samples/reading-large-data-with-stored-procedures-sample.md) | Describes how to retrieve a large CallableStatement OUT parameter value. |
-| [Updating Large Data Sample](../../../connect/jdbc/code-samples/updating-large-data-sample.md)                                             | Describes how to update a large-value data in a database.                |
+| [Reading large data sample](../../../connect/jdbc/code-samples/reading-large-data-sample.md)                                               | Describes how to use a SQL statement to retrieve large-value data.       |
+| [Reading large data with stored procedures sample](../../../connect/jdbc/code-samples/reading-large-data-with-stored-procedures-sample.md) | Describes how to retrieve a large CallableStatement OUT parameter value. |
+| [Updating large data sample](../../../connect/jdbc/code-samples/updating-large-data-sample.md)                                             | Describes how to update a large-value data in a database.                |
   
-## See Also
+## See also
 
-[Sample JDBC Driver Applications](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
+[Sample JDBC driver applications](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

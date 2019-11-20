@@ -26,8 +26,6 @@ ms.author: "mathoma"
   
 3.  Optionally, execute **sp_trace_setfilter** to set any or a combination of filters.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
      **sp_trace_setevent** and **sp_trace_setfilter** can be executed only on existing traces that are stopped.  
   
     > [!IMPORTANT]  

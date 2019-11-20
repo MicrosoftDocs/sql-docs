@@ -51,7 +51,7 @@ manager: craigg
 |-----------|-----------------|  
 |[Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|This topic provides an overview of firewall configuration and how to configure the Windows firewall.|  
 |[Configure a Multi-Homed Computer for SQL Server Access](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|This topic describes how to configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Firewall with Advanced Security to provide for network connections to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a multi-homed environment.|  
-|[Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|You can follow the steps provided in this topic to configure both port and firewall settings to allow access to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or PowerPivot for SharePoint.|  
+|[Configure the Windows Firewall to Allow Analysis Services Access](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|You can follow the steps provided in this topic to configure both port and firewall settings to allow access to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or PowerPivot for SharePoint.|  
   
 ## Related Sections  
  [Install SQL Server 2014 BI Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)  

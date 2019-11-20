@@ -27,8 +27,8 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out.  
   
 > [!NOTE]
-> An initial query of **sys.dm_exec_function_stats** might produce inaccurate results if there is a workload currently executing on the server. More accurate results may be determined by rerunning the query.  
-  
+> The results of **sys.dm_exec_function_stats**  may vary with each execution as the data only reflects finished queries, and not ones still in-flight. 
+
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

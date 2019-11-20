@@ -63,10 +63,10 @@ manager: craigg
 |Object|Invalid characters|  
 |------------|------------------------|  
 |`Server`|Follow Windows server naming conventions when naming a server object. See [Naming Conventions (Windows)](/windows/desktop/DNS/naming-conventions) for details.|  
-|`DataSource`|`: / \ * | ? " () [] {} <>`|  
-|`Level` or `Attribute`|````. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >````|  
-|`Dimension` or `Hierarchy`|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>````|  
-|All other objects|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >````|  
+|`DataSource`| `: / \ * \| ? " () [] {} <>` |  
+|`Level` or `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension` or `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|All other objects|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
  **Exceptions: When Reserved Characters are Allowed**  
   
@@ -83,7 +83,7 @@ manager: craigg
   
 ## See Also  
  [MDX Reserved Words](/sql/mdx/mdx-reserved-words)   
- [Translations &#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
+ [Translations &#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
  [XML for Analysis Compliance &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

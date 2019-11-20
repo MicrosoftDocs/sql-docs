@@ -1,7 +1,7 @@
 ---
 title: "Updating Large Data Sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -45,6 +45,6 @@ The default behavior of the driver is "**adaptive.**" However, for the forward-o
 
 [!code[JDBC#UsingAdaptiveBuffering3](../../connect/jdbc/codesnippet/Java/updating-large-data-sample_1.java)]
 
-## See Also
+## See also
 
 [Working with Large Data](../../connect/jdbc/working-with-large-data.md)

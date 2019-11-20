@@ -135,7 +135,7 @@ Get-SPDiagnosticConfig
 |Shared Service|Sample entries:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting access to content databases.<br /><br /> MediumProvisioning instances for ReportingWebServiceApplication<br /><br /> MediumProcessing service account change for ReportingWebServiceApplication<br /><br /> MediumSetting database permissions.|  
   
 ##  <a name="bkmk_powershell"></a> View a Log file with PowerShell  
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")You can use PowerShell to return a list of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] related events from a ULS Log file. Type the following command from the SharePoint 2010 Management Shell to return a filtered list of rows from the file a ULS log file UESQL11SPOINT-20110606-1530.log, that contain "**sql server reporting services**":  
+ ![PowerShell related content](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")You can use PowerShell to return a list of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] related events from a ULS Log file. Type the following command from the SharePoint 2010 Management Shell to return a filtered list of rows from the file a ULS log file UESQL11SPOINT-20110606-1530.log, that contain "**sql server reporting services**":  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  

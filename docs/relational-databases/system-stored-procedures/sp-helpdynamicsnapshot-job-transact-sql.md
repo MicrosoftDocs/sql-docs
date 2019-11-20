@@ -23,7 +23,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_helpdynamicsnapshot_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns information on agent jobs that generate filtered data snapshots. This stored procedure is executed at the Publisher on the publication database.  
   

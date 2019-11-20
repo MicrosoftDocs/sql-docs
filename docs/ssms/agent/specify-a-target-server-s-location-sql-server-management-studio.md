@@ -23,20 +23,6 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 
 This topic describes how to specify the location of a target server in a multiserver administration configuration in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-**In This Topic**  
-  
--   **Before you begin:**  
-  
-    [Limitations and Restrictions](#Restrictions)  
-  
-    [Security](#Security)  
-  
--   **To specify a target server's location, using:**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
-  
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  

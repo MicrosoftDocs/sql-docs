@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_dropdistpublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Drops a distribution Publisher. This stored procedure is executed at the Distributor on any database.  
   
@@ -41,7 +41,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
  If **0**, replication verifies that the remote Publisher has uninstalled the local server as the Distributor. If the Publisher is local, replication verifies that there are no publication or distribution objects remaining on the local server.  
   
- If **1**, all the replication objects associated with the distribution Publisher are dropped even if a remote Publisher cannot be reached. After doing this, the remote Publisher must uninstall replication using [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) with **@ignore_distributor** = **1**.  
+ If **1**, all the replication objects associated with the distribution Publisher are dropped even if a remote Publisher cannot be reached. After doing this, the remote Publisher must uninstall replication using [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) with **\@ignore_distributor** = **1**.  
   
 `[ @ignore_distributor = ] ignore_distributor`
  Specifies whether distribution objects are left at the Distributor when the Publisher is removed. *ignore_distributor* is **bit** and can be one of these values:  

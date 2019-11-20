@@ -25,20 +25,6 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 
 This topic describes how to create and define a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step that executes a PowerShell script in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-**In This Topic**  
-  
--   **Before you begin:**  
-  
-    [Security](#Security)  
-  
--   **To create a PowerShell Script job step, using:**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [Transact-SQL](#TSQL)  
-  
-    [SQL Server Management Objects](#SMO)  
-
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Security"></a>Security  

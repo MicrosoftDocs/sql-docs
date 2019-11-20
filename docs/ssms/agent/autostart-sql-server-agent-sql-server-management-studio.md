@@ -23,16 +23,6 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 
 This topic describes how to configure [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to automatically restart if it should stop unexpectedly in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-**In This Topic**  
-  
--   **Before you begin:**  
-  
-    [Limitations and Restrictions](#Restrictions)  
-  
-    [Security](#Security)  
-  
--   [To configure SQL Server Agent to automatically restart, using SQL Server Management Studio](#SSMSProcedure)  
-  
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  

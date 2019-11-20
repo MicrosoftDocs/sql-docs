@@ -104,8 +104,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 7.  In the **Binding** area, complete the **Default** or **Rule** boxes if you want to bind a default or rule to the new data type alias. Defaults and rules cannot be created in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use [!INCLUDE[tsql](../../includes/tsql-md.md)]. Example code for creating defaults and rules are available in Template Explorer.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To create a user-defined data type alias  

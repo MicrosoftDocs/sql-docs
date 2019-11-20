@@ -43,14 +43,14 @@ Why use user-defined functions (UDFs)?
   
 ##  <a name="FunctionTypes"></a> Types of functions  
 **Scalar Function**  
- User-defined scalar functions return a single data value of the type defined in the RETURNS clause. For an inline scalar function, there is no function body; the scalar value is the result of a single statement. For a multistatement scalar function, the function body, defined in a BEGIN...END block, contains a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that return the single value. The return type can be any data type except **text**, **ntext**, **image**, **cursor**, and **timestamp**. 
+ User-defined scalar functions return a single data value of the type defined in the RETURNS clause. For an inline scalar function, the returned scalar value is the result of a single statement. For a multistatement scalar function, the function body can contain a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that return the single value. The return type can be any data type except **text**, **ntext**, **image**, **cursor**, and **timestamp**. 
  **[Examples.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **Table-Valued Functions**  
  User-defined table-valued functions return a **table** data type. For an inline table-valued function, there is no function body; the table is the result set of a single SELECT statement. **[Examples.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)**
   
 **System Functions**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides many system functions that you can use to perform a variety of operations. They cannot be modified. For more information, see [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [System Stored Functions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md), and [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides many system functions that you can use to perform a variety of operations. They cannot be modified. For more information, see [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [System Stored Functions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-category-transact-sql.md), and [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ##  <a name="Guidelines"></a> Guidelines  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] errors that cause a statement to be canceled and continue with the next statement in the module (such as triggers or stored procedures) are treated differently inside a function. In functions, such errors cause the execution of the function to stop. This in turn causes the statement that invoked the function to be canceled.  

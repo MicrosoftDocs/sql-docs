@@ -43,7 +43,7 @@ See [Indexes](../../relational-databases/indexes/indexes.md) for additional type
 
 ## Indexes and Constraints
 
-Indexes are automatically created when PRIMARY KEY and UNIQUE constraints are defined on table columns. For example, when you create a table with a UNIQUE constraint, [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatically creates a non-clustered index. If you configure a PRIMARY KEY, [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatically creates a clustered index, unless a clustered index already exists. When you try to enforce a PRIMARY KEY constraint on an existing table and a clustered index already exists on that table, SQL Server enforces the primary key using a nonclustered index.
+Indexes are automatically created when PRIMARY KEY and UNIQUE constraints are defined on table columns. For example, when you create a table with a UNIQUE constraint, [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatically creates a nonclustered index. If you configure a PRIMARY KEY, [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatically creates a clustered index, unless a clustered index already exists. When you try to enforce a PRIMARY KEY constraint on an existing table and a clustered index already exists on that table, SQL Server enforces the primary key using a nonclustered index.
 
 For more information, see [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) and [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md).
 

@@ -71,7 +71,7 @@ Physical, operating system, or [!INCLUDE[ssNoVersion](../../../includes/ssnovers
   
 -   Network errors such as TCP link time-outs, dropped or corrupted packets, or packets that are in an incorrect order.  
   
--   A hanging operating system, server, or database state.  
+-   An operating system, server, or database that is not responding.  
   
 -   A Windows server timing out.  
   

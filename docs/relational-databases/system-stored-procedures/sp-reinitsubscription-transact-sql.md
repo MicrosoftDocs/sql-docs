@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_reinitsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Marks the subscription for reinitialization. This stored procedure is executed at the Publisher for push subscriptions.  
   

@@ -23,7 +23,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_check_join_filter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Is used to verify a join filter between two tables to determine if the join filter clause is valid. This stored procedure also returns information about the supplied join filter, including if it can be used with precomputed partitions for the given table. This stored procedure is executed at the Publisher on the publication. For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   

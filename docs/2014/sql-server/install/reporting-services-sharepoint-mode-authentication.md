@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SharePoint integration"
   - "SharePoint Mode"
 ms.assetid: 2c19794a-dd55-4fe5-b901-6dd93e9f6beb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Reporting Services SharePoint Mode Authentication

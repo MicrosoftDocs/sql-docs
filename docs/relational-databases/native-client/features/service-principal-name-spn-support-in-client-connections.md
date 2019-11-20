@@ -18,7 +18,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Service Principal Name (SPN) Support in Client Connections
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Beginning with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], support for service principal names (SPNs) has been extended to enable mutual authentication across all protocols. In previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], SPNs were only supported for Kerberos over TCP when the default SPN for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance was registered with Active Directory.  
   
@@ -34,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  For more information about Kerberos, see the following articles:  
   
--   [Kerberos Technical Supplement for Windows](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Kerberos Technical Supplement for Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
@@ -66,7 +65,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The new connection behavior is implemented by the client; therefore, it is not specific to a version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## Linked Servers and Delegation  
- When linked servers are created, the **@provstr** parameter of [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) can be used to specify the server and failover partner SPNs. The benefits of doing this are the same as specifying SPNs in client connection strings: It is simpler and more reliable to establish connections that use Kerberos authentication.  
+ When linked servers are created, the **\@provstr** parameter of [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) can be used to specify the server and failover partner SPNs. The benefits of doing this are the same as specifying SPNs in client connection strings: It is simpler and more reliable to establish connections that use Kerberos authentication.  
   
  Delegation with linked servers requires Kerberos authentication.  
   

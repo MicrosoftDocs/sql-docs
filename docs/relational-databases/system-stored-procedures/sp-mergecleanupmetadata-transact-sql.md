@@ -48,13 +48,13 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 >  After **sp_mergecleanupmetadata** is executed, by default, all subscriptions at the Subscribers of publications that have metadata stored in **MSmerge_genhistory**, **MSmerge_contents** and **MSmerge_tombstone** are marked for reinitialization, any pending changes at the Subscriber are lost, and the current snapshot is marked obsolete.  
 > 
 > [!NOTE]
->  If there are multiple publications on a database, and any one of those publications uses an infinite publication retention period (**@retention**=**0**), running **sp_mergecleanupmetadata** does not clean up the merge replication change tracking metadata for the database. For this reason, use infinite publication retention with caution.  
+>  If there are multiple publications on a database, and any one of those publications uses an infinite publication retention period (**\@retention**=**0**), running **sp_mergecleanupmetadata** does not clean up the merge replication change tracking metadata for the database. For this reason, use infinite publication retention with caution.  
   
- When executing this stored procedure, you can choose whether to reinitialize Subscribers by setting the **@reinitialize_subscriber** parameter to **TRUE** (the default) or **FALSE**. If **sp_mergecleanupmetadata** is executed with the **@reinitialize_subscriber** parameter set to **TRUE**, a snapshot is reapplied at the Subscriber even if the subscription was created without an initial snapshot (for example, if the snapshot data and schema were manually applied or already existed at the Subscriber). Setting the parameter to **FALSE** should be used with caution, because if the publication is not reinitialized, you must ensure that data at the Publisher and Subscriber is synchronized.  
+ When executing this stored procedure, you can choose whether to reinitialize Subscribers by setting the **\@reinitialize_subscriber** parameter to **TRUE** (the default) or **FALSE**. If **sp_mergecleanupmetadata** is executed with the **\@reinitialize_subscriber** parameter set to **TRUE**, a snapshot is reapplied at the Subscriber even if the subscription was created without an initial snapshot (for example, if the snapshot data and schema were manually applied or already existed at the Subscriber). Setting the parameter to **FALSE** should be used with caution, because if the publication is not reinitialized, you must ensure that data at the Publisher and Subscriber is synchronized.  
   
- Regardless of the value of **@reinitialize_subscriber**, **sp_mergecleanupmetadata** fails if there are ongoing merge processes that are attempting to upload changes to a Publisher or a republishing Subscriber at the time the stored procedure is invoked.  
+ Regardless of the value of **\@reinitialize_subscriber**, **sp_mergecleanupmetadata** fails if there are ongoing merge processes that are attempting to upload changes to a Publisher or a republishing Subscriber at the time the stored procedure is invoked.  
   
- **Executing sp_mergecleanupmetadata with @reinitialize_subscriber = TRUE:**  
+ **Executing sp_mergecleanupmetadata with \@reinitialize_subscriber = TRUE:**  
   
 1.  It is recommended, but not required, that you stop all updates to the publication and subscription databases. If updates continue, any updates made at a Subscriber since the last merge are lost when the publication is reinitialized, but data convergence is maintained.  
   
@@ -70,7 +70,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 7.  Back up the publication database. Failure to do so can cause a merge failure after a restore of the publication database.  
   
- **Executing sp_mergecleanupmetadata with @reinitialize_subscriber = FALSE:**  
+ **Executing sp_mergecleanupmetadata with \@reinitialize_subscriber = FALSE:**  
   
 1.  Stop **all** updates to the publication and subscription databases.  
   
@@ -83,8 +83,6 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 5.  Regenerate snapshot files for all merge publications involved at all levels. If you try to merge without regenerating the snapshot first, you receive a prompt to regenerate the snapshot.  
   
 6.  Back up the publication database. Failure to do so can cause a merge failure after a restore of the publication database.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  **Special Considerations for Continuous Mode Merges**  
   

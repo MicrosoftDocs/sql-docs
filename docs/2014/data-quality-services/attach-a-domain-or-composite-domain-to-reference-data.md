@@ -15,7 +15,7 @@ ms.author: lle
 manager: craigg
 ---
 # Attach a Domain or Composite Domain to Reference Data
-  This topic describes how to attach domains/composite domains in a data quality knowledge base to a reference data service in Windows Azure Marketplace to build knowledge against the high-quality reference data. Each reference data service contains a schema (data columns). After attaching a domain or a composite domain to a reference data service, you must map the attached domain or the individual domains within the attached composite domain to the appropriate columns in a reference data service schema. Attaching a composite domain to a reference data service enables you to attach just one domain to a reference data service, and then map the individual domains within the composite domain to appropriate columns in the reference data service schema.  
+  This topic describes how to attach domains/composite domains in a data quality knowledge base to a reference data service in Azure Marketplace to build knowledge against the high-quality reference data. Each reference data service contains a schema (data columns). After attaching a domain or a composite domain to a reference data service, you must map the attached domain or the individual domains within the attached composite domain to the appropriate columns in a reference data service schema. Attaching a composite domain to a reference data service enables you to attach just one domain to a reference data service, and then map the individual domains within the composite domain to appropriate columns in the reference data service schema.  
   
 > [!WARNING]  
 >  The composite domain attached to a reference data service is available in the domains drop-down list while mapping domains to the columns in the reference data service schema. Do not map the composite domain to a column in the reference data service schema; you must only map individual domains within a composite domain to the appropriate columns in the reference data service schema. Otherwise, it will result in an error.  
@@ -61,7 +61,7 @@ manager: craigg
          ![Online Reference Data Providers Catalog dialog box](../../2014/data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "Online Reference Data Providers Catalog dialog box")  
   
         > [!NOTE]  
-        >  -   In the **Online Reference Data Providers Catalog** dialog box, the **DataMarket Data Quality Services** node displays all the reference data service providers that you have subscribed to in Windows Azure Marketplace. If you have configured direct online third-party reference data service providers in DQS, they will appear under another node called **3rd Party Direct Online Providers** (not available now as no direct online third-party reference data service providers are configured in DQS).  
+        >  -   In the **Online Reference Data Providers Catalog** dialog box, the **DataMarket Data Quality Services** node displays all the reference data service providers that you have subscribed to in Azure Marketplace. If you have configured direct online third-party reference data service providers in DQS, they will appear under another node called **3rd Party Direct Online Providers** (not available now as no direct online third-party reference data service providers are configured in DQS).  
   
 9. You will return to the **Reference Data** tab. In the **Provider Settings** area, change values in the following boxes, if required:  
   
@@ -73,7 +73,7 @@ manager: craigg
   
 10. Click **Finish** to publish the knowledge base. A confirmation message appears after the knowledge base is published successfully.  
   
- You can now use this knowledge base for cleansing activity in a data quality project to standardize and cleanse US addresses in your source data based on the knowledge provided by Melissa Data through Windows Azure Marketplace.  
+ You can now use this knowledge base for cleansing activity in a data quality project to standardize and cleanse US addresses in your source data based on the knowledge provided by Melissa Data through Azure Marketplace.  
   
 ##  <a name="FollowUp"></a> Follow Up: After Mapping a Domain to Reference Data  
  Create a data quality project, and run the cleansing activity on your source data containing US addresses by comparing it against the knowledge base created in this topic. See [Cleanse Data Using Reference Data &#40;External&#41; Knowledge](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

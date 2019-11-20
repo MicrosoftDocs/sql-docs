@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sapbwdestination.connection.f1"
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # SAP BW Destination Editor (Connection Manager Page)
 

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "conditional operator (?:)"
   - "?: (conditional operator)"
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # ? : (Conditional) (SSIS Expression)
 

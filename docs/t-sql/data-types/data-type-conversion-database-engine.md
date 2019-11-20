@@ -51,8 +51,44 @@ Use CAST instead of CONVERT if you want [!INCLUDE[tsql](../../includes/tsql-md.m
 The following illustration shows all explicit and implicit data type conversions that are allowed for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system-supplied data types. These include **xml**, **bigint**, and **sql_variant**. There is no implicit conversion on assignment from the **sql_variant** data type, but there is implicit conversion to **sql_variant**.
   
 ![Data type conversion table](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
-  
+
+While the above chart illustrates all the explicit and implicit conversions that are allowed in SQL Server, it does not indicate the resulting data type of the conversion. When SQL Server performs an explicit conversion, the statement itself determines the resulting data type. For implicit conversions, assignment statements such as setting the value of a variable or inserting a value into a column result in the data type that was defined by the variable declaration or column definition. For comparison operators or other expressions, the resulting data type depends on the rules of data type precedence.
+
+As an example, the following script defines a variable of type `varchar`, assigns an `int` type value to the variable, then selects a concatenation of the variable with a string.
+
+```sql
+DECLARE @string varchar(10);
+SET @string = 1;
+SELECT @string + ' is a string.'
+```
+
+The `int` value of `1` is converted to a `varchar`, so the `SELECT` statement returns the value `1 is a string.`.
+
+The following example, shows a similar script with an `int` variable instead:
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + ' is not a string.'
+```
+
+In this case, the `SELECT` statement throws the following error:
+
+`Msg 245, Level 16, State 1, Line 3`
+`Conversion failed when converting the varchar value ' is not a string.' to data type int.`
+
+In order to evaluate the expression `@notastring + ' is not a string.'`, SQL Server follows the rules of data type precedence to complete the implicit conversion before the result of the expression can be calculated. Because `int` has a higher precedence than `varchar`, SQL Server attempts to convert the string to an integer and fails because this string cannot be converted to an integer. If the expression provides a string that can be converted, the statement succeeds, as in the following example:
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + '1'
+```
+
+In this case, the string `1` can be converted to the integer value `1`, so this `SELECT` statement returns the value `2`. Note that the `+` operator becomes addition rather than concatenation when the data types provided are integers.
+
 ## Data type conversion behaviors
+
 Some implicit and explicit data type conversions are not supported when you are converting the data type of one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object to another. For example, an **nchar** value cannot be converted to an **image** value. An **nchar** can only be converted to **binary** by using explicit conversion, an implicit conversion to **binary** is not supported. However, an **nchar** can be explicitly or implicitly converted to **nvarchar**.
   
 The following topics describe the conversion behaviors exhibited by their corresponding  data types:

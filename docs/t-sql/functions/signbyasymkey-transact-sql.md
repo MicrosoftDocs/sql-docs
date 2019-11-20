@@ -42,7 +42,7 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
  *Asym_Key_ID*  
  Is the ID of an asymmetric key in the current database. *Asym_Key_ID* is**int**.  
   
- **@plaintext**  
+ **\@plaintext**  
  Is a variable of type **nvarchar**, **char**, **varchar**, or **nchar** containing data that will be signed with the asymmetric key.  
   
  *password*  

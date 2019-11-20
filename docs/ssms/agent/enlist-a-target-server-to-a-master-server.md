@@ -30,14 +30,6 @@ For information about how the Windows account used for the [!INCLUDE[ssNoVersion
   
 Full Secure Sockets Layer (SSL) encryption and certificate validation is enabled for connections between master servers and target servers by default. For more information, see [Set Encryption Options on Target Servers](../../ssms/agent/set-encryption-options-on-target-servers.md).  
   
-**In This Topic**  
-  
--   **To enlist a target server, using:**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
-  
 ## <a name="SSMSProcedure"></a>Using SQL Server Management Studio  
   
 #### To enlist a target server  

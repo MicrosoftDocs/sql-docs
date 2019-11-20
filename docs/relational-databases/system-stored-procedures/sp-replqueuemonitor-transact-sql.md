@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_replqueuemonitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Lists the queue messages from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] queue or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing for queued updating subscriptions to a specified publication. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] queues are used, this stored procedure is executed at the Subscriber on the subscription database. If Message Queuing is used, this stored procedure is executed at the Distributor on the distribution database.  
   
@@ -47,7 +47,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 `[ @tranid = ] 'tranid' ]`
  Is the transaction ID. *tranid*is **sysname**, with a default of NULL. NULL for all transactions.  
   
- [**@queuetype=** ] **'***queuetype***'** ]  
+`[ @queuetype = ] 'queuetype' ]`
  Is the type of queue that stores transactions. *queuetype* is **tinyint** with a default of **0**, and can be one of these values.  
   
 |Value|Description|  

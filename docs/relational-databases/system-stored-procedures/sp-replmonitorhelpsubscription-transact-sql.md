@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_replmonitorhelpsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns current status information for subscriptions belonging to one or more publications at the Publisher and returns one row for each returned subscription. This stored procedure, which is used to monitor replication, is executed at the Distributor on the distribution database.  
   

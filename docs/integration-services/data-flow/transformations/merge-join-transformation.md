@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "joining datasets [Integration Services]"
   - "joins [SQL Server], SSIS"
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Merge Join Transformation
 

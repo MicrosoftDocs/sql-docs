@@ -25,12 +25,12 @@ author: minewiskan
  **UNIFORM**  
  The values for the continuous column form a flat curve, in which all values are equally likely.  
   
- For more information about [!INCLUDE[msCoName](../includes/msconame-md.md)] data mining algorithms, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Third-party algorithm providers may support additional distribution types. To determine which distribution types an algorithm supports, use the **SUPPORTED_DISTRIBUTION_FLAGS** schema rowset.  
+ For more information about [!INCLUDE[msCoName](../includes/msconame-md.md)] data mining algorithms, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining). Third-party algorithm providers may support additional distribution types. To determine which distribution types an algorithm supports, use the **SUPPORTED_DISTRIBUTION_FLAGS** schema rowset.  
   
- For more information about distribution types, see [Column Distributions &#40;Data Mining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md).  
+ For more information about distribution types, see [Column Distributions &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining).  
   
 ## See Also  
- [Content Types &#40;Data Mining&#41;](../analysis-services/data-mining/content-types-data-mining.md)   
+ [Content Types &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)   
  [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Elements](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   

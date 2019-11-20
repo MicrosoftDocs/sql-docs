@@ -1,7 +1,7 @@
 ---
-title: "Building the Connection URL | Microsoft Docs"
+title: "Building the connection URL | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -31,12 +31,12 @@ ms.author: genemi
     > [!NOTE]  
     >  For optimal connection performance, you should set the portNumber when you connect to a named instance. This will avoid a round trip to the server to determine the port number. If both a portNumber and instanceName are used, the portNumber will take precedence and the instanceName will be ignored.  
   
--   **property** (Optional) is one or more option connection properties. For more information, see [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md). Any property from the list can be specified. Properties can only be delimited by using the semicolon (';'), and they can't be duplicated.  
+-   **property** (Optional) is one or more option connection properties. For more information, see [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md). Any property from the list can be specified. Properties can only be delimited by using the semicolon (';'), and they can't be duplicated.  
   
 > [!CAUTION]  
->  For security purposes, you should avoid building the connection URLs based on user input. You should only specify the server name and driver in the URL. For user name and password values, use the connection property collections. For more information about security in your JDBC applications, see [Securing JDBC Driver Applications](../../connect/jdbc/securing-jdbc-driver-applications.md).  
+>  For security purposes, you should avoid building the connection URLs based on user input. You should only specify the server name and driver in the URL. For user name and password values, use the connection property collections. For more information about security in your JDBC applications, see [Securing JDBC driver applications](../../connect/jdbc/securing-jdbc-driver-applications.md).  
   
-## Connection Examples  
+## Connection examples  
  Connect to the default database on the local computer by using a user name and password:  
   
  `jdbc:sqlserver://localhost;user=MyUserName;password=*****;`  
@@ -66,7 +66,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
-## Named and Multiple SQL Server Instances  
+## Named and multiple SQL Server instances  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows for the installation of multiple database instances per server. Each instance is identified by a specific name. To connect to a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can either specify the port number of the named instance (preferred), or you can specify the instance name as a JDBC URL property or a **datasource** property. If no instance name or port number property is specified, a connection to the default instance is created. See the following examples:  
   
  To use a port number, do the following:  
@@ -77,7 +77,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `jdbc:sqlserver://localhost;instanceName=instance1;integratedSecurity=true;<more properties as required>;`  
   
-## Escaping Values in the Connection URL  
+## Escaping values in the connection URL  
  You might have to escape certain parts of the connection URL values because of the inclusion of special characters such as spaces, semicolons, and quotation marks. The JDBC driver supports escaping these characters if they are enclosed in braces. For example, {;} escapes a semicolon.  
   
  Escaped values can contain special characters (especially '=', ';', '[]', and space) but cannot contain braces. Values that must be escaped and contain braces should be added to a properties collection.  
@@ -85,7 +85,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  White space inside the braces is literal and not trimmed.  
   
-##  <a name="Connectingintegrated"></a> Connecting with Integrated Authentication On Windows  
+##  <a name="Connectingintegrated"></a> Connecting with integrated authentication On Windows  
  The JDBC driver supports the use of Type 2 integrated authentication on Windows operating systems through the integratedSecurity connection string property. To use integrated authentication, copy the sqljdbc_auth.dll file to a directory on the Windows system path on the computer where the JDBC driver is installed.  
   
  The sqljdbc_auth.dll files are installed in the following location:  
@@ -101,7 +101,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   
-## Connecting with IPv6 Addresses  
+## Connecting with IPv6 addresses  
  The JDBC driver supports the use of IPv6 addresses with the connection properties collection, and with the serverName connection string property. The initial serverName value, such as jdbc:*sqlserver*://*serverName*, isn't supported for IPv6 addresses in connection strings. Using a name for *serverName* instead of a raw IPv6 address will work in every case in the connection. The following examples provide more information.  
   
  **To use the serverName property**  
@@ -116,7 +116,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
-## See Also  
- [Connecting to SQL Server with the JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+## See also  
+ [Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

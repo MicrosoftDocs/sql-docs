@@ -56,7 +56,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 2.  In the query window, enter the following statement that uses the SERVERPROPERTY system function.  
   
     ```sql  
-    SELECT CONVERT (varchar, SERVERPROPERTY('collation'));  
+    SELECT CONVERT (varchar(256), SERVERPROPERTY('collation'));  
     ```  
   
 3.  Alternatively, you can use the sp_helpsort system stored procedure.  
@@ -88,7 +88,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 3.  Alternatively, you can use the DATABASEPROPERTYEX system function.  
   
     ```sql  
-    SELECT CONVERT (varchar, DATABASEPROPERTYEX('database_name','collation'));  
+    SELECT CONVERT (varchar(256), DATABASEPROPERTYEX('database_name','collation'));  
     ```  
   
  **To view the collation setting of a column**  

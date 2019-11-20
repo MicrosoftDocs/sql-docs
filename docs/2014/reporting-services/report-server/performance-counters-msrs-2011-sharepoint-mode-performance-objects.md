@@ -116,21 +116,23 @@ manager: kfile
 ##  <a name="bkmk_powershell"></a> Use PowerShell Cmdlets to return lists  
  ![PowerShell related content](../media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script will return the counter sets where the CounterSetName starts with "msr"  
   
-```  
-get-counter -listset msr*  
-Returns a list with the following information  
+```powershell
+Get-Counter -ListSet msr*
+```
+
+Returns a list with the following information:
+
+```
 CounterSetName     : MSRS 2014 Windows Service SharePoint Mode  
 CounterSetName     : MSRS 2014 Web Service SharePoint Mode  
 ```  
   
  The following Windows PowerShell script will return the list of performance counters for the CounterSetName "MSRS 2014 Windows Service SharePoint Mode".  
   
-```  
-(get-counter -listset "MSRS 2014 Windows Service SharePoint Mode").paths  
+```powershell
+(Get-Counter -ListSet "MSRS 2014 Windows Service SharePoint Mode").Paths  
 ```  
   
 ## See Also  
  [Monitoring Report Server Performance](monitoring-report-server-performance.md)   
  [Performance Counters for the MSRS 2014 Web Service and MSRS 2014 Windows Service Performance Objects &#40;Native Mode&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
-  
-  

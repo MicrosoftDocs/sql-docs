@@ -15,7 +15,7 @@ author: stevestein
 ms.author: sstein
 ---
 # Create a Database Mail Account
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Use either the **Database Mail Configuration Wizard** or [!INCLUDE[tsql](../../includes/tsql-md.md)] to create a Database Mail account.  
   
 -   **Before you begin:**  [Prerequisites](#Prerequisites)  

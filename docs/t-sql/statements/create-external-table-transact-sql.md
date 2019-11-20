@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 05/29/2019
+ms.date: 07/29/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -353,7 +353,7 @@ SELECT DISTINCT user.FirstName, user.LastName
 INTO ms_user
 FROM user INNER JOIN (
     SELECT * FROM ClickStream WHERE cs.url = 'www.microsoft.com'
-    ) AS ms_user
+    ) AS ms
 ON user.user_ip = ms.user_ip
 ;
 ```
@@ -589,9 +589,8 @@ WITH
 
 ## Overview: Azure SQL Database
 
-In Azure SQL Database, creates an external table for [elastic queries](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) for use with Azure SQL Database.
+In Azure SQL Database, creates an external table for [elastic queries (in preview)](/azure/sql-database/sql-database-elastic-query-overview/).
 
-Use an external table toc reate an external table for use with an elastic query.
 
 See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -625,6 +624,9 @@ The one to three-part name of the table to create. For an external table, SQL st
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
+
+> [!NOTE]
+> `Text`, `nText` and `XML` are not supported data types for columns in external tables for Azure SQL Database.
 
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
@@ -673,7 +675,7 @@ You can create many external tables that reference the same or different externa
 
 ## Limitations and Restrictions
 
-Since the data for an external table is in another SQL Database, it can be changed or removed at any time. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
+Access to data via an external table doesn't adhere to the isolation semantics within SQL Server. This means that querying an external doesn't impose any locking or snapshot isolation and thus data return can change if the data in the external data source is changing.  The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
 
 You can create multiple external tables that each reference different external data sources.
 
@@ -686,6 +688,24 @@ Constructs and operations not supported:
 
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
+
+Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, i.e. when used in connjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined to.    
+
+```sql
+  \\ Assuming External.Orders is an external table and Customer is a local table. 
+  \\ This query  will copy the whole of the external locally as the predicate needed
+  \\ to filter isn't known at compile time. Its only known during execution of the query
+  
+  SELECT Orders.OrderId, Orders.OrderTotal 
+    FROM External.Orders
+   WHERE CustomerId in (SELECT TOP 1 CustomerId 
+                          FROM Customer 
+	                     WHERE CustomerName = 'MyCompany')
+```
+
+Use of External Tables prevents use of parallelism in the query plan.
+
+External tables are implemented as Remote Query and as such the estimated number of rows returned is generally 1000, there are other rules based on the type of predicate used to filter the external table. They are rules based estimates rather than estimates based on the actual data in the external table. The optimiser doesn't access the remote data source to obtain a more accurate estimate.
 
 ## Locking
 
@@ -751,7 +771,7 @@ column_name <data_type>
     | REJECT_TYPE = value | percentage,  
     | REJECT_VALUE = reject_value,  
     | REJECT_SAMPLE_VALUE = reject_sample_value,
-    | REJECTED_ROW_LOCATION = '\REJECT_Directory'
+    | REJECTED_ROW_LOCATION = '/REJECT_Directory'
   
 }  
 ```  
@@ -763,6 +783,9 @@ The one to three-part name of the table to create. For an external table, SQL Da
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
+
+> [!NOTE]
+> `Text`, `nText` and `XML` are not supported data types for columns in external tables for Azure SQL Warehouse.
 
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
@@ -911,10 +934,10 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat
 WITH
 (
     FORMAT_TYPE = DELIMITEDTEXT 
-    , FORMAT_OPTIONS ( FIELDTERMINATOR = '|'
-       , STRINGDELIMITER = ''
-      , DATEFORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
-      , USETYPE_DEFAULT = FALSE
+    , FORMAT_OPTIONS ( FIELD_TERMINATOR = '|'
+       , STRING_DELIMITER = ''
+      , DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
+      , USE_TYPE_DEFAULT = FALSE
       )
 )
 

@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.deploy_project (SSISDB Database)
 
@@ -66,7 +66,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   A parameter refers to an object that does not exist, a parameter tries to create an object that already exists, or a parameter is invalid in some other way  
   
--   The value of the parameter *@project_name* does not match the name of the project in the deployment file  
+-   The value of the parameter *\@project_name* does not match the name of the project in the deployment file  
   
 -   The user does not have sufficient permissions  
   

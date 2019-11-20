@@ -21,7 +21,7 @@ ms.author: "mathoma"
   
 ## Options  
  **Operator**  
- Select an operator for the filter, such as **Less than or Equal to**.  
+ Select an operator for the filter, such as **Less than or Equal to**.
   
  **Value**  
  Enter a value for the filter. Most operators only require a value in the first **Value** column, but the **Between** and **Not Between** operators require a value in both of the **Value** columns.  

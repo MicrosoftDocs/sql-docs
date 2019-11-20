@@ -101,7 +101,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |Nederlands|Dutch|1043|nl-NL|  
 |Norsk|Norwegian|2068|nn-NO|  
 |Português|Portuguese|2070|pt-PT|  
-|Suomi|Finnish|1035|fi|  
+|Suomi|Finnish|1035|fi-FI|  
 |Svenska|Swedish|1053|sv-SE|  
 |čeština|Czech|1029|Cs-CZ|  
 |magyar|Hungarian|1038|Hu-HU|  

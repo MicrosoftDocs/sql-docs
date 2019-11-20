@@ -20,9 +20,10 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Filter Published Data
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Filtering table articles enables you to create partitions of data to be published. By filtering published data, you can:  
   
 -   Minimize the amount of data sent over the network.  

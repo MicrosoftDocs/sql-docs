@@ -1,5 +1,5 @@
 ---
-title: "Secure a Master Data Manager Web Application | Microsoft Docs"
+title: Secure a Master Data Manager Web Application
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -55,7 +55,7 @@ ms.author: lle
 
 12. Change `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` to `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">` to prevent issues that may appear in the Silverlight client.
 
-13. Save and close the file. If you get an error, it could be because you have UAC enabled. For more information, see [Turn off User Account Control](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Users should now be able to use HTTPS to access the site.  
+13. Save and close the file. If you get an error, it could be because you have UAC enabled. Users should now be able to use HTTPS to access the site.  
 
   
 ## See Also  

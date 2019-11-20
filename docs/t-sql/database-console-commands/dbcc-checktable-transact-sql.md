@@ -76,7 +76,7 @@ REPAIR_FAST
  Syntax is maintained for backward compatibility only. No repair actions are performed.  
     
 REPAIR_REBUILD  
- Performs repairs that have no possibility of data loss. This can include quick repairs, such as repairing missing rows in non-clustered indexes, and more time-consuming repairs, such as rebuilding an index.  
+ Performs repairs that have no possibility of data loss. This can include quick repairs, such as repairing missing rows in nonclustered indexes, and more time-consuming repairs, such as rebuilding an index.  
  This argument does not repair errors involving FILESTREAM data.  
     
  > [!NOTE]  
@@ -119,7 +119,7 @@ DATA_PURITY
  If PHYSICAL_ONLY is specified, column-integrity checks are not performed.  
     
 MAXDOP  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and later).  
  
  Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the Database Engine uses the Resource Governor MAXDOP value, described in ALTER WORKLOAD GROUP (Transact-SQL). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
     

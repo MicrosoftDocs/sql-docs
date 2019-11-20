@@ -65,7 +65,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  *database_name*  
  Is the name of the database in which the table was created.  
   
- Windows Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #. Windows Azure SQL Database does not support four-part names.  
+ Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #. Azure SQL Database does not support four-part names.  
   
  *IF EXISTS*  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  

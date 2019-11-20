@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "oraDb"
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Connect to an Oracle Source Database
 

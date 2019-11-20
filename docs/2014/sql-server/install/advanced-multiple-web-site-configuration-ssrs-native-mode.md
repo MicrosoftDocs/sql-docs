@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1"
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Advanced Multiple Web Site Configuration (SSRS Native Mode)

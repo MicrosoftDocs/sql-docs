@@ -58,7 +58,7 @@ ms.author: sstein
  Is an output parameter that returns the result set in an XML fragment. *xml_output* is **xml** with no default.  
   
 ## Properties  
- Set **@verboseoutput** =0 to return core properties as shown in the table below; **@verboseoutput** > 0 to return all properties of the spatial index.  
+ Set **\@verboseoutput** =0 to return core properties as shown in the table below; **\@verboseoutput** > 0 to return all properties of the spatial index.  
   
  **Base_Table_Rows**  
  Number of rows in the base table. Value is **bigint**.  

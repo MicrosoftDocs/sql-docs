@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 1-5 - Testing the Updated Packages
 

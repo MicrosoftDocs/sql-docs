@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Analysis Services Execute DDL task"
   - "DDL"
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Analysis Services Execute DDL Task
 
@@ -38,9 +38,9 @@ ms.author: janinez
 ## DDL Statements  
  The DDL statements are represented as statements in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL), and framed in an XML for Analysis (XMLA) command.  
   
--   ASSL is used to define and describe an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and the databases and database objects it contains. For more information, see [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+-   ASSL is used to define and describe an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and the databases and database objects it contains. For more information, see [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).  
   
--   XMLA is a command language that is used to send action commands, such as Create, Alter, or Process, to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [XML for Analysis  &#40;XMLA&#41; Reference](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md).  
+-   XMLA is a command language that is used to send action commands, such as Create, Alter, or Process, to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [XML for Analysis  &#40;XMLA&#41; Reference](/bi-reference/xmla/xml-for-analysis-xmla-reference).  
   
  If the DDL code is stored in a separate file, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task uses a File connection manager to specify the path of the file. For more information, see [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
   

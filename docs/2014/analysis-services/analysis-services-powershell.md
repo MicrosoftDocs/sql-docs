@@ -76,11 +76,11 @@ For more information about syntax and examples, see [Analysis Services PowerShel
   
 3.  The user name and password provided by the credential object resolves to a Windows user identity. Analysis Services uses this identity as the current user. If the user is not a Windows user, or lacks sufficient permissions to perform the requested operation, the request will fail.  
   
- To create a credential object, you can use the Get-Credential cmdlet to collect the credentials from the operator. You can then use the credential object on a command that connects to Analysis Services. The following example illustrates one approach. In this example, the connection is to a local instance configured for HTTP access.  
+ To create a credential object, you can use the Get-Credential cmdlet to collect the credentials from the operator. You can then use the credential object on a command that connects to Analysis Services. The following example illustrates one approach. In this example, the connection is to a local instance (`SQLSERVER:\SQLAS\HTTP_DS`) configured for HTTP access.  
   
-```  
-PS SQLSERVER:\SQLAS\HTTP_DS> $cred = Get-credential adventureworks\dbadmin  
-PS SQLSERVER:\SQLAS\HTTP_DS> Invoke-ASCmd -Inputfile:"c:\discoverconnections.xmla" -Credential:$cred  
+```powershell
+$cred = Get-Credential adventureworks\dbadmin  
+Invoke-ASCmd -Inputfile:"c:\discoverconnections.xmla" -Credential:$cred  
 ```  
   
  When using Basic authentication, you should always use HTTPS with SSL so that username and passwords are sent over an encrypted connection. For more information, see [Configure Secure Sockets Layer in IIS 7.0](https://go.microsoft.com/fwlink/?linkID=184299) and [Configure Basic Authentication (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=230776).  
@@ -91,20 +91,18 @@ PS SQLSERVER:\SQLAS\HTTP_DS> Invoke-ASCmd -Inputfile:"c:\discoverconnections.xml
   
  Some operations, such as backup and restore, support encryption options that are activated when you provide a password in the command. Providing the password signals Analysis Services to encrypt or decrypt the backup file. In Analysis Services, this password is instantiated as a secure string object. The following example provides an illustration of how to collect a password from the operator at run time.  
   
-```  
-PS SQLSERVER:\SQLAS\Localhost\default> $pwd = read-host -AsSecureString -Prompt "Password"  
-Password: ****  
-PS SQLSERVER:\SQLAS\Localhost\default> $pwd -is [System.IDisposable]   
-True  
+```powershell
+$pwd = read-host -AsSecureString -Prompt "Password"  
+$pwd -is [System.IDisposable]  
 ```  
   
- You can now backup or restore an encrypted database file, passing the $pwd variable to the password parameter. To view a complete example that combines this illustration with other cmdlets, see [Backup-ASDatabase cmdlet](/sql/analysis-services/powershell/backup-asdatabase-cmdlet) and [Restore-ASDatabase cmdlet](/sql/analysis-services/powershell/restore-asdatabase-cmdlet).
+ You can now backup or restore an encrypted database file, passing the $pwd variable to the password parameter. To view a complete example that combines this illustration with other cmdlets, see [Backup-ASDatabase cmdlet](/powershell/module/sqlserver/backup-asdatabase) and [Restore-ASDatabase cmdlet](/powershell/module/sqlserver/restore-asdatabase).
   
  As a follow up step, remove both the password and variable from the session.  
   
-```  
-PS SQLSERVER:\SQLAS\Localhost\default> $pwd.Dispose()  
-PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd  
+```powershell
+$pwd.Dispose()  
+Remove-Variable -Name pwd  
 ```  
   
 ##  <a name="bkmk_tasks"></a> Analysis Services PowerShell Tasks  
@@ -127,16 +125,16 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
   
 -   Run the Import-module cmdlet to load SQLPS that includes all of the Analysis Services PowerShell functionality. If you cannot import the module, you can temporarily change the execution policy to unrestricted for the purpose of the loading the module. For more information, see [Import the SQLPS Module](../../2014/database-engine/import-the-sqlps-module.md).  
   
-    ```  
-    Import-module "sqlps"  
+    ```powershell
+    Import-Module "sqlps"  
     ```  
   
      Alternatively, use `import-module "sqlps" -disablenamechecking` to suppress the warning about unapproved verb names.  
   
 -   To load just the task-specific Analysis Services cmdlets, without the Analysis Services provider or the Invoke-ASCmd cmdlet, you can load the SQLASCmdlets module as an independent operation.  
   
-    ```  
-    Import-module "sqlascmdlets"  
+    ```powershell
+    Import-Module "sqlascmdlets"  
     ```  
   
 ###  <a name="bkmk_remote"></a> Enable Remote Administration  
@@ -158,16 +156,16 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
   
 8.  On the local computer that has the client tools, use the following cmdlets to verify remote administration, substituting the actual server name for the *remote-server-name* placeholder. Omit the instance name if Analysis Services is installed as the default instance. You must have previously imported the SQLPS module in order for the command to work.  
   
-    ```  
-    PS SQLSERVER:\> cd sqlas  
+    ```
+    PS SQLSERVER:\> cd sqlas
     PS SQLSERVER:\sqlas> cd <remote-server-name\instance-name>  
     PS SQLSERVER:\sqlas\<remote-server-name\instance-name> dir  
     ```  
   
  In some cases, additional configuration might be necessary. You might need to type the following on the remote server before you can issue commands to it from another computer:  
   
-```  
-Enable-psremoting  
+```powershell
+Enable-PSRemoting  
 ```  
   
   
@@ -211,61 +209,61 @@ PS SQLSERVER\sqlas\http_ds\http%3A%2F%2Flocalhost%2olap%2msmdpump%2Edll:> dir
 ###  <a name="bkmk_admin"></a> Administer the Service  
  Verify the service is running. Returns status, name, and display name for SQL Server services, including Analysis Services (MSSQLServerOLAPService) and the Database Engine.  
   
-```  
-Get-service mssql*  
+```powershell
+Get-Service mssql*  
 ```  
   
  Returns properties about a process, including process ID, handle count, and memory usage:  
   
-```  
-Get-process msmdsrv  
+```powershell
+Get-Process msmdsrv  
 ```  
   
  Restarts the service when you issue the following cmdlet from the administrator shell:  
   
-```  
-Restart-service mssqlserverolapservice  
+```powershell
+Restart-Service mssqlserverolapservice  
 ```  
   
 ###  <a name="bkmk_help"></a> Get Help for Analysis Services PowerShell  
  Use any of the following cmdlets to verify cmdlet availability and to get more information about services, processes, and objects.  
   
-1.  `Get-help` returns the built-in help for an Analysis Services cmdlet, including examples:  
+1.  `Get-Help` returns the built-in help for an Analysis Services cmdlet, including examples:  
   
-    ```  
-    Get-help invoke-ascmd -examples  
-    ```  
-  
-2.  `Get-command` returns a list of the eleven Analysis Services PowerShell cmdlets:  
-  
-    ```  
-    get-command -module SQLASCmdlets  
+    ```powershell
+    Get-Help invoke-ascmd -Examples  
     ```  
   
-3.  `Get-member` returns properties or methods of a service or process.  
+2.  `Get-Command` returns a list of the eleven Analysis Services PowerShell cmdlets:  
   
-    ```  
-    Get-service mssqlserverolapservice | get-member -type Property  
-    ```  
-  
-    ```  
-    Get-service mssqlserverolapservice | get-member -type Method  
+    ```powershell
+    Get-Command -module SQLASCmdlets  
     ```  
   
-    ```  
-    Get-process msmdsrv | get-member -type Property  
+3.  `Get-Member` returns properties or methods of a service or process.  
+  
+    ```powershell
+    Get-Service mssqlserverolapservice | Get-Member -Type Property  
     ```  
   
-4.  `Get-member` can also be used to return properties or methods of an object (for example, AMO methods on the server object) using the SQLAS provider to specify the server instance.  
-  
+    ```powershell
+    Get-Service mssqlserverolapservice | Get-Member -Type Method  
     ```  
+  
+    ```powershell
+    Get-Process msmdsrv | Get-Member -Type Property  
+    ```  
+  
+4.  `Get-Member` can also be used to return properties or methods of an object (for example, AMO methods on the server object) using the SQLAS provider to specify the server instance.  
+  
+    ```
     PS SQLSERVER:\sqlas\localhost\default > $serverObj = New-Object Microsoft.AnalysisServices.Server  
-    PS SQLSERVER:\sqlas\localhost\default > $serverObj = | get-member -type Method  
+    PS SQLSERVER:\sqlas\localhost\default > $serverObj = | Get-Member -Type Method  
     ```  
   
 5.  `Get-PSdrive` returns a list of the providers that are currently installed. If you imported the SQLPS module, you will see the `SQLServer` provider in the list (SQLAS is part of the SQLServer provider and never appears separately in the list):  
   
-    ```  
+    ```powershell
     Get-PSDrive  
     ```  
   

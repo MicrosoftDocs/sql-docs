@@ -39,6 +39,6 @@ manager: craigg
      ![Internet sales by region and product line](../../2014/tutorials/media/l3-cube-browser-finish.gif "Internet sales by region and product line")  
   
 ## Next Lesson  
- [Lesson 4: Defining Advanced Attribute and Dimension Properties](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Lesson 4: Defining Advanced Attribute and Dimension Properties](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

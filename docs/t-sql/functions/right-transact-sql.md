@@ -104,9 +104,7 @@ lters
  The following example uses `RIGHT` to return the two rightmost characters of the character string `abcdefg`.  
   
 ```  
--- Uses AdventureWorks  
-  
-SELECT TOP(1) RIGHT('abcdefg',2) FROM dbo.DimProduct;  
+SELECT RIGHT('abcdefg', 2); 
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

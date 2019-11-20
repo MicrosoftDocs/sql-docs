@@ -1,5 +1,5 @@
 ---
-title: "View or Change Collection Set Schedules (SQL Server Management Studio) | Microsoft Docs"
+title: "View or change collection set schedules"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,6 +18,7 @@ helpviewer_keywords:
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
+ms.custom: "seo-lt-2019"
 ---
 # View or Change Collection Set Schedules (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -58,7 +58,7 @@ sp_set_firewall_rule [@name =] 'name',
  The following code creates a server-level firewall setting called `Allow Azure` that enables access from Azure. Execute the following in the virtual master database.  
   
 ```  
--- Enable Windows Azure connections.  
+-- Enable Azure connections.  
 exec sp_set_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';  
   
 ```  

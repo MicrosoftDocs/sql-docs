@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Connect to a Flat File Data Source (SQL Server Import and Export Wizard)
 

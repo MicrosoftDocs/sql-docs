@@ -1,5 +1,5 @@
 ---
-title: "Configure PolyBase Hadoop security in Analytics Platform System | Microsoft Docs"
+title: "Configure PolyBase Hadoop security in Analytics Platform System"
 description: Explains how to configure PolyBase in Parallel Data Warehouse to connect to external Hadoop. 
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 # PolyBase configuration and security for Hadoop
 

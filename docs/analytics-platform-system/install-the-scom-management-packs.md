@@ -1,5 +1,5 @@
 ---
-title: Install SCOM management packs - Analytics Platform System | Microsoft Docs
+title: Install SCOM management packs - Analytics Platform System
 description: Follow these steps to download and install the System Center Operations Manager (SCOM) Management Packs for SQL Server PDW. The Management Packs are required to monitor SQL Server PDW from SCOM. 
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Install SQL Server Operations Manager (SCOM) management packs for Analytics Platform System

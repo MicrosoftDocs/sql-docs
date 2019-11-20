@@ -22,7 +22,7 @@ See [Deploy the Host Guardian Service for [!INCLUDE [ssnoversion-md](../../../in
 
 ## Step 1: Install the attestation client components
 
-To allow a SQL client to verify it is talking to a trustworthy [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer, the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer must successfully attest with the Host Guardian Service.
+To allow a SQL client to verify it's talking to a trustworthy [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer, the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer must successfully attest with the Host Guardian Service.
 The attestation process is managed by an optional Windows component called the HGS Client.
 The steps below will help you install this component and begin attesting.
 
@@ -43,11 +43,11 @@ To check if VBS is running, open the System Information tool by running `msinfo3
 
 ![System Information screenshot showing Virtualization Based Security status and configuration](./media/always-encrypted-enclaves/msinfo32-vbs-status.png)
 
-The first item to check is **Virtualization-based security**, which can have the following 3 values:
+The first item to check is **Virtualization-based security**, which can have the following three values:
 
 - **Running** means VBS is configured correctly and was able to start successfully. If your computer shows this status, you can skip to Step 3.
 - **Enabled but not running** means VBS is configured to run, but your hardware does not have the minimum security requirements to run VBS. You may need to change the configuration of your hardware in BIOS or UEFI to enable optional processor features like an IOMMU or, if the hardware truly does not support the required features, you may need to lower the VBS security requirements. Continue reading this section to learn more.
-- **Not enabled** means VBS is not configured to run. The Host Guardian Hyper-V Support feature automatically enables VBS, so it is recommended that you repeat step 1 if you see this status.
+- **Not enabled** means VBS is not configured to run. The Host Guardian Hyper-V Support feature automatically enables VBS, so it's recommended that you repeat step 1 if you see this status.
 
 If VBS is not running on your computer, compare the values in the "Virtualization-based security **Required** Security Properties" item to those in the "Virtualization-based security **Available** Security Properties" item.
 The required properties must be equal to or a subset of the available security properties for VBS to run.
@@ -55,8 +55,8 @@ The required properties must be equal to or a subset of the available security p
 In the context of attesting [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] enclaves, the security properties have the following importance:
 
 - **Base virtualization support** is always required, as it represents the minimum hardware features needed to run a hypervisor on your computer.
-- **Secure Boot** is recommended but not required for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted. Secure Boot protects against bootkits and rootkits by requiring a Microsoft-signed bootloader to run immediately after UEFI initialization completes. If you are using TPM attestation, Secure Boot enablement will be measured and enforced regardless of whether VBS is configured to require Secure Boot.
-- **DMA Protection** is strongly recommended but not required for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted. DMA protection uses an IOMMU to protect VBS and enclave memory from direct memory access attacks. In a production environment, you should always use computers with DMA protection. In a dev/test environment, it is okay to remove the requirement for DMA protection. If your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is virtualized, you will most likely not have DMA protection available and will need to remove the requirement for VBS to run.
+- **Secure Boot** is recommended but not required for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted. Secure Boot protects against rootkits by requiring a Microsoft-signed bootloader to run immediately after UEFI initialization completes. If you are using TPM attestation, Secure Boot enablement will be measured and enforced regardless of whether VBS is configured to require Secure Boot.
+- **DMA Protection** is strongly recommended but not required for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted. DMA protection uses an IOMMU to protect VBS and enclave memory from direct memory access attacks. In a production environment, you should always use computers with DMA protection. In a dev/test environment, it's okay to remove the requirement for DMA protection. If your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is virtualized, you'll most likely not have DMA protection available and will need to remove the requirement for VBS to run.
 
 Before lowering the VBS required security features, check with your OEM to confirm if there is a way to enable the missing platform requirements in UEFI or BIOS.
 
@@ -102,7 +102,7 @@ Before you begin collecting TPM measurements, make sure you are working on a kno
 This includes having all necessary hardware installed and the latest firmware and software updates applied.
 HGS will measure your computers against this baseline when they attest, so it's important that you're in the most secure and intended state possible when collecting the TPM measurements.
 
-There are 3 data files collected for TPM attestation, some of which can be re-used if you have identically configured computers.
+There are three data files collected for TPM attestation, some of which can be re-used if you have identically configured computers.
 
 | Attestation artifact | What it measures | Uniqueness |
 | -------------------- | ---------------- | ---------- |
@@ -111,8 +111,8 @@ There are 3 data files collected for TPM attestation, some of which can be re-us
 | Code integrity policy | The [Windows Defender Application Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) policy you trust to protect your computers | One per unique CI policy deployed to your computers. |
 
 You can configure more than one of each attestation artifact on HGS to support a mixed fleet of hardware and software.
-HGS only requires that a computer attesting match one of any given policy.
-For example, if you have 3 TPM baselines registered on HGS, your computer measurements can match any one of those baselines to meet the policy requirement.
+HGS only requires that a computer attesting match one policy from each policy category.
+For example, if you have three TPM baselines registered on HGS, your computer measurements can match any one of those baselines to meet the policy requirement.
 
 ### Configure a code integrity policy
 
@@ -123,7 +123,7 @@ As such, it's recommended that you deploy a simple audit-mode policy to your [!I
 
 If you are already using a custom WDAC code integrity policy on your computers to harden the OS configuration, you can skip to [Collect TPM attestation information](#collect-tpm-attestation-information).
 
-1. There are pre-made an example policies available on every Windows Server 2019, Windows 10 version 1809, and later operating system. The *AllowAll* policy will allow any software to run on the computer without restrictions. You need to convert the policy to a binary form understood by the OS and HGS before you can use it. In an elevated PowerShell console, run the following commands to compile the *AllowAll* policy:
+1. There are pre-made example policies available on every Windows Server 2019, Windows 10 version 1809, and later operating system. The *AllowAll* policy will allow any software to run on the computer without restrictions. You need to convert the policy to a binary form understood by the OS and HGS before you can use it. In an elevated PowerShell console, run the following commands to compile the *AllowAll* policy:
 
     ```powershell
     # We are changing the policy to disable enforcement and user mode code protection before compiling
@@ -179,7 +179,7 @@ Repeat the following steps for each [!INCLUDE [ssnoversion-md](../../../includes
 
 In addition to the platform identifier, TPM baseline, and code integrity policy, there are built-in policies configured and enforced by HGS that you may need to change.
 These built-in policies are measured from the TPM baseline you collect from the server and represent a variety of security settings that should be enabled to protect your computer.
-If you have any computers that do not have an IOMMU present to protect against DMA attacks (for example, a VM), you will need to disable the IOMMU policy.
+If you have any computers that do not have an IOMMU present to protect against DMA attacks (for example, a VM), you'll need to disable the IOMMU policy.
 Note that disabling the IOMMU policy means any computer can attest without an IOMMU -- you cannot scope the policy to a particular computer.
 
 To disable the IOMMU requirement, run the following command on the HGS server:
@@ -226,7 +226,7 @@ Repeat Step 3B for every [!INCLUDE [ssnoversion-md](../../../includes/ssnoversio
 
 ## Step 4: Confirm the host can attest successfully
 
-After you've registered the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer with HGS ([Step 3A](#step-3a-register-a-computer-in-tpm-mode) for TPM mode, [Step 3B](#step-3b-register-a-computer-in-host-key-mode) for host key mode), you should confirm it is able to successfully attest.
+After you've registered the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer with HGS ([Step 3A](#step-3a-register-a-computer-in-tpm-mode) for TPM mode, [Step 3B](#step-3b-register-a-computer-in-host-key-mode) for host key mode), you should confirm it's able to successfully attest.
 
 You can check the configuration of the HGS attestation client and perform an attestation attempt at any time with [Get-HgsClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
 The output of the command will look similar to below:
@@ -271,6 +271,6 @@ The table below explains the most common values and how to remediate the errors.
 | FullBoot | The computer resumed from a sleep state or hibernation, resulting in changes to your TPM measurements. Restart your computer to generate clean TPM measurements. |
 | HibernationEnabled | The computer is configured to allow hibernation with unencrypted hibernation files. Disable hibernation on your computer to resolve this issue. |
 | HypervisorEnforcedCodeIntegrityPolicy | The computer is not configured to use a code integrity policy. Check your Group Policy or Local Group Policy > Computer Configuration > Administrative Templates > System > Device Guard > Turn on Virtualization Based Security > Virtualization based protection of code integrity. This policy item should be "Enabled without UEFI lock". |
-| Iommu | This computer does not have an IOMMU device enabled. If it's a physical computer, enable the IOMMU in your UEFI configuration menu. If it is a virtual machine and an IOMMU is not available, disable the Hgs_IommuEnabled policy on the HGS server. |
+| Iommu | This computer does not have an IOMMU device enabled. If it's a physical computer, enable the IOMMU in your UEFI configuration menu. If it's a virtual machine and an IOMMU is not available, disable the Hgs_IommuEnabled policy on the HGS server. |
 | SecureBoot | Secure Boot is not enabled on this computer. Enable Secure Boot in your UEFI configuration menu to resolve this error. |
 | VirtualSecureMode | Virtualization Based Security is not running on this computer. Follow the guidance in [Step 2: Verify VBS is running on your computer](#step-2-verity-virtualization-based-security-is-running). |

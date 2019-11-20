@@ -75,7 +75,7 @@ After changing the registry, restart your [!INCLUDE [ssnoversion-md](../../../in
 If your device is managed by your company, Group Policy or Microsoft Endpoint Manager may override any changes you make to these registry keys after you reboot.
 Contact your IT help desk to see if they deploy policies that manage your VBS configuration.
 
-## Configure the attestation URL
+## Step 3: Configure the attestation URL
 
 Next, you'll configure the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer with the URL for your HGS attestation service.
 
@@ -91,12 +91,12 @@ Set-HgsClientConfiguration -AttestationServerUrl "https://hgs.bastion.local/Atte
 Unless you have registered this machine with HGS before, the command will report an attestation failure.
 This is normal.
 The `AttestationMode` field in the cmdlet output will indicate which attestation mode HGS is configured to use.
-Proceed to [Step 3A](#step-3a-register-a-computer-in-tpm-mode) to register your machine in TPM mode or [Step 3B](#step-3b-register-a-computer-in-host-key-mode) to register your machine in host key mode.
+Proceed to [Step 4A](#step-4a-register-a-computer-in-tpm-mode) to register your machine in TPM mode or [Step 4B](#step-4b-register-a-computer-in-host-key-mode) to register your machine in host key mode.
 
-## Step 3A: Register a computer in TPM mode
+## Step 4A: Register a computer in TPM mode
 
 This step will walk you through the process to collect information about your computer's TPM state and register it with HGS.
-If your HGS attestation service is configured to use host key mode, skip to [Step 3B](#step-3b-register-a-computer-in-host-key-mode) instead.
+If your HGS attestation service is configured to use host key mode, skip to [Step 4B](#step-4b-register-a-computer-in-host-key-mode) instead.
 
 Before you begin collecting TPM measurements, make sure you are working on a known-good configuration of your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer.
 This includes having all necessary hardware installed and the latest firmware and software updates applied.
@@ -195,10 +195,10 @@ Get-HgsAttestationTpmHost
 Get-HgsAttestationTpmPolicy
 ```
 
-## Step 3B: Register a computer in host key mode
+## Step 4B: Register a computer in host key mode
 
 This step will walk you through the process to generate a unique key for your host and register it with HGS.
-If your HGS attestation service is configured to use TPM mode, follow the guidance in [Step 3A](#step-3a-register-a-computer-in-tpm-mode) instead.
+If your HGS attestation service is configured to use TPM mode, follow the guidance in [Step 4A](#step-4a-register-a-computer-in-tpm-mode) instead.
 
 Host key attestation works by generating an asymmetric key pair on your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer and providing HGS with the public half of that key.
 To generate your key pair, run the following command in an elevated PowerShell console:
@@ -222,11 +222,11 @@ Once you have generated the host key, copy the certificate file to an HGS server
 Add-HgsAttestationHostKey -Name "YourComputerName" -Path "C:\temp\yourcomputername.cer"
 ```
 
-Repeat Step 3B for every [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer that will attest with HGS.
+Repeat Step 4B for every [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer that will attest with HGS.
 
-## Step 4: Confirm the host can attest successfully
+## Step 5: Confirm the host can attest successfully
 
-After you've registered the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer with HGS ([Step 3A](#step-3a-register-a-computer-in-tpm-mode) for TPM mode, [Step 3B](#step-3b-register-a-computer-in-host-key-mode) for host key mode), you should confirm it's able to successfully attest.
+After you've registered the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer with HGS ([Step 4A](#step-4a-register-a-computer-in-tpm-mode) for TPM mode, [Step 4B](#step-4b-register-a-computer-in-host-key-mode) for host key mode), you should confirm it's able to successfully attest.
 
 You can check the configuration of the HGS attestation client and perform an attestation attempt at any time with [Get-HgsClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
 The output of the command will look similar to below:
@@ -259,7 +259,7 @@ The most common values that may appear in **AttestationStatus** are explained be
 | Passed | The computer passed attestation and is trusted to run [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] enclaves. |
 | TransientError | The attestation attempt failed due to a temporary error. This usually means there was an issue contacting HGS over the network. Check your network connection and ensure the computer can resolve and route to the HGS service name. |
 | TpmError | Your computer's TPM device reported an error during the attestation attempt. Check the TPM logs for more information. Clearing the TPM may resolve the issue, but take care to suspend BitLocker and other services that rely on your TPM before clearing the TPM. |
-| UnauthorizedHost | Your host key is not known to HGS. Follow the instructions in [Step 3B](#step-3b-register-a-computer-in-host-key-mode) to register the computer with HGS. |
+| UnauthorizedHost | Your host key is not known to HGS. Follow the instructions in [Step 4B](#step-4b-register-a-computer-in-host-key-mode) to register the computer with HGS. |
 
 When the **AttestationStatus** shows **InsecureHostConfiguration**, the **AttestationSubStatus** field will be populated with one or more policy names that failed.
 The table below explains the most common values and how to remediate the errors.

@@ -19,9 +19,6 @@ ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 - [For Versions 2017 CU4 and above, Enable the SQL Server Agent](#EnableAgentAfterCU4)
 - [For Versions 2017 CU3 and Below, Install the SQL Server Agent](#InstallAgentBelowCU4)
 
-> [!NOTE]
-> Make sure you have added the hostname (with and without domain) in the /etc/hosts files, otherwise the Agent won't be enabled properly.
-
 
 ## <a name="EnableAgentAfterCU4">For Versions 2017 CU4 and above, Enable the SQL Server Agent</a>
 
@@ -34,6 +31,9 @@ sudo systemctl restart mssql-server
 
 > [!NOTE]
 > If you are upgrading from 2017 CU3 or below with Agent installed, SQL Server Agent will be enabled automatically and previous Agent packages will be uninstalled.  
+
+> [!NOTE]
+> Make sure you have added the hostname (with and without domain) in the ```/etc/hosts``` file. Without that information the SQL Server Agent will not start properly and and no error message will be provided too.
 
 ## <a name="InstallAgentBelowCU4">For Versions 2017 CU3 and Below, Install the SQL Server Agent</a>
 

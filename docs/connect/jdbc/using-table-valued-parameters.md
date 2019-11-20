@@ -1,7 +1,7 @@
 ---
 title: "Using table-valued parameters | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "11/19/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -42,7 +42,7 @@ Before table-valued parameters were introduced to SQL Server 2008, the options f
   
 - Create a series of individual SQL statements for data modifications that affect multiple rows. Changes can be submitted to the server individually or batched into groups. However, even when submitted in batches that contain multiple statements, each statement is executed separately on the server.  
   
-- Use the bcp utility program or the [SQLServerBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy(v=vs.110).aspx) object to load many rows of data into a table. Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.  
+- Use the bcp utility program or the [SQLServerBulkCopy](../../connect/jdbc/reference/using-bulk-copy-with-the-jdbc-driver.md) object to load many rows of data into a table. Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.
   
 ## Creating table-valued parameter types  
 

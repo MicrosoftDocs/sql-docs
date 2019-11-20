@@ -35,10 +35,10 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
 ```  
   
 ## Arguments  
- *@schema_name*  
+ *\@schema_name*  
  The schema name for the current or temporal table  
   
- *@object_name*  
+ *\@object_name*  
  The name of the current or temporal table  
   
 ## Return Code Values  

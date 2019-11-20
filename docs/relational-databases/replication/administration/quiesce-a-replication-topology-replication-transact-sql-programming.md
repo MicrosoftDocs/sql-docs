@@ -32,8 +32,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 4.  Ensure that each Subscriber has received the tracer token.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### To quiesce a transactional replication topology with updatable subscriptions  
   
 1.  Stop activity on all published tables at the Publisher and all Subscribers.  

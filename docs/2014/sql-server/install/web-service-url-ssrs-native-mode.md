@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Reporting Services, Web service"
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Web Service URL (SSRS Native Mode)

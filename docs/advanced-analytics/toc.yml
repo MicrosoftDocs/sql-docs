@@ -2,7 +2,7 @@
   href: ../advanced-analytics/index.yml
 
 - name: Welcome to SQL Server >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 
 - name: Overview
   expanded: true
@@ -49,32 +49,24 @@
   items:
   - name: Python
     items:
-    - name: Verify Python exists in SQL Server
-      href: ../advanced-analytics/tutorials/quickstart-python-verify.md
-    - name: Hello World in Python and SQL
-      href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
-    - name: Handle inputs and outputs
-      href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
-    - name: Python data structures and SQL
+    - name: Create Python scripts
+      href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
+    - name: Handle data types and objects
       href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-    - name: Train and use your first model
-      href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
+    - name: Write Python functions
+      href: ../advanced-analytics/tutorials/quickstart-python-functions.md
+    - name: Train and score a model
+      href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
   - name: R
     items:
-    - name: Verify R exists in SQL Server
-      href: ../advanced-analytics/tutorials/quickstart-r-verify.md
-    - name: Hello World in R and SQL
-      href: ../advanced-analytics/tutorials/quickstart-r-run-using-tsql.md
-    - name: Handle inputs and outputs
-      href: ../advanced-analytics/tutorials/quickstart-r-inputs-and-outputs.md
+    - name: Create R scripts
+      href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
     - name: Handle data types and objects
       href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-    - name: Using R functions
+    - name: Write R functions
       href: ../advanced-analytics/tutorials/quickstart-r-functions.md
-    - name: Create a predictive model
-      href: ../advanced-analytics/tutorials/quickstart-r-create-predictive-model.md
-    - name: Predict from model
-      href: ../advanced-analytics/tutorials/quickstart-r-predict-from-model.md
+    - name: Train and score a model
+      href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
 - name: Tutorials
   items:
   - name: Python
@@ -267,28 +259,26 @@
         href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
   - name: Administration
     items:
-    - name: Manage integration
-      href: ../advanced-analytics/r/managing-and-monitoring-r-solutions.md
     - name: Monitor
       items:
       - name: Monitor using SSMS reports
-        href: ../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md
+        href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md
       - name: Monitor using DMVs
         href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
       - name: Extended events
         items:
-        - name: Extended events
-          href: ../advanced-analytics/r/extended-events-for-sql-server-r-services.md
-        - name: Extended events PREDICT T-SQL
-          href: ../advanced-analytics/xe-event-predict-tsql.md
+        - name: Monitor using extended events
+          href: ../advanced-analytics/administration/extended-events.md
+        - name: Monitor PREDICT T-SQL
+          href: ../advanced-analytics/administration/extended-events-predict-tsql.md
     - name: Scale script execution
-      href: ../advanced-analytics/administration/modify-user-account-pool.md
+      href: ../advanced-analytics/administration/scale-concurrent-execution-external-scripts.md
     - name: Resource governor
       items:
       - name: Use resource governor
-        href: ../advanced-analytics/administration/resource-governance.md
+        href: ../advanced-analytics/administration/resource-governor.md
       - name: Create a resource pool
-        href: ../advanced-analytics/administration/how-to-create-a-resource-pool.md
+        href: ../advanced-analytics/administration/create-external-resource-pool.md
   - name: Security
     items:
     - name: Give users permission

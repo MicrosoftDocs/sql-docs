@@ -124,7 +124,7 @@ GO
 
 Here are the results from the first query.
 
-```
+```output
 Place
 -------------
 California
@@ -135,7 +135,7 @@ Colima
 
 Here are the results from the second query.
 
-```
+```output
 Place
 -------------
 California

@@ -51,8 +51,6 @@ ms.author: mikeray
   
 3.  You can also specify the names to be used for the 3 primary key and unique constraints that are automatically created. If you do not provide names, then the system generates names as described later in this topic.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     -   **FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME**  
   
     -   **FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME**  

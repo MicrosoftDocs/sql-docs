@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.dts.designer.afpblobdest.f1"
   - "sql14.dts.designer.afpblobdest.f1"
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Azure Blob Destination
 

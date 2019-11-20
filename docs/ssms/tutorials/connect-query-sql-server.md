@@ -106,9 +106,10 @@ In this section, you create a table in the newly created TutorialDB database. Be
    ![Change database](media/connect-query-sql-server/changedb.png)
 
 2. Paste the following T-SQL code snippet into the query window, select it, and then select **Execute** (or select F5 on your keyboard).  
-   You can either replace the existing text in the query window or append it to the end. To execute everything in the query window, select **Execute**. To execute a portion of the text, highlight that portion, and then select **Execute**.  
+   You can either replace the existing text in the query window or append it to the end. To execute everything in the query window, select **Execute**. If you've appended the text, you will want to execute just the portion of the text, so highlight that portion, and then select **Execute**.  
   
    ```sql
+   USE [TutorialDB]
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "report compilation errors [Reporting Services]"
   - "authentication [Reporting Services]"
 ms.assetid: 42dd2f06-1de9-449e-ab9d-f4ef25f8b728
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Other Reporting Services Upgrade Issues

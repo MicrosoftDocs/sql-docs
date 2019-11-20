@@ -1,11 +1,11 @@
 ---
 title: What are Big Data Clusters?
 titleSuffix: SQL Server Big Data Clusters
-description: Learn about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview) that run on Kubernetes and provide scale-out options for both relational and HDFS data. 
+description: Learn about SQL Server Big Data Clusters that run on Kubernetes and provide scale-out options for both relational and HDFS data. 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -18,8 +18,6 @@ ms.technology: big-data-cluster
 Starting with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers running on Kubernetes. These components are running side by side to enable you to read, write, and process big data from Transact-SQL or Spark, allowing you to easily combine and analyze your high-value relational data with high-volume big data.
 
 For more information about new features and known issues for latest release, see the [release notes](release-notes-big-data-cluster.md).
-
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## Scenarios
 
@@ -53,7 +51,7 @@ A SQL Server big data cluster includes a scalable HDFS *storage pool*. This can 
 
 Management and monitoring are provided through a combination of command line tools, APIs, portals, and dynamic management views.
 
-You can use Azure Data Studio to perform a variety of tasks on the big data cluster. This is enabled by the new **SQL Server 2019 Extension (Preview)**. This extension provides:
+You can use Azure Data Studio to perform a variety of tasks on the big data cluster. This is enabled by the new **SQL Server 2019 Extension**. This extension provides:
 
 - Built-in snippets for common management tasks.
 - Ability to browse HDFS, upload files, preview files, and create directories.
@@ -85,7 +83,7 @@ The following diagram shows the components of a big data cluster for SQL Server.
 
 ### <a id="controlplane"></a> Controller
 
-The controller provides management and security for the cluster. It contains the cntrol service, the configuration store, and other cluster-level services such as Kibana, Grafana, and Elastic Search.
+The controller provides management and security for the cluster. It contains the control service, the configuration store, and other cluster-level services such as Kibana, Grafana, and Elastic Search.
 
 ### <a id="computeplane"></a> Compute pool
 
@@ -104,5 +102,4 @@ The storage pool consists of storage pool pods comprised of SQL Server on Linux,
 
 ## Next steps
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is first available as a limited public preview through the SQL Server 2019
-Early Adoption Program. To request access, register [here](https://aka.ms/eapsignup), and specify your interest to try big data clusters. Microsoft will triage all requests and respond as soon as possible.
+For more information about deploying SQL Server Big Data Clusters, see [Get started with SQL Server Big Data Clusters](deploy-get-started.md).

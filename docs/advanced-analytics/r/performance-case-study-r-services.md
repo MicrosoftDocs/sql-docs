@@ -1,5 +1,6 @@
 ---
-title: Performance for SQL Server R Services - results and resources
+title: Performance tuning for results
+description: This article summarizes the methods, findings, and conclusions of two case studies that tested various optimization methods.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -7,6 +8,7 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Performance for R Services: results and resources

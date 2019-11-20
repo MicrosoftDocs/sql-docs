@@ -31,8 +31,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 4.  Manually create an Extended Events session, using the equivalent Extended Events events, actions, and predicates (filters).  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## To obtain the trace ID  
   
 1.  Open the SQL Trace script in Query Editor, and then execute the script to create the trace session. Note that the trace session does not need to be running to complete this procedure.  

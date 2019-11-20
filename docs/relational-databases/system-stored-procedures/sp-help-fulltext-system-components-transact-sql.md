@@ -102,7 +102,7 @@ GO
 ```  
   
 ### C. Determining whether a specific word breaker is registered  
- The following example will list the word breaker for the Turkish language (LCID = 1055) if it has been installed on the system and registered on the service instance. This example specifies the parameter names, **@component_type** and **@param**.  
+ The following example will list the word breaker for the Turkish language (LCID = 1055) if it has been installed on the system and registered on the service instance. This example specifies the parameter names, **\@component_type** and **\@param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  

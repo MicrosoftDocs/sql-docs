@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "extending data flow task [Integration Services]"
   - "components [Integration Services], data flow"
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Developing a Custom Data Flow Component
 

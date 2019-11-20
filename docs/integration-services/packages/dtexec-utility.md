@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # dtexec Utility
 
@@ -270,7 +270,7 @@ dtexec /option [value] [/option [value]]...
 
   The *filespec* argument specifies the path and file name of the package. You can specify the path as either a Universal Naming Convention (UNC) path or a local path. If the path or file name specified in the *filespec* argument contains a space, you must put quotation marks around the *filespec* argument.  
   
-     The **/File** option cannot be used together with the **/DTS** or **/SQL** option. If multiple options are specified, **dtexec** fails.  
+-   The **/File** option cannot be used together with the **/DTS** or **/SQL** option. If multiple options are specified, **dtexec** fails.
   
 -   **/H[elp]** [*option_name*]: (Optional). Displays help for the options, or displays help for the specified *option_name* and closes the utility.  
   

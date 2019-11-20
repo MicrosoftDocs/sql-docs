@@ -209,7 +209,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
   
-1.  Use the `Backup-SqlDatabase` cmdlet and specify `Files` for the value of the `-BackupAction` parameter. Also, specify one of the following parameters:  
+Use the `Backup-SqlDatabase` cmdlet and specify `Files` for the value of the `-BackupAction` parameter. Also, specify one of the following parameters:  
   
     -   To back up a specific file, specify the `-DatabaseFile`*String* parameter, where *String* is one or more database files to be backed up.  
   
@@ -217,14 +217,11 @@ GO
   
      The following example creates a full file backup of every file in the secondary filegroups 'FileGroup1' and 'FileGroup2' in the `MyDB` database. The backups are created on the default backup location of the server instance `Computer\Instance`.  
   
-    ```  
-    --Enter this command at the PowerShell command prompt, C:\PS>  
+    ```powershell
     Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Files -DatabaseFileGroup "FileGroup1","FileGroup2"  
     ```  
   
- **To set up and use the SQL Server PowerShell provider**  
-  
--   [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md)  
+To set up and use the SQL Server PowerShell provider, see [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md).
   
 ## See Also  
  [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)   

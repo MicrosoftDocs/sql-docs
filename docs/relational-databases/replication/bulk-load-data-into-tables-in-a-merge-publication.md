@@ -29,6 +29,6 @@ ms.author: "mathoma"
   
     -   Execute the bulk copy using the FIRE_TRIGGERS option.  
   
-    -   On the database into which data was inserted, execute [sp_addtabletocontents &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md). Specify the table name into which the data was inserted for **@table_name**.  
+    -   On the database into which data was inserted, execute [sp_addtabletocontents &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md). Specify the table name into which the data was inserted for `@table_name`.  
   
   

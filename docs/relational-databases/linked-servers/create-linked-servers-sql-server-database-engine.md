@@ -1,6 +1,5 @@
 ---
-title: "Create Linked Servers (SQL Server Database Engine) | Microsoft Docs"
-ms.custom: ""
+title: "Create Linked Servers"
 ms.date: "11/20/2015"
 ms.prod: sql
 ms.technology: 
@@ -17,6 +16,7 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
+ms.custom: seo-dt-2019
 ---
 # Create Linked Servers (SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

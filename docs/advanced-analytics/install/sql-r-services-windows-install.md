@@ -4,7 +4,7 @@ description: Add R programming language support to a database engine on SQL Serv
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 05/03/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -110,7 +110,7 @@ This step requires a server restart. If you are about to enable script execution
     > [!TIP]
     > You can download and install the appropriate version from this page: [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
-    > You can also try out the preview release of [Azure Data Studio](../../azure-data-studio/what-is.md), which supports administrative tasks and queries against SQL Server.
+    > You can also use [Azure Data Studio](../../azure-data-studio/what-is.md), which supports administrative tasks and queries against SQL Server.
   
 2. Connect to the instance where you installed Machine Learning Services, click **New Query** to open a query window, and run the following command:
 
@@ -252,7 +252,7 @@ The process for installing and managing R packages is different in SQL Server 20
 
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
-+ [Tutorial: Run R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutorial: Run R in T-SQL](../tutorials/quickstart-r-create-script.md)
 + [Tutorial: In-database analytics for R developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../tutorials/machine-learning-services-tutorials.md).

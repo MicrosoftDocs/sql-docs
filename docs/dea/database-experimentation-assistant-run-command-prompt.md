@@ -1,7 +1,7 @@
 ---
-title: Run Database Experimentation Assistant at a command prompt for SQL Server upgrades
+title: Run Database Experimentation Assistant at a command prompt
 description: Run Database Experimentation Assistant at a command prompt
-ms.custom: ""
+ms.custom: "seo-lt-2019"
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -14,7 +14,7 @@ ms.author: ajaykar
 ms.reviewer: mathoma
 ---
 
-# Run Database Experimentation Assistant at a command prompt
+# Run Database Experimentation Assistant at a command prompt (SQL Server)
 
 This article describes how to use the Command Prompt window to capture a trace in Database Experimentation Assistant (DEA), and then analyze the results. 
 
@@ -73,4 +73,4 @@ To start a new trace analysis, run the following command:
 
 For a 19-minute introduction to DEA and demonstration, watch the following video:
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player?WT.mc_id=dataexposed-c9-niner]

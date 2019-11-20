@@ -1,7 +1,7 @@
 ---
 title: "Deploying the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 10/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -45,7 +45,13 @@ ms.author: genemi
  To unpack the tar file, move it to the directory where you want the driver installed and type the following command:  
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
-  
+
+## Legalities of driver redistribution
+
+The JDBC Driver versions 6.0, 6.2, 6.4, and 7.0 are redistributable. Review the _Distributable Code_ clause in the license agreements.
+
+The JDBC Driver versions 4.x are old and obsolete. Support for 4.x expired before 2018.
+
 ## See also  
  [Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   

@@ -75,8 +75,8 @@ You can use open-source packages and frameworks, in addition to Microsoft's ente
 
 1. Write your first R script
 
-    + Quickstart: [Run a "Hello world" script in R](../tutorials/quickstart-r-run-using-tsql.md)
-    + Quickstart: [Create a predictive model in R](../tutorials/quickstart-r-create-predictive-model.md)
+    + Quickstart: [Create and run simple R scripts in SQL Server](../tutorials/quickstart-r-create-script.md)
+    + Quickstart: [Create and train a predictive model in R](../tutorials/quickstart-r-train-score-model.md)
     + Tutorial: [Use R in T-SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md): Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)
     + Tutorial: [Use R Services in R tools](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Explore data, create graphs and plots, perform feature engineering, train and deploy models, and make predictions (six-part series)
 

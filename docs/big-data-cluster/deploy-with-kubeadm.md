@@ -1,6 +1,6 @@
 ---
 title: Configure Kubernetes with kubeadm
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Learn how to configure Kubernetes on multiple Ubuntu 16.04 or 18.04 machines (physical or virtual) for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments.
 author: MikeRayMSFT 
 ms.author: mikeray
@@ -28,6 +28,9 @@ Also see [this](deployment-script-single-node-kubeadm.md) topic for a sample scr
    - 8 CPUs
    - 64 GB of memory
    - 100 GB of storage
+ 
+> [!Important] 
+> Before starting the big data cluster deployment, ensure the clocks are synchronized across all the Kubernetes nodes the deployment is targeting. The big data cluster has built-in health properties for various services that are time sensitive and clock skews can result in incorrect status.
 
 ## Prepare the machines
 
@@ -56,7 +59,7 @@ On each machine, there are several required prerequisites. In a bash terminal, r
 1. Configure docker and Kubernetes prerequisites on the machine.
 
    ```bash
-   KUBE_DPKG_VERSION=1.15.0-00
+   KUBE_DPKG_VERSION=1.15.0-00 #or your other target K8s version, which should be at least 1.13.
    sudo apt-get update && \
    sudo apt-get install -y ebtables ethtool && \
    sudo apt-get install -y docker.io && \
@@ -96,12 +99,14 @@ After running the previous commands on each machine, choose one of the machines 
    EOF
    ```
 
-1. Initialize the Kubernetes master on this machine. You should see output that the Kubernetes master was successfully initialized.
+1. Initialize the Kubernetes master on this machine. The example script below specifies Kubernetes version `1.15.0`. The version you use depends on your Kubernetes cluster.
 
    ```bash
-   KUBE_VERSION=1.11.3
+   KUBE_VERSION=1.15.0
    sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=$KUBE_VERSION
    ```
+
+   You should see output that the Kubernetes master was successfully initialized.
 
 1. Note the `kubeadm join` command that you need to use on the other servers to join the Kubernetes cluster. Copy this for later use.
 
@@ -121,7 +126,7 @@ After running the previous commands on each machine, choose one of the machines 
    kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
    helm init
    kubectl apply -f rbac.yaml
-   kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+   kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
    kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
    ```
 

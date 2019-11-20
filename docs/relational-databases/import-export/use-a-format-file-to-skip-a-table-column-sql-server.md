@@ -53,8 +53,6 @@ You can use a non-XML format file or an XML format file to skip a table column. 
 
 2.   Modify the default format file in a text editor.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 The modified format file must map each existing field to its corresponding column in the destination table. It must also indicate which table column or columns to skip. 
 
 For example, to bulk import data from `myTestSkipCol2.dat` into the `myTestSkipCol` table, the format file must map the first data field to `Col1`, skip `Col2`, and map the second field to `Col3`.  

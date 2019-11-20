@@ -55,7 +55,7 @@ ms.author: mikeray
     RESTORE LOG adb FROM log_backup1 WITH NORECOVERY;  
     RESTORE LOG adb FROM log_backup2 WITH NORECOVERY;  
     RESTORE LOG adb FROM log_backup3 WITH NORECOVERY;  
-    RESTORE LOG adb WITH RECOVERY;  
+    RESTORE DATABASE adb WITH RECOVERY;  
     ```  
   
      File `a1` is now online.  

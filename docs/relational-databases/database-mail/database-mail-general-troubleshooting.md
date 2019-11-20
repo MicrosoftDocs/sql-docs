@@ -1,5 +1,5 @@
 ---
-title: "General database mail troubleshooting with SQL Server | Microsoft Docs"
+title: "General database mail troubleshooting"
 ms.custom: ""
 ms.date: "04/22/2019"
 ms.prod: sql
@@ -13,6 +13,7 @@ helpviewer_keywords:
   - "Database Mail [SQL Server], components"
 author: MashaMSFT
 ms.author: mathoma
+ms.custom: seo-dt-2019
 ---
 # General database mail troubleshooting steps 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,8 +50,6 @@ You must be a member of the sysadmin fixed server role to troubleshoot all aspec
     ```
 
 1. To restore the sp_configure procedure to its default state, which does not show advanced options, execute the following code:
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql 
     sp_configure 'show advanced', 0; 

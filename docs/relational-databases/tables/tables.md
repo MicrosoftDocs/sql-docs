@@ -1,7 +1,7 @@
 ---
 title: "Tables | Microsoft Docs"
 ms.custom: ""
-ms.date: 04/23/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -40,7 +40,7 @@ Temporary tables are stored in **tempdb**. There are two types of temporary tabl
 
 #### <a name="ctp23"></a> Reduced recompilations for workloads using temporary tables across multiple scopes
 
-[!INCLUDE[ss2019](../../includes/sssqlv15-md.md) reduces recompilations for workloads using temporary tables across multiple scopes. Prior to this feature, when referencing a temporary table with a data manipulation language (DML) statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed. With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
+[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] reduces recompilations for workloads using temporary tables across multiple scopes. Prior to this feature, when referencing a temporary table with a data manipulation language (DML) statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed. With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
 
 - Check if the outer-scope module used for creating the temporary table at compile time is the same one used for consecutive executions. 
 - Keep track of any data definition language (DDL) changes made at initial compilation and compare them with DDL operations for consecutive executions.

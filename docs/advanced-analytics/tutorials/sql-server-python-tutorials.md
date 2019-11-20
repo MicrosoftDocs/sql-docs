@@ -36,10 +36,9 @@ If you are new to SQL Server Machine Learning Services, you can also try the Pyt
 
 | Quickstart | Description |
 |-|-|
-| [Hello World in Python and SQL Server](quickstart-python-run-using-t-sql.md) | Learn the basics of how to call Python in T-SQL. |
-| [Handle inputs and outputs using Python in SQL Server](quickstart-python-inputs-and-outputs.md) | Learn how to handle inputs and outputs for Python in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
-| [Python data structures in SQL Server](quickstart-python-data-structures.md) | Shows how SQL Server uses the Python pandas package to handle data structures. |
-| [Train and use your first model](quickstart-python-train-score-in-tsql.md) | Explains how to create, train, and use a Python model to predict new data. |
+| [Hello World in Python and SQL Server](quickstart-python-create-script.md) | Learn the basics of how to call Python in T-SQL using [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
+| [Handle data types and objects using Python in SQL Server](quickstart-python-data-structures.md) | Shows how SQL Server uses the Python pandas package to handle data structures. |
+| [Create and score a predictive model in Python](quickstart-python-train-score-model.md) | Explains how to create, train, and use a Python model to make predictions from new data. |
 
 ## Next steps
 

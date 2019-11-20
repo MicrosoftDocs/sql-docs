@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPEXTFILETASK.F1"
   - "SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1"
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Flexible File Task
 
@@ -29,7 +29,9 @@ The Flexible File Task is a component of the [SQL Server Integration Services (S
 To add a Flexible File Task to a package, drag it from SSIS Toolbox to the designer canvas. Then double-click the task, or right-click the task and select **Edit**, to open the **Flexible File Task Editor** dialog box.
 
 The **Operation** property specifies the file operation to perform.
-Only **Copy** operation is currently supported.
+Currently supported operations are:
+- **Copy** Operation
+- **Delete** Operation
 
 For **Copy** operation, following properties are available.
 
@@ -42,6 +44,12 @@ For **Copy** operation, following properties are available.
 - **DestinationConnection:** Specifies the destination connection manager.
 - **DestinationFolderPath:** Specifies the destination folder path.
 - **DestinationFileName:** Specifies the destination file name.
+
+For **Delete** operation, following properties are available.
+- **ConnectionType:** Specifies the connection manager type.
+- **Connection:** Specifies the connection manager.
+- **FolderPath:** Specifies the folder path.
+- **FileName:** Specifies the file name. If left blank, the folder will be deleted. For Azure Blob Storage, delete folder is not supported.
 
 ***Notes on Service Principal Permission Configuration***
 

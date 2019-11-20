@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.loaddimwizard.attriboption.f1"
 ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard
 

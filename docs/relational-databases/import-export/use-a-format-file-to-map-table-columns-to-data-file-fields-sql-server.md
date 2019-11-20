@@ -1,6 +1,5 @@
 ---
-title: "Use a Format File to Map Table Columns to Data-File Fields (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Map table columns to data-file fields with a format file" 
 ms.date: "09/19/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -14,8 +13,9 @@ ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
-# Use a Format File to Map Table Columns to Data-File Fields (SQL Server)
+# Use a format file to map table columns to data-file fields (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 A data file can contain fields arranged in a different order from the corresponding columns in the table. This topic presents both non-XML and XML format files that have been modified to accommodate a data file whose fields are arranged in a different order from the table columns. The modified format file maps the data fields to their corresponding table columns.  Please review [Create a Format File (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) for additional information.
 
@@ -72,8 +72,6 @@ See [Structure of Non-XML Format Files](../../relational-databases/import-export
 1.  Re-arrange the order of the format-file rows so that the rows are in the same order as the data in `myRemap.bcp`.
 2.  Ensure the host file field order values are sequential.
 3.  Ensure there is a carriage return after the last format-file row.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Compare the changes:	 
 **Before**

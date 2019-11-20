@@ -57,7 +57,7 @@ Conditionally drops the database only if it already exists.
 Specifies the name of the database to be removed. To display a list of databases, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
 
 *database_snapshot_name*
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
 
 Specifies the name of a database snapshot to be removed.
 
@@ -141,7 +141,7 @@ DROP DATABASE Sales;
 
 ### B. Dropping multiple databases
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
 
 The following example removes each of the listed databases.
 
@@ -151,7 +151,7 @@ DROP DATABASE Sales, NewSales;
 
 ### C. Dropping a database snapshot
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
 
 The following example removes a database snapshot, named `sales_snapshot0600`, without affecting the source database.
 

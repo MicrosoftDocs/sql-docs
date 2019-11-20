@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Deploy a model in Python to categorize customers"
+title: "Python tutorial: Deploy cluster model"
 description: In part four of this four-part tutorial series, you'll deploy a clustering model in Python with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,6 +9,7 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
@@ -181,7 +182,7 @@ In part four of this tutorial series, you completed these steps:
 
 To learn more about using Python in SQL Server Machine Learning Services, see:
 
-* [Quickstart: Run a "Hello world" Python script on SQL Server Machine Learning Services](quickstart-python-run-using-t-sql.md)
+* [Quickstart: Create and run simple Python scripts with SQL Server Machine Learning Services](quickstart-python-create-script.md)
 * [Other Python tutorials for SQL Server Machine Learning Services](sql-server-python-tutorials.md)
 * [Install Python packages with sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md)
 

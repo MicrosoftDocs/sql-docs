@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "precedence constraints [Integration Services], connecting tasks"
   - "constraints [Integration Services]"
 ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Connecting Tasks Programmatically
 

@@ -60,8 +60,6 @@ ms.author: "mathoma"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### To set the updating mode for a pull subscription  
   
 1.  In the **Subscription Properties - \<Publisher>: \<PublicationDatabase>** dialog box, select a value of **Immediately replicate changes** or **Queue changes** for the **Subscriber update method** option.  
@@ -76,7 +74,7 @@ ms.author: "mathoma"
   
 1.  Verify that the subscription supports failover by executing [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) for a pull subscription or [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) for a push subscription. If the value of **update mode** in the result set is **3** or **4**, failover is supported.  
   
-2.  At the Subscriber on the subscription database, execute [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, and one of the following values for **@failover_mode**:  
+2.  At the Subscriber on the subscription database, execute [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Specify `@publisher`, `@publisher_db`, `@publication`, and one of the following values for `@failover_mode`:  
   
     -   **queued** - fail over to queued updating when connectivity has been temporarily lost.  
   

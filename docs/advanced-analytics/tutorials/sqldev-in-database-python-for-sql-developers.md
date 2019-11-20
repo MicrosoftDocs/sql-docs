@@ -1,5 +1,5 @@
 ---
-title: Tutorial for in-database Python analytics for SQL developers
+title: "Python + T-SQL: Develop model"
 description: Learn how to embed Python code in SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,7 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Tutorial: Python data analytics for SQL developers

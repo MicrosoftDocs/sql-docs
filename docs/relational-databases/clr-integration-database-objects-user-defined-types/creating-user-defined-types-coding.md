@@ -608,8 +608,6 @@ public void Rotate(double anglex, double angley, double anglez)
   
 3.  Save the **Currency** UDT using the following binary format:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     1.  Save the culture as a UTF-16 encoded string for bytes 0-19 with padding to the right with null characters.  
   
     2.  Use bytes 20 and above to contain the decimal value of the currency.  

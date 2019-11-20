@@ -33,8 +33,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### To enable a Publisher in the Distributor Properties dialog box  
   
 1.  On the **Publishers** page of the **Distributor Properties - \<Distributor>** dialog box, click **Add**.  

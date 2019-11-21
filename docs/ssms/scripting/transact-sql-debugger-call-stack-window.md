@@ -14,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transact-SQL Debugger - Call Stack Window
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Call Stack** window displays the modules on the call stack, and the data types and values of any parameters that are passed to the modules. [!INCLUDE[tsql](../../includes/tsql-md.md)] modules include stored procedures, functions, and triggers. To display the call stack, you must be in debug mode.  
   
 ## Task List  

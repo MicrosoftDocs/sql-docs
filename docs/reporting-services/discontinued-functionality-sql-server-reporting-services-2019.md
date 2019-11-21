@@ -14,9 +14,9 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2019-and-later](../includes/ssrs-appliesto-2019-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-This topic describes SQL Server Reporting Services features that are no longer supported in SQL Server 2019. It doesn't include announcements about discontinued support for specific versions of the operating system or Microsoft Internet Information Services (IIS).
+This article describes features that SQL Server Reporting Services no longer supports in SQL Server 2019. It doesn't include announcements about discontinued support for specific versions of the operating system or Microsoft Internet Information Services (IIS).
 
-A _discontinued feature_ is one that is no longer supported. It might also be physically removed from the product. The following features are discontinued.
+A _discontinued feature_ is one that Reporting Services no longer supports. It might also be physically removed from the product. Reporting Services has discontinued the following features.
 
 | Category | Deprecated feature | Replacement |
 | --- | --- | --- |

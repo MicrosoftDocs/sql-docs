@@ -1,6 +1,6 @@
 ---
 title: "Deprecated features in SQL Server 2019 Reporting Services | Microsoft Docs"
-ms.date: 11/20/2019
+ms.date: 11/21/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -19,17 +19,17 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 # Deprecated features in SQL Server 2019 Reporting Services
 
-[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2019-and-later](../includes/ssrs-appliesto-2019-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2019-and-later](../includes/ssrs-appliesto-2019-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
 
-When a feature is marked deprecated, it means:
+When we mark a feature as deprecated, it means:
 
-- The feature is in maintenance mode only. No new changes will be done, including those related to interoperability with new features.
+- The feature is in maintenance mode only. We'll make no new changes, including changes related to interoperability with new features.
 - We strive not to remove a deprecated feature from future releases, to make upgrades easier. However, in rare situations, we may choose to permanently remove the feature from Reporting Services if it limits future innovations.
 - For new development work, we don't recommend using deprecated features.
 
 **Features deprecated in a future version of SQL Server**
 
-The following SQL Server Reporting Services features are supported in the next version of SQL Server but will be deprecated in a later version. The specific version of SQL Server hasn't been determined.
+SQL Server Reporting Services supports the following features in the next version of SQL Server, but will deprecate them in a later version. The specific version of SQL Server hasn't been determined.
 
 | **Category** | **Deprecated feature** | **Replacement** |
 | --- | --- | --- |

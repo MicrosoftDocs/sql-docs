@@ -21,10 +21,10 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017](../includes/ssrs-appliesto-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-When a feature is marked deprecated, it means:
+When we mark a feature as deprecated, it means:
 
-- The feature is in maintenance mode only. No new changes will be done, including those related to inter-operability with new features.
-- We strive not to remove a deprecated feature from future releases to make upgrades easier. However, in rare situations, we may choose to permanently remove the feature from Reporting Services if it limits future innovations.
+- The feature is in maintenance mode only. We'll make no new changes, including changes related to interoperability with new features.
+- We strive not to remove a deprecated feature from future releases, to make upgrades easier. However, in rare situations, we may choose to permanently remove the feature from Reporting Services if it limits future innovations.
 - For new development work, we don't recommend using deprecated features.
 
 ## Features deprecated in the next version of SQL Server

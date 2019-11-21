@@ -49,8 +49,6 @@ The following tools provide a graphical user interface (GUI).
 
 ## Command-line tools
 
-The following are the main command-line tools:
-
 | Tool | Description | Operating system |
 |:--|:--|:--|
 |[**mssql-cli**](mssql-cli.md)|**mssql-cli** is an interactive command-line tool for querying SQL Server. | **Windows</br>macOS</br>Linux** |

@@ -2082,7 +2082,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/install-r-packages-tsql.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-r-packages-with-tsql",
             "redirect_document_id": false
         },
         {

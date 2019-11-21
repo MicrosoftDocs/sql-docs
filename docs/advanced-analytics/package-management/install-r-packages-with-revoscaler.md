@@ -12,8 +12,6 @@ ms.reviewer: davidph
 monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ---
 
-XXXXXX - Remove 2017+ monikers, edit to match new content
-
 # Use RevoScaleR to install R packages
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

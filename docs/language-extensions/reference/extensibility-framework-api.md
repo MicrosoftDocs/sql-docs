@@ -66,17 +66,17 @@ Initialize the information regarding a given column in the input dataset for a p
 
 ```C++
 SQLRETURN InitColumn(
-    SQLGUID		    SessionId,
-    SQLUSMALLINT 	TaskId,
-    SQLUSMALLINT	ColumnNumber,
-    SQLCHAR*       	ColumnName,
-    SQLSMALLINT     ColumnNameLength,
-    SQLSMALLINT     DataType,
-    SQLULEN         ColumnSize,
-    SQLSMALLINT     DecimalDigits,
-    SQLSMALLINT     Nullable,
-    SQLSMALLINT     PartitionByNumber,
-    SQLSMALLINT     OrderByNumber
+    SQLGUID       SessionId,
+    SQLUSMALLINT  TaskId,
+    SQLUSMALLINT  ColumnNumber,
+    SQLCHAR*      ColumnName,
+    SQLSMALLINT   ColumnNameLength,
+    SQLSMALLINT   DataType,
+    SQLULEN       ColumnSize,
+    SQLSMALLINT   DecimalDigits,
+    SQLSMALLINT   Nullable,
+    SQLSMALLINT   PartitionByNumber,
+    SQLSMALLINT   OrderByNumber
 );
 ```
 
@@ -91,3 +91,23 @@ SQLRETURN InitColumn(
     - SQL_NULLABLE: The column allows NULL values.
 - **PartitionByNumber:** Number of the column in the @partition_by sequence. Columns are numbered sequentially in increasing order starting at 0. If the column is not included in the partition by sequence, the value of this argument is -1.
 - **OrderByNumber:** Number of the column in the @order_by sequence. Columns are numbered sequentially in increasing order starting at 0. If the column is not included in the order by sequence, the value of this argument is -1.
+
+### InitParam
+
+Initialize the information regarding a given input parameter for a particular session.
+
+```C++
+SQLRETURN InitParam(
+    SQLGUID      SessionId,
+    SQLUSMALLINT TaskId,
+    SQLUSMALLINT ParamNumber,
+    SQLCHAR*     ParamName,
+    SQLSMALLINT  ParamNameLength,
+    SQLSMALLINT  DataType,
+    SQLULEN      ParamSize,
+    SQLSMALLINT  DecimalDigits,
+    SQLPOINTER   ParamValue,
+    SQLINTEGER   StrLen_or_Ind,
+    SQLSMALLINT InputOutputType
+);
+```

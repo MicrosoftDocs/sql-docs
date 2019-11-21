@@ -16,7 +16,7 @@ ms.date: "10/15/2019"
 
 Azure Data Studio is a cross-platform database tool for data professionals using the Microsoft family of on-premises and cloud data platforms on Windows, MacOS, and Linux.
 
-Azure Data Studio offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal. It is engineered with the data platform user in mind, with built in charting of query result sets and customizable dashboards.
+Azure Data Studio offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal. It is engineered with the data platform user in mind, with built-in charting of query result sets and customizable dashboards.
 
 The source code for Azure Data Studio and its data providers is available on GitHub under a source code EULA that provides rights to modify and use the software, but not to redistribute it or host it in a cloud service. For more information, see [Azure Data Studio FAQ](faq.md).
 
@@ -61,7 +61,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 - Need the ability to quickly chart and visualize result sets
 - Can execute most administrative tasks via the integrated terminal using sqlcmd or Powershell
 - Have minimal need for wizard experiences
-- Do not need to do deep administrative configuration
+- Don't need to do deep administrative configuration
 - Want to
 
 **Use SQL Server Management Studio if you:**
@@ -147,7 +147,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |Error Log Viewer||Yes|
 |Maintenance Plans||Yes|
 |Multi-Server Query||Yes|
-|Policy Based Management||Yes|
+|Policy-Based Management||Yes|
 |PolyBase||Yes|
 |Query Store||Yes|
 |Registered Servers||Yes|

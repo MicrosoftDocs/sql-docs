@@ -42,24 +42,24 @@ The following tools provide a graphical user interface (GUI).
 
 | Tool | Description | Operating system |
 |:--|:--|:--|
-| [**![ADS image](../tools/media/overview-sql-tools/azure-data-studio.svg) Azure Data Studio**](../azure-data-studio/download.md) | Run on-demand SQL queries, view and save results as text, JSON, or Excel. Edit data, organize your favorite database connections, and browse database objects in a familiar object browsing experience. | **Windows</br>macOS</br>Linux** |
-| [**![SSMS image](../tools/media/overview-sql-tools/ssms.svg) SQL Server Management Studio (SSMS)**](../ssms/download-sql-server-management-studio-ssms.md) | Access, configure, manage, administer, and develop all components of SQL Server, Azure SQL Database, and SQL Data Warehouse. Provides a single comprehensive utility that combines a broad group of graphical tools with a number of rich script editors to provide access to SQl for developers and database administrators of all skill levels. | **Windows** |
-| [**![SSDT image](../tools/media/overview-sql-tools/ssdt.svg) SQL Server Data Tools (SSDT)**](../ssdt/download-sql-server-data-tools-ssdt.md) | A modern development tool for building SQL Server relational databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in **[Visual Studio](https://visualstudio.microsoft.com/downloads/)**. | **Windows** |
-| [**![VS Code image](../tools/media/overview-sql-tools/visual-studio-code.svg) Visual Studio Code**](https://code.visualstudio.com/) | The [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) for Visual Studio Code is the official SQL Server extension that supports connections to SQL Server and rich editing experience for T-SQL in Visual Studio Code. | **Windows</br>macOS</br>Linux** |
+| [**![ADS image](../tools/media/overview-sql-tools/azure-data-studio.svg)</br></br>Azure Data Studio**](../azure-data-studio/download.md) | Run on-demand SQL queries, view and save results as text, JSON, or Excel. Edit data, organize your favorite database connections, and browse database objects in a familiar object browsing experience. | **Windows</br>macOS</br>Linux** |
+| [**![SSMS image](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio (SSMS)**](../ssms/download-sql-server-management-studio-ssms.md) | Access, configure, manage, administer, and develop all components of SQL Server, Azure SQL Database, and SQL Data Warehouse. Provides a single comprehensive utility that combines a broad group of graphical tools with a number of rich script editors to provide access to SQl for developers and database administrators of all skill levels. | **Windows** |
+| [**![SSDT image](../tools/media/overview-sql-tools/ssdt.svg)</br>SQL Server Data Tools (SSDT)**](../ssdt/download-sql-server-data-tools-ssdt.md) | A modern development tool for building SQL Server relational databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in **[Visual Studio](https://visualstudio.microsoft.com/downloads/)**. | **Windows** |
+| [**![VS Code image](../tools/media/overview-sql-tools/visual-studio-code.svg)</br></br>Visual Studio Code**](https://code.visualstudio.com/) | The [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) for Visual Studio Code is the official SQL Server extension that supports connections to SQL Server and rich editing experience for T-SQL in Visual Studio Code. | **Windows</br>macOS</br>Linux** |
 
 ## Command-line tools
 
 The following are the main command-line tools:
 
-| Tool | Description | Runs on |
+| Tool | Description | Operating system |
 |:--|:--|:--|
-|[**mssql-cli**](mssql-cli.md)|**mssql-cli** is an interactive command-line tool for querying SQL Server. | Windows, macOS, and Linux|
+|[**mssql-cli**](mssql-cli.md)|**mssql-cli** is an interactive command-line tool for querying SQL Server. | **Windows</br>macOS</br>Linux** |
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage** is a command-line utility that automates several database development tasks. macOS and Linux versions of sqlpackage are currently in preview. | Windows, macOS, and Linux|
-|[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** provides cmdlets for working with SQL| Windows, macOS, and Linux|
-| [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd** utility lets you enter Transact-SQL statements, system procedures, and script files at the command prompt. | Windows, macOS, and Linux|
-|[**bcp**](bcp-utility.md)|The **b**ulk **c**opy **p**rogram utility (**bcp**) bulk copies data between an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format.|Windows, macOS, and Linux|
-|[**mssql-scripter (preview)**](https://github.com/Microsoft/mssql-scripter)|**mssql-scripter** is a multi-platform command-line experience for scripting SQL Server databases|Windows, macOS, and Linux|
-|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql-conf** configures SQL Server running on Linux.|Linux|
+|[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** provides cmdlets for working with SQL| **Windows</br>macOS</br>Linux** |
+| [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd** utility lets you enter Transact-SQL statements, system procedures, and script files at the command prompt. | **Windows</br>macOS</br>Linux** |
+|[**bcp**](bcp-utility.md)|The **b**ulk **c**opy **p**rogram utility (**bcp**) bulk copies data between an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format.| **Windows</br>macOS</br>Linux** |
+|[**mssql-scripter**](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** is a multi-platform command-line experience for scripting SQL Server databases| **Windows</br>macOS</br>Linux** |
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** configures SQL Server running on Linux.| Linux |
 
 ## Migration and other tools
 

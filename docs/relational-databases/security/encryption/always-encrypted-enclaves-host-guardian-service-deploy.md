@@ -1,5 +1,6 @@
 ---
-title: "Deploy the Host Guardian Service | Microsoft Docs"
+title: "Deploy Host Guardian Service"
+description: "Deploy the Host Guardian Service for Always Encrypted with Secure Enclaves."
 ms.custom: ""
 ms.date: "11/15/2019"
 ms.prod: sql
@@ -109,8 +110,8 @@ As with the first HGS computer, ensure the computer you're joining to the cluste
 
 ## Step 3: Configure a DNS forwarder to your HGS cluster
 
-HGS runs its own DNS server which contains the name records needed to resolve the attestation service.
-Your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers will not be able to resolve these records until you configure your network's DNS server to forward requests to the HGS DNS servers.
+HGS runs its own DNS serve, which contains the name records needed to resolve the attestation service.
+Your SQL Server computers will not be able to resolve these records until you configure your network's DNS server to forward requests to the HGS DNS servers.
 
 The process for configuring DNS forwarders is vendor-specific, so we recommend contacting your network administrator for the correct guidance for your particular network.
 
@@ -130,7 +131,7 @@ If you haven't already selected an attestation mode, check out the attestation i
 
 The steps in this section will configure the basic attestation policies for a particular attestation mode.
 You'll register host-specific information in Step 4.
-If you need to change your attestation mode in the future, simply repeat Step 3 and 4 using the desired attestation mode.
+If you need to change your attestation mode in the future, repeat Step 3 and 4 using the desired attestation mode.
 
 ### Switch to TPM attestation
 
@@ -144,13 +145,13 @@ Set-HgsServer -TrustTpm
 
 All HGS computers in your cluster will now use TPM mode when a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer tries to attest.
 
-Before you can register TPM information from your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers with HGS, you need to install the endorsement key (EK) root certificates from your TPM vendor(s).
+Before you can register TPM information from your SQL Server computers with HGS, you need to install the endorsement key (EK) root certificates from your TPM vendor(s).
 Each physical TPM is configured in the factory with a unique endorsement key that is accompanied by an endorsement key certificate that identifies the manufacturer.
 This certificate ensures that your TPM is genuine.
 HGS verifies the endorsement key certificate when you register a new TPM with HGS by comparing the certificate chain with a list of trusted root certificates.
 
 Microsoft publishes a list of known-good TPM vendor root certificates that you can import into the HGS Trusted TPM Root Certificates store.
-If your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers are virtualized, you will need to contact your cloud service provider or virtualization platform vendor for information on how to obtain the certificate chain for your virtual TPM's endorsement key.
+If your SQL Server computers are virtualized, you will need to contact your cloud service provider or virtualization platform vendor for information on how to obtain the certificate chain for your virtual TPM's endorsement key.
 
 To download the trusted TPM root certificates package from Microsoft for physical TPMs, complete the following steps:
 
@@ -187,7 +188,7 @@ To download the trusted TPM root certificates package from Microsoft for physica
 
 7. Repeat steps 5 and 6 for every HGS computer.
 
-If you have obtained intermediate and root CA certificates from your OEM, cloud service provider, or virtualization platform vendor, you can directly import the certificates to the respective local machine certificate store: **TrustedHgs_RootCA** or **TrustedHgs_IntermediateCA**. In PowerShell, this would look like:
+If you have obtained intermediate and root CA certificates from your OEM, cloud service provider, or virtualization platform vendor, you can directly import the certificates to the respective local machine certificate store: `TrustedHgs_RootCA` or `TrustedHgs_IntermediateCA`. For example, in PowerShell:
 
 ```powershell
 # Imports MyCustomTpmVendor_Root.cer to the local machine's "TrustedHgs_RootCA" store

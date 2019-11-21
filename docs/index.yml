@@ -19,7 +19,7 @@ highlightedContent:
      url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm
    - title: SQL tools
      itemType: overview
-     url: tools/sql-tools-hub.yml
+     url: tools/overview-sql-tools.md
    - title: SQL Server Education Center
      itemType: learn
      url: lp/sql-server/sql-education-center.md
@@ -224,4 +224,4 @@ additionalContent:
           - text: Distributed replay
             url: tools/distributed-replay/sql-server-distributed-replay.md
           - text: See more tools
-            url: tools/sql-tools-hub.yml
+            url: tools/sql-tools-lp.yml

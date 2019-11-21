@@ -1,6 +1,6 @@
 ---
-title: "SQL query and management tools for SQL Server, Azure SQL (Azure SQL databases, Azure SQL managed instances, SQL virtual machines), and Azure SQL data warehouse | Microsoft Docs"
-description: "SQL query and management tools for SQL Server, Azure SQL (Azure SQL database, Azure SQL managed instance, SQL virtual machines), and Azure SQL data warehouse"
+title: SQL query and management tools
+description: SQL query and management tools for SQL Server, Azure SQL (Azure SQL database, Azure SQL managed instance, SQL virtual machines), and Azure SQL data warehouse.
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: tools-other
@@ -9,32 +9,45 @@ ms.assetid:
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.custom: ""
-ms.date: 11/04/2019
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+ms.custom: seo-lt-2019
+ms.date: 11/23/2019
+monikerRange: ">=aps-pdw-2014||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 
-# SQL query and management tools for SQL Server
+# SQL query and management tools
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 To manage (query, monitor, etc.) your database you need a tool. While your databases can be running in the cloud, on Windows, or on [Linux](../linux/sql-server-linux-overview.md), your tool doesn't need to run on the same platform as the database.
+
 There are many database tools available, so this article provides descriptions and pointers to some of the available tools for working with your SQL databases. If you need help with deciding which tool you need, see [Which tool should I use?](#which-tool-should-i-choose).
 
-The [SQL Server tools hub page](sql-tools-hub.yml) provides an overview for finding relevant SQL tools content. For additional information, you can also view the links in the Tool column in the following tables. To download SQL Server, see [Install SQL Server](../database-engine/install-windows/install-sql-server.md).
+## Which tool should I choose?
 
-## GUI tools to manage databases
+If you choose to manage a SQL Server instance or database, in a light-weight editor on Windows, Mac, or Linux? then you can choose [Azure Data Studio](../azure-data-studio/download.md).
 
-The following tools provide a graphical user interface (GUI):
+If you want to manage a SQL Server instance or database on Windows with full GUI support then choose [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
-| Tool | Description | Runs on |
+If you want to create or maintain database code, including compile-time validation, refactoring, and designer support on Windows then choose [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
+
+If you want to write T-SQL scripts in a light-weight editor on Windows, Mac, or Linux then choose the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) that runs on [Visual Studio Code](https://code.visualstudio.com/).
+
+If you want to query SQL Server with a command-line tool that features IntelliSense, syntax high-lighting, and more? then choose [mssql-cli](mssql-cli.md).
+
+You can view the links to the different SQL tools column in the following tables. To download SQL Server, see [Install SQL Server](../database-engine/install-windows/install-sql-server.md).
+
+## Recommended tools
+
+The following tools provide a graphical user interface (GUI).
+
+| Tool | Description | Operating system |
 |:--|:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] is a free, light-weight tool, for managing databases wherever they're running. This preview release provides database management features, including an extended Transact-SQL editor and customizable insights into the operational state of your databases. | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] runs on Windows, macOS, and Linux**.|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Use SQL Server Management Studio (SSMS) to query, design, and manage your SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. | **SSMS runs on Windows**.|
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Turn Visual Studio into a powerful development environment for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse.| **SSDT runs on Windows**.|
-| [Visual Studio Code](https://code.visualstudio.com/)| After installing Visual Studio Code, install the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) for developing Microsoft SQL Server, Azure SQL Database, and SQL Data Warehouse.| **Visual Studio Code runs on Windows, macOS, and Linux**.|
+| [**![ADS image](../tools/media/overview-sql-tools/azure-data-studio.svg) Azure Data Studio**](../azure-data-studio/download.md) | Run on-demand SQL queries, view and save results as text, JSON, or Excel. Edit data, organize your favorite database connections, and browse database objects in a familiar object browsing experience. | **Windows</br>macOS</br>Linux** |
+| [**![SSMS image](../tools/media/overview-sql-tools/ssms.svg) SQL Server Management Studio (SSMS)**](../ssms/download-sql-server-management-studio-ssms.md) | Access, configure, manage, administer, and develop all components of SQL Server, Azure SQL Database, and SQL Data Warehouse. Provides a single comprehensive utility that combines a broad group of graphical tools with a number of rich script editors to provide access to SQl for developers and database administrators of all skill levels. | **Windows** |
+| [**![SSDT image](../tools/media/overview-sql-tools/ssdt.svg) SQL Server Data Tools (SSDT)**](../ssdt/download-sql-server-data-tools-ssdt.md) | A modern development tool for building SQL Server relational databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in **[Visual Studio](https://visualstudio.microsoft.com/downloads/)**. | **Windows** |
+| [**![VS Code image](../tools/media/overview-sql-tools/visual-studio-code.svg) Visual Studio Code**](https://code.visualstudio.com/) | The [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) for Visual Studio Code is the official SQL Server extension that supports connections to SQL Server and rich editing experience for T-SQL in Visual Studio Code. | **Windows</br>macOS</br>Linux** |
 
-## Command-line tools to manage databases
+## Command-line tools
 
 The following are the main command-line tools:
 
@@ -48,15 +61,7 @@ The following are the main command-line tools:
 |[**mssql-scripter (preview)**](https://github.com/Microsoft/mssql-scripter)|**mssql-scripter** is a multi-platform command-line experience for scripting SQL Server databases|Windows, macOS, and Linux|
 |[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql-conf** configures SQL Server running on Linux.|Linux|
 
-## Which tool should I choose?
-
-- Do you want to manage a SQL Server instance or database, in a light-weight editor on Windows, Linux, or Mac? Choose [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md)
-- Do you want to manage a SQL Server instance or database on Windows with full GUI support? Choose [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- Do you want to create or maintain database code, including compile-time validation, refactoring, and designer support on Windows? Choose [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-- Do you want to query SQL Server with a command-line tool that features IntelliSense, syntax high-lighting, and more? Choose [mssql-cli](mssql-cli.md)
-- Do you want to write T-SQL scripts in a light-weight editor on Windows, Linux, or Mac? Choose [Visual Studio Code](https://code.visualstudio.com/) and the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
-
-## Additional tools
+## Migration and other tools
 
 | Tool | Description |
 |:--|:--|

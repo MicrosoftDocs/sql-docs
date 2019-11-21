@@ -1,5 +1,6 @@
 ---
-title: "Plan for Host Guardian Service attestation | Microsoft Docs"
+title: "Plan for Host Guardian Service attestation"
+description: "Plan Host Guardian Service attestation for SQL Server Always Encrypted with Secure Enclaves."
 ms.custom: ""
 ms.date: "10/12/2019"
 ms.prod: sql
@@ -27,7 +28,7 @@ In a typical deployment, there will be 1-3 HGS servers, at least one computer ru
 Since the HGS is responsible for determining which computers running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] are trustworthy, it requires both physical and logical isolation from the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance it is protecting.
 If the same admins have access to HGS and a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer, they could configure the attestation service to allow a malicious computer to run [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], enabling them to compromise the VBS enclave.
 
-### HGS Domain
+### HGS domain
 
 HGS setup will automatically create a new Active Directory domain for the HGS servers, failover cluster resources, and administrator accounts.
 
@@ -85,7 +86,7 @@ It cannot measure the state of the hypervisor controlling the VM.
 However, even when [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is virtualized, the enclave is still protected from attacks originating within the VM operating system.
 If you trust your hypervisor or cloud provider, and are primarily worried about database admin and OS admin attacks on sensitive data, a virtualized [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] may meet your requirements.
 
-Similarly, Host Key attestation is still valuable in situations where a TPM 2.0 module isn't installed on the computer running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] or in a dev/test scenarios where security isn't paramount.
+Similarly, Host Key attestation is still valuable in situations where a TPM 2.0 module isn't installed on the computer running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] or in dev/test scenarios where security isn't paramount.
 You can still use many of the security features mentioned above, including Secure Boot and a TPM 1.2 module, to better protect VBS and the operating system as a whole.
 But, since there's no way for HGS to verify the computer actually has these settings enabled with Host Key attestation, the client isn't assured the host is indeed using all available protections.
 

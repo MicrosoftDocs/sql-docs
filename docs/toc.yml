@@ -5813,10 +5813,10 @@
     items:
     - name: Workload comparison overview
       href: dea/database-experimentation-assistant-get-started.md
-    - name: Capture trace
-      href: dea/database-experimentation-assistant-capture-trace.md
     - name: Configure replay
       href: dea/database-experimentation-assistant-configure-replay.md
+    - name: Capture trace
+      href: dea/database-experimentation-assistant-capture-trace.md
     - name: Replay trace
       href: dea/database-experimentation-assistant-replay-trace.md
     - name: Create reports

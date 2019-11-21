@@ -1,20 +1,18 @@
 ---
-title: Install new packages with R
+title: Install packages with R tools
 description: Learn how to use standard R tools to install new R packages to an instance of SQL Server Machine Learning Services or SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/05/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ---
 
-XXXXXX - Remove 2017+ monikers, edit to match new content
-
-# Install new packages with R
+# Install packages with R tools
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -23,9 +21,13 @@ This article describes how to use standard R tools to install new R packages to 
 In addition to standard R tools, you can install R packages using:
 
 + [RevoScaleR](use-revoscaler-to-manage-r-packages.md)
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 + [T-SQL](install-r-packages-tsql.md) (CREATE EXTERNAL LIBRARY)
 ::: moniker-end
+
+## Prerequisites
+
+- Install [R](https://www.r-project.org) or an R IDE such as [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
 
 ## General considerations
 
@@ -34,7 +36,7 @@ This includes R libraries installed with other Microsoft products.
 
 + The R package library is located in the Program Files folder of your SQL Server instance and, by default, installing in this folder requires administrator permissions. For more information, see [Package library location](../package-management/r-package-information.md#default-r-library-location).
 
-  ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
   Non-administrators can install packages using RevoScaleR 9.0.1 and later, or using CREATE EXTERNAL LIBRARY. The **dbo_owner** user, or a user with CREATE EXTERNAL LIBRARY permission, can install R packages to the current database. For more information, see:
   + [How to use RevoScaleR functions to find or install R packages on SQL Server](use-revoscaler-to-manage-r-packages.md)
   + [Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages on SQL Server](install-r-packages-tsql.md)
@@ -69,17 +71,11 @@ For example, the following procedure uses RGui:
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
-   For example the default path for a SQL Server default instance is:
-
-   `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64\`
-   ::: moniker-end
-
-1. Right-click **RGui.exe** and select **Run as administrator**.
+1. Run **R** or **RStudio** as administrator.
 
 1. Run the R command `install.packages` and specify the package name. If the package has any dependencies, the installer automatically downloads the dependencies and installs them.
 
-If you have multiple, side-by-side instances of SQL Server, run installation separately for each instance in which you want to use the package. Packages cannot be shared across instances.
+If you have multiple, side-by-side instances of SQL Server, run the installation separately for each instance in which you want to use the package. Packages cannot be shared across instances.
 
 ## <a name = "bkmk_offlineInstall"></a> Offline installation (no internet access)
 
@@ -106,13 +102,7 @@ Once the zip file is on the SQL Server instance, you can install it using standa
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\Rgui.exe`
    ::: moniker-end
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
-   For example the default path for a SQL Server default instance is:
-
-   `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64\Rgui.exe`
-   ::: moniker-end
-
-1. Right-click **RGui.exe** and select **Run as administrator**.
+1. Run **R** or **RStudio** as administrator.
 
 1. Run the R command `install.packages` and specify the package or repository name, and the location of the zipped files. For example:
 
@@ -137,5 +127,6 @@ As an alternative to **miniCRAN**, you can perform these steps manually:
 
 ## See also
 
-+ [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md)
-+ [Tutorials, samples, solutions](../tutorials/machine-learning-services-tutorials.md)
++ [Get R package information](r-package-information.md)
++ [Tips for using R packages](tips-for-using-r-packages.md)
++ [SQL Server R language tutorials](../tutorials/sql-server-r-tutorials.md)

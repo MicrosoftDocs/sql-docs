@@ -82,7 +82,7 @@ This section provides links to other websites that contain information about In-
 
 - _Video title:_ &nbsp; **In-Memory OLTP in SQL Server 2016**
 - _Published date:_ &nbsp; 2019-03-10, on `YouTube.com`.
-- _Duration:_ &nbsp; 17:32 &nbsp; &nbsp; (See the following [Index](#anchorname-index-17minute-video) for links into the video.)
+- _Duration:_ &nbsp; 17:32 &nbsp; &nbsp; (See the following [**Index**](#anchorname-index-17minute-video) for links into the video.)
 - _Hosted by:_ &nbsp; Jos de Bruijn, Senior Program Manager on SQL Server
 
 ### Demo can be downloaded

@@ -7,6 +7,7 @@ ms.topic: conceptual
 author: maggiesMSFT 
 ms.author: maggies
 ms.date: 11/19/2019
+monikerRange: ">= sql-server-2019 || = sqlallproducts-allversions"
 ---
 
 # Discontinued functionality in SQL Server 2019 Reporting Services (SSRS)

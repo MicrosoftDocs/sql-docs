@@ -1,5 +1,5 @@
 ---
-title: "Deprecated features in SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
+title: "Deprecated features in SQL Server 2016 Reporting Services | Microsoft Docs"
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -17,7 +17,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Deprecated features in SQL Server Reporting Services in SQL Server 2016
+# Deprecated features in SQL Server 2016 Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 

@@ -1,10 +1,10 @@
 ### YamlMime:Hub
 title: Microsoft SQL documentation
-summary: Learn how to use Microsoft SQL Server to address your database needs, both on-premises, and in the cloud!
+summary: Learn how to use Microsoft SQL Server to address your database needs, both on-premises and in the cloud.
 brand: sql
 metadata:
    title: Microsoft SQL documentation | Microsoft Docs
-   description: Learn how to use Microsoft SQL Server to manage your database needs, both on-premises, and in the cloud!
+   description: Learn how to use Microsoft SQL Server to manage your database needs, both on-premises and in the cloud.
    ms.topic: hub-page
 
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -73,10 +73,10 @@ conceptualContent:
     - title: What's new
       links:
         - text: SQL Server 2019
-          url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15?view=sql-server-ver15
+          url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15
           itemType: whats-new
         - text: SQL Server Big Data Cluster
-          url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
+          url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
           itemType: whats-new
         - text: Azure Data Studio
           url: azure-data-studio/what-is.md
@@ -196,7 +196,7 @@ additionalContent:
       - title: Big data
         links:
           - text: SQL Server 2019 Big Data Clusters
-            url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
+            url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
           - text: Data Virtualization with Polybase
             url: relational-databases/polybase/polybase-guide.md
           - text: Azure Synapse Analytics (SQL DW)

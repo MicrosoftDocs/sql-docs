@@ -22,7 +22,7 @@ In addition to standard R tools, you can install R packages using:
 
 + [RevoScaleR](install-r-packages-with-revoscaler.md)
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-+ [T-SQL](install-r-packages-tsql.md) (CREATE EXTERNAL LIBRARY)
++ [T-SQL](install-r-packages-with-tsql.md) (CREATE EXTERNAL LIBRARY)
 ::: moniker-end
 
 ## Prerequisites
@@ -39,7 +39,7 @@ This includes R libraries installed with other Microsoft products.
   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
   Non-administrators can install packages using RevoScaleR 9.0.1 and later, or using CREATE EXTERNAL LIBRARY. The **dbo_owner** user, or a user with CREATE EXTERNAL LIBRARY permission, can install R packages to the current database. For more information, see:
   + [Use RevoScaleR to install R packages](install-r-packages-with-revoscaler.md)
-  + [Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages on SQL Server](install-r-packages-tsql.md)
+  + [Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages on SQL Server](install-r-packages-with-tsql.md)
   ::: moniker-end
 
   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"

@@ -2,7 +2,7 @@
 title: Capture a trace for SQL Server upgrades
 description: Capture a trace in Database Experimentation Assistant for SQL Server upgrades
 ms.custom: "seo-lt-2019"
-ms.date: 10/22/2018
+ms.date: 11/21/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,7 +10,7 @@ ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: jtoland
 ms.reviewer: mathoma
 ---
 
@@ -28,25 +28,24 @@ Query caching in SQL Server might affect evaluation results. We recommend that y
 
     ![Select Capture Traces in the menu](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-capture.png)
 
-1. Under **New Capture**, enter or select the following information:
+2. Under **New Capture**, enter or select the following information:
 
     - **SQL Server instance name**: Enter a name for the computer running SQL Server on which you want to capture a server trace.
     - **Database name**: Enter a name for a database on which to start a database trace. If you don't specify a database, trace is captured on all the databases on the server.
     - **Trace file name**: Enter a name for the trace file for your capture.
     - **Max file size (MB)**: Select the rollover size for files. A new file is created as needed at the file size you select. The recommended rollover size is 200 MB.
     - **Duration (in min)**: Select the length of time (in minutes) that you want the trace capture to run.
-    - **Path to store output trace file**: Select the destination path for the trace file. 
+    - **Path to store output trace file**: Select the destination path for the trace file.
 
     > [!NOTE]
     > The file path to the trace file must be on the computer that's running SQL Server. If the SQL Server service isn't set for a specific account, the service might need write permissions to the specified folder for the trace file to be written.
-    >
     >
 
     ![New Capture page](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-inputs.png)
 
 ## Start the trace capture
 
-After you enter or select the required information, select **Start** to start capturing traces. If the information you entered is valid, the trace capture process begins. Otherwise, the text boxes that have invalid entries are highlighted with red. 
+After you enter or select the required information, select **Start** to start capturing traces. If the information you entered is valid, the trace capture process begins. Otherwise, the text boxes that have invalid entries are highlighted with red.
 
 Make sure that the values you've selected or entered are correct, and then select **Start**.
 
@@ -84,33 +83,33 @@ The following table provides the list of events and the corresponding column dat
 |**CursorUnprepare (77)**|*||*|*|*|*|*|*||*|*|*|  
 |**CursorClose (78)**|*||*|*|*|*|*|*||*|*|*|  
 
-### Is there a performance effect on my production server when trace capture is running?
-    
+**Q: Is there a performance effect on my production server when trace capture is running?**
+
 Yes, there's a minimal performance effect during trace collection. In our tests, we found about a 3% memory pressure.
-    
-### What kind of permissions are required for capturing traces on a production workload?
-    
+
+**Q: What kind of permissions are required for capturing traces on a production workload?**
+
 - The Windows user that runs the trace operation in the DEA application must have sysadmin rights on the computer that's running SQL Server.
 - The service account used on the computer running SQL Server must have write access to the specified trace file path.
 
-### Can I capture traces for the entire server or only on a single database?
-    
+**Q: Can I capture traces for the entire server or only on a single database?**
+
 You can use DEA to capture traces for all databases in the server or for a single database.
-    
-### I have a linked server configured in my production environment. Do those queries show up in the traces?
-    
+
+**Q: I have a linked server configured in my production environment. Do those queries show up in the traces?**
+
 If you're running a trace capture for the entire server, the trace captures all queries, including the linked server queries. To run a trace capture for the entire server, leave the **Database name** box under **New Capture** empty.
-    
-### What's the minimum recommended time for production workload traces?
-    
+
+**Q:  What's the minimum recommended time for production workload traces?**
+
 We recommend that you choose a time that best represents the entirety of your workload. That way, the analysis runs on all the queries in your workload.
-    
-### How important is to take a database backup right before I start a trace capture?
-    
+
+**Q: How important is to take a database backup right before I start a trace capture?**
+
 Before you start a trace capture, make sure that you back up all your target databases. The captured trace in Target 1 and Target 2 is replayed. If the database state isn't the same, the results of the experimentation are skewed.
 
-### Can I collect XEvents instead of traces, and can I replay XEvents?
-    
+**Q: Can I collect XEvents instead of traces, and can I replay XEvents?**
+
 Yes. DEA supports XEvents. Download the latest version of DEA and give it a try.
 
 ## Troubleshoot trace captures
@@ -133,10 +132,6 @@ Following are some possible errors you might see and solutions for resolving the
 
 If you see any other errors labeled *Sql Error Code*, see [Database Engine Errors](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) for detailed descriptions.
 
-## Next steps
+## See also
 
-- To learn how to configure the Distributed Replay tools in SQL Server before you replay a captured trace, see [Configure replay](database-experimentation-assistant-configure-replay.md).
-
-- For a 19-minute introduction to DEA and demonstration, watch the following video:
-
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+- To learn how to configure the Distributed Replay tools in SQL Server before you replay a captured trace, see [Configure Distributed Replay](database-experimentation-assistant-configure-replay.md).

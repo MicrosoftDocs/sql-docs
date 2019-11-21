@@ -1,26 +1,28 @@
 ---
-title: "Transact-SQL Debugger | Microsoft Docs"
+title: Transact-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
+helpviewer_keywords: 
+  - "Transact-SQL debugger, introduction"
+ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 11/04/2019
-helpviewer_keywords: 
-  - "Transact-SQL debugger, introduction"
-ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 monikerRange: ">= sql-server-2014 || = sqlallproducts-allversions" 
 ---
 
-# Transact-SQL Debugger
+# Transact-SQL debugger
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger helps you find errors in [!INCLUDE[tsql](../../includes/tsql-md.md)] code by investigating the run-time behavior of the code. After you set the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window to debug mode, you can pause execution on specific lines of code and inspect information and data that is used by or returned by those [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
 
-## Stepping Through Transact-SQL Code
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## Stepping through Transact-SQL Code
 
 The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger provides the following options that you can use to navigate through [!INCLUDE[tsql](../../includes/tsql-md.md)] code when the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window is in debug mode:
 
@@ -40,7 +42,7 @@ The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger provides the following 
 
 For more information about how the debugger enables you to navigate code, see [Step Through Transact-SQL Code](../../relational-databases/scripting/step-through-transact-sql-code.md).  
 
-## Viewing Debugger Information
+## Viewing debugger information
 
 Each time the debugger pauses execution on a specific [!INCLUDE[tsql](../../includes/tsql-md.md)] statement, you can use the following debugger windows to view the current execution state:  
 
@@ -56,7 +58,7 @@ Each time the debugger pauses execution on a specific [!INCLUDE[tsql](../../incl
 
 - **Results** and **Messages.** These tabs on the Query Editor window display the results of previously executed [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
 
-## Transact-SQL Debugger Tasks  
+## Transact-SQL debugger tasks  
 
 |Task Description|Topic|  
 |----------------------|-----------|  
@@ -65,6 +67,6 @@ Each time the debugger pauses execution on a specific [!INCLUDE[tsql](../../incl
 |Describes how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger to step through code.|[Step Through Transact-SQL Code](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |Describes how to use the debugger to view [!INCLUDE[tsql](../../includes/tsql-md.md)] data, such as parameters and variables, and system information.|[Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
 
-## See Also
+## See also
 
 [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)

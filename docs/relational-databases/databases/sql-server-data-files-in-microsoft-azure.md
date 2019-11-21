@@ -100,25 +100,25 @@ ON
 - SQL Server running in an Azure virtual machine: If you are installing [SQL Server on an Azure Virtual Machine](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1), install SQL Server 2016, or update your existing instance. Similarly, you can also create a new virtual machine in Azure using SQL Server 2016 platform image.
 
   
-###  <a name="bkmk_Limitations"></a> Limitations
-
-- In the current release of this feature, storing **FileStream** data in Azure Storage is not supported. You can store **FileStream** data in a database that also contains data files stored in Azure Storage, but all FileStream data files must be stored on local storage.  Since the FileStream data must reside on local storage, it cannot be moved between machines using Azure Storage, therefore we recommend that you continue using the [traditional techniques](../../relational-databases/blob/move-a-filestream-enabled-database.md) to move the data associated with FileStream between different machines.
-
-- Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in  Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidently started, and it also has a database which points to the same data file, the second server will fail to start the database with an error code **5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"**.
-
-- Only .mdf, .ldf, and .ndf files can be stored in Azure Storage by using the SQL Server Data Files in Azure feature.
-
-- When using the SQL Server Data Files in Azure feature, geo-replication for your storage account is not supported. If a storage account is geo-replicated and a geo-failover happened, database corruption could occur.
-
-- For capacity limitations, see [Introduction to Blob storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).
-
-- It is not possible to store In-Memory OLTP data in Azure Blob using the SQL Server Data Files in Azure Storage feature. This is because In-Memory OLTP has a dependency on **FileStream** and, in the current release of this feature, storing **FileStream** data in Azure Storage is not supported.
-
-- When using SQL Server Data Files in Azure feature, SQL Server performs all URL or file path comparisons using the Collation set in the **master** database.
-
-- **Always On availability groups** are supported as long as you do not add new database files to the primary database. If a database operation requires a new file to be created in the primary database, first disable Always On availability groups in the secondary node. Then, perform the database operation on the primary database and backup the database in the primary node. Next, restore the database to the secondary node, and enable Always On availability groups in the secondary node. Note that Always On failover cluster instances is not supported when using the SQL Server data files in Azure feature.
-
-- During normal operation, SQL Server uses temporary leases to reserve Blobs for storage with a renewal of each Blob lease every 45 to 60 seconds. If a server crashes and another instance of SQL Server configured to use the same blobs is started, the new instance will wait up to 60 seconds for the existing lease on the Blob to expire. If you want to attach the database to another instance and you cannot wait for the lease to expire within 60 seconds, you can explicitly break the lease on the Blob to avoid any failures in attach operations.  
+###  <a name="bkmk_Limitations"></a> Limitations  
+  
+-   In the current release of this feature, storing **FileStream** data in Azure Storage is not supported. You can store **FileStream** data in a database that also contains data files stored in Azure Storage, but all FileStream data files must be stored on local storage.  Since the FileStream data must reside on local storage, it cannot be moved between machines using Azure Storage, therefore we recommend that you continue using the [traditional techniques](../../relational-databases/blob/move-a-filestream-enabled-database.md) to move the data associated with FileStream between different machines.  
+  
+-   Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in  Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidently started, and it also has a database which points to the same data file, the second server will fail to start the database with an error code **5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"**.  
+  
+-   Only .mdf, .ldf, and .ndf files can be stored in Azure Storage by using the SQL Server Data Files in Azure feature.  
+  
+-   When using the SQL Server Data Files in Azure feature, geo-replication for your storage account is not supported. If a storage account is geo-replicated and a geo-failover happened, database corruption could occur.  
+  
+-   For capacity limitations, see [Introduction to Blob storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).  
+  
+-   It is not possible to store In-Memory OLTP data in Azure Blob using the SQL Server Data Files in Azure Storage feature. This is because In-Memory OLTP has a dependency on **FileStream** and, in the current release of this feature, storing **FileStream** data in Azure Storage is not supported.  
+  
+-   When using SQL Server Data Files in Azure feature, SQL Server performs all URL or file path comparisons using the Collation set in the **master** database.  
+  
+-   **Always On availability groups** are supported as long as you do not add new database files to the primary database. If a database operation requires a new file to be created in the primary database, first disable Always On availability groups in the secondary node. Then, perform the database operation on the primary database and backup the database in the primary node. Next, restore the database to the secondary node, and enable Always On availability groups in the secondary node. Note that Always On failover cluster instances is not supported when using the SQL Server data files in Azure feature.  
+  
+-   During normal operation, SQL Server uses temporary leases to reserve Blobs for storage with a renewal of each Blob lease every 45 to 60 seconds. If a server crashes and another instance of SQL Server configured to use the same blobs is started, the new instance will wait up to 60 seconds for the existing lease on the Blob to expire. If you want to attach the database to another instance and you cannot wait for the lease to expire within 60 seconds, you can explicitly release the lease on the Blob to avoid any failures in attach operations.  
   
 ## Tools and programming reference support  
  This section describes which tools and programming reference libraries can be used when storing SQL Server data files in Azure Storage.  
@@ -147,20 +147,20 @@ ON
   
  The list of errors that you might get when using the SQL Server Data Files in Azure Storage feature are as follows.  
   
- **Authentication errors**
-
-- *Cannot drop the credential '%.\*ls' because it is used by an active database file.*   
-    Resolution: You may see this error when you try to drop a credential that is still being used by an active database file in Azure Storage. To drop the credential, first you must delete the associated blob that has this database file. To delete a blob that has an active lease, you must first break the lease.
-
-- *Shared Access Signature has not been created on the container correctly.*   
-     Resolution: Make sure that you have created a Shared Access Signature on the container correctly. Review the instructions given in Lesson 2 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).
-
-- *SQL Server credential has not been not created correctly.*   
+ **Authentication errors**  
+  
+-   *Cannot drop the credential '%.\*ls' because it is used by an active database file.*   
+    Resolution: You may see this error when you try to drop a credential that is still being used by an active database file in Azure Storage. To drop the credential, first you must delete the associated blob that has this database file. To delete a blob that has an active lease, you must first release the lease.  
+  
+-   *Shared Access Signature has not been created on the container correctly.*   
+     Resolution: Make sure that you have created a Shared Access Signature on the container correctly. Review the instructions given in Lesson 2 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
+  
+-   *SQL Server credential has not been not created correctly.*   
     Resolution: Make sure that you have used 'Shared Access Signature' for the **Identity** field and created a secret correctly. Review the instructions given in Lesson 3 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../lesson-3-database-backup-to-url.md).  
   
- **Lease blob errors:**
-
-- Error when trying to start SQL Server after another instance using the same blob files has crashed. Resolution: During normal operation, SQL Server uses temporary leases to reserve Blobs for storage with a renewal of each Blob lease every 45 to 60 seconds. If a server crashes and another instance of SQL Server configured to use the same blobs is started, the new instance will wait up to 60 seconds for the existing lease on the Blob to expire. If you want to attach the database to another instance and you cannot wait for the lease to expire within 60 seconds, you can explicitly break the lease on the Blob to avoid any failures in attach operations.  
+ **Lease blob errors:**  
+  
+-   Error when trying to start SQL Server after another instance using the same blob files has crashed. Resolution: During normal operation, SQL Server uses temporary leases to reserve Blobs for storage with a renewal of each Blob lease every 45 to 60 seconds. If a server crashes and another instance of SQL Server configured to use the same blobs is started, the new instance will wait up to 60 seconds for the existing lease on the Blob to expire. If you want to attach the database to another instance and you cannot wait for the lease to expire within 60 seconds, you can explicitly release the lease on the Blob to avoid any failures in attach operations.  
   
  **Database errors**  
   
@@ -172,7 +172,7 @@ ON
   
 3.  *Error code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*   
 
-    Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidently started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  
+    Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidentally started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  
   
      To resolve this issue, first determine if you need ServerA to access the database file in Azure Storage or not. If not, simply remove any connection between ServerA and the database files in Azure Storage. To do this, follow these steps:  
   

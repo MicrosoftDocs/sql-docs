@@ -59,7 +59,7 @@ On each machine, there are several required prerequisites. In a bash terminal, r
 1. Configure docker and Kubernetes prerequisites on the machine.
 
    ```bash
-   KUBE_DPKG_VERSION=1.15.0-00
+   KUBE_DPKG_VERSION=1.15.0-00 #or your other target K8s version, which should be at least 1.13.
    sudo apt-get update && \
    sudo apt-get install -y ebtables ethtool && \
    sudo apt-get install -y docker.io && \
@@ -99,12 +99,14 @@ After running the previous commands on each machine, choose one of the machines 
    EOF
    ```
 
-1. Initialize the Kubernetes master on this machine. You should see output that the Kubernetes master was successfully initialized.
+1. Initialize the Kubernetes master on this machine. The example script below specifies Kubernetes version `1.15.0`. The version you use depends on your Kubernetes cluster.
 
    ```bash
-   KUBE_VERSION=1.11.3
+   KUBE_VERSION=1.15.0
    sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=$KUBE_VERSION
    ```
+
+   You should see output that the Kubernetes master was successfully initialized.
 
 1. Note the `kubeadm join` command that you need to use on the other servers to join the Kubernetes cluster. Copy this for later use.
 

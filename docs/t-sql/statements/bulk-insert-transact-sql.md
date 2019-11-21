@@ -98,7 +98,7 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1, the data_file can be in Azure blob storage. In that case, you need to specify **data_source_name** option. For an example, see [Importing data from a file in Azure blob storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 **'** _data_source_name_ **'**
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 and Azure SQL Database.
@@ -299,7 +299,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files, but can read from Azure Blob storage.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### Data Types for Bulk Exporting or Importing SQLXML Documents
 
@@ -390,7 +390,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### B. Using the FIRE_TRIGGERS argument
 
@@ -408,7 +408,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### C. Using line feed as a row terminator
 
@@ -426,7 +426,7 @@ EXEC(@bulk_cmd);
 > Due to how Microsoft Windows treats text files **(\n** automatically gets replaced with **\r\n)**.
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### D. Specifying a code page
 
@@ -443,7 +443,7 @@ WITH
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### E. Importing data from a CSV file
 
@@ -460,7 +460,7 @@ WITH (FORMAT = 'CSV'
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### F. Importing data from a file in Azure blob storage
 
@@ -491,7 +491,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### G. Importing data from a file in Azure blob storage and specifying an error file
 

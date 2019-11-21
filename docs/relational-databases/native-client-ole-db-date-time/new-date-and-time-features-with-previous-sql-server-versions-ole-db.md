@@ -1,6 +1,5 @@
 ---
-title: "New Date and Time Features with Previous SQL Server Versions (OLE DB) | Microsoft Docs"
-ms.custom: ""
+title: "Date and Time OLE DB Features with Previous SQL Server Versions"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -11,6 +10,7 @@ ms.topic: "reference"
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # New Date and Time Features with Previous SQL Server Versions (OLE DB)

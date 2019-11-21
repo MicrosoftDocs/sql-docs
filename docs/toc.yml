@@ -1705,7 +1705,7 @@
     - name: Temporal tables
       href: relational-databases/tables/temporal-tables.md
       items:
-      - name: Manage
+      - name: Create and manage
         items:
         - name: Getting started
           href: relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
@@ -1733,17 +1733,17 @@
           href: relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
         - name: Metadata views & functions
           href: relational-databases/tables/temporal-table-metadata-views-and-functions.md
-    - name: Memory-optimized tables
-      href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
-      items:
-      - name: Create
-        href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
-      - name: Work with
-        href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
-      - name: Monitor
-        href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
-      - name: Performance considerations
-        href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
+      - name: Memory-optimized temporal tables
+        href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
+        items:
+        - name: Create
+          href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
+        - name: Work with
+          href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
+        - name: Monitor
+          href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
+        - name: Performance considerations
+          href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
     - name: Tutorials
       items:
       - name: Using hierarchyid data type
@@ -5811,17 +5811,17 @@
   - name: Database Experimentation Assistant (DEA)
     href: dea/database-experimentation-assistant-overview.md
     items:
-    - name: Get started
+    - name: Workload comparison overview
       href: dea/database-experimentation-assistant-get-started.md
-    - name: Capture trace
-      href: dea/database-experimentation-assistant-capture-trace.md
     - name: Configure replay
       href: dea/database-experimentation-assistant-configure-replay.md
+    - name: Capture trace
+      href: dea/database-experimentation-assistant-capture-trace.md
     - name: Replay trace
       href: dea/database-experimentation-assistant-replay-trace.md
     - name: Create reports
       href: dea/database-experimentation-assistant-create-report.md
-    - name: View reports
+    - name: Review reports
       href: dea/database-experimentation-assistant-view-report.md
     - name: Run at command prompt
       href: dea/database-experimentation-assistant-run-command-prompt.md

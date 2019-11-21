@@ -1,6 +1,6 @@
 ---
-title: "Upgrading Databases by using the Query Tuning Assistant | Microsoft Docs"
-ms.custom: ""
+title: "Upgrade databases using Query Tuning Assistant"
+ms.custom: seo-dt-2019
 ms.date: "02/13/2019"
 ms.prod: sql
 ms.reviewer: ""

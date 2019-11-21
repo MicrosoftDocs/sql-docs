@@ -43,7 +43,7 @@ The following steps are only needed for when using the latest 18x drivers. They 
 Data Source="Oracle"; Unicode="True"  
 ```  
   
- For more connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ For more connection string examples, see [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Credentials  
  Credentials are required to run queries, to preview the report locally, and to preview the report from the report server.  

@@ -1,6 +1,5 @@
 ---
-title: "Conversions Performed from Server to Client | Microsoft Docs"
-ms.custom: ""
+title: "Conversions Performed from Server to Client"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -13,6 +12,7 @@ helpviewer_keywords:
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Conversions Performed from Server to Client

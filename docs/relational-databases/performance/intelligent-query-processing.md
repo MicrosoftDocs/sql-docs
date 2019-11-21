@@ -1,7 +1,7 @@
 ---
-title: "Intelligent query processing in Microsoft SQL databases | Microsoft Docs"
+title: "Intelligent query processing"
 description: "Intelligent query processing features to improve query performance in SQL Server and Azure SQL Database."
-ms.custom: ""
+ms.custom: seo-dt-2019
 ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -20,6 +20,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 The intelligent query processing (IQP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort to adopt. 
 
 ![Intelligent Query Processing](./media/iqp-feature-family.png)
+
+Watch this 6-minute video for an overview of intelligent query processing:
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Intelligent-Query-processing-in-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
+
 
 You can make workloads automatically eligible for intelligent query processing by enabling the applicable database compatibility level for the database. You can set this using [!INCLUDE[tsql](../../includes/tsql-md.md)]. For example:  
 

@@ -9,12 +9,23 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
-ms.date: 11/04/2019
+ms.date: 11/15/2019
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## November 2019 (hotfix)
+
+November 15, 2019 &nbsp; / &nbsp; version: 1.13.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Fix bug #8210 Copy/Paste results are out of order |  |
+| &nbsp; | &nbsp; |
 
 ## November 2019
 

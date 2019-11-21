@@ -110,7 +110,7 @@ As with the first HGS computer, ensure the computer you're joining to the cluste
 
 ## Step 3: Configure a DNS forwarder to your HGS cluster
 
-HGS runs its own DNS serve, which contains the name records needed to resolve the attestation service.
+HGS runs its own DNS server, which contains the name records needed to resolve the attestation service.
 Your SQL Server computers will not be able to resolve these records until you configure your network's DNS server to forward requests to the HGS DNS servers.
 
 The process for configuring DNS forwarders is vendor-specific, so we recommend contacting your network administrator for the correct guidance for your particular network.

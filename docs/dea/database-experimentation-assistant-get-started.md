@@ -48,7 +48,7 @@ Considerations:
 
 - To replay a workload trace, your computers must be set up to run Distributed Replay (DReplay) traces.
 - Be sure to restore the databases on your target servers by using the backup from the source server.
-- It is recommended to restart the SQL Server service (MSSQLSERVER) in the services application to improve consistency in evaluation results. Query caching in SQL Server can affect evaluation results.
+- It's recommended to restart the SQL Server service (MSSQLSERVER) in the services application to improve consistency in evaluation results. Query caching in SQL Server can affect evaluation results.
 
 ## Analyzing the replayed workload traces
 
@@ -61,8 +61,4 @@ Considerations:
 
 ## See also
 
-- For a 19-minute introduction to DEA and demonstration, watch the following video:
-  
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player?WT.mc_id=dataexposed-c9-niner]
-- To learn how to produce a trace file with a log of events that occur on a server, see [Capture trace](database-experimentation-assistant-capture-trace.md).
-
+- To learn how to produce a trace file with a log of events that occur on a server, see the article [Capture a trace in Database Experimentation Assistant](database-experimentation-assistant-capture-trace.md).

@@ -17,7 +17,7 @@ ms.date: 04/26/2019
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-This topic describes SQL Server Reporting Services features that are no longer available in SQL Server 2016. It does not include announcements about discontinued support for specific versions of the operating system or Microsoft Internet Information Services (IIS). For more information about system prerequisites, see [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+This article describes SQL Server Reporting Services features that are no longer available in SQL Server 2016. It doesn't include announcements about discontinued support for specific versions of the operating system or Microsoft Internet Information Services (IIS). For more information about system prerequisites, see [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
 A *discontinued feature* is one that is no longer supported. It might also be physically removed from the product. The following features are discontinued.
 

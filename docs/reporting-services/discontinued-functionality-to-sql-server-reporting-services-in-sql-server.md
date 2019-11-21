@@ -1,5 +1,5 @@
 ---
-title: Discontinued functionality
+title: Discontinued functionality in SQL Server 2016 Reporting Services (SSRS)
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -11,7 +11,7 @@ ms.custom: seodec18
 ms.date: 04/26/2019
 ---
 
-# Discontinued Functionality in SQL Server Reporting Services (SSRS)
+# Discontinued Functionality in SQL Server 2016 Reporting Services (SSRS)
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -21,9 +21,9 @@ This topic describes SQL Server Reporting Services features that are no longer a
 
 A *discontinued feature* is one that is no longer supported. It might also be physically removed from the product. The following features are discontinued.
 
-|Feature|Replacment or workaround|
+|Feature|Replacement or workaround|
 |-|-|
-|Customize style sheets for HTML Viewer and Report Manager|You can still [brand the web portal](branding-the-web-portal.md).|
+|Customized style sheets for HTML Viewer and Report Manager|You can still [brand the web portal](branding-the-web-portal.md).|
 
 ## Next steps
 

@@ -44,7 +44,7 @@ GeneMi (and CraigG).  2019/03/30.
 | :------------ | :------ |
 | Support for additional Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Support for setting data classification version | See [Data Classification](../data-classification.md#bkmk-version). |
-| Driver will now install Azure Active Drirectory Authentication Library (adal.dll) used for authentication to Azure | |
+| Include Azure Active Drirectory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, this will upgrade existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 

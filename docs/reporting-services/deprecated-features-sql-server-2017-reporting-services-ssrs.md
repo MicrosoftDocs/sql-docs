@@ -41,6 +41,6 @@ The following SQL Server 2017 Reporting Services features will be deprecated in 
 
 ## See also
 
-[Discontinued Functionality in SQL Server Reporting Services (SSRS)](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)
+[Discontinued functionality in SQL Server Reporting Services (SSRS)](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

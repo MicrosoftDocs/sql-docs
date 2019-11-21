@@ -40,6 +40,6 @@ The following SQL Server Reporting Services features are supported in the next v
 
 ## See also
 
-[Discontinued Functionality in SQL Server Reporting Services (SSRS)](discontinued-functionality-sql-server-reporting-services-2019.md)
+[Discontinued functionality in SQL Server 2019 Reporting Services (SSRS)](discontinued-functionality-sql-server-reporting-services-2019.md)
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

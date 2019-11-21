@@ -25,8 +25,8 @@ A _discontinued feature_ is one that is no longer supported. It might also be ph
 
 ## See also
 
-- [Deprecated features in SQL Server 2019 Reporting Services](deprecated-features-in-sql-server-reporting-services-ssrs.md)
-* [Deprecated features in SQL Server 2016 Reporting Services](deprecated-features-in-sql-server-reporting-services-ssrs.md)  
-* [What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+- [Deprecated features in SQL Server 2019 Reporting Services](deprecated-features-sql-server-2019-reporting-services-ssrs.md)
+* [Deprecated features in SQL Server 2016 Reporting Services](deprecated-features-sql-server-2017-reporting-services-ssrs.md)  
+* [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

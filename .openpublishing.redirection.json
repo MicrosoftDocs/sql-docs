@@ -2112,7 +2112,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/python/install-additional-python-packages-on-sql-server.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-python-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-python-packages-with-pip",
             "redirect_document_id": false
         },
         {

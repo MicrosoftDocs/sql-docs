@@ -2,7 +2,7 @@
 title: Overview of the Database Experimentation Assistant 
 description: Overview of Database Experimentation Assistant
 ms.custom: ""
-ms.date: 11/16/2019
+ms.date: 11/21/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -26,10 +26,6 @@ DEA analysis metrics include:
 - Other workload comparison data
 
 Comparison data can lead to higher confidence and a successful upgrade experience.
-
-For a 19-minute introduction to DEA and a demonstration, watch the following video:
-
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player?WT.mc_id=dataexposed-c9-niner]
 
 ## Get DEA
 

@@ -129,7 +129,7 @@ As such, it's recommended that you deploy a simple audit-mode policy to the [!IN
 
 If you are already using a custom WDAC code integrity policy on the computers to harden the OS configuration, you can skip to [Collect TPM attestation information](#collect-tpm-attestation-information).
 
-1. There are pre-made example policies available on every Windows Server 2019, Windows 10 version 1809, and later operating system. The `AllowAll` policy allows any software to run on the computer without restrictions. Convert the policy to a binary form understood by the OS and HGS in order use it. In an elevated PowerShell console, run the following commands to compile the `AllowAll` policy:
+1. There are pre-made example policies available on every Windows Server 2019, Windows 10 version 1809, and later operating system. The `AllowAll` policy allows any software to run on the computer without restrictions. Convert the policy to a binary form understood by the OS and HGS in order to use it. In an elevated PowerShell console, run the following commands to compile the `AllowAll` policy:
 
     ```powershell
     # We are changing the policy to disable enforcement and user mode code protection before compiling
@@ -164,7 +164,7 @@ Repeat the following steps for each [!INCLUDE [ssnoversion-md](../../../includes
     Copy-Item -Path "$env:SystemRoot\System32\CodeIntegrity\SIPolicy.p7b" -Destination "$path\$name-CIpolicy.bin"
     ```
 
-2. Copy the 3 attestation files to the HGS server.
+2. Copy the three attestation files to the HGS server.
 
 3. On the HGS server, run the following commands in an elevated PowerShell console to register the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer:
 

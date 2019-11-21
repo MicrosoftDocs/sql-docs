@@ -8375,9 +8375,7 @@
   href: tools/sql-tools-lp.yml
   items:
   - name: Overview
-    items: 
-    - name: Tools Overview
-      href: tools/overview-sql-tools.md
+    href: tools/overview-sql-tools.md
   - name: Azure Data Studio
     href: azure-data-studio/what-is.md
     items:

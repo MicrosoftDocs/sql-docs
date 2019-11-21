@@ -74,7 +74,7 @@ In order for a client to trust that it's talking to a legitimate instance of VBS
 The TPM measurements captured during the boot process include the unique identity key of the VBS instance, ensuring the health certificate is only valid on that exact computer.
 Further, when a TPM is available on a computer running VBS, the private part of the VBS identity key is protected by the TPM, preventing anyone from trying to impersonate that VBS instance.
 
-Secure Boot is required with TPM attestation to ensure UEFI loaded a legitimate, Microsoft-signed bootloader and that no rootkits or bootkits intercepted the hypervisor boot process.
+Secure Boot is required with TPM attestation to ensure UEFI loaded a legitimate, Microsoft-signed bootloader and that no rootkits intercepted the hypervisor boot process.
 Additionally, an IOMMU device is required by default to ensure any hardware devices with direct memory access can't inspect or modify enclave memory.
 
 These protections all assume the computer running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is a physical machine.
@@ -123,7 +123,7 @@ These requirements include:
   - If you're running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] in a VM, the hypervisor and physical CPU must offer nested virtualization capabilities. See the [trust model](#trust-model) section for information on the assurances when running VBS enclaves in a VM.
     - On Hyper-V 2016 or later, [enable nested virtualization extensions on the VM processor](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
     - In Azure, select a VM size that supports nested virtualization. All v3 series VMs support nested virtualization, for example Dv3 and Ev3. See [Create a nesting capable Azure VM](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
-    - On VMWare vSphere 6.7 or later, enable Virtualization Based Security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
+    - On VMWare vSphere 6.7 or later, enable virtualization-based security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - Other hypervisors and public clouds may support nested virtualization capabilities that enable Always Encrypted with VBS Enclaves as well. Check your virtualization solution's documentation for compatibility and configuration instructions.
 - If you plan to use TPM attestation, you'll need a TPM 2.0 rev 1.16 chip ready for use in the server. At this time, HGS attestation doesn't work with TPM 2.0 rev 1.38 chips. Additionally, the TPM must have a valid Endorsement Key Certificate.
 

@@ -37,14 +37,14 @@ The steps below will help you install this component and begin attesting.
 
 3. Restart to complete the installation.
 
-## Step 2: Verify Virtualization Based Security is running
+## Step 2: Verify virtualization-based security is running
 
-When you install the Host Guardian Hyper-V Support feature, Virtualization Based Security (VBS) is automatically configured and enabled.
+When you install the Host Guardian Hyper-V Support feature, virtualization-based security (VBS) is automatically configured and enabled.
 The enclaves for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted are protected by and run inside the VBS environment.
 VBS may not start if the computer does not have an IOMMU device installed and enabled.
 To check if VBS is running, open the System Information tool by running `msinfo32.exe` and find the `Virtualization-based security` items towards the bottom of the System Summary.
 
-![System Information screenshot showing Virtualization Based Security status and configuration](./media/always-encrypted-enclaves/msinfo32-vbs-status.png)
+![System Information screenshot showing virtualization-based security status and configuration](./media/always-encrypted-enclaves/msinfo32-vbs-status.png)
 
 The first item to check is `Virtualization-based security`, which can have the following three values:
 
@@ -52,7 +52,7 @@ The first item to check is `Virtualization-based security`, which can have the f
 - `Enabled but not running` means VBS is configured to run, but the hardware does not have the minimum security requirements to run VBS. You may need to change the configuration of the hardware in BIOS or UEFI to enable optional processor features like an IOMMU or, if the hardware truly does not support the required features, you may need to lower the VBS security requirements. Continue reading this section to learn more.
 - `Not enabled` means VBS is not configured to run. The Host Guardian Hyper-V Support feature automatically enables VBS, so it's recommended that you repeat step 1 if you see this status.
 
-If VBS is not running on the computer, check `Virtualization Based Security` properties. Compare the values in the `Required Security Properties` item to the values in the `Available Security Properties` item.
+If VBS is not running on the computer, check `Virtualization-based security` properties. Compare the values in the `Required Security Properties` item to the values in the `Available Security Properties` item.
 The required properties must be equal to or a subset of the available security properties for VBS to run.
 
 In the context of attesting [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] enclaves, the security properties have the following importance:
@@ -125,7 +125,7 @@ For example, if you have three TPM baselines registered on HGS, the computer mea
 
 HGS requires that every computer attesting in TPM mode has a Windows Defender Application Control (WDAC) policy applied.
 WDAC code integrity policies restrict which software can run on a computer by checking each process that tries to execute code against a list of trusted publishers and file hashes.
-For the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] use case, enclaves are protected by Virtualization Based Security and cannot be modified from the host OS, so the strictness of the WDAC policy does not affect the security of encrypted queries.
+For the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] use case, enclaves are protected by virtualization-based security and cannot be modified from the host OS, so the strictness of the WDAC policy does not affect the security of encrypted queries.
 As such, it's recommended that you deploy a simple audit-mode policy to the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers to meet the attestation requirement without imposing additional restrictions on the system.
 
 If you are already using a custom WDAC code integrity policy on the computers to harden the OS configuration, you can skip to [Collect TPM attestation information](#collect-tpm-attestation-information).
@@ -280,7 +280,7 @@ The table below explains the most common values and how to remediate the errors.
 | DumpsEnabled | The computer is configured to allow crash dumps, but the Hgs_DumpsEnabled policy disallows dumps. Disable dumps on this computer or disable the Hgs_DumpsEnabled policy to continue. |
 | FullBoot | The computer resumed from a sleep state or hibernation, resulting in changes to the TPM measurements. Restart the computer to generate clean TPM measurements. |
 | HibernationEnabled | The computer is configured to allow hibernation with unencrypted hibernation files. Disable hibernation on the computer to resolve this issue. |
-| HypervisorEnforcedCodeIntegrityPolicy | The computer is not configured to use a code integrity policy. Check the Group Policy or Local Group Policy > Computer Configuration > Administrative Templates > System > Device Guard > Turn on Virtualization Based Security > Virtualization based protection of code integrity. This policy item should be "Enabled without UEFI lock". |
+| HypervisorEnforcedCodeIntegrityPolicy | The computer is not configured to use a code integrity policy. Check the Group Policy or Local Group Policy > Computer Configuration > Administrative Templates > System > Device Guard > Turn on Virtualization Based Security > Virtualization Based Protection of Code Integrity. This policy item should be "Enabled without UEFI lock". |
 | Iommu | This computer does not have an IOMMU device enabled. If it's a physical computer, enable the IOMMU in the UEFI configuration menu. If it's a virtual machine and an IOMMU is not available, run `Disable-HgsAttestationPolicy Hgs_IommuEnabled` on the HGS server. |
 | SecureBoot | Secure Boot is not enabled on this computer. Enable Secure Boot in the UEFI configuration menu to resolve this error. |
-| VirtualSecureMode | Virtualization Based Security is not running on this computer. Follow the guidance in [Step 2: Verify VBS is running on the computer](#step-2-verify-virtualization-based-security-is-running). |
+| VirtualSecureMode | Virtualization-based security is not running on this computer. Follow the guidance in [Step 2: Verify VBS is running on the computer](#step-2---verify-virtualization-based-security-is-running). |

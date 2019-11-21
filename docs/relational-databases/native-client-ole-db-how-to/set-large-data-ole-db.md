@@ -16,7 +16,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Set Large Data (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   This sample shows how to set BLOB data, create a table, add a sample record, fetches that record in the rowset, and then set the value of the BLOB field. This sample is not supported on IA64.  
   

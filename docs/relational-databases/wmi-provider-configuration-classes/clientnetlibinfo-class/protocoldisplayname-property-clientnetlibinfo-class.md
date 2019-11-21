@@ -1,6 +1,6 @@
 ---
-title: "ProtocolDisplayName Property (ClientNetLibInfo Class) | Microsoft Docs"
-ms.custom: ""
+title: "ProtocolDisplayName Property (ClientNetLibInfo)"
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

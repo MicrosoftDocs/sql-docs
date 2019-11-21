@@ -748,8 +748,6 @@
           href: database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md
         - name: Failover & failover modes
           href: database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md
-        - name: Flexible failover policy for automatic failover
-          href: database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
         - name: Read-scale only
           href: database-engine/availability-groups/windows/read-scale-availability-groups.md
         - name: Read/write connection redirection
@@ -1707,7 +1705,7 @@
     - name: Temporal tables
       href: relational-databases/tables/temporal-tables.md
       items:
-      - name: Manage
+      - name: Create and manage
         items:
         - name: Getting started
           href: relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
@@ -1735,17 +1733,17 @@
           href: relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
         - name: Metadata views & functions
           href: relational-databases/tables/temporal-table-metadata-views-and-functions.md
-    - name: Memory-optimized tables
-      href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
-      items:
-      - name: Create
-        href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
-      - name: Work with
-        href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
-      - name: Monitor
-        href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
-      - name: Performance considerations
-        href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
+      - name: Memory-optimized temporal tables
+        href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
+        items:
+        - name: Create
+          href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
+        - name: Work with
+          href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
+        - name: Monitor
+          href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
+        - name: Performance considerations
+          href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
     - name: Tutorials
       items:
       - name: Using hierarchyid data type
@@ -4160,14 +4158,16 @@
       href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
   - name: Release notes
     items:
-    - name: Backward compatibility
-      href: database-engine/sql-server-database-engine-backward-compatibility.md
+    - name: Discontinued functionality in SQL Server
+      href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+    - name: Deprecated in SQL Server 2019
+      href: database-engine/deprecated-database-engine-features-in-sql-server-version-15.md
     - name: Deprecated in SQL Server 2017
       href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
     - name: Deprecated in SQL Server 2016
       href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-    - name: Discontinued functionality in SQL Server
-      href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+    - name: Breaking changes in SQL Server 2019
+      href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md
     - name: Breaking changes in SQL Server 2017
       href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
     - name: Breaking changes in SQL Server 2016
@@ -4782,11 +4782,11 @@
     - name: Overview
       href: relational-databases/replication/sql-server-replication.md
       items:
-      - name: Backward Compatibility
+      - name: Backward compatibility
         href: relational-databases/replication/replication-backward-compatibility.md
-      - name: Deprecated Features
+      - name: Deprecated features
         href: relational-databases/replication/deprecated-features-in-sql-server-replication.md
-      - name: Breaking Changes
+      - name: Breaking changes
         href: relational-databases/replication/breaking-changes-in-sql-server-replication.md
       - name: Best practices
         href: relational-databases/replication/administration/best-practices-for-replication-administration.md
@@ -5811,17 +5811,17 @@
   - name: Database Experimentation Assistant (DEA)
     href: dea/database-experimentation-assistant-overview.md
     items:
-    - name: Get started
+    - name: Workload comparison overview
       href: dea/database-experimentation-assistant-get-started.md
-    - name: Capture trace
-      href: dea/database-experimentation-assistant-capture-trace.md
     - name: Configure replay
       href: dea/database-experimentation-assistant-configure-replay.md
+    - name: Capture trace
+      href: dea/database-experimentation-assistant-capture-trace.md
     - name: Replay trace
       href: dea/database-experimentation-assistant-replay-trace.md
     - name: Create reports
       href: dea/database-experimentation-assistant-create-report.md
-    - name: View reports
+    - name: Review reports
       href: dea/database-experimentation-assistant-view-report.md
     - name: Run at command prompt
       href: dea/database-experimentation-assistant-run-command-prompt.md
@@ -13143,7 +13143,7 @@
       - name: sys.dm_tran_version_store_space_usage
         href: relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md
   - name: System functions
-    href: relational-databases/system-functions/system-functions-for-transact-sql.md
+    href: relational-databases/system-functions/system-functions-category-transact-sql.md
     items:
     - name: Always On Availability Groups
       href: relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md

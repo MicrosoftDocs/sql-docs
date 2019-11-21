@@ -1,6 +1,5 @@
 ---
-title: "How FOR JSON converts SQL Server data types to JSON data types (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "How FOR JSON converts SQL Server data types to JSON data types"
 ms.date: "07/07/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -12,6 +11,7 @@ ms.assetid: da356f06-efd0-4ea3-8157-77395bf790d7
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: genemi
+ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # How FOR JSON converts SQL Server data types to JSON data types (SQL Server)

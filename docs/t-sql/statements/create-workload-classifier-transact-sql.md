@@ -56,7 +56,7 @@ WITH
  *WORKLOAD_GROUP* = *'name'*   
  When the conditions are met by the classifier rules, name maps the request to a workload group.  name is a sysname.  It can be up to 128 characters long and must be a valid workload group name at the time of classifier creation.
 
- Available workload groups can be found in [sys.workload_management_workload_groups](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md?view=azure-sqldw-latest) catalog view.
+ Available workload groups can be found in [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) catalog view.
 
  *MEMBERNAME* ='security_account'*    
  This is the security account being added to the role.  Security_account is a sysname, with no default. Security_account can be a database user, database role, Azure Active Directory login, or Azure Active Directory group.

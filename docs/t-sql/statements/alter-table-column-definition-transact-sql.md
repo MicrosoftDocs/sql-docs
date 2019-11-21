@@ -113,7 +113,7 @@ DOCUMENT
  Specifies that each instance of the **xml** data type in *column_name* can comprise only one top-level element. DOCUMENT applies only to the **xml** data type and can be specified only if *xml_schema_collection* is also specified.  
   
  *xml_schema_collection*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Applies only to the **xml** data type for associating an XML schema collection with the type. Before typing an **xml** column to a schema, the schema must first be created in the database by using [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
@@ -174,12 +174,12 @@ IDENTITY
  Is the incremental value added to the identity value of the previous row that is loaded.  
   
 NOT FOR REPLICATION  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Can be specified for the IDENTITY property. If this clause is specified for the IDENTITY property, values are not incremented in identity columns when replication agents perform insert operations.  
   
 ROWGUIDCOL  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Specifies that the column is a row globally unique identifier column. ROWGUIDCOL can only be assigned to a **uniqueidentifier** column, and only one **uniqueidentifier** column per table can be designated as the ROWGUIDCOL column. ROWGUIDCOL cannot be assigned to columns of user-defined data types.  
   
@@ -209,14 +209,14 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
  Columns must be of a qualifying data type.  
   
 ALGORITHM  
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
 Must be **'AEAD_AES_256_CBC_HMAC_SHA_256'**.  
   
  For more information including feature constraints, see [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
    
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies a dynamic data mask. *mask_function* is the name of the masking function with the appropriate parameters. The following functions are available:  
   

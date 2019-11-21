@@ -174,6 +174,12 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
   
 ## Release Notes
 
+### Version 1.16.0
+
+#### Bugfixes
+
+1. In certain cases, package execution reports "Error: Could not load file or assembly ‘Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed’ or one of its dependencies."
+
 ### Version 1.15.0
 
 #### Improvements

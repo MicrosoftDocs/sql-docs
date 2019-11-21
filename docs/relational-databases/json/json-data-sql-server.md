@@ -1,6 +1,5 @@
 ---
-title: "Work with JSON data in SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "Work with JSON data"
 ms.date: "05/14/2019"
 ms.prod: sql
 ms.reviewer: ""
@@ -13,6 +12,7 @@ ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: genemi
+ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -56,7 +56,7 @@ By using SQL Server built-in functions and operators, you can do the following t
 The next sections discuss the key capabilities that SQL Server provides with its built-in JSON support. You can see how to use JSON functions and operators in the following video:
 
 *SQL Server 2016 and JSON Support*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player?WT.mc_id=dataexposed-c9-niner]
 
 ### Extract values from JSON text and use them in queries
 
@@ -399,7 +399,7 @@ Here's what you can do with the scripts that are included in the file:
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following video:
 
 *Using JSON in SQL Server 2016 and Azure SQL Database*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
 
 *Building REST API with SQL Server using JSON functions*
 > [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]

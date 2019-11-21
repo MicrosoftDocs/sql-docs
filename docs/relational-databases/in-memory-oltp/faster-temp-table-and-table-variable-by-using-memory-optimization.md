@@ -118,7 +118,7 @@ CREATE TABLE #tempSessionC
   
   
   
-First, create the following table-value function to filter on **@@spid**. The function will be usable by all SCHEMA_ONLY tables that you convert from session temporary tables.  
+First, create the following table-value function to filter on **\@\@spid**. The function will be usable by all SCHEMA_ONLY tables that you convert from session temporary tables.  
   
   
   

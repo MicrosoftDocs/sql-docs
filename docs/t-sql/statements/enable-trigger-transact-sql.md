@@ -54,7 +54,7 @@ DATABASE
 For a DDL trigger, indicates that *trigger_name* was created or modified to execute with database scope.  
   
 ALL SERVER  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
 For a DDL trigger, indicates that *trigger_name* was created or modified to execute with server scope. ALL SERVER also applies to logon triggers.  
   
@@ -101,7 +101,7 @@ GO
 ### C. Enabling all triggers that were defined with the same scope  
 The following example enables all DDL triggers that were created at the server scope.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
 ```sql  
 ENABLE Trigger ALL ON ALL SERVER;  

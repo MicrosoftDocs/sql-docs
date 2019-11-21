@@ -1,5 +1,5 @@
 ---
-title: RevoScaleR function deep-dive tutorial- SQL Server Machine Learning
+title: RevoScaleR deep-dive tutorial
 description: In this tutorial, learn how to call RevoScaleR functions using SQL Server Machine Learning R integration.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,7 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Tutorial: Use RevoScaleR R functions with SQL Server data
@@ -43,7 +44,7 @@ For instructions on client configuration, see [Set up a data science client for 
 
 R developers typically use IDEs for writing and debugging R code. Here are some suggestions:
 
-- **R Tools for Visual Studio** (RTVS) is a free plug-in that provides Intellisense, debugging, and support for Microsoft R. You can use it with both R Server and SQL Server Machine Learning Services. To download, see [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/).
+- **R Tools for Visual Studio** (RTVS) is a free plug-in that provides Intellisense, debugging, and support for Microsoft R. You can use it with both R Server and SQL Server Machine Learning Services. To download, see [R Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019).
 
 - **RStudio** is one of the more popular environments for R development. For more information, see [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/).
 

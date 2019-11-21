@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE Compatibility Level (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/27/2019"
+ms.date: "11/15/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors to be compatible with the specified version of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. For other ALTER DATABASE options, see [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
+Sets [!INCLUDE[tsql](../../includes/tsql-md.md)] and query processing behaviors to be compatible with the specified version of the SQL engine. For other ALTER DATABASE options, see [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
@@ -42,10 +42,10 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 ## Arguments
 
-*database_name*      
+*database_name*
 Is the name of the database to be modified.
 
-COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }       
+COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 Is the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with which the database is to be made compatible. The following compatibility level values can be configured (not all versions supports all of the above listed compatibility level):
 
 <a name="supported-dbcompats"></a>
@@ -54,8 +54,8 @@ Is the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database/elastic pool|12|140|150, 140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance|12|140|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database/elastic pool|12|150|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance|12|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|
@@ -64,7 +64,11 @@ Is the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|9|90|90, 80|
 |[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|8|80|80|
 
+> [!IMPORTANT]
+> The database engine version numbers for SQL Server and Azure SQL Database are not comparable with each other, and rather are internal build numbers for these separate products. The database engine for Azure SQL Database is based on the same code base as the SQL Server database engine. Most importantly, the database engine in Azure SQL Database always has the newest SQL database engine bits. Version 12 of Azure SQL Database is newer than version 15 of SQL Server.
+
 ## Remarks
+
 For all installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default compatibility level is associated with the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. New databases are set to this level unless the **model** database has a lower compatibility level. For databases attached or restored from any earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the database retains its existing compatibility level, if it is at least minimum allowed for that instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Moving a database with a compatibility level lower than the allowed level by the [!INCLUDE[ssde_md](../../includes/ssde_md.md)], automatically sets the database to the lowest compatibility level allowed. This applies to both system and user databases.
 
 The below behaviors are expected for [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] when a database is attached or restored, and after an in-place upgrade:
@@ -75,18 +79,18 @@ The below behaviors are expected for [!INCLUDE[ssSQL17](../../includes/sssql17-m
 - The master system database retains the compatibility level it had before upgrade.
 
 Use `ALTER DATABASE` to change the compatibility level of the database. The new compatibility level setting for a database takes effect when a `USE <database>` command is issued, or a new login is processed with that database as the default database context.
-To view the current compatibility level of a database, query the **compatibility_level** column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
+To view the current compatibility level of a database, query the `compatibility_level` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
 
 > [!NOTE]
 > A [distribution database](../../relational-databases/replication/distribution-database.md) that was created in an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and is upgraded to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM or Service Pack 1 has a compatibility level of 90, which is not supported for other databases. This does not have an impact on the functionality of replication. Upgrading to later service packs and versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will result in the compatibility level of the distribution database to be increased to match that of the **master** database.
 
 > [!NOTE]
-> As of **January 2018**, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the default compatibility level is 140 for newly created databases. [!INCLUDE[msCoName](../../includes/msconame-md.md)] does not update Database Compatibility Level for existing databases. It is up to customers to do at their own discretion.        
+> As of **November 2019**, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the default compatibility level is 150 for newly created databases. [!INCLUDE[msCoName](../../includes/msconame-md.md)] does not update Database Compatibility Level for existing databases. It is up to customers to do at their own discretion.        
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] highly recommends that customers plan to upgrade to the latest compatibility level in order to leverage the latest query optimization improvements.        
 
 To leverage Database Compatibility Level 120 or higher for a database overall, but opt-in to the [**cardinality estimation**](../../relational-databases/performance/cardinality-estimation-sql-server.md) model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], which maps to Database Compatibility Level 110, see [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), and in particular its keyword `LEGACY_CARDINALITY_ESTIMATION = ON`.
 
-For details about how to assess the performance differences of your most important queries, between two different compatibility levels on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Note that this article refers to compatibility level 130 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but the same methodology applies for upgrades to 140 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+For details about how to assess the performance differences of your most important queries, between two different compatibility levels on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Note that this article refers to compatibility level 130 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but the same methodology applies for upgrades to 140 or higher levels in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 To determine the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] that you are connected to, execute the following query.
 
@@ -195,8 +199,6 @@ The fundamental plan-affecting changes added only to the default compatibility l
 
 ## Differences between Compatibility Level 140 and Level 150
 This section describes new behaviors introduced with compatibility level 150.
-
-Database Compatibility Level 150 is currently in Public Preview for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. This Database Compatibility Level will be associated with the next generation of query processing improvements beyond what was introduced in Database Compatibility Level 140.
 
 |Compatibility level setting of 140 or lower|Compatibility level setting of 150|
 |--------------------------------------------------|-----------------------------------------|

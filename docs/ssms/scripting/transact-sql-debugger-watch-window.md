@@ -1,24 +1,31 @@
 ---
-title: "Watch Window | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Watch Window
+titleSuffix: T-SQL Debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Watch Window [Transact-SQL]"
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: markingmyname
 ms.author: maghan
+ms.custom: ""
+ms.reviewer: ""
+ms.date: "03/14/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Transact-SQL Debugger - Watch Window
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  The **Watch** window displays information about the expressions that you have selected. There can be up to four watch windows: **Watch 1**, **Watch 2, Watch 3**, and **Watch 4**. The expressions are evaluated within the scope of the current call stack frame that is selected in the **Call Stack** window. You must be in debug mode to watch variables and expressions.  
-  
-## Task List  
- **To access the Watch windows**  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+The **Watch** window displays information about the expressions that you have selected. There can be up to four watch windows: **Watch 1**, **Watch 2, Watch 3**, and **Watch 4**. The expressions are evaluated within the scope of the current call stack frame that is selected in the **Call Stack** window. You must be in debug mode to watch variables and expressions.  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## Task List
+
+**To access the Watch windows**  
   
 -   On the **Debug** menu, click **Windows**, click **Watch**, and then click **Watch 1**, **Watch 2, Watch 3**, or **Watch 4**.  
   

@@ -1,7 +1,7 @@
 ---
 title: "ALTER LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "11/06/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -388,7 +388,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 The following example maps the login `Mary5` to the EKM credential `EKMProvider1`.
 
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
 
 ```sql
 ALTER LOGIN Mary5
@@ -418,7 +418,7 @@ GO
 
 The following example changes the password of the `TestUser` login to an already hashed value.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -484,8 +484,8 @@ ALTER LOGIN login_name
   | DROP CREDENTIAL credential_name
 ```
 
-> [!IMPORTANT]
-> Azure AD logins for SQL Database managed instance is in **public preview**.
+> [!NOTE]
+> The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```
 -- Syntax for Azure SQL Database managed instance using Azure AD logins
@@ -647,7 +647,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 The following example maps the login `Mary5` to the EKM credential `EKMProvider1`.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL Database managed instance.
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, and Azure SQL Database managed instance.
 
 ```sql
 ALTER LOGIN Mary5
@@ -677,7 +677,7 @@ GO
 
 The following example changes the password of the `TestUser` login to an already hashed value.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL Database managed instance.
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, and Azure SQL Database managed instance.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -815,7 +815,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 The following example maps the login `Mary5` to the EKM credential `EKMProvider1`.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
 
 ```sql
 ALTER LOGIN Mary5
@@ -845,7 +845,7 @@ GO
 
 The following example changes the password of the `TestUser` login to an already hashed value.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -1013,7 +1013,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 The following example maps the login `Mary5` to the EKM credential `EKMProvider1`.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
 
 ```sql
 ALTER LOGIN Mary5
@@ -1043,7 +1043,7 @@ GO
 
 The following example changes the password of the `TestUser` login to an already hashed value.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
 
 ```sql
 ALTER LOGIN TestUser WITH

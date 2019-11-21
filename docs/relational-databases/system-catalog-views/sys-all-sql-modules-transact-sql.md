@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**is_recompiled**|**bit**|Procedure was created using the WITH RECOMPILE option.|  
 |**null_on_null_input**|**bit**|Module was declared to produce a NULL output on any NULL input.|  
 |**execute_as_principal_id**|**int**|ID of the EXECUTE AS database principal.<br /><br /> NULL by default or if EXECUTE AS CALLER.<br /><br /> ID of the specified principal if EXECUTE AS SELF or EXECUTE AS \<principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
-|**uses_native_compilation**|bit|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = not natively compiled<br /><br /> 1 = is natively compiled<br /><br /> The default value is 0.|  
+|**uses_native_compilation**|bit|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.<br /><br /> 0 = not natively compiled<br /><br /> 1 = is natively compiled<br /><br /> The default value is 0.|  
   
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

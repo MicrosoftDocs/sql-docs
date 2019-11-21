@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Transaction Log Architecture and Management Guide | Microsoft Docs"
+title: "Transaction Log Architecture and Management Guide"
 ms.custom: ""
 ms.date: "10/23/2019"
 ms.prod: sql

@@ -51,14 +51,20 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/big-data-cluster/reference-azdata-control.md",
-            "redirect_url": "/sql/big-data-cluster/reference-azdata",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "docs/sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md",
             "redirect_url": "/sql/sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance",
             "redirect_document_id": false
+
+        },
+        {
+            "source_path": "docs/database-engine/install-windows/installation-for-sql-server.md",
+            "redirect_url": "/sql/database-engine/install-windows/install-sql-server",
+            "redirect_document_id": false
+        },        
+        {
+            "source_path": "docs/database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md",
+            "redirect_url": "/sql/database-engine/discontinued-database-engine-functionality-in-sql-server",
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/sql-server/sql-server-technical-documentation.md",

@@ -10413,6 +10413,9 @@
       href: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
     - name: Run & Connect - Cloud
       href: linux/quickstart-install-connect-clouds.md
+    - name: Use Visual Studio Code
+      href: visual-studio-code/sql-server-develop-use-vscode
+
   - name: Tutorials
     items:
     - name: Migrate from Windows

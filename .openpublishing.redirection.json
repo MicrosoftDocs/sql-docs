@@ -2092,7 +2092,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/use-revoscaler-to-manage-r-packages.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-r-packages-with-revoscaler",
             "redirect_document_id": false
         },
         {

@@ -1,6 +1,6 @@
 ---
 title: "Plan for Host Guardian Service attestation"
-description: "Plan Host Guardian Service attestation for SQL Server Always Encrypted with Secure Enclaves."
+description: "Plan Host Guardian Service attestation for SQL Server Always Encrypted with secure enclaves."
 ms.custom: ""
 ms.date: "10/12/2019"
 ms.prod: sql
@@ -92,7 +92,7 @@ But, since there's no way for HGS to verify the computer actually has these sett
 
 ## Prerequisites
 
-### HGS Server prerequisites
+### HGS server prerequisites
 
 The computer(s) running the Host Guardian Service role should meet the following requirements:
 

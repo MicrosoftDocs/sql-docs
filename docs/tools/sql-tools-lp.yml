@@ -79,7 +79,7 @@ landingContent:
             url:  ../azure-data-studio/quickstart-sql-server.md
 
   # Card
-  - title: Command line tools
+  - title: Command-line tools
     linkLists:
       - linkListType: concept
         links:

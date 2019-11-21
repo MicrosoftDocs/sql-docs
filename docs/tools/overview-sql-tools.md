@@ -18,7 +18,7 @@ monikerRange: ">=aps-pdw-2014||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-To manage (query, monitor, etc.) your database you need a tool. While your databases can be running in the cloud, on Windows, or on [Linux](../linux/sql-server-linux-overview.md), your tool doesn't need to run on the same platform as the database.
+To manage your database, you need a tool. While your databases run in the cloud, on Windows, or [Linux](../linux/sql-server-linux-overview.md), your tool doesn't need to run on the same platform as the database.
 
 There are many database tools available, so this article provides descriptions and pointers to some of the available tools for working with your SQL databases. If you need help with deciding which tool you need, see [Which tool should I use?](#which-tool-should-i-choose).
 
@@ -26,11 +26,11 @@ There are many database tools available, so this article provides descriptions a
 
 If you choose to manage a SQL Server instance or database, in a light-weight editor on Windows, Mac, or Linux? then you can choose [Azure Data Studio](../azure-data-studio/download.md).
 
-If you want to manage a SQL Server instance or database on Windows with full GUI support then choose [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
+If you want to manage a SQL Server instance or database on Windows with full GUI support, then choose [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
 If you want to create or maintain database code, including compile-time validation, refactoring, and designer support on Windows then choose [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-If you want to write T-SQL scripts in a light-weight editor on Windows, Mac, or Linux then choose the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) that runs on [Visual Studio Code](https://code.visualstudio.com/).
+If you want to write T-SQL scripts in a light-weight editor on Windows, Mac, or Linux, then choose the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) that runs on [Visual Studio Code](https://code.visualstudio.com/).
 
 If you want to query SQL Server with a command-line tool that features IntelliSense, syntax high-lighting, and more? then choose [mssql-cli](mssql-cli.md).
 

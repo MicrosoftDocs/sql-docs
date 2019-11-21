@@ -1,5 +1,5 @@
 ---
-title: "Install & configure AdventureWorks sample database"
+title: "Install and configure AdventureWorks sample database"
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -10,7 +10,7 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
-# AdventureWorks Installation and configuration
+# AdventureWorks installation and configuration
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 AdventureWorks download links and installation instructions. 
@@ -47,7 +47,7 @@ The below scripts can be used to create the entire AdventureWorks database, irre
 - [AdventureWorks OLTP Scripts Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks-oltp-install-script.zip)
 - [AdventureWorks DW Scripts Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW-data-warehouse-install-script.zip)
 
-## Github links
+## GitHub links
 
 - [All AdventureWorks files for SQL 2014 - 2016](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
 - [All AdventureWorks files for SQL 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)

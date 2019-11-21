@@ -50,7 +50,7 @@ To set up the controller service:
 
 ## Configure DCOM
 
-This configuration is required only on the controller machine.
+This configuration is only required on the controller computer.
 
 1. Open dcomcnfg.exe.
 2. Expand **Component Services** > **Computers** > **My Computer** > **DCOM Config**.
@@ -69,7 +69,7 @@ This configuration is required only on the controller machine.
 
 ## Set up the client service
 
-Before you set up the client service, use networking tools like ping to verify that the controller and client machines can communicate.
+Before you set up the client service, use networking tools like ping to verify that the controller and client computers can communicate.
 
 1. Install the Distributed Replay client by using the SQL Server installer.
 2. Open Services.msc and go to the SQL Server Distributed Replay Client service.
@@ -88,8 +88,9 @@ Before you set up the client service, use networking tools like ping to verify t
 You can use Distributed Replay administration tools to quickly test whether Distributed Replay is functioning properly in the environment. Testing the configuration can be especially helpful in an environment in which multiple client machines are registered with a controller. You might need to install SQL Server Management Studio (SSMS) to get the administration tools.
 
 1. Go to the SSMS install location and look for the Distributed Replay administration tool dreplay.exe and its dependent components.
-2. Open a Command Prompt window and run `dreplay.exe status -f 1`.
-3. If all the preceding steps are successful, the console output indicates that the controller can see its clients in a `READY` state.
+2. At a Command Prompt, run `dreplay.exe status -f 1`.
+
+If the preceding steps were successful, the console output indicates that the controller can see its clients in a `READY` state.
 
 ## Configure the firewall for remote Distributed Replay access
 
@@ -103,7 +104,7 @@ Remotely accessing Distributed Replay requires opening ports that are visible wi
 
 ## Set up target computers
 
-Two replays are required to run an A/B test or an experiment. That is, you might need two separate instances of SQL Server installations for a migration scenario. 
+Two replays are required to run an A/B test or an experiment. That is, you might need two separate instances of SQL Server installations for a migration scenario.
 
 You can also install the two versions of SQL Server instances on the same machine. A caveat is to make sure that the instances are isolated when a replay is in progress.
 

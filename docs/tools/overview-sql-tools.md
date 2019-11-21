@@ -54,21 +54,21 @@ The following are the main command-line tools:
 | Tool | Description | Operating system |
 |:--|:--|:--|
 |[**mssql-cli**](mssql-cli.md)|**mssql-cli** is an interactive command-line tool for querying SQL Server. | **Windows</br>macOS</br>Linux** |
-| [**sqlpackage**](sqlpackage.md) |**sqlpackage** is a command-line utility that automates several database development tasks. macOS and Linux versions of sqlpackage are currently in preview. | Windows, macOS, and Linux|
+| [**sqlpackage**](sqlpackage.md) |**sqlpackage** is a command-line utility that automates several database development tasks. macOS and Linux versions of sqlpackage are currently in preview. |**Windows</br>macOS</br>Linux** |
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** provides cmdlets for working with SQL| **Windows</br>macOS</br>Linux** |
 | [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd** utility lets you enter Transact-SQL statements, system procedures, and script files at the command prompt. | **Windows</br>macOS</br>Linux** |
 |[**bcp**](bcp-utility.md)|The **b**ulk **c**opy **p**rogram utility (**bcp**) bulk copies data between an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format.| **Windows</br>macOS</br>Linux** |
 |[**mssql-scripter**](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** is a multi-platform command-line experience for scripting SQL Server databases| **Windows</br>macOS</br>Linux** |
-|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** configures SQL Server running on Linux.| Linux |
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** configures SQL Server running on Linux.| **Linux** |
 
 ## Migration and other tools
 
 | Tool | Description |
 |:--|:--|
-| [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Use SQL Server Configuration Manager to configure SQL Server services and configure network connectivity. Configuration Manager runs on Windows|
-| [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | Use SQL Server Migration Assistant to automate database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and Sybase.|
-| [Database Experimentation Assistant](../dea/database-experimentation-assistant-overview.md) | Use Database Experimentation Assistant to evaluate a targeted version of SQL for a given workload. |
-| [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Use the Distributed Replay feature to help you assess the impact of future SQL Server upgrades. Also use Distributed Replay to help assess the impact of hardware and operating system upgrades, and SQL Server tuning. |
-| [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | The ssbdiagnose utility reports issues in Service Broker conversations or the configuration of Service Broker services. |
+| **[Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)** | Use SQL Server Configuration Manager to configure SQL Server services and configure network connectivity. Configuration Manager runs on Windows|
+| **[SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)** | Use SQL Server Migration Assistant to automate database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and Sybase.|
+| **[Database Experimentation Assistant](../dea/database-experimentation-assistant-overview.md)** | Use Database Experimentation Assistant to evaluate a targeted version of SQL for a given workload. |
+| **[Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)** | Use the Distributed Replay feature to help you assess the impact of future SQL Server upgrades. Also use Distributed Replay to help assess the impact of hardware and operating system upgrades, and SQL Server tuning. |
+| **[ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)** | The ssbdiagnose utility reports issues in Service Broker conversations or the configuration of Service Broker services. |
 
 If you're looking for additional tools that aren't mentioned on this page, see [SQL Command Prompt Utilities](command-prompt-utility-reference-database-engine.md).

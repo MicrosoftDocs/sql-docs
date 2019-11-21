@@ -1,9 +1,9 @@
 ---
  title: include file
  description: include file
- services: 
+ ms.prod: reporting-services
+ ms.technology: reporting-services
  author: maggiesMSFT
- ms.service: 
  ms.topic: include
  ms.date: 11/19/2019
  ms.author: maggies

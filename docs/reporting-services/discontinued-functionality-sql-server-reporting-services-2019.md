@@ -1,5 +1,6 @@
 ---
 title: Discontinued functionality in SQL Server 2019 Reporting Services (SSRS)
+description: This article describes features that SQL Server Reporting Services no longer supports in SQL Server 2019.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services

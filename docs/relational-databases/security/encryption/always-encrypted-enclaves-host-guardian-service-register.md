@@ -1,5 +1,6 @@
 ---
-title: "Register your computer with the Host Guardian Service | Microsoft Docs"
+title: "Register computer with Host Guardian Service"
+description: "Register the SQL Server computer with the Host Guardian Service for Always Encrypted with Secure Enclaves."
 ms.custom: ""
 ms.date: "11/15/2019"
 ms.prod: sql
@@ -11,7 +12,7 @@ ms.author: ryanpu
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-# Register your computer with the Host Guardian Service
+# Register computer with Host Guardian Service
 
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
@@ -26,37 +27,39 @@ To allow a SQL client to verify it's talking to a trustworthy [!INCLUDE [ssnover
 The attestation process is managed by an optional Windows component called the HGS Client.
 The steps below will help you install this component and begin attesting.
 
-1. Ensure your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer meets the [prerequisites outlined in the HGS planning doc](./always-encrypted-enclaves-host-guardian-service-plan.md#prerequisites).
+1. Ensure the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer meets the [prerequisites outlined in the HGS planning doc](./always-encrypted-enclaves-host-guardian-service-plan.md#prerequisites).
 
-2. Run the following command in an elevated PowerShell console to install the Host Guardian Hyper-V Support feature, which contains HGS Client and the attestation components. Your computer will restart to complete the installation.
+2. Run the following command in an elevated PowerShell console to install the Host Guardian Hyper-V Support feature, which contains HGS Client and the attestation components.
 
     ```powershell
     Enable-WindowsOptionalFeature -Online -FeatureName HostGuardian -All
     ```
 
+3. Restart to complete the installation.
+
 ## Step 2: Verify Virtualization Based Security is running
 
-When you install the Host Guardian Hyper-V Support feature, Virtualization Based Security (VBS) is automatically configured and enabled on your computer.
+When you install the Host Guardian Hyper-V Support feature, Virtualization Based Security (VBS) is automatically configured and enabled.
 The enclaves for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted are protected by and run inside the VBS environment.
-VBS may not start if your computer does not have an IOMMU device installed and enabled.
-To check if VBS is running, open the System Information tool by running `msinfo32.exe` and find the **Virtualization-based security** items towards the bottom of the System Summary.
+VBS may not start if the computer does not have an IOMMU device installed and enabled.
+To check if VBS is running, open the System Information tool by running `msinfo32.exe` and find the `Virtualization-based security` items towards the bottom of the System Summary.
 
 ![System Information screenshot showing Virtualization Based Security status and configuration](./media/always-encrypted-enclaves/msinfo32-vbs-status.png)
 
-The first item to check is **Virtualization-based security**, which can have the following three values:
+The first item to check is `Virtualization-based security`, which can have the following three values:
 
-- **Running** means VBS is configured correctly and was able to start successfully. If your computer shows this status, you can skip to Step 3.
-- **Enabled but not running** means VBS is configured to run, but your hardware does not have the minimum security requirements to run VBS. You may need to change the configuration of your hardware in BIOS or UEFI to enable optional processor features like an IOMMU or, if the hardware truly does not support the required features, you may need to lower the VBS security requirements. Continue reading this section to learn more.
-- **Not enabled** means VBS is not configured to run. The Host Guardian Hyper-V Support feature automatically enables VBS, so it's recommended that you repeat step 1 if you see this status.
+- `Running` means VBS is configured correctly and was able to start successfully. If the computer shows this status, you can skip to Step 3.
+- `Enabled but not running` means VBS is configured to run, but the hardware does not have the minimum security requirements to run VBS. You may need to change the configuration of the hardware in BIOS or UEFI to enable optional processor features like an IOMMU or, if the hardware truly does not support the required features, you may need to lower the VBS security requirements. Continue reading this section to learn more.
+- `Not enabled` means VBS is not configured to run. The Host Guardian Hyper-V Support feature automatically enables VBS, so it's recommended that you repeat step 1 if you see this status.
 
-If VBS is not running on your computer, compare the values in the "Virtualization-based security **Required** Security Properties" item to those in the "Virtualization-based security **Available** Security Properties" item.
+If VBS is not running on the computer, check `Virtualization Based Security` properties. Compare the values in the `Required Security Properties` item to the values in the `Available Security Properties` item.
 The required properties must be equal to or a subset of the available security properties for VBS to run.
 
 In the context of attesting [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] enclaves, the security properties have the following importance:
 
-- **Base virtualization support** is always required, as it represents the minimum hardware features needed to run a hypervisor on your computer.
-- **Secure Boot** is recommended but not required for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted. Secure Boot protects against rootkits by requiring a Microsoft-signed bootloader to run immediately after UEFI initialization completes. If you are using TPM attestation, Secure Boot enablement will be measured and enforced regardless of whether VBS is configured to require Secure Boot.
-- **DMA Protection** is strongly recommended but not required for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted. DMA protection uses an IOMMU to protect VBS and enclave memory from direct memory access attacks. In a production environment, you should always use computers with DMA protection. In a dev/test environment, it's okay to remove the requirement for DMA protection. If your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is virtualized, you'll most likely not have DMA protection available and will need to remove the requirement for VBS to run. Review the [trust model](./always-encrypted-enclaves-host-guardian-service-plan.md#trust-model) for information about the lowered security assurances when running in a VM.
+- `Base virtualization support` is always required, as it represents the minimum hardware features needed to run a hypervisor.
+- `Secure Boot` is recommended but not required for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted. Secure Boot protects against rootkits by requiring a Microsoft-signed bootloader to run immediately after UEFI initialization completes. If you are using Trusted Platform Module (TPM) attestation, Secure Boot enablement will be measured and enforced regardless of whether VBS is configured to require Secure Boot.
+- `DMA Protection` is recommended but not required for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted. DMA protection uses an IOMMU to protect VBS and enclave memory from direct memory access attacks. In a production environment, you should always use computers with DMA protection. In a dev/test environment, it's okay to remove the requirement for DMA protection. If the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance is virtualized, you'll most likely not have DMA protection available and will need to remove the requirement for VBS to run. Review the [trust model](./always-encrypted-enclaves-host-guardian-service-plan.md#trust-model) for information about the lowered security assurances when running in a VM.
 
 Before lowering the VBS required security features, check with your OEM or cloud service provider to confirm if there is a way to enable the missing platform requirements in UEFI or BIOS (e.g. enabling Secure Boot, Intel VT-d or AMD IOV).
 
@@ -70,61 +73,64 @@ To change the required platform security features for VBS, run the following com
 Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
 ```
 
-After changing the registry, restart your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer and check if VBS is running again.
+After changing the registry, restart the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer and check if VBS is running again.
 
-If your device is managed by your company, Group Policy or Microsoft Endpoint Manager may override any changes you make to these registry keys after you reboot.
+If the computer is managed by your company, Group Policy or Microsoft Endpoint Manager may override any changes you make to these registry keys after you reboot.
 Contact your IT help desk to see if they deploy policies that manage your VBS configuration.
 
 ## Step 3: Configure the attestation URL
 
-Next, you'll configure the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer with the URL for your HGS attestation service.
+Next, you'll configure the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer with the URL for theHGS attestation service.
 
-In an elevated PowerShell console, run the following command to configure the attestation URL:
+In an elevated PowerShell console, update and run the following command to configure the attestation URL.
+
+- Replace `hgs.bastion.local` with the HGS cluster name
+- You can run `Get-HgsServer` on any HGS computer to get the cluster name
+- The attestation URL should always end with `/Attestation`
+- SQL Server does not leverage the key protection features of HGS, so provide any dummy URL like `http://localhost` to `-KeyProtectionServerUrl`
 
 ```powershell
-# Replace "hgs.bastion.local" with your HGS cluster name
-# You can run Get-HgsServer on any HGS computer to get the cluster name
-# The attestation URL should always end with /Attestation
-# SQL Server does not leverage the key protection features of HGS, so provide any dummy URL like "http://localhost" to -KeyProtectionServerUrl
 Set-HgsClientConfiguration -AttestationServerUrl "https://hgs.bastion.local/Attestation" -KeyProtectionServerUrl "http://localhost"
 ```
 
-Unless you have registered this machine with HGS before, the command will report an attestation failure.
-This is normal.
-The `AttestationMode` field in the cmdlet output will indicate which attestation mode HGS is configured to use.
-Proceed to [Step 4A](#step-4a-register-a-computer-in-tpm-mode) to register your machine in TPM mode or [Step 4B](#step-4b-register-a-computer-in-host-key-mode) to register your machine in host key mode.
+Unless you have registered this machine with HGS before, the command reports an attestation failure. This result is normal.
+
+The `AttestationMode` field in the cmdlet output indicates which attestation mode HGS uses.
+
+Proceed to [Step 4A](#step-4a-register-a-computer-in-tpm-mode) to register the computer in TPM mode or [Step 4B](#step-4b-register-a-computer-in-host-key-mode) to register the computer in host key mode.
 
 ## Step 4A: Register a computer in TPM mode
 
-This step will walk you through the process to collect information about your computer's TPM state and register it with HGS.
-If your HGS attestation service is configured to use host key mode, skip to [Step 4B](#step-4b-register-a-computer-in-host-key-mode) instead.
+In this step, you collect information about the computer TPM state and register it with HGS.
 
-Before you begin collecting TPM measurements, make sure you are working on a known-good configuration of your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer.
-This includes having all necessary hardware installed and the latest firmware and software updates applied.
-HGS will measure your computers against this baseline when they attest, so it's important that you're in the most secure and intended state possible when collecting the TPM measurements.
+If the HGS attestation service is configured to use host key mode, skip to [Step 4B](#step-4b-register-a-computer-in-host-key-mode) instead.
 
-There are three data files collected for TPM attestation, some of which can be re-used if you have identically configured computers.
+Before you begin collecting TPM measurements, make sure you are working on a known-good configuration of the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer.
+The computer should have all necessary hardware installed and the latest firmware and software updates applied.
+HGS measures the computers against this baseline when they attest, so it's important to be in the most secure and intended state possible when collecting the TPM measurements.
+
+There are three data files collected for TPM attestation, some of which can be reused if you have identically configured computers.
 
 | Attestation artifact | What it measures | Uniqueness |
 | -------------------- | ---------------- | ---------- |
-| Platform identifier  | The public endorsement key in your computer's TPM and the endorsement key certificate from your TPM manufacturer. | 1 for each computer |
-| TPM baseline | The platform control registers (PCRs) in your TPM that measure the firmware and OS configuration loaded during the boot process. Examples include Secure Boot state and whether crash dumps are encrypted. | One baseline per unique computer configuration (identical hardware and software can use the same baseline) |
-| Code integrity policy | The [Windows Defender Application Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) policy you trust to protect your computers | One per unique CI policy deployed to your computers. |
+| Platform identifier  | The public endorsement key in the computer's TPM and the endorsement key certificate from the TPM manufacturer. | 1 for each computer |
+| TPM baseline | The platform control registers (PCRs) in the TPM that measure the firmware and OS configuration loaded during the boot process. Examples include Secure Boot state and whether crash dumps are encrypted. | One baseline per unique computer configuration (identical hardware and software can use the same baseline) |
+| Code integrity policy | The [Windows Defender Application Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) policy you trust to protect the computers | One per unique CI policy deployed to the computers. |
 
 You can configure more than one of each attestation artifact on HGS to support a mixed fleet of hardware and software.
-HGS only requires that a computer attesting match one policy from each policy category.
-For example, if you have three TPM baselines registered on HGS, your computer measurements can match any one of those baselines to meet the policy requirement.
+HGS only requires that a computer attesting matches one policy from each policy category.
+For example, if you have three TPM baselines registered on HGS, the computer measurements can match any one of those baselines to meet the policy requirement.
 
 ### Configure a code integrity policy
 
-HGS requires that every computer attesting in TPM mode have a Windows Defender Application Control (WDAC) policy applied.
+HGS requires that every computer attesting in TPM mode has a Windows Defender Application Control (WDAC) policy applied.
 WDAC code integrity policies restrict which software can run on a computer by checking each process that tries to execute code against a list of trusted publishers and file hashes.
-For the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] use case, enclaves are protected by Virtualization Based Security and cannot be modified from the host OS, so the strictness of the WDAC policy does not affect the security of your encrypted queries.
-As such, it's recommended that you deploy a simple audit-mode policy to your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers to meet the attestation requirement without imposing additional restrictions on your system.
+For the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] use case, enclaves are protected by Virtualization Based Security and cannot be modified from the host OS, so the strictness of the WDAC policy does not affect the security of encrypted queries.
+As such, it's recommended that you deploy a simple audit-mode policy to the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers to meet the attestation requirement without imposing additional restrictions on the system.
 
-If you are already using a custom WDAC code integrity policy on your computers to harden the OS configuration, you can skip to [Collect TPM attestation information](#collect-tpm-attestation-information).
+If you are already using a custom WDAC code integrity policy on the computers to harden the OS configuration, you can skip to [Collect TPM attestation information](#collect-tpm-attestation-information).
 
-1. There are pre-made example policies available on every Windows Server 2019, Windows 10 version 1809, and later operating system. The *AllowAll* policy will allow any software to run on the computer without restrictions. You need to convert the policy to a binary form understood by the OS and HGS before you can use it. In an elevated PowerShell console, run the following commands to compile the *AllowAll* policy:
+1. There are pre-made example policies available on every Windows Server 2019, Windows 10 version 1809, and later operating system. The `AllowAll` policy allows any software to run on the computer without restrictions. Convert the policy to a binary form understood by the OS and HGS in order to use it. In an elevated PowerShell console, run the following commands to compile the `AllowAll` policy:
 
     ```powershell
     # We are changing the policy to disable enforcement and user mode code protection before compiling
@@ -136,15 +142,15 @@ If you are already using a custom WDAC code integrity policy on your computers t
     ConvertFrom-CIPolicy -XmlFilePath $temppolicy -BinaryFilePath "$HOME\Desktop\allowall_cipolicy.bin"
     ```
 
-2. Follow the guidance in the Windows Defender Application Control deployment guide to deploy the "allowall_cipolicy.bin" file to your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers using [Group Policy](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy). For workgroup computers, you can follow the same process using the Local Group Policy Editor (gpedit.msc).
+2. Follow the guidance in the [Windows Defender Application Control deployment guide](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) to deploy the `allowall_cipolicy.bin` file to the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers using [Group Policy](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy). For workgroup computers, follow the same process using the Local Group Policy Editor (`gpedit.msc`).
 
-3. Run `gpupdate /force` on your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers to configure the new code integrity policy, then restart the computers to apply the policy.
+3. Run `gpupdate /force` on the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers to configure the new code integrity policy, then restart the computers to apply the policy.
 
 ### Collect TPM attestation information
 
 Repeat the following steps for each [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer that will be attesting with HGS:
 
-1. With your computer in a known-good state, run the following commands in PowerShell to collect the TPM attestation information:
+1. With the computer in a known-good state, run the following commands in PowerShell to collect the TPM attestation information:
 
     ```powershell
     # Collects the TPM EKpub and EKcert
@@ -159,7 +165,7 @@ Repeat the following steps for each [!INCLUDE [ssnoversion-md](../../../includes
     Copy-Item -Path "$env:SystemRoot\System32\CodeIntegrity\SIPolicy.p7b" -Destination "$path\$name-CIpolicy.bin"
     ```
 
-2. Copy the 3 attestation files to the HGS server.
+2. Copy the three attestation files to the HGS server.
 
 3. On the HGS server, run the following commands in an elevated PowerShell console to register the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer:
 
@@ -176,10 +182,10 @@ Repeat the following steps for each [!INCLUDE [ssnoversion-md](../../../includes
     ```
 
     > [!TIP]
-    > If you encounter an error trying to register your unique TPM identifier, make sure you [imported the TPM intermediate and root certificates](./always-encrypted-enclaves-host-guardian-service-deploy.md#switch-to-tpm-attestation) on the HGS computer you're using.
+    > If you encounter an error trying to register the unique TPM identifier, make sure you [imported the TPM intermediate and root certificates](./always-encrypted-enclaves-host-guardian-service-deploy.md#switch-to-tpm-attestation) on the HGS computer you're using.
 
 In addition to the platform identifier, TPM baseline, and code integrity policy, there are built-in policies configured and enforced by HGS that you may need to change.
-These built-in policies are measured from the TPM baseline you collect from the server and represent a variety of security settings that should be enabled to protect your computer.
+These built-in policies are measured from the TPM baseline you collect from the server and represent a variety of security settings that should be enabled to protect the computer.
 If you have any computers that do not have an IOMMU present to protect against DMA attacks (for example, a VM), you'll need to disable the IOMMU policy.
 
 To disable the IOMMU requirement, run the following command on the HGS server:
@@ -201,11 +207,11 @@ Get-HgsAttestationTpmPolicy
 
 ## Step 4B: Register a computer in host key mode
 
-This step will walk you through the process to generate a unique key for your host and register it with HGS.
-If your HGS attestation service is configured to use TPM mode, follow the guidance in [Step 4A](#step-4a-register-a-computer-in-tpm-mode) instead.
+This step will walk you through the process to generate a unique key for the host and register it with HGS.
+If the HGS attestation service is configured to use TPM mode, follow the guidance in [Step 4A](#step-4a-register-a-computer-in-tpm-mode) instead.
 
-Host key attestation works by generating an asymmetric key pair on your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer and providing HGS with the public half of that key.
-To generate your key pair, run the following command in an elevated PowerShell console:
+Host key attestation works by generating an asymmetric key pair on the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer and providing HGS with the public half of that key.
+To generate the key pair, run the following command in an elevated PowerShell console:
 
 ```powershell
 Set-HgsClientHostKey
@@ -251,30 +257,30 @@ FallbackAttestationServerUrl   :
 IsFallbackInUse                : False
 ```
 
-The two most important fields in the output are **AttestationStatus**, which tells you if the computer passed attestation, and **AttestationSubStatus** which will explain which policies the computer failed if the computer failed attestation.
+The two most important fields in the output are `AttestationStatus`, which tells you if the computer passed attestation, and `AttestationSubStatus`, which explains which policies the computer failed if the computer failed attestation.
 
-The most common values that may appear in **AttestationStatus** are explained below:
+The most common values that may appear in `AttestationStatus` are explained below:
 
-| AttestationStatus | Explanation |
+| `AttestationStatus` | Explanation |
 | ----------------- | ----------- |
 | Expired | The host passed attestation previously, but the health certificate it was issued has expired. Ensure the host and HGS time are in sync. |
-| InsecureHostConfiguration | The computer did not meet one or more of the attestation policies configured on the HGS server. See AttestationSubStatus for more information. |
+| `InsecureHostConfiguration` | The computer did not meet one or more of the attestation policies configured on the HGS server. For more information, see `AttestationSubStatus`. |
 | NotConfigured | The computer is not configured with an attestation URL. [Configure the attestation URL](#step-3-configure-the-attestation-url) |
 | Passed | The computer passed attestation and is trusted to run [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] enclaves. |
-| TransientError | The attestation attempt failed due to a temporary error. This usually means there was an issue contacting HGS over the network. Check your network connection and ensure the computer can resolve and route to the HGS service name. |
-| TpmError | Your computer's TPM device reported an error during the attestation attempt. Check the TPM logs for more information. Clearing the TPM may resolve the issue, but take care to suspend BitLocker and other services that rely on your TPM before clearing the TPM. |
-| UnauthorizedHost | Your host key is not known to HGS. Follow the instructions in [Step 4B](#step-4b-register-a-computer-in-host-key-mode) to register the computer with HGS. |
+| `TransientError` | The attestation attempt failed due to a temporary error. This error usually means there was an issue contacting HGS over the network. Check the network connection and ensure the computer can resolve and route to the HGS service name. |
+| `TpmError` | The computer's TPM device reported an error during the attestation attempt. Check the TPM logs for more information. Clearing the TPM may resolve the issue, but take care to suspend BitLocker and other services that rely on the TPM before clearing the TPM. |
+| `UnauthorizedHost` | The host key is not known to HGS. Follow the instructions in [Step 4B](#step-4b-register-a-computer-in-host-key-mode) to register the computer with HGS. |
 
-When the **AttestationStatus** shows **InsecureHostConfiguration**, the **AttestationSubStatus** field will be populated with one or more policy names that failed.
+When the `AttestationStatus` shows `InsecureHostConfiguration`, the `AttestationSubStatus` field will be populated with one or more policy names that failed.
 The table below explains the most common values and how to remediate the errors.
 
 | AttestationSubStatus | What it means and what to do |
 | -------------------- | ---------------------------- |
-| CodeIntegrityPolicy | The code integrity policy on your computer is not registered with HGS *or* your computer is not currently using a code integrity policy. See [Configure a code integrity policy](#configure-a-code-integrity-policy) for guidance. |
+| CodeIntegrityPolicy | The code integrity policy on the computer is not registered with HGS *or* the computer is not currently using a code integrity policy. See [Configure a code integrity policy](#configure-a-code-integrity-policy) for guidance. |
 | DumpsEnabled | The computer is configured to allow crash dumps, but the Hgs_DumpsEnabled policy disallows dumps. Disable dumps on this computer or disable the Hgs_DumpsEnabled policy to continue. |
-| FullBoot | The computer resumed from a sleep state or hibernation, resulting in changes to your TPM measurements. Restart your computer to generate clean TPM measurements. |
-| HibernationEnabled | The computer is configured to allow hibernation with unencrypted hibernation files. Disable hibernation on your computer to resolve this issue. |
-| HypervisorEnforcedCodeIntegrityPolicy | The computer is not configured to use a code integrity policy. Check your Group Policy or Local Group Policy > Computer Configuration > Administrative Templates > System > Device Guard > Turn on Virtualization Based Security > Virtualization based protection of code integrity. This policy item should be "Enabled without UEFI lock". |
-| Iommu | This computer does not have an IOMMU device enabled. If it's a physical computer, enable the IOMMU in your UEFI configuration menu. If it's a virtual machine and an IOMMU is not available, run `Disable-HgsAttestationPolicy Hgs_IommuEnabled` on the HGS server. |
-| SecureBoot | Secure Boot is not enabled on this computer. Enable Secure Boot in your UEFI configuration menu to resolve this error. |
-| VirtualSecureMode | Virtualization Based Security is not running on this computer. Follow the guidance in [Step 2: Verify VBS is running on your computer](#step-2-verify-virtualization-based-security-is-running). |
+| FullBoot | The computer resumed from a sleep state or hibernation, resulting in changes to the TPM measurements. Restart the computer to generate clean TPM measurements. |
+| HibernationEnabled | The computer is configured to allow hibernation with unencrypted hibernation files. Disable hibernation on the computer to resolve this issue. |
+| HypervisorEnforcedCodeIntegrityPolicy | The computer is not configured to use a code integrity policy. Check the Group Policy or Local Group Policy > Computer Configuration > Administrative Templates > System > Device Guard > Turn on Virtualization Based Security > Virtualization based protection of code integrity. This policy item should be "Enabled without UEFI lock". |
+| Iommu | This computer does not have an IOMMU device enabled. If it's a physical computer, enable the IOMMU in the UEFI configuration menu. If it's a virtual machine and an IOMMU is not available, run `Disable-HgsAttestationPolicy Hgs_IommuEnabled` on the HGS server. |
+| SecureBoot | Secure Boot is not enabled on this computer. Enable Secure Boot in the UEFI configuration menu to resolve this error. |
+| VirtualSecureMode | Virtualization Based Security is not running on this computer. Follow the guidance in [Step 2: Verify VBS is running on the computer](#step-2-verify-virtualization-based-security-is-running). |

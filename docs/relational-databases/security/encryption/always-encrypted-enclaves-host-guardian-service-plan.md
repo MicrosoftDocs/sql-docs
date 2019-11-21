@@ -42,7 +42,9 @@ Shared storage is not required between the HGS nodes. A copy of the attestation 
 
 ### Network connectivity
 
-Both the SQL client and [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] will need to be able to communicate with HGS over HTTP. You can optionally configure HGS with a TLS certificate to support encrypted HTTPS connections.
+Both the SQL client and [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] will need to be able to communicate with HGS over HTTP.
+It is recommended to configure HGS with a TLS certificate to encrypt all communications between the SQL Client and HGS, as well as between SQL Server and HGS.
+This will help protect you from man in the middle attacks and ensure you're talking to the correct HGS server.
 
 HGS servers require connectivity between each node in the cluster to ensure the attestation service database stays in sync.
 It's a failover cluster best practice to connect the HGS nodes on one network for cluster communication and use a separate network for other clients to communicate with HGS.
@@ -56,6 +58,12 @@ HGS supports two attestation modes for use with [!INCLUDE [ssnoversion-md](../..
 | ---------------- | ------- |
 | TPM | Trusted Platform Module (TPM) attestation provides the strongest assurance about the identity and integrity of the computer attesting with HGS. It requires the computers running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to have TPM version 2.0 installed. Each TPM chip contains a unique and immutable identity (Endorsement Key) that can be used to identify a particular computer. TPMs also measure the boot process of the computer, storing hashes of security-sensitive measurements in Platform Control Registers (PCRs) that can be read, but not modified by the operating system. These measurements are used during attestation to provide cryptographic proof that a computer is in the security configuration it claims to be. |
 | Host Key | Host key attestation is a simpler form of attestation that only verifies the identity of a computer by using an asymmetric key pair. The private key is stored on the computer running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and the public key is provided to HGS. The security configuration of the computer is not measured and a TPM 2.0 chip is not required on the computer running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. It is important to protect the private key installed on the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer because anyone who obtains this key can impersonate a legitimate [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer and the VBS enclave running inside [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. |
+
+In general, we make the following recommendations:
+
+- For **physical production servers**, we recommend using TPM attestation for the additional assurances it provides.
+- For **virtual production servers**, we recommend host key attestation since most virtual machines do not have virtual TPMs or Secure Boot. If you're using a security-enhanced VM like an [on-premises shielded VM](https://aka.ms/shieldedvms), you may choose to use TPM mode. In all virtualized deployments, the attestation process only analyzes your VM environment -- not the virtualization platform underneath the VM.
+- For **dev/test scenarios**, we recommend host key attestation because it is easier to set up.
 
 ### Trust model
 
@@ -129,4 +137,4 @@ If you're using Always Encrypted with VBS enclaves in a development or test envi
 
 ## Next steps
 
-- [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Deploy the Host Guardian Service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md)

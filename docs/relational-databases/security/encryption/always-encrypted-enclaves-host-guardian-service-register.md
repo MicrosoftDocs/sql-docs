@@ -56,14 +56,14 @@ In the context of attesting [!INCLUDE [ssnoversion-md](../../../includes/ssnover
 
 - **Base virtualization support** is always required, as it represents the minimum hardware features needed to run a hypervisor on your computer.
 - **Secure Boot** is recommended but not required for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted. Secure Boot protects against rootkits by requiring a Microsoft-signed bootloader to run immediately after UEFI initialization completes. If you are using TPM attestation, Secure Boot enablement will be measured and enforced regardless of whether VBS is configured to require Secure Boot.
-- **DMA Protection** is strongly recommended but not required for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted. DMA protection uses an IOMMU to protect VBS and enclave memory from direct memory access attacks. In a production environment, you should always use computers with DMA protection. In a dev/test environment, it's okay to remove the requirement for DMA protection. If your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is virtualized, you'll most likely not have DMA protection available and will need to remove the requirement for VBS to run.
+- **DMA Protection** is strongly recommended but not required for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted. DMA protection uses an IOMMU to protect VBS and enclave memory from direct memory access attacks. In a production environment, you should always use computers with DMA protection. In a dev/test environment, it's okay to remove the requirement for DMA protection. If your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is virtualized, you'll most likely not have DMA protection available and will need to remove the requirement for VBS to run. Review the [trust model](./always-encrypted-enclaves-host-guardian-service-plan.md#trust-model) for information about the lowered security assurances when running in a VM.
 
-Before lowering the VBS required security features, check with your OEM to confirm if there is a way to enable the missing platform requirements in UEFI or BIOS.
+Before lowering the VBS required security features, check with your OEM or cloud service provider to confirm if there is a way to enable the missing platform requirements in UEFI or BIOS (e.g. enabling Secure Boot, Intel VT-d or AMD IOV).
 
 To change the required platform security features for VBS, run the following command in an elevated PowerShell console:
 
 ```powershell
-# Value 0 = No security features required (base virtualization support only)
+# Value 0 = No security features required (use this for Azure VMs)
 # Value 1 = Only Secure Boot is required
 # Value 2 = Only DMA protection is required (default configuration)
 # Value 3 = Both Secure Boot and DMA protection are required
@@ -84,7 +84,8 @@ In an elevated PowerShell console, run the following command to configure the at
 ```powershell
 # Replace "hgs.bastion.local" with your HGS cluster name
 # You can run Get-HgsServer on any HGS computer to get the cluster name
-# The URL should always end with /Attestation
+# The attestation URL should always end with /Attestation
+# SQL Server does not leverage the key protection features of HGS, so provide any dummy URL like "http://localhost" to -KeyProtectionServerUrl
 Set-HgsClientConfiguration -AttestationServerUrl "https://hgs.bastion.local/Attestation" -KeyProtectionServerUrl "http://localhost"
 ```
 
@@ -175,18 +176,21 @@ Repeat the following steps for each [!INCLUDE [ssnoversion-md](../../../includes
     ```
 
     > [!TIP]
-    > If you encounter an error trying to register your unique TPM identifier, make sure you [imported the TPM endorsement key intermediate and root certificates](./always-encrypted-enclaves-host-guardian-service-deploy.md#switch-to-tpm-attestation) on the HGS computer you're using.
+    > If you encounter an error trying to register your unique TPM identifier, make sure you [imported the TPM intermediate and root certificates](./always-encrypted-enclaves-host-guardian-service-deploy.md#switch-to-tpm-attestation) on the HGS computer you're using.
 
 In addition to the platform identifier, TPM baseline, and code integrity policy, there are built-in policies configured and enforced by HGS that you may need to change.
 These built-in policies are measured from the TPM baseline you collect from the server and represent a variety of security settings that should be enabled to protect your computer.
 If you have any computers that do not have an IOMMU present to protect against DMA attacks (for example, a VM), you'll need to disable the IOMMU policy.
-Note that disabling the IOMMU policy means any computer can attest without an IOMMU -- you cannot scope the policy to a particular computer.
 
 To disable the IOMMU requirement, run the following command on the HGS server:
 
 ```powershell
 Disable-HgsAttestationPolicy Hgs_IommuEnabled
 ```
+
+> [!NOTE]
+> If you disable the IOMMU policy (or any policy starting with **Hgs_**), IOMMUs will not be required of any computer attesting with HGS.
+> It is not possible to disable the IOMMU policy for just a single computer.
 
 You can review the list of registered TPM hosts and policies with the following PowerShell commands:
 
@@ -271,6 +275,6 @@ The table below explains the most common values and how to remediate the errors.
 | FullBoot | The computer resumed from a sleep state or hibernation, resulting in changes to your TPM measurements. Restart your computer to generate clean TPM measurements. |
 | HibernationEnabled | The computer is configured to allow hibernation with unencrypted hibernation files. Disable hibernation on your computer to resolve this issue. |
 | HypervisorEnforcedCodeIntegrityPolicy | The computer is not configured to use a code integrity policy. Check your Group Policy or Local Group Policy > Computer Configuration > Administrative Templates > System > Device Guard > Turn on Virtualization Based Security > Virtualization based protection of code integrity. This policy item should be "Enabled without UEFI lock". |
-| Iommu | This computer does not have an IOMMU device enabled. If it's a physical computer, enable the IOMMU in your UEFI configuration menu. If it's a virtual machine and an IOMMU is not available, disable the Hgs_IommuEnabled policy on the HGS server. |
+| Iommu | This computer does not have an IOMMU device enabled. If it's a physical computer, enable the IOMMU in your UEFI configuration menu. If it's a virtual machine and an IOMMU is not available, run `Disable-HgsAttestationPolicy Hgs_IommuEnabled` on the HGS server. |
 | SecureBoot | Secure Boot is not enabled on this computer. Enable Secure Boot in your UEFI configuration menu to resolve this error. |
 | VirtualSecureMode | Virtualization Based Security is not running on this computer. Follow the guidance in [Step 2: Verify VBS is running on your computer](#step-2-verify-virtualization-based-security-is-running). |

@@ -208,6 +208,7 @@ All HGS computers in your cluster will now use host key mode when a [!INCLUDE [s
 
 In a default installation, HGS only exposes an HTTP (port 80) binding.
 You can configure an HTTPS (port 443) binding to encrypt all communications between [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers and HGS.
+It is recommended that all production instances of HGS use an HTTPS binding.
 
 1. Obtain a TLS certificate from your certificate authority, using the fully qualified HGS service name from Step 1.3 as the subject name. If you do not know your service name, you can find it by running `Get-HgsServer` on any HGS computer. You can add alternative DNS names to the Subject Alternate Name list if your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers use a different DNS name to reach your HGS cluster (e.g. if HGS is behind a network load balancer with a different address).
 

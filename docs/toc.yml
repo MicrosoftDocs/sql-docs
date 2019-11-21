@@ -8195,6 +8195,10 @@
                 items:
                   - name: Plan for Host Guardian Service attestation
                     href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
+                  - name: Deploy the Host Guardian Service
+                    href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md
+                  - name: Register computer with Host Guardian Service
+                    href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-register.md
           - name: Manage keys for Always Encrypted with secure enclaves
             items:
               - name: Manage enclave-enabled keys

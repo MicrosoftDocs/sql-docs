@@ -175,7 +175,7 @@ computeContext <- RxInSqlServer(connectionString = connectionString )
 rxSyncPackages(computeContext=computeContext, verbose=TRUE)
 ```
 
-Package synchronization works on a per database and per user basis. For more information, see [R package synchronization for SQL Server](../r/package-install-uninstall-and-sync.md).
+Package synchronization works on a per database and per user basis. For more information, see [R package synchronization for SQL Server](package-install-uninstall-and-sync.md).
 
 ### Use a stored procedure to list packages in SQL Server
 
@@ -211,5 +211,5 @@ exec sp_execute_external_script
 
 + [Enable remote R package management](r-package-how-to-enable-or-disable.md)
 + [Synchronize R packages](package-install-uninstall-and-sync.md)
-+ [Tips for installing R packages](packages-installed-in-user-libraries.md)
++ [Tips for using R packages](tips-for-using-r-packages.md)
 + [Get R package information](../package-management/r-package-information.md)

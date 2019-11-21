@@ -253,14 +253,18 @@
         href: ../advanced-analytics/package-management/r-package-information.md
       - name: Install R packages
         href: ../advanced-analytics/package-management/install-r-packages-standard-tools.md
-      - name: Install with RevoScaleR
-        href: ../advanced-analytics/package-management/install-r-packages-with-revoscaler.md
       - name: Install with T-SQL
         href: ../advanced-analytics/package-management/install-r-packages-with-tsql.md
-      - name: R package synchronization
-        href: ../advanced-analytics/package-management/package-install-uninstall-and-sync.md
-      - name: Enable remote management
-        href: ../advanced-analytics/package-management/r-package-how-to-enable-or-disable.md
+      - name: Use package managers
+        href: use-r-package-managers-on-sql-server.md
+      - name: Use RevoScaleR
+        items:
+        - name: Install with RevoScaleR
+          href: ../advanced-analytics/package-management/install-r-packages-with-revoscaler.md
+        - name: Enable remote R management
+          href: ../advanced-analytics/package-management/r-package-how-to-enable-or-disable.md
+        - name: Synchronize R packages
+          href: ../advanced-analytics/package-management/package-install-uninstall-and-sync.md
       - name: Install R packages
         href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
       - name: Create a miniCRAN repo

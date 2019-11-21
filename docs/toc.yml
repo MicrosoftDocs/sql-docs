@@ -10415,8 +10415,7 @@
     - name: Run & Connect - Cloud
       href: linux/quickstart-install-connect-clouds.md
     - name: Use Visual Studio Code
-      href: visual-studio-code/sql-server-develop-use-vscode
-
+      href: /visual-studio-code/sql-server-develop-use-vscode.md
   - name: Tutorials
     items:
     - name: Migrate from Windows

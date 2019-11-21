@@ -18,9 +18,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-To manage your database, you need a tool. While your databases run in the cloud, on Windows, or [Linux](../linux/sql-server-linux-overview.md), your tool doesn't need to run on the same platform as the database.
-
-There are many database tools available, if you need help with deciding which tool to, see [Which tool should I use?](#which-tool-should-i-choose).
+To manage your database, you need a tool. Whether your databases run in the cloud, on Windows, on macOS, or on [Linux](../linux/sql-server-linux-overview.md), your tool doesn't need to run on the same platform as the database.
 
 You can view the links to the different SQL tools in the following tables.
 

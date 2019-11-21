@@ -189,7 +189,7 @@ Disable-HgsAttestationPolicy Hgs_IommuEnabled
 ```
 
 > [!NOTE]
-> If you disable the IOMMU policy (or any policy starting with **Hgs_**), IOMMUs will not be required of any computer attesting with HGS.
+> If you disable the IOMMU policy, IOMMUs will not be required for any computer attesting with HGS.
 > It is not possible to disable the IOMMU policy for just a single computer.
 
 You can review the list of registered TPM hosts and policies with the following PowerShell commands:

@@ -1,5 +1,6 @@
 ---
-title: "Register the Host Guardian Service | Microsoft Docs"
+title: "Register computer with Host Guardian Service"
+description: "Register the SQL Server computer with the Host Guardian Service for Always Encrypted with Secure Enclaves."
 ms.custom: ""
 ms.date: "11/15/2019"
 ms.prod: sql
@@ -11,7 +12,7 @@ ms.author: ryanpu
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-# Register the Host Guardian Service
+# Register computer with Host Guardian Service
 
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 

@@ -1,7 +1,7 @@
 ---
 title: Overview of the workload comparison process
 description: Database Experimentation Assistant (DEA) is an A/B testing solution for changes in SQL Server environments, such as upgrades or new indexes.
-ms.date: 11/16/2019
+ms.date: 11/22/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -30,9 +30,9 @@ The first stage of SQL Server A/B testing is to capture a trace on your source s
 
 Considerations:
 
-- Before you start capturing your workload trace, be sure to back up the databases from which you're capturing the trace.
-- A DEA user must be configured to connect to the database by using Windows authentication.
-- A SQL Server service account requires access to the source trace file path.
+- Before you starting, be sure to back up the databases from which you'll be capturing the trace.
+- The DEA user must be able to connect to the database by using Windows authentication.
+- A SQL Server service account must be able to access the source trace file path.
 - For DEA to determine whether the performance of a query is improved or degraded, that query must execute at least 15 times during the capture period.
 
 ## Replaying a workload trace
@@ -42,7 +42,7 @@ The second stage of SQL Server A/B testing is to replay the trace file you captu
 Target 1, which mimics your source server
 Target 2, which mimics your proposed target environment.
 
-The hardware configurations of Target 1 and Target 2 should be as similarly as possible so SQL Server can accurately analyze the performance effect of your proposed changes.
+The hardware configurations of Target 1 and Target 2 should be as similar as possible so that SQL Server can accurately analyze the performance effect of your proposed changes.
 
 Considerations:
 
@@ -52,12 +52,12 @@ Considerations:
 
 ## Analyzing the replayed workload traces
 
-The final stage in the process is to generate an analysis report using the replay traces. You can then review the  analysis report for insights about the potential performance implications of the proposed change.
+The final stage in the process is to generate an analysis report using the replay traces and to review the report for insights about the potential performance implications of the proposed change.
 
 Considerations:
 
-- If one or more components are missing, a prerequisites page with links for downloads appears when you try to generate a new analysis report (internet connection required).
-- To view a report that was generated in an earlier version of the tool, you must first update the schema.
+- If one or more components are missing, a prerequisites page with links for downloads appears when you try to generate a new analysis report (Internet connection required).
+- To view a report generated in an earlier version of the tool, you must first update the schema.
 
 ## See also
 

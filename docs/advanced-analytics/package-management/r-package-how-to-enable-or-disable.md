@@ -16,9 +16,6 @@ monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 
 This article describes how to enable remote management of R packages from a client workstation or a different Machine Learning Server. After the package management feature has been enabled on SQL Server, you can use RevoScaleR commands on a client to install packages on SQL Server.
 
-> [!NOTE]
-> Currently management of R libraries is supported; support for Python is on the roadmap.
-
 By default, the external package management feature for SQL Server is disabled. You must run a separate script to enable the feature as described in the next section.
 
 ## Overview of process and tools

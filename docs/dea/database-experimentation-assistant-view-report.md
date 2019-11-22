@@ -1,8 +1,8 @@
 ---
-title: View analysis reports  for SQL Server upgrades
+title: View analysis reports for SQL Server upgrades
 description: View analysis reports in Database Experimentation Assistant
 ms.custom: "seo-lt-2019"
-ms.date: 11/21/2019
+ms.date: 11/22/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -16,17 +16,17 @@ ms.reviewer: mathoma
 
 # View analysis reports in Database Experimentation Assistant
 
-After you [create your analysis report](database-experimentation-assistant-create-report.md) in Database Experimentation Assistant (DEA), complete the steps described in this article to view the report and gain performance insights provided by your A/B test.
+After you use Database Experimentation Assistant (DEA) to [create an analysis report](database-experimentation-assistant-create-report.md), use the steps below to review the report for performance insights based on your A/B test.
 
 ## Select a server
 
 In DEA, select the menu icon. In the expanded menu, select **Analysis Reports** next to the checklist icon to open the Analysis Reports window.
 
-Under **Analysis Reports**, enter the name of a computer running SQL Server that has an analysis database. Select **Connect**.
+Under **Analysis Reports**, enter the name of a computer running SQL Server that has an analysis database, and then select **Connect**.
 
 ![Connect to an existing report](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
-If you're missing any dependencies, the **Prerequisites** page prompts you with links to install them. Install the prerequisites, and then select **Try again**.
+If you're missing any dependencies, the **Prerequisites** page prompts you with links to install them. If necessary, install the prerequisites, and then select **Try again**.
 
 ![Prerequisites page](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
 

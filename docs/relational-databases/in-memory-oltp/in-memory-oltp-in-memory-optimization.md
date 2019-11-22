@@ -1,7 +1,7 @@
 ---
 title: "In-Memory OLTP (In-Memory Optimization) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2019"
+ms.date: "11/21/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -72,7 +72,7 @@ This section provides links to other websites that contain information about In-
 
 -   [SQL Server In-Memory OLTP and Columnstore Feature Comparison](https://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
 
--   What's new for In-Memory OLTP in SQL Server 2016 [Part 1](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) and [Part 2](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
+-   What's new for In-Memory OLTP in SQL Server 2016, [Part 1](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) and [Part 2](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
   
 -   [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)  
   
@@ -80,16 +80,16 @@ This section provides links to other websites that contain information about In-
 
 ## <a name="anchorname-17minute-video"></a>17 minute video, indexed
 
-- _Video title:_ **In-Memory OLTP in SQL Server 2016**
-- _Published date:_ 2019-03-10
-- _Duration:_ 17:32
-- _Hosted by:_ Jos de Bruijn, Senior Program Manager on SQL Server
+- _Video title:_ &nbsp; **In-Memory OLTP in SQL Server 2016**
+- _Published date:_ &nbsp; 2019-03-10, on `YouTube.com`.
+- _Duration:_ &nbsp; 17:32 &nbsp; &nbsp; (See the following [**Index**](#anchorname-index-17minute-video) for links into the video.)
+- _Hosted by:_ &nbsp; Jos de Bruijn, Senior Program Manager on SQL Server
 
 ### Demo can be downloaded
 
-At the time mark 08:09, the video runs a demonstration twice. You can download the runnable performance demo that is used in the video, from the following link:
+At the time mark 08:09, the video runs a demonstration twice. You can download the source code for runnable performance demo that is used in the video, from the following link:
 
-- [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+- [In-Memory OLTP Performance Demo v1.0, source code](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 
 The general steps seen in the video are as follows:
 
@@ -97,7 +97,7 @@ The general steps seen in the video are as follows:
 2. Next we see a memory-optimized edition of the table being created and populated by a few clicks in SQL Server Management Studio (SSMS.exe).
 3. Then the demo is rerun with the memory-optimized table. An enormous speed improvement is measured.
 
-### Index to each section in the video
+### <a name="anchorname-index-17minute-video"></a>Index to each section in the video
 
 | Time mark link | Section title |
 | :------------- | :------------ |

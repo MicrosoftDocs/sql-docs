@@ -1,5 +1,5 @@
 ---
-title: Permissions in Parallel Data Warehouse | Microsoft Docs
+title: Permissions
 description: This article describes the requirements and options for managing database permissions for Parallel Data Warehouse.  
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Managing permissions in Parallel Data Warehouse

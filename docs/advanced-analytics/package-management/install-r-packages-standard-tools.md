@@ -55,8 +55,6 @@ This includes R libraries installed with other Microsoft products.
 
 If the SQL Server has access to the Internet, then you can use standard package installation tools to install R packages.
 
-For example, the following procedure uses RGui:
-
 1. Determine the location of the instance library (see [Get R package information](../package-management/r-package-information.md)) and navigate to the folder where the R tools are installed.
 
    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
@@ -86,20 +84,20 @@ Identifying all dependencies gets complicated. For R, we recommend that you use 
 
 For more information, see [Create a local R package repository using miniCRAN](create-a-local-package-repository-using-minicran.md).
 
-Once the zip file is on the SQL Server instance, you can install it using standard R tools on the server. For example, the following procedure uses RGui:
+Once the zip file is on the SQL Server instance, you can install it using standard R tools on the server.
 
 1. Determine the location of the instance library (see [Get R package information](../package-management/r-package-information.md)) and navigate to the folder where the R tools are installed. 
 
    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
    For example the default path for a SQL Server default instance is:
 
-   `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\Rgui.exe`
+   `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
    For example the default path for a SQL Server default instance is:
 
-   `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\Rgui.exe`
+   `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
 1. Run **R** or **RStudio** as administrator.

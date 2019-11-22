@@ -110,6 +110,11 @@ pdb[, c("Package", "Version", "License")]
 
 After you have a local repository with the packages you need, move the package repository to the SQL Server computer. The following procedure describes how to install the packages using R tools.
 
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> The recommended method for installing packages is using **sqlmlutils**. See [Install new R packages with sqlmlutils](install-additional-r-packages-on-sql-server.md).
+::: moniker-end
+
 1. Copy the folder containing the miniCRAN repository, in its entirety, to the server where you plan to install the packages. The folder typically has this structure: 
 
    `<miniCRAN root>/bin/windows/contrib/version/<all packages>`

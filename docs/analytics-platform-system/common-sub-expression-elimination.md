@@ -1,5 +1,5 @@
 ---
-title: "Common subexpression
+title: "Common subexpression"
 description: "Displays example query improvement that was introduced in Analytics Platform System CU7.3"
 author: "mzaman1" 
 ms.prod: "sql"

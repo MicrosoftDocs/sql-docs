@@ -1,5 +1,5 @@
 ---
-title: Track appliance alerts - Analytics Platform System
+title: Track appliance alerts
 description: Track appliance alerts in Analytics Platform System.
 author: mzaman1 
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: Tempdb database - Parallel Data Warehouse
+title: Tempdb database
 description: Tempdb database in Parallel Data Warehouse.
 author: mzaman1 
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: Appliance network configuration - Analytics Platform System
+title: Appliance network configuration
 description: The Analytics Platform System (APS) appliance is built and configured with a fix set of IP addresses throughout all servers and applicable devices from the IHV's factory floor. Upon delivery of the appliance, the external (Ethernet) IP addressed must be reconfigured to match the specific customer's data center requirements.  
 author: mzaman1 
 ms.prod: sql

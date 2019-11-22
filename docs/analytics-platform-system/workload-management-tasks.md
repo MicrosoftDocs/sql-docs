@@ -1,5 +1,5 @@
 ---
-title: Workload Management Tasks - Analytics Platform System
+title: Workload Management Tasks
 description: Workload management tasks in Analytics Platform System.
 author: mzaman1 
 ms.prod: sql

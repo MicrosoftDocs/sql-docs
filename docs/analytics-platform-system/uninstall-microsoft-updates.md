@@ -1,5 +1,5 @@
 ---
-title: Uninstall Microsoft updates - Analytics Platform System
+title: Uninstall Microsoft updates
 description: Uninstall Microsoft updates in Analytics Platform System (APS).
 author: mzaman1 
 ms.prod: sql

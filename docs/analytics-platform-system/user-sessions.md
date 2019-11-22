@@ -1,5 +1,5 @@
 ---
-title: User sessions in Analytics Platform System
+title: User sessions
 description: User sessions in Analytics Platform System's Parallel Data Warehouse.
 author: mzaman1 
 ms.prod: sql

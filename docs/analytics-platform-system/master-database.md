@@ -1,5 +1,5 @@
 ---
-title: Master database - Parallel Data Warehouse
+title: Master database
 description: Learn about the master database in Parallel Data Warehouse.
 author: mzaman1 
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: High availability in Analytics Platform System
+title: High availability
 description: Learn how Analytics Platform System (APS) is architected for high availability. 
 author: mzaman1 
 ms.prod: sql

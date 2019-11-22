@@ -1,5 +1,5 @@
 ---
-title: Hardware configurations - Analytics Platform System
+title: Hardware configurations
 description: The Analytics Platform System (APS) appliance hardware is architected  with scalable units so that you buy the right amount of processing and storage according to your business requirements. The appliance scales storage for Parallel Data Warehouse from a few terabytes to over 6 petabytes of data.  
 author: mzaman1 
 ms.prod: sql

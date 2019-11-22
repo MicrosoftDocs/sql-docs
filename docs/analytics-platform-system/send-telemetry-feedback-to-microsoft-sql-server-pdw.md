@@ -1,5 +1,5 @@
 ---
-title: Telemetry feedback - Analytics Platform System
+title: Telemetry feedback
 description: Send telemetry feedback to Microsoft for Analytics Platform System.
 author: mzaman1 
 ms.prod: sql

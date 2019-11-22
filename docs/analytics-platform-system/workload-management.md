@@ -1,5 +1,5 @@
 ---
-title: Workload management in Analytics Platform System
+title: Workload management
 description: Workload management in Analytics Platform System.
 author: mzaman1 
 ms.prod: sql

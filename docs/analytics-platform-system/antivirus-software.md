@@ -1,5 +1,5 @@
 ---
-title: Antivirus software - Analytics Platform System (APS)
+title: Antivirus software
 description: If your data center requires antivirus software, use these guidelines to install antivirus software on Analytics Platform System (APS). We recommend not installing antivirus software unless it is a firm requirement of your data center. 
 author: mzaman1 
 ms.prod: sql

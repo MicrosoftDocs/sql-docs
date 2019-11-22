@@ -1,5 +1,5 @@
 ---
-title: Uninstall Analytics Platform System hotfixes
+title: Uninstall hotfixes
 description: Uninstall Analytics Platform System hotfixes.
 author: mzaman1 
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: Download Microsoft Updates - Analytics Platform System
+title: Download Microsoft Updates
 description: This topic discusses how to download updates from the Microsoft Update Catalog to Windows Server Update Services (WSUS) and apply those updates to the Analytics Platform System appliance servers. Microsoft Update will install all applicable updates for Windows and SQL Server. WSUS is installed on the VMM virtual machine of the appliance. 
 author: mzaman1 
 ms.prod: sql

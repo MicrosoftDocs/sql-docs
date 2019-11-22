@@ -1,5 +1,5 @@
 ---
-title: Remote table copy - Parallel Data Warehouse
+title: Remote table copy
 description: Using remote table copy in Analytics Platform System Parallel Data Warehouse.
 author: mzaman1 
 ms.prod: sql

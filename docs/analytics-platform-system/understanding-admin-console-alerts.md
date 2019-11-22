@@ -1,5 +1,5 @@
 ---
-title: Admin Console alerts - Analytics Platform System
+title: Admin Console alerts
 description: Understanding Admin Console alerts in Analytics Platform System (APS).
 author: mzaman1 
 ms.prod: sql

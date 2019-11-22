@@ -1,5 +1,5 @@
 ---
-title: Power the appliance on or off - Analytics Platform System
+title: Power the appliance on or off
 description: Power the appliance on or off for Analytics Platform System 
 author: mzaman1 
 ms.prod: sql

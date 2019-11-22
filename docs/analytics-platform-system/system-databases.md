@@ -1,5 +1,5 @@
 ---
-title: System databases - Parallel Data Warehouse
+title: System databases
 description: System databases in Parallel Data Warehouse (PDW).
 author: mzaman1 
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: Monitor with SCOM - Analytics Platform System
+title: Monitor with SCOM
 description: Use System Center Operations Manager (SCOM) to monitor the Analytics Platform System  (APS)appliance.
 author: mzaman1 
 ms.prod: sql

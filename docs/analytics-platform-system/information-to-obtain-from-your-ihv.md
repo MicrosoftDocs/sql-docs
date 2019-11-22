@@ -1,5 +1,5 @@
 ---
-title: Obtain information from IHV - Analytics Platform System
+title: Obtain information from IHV
 description: Information to obtain from your IHV about the Analytics Platform System appliance. 
 author: mzaman1 
 ms.prod: sql

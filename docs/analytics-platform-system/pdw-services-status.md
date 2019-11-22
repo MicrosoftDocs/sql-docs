@@ -1,5 +1,5 @@
 ---
-title: PDW services status - Analytics Platform System
+title: PDW services status
 description: Parallel Data Warehouse (PDW) services status for Analytics Platform System.
 author: mzaman1 
 ms.prod: sql

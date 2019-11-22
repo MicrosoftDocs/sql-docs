@@ -1,5 +1,5 @@
 ---
-title: Password reset - Analytics Platform System
+title: Password reset
 description: The Password Reset page enables you to change the password for the administrator accounts used by Analytics Platform System.  
 author: mzaman1 
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: dwloader Command-Line Loader - Parallel Data Warehouse
+title: dwloader Command-Line Loader
 description: dwloader is a Parallel Data Warehouse (PDW) command-line tool that loads table rows in bulk into an existing table.
 author: mzaman1 
 ms.prod: sql

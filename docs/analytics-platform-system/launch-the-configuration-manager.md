@@ -1,5 +1,5 @@
 ---
-title: Launch Configuration Manager - Analytics Platform System
+title: Launch Configuration Manager
 description: Instructions for launching the Configuration Manager tool for the Analytics Platform System appliance.  
 author: mzaman1 
 ms.prod: sql

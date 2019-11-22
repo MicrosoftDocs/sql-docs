@@ -1,5 +1,5 @@
 ---
-title: T-SQL language elements - Parallel Data Warehouse
+title: T-SQL language elements
 description: T-SQL language elements for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 author: mzaman1 
 ms.prod: sql

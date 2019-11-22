@@ -1,5 +1,5 @@
 ---
-title: Determine failed cluster node - Analytics Platform System
+title: Determine failed cluster node
 description: This article describes how to determine the name of the Analytics Platform System (APS) node that failed after a cluster failover has occurred and a cluster failover alert has been raised. As part of troubleshooting a cluster failover, you must determine the name of the node that failed before contacting Microsoft to help resolve the problem.  
 author: mzaman1 
 ms.prod: sql

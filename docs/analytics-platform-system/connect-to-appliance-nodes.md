@@ -1,5 +1,5 @@
 ---
-title: Connect to appliance Nodes - Analytics Platform System
+title: Connect to appliance Nodes
 description: This article explains the various ways to connect to each node in the Analytics Platform System appliance.
 author: mzaman1 
 ms.prod: sql

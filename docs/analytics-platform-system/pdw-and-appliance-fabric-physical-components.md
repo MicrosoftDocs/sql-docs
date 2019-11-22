@@ -1,5 +1,5 @@
 ---
-title: Appliance physical components - Analytics Platform System
+title: Appliance physical components
 description: Names and descriptions for the PDW and appliance fabric physical components. 
 author: mzaman1 
 ms.prod: sql

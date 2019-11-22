@@ -1,5 +1,5 @@
 ---
-title: Parallel Data Warehouse & remote table copies
+title: Remote table copies
 description: Describes how to configure Parallel Data Warehouse to use the remote table copy feature to copy tables to SMP SQL Server databases on non-appliance servers.
 author: mzaman1 
 ms.prod: sql

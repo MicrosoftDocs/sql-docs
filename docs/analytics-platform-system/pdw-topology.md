@@ -1,5 +1,5 @@
 ---
-title: PDW topology - Analytics Platform System
+title: PDW topology
 description: PDW topology for Analytics Platform System.
 author: mzaman1 
 ms.prod: sql

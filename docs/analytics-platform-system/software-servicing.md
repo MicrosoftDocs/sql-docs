@@ -1,5 +1,5 @@
 ---
-title: Software servicing - Analytics Platform System
+title: Software servicing
 description: Software servicing in Analytics Platform System (APS).
 author: mzaman1 
 ms.prod: sql

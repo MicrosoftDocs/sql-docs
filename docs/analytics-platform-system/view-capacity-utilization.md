@@ -1,5 +1,5 @@
 ---
-title: View capacity utilization in Analytics Platform System
+title: View capacity utilization
 description: View capacity utilization in Analytics Platform System.
 author: mzaman1 
 ms.prod: sql

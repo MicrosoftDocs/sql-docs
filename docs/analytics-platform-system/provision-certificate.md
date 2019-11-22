@@ -1,5 +1,5 @@
 ---
-title: Certificate provisioning - Analytics Platform System
+title: Certificate provisioning
 description: Certificate provisioning in Analytics Platform System.
 author: mzaman1 
 ms.prod: sql

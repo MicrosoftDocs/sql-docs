@@ -29,8 +29,8 @@ ms.author: mikeray
 |[OPENXML](../../t-sql/functions/openxml-transact-sql.md)||  
 
 > [!Note]
-> For Azure Synapse Analytics (SQLDW) only OPENJSON applies </br>
-OPENROWSET and OPENQUERY apply only to Azure SQL Database Manage Instance.
+> For Azure Synapse Analytics (SQLDW) only OPENJSON applies. </br></br>
+OPENROWSET and OPENQUERY apply only to Azure SQL Database Managed Instance.
 
  All rowset functions are nondeterministic. This means these functions do not always return the same results every time they are called, even with the same set of input values. For more information about function determinism, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   

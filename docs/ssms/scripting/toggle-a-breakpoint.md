@@ -1,5 +1,5 @@
 ---
-title: "Toggle a Breakpoint | Microsoft Docs"
+title: "Toggle a Breakpoint"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

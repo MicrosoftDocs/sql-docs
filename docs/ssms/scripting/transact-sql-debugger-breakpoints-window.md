@@ -1,5 +1,5 @@
 ---
-title: "Breakpoints Window | Microsoft Docs"
+title: "Breakpoints Window"
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual

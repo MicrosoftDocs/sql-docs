@@ -1,5 +1,5 @@
 ---
-title: "Drag and Drop Text | Microsoft Docs"
+title: "Drag and Drop Text"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

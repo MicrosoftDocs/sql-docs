@@ -1,5 +1,5 @@
 ---
-title: "Specify a Breakpoint Filter | Microsoft Docs"
+title: "Specify a Breakpoint Filter"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

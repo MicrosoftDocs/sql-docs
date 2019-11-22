@@ -1,5 +1,5 @@
 ---
-title: "Configure IntelliSense (SQL Server Management Studio) | Microsoft Docs"
+title: "Configure IntelliSense (SQL Server Management Studio)"
 ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql

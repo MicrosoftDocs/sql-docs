@@ -1,5 +1,5 @@
 ---
-title: "Error List Window (Management Studio) | Microsoft Docs"
+title: "Error List Window (Management Studio)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

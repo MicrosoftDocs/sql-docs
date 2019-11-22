@@ -11,7 +11,7 @@ ms.author: v-chmalh
 ms.reviewer: rothja
 ---
 
-# SqlClient support for Always Encrypted
+# Using Always Encrypted with the Microsoft .NET Data Provider for SQL Server
 
 [!INCLUDE[appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 
@@ -299,6 +299,8 @@ You do not need to make any application code changes to use these providers, but
 
 Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The **Microsoft .NET Data Provider for SQL Server** does not include a built-in column master key store provider for Azure Key Vault, but it is available as a NuGet package  that you can easily integrate with your application. For details, see [Always Encrypted - Protect sensitive data in SQL Database with data encryption and store your encryption keys in the Azure Key Vault](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/).
 
+For examples demonstrating performing encryption/decryption with Azure Key Vault, see [Azure Key Vault working with Always Encrypted](azure-key-vault-example.md) and [Azure Key Vault working with Always Encrypted with Secure Enclaves](azure-key-vault-enclaves-example.md).
+
 ### Implementing a custom column master key store provider
 
 If you want to store column master keys in a key store that is not supported by an existing provider, you can implement a custom provider by extending the [SqlColumnEncryptionCngProvider class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) and registering the provider using the [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders) method.
@@ -555,3 +557,6 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted blog](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [SQL Database tutorial: Protect sensitive data with Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
+- [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md)
+- [Example: Azure Key Vault working with Always Encrypted](azure-key-vault-example.md)
+- [Example: Azure Key Vault working with Always Encrypted with Secure Enclaves](azure-key-vault-enclaves-example.md).

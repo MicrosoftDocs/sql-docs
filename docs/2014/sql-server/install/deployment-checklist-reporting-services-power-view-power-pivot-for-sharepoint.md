@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 9a2575c8-06fc-4ef4-9f24-c19e52b1bbcf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Deployment Checklist: Reporting Services, Power View, and PowerPivot for SharePoint

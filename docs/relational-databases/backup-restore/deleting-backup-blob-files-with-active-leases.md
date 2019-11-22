@@ -36,8 +36,6 @@ The follow steps describe how to clean up after failed backup or restore activit
   
 1. **Delete the Blob:** To delete a blob with an active lease, you must first break the lease.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ###  <a name="Code_Example"></a> PowerShell script example  
   
 > [!IMPORTANT]

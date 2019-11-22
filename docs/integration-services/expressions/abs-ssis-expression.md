@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ABS function"
   - "absolute positive value"
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # ABS (SSIS Expression)
 

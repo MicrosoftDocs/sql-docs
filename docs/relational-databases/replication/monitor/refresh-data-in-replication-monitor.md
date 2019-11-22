@@ -28,8 +28,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### To specify that a detail window should automatically refresh  
   
 1.  Open a detail window in Replication Monitor. For example:  

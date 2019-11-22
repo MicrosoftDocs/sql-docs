@@ -13,13 +13,12 @@ helpviewer_keywords:
   - "ODBC, bulk copy operations"
   - "functions [ODBC]"
 ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Driver Extensions - Bulk Copy Functions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Open Database Connectivity (ODBC) is a Microsoft Win32 application programming interface used by applications to access data in ODBC data sources. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver reference does not document all of the ODBC function calls. Only those functions that have driver-specific parameters or behaviors when used with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver are discussed.  
   

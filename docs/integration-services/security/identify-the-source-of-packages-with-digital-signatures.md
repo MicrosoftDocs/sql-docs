@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "security [Integration Services], certificates"
   - "signing policies [Integration Services]"
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Identify the Source of Packages with Digital Signatures
 

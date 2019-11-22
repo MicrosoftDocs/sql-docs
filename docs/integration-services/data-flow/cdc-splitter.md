@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.cdcsplitter.f1"
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # CDC Splitter
 

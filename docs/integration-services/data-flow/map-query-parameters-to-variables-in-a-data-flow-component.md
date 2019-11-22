@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "mapping query parameters to variables [Integration Services]"
   - "variables [Integration Services], mapping parameters to"
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Map Query Parameters to Variables in a Data Flow Component
 

@@ -19,7 +19,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # sysmail_allitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Contains one row for each message processed by Database Mail. Use this view when you want to see the status of all messages.  
   

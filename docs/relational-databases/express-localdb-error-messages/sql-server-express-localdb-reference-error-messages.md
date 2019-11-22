@@ -1,6 +1,7 @@
 ---
-title: "SQL Server Express LocalDB Error Message Reference | Microsoft Docs"
-ms.custom: ""
+title: "LocalDB Error Message Reference"
+titleSuffix: SQL Server Express
+ms.custom: seo-dt-2019
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.reviewer: ""

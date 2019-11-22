@@ -1,5 +1,5 @@
 ---
-title: "Configure PolyBase to access external data in Hadoop | Microsoft Docs"
+title: "Use PolyBase to access external data in Hadoop"
 description: Explains how to configure PolyBase in Parallel Data Warehouse to connect to external Hadoop. 
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 # Configure PolyBase to access external data in Hadoop
 
@@ -21,7 +22,7 @@ PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Clou
  - Hortonworks HDP 3.0 - 3.1 on Linux
  - Hortonworks HDP 2.1 - 2.3 on Windows Server  
  - Cloudera CDH 4.3 on Linux  
- - Cloudera CDH 5.1 - 5.5, 5.9 - 5.13 on Linux
+ - Cloudera CDH 5.1 - 5.5, 5.9 - 5.13, 5.15 & 5.16 on Linux
 
 ### Configure Hadoop connectivity
 

@@ -112,8 +112,6 @@ This example configures a new distributor and publisher and puts the distributio
 
 1. On DIST2 and DIST3, run:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```

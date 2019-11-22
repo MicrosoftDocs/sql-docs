@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Guidance for Using SQL Server BI Features in a SharePoint 2010 Farm

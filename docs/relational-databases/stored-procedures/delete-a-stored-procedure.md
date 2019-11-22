@@ -56,8 +56,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 6.  Remove references to the procedure from any dependent objects and scripts.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ###  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To delete a procedure in Query Editor**  
   

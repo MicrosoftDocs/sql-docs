@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "desCons"
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Change Data Capture Designer for Oracle by Attunity
 

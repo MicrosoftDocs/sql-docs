@@ -299,7 +299,7 @@ _SSDT for Visual Studio 2017._
 
 Visual Studio 2017 (15.5.1) is the same release as version 15.5.0 except for the following bug fixes to the installer:
 
-1.	Fix an issue where the installer hangs on SQL Server Integration Services post install.
+1.	Fix an issue where the installer stops responding on SQL Server Integration Services post install.
 2.	Fix an issue where setup fails with the following error message: "The requested metafile operation is not support (0x800707D3)".
 
 In addition to these two bug fixes, the following details for 15.5.0 still apply to 15.5.1
@@ -493,7 +493,7 @@ _SSDT for Visual Studio 2015._
 - Fixed an issue with ChangeSource on structure datasource not persisting changes when context expression
 - Fixed an issue where M expression errors may cause failures to update the model without error message shown
 - Fixed an issue closing SSDT with error "The build must be stopped before the solution can be closed"
-- Fixed an issue where VS may appear to hang when setting wrong impersonation mode in 1400 compat-level model 
+- Fixed an issue where VS may appear to stop responding when setting wrong impersonation mode in 1400 compat-level model 
 - Detail rows property will now only be serialized to JSON when it is not empty (changed from default)
 - Oracle OLEDB driver now available in the list for tabular Direct Query mode
 - Adding M-Expressions in 1400-compat tabular models now appear\refresh in the Tabular Model Explorer (TME)
@@ -840,7 +840,7 @@ SSDT Tabular now includes an internal SSAS instance, which SSDT Tabular starts a
 * Fixed an issue with SSDT AS project properties dialog to anchored correctly when resized at High-DPI scaling.
 * Fixed an issue in SSDT AS projects that may have caused an error upgrading certain models with Pasted tables.
 * Fixed an issue in SSDT AS where pasting full sheet rows from Excel was slow and created many unwanted columns.
-* Fixed an issue in SSDT AS where large static DataTable expressions parsing and highlight were slow or appeared to hang.
+* Fixed an issue in SSDT AS where large static DataTable expressions parsing and highlight were slow or appeared to stop responding.
 * Fixed an issue in SSDT AS to add measures and KPI values to the current perspective selected in the editor.
 * Fixed an issue in SSDT where data import into AS project from SQL Azure didn't support schema types other than "dbo".
 

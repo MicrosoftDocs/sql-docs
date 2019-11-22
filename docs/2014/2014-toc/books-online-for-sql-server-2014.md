@@ -1,6 +1,6 @@
 ---
 title: "Books Online for SQL Server 2014 | Microsoft Docs"
-ms.date: "05/25/2017"
+ms.date: "10/18/2019"
 ms.prod: "sql-server-2014"
 ms.technology: release-landing
 ms.reviewer: ""
@@ -63,7 +63,7 @@ SQL Server 2016, and later versions, are documented [here](https://docs.microsof
 
 ## <a name="previous-versions-gm2014"></a> SQL Server 2005, 2008, 2012, 2016+
 
-[!INCLUDE[???](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+[!INCLUDE[previous versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 ## See Also  
 

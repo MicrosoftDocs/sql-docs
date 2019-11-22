@@ -22,25 +22,29 @@ ms.author: genemi
 ### Linux and macOS
 
 #### Debian
+- [Debian 10 .deb packages](https://packages.microsoft.com/debian/10/prod/pool/main/m/msodbcsql17/)
 - [Debian 9 .deb packages](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
 - [Debian 8 .deb packages](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
 
 #### RedHat
+- [RedHat 8 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/rhel/8/prod/)
 - [RedHat 7 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/rhel/7/prod/)
-- [RedHat 6 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/rhel/6.8/prod/)
+- [RedHat 6 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/rhel/6/prod/)
 
 #### Suse
+- [SuSE 15 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/sles/15/prod/)
 - [SuSE 12 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/sles/12/prod/)
 - [SuSE 11 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### Ubuntu
+- [Ubuntu 19.04 .deb packages](https://packages.microsoft.com/ubuntu/19.04/prod/pool/main/m/msodbcsql17/)
+- [Ubuntu 18.10 .deb packages](https://packages.microsoft.com/ubuntu/18.10/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 18.04 .deb packages](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 17.10 .deb packages](https://packages.microsoft.com/ubuntu/17.10/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 16.04 .deb packages](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 14.04 .deb packages](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/) 
 
 #### macOS
-- [OS X 10.11 and macOS 10.12, 10.13 Homebrew formulae](https://github.com/Microsoft/homebrew-mssql-release)
+- [macOS 10.12, 10.13, 10.14 Homebrew formulae](https://github.com/Microsoft/homebrew-mssql-release)
 
 See also [Installing the Driver](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 

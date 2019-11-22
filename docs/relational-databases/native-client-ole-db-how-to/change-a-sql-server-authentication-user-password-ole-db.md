@@ -14,7 +14,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Change a SQL Server Authentication User Password (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   This sample shows how to use OLE DB to change the password of a user account under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
@@ -203,7 +202,7 @@ void DumpErrorInfo (IUnknown* pObjectWithError, REFIID IID_InterfaceWithError, B
    SSERRORINFO * pSSErrorInfo = NULL;  
    OLECHAR * pSSErrorStrings = NULL;  
   
-   // Hard-code an American English locale for the example.  
+   // Hard-code an English (United States) locale for the example.  
    DWORD MYLOCALEID = 0x0409;  
   
    has_sql_errors = 0;  

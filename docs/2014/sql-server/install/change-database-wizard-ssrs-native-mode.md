@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Change Database Wizard"
   - "report server database, create"
 ms.assetid: 1a2e8d18-5997-482f-a9c1-87d99f7407b8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Change Database Wizard (SSRS Native Mode)

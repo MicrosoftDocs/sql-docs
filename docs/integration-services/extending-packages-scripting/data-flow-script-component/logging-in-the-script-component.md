@@ -10,8 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "Script component [Integration Services], logging"
 ms.assetid: 17c19787-379e-43fe-9107-e36e17ecda53
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Logging in the Script Component
 

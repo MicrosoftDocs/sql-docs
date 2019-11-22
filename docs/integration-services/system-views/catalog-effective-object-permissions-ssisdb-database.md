@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "catalog.effective_object_permissions views [Integration Services]"
   - "effective_object_permissions view [Integration Services]"
 ms.assetid: e70c4ce9-79f5-44df-ac75-6c29b6e38776
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.effective_object_permissions (SSISDB Database)
 

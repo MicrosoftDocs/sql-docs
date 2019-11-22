@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "containers [Integration Services], For Loop"
   - "For Loop containers"
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # For Loop Container
 

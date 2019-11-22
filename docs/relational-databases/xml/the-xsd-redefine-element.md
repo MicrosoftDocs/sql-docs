@@ -25,8 +25,6 @@ ms.author: genemi
   
 3.  Drop the old version of the XML Schema collection.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## See Also  
  [Requirements and Limitations for XML Schema Collections on the Server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   

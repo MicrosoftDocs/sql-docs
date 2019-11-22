@@ -126,7 +126,7 @@ manager: craigg
   
 1.  Configure the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] to use EKM, and register (create) the cryptographic provider with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-    ```  
+    ```sql
     -- Enable advanced options.  
     USE master;  
     GO  
@@ -147,7 +147,7 @@ manager: craigg
   
     CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
-    GO   
+    GO
     ```  
   
 2.  Setup a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] credential for a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] administrator login to use the key vault in order to setup and manage [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption scenarios.  
@@ -157,7 +157,7 @@ manager: craigg
   
      In the following example, the **Client ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) is stripped of the hyphens and entered as the string `EF5C8E094D2A4A769998D93440D8115D` and the **Secret** is represented by the string *SECRET_sysadmin_login*.  
   
-    ```  
+    ```sql
     USE master;  
     CREATE CREDENTIAL sysadmin_ekm_cred   
         WITH IDENTITY = 'ContosoKeyVault',   
@@ -173,7 +173,7 @@ manager: craigg
   
 3.  If you imported an asymmetric key as described earlier in step 1, section 3, open the key by providing your key name in the following example.  
   
-    ```  
+    ```sql
     CREATE ASYMMETRIC KEY CONTOSO_KEY   
     FROM PROVIDER [AzureKeyVault_EKM_Prov]  
     WITH PROVIDER_KEY_NAME = 'ContosoMasterKey',  
@@ -182,7 +182,7 @@ manager: craigg
   
      Though not recommended for production (because the key cannot be exported), it is possible to create an asymmetric key directly in the vault from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If you did not import a key earlier, then create an asymmetric key in the key vault for testing by using the following script. Execute the script, using a login provisioned with the **sysadmin_ekm_cred** credential.  
   
-    ```  
+    ```sql
     CREATE ASYMMETRIC KEY CONTOSO_KEY   
     FROM PROVIDER [AzureKeyVault_EKM_Prov]  
     WITH ALGORITHM = RSA_2048,  
@@ -222,7 +222,7 @@ manager: craigg
   
      In the following example, the **Client ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) is stripped of the hyphens and entered as the string `EF5C8E094D2A4A769998D93440D8115D` and the **Secret** is represented by the string *SECRET_DBEngine*.  
   
-    ```  
+    ```sql
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
         WITH IDENTITY = 'ContosoKeyVault',   
@@ -232,7 +232,7 @@ manager: craigg
   
 2.  Create a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login to be used by the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] for TDE, and add the credential to it. This example uses the CONTOSO_KEY asymmetric key stored in the key vault, which was imported or created earlier for the master database, as described in [Step 3, section 3](#Step3) above.  
   
-    ```  
+    ```sql
     USE master;  
     -- Create a SQL Server login associated with the asymmetric key   
     -- for the Database engine to use when it loads a database   
@@ -252,7 +252,7 @@ manager: craigg
   
      This example uses the CONTOSO_KEY asymmetric key stored in the key vault, which was imported or created earlier, as described in [Step 3, section 3](#Step3) above.  
   
-    ```  
+    ```sql
     USE ContosoDatabase;  
     GO  
   
@@ -276,7 +276,7 @@ manager: craigg
 ###  <a name="ExampleB"></a> Example B: Encrypting Backups by Using an Asymmetric Key from the Key Vault  
  Encrypted backups are supported starting with [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. The following example creates and restores a backup encrypted a data encryption key protected by the asymmetric key in the key vault.  
   
-```  
+```sql
 USE master;  
 BACKUP DATABASE [DATABASE_TO_BACKUP]  
 TO DISK = N'[PATH TO BACKUP FILE]'   
@@ -287,7 +287,7 @@ GO
   
  Sample restore code.  
   
-```  
+```sql
 RESTORE DATABASE [DATABASE_TO_BACKUP]  
 FROM DISK = N'[PATH TO BACKUP FILE]' WITH FILE = 1, NOUNLOAD, REPLACE;  
 GO  
@@ -300,7 +300,7 @@ GO
   
  This example uses the CONTOSO_KEY asymmetric key stored in the key vault, which was imported or created earlier, as described in [Step 3, section 3](#Step3) above. To use this asymmetric key in the `ContosoDatabase` database, you must execute the CREATE ASYMMETRIC KEY statement again, to provide the `ContosoDatabase` database with a reference to the key.  
   
-```  
+```sql
 USE [ContosoDatabase];  
 GO  
   
@@ -344,5 +344,3 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [Enable TDE Using EKM](enable-tde-on-sql-server-using-ekm.md)   
  [Backup Encryption](../../backup-restore/backup-encryption.md)   
  [Create an Encrypted Backup](../../backup-restore/create-an-encrypted-backup.md)  
-  
-  

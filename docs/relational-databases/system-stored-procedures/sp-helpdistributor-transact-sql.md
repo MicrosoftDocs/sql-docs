@@ -112,12 +112,12 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |Result set column|Output parameter|  
 |-----------------------|----------------------|  
-|account|**@account**|  
-|min distrib retention|**@min_distretention**|  
-|max distrib retention|**@max_distretention**|  
-|history retention|**@history_retention**|  
-|history cleanup agent|**@history_cleanupagent**|  
-|distribution cleanup agent|**@distrib_cleanupagent**|  
+|account|**\@account**|  
+|min distrib retention|**\@min_distretention**|  
+|max distrib retention|**\@max_distretention**|  
+|history retention|**\@history_retention**|  
+|history cleanup agent|**\@history_cleanupagent**|  
+|distribution cleanup agent|**\@distrib_cleanupagent**|  
 |rpc login name|none|  
   
  The following result set column is returned to users in the publication access list for a publication at the Distributor:  
@@ -128,10 +128,10 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |Result set column|Output parameter|  
 |-----------------------|----------------------|  
-|distributor|**@distributor**|  
-|distribution database|**@distribdb**|  
-|rpc server name|**@rpcsrvname**|  
-|publisher type|**@publisher_type**|  
+|distributor|**\@distributor**|  
+|distribution database|**\@distribdb**|  
+|rpc server name|**\@rpcsrvname**|  
+|publisher type|**\@publisher_type**|  
   
 ## See Also  
  [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Aggregate transformation [Integration Services]"
   - "large data, SSIS transformations"
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Aggregate Transformation
 

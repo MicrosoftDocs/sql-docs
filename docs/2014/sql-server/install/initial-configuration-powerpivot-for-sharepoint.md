@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Initial Configuration (PowerPivot for SharePoint)
@@ -33,7 +33,7 @@ manager: craigg
 ##  <a name="deploywsp"></a> Step 1: Deploy PowerPivot Solutions  
  There are two solutions that must be installed and deployed: a farm solution and a web application solution.  
   
- **Install and Deploy the Farm Solution**  
+### Install and Deploy the Farm Solution
   
  In the previous release, SQL Server Setup installed and deployed the farm solution. In this release, you must either use the PowerPivot Configuration Tool or PowerShell script to deploy the farm solution. You cannot use Central Administration to deploy the farm solution. This is the only step in PowerPivot for SharePoint configuration that cannot be performed in Central Administration. After the farm solution is deployed, you can use Central Administration and the steps in this topic to configure a PowerPivot for SharePoint installation.  
   
@@ -43,7 +43,7 @@ manager: craigg
   
 2.  Run the first cmdlet:  
   
-    ```  
+    ```powershell
     Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
@@ -51,11 +51,11 @@ manager: craigg
   
 3.  Run the second cmdlet to deploy the solution:  
   
-    ```  
+    ```powershell
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
- **Deploy the web application solution**  
+### Deploy the web application solution
   
 1.  Click the Start button, select **All Programs**, select **Microsoft SharePoint Products 2010**, and then select **SharePoint 2010 Central Administration**.  
   
@@ -221,7 +221,7 @@ manager: craigg
   
  Installing the provider will allow workbooks that reference MSOLAP.4 in the data connection string to work as expected on a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot server. Installing the SQL Server 2008 R2 OLE DB provider is an alternative approach to upgrading workbooks that were created in an earlier version of PowerPivot for Excel.  
   
- You can download the provider from [SQL Server 2008 R2 Feature Pack page](https://go.microsoft.com/fwlink/?LinkId=159570). Look for **Microsoft® Analysis Services OLE DB Provider for Microsoft® SQL Server® 2008 R2**, and then download the x64 Package of the `SQLServer2008_ASOLEDB10.msi` installation program.  
+ You can download the provider from [SQL Server 2008 R2 Feature Pack page](https://www.microsoft.com/download/details.aspx?id=16978). Look for **Microsoft® Analysis Services OLE DB Provider for Microsoft® SQL Server® 2008 R2**, and then download the x64 Package of the `SQLServer2008_ASOLEDB10.msi` installation program.  
   
  For more information about installing the provider, including verification steps, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
@@ -293,5 +293,3 @@ manager: craigg
  [Deploy PowerPivot Solutions to SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint)   
  [Activate PowerPivot Feature Integration for Site Collections in Central Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)   
  [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
-  
-  

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "custom variables [Integration Services]"
   - "variables [Integration Services], customizing"
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Working with Variables Programmatically
 

@@ -1,7 +1,7 @@
 ---
 title: "Bulk Copy by Using a Format File (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: 10/18/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: native-client
@@ -23,7 +23,7 @@ manager: craigg
   
 2.  Set SQL_COPT_SS_BCP and SQL_BCP_ON to enable bulk copy operations.  
   
-3.  Connect to Microsoft?? SQL Server???.  
+3.  Connect to Microsoft SQL Server.  
   
 4.  Call [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) to set the following information:  
   
@@ -56,7 +56,7 @@ manager: craigg
   
  Execute the fifth ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the table that the sample used.  
   
-```  
+```sql
 use AdventureWorks  
 CREATE TABLE BCPDate (cola int, colb datetime)  
 ```  
@@ -71,10 +71,9 @@ CREATE TABLE BCPDate (cola int, colb datetime)
 ```  
 1  
 2  
-  
 ```  
   
-```  
+```cpp
 // compile with: odbc32.lib odbcbcp.lib  
 #include <stdio.h>  
 #include <windows.h>  
@@ -171,7 +170,7 @@ int main() {
 }  
 ```  
   
-```  
+```sql
 use AdventureWorks  
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')  
      DROP TABLE BCPDate  

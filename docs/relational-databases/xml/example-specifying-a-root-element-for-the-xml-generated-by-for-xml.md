@@ -27,7 +27,7 @@ SELECT ProductModelID, Name
 FROM Production.ProductModel  
 WHERE ProductModelID=122 or ProductModelID=119 or ProductModelID=115  
 FOR XML RAW, ROOT('MyRoot')  
-go  
+GO
 ```  
   
  This is the result:  

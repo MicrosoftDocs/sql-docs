@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "<= (less than or equal to operator)"
   - "less than or equal to operator (<=)"
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # &lt;= (Less Than or Equal To) (SSIS Expression)
 

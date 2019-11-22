@@ -63,7 +63,7 @@ To create a report server database or to change the connection string or credent
   
 6.  Restart the service.  
   
-7.  Open your firewall software and open the port that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listens on. For the default instance, this is typically port 1433 for TCP/IP connections. For more information, see [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+7.  Open your firewall software and open the port that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listens on. For the default instance, this is typically port 1433 for TCP/IP connections. For more information, see [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### To create a local report server database  
   
@@ -107,7 +107,7 @@ To create a report server database or to change the connection string or credent
   
 7.  Review the information on the Summary page to verify the settings are correct, and then select **Next**.  
   
-8.  Verify the connection by selecting a URL on the Report Server URL page. The URLs must be defined in order for this test to work. If the report server database connection is valid, you will see the report server folder hierarchy. For more information, see [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+8.  Verify the connection by selecting a URL on the Report Server URL page. The URLs must be defined in order for this test to work. If the report server database connection is valid, you will see the report server folder hierarchy. For more information, see [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
 
 ## Change database credentials
 

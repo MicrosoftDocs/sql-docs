@@ -19,7 +19,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # sp_add_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Creates an operator (notification recipient) for use with alerts and jobs.  
   
@@ -57,7 +57,7 @@ sp_add_operator [ @name = ] 'name'
   
  You can specify either a physical e-mail address or an alias for *email_address*. For example:  
   
- '**jdoe**' or '**jdoe@xyz.com**'  
+ '**jdoe**' or '**jdoe\@xyz.com**'  
   
 > [!NOTE]  
 >  You must use the e-mail address for Database Mail.  

@@ -37,8 +37,6 @@ For information about support for backups from earlier versions of [!INCLUDE[ssN
   
 ##  <a name="PointOfFailure"></a> Restoring a Database to the Point of Failure  
 
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Typically, recovering a database to the point of failure involves the following basic steps:  
   
 1.  Back up the active transaction log (known as the tail of the log). This creates a tail-log backup. If the active transaction log is unavailable, all transactions in that part of the log are lost.  

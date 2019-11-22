@@ -118,7 +118,7 @@ Rssharepoint.msi /?
   
 2.  Run the following command:  
   
-    ```  
+    ```cmd
     Msiexec.exe /i rsSharePoint.msi SKIPCA=1  
     ```  
   
@@ -139,7 +139,7 @@ Rssharepoint.msi /?
   
     2.  Type the following command. This configuration step will take several minutes to finish. The W3SVC service will be restarted during this process. Several Status messages will be displayed as the program copies files, registers components, and runs the SharePoint Product Configuration Wizard.  
   
-        ```  
+        ```cmd
         rsCustomAction.exe /i  
         ```  
   
@@ -157,7 +157,7 @@ Rssharepoint.msi /?
   
 2.  Run the following command:  
   
-    ```  
+    ```cmd
     Msiexec.exe /i rsSharePoint.msi /q  
     ```  
   
@@ -200,7 +200,7 @@ Rssharepoint.msi /?
   
 2.  Run the following command:  
   
-    ```  
+    ```cmd
     msiexec.exe /uninstall rsSharePoint.msi  
     ```  
   
@@ -213,7 +213,7 @@ Rssharepoint.msi /?
   
 2.  Run the following command:  
   
-    ```  
+    ```cmd
     Msiexec.exe /uninstall rsSharePoint.msi LocalOnly=1  
     ```  
   
@@ -225,7 +225,7 @@ Rssharepoint.msi /?
   
 2.  Run the following command:  
   
-    ```  
+    ```cmd
     rsCustomAction.exe /p  
     ```  
   
@@ -238,7 +238,7 @@ Rssharepoint.msi /?
   
 2.  Run the following command:  
   
-    ```  
+    ```cmd
     msiexec.exe /f rssharepoint.msi  
     ```  
   
@@ -252,15 +252,15 @@ Rssharepoint.msi /?
   
 1.  The following commands will change the command prompt path, list the rs log files and then open one of the files with Windows Notepad:  
   
-    ```  
+    ```cmd
     cd %temp%  
     ```  
   
-    ```  
-    Dir rs_sp*.log  
+    ```cmd
+    dir rs_sp*.log  
     ```  
   
-    ```  
+    ```cmd
     notepad rs_sp_3.log  
     ```  
   
@@ -268,8 +268,8 @@ Rssharepoint.msi /?
   
 1.  Type the following command from the SharePoint Management Shell to return a filtered list of rows from the file, that contain "ssrscustomactionerror":  
   
-    ```  
-    Get-content -path C:\Users\<UserName\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  
+    ```powershell
+    Get-Content -Path C:\Users\<UserName\AppData\Local\Temp\rs_sp_0.log | Select-String "ssrscustomactionerror"  
     ```  
   
 2.  The output will look similar to the following:  
@@ -302,5 +302,3 @@ Rssharepoint.msi /?
 ## See Also  
  [Install Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)   
  [Reporting Services Report Server &#40;SharePoint Mode&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)  
-  
-  

@@ -27,7 +27,7 @@ monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 includes all cumulative updates released after 2016 SP1, up to and including CU8.
 
-- [![Microsoft Download Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [Download SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+- [![Microsoft Download Center](../includes/media/download2.png)](https://www.microsoft.com/download/details.aspx?id=56836) [Download SQL Server 2016 Service Pack 2 (SP2)](https://www.microsoft.com/download/details.aspx?id=56836)
 - For a complete list of updates, see [SQL Server 2016 Service Pack 2 release information](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)
 
 The SQL Server 2016 SP2 installation may require reboot after installation. As a best practice, we recommend to plan and perform a reboot following the installation of SQL Server 2016 SP2.
@@ -214,7 +214,7 @@ Also, execute the following Query Store stored procedures periodically to clean 
  **F1 Help:** By design when you press F1 in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], the online version of the F1 Help article is displayed in the browser. The issues is browser-based help even when you have configured and installed local Help.
 
 **Updating content:**
-In SQL Server Management Studio and Visual Studio, the Help Viewer application may freeze (hang) during the process of adding the documentation. To resolve this issue, complete the following steps. For more information about this issue, see [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/library/mt654096.aspx).
+In SQL Server Management Studio and Visual Studio, the Help Viewer application may stop responding during the process of adding the documentation. To resolve this issue, complete the following steps. For more information about this issue, see [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/library/mt654096.aspx).
 
 * Open the %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings file in Notepad and change the date in the following code to some date in the future.
 

@@ -52,8 +52,6 @@ ms.author: mikeray
   
 13. Restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="best"></a> Best practices  
   
 ###  <a name="config"></a> Physical configuration and maintenance  

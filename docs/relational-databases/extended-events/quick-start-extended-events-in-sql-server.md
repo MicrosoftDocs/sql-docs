@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-This article aims to help the SQL developer who is new to extended events, and who wants create an event session in just a few minutes. By using extended events, you can see details about the inner operations of the SQL system and your application. When you create an extended event session, you tell the system:
+Extended events is a lightweight performance monitoring system that enables users to collect data needed to monitor and troubleshoot problems in SQL Server. See [Extended events overview](extended-events.md) to learn more about the extended events architecture.  This article aims to help the SQL developer who is new to extended events, and who wants create an event session in just a few minutes. By using extended events, you can see details about the inner operations of the SQL system and your application. When you create an extended event session, you tell the system:
 
 - Which occurrences you are interested in.
 - How you want the system to report the data to you.
@@ -78,7 +78,7 @@ You can understand the steps even if you decide not to perform them. The demonst
 - Advanced
 
 
-The text and supporting screenshots can become slightly inexact when the SSMS UI is tweaked over the months or years. Yet the screenshots remain effective for explanation if the discrepancies or only minor.
+The text and supporting screenshots can become slightly inexact when the SSMS UI is tweaked over the months or years. Yet the screenshots remain effective for explanation if the discrepancies are only minor.
 
 
 1. Connect with SSMS.
@@ -114,7 +114,7 @@ The text and supporting screenshots can become slightly inexact when the SSMS UI
 
 9. In the upper-left, click the **Data Storage** page.
 
-10. In the **Targets** area, click **Click here to a target**.
+10. In the **Targets** area, click **Click here to add a target**.
     - In the **Type** drop-down list, choose **event_file**.
     - This means the event data will be stored in a file that we can view.
 
@@ -404,7 +404,7 @@ In the SSMS **Object Explorer**, you can right-click your event session node. In
 There are innumerable scenarios for the effective use of extended events. The following articles provide example scenarios that involve the locks taken during queries.
 
 
-Specific scenarios for event sessions aimed at assessing locks are described in the following articles. The articles also show some advanced techniques, such as using **@dbid**, and using the dynamic `EXECUTE (@YourSqlString)`:
+Specific scenarios for event sessions aimed at assessing locks are described in the following articles. The articles also show some advanced techniques, such as using **\@dbid**, and using the dynamic `EXECUTE (@YourSqlString)`:
 
 - [Find the Objects That Have the Most Locks Taken on Them](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - This scenario uses the target package0.histogram, which processes the raw event data before displaying it to you.

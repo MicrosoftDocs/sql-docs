@@ -24,8 +24,6 @@ ms.author: mikeray
   
 2.  Then the application uses this logical path to obtain a handle to the file or directory and do something with the object. The path can be passed to any supported file system API function, such as CreateFile() or CreateDirectory(), to create or open a file and obtain a handle. The handle can then be used to stream data, to enumerate or organize directories, to get or set file attributes, to delete files or directories, and so forth.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="create"></a> Creating Files and Directories in a FileTable  
  A file or directory can be created in a FileTable by calling file I/O APIs such as CreateFile or CreateDirectory.  
   

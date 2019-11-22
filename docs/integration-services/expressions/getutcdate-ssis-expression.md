@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "UTC time"
   - "GETUTCDATE function"
 ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # GETUTCDATE (SSIS Expression)
 

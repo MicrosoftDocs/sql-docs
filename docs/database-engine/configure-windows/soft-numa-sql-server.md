@@ -126,7 +126,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): Displays the current value (0 or 1) for SOFTNUMA  
   
--   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): The *softnuma* and *softnuma_desc* columns displays the current configuration values.  
+-   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): The *softnuma_configuration* and *softnuma_configuration_desc* columns displays the current configuration values.  
   
 > [!NOTE]
 > While you can view the running value for automatic soft-NUMA using [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), you cannot change its value using **sp_configure**. You must use the [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) statement with the `SET SOFTNUMA` argument.  

@@ -109,7 +109,7 @@ SELECT DATENAME(year, '12:10:30.123')
     ,DATENAME(weekday, '12:10:30.123');  
 ```  
   
-If *date* is specified as a variable or table column, and the data type for that variable or column does not have the specified *datepart*, `DATENAME` will return error 9810. In this example, variable *@t* has a **time** data type. The example fails because the date part year is invalid for the **time** data type:
+If *date* is specified as a variable or table column, and the data type for that variable or column does not have the specified *datepart*, `DATENAME` will return error 9810. In this example, variable *\@t* has a **time** data type. The example fails because the date part year is invalid for the **time** data type:
   
 ```sql
 DECLARE @t time = '12:10:30.123';   

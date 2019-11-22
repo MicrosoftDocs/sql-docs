@@ -1,5 +1,5 @@
 ---
-title: "Create a Version Flag (Master Data Services) | Microsoft Docs"
+title: Create a Version Flag
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -152,7 +152,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   The alert is enabled.  
   
--   Events generated with **xp_logevent** occur in the master database. Therefore, **xp_logevent** does not trigger an alert unless the **@database_name** for the alert is **'master'** or NULL.  
+-   Events generated with **xp_logevent** occur in the master database. Therefore, **xp_logevent** does not trigger an alert unless the **\@database_name** for the alert is **'master'** or NULL.  
   
 ## Permissions  
  By default, only members of the **sysadmin** fixed server role can execute **sp_add_alert**.  

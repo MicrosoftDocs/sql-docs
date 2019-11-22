@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "equal operator (==)"
   - "== (equal operator)"
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # == (Equal) (SSIS Expression)
 

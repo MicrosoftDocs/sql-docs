@@ -1,5 +1,5 @@
 ---
-title: Operationalize R code using stored procedures
+title: Deploy R code in stored procedures
 description: Embed R language code in a SQL Server stored procedure to make it available to any client application having access to a SQL Server database.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,7 @@ ms.date: 03/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Operationalize R code using stored procedures in SQL Server Machine Learning Services
@@ -19,7 +20,7 @@ When using the R and Python features in SQL Server Machine Learning Services, th
 
 Traditionally, integration of data science solutions has meant extensive recoding to support performance and integration. SQL Server Machine Learning Services simplifies this task because R and Python code can be run in SQL Server and called using stored procedures. For more information about the mechanics of embedding code in stored procedures, see:
 
-+ [Quickstart: "Hello world" R script in SQL Server](../../advanced-analytics/tutorials//quickstart-r-run-using-tsql.md)
++ [Create and run simple R scripts in SQL Server](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
 A more comprehensive example of deploying R code into production by using stored procedures can be found at [Tutorial: R data analytics for SQL developers](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)

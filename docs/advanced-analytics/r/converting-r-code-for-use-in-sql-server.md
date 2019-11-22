@@ -1,5 +1,5 @@
 ---
-title: Convert R code for stored procedures
+title: Convert R code for SQL
 description: Migrate R code to a SQL Server stored procedure for solution deployment and data access to relational data on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,7 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Convert R code for execution in SQL Server (In-Database) instances
@@ -21,7 +22,7 @@ However, your code might require substantial changes if any of the following app
 
 + You use R libraries that access the network or that cannot be installed on SQL Server.
 + The code makes separate calls to data sources outside SQL Server, such as Excel worksheets, files on shares, and other databases. 
-+ You want to run the code in the *@script* parameter of [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) and also parameterize the stored procedure.
++ You want to run the code in the *\@script* parameter of [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) and also parameterize the stored procedure.
 + Your original solution includes multiple steps that might be more efficient in a production environment if executed independently, such as data preparation or feature engineering vs. model training, scoring, or reporting.
 + You want to improve optimize performance by changing libraries, using parallel execution, or offloading some processing to SQL Server. 
 

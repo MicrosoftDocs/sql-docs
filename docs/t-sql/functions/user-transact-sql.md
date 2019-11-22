@@ -38,7 +38,7 @@ USER
 ```  
   
 ## Return Types  
- **char**  
+ **nvarchar(128)**  
   
 ## Remarks  
  USER provides the same functionality as the USER_NAME system function.  

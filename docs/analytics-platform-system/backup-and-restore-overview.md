@@ -1,5 +1,5 @@
 ---
-title: Backup and restore - Parallel Data Warehouse | Microsoft Docs
+title: Backup and restore
 description: Describes how data backup and restore works for Parallel Data Warehouse (PDW). Backup and restore operations are used for disaster recovery. Backup and restore can also be used to copy a database from one appliance to another appliance.  
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 # Backup and restore
 

@@ -89,8 +89,8 @@ For more information on which packages are installed with Machine Learning Servi
 
 1. Write your first Python or R script
 
-    + Quickstart: Run a "Hello world" script [in Python](tutorials/quickstart-python-run-using-t-sql.md) or [in R](tutorials/quickstart-r-run-using-tsql.md)
-    + Quickstart: Create a predictive model [in Python](tutorials/quickstart-python-train-score-in-tsql.md) or [in R](tutorials/quickstart-r-create-predictive-model.md)
+    + Quickstart: [Create and run simple R scripts in SQL](tutorials/quickstart-r-create-script.md)
+    + Quickstart: [Create and train a predictive model in R](tutorials/quickstart-r-train-score-model.md)
     + Tutorial: [Use Python in T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md): Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)
     + Tutorial: [Use R in T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md): Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)
     + Tutorial: [Use Machine Learning Services in R tools](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Explore data, create graphs and plots, perform feature engineering, train and deploy models, and make predictions (six-part series)

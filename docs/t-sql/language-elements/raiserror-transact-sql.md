@@ -117,8 +117,8 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  To convert a value to the [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** data type, specify **%I64d**.  
   
- *@local_variable*  
- Is a variable of any valid character data type that contains a string formatted in the same manner as *msg_str*. *@local_variable* must be **char** or **varchar**, or be able to be implicitly converted to these data types.  
+ *\@local_variable*  
+ Is a variable of any valid character data type that contains a string formatted in the same manner as *msg_str*. *\@local_variable* must be **char** or **varchar**, or be able to be implicitly converted to these data types.  
   
  *severity*  
  Is the user-defined severity level associated with this message. When using *msg_id* to raise a user-defined message created using sp_addmessage, the severity specified on RAISERROR overrides the severity specified in sp_addmessage.  

@@ -1,8 +1,8 @@
 ---
 title: Virtualize external data in SQL Server 2019 CTP 2.0 | Microsoft Docs
 description: This page details the steps for using the Create external table wizard for a CSV file
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual

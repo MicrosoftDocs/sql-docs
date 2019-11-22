@@ -102,7 +102,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example creates the same stored DML trigger as above.  
   
-    ```  
+    ```sql
     -- Trigger valid for multirow and single row inserts  
     -- and optimal for single row inserts.  
     USE AdventureWorks2012;  
@@ -130,7 +130,3 @@ manager: craigg
           (SELECT PurchaseOrderID FROM inserted)  
     END;  
     ```  
-  
-##  <a name="PowerShellProcedure"></a> [Before You Begin](#Top)  
-  
-  

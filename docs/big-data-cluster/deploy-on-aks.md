@@ -34,9 +34,9 @@ This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If
 
 - Minimum 1.13 version for Kubernetes server. For AKS, you need to use `--kubernetes-version` parameter to specify a version different than the default.
 
-- For an optimal experience while validating basic scenarios on AKS, use:
+- To ensure a successful deployment and an optimal experience while validating basic scenarios on AKS, you can use a single node or a multi-node AKS cluster, with these resources available:
    - 8 vCPUs across all nodes
-   - 32 GB of memory per VM
+   - 64 GB of memory per VM
    - 24 or more attached disks across all nodes
 
    > [!TIP]

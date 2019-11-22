@@ -41,8 +41,6 @@ ms.author: jrasnick
   
 6.  To run the query, click **Execute**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## See Also  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Enable Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   

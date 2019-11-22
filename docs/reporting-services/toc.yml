@@ -2,7 +2,7 @@
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
 
 - name: Welcome to SQL Server >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 
 - name: Overview
   items:
@@ -17,13 +17,19 @@
   - name: Backward Compatibility
     href: ../reporting-services/reporting-services-backward-compatibility.md
     items:
-    - name: Deprecated features
+    - name: Deprecated features in 2019
+      href: ../reporting-services/deprecated-features-sql-server-2019-reporting-services-ssrs.md
+    - name: Deprecated features in 2017
+      href: ../reporting-services/deprecated-features-sql-server-2017-reporting-services-ssrs.md
+    - name: Deprecated features in 2016
       href: ../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md
-    - name: Discontinued functionality in SSRS in SQL Server 2016
+    - name: Discontinued functionality in 2019
+      href: ../reporting-services/discontinued-functionality-sql-server-reporting-services-2019.md
+    - name: Discontinued functionality in 2016
       href: ../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
-    - name: Breaking changes in SSRS in SQL Server 2016
+    - name: Breaking changes in 2016
       href: ../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
-    - name: Behavior changes to SQL Server Reporting Services in SQL Server 2016
+    - name: Behavior changes in 2016
       href: ../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
 - name: Tutorials
   items:
@@ -125,12 +131,12 @@
     href: ../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md
   - name: Reporting Services features in editions of SQL Server
     href: ../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
-- name: Install Reporting Services
+- name: Install Reporting Services versions
   items:
-  - name: Install Reporting Services 2017
+  - name: Install Reporting Services
     href: ../reporting-services/install-windows/install-reporting-services.md
     items:
-    - name: Find the product key for Reporting Services 2017
+    - name: Find the product key for Reporting Services
       href: ../reporting-services/install-windows/find-reporting-services-product-key-ssrs.md
   - name: Install Reporting Services 2016 in native mode
     href: ../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
@@ -1016,15 +1022,19 @@
     href: ../reporting-services/report-builder/print-a-report-reporting-services-in-sharepoint-mode.md
 - name: Report data in SSRS
   items:
-  - name: Report Data in SSRS Overview
+  - name: Intro to Report Data
     href: ../reporting-services/report-data/report-data-ssrs.md
-  - name: Data Sources Supported by Reporting Services
+  - name: Supported Data Sources
     href: ../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md
-  - name: Data Connections, Data Sources, and Connection Strings (Report Builder and SSRS)
+  - name: Create connection strings
     href: ../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md
   - name: Add and Verify a Data Connection
     href: ../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md
-  - name: Create, Modify, and Delete Shared Data Sources
+  - name: Specify Credential and Connection Information
+    href: ../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md
+  - name: Compare Shared and Embedded Data Sources
+    href: ../reporting-services/report-data/compare-shared-embedded-data-sources-report-builder-ssrs.md
+  - name: Create and Modify Shared Data Sources
     href: ../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md
   - name: Create and Modify Embedded Data Sources
     href: ../reporting-services/report-data/create-and-modify-embedded-data-sources.md

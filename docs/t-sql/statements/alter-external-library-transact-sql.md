@@ -1,7 +1,7 @@
 ---
 title: "ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 07/24/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning
@@ -26,7 +26,7 @@ Modifies the content of an existing external package library.
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> In SQL Server 2017, R language and Windows platform are supported. R, Python, and external languages on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4 and later.
+> In SQL Server 2017, R language and Windows platform are supported. R, Python, and external languages on the Windows and Linux platforms are supported in SQL Server 2019 and later.
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current"
@@ -163,14 +163,14 @@ This option is useful if you have the required permission to alter a library, bu
 Instead, you can pass the package contents as a variable in binary format.
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-**PLATFORM = WINDOWS**
+**platform = WINDOWS**
 
 Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform.
 In SQL Server 2017, Windows is the only supported platform.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-**PLATFORM**
+**platform**
 
 Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform. 
 In SQL Server 2019, Windows and Linux are the supported platforms.

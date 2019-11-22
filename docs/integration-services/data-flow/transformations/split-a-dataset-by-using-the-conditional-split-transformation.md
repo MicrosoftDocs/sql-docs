@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "splitting dataset"
   - "datasets [Integration Services], splitting"
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Split a Dataset by Using the Conditional Split Transformation
 

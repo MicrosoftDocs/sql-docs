@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "cryptography [Integration Services]"
   - "security [Integration Services], protection levels"
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Access Control for Sensitive Data in Packages
 

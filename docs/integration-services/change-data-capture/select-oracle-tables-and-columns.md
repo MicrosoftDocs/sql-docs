@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "selTabCol"
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Select Oracle Tables and Columns
 

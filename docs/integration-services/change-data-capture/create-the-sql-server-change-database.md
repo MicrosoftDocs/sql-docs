@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "oraIns"
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Create the SQL Server Change Database
 

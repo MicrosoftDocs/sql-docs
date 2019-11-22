@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "running packages [Integration Services]"
   - "Integration Services, (See also Integration Services packages)"
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Run Integration Services (SSIS) Packages
 

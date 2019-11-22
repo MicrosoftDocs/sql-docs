@@ -45,27 +45,27 @@ SQLSERVER:\SQL\MyComputer\MyInstance
 ##  <a name="Examples"></a> Examples; Computer and Instance Names  
  This example uses localhost and DEFAULT to specify the default instance on the local computer:  
   
-```  
-Set-Location SQLSERVER:\SQL\localhost\DEFAULT   
+```powershell
+Set-Location SQLSERVER:\SQL\localhost\DEFAULT
 ```  
   
  The parenthesis characters in (local) are normally treated as commands by Windows PowerShell. You must either:  
   
 -   Enclose the path string in quotes:  
   
-    ```  
+    ```powershell
     Set-Location "SQLSERVER:\SQL\(local)\DEFAULT"  
     ```  
   
 -   Escape the parenthesis using the back tick character (`):  
   
-    ```  
+    ```powershell
     Set-Location SQLSERVER:\SQL\`(local`)\DEFAULT  
     ```  
   
 -   Encode the parenthesis using their hexadecimal representation:  
   
-    ```  
+    ```powershell
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
@@ -73,5 +73,3 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
  [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

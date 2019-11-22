@@ -39,7 +39,7 @@ manager: craigg
   
 ##  <a name="SSMS"></a> Using SQL Server Management Studio  
   
-#### To start a job  
+### To start a job  
   
 1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
   
@@ -55,7 +55,7 @@ manager: craigg
   
 ##  <a name="TSQL"></a> Using Transact-SQL  
   
-#### To start a job  
+### To start a job  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -63,7 +63,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql
     -- starts a job named Weekly Sales Data Backup.    
     USE msdb ;  
     GO  
@@ -75,8 +75,7 @@ manager: craigg
  For more information, see [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql).  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
- **To start a job**  
+
+### To start a job
   
  Call the `Start` method of the `Job` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

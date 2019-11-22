@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "roles [Integration Services]"
   - "packages [Integration Services], roles"
 ms.assetid: 2e0ca0d5-d4f5-421d-b17d-a48b37b923e5
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Managing Package Roles Programmatically (SSIS Service)
 

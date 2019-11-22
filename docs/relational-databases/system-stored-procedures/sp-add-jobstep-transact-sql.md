@@ -20,11 +20,14 @@ ms.author: "sstein"
 ---
 # sp_add_jobstep (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Adds a step (operation) to a job.  
+  Adds a step (operation) to a SQL Agent job.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+  > [!IMPORTANT]  
+  > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent job types are supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
   
 ## Syntax  
   
@@ -184,7 +187,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  SQL Server Management Studio provides an easy, graphical way to manage jobs, and is the recommended way to create and manage the job infrastructure.  
   
- A job step must specify a proxy unless the creator of the job step is a member of the **sysadmin** fixed security role.  
+ By default, a job step will run as the service account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent unless another proxy is specified. A requirement of this account is to be a member of the **sysadmin** fixed security role.
   
  A proxy may be identified by *proxy_name* or *proxy_id*.  
   

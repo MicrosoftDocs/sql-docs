@@ -8,7 +8,7 @@ ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 06/25/2019
+ms.date: 09/12/2019
 ms.author: mibar
 author: barmichal
 ---
@@ -93,7 +93,7 @@ The classification metadata for *Information Types* and *Sensitivity Labels* is 
 
 The metadata can be accessed using the Extended Properties catalog view [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
 
-The following code example returns all classified columns with their corresponding classifications:
+For SQL Server 2017, the following code example returns all classified columns with their corresponding classifications:
 
 ```sql
 SELECT
@@ -135,7 +135,7 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
-Or on SQL Server 2019 :
+On SQL Server 2019:
 ```sql
 SELECT 
     schema_name(O.schema_id) AS schema_name,

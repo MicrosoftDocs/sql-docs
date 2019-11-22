@@ -37,8 +37,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 3.  Add the values calculated in steps 1 and 2.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## See Also  
  [Estimate the Size of a Database](../../relational-databases/databases/estimate-the-size-of-a-database.md)   
  [Estimate the Size of a Heap](../../relational-databases/databases/estimate-the-size-of-a-heap.md)   

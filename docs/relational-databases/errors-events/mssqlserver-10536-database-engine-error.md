@@ -24,10 +24,10 @@ ms.author: mathoma
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|PG_TOO_MANY_STMTS|  
-|Message Text|Cannot create plan guide '%.\*ls' because the batch or module corresponding to the specified **@plan_handle** contains more than 1000 eligible statements. Create a plan guide for each statement in the batch or module by specifying a **statement_start_offset** value for each statement.|  
+|Message Text|Cannot create plan guide '%.\*ls' because the batch or module corresponding to the specified **\@plan_handle** contains more than 1000 eligible statements. Create a plan guide for each statement in the batch or module by specifying a **statement_start_offset** value for each statement.|  
   
 ## Explanation  
-The batch or module corresponding to the specified **@plan_handle** contains more than 1000 eligible statements.  
+The batch or module corresponding to the specified **\@plan_handle** contains more than 1000 eligible statements.  
   
 ## User Action  
 Create a plan guide for each statement in the batch or module by specifying a **statement_start_offset** value for each statement.  

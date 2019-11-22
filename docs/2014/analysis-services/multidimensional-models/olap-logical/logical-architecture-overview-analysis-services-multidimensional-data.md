@@ -22,7 +22,7 @@ manager: craigg
 ## Basic Architecture  
  An instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] can contain multiple databases, and a database can have OLAP objects and data mining objects at the same time. Applications connect to a specified instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] and a specified database. A server computer can host multiple instances of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Instances of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] are named as "\<ServerName>\\<InstanceName\>". The following illustration shows all mentioned relationships between [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects.  
   
- ![AMO running objects relationships](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "AMO running objects relationships")  
+ ![AMO running objects relationships](../../dev-guide/media/amo-runningobjects.gif "AMO running objects relationships")  
   
  Basic classes are the minimum set of objects that are required to build a cube. This minimum set of objects is a dimension, a measure group, and a partition. An aggregation is optional.  
   
@@ -55,7 +55,7 @@ manager: craigg
 ## Example  
  The Imports cube contains two measures, Packages and Last, and three related dimensions, Route, Source, and Time.  
   
- ![Cube Example 1](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro1.gif "Cube Example 1")  
+ ![Cube Example 1](../../dev-guide/media/cubeintro1.gif "Cube Example 1")  
   
  The smaller alphanumeric values around the cube are the members of the dimensions. Example members are ground (member of the Route dimension), Africa (member of the Source dimension), and 1st quarter (member of the Time dimension).  
   
@@ -68,7 +68,7 @@ manager: craigg
 ### Aggregates  
  Business users of a cube can determine the value of any measure for each member of every dimension, regardless of the level of the member within the dimension, because [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] aggregates values at upper levels as needed. For example, the measure values in the preceding illustration can be aggregated according to a standard calendar hierarchy by using the Calendar Time hierarchy in the Time dimension as illustrated in the following diagram.  
   
- ![Diagram of measures organized along time dimension](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif "Diagram of measures organized along time dimension")  
+ ![Diagram of measures organized along time dimension](../../dev-guide/media/cubeintro2.gif "Diagram of measures organized along time dimension")  
   
  In addition to aggregating measures by using a single dimension, you can aggregate measures by using combinations of members from different dimensions. This allows business users to evaluate measures in multiple dimensions simultaneously. For example, if a business user wants to analyze quarterly imports that arrived by air from the Eastern Hemisphere and Western Hemisphere, the business user can issue a query on the cube to retrieve the following dataset.  
   

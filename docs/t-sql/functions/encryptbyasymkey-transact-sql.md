@@ -52,8 +52,8 @@ or
  
 data type.  
   
-**@plaintext**  
-A variable holding a value that `ENCRYPTBYASYMKEY` will encrypt with the asymmetric key. **@plaintext** can have a
+**\@plaintext**  
+A variable holding a value that `ENCRYPTBYASYMKEY` will encrypt with the asymmetric key. **\@plaintext** can have a
   
 + **binary**
 + **char**

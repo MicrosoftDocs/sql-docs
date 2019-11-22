@@ -15,14 +15,14 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article provides guidance on how to use extended Spark History Server to debug and diagnose Spark applications in a SQL Server 2019 (preview) big data cluster. These debug and diagnosis capabilities are built into Spark History Server and powered by Microsoft. The extension includes data tab and graph tab and diagnosis tab. In data tab, users can check the input and output data of the Spark job. In graph tab, users can check the data flow and replay the job graph. In diagnosis tab, user can refer to Data skew, Time skew, and Executor Usage analysis.
+This article provides guidance on how to use extended Spark History Server to debug and diagnose Spark applications in a SQL Server Big Data Cluster. These debug and diagnosis capabilities are built into Spark History Server and powered by Microsoft. The extension includes data tab and graph tab and diagnosis tab. In data tab, users can check the input and output data of the Spark job. In graph tab, users can check the data flow and replay the job graph. In diagnosis tab, user can refer to Data skew, Time skew, and Executor Usage analysis.
 
 ## Get access to Spark History Server
 
 The Spark history server user experience from open source is enhanced with information, which includes job-specific data and interactive visualization of job graph and data flows for big data cluster. 
 
 ### Open the Spark History Server Web UI by URL
-Open the Spark History Server by browsing to the following URL, replace `<Ipaddress>` and `<Port>` with big data cluster specific information. More information can be referred to: [Deploy SQL Server big data cluster](quickstart-big-data-cluster-deploy.md)
+Open the Spark History Server by browsing to the following URL, replace `<Ipaddress>` and `<Port>` with big data cluster specific information. Note that in a basic authentication (username/password) big data cluster setup, you must provide user **root** when prompted to login to gateway (Knox) endpoints. More information can be referred to: [Deploy SQL Server big data cluster](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -198,5 +198,6 @@ The Spark History Server has the following known issues:
 
 ## Next steps
 
-* [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
-* [Configure Spark settings](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)
+* [Get started with SQL Server Big Data Clusters](../big-data-cluster/deploy-get-started.md)
+* Configure Spark settings
+* [Configure Spark settings](/azure/hdinsight/spark/apache-spark-settings/)

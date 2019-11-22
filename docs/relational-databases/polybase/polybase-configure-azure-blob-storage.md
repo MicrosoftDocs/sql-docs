@@ -1,19 +1,21 @@
 ---
-title: "Configure PolyBase to access external data in Azure Blob Storage | Microsoft Docs"
+title: "Configure PolyBase to access external data in Azure Blob Storage"
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ""
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
+ms.custom: seo-dt-2019
+
 ---
 # Configure PolyBase to access external data in Azure Blob Storage
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The article explains how to use PolyBase on a SQL Server instance to query external data in Hadoop.
+The article explains how to use PolyBase on a SQL Server instance to query external data in Azure Blob Storage.
 
 ## Prerequisites
 

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Excel [Integration Services]"
   - "connection managers [Integration Services], Excel"
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Excel Connection Manager
 

@@ -1,18 +1,18 @@
 ---
-title: "Database Engine Events and Errors | Microsoft Docs"
+title: "Database engine events and errors"
 ms.custom: ""
 ms.date: 01/11/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 ---
-# Database Engine Errors
+# Database engine errors
 
-The table contains error message numbers and the description, which is the text of the error message from the sys.messages catalog view.
+The table contains error message numbers and the description, which is the text of the error message from the sys.messages catalog view. Where applicable, the error number is a link to further information.
 
 ## Errors -2 to 999
 
@@ -4993,7 +4993,7 @@ The table contains error message numbers and the description, which is the text 
 |	11297	|	16	|	No	|	A corrupted message has been received. The private variable data segment offset is incorrect.	|
 |	11298	|	16	|	No	|	A corrupted message has been received. The public variable data segment offset is incorrect.	|
 |	11299	|	10	|	No	|	A corrupted message has been received. An unsequenced message had a non-zero sequence number. This occurred in the message with Conversation ID '%.*ls', Initiator: %d, and Message sequence number: %I64d.	|
-|	11300	|	10	|	Yes	|	Error wile committing a readonly or a TEMPDB XDES, Shutting down the server.	|
+|	11300	|	10	|	Yes	|	Error while committing a readonly or a TEMPDB XDES, Shutting down the server.	|
 |	11301	|	10	|	Yes	|	Error while performing transaction notification for object %p event %d.	|
 |	11302	|	10	|	Yes	|	Error during rollback. shutting down database (location: %d).	|
 |	11303	|	10	|	Yes	|	Error releasing reserved log space: %ls space %I64d, code %d, state %d.	|

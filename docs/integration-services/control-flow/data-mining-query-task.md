@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "prediction queries [Integration Services]"
   - "Data Mining Query task [Integration Services]"
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Data Mining Query Task
 

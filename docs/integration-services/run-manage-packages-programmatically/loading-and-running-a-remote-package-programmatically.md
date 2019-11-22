@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "packages [Integration Services], running"
   - "remote packages [Integration Services]"
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Loading and Running a Remote Package Programmatically
 

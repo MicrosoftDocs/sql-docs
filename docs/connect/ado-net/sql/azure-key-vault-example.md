@@ -20,7 +20,7 @@ ms.author: v-jizho2
 
 This example demonstrates use of Azure Key Vault Provider when accessing encrypted columns.
 
-[!code-csharp[AKVProvider Example#1](~/../sqlclient/doc/samples/AzureKeyVaultProviderExample.cs#1)]
+[!code-csharp [AKVProvider Example#1](~/../sqlclient/doc/samples/AzureKeyVaultProviderExample.cs#1)]
 
 ## See Also
 

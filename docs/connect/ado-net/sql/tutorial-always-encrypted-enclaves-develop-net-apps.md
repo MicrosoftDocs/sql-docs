@@ -30,7 +30,7 @@ In addition, you need Visual Studio (version 2019 is recommended) - you can down
 
 To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application targets .NET Framework 4.6 or higher. To use Always Encrypted with secure enclaves in a .NET Core application, you need to make sure your application targets .NET Core 2.1 or higher.
 
-In addition, if you store you column master key in Azure Key Vault, you also need to integrate your application with the [Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider NuGet](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider).
+In addition, if you store your column master key in Azure Key Vault, you also need to integrate your application with the [Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider NuGet](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider).
 
 1. Open Visual Studio.
 

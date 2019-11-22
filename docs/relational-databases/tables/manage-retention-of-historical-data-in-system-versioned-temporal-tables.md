@@ -321,9 +321,9 @@ In sliding window scenario, we always remove lowest partition boundary.
 
 ## Using custom cleanup script approach
 
-In cases when the Stretch Database and table partitioning approached are not viable options, the third approach is to delete the data from history table using the custom cleanup script. Deleting data from history table is possible only when **SYSTEM_VERSIONING = OFF**. In order to avoid data inconsistency, perform cleanup either during the maintenance window (when workloads that modify data are not active) or within a transaction (effectively blocking other workloads). This operation requires **CONTROL** permission on current and history tables.
+In cases when the Stretch Database and table partitioning approaches are not viable options, the third approach is to delete the data from history table using a custom cleanup script. Deleting data from history table is possible only when **SYSTEM_VERSIONING = OFF**. In order to avoid data inconsistency, perform cleanup either during the maintenance window (when workloads that modify data are not active) or within a transaction (effectively blocking other workloads). This operation requires **CONTROL** permission on current and history tables.
 
-To minimally block regular applications and user queries, delete data in smaller chunks with a delay when performing the cleanup script inside a transaction. While there is no optimal size of for each data chunk to be deleted for all scenarios, deleting more than 10,000 rows in a single transaction may impose a significant impact.
+To minimally block regular applications and user queries, delete data in smaller chunks with a delay when performing the cleanup script inside a transaction. While there is no optimal size for each data chunk to be deleted for all scenarios, deleting more than 10,000 rows in a single transaction may impose a significant impact.
 
 The cleanup logic is the same for every temporal table, so it can be automated relatively easily through a generic stored procedure that you schedule to run periodically for every temporal table for which you want to limit data history.
 
@@ -333,7 +333,7 @@ The following diagram illustrates how your cleanup logic should be organized for
 
 Here are some high-level guidelines for implementing the process. Schedule cleanup logic to run every day and iterate over all temporal tables that need data cleanup. Use SQL Server Agent or different tool to schedule this process:
 
-- Delete historical data in every temporal table starting from the oldest to the most recent rows in several iterations in small chunks and avoid deleting all rows in a single transaction as shown on picture above.
+- Delete historical data in every temporal table starting from the oldest to the most recent rows in several iterations in small chunks and avoid deleting all rows in a single transaction as shown on the picture above.
 - Implement every iteration as an invocation of generic stored procedure that removes a portion of data from the history table (see code example below for this procedure).
 - Calculate how many rows you need to delete for an individual temporal table every time you invoke the process. Based on that and number of number of iterations you want to have, determine dynamic split points for every procedure invocation.
 - Plan to have a period of delay between iterations for a single table to reduce impact on applications that access the temporal table.

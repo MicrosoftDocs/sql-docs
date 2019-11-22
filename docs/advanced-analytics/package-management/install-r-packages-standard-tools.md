@@ -25,10 +25,6 @@ In addition to standard R tools, you can install R packages using:
 + [T-SQL](install-r-packages-with-tsql.md) (CREATE EXTERNAL LIBRARY)
 ::: moniker-end
 
-## Prerequisites
-
-- Install [R](https://www.r-project.org) or an R IDE such as [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
-
 ## General considerations
 
 + R code running in SQL Server can use only packages installed in the default instance library. SQL Server cannot load packages from external libraries, even if that library is on the same computer.
@@ -69,7 +65,7 @@ If the SQL Server has access to the Internet, then you can use standard package 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-1. Run **R** or **RStudio** as administrator.
+1. Run **R** or **Rgui** as administrator from this folder.
 
 1. Run the R command `install.packages` and specify the package name. If the package has any dependencies, the installer automatically downloads the dependencies and installs them.
 
@@ -100,7 +96,7 @@ Once the zip file is on the SQL Server instance, you can install it using standa
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-1. Run **R** or **RStudio** as administrator.
+1. Run **R** or **Rgui** as administrator from this folder.
 
 1. Run the R command `install.packages` and specify the package or repository name, and the location of the zipped files. For example:
 

@@ -11,8 +11,6 @@
 - name: SQL Data Developer
   href: ../connect/sql-data-developer.md
 
-
-
 - name: ADO.NET
   items:
   - name: Microsoft ADO.NET for SQL Server
@@ -145,6 +143,8 @@
         href: ../connect/ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md
       - name: SqlClient support for LocalDB
         href: ../connect/ado-net/sql/sqlclient-support-localdb.md
+      - name: SqlClient support for Always Encrypted
+        href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
 
 - name: JDBC
   items:

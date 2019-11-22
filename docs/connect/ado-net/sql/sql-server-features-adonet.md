@@ -47,7 +47,7 @@ Describes SqlClient support for high-availability, disaster recovery (AlwaysOn) 
 [SqlClient support for LocalDB](sqlclient-support-localdb.md)  
 Describes SqlClient support for LocalDB databases.
 
-[SqlClient support for Always Encrypted](sqlclient-support-always-encrypted.md)
+[SqlClient support for Always Encrypted](sqlclient-support-always-encrypted.md)  
 Describes SqlClient support for the Always Encrypted feature.
 
 ## Next steps

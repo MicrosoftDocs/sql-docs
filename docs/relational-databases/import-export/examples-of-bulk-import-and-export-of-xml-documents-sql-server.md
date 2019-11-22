@@ -247,7 +247,7 @@ GO
  [&#91;Top&#93;](#top)  
   
 ## <a name="bulk_export_xml_data"></a> Bulk exporting XML data  
- The following example uses `bcp` to bulk export XML data from the table that is created in the preceding example by using the same XML format file. In the following `bcp` command, `<server_name>` and `<instance_name>` represent placeholders that must be replaced with appropriate values:  
+ The following example uses [bcp](../../tools/bcp-utility.md) to bulk export XML data from the table that is created in the preceding example by using the same XML format file. In the following `bcp` command, `<server_name>` and `<instance_name>` represent placeholders that must be replaced with appropriate values:  
   
 ```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  

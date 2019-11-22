@@ -251,8 +251,10 @@
       items:
       - name: Get R package information
         href: ../advanced-analytics/package-management/r-package-information.md
-      - name: Install R packages
+      - name: Install with R tools
         href: ../advanced-analytics/package-management/install-r-packages-standard-tools.md
+      - name: Install with sqlmlutils
+        href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
       - name: Install with T-SQL
         href: ../advanced-analytics/package-management/install-r-packages-with-tsql.md
       - name: Use RevoScaleR
@@ -263,8 +265,6 @@
           href: ../advanced-analytics/package-management/r-package-how-to-enable-or-disable.md
         - name: Synchronize R packages
           href: ../advanced-analytics/package-management/package-install-uninstall-and-sync.md
-      - name: Install R packages
-        href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
       - name: Create a miniCRAN repo
         href: ../advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md
       - name: Tips for using R packages

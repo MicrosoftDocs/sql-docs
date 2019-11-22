@@ -1,6 +1,6 @@
 ---
-title: "DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL)"
+ms.custom: seo-dt-2019
 ms.date: "07/03/2019"
 ms.prod: sql
 ms.technology: data-warehouse

@@ -1,6 +1,6 @@
 ---
-title: "Bind a Database with Memory-Optimized Tables to a Resource Pool | Microsoft Docs"
-ms.custom: ""
+title: "Bind database with memory-optimized tables to resource pool"
+ms.custom: seo-dt-2019
 ms.date: "08/29/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"

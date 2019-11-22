@@ -1,6 +1,6 @@
 ---
-title: "Troubleshooting Hash Indexes for Memory-Optimized Tables | Microsoft Docs"
-ms.custom: ""
+title: "Troubleshooting hash indexes - memory-optimized tables"
+ms.custom: seo-dt-2019
 ms.date: "12/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

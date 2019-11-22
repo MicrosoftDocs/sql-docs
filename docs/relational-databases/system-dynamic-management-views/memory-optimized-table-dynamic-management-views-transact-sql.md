@@ -1,6 +1,6 @@
 ---
-title: "Memory-Optimized Table Dynamic Management Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Memory-optimized table Dynamic Management Views (Transact-SQL)"
+ms.custom: seo-dt-2019
 ms.date: "02/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

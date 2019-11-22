@@ -1,6 +1,6 @@
 ---
-title: "Piecemeal Restore of Databases With Memory-Optimized Tables | Microsoft Docs"
-ms.custom: ""
+title: "Piecemeal restore of databases - memory-optimized tables"
+ms.custom: seo-dt-2019
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

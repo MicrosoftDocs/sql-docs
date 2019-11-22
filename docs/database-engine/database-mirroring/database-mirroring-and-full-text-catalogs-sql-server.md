@@ -1,6 +1,7 @@
 ---
-title: "Database Mirroring and Full-Text Catalogs (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Database Mirroring and Full-Text Catalogs"
+description: Describes how to configure a database mirror on a database that has a full-text catalog.
+ms.custom: "seo-lt-2019"
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: high-availability

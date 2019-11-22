@@ -1,6 +1,7 @@
 ---
-title: "Summary Page (Always On Availability Group Wizards) | Microsoft Docs"
-ms.custom: ""
+title: "Availability group wizard: Summary Page"
+description: "Describes the options of the 'Summary' page of the Always On Availability Group Wizard in SQL Server Management Studio."
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

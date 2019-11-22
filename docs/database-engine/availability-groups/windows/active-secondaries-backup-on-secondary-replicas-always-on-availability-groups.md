@@ -1,7 +1,7 @@
 ---
-title: "Offload supported backups to secondary replicas of an availability group"
+title: "Offload backup to availability group secondary replica"
 description: "Learn about the different supported back up types when offloading backups to a secondary replica of an Always On availability group."
-ms.custom: "seodec18"
+ms.custom: "seo-lt-2019"
 ms.date: "09/01/2017"
 ms.prod: sql
 ms.reviewer: ""

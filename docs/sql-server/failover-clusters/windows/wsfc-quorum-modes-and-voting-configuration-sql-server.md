@@ -1,6 +1,7 @@
 ---
-title: "WSFC Quorum Modes and Voting Configuration (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "WSFC Quorum Modes & Voting Configuration"
+descriptoin: "A description of the quroum modes and voting configuration used by the Windows Server Failover Cluster with a SQL Server failover cluster instance, or an Always On availability group. "
+ms.custom: "seo-lt-2019"
 ms.date: "10/03/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -18,19 +19,6 @@ ms.author: mathoma
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Both [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and Always On Failover Cluster Instances (FCI) take advantage of Windows Server Failover Clustering (WSFC) as a platform technology.  WSFC uses a quorum-based approach to monitoring overall cluster health and maximize node-level fault tolerance. A fundamental understanding of WSFC quorum modes and node voting configuration is very important to designing, operating, and troubleshooting your Always On high availability and disaster recovery solution.  
   
- **In this topic:**  
-  
--   [Cluster Health Detection by Quorum](#ClusterHealthDetectionbyQuorum)  
-  
--   [Quorum Modes](#QuorumModes)  
-  
--   [Voting and Non-Voting Nodes](#VotingandNonVotingNodes)  
-  
--   [Recommended Adjustments to Quorum Voting](#RecommendedAdjustmentstoQuorumVoting)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
   
 ##  <a name="ClusterHealthDetectionbyQuorum"></a> Cluster Health Detection by Quorum  
  Each node in a WSFC cluster participates in periodic heartbeat communication to share the node's health status with the other nodes. Unresponsive nodes are considered to be in a failed state.  

@@ -1,6 +1,7 @@
 ---
-title: "Transact-SQL Statements for Always On Availability Groups | Microsoft Docs"
-ms.custom: ""
+title: "Transact-SQL Statements for availability groups"
+description: Introduces Transact-SQL (T-SQL) statements that support deploying, creating, and managing Always On availability groups. 
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

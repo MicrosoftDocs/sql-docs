@@ -1,6 +1,7 @@
 ---
-title: "Quorum: How a Witness Affects Database Availability (Database Mirroring) | Microsoft Docs"
-ms.custom: ""
+title: "How a Witness Affects Database Availability"
+description: "Describes how a database mirroring affects quorum and database availability."
+ms.custom: "seo-lt-2019"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: high-availability

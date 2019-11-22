@@ -1,6 +1,7 @@
 ---
-title: "Remove an Availability Group Listener (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Remove an availability group listener"
+description: Describws how to remove an Always On availablity group listener with SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or SQL PowerShell. 
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

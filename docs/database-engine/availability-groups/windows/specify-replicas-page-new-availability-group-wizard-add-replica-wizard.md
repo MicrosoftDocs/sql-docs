@@ -1,6 +1,7 @@
 ---
-title: "Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard) | Microsoft Docs"
-ms.custom: ""
+title: "Availability Group Wizard: Specify Replicas Page"
+description: Describes the options of the 'Specify Replicas' page of the 'New Availability Group Wizard in SQL Server Management Studio (SSMS)."
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

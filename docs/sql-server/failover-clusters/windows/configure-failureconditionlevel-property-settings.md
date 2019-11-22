@@ -1,6 +1,7 @@
 ---
-title: "Configure FailureConditionLevel Property Settings | Microsoft Docs"
-ms.custom: ""
+title: "Configure FailureConditionLevel Property Settings"
+describes: "Use the FailureConditionLevel property to set the conditions for the Always On Failover Cluster Instance (FCI) to fail over or restart. "
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""

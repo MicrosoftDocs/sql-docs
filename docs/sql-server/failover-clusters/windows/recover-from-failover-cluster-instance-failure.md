@@ -1,6 +1,7 @@
 ---
-title: "Recover from Failover Cluster Instance Failure | Microsoft Docs"
-ms.custom: ""
+title: "Recover from Failover Cluster Instance Failure"
+description: Describes how to recover from a failover of a SQL Server failover cluster instance. 
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""

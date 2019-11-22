@@ -31,7 +31,10 @@ Package repositories are useful in these scenarios:
 
 - **Security**: Many R users are accustomed to downloading and installing new R packages at will, from CRAN or one of its mirror sites. However, for security reasons, production servers running [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] typically do not have internet connectivity.
 
-- **Easier offline installation**: To install a package to an offline server requires that you also download all package dependencies. Using miniCRAN makes it easier to get all dependencies in the correct format. By using miniCRAN, you can avoid package dependency errors when preparing packages to install with the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement.
+- **Easier offline installation**: To install a package to an offline server requires that you also download all package dependencies. Using miniCRAN makes it easier to get all dependencies in the correct format. 
+::: moniker range==sql-server-2017||=sqlallproducts-allversions"
+By using miniCRAN, you can avoid package dependency errors when preparing packages to install with the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement.
+::: moniker-end
 
 - **Improved version management**: In a multi-user environment, there are good reasons to avoid unrestricted installation of multiple package versions on the server. Use a local repository to provide a consistent set of packages for your users.
 
@@ -119,7 +122,7 @@ After you have a local repository with the packages you need, move the package r
    - For example, the default file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range==sql-server-2017||=sqlallproducts-allversions"
    - For example, the file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 

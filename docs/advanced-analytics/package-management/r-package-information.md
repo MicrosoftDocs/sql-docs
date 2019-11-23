@@ -175,7 +175,12 @@ print(packageDescription("glue"))
 
 ## Next steps
 
-+ [Install new R packages](../r/install-additional-r-packages-on-sql-server.md)
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
++ [Install packages with R tools](install-r-packages-standard-tools.md)
+::: moniker-end
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
++ [Install new R packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
+::: moniker-end
 + [Get Python package information](python-package-information.md)
 + [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md)
 + [R and Python tutorials](../tutorials/machine-learning-services-tutorials.md)

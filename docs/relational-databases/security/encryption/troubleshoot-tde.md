@@ -77,7 +77,7 @@ In the Azure portal, go to the key vault, and then go to **Access policies**. Co
  1. Use the **Add New** button to add the AppId for the server you created in the preceding step. 
  1. Assign the following key permissions: Get, Wrap, and Unwrap 
 
-To learn more, see [Assign an Azure AD identity to your server](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
+To learn more, see [Assign an Azure AD identity to your server](/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure#assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
 > If the logical SQL Server instance was moved to a new tenant after the initial configuration of TDE with Key Vault, repeat the step to configure the Azure AD identity to create a new AppId. Then, add the AppId to the key vault and assign the correct permissions to the key. 

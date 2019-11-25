@@ -174,7 +174,7 @@ Once you can connect using TCP on the same computer, it's time to try connecting
    - `ping` of the IP address doesn't work, indicating a general TCP configuration problem. Go back to the section [Testing TCP/IP connectivity](#testTCPIP).
    - SQL Server is not listening on the TCP protocol. Go back to the section [Enable protocols](#enableprotocols).
    - SQL Server is listening on a port other than the port you specified. Go back to the section [Get the TCP port number](#getTCP).
-   - The SQL Server TCP port is being blocked by the firewall. Go back to the section [Opening a port in the firewall](#opening-a-port-in-the-firewall).
+   - The SQL Server TCP port is being blocked by the firewall. Go back to the section [Open a port in the firewall](#open-a-port-in-the-firewall).
 
 2. Once you can connect using the IP address and port number, attempt to connect using the IP address without a port number. For a default instance, just use the IP address. For a named instance, use the IP address and the instance name in the format IP address backslash instance name, for example `192.168.1.101\<instance name>` If this doesn't work, then you probably have one of the following problems:
 
@@ -184,7 +184,7 @@ Once you can connect using TCP on the same computer, it's time to try connecting
    Both of these problems are related to the SQL Server Browser service, which provides the port number to the client. The solutions are:
 
    - Start the SQL Server Browser service. See the instructions to [start browser in SQL Server Configuration Manager](#startbrowser).
-   - The SQL Server Browser service is being blocked by the firewall. Open UDP port 1434 in the firewall. Go back to the section [Opening a port in the firewall](#opening-a-port-in-the-firewall). Make sure you are opening a UDP port, not a TCP port.
+   - The SQL Server Browser service is being blocked by the firewall. Open UDP port 1434 in the firewall. Go back to the section [Open a port in the firewall](#open-a-port-in-the-firewall). Make sure you are opening a UDP port, not a TCP port.
    - The UDP port 1434 information is being blocked by a router. UDP communication (user datagram protocol) is not designed to pass through routers. This keeps the network from getting filled with low-priority traffic. You might be able to configure your router to forward UDP traffic, or you can decide to always provide the port number when you connect.
    - If the client computer is using Windows 7 or Windows Server 2008, (or a more recent operating system,) the UDP traffic might be dropped by the client operating system because the response from the server is returned from a different IP address than was queried. This is a security feature blocking "loose source mapping." For more information, see the **Multiple Server IP Addresses** section of the Books Online topic [Troubleshooting: Timeout Expired](https://msdn.microsoft.com/library/ms190181.aspx). This is an article from SQL Server 2008 R2, but the principals still apply. You might be able to configure the client to use the correct IP address, or you can decide to always provide the port number when you connect.
 

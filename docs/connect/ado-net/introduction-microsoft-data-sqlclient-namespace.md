@@ -15,7 +15,7 @@ ms.reviewer: rothja
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-## Release notes for Microsoft.Data.SqlClient v1.1.0
+## Release notes for Microsoft.Data.SqlClient 1.1.0
 
 Release notes are also available in the GitHub Repository: [1.1 Release Notes](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.1).
 
@@ -34,7 +34,7 @@ For more details, see:
 - [SqlClient support for Always Encrypted](sql/sqlclient-support-always-encrypted.md)
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
 
-## Release notes for Microsoft.Data.SqlClient v1.0
+## Release notes for Microsoft.Data.SqlClient 1.0
 
 The initial release for the Microsoft.Data.SqlClient namespace offers additional functionality over the existing System.Data.SqlClient namespace.
 Release notes are also available on the GitHub Repository: [1.0 Release Notes](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.0).

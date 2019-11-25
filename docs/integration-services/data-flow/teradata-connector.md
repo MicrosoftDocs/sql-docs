@@ -40,7 +40,7 @@ Check [Teradata documentation](https://docs.teradata.com/) for details of Terada
 
 ### Prerequisite
 
-On 32-bit computers, install the following drivers:
+On 32-bit computers, install the following drivers from [Teradata Tools and Utilities - Windows Installation Package](https://downloads.teradata.com/download/tools/teradata-tools-and-utilities-windows-installation-package):
 
 - Teradata ODBC driver (32-bit)
 - Teradata PT API (32-bit)

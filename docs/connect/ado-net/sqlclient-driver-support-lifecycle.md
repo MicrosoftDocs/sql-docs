@@ -24,7 +24,7 @@ Each iteration of the Microsoft SqlClient Data Provider for SQL Server ships wit
 
 |  Version  |  Release Date | Support Level | Supported Patch Version | End of Support |
 | -- | -- | -- | -- | -- |
-| [.NET Core 2.2](https://aka.ms/netcore22announce) | December 04, 2018 | Current | [2.2.6]https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-2.2.6-windows-x86-installer) | |
+| [.NET Core 2.2](https://aka.ms/netcore22announce) | December 04, 2018 | Current | [2.2.6](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-2.2.6-windows-x86-installer) | |
 | [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1) | May 30, 2018 | LTS | [2.1.12](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-2.1.12-windows-x86-installer) | At least three years from LTS declaration (August 21, 2018). |
 
 ## Microsoft support for .NET Framework

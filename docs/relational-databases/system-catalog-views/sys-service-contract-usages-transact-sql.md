@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sys.service_contract_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

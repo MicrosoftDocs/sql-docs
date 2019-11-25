@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # View Data Conflicts for Transactional Publications (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

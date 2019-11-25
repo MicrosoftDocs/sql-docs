@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Assemblies - Getting Information
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

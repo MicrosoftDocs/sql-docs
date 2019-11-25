@@ -1,5 +1,5 @@
 ---
-title: "Database Object Security (Master Data Services) | Microsoft Docs"
+title: Database Object Security
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "database [Master Data Services], object security"
   - "security [Master Data Services], database objects"
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Database Object Security (Master Data Services)
 

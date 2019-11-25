@@ -10,7 +10,6 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
-manager: craigg
 ---
 # SQL Server Profiler extension (preview)
 

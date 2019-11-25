@@ -16,10 +16,10 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Distributor Information, Publications
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Publications** tab provides summary information for all publications at the Distributor that is selected in the left pane.  
   
 The information that is displayed about the publications supported by the Distributor includes a column that contains the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance of the Publisher. Otherwise, the publication information is the same as the publication information that is provided when you view publications in the Publisher view of Replication Monitor. For more information about the columns in the **Publications** tab, see [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md).  

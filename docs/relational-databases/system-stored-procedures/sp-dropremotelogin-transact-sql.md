@@ -16,10 +16,10 @@ helpviewer_keywords:
   - "sp_dropremotelogin"
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
-manager: craigg
-manager: craigg
+author: VanMSFT
 ---
 # sp_dropremotelogin (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Removes a remote login mapped to a local login used to execute remote stored procedures against the local server running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -32,20 +32,19 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 sp_dropremotelogin [ @remoteserver = ] 'remoteserver'   
      [ , [ @loginame = ] 'login' ]   
      [ , [ @remotename = ] 'remote_name' ]  
 ```  
   
 ## Arguments  
- [ **@remoteserver =** ] **'**_remoteserver_**'**  
+`[ @remoteserver = ] 'remoteserver'`
  Is the name of the remote server mapped to the remote login that is to be removed. *remoteserver* is **sysname**, with no default. *remoteserver* must already exist.  
   
- [ **@loginame =** ] **'**_login_**'**  
+`[ @loginame = ] 'login'`
  Is the optional login name on the local server that is associated with the remote server. *login* is **sysname**, with a default of NULL. *login* must already exist if specified.  
   
- [ **@remotename =** ] **'**_remote_name_**'**  
+`[ @remotename = ] 'remote_name'`
  Is the optional name of the remote login that is mapped to *login* when logging in from the remote server. *remote_name* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  
@@ -68,21 +67,21 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ### A. Dropping all remote logins for a remote server  
  The following example removes the entry for the remote server `ACCOUNTS`, and, therefore, removes all mappings between logins on the local server and remote logins on the remote server.  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
 ### B. Dropping a login mapping  
  The following example removes the entry for mapping remote logins from the remote server `ACCOUNTS` to the local login `Albert`.  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';  
 ```  
   
 ### C. Dropping a remote user  
  The following example removes the login for the remote login `Chris` on the remote server `ACCOUNTS` that was mapped to the local login `salesmgr`.  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   

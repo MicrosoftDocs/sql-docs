@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ELEMENT directive"
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Example: Specifying the ELEMENT Directive
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

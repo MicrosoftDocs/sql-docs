@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Publication (Peer-to-Peer Replication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

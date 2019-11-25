@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing XPath Queries with Namespaces (SQLXMLOLEDB Provider)
@@ -90,7 +89,7 @@ End Sub
     ```  
   
 4.  Execute the application.  
-  
+
  This is the partial result:  
   
 ```  

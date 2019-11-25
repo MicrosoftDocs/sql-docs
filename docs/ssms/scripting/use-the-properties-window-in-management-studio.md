@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "Properties window [SQL Server Management Studio]"
   - "complex properties [SQL Server Management Studio]"
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the Properties Window in Management Studio

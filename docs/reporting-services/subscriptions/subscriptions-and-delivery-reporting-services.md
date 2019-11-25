@@ -2,7 +2,7 @@
 title: "Subscriptions and Delivery (Reporting Services) | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: subscriptions
 
 
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], about subscriptions"
   - "subscriptions [Reporting Services]"
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Subscriptions and Delivery (Reporting Services)
   A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription is a configuration that delivers a report at a specific time or in response to an event, and in a file format that you specify. For example, every Wednesday, save the MonthlySales.rdl report as a Microsoft Word document to a file share. Subscriptions can be used to schedule and automate the delivery of a report and with a specific set of report parameter values.  

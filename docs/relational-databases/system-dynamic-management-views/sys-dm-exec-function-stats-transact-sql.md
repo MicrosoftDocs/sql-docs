@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_function_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "05/30/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.reviewer: ""
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_function_stats (Transact-SQL)
@@ -28,8 +27,8 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out.  
   
 > [!NOTE]
-> An initial query of **sys.dm_exec_function_stats** might produce inaccurate results if there is a workload currently executing on the server. More accurate results may be determined by rerunning the query.  
-  
+> The results of **sys.dm_exec_function_stats**  may vary with each execution as the data only reflects finished queries, and not ones still in-flight. 
+
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -62,11 +61,15 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 |**last_elapsed_time**|**bigint**|Elapsed time, in microseconds, for the most recently completed execution of this function.|  
 |**min_elapsed_time**|**bigint**|Minimum elapsed time, in microseconds, for any completed execution of this function.|  
 |**max_elapsed_time**|**bigint**|Maximum elapsed time, in microseconds, for any completed execution of this function.|  
+|**total_page_server_reads**|**bigint**|Total number of page server reads performed by executions of this function since it was compiled.<br /><br /> **Applies To:** Azure SQL Database Hyperscale.|  
+|**last_page_server_reads**|**bigint**|Number of page server reads performed the last time the function was executed.<br /><br /> **Applies To:** Azure SQL Database Hyperscale.|  
+|**min_page_server_reads**|**bigint**|Minimum number of page server reads that this function has ever performed during a single execution.<br /><br /> **Applies To:** Azure SQL Database Hyperscale.|  
+|**max_page_server_reads**|**bigint**|Maximum number of page server reads that this function has ever performed during a single execution.<br /><br /> **Applies To:** Azure SQL Database Hyperscale.|
   
 ## Permissions  
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
   
 ## Examples  
  The following example returns information about the top ten functions identified by average elapsed time.  

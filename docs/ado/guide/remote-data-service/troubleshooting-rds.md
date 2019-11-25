@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Troubleshooting RDS
 > [!IMPORTANT]

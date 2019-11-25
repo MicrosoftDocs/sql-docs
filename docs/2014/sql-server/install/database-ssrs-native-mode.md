@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.databasesetup.F1"
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Database (SSRS Native Mode)

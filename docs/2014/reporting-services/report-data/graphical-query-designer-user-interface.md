@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10012"
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "query designers [Reporting Services]"
   - "Reporting Services, query designers"
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Graphical Query Designer User Interface
@@ -71,7 +70,7 @@ manager: kfile
 |![Show or Hide Grid pane toggle](../media/rsqdicon-showhidegrid.gif "Show or Hide Grid pane toggle")|Show or hide the Grid pane.|  
 |![Show or hide sql pane toggle](../media/rsqdicon-showhidesql.gif "Show or hide sql pane toggle")|Show or hide the SQL pane.|  
 |![Show or Hide Result pane toggle](../media/rsqdicon-showhideresult.gif "Show or Hide Result pane toggle")|Show or hide the Result pane.|  
-|![Run the query](../../analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query.|  
+|![Run the query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query.|  
 |![Verify SQL in SQL pane button](../media/rsqdicon-verifysql.gif "Verify SQL in SQL pane button")|Check that the syntax of the query text is correct.|  
 |![Set Sort Ascending on selected field](../media/rsqdicon-sortascending.gif "Set Sort Ascending on selected field")|Set the sort order to **Sort Ascending** for the selected column in the Diagram pane,|  
 |![Set Sort Descending on selected field](../media/rsqdicon-sortdescending.gif "Set Sort Descending on selected field")|Set the sort order to **Sort Descending** for the selected column in the Diagram pane,|  
@@ -113,7 +112,7 @@ EXEC uspGetEmployeeManagers '1';
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer.|  
 |**Import**|Import an existing query from a file or report. Only file types .sql and .rdl are supported. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Icon of the Generic Query Designer button](../media/icongenericquerydesigner.gif "Icon of the Generic Query Designer button")|Toggle between generic query designer and graphical query designer, preserving the query text or stored procedure view.|  
-|![Run the query](../../analysis-services/media/rsqdicon-run.gif "Run the query")|Select all columns from the selected table.|  
+|![Run the query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")|Select all columns from the selected table.|  
   
 ### Command Type StoredProcedure  
  In **StoredProcedure** type, the graphical query designer displays a drop-down list of the available stored procedures from the data source and a Result pane. The following table describes the function of each pane.  
@@ -130,7 +129,7 @@ EXEC uspGetEmployeeManagers '1';
 |------------|-----------------|  
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer.|  
 |**Import**|Import an existing query from a file or report. Only file types .sql and .rdl are supported. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Run the query](../../analysis-services/media/rsqdicon-run.gif "Run the query")|Run the selected stored procedure.|  
+|![Run the query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")|Run the selected stored procedure.|  
 |Stored procedure drop-down list|Click the down arrow to display a list of available stored procedures from the data source. Click any stored procedure from the list to select it.|  
   
 #### Example  

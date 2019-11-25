@@ -1,5 +1,5 @@
 ---
-title: "Enable Data Quality Services Integration with Master Data Services | Microsoft Docs"
+title: Enable Data Quality Services Integration
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: ab32938d-a80e-4106-80d4-94b2de3d67dc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Enable Data Quality Services Integration with Master Data Services
 

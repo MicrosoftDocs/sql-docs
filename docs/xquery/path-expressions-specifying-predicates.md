@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Path Expressions - Specifying Predicates
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

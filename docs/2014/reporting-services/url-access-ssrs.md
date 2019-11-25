@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "URL access [Reporting Services]"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], URL access"
   - "hyperlinks [Reporting Services]"
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # URL Access (SSRS)

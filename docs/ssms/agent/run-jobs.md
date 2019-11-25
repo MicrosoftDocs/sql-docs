@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], manually running"
   - "manual job processing [SQL Server]"
 ms.assetid: cd445949-dc10-42fc-8785-4db74c9723ad
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Run Jobs

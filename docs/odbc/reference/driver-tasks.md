@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Driver Tasks
 Specific tasks performed by drivers include:  

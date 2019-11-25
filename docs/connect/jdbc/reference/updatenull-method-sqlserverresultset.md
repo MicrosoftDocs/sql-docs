@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: ca0e9ae2-86e3-4763-8225-07d36acf8a18
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # updateNull Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c98a06f6-c205-42f0-9f2a-4668c6103bc8
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Geo-Replication Dynamic Management Views and Functions (Azure SQL Database)

@@ -26,7 +26,6 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,13 +45,15 @@ manager: craigg
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
-    FROM base_type   
-    [ ( precision [ , scale ] ) ]  
-    [ NULL | NOT NULL ]   
-  | EXTERNAL NAME assembly_name [ .class_name ]   
-AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
-    | [ <table_constraint> ] [ ,... n ]    
-    | [ <table_index> ] [ ,... n ] } )
+    [
+      FROM base_type   
+      [ ( precision [ , scale ] ) ]  
+      [ NULL | NOT NULL ]
+    ]
+    | EXTERNAL NAME assembly_name [ .class_name ]   
+    | AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
+      [ <table_constraint> ] [ ,... n ]    
+      [ <table_index> ] [ ,... n ] } )
  
 } [ ; ]  
   
@@ -190,7 +191,7 @@ column_name <data_type>
  Specifies whether the type can hold a null value. If not specified, NULL is the default.  
   
  *assembly_name*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assembly that references the implementation of the user-defined type in the common language runtime. *assembly_name* should match an existing assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the current database.  
   
@@ -198,7 +199,7 @@ column_name <data_type>
 >  EXTERNAL_NAME is not available in a contained database.  
   
  **[.** *class_name*  **]**  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Specifies the class within the assembly that implements the user-defined type. *class_name* must be a valid identifier and must exist as a class in the assembly with assembly visibility. *class_name* is case-sensitive, regardless of the database collation, and must exactly match the class name in the corresponding assembly. The class name can be a namespace-qualified name enclosed in square brackets (**[ ]**) if the programming language that is used to write the class uses the concept of namespaces, such as C#. If *class_name* is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assumes it is the same as *type_name*.  
   
@@ -222,7 +223,7 @@ column_name <data_type>
  
   `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies to create an index on the table. This can be a clustered index, or a nonclustered index. The index will contain the columns listed, and will sort the data in either ascending or descending order.
   
@@ -230,17 +231,17 @@ Specifies to create an index on the table. This can be a clustered index, or a n
  You must specify column and table indexes as part of the CREATE TABLE statement. CREATE INDEX and DROP INDEX are not supported for memory-optimized tables.  
   
  MEMORY_OPTIMIZED  
- **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indicates whether the table type is memory optimized. This option is off by default; the table (type) is not a memory optimized table (type). Memory optimized table types are memory-optimized user tables, the schema of which is persisted on disk similar to other user tables.  
   
  BUCKET_COUNT  
- **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indicates the number of buckets that should be created in the hash index. The maximum value for BUCKET_COUNT in hash indexes is 1,073,741,824. For more information about bucket counts, see [Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md). *bucket_count* is a required argument.  
   
  HASH  
- **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indicates that a HASH index is created. Hash indexes are supported only on memory optimized tables.  
   
@@ -290,7 +291,7 @@ FROM varchar(11) NOT NULL ;
 ### B. Creating a user-defined type  
  The following example creates a type `Utf8String` that references class `utf8string` in the assembly `utf8string`. Before creating the type, assembly `utf8string` is registered in the local database. Replace the binary portion of the CREATE ASSEMBLY statement with a valid description.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
 ```  
 CREATE ASSEMBLY utf8string  
@@ -311,6 +312,25 @@ CREATE TYPE LocationTableType AS TABLE
     , CostRate INT );  
 GO  
 ```  
+
+### D. Creating a user-defined table type with primary key and index
+The following example creates a user-defined table type that has three columns, one of which (`Name`) is the primary key and another (`Price`) has a nonclustered index.  For more information about how to create and use table-valued parameters, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).
+
+```sql
+CREATE TYPE InventoryItem AS TABLE
+(
+	[Name] NVARCHAR(50) NOT NULL,
+	SupplierId BIGINT NOT NULL,
+	Price DECIMAL (18, 4) NULL,
+	PRIMARY KEY (
+		Name
+	),
+	INDEX IX_InventoryItem_Price (
+		Price
+	)
+)
+GO
+```
   
 ## See Also  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   

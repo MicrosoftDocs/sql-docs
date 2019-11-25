@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 7934276d-5ac9-4cbc-a2a0-2c65c93733ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # setSelectMethod Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

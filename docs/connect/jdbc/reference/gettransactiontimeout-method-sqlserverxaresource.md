@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: ed0a37e9-1132-4d3f-b88f-8be674e852b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getTransactionTimeout Method (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

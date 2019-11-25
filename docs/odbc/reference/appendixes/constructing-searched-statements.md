@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Constructing Searched Statements
 > [!IMPORTANT]  

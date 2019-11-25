@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLCleanupConnectionPoolID Function
 **Conformance**  
@@ -23,7 +22,8 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp
+  
 SQLRETURN  SQLCleanupConnectionPoolID (  
                 SQLHENV    EnvironmentHandle  
                 SQLPOOLID  PoolID );  

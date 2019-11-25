@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 8aa2b24d-68ed-488f-ad33-e2c688f945cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLServerPooledConnection Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

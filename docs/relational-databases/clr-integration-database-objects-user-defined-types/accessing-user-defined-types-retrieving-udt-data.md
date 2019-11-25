@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Accessing User-Defined Types - Retrieving UDT Data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -396,7 +395,11 @@ Module Module1
       cmd.CommandText = "INSERT INTO dbo.Points (Pnt) VALUES (@Point)"  
       cmd.CommandType = CommandType.Text  
   
-      Dim param As New SqlParameter("@Point", SqlDbType.Udt)      param.UdtTypeName = "TestPoint.dbo.Point"      param.Direction = ParameterDirection.Input      param.Value = New Point(5, 6)      cmd.Parameters.Add(param)  
+      Dim param As New SqlParameter("@Point", SqlDbType.Udt)      
+      param.UdtTypeName = "TestPoint.dbo.Point"      
+      param.Direction = ParameterDirection.Input      
+      param.Value = New Point(5, 6)      
+      cmd.Parameters.Add(param)  
   
       cnn.Open()  
       cmd.ExecuteNonQuery()  

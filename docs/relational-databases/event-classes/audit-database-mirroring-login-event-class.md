@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Database Mirroring Login Event Class

@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "stored procedures [OLE DB], command syntax"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Command Syntax
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

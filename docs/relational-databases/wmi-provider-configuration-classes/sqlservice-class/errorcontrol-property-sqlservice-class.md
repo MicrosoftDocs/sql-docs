@@ -1,6 +1,6 @@
 ---
-title: "ErrorControl Property (SqlService Class) | Microsoft Docs"
-ms.custom: ""
+title: "ErrorControl Property (SqlService)"
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ErrorControl Property (SqlService Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

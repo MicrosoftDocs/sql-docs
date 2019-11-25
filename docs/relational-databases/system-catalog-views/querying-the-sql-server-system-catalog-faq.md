@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Querying the SQL Server System Catalog FAQ
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

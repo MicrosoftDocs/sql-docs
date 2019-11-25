@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.dimprocessingtransformation.advanced.f1"
 helpviewer_keywords: 
   - "Dimension Processing Destination Editor"
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Dimension Processing Destination Editor (Advanced Page)

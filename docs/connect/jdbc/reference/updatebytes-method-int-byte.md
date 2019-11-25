@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 625f48ba-53d0-45a6-8fcb-643f1e0cbe8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # updateBytes Method (int, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5703eb39-f3b2-4f3a-8676-a5625ae29a41
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetConnectOption (Visual FoxPro ODBC Driver)
 > [!NOTE]  

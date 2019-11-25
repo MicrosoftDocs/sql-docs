@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # dbo.sysproxylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 4f0e4659-14e7-4743-aed8-1768ee2b29dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # supportsGetGeneratedKeys Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

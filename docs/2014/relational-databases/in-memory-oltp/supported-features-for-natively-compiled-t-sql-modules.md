@@ -136,7 +136,7 @@ manager: craigg
   
      You can obtain results greater than 8,192 by storing the number of rows in a variable:  
   
-    ```tsql  
+    ```sql  
     DECLARE @v INT = 9000  
     SELECT TOP (@v) ... FROM ... ORDER BY ...  
     ```  
@@ -174,7 +174,7 @@ manager: craigg
   
  Example with TOP N = 8192: Compiles  
   
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -187,7 +187,7 @@ GO
   
  Example with TOP N > 8192: Fails to compile.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -202,7 +202,7 @@ GO
   
  Example using a variable: Compiles  
   
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  

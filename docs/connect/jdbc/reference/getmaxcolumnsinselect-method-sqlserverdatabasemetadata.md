@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 43c428df-ef91-4f55-81c3-49a4db3379cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getMaxColumnsInSelect Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # EXECUTE AS Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ Queues
   
 ```  
   
--- Windows Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
   
 { EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }   

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: f214f05b-5f0b-4786-b2ad-b8b4b6e58d72
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Keep the Locks Configuration Option Default Value
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Numeric Values Functions - ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

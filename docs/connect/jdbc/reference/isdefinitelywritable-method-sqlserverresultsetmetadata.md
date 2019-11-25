@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # isDefinitelyWritable Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,6 +1,6 @@
 ---
-title: "ProtocolDLL Property (ServerNetworkProtocol Class) | Microsoft Docs"
-ms.custom: ""
+title: "ProtocolDLL Property (ServerNetworkProtocol)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ac386558-392e-46f3-97f8-382f267b7fca
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ProtocolDLL Property (ServerNetworkProtocol Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

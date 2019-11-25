@@ -1,7 +1,7 @@
 ---
-title: "FROM (Transact-SQL) | Microsoft Docs"
+title: "FROM: JOIN, APPLY, PIVOT (T-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2018"
+ms.date: "06/01/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -31,18 +31,30 @@ helpviewer_keywords:
   - "UPDATE statement [SQL Server], FROM clause"
   - "derived tables"
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# FROM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
 
-  Specifies the tables, views, derived tables, and joined tables used in DELETE, SELECT, and UPDATE statements in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. In the SELECT statement, the FROM clause is required except when the select list contains only constants, variables, and arithmetic expressions (no column names).  
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+In Transact-SQL, the FROM clause is available on the following statements:
+
+- [DELETE](../statements/delete-transact-sql.md)
+- [UPDATE](update-transact-sql.md)
+- [SELECT](select-transact-sql.md)
+
+The FROM clause is usually required on the SELECT statement. The exception is when no table columns are listed, and the only items listed are literals or variables or arithmetic expressions.
+
+This article also discusses the following keywords that can be used on the FROM clause:
+
+- JOIN
+- APPLY
+- PIVOT
+
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
 ## Syntax  
   
 ```  
@@ -181,7 +193,7 @@ FROM { <table_source> [ ,...n ] }
   
  *rowset_function*  
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Specifies one of the rowset functions, such as OPENROWSET, that returns an object that can be used instead of a table reference. For more information about a list of rowset functions, see [Rowset Functions &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md).  
@@ -190,7 +202,7 @@ FROM { <table_source> [ ,...n ] }
   
  *bulk_column_alias*  
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Is an optional alias to replace a column name in the result set. Column aliases are allowed only in SELECT statements that use the OPENROWSET function with the BULK option. When you use *bulk_column_alias*, specify an alias for every table column in the same order as the columns in the file.  
@@ -203,7 +215,7 @@ FROM { <table_source> [ ,...n ] }
   
  OPENXML \<openxml_clause>  
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Provides a rowset view over an XML document. For more information, see [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
@@ -218,7 +230,7 @@ FROM { <table_source> [ ,...n ] }
   
  *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Specifies that a specific version of data is returned from the specified temporal table and its linked system-versioned history table  
@@ -363,27 +375,27 @@ ON (p.ProductID = v.ProductID);
   
  AS OF \<date_time>  
 
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Returns a table with single record for each row containing the values that were actual (current) at the specified point in time in the past. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values in the row that was valid at the point in time specified by the *\<date_time>* parameter. The value for a row is deemed valid if the *system_start_time_column_name* value is less than or equal to the *\<date_time>* parameter value and the *system_end_time_column_name* value is greater than the *\<date_time>* parameter value.   
   
  FROM \<start_date_time> TO \<end_date_time>
 
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
   
  Returns a table with the values for all record versions that were active within the specified time range, regardless of whether they started being active before the *\<start_date_time>* parameter value for the FROM argument or ceased being active after the *\<end_date_time>* parameter value for the TO argument. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values for all row versions that were active at any time during the time range specified. Rows that became active exactly on the lower boundary defined by the FROM endpoint are included and rows that became active exactly on the upper boundary defined by the TO endpoint are not included.  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Same as above in the  **FROM \<start_date_time> TO \<end_date_time>** description, except it includes rows that became active on the upper boundary defined by the \<end_date_time> endpoint.  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Returns a table with the values for all record versions that were opened and closed within the specified time range defined by the two datetime values for the CONTAINED IN argument. Rows that became active exactly on the lower boundary or ceased being active exactly on the upper boundary are included.  
@@ -614,7 +626,7 @@ GO
   
 ### M. Using FOR SYSTEM_TIME  
   
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  The following example uses the FOR SYSTEM_TIME AS OF date_time_literal_or_variable argument to return table rows that were actual (current) as of January 1, 2014.  
   
@@ -874,11 +886,9 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
 ## See Also  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

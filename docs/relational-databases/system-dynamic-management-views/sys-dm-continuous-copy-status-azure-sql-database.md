@@ -1,6 +1,6 @@
 ---
-title: "sys.dm_continuous_copy_status (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_continuous_copy_status"
+titleSuffix: Azure SQL Database
 ms.date: "03/03/2017"
 ms.service: sql-database
 ms.reviewer: ""
@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+ms.custom: seo-dt-2019
 ---
 # sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

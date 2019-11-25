@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 059170b6-d62e-4b28-9451-99a0cc7e1f5f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

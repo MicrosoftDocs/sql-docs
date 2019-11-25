@@ -1,6 +1,6 @@
 ---
-title: "Transact-SQL Constructs Not Supported by In-Memory OLTP | Microsoft Docs"
-ms.custom: ""
+title: "T-SQL not supported by in-memory OLTP"
+ms.custom: seo-dt-2019
 ms.date: "11/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transact-SQL Constructs Not Supported by In-Memory OLTP

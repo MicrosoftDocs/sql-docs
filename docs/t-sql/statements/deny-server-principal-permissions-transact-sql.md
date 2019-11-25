@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DENY Server Principal Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

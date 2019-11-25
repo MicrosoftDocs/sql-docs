@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services Configuration tool"
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Reporting Services Configuration Manager F1 Help Topics (SSRS Native Mode)
@@ -52,6 +51,6 @@ manager: craigg
 -   [Scale-out Deployment](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## See Also  
- [Reporting Services Configuration Manager &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  
+ [Reporting Services Configuration Manager &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  
   
   

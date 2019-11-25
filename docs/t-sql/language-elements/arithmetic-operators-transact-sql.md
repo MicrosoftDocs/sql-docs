@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "arithmetic operators"
   - "math operations [Transact-SQL]"
 ms.assetid: a41b92a5-1061-4e4d-bb3b-a180b73c88fa
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Arithmetic Operators (Transact-SQL)

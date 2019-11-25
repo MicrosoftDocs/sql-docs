@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +35,13 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## Arguments  
- [ **@backup_file_name=** ] **'**_backup_file_name_**'**  
+`[ @backup_file_name = ] 'backup_file_name'`
  Is the name of a backup file. *backup_file_name* is **nvarchar(128)**.  
   
- [ **@database_name=** ] **'**_database_name_**'**  
+`[ @database_name = ] 'database_name'`
  Is the name of the database. *database_name* is **sysname**.  
   
- [ **@result=** ] _result_ **OUTPUT**  
+`[ @result = ] _result_ OUTPUT`
  Indicates whether the transaction log can be applied to the database. *result* is **bit**.  
   
  1 = The log can be applies  

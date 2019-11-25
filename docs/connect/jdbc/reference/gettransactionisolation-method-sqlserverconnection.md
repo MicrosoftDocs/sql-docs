@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 179772e9-6572-4ce5-83c5-ab2b196cee67
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getTransactionIsolation Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

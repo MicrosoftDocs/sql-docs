@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.unittesting.testconfig"
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Running SQL Server Unit Tests
 To improve and maintain the quality of your code, you can create and run SQL Server unit tests that verify the behavior of any database object and then check those tests in to version control. As you or any member of your team changes the database schema, you run both SQL Server unit tests and software unit tests to verify that the changes have not broken existing functionality. You can run individual tests, or you can run groups of tests, which are known as test lists. For more information, see [Using Test Lists (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182461(VS.100).aspx).  

@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 4d088e21-ceeb-445f-bd0d-ed1799673da7
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # LOCALDB_ERROR_INSTANCE_STOP_FAILED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

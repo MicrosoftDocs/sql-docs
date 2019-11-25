@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 886cab83-d599-4fbc-9c88-e8cb833aac4b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLStatistics (Paradox Driver)
 > [!NOTE]  

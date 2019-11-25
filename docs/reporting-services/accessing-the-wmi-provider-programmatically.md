@@ -8,8 +8,8 @@ ms.technology: reporting-services
 
 ms.topic: reference
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Accessing the WMI Provider Programmatically
 

@@ -12,7 +12,6 @@ dev_langs:
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Permissions: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
@@ -240,7 +239,7 @@ REVOKE
   
  ![APS security permissions poster](../../t-sql/statements/media/aps-security-perms-poster.png "APS security permissions poster")  
   
- To download a full size version of this poster, see [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249)in the files section of the APS Yammer site (or request by e-mail from **apsdoc@microsoft.com**.  
+ To download a full size version of this poster, see [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249)in the files section of the APS Yammer site (or request by e-mail from **apsdoc\@microsoft.com**.  
   
 ## Default Permissions  
  The following list describes the default permissions:  

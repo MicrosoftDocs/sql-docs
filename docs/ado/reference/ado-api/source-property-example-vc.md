@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Source Property Example (VC++)
 This example demonstrates the [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) property by opening three [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objects based on different data sources.  

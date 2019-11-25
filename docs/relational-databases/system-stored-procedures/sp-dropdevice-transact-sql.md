@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_dropdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +35,10 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## Arguments  
- [ **@logicalname=** ] **'**_device_**'**  
+`[ @logicalname = ] 'device'`
  Is the logical name of the database device or backup device as listed in **master.dbo.sysdevices.name**. *device* is **sysname**, with no default.  
   
- [ **@delfile=** ] **'**_delfile_**'**  
+`[ @delfile = ] 'delfile'`
  Specifies whether the physical backup device file should be deleted. *delfile* is **varchar(7)**. If specified as **DELFILE**, the physical backup device disk file is deleted.  
   
 ## Return Code Values  

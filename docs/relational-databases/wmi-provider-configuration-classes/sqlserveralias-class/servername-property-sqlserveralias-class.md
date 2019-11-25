@@ -1,6 +1,6 @@
 ---
-title: "ServerName Property (SqlServerAlias Class) | Microsoft Docs"
-ms.custom: ""
+title: "ServerName Property (SqlServerAlias)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ServerName Property (SqlServerAlias Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLPutData Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLPutData(  
       SQLHSTMT     StatementHandle,  
@@ -108,11 +107,11 @@ SQLRETURN SQLPutData(
 ## Example  
  The following sample assumes a data source name called Test. The associated database should have a table that you can create, as follows:  
   
-```  
+```sql  
 CREATE TABLE emp4 (NAME char(30), AGE int, BIRTHDAY datetime, Memo1 text)  
 ```  
   
-```  
+```cpp  
 // SQLPutData.cpp  
 // compile with: odbc32.lib user32.lib  
 #include <stdio.h>  

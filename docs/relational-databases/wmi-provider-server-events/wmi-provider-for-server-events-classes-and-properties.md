@@ -1,5 +1,5 @@
 ---
-title: "WMI Provider for Server Events Classes and Properties | Microsoft Docs"
+title: "WMI Provider for Server Events Classes and Properties"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # WMI Provider for Server Events Classes and Properties
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ manager: craigg
  For example, by referring to the ALTER_DATABASE event, you will learn that its parent event is DDL_SERVER_LEVEL_EVENTS and its properties are **TSQLCommand** and **DatabaseName**. The event also inherits the properties **SQLInstance**, **PostTime**, **ComputerName**, **SPID**, and **LoginName**. The event has no children events.  
   
 > [!NOTE]  
->  System stored procedures that perform DDL-like operations can also fire event notifications. Test your event notifications to determine their responses to system stored procedures that are run. For example, the CREATE TYPE statement and **sp_addtype** stored procedure will both fire an event notification that is created on a CREATE_TYPE event. For more information, see[DDL Events](../../relational-databases/triggers/ddl-events.md).  
+>  System stored procedures that perform DDL-like operations can also fire event notifications. Test your event notifications to determine their responses to system stored procedures that are run. For example, the CREATE TYPE statement and **sp_addtype** stored procedure will both fire an event notification that is created on a CREATE_TYPE event. For more information, see [DDL Events](../../relational-databases/triggers/ddl-events.md).  
   
  **Data Definition Language Events and Event Groups**  
   

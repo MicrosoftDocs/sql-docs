@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "EnvelopeCenter method"
 ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # EnvelopeCenter (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

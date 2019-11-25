@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: c05fd873-aff2-4a89-9936-a54c2ea09996
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.table_types (Transact-SQL)
@@ -34,7 +33,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |-----------------|---------------|-----------------|  
 |*\<inherited columns>*||For a list of columns that this view inherits, see [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md).|  
 |**type_table_object_id**|**int**|Object identification number. This number is unique within a database.|  
-|**is_memory_optimized**|**bit**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The following are the possible values:<br /><br /> 0 = is not memory optimized<br /><br /> 1 = is memory optimized<br /><br /> A value of 0 is the default value.<br /><br /> Table types are always created with DURABILITY = SCHEMA_ONLY. Only the schema is persisted on disk.|  
+|**is_memory_optimized**|**bit**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.<br /><br /> The following are the possible values:<br /><br /> 0 = is not memory optimized<br /><br /> 1 = is memory optimized<br /><br /> A value of 0 is the default value.<br /><br /> Table types are always created with DURABILITY = SCHEMA_ONLY. Only the schema is persisted on disk.|  
   
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "07/27/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
+ms.reviewer: "vanto"
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
@@ -15,9 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_describe_parameter_encryption"
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: jaszymas
+ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_describe_parameter_encryption (Transact-SQL)
@@ -86,7 +85,7 @@ sp_describe_parameter_encryption
   
 ## Examples  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY [CMK1]  
 WITH  
 (  
@@ -159,7 +158,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |1|1|  
   
 ## See Also  
- [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Always Encrypted &#40;client development&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Develop application using Always Encrypted](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

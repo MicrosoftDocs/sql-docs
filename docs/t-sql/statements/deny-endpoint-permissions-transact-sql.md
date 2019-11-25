@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DENY Endpoint Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

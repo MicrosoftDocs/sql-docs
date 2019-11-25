@@ -31,9 +31,8 @@ helpviewer_keywords:
   - "PROPERTY index"
   - "XML indexes [SQL Server], creating"
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # XML Indexes (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

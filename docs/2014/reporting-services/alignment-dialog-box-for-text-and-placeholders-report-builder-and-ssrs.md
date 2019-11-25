@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10136"
@@ -13,8 +12,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.placeholderproperties.alignment.f1"
   - "sql12.rtp.rptdesigner.textproperties.alignment.f1"
 ms.assetid: ea2bbcec-03d8-42e7-8f8e-3cccd9548586
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Alignment Dialog Box for Text and Placeholders (Report Builder and SSRS)

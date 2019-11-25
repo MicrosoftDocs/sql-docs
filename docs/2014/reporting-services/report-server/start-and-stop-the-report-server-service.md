@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "stopping Report Server service"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "Report Server service, starting"
   - "starting Report Server service"
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Start and Stop the Report Server Service

@@ -9,7 +9,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking [SQL Server]"
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

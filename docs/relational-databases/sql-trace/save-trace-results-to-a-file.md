@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Save Trace Results to a File
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ manager: craigg
   
 -   Carry out query optimization  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] saves trace results to a file when a path and file name are specified for the **@tracefile** argument of the stored procedure **sp_trace_create**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] saves trace results to a file when a path and file name are specified for the **\@tracefile** argument of the stored procedure **sp_trace_create**.  
   
 > [!NOTE]  
 >  If a path is specified to the **sp_trace_create** stored procedure for saving the trace file, the directory must be accessible to the server. Also be aware that if a local directory is specified to **sp_trace_create**, it is a local directory on the server computer.  

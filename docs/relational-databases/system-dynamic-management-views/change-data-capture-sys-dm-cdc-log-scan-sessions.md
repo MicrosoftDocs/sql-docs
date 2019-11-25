@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Change Data Capture - sys.dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

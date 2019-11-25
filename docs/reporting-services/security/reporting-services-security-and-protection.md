@@ -2,7 +2,7 @@
 title: "Reporting Services Security and Protection | Microsoft Docs"
 ms.date: 08/26/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: security
 
 
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "security [Reporting Services]"
   - "Reporting Services, security"
 ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Reporting Services Security and Protection
   You can use information in this section to learn about the security features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. This section also explains the authorization models and authentication providers supported in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

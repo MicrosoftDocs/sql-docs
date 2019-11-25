@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # managed_backup.sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

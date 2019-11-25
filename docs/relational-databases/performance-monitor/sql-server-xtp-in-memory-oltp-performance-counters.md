@@ -1,6 +1,6 @@
 ---
-title: "SQL Server XTP (In-Memory OLTP) Performance Counters | Microsoft Docs"
-ms.custom: ""
+title: "XTP (In-Memory OLTP) Performance Counters"
+ms.custom: seo-dt-2019
 ms.date: "04/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server XTP (In-Memory OLTP) Performance Counters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

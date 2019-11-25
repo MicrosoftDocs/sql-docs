@@ -1,5 +1,5 @@
 ---
-title: "Database Requirements (Master Data Services) | Microsoft Docs"
+title: Database Requirements
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Database Requirements (Master Data Services)
 

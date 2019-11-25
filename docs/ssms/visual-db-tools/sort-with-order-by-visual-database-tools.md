@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ORDER BY clause [Visual Database Tools]"
 ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Sort with ORDER BY (Visual Database Tools)

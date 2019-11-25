@@ -1,6 +1,5 @@
 ---
-title: "Use a Format File to Skip a Data Field (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Use a format file to skip a data field"
 ms.date: "09/19/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -11,12 +10,12 @@ helpviewer_keywords:
   - "format files [SQL Server], skipping data fields"
   - "skipping data fields when importing"
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
-# Use a Format File to Skip a Data Field (SQL Server)
+# Use a format file to skip a data field (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 A data file can contain more fields than the number of columns in the table. This topic describes modifying both non-XML and XML format files to accommodate a data file with more fields by mapping the table columns to the corresponding data fields and ignoring the extra fields.  Please review [Create a Format File (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) for additional information.
 
@@ -99,7 +98,7 @@ Compare the changes made:
 
 The modified format file now reflects:
 * 4 data fields
-* The first data field in `myTestSkipField.bcp` is mapped to the first column, ` myTestSkipField.. PersonID`
+* The first data field in `myTestSkipField.bcp` is mapped to the first column, `myTestSkipField.. PersonID`
 * The second data field in `myTestSkipField.bcp` is not mapped to any column.
 * The third data field in `myTestSkipField.bcp` is mapped to the second column, `myTestSkipField.. FirstName`
 * The fourth data field in `myTestSkipField.bcp` is mapped to the third column, `myTestSkipField.. LastName`

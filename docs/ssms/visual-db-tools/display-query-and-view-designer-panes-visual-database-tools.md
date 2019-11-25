@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "displaying View Designer panes"
   - "displaying Query Designer panes"
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Display Query and View Designer Panes (Visual Database Tools)

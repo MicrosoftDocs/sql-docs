@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 95b95a1d-b502-4838-825f-82a456487e25
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # IHpublishercolumnindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

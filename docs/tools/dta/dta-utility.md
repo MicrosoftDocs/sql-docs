@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "Database Engine Tuning Advisor [SQL Server], command prompt"
   - "optimizing databases [SQL Server]"
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # dta Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,11 +171,11 @@ dta -d AdventureWorks2012 ...
  Specifies that filtered indexes be considered for new recommendations. For more information, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 **-fc**  
- Specifies that columnstore indexes be considered for new recommendations. DTA will consider both clustered and non-clustered columnstore indexes. For more information, see    
+ Specifies that columnstore indexes be considered for new recommendations. DTA will consider both clustered and nonclustered columnstore indexes. For more information, see    
 [Columnstore index recommendations in Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.|  
 
   
  **-fk** _keep_existing_option_  
@@ -215,7 +214,7 @@ dta -d AdventureWorks2012 ...
  [Tuning Database Using Workload from Query Store](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) for more information.
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.|  
      
   
  **-if** _workload_file_  
@@ -269,7 +268,7 @@ dta -iq -I 48
 In this case, DTA will use Query Store as the source of workload and only consider queries that have executed with the past 48 hours.  
   ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.|  
 
 
   

@@ -1,8 +1,8 @@
 ---
 title: "Caching Reports (SSRS) | Microsoft Docs"
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "expiration [Reporting Services]"
   - "snapshots [Reporting Services], caching"
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Caching Reports (SSRS)
   A report server can cache a copy of a processed report and return that copy when a user opens the report. To a user, the only evidence available to indicate the report is a cached copy is the date and time that the report ran. If the date or time is not current and the report is not a snapshot, the report was retrieved from cache.  
@@ -63,13 +63,12 @@ ms.author: maghan
   
  If a report cannot be rendered from a cached instance for any reason (for example, if the parameter values that a user specifies are different from those used to produce the cached report), the report server reruns the report.  
   
-## See Also  
+## See also  
  [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Reporting Services Concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Preload the Cache &#40;Report Manager&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [Preload the Cache](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
  [Cache Shared Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [Cache Refresh Options &#40;Report Manager&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   

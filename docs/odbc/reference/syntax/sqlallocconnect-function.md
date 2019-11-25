@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ca119958-ff72-42d4-b0ac-b1ca3212c705
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLAllocConnect Function
 **Conformance**  

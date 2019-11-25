@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ce5e8efc-6a2d-40d5-a658-8dd35cd1dd09
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # dBASE Driver Programming Considerations
 This section contains the following topics.  

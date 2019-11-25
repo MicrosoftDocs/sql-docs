@@ -15,12 +15,10 @@ helpviewer_keywords:
 ms.assetid: 9b530b7d-8165-49d4-a978-5ced17c6705e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating Rowsets with ICommand::Execute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   For rowsets created by using the **ICommand::Execute** method, the properties that you want in the resulting rowset can constrain the text of the command. This is especially critical for consumers that support dynamic command text.  
   

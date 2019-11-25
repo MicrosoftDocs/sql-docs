@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQL to C: Timestamp
 

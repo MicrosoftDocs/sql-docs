@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Provider Property (ADO)
 Indicates the name of the provider for a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  

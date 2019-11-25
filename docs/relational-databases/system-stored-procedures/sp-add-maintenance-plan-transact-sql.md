@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## Arguments  
- [ **@plan_name =**] **'***plan_name***'**  
+`[ @plan_name = ] 'plan_name'`
  Specifies the name of the maintenance plan to be added. *plan_name* is **varchar(128)**.  
   
  **@plan_id = '** *plan_id* **'**  

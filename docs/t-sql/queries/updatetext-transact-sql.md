@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "data updates [SQL Server], UPDATETEXT statement"
   - "UPDATETEXT statement"
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -8,9 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: Create a Test Project for SQL Server Database Unit Testing
 Before you can start to write unit tests that evaluate database objects, you must first create a test project. This project contains SQL Server unit tests, but it could contain other types of tests.  

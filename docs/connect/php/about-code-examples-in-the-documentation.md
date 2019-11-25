@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # About Code Examples in the Documentation
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

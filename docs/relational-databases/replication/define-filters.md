@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Define Filters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +21,7 @@ manager: craigg
   
 ## Options  
  **Operator**  
- Select an operator for the filter, such as **Less than or Equal to**.  
+ Select an operator for the filter, such as **Less than or Equal to**.
   
  **Value**  
  Enter a value for the filter. Most operators only require a value in the first **Value** column, but the **Between** and **Not Between** operators require a value in both of the **Value** columns.  

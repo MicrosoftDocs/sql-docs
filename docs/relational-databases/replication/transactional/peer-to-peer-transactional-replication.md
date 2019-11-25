@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Peer-to-Peer - Transactional Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,19 +133,19 @@ manager: craigg
   
 -   The Distribution Agent parameter **-SubscriptionStreams** and the Log Reader Agent parameter **-MaxCmdsInTran**.  
   
--   The article properties **@destination_owner** and **@destination_table**.
+-   The article properties `@destination_owner` and `@destination_table`.
 
 -   Peer-to-Peer transactional replication does not support creating a one-way transactional subscription to a Peer-to-Peer publication   
   
  The following properties have special considerations:  
   
--   The publication property **@allow_initialize_from_backup** requires a value of **true**.  
+-   The publication property `@allow_initialize_from_backup` requires a value of **true**.  
   
--   The article property **@replicate_ddl** requires a value of **true**; **@identityrangemanagementoption** requires a value of **manual**; and **@status** requires that option **24** is set.  
+-   The article property `@replicate_ddl` requires a value of **true**; `@identityrangemanagementoption` requires a value of **manual**; and `@status` requires that option **24** is set.  
   
--   The value for article properties **@ins_cmd**, **@del_cmd**, and **@upd_cmd** cannot be set to **SQL**.  
+-   The value for article properties `@ins_cmd`, `@del_cmd`, and `@upd_cmd` cannot be set to **SQL**.  
   
--   The subscription property **@sync_type** requires a value of **none** or **automatic**.  
+-   The subscription property `@sync_type` requires a value of **none** or **automatic**.  
   
 ### Maintenance Considerations  
  Some actions require the system to be quiescent. This means stopping activity on published tables at all nodes and making sure that each node has received all changes from all other nodes.  

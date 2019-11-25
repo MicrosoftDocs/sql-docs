@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, viewing"
   - "viewing job step information"
 ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # View Job Step Information

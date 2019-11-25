@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 9e3c51bc-7285-4f28-92c8-cfa05e49da9e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getShort Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

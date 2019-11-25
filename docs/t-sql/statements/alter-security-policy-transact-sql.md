@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
            [ <block_dml_operation> ] }  
         | { DROP { FILTER | BLOCK } PREDICATE ON table_schema_name.table_name }   
         | [ <additional_add_alter_drop_predicate_statements> [ , ...n ] ]  
-    )    [ WITH ( STATE = { ON | OFF } ]  
+    )    [ WITH ( STATE = { ON | OFF } ) ]  
     [ NOT FOR REPLICATION ]  
 [;]  
   

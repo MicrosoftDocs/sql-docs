@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 4610cbaf-5638-4a66-bd83-70aefca40e58
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getArray Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

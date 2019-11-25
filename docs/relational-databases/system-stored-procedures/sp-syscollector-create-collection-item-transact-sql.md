@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

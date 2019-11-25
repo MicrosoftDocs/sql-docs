@@ -1,6 +1,6 @@
 ---
-title: "SetDefaults Method (ServerSettings Class) | Microsoft Docs"
-ms.custom: ""
+title: "SetDefaults Method (ServerSettings)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetDefaults Method (ServerSettings Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

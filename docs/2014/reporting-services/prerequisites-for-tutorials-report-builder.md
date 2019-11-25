@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Prerequisites for Tutorials (Report Builder)
@@ -32,7 +31,7 @@ manager: kfile
   
 -   For the tutorial that includes a map, the report server must be configured to support the Bing maps as a background. For more information, see [Plan for Map Report Support](plan-for-map-report-support.md) in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
   
--   The tutorial, [Tutorial: Creating Drillthrough and Main Reports &#40;Report Builder&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), uses the Contoso business intelligence demo dataset. This dataset is comprised of the ContosoDW data warehouse and the Contoso_Retail online analytical processing (OLAP) database. The reports you will create in this tutorial retrieve report data from the Contoso Sales cube. The Contoso_Retail OLAP database can be downloaded from [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=191575). You need only download the file ContosoBIdemoABF.exe. It contains the OLAP database.  
+-   The tutorial, [Tutorial: Creating Drillthrough and Main Reports &#40;Report Builder&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), uses the Contoso business intelligence demo dataset. This dataset is comprised of the ContosoDW data warehouse and the Contoso_Retail online analytical processing (OLAP) database. The reports you will create in this tutorial retrieve report data from the Contoso Sales cube. The Contoso_Retail OLAP database can be downloaded from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=18279). You need only download the file ContosoBIdemoABF.exe. It contains the OLAP database.  
   
      The other file, ContosoBIdemoBAK.exe, is for the ContosoDW data warehouse, which is not used in this tutorial.  
   

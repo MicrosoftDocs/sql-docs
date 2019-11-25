@@ -10,10 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "shared memory [SQL Server]"
 ms.assetid: dc1704da-eacd-4d26-b529-c996f958ca4b
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Shared Memory Properties
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,5 +1,5 @@
 ---
-title: "What's new in Analytics Platform System - a scale-out data warehouse"
+title: "What's new"
 description: "See what's new in Microsoft Analytics Platform System, a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse."
 author: "mzaman1"
 manager: "craigg"
@@ -9,11 +9,38 @@ ms.topic: "conceptual"
 ms.date: "06/27/2018"
 ms.author: "murshedz"
 ms.reviewer: "martinle"
+ms.custom: seo-dt-2019
 ---
 # What's new in Analytics Platform System, a scale-out MPP data warehouse
 See what's new in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.5"></a>
+## APS CU7.5
+Release date - September 2019
+
+### Alter External Data Source
+Customers will be able to alter external data source definition with the CU7.5 update. Customers with Hadoop name node high availability can now alter the data source to change the arguments when a failover happens. For APS, only the LOCATION, RESOURCE_MANAGER_LOCATION and CREDENTIAL can be changed. See [alter external data source](https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql?view=sql-server-2017) for more information.
+
+### CDH 5.15 and 5.16 support with PolyBase
+PolyBase on APS with CU7.5 update now supports CDH 5.15 and 5.16 versions of Hadoop distribution from Cloudera. Use option 6 for CDH 5.x versions. 
+
+### Try_Convert and Try_Cast support
+CU7.5 APS now supports [TRY_CAST](https://docs.microsoft.com/sql/t-sql/functions/try-cast-transact-sql?view=sql-server-2017) and [TRY_CONVERT](https://docs.microsoft.com/sql/t-sql/functions/try-convert-transact-sql?view=sql-server-2017) tsql functions. Both of these functions returns a value converted to the specified data type if the convert succeeds; otherwise, returns null.
+
+<a name="h2-aps-cu7.4"></a>
+## APS CU7.4
+Release date - May 2019
+
+### Loading large rows with dwloader
+Starting from APS CU7.4, customers will be able to use a new dwloader to load rows into tables that are larger than 32 KB (32,768 bytes). The new dwloader supports the -l switch that takes an integer value between 32768 and 33554432 (in bytes) to load rows larger than 32 KB. Only use this option when loading large rows (greater than 32 KB) as this switch will allocate more memory on the client and the server and may slow down loads. You can download the new dwloader from [download site](https://www.microsoft.com/download/details.aspx?id=57472).  
+
+### HDP 3.0 and 3.1 support with PolyBase
+PolyBase on APS now supports HDP 3.0 and 3.1 with this update. Use option 7 for HDP 3.x versions. For more information, see [PolyBase connectivity](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql) page.
+
+### UTF16 file support with PolyBase
+PolyBase now support reading delimited text files that are in UTF16 (LE) encoding. See [create external file format](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql) for setup details. 
+
 <a name="h2-aps-cu7.3"></a>
 ## APS CU7.3
 Release date - December 2018
@@ -114,7 +141,7 @@ APS AU7 creates and updates statistics automatically, by default. To update stat
 ### T-SQL
 Select @var is now supported. For more information, see [select local variable](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-Query hints HASH and ORDER GROUP are now supported. For more information, see [Hints(Transact-SQL) - Query ](/sql/t-sql/queries/hints-transact-sql-query)
+Query hints HASH and ORDER GROUP are now supported. For more information, see [Hints(Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### Feature Switch
 APS AU7 introduces Feature Switch in [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled and DmsProcessStopMessageTimeoutInSeconds are now configurable options that can be changed by Administrators.

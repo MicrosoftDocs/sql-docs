@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, Catalog Metadata Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

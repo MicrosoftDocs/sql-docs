@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetInstalledDrivers Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLGetInstalledDrivers(  
      LPSTR   lpszBuf,  

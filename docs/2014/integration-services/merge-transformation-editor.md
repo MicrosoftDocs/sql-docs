@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.mergetransformation.f1"
 helpviewer_keywords: 
   - "Merge Transformation Editor"
 ms.assetid: 7f5c0b26-9c68-4955-aa95-eb1a8fb7f87f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Merge Transformation Editor

@@ -12,12 +12,10 @@ helpviewer_keywords:
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Binding and Data Transfer of Table-Valued Parameters and Column Values
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Table-valued parameters, like other parameters, must be bound before they are passed to the server. The application binds table-valued parameters the same way it binds other parameters: by using SQLBindParameter or equivalent calls to SQLSetDescField or SQLSetDescRec. The server data type for a table-valued parameter is SQL_SS_TABLE. The C type can be specified either as SQL_C_DEFAULT or SQL_C_BINARY.  
   

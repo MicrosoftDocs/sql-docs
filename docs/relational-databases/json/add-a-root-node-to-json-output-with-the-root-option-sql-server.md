@@ -1,6 +1,5 @@
 ---
-title: "Add a Root Node to JSON Output with the ROOT Option (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Add a Root Node to JSON Output with the ROOT Option"
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -12,7 +11,7 @@ ms.assetid: b9afa74a-f59f-483e-a178-42be2e9882c9
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: genemi
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Add a Root Node to JSON Output with the ROOT Option (SQL Server)

@@ -25,7 +25,7 @@ manager: craigg
   
 -   [What's New &#40;Database Engine&#41;](../database-engine/whats-new-in-sql-server-2016.md)  
   
--   [What's New in Analysis Services and Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md)  
+-   [What's New in Analysis Services and Business Intelligence](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)  
   
 -   [What's New in SQL Server Installation](install/what-s-new-in-sql-server-installation.md)  
   
@@ -37,7 +37,7 @@ manager: craigg
   
 ## [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 1 (SP1)
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP1) did not introduce significant new features.
--  [SQL Server 2014 Service Pack 1 release information ](https://support.microsoft.com/en-us/kb/3058865).
+-  [SQL Server 2014 Service Pack 1 release information](https://support.microsoft.com/en-us/kb/3058865).
 -  [![Download Service Pack 1 for Microsoft?? SQL Server?? 2014](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [Download Service Pack 1 for Microsoft?? SQL Server?? 2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694).
 
 

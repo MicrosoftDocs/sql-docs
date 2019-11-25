@@ -1,13 +1,11 @@
 ---
-title: Configure SQL Server settings on Linux | Microsoft Docs
+title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to  configure SQL Server settings on Linux.
-author: rothja 
-ms.author: jroth 
-manager: craigg
-ms.date: 10/31/2018
+author: VanMSFT 
+ms.author: vanto
+ms.date: 07/30/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ---
@@ -22,7 +20,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 |||
 |---|---|
-| [Agent](#agent) | Enable SQL Server Agent |
+| [Agent](#agent) | Enable SQL Server Agent. |
 | [Collation](#collation) | Set a new collation for SQL Server on Linux. |
 | [Customer feedback](#customerfeedback) | Choose whether or not SQL Server sends feedback to Microsoft. |
 | [Database Mail Profile](#dbmail) | Set the default database mail profile for SQL Server on Linux. |
@@ -68,6 +66,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 | [Memory limit](#memorylimit) | Set the memory limit for SQL Server. |
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
 | [MLServices EULAs](#mlservices-eula) | Accept R and Python EULAs for mlservices packages. Applies to SQL Server 2019 only.|
+| [outboundnetworkaccess](#mlservices-outbound-access) |Enable outbound network access for [mlservices](sql-server-linux-setup-machine-learning.md) R, Python, and Java extensions.|
 | [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
 | [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
@@ -400,7 +399,7 @@ The first phase capture is controlled by the **coredump.coredumptype** setting, 
 The **sqlpagent.databasemailprofile** allows you to set the default DB Mail profile for email alerts.
 
 ```bash
-sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
 ## <a id="hadr"></a> High Availability
 
@@ -504,8 +503,8 @@ There are several other settings for mssql-conf that you can use to monitor and 
 
 | mssql-conf setting | Description |
 |---|---|
-| distributedtransaction.allowonlysecurerpccalls | Configure secure only rpc calls for distributed transactions |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | Configure security only rpc calls for distributed |transactions
+| distributedtransaction.allowonlysecurerpccalls | Configure secure only RPC calls for distributed transactions |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | Configure security only RPC calls for distributed transactions |
 | distributedtransaction.maxlogsize | DTC transaction log file size in MB. Default is 64MB |
 | distributedtransaction.memorybuffersize | Circular buffer size in which traces are stored. This size is in MB and default is 10MB |
 | distributedtransaction.servertcpport | MSDTC rpc server port |
@@ -538,10 +537,10 @@ sudo /opt/mssql/bin/mssql-conf setup
 sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 # Alternative valid syntax
-# Add R or Python to an existing installation
+# Adds the EULA section to the INI and sets acceptulam to yes
 sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
 
-# Rescind EULA acceptance
+# Rescind EULA acceptance and removes the setting
 sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 ```
 
@@ -552,7 +551,34 @@ You can also add EULA acceptance directly to the [mssql.conf file](#mssql-conf-f
 accepteula = Y
 accepteulaml = Y
 ```
+:::moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
+## <a id="mlservices-outbound-access"></a> Enable outbound network access
+
+Outbound network access for R, Python, and Java extensions in the [SQL Server Machine Learning Services](sql-server-linux-setup-machine-learning.md) feature is disabled by default. To enable outbound requests, set the "outboundnetworkaccess" Boolean property using mssql-conf.
+
+After setting the property, restart SQL Server Launchpad service to read the updated values from the INI file. A restart message reminds you whenever an extensibility-related setting is modified.
+
+```bash
+# Adds the extensibility section and property.
+# Sets "outboundnetworkaccess" to true.
+# This setting is required if you want to access data or operations off the server.
+sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+
+# Turns off network access but preserves the setting
+sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
+
+# Removes the setting and rescinds network access
+sudo /opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess
+```
+
+You can also add "outboundnetworkaccess" directly to the [mssql.conf file](#mssql-conf-format):
+
+```ini
+[extensibility]
+outboundnetworkaccess = 1
+```
 :::moniker-end
 
 ## <a id="tcpport"></a> Change the TCP port

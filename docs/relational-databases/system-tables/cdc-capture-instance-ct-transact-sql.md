@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # cdc.&lt;capture_instance&gt;_CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ The `__$command_id` column was column was introduced in a cumulative update in v
 2.  In the change table, perform the same update operation to the equivalent column.  
   
 3.  Alter the source table by specifying the new data type. The data type change is propagated successfully to the change table.  
-  
+
 ## Data Manipulation Language Modifications  
  When insert, update, and delete operations are performed on a change data capture enabled source table, a record of those DML operations appears in the database transaction log. The change data capture process retrieves information about those changes from the transaction log, and adds either one or two rows to the change table to record the change. Entries are added to the change table in the same order that they were committed to the source table, although the commit of change table entries must typically be performed on a group of changes instead of for a single entry.  
   

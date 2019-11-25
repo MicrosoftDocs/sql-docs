@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 1f69e31e-4599-47cc-ac89-b86fba8703c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SET UNIQUE Command
 Specifies whether records with duplicate index key values are maintained in an index file.  

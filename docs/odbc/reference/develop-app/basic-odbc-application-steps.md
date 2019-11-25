@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Basic ODBC Application Steps
 This section describes the general flow of ODBC applications. It is unlikely that any application calls all of these functions in exactly this order. However, most applications use some variation of these steps. The basic application steps are shown in the following illustration.  

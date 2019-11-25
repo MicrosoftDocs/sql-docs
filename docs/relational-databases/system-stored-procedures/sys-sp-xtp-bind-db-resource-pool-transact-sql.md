@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

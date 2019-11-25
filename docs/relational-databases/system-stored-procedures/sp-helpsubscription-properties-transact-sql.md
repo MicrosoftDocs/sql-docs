@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpsubscription_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retrieves security information from the [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) table. This stored procedure is executed at the Subscriber.  
   
@@ -35,16 +34,16 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with a default of **%**, which returns information on all Publishers.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with a default of **%**, which returns information on all Publisher databases.  
   
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **%**, which returns information on all publications.  
   
- [ **@publication_type=**] *publication_type*  
+`[ @publication_type = ] publication_type`
  Is the type of publication.*publication_type* is **int**, with a default of NULL. If supplied, *publication_type* must be one of the following values:  
   
 |Value|Description|  

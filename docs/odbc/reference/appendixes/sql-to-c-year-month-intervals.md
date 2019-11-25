@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQL to C: Year-Month Intervals
 

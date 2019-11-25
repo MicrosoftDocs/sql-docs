@@ -1,5 +1,5 @@
 ---
-title: "Models (Master Data Services) | Microsoft Docs"
+title: Models
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "models [Master Data Services], about models"
   - "models [Master Data Services]"
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Models (Master Data Services)
 

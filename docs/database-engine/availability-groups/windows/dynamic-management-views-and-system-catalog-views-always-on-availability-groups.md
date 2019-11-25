@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Dynamic management views and system catalog views (Always On Availability Groups)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

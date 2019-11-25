@@ -1,11 +1,10 @@
 ---
 title: "Configure HTTP Access to Analysis Services on Internet Information Services (IIS) 8.0 | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "06/19/2019"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
@@ -256,7 +255,7 @@ manager: craigg
 ##  <a name="bkmk_test"></a> Step 6: Test your configuration  
  The connection string syntax for MSMDPUMP is the URL to the MSMDPUMP.dll file.  
   
- If the web application is listening on a fixed port, append the port number to the server name or IP address (for example, http://my-web-srv01:8080/OLAP/msmdpump.dll or http://123.456.789.012:8080/OLAP/msmdpump.dll.  
+ If the web application is listening on a fixed port, append the port number to the server name or IP address, for example, `http://my-web-srv01:8080/OLAP/msmdpump.dll` or `http://123.456.789.012:8080/OLAP/msmdpump.dll`.  
   
  To quickly test the connection, you can open a connection using Microsoft Excel or SQL Server Management Studio  
   

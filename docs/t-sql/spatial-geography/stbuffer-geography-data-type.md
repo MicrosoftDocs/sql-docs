@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STBuffer (geography Data Type)"
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STBuffer (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

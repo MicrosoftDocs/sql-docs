@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Scalar Types Catalog Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

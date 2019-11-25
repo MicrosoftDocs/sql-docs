@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetStmtOption (Cursor Library)
 > [!IMPORTANT]  

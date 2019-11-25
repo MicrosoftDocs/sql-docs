@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Microsoft Replication Conflict Viewer (Merge Replication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

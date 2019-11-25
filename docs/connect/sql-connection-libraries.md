@@ -13,7 +13,7 @@ ms.author: genemi
 
 This article provides download links to connection modules or *drivers* that your client programs can use for interacting with [Microsoft SQL Server](../relational-databases/database-features.md), and with its twin in the cloud [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/). Drivers are available for a variety of programming languages, running on the following operating systems:
 
-- Linux (Ubuntu)
+- Linux
 - MacOS
 - Windows
 
@@ -43,7 +43,7 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 
 | Language | Download the SQL driver |
 | :------- | :---------------------- |
-| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br /><br />[.NET Core, for Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, for MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET Core, for Windows](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br /><br />[.NET Core, for Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, for MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET Core, for Windows](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js driver, install instructions](./node-js/step-1-configure-development-environment-for-node-js-development.md) |

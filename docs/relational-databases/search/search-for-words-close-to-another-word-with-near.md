@@ -1,10 +1,8 @@
 ---
 title: "Search for Words Close to Another Word with NEAR | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 dev_langs: 
@@ -18,9 +16,9 @@ helpviewer_keywords:
   - "full-text queries [SQL Server], proximity"
   - "queries [full-text search], proximity"
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search for Words Close to Another Word with NEAR
@@ -132,7 +130,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
      All proximity searches always look for only non-overlapping occurrences. Overlapping occurrences of search terms never qualify as matches. For example, consider the following proximity term, which searches "`A`" and "`AA`" in this order with a maximum distance of two terms:  
   
     ```  
-    CONTAINS(column_name, 'NEAR((A,AA),2, TRUE')  
+    CONTAINS(column_name, 'NEAR((A,AA), 2, TRUE)')
     ```  
   
      The possible matches are as "`AAA`", "`A.AA`", and "`A..AA`". Rows containing just "`AA`" would not match.  

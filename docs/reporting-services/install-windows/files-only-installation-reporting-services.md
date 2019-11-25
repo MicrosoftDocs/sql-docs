@@ -9,8 +9,8 @@ helpviewer_keywords:
   - "files-only installation [Reporting Services]"
   - "installation options [Reporting Services]"
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Files-Only Installation (Reporting Services)
   *Files-only installation* refers to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation where Setup creates the folder structure for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] program files, copies the files to disk, registers the Report Server service on the local computer, configures the service account, grants files permissions to the service account, and registers the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI provider.  
@@ -54,7 +54,13 @@ setup /q /ACTION=install /FEATURES=RS /InstanceName=MSSQLSERVER /RSSVCACCOUNT="N
  [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  [Install Reporting Services SharePoint Mode](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+
+::: moniker-end
+
  [Install Reporting Services Native Mode Report Server](~/reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)   
  [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)  
   

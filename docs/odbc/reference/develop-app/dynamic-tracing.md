@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ebe58a83-a7b0-4747-86c8-2af2940471ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Dynamic Tracing
 Tracing can be enabled or disabled at any point in an application run. This allows an application to trace any number of function calls.  

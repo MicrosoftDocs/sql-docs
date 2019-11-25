@@ -1,6 +1,6 @@
 ---
-title: "FlagName Property (ServerSettingsGeneralFlag Class) | Microsoft Docs"
-ms.custom: ""
+title: "FlagName Property (ServerSettingsGeneralFlag)"
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # FlagName Property (ServerSettingsGeneralFlag Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -90,7 +90,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example enlists the current server into the AdventureWorks1 master server. The location for the current server is Building 21, Room 309, Rack 5.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -105,5 +105,3 @@ manager: craigg
   
 ## See Also  
  [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)  
-  
-  

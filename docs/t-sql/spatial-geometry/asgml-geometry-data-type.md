@@ -17,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "AsGml (geometry Data Type)"
 ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # AsGml (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

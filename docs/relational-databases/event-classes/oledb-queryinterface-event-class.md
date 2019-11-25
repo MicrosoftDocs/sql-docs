@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLEDB QueryInterface Event Class

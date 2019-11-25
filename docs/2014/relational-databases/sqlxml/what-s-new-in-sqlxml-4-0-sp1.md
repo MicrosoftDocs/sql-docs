@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Native Client, SQLXML"
   - "side-by-side installations [SQLXML]"
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # What&#39;s New in SQLXML 4.0 SP1

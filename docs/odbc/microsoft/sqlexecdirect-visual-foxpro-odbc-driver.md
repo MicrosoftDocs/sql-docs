@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5004060f-8510-4018-87a4-d41789e69d3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLExecDirect (Visual FoxPro ODBC Driver)
 > [!NOTE]  

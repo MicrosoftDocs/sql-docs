@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sql_modules (Transact-SQL)

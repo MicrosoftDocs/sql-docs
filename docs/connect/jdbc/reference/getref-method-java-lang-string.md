@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: a8ff2dd5-923b-4a2f-ab33-665574b2dfda
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getRef Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

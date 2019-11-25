@@ -1,5 +1,5 @@
 ---
-title: "Delete an Entity (Master Data Services) | Microsoft Docs"
+title: Delete an Entity
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "entities [Master Data Services], deleting"
   - "deleting entities [Master Data Services]"
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete an Entity (Master Data Services)
 

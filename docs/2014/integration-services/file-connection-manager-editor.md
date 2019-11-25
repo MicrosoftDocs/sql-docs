@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.fileconnectionmanager.f1"
 helpviewer_keywords: 
   - "File Connection Manager Editor"
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # File Connection Manager Editor

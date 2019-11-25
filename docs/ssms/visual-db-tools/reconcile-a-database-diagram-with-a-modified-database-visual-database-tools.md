@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "updating database to match diagram"
   - "database diagrams [SQL Server], reconciling changes"
 ms.assetid: eda8dea2-eedd-43a7-85aa-92bd97783b5f
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Reconcile a Database Diagram with a Modified Database (Visual Database Tools)

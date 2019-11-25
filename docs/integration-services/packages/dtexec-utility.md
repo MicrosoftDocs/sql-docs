@@ -8,11 +8,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # dtexec Utility
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The **dtexec** command prompt utility is used to configure and execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. The **dtexec** utility provides access to all the package configuration and execution features, such as parameters, connections, properties, variables, logging, and progress indicators. The **dtexec** utility lets you load packages from these sources: the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, an .ispac project file, a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store, and the file system.  
   
 > **NOTE:** When you use the current version of the **dtexec** utility to run a package created by an earlier version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the utility temporarily upgrades the package to the current package format. However, you cannot use the **dtexec** utility to save the upgraded package. For more information about how to permanently upgrade a package to the current version, see [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
@@ -32,6 +35,8 @@ manager: craigg
 -   [Syntax Rules](#syntaxRules)  
   
 -   [Using dtexec from the xp_cmdshell](#cmdshell)  
+
+-   [Using dtexec from Bash](#bash)
   
 -   [Syntax](#syntax)  
   
@@ -133,7 +138,15 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > **IMPORTANT!!** In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the **xp_cmdshell** option is disabled by default on new installations. The option can be enabled by running the **sp_configure** system stored procedure. For more information, see [xp_cmdshell Server Configuration Option](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
-  
+
+##  <a name="bash"></a> Using dtexec from Bash
+
+The **Bash** shell is a popular shell for Linux. It can also be used on Windows. You can run dtexec from the Bash prompt. Notice that a semicolon (`;`) is a command delimiter operator in Bash. This is particularly important when passing in values to the package using the `/Conn[ection]` or `/Par[arameter]` or '`/Set` options since they use the semicolon to separate the name and the value of the item provided. The following example shows how to properly escape the semicolon and other items when using Bash and passing in values to a package:
+
+```bash
+dtexec /F MyPackage.dtsx /CONN "MyConnection"\;"\"MyConnectionString\""
+```
+
 ##  <a name="syntax"></a> Syntax  
   
 ```  
@@ -257,7 +270,7 @@ dtexec /option [value] [/option [value]]...
 
   The *filespec* argument specifies the path and file name of the package. You can specify the path as either a Universal Naming Convention (UNC) path or a local path. If the path or file name specified in the *filespec* argument contains a space, you must put quotation marks around the *filespec* argument.  
   
-     The **/File** option cannot be used together with the **/DTS** or **/SQL** option. If multiple options are specified, **dtexec** fails.  
+-   The **/File** option cannot be used together with the **/DTS** or **/SQL** option. If multiple options are specified, **dtexec** fails.
   
 -   **/H[elp]** [*option_name*]: (Optional). Displays help for the options, or displays help for the specified *option_name* and closes the utility.  
   

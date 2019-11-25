@@ -9,7 +9,6 @@ ms.reviewer: ""
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # WideWorldImporters database catalog
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -132,7 +131,7 @@ The database schema has been code-generated based on a series of metadata tables
 
 - All tables have single column primary keys for join simplicity.
 - All schemas, tables, columns, indexes, and check constraints have a Description extended property that can be used to identify the purpose of the object or column. Memory-optimized tables are an exception to this since they don't currently support extended properties.
-- All foreign keys are automatically indexed unless there is another non-clustered index that has the same left-hand component.
+- All foreign keys are automatically indexed unless there is another nonclustered index that has the same left-hand component.
 - Auto-numbering in tables is based on sequences. These sequences are easier to work with across linked servers and similar environments than IDENTITY columns. Memory-optimized tables use IDENTITY columns since they don't support in SQL Server 2016.
 - A single sequence (TransactionID) is used for these tables: CustomerTransactions, SupplierTransactions, and StockItemTransactions. This demonstrates how a set of tables can have a single sequence.
 - Some columns have appropriate default values.
@@ -196,7 +195,7 @@ These procedures are used to configure the sample. They are used to apply enterp
 |Configuration_ApplyAuditing|Adds auditing. Server auditing is applied for standard edition databases; additional database auditing is added for enterprise edition.|
 |Configuration_ApplyColumnstoreIndexing|Applies columnstore indexing to `Sales.OrderLines` and `Sales.InvoiceLines` and reindexes appropriately.|
 |Configuration_ApplyFullTextIndexing|Applies fulltext indexes to `Application.People`, `Sales.Customers`, `Purchasing.Suppliers`, and `Warehouse.StockItems`. Replaces `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`, `Website.SearchForStockItems`, `Website.SearchForStockItemsByTags` with replacement procedures that use fulltext indexing.|
-|Configuration_ApplyPartitioning|Applies table partitioning to `Sales.CustomerTransactions and `Purchasing.SupplierTransactions`, and rearranges the indexes to suit.|
+|Configuration_ApplyPartitioning|Applies table partitioning to `Sales.CustomerTransactions` and `Purchasing.SupplierTransactions`, and rearranges the indexes to suit.|
 |Configuration_ApplyRowLevelSecurity|Applies row level security to filter customers by sales territory related roles.|
 |Configuration_ConfigureForEnterpriseEdition|Applies columnstore indexing, full text, in-memory, polybase, and partitioning.|
 |Configuration_EnableInMemory|Adds a memory-optimized filegroup (when not working in Azure), replaces `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` with in-memory equivalents, and migrates the data, recreates the `Website.OrderIDList`, `Website.OrderList`, `Website.OrderLineList`, `Website.SensorDataList` table types with memory-optimized equivalents, drops and recreates the procedures `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`, and `Website.RecordColdRoomTemperatures` that uses these table types.|

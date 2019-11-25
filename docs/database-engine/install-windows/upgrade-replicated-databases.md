@@ -1,5 +1,5 @@
 ---
-title: "Upgrade Replicated Databases | Microsoft Docs"
+title: "Upgrade or patch replicated databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2016"
 ms.prod: sql
@@ -16,9 +16,8 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
-# Upgrade Replicated Databases
+# Upgrade or patch replicated databases
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -36,9 +35,7 @@ The upgrade path to SQL Server is different depending on the deployment pattern.
 
 A common approach that has been adopted for side-by-side upgrades of replication topologies is to move publisher-subscriber pairs in parts to the new side-by-side environment as opposed to a movement of the entire topology. This phased approach helps control downtime and minimize the impact to a certain extent for the business dependent on replication.  
 
-
-> [!NOTE]  
-> **For more detailed information regarding upgrading replication topology to SQL 2016, please see the blog post [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
+The majority of this article is scoped towards upgrading the version of SQL Server. However, the in-place upgrade process should also be used when patching SQL Server with a service pack or cumulative update as well. 
 
  >[!WARNING]
  > Upgrading a replication topology is a multi-step process. We recommend attempting an upgrade of a replica of your replication topology in a test environment before running the upgrade on the actual production environment. This will help iron out any operational documentation that is required for handling the upgrade smoothly without incurring expensive and long downtimes during the actual upgrade process. We have seen customers reduce downtime significantly with the use of Always On Availability Groups and/or SQL Server Failover Cluster Instances for their production environments while upgrading their replication topology. Additionally, we recommend taking backups of all the databases including MSDB, Master, Distribution database(s) and the user databases participating in replication before attempting the upgrade.
@@ -101,7 +98,7 @@ These steps outline the order in which servers in a replication topology should 
 
 
 ## Steps for side-by-side migration of the Distributor to Windows Server 2012 R2
-If you are planning to upgrade your SQL Server instance to SQL 2016 (or greater), and your current OS is Windows 2008 (or 2008 R2), then you will need to perform a side-by side upgrade of the OS to Windows Server 2012 R2 or greater. The reason for this intermediate OS upgrade is that SQL Server 2016 cannot be installed on a Windows Server 2008/2008 R2, and Windows Server 2008/20008 R2 does not allow in-place upgrades for Failover Clusters. The following steps can be performed on either a standalone SQL Server instance, or one within an Always On Failover Cluster Instance (FCI).
+If you are planning to upgrade your SQL Server instance to SQL Server 2016 (or greater), and your current OS is Windows 2008 (or 2008 R2), then you will need to perform a side-by-side upgrade of the OS to Windows Server R2 or greater. The reason for this intermediate OS upgrade is that SQL Server 2016 cannot be installed on a Windows Server 2008/2008 R2, and Windows Server 2008/20008 R2 does not allow in-place upgrades directly to Windows Server 2016. While it's possible to perform an in-place upgrade from Windows Server 2008/2008 R2 to Windows Server 2012, and then to Windows Server 2016, doing so is generally not recommended due the downtime and added complexity preventing an easy roll-back path. A side-by-side upgrade is the only upgrade path available for SQL Server instances participating in a failover cluster.  The following steps can be performed on either a standalone SQL Server instance, or one within an Always On Failover Cluster Instance (FCI).
 
 1. Set up a new SQL Server instance (either standalone, or Always On Failover Cluster), edition, and version as your distributor on Windows Server 2012 R2/2016 with a different windows cluster and SQL Server FCI name or standalone host name. You will need to keep the directory structure same as the old distributor to ensure that the replication agents executables, replication folders, and database file paths are found at the same path on the new environment. This will reduce any post migration/upgrade steps required.
 1. Ensure that your replication is synchronized and then shut down all of the replication agents. 

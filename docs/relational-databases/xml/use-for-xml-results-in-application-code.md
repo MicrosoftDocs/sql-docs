@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "XML data islands [SQL Server]"
   - "data islands [SQL Server]"
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Use FOR XML Results in Application Code
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

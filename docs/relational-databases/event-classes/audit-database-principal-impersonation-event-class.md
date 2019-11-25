@@ -1,5 +1,5 @@
 ---
-title: "Audit Database Principal Impersonation Event Class | Microsoft Docs"
+title: "Audit Database Principal Impersonation Event Class"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -11,8 +11,8 @@ helpviewer_keywords:
 ms.assetid: 1b29dea4-3727-4c5f-8362-4ca0374de0b6
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # Audit Database Principal Impersonation Event Class
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

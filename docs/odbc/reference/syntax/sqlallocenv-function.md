@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 00bac0c1-346b-4e48-901a-06ba4557b944
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLAllocEnv Function
 **Conformance**  

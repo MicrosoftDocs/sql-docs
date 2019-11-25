@@ -11,7 +11,6 @@ dev_langs:
 ms.assetid: 1af14fe0-e562-4f48-a7f0-783f300a88ac
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.pdw_table_mappings (Transact-SQL)

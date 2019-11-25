@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 44be3a38-fa2b-4136-9759-b218e212a0c8
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Configure Peer-to-Peer Topology Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

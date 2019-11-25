@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +34,13 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## Arguments  
- [ **@alert_name=** ] **'***alert***'**  
+`[ @alert_name = ] 'alert'`
  The alert for this notification. *alert* is **sysname**, with no default.  
   
- [ **@operator_name=** ] **'***operator***'**  
+`[ @operator_name = ] 'operator'`
  The operator to be notified when the alert occurs. *operator* is **sysname**, with no default.  
   
- [ **@notification_method=** ] *notification_method*  
+`[ @notification_method = ] notification_method`
  The method by which the operator is notified. *notification_method* is **tinyint**, with no default. *notification_method* can be one or more of these values combined with an **OR** logical operator.  
   
 |Value|Description|  

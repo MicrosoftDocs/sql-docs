@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,25 +41,25 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the Oracle publication. *publication* is **sysname**, with no default.  
   
- [ **@article =** ] **'**_article_**'**  
+`[ @article = ] 'article'`
  Is the name of the article. *article* is **sysname**, with no default.  
   
- [ **@column**= ] **'**_column_**'**  
+`[ @column = ] 'column'`
  Is the name of the column for which to change the data type mapping. *column* is **sysname**, with no default.  
   
- [ **@type** = ] **'**_type_**'**  
+`[ @type = ] 'type'`
  Is the name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type in the destination column. *type* is **sysname**, with a default of NULL.  
   
- [ **@length** = ] *length*  
+`[ @length = ] length`
  Is the length of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type in the destination column. *length* is **bigint**, with a default of NULL.  
   
- [ **@precision**= ] *precision*  
+`[ @precision = ] precision`
  Is the precision of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type in the destination column. *precision* is **bigint**, with a default of NULL.  
   
- [ **@publisher**= ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

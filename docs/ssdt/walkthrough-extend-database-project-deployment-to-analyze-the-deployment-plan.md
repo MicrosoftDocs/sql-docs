@@ -8,9 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Walkthrough: Extend Database Project Deployment to Analyze the Deployment Plan
 You can create deployment contributors to perform custom actions when you deploy a SQL project. You can create either a DeploymentPlanModifier or a DeploymentPlanExecutor. Use a DeploymentPlanModifier to change the plan before it is executed and a DeploymentPlanExecutor to perform operations while the plan is being executed. In this walkthrough, you create a DeploymentPlanExecutor named DeploymentUpdateReportContributor that creates a report about the actions that are performed when you deploy a database project. Because this build contributor accepts a parameter to control whether the report is generated, you must perform an additional required step.  

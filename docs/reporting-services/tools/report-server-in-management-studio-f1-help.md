@@ -2,7 +2,7 @@
 title: "Report Server in Management Studio F1 Help | Microsoft Docs"
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 
@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "Object Explorer, help"
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Report Server in Management Studio F1 Help
   This section includes topics about the dialog boxes in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] that can be used to manage report servers.  

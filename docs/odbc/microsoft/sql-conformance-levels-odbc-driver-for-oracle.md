@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQL Conformance Levels (ODBC Driver for Oracle)
 > [!IMPORTANT]  

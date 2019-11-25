@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Template Files by Using the CommandText Property
@@ -87,7 +86,7 @@ class Test
      This creates an executable (DocSample.exe).  
   
 5.  At the command prompt, execute DocSample.exe.  
-  
+
  If you pass a parameter to a template, the parameter name must begin with at sign (@); for example, p.Name="\@ContactID", where p is a SqlXmlParameter object.  
   
  This is the updated template which takes one parameter.  

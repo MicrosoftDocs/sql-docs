@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "database diagrams [SQL Server]"
   - "diagrams [SQL Server]"
 ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Work with Database Diagrams (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

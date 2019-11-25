@@ -25,9 +25,8 @@ f1_keywords:
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.ONLINE_EDITING"
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_EXECUTION.ADVANCED"
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Transact-SQL Editor Options
 This topic contains information about some of the options of the Transact-SQL Editor. To set these options, navigate to the **Option** dialog through the **Tools\Options** menu.  

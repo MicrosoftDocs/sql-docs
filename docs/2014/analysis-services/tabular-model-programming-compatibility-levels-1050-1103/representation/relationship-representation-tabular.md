@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: 01/19/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan

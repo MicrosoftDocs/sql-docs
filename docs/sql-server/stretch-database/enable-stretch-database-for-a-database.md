@@ -1,5 +1,5 @@
 ---
-title: "Enable Stretch Database for a database | Microsoft Docs"
+title: "Enable Stretch Database for a database"
 ms.date: "08/05/2016"
 ms.service: sql-server-stretch-database
 ms.reviewer: ""
@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: rothja
 ms.author: jroth
-manager: craigg
+ms.custom: seo-dt-2019
 ---
 # Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

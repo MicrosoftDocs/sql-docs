@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Clustered Property Example (VB)
 This example demonstrates the [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) property of an [Index](../../../ado/reference/adox-api/index-object-adox.md). Note that Microsoft Jet databases do not support clustered indexes, so this example will return **False** for the **Clustered** property of all indexes in the **Northwind** database.  

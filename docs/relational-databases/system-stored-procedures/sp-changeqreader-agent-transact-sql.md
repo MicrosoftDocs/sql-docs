@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +33,13 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## Arguments  
- [ **@job_login**= ] **'**_job_login_**'**  
+`[ @job_login = ] 'job_login'`
  Is the login for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with a default of NULL.  
   
- [ **@job_password**= ] **'**_job_password_**'**  
+`[ @job_password = ] 'job_password'`
  Is the password for the Windows account under which the agent runs. *job_password* is **sysname**, with a default of NULL.  
   
- [ **@frompublisher=** ] *frompublisher*  
+`[ @frompublisher = ] frompublisher`
  Is if the procedure is being executed at the Publisher. *frompublisher* is bit, with a default value of **0**. A value of **1** means that the procedure is being executed from the Publisher on the publication database.  
   
 ## Return Code Values  

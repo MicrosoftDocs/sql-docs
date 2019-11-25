@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 14320251-c551-49d8-b933-057406114978
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_unprepare (Transact-SQL)

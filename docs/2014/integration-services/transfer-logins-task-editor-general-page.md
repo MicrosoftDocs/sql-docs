@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transferloginstask.general.f1"
 helpviewer_keywords: 
   - "Transfer Logins Task Edito"
 ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Transfer Logins Task Editor (General Page)

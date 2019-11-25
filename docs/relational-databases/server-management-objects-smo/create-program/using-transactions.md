@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "transactions [SMO]"
   - "SMO [SQL Server], transactions"
 ms.assetid: 399aded8-bee3-4cfb-a671-1877c7d0de9f
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Transactions

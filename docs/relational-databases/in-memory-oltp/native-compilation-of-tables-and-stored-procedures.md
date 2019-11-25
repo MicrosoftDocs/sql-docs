@@ -1,6 +1,6 @@
 ---
-title: "Native Compilation of Tables and Stored Procedures | Microsoft Docs"
-ms.custom: ""
+title: "Native compilation of tables & stored procedures"
+ms.custom: seo-dt-2019
 ms.date: "04/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Native Compilation of Tables and Stored Procedures

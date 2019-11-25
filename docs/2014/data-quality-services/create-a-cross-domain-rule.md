@@ -10,7 +10,7 @@ f1_keywords:
   - "sql12.dqs.dm.testcdrule.f1"
   - "sql12.dqs.dm.cdrules.f1"
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

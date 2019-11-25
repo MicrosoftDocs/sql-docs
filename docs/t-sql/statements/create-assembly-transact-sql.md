@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # CREATE ASSEMBLY (Transact-SQL)
@@ -164,11 +163,11 @@ The following permissions required to create a CLR assembly when `CLR strict sec
   
 ### Example A: Creating an assembly from a dll  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  The following example assumes that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] samples are installed in the default location of the local computer and the HelloWorld.csproj sample application is compiled. For more information, see [Hello World Sample](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).  
   
-```  
+```sql  
 CREATE ASSEMBLY HelloWorld   
 FROM <system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll  
 WITH PERMISSION_SET = SAFE;  
@@ -179,11 +178,11 @@ WITH PERMISSION_SET = SAFE;
   
 ### Example B: Creating an assembly from assembly bits  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Replace the sample bits (which are not complete or valid) with your assembly bits.  
   
-```  
+```sql  
 CREATE ASSEMBLY HelloWorld  
     FROM 0x4D5A900000000000  
 WITH PERMISSION_SET = SAFE;  

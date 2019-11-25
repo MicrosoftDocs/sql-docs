@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: e0695fac-4593-4b3d-8675-cb8f73dab966
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Gateways Diagnostic Example
 In a gateway architecture, a driver sends requests to a gateway that supports ODBC. The gateway sends the requests to a DBMS. Because it is the component that interfaces with the Driver Manager, the driver formats and returns arguments for **SQLGetDiagRec**.  

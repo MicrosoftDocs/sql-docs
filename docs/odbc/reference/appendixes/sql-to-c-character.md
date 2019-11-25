@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7fdb7f38-b64d-48f2-bcb4-1ca96b2bbdb6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQL to C: Character
 

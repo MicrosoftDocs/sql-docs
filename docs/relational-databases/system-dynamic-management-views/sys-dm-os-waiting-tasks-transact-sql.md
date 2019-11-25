@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns information about the wait queue of tasks that are waiting on some resource.  
-  
+  Returns information about the wait queue of tasks that are waiting on some resource. For more information about tasks, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
+   
 > [!NOTE]  
 >  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_waiting_tasks**.  
   
@@ -132,18 +131,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
  
 ## Example
-This example will identify blocked sessions.  Execute the [!INCLUDE[tsql](../../includes/tsql-md.md)] query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+This example will identify blocked sessions. Execute the [!INCLUDE[tsql](../../includes/tsql-md.md)] query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 
 ``` 
   
 ## See Also  
-  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
-  
-  
-
-
+[SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
+[Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md)     
+   
+ 

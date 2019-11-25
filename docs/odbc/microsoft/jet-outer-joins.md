@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 02e0394e-ddd7-47ae-9180-b4d8a3b648ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Jet: Outer Joins
 A SELECT statement can contain a list of OUTER JOIN clauses. Nested OUTER JOINS are supported. For more information about OUTER JOINS, see the *Microsoft Jet Database Engine Programmer's Guide*.

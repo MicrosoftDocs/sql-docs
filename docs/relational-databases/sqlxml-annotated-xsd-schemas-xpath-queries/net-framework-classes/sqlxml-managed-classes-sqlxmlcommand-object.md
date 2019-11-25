@@ -30,7 +30,6 @@ helpviewer_keywords:
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML Managed Classes - SqlXmlCommand Object

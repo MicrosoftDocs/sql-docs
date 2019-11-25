@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.fuzzygroupingtransformation.columns.f1"
 helpviewer_keywords: 
   - "Fuzzy Grouping Transformation Editor"
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Fuzzy Grouping Transformation Editor (Columns Tab)

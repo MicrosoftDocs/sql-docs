@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Altering an Assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

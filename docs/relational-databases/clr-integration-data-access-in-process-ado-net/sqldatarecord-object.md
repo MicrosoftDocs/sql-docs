@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # SqlDataRecord Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

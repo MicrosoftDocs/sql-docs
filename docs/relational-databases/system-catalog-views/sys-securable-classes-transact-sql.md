@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ae2bf589-17be-4cad-b5d5-05a34173b32d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.securable_classes (Transact-SQL)

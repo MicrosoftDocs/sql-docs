@@ -11,9 +11,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.ObjectExplorerScripting"
   - "VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting"
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Options (SQL Server Object Explorer - Scripting Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,10 @@ Use this page to set scripting options that apply to the following commands on o
 The **Edit** and **Modify** commands might produce results that are different from the **Script <object> as** command for the same option setting. The **Edit** and **Modify** commands are designed to modify objects in the current database during a Query Editor session. The **Script <object> as** command is designed to generate a script so that it can be used later to create objects.  
   
 ## Options  
-Specify scripting options by selecting from the available settings in the list to the right of each option.  
+Specify scripting options by selecting from the available settings in the list to the right of each option.
+
+> [!NOTE]
+> The default settings listed only apply to the **Script entire database and all database objects** option and may vary when using the **Select specific database objects** option.
   
 ### General scripting options  
 **Delimit individual statements**  

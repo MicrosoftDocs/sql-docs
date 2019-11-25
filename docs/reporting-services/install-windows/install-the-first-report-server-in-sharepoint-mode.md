@@ -5,8 +5,8 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
 
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install the first Report Server in SharePoint mode
@@ -137,7 +137,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
 9. If you selected the Database Engine services, accept the default instance of **MSSQLSERVER** on the **Instance Configuration** page and click **Next**.  
   
-     ![note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note")The Reporting Services SharePoint service architecture is not based on a SQL Server "instance" as was the previous Reporting Services architecture.  
+     ![note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note")The Reporting Services SharePoint service architecture is not based on a SQL Server "instance" as was the previous Reporting Services architecture.  
   
 10. If you see the **Server Configuration** page type appropriate credentials. If you want to use the Reporting Services data alerting or subscription features, you need to change the **Startup Type** for SQL Server Agent to **Automatic**. You may not see the **Server Configuration** page, depending on what is already installed on the computer.  
   
@@ -159,7 +159,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 15. The installation will take several minutes. You will see the **Complete** page with the features listed and the status of each feature. You may see an information dialog indicating the computer needs to be restarted.  
   
 ##  <a name="bkmk_install_SSRS_sharedservice"></a> Step 2: Register and start the Reporting Services SharePoint Service  
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
+ ![PowerShell related content](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
   
 > [!NOTE]
 > If you are installing into an existing SharePoint farm, you do not need to complete the steps in this section. The Reporting Services SharePoint service is installed and started when you ran the SQL Server installation wizard as part of the previous section of this document.  
@@ -249,7 +249,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
 11. The process to create a service application could take several minutes to complete. When it is complete, you will see a confirmation message and a link to a **Provision Subscriptions and Alerts** page. Complete the provision step if you want to use the Reporting Services subscriptions feature or the data alerts feature. For more information, see [Provision Subscriptions and Alerts for SSRS Service Applications](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") For information on using PowerShell to create a Reporting Services service application, see:  
+ ![PowerShell related content](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") For information on using PowerShell to create a Reporting Services service application, see:  
   
 -   See the following section [Windows PowerShell script for Steps 1-4](#bkmk_full_script).  
   
@@ -267,7 +267,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
      Open your browser to the desired SharePoint site. For example https://\<servername>/sites/bi  
   
-2.  Select **Settings**![SharePoint Settings](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings").  
+2.  Select **Settings**![SharePoint Settings](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings").  
   
 3.  Select **Site settings**.  
   
@@ -386,13 +386,13 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  For SharePoint 2016, an [Office Online Server](https://technet.microsoft.com/library/jj219456\(v=office.16\).aspx) needs to be configured in order to use Excel Services. For detailed information, refer to the following white papers.
  
- - [Deploying SQL Server 2016 PowerPivot and Power View in SharePoint 2016](../../analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md)
+ - [Deploying SQL Server 2016 PowerPivot and Power View in SharePoint 2016](https://docs.microsoft.com/analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016)
  
- - [Deploying SQL Server 2016 PowerPivot and Power View in a Multi-Tier SharePoint 2016 Farm](../../analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md)
+ - [Deploying SQL Server 2016 PowerPivot and Power View in a Multi-Tier SharePoint 2016 Farm](https://docs.microsoft.com/analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm)
  
  For SharePoint 2016, you will need to create, and configure, an Excel Services Application. For more information, see the following:  
   
--   The section "Configure Excel Services for Analysis Services integration" in [Install Analysis Services in Power Pivot Mode](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+-   The section "Configure Excel Services for Analysis Services integration" in [Install Analysis Services in Power Pivot Mode](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
   
 -   [Manage Excel Services data model settings (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
 
@@ -405,7 +405,7 @@ Also, the application pool security account used by the Reporting Services servi
  The Reporting Services data alerts feature sends alerts in e-mail messages. To send e-mail you may need to configure your Reporting Services service application and you may need to modify the e-mail delivery extension for the service application. If you plan to use the e-mail delivery extension for the Reporting Services subscription feature, the e-mail settings are required. For more information, see [Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2013 and SharePoint 2016&#41;](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f). 
   
 ### Add Reporting Services content types to content libraries  
- Reporting Services provides predefined content types that are used to manage shared data source (.rsds) files, report models (.smdl), and Report Builder report definition (.rdl) files. Adding a **Report Builder Report**, **Report Model**, and **Report Data Source** content type to a library enables the **New** command so that you can create new documents of that type. For more information, see [Add Reporting Services Content Types to a SharePoint Library](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+ Reporting Services provides predefined content types that are used to manage shared data source (.rsds) files, and Report Builder report definition (.rdl) files. Adding a **Report Builder Report** and **Report Data Source** content type to a library enables the **New** command so that you can create new documents of that type. For more information, see [Add Reporting Services Content Types to a SharePoint Library](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 ### Activate the Report Server File Sync Feature  
  If users will frequently upload published report items directly to SharePoint document libraries, the **Report Server File Sync** site level feature will be beneficial. The file sync feature will synchronize the report server catalog with items in document libraries on a more frequent basis. For more information, see [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  

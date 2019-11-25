@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 114f55af-62ab-4c60-8724-0affbbbbbcdc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # valueOf Method (java.sql.Timestamp, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

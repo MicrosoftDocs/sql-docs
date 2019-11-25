@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "testing permissions"
   - "HAS_PERMS_BY_NAME function"
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  An optional scalar expression of type **sysname** that represents the name of the securable sub-entity against which the permission is tested. The default is NULL.  
   
 > [!NOTE]  
->  In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], sub-securables cannot use brackets in the form **'[**_sub name_**]'**. Use **'**_sub name_**'** instead.  
+>  In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and later, sub-securables cannot use brackets in the form **'[**_sub name_**]'**. Use **'**_sub name_**'** instead.  
   
  *sub-securable_class*  
  An optional scalar expression of type **nvarchar(60)** that represent the class of securable subentity against which the permission is tested. The default is NULL.  
@@ -100,7 +99,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### A. Do I have the server-level VIEW SERVER STATE permission?  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -108,7 +107,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### B. Am I able to IMPERSONATE server principal Ps?  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  

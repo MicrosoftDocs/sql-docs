@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], filters"
   - "filters [full-text search]"
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure and Manage Filters for Search

@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Working with the Oracle CDC Service
@@ -18,7 +18,7 @@ manager: craigg
   
      This section describes the tables that are included in this database and how it is important to CDC.  
   
--   [The CDC Databases](#BKMK_CDCdatabas)  
+-   [The CDC Databases](#BKMK_CDCdatabase)  
   
      This section provides a brief description of the CDC databases. These databases are created using the Oracle CDC Designer Console. See the documentation included with your installation of the CDC Designer Console for more information about the CDC databases.  
   
@@ -257,5 +257,3 @@ manager: craigg
 ## See Also  
  [How to Use the CDC Service Command-Line Interface](how-to-use-the-cdc-service-command-line-interface.md)   
  [How to Prepare SQL Server for CDC](prepare-sql-server-for-cdc.md)  
-  
-  

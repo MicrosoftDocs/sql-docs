@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Microsoft OLE DB Provider for Internet Publishing Overview
 The Microsoft OLE DB Provider for Internet Publishing allows ADO to access resources served by Microsoft FrontPage or Microsoft Internet Information Server. Resources include web source files such as HTML files, or Windows 2000 web folders.

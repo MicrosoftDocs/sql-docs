@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, Memory Manager Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "models [Master Data Services], permissions"
   - "permissions [Master Data Services], models"
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

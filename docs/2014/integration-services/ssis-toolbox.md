@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.dts.designer.toolbox.F1"
   - "sql12.dts.designer.toolboxfavorites.F1"
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SSIS Toolbox

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Configure Dialog Security for Event Notifications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

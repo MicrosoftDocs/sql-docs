@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: bb48c22f-1fd5-47b4-8eaa-ff69cd431cf9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLStatistics (Visual FoxPro ODBC Driver)
 > [!NOTE]  

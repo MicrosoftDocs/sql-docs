@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Views Collection (ADOX)
 Contains all [View](../../../ado/reference/adox-api/view-object-adox.md) objects of a catalog.  

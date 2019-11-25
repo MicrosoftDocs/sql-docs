@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: eb4339b0-383b-4337-a935-e8ec3f0d4123
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getWarnings Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing role assignments"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "modifying role assignments"
   - "deleting role assignments"
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Grant User Access to a Report Server (Report Manager)

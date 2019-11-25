@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "Unicode [SQL Server], bulk importing and exporting"
   - "data formats [SQL Server], Unicode native"
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Unicode Native Format to Import or Export Data (SQL Server)

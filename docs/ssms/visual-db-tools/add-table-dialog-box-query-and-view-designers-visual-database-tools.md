@@ -11,9 +11,8 @@ f1_keywords:
   - "vdt.dlgbox.query.addtable"
   - "vdtsql.chm:65565"
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Add Table Dialog Box (Query and View Designers) (Visual Database Tools)

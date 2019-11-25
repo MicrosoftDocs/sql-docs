@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backing up encryption keys [Reporting Services]"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "encryption keys [Reporting Services]"
   - "symmetric keys [Reporting Services]"
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Back Up and Restore Reporting Services Encryption Keys
@@ -64,7 +63,7 @@ manager: kfile
   
 1.  Run **rskeymgmt.exe** locally on the computer that hosts the report server. You must use the `-e` extract argument to copy the key, provide a file name, and specify a password. The following example illustrates the arguments you must specify:  
   
-    ```  
+    ```cmd
     rskeymgmt -e -f d:\rsdbkey.snk -p<password>  
     ```  
   
@@ -97,11 +96,9 @@ manager: kfile
   
 1.  Run **rskeymgmt.exe** locally on the computer that hosts the report server. Use the `-a` argument to restore the keys. You must provide a fully-qualified file name and specify a password. The following example illustrates the arguments you must specify:  
   
-    ```  
+    ```cmd
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  
     ```  
   
 ## See Also  
  [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
-  
-  

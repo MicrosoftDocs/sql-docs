@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 3e597c52-caf4-4341-8471-d1ade563dbf7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # KeyTypeEnum
 Specifies the type of [Key](../../../ado/reference/adox-api/key-object-adox.md): primary, foreign, or unique.  

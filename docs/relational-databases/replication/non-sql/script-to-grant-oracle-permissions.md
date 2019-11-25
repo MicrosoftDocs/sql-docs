@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Script to Grant Oracle Permissions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transferjobstask.jobs.f1"
 helpviewer_keywords: 
   - "Transfer Jobs Task Editor"
 ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Transfer Jobs Task Editor (Jobs Page)

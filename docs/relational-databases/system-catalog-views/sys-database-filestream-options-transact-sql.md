@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sys.database_filestream_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

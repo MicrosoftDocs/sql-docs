@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "06/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.DTS.DESIGNER.AFPADLSCM.F1"
   - "SQL11.DTS.DESIGNER.AFPADLSCM.F1"
 ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
-ms.author: douglasl
+ms.author: janinez
 manager: craigg
 ---
 # Azure Data Lake Store Connection Manager
@@ -22,7 +21,7 @@ manager: craigg
   
 1.  In the **Add SSIS Connection Manager** dialog box, select **AzureDataLake**, and click **Add**.   
   
-2.  In the Azure Data Lake Store Connection Manager Editor dialog box, type in the Azure Data Lake Store host URL in **ADLS Host** field. For example: https://test.azuredatalakestore.net or test.azuredatalakestore.net.
+2.  In the Azure Data Lake Store Connection Manager Editor dialog box, type in the Azure Data Lake Store host URL in **ADLS Host** field. For example: https:\//test.azuredatalakestore.net or test.azuredatalakestore.net.
   
 3.  Choose corresponding authentication type to access Azure Data Lake Store data.
 
@@ -30,7 +29,7 @@ manager: craigg
 
         1. Specify values for the **User Name** and **Password** field. 
     
-        2. Click **Test Connection** button to test the connection. If you and your tenant administrator didn't consent SSIS to access your Azure Data Lake Store data before, you need click **Accept** button to consent SSIS to access your Azure Data Lake Store data in the pop out dialog. For more information about this consent experience, see [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
+        2. Click **Test Connection** button to test the connection. If you and your tenant administrator didn't consent SSIS to access your Azure Data Lake Store data before, you need click **Accept** button to consent SSIS to access your Azure Data Lake Store data in the pop out dialog. For more information about this consent experience, see [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
     
         > [!NOTE] 
         > For Azure AD User Identity authentication option, multi-factor authentication and Microsoft account is NOT supported.

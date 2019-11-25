@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 53a33c8d-e5f0-430d-a712-b65f43d64318
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.sysindexkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

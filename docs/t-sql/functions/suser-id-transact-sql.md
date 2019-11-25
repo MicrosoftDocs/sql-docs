@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], logins"
   - "user IDs [SQL Server]"
 ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # SUSER_ID (Transact-SQL)
@@ -66,6 +65,6 @@ SELECT SUSER_ID('sa');
 ## See Also  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

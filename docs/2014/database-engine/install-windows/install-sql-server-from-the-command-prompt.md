@@ -165,11 +165,11 @@ manager: craigg
   
 -   [Feature Parameters](#Feature)  
   
--   [Role Parameters](install-sql-server-from-the-command-prompt.md#role)  
+-   [Role Parameters](install-sql-server-from-the-command-prompt.md#Role)  
   
--   [Controlling Failover Behavior using the /FAILOVERCLUSTERROLLOWNERSHIP Parameter](install-sql-server-from-the-command-prompt.md#rollownership)  
+-   [Controlling Failover Behavior using the /FAILOVERCLUSTERROLLOWNERSHIP Parameter](install-sql-server-from-the-command-prompt.md#RollOwnership)  
   
--   [Instance ID or InstanceID Configuration](install-sql-server-from-the-command-prompt.md#instanceid)  
+-   [Instance ID or InstanceID Configuration](install-sql-server-from-the-command-prompt.md#InstanceID)  
   
 ##  <a name="Install"></a> Installation Parameters  
  Use the parameters in the following table to develop command line scripts for installation.  
@@ -182,7 +182,7 @@ manager: craigg
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/UpdateEnabled<br /><br /> **Optional**|Specify whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup should discover and include product updates. The valid values are True and False or 1 and 0. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will include updates that are found.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/UpdateSource<br /><br /> **Optional**|Specify the location where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will obtain product updates. The valid values are "MU" to search [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, a valid folder path, a relative path such as .\MyUpdates or a UNC share. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will search [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update or a Windows Update Service through the Windows Server Update Services.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/CONFIGURATIONFILE<br /><br /> **Optional**|Specifies the [ConfigurationFile](install-sql-server-using-a-configuration-file.md) to use.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ERRORREPORTING<br /><br /> **Optional**|Specifies the error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](https://go.microsoft.com/fwlink/?LinkID=72173). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ERRORREPORTING<br /><br /> **Optional**|Specifies the error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/FEATURES<br /><br /> - Or -<br /><br /> /ROLE<br /><br /> **Required**|Specifies the components to install.<br /><br /> Choose **/FEATURES** to specify individual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components to install. For more information, see [Feature Parameters](#Feature) below.<br /><br /> Choose [Role Parameters](#Role) to specify a setup role. Setup roles install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a predetermined configuration.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/HELP, H, ?<br /><br /> **Optional**|Displays the usage options for installation parameters.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/INDICATEPROGRESS<br /><br /> **Optional**|Specifies that the verbose Setup log file is piped to the console.|  
@@ -195,7 +195,7 @@ manager: craigg
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/Q<br /><br /> **Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/QS<br /><br /> **Optional**|Specifies that Setup runs and shows progress through the UI, but does not accept any input or show any error messages.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/UIMODE<br /><br /> **Optional**|Specifies whether to present only the minimum number of dialog boxes during setup. <br />                **/UIMode** can only be used with the **/ACTION=INSTALL** and **UPGRADE** parameters. Supported values:<br /><br /> **/UIMODE=Normal** is the default for non-Express editions and presents all setup dialog boxes for the selected features.<br /><br /> **/UIMODE=AutoAdvance** is the default for Express editions and skips nonessential dialog boxes.<br /><br /> <br /><br /> When combined with other parameters, **UIMODE** is overridden. For example, when **/UIMODE=AutoAdvance** and **/ADDCURRENTUSERASSQLADMIN=FALSE** are both provided, the provisioning dialog box is not auto populated with the current user.<br /><br /> The **UIMode** setting cannot be used with the **/Q** or **/QS** parameters.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/SQMREPORTING<br /><br /> **Optional**|Specifies feature usage reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](https://go.microsoft.com/fwlink/?LinkID=72173). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/SQMREPORTING<br /><br /> **Optional**|Specifies feature usage reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/HIDECONSOLE<br /><br /> **Optional**|Specifies that the console window is hidden or closed.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCACCOUNT<br /><br /> **Required**|Specifies the account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCPASSWORD<br /><br /> [Required](#Accounts)|Specifies the password for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account.|  
@@ -205,7 +205,7 @@ manager: craigg
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **Optional**|Specifies the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuration files. Default values:<br /><br /> For WOW mode on 64-bit: %Program Files(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<INSTANCEDIR\>\\<ASInstanceID\>\OLAP\Config.<br /><br /> For all other installations: %Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<INSTANCEDIR\>\\<ASInstanceID\>\OLAP\Config.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **Optional**|Specifies the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data files. Default values:<br /><br /> For WOW mode on 64-bit: %Program Files(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<INSTANCEDIR\>\\<ASInstanceID\>\OLAP\Data.<br /><br /> For all other installations: %Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<INSTANCEDIR\>\\<ASInstanceID\>\OLAP\Data.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **Optional**|Specifies the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] log files. Default values:<br /><br /> For WOW mode on 64-bit: %Program Files(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<INSTANCEDIR\>\\<ASInstanceID\>\OLAP\Log.<br /><br /> For all other installations: %Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<INSTANCEDIR\>\\<ASInstanceID\>\OLAP\Log.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **Optional**|Specifies the server mode of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Valid values are MULTIDIMENSIONAL, POWERPIVOT or TABULAR. **ASSERVERMODE** is case-sensitive. All values must be expressed in upper case. For more information about valid values, see [Install Analysis Services in Tabular Mode](../../analysis-services/instances/install-windows/install-analysis-services.md).|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **Optional**|Specifies the server mode of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Valid values are MULTIDIMENSIONAL, POWERPIVOT or TABULAR. **ASSERVERMODE** is case-sensitive. All values must be expressed in upper case. For more information about valid values, see [Install Analysis Services in Tabular Mode](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services).|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **Required**|Specifies the account for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [Required](#Accounts)|Specifies the password for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCSTARTUPTYPE<br /><br /> **Optional**|Specifies the [startup](#Accounts) mode for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service. Supported values:<br /><br /> Automatic<br /><br /> Disabled<br /><br /> Manual|  
@@ -249,10 +249,8 @@ manager: craigg
 ###### Sample Syntax:  
  To install a new, stand-alone instance with the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components.  
   
-```  
-  
-Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
-  
+```cmd
+setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
 ##  <a name="SysPrep"></a> SysPrep Parameters  
@@ -284,8 +282,8 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 ###### Sample Syntax:  
  To prepare a new, stand-alone instance with the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components, and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-```  
-Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEPTSQLSERVERLICENSETERMS  
+```cmd
+setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
 #### Complete Image Parameters  
@@ -297,7 +295,7 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Required to acknowledge acceptance of the license terms.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ENU<br /><br /> **Optional**|Use this parameter to install the English version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a localized operating system when the installation media includes language packs for both English and the language corresponding to the operating system.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/CONFIGURATIONFILE<br /><br /> **Optional**|Specifies the [ConfigurationFile](install-sql-server-using-a-configuration-file.md) to use.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ERRORREPORTING<br /><br /> **Optional**|Specifies the error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](https://go.microsoft.com/fwlink/?LinkID=72173). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ERRORREPORTING<br /><br /> **Optional**|Specifies the error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/HELP, H, ?<br /><br /> **Optional**|Displays the usage options for installation parameters.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/INDICATEPROGRESS<br /><br /> **Optional**|Specifies that the verbose Setup log file is piped to the console.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/INSTANCEID<br /><br /> Prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 Cumulative Update 2 (January 2013) **Required**<br /><br /> Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 Cumulative Update 2 **Optional**|Use the Instance ID specified during the prepare image step. Supported Values:<br /><br /> InstanceID of a Prepared Instance.|  
@@ -305,7 +303,7 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/PID<br /><br /> **Optional**|Specifies the product key for the edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If this parameter is not specified, Evaluation is used.<br /><br /> Note: If you are installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express with tools or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express with Advanced Services, the PID is predefined.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/Q<br /><br /> **Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/QS<br /><br /> **Optional**|Specifies that Setup runs and shows progress through the UI, but does not accept any input or show any error messages.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/SQMREPORTING<br /><br /> **Optional**|Specifies feature usage reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](https://go.microsoft.com/fwlink/?LinkID=72173). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/SQMREPORTING<br /><br /> **Optional**|Specifies feature usage reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/HIDECONSOLE<br /><br /> **Optional**|Specifies that the console window is hidden or closed.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCACCOUNT<br /><br /> **Required**|Specifies the account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCPASSWORD<br /><br /> [Required](#Accounts)|Specifies the password for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account.|  
@@ -339,10 +337,8 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 ###### Sample Syntax:  
  To complete a prepared, stand-alone instance that includes [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components.  
   
-```  
-  
-setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
-  
+```cmd
+setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /IACCEPTSQLSERVERLICENSETERMS 
 ```  
   
 ##  <a name="Upgrade"></a> Upgrade Parameters  
@@ -356,7 +352,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/*UpdateEnabled*<br /><br /> **Optional**|Specify whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup should discover and include product updates. The valid values are True and False or 1 and 0. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will include updates that are found.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/*UpdateSource*<br /><br /> **Optional**|Specify the location where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will obtain product updates. The valid values are "MU" to search [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, a valid folder path, a relative path such as .\MyUpdates or a UNC share. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will search [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update or a Windows Update Service through the Windows Server Update Services.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/CONFIGURATIONFILE<br /><br /> **Optional**|Specifies the [ConfigurationFile](install-sql-server-using-a-configuration-file.md) to use.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ERRORREPORTING<br /><br /> **Optional**|Specifies the error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](https://go.microsoft.com/fwlink/?LinkID=72173). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ERRORREPORTING<br /><br /> **Optional**|Specifies the error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/HELP, H, ?<br /><br /> **Optional**|Displays the usage options for the parameters.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/INDICATEPROGRESS<br /><br /> **Optional**|Specifies that the verbose Setup log file will be piped to the console.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ INSTANCEDIR<br /><br /> **Optional**|Specifies a nondefault installation directory for shared components.|  
@@ -365,7 +361,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/PID<br /><br /> **Optional**|Specifies the product key for the edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If this parameter is not specified, Evaluation is used.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/Q<br /><br /> **Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/UIMODE<br /><br /> **Optional**|Specifies whether to present only the minimum number of dialog boxes during setup. <br />                **/UIMode** can only be used with the **/ACTION=INSTALL** and **UPGRADE** parameters. Supported values:<br /><br /> **/UIMODE=Normal** is the default for non-Express editions and presents all setup dialog boxes for the selected features.<br /><br /> **/UIMODE=AutoAdvance** is the default for Express editions and skips nonessential dialog boxes.<br /><br /> The **UIMode** setting cannot be used with the **/Q** or **/QS** parameters.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/SQMREPORTING<br /><br /> **Optional**|Specifies feature usage reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](https://go.microsoft.com/fwlink/?LinkID=72173). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/SQMREPORTING<br /><br /> **Optional**|Specifies feature usage reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/HIDECONSOLE<br /><br /> **Optional**|Specifies the console window would be hidden or closed.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service|/BROWSERSVCSTARTUPTYPE<br /><br /> **Optional**|Specifies the [startup](#Accounts) mode for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service. Supported values:<br /><br /> Automatic<br /><br /> Disabled<br /><br /> Manual|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text|/FTUPGRADEOPTION<br /><br /> **Optional**|Specifies the Full-Text catalog upgrade option. Supported values:<br /><br /> REBUILD<br /><br /> RESET<br /><br /> IMPORT|  
@@ -379,8 +375,8 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 ###### Sample Syntax:  
  To upgrade an existing instance or failover cluster node from a previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version,  
   
-```  
-Setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER /RSUPGRADEDATABASEACCOUNT="<Provide a SQL Server logon account that can connect to the report server during upgrade>" /RSUPGRADEPASSWORD="<Provide a password for the report server upgrade account>" /ISSVCAccount="NT Authority\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
+```cmd
+setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER /RSUPGRADEDATABASEACCOUNT="<Provide a SQL Server logon account that can connect to the report server during upgrade>" /RSUPGRADEPASSWORD="<Provide a password for the report server upgrade account>" /ISSVCAccount="NT Authority\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
 ##  <a name="Repair"></a> Repair Parameters  
@@ -398,8 +394,8 @@ Setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 ###### Sample Syntax:  
  Repair an instance and shared components.  
   
-```  
-Setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>  
+```cmd
+setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>  
 ```  
   
 ##  <a name="Rebuild"></a> Rebuild System Database Parameters  
@@ -431,8 +427,8 @@ Setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ###### Sample Syntax:  
  To uninstall an existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
-Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERVER  
+```cmd
+setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERVER  
 ```  
   
  To remove a named instance, specify the name of the instance instead of "MSSQLSERVER" in the example that was mentioned earlier in this topic.  
@@ -470,7 +466,7 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/*UpdateEnabled*<br /><br /> **Optional**|Specify whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup should discover and include product updates. The valid values are True and False or 1 and 0. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will include updates that are found.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/*UpdateSource*<br /><br /> **Optional**|Specify the location where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will obtain product updates. The valid values are "MU" to search [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, a valid folder path, a relative path such as .\MyUpdates or a UNC share. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will search [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update or a Windows Update Service through the Windows Server Update Services.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/CONFIGURATIONFILE<br /><br /> **Optional**|Specifies the [ConfigurationFile](install-sql-server-using-a-configuration-file.md) to use.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ERRORREPORTING<br /><br /> **Optional**|Specifies the error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Privacy Statement for the Microsoft Error Reporting Service](https://go.microsoft.com/fwlink/?LinkID=72173). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ERRORREPORTING<br /><br /> **Optional**|Specifies the error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/FEATURES<br /><br /> **Required**|Specifies [components](#Feature) to install.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/HELP, H, ?<br /><br /> **Optional**|Displays the usage options for the parameters.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/INDICATEPROGRESS<br /><br /> **Optional**|Specifies that the verbose Setup log file will be piped to the console.|  
@@ -482,7 +478,7 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/PID<br /><br /> **Optional**|Specifies the product key for the edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If this parameter is not specified, Evaluation is used.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/Q<br /><br /> **Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/QS<br /><br /> **Optional**|Specifies that Setup runs and shows progress through the UI, but does not accept any input or show any error messages.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/SQMREPORTING<br /><br /> **Optional**|Specifies feature usage reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](https://go.microsoft.com/fwlink/?LinkID=72173). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/SQMREPORTING<br /><br /> **Optional**|Specifies feature usage reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/HIDECONSOLE<br /><br /> **Optional**|Specifies the console window would be hidden or closed.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/FAILOVERCLUSTERDISKS<br /><br /> **Optional**|Specifies the list of shared disks to be included in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster resource group.<br /><br /> Default value:<br /><br /> The first drive is used as the default drive for all databases.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **Required**|Specifies an encoded IP address. The encodings are semicolon-delimited (;) and follow the format \<IP Type>;\<address>;\<network name>;\<subnet mask>. Supported IP types include DHCP, IPv4, and IPv6.<br />You can specify multiple failover cluster IP addresses with a space in between. See the following examples:<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1|  
@@ -530,7 +526,7 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 ###### Sample Syntax:  
  To install a single-node [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance with the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], default instance.  
   
-```  
+```cmd
 setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
@@ -545,7 +541,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/*UpdateEnabled*<br /><br /> **Optional**|Specify whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup should discover and include product updates. The valid values are True and False or 1 and 0. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will include updates that are found.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/*UpdateSource*<br /><br /> **Optional**|Specify the location where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will obtain product updates. The valid values are "MU" to search [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, a valid folder path, a relative path such as .\MyUpdates or a UNC share. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will search [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update or a Windows Update Service through the Windows Server Update Services.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/CONFIGURATIONFILE<br /><br /> **Optional**|Specifies the [ConfigurationFile](install-sql-server-using-a-configuration-file.md) to use.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ERRORREPORTING<br /><br /> **Optional**|Specifies the error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](https://go.microsoft.com/fwlink/?LinkID=72173). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ERRORREPORTING<br /><br /> **Optional**|Specifies the error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/FEATURES<br /><br /> **Required**|Specifies [components](#Feature) to install.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/HELP, H, ?<br /><br /> **Optional**|Displays the usage options for the parameters.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/INDICATEPROGRESS<br /><br /> **Optional**|Specifies that the verbose Setup log file will be piped to the console.|  
@@ -557,7 +553,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/PID<br /><br /> **Optional**|Specifies the product key for the edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If this parameter is not specified,<br /><br /> Evaluation is used.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/Q<br /><br /> **Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/QS<br /><br /> **Optional**|Specifies that Setup runs and shows progress through the UI, but does not accept any input or show any error messages.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/SQMREPORTING<br /><br /> **Optional**|Specifies feature usage reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](https://go.microsoft.com/fwlink/?LinkID=72173). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/SQMREPORTING<br /><br /> **Optional**|Specifies feature usage reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/HIDECONSOLE<br /><br /> **Optional**|Specifies that the console window is hidden or closed.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCACCOUNT<br /><br /> **Required**|Specifies the account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCPASSWORD<br /><br /> [Required](#Accounts)|Specifies the password for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account.|  
@@ -584,13 +580,13 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
   
  Run the following command at the command prompt to prepare a default instance:  
   
-```  
+```cmd
 setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=MSSQLSERVER /Features=AS,SQL /INDICATEPROGRESS /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
  Run the following command at the command prompt to prepare a named instance:  
   
-```  
+```cmd
 setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name>" /Features=AS,SQL /INDICATEPROGRESS /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
@@ -603,14 +599,14 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ENU<br /><br /> **Optional**|Use this parameter to install the English version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a localized operating system when the installation media includes language packs for both English and the language corresponding to the operating system.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/FAILOVERCLUSTERGROUP<br /><br /> **Optional**|Specifies the name of the resource group to be used for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster. It can be the name of an existing cluster group or the name of a new resource group.<br /><br /> Default value:<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<InstanceName>)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/CONFIGURATIONFILE<br /><br /> **Optional**|Specifies the [ConfigurationFile](install-sql-server-using-a-configuration-file.md) to use.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ERRORREPORTING<br /><br /> **Optional**|Specifies the error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](https://go.microsoft.com/fwlink/?LinkID=72173). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ERRORREPORTING<br /><br /> **Optional**|Specifies the error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/HELP, H, ?<br /><br /> **Optional**|Displays the usage options for the parameters.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/INDICATEPROGRESS<br /><br /> **Optional**|Specifies that the verbose Setup log file will be piped to the console.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name.<br /><br /> For more information, see [Instance Configuration](../../sql-server/install/instance-configuration.md).|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/PID<br /><br /> **Optional**|Specifies the product key for the edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If this parameter is not specified, Evaluation is used.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/Q<br /><br /> **Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/QS<br /><br /> **Optional**|Specifies that Setup runs and shows progress through the UI, but does not accept any input or show any error messages.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/SQMREPORTING<br /><br /> **Optional**|Specifies feature usage reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](https://go.microsoft.com/fwlink/?LinkID=72173). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/SQMREPORTING<br /><br /> **Optional**|Specifies feature usage reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/HIDECONSOLE<br /><br /> **Optional**|Specifies that the console window is hidden or closed.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/FAILOVERCLUSTERDISKS<br /><br /> **Optional**|Specifies the list of shared disks to be included in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster resource group.<br /><br /> Default value:<br /><br /> The first drive is used as the default drive for all databases.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **Required**|Specifies an encoded IP address. The encodings are semicolon-delimited (;) and follow the format \<IP Type>;\<address>;\<network name>;\<subnet mask>. Supported IP types include DHCP, IPv4, and IPv6.<br />You can specify multiple failover cluster IP addresses with a space in between. See the following examples:<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1|  
@@ -642,13 +638,13 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
   
  Run the following command at the command prompt to complete failover cluster installation for a default instance:  
   
-```  
+```cmd
 setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\Username>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'>:" /FAILOVERCLUSTERNETWORKNAME="<Insert FOI Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSYSADMINACCOUNTS="<DomainName\UserName>"  
 ```  
   
  Run the following command at the command prompt to complete failover cluster installation for a named instance:  
   
-```  
+```cmd
 setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Name>" /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\KATMAI\Data /ASLOGDIR=<drive>:\KATMAI\Log /ASBACKUPDIR=<Drive>:\KATMAI\Backup /ASCONFIGDIR=<Drive>:\KATMAI\Config /ASTEMPDIR=<Drive>:\KATMAI\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'>" /FAILOVERCLUSTERNETWORKNAME="CompNamedFOI" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;ClusterNetwork1;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="<Insert New Group Name>" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER_KATMAI" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSYSADMINACCOUNTS="<DomainName\Username>"  
 ```  
   
@@ -663,7 +659,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/*UpdateEnabled*<br /><br /> **Optional**|Specify whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup should discover and include product updates. The valid values are True and False or 1 and 0. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will include updates that are found.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/*UpdateSource*<br /><br /> **Optional**|Specify the location where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will obtain product updates. The valid values are "MU" to search [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, a valid folder path, a relative path such as .\MyUpdates or a UNC share. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup will search [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update or a Windows Update Service through the Windows Server Update Services.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/CONFIGURATIONFILE<br /><br /> **Optional**|Specifies the [ConfigurationFile](install-sql-server-using-a-configuration-file.md) to use.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ERRORREPORTING<br /><br /> **Optional**|Specifies the error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](https://go.microsoft.com/fwlink/?LinkID=72173). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ERRORREPORTING<br /><br /> **Optional**|Specifies the error reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Supported values:<br /><br /> 1=enabled<br /><br /> 0=disabled|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/HELP, H, ?<br /><br /> **Optional**|Displays the usage options for the parameters.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/INDICATEPROGRESS<br /><br /> **Optional**|Specifies that the verbose Setup log file will be piped to the console.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ INSTANCEDIR<br /><br /> **Optional**|Specifies a nondefault installation directory for shared components.|  
@@ -671,7 +667,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name.<br /><br /> For more information, see [Instance Configuration](../../sql-server/install/instance-configuration.md).|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/PID<br /><br /> **Optional**|Specifies the product key for the edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If this parameter is not specified, Evaluation is used.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/Q<br /><br /> **Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/SQMREPORTING<br /><br /> **Optional**|Specifies feature usage reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](https://go.microsoft.com/fwlink/?LinkID=72173). Supported values:<br /><br /> 0=disabled<br /><br /> 1=enabled|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/SQMREPORTING<br /><br /> **Optional**|Specifies feature usage reporting for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> For more information, see [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Supported values:<br /><br /> 0=disabled<br /><br /> 1=enabled|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/HIDECONSOLE<br /><br /> **Optional**|Specifies that the console window is hidden or closed.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/FAILOVERCLUSTERROLLOWNERSHIP|Specifies the [failover behavior](#RollOwnership) during upgrade.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service|/BROWSERSVCSTARTUPTYPE<br /><br /> **Optional**|Specifies the [startup](#Accounts) mode for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service. Supported values:<br /><br /> Automatic<br /><br /> Disabled<br /><br /> Manual|  
@@ -718,7 +714,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 ###### Sample Syntax:  
  To add a node to an existing failover cluster instance with the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-```  
+```cmd
 setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOUNT="<SQL account that is used on other nodes>" /SQLSVCPASSWORD="<password for SQL account>" /AGTSVCACCOUNT="<SQL Server Agent account that is used on other nodes>", /AGTSVCPASSWORD="<SQL Server Agent account password>" /ASSVCACCOUNT="<AS account that is used on other nodes>" /ASSVCPASSWORD="<password for AS account>" /INDICATEPROGRESS /IACCEPTSQLSERVERLICENSETERMS /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;ClusterNetwork1;xxx.xxx.xxx.x" /CONFIRMIPDEPENDENCYCHANGE=0  
 ```  
   
@@ -740,7 +736,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 ###### Sample Syntax:  
  To remove a node from an existing failover cluster instance with the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-```  
+```cmd
 setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICATEPROGRESS] /CONFIRMIPDEPENDENCYCHANGE=0  
 ```  
   
@@ -845,5 +841,3 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
  [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
  [SQL Server Failover Cluster Installation](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [Install SQL Server 2014 BI Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
-  
-  

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sys.transmission_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

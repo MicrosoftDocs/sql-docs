@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c5c0ac6d-a6c1-4077-8186-1644df1944f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetScrollOptions (Cursor Library)
 > [!IMPORTANT]  

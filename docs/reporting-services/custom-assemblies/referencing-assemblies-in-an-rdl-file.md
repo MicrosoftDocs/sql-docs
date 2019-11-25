@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Report Definition Language, referencing assemblies"
   - "report definition files [Reporting Services]"
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Referencing Assemblies in an RDL File
   To support the use of custom code assemblies in report definition files, two Report Definition Language (RDL) elements are included in the RDL specification: the **CodeModules** element and the **Classes** element.  

@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Modify Snapshot Initialization Options for SQL Replication 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 There are a number of options to specify when [initializing a subscription with a snapshot](initialize-a-subscription-with-a-snapshot.md).
 
@@ -41,7 +41,7 @@ Specify the default snapshot location on the **Snapshot Folder** page of the Con
   
 ### To modify the default snapshot location  
   
-1.  On the **Publishers** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties button (**…**) for the Publisher for which you want to change the default snapshot location.    
+1.  On the **Publishers** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties button (**...**) for the Publisher for which you want to change the default snapshot location.    
 2.  In the **Publisher Properties - \<Publisher>** dialog box, enter a value for the **Default Snapshot Folder** property.  
   
     > [!NOTE]  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Statistics
@@ -61,7 +60,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 5.  Right-click the statistics object that you want to delete and select **Delete**.  
   
 6.  In the **Delete Object** dialog box, ensure that the correct statistic has been selected and click **OK**.  
-  
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To drop statistics from a table or view  

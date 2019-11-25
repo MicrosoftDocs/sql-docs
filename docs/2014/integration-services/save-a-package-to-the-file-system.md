@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services packages, saving"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "SSIS packages, saving"
   - "SQL Server Integration Services packages, saving"
 ms.assetid: 1ba45350-dae8-437a-8984-64e6d8d180c1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Save a Package to the File System

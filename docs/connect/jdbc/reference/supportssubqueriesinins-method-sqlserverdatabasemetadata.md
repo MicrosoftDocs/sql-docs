@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 77a0b5c0-0d8e-4e08-975f-4eeabb108ab1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # supportsSubqueriesInIns Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

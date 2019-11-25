@@ -1,5 +1,5 @@
 ---
-title: "Create Custom Collection Set - Generic T-SQL Query Collector Type | Microsoft Docs"
+title: "Create Custom Collection Set - Generic T-SQL Query Collector Type"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+ms.custom: "seo-lt-2019"
 ---
 # Create Custom Collection Set - Generic T-SQL Query Collector Type
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

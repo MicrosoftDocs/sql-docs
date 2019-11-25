@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 57f88c22-e7fa-4270-a0bf-443a2684cf6e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Diagnostic Handling Examples
 The following examples show how various components in an ODBC connection might generate diagnostic messages and how various drivers might return diagnostics to the application with **SQLGetDiagRec**.  

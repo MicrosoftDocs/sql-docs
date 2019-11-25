@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +36,10 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## Arguments  
- [ **@secondary_server =** ] '*secondary_server*'  
+`[ @secondary_server = ] 'secondary_server'`
  Is the name of the secondary server. *secondary_server* is **sysname**, with no default.  
   
- [ **@secondary_database =** ] '*secondary_database*'  
+`[ @secondary_database = ] 'secondary_database'`
  Is the name of the secondary database. *secondary_database* is **sysname**, with no default.  
   
 ## Return Code Values  

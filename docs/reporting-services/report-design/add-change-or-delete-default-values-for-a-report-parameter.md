@@ -2,7 +2,7 @@
 title: "Add, Change, or Delete Default Values for a Report Parameter | Microsoft Docs"
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -12,8 +12,8 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.reportparameters.defaultvalues.f1"
   - "10072"
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add, Change, or Delete Default Values for a Report Parameter
   After you create a report parameter, you can provide a list of default values. If all parameters have a valid default value, the report runs automatically when you first view or preview it.  

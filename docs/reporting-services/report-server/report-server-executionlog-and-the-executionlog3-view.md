@@ -2,7 +2,7 @@
 title: "Report Server ExecutionLog and the ExecutionLog3 View | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "logs [Reporting Services], execution"
   - "execution logs [Reporting Services]"
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Report Server ExecutionLog and the ExecutionLog3 View
   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], report server execution log contains information about the reports that execute on the server or on multiple servers in a native mode scale-out deployment or a SharePoint farm. You can use the report execution log to find out how often a report is requested, what output formats are used the most, and how many milliseconds of processing time is spent on each processing phase. The log contains information on the length of time spent executing a report's dataset query and the time spent processing the data. If you are a report server administrator, you can review the log information and identify long running tasks and make suggestions to the report authors on the areas of the report (dataset or processing) they may be able to improve.  
@@ -256,8 +256,6 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ExternalImages**  
   
-     Added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
      The value is in miliseconds. This data can be used to diagnose performance issues. The time needed to retrieve images from an external webserver may slow the overall report execution.  
   
     ```  
@@ -269,8 +267,6 @@ select * from ExecutionLog3 order by TimeStart DESC
     ```  
   
 -   **Connections**  
-  
-     Added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
      A multi-leveled structure  
   
@@ -318,9 +314,9 @@ select * from ExecutionLog2 order by TimeStart DESC
  The following table describes the data that is captured in the report execution log  
   
 |Column|Description|  
-|------------|-----------------|  
+|------------|------------------------------------------------------------|  
 |InstanceName|Name of the report server instance that handled the request.|  
-|ReportPath|The path structure to the report.  For example a report named "test" which is the in root folder in Report Manager, would have a ReportPath of "/test".<br /><br /> A report named "test" that is saved in the folder "samples" on Report Manager , will have a ReportPath of "/Samples/test/"|  
+|ReportPath|The path structure to the report. A repost saved in the root folder as "test", has a ReportPath of "/test".<br /><br /> A report named "test" that is saved in the folder "samples", would have a ReportPath of "/Samples/test/"|  
 |UserName|User identifier.|  
 |ExecutionID||  
 |RequestType|Request type (either user or system).|  

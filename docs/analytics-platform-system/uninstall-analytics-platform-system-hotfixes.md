@@ -1,14 +1,14 @@
 ---
-title: Uninstall Analytics Platform System hotfixes in  | Microsoft Docs
+title: Uninstall hotfixes
 description: Uninstall Analytics Platform System hotfixes.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Uninstall Analytics Platform System hotfixes 

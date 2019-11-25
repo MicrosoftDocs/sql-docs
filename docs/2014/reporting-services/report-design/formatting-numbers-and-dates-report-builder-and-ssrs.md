@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.placeholderproperties.number.f1"
@@ -17,8 +16,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.textboxproperties.number.f1"
   - "10285"
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Formatting Numbers and Dates (Report Builder and SSRS)

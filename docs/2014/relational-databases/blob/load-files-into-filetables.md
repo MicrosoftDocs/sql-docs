@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "FileTables [SQL Server], bulk loading"
   - "FileTables [SQL Server], loading files"
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Load Files into FileTables
@@ -48,7 +48,7 @@ manager: craigg
   
 3.  Fix the metadata in the `PhotoMetadata` table, by using code similar to the following:  
   
-```tsql  
+```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  
   

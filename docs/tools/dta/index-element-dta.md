@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Index element (DTA)"
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Index Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

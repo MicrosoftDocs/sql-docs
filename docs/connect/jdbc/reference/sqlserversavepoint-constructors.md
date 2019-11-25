@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f9b1be55-6c2b-4568-a768-5294675ae35f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLServerSavepoint Constructors
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

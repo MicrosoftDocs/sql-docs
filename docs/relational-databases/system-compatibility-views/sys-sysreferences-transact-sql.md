@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 81276f13-202e-4e74-962d-46eb98c98d2e
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sysreferences (Transact-SQL)

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,32 +37,32 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication =**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *Publication* is **sysname**, with no default.  
   
- [ **@article =**] **'**_article_**'**  
+`[ @article = ] 'article'`
  Is the name of the article in the publication. *article* is **sysname**, with no default.  
   
- [ **@column =**] **'**_column_**'**  
+`[ @column = ] 'column'`
  Identifies the columns on which to create the vertical partition. *column* is **sysname**, with a default of NULL. If NULL and `@operation = N'add'`, all columns in the source table are added to the article by default. *column* cannot be NULL when *operation* is set to **drop**. To exclude columns from an article, execute **sp_mergearticlecolumn** and specify *column* and `@operation = N'drop'` for each column to be removed from the specified *article*.  
   
- [ **@operation =**] **'**_operation_**'**  
+`[ @operation = ] 'operation'`
  Is the replication status. *operation* is **nvarchar(4)**, with a default of ADD. **add** marks the column for replication. **drop** clears the column.  
   
- [ **@schema_replication=**] **'**_schema_replication_**'**  
+`[ @schema_replication = ] 'schema_replication'`
  Specifies that a schema change will be propagated when the Merge Agent runs. *schema_replication* is **nvarchar(5)**, with a default of FALSE.  
   
 > [!NOTE]  
 >  Only **FALSE** is supported for *schema_replication*.  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`
  Enables or disables the ability to have a snapshot invalidated. *force_invalidate_snapshot* is a **bit**, with a default of **0**.  
   
  **0** specifies that changes to the merge article will not cause the snapshot to be invalid.  
   
  **1** specifies that changes to the merge article may cause the snapshot to be invalid, and if that is the case, a value of **1** gives permission for the new snapshot to occur.  
   
- [ **@force_reinit_subscription = ]**_force_reinit_subscription_  
+`[ @force_reinit_subscription = ]force_reinit_subscription_`
  Enables or disables the ability to have the subscription reinitializated. *force_reinit_subscription* is a bit with a default of **0**.  
   
  **0** specifies that changes to the merge article will not cause the subscription to be reinitialized.  

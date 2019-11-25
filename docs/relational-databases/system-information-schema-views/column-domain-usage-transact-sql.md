@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: deb20037-6a51-47ae-9f49-7601698fafaf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COLUMN_DOMAIN_USAGE (Transact-SQL)

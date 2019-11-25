@@ -1,8 +1,8 @@
 ---
-title: View analysis reports in Database Experimentation Assistant for SQL Server upgrades
+title: View analysis reports for SQL Server upgrades
 description: View analysis reports in Database Experimentation Assistant
-ms.custom: ""
-ms.date: 10/22/2018
+ms.custom: "seo-lt-2019"
+ms.date: 11/22/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,24 +10,23 @@ ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
-ms.reviewer: douglasl
-manager: craigg
+ms.author: jtoland
+ms.reviewer: mathoma
 ---
 
 # View analysis reports in Database Experimentation Assistant
 
-After you [create your analysis report](database-experimentation-assistant-create-report.md) in Database Experimentation Assistant (DEA), complete the steps described in this article to view the report and gain performance insights provided by your A/B test.
+After you use Database Experimentation Assistant (DEA) to [create an analysis report](database-experimentation-assistant-create-report.md), use the steps below to review the report for performance insights based on your A/B test.
 
 ## Select a server
 
 In DEA, select the menu icon. In the expanded menu, select **Analysis Reports** next to the checklist icon to open the Analysis Reports window.
 
-Under **Analysis Reports**, enter the name of a computer running SQL Server that has an analysis database. Select **Connect**. 
+Under **Analysis Reports**, enter the name of a computer running SQL Server that has an analysis database, and then select **Connect**.
 
 ![Connect to an existing report](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
-If you're missing any dependencies, the **Prerequisites** page prompts you with links to install them. Install the prerequisites, and then select **Try again**.
+If you're missing any dependencies, the **Prerequisites** page prompts you with links to install them. If necessary, install the prerequisites, and then select **Try again**.
 
 ![Prerequisites page](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
 
@@ -74,16 +73,13 @@ You can see the A and B instances that the query ran on. You can also see a temp
 The comparison summary report has expandable **Error Information** and **Query Plan Information** sections. The sections show the errors and plan information for both instances.
 
 Select the error (red) pie to show these types of errors:
+
 - **Existing errors**: Errors that were in A.
 - **New errors**: Errors that were in B.
 - **Resolved errors**: Errors that were in A but not in B.
 
 ![Error charts](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
 
-## Next steps
+## See also
 
 - To learn how to generate an analysis report at a command prompt, see [Run at command prompt](database-experimentation-assistant-run-command-prompt.md).
-
-- For a 19-minute introduction to DEA and demonstration, watch the following video:
-
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

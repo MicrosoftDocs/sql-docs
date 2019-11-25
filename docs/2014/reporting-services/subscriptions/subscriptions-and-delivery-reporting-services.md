@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [Reporting Services], report distribution"
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], about subscriptions"
   - "subscriptions [Reporting Services]"
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Subscriptions and Delivery (Reporting Services)

@@ -1,5 +1,5 @@
 ---
-title: "Delete an Attribute (Master Data Services) | Microsoft Docs"
+title: Delete an Attribute
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "attributes [Master Data Services], deleting"
   - "deleting attributes [Master Data Services]"
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete an Attribute (Master Data Services)
 

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], performance counters"
   - "counters [Integration Services]"
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Monitoring Performance Counters with the Script Task

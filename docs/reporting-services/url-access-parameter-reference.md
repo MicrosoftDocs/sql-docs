@@ -1,8 +1,8 @@
 ---
 title: "URL Access Parameter Reference | Microsoft Docs"
-ms.date: 09/09/2015
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 
@@ -11,14 +11,14 @@ helpviewer_keywords:
   - "reports [Reporting Services], display options"
   - "URL access [Reporting Services], report display parameters"
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # URL Access Parameter Reference
   You can use the following parameters as part of a URL to configure the look and feel of your [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]reports. The most common parameters are listed in this section. Parameters are case-insensitive and begin with the parameter prefix *rs:* if directed to the report server and *rc:* if directed to an HTML Viewer. You can also specify parameters that are specific to devices or rendering extensions. For more information about device-specific parameters, see [Specify Device Information Settings in a URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
   
 > [!IMPORTANT]  
->  For a SharePoint mode report server it  is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds context to the HTTP reques that is required to ensure proper execution of the report for SharePoint mode report servers. For examples, see [Access Report Server Items Using URL Access](../reporting-services/access-report-server-items-using-url-access.md).  
+>  For a SharePoint mode report server it  is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds context to the HTTP request that is required to ensure proper execution of the report for SharePoint mode report servers. For examples, see [Access Report Server Items Using URL Access](../reporting-services/access-report-server-items-using-url-access.md).  
 >   
 >  For information about including report parameters in a URL, and examples, see [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
@@ -31,7 +31,7 @@ ms.author: maghan
 -   [Report Viewer Web Part Commands (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> HTML Viewer Commands (rc:)  
- HTML Viewer commands are used to target the HTML Viewer (for example, from Report Manager) and are prefixed with *rc:*:  
+ - HTML Viewer commands are used to target the HTML Viewer, and are prefixed with *rc:*:
   
 -   *Toolbar* :  
                   Shows or hides the toolbar. If the value of this parameter is **false**, all remaining options are ignored. If you omit this parameter, the toolbar is automatically displayed for rendering formats that support it. The default of this parameter is **true**.  

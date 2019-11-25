@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a User-Defined Data Type Alias
@@ -104,7 +103,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 6.  Check **Allow NULLs** if the new data type alias can permit NULL values.  
   
 7.  In the **Binding** area, complete the **Default** or **Rule** boxes if you want to bind a default or rule to the new data type alias. Defaults and rules cannot be created in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use [!INCLUDE[tsql](../../includes/tsql-md.md)]. Example code for creating defaults and rules are available in Template Explorer.  
-  
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To create a user-defined data type alias  

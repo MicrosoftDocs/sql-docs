@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # GUID Escape Sequences
 ODBC uses escape sequences for GUID literals. The syntax of this escape sequence is as follows:  

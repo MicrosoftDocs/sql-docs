@@ -133,7 +133,7 @@ manager: craigg
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  The following example restores the files and filegroups for the `MyNwind` database, and replaces any existing files of the same name. Two transaction logs will also be applied to restore the database to the current time.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Restore the files and filesgroups for MyNwind.  

@@ -1,5 +1,5 @@
 ---
-title: "Database Logins, Users, and Roles (Master Data Services) | Microsoft Docs"
+title: Database Logins, Users, and Roles
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "database [Master Data Services], logins"
   - "security [Master Data Services], database logins"
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Database Logins, Users, and Roles (Master Data Services)
 

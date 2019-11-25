@@ -1,5 +1,5 @@
 ---
-title: "Create an Attribute Group (Master Data Services) | Microsoft Docs"
+title: Create an Attribute Group
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "attribute groups [Master Data Services], creating"
   - "creating attribute groups [Master Data Services]"
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create an Attribute Group (Master Data Services)
 

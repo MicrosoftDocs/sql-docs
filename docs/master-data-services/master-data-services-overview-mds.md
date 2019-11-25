@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services Overview (MDS) | Microsoft Docs"
+title: Overview
 ms.custom: ""
 ms.date: "02/14/2017"
 ms.prod: sql
@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "Master Data Services, overview"
   - "Master Data Services"
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Master Data Services Overview (MDS)
 

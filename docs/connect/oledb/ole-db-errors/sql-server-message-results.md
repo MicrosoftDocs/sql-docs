@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "OLE DB error handling, SQL Server message results"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # SQL Server Message Results
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

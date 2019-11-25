@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 8ed5c512-f5de-4741-a18a-de85a3041295
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_NULL_DFLT_OFF (Transact-SQL)

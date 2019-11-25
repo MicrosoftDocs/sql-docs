@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "replaying traces"
   - "TSQL_Replay template [SQL Server]"
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

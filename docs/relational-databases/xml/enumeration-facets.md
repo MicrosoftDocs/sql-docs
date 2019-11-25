@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "enumeration facets"
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Enumeration Facets
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

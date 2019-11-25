@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sys.service_message_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

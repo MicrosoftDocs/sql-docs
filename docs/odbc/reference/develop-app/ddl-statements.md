@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 96ac9859-5976-4b06-ae1f-2fec3231e266
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # DDL Statements
 Data Definition Language (DDL) statements vary tremendously among DBMSs. ODBC SQL defines statements for the most common data definition operations: creating and dropping tables, indexes, and views; altering tables; and granting and revoking privileges. All other DDL statements are data source-specific. Therefore, interoperable applications cannot perform some data definition operations. In general, this is not a problem, because such operations tend to be highly DBMS-specific and are best left to the proprietary database administration software shipped with most DBMSs or the setup program shipped with the driver.  

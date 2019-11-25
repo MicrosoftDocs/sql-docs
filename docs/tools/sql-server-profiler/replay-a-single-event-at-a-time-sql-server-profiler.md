@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "traces [SQL Server], replaying"
   - "replaying traces"
 ms.assetid: 220fb192-9636-41a2-b15c-62af6cab8fff
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Replay a Single Event at a Time (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

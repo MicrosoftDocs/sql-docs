@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.scaleoutdeployment.F1"
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Scale-out Deployment (Native Mode Report Server)

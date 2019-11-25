@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Direction Property
 Indicates whether the [parameter](../../../ado/reference/ado-api/parameter-object.md) represents an input parameter, an output parameter, an input and an output parameter, or if the parameter is the return value from a stored procedure.  

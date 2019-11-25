@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "viewing join properties"
   - "displaying join properties"
 ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # View Join Properties (Visual Database Tools)

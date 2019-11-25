@@ -1,5 +1,5 @@
 ---
-title: "Members (Master Data Services) | Microsoft Docs"
+title: Members
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "leaf members [Master Data Services], about leaf members"
   - "members [Master Data Services]"
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Members (Master Data Services)
 

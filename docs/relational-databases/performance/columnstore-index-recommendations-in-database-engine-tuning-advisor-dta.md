@@ -1,6 +1,6 @@
 ---
-title: "Columnstore index recommendations in Database Engine Tuning Advisor (DTA) | Microsoft Docs"
-ms.custom: ""
+title: "Columnstore index recommendations-Database Engine Tuning Advisor (DTA)"
+ms.custom: seo-dt-2019
 ms.date: "01/09/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Columnstore index recommendations in Database Engine Tuning Advisor (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
-title: "Using Sql_variant Data Type | Microsoft Docs"
+title: "Using Sql_variant data type | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/28/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,9 +10,8 @@ ms.topic: conceptual
 ms.assetid: 
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
-# Using Sql_variant Data Type
+# Using Sql_variant data type
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -87,6 +86,6 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
     
     `Inserting null value with column type sql_variant in TVP is not supported.`
 
-## See Also
+## See also
 
-[Understanding the JDBC Driver Data Types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Understanding the JDBC driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

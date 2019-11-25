@@ -2,7 +2,7 @@
 title: "Administer a Report Server Database (SSRS Native Mode) | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "reportservertempdb"
   - "reportserver database"
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Administer a Report Server Database (SSRS Native Mode)
   A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment uses two [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases for internal storage. By default, the databases are named ReportServer and ReportServerTempdb. ReportServerTempdb is created with the primary report server database and is used to store temporary data, session information, and cached reports.  
@@ -25,7 +25,7 @@ ms.author: maghan
   
  To administer the report server databases, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a variety of tools.  
   
--   To back up or restore the report server database, move a report server database, or recover a report server database, you can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], the [!INCLUDE[tsql](../../includes/tsql-md.md)] commands, or the database command prompt utilities. For instructions, see [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) in SQL Server Books Online.  
+-   To back up or restore the report server database, move a report server database, or recover a report server database, you can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], the [!INCLUDE[tsql](../../includes/tsql-md.md)] commands, or the database command prompt utilities. For instructions, see [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   To copy existing database content to another report server database, you can attach a copy of a report server database and use it with a different report server instance. Or, you can create and run a script that uses SOAP calls to recreate report server content in a new database. You can use the **rs** utility to run the script.  
   

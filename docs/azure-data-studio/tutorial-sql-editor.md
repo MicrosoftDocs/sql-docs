@@ -2,15 +2,14 @@
 title: "Tutorial: Use the Transact-SQL editor to create database objects"
 titleSuffix: Azure Data Studio
 description: This tutorial demonstrates the key features in Azure Data Studio that simplify working with T-SQL.
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
 ms.topic: "tutorial"
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
+ms.reviewer: "alayu; sstein"
+ms.custom: "seodec18"
+ms.date: "09/24/2018"
 ---
 
 # Tutorial: Use the Transact-SQL editor to create database objects - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -50,7 +49,7 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
    ![quick search widget](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Edit the **Email** column in the first row, type *orlando0@adventure-works.com*, and press **Enter** to save the change.
+1. Edit the **Email** column in the first row, type *orlando0\@adventure-works.com*, and press **Enter** to save the change.
 
    ![edit data](./media/tutorial-sql-editor/edit-data.png)
 
@@ -178,7 +177,7 @@ The stored procedure is now created, and the **RESULTS** pane displays the retur
 
 ## Use save query results as JSON to test the setCustomer stored procedure
 
-The *setCustomer* stored procedure created in the previous section requires JSON data be passed into the *@json_val* parameter. This section shows how to get a properly formatted bit of JSON to pass into the parameter so you can test the stored procedure.
+The *setCustomer* stored procedure created in the previous section requires JSON data be passed into the *\@json_val* parameter. This section shows how to get a properly formatted bit of JSON to pass into the parameter so you can test the stored procedure.
 
 1. In the **SERVERS** sidebar right-click the *dbo.Customers* table and click **SELECT TOP 1000 Rows**.
 

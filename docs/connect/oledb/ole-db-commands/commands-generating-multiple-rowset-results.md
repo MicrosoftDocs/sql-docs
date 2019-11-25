@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "multiple-rowset results"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Commands Generating Multiple-Rowset Results
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

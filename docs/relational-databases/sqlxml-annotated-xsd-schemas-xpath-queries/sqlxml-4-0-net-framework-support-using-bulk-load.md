@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML 4.0 .NET Framework Support - Using Bulk Load

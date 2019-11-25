@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Maintenance Cleanup Task (Maintenance Plan)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ manager: craigg
  Path and name of the folder containing the files to be deleted.  
   
  **File extension**  
- Provide the file extension of the file to be deleted. Don't include any other characters before or after the extension (for example, don't include BAK or TRN). 
+ Provide the file extension of the file to be deleted. Don't include any other characters before or after the extension (for example, use BAK or TRN). 
   
  **Include first-level subfolders**  
  Delete files with the extension specified for **File extension** from first-level subfolders under **Folder**.  

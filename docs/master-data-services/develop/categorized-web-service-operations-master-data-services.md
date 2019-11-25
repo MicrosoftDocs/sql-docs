@@ -1,5 +1,5 @@
 ---
-title: "Categorized Web Service Operations (Master Data Services) | Microsoft Docs"
+title: Categorized Web Service Operations
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -9,9 +9,8 @@ ms.technology:
 
 ms.topic: "reference"
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Categorized Web Service Operations (Master Data Services)
 

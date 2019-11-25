@@ -1,6 +1,6 @@
 ---
-title: "Context Property (SecurityCertificate Class) | Microsoft Docs"
-ms.custom: ""
+title: "Context Property (SecurityCertificate)"
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Context Property (SecurityCertificate Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

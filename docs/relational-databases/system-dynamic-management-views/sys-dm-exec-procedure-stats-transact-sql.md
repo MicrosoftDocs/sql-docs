@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_procedure_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/10/2018"
+ms.date: "06/03/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_procedure_stats (Transact-SQL)
@@ -30,13 +29,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out.  
   
 > [!NOTE]
-> An initial query of **sys.dm_exec_procedure_stats** might produce inaccurate results if there is a workload currently executing on the server. More accurate results may be determined by rerunning the query.  
-  
-> [!NOTE]
-> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_exec_procedure_stats**.  
+> The results of **sys.dm_exec_procedure_stats**  may vary with each execution as the data only reflects finished queries, and not ones still in-flight.
+> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_exec_procedure_stats**. 
+
   
 |Column name|Data type|Description|  
-|-----------------|---------------|-----------------|  
+|-----------------|---------------|-----------------| 
 |**database_id**|**int**|Database ID in which the stored procedure resides.|  
 |**object_id**|**int**|Object identification number of the stored procedure.|  
 |**type**|**char(2)**|Type of the object:<br /><br /> P = SQL stored procedure<br /><br /> PC = Assembly (CLR) stored procedure<br /><br /> X = Extended stored procedure|  
@@ -71,13 +69,17 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**min_spills**|**bigint**|The minimum number of pages that this stored procedure has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|The maximum number of pages that this stored procedure has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_page_server_reads**|**bigint**|The total number of page server reads performed by executions of this stored procedure since it was compiled.<br /><br /> **Applies to**: Azure SQL Database Hyperscale|  
+|**last_page_server_reads**|**bigint**|The number of page server reads performed the last time the stored procedure was executed.<br /><br /> **Applies to**: Azure SQL Database Hyperscale|  
+|**min_page_server_reads**|**bigint**|The minimum number of page server reads that this stored procedure has ever performed during a single execution.<br /><br /> **Applies to**: Azure SQL Database Hyperscale|  
+|**max_page_server_reads**|**bigint**|The maximum number of page server reads that this stored procedure has ever performed during a single execution.<br /><br /> **Applies to**: Azure SQL Database Hyperscale|  
   
  <sup>1</sup> For natively compiled stored procedures when statistics collection is enabled, worker time is collected in milliseconds. If the query executes in less than a millisecond, the value will be 0.  
   
 ## Permissions  
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
    
 ## Remarks  
  Statistics in the view are updated when a stored procedure execution completes.  

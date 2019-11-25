@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.sysremotelogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

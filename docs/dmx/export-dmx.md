@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # EXPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,6 +55,6 @@ EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES
  [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
  [IMPORT &#40;DMX&#41;](../dmx/import-dmx.md)   
- [Export and Import Data Mining Objects](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [Export and Import Data Mining Objects](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
   
   

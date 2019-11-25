@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ee1b2ebd-03cb-4b91-a5d2-98d4d38f82ec
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # dbo.systargetservergroupmembers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -1,16 +1,15 @@
 ---
-title: "sys.pdw_replicated_table_cache_state (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.pdw_replicated_table_cache_state (Transact-SQL)"
+ms.custom: seo-dt-2019
 ms.date: "07/03/2017"
 ms.prod: sql
-ms.technology: data-warehousee"
+ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 author: "ronortloff"
 ms.author: "rortloff"
-manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_replicated_table_cache_state (Transact-SQL)

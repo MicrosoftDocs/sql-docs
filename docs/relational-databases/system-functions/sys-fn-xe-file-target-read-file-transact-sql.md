@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_xe_file_target_read_file (Transact-SQL)
@@ -70,7 +69,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|The event contents, in XML format. Is not nullable.|  
 |file_name|**nvarchar(260)**|The name of the file that contains the event. Is not nullable.|  
 |file_offset|**bigint**|The offset of the block in the file that contains the event. Is not nullable.|  
-|timestamp_utc|**datetime2**|**Applies to**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />The date and time (UTC timezone) of the event. Is not nullable.|  
+|timestamp_utc|**datetime2**|**Applies to**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />The date and time (UTC timezone) of the event. Is not nullable.|  
 
   
 ## Remarks  

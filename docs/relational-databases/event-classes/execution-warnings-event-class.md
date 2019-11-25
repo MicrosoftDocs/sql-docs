@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Execution Warnings Event Class

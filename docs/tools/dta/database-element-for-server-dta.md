@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Database element"
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Database Element for Server (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

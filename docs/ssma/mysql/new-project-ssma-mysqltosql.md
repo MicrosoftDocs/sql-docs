@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # New Project (SSMA) (MySQLToSQL)
 Use the **New Project** dialog box to create a new SSMA project. To access the **New Project** dialog box, on the **File** menu, click **New Project**.  

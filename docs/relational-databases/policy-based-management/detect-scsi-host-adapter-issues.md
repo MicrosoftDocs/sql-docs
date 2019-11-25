@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Detect SCSI Host Adapter Issues
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

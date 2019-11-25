@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CURRENT_REQUEST_ID"
 ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # CURRENT_REQUEST_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

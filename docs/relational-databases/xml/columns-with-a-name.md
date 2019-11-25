@@ -1,7 +1,7 @@
 ---
 title: "Columns with a Name | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.custom: "fresh2019may"
+ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -10,13 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "names [SQL Server], columns with"
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Columns with a Name
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  The following are the specific conditions in which rowset columns with a name are mapped, case-sensitive, to the resulting XML:  
+
+The following are the specific conditions in which rowset columns with a name are mapped, case-sensitive, to the resulting XML:  
   
 -   The column name starts with an at sign (\@).  
   
@@ -31,20 +32,17 @@ manager: craigg
 ## Column Name Starts with an At Sign (\@)  
  If the column name starts with an at sign (\@) and does not contain a slash mark (/), an attribute of the `row` element that has the corresponding column value is created. For example, the following query returns a two-column (\@PmId, Name) rowset. In the resulting XML, a **PmId** attribute is added to the corresponding `row` element and a value of ProductModelID is assigned to it.  
   
-```  
-  
+```sql
 SELECT ProductModelID as "@PmId",  
        Name  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
-  
+FOR XML PATH;
 ```  
   
  This is the result:  
   
-```  
+```xml
 <row PmId="7">  
   <Name>HL Touring Frame</Name>  
 </row>  
@@ -52,13 +50,12 @@ go
   
  Note that attributes must come before any other node types, such as element nodes and text nodes, in the same level. The following query will return an error:  
   
-```  
+```sql
 SELECT Name,  
        ProductModelID as "@PmId"  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
+FOR XML PATH;
 ```  
   
 ## Column Name Does Not Start with an At Sign (\@)  
@@ -66,14 +63,14 @@ go
   
  The following query specifies the column name, the result. Therefore, a `result` element child is added to the `row` element.  
   
-```  
+```sql
 SELECT 2+2 as result  
-for xml PATH  
+for xml PATH;
 ```  
   
  This is the result:  
   
-```  
+```xml
 <row>  
   <result>4</result>  
 </row>  
@@ -81,22 +78,22 @@ for xml PATH
   
  The following query specifies the column name, ManuWorkCenterInformation, for the XML returned by the XQuery specified against Instructions column of **xml** type. Therefore, a `ManuWorkCenterInformation` element is added as a child of the `row` element.  
   
-```  
-SELECT   
-       ProductModelID,  
-       Name,  
-       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
-                /MI:root/MI:Location   
-              ') as ManuWorkCenterInformation  
+```sql
+SELECT
+  ProductModelID,  
+  Name,  
+  Instructions.query(
+    'declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";
+     /MI:root/MI:Location
+    ') as ManuWorkCenterInformation  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
+FOR XML PATH;
 ```  
   
  This is the result:  
   
-```  
+```xml
 <row>  
   <ProductModelID>7</ProductModelID>  
   <Name>HL Touring Frame</Name>  
@@ -113,20 +110,20 @@ go
   
  For example, the following query returns an employee ID and name that are represented as a complex element EmpName that contains a First, Middle, and Last name.  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName  "EmpName/First",   
        MiddleName "EmpName/Middle",   
        LastName   "EmpName/Last"  
 FROM   HumanResources.Employee E, Person.Contact C  
-WHERE  E.EmployeeID = C.ContactID  
-AND    E.EmployeeID=1  
-FOR XML PATH  
+WHERE  E.EmployeeID = C.ContactID  AND
+       E.EmployeeID=1  
+FOR XML PATH;
 ```  
   
  The column names are used as a path in constructing XML in the PATH mode. The column name that contains employee ID values, starts with '\@'.Therefore, an attribute, **EmpID**, is added to the `row` element. All other columns include a slash mark ('/') in the column name that indicates hierarchy. The resulting XML will have the `EmpName` child under the `row` element, and the `EmpName` child will have `First`, `Middle` and `Last` element children.  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -137,21 +134,21 @@ FOR XML PATH
   
  The employee middle name is null and, by default, the null value maps to the absence of the element or attribute. If you want elements generated for the NULL values, you can specify the ELEMENTS directive with XSINIL as shown in this query.  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName  "EmpName/First",   
        MiddleName "EmpName/Middle",   
        LastName   "EmpName/Last"  
 FROM   HumanResources.Employee E, Person.Contact C  
-WHERE  E.EmployeeID = C.ContactID  
-AND    E.EmployeeID=1  
-FOR XML PATH, ELEMENTS XSINIL  
+WHERE  E.EmployeeID = C.ContactID  AND
+       E.EmployeeID=1  
+FOR XML PATH, ELEMENTS XSINIL;
 ```  
   
  This is the result:  
   
-```  
-<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+```xml
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -165,7 +162,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  Besides the ID and name, the following query retrieves an employee address. As per the path in the column names for address columns, an `Address` element child is added to the `row` element and the address details are added as element children of the `Address` element.  
   
-```  
+```sql
 SELECT EmployeeID   "@EmpID",   
        FirstName    "EmpName/First",   
        MiddleName   "EmpName/Middle",   
@@ -173,16 +170,18 @@ SELECT EmployeeID   "@EmpID",
        AddressLine1 "Address/AddrLine1",  
        AddressLine2 "Address/AddrLIne2",  
        City         "Address/City"  
-FROM   HumanResources.Employee E, Person.Contact C, Person.Address A  
+FROM   HumanResources.Employee E,
+       Person.Contact C,
+       Person.Address A  
 WHERE  E.EmployeeID = C.ContactID  
 AND    E.AddressID = A.AddressID  
 AND    E.EmployeeID=1  
-FOR XML PATH  
+FOR XML PATH;
 ```  
   
  This is the result:  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -201,7 +200,7 @@ FOR XML PATH
 ## One Column Has a Different Name  
  If a column with a different name appears in between, it will break the grouping, as shown in the following modified query. The query breaks the grouping of FirstName, MiddleName, and LastName, as specified in the previous query, by adding address columns in between the FirstName and MiddleName columns.  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName "EmpName/First",   
        AddressLine1 "Address/AddrLine1",  
@@ -209,18 +208,20 @@ SELECT EmployeeID "@EmpID",
        City "Address/City",  
        MiddleName "EmpName/Middle",   
        LastName "EmpName/Last"  
-FROM   HumanResources.EmployeeAddress E, Person.Contact C, Person.Address A  
+FROM   HumanResources.EmployeeAddress E,
+       Person.Contact C,
+       Person.Address A  
 WHERE  E.EmployeeID = C.ContactID  
 AND    E.AddressID = A.AddressID  
 AND    E.EmployeeID=1  
-FOR XML PATH  
+FOR XML PATH;
 ```  
   
  As a result, the query creates two `EmpName` elements. The first `EmpName` element has the `FirstName` element child and the second `EmpName` element has the `MiddleName` and `LastName` element children.  
   
  This is the result:  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  

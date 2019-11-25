@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "string concatenation operators"
   - "+ (string concatenation)"
 ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # String Operators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

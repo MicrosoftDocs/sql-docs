@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetStmtAttr (Cursor Library)
 > [!IMPORTANT]  

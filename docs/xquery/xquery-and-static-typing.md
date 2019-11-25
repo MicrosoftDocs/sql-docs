@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # XQuery and Static Typing
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

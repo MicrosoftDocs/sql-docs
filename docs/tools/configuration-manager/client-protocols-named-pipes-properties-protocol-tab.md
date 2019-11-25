@@ -12,10 +12,9 @@ helpviewer_keywords:
   - "Named Pipes [SQL Server], default pipe"
   - "client protocols [SQL Server]"
 ms.assetid: 30fbae62-2f2e-4d36-9c6e-3444fff68781
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Client Protocols - Named Pipes Properties (Protocol Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

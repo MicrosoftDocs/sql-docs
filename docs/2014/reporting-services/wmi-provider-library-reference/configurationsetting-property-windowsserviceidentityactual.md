@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "WindowsServiceIdentityActual"
@@ -16,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "WindowsServiceIdentityActual property"
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # WindowsServiceIdentityActual Property (WMI MSReportServer_ConfigurationSetting)

@@ -2,7 +2,7 @@
 title: "Formatting Text and Placeholders (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -15,8 +15,8 @@ f1_keywords:
   - "10132"
   - "sql11.rtp.rptdesigner.textproperties.font.f1"
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Formatting Text and Placeholders (Report Builder and SSRS)
   A text box can be a report item or an individual cell within a data region that contains text, a calculated field, a pointer to a field in a database, or a combination of all three items. You can mix fonts and colors, add bold and italic styles, and use paragraph styles such as alignment and hanging indents. You can format an entire text box or you can format specific text, numbers, expressions, or fields within the text box.  

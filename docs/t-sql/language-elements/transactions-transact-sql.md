@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "UOW [SQL Server]"
   - "unit of work [SQL Server]"
 ms.assetid: 1485c375-921a-42af-a871-bb333cc08d3e
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transactions (Transact-SQL)

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Scalar Functions
 The Microsoft ODBC Desktop Database Drivers support the following scalar functions:  

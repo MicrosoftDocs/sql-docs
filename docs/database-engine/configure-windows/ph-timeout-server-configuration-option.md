@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ed19a07c-83fe-4582-9c9e-41b1ce571850
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # PH timeout Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

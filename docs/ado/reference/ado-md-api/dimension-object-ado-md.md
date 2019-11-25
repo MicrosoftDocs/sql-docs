@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Dimension Object (ADO MD)
 Represents one of the dimensions of a multidimensional cube, containing one or more hierarchies of members.  

@@ -1,7 +1,7 @@
 ---
 title: "Columnstore indexes - Data loading guidance | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/01/2017"
+ms.date: "12/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Data loading guidance
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Options and recommendations for loading data into a columnstore index by using the standard SQL bulk loading and trickle insert methods. Loading data into a columnstore index is an essential part of any data warehousing process because it moves data into the index in preparation for analytics.
@@ -27,21 +27,25 @@ To perform a bulk load, you can use [bcp Utility](../../tools/bcp-utility.md), [
 
 ![Loading into a clustered columnstore index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
   
- As the diagram suggests, a bulk load::  
+As the diagram suggests, a bulk load:
   
-* Does not pre-sort the data. Data is inserted into rowgroups in the order it is received.
-* If the batch size is >= 102400, the rows are directly into the compressed rowgroups. It is recommended that you choose a batch size >=102400 for efficient bulk import because you can avoid moving data rows to a delta rowgroups  before the rows are  eventually moved  to compressed rowgroups by a background thread, Tuple mover (TM).
-* If the batch size < 102,400 or if the remaining rows are < 102,400, the rows are loaded into delta rowgroups.
+- Does not pre-sort the data. Data is inserted into rowgroups in the order it is received.
+- If the batch size is >= 102400, the rows are directly into the compressed rowgroups. It is recommended that you choose a batch size >=102400 for efficient bulk import because you can avoid moving data rows to a delta rowgroups before the rows are  eventually moved  to compressed rowgroups by a background thread, Tuple mover (TM).
+- If the batch size < 102,400 or if the remaining rows are < 102,400, the rows are loaded into delta rowgroups.
 
 > [!NOTE]
 > On a rowstore table with a nonclustered columnstore index data, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] always inserts data into the base table. The data is never inserted directly into the columnstore index.  
 
 Bulk loading has these built-in performance optimizations:
--   **Parallel loads:** You can have multiple concurrent bulk loads (bcp or bulk insert) that are each loading a separate data file. Unlike rowstore bulk loads into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you don't need to specify `TABLOCK` because each bulk import thread will load data exclusively into a separate rowgroups (compressed or delta rowgroups) with exclusive lock on it. Using `TABLOCK` will force an exclusive lock on the table and you will not be able to import data in parallel.  
--   **Minimal logging:** A bulk load uses minimal logging on data that goes directly to compressed rowgroups. Any data that goes to a delta rowgroup is fully logged. This includes any batch sizes that are less than 102,400 rows. However, with bulk loading the goal is for most of the data to bypass delta rowgroups.  
--   **Locking Optimization:** When loading into compressed rowgroup, the X lock on rowgroup is acquired. However, when bulk loading into delta rowgroup, an X lock is acquired at rowgroup but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still locks the locks PAGE/EXTENT because X rowgroup lock is not part of locking hierarchy.  
+-   **Parallel loads:** You can have multiple concurrent bulk loads (bcp or bulk insert) that are each loading a separate data file. Unlike rowstore bulk loads into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you don't need to specify `TABLOCK` because each bulk import thread will load data exclusively into separate rowgroups (compressed or delta rowgroups) with exclusive lock on it. 
+
+-   **Reduced Logging:** The data that is directly loaded into compressed row groups leads to significant reduction in the size of the log. For example, if data was compressed 10x, the corresponding transaction log will be roughly 10x smaller without requiring TABLOCK or Bulk-logged/Simple recovery model. Any data that goes to a delta rowgroup is fully logged. This includes any batch sizes that are less than 102,400 rows.  Best practice is to use batchsize >= 102400. Since there is no TABLOCK required, you can load the data in parallel. 
+
+-   **Minimal logging:** You can get further reduction in logging if you follow the prerequisites for [minimal logging](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md). However, unlike loading data into a rowstore, TABLOCK leads to an X lock on the table rather than a BU (Bulk Update) lock and therefore parallel data load cannot be done. For more information on locking, see [Locking and row versioning[(../sql-server-transaction-locking-and-row-versioning-guide.md).
+
+-   **Locking Optimization:** The X lock on a row group is automatically acquired when loading data into a compressed row group. However, when bulk loading into a delta rowgroup, an X lock is acquired at rowgroup but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still locks the PAGE/EXTENT because X rowgroup lock is not part of locking hierarchy.  
   
-If you have a nonclustered B-tree index on a columnstore index, there is no locking or logging optimization for the index itself but the optimizations on clustered columnstore index as described above are still there.  
+If you have a nonclustered B-tree index on a columnstore index, there is no locking or logging optimization for the index itself but the optimizations on clustered columnstore index as described above are applicable.  
   
 ## Plan bulk load sizes to minimize delta rowgroups
 Columnstore indexes perform best when most of the rows are compressed into the columnstore and not sitting in delta rowgroups. It's best to size your loads so that rows go directly to the columnstore and bypass the deltastore as much as possible.
@@ -54,6 +58,7 @@ These scenarios describe when loaded rows go directly to the columnstore or when
 |145,000|145,000<br /><br /> Rowgroup size: 145,000|0|  
 |1,048,577|1,048,576<br /><br /> Rowgroup size: 1,048,576.|1|  
 |2,252,152|2,252,152<br /><br /> Rowgroup sizes: 1,048,576, 1,048,576, 155,000.|0|  
+| &nbsp; | &nbsp; | &nbsp; |
   
  The following example shows the results of loading 1,048,577 rows into a table. The results show that one COMPRESSED rowgroup in the columnstore (as compressed column segments), and 1 row in the deltastore.  
   
@@ -75,7 +80,7 @@ INSERT INTO <columnstore index>
 SELECT <list of columns> FROM <Staging Table>  
 ```  
   
- This command loads the data into the columnstore index in similar ways to BCP or Bulk Insert but in a single batch. If the number of rows in the staging table < 102400, the rows are loaded into a delta rowgroup otherwise the rows are directly loaded into compressed rowgroup. One key limitation was that this `INSERT` operation was single threaded. To load data in parallel, you could create multiple staging table or issue `INSERT`/`SELECT` with non-overlapping ranges of rows from the staging table. This limitation goes away with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. The command below loads the data from staging table in parallel but you will need to specify `TABLOCK`.  
+ This command loads the data into the columnstore index in similar ways to BCP or Bulk Insert but in a single batch. If the number of rows in the staging table < 102400, the rows are loaded into a delta rowgroup otherwise the rows are directly loaded into compressed rowgroup. One key limitation was that this `INSERT` operation was single threaded. To load data in parallel, you could create multiple staging table or issue `INSERT`/`SELECT` with non-overlapping ranges of rows from the staging table. This limitation goes away with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. The command below loads the data from staging table in parallel but you will need to specify `TABLOCK`. You may find this contradictory to what was said earlier with bulkload but the key difference is the parallel data load from the staging table is executed under the same transaction.
   
 ```sql  
 INSERT INTO <columnstore index> WITH (TABLOCK) 
@@ -83,7 +88,7 @@ SELECT <list of columns> FROM <Staging Table>
 ```  
   
  There are following optimizations available when loading into clustered columnstore index from staging table:
--   **Log Optimization:** Minimally logged both when the data is loaded into compressed rowgroup. No minimal logging when data gets loaded into delta rowgroup.  
+-   **Log Optimization:** Reduced logging when the data is loaded into compressed rowgroup.   
 -   **Locking Optimization:** When loading into compressed rowgroup, the X lock on rowgroup is acquired. However, with delta rowgroup, an X lock is acquired at rowgroup but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still locks the locks PAGE/EXTENT because X rowgroup lock is not part of locking hierarchy.  
   
  If you have or more nonclustered indexes, there is no locking or logging optimization for the index itself but the optimizations on clustered columnstore index as described above are still there  
@@ -114,5 +119,6 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
 ## How loading into a partitioned table works  
  For partitioned data, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] first assigns each row to a partition, and then performs columnstore operations on the data within the partition. Each partition has its own rowgroups and at least one delta rowgroup.  
   
- ## Next steps
- For further discussion on loading, see this [blog post](https://blogs.msdn.com/b/sqlcat/archive/2015/03/11/data-loading-performance-considerations-on-tables-with-clustered-columnstore-index.aspx).  
+## Next steps
+
+Blog post now hosted on _techcommunity_, written 2015-03-11: [Data Loading performance considerations with Clustered Columnstore indexes](https://techcommunity.microsoft.com/t5/DataCAT/Data-Loading-performance-considerations-with-Clustered/ba-p/305223).

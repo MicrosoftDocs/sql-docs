@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Run System Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

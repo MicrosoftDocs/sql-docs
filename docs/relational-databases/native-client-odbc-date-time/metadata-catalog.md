@@ -13,12 +13,10 @@ helpviewer_keywords:
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Metadata - Catalog
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   This topic describes the column metadata returned by **SQLColumns** and **SQLProcedureColumns**, and the data type metadata returned by **SQLGetTypeInfo**.  
   

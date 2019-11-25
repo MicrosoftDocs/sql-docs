@@ -1,6 +1,6 @@
 ---
-title: "SetValue Method (ServerSettingsGeneralFlag Class) | Microsoft Docs"
-ms.custom: ""
+title: "SetValue Method (ServerSettingsGeneralFlag)"
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetValue Method (ServerSettingsGeneralFlag Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

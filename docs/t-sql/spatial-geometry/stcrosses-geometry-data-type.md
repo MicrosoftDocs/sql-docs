@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STCrosses (geometry Data Type)"
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STCrosses (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Specify If Backup or Restore Continues or Stops After Error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

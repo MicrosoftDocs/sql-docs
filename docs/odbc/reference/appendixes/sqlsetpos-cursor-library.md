@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetPos (Cursor Library)
 > [!IMPORTANT]  

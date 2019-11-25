@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 673b1aad-ad38-4693-91f2-f4515f476d9b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Visual Studio Analyzer
 > [!IMPORTANT]  

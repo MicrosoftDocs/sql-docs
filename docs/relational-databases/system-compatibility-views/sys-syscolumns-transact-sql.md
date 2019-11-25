@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.syscolumns (Transact-SQL)

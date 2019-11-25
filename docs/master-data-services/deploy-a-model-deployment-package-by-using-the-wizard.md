@@ -1,5 +1,5 @@
 ---
-title: "Deploy a Model Deployment Package by Using the Wizard | Microsoft Docs"
+title: Deploy a Model Deployment Package (Wizard)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "deployment packages [Master Data Services], deploying"
   - "models [Master Data Services], deploying a package"
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Deploy a Model Deployment Package by Using the Wizard
 

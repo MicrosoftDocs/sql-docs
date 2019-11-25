@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 510842e0-e8dc-4b33-9517-bd1c6df0cf3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ParentSameAsPrev Property (ADO MD)
 Indicates whether the parent of this position [member](../../../ado/reference/ado-md-api/member-object-ado-md.md) is the same as the parent of the immediately preceding member.  

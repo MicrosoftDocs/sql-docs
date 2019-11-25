@@ -12,12 +12,10 @@ helpviewer_keywords:
 ms.assetid: e3c2a450-8fd4-44cb-93d8-affe1b65c68e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLE DB Table-Valued Parameter Type Support (Methods)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The following standard OLE DB methods support table-valued parameters:  
   

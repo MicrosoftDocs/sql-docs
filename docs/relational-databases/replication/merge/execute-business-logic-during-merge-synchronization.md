@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Execute Business Logic During Merge Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

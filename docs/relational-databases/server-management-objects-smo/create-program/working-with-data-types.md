@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "data types [SMO]"
   - "SMO [SQL Server], data types"
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Working with Data Types

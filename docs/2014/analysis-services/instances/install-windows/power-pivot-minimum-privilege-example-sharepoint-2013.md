@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 author: minewiskan
@@ -67,10 +66,7 @@ manager: craigg
   
 2.  Run the following PowerShell code:  
   
-    ```  
+    ```powershell
     $webApp = Get-SPWebApplication "http://<servername>"  
-    $webApp.GrantAccessToProcessIdentity("DOMAIN\<ServiceAccountName>")  
-  
+    $webApp.GrantAccessToProcessIdentity("DOMAIN\<ServiceAccountName>")
     ```  
-  
-  

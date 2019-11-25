@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 3c9bc120-67c3-463f-9e24-29fd623f25a0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.spatial_reference_systems (Transact-SQL)

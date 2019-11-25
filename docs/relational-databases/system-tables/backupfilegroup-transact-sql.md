@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # backupfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

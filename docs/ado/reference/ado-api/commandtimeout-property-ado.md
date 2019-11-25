@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # CommandTimeout Property (ADO)
 Indicates how long to wait while executing a command before terminating the attempt and generating an error.  

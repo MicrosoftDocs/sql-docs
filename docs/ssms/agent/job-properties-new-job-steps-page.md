@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.job.steps.f1"
 ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Job Properties - New Job (Steps Page)

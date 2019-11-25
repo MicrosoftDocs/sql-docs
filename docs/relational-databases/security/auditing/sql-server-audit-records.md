@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # SQL Server Audit Records
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ manager: craigg
 |**session_id**|ID of the session on which the event occurred.|**int**|Yes|  
 |**server_principal_id**|ID of the login context that the action is performed in.|**int**|Yes|  
 |**database_principal_id**|ID of the database user context that the action is performed in.|**int**|No|  
-|**object_ id**|The primary ID of the entity on which the audit occurred. This ID can be:<br /><br /> server objects<br /><br /> databases<br /><br /> database objects<br /><br /> schema objects|**int**|No|  
+|**object_id**|The primary ID of the entity on which the audit occurred. This ID can be:<br /><br /> server objects<br /><br /> databases<br /><br /> database objects<br /><br /> schema objects|**int**|No|  
 |**target_server_principal_id**|Server principal that the auditable action applies to.|**int**|Yes|  
 |**target_database_principal_id**|Database principal that the auditable action applies to.|**int**|No|  
 |**class_type**|Type of auditable entity that the audit occurs on.|**varchar(2)**|Yes|  

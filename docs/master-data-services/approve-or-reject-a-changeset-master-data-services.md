@@ -1,5 +1,5 @@
 ---
-title: "Approve or Reject a Changeset (Master Data Services) | Microsoft Docs"
+title: Approve or Reject a Changeset
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Approve or Reject a Changeset (Master Data Services)
 

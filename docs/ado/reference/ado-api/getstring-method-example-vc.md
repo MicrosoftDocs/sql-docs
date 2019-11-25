@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # GetString Method Example (VC++)
 This example demonstrates the [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) method.  

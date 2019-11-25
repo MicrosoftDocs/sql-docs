@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
@@ -37,13 +36,13 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```sql
 -- Syntax for SQL Server  
     
 SET CONCAT_NULL_YIELDS_NULL { ON | OFF }   
 ```  
   
-```  
+```sql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 SET CONCAT_NULL_YIELDS_NULL ON    
@@ -65,17 +64,16 @@ SET CONCAT_NULL_YIELDS_NULL must be **ON** when creating or altering indexed vie
   
  To view the current setting for this setting, run the following query.  
   
-```  
-DECLARE @CONCAT_NULL_YIELDS_NULL VARCHAR(3) = 'OFF';  
-IF ( (4096 & @@OPTIONS) = 4096 ) SET @CONCAT_NULL_YIELDS_NULL = 'ON';  
-SELECT @CONCAT_NULL_YIELDS_NULL AS CONCAT_NULL_YIELDS_NULL;  
-  
+```sql
+DECLARE @CONCAT_SETTING VARCHAR(3) = 'OFF';  
+IF ( (4096 & @@OPTIONS) = 4096 ) SET @CONCAT_SETTING = 'ON';  
+SELECT @CONCAT_SETTING AS CONCAT_NULL_YIELDS_NULL; 
 ```  
   
 ## Examples  
  The following example showing using both `SET CONCAT_NULL_YIELDS_NULL` settings.  
   
-```  
+```sql
 PRINT 'Setting CONCAT_NULL_YIELDS_NULL ON';  
 GO  
 -- SET CONCAT_NULL_YIELDS_NULL ON and testing.  

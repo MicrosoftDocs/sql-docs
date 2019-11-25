@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 450d131c-773a-4e05-ab96-3837b6c33aae
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Security-Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

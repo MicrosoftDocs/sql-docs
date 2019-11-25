@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "FOR XML clause, formatting"
   - "server-side XML formatting"
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Server-side XML Formatting (SQLXML 4.0)

@@ -2,7 +2,7 @@
 title: "rrRenderingError - Reporting Services Error | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: troubleshooting
 
 
@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "rrRenderingError"
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # rrRenderingError - Reporting Services Error
     

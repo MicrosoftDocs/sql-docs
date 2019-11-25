@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Rowset Property (ADO)
 Gets or sets an OLE DB **Rowset** object from/on an **ADORecordsetConstruction** object. When you use put_Rowset, the rowset is turned into an ADO **Recordset** object.  

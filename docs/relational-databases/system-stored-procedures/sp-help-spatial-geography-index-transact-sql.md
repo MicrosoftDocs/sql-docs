@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # sp_help_spatial_geography_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## Remarks  
   
 ## Example  
- The following example uses `sp_help_spatial_geography_index` to investigate the **geography** spatial index **SIndx_SpatialTable_geography_col2** defined on table **geography_col** for the given query sample in **@qs**. This example returns only the core properties of the specified index.  
+ The following example uses `sp_help_spatial_geography_index` to investigate the **geography** spatial index **SIndx_SpatialTable_geography_col2** defined on table **geography_col** for the given query sample in **\@qs**. This example returns only the core properties of the specified index.  
   
 ```  
 declare @qs geography  

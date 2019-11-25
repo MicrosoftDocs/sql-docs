@@ -16,9 +16,8 @@ helpviewer_keywords:
   - ".sqlsuo files"
   - "files [SQL Server Management Studio], projects"
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Files That Manage Solutions and Projects
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

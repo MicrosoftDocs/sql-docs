@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.impexpwizard.savedtspackage.f1"
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Save SSIS Package (SQL Server Import and Export Wizard)

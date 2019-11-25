@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_publisherproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Displays or changes publisher properties for non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers. This stored procedure is executed at the Distributor.  
   
@@ -34,10 +33,10 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [**@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the heterogeneous Publisher. *publisher* is **sysname**, with no default.  
   
- [**@propertyname** = ] **'***propertyname***'**  
+`[ @propertyname = ] 'propertyname'`
  Is the name of the property being set. *propertyname* is **sysname**, and can be one of the following values.  
   
 |Value|Description|  
@@ -48,7 +47,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  When *propertyname* is omitted all settable properties are returned.  
   
- [**@propertyvalue** = ] **'***propertyvalue***'**  
+ `[ @propertyvalue = ] 'propertyvalue'`  
  Is the new value for the property setting. *propertyvalue* is **sysname**, with a default value of NULL. When *propertyvalue* is omitted, the current setting for the property is returned.  
   
 ## Result Sets  

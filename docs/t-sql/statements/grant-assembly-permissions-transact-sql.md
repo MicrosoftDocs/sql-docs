@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # GRANT Assembly Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

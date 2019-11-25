@@ -13,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLAllocEnv Mapping
-When an application calls **SQLAllocEnv** through an ODBC 3*.x* driver, the call to **SQLAllocEnv**(*phenv*) is mapped to **SQLAllocHandle** as follows:  
+When an application calls **SQLAllocEnv** through an ODBC *3.x* driver, the call to **SQLAllocEnv**(*phenv*) is mapped to **SQLAllocHandle** as follows:  
   
 1.  The Driver Manager allocates an environment handle and returns it to the application. The Driver Manager calls **SQLSetEnvAttr** to set the SQL_ATTR_ODBC_VERSION environment attribute to SQL_OV_ODBC2.  
   

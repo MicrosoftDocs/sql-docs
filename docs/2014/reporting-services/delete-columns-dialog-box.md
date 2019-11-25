@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10139"
@@ -13,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Delete Columns dialog box"
 ms.assetid: 44587147-1013-4937-a26c-4fd023eea578
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Delete Columns Dialog Box

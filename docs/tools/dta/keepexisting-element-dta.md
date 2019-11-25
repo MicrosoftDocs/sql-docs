@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "KeepExisting element"
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # KeepExisting Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

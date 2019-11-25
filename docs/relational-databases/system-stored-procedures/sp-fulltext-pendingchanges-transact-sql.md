@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_fulltext_pendingchanges"
 ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_fulltext_pendingchanges (Transact-SQL)

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "DatabaseLogonAccount"
@@ -16,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "DatabaseLogonAccount property"
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # DatabaseLogonAccount Property (WMI MSReportServer_ConfigurationSetting)

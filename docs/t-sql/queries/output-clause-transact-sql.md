@@ -28,9 +28,8 @@ helpviewer_keywords:
   - "displaying deleted rows"
   - "UPDATE statement [SQL Server], OUTPUT clause"
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # OUTPUT Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

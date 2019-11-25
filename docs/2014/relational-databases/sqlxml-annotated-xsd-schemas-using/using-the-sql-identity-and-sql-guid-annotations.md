@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], IDENTITY-type columns"
   - "updategrams [SQLXML], GUID values"
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Using the sql:identity and sql:guid Annotations

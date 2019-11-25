@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "unequal operator (!=)"
   - "!= (not equal to)"
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # != (Unequal) (SSIS Expression)

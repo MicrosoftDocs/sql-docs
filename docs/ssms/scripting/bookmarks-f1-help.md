@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "bookmarks [SQL Server Management Studio]"
   - "SQL Server Management Studio Help [SQL Server], bookmarks"
 ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bookmarks F1 Help

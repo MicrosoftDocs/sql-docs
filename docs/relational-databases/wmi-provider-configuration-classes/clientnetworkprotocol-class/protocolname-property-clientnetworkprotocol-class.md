@@ -1,6 +1,6 @@
 ---
-title: "ProtocolName Property (ClientNetworkProtocol Class) | Microsoft Docs"
-ms.custom: ""
+title: "ProtocolName Property (ClientNetworkProtocol)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ProtocolName Property (ClientNetworkProtocol Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

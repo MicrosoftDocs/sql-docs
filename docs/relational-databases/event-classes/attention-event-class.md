@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Attention Event Class

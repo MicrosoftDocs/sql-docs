@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: ad538a76-983f-4175-9481-9e7fa9480c71
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getTimestamp Method (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

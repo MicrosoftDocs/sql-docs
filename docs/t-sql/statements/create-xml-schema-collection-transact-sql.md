@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
 ---
 # CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

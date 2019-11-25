@@ -18,12 +18,11 @@ helpviewer_keywords:
   - "DBCC TRACEON statement"
   - "trace flags [SQL Server], enabling"
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC TRACEON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 Enables the specified trace flags.
   
@@ -43,7 +42,7 @@ Is the number of the trace flag to turn on.
 Is a placeholder that indicates multiple trace flags can be specified.  
   
 -1  
-Switches on the specified trace flags globally.  
+Switches on the specified trace flags globally. This argument is required in Azure SQL Managed Instance. 
   
 WITH NO_INFOMSGS  
 Suppresses all informational messages.  
@@ -56,7 +55,9 @@ On a production server, to avoid unpredictable behavior, we recommend that you o
 Trace flags are used to customize certain characteristics by controlling how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operates. Trace flags, after they are enabled, remain enabled in the server until disabled by executing a DBCC TRACEOFF statement. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there are two types of trace flags: session and global. Session trace flags are active for a connection and are visible only for that connection. Global trace flags are set at the server level and are visible to every connection on the server. To determine the status of trace flags, use DBCC TRACESTATUS. To disable trace flags, use DBCC TRACEOFF.
   
 After turning on a trace flag that affects query plans, execute `DBCC FREEPROCCACHE;` so that cached plans are recompiled using the new plan-affecting behavior.
-  
+
+Azure SQL Database Managed Instance supports the following global Trace Flags: 460,2301,2389,2390,2453,2467,7471,8207,9389,10316, and 11024
+
 ## Result Sets  
  DBCC TRACEON returns the following result set (message):  
   

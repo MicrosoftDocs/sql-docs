@@ -10,13 +10,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.alert.general.f1"
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Alert Properties - New Alert (General Page)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
 > [!IMPORTANT]  

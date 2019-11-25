@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_cursorclose (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

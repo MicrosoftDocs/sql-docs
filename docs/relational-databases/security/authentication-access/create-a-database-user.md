@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---   
 # Create a Database User
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  This topic describes how to create the most common types of database users. There are eleven type of users. The complete list is provided in the topic [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). All varieties of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] support database users, but not necessarily all types of users.  
+  This topic describes how to create the most common types of database users. There are eleven types of users. The complete list is provided in the topic [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). All varieties of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] support database users, but not necessarily all types of users.  
   
  You can create a database user by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or by using [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   

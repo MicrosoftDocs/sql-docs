@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "M (geometry Data Type)"
 ms.assetid: 443ae2ea-739b-41ef-96cc-ac5dfd65e10b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # M (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

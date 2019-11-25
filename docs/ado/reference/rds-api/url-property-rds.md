@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # URL Property (RDS)
 Indicates a string that contains a relative or absolute URL.  

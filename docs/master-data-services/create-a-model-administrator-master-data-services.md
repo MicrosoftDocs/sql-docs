@@ -1,5 +1,5 @@
 ---
-title: "Create a Model Administrator (Master Data Services) | Microsoft Docs"
+title: Create a Model Administrator
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "administrators [Master Data Services], creating"
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Model Administrator (Master Data Services)
 

@@ -20,7 +20,7 @@ manager: craigg
   
 ## Code Listing  
   
-```tsql  
+```sql  
 USE MASTER  
 GO  
   

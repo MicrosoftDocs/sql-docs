@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Determining Installed Oracle Components
 > [!IMPORTANT]  

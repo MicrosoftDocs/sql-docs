@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d0cbf214-fc2e-4917-8d31-1d71c9ffa61d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Policy-Based Management Storage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

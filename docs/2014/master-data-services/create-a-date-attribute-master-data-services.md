@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "creating date attributes [Master Data Services]"
   - "attributes [Master Data Services], creating date attributes"
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

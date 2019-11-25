@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption keys [Reporting Services]"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "encryption [Reporting Services]"
   - "public keys [Reporting Services]"
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Configure and Manage Encryption Keys (SSRS Configuration Manager)

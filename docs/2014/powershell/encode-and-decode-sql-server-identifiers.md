@@ -28,7 +28,7 @@ manager: craigg
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
-|**Character**|\|/|:|%|\<|>|*|?|[|]|&#124;|  
+|**Character**|\ |/|:|%|\<|>|*|?|[|]|&#124;|  
 |**Hexadecimal Encoding**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
 ##  <a name="EncodeIdent"></a> Encoding an Identifier  
@@ -49,7 +49,7 @@ Set-Location Table%3ATest
   
  Alternatively, you can use **Encode-SqlName** to build a name supported by Windows PowerShell:  
   
-```  
+```powershell
 Set-Location (Encode-SqlName "Table:Test")  
 ```  
   
@@ -61,7 +61,7 @@ Set-Location (Encode-SqlName "Table:Test")
 ### Examples (Decoding)  
  This example returns "Table:Test":  
   
-```  
+```powershell
 Decode-SqlName "Table%3ATest"  
 ```  
   
@@ -69,5 +69,3 @@ Decode-SqlName "Table%3ATest"
  [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

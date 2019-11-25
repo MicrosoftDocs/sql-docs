@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "legacy database diagrams"
   - "diagrams [SQL Server], upgrading"
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Upgrade Database Diagrams from Previous Editions (Visual Database Tools)

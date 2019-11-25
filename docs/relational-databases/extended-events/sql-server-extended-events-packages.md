@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Extended Events Packages
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   A package is a container for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events objects. There are three kinds of Extended Events packages, which include the following:  

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_enum_sqlagent_subsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

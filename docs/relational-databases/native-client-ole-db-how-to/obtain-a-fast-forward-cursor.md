@@ -12,12 +12,10 @@ helpviewer_keywords:
 ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Obtain a FAST_FORWARD Cursor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   To obtain a forward-only, read-only cursor, set the rowset properties DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT, and DBPROP_OWNUPDATEDELETE to VARIANT_TRUE.  
   
@@ -33,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 2.  Set the rowset properties DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT, and DBPROP_OWNUPDATEDELETE to VARIANT_TRUE.  
   
 3.  Execute the command.  
-  
+
 ## Example  
  The following example shows how to set the rowset properties to obtain a FAST_FORWARD cursor. After the properties are set, a SELECT statement is executed to retrieve and display the Name column of the Purchasing.Vendor table in the AdventureWorks database. This sample is not supported on IA64.  
   

@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "SSVARIANT struct"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # SSVARIANT Structure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -2,14 +2,14 @@
 title: "Plot Data on a Secondary Axis (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Plot Data on a Secondary Axis (Report Builder and SSRS)

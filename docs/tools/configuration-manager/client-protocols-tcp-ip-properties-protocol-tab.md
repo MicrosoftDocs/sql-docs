@@ -11,10 +11,9 @@ helpviewer_keywords:
   - "TCP/IP [SQL Server], client protocols"
   - "client protocols [SQL Server]"
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Client Protocols - TCP IP Properties (Protocol Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

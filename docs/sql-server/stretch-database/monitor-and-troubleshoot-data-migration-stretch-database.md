@@ -1,5 +1,5 @@
 ---
-title: "Monitor and troubleshoot data migration (Stretch Database) | Microsoft Docs"
+title: "Monitor and troubleshoot data migration"
 ms.date: "06/14/2016"
 ms.service: sql-server-stretch-database
 ms.reviewer: ""
@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 author: rothja
 ms.author: jroth
-manager: craigg
+ms.custom: seo-dt-2019
 ---
 # Monitor and troubleshoot data migration (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

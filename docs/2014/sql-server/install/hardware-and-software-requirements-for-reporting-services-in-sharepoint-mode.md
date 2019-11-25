@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: 01/09/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Hardware and Software Requirements for Reporting Services in SharePoint Mode

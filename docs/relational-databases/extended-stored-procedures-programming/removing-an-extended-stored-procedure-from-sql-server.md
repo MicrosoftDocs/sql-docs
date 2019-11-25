@@ -1,6 +1,5 @@
 ---
-title: "Removing an Extended Stored Procedure from SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "Removing an Extended Stored Procedure"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -16,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 7827e574-3f59-4279-9a9b-532582e041cb
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
+ms.custom: seo-dt-2019
 ---
 # Removing an Extended Stored Procedure from SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

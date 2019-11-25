@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10183"
@@ -25,8 +24,8 @@ f1_keywords:
   - "10188"
   - "sql12.rtp.rptdesigner.legendtitleproperties.general.f1"
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Formatting the Legend on a Chart (Report Builder and SSRS)

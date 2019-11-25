@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "invalid requests [Reporting Services]"
   - "exceptions [Reporting Services], invalid requests"
   - "valid requests [Reporting Services]"
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Preventing Invalid Requests

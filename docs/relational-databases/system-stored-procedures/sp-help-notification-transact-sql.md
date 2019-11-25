@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +38,13 @@ sp_help_notification
 ```  
   
 ## Arguments  
- [ **@object_type =**] **'***object_type***'**  
+`[ @object_type = ] 'object_type'`
  The type of information to be returned. *object_type*is **char(9)**, with no default. *object_type* can be ALERTS, which lists the alerts assigned to the supplied operator name*,* or OPERATORS, which lists the operators responsible for the supplied alert name*.*  
   
- [ **@name =**]  **'***name***'**  
+`[ @name = ] 'name'`
  An operator name (if *object_type* is OPERATORS) or an alert name (if *object_type* is ALERTS). *name* is **sysname**, with no default.  
   
- [ **@enum_type =**] **'***enum_type***'**  
+`[ @enum_type = ] 'enum_type'`
  The *object_type*information that is returned. *enum_type* is ACTUAL in most cases. *enum_type*is **char(10)**, with no default, and can be one of these values.  
   
 |Value|Description|  
@@ -54,7 +53,7 @@ sp_help_notification
 |ALL|Lists all the*object_types* including those that are not associated with *name*.|  
 |TARGET|Lists only the *object_types* matching the supplied *target_name*, regardless of association with*name*.|  
   
- [ **@notification_method =**] *notification_method*  
+`[ @notification_method = ] notification_method`
  A numeric value that determines the notification method columns to return. *notification_method* is **tinyint**, and can be one of the following values.  
   
 |Value|Description|  
@@ -64,7 +63,7 @@ sp_help_notification
 |**4**|NetSend: returns only the **use_netsend** column.|  
 |**7**|All: returns all columns.|  
   
- [ **@target_name =**] **'***target_name***'**  
+`[ @target_name = ] 'target_name'`
  An alert name to search for (if *object_type* is ALERTS) or an operator name to search for (if *object_type* is OPERATORS). *target_name* is needed only if *enum_type* is TARGET. *target_name* is **sysname**, with a default of NULL.  
   
 ## Return Code Valves  

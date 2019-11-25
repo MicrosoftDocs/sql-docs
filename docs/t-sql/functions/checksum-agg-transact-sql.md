@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "CHECKSUM_AGG function"
   - "groups [SQL Server], checksum values"
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

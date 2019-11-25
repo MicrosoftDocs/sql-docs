@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REFERENTIAL_CONSTRAINTS (Transact-SQL)

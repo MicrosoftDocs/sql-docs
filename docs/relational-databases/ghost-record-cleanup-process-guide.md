@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "ghost clean up process" 
 author: MashaMSFT
 ms.author: mathoma
-manager: "craigg"
 ---
 # Ghost cleanup process guide
 
@@ -33,7 +32,7 @@ The below query can identify how many ghosted records exist in a single database
 
  ```sql
  SELECT sum(ghost_record_count) total_ghost_records, db_name(database_id) 
- FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, NULL)
+ FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, 'SAMPLED')
  group by database_id
  order by total_ghost_records desc
 ```

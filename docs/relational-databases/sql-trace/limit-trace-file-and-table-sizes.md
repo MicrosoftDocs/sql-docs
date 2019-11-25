@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Limit Trace File and Table Sizes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

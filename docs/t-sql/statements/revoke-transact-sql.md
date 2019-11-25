@@ -28,7 +28,6 @@ helpviewer_keywords:
 ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE (Transact-SQL)
@@ -87,7 +86,7 @@ REVOKE
 >  If the principal has the specified permission without the GRANT option, the permission itself will be revoked.  
   
  ALL  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
  This option does not revoke all possible permissions. Revoking ALL is equivalent to revoking the following permissions.  
   

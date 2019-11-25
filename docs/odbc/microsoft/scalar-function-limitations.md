@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 023d94b9-3ed6-46d3-9a66-f2872f505bbb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Scalar Function Limitations
 Scalar functions are supported only by using the ODBC canonical format.

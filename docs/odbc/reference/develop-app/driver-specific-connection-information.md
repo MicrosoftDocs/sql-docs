@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Driver-Specific Connection Information
 **SQLConnect** assumes that a data source name, user ID, and password are sufficient to connect to a data source and that all other connection information can be stored on the system. This is frequently not the case. For example, a driver might need one user ID and password to log on to a server and a different user ID and password to log on to a DBMS. Because **SQLConnect** accepts a single user ID and password, this means that the other user ID and password must be stored with the data source information on the system if **SQLConnect** is to be used. This is a potential breach of security and should be avoided unless the password is encrypted.  

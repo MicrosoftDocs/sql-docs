@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: bbeef024-d470-4d28-b61b-26997ef41007
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLColAttributes (Paradox Driver)
 > [!NOTE]  

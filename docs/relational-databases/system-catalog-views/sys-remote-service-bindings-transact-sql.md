@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 4e1a885d-eed1-4993-9c87-e6fd781f437d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sys.remote_service_bindings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 09f591a1-cfae-4a08-b04d-50bd02e7b71a
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Security Considerations for SQL Server Compact Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

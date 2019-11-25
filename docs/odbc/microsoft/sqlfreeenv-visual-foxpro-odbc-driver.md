@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 83011775-e31d-4663-b68b-999113a20d5b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLFreeEnv (Visual FoxPro ODBC Driver)
 > [!NOTE]  

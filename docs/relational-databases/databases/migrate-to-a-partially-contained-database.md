@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Migrate to a Partially Contained Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ GO
 2.  On the **Advanced** page, in the **Containment** section, set the **Enable Contained Databases** option to **True**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
+
 ##  <a name="convert"></a> Converting a Database to Partially Contained  
  A database is converted to a contained database by changing the **CONTAINMENT** option.  
   

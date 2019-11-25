@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "delivery extensions [Reporting Services], namespace assignments"
   - "library [Reporting Services]"
   - "assigning namespaces to extensions"
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Creating a Delivery Extension Library

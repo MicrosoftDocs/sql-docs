@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d403dfa0-c26d-47d4-91d9-2f29aa387399
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLColAttributes (Visual FoxPro ODBC Driver)
 > [!NOTE]  

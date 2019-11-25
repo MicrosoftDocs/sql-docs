@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Deploy a Database By Using a DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

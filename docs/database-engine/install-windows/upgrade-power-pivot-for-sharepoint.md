@@ -11,7 +11,7 @@ ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: "Minewiskan"
 ms.author: "owend"
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: "erikre"
+manager: erikre
 ---
 # Upgrade Power Pivot for SharePoint
 
@@ -87,13 +87,13 @@ manager: "erikre"
   
 2.  Restart the server.  
   
-3.  Run the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint add-in (**spPowerPivot.msi**) on each server in the SharePoint 2013 farm to install the data providers. The exception is servers where you ran the SQL Server setup wizard, which also upgrades data providers. For more information, see [Download Microsoft SQL Server 2014 Power Pivot for Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) and  [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  Run the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint add-in (**spPowerPivot.msi**) on each server in the SharePoint 2013 farm to install the data providers. The exception is servers where you ran the SQL Server setup wizard, which also upgrades data providers. For more information, see [Download Microsoft SQL Server 2014 Power Pivot for Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) and  [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
 4.  **Run the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration** tool on one of the SharePoint application servers to configure the SharePoint farm with the updated solution files that the add-in installed. You cannot use Central SharePoint Administration for this step. For more information, see the following:  
   
     1.  From the Windows Start page, type **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** and in the search results, click **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration**. Note the search may return both versions of the configuration tool.  
   
-         ![two powerpivot configuratoin tools](../../analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
+         ![two powerpivot configuratoin tools](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
   
          Or  
   
@@ -124,13 +124,13 @@ manager: "erikre"
   
      For more information, see the following:  
   
-    -   [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
+    -   [Power Pivot Configuration Tools](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
-    -   [Configure or Repair Power Pivot for SharePoint 2013 &#40;Power Pivot Configuration Tool&#41;](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)  
+    -   [Configure or Repair Power Pivot for SharePoint 2013 &#40;Power Pivot Configuration Tool&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013)  
   
-    -   [Power Pivot Configuration using Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
+    -   [Power Pivot Configuration using Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
   
-    -   [PowerShell Reference for Power Pivot for SharePoint](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
+    -   [PowerShell Reference for Power Pivot for SharePoint](https://docs.microsoft.com/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
 5.  Verify that upgrade succeeded by performing the post-upgrade steps and by checking the version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servers in the farm. For more information, see [Post-upgrade verification tasks](#verify) in this article and the following section.  
   
@@ -224,7 +224,7 @@ manager: "erikre"
   
     4.  Retry the task in the configuration tool by clicking **Validate** followed by **Run**.  
   
-     For all other errors, check the ULS logs. For more information, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;Power Pivot for SharePoint&#41;](~/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
+     For all other errors, check the ULS logs. For more information, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;Power Pivot for SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
   
 ##  <a name="bkmk_workbooks"></a> Workbooks  
  Upgrading a server does not necessarily upgrade the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks that run on it, but older workbooks created in the previous version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel will continue to work as before, using the features available in that release. Workbooks remain functional because an upgraded server has the version of the Analysis Services OLE DB provider that was part of the previous installation.  
@@ -294,7 +294,7 @@ Get-PowerPivotSystemService
   
 3.  Click **Trusted Data Providers**. You should see MSOLAP.5 (Microsoft OLE DB Provider for OLAP Services 11.0). If you upgraded your [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation, you will also see MSOLAP.4 from the previous version.  
   
-4.  For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md).  
+4.  For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
   
  MSOLAP.4 is described as the Microsoft OLE DB Provider for OLAP Services 10.0. This version might be the default version from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] that is installed with Excel Services, or it might be the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version. The default version that SharePoint installs does not support [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access. You must have the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version or later to connect to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks on SharePoint. To verify you have the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version, use the instructions in the previous section that explain how to verify the version by viewing file properties.  
   
@@ -343,13 +343,13 @@ Get-PowerPivotSystemService
   
 |Task|Link|  
 |----------|----------|  
-|Verify the service is running on all computers that run [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint.|[Start or Stop a Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)|  
-|Verify feature activation at the site collection level.|[Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|  
+|Verify the service is running on all computers that run [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint.|[Start or Stop a Power Pivot for SharePoint Server](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)|  
+|Verify feature activation at the site collection level.|[Activate Power Pivot Feature Integration for Site Collections in Central Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)|  
 |Verify individual [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks are loading properly by opening a workbook and clicking on filters and slicers to initiate a query.|Check for the presence of cached files on the hard drive. A cached file confirms that the data file was loaded on that physical server. Look for cached files in the c:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\Backup folder.|  
 |Test data refresh on selected workbooks that are configured for data refresh.|The easiest way to test data refresh is to modify a data refresh schedule, choosing the **Also refresh as soon as possible** checkbox so that data refresh runs immediately. This step will determine whether data refresh is successful for the current workbook. Repeat these steps for other frequently used workbooks to ensure that data refresh is functional. For more information about scheduling data refresh, see [Schedule a Data Refresh (Power Pivot for SharePoint)](https://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b).|  
-|Over time, monitor the data refresh reports in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard to confirm there are no data refresh errors.|[Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)|  
+|Over time, monitor the data refresh reports in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard to confirm there are no data refresh errors.|[Power Pivot Management Dashboard and Usage Data](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)|  
   
- For more information about how to configure [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] settings and features, see [Power Pivot Server Administration and Configuration in Central Administration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+ For more information about how to configure [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] settings and features, see [Power Pivot Server Administration and Configuration in Central Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
   
  For step-by-step instructions that guide you through all of the post-installation configuration tasks, see [Initial Configuration (Power Pivot for SharePoint)](https://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
   

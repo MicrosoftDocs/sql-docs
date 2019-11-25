@@ -30,7 +30,6 @@ helpviewer_keywords:
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Delete Method (ADOX Collections)
 Removes an object from a collection.  

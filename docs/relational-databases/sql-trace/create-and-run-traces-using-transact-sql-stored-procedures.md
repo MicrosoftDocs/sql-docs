@@ -1,6 +1,6 @@
 ---
-title: "Create and Run Traces Using Transact-SQL Stored Procedures | Microsoft Docs"
-ms.custom: ""
+title: "Create and Run Traces Using Transact-SQL Stored Procedures"
+ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Create and Run Traces Using Transact-SQL Stored Procedures
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +80,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
 ### A. Creating a new full-text stoplist  
  The following example creates a new full-text stoplist named `myStoplist`.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist;  
 GO  
 ```  
@@ -89,7 +88,7 @@ GO
 ### B. Copying a full-text stoplist from an existing full-text stoplist  
  The following example creates a new full-text stoplist named `myStoplist2` by copying an existing AdventureWorks stoplist named `Customers.otherStoplist`.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist2 FROM AdventureWorks.otherStoplist;  
 GO  
 ```  
@@ -97,7 +96,7 @@ GO
 ### C. Copying a full-text stoplist from the system full-text stoplist  
  The following example creates a new full-text stoplist named `myStoplist3` by copying from the system stoplist.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist3 FROM SYSTEM STOPLIST;  
 GO  
 ```  

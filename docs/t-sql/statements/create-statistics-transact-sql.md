@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE STATISTICS (Transact-SQL)
@@ -87,7 +86,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE STATISTICS statistics_name   
-    ON [ database_name . [schema_name ] . | schema_name. ] table_name   
+    ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( column_name  [ ,...n ] )   
     [ WHERE <filter_predicate> ]  
     [ WITH {  
@@ -161,7 +160,10 @@ CREATE STATISTICS statistics_name
  PERSIST_SAMPLE_PERCENT = { ON | OFF }  
  When **ON**, the statistics will retain the creation sampling percentage for subsequent updates that do not explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that do not explicitly specify a sampling percentage. The default is **OFF**. 
  
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
+ > [!NOTE]
+ > If the table is truncated, all statistics built on the truncated HoBT will revert to using the default sampling percentage.
+
+ **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) and later (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
   
  STATS_STREAM **=**_stats_stream_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -189,7 +191,7 @@ CREATE STATISTICS statistics_name
 -   Statistics created on internal tables.  
 -   Statistics created with spatial indexes or XML indexes.  
   
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.  
   
 MAXDOP = *max_degree_of_parallelism*  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
@@ -291,7 +293,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
-```  
+```  
   
 ### Examples using AdventureWorksDW database. 
   

@@ -2,7 +2,7 @@
 title: "Start Report Builder | Microsoft Docs"
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 
 
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], starting Report Builder"
   - "starting Report Builder"
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Start Report Builder

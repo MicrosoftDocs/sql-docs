@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Microsoft Access Driver Programming Considerations
 This section contains the following topics.  

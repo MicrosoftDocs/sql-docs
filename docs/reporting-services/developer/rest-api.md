@@ -1,11 +1,10 @@
 ---
 title: "Develop with the REST APIs for Reporting Services| Microsoft Docs"
 ms.description: "The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog."
-author: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
@@ -51,7 +50,7 @@ A REST API request/response pair can be separated into five components:
 
 ## API documentation
 
-A modern REST API calls for modern API documentation. The REST API is built on the OpenAPI specification (a.k.a. the swagger specification) and documentation is available on [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Beyond documenting the API, SwaggerHub helps generate a client library in the language of choice - JavaScript, TypeScript, C#, Java, Python, Ruby, and more.
+A modern REST API calls for modern API documentation. The REST API is built on the OpenAPI specification (also called the swagger specification) and documentation is available on [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Beyond documenting the API, SwaggerHub helps generate a client library in the language of choice - JavaScript, TypeScript, C#, Java, Python, Ruby, and more.
 
 ## Testing API calls
 

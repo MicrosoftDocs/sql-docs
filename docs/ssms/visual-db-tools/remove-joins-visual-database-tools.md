@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "joins [SQL Server], removing"
   - "deleting joins"
 ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Remove Joins (Visual Database Tools)

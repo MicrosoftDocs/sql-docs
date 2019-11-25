@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 author: MikeRayMSFT
@@ -19,9 +18,9 @@ manager: craigg
   
  You can create a policy and a shared access signature by using one of the following methods:  
   
--   Windows Azure REST API operations: [Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx), [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx), and [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
+-   Azure REST API operations: [Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx), [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx), and [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
   
--   [CloudBlobContainer.GetSharedAccessSignature Method](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storageclient.cloudblobcontainer.getsharedaccesssignature.aspx) in the Windows Azure SDK.  
+-   [CloudBlobContainer.GetSharedAccessSignature Method](https://docs.microsoft.com/dotnet/api/microsoft.azure.storage.blob.cloudblobcontainer.getsharedaccesssignature) in the Azure SDK.  
   
     ```  
   
@@ -35,7 +34,7 @@ manager: craigg
   
     ```  
   
--   A third-party Windows Azure explorer tool, such as [Azure Storage Explorer](http://azurestorageexplorer.codeplex.com/).  
+-   A third-party Azure explorer tool, such as [Azure Storage Explorer](http://azurestorageexplorer.codeplex.com/).  
   
  **Next Lesson:**  
   

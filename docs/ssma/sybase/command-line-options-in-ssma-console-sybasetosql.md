@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Command Line Options in SSMA Console (SybaseToSQL)
 Microsoft provides you with a robust set of command line options to execute and control SSMA activities. The ensuing sections detail the same.  

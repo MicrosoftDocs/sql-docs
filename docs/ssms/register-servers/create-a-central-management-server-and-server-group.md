@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "configuration server"
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Create a Central Management Server and Server Group
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # DELETE TAG Command
 Removes a tag or tags from a compound index (.cdx) file.  

@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "metadata [OLE DB]"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Metadata - Parameter and Rowset
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

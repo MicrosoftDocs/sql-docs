@@ -1,6 +1,6 @@
 ---
-title: "ProtocolDisplayName Property (ClientNetLibInfo Class) | Microsoft Docs"
-ms.custom: ""
+title: "ProtocolDisplayName Property (ClientNetLibInfo)"
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ProtocolDisplayName Property (ClientNetLibInfo Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

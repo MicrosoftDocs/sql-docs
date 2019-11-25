@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing a DiffGram by Using ADO (SQLXML 4.0)
@@ -98,5 +97,4 @@ End Sub
 6.  Edit the code to specify the DiffGram and XSD file names. Also edit the connection string as appropriate.  
   
 7.  Execute the application. The result of the execution depends on what DiffGram you are executing.  
-  
-  
+

@@ -11,9 +11,8 @@ f1_keywords:
   - "vdt.dlgbox.deletetable"
   - "vdtsql.chm:69644"
 ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Delete Table Dialog Box (Visual Database Tools)

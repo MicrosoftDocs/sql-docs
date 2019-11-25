@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +35,10 @@ sp_update_targetservergroup
 ```  
   
 ## Arguments  
- [ **@name =**] **'***current_name***'**  
+`[ @name = ] 'current_name'`
  The name of the target server group. *current_name* is **sysname**, with no default.  
   
- [ **@new_name =**] **'***new_name***'**  
+`[ @new_name = ] 'new_name'`
  The new name for the target server group. *new_name* is **sysname**, with no default.  
   
 ## Return Code Values  

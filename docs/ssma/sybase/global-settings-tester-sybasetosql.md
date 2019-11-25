@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Global Settings (Tester) (SybaseToSQL)
 Use the Tester page of the **Global Settings** dialog box to specify settings for SSMA Tester.  

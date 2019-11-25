@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLConfigDataSource (Paradox Driver)
 > [!NOTE]  

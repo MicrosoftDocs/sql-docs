@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "RAW mode, requesting schema example"
   - "RAW mode, with XMLDATA and XMLSCHEMA"
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Example: Requesting Schemas as Results with the XMLDATA and XMLSCHEMA Options
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

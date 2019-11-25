@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Database Properties (Query Store Page)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
 ---
 # Binding Relational Data Inside XML Data
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

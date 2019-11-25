@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Execute T-SQL Statement Task (Maintenance Plan)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

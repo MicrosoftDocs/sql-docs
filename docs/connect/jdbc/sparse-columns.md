@@ -1,7 +1,7 @@
 ---
-title: "Sparse Columns | Microsoft Docs"
+title: "Sparse columns | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,10 +10,9 @@ ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 
-# Sparse Columns
+# Sparse columns
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -154,6 +153,6 @@ public class SparseColumns {
 
 ```
 
-## See Also
+## See also
 
-[Improving Performance and Reliability with the JDBC Driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Improving performance and reliability with the JDBC driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

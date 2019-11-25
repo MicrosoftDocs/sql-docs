@@ -40,7 +40,6 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ParentCatalog Property (ADOX)
 Specifies the parent catalog of a Table, User, or Column object to provide access to provider-specific properties.  

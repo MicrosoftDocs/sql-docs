@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,27 +41,27 @@ sp_notify_operator
 ```  
   
 ## Arguments  
- [ **@profile_name=** ] **'***profilename***'**  
+`[ @profile_name = ] 'profilename'`
  The name of the Database Mail profile to use to send the message. *profilename* is **nvarchar(128)**. If *profilename* is not specified, the default Database Mail profile is used.  
   
- [ **@id=** ] *id*  
+`[ @id = ] id`
  The identifier for the operator to send the message to. *id* is **int**, with a default of NULL. One of *id* or *name* must be specified.  
   
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  The name of the operator to send the message to. *name* is **nvarchar(128)**, with a default of NULL. One of *id* or *name* must be specified.  
   
 > **NOTE:** An e-mail address must be defined for the operator before they can receive messages.  
   
- [ **@subject=** ] **'***subject***'**  
+`[ @subject = ] 'subject'`
  The subject for the e-mail message. *subject* is **nvarchar(256)** with no default.  
   
- [ **@body=** ] **'***message***'**  
+`[ @body = ] 'message'`
  The body of the e-mail message. *message* is **nvarchar(max)** with no default.  
   
- [ **@file_attachments=** ] **'***attachment***'**  
+`[ @file_attachments = ] 'attachment'`
  The name of a file to attach to the e-mail message. *attachment* is **nvarchar(512)**, with no default.  
   
- [ **@mail_database=** ] **'***mail_host_database***'**  
+`[ @mail_database = ] 'mail_host_database'`
  Specifies the name of the mail host database. *mail_host_database* is **nvarchar(128)**. If no *mail_host_database* is specified, the **msdb** database is used by default.  
   
 ## Return Code Values  

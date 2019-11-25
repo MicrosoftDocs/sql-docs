@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
@@ -116,7 +115,7 @@ manager: craigg
      ![Define Relationship dialog box](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Define Relationship dialog box")  
   
 ## Next Task in Lesson  
- [Defining a Fact Relationship](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
+ [Defining a Fact Relationship](lesson-5-2-defining-a-fact-relationship.md)  
   
 ## See Also  
  [Attribute Relationships](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   

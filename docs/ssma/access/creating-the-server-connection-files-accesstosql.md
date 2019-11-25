@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Creating the server connection files (AccessToSQL)
 Server information can be specified either in the servers section of the script file. Server information can also be specified in a separate server connection file. The command line parameter for the server connection file is `-c <serverconnectionfile>`. If the same server id is present in both the script and server connection files, then the server definition in the script file is considered.  

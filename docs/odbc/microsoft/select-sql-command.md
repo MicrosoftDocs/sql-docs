@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SELECT - SQL Command
 Retrieves data from one or more tables.  

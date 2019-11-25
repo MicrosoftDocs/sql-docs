@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetDescField Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetDescField(  
      SQLHDESC        DescriptorHandle,  

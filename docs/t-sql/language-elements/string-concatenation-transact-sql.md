@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "string concatenation operators"
   - "+ (string concatenation)"
 ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # + (String Concatenation) (Transact-SQL)

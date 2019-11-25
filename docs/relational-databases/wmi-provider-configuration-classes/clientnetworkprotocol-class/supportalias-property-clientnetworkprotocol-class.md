@@ -1,6 +1,6 @@
 ---
-title: "SupportAlias Property (ClientNetworkProtocol Class) | Microsoft Docs"
-ms.custom: ""
+title: "SupportAlias Property (ClientNetworkProtocol)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SupportAlias Property (ClientNetworkProtocol Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

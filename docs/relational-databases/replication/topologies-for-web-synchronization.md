@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Topologies for Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

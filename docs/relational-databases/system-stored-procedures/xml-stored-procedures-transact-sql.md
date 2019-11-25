@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 11c84ddb-662b-43a6-9625-9eaa589f0966
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # XML Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

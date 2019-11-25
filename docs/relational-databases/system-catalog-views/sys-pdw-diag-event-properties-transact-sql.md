@@ -12,7 +12,6 @@ dev_langs:
 ms.assetid: e3944f48-8074-43aa-9840-3d5230faedd3
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.pdw_diag_event_properties (Transact-SQL)

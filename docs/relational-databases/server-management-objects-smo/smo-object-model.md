@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "SMO [SQL Server], object model"
   - "SQL Server Management Objects, object model"
 ms.assetid: bd6e59b6-ca46-42c0-adb2-c9d64cf6e00b
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMO Object Model

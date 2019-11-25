@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.sendmailtask.mail.f1"
 helpviewer_keywords: 
   - "Send Mail Task Editor"
 ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Send Mail Task Editor (Mail Page)

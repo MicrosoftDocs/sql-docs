@@ -12,7 +12,6 @@ dev_langs:
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
 ---
 # CREATE XML INDEX (Selective XML Indexes)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ CREATE XML INDEX index_name
     [WITH ( <index_options> )]  
   
 <table_object> ::=   
-{ [database_name. [schema_name ] . | schema_name. ] table_name }  
+{ database_name.schema_name.table_name | schema_name.table_name | table_name }  
   
 <xquery_or_sql_values_path>::=   
 <path_name>   

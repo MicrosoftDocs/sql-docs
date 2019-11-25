@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server]"
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Full-Text Search

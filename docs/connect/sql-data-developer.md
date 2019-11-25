@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQL Data Developer
 Use Microsoft's SQL data platform to create data-centric solutions across mobile devices and desktops for web servers, enterprise servers, and the cloud.  
@@ -22,7 +21,7 @@ Use Microsoft's SQL data platform to create data-centric solutions across mobile
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): Use LocalDB during development to write and test Transact-SQL code without having to manage a full server instance of SQL Server.
 
 ## SQL Data tools
-* [SQL Server Data Tools ](../ssdt/download-sql-server-data-tools-ssdt.md) : Use  SSDT to build relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports.
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) : Use  SSDT to build relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports.
 * [SQL Server Management Tools](../ssms/download-sql-server-management-studio-ssms.md):  Use SSMS configure, monitor, and administer instances of SQL Server.
 
 ## SQL Data access
@@ -35,7 +34,7 @@ Use Microsoft's SQL data platform to create data-centric solutions across mobile
 * [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): Use SQLXML 4.0 to export relational data to XML.
 
 ## Data collection, processing, and visualization
-* [Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
+* [Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)
 * [Integration Services](../integration-services/integration-services-developer-documentation.md)  
 * [Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [Replication Services](../relational-databases/replication/concepts/replication-developer-documentation.md)

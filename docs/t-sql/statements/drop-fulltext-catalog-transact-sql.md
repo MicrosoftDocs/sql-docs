@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DROP FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

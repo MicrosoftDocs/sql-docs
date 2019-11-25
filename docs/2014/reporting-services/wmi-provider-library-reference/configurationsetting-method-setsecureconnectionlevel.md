@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting Class)"
@@ -16,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "SetSecureConnectionLevel method"
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # SetSecureConnectionLevel Method (WMI MSReportServer_ConfigurationSetting)

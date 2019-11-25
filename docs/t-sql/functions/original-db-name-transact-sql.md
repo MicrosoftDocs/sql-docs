@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ORIGINAL_DB_NAME function"
 ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

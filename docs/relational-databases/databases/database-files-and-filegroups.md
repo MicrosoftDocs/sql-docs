@@ -32,7 +32,6 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Database Files and Filegroups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

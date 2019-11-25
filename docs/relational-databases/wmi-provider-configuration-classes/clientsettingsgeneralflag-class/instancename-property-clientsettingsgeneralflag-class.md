@@ -1,6 +1,6 @@
 ---
-title: "InstanceName Property (ClientSettingsGeneralFlag Class) | Microsoft Docs"
-ms.custom: ""
+title: "InstanceName Property (ClientSettingsGeneralFlag)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7de3c043-6c5a-4663-b960-a80492444a99
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # InstanceName Property (ClientSettingsGeneralFlag Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Create Charts, Alerts, Logs, and Reports
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

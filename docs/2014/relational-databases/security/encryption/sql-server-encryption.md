@@ -56,7 +56,7 @@ manager: craigg
  Information about how to use a certificate to encrypt data.  
   
 ## External Resources  
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 Security and Protection](https://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
+ [10 Steps to SQL Server 2005 Security](https://www.itprotoday.com/sql-server/10-steps-sql-server-2005-security)  
  Current information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] security.  
   
 ## See Also  

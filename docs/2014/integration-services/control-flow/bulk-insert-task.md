@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Bulk Insert task"
   - "copying data [Integration Services]"
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Bulk Insert Task

@@ -22,9 +22,8 @@ helpviewer_keywords:
   - "comparing dates times [SQL Server]"
   - "dates [SQL Server], dateparts"
 ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATENAME (Transact-SQL)
@@ -110,7 +109,7 @@ SELECT DATENAME(year, '12:10:30.123')
     ,DATENAME(weekday, '12:10:30.123');  
 ```  
   
-If *date* is specified as a variable or table column, and the data type for that variable or column does not have the specified *datepart*, `DATENAME` will return error 9810. In this example, variable *@t* has a **time** data type. The example fails because the date part year is invalid for the **time** data type:
+If *date* is specified as a variable or table column, and the data type for that variable or column does not have the specified *datepart*, `DATENAME` will return error 9810. In this example, variable *\@t* has a **time** data type. The example fails because the date part year is invalid for the **time** data type:
   
 ```sql
 DECLARE @t time = '12:10:30.123';   

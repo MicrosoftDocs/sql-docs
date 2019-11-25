@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # setEncrypt Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

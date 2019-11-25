@@ -40,13 +40,9 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 Creates a user-defined function in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value can either be a scalar (single) value or a table. Use this statement to create a reusable routine that can be used in these ways:  
   
@@ -267,7 +263,7 @@ RETURNS return_data_type
   
 ## Arguments
 *OR ALTER*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Conditionally alters the function only if it already exists. 
  
@@ -331,7 +327,7 @@ Is a default value for the parameter. If a *default* value is defined, the funct
   
  In inline TVFs, the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.  
   
- <a name="mstvf"></a> In MSTVFs, @*return_variable* is a TABLE variable, used to store and accumulate the rows that should be returned as the value of the function. @*return_variable* can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.  
+ <a name="mstvf"></a> In MSTVFs, \@*return_variable* is a TABLE variable, used to store and accumulate the rows that should be returned as the value of the function. \@*return_variable* can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.  
   
  *select_stmt*  
  Is the single SELECT statement that defines the return value of an inline table-valued function (TVF).  
@@ -340,7 +336,7 @@ Is a default value for the parameter. If a *default* value is defined, the funct
  Specifies the order in which results are being returned from the table-valued function. For more information, see the section, "[Using Sort Order in CLR Table-valued Functions](#using-sort-order-in-clr-table-valued-functions)", later in this topic.  
   
  EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*    
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later)
   
  Specifies the assembly and method to which the created function name shall refer.  
   
@@ -369,7 +365,7 @@ In a typical example, for MyFood.DLL, in which all types are in the MyFood names
  Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints. The table is always put in the primary filegroup.  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Preview in some regions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Preview in some regions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Defines the table data types for a CLR function. The table declaration includes only column names and data types. The table is always put in the primary filegroup.  
   
@@ -393,7 +389,7 @@ In a typical example, for MyFood.DLL, in which all types are in the MyFood names
  Specifies that the function will have one or more of the following options.  
   
  ENCRYPTION  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later)  
   
  Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will convert the original text of the CREATE FUNCTION statement to an obfuscated format. The output of the obfuscation is not directly visible in any catalog views. Users that have no access to system tables or database files cannot retrieve the obfuscated text. However, the text will be available to privileged users that can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users that can attach a debugger to the server process can retrieve the original procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -786,7 +782,7 @@ GO
 ### D. Creating a CLR function  
  The example creates CLR function `len_s`. Before the function is created, the assembly `SurrogateStringFunction.dll` is registered in the local database.  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later)  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  

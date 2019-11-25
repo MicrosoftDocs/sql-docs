@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "keywords [SQL Server], control-of-flow language"
   - "control-of-flow language [SQL Server], keywords listed"
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Control-of-Flow
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

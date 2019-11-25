@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 327e952b-e7d5-4209-9423-f4b49cea272f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Paradox Driver Programming Considerations
 This section contains the following topics:  

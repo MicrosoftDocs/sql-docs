@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL.DATA.TOOLS.SQLEDITOR"
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Use Transact-SQL Editor to Edit and Execute Scripts
 The Transact\-SQL Editor provides you with a rich editing and debugging experience when you are working with scripts. It is invoked when you use the **View Code** contextual menu to open a database entity in a connected database or a project. It is also automatically opened when you use the **New Query** contextual menu from the SQL Server Object Explorer, or add a new script object to a database project.  

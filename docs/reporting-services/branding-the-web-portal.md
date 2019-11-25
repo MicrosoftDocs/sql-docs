@@ -1,28 +1,28 @@
 ---
 title: "Branding the web portal | Microsoft Docs"
-ms.date: 12/06/2018 
+ms.date: 04/10/2019 
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 description: In this article you learn about altering the appearance of the web portal by branding it to your business through a brand package. The brand package is designed so you don't need deep cascading style sheet (CSS) knowledge to create it.
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Branding the web portal
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package is designed so you don't need deep cascading style sheet (CSS) knowledge to create it.  
-  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
-   
+You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package is designed so you don't need deep cascading style sheet (CSS) knowledge to create it.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA" frameborder="0" allowfullscreen></iframe>
+
 ## Creating the brand package
   
 A brand package for Reporting Services consists of three items and is packaged as a zip file.   
   
-- color.json  
+- colors.json  
 - metadata.xml  
 - logo.png (optional)  
   
@@ -70,7 +70,7 @@ For example, if the colors.json file had the following values.
     "primary":"#009900",   
     "primaryContrast":"#ffffff"   
   
-The processed output would look up the **@primaryButtonBg** LESS variable and see that it maps to the json property called **primary**, which in this example is #009900. It would therefore output the proper CSS.  
+The processed output would look up the **\@primaryButtonBg** LESS variable and see that it maps to the json property called **primary**, which in this example is #009900. It would therefore output the proper CSS.  
   
     .btn-primary {   
         color:#ffffff;   

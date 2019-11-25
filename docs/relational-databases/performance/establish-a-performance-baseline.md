@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: dc5aa8d6-2507-448f-ad86-4196443915fc
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Establish a Performance Baseline

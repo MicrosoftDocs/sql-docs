@@ -12,7 +12,6 @@ dev_langs:
 ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_delete_backup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

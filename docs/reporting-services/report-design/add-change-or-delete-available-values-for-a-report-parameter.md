@@ -2,7 +2,7 @@
 title: "Add, Change, or Delete Available Values for a Report Parameter | Microsoft Docs"
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -12,8 +12,8 @@ f1_keywords:
   - "10455"
   - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add, Change, or Delete Available Values for a Report Parameter
   After you create a report parameter, you can specify a list of available values to display to the user. An available values list limits the choices a user can make to only valid values for the parameter.  

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_log_stats (Transact-SQL)   

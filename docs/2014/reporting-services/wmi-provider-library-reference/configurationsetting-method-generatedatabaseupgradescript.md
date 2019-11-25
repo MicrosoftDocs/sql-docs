@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting Class)"
@@ -16,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "GenerateDatabaseUpgradeScript method"
 ms.assetid: 88534e8e-2877-41cd-b5c2-b1d33a0fd203
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # GenerateDatabaseUpgradeScript Method (WMI MSReportServer_ConfigurationSetting)

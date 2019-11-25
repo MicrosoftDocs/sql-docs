@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## Arguments  
- [ **@traceid=** ] *trace_id*  
+`[ @traceid = ] trace_id`
  Is the ID of the trace to be modified. *trace_id* is **int**, with no default. The user employs this *trace_id* value to identify, modify, and control the trace.  
   
- [ **@eventid=** ] *event_id*  
+`[ @eventid = ] event_id`
  Is the ID of the event to turn on. *event_id* is **int**, with no default.  
   
  This table lists the events that can be added to or removed from a trace.  
@@ -233,7 +232,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|Indicates that SQL Server could not produce an execution plan for a query or batch that contained a plan guide. SQL Server attempted to generate an execution plan for this query or batch without applying the plan guide. An invalid plan guide may be the cause of this problem. You can validate the plan guide by using the sys.fn_validate_plan_guide system function.|  
 |235|Audit Fulltext||  
   
- [ **@columnid=** ] *column_id*  
+`[ @columnid = ] column_id`
  Is the ID of the column to be added for the event. *column_id* is **int**, with no default.  
   
  The following table lists the columns that can be added for an event.  
@@ -312,7 +311,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  If *on* is set to **0**, and *column_id* is NULL, then the event is turned OFF and all columns are cleared. If *column_id* is not null, then the column is turned OFF.  
   
- This table illustrates the interaction between **@on** and **@columnid**.  
+ This table illustrates the interaction between **\@on** and **\@columnid**.  
   
 |@on|@columnid|Result|  
 |---------|---------------|------------|  
@@ -345,7 +344,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- Users must execute **sp_trace_setevent** for each column added for each event. During each execution, if **@on** is set to **1**, **sp_trace_setevent** adds the specified event to the list of events of the trace. If **@on** is set to **0**, **sp_trace_setevent** removes the specified event from the list.  
+ Users must execute **sp_trace_setevent** for each column added for each event. During each execution, if **\@on** is set to **1**, **sp_trace_setevent** adds the specified event to the list of events of the trace. If **\@on** is set to **0**, **sp_trace_setevent** removes the specified event from the list.  
   
  Parameters of all SQL Trace stored procedures (**sp_trace_xx**) are strictly typed. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure will return an error.  
   

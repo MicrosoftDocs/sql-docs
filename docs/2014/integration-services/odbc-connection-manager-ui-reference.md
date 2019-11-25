@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.odbcconnection.f1"
 helpviewer_keywords: 
   - "Configure ODBC Connection Manager dialog box"
 ms.assetid: a596eeaf-68b2-4560-b77d-d2f72ddba926
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # ODBC Connection Manager UI Reference

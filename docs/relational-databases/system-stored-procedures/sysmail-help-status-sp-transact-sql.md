@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

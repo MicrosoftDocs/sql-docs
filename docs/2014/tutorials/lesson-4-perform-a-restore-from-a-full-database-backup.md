@@ -37,6 +37,6 @@ manager: craigg
 5.  Verify the T-SQL statement and click **Execute**  
   
 ### Return to Tutorials Portal  
- [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
+ [Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
   

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 9a276caa-ea38-473d-92bc-26302bfcf660
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Server public Permissions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

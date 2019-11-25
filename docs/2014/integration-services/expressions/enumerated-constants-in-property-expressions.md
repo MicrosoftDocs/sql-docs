@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "enumerated constants [Integration Services]"
   - "property expressions [Integration Services]"
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Enumerated Constants in Property Expressions

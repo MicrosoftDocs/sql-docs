@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: fce10907-4753-441b-b624-f28e00ed7520
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_1461
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

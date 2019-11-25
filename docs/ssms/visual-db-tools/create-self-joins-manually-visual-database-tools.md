@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "manual joins [SQL Server]"
   - "joins [SQL Server], self"
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Create Self-Joins Manually (Visual Database Tools)

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)"
@@ -16,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "SetUnattendedExecutionAccount method"
 ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # SetUnattendedExecutionAccount Method (WMI MSReportServer_ConfigurationSetting)

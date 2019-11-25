@@ -7,7 +7,6 @@ ms.reviewer: ""
 ms.technology:
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ms.topic: conceptual
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
@@ -134,3 +133,5 @@ These applies-to include files are used with Reporting Services documentation.
 ## Next steps
 
 For more information on how to use these include files, see [Applies-to includes](sql-server-docs-contribute.md#applies-to-includes).
+
+this is a test

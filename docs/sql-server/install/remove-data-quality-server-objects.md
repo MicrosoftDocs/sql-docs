@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Remove Data Quality Server Objects
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # INDEX Command
 Creates an index file to display and access table records in a logical order.  

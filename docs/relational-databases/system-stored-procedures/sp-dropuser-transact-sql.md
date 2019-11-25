@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ```  
   
 ## Arguments  
- [ **@name_in_db =**] **'***user***'**  
+`[ @name_in_db = ] 'user'`
  Is the name of the user to remove. *user* is a **sysname**, with no default. *user* must exist in the current database. When specifying a Windows login, use the name by which the database knows that login.  
   
 ## Return Code Values  

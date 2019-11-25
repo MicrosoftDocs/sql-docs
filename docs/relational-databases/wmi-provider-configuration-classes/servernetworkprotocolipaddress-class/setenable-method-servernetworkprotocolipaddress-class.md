@@ -1,6 +1,6 @@
 ---
-title: "SetEnable Method (ServerNetworkProtocolIPAddress Class) | Microsoft Docs"
-ms.custom: ""
+title: "SetEnable Method (ServerNetworkProtocolIPAddress)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: baa86deb-95dd-416f-b2c7-cec1dfb91ab4
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetEnable Method (ServerNetworkProtocolIPAddress Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

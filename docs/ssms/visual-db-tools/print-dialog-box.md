@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "vs.Print"
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Print Dialog Box

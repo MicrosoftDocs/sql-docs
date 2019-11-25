@@ -1,6 +1,6 @@
 ---
-title: "PropertyStrVal Property (ServerNetworkProtocolProperty Class) | Microsoft Docs"
-ms.custom: ""
+title: "PropertyStrVal Property (ServerNetworkProtocolProperty)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: wmi
 ms.topic: "reference"
 apiname: 
-  - "PropertyStrVal Property (ServerNetworkProtocolProperty Class)"
+  - "PropertyStrVal Property (ServerNetworkProtocolProperty"
 apilocation: 
   - "sqlmgmproviderxpsp2up.mof"
 apitype: "MOFDef"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7df3cf21-15b7-4813-93e7-c2bae1209f5a
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # PropertyStrVal Property (ServerNetworkProtocolProperty Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

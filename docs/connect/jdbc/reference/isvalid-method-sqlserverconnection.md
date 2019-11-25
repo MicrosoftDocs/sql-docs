@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 3b0a8bbf-9369-4456-9ab8-1434ccacdd7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # isValid Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

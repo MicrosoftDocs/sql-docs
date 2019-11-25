@@ -1,5 +1,5 @@
 ---
-title: "Add Members to a Collection (Master Data Services) | Microsoft Docs"
+title: Add Members to a Collection
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "collections [Master Data Services], adding members"
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Add Members to a Collection (Master Data Services)
 

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 2ccec113-ae1b-45b8-a334-13eae04941f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getDriverName Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

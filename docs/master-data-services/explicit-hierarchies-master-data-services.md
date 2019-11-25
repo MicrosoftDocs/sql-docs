@@ -1,5 +1,5 @@
 ---
-title: "Explicit Hierarchies (Master Data Services) | Microsoft Docs"
+title: Explicit Hierarchies
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql
@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "hierarchies [Master Data Services], explicit hierarchies"
   - "explicit hierarchies"
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Explicit Hierarchies (Master Data Services)
 

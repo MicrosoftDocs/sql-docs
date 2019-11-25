@@ -1,6 +1,6 @@
 ---
-title: "SetProtocolsOrder Method (ClientNetworkProtocol Class) | Microsoft Docs"
-ms.custom: ""
+title: "SetProtocolsOrder Method (ClientNetworkProtocol)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetProtocolsOrder Method (ClientNetworkProtocol Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

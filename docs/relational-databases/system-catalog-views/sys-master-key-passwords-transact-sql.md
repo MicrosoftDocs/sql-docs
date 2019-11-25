@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.master_key_passwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

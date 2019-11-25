@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Synchronize Method (RDS)
 Synchronize the given Recordset with the database specified by the connection string for use in ADO 2.5 and later.  

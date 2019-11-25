@@ -9,7 +9,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.mds.configmanager.createapp.f1"
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

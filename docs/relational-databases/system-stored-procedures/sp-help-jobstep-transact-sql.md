@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,22 +36,22 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## Arguments  
- [ **@job_id =**] **'***job_id***'**  
+`[ @job_id = ] 'job_id'`
  The job identification number for which to return job information. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job. *job_name* is **sysname**, with a default NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@step_id =**] *step_id*  
+`[ @step_id = ] step_id`
  The identification number of the step in the job. If not included, all steps in the job are included. *step_id* is **int**, with a default of NULL.  
   
- [ **@step_name =**] **'***step_name***'**  
+`[ @step_name = ] 'step_name'`
  The name of the step in the job. *step_name* is **sysname**, with a default of NULL.  
   
- [ **@suffix =**] *suffix*  
+`[ @suffix = ] suffix`
  A flag indicating whether a text description is appended to the **flags** column in the output. *suffix*is **bit**, with the default of **0**. If *suffix* is **1**, a description is appended.  
   
 ## Return Code Values  
@@ -80,7 +79,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**os_run_priority**|**int**|Reserved.|  
 |**output_file_name**|**nvarchar(200)**|File to which command output should be written ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, and **PowerShell** steps only).|  
 |**last_run_outcome**|**int**|Outcome of the step the last time it ran:<br /><br /> **0** = Failed<br /><br /> **1** = Succeeded<br /><br /> **2** = Retry<br /><br /> **3** = Canceled<br /><br /> **5** = Unknown|  
-|**last_run_duration**|**int**|Duration (in seconds) of the step the last time it ran.|  
+|**last_run_duration**|**int**|Duration (hhmmss) of the step the last time it ran.|  
 |**last_run_retries**|**int**|Number of times the command was retried the last time the step ran.|  
 |**last_run_date**|**int**|Date the step last started execution.|  
 |**last_run_time**|**int**|Time the step last started execution.|  

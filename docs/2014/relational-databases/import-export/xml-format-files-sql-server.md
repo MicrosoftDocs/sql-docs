@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], format files"
   - "XML format files [SQL Server]"
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # XML Format Files (SQL Server)

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 410c5a6e-e957-4ecc-9e2d-e591cbc0bc4f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SET NULL Command
 Determines how null values are supported by the ALTER TABLE - SQL, CREATE TABLE - SQL, and INSERT - SQL commands.  

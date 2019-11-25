@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotation Interpretation - sql:limit-field and sql:limit-value

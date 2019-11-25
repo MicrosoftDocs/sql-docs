@@ -1,5 +1,5 @@
 ---
-title: "Custom Workflow Example (Master Data Services) | Microsoft Docs"
+title: Custom Workflow Example
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -9,9 +9,8 @@ ms.technology:
 
 ms.topic: "reference"
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Custom Workflow - Example
 

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Spatial Data - sys.dm_db_objects_disabled_on_compatibility_level_change
@@ -108,7 +107,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### Behavior of the disabled objects  
  **Indexes**  
   
- If the clustered index is disabled, or if a non-clustered index is forced, the following error is raised: "The query processor is unable to produce a plan because the index '%.\*ls' on table or view '%.\*ls' is disabled." To re-enable these objects, rebuild the indexes after upgrade by calling **ALTER INDEX ON ... REBUILD**.  
+ If the clustered index is disabled, or if a nonclustered index is forced, the following error is raised: "The query processor is unable to produce a plan because the index '%.\*ls' on table or view '%.\*ls' is disabled." To re-enable these objects, rebuild the indexes after upgrade by calling **ALTER INDEX ON ... REBUILD**.  
   
  **Heaps**  
   

@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 8e9a13a0-6b24-47c6-9d83-3cbaf08f673d
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Updatable Subscriptions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

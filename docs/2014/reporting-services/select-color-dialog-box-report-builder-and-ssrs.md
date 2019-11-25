@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.selectcolor.f1"
@@ -13,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Select Color dialog box"
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Select Color Dialog Box (Report Builder and SSRS)

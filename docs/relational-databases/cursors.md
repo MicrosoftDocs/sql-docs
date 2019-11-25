@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Cursors

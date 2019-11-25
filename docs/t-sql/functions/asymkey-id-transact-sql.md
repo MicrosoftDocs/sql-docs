@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "IDs [SQL Server], asymmetric keys"
   - "cryptography [SQL Server], asymmetric keys"
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # ASYMKEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

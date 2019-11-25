@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSpeer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

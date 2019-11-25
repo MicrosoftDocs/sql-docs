@@ -2,7 +2,7 @@
 title: "File Share Delivery in Reporting Services | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: subscriptions
 
 
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], file share delivery"
   - "file share delivery [Reporting Services]"
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # File Share Delivery in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes a file share delivery extension so that you can deliver a report to a folder. The file share delivery extension is available by default and requires no additional configuration. In order for file delivery to succeed, you must set write access permissions on the shared folder. The account that requires writer permissions can either be credentials configured in the subscription or a **File share account** configured for the report server. For more information on the file share account, see [Subscription Settings and a File Share Account &#40;Configuration Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). In addition, users who require access to the reports must have read permissions on the shared folder.  
@@ -68,7 +68,7 @@ ms.author: maghan
   
  **Overwrite:** You can specify overwrite options to reuse the same file name for each report delivery or to create a new file. To overwrite the file, you must use the same file name and extension.  
   
- An alternative approach to creating unique files for every delivery is to include a timestamp in the file name. To do this, add the **@timestamp** variable to the file name (for example, *CompanySales@timestamp*). With this approach, the file name is unique by definition, so it will never be overwritten.  
+ An alternative approach to creating unique files for every delivery is to include a timestamp in the file name. To do this, add the **\@timestamp** variable to the file name (for example, *CompanySales@timestamp*). With this approach, the file name is unique by definition, so it will never be overwritten.  
   
  The following image is an example of the settings for a subscription configured for file share delivery.  
   

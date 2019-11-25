@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQL Property
 Indicates the query string used to retrieve the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

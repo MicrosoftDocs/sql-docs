@@ -1,6 +1,6 @@
 ---
-title: "PropertyValType Property (ClientNetworkProtocolProperty Class) | Microsoft Docs"
-ms.custom: ""
+title: "PropertyValType Property (ClientNetworkProtocolProperty)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: wmi
 ms.topic: "reference"
 apiname: 
-  - "PropertyValType Property (ClientNetworkProtocolProperty Class)"
+  - "PropertyValType Property (ClientNetworkProtocolProperty"
 apilocation: 
   - "sqlmgmproviderxpsp2up.mof"
 apitype: "MOFDef"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 624b9bdd-ed93-4140-bd4e-00d714a2558c
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # PropertyValType Property (ClientNetworkProtocolProperty Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

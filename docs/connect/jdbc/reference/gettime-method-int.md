@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 6c13dea2-511f-48dc-b3db-2d3b72ccc9de
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getTime Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

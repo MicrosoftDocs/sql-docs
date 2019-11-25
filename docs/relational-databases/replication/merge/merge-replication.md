@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Merge Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

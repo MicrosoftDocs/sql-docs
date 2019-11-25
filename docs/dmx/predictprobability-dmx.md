@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # PredictProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +31,7 @@ PredictProbability(<scalar column reference>, [<predicted state>])
  If the predicted state is omitted, the state that has the highest probability is used, excluding the missing states bucket. To include the missing states bucket, set the \<predicted state> to **INCLUDE_NULL**. To return the probability for the missing states, set the \<predicted state> to NULL.  
   
 > [!NOTE]  
->  Some mining models do not provide probability values and therefore cannot use this function. In addition, the probability values for any particular target value are calculated differently or might have a different interpretation depending on the model type that you are querying. For more information about how probability is calculated for a particular model type, see the individual algorithm topic in [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Some mining models do not provide probability values and therefore cannot use this function. In addition, the probability values for any particular target value are calculated differently or might have a different interpretation depending on the model type that you are querying. For more information about how probability is calculated for a particular model type, see the individual algorithm topic in [Mining Model Content &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 ## Examples  
  The following example uses a natural prediction join to determine whether an individual is likely to be a bike buyer based on the TM Decision Tree mining model, and also determines the probability for the prediction. In this example, there are two PredictProbability functions, one for each possible value. If you omit this argument, the function returns the probability for the most likely value.  

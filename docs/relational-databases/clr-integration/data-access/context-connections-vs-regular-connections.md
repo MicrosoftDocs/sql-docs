@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Context Connections vs. Regular Connections
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

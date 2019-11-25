@@ -204,7 +204,7 @@ GO
   
 -   For queries running only on memory-optimized tables, the only supported isolation levels are snapshot, repeatable read, and serializable. Any queries with read-uncommitted or read committed isolation level returns an error unless you have enabled the option MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT at the database level.  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL READ_COMMITTED  
     -- This is not allowed  
     BEGIN TRAN  
@@ -222,7 +222,7 @@ GO
   
 -   No locking hints are supported on memory-optimized tables. For example, all of the following queries fail with an error. Only NOLOCK hint is allowed and it is NOOP when used with memory-optimized tables.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM t_hk WITH (PAGLOCK)  
     SELECT * FROM t_hk WITH (READPAST)  
     SELECT * FROM t_hk WITH (ROWLOCK)  
@@ -234,7 +234,7 @@ GO
   
 -   For cross-container transactions, transactions with session isolation level "snapshot" that access memory-optimized tables is not supported. For example,  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
     -- This is not allowed  
     BEGIN TRAN  

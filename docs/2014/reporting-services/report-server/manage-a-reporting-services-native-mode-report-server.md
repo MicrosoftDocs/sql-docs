@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services Configuration tool"
   - "configuration options [Reporting Services]"
   - "report servers [Reporting Services], configuring"
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Manage a Reporting Services Native Mode Report Server

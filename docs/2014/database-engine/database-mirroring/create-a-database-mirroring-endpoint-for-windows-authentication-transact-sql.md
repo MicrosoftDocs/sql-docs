@@ -50,8 +50,8 @@ manager: craigg
   
 3.  Determine if a database mirroring endpoint already exists by using the following statement:  
   
-    ```  
-    SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
+    ```sql
+    SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;
     ```  
   
     > [!IMPORTANT]  
@@ -147,7 +147,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  Each server instance can have only one endpoint. Therefore, if you want a server instance to be a partner in some sessions and the witness in others, specify ROLE=ALL.  
   
-```  
+```sql
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  
@@ -172,7 +172,8 @@ GO
 ```  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
- **To Configure a Database Mirroring Endpoint**  
+
+### To Configure a Database Mirroring Endpoint
   
 -   [Create a Database Mirroring Endpoint for AlwaysOn Availability Groups &#40;SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
@@ -197,5 +198,3 @@ GO
  [Specify a Server Network Address &#40;Database Mirroring&#41;](specify-a-server-network-address-database-mirroring.md)   
  [Example: Setting Up Database Mirroring Using Windows Authentication &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
-  
-  

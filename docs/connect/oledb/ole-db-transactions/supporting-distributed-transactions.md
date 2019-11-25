@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "MS DTC, about distributed transaction support"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Supporting Distributed Transactions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

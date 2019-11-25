@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "statements [Integration Services]"
   - "OLE DB Command transformation"
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # OLE DB Command Transformation

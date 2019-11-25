@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Cellset Object (ADO MD)
 Represents the results of a multidimensional query. It is a collection of cells selected from cubes or other cellsets.  

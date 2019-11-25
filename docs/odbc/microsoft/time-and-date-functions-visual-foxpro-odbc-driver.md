@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Time and Date Functions (Visual FoxPro ODBC Driver)
 The following table lists ODBC time and date functions supported by the Visual FoxPro ODBC Driver; when the Visual FoxPro grammar for the same function differs from the ODBC syntax, the Visual FoxPro equivalent is listed.  

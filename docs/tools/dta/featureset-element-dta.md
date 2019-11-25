@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "FeatureSet element"
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # FeatureSet Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c1f53d0f-4080-43ff-be38-2b10395c68c9
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSpeer_originatorid_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

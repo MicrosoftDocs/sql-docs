@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "grouping rows"
   - "grouping query results"
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Group Rows in Query Results (Visual Database Tools)

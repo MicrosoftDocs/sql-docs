@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STDisjoint (geometry Data Type)"
 ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STDisjoint (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

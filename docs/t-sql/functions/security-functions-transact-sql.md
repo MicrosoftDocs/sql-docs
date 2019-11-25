@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "users [SQL Server], security functions"
   - "security [SQL Server], functions"
 ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # Security Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

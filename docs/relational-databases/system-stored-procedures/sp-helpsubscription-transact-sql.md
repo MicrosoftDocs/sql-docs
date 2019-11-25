@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Lists subscription information associated with a particular publication, article, Subscriber, or set of subscriptions. This stored procedure is executed at a Publisher on the publication database.  
   
@@ -37,26 +36,26 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the associated publication. *publication* is **sysname**, with a default of **%**, which returns all subscription information for this server.  
   
- [ **@article=** ] **'**_article_**'**  
+`[ @article = ] 'article'`
  Is the name of the article. *article* is **sysname**, with a default of **%**, which returns all subscription information for the selected publications and Subscribers. If **all**, only one entry is returned for the full subscription on a publication.  
   
- [ **@subscriber=** ] **'**_subscriber_**'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber on which to obtain subscription information. *subscriber* is **sysname**, with a default of **%**, which returns all subscription information for the selected publications and articles.  
   
- [ **@destination_db=** ] **'**_destination_db_**'**  
+`[ @destination_db = ] 'destination_db'`
  Is the name of the destination database. *destination_db* is **sysname**, with a default of **%**.  
   
- [ **@found=** ] **'**_found_**'**OUTPUT  
+`[ @found = ] 'found'OUTPUT`
  Is a flag to indicate returning rows. *found*is **int** and an OUTPUT parameter, with a default of 23456.  
   
  **1** indicates the publication is found.  
   
  **0** indicates the publication is not found.  
   
- [ **@publisher**= ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, and defaults to the name of the current server.  
   
 > [!NOTE]  

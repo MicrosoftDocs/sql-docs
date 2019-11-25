@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.operator.notifications.f1"
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Operator Properties - New Operator (Notifications Page)

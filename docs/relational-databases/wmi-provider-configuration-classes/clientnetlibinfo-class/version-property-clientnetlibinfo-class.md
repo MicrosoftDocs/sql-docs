@@ -1,6 +1,6 @@
 ---
-title: "Version Property (ClientNetLibInfo Class) | Microsoft Docs"
-ms.custom: ""
+title: "Version Property (ClientNetLibInfo)"
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Version Property (ClientNetLibInfo Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

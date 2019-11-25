@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_reset_exec_stats (Transact-SQL)
@@ -38,7 +37,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ```  
   
 ## Arguments  
- [ **@plan_id =** ] *plan_id*  
+`[ @plan_id = ] plan_id`
  Is the id of the query plan to being cleared. *plan_id* is a **bigint**, with no default.  
   
 ## Return Code Values  
@@ -47,7 +46,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ## Remarks  
   
 ## Permissions  
- Requires the **EXECUTE** permission on the database, and **DELETE** permission on the query store catalog views.  
+ Requires the **ALTER** permission on the database. 
   
 ## Examples  
  The following example returns information about the queries in the query store.  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Display Size
 The display size of a column is the maximum number of characters needed to display data in character form. The following table defines the display size for each ODBC SQL data type.  

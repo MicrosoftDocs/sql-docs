@@ -1,6 +1,6 @@
 ---
-title: "SetServiceAccount Method (SqlService Class) | Microsoft Docs"
-ms.custom: ""
+title: "SetServiceAccount Method (SqlService)"
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetServiceAccount Method (SqlService Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

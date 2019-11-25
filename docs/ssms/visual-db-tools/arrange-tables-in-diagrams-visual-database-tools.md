@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], arranging objects"
   - "arranging database diagram objects"
 ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Arrange Tables in Diagrams (Visual Database Tools)

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.asymmetric_keys (Transact-SQL)

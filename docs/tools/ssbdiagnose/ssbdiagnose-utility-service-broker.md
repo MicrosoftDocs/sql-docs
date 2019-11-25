@@ -23,14 +23,13 @@ helpviewer_keywords:
   - "Service Broker, ssbdiagnose utility"
   - "ssbdiagnose"
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # ssbdiagnose Utility (Service Broker)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The **ssbdiagnose** utility reports issues in [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversations or the configuration of [!INCLUDE[ssSB](../../includes/sssb-md.md)] services. Configuration checks can be made for either two services or a single service. Issues are reported either in the command prompt window as human-readable text, or as formatted XML that can be redirected to a file or another program.  
-  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  The **ssbdiagnose** utility reports issues in [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversations or the configuration of [!INCLUDE[ssSB](../../includes/sssb-md.md)] services. Configuration checks can be made for either two services or a single service. Issues are reported either in the command prompt window as human-readable text, or as formatted XML that can be redirected to a file or another program.
+
 ## Syntax  
   
 ```  
@@ -179,14 +178,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  A unique identifier that identifies a conversation endpoint in an application. Conversation handles are unique to one endpoint of a conversation, the initiator and target endpoints have separate conversation handles.  
   
- Conversation handles are returned to applications by the *@dialog_handle* parameter of the **BEGIN DIALOG** statement, and the **conversation_handle** column in the result set of a **RECEIVE** statement.  
+ Conversation handles are returned to applications by the *\@dialog_handle* parameter of the **BEGIN DIALOG** statement, and the **conversation_handle** column in the result set of a **RECEIVE** statement.  
   
  Conversation handles are reported in the **conversation_handle** column of the **sys.transmission_queue** and **sys.conversation_endpoints** catalog views.  
   
  *conversation_group_id*  
  The unique identifier that identifies a conversation group.  
   
- Conversation group IDs are returned to applications by the *@conversation_group_id* parameter of the **GET CONVERSATION GROUP** statement and the **conversation_group_id** column in the result set of a **RECEIVE** statement.  
+ Conversation group IDs are returned to applications by the *\@conversation_group_id* parameter of the **GET CONVERSATION GROUP** statement and the **conversation_group_id** column in the result set of a **RECEIVE** statement.  
   
  Conversation group IDs are reported in the **conversation_group_id** columns of the **sys.conversation_groups** and **sys.conversation_endpoints** catalog views.  
   

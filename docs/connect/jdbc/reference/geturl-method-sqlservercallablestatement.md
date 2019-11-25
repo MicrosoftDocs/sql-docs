@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 700f54ab-58c1-4e5f-a188-818366a119c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getURL Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

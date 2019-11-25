@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Error Handling (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

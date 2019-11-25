@@ -24,9 +24,8 @@ helpviewer_keywords:
   - "$ROWGUID keyword"
   - "queries [SQL Server], results"
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # SELECT Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

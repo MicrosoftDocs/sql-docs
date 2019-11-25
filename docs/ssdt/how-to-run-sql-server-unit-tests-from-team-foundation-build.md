@@ -8,9 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: Run SQL Server Unit Tests from Team Foundation Build
 You can use Team Foundation Build to run your SQL Server unit tests as part of a build verification test (BVT). You can configure your unit tests to deploy the database, generate test data, and then run selected tests. If you are not familiar with Team Foundation Build, you should review the following information before you follow the procedures in this topic:  

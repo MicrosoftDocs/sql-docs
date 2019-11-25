@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "OnlineIndexOperation element"
 ms.assetid: 7c5614cd-09aa-4a59-9591-347aa7d36473
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # OnlineIndexOperation Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

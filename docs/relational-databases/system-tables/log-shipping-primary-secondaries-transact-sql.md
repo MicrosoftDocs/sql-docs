@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 4b315c70-7265-4acd-b35b-a4dbb7881d98
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # log_shipping_primary_secondaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

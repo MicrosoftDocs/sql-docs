@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # AppendChunk and GetChunk Methods Example (VC++)
 This example uses the [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) and [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) methods to fill an image field with data from another record.  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 ---
 # SQL Server 2012 Service Pack release notes
@@ -17,7 +16,7 @@ monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 This topic contains the aggregated release notes of the four service packs for SQL Server 2012. Each service pack is cumulative of prior service packs.
 
 The Service Packs are available online only, not on the installation media, and can be downloaded as follows:
-- [SQL Server 2012 SP4 ](https://go.microsoft.com/fwlink/?linkid=846937)
+- [SQL Server 2012 SP4](https://go.microsoft.com/fwlink/?linkid=846937)
 - [SQL Server 2012 SP3](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
 - [SQL Server 2012 SP2](https://support.microsoft.com/KB/2958429)
 - [SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268158)
@@ -26,9 +25,9 @@ The Service Packs are available online only, not on the installation media, and 
 
 ### Download pages
 
-- [SQL Server 2012 SP4 Feature Pack](https://go.microsoft.com/fwlink/?linkid=846907)
-- [SQL Server 2012 SP4 Patch installation](https://go.microsoft.com/fwlink/?linkid=846829)
-- [SQL Server 2012 SP4 Express](https://go.microsoft.com/fwlink/?linkid=846905)
+- [SQL Server 2012 SP4 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041)
+- [SQL Server 2012 SP4 Patch installation](https://www.microsoft.com/download/details.aspx?id=56040)
+- [SQL Server 2012 SP4 Express](https://www.microsoft.com/download/details.aspx?id=56042)
 
 
 ### Performance and scale improvements
@@ -89,7 +88,7 @@ Use the table below to identify the location and name of the file to download ba
 
 ### Download pages  
 - [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268158)
-- [SQL Server 2012 SP1 Express](https://go.microsoft.com/fwlink/p/?LinkID=26815)
+- [SQL Server 2012 SP1 Express](https://www.microsoft.com/download/details.aspx?id=35579)
 
 
 Use the following table to determine which file to download and install. Verify that you have the correct system requirements before installing the service pack. The system requirements are provided on the download pages that are linked to in the table.  
@@ -220,11 +219,11 @@ Previously, DACFx did not preserve the state (WITH CHECK/NOCHECK) of check const
   
 **Updates to SqlPackage.exe (DACFx command-line tool)**  
   
--   Extract DACPAC with data - Creates a database snapshot file (.dacpac) from a live SQL Server or Windows Azure SQL Database that contains data from user tables in addition to the database schema. These packages can be published to a new or existing SQL Server or Windows Azure SQL Database using the SqlPackage.exe Publish action. Data contained in package replaces the existing data in the target database.  
+-   Extract DACPAC with data - Creates a database snapshot file (.dacpac) from a live SQL Server or Azure SQL Database that contains data from user tables in addition to the database schema. These packages can be published to a new or existing SQL Server or Azure SQL Database using the SqlPackage.exe Publish action. Data contained in package replaces the existing data in the target database.  
   
--   Export BACPAC - Creates a logical backup file (.bacpac) of a live SQL Server or Windows Azure SQL Database containing the database schema and user data which can be used to migrate a database from on-premise SQL Server to Windows Azure SQL Database. Databases compatible with Azure can be exported and then later imported between supported versions of SQL Server.  
+-   Export BACPAC - Creates a logical backup file (.bacpac) of a live SQL Server or Azure SQL Database containing the database schema and user data which can be used to migrate a database from on-premise SQL Server to Azure SQL Database. Databases compatible with Azure can be exported and then later imported between supported versions of SQL Server.  
   
--   Import BACPAC - Import a .bacpac file to create a new or populate an empty SQL Server or Windows Azure SQL Database.  
+-   Import BACPAC - Import a .bacpac file to create a new or populate an empty SQL Server or Azure SQL Database.  
   
 Full SqlPackage.exe documentation on MSDN can be found [here](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx).  
   
@@ -240,7 +239,7 @@ This release introduces several forward compatibility scenarios for DAC packages
 - [Install SQL Server 2012 Servicing Updates](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
 - [How to identify your SQL Server version and edition](https://support.microsoft.com/help/321185)
 - [Install SQL Server 2012 Servicing Updates](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
-- [How to identify your SQL Server version and edition ](https://support.microsoft.com/help/321185) 
+- [How to identify your SQL Server version and edition](https://support.microsoft.com/help/321185) 
 - [How to determine the version and edition of SQL Server](https://support.microsoft.com/kb/321185)  
 - [Features Supported by the Editions of SQL Server 2014](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
 

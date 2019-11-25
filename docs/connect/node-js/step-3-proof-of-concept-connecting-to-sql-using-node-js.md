@@ -1,7 +1,7 @@
 ---
 title: "Step 3: Proof of concept connecting to SQL using Node.js | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/08/2017"
+ms.date: "07/23/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Step 3: Proof of concept connecting to SQL using Node.js
 
@@ -27,15 +26,23 @@ The **new Connection** function is used to connect to SQL Database.
 ```javascript  
     var Connection = require('tedious').Connection;  
     var config = {  
-        userName: 'yourusername',  
-        password: 'yourpassword',  
-        server: 'yourserver.database.windows.net',  
-        // If you are on Microsoft Azure, you need this:  
-        options: {encrypt: true, database: 'AdventureWorks'}  
+        server: 'your_server.database.windows.net',  //update me
+        authentication: {
+            type: 'default',
+            options: {
+                userName: 'your_username', //update me
+                password: 'your_password'  //update me
+            }
+        },
+        options: {
+            // If you are on Microsoft Azure, you need encryption:
+            encrypt: true,
+            database: 'your_database'  //update me
+        }
     };  
     var connection = new Connection(config);  
     connection.on('connect', function(err) {  
-    // If no error, then good to proceed.  
+        // If no error, then good to proceed.
         console.log("Connected");  
     });  
 ```  
@@ -49,12 +56,20 @@ All SQL statements are executed using the **new Request()** function. If the sta
 ```javascript  
     var Connection = require('tedious').Connection;  
     var config = {  
-        userName: 'yourusername',  
-        password: 'yourpassword',  
-        server: 'yourserver.database.windows.net',  
-        // When you connect to Azure SQL Database, you need these next options.  
-        options: {encrypt: true, database: 'AdventureWorks'}  
-    };  
+        server: 'your_server.database.windows.net',  //update me
+        authentication: {
+            type: 'default',
+            options: {
+                userName: 'your_username', //update me
+                password: 'your_password'  //update me
+            }
+        },
+        options: {
+            // If you are on Microsoft Azure, you need encryption:
+            encrypt: true,
+            database: 'your_database'  //update me
+        }
+    }; 
     var connection = new Connection(config);  
     connection.on('connect', function(err) {  
         // If no error, then good to proceed.  
@@ -98,11 +113,19 @@ In this example you will see how to execute an [INSERT](../../t-sql/statements/i
 ```javascript  
     var Connection = require('tedious').Connection;  
     var config = {  
-        userName: 'yourusername',  
-        password: 'yourpassword',  
-        server: 'yourserver.database.windows.net',  
-        // If you are on Azure SQL Database, you need these next options.  
-        options: {encrypt: true, database: 'AdventureWorks'}  
+        server: 'your_server.database.windows.net',  //update me
+        authentication: {
+            type: 'default',
+            options: {
+                userName: 'your_username', //update me
+                password: 'your_password'  //update me
+            }
+        },
+        options: {
+            // If you are on Microsoft Azure, you need encryption:
+            encrypt: true,
+            database: 'your_database'  //update me
+        }
     };  
     var connection = new Connection(config);  
     connection.on('connect', function(err) {  

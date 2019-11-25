@@ -1,12 +1,12 @@
 ---
 title: SQL Server Reporting Services features supported by its editions
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.date: 11/01/2018
+author: maggiesMSFT
+ms.author: maggies
+ms.date: 06/20/2019
 ---
 
 # SQL Server Reporting Services features supported by its editions
@@ -19,9 +19,9 @@ This topic explains the SQL Server Reporting Services (SSRS) features supported 
 
  ## Try SQL Server 2017
 
-> [![Download SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Download SQL Server 2017 from the Evaluation Center](https://go.microsoft.com/fwlink/?LinkID=829477)**    
+> [![Download SQL Server 2017](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Download SQL Server 2017 from the Evaluation Center](https://go.microsoft.com/fwlink/?LinkID=829477)**    
 >
-> ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2017 already installed](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+> ![Azure Virtual Machine small](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2017 already installed](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 For features supported by the Evaluation and Developer editions, see the SQL Server Enterprise edition column in the following table.
 
@@ -48,7 +48,7 @@ For features supported by the Evaluation and Developer editions, see the SQL Ser
 |Shared-component library|Yes|Yes|||Yes|  
 |Email and file share subscriptions and scheduling|Yes|Yes|||Yes|  
 |Report history, execution snapshots, and caching|Yes|Yes|||Yes|  
-|SharePoint integration|Yes|Yes|||Yes|  
+|SharePoint integration<sup>2</sup>|Yes|Yes|||Yes|  
 |Remote and non-SQL data source support<sup>1</sup>|Yes|Yes|||Yes|  
 |Data source, delivery, and rendering and RDCE extensibility|Yes|Yes|||Yes|  
 |Custom branding|Yes||||Yes|  

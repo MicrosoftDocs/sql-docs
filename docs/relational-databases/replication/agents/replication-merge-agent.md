@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +173,7 @@ replmerg [-?]
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] To restrict uploading, use the **@subscriber_upload_options** of **sp_addmergearticle** instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] To restrict uploading, use the **\@subscriber_upload_options** of **sp_addmergearticle** instead.  
   
  Specifies the type of data exchange during synchronization, which can be one of the following:  
   
@@ -315,7 +314,7 @@ replmerg [-?]
  Specifies the number of source threads that the Merge Agent uses to enumerate changes from the source. The source is the Subscriber during upload and the Publisher during download. The default is **3**.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Is the maximum number of seconds that the Merge Agent waits when the number of concurrent merge processes running is at the limit set by the **@max_concurrent_merge** property of **sp_addmergepublication**. If the maximum number of seconds is reached and the Merge Agent is still waiting, it will exit. A value of 0 means that the agent waits indefinitely, although it can be cancelled.  
+ Is the maximum number of seconds that the Merge Agent waits when the number of concurrent merge processes running is at the limit set by the **\@max_concurrent_merge** property of **sp_addmergepublication**. If the maximum number of seconds is reached and the Merge Agent is still waiting, it will exit. A value of 0 means that the agent waits indefinitely, although it can be cancelled.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Is the path to the Jet database (.mdb file) if **SubscriberType** is **2** (allows a connection to a Jet database without an ODBC Data Source Name (DSN)).  

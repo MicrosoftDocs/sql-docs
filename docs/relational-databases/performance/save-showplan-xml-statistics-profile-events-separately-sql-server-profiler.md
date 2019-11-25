@@ -1,5 +1,6 @@
 ---
-title: "Save Showplan XML Statistics Profile events separately (SQL Server Profiler) | Microsoft Docs"
+title: "Save Showplan XML Statistics Profile events separately"
+titleSuffix: SQL Server Profiler
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Save Showplan XML Statistics Profile events separately (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

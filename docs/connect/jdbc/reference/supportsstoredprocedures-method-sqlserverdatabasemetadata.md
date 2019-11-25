@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 776ff53a-8bf3-4864-a7b7-170fdef1a87b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # supportsStoredProcedures Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

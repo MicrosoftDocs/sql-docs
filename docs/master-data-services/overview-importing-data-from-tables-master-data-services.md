@@ -1,5 +1,5 @@
 ---
-title: "Overview: Importing Data from Tables (Master Data Services) | Microsoft Docs"
+title: Importing Data from Tables
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "importing data [Master Data Services]"
   - "staging process [Master Data Services]"
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Overview: Importing Data from Tables (Master Data Services)
 

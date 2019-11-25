@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Point (geometry Data Type)"
 ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Point (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

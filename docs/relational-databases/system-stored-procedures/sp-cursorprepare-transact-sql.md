@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -111,6 +110,32 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |1FF6|Could not return metadata.<br /><br /> Note: The reason for this is that the statement does not produce a result set; for example, it is an INSERT or DDL statement.|  
   
 ## Examples  
+  The following is an example of using sp_cursorprepare and sp_cursorexecute
+
+```sql
+declare @handle int , @p5 int, @p6 int
+exec sp_cursorprepare @handle OUTPUT, 
+	N'@dbid int', 
+	N'select * from sys.databases where database_id < @dbid',
+	1,
+	@p5 output,
+	@p6 output
+
+
+declare @p1 int  
+set @P1 = @handle 
+declare @p2 int   
+declare @p3 int  
+declare @p4 int  
+set @P6 = 4 
+exec sp_cursorexecute @p1, @p2 OUTPUT, @p3 output , @p4 output, @p5 OUTPUT, @p6
+
+exec sp_cursorfetch @P2
+
+exec sp_cursorunprepare @handle
+exec sp_cursorclose @p2
+```
+ 
  When *stmt* is parameterized and the *scrollopt* PARAMETERIZED_STMT value is ON, the format of the string is as follows:  
   
  { *\<local variable name>**\<data type>* } [ ,...*n* ]  

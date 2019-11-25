@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ```  
   
 ## Arguments  
- [ **@policy_category=** ] **'***policy_category***'**  
+`[ @policy_category = ] 'policy_category'`
  Is the name of the policy category that you want the database to subscribe to. *policy_category* is **sysname**, and is required.  
   
  To obtain values for *policy_category*, query the msdb.dbo.syspolicy_policy_categories system view.  

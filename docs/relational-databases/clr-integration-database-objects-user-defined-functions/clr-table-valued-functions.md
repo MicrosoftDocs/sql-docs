@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # CLR Table-Valued Functions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

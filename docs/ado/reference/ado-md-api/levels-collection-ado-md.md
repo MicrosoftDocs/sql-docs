@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Levels Collection (ADO MD)
 Contains the [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) objects that make up a hierarchy.  

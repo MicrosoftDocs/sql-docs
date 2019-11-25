@@ -14,14 +14,14 @@ helpviewer_keywords:
   - "accounts [Reporting Services]"
   - "reports [Reporting Services], processing"
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Configure the Unattended Execution Account (SSRS Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a special account that is used for unattended report processing and for sending connection requests across the network. The account is used in the following ways:  
   
--   Send connection requests over the network for reports that use database authentication, or connect to external report data sources that do not require or use authentication. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) in SQL Server Books Online.  
-  
+-   Send connection requests over the network for reports that use database authentication, or connect to external report data sources that do not require or use authentication. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).
+
 -   Retrieve external image files that are used in report. If you want to use an image file and the file cannot be accessed through Anonymous access, you can configure the unattended report processing account and grant the account permission to access the file.  
   
  Unattended report processing refers to any report execution process that is triggered by an event (either a schedule-driven event or data refresh event) rather than a user request. The report server uses the unattended report processing account to log on to the computer that hosts the external data source. This account is necessary because the credentials of the Report Server service account are never used to connect to other computers.  
@@ -51,8 +51,8 @@ ms.author: maghan
   
      **rsconfig -e -u\<domain/username> -p\<password>**  
   
- **rsconfig -e** supports additional arguments. For more information about syntax and to view command examples, see [rsconfig Utility &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) in SQL Server Books Online.  
-  
+ **rsconfig -e** supports additional arguments. For more information about syntax and to view command examples, see [rsconfig Utility &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).
+ 
 ### How Account Information is Stored  
  When you set the account, the following settings are specified as encrypted values in the RSreportserver.config file on a local or remote report server instance:  
   
@@ -70,6 +70,9 @@ ms.author: maghan
  To retrieve image files, the report server uses the account automatically and no specific action is required on your part. To use the account to connect to external data sources that provide data to reports, you must specify a **Credential Type** option in the data source properties page of the report data source or shared data source:  
   
 -   In the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] or on a SharePoint site, select the **Credentials are not required** option.  
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
  The unattended report processing account is used primarily to connect to external servers, and not as a login to database servers. If you want to use the account credentials to log in to a database, you must specify credentials in the connection string. You can specify **Integrated Security=SSPI** if the database server supports Windows integrated security and the account used for unattended report processing has permission to read the database. Otherwise, you must enter the user name and password in the connection string, where it appears in clear text to any user who has permission to edit data source connection properties.  
   
@@ -96,6 +99,6 @@ ms.author: maghan
  The account information is removed from the RSReportServer.config file.  
   
 ## See Also  
- [Reporting Services Configuration Manager (SSRS Native Mode)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
+ [Reporting Services Configuration Manager (SSRS Native Mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

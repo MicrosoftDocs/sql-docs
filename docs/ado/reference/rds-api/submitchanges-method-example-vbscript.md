@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SubmitChanges Method Example (VBScript)
 > [!IMPORTANT]

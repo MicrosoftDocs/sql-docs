@@ -2,7 +2,7 @@
 title: "SetSecureConnectionLevel Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "SetSecureConnectionLevel method"
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - SetSecureConnectionLevel
   Sets the secure connection level of the report server.  

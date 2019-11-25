@@ -26,9 +26,8 @@ helpviewer_keywords:
   - "clauses [SQL Server], INTO"
   - "row additions [SQL Server], INTO clause"
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - INTO Clause (Transact-SQL)
@@ -58,7 +57,7 @@ SELECT...INTO creates a new table in the default filegroup and inserts the resul
  *filegroup*    
  Specifies the name of the filegroup in which new table will be created. The filegroup specified should exist on the database else the SQL Server engine throws an error.   
  
- **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later.
   
 ## Data Types  
  The FILESTREAM attribute does not transfer to the new table. FILESTREAM BLOBs are copied and stored in the new table as **varbinary(max)** BLOBs. Without the FILESTREAM attribute, the **varbinary(max)** data type has a limitation of 2 GB. If a FILESTREAM BLOB exceeds this value, error 7119 is raised and the statement is stopped.  
@@ -76,6 +75,9 @@ SELECT...INTO creates a new table in the default filegroup and inserts the resul
 -   The identity column is from a remote data source.  
   
 If any one of these conditions is true, the column is created NOT NULL instead of inheriting the IDENTITY property. If an identity column is required in the new table but such a column is not available, or you want a seed or increment value that is different than the source identity column, define the column in the select list using the IDENTITY function. See "Creating an identity column using the IDENTITY function" in the Examples section below.  
+
+## Remarks  
+The `SELECT...INTO` statement operates in two parts - the new table is created, and then rows are inserted.  This means that if the inserts fail, they will all be rolled back, but the new (empty) table will remain.  If you need the entire operation to succeed or fail as a whole, use an [explicit transaction](../language-elements/begin-transaction-transact-sql.md).
   
 ## Limitations and Restrictions  
  You cannot specify a table variable or table-valued parameter as the new table.  
@@ -163,7 +165,7 @@ WHERE name = 'AddressID';
 ### D. Creating a table by specifying columns from a remote data source  
  The following example demonstrates three methods of creating a new table on the local server from a remote data source. The example begins by creating a link to the remote data source. The linked server name, `MyLinkServer,` is then specified in the FROM clause of the first SELECT...INTO statement and in the OPENQUERY function of the second SELECT...INTO statement. The third SELECT...INTO statement uses the OPENDATASOURCE function, which specifies the remote data source directly instead of using the linked server name.  
   
- **Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
 ```sql
 USE master;  
@@ -223,7 +225,7 @@ ORDER BY YearlyIncome;
 ### F. Creating a new table as a copy of another table and loading it a specified filegroup
 The following example demonstrates creating a new table as a copy of another table and loading it into a specified filegroup different from the default filegroup of the user.
 
- **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later.
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

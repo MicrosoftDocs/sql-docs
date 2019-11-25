@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 9fd9fa76-6128-410c-896f-741e6050143a
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sys.service_queues (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ manager: craigg
 |**is_receive_enabled**|**bit**|1 = Receive is enabled.|  
 |**is_enqueue_enabled**|**bit**|1 = Enqueue is enabled.|  
 |**is_retention_enabled**|**bit**|1 = Messages are retained until dialog end.|  
-|**is_poison_message_handling_enabled**|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Poison message handling is enabled.|  
+|**is_poison_message_handling_enabled**|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> 1 = Poison message handling is enabled.|  
   
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # ADD SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: b0f9ffab-6ac7-49d5-8369-477fa6b1c02b
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sys.module_assembly_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

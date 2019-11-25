@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "constraints [SQL Server], consistency checks"
   - "integrity [SQL Server], constraints"
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 The query data is stored in a temp table. After all requested tables or constraints have been checked, the result set is returned.
 DBCC CHECKCONSTRAINTS checks the integrity of FOREIGN KEY and CHECK constraints but does not check the integrity of the on-disk data structures of a table. These data structure checks can be performed by using [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) and [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
   
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later
   
 If *table_name* or *table_id* is specified and it is enabled for system versioning, DBCC CHECKCONSTRAINTS also performs temporal data consistency checks on the specified table. When *NO_INFOMSGS* is not specified, this command will return each consistency violation in the output on a separate line. The format of the output will be ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<what is wrong with temporal table record>.
   

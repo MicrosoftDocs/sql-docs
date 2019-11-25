@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 967586bf-d5f1-466c-82ab-8c461bfb6222
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Server Alter Trace Event Class

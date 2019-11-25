@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deleting Data Using XML Updategrams (SQLXML 4.0)

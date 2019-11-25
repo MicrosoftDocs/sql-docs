@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "digital signatures [Integration Services]"
   - "signing packages [Integration Services]"
   - "signatures [Integration Services]"
 ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Sign a Package by Using a Digital Certificate

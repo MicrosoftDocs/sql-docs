@@ -2,14 +2,14 @@
 title: "Troubleshoot Reports: Map Reports (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 01/17/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Troubleshoot Reports: Map Reports (Report Builder and SSRS)
   Issues with maps in a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report might occur when you add a map or map layer to your report, when you customize an existing map or map layer in your report, when you preview a map in a report, or when you publish a report with a map. Use this topic to help troubleshoot these issues.  
@@ -183,7 +183,7 @@ ms.author: maghan
   
 -   The map projection must be **Mercator**.  
   
--   For local preview, you must have internet access. For a report that runs from the report server, the report server must be configure to support tile background. For more information, see "Planning for Map Support" in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
+-   For local preview, you must have internet access. For a report that runs from the report server, the report server must be configure to support tile background. For more information, see [Plan a Map Report](plan-a-map-report-report-builder-and-ssrs.md).  
   
  For more information about adding a tile layer, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -202,6 +202,6 @@ ms.author: maghan
   
 ## See Also  
  [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Troubleshoot Report Builder](https://msdn.microsoft.com/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [Troubleshoot Report Builder](https://docs.microsoft.com/sql/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
   
   

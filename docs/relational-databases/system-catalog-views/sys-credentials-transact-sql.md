@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ea48cf80-904a-4273-a950-6d35b1b0a1b6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.credentials (Transact-SQL)

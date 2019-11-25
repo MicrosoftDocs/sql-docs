@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STPolyFromWKB (geometry Data Type)"
 ms.assetid: 8e8f0c41-0c62-4919-9d4c-d37c93fdd31c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STPolyFromWKB (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

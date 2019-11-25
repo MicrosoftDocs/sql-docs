@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ActiveConnection Property (ADO MD)
 Indicates to which ADO [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object the current cellset or catalog currently belongs.  

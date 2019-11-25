@@ -2,13 +2,11 @@
 title: Unattended install for SQL Server on SUSE Linux Enterprise Server
 titleSuffix: SQL Server
 description: SQL Server Script Sample - Unattended Install on SUSE Linux Enterprise Server
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 10/02/2017
+author: VanMSFT 
+ms.author: vanto
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ---
 # Sample: Unattended SQL Server installation script for SUSE Linux Enterprise Server
@@ -172,7 +170,7 @@ To run the script
    ```
 
 ### Understanding the script
-The first thing the Bash script does is set a few variables. These can be either scripting variables, like the sample, or environment variables. The variable ``` MSSQL_SA_PASSWORD ``` is **required** by SQL Server installation, the others are custom variables created for the script. The sample script performs the following steps:
+The first thing the Bash script does is set a few variables. These can be either scripting variables, like the sample, or environment variables. The variable `MSSQL_SA_PASSWORD` is **required** by SQL Server installation, the others are custom variables created for the script. The sample script performs the following steps:
 
 1. Import the public Microsoft GPG keys.
 

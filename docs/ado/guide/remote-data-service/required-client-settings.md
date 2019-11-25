@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Required Client Settings
 > [!IMPORTANT]

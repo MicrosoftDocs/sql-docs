@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Managing Passwords (AccessToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers:  

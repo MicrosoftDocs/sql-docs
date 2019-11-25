@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "custom data processing extensions [Reporting Services]"
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "external data sources [Reporting Services]"
   - "data processing extensions [Reporting Services], connections"
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Specify Connections for Custom Data Processing Extensions

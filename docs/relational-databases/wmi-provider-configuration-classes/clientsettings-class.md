@@ -1,5 +1,5 @@
 ---
-title: "ClientSettings Class | Microsoft Docs"
+title: "ClientSettings Class"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: cc58e1f2-2863-4034-ba21-aa9497320b07
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ClientSettings Class
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

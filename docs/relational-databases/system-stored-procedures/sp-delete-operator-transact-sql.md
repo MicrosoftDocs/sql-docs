@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_delete_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +34,10 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## Arguments  
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  The name of the operator to delete. *name* is **sysname**, with no default.  
   
- [ **@reassign_to_operator=** ]  **'***reassign_operator***'**  
+`[ @reassign_to_operator = ] 'reassign_operator'`
  The name of an operator to whom the specified operator's alerts can be reassigned. *reassign_operator* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

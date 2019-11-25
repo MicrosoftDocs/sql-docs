@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STIsClosed method"
 ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STIsClosed (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

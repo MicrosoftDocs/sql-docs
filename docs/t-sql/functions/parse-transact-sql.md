@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "PARSE function"
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -102,7 +101,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |Nederlands|Dutch|1043|nl-NL|  
 |Norsk|Norwegian|2068|nn-NO|  
 |Português|Portuguese|2070|pt-PT|  
-|Suomi|Finnish|1035|fi|  
+|Suomi|Finnish|1035|fi-FI|  
 |Svenska|Swedish|1053|sv-SE|  
 |čeština|Czech|1029|Cs-CZ|  
 |magyar|Hungarian|1038|Hu-HU|  

@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Extended Static Geometry Methods [SQL Server]"
 ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Extended Static Geometry Methods
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

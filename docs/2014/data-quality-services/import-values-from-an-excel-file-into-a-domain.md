@@ -11,7 +11,7 @@ f1_keywords:
   - "sql12.dqs.kb.importfailing.f1"
   - "sql12.dqs.kb.importselect.f1"
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # cdc.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

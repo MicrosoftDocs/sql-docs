@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ConvexHullAggregate method (geometry)"
 ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # ConvexHullAggregate (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

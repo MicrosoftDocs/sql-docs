@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetStmtOption (Visual FoxPro ODBC Driver)
 > [!NOTE]  

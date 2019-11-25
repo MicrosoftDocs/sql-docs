@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "methods [Reporting Services], report parameters"
   - "parameters [Reporting Services], methods"
 ms.assetid: cedf68af-646a-47e4-9fbb-39b5dc3de235
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Parameters Methods

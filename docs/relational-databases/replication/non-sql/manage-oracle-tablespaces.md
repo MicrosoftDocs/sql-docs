@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Manage Oracle Tablespaces
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,15 +26,15 @@ manager: craigg
   
 -   Use [sp_changearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). To use **sp_changearticle**, specify the following:  
   
-    -   The name of the Oracle Publisher for the parameter **@publisher**.  
+    -   The name of the Oracle Publisher for the parameter **\@publisher**.  
   
-    -   The name of the Oracle publication for the parameter **@publication**.  
+    -   The name of the Oracle publication for the parameter **\@publication**.  
   
-    -   The name of the article for the parameter **@article**.  
+    -   The name of the article for the parameter **\@article**.  
   
-    -   A value of 'tablespace' for the parameter **@property**.  
+    -   A value of 'tablespace' for the parameter **\@property**.  
   
-    -   The name of the tablespace for the parameter **@value**.  
+    -   The name of the tablespace for the parameter **\@value**.  
   
 ## See Also  
  [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

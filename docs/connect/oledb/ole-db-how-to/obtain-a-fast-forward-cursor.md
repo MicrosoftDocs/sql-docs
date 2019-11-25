@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "fast forward-only cursors"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Obtain a FAST_FORWARD Cursor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

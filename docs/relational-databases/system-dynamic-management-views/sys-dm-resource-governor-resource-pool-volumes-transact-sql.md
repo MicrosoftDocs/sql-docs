@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

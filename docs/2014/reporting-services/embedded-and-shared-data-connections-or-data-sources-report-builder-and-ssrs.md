@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "embedded data sources"
   - "shared data sources"
   - "data sources"
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Embedded and Shared Data Connections or Data Sources (Report Builder and SSRS)

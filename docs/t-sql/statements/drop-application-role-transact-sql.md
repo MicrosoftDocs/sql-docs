@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 44121ee7-ef40-405d-b03b-f8ddb4e3c559
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DROP APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

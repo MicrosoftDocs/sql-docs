@@ -42,9 +42,9 @@ manager: craigg
   
 -   [Remove features from a prepared instance of SQL Server](#RemoveFeatures)  
   
--   [Uninstalling a Prepared Instance](install-sql-server-using-sysprep.md#uninstall)  
+-   [Uninstalling a Prepared Instance](install-sql-server-using-sysprep.md#Uninstall)  
   
--   [Modifying or Uninstalling a Completed Instance of SQL Server.](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
+-   [Modifying or Uninstalling a Completed Instance of SQL Server.](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep Cluster Support  
  Beginning in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep supports clustered [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances in command line installations. For more information, see [What is Sysprep?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
@@ -319,5 +319,3 @@ manager: craigg
 ## See Also  
  [What is Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [How does Windows SysPrepWork](https://go.microsoft.com/fwlink/?LinkId=143547)  
-  
-  

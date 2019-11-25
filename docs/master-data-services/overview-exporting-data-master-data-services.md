@@ -1,5 +1,5 @@
 ---
-title: "Overview: Exporting Data (Master Data Services) | Microsoft Docs"
+title: Exporting Data
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "subscription views [Master Data Services]"
   - "subscription views [Master Data Services], about subscription views"
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Overview: Exporting Data (Master Data Services)
 

@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "items [Reporting Services], deleting"
   - "deleting report items"
   - "report items [Reporting Services], deleting"
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Delete an Item (Management Studio)

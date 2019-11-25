@@ -1,5 +1,5 @@
 ---
-title: "Custom Workflow XML Description (Master Data Services) | Microsoft Docs"
+title: Custom Workflow XML Description
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -9,9 +9,8 @@ ms.technology:
 
 ms.topic: "reference"
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Custom Workflow - XML Description
 

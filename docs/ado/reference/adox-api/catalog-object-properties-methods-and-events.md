@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Catalog Object Properties, Methods, and Events
 ## Properties/Collections  

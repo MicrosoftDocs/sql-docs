@@ -1,6 +1,6 @@
 ---
-title: "ProtocolName Property (SqlServerAlias Class) | Microsoft Docs"
-ms.custom: ""
+title: "ProtocolName Property (SqlServerAlias)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ProtocolName Property (SqlServerAlias Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STExteriorRing (geometry Data Type)"
 ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STExteriorRing (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

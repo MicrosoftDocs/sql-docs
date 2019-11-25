@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: aad6c325-3398-462c-aa6e-201dc89fa5ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getPooledConnection Method ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

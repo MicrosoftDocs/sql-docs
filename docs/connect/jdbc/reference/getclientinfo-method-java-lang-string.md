@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: e8e632c4-d6cc-4c5e-b6ad-873579343b19
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getClientInfo Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_getsubscriptiondtspackagename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +32,10 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. **'***publication***'** is **sysname**, with no default.  
   
- [ **@subscriber=**] **'***subscriber***'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is sysname, with a default of NULL.  
   
 ## Return Code Values  

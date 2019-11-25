@@ -8,8 +8,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "URL access [Reporting Services], syntax"
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Configure a URL  (SSRS Configuration Manager)
   Before you can use the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] or the Report Server Web service, you must configure at least one URL for each application. Configuring the URLs is mandatory if you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in "files-only" mode (that is, by selecting the **Install but do not configure the server** option on the Report Server Installation Options page in the Installation Wizard). If you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the default configuration, URLs are already configured for each application.  
@@ -26,7 +26,7 @@ ms.author: maghan
   
 -   Set advanced URL properties to define additional URLs.  
   
- For more information about how URLs are stored and maintained or interoperability issues, see [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) and [Install Reporting Services and Internet Information Services Side-by-Side &#40;SSRS Native Mode&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. To review examples of URLs often used in a Reporting Services installation, see [Examples of URLs](#URLExamples) in this topic.  
+ For more information about how URLs are stored and maintained or interoperability issues, see [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) and [Install Reporting Services and Internet Information Services Side-by-Side &#40;SSRS Native Mode&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). To review examples of URLs often used in a Reporting Services installation, see [Examples of URLs](#URLExamples) in this topic.  
   
 ## Prerequisites  
  Before you create or modify a URL, remember the following points:  
@@ -138,7 +138,7 @@ ms.author: maghan
   
  Specifies the fully qualified computer name for which the certificate is registered. The name that you specify must be identical to the name for which the certificate is registered.  
   
- You must have a certificate installed to use this option. You must also modify the UrlRoot configuration setting in the RSReportServer.config file so that it specifies the fully qualified name of the computer for which the certificate is registered. For more information, see [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ You must have a certificate installed to use this option. You must also modify the UrlRoot configuration setting in the RSReportServer.config file so that it specifies the fully qualified name of the computer for which the certificate is registered. For more information, see [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### To set advanced properties on a URL  
   

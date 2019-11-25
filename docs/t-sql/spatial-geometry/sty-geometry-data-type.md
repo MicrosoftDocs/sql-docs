@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STY (geometry Data Type)"
 ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STY (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

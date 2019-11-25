@@ -1,7 +1,7 @@
 ---
 title: "Columns with a Name Specified as a Wildcard Character | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.custom: "fresh2019may"
+ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -10,15 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "names [SQL Server], columns with"
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Columns with a Name Specified as a Wildcard Character
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  If the column name specified is a wildcard character (\*), the content of that column is inserted as if there is no column name specified. If this column is a non-**xml** type column, the column content is inserted as a text node, as shown in the following example:  
+
+If the column name specified is a wildcard character (\*), the content of that column is inserted as if there is no column name specified. If this column is a non-**xml** type column, the column content is inserted as a text node, as shown in the following example:  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT E.BusinessEntityID "@EmpID",   
@@ -26,19 +27,21 @@ SELECT E.BusinessEntityID "@EmpID",
        MiddleName "*",   
        LastName "*"  
 FROM   HumanResources.Employee AS E  
-INNER JOIN Person.Person AS P  
+  INNER JOIN Person.Person AS P  
     ON E.BusinessEntityID = P.BusinessEntityID  
 WHERE E.BusinessEntityID=1  
 FOR XML PATH;  
 ```  
   
  This is the result:  
-  
- `<row EmpID="1">KenJSánchez</row>`  
-  
+
+```xml
+<row EmpID="1">KenJSánchez</row>
+```
+
  If the column is of **xml** type, the corresponding XML tree is inserted. For example, the following query specifies "*" for the column name that contains the XML returned by the XQuery against the Instructions column.  
   
-```  
+```sql
 SELECT   
        ProductModelID,  
        Name,  
@@ -48,25 +51,20 @@ SELECT
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
 FOR XML PATH;   
-GO  
 ```  
   
  This is the result. The XML returned by XQuery is inserted without a wrapping element.  
-  
- `<row>`  
-  
- `<ProductModelID>7</ProductModelID>`  
-  
- `<Name>HL Touring Frame</Name>`  
-  
- `<MI:Location LocationID="10">...</MI:Location>`  
-  
- `<MI:Location LocationID="20">...</MI:Location>`  
-  
- `...`  
-  
- `</row>`  
-  
+
+```xml
+<row>
+  <ProductModelID>7</ProductModelID>
+  <Name>HL Touring Frame</Name>
+  <MI:Location LocationID="10">...</MI:Location>
+  <MI:Location LocationID="20">...</MI:Location>
+  ...
+</row>
+```
+
 ## See Also  
  [Use PATH Mode with FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   

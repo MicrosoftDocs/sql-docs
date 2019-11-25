@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Connect to MySQL (MySQLToSQL)
 Use the **Connect to MySQL** dialog box to connect to the MySQL database that you want to migrate.  

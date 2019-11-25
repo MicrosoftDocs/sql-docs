@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLEDB Errors Event Class

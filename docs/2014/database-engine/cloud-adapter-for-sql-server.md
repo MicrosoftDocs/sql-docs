@@ -4,19 +4,18 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Cloud adapter"
-  - "Deploy to Windows Azure"
+  - "Deploy to Azure"
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
 ---
 # Cloud Adapter for SQL Server
-  The Cloud Adapter service is created as part of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provisioning on a Windows Azure VM. The Cloud Adapter service generates a self-signed SSL certificate as part of its first run, and then runs as a **Local System** account. It generates a configuration file that is used to configure itself. The Cloud Adapter also creates a Windows Firewall rule to allow its incoming TCP connections at default port 11435.  
+  The Cloud Adapter service is created as part of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provisioning on an Azure VM. The Cloud Adapter service generates a self-signed SSL certificate as part of its first run, and then runs as a **Local System** account. It generates a configuration file that is used to configure itself. The Cloud Adapter also creates a Windows Firewall rule to allow its incoming TCP connections at default port 11435.  
   
  The Cloud Adapter is a stateless, synchronous service that receives messages from the on-premise instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. When the Cloud Adapter service is stopped, it stops the remote access Cloud Adapter, unbinds the SSL certificate, and disables the Windows Firewall rule.  
   

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: a56e08ae-6f4e-4dc6-b175-ff457d0d7a81
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getTimeDateFunctions Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

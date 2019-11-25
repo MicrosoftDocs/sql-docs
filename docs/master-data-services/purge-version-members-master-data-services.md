@@ -1,5 +1,5 @@
 ---
-title: "Purge Version Members (Master Data Services) | Microsoft Docs"
+title: Purge Version Members
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Purge Version Members (Master Data Services)
 

@@ -1,7 +1,7 @@
 ---
 title: "Use SQL Server Connector with SQL Encryption Features | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/04/2017"
+ms.date: "09/12/2019"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,11 +12,9 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-manager: craigg
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Use SQL Server Connector with SQL Encryption Features
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Common [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption activities using an asymmetric key protected by the Azure Key Vault include the following three areas.  
   
 -   Transparent Data Encryption by using an Asymmetric Key from Azure Key Vault  
@@ -30,8 +28,10 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 > [!NOTE]  
 >  Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Upgrade to version 1.0.1.0 or later by visiting the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under "Upgrade of SQL Server Connector."  
   
-## Transparent Data Encryption by using an Asymmetric Key from Azure Key Vault  
- After completing Parts I through IV of the topic Setup Steps for Extensible Key Management Using the Azure Key Vault, use the Azure Key Vault key to encrypt the database encryption key using TDE.  
+## Transparent Data Encryption by using an Asymmetric Key from Azure Key Vault
+
+After completing Parts I through IV of the topic Setup Steps for Extensible Key Management Using the Azure Key Vault, use the Azure Key Vault key to encrypt the database encryption key using TDE. For more information about rotating keys using PowerShell, see [Rotate the Transparent Data Encryption (TDE) protector using PowerShell](/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation).
+ 
 You will need to create a credential and a login, and create a database encryption key which will encrypt the data and logs in the database. To encrypt a database requires **CONTROL** permission on the database. The following graphic shows the hierarchy of the encryption key when using the Azure Key Vault.  
   
  ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
@@ -43,8 +43,8 @@ You will need to create a credential and a login, and create a database encrypti
      Modify the [!INCLUDE[tsql](../../../includes/tsql-md.md)] script below in the following ways:  
   
     -   Edit the `IDENTITY` argument (`ContosoDevKeyVault`) to point to your Azure Key Vault.
-        - If you're using **public Azure**, replace the `IDENTITY` argument with the name of your Azure Key Vault from Part II.
-        - If you're using a **private Azure cloud** (ex. Azure Government, Azure China, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that is returned in Part II, step 3. Do not include "https://" in the Vault URI.   
+        - If you're using **global Azure**, replace the `IDENTITY` argument with the name of your Azure Key Vault from Part II.
+        - If you're using a **private Azure cloud** (ex. Azure Government, Azure China 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that is returned in Part II, step 3. Do not include "https://" in the Vault URI.   
   
     -   Replace the first part of the `SECRET` argument with the Azure Active Directory **Client ID** from Part I. In this example, the **Client ID** is `EF5C8E094D2A4A769998D93440D8115D`.  
   
@@ -56,9 +56,9 @@ You will need to create a credential and a login, and create a database encrypti
     ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
-        WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+        WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
         SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
@@ -140,8 +140,8 @@ The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] needs the credential when acc
      Modify the [!INCLUDE[tsql](../../../includes/tsql-md.md)] script below in the following ways:  
   
     -   Edit the `IDENTITY` argument (`ContosoDevKeyVault`) to point to your Azure Key Vault.
-        - If you're using **public Azure**, replace the `IDENTITY` argument with the name of your Azure Key Vault from Part II.
-        - If you're using a **private Azure cloud** (ex. Azure Government, Azure China, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that is returned in Part II, step 3. Do not include "https://" in the Vault URI.    
+        - If you're using **global Azure**, replace the `IDENTITY` argument with the name of your Azure Key Vault from Part II.
+        - If you're using a **private Azure cloud** (ex. Azure Government, Azure China 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that is returned in Part II, step 3. Do not include "https://" in the Vault URI.    
   
     -   Replace the first part of the `SECRET` argument with the Azure Active Directory **Client ID** from Part I. In this example, the **Client ID** is `EF5C8E094D2A4A769998D93440D8115D`.  
   
@@ -154,9 +154,9 @@ The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] needs the credential when acc
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
-            WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+            WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
             SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
         FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;    

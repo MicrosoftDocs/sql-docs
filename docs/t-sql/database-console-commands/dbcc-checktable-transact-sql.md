@@ -24,9 +24,8 @@ helpviewer_keywords:
   - "low overhead checks"
   - "table integrity checks [SQL Server]"
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ DBCC CHECKTABLE
     ]     
 )    
     [ WITH     
-        { ALL_ERRORMSGS ]    
+        { [ ALL_ERRORMSGS ]    
           [ , EXTENDED_LOGICAL_CHECKS ]     
           [ , NO_INFOMSGS ]    
           [ , TABLOCK ]     
@@ -77,7 +76,7 @@ REPAIR_FAST
  Syntax is maintained for backward compatibility only. No repair actions are performed.  
     
 REPAIR_REBUILD  
- Performs repairs that have no possibility of data loss. This can include quick repairs, such as repairing missing rows in non-clustered indexes, and more time-consuming repairs, such as rebuilding an index.  
+ Performs repairs that have no possibility of data loss. This can include quick repairs, such as repairing missing rows in nonclustered indexes, and more time-consuming repairs, such as rebuilding an index.  
  This argument does not repair errors involving FILESTREAM data.  
     
  > [!NOTE]  
@@ -120,7 +119,7 @@ DATA_PURITY
  If PHYSICAL_ONLY is specified, column-integrity checks are not performed.  
     
 MAXDOP  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and later).  
  
  Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the Database Engine uses the Resource Governor MAXDOP value, described in ALTER WORKLOAD GROUP (Transact-SQL). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
     

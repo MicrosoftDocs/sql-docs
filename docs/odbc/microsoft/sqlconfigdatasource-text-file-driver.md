@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLConfigDataSource (Text File Driver)
 > [!NOTE]  

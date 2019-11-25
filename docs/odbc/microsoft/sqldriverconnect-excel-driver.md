@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLDriverConnect (Excel Driver)
 > [!NOTE]  

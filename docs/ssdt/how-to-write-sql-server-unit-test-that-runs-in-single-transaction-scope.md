@@ -8,9 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: Write a SQL Server Unit Test that Runs within the Scope of a Single Transaction
 You can modify unit tests to run within the scope of a single transaction. If you take this approach, you can roll back any changes that the test enacted after the test ends. The following procedures explain how to:  

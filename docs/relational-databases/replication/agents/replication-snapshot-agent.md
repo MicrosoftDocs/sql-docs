@@ -15,14 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Replication Snapshot Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The Replication Snapshot Agent is an executable file that prepares snapshot files containing schema and data of published tables and database objects, stores the files in the snapshot folder, and records synchronization jobs in the distribution database.  
   
 > [!NOTE]  
->  Parameters can be specified in any order.  
+>  - Parameters can be specified in any order.  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## Syntax  
   
@@ -177,7 +179,7 @@ snapshot [ -?]
  Is if irrelevant deletes are sent to the Subscriber. Irrelevant deletes are DELETE commands that are sent to Subscribers for rows that do not belong to the Subscriber's partition. Irrelevant deletes do not affect data integrity or convergence, but they can result in unnecessary network traffic. The default value of **MaxNetworkOptimization** is **0**. Setting **MaxNetworkOptimization** to **1** minimizing the chances of irrelevant deletes thereby reducing network traffic and maximizing network optimization. Setting this parameter to **1** can also increase the storage of metadata and cause performance to degrade at the Publisher if multiple levels of join filters and complex subset filters are present. You should carefully assess your replication topology and set **MaxNetworkOptimization** to **1** only if network traffic from irrelevant deletes is unacceptably high.  
   
 > [!NOTE]
->  Setting this parameter to **1** is useful only when the synchronization optimization option of the merge publication is set to **true** (the **@keep_partition_changes** parameter of [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
+>  Setting this parameter to **1** is useful only when the synchronization optimization option of the merge publication is set to **true** (the `@keep_partition_changes**` parameter of [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
   
  **-Output** _output_path_and_file_name_  
  Is the path of the agent output file. If the file name is not provided, the output is sent to the console. If the specified file name exists, the output is appended to the file.  
@@ -242,7 +244,7 @@ snapshot [ -?]
  Is the character or character sequence that marks the end of a row in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bulk-copy data file. The default is \n\<,@g>\n.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Is the maximum number of seconds that the Snapshot Agent waits when the number of concurrent dynamic snapshot processes running is at the limit set by the **@max_concurrent_dynamic_snapshots** property of [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). If the maximum number of seconds is reached and the Snapshot Agent is still waiting, it will exit. A value of 0 means that the agent waits indefinitely, although it can be canceled.  
+ Is the maximum number of seconds that the Snapshot Agent waits when the number of concurrent dynamic snapshot processes running is at the limit set by the `@max_concurrent_dynamic_snapshots` property of [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). If the maximum number of seconds is reached and the Snapshot Agent is still waiting, it will exit. A value of 0 means that the agent waits indefinitely, although it can be canceled.  
   
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  This parameter has been deprecated and is supported for backward-compatibility only.  

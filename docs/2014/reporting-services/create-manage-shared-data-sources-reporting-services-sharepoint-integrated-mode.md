@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SharePoint integration [Reporting Services], shared data sources"
   - "shared data sources [Reporting Services]"
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create and Manage Shared Data Sources (Reporting Services in SharePoint Integrated Mode)

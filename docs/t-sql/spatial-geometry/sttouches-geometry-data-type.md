@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STTouches (geometry Data Type)"
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STTouches (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

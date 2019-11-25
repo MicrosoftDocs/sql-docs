@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "GetErrorInfo method"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

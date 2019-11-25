@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,16 +34,16 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## Arguments  
- [ **@principal_id** = ] *principal_id*  
+`[ @principal_id = ] principal_id`
  Is the ID of the database user or role in the **msdb** database for the association to delete. *principal_id* is **int**, with a default of NULL. To make a public profile into a private profile, provide the principal ID **0** or the principal name **'public'**. Either *principal_id* or *principal_name* must be specified.  
   
- [ **@principal_name** = ] **'***principal_name***'**  
+`[ @principal_name = ] 'principal_name'`
  Is the name of the database user or role in the **msdb** database for the association to delete. *principal_name* is **sysname**, with a default of NULL. To make a public profile into a private profile, provide the principal ID **0** or the principal name **'public'**. Either *principal_id* or *principal_name* must be specified.  
   
- [ **@profile_id** = ] *profile_id*  
+`[ @profile_id = ] profile_id`
  Is the ID of the profile for the association to delete. *profile_id* is **int**, with a default of NULL. Either *profile_id* or *profile_name* must be specified.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+`[ @profile_name = ] 'profile_name'`
  Is the name of the profile for the association to delete. *profile_name* is **sysname**, with a default of NULL. Either *profile_id* or *profile_name* must be specified.  
   
 ## Return Code Values  

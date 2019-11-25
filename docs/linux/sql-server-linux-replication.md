@@ -1,14 +1,13 @@
 ---
-title: SQL Server Replication on Linux | Microsoft Docs
+title: SQL Server Replication on Linux
 description: This article describes SQL Server replication on Linux.
-author: MikeRayMSFT 
+author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.custom: "sql-linux"
 ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
@@ -31,7 +30,6 @@ A replication schema can mix and match operating system platforms. For example, 
 SQL Server instances on Linux can participate in any type of replication.
 
 * Transactional
-* Merge
 * Snapshot
 
 For detailed information about replication, see [SQL Server replication documentation](../relational-databases/replication/sql-server-replication.md).
@@ -42,8 +40,6 @@ For [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] the following replic
 
 * Snapshot replication
 * Transactional replication
-* Merge replication
-* Peer-to-Peer replication
 * Replication with non-default ports <!--Add link to explanation-->
 * Replication with AD authentication
 * Replication configurations across Windows and Linux
@@ -53,7 +49,8 @@ For [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] the following replic
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] does not support the following features:
 
-* Immediate update subscribers
+* Merge replication
+* Peer-to-Peer replication
 * Oracle publishing
 
 ## Next steps

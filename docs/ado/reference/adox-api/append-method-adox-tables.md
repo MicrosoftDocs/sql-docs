@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Append Method (ADOX Tables)
 Adds a new [Table](../../../ado/reference/adox-api/table-object-adox.md) object to the [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) collection.  

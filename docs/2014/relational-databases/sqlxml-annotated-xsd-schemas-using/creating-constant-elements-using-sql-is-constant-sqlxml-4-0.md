@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "constant elements [SQLXML]"
   - "annotated XSD schemas, constant elements"
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Creating Constant Elements Using sql:is-constant (SQLXML 4.0)

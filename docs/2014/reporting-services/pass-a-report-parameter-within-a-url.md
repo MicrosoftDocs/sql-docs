@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "URL access [Reporting Services], passing parameters"
   - "passing parameters [Reporting Services]"
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Pass a Report Parameter Within a URL

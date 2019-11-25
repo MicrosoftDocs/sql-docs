@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

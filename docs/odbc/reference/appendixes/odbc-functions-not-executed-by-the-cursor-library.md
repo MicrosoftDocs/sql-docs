@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f2941522-75eb-4db9-9468-4800b884dac2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC Functions Not Executed by the Cursor Library
 > [!IMPORTANT]  

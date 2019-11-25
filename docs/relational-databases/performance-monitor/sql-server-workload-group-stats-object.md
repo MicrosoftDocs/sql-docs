@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, Workload Group Stats Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

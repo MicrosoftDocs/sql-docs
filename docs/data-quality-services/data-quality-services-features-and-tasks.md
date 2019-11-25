@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Data Quality Services Features and Tasks
 
@@ -18,7 +17,7 @@ manager: craigg
 
   Find information that anyone-data steward, Data Quality Services administrator, or SQL Server administrator-requires to prepare and execute a data quality project.  
   
- ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Designing and Implementing a Data Quality Solution**  
+ ![Small File Folder Icon](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") **Designing and Implementing a Data Quality Solution**  
  [Data Quality Client Application](../data-quality-services/data-quality-client-application.md)  
   
  [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
@@ -33,7 +32,7 @@ manager: craigg
   
  [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
   
- ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Administering Data Quality Services**  
+ ![Small File Folder Icon](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") **Administering Data Quality Services**  
  [DQS Administration](../data-quality-services/dqs-administration.md)  
   
  [DQS Security](../data-quality-services/dqs-security.md)  

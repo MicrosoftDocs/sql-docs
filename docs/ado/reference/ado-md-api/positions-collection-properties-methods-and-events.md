@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 56091fcb-71e1-463a-b8ae-c09108eece2f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Positions Collection Properties, Methods, and Events
 ## Properties  

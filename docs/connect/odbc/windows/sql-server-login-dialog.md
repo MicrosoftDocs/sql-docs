@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: "v-jizho2"
-manager: craigg
 ---
 # SQL Server Login Dialog Box (ODBC)
 

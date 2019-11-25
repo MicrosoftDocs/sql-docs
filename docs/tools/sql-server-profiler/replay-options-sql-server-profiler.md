@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "health monitor [SQL Server]"
   - "Replay Configuration dialog box"
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Replay Options (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

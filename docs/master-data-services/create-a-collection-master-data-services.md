@@ -1,5 +1,5 @@
 ---
-title: "Create a Collection (Master Data Services) | Microsoft Docs"
+title: Create a Collection
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "creating collections [Master Data Services]"
   - "collections [Master Data Services], creating"
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Collection (Master Data Services)
 

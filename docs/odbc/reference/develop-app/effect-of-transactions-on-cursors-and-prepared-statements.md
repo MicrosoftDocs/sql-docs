@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Effect of Transactions on Cursors and Prepared Statements
 Committing or rolling back a transaction has the following effect on cursors and access plans:  

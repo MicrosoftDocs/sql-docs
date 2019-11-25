@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d3cf324c-aa52-47a6-b44a-a59a778fad23
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Microsoft Excel Driver Programming Considerations
 This section contains the following topics.  

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "report servers [Reporting Services], properties"
@@ -14,8 +12,8 @@ helpviewer_keywords:
   - "report items [Reporting Services], properties"
   - "items [Reporting Services], properties"
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Server Item Properties

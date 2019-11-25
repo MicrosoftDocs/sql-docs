@@ -1,13 +1,12 @@
 ---
-title: Configure SQL Server replication on Linux | Microsoft Docs
+title: Configure SQL Server replication on Linux
 description: This tutorial shows how to configure SQL Server snapshot replication on Linux.
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---

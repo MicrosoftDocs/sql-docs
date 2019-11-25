@@ -1,5 +1,5 @@
 ---
-title: "Assign Functional Area Permissions (Master Data Services) | Microsoft Docs"
+title: Assign Functional Area Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "permissions [Master Data Services], assigning functional area permissions"
   - "functional area permissions [Master Data Services], assigning"
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Assign Functional Area Permissions (Master Data Services)
 

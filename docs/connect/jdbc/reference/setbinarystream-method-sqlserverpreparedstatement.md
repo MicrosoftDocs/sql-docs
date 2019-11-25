@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 2adb2b88-96d6-4645-86d0-0388c8186691
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # setBinaryStream Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

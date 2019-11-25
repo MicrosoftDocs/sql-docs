@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysdbmaintplan_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

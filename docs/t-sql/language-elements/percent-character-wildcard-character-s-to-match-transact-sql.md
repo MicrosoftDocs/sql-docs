@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "wildcard characters [SQL Server]"
   - "characters [SQL Server], wildcard"
 ms.assetid: d4cbc1a9-37e1-4101-97fb-e6ac30c1223e
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Percent character (Wildcard - Character(s) to Match) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

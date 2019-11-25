@@ -1,14 +1,14 @@
 ---
-title: Monitor loads for Parallel Data Warehouse | Microsoft Docs
+title: Monitor loads
 description: Monitor active and recent loads by using the Analytics Platform System (APS) Admin Console or the Parallel Data Warehouse (PDW) System Views."
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Monitor loads into Parallel Data Warehouse

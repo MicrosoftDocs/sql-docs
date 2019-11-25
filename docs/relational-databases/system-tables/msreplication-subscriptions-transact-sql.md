@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

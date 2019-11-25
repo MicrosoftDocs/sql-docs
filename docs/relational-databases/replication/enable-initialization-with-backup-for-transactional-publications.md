@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 9df00514-aa9d-4ac6-9766-d226c9958175
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Enable Initialization with Backup for Transactional Publications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

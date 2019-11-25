@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "NumRings method"
 ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # NumRings (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

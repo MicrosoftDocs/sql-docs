@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetDiagRec Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetDiagRec(  
      SQLSMALLINT     HandleType,  

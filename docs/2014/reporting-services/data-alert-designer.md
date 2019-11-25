@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "editing, data alerts"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "creating, data alerts"
   - "creating, alerts"
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Data Alert Designer

@@ -1,6 +1,6 @@
 ---
-title: "PropertyNumVal Property (ServerNetworkProtocolProperty Class) | Microsoft Docs"
-ms.custom: ""
+title: "PropertyNumVal Property (ServerNetworkProtocolProperty)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: wmi
 ms.topic: "reference"
 apiname: 
-  - "PropertyNumVal Property (ServerNetworkProtocolProperty Class)"
+  - "PropertyNumVal Property (ServerNetworkProtocolProperty"
 apilocation: 
   - "sqlmgmproviderxpsp2up.mof"
 apitype: "MOFDef"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 93fce2e8-adf5-48cf-8106-1fead7501a6f
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # PropertyNumVal Property (ServerNetworkProtocolProperty Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

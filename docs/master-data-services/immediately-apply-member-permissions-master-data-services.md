@@ -1,5 +1,5 @@
 ---
-title: "Immediately Apply Member Permissions (Master Data Services) | Microsoft Docs"
+title: Immediately Apply Member Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "members [Master Data Services], applying permissions immediately"
   - "permissions [Master Data Services], applying member permissions immediately"
 ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Immediately Apply Member Permissions (Master Data Services)
 

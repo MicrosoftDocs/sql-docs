@@ -14,7 +14,7 @@ manager: craigg
 # Simulating an EXISTS Clause in a Natively Compiled Stored Procedure
   Natively compiled stored procedures do not support the `EXISTS` clause, but there is a workaround:  
   
-```tsql  
+```sql  
 DECLARE @exists BIT = 0  
 SELECT TOP 1 @exists = 1 FROM MyTable WHERE ...  
 IF @exists = 1  

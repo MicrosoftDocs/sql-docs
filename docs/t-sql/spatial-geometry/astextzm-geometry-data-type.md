@@ -17,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "AsTextZM (geometry Data Type)"
 ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # AsTextZM (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

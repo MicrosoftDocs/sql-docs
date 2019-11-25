@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DENY Assembly Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

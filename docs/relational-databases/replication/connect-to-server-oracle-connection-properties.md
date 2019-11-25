@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1bb7396f-cbb2-4f88-b82b-543287ed4172
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Connect to Server (Oracle), Connection Properties
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

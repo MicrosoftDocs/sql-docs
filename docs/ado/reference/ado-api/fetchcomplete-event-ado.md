@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # FetchComplete Event (ADO)
 The **FetchComplete** event is called after all the records in a lengthy asynchronous operation have been retrieved into the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "KILL STATS JOB statement"
   - "statistics update jobs [SQL Server]"
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # KILL STATS JOB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

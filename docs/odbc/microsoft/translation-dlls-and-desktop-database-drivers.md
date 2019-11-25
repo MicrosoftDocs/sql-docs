@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 09ebe734-39a0-4af0-a39b-1d5479f69635
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Translation DLLs and Desktop Database Drivers
 Not supported.

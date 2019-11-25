@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: 0e25fe22-2536-4d7e-ba4a-1921e880f367
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # BACKUP MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

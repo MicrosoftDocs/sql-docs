@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 2c61859b-00c9-4267-aef3-bc3ad075db69
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Exec Prepared SQL Event Class

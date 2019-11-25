@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d81682e3-2444-4d66-ad00-1cf628632e8b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_syspolicy_repair_policy_automation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

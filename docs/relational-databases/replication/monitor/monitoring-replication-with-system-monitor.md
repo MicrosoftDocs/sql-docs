@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Monitoring Replication with System Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

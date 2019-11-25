@@ -1,6 +1,6 @@
 ---
-title: "Implementing a CASE Expression in a Natively Compiled Stored Procedure | Microsoft Docs"
-ms.custom: ""
+title: "CASE expression in a natively compiled stored procedure"
+ms.custom: seo-dt-2019
 ms.date: "11/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing a CASE Expression in a Natively Compiled Stored Procedure

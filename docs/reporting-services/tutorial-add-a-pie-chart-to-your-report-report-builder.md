@@ -7,8 +7,8 @@ ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Tutorial: Add a Pie Chart to Your Report (Report Builder)
 In this tutorial, you create pie chart in a Reporting Services paginated report. You add percentages and combine small slices into a single slice.

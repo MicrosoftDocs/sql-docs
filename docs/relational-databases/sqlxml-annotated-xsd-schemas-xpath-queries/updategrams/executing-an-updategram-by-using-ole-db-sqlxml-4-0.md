@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing an Updategram by Using OLE DB (SQLXML 4.0)

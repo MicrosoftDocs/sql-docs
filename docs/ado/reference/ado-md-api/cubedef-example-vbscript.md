@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 4d72a912-ef53-4989-9fca-214937574116
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # CubeDef Example (VBScript)
 This example displays cube metadata on a web page.  

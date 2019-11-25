@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

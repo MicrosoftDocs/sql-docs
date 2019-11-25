@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # SQL Server Agent Tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

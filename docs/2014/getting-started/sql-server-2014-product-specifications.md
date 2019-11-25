@@ -4,15 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "data-quality-services"
-  - "database-engine"
-  - "integration-services"
-  - "master-data-services"
-  - "replication"
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server, product specifications"
@@ -26,7 +18,24 @@ manager: craigg
 ---
 # SQL Server 2014 Product Specifications
   The topics in the following table provide product specification details for this release:  
-  
+
+<!--
+I (GeneMi = MightyPen, 2019-04-20) am replacing this multiValue metadata with the single value 'database-engine'.
+'ms.technology' no longer allowed multiple values.  DevO= 1515083.
+
+ms.technology: 
+  - "analysis-services"
+  - "data-quality-services"
+  - "database-engine"
+  - "integration-services"
+  - "master-data-services"
+  - "replication"
+  - "reporting-services-native"
+  - "reporting-services-sharepoint"
+
+This HTML comment can be erased, if you like.
+-->
+
  [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
  The maximum number of processors supported by each edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

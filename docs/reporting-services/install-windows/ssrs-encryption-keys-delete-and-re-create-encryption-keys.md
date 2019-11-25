@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "removing encryption keys"
   - "resetting encryption keys"
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # SSRS Encryption Keys - Delete and Re-create Encryption Keys
   Deleting and re-creating encryption keys are activities that fall outside of routine encryption key maintenance. You perform these tasks in response to a specific threat to your report server, or as a last resort when you can no longer access a report server database.  
@@ -101,7 +101,7 @@ ms.author: maghan
   
 1.  For each shared data source, you must retype the connection string.  
   
-2.  For each report and shared data source that uses stored credentials, you must retype the user name and password, and then save. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+2.  For each report and shared data source that uses stored credentials, you must retype the user name and password, and then save. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 3.  For each data-driven subscription, open each subscription and retype the credentials to the subscription database.  
   

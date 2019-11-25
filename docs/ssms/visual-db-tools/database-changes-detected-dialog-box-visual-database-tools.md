@@ -12,9 +12,8 @@ f1_keywords:
   - "vdtsql.chm:65543"
   - "vdtsql.chm:65554"
 ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Database Changes Detected Dialog Box (Visual Database Tools)

@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Environment.Help.General"
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Options (Environment - Help - General Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

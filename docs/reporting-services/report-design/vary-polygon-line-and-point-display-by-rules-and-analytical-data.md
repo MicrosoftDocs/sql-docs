@@ -2,7 +2,7 @@
 title: "Vary Polygon, Line, and Point Display by Rules and Analytical Data | Microsoft Docs"
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -18,8 +18,8 @@ f1_keywords:
   - "10536"
   - "sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Vary Polygon, Line, and Point Display by Rules and Analytical Data
   The display options for polygons, lines, and points on a map layer are controlled by setting options for the layer, by setting rules for the map elements on the layer, or by overriding options for specific embedded map elements on a layer.  

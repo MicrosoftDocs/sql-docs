@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DDL Event Groups

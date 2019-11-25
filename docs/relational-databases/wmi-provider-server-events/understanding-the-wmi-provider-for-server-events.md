@@ -1,5 +1,5 @@
 ---
-title: "Understanding the WMI Provider for Server Events | Microsoft Docs"
+title: "Understanding the WMI Provider for Server Events"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Understanding the WMI Provider for Server Events
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Data Migration Settings (SybaseToSQL)
   

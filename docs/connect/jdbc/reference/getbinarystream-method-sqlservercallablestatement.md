@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: b0d2cff1-1ab0-44c2-9824-70106fc43370
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getBinaryStream Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

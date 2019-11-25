@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Data Collector Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

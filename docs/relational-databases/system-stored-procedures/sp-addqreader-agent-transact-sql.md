@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_addqreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Adds a Queue Reader agent for a given Distributor. This stored procedure is executed at the Distributor on the distribution database or at the Publisher on the publication database.  
   
@@ -35,19 +34,19 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## Arguments  
- [ **@job_login**= ] **'***job_login***'**  
+`[ @job_login = ] 'job_login'`
  Is the login for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with no default. This Windows account is always used for agent connections to the Distributor.  
   
- [ **@job_password**= ] **'***job_password***'**  
+`[ @job_password = ] 'job_password'`
  Is the password for the Windows account under which the agent runs. *job_password* is **sysname**, with no default.  
   
 > [!IMPORTANT]  
 >  Do not store authentication information in script files. For best security, login names and passwords should be supplied at runtime.  
   
- [ **@job_name**= ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  Is the name of an existing agent job. *job_name* is **sysname**, with a default value of NULL. This parameter is only specified when the agent is created using an existing job instead of a newly created job (the default).  
   
- [ **@frompublisher=** ] *frompublisher*  
+`[ @frompublisher = ] frompublisher`
  Specifies whether the procedure is being executed at the Publisher. *frompublisher* is bit, with a default value of **0**. A value of **1** means that the procedure is being executed from the Publisher on the publication database.  
   
 ## Return Code Values  

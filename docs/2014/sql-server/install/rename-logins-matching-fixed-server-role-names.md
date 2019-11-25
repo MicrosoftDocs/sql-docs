@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined login names [SQL Server]"
@@ -55,10 +54,10 @@ manager: craigg
   
 2.  Drop the logins.  
   
-3.  Use the **sp_addlogin** system procedure to create new logins. Specify the SID returned in step 1 in the **@sid** parameter for each corresponding login.  
+3.  Use the **sp_addlogin** system procedure to create new logins. Specify the SID returned in step 1 in the **\@sid** parameter for each corresponding login.  
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

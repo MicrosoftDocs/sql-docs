@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.agent.alert.f1"
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Agent Properties (Alert System Page)

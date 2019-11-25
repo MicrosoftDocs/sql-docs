@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 45938efb-b678-47d8-9345-644fa26ad679
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLTables (dBASE Driver)
 > [!NOTE]  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "packages [Integration Services], importing"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "importing packages"
   - "exporting packages"
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Import and Export Packages (SSIS Service)

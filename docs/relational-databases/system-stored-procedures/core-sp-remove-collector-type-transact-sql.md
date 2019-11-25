@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # core.sp_remove_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

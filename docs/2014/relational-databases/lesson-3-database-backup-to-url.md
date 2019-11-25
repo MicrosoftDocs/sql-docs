@@ -1,33 +1,32 @@
 ---
-title: "Lesson 4: Create a database in Windows Azure Storage | Microsoft Docs"
+title: "Lesson 4: Create a database in Azure Storage | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---
-# Lesson 4: Create a database in Windows Azure Storage
-  In this lesson, you will learn how to create a database using the SQL Server Data Files in Windows Azure feature. Note that before this lesson, you must complete the Lesson 1, 2, and 3. Lesson 3 is a very important step because you need to store the information about your Windows Azure storage container and its associated policy name and SAS key in the SQL Server credential store before Lesson 4.  
+# Lesson 4: Create a database in Azure Storage
+  In this lesson, you will learn how to create a database using the SQL Server Data Files in Azure feature. Note that before this lesson, you must complete the Lesson 1, 2, and 3. Lesson 3 is a very important step because you need to store the information about your Azure storage container and its associated policy name and SAS key in the SQL Server credential store before Lesson 4.  
   
- For each storage container used by a data or log file, you must create a SQL Server Credential whose name matches the container path. Then, you can create a new database in Windows Azure Storage  
+ For each storage container used by a data or log file, you must create a SQL Server Credential whose name matches the container path. Then, you can create a new database in Azure Storage  
   
  This lesson assumes that you already completed the following steps:  
   
--   You have a Windows Azure Storage account.  
+-   You have an Azure Storage account.  
   
--   You have created a container under your Windows Azure Storage account.  
+-   You have created a container under your Azure Storage account.  
   
 -   You have created a policy on a container with read, write, and list rights. You also generated a SAS key.  
   
 -   You have created a SQL Server credential on the source machine.  
   
- To create a database in Windows Azure using the SQL Server Data Files in Windows Azure Storage feature, follow these steps:  
+ To create a database in Azure using the SQL Server Data Files in Azure Storage feature, follow these steps:  
   
 1.  Connect to SQL Server Management Studio.  
   
@@ -66,25 +65,25 @@ manager: craigg
   
 5.  To see the new TestDB1 in your on-premises SQL Server, refresh databases in the Object Explorer.  
   
-6.  Similarly, to see the newly created database in your storage account, connect to your storage account via SQL Server Management Studio (SSMS). For information on how to connect to a Windows Azure storage using SQL Server Management Studio, follow these steps:  
+6.  Similarly, to see the newly created database in your storage account, connect to your storage account via SQL Server Management Studio (SSMS). For information on how to connect to an Azure storage using SQL Server Management Studio, follow these steps:  
   
     1.  First, get the storage account information. Log in to the Management Portal. Then, click **Storage** and choose your storage account. When a storage account is selected, click **Manage Access Keys** at the bottom of the page. This opens a similar dialog window:  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  Copy the **Storage Account Name** and **Primary Access Key** values to the **Connect to Windows Azure Storage** dialog window in SSMS. Then, click **Connect**. This brings the information about storage account containers to SSMS as shown in the following screenshot:  
+    2.  Copy the **Storage Account Name** and **Primary Access Key** values to the **Connect to Azure Storage** dialog window in SSMS. Then, click **Connect**. This brings the information about storage account containers to SSMS as shown in the following screenshot:  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
- The following screenshot demonstrates the new created database both in on-premises and Windows Azure Storage environment.  
+ The following screenshot demonstrates the new created database both in on-premises and Azure Storage environment.  
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
  **Note:** If there are any active references to data files in a container, any attempts to delete the associated SQL Server credential fails. Similarly, if there is already a lease on a specific database file in a blob and you want to delete it, first you need to break the lease on the blob. To break the lease, you can use [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
   
- Using this new feature, you can configure SQL Server so that any CREATE DATABASE statement will default to a cloud enabled database. In other words, you can set default data and log locations in SQL Server Management Studio Server instance properties so anytime you create a database, all database files (.mdf, .ldf) are created as page blobs in Windows Azure Storage.  
+ Using this new feature, you can configure SQL Server so that any CREATE DATABASE statement will default to a cloud enabled database. In other words, you can set default data and log locations in SQL Server Management Studio Server instance properties so anytime you create a database, all database files (.mdf, .ldf) are created as page blobs in Azure Storage.  
   
- To create a database in Windows Azure Storage by using SQL Server Management Studio user interface, perform these steps:  
+ To create a database in Azure Storage by using SQL Server Management Studio user interface, perform these steps:  
   
 1.  In Object Explorer, connect to an instance of the SQL Server Database Engine and then expand that instance.  
   

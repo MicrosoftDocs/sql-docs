@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "InstanceID Property (WMI MSReportServer_Instance)"
@@ -16,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "InstanceID property"
 ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # InstanceID Property (WMI MSReportServer_Instance)

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +36,13 @@ sp_manage_jobs_by_login
 ```  
   
 ## Arguments  
- [ **@action=** ] **'***action***'**  
+`[ @action = ] 'action'`
  The action to take for the specified login. *action* is **varchar(10)**, with no default. When *action*is **DELETE**, **sp_manage_jobs_by_login** deletes all jobs owned by *current_owner_login_name*. When *action* is **REASSIGN**, all jobs are assigned to *new_owner_login_name*.  
   
- [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
+`[ @current_owner_login_name = ] 'current_owner_login_name'`
  The login name of the current job owner. *current_owner_login_name* is **sysname**, with no default.  
   
- [ **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
+`[ @new_owner_login_name = ] 'new_owner_login_name'`
  The login name of the new job owner. Use this parameter only if *action* is **REASSIGN**. *new_owner_login_name* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 472a2d0b-64ae-4877-8f11-a5620aa698b7
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # SqlTriggerContext Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

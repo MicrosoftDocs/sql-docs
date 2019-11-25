@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "XML [SQL Server], untyped"
   - "xml data type [SQL Server], parameters"
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Compare Typed XML to Untyped XML

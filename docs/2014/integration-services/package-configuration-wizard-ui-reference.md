@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.configwizard.selectobjects.f1"
@@ -13,8 +12,8 @@ f1_keywords:
   - "sql12.dts.configwizard.finishdtsconfiguration.f1"
   - "sql12.dts.configwizard.welcome.f1"
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Package Configuration Wizard UI Reference

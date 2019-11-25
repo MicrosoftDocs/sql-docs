@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSsub_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

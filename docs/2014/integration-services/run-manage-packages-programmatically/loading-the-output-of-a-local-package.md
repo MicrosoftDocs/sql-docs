@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data flow [Integration Services], loading results"
   - "loading data flow results"
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Loading the Output of a Local Package
@@ -77,7 +77,7 @@ manager: craigg
   
 6.  Click `Parameters` and, in the **Set Query Parameters** dialog box, map the single input parameter in the query, Parameter0, to the DtsClient::Country variable.  
   
-7.  Add an Aggregate transformation to the data flow, and connect the output of the OLE DB source to the transformation. Open the Aggregate Transformation Editor and configure it to peform a "Count all" operation on all input columns (*) and to output the aggregated value with the alias CustomerCount.  
+7.  Add an Aggregate transformation to the data flow, and connect the output of the OLE DB source to the transformation. Open the Aggregate Transformation Editor and configure it to perform a "Count all" operation on all input columns (*) and to output the aggregated value with the alias CustomerCount.  
   
 8.  Add a DataReader destination to the data flow and connect the output of the Aggregate transformation to the DataReader destination. The sample code uses "DataReaderDest" as the name of the DataReader. Select the single available input column, CustomerCount, for the destination.  
   

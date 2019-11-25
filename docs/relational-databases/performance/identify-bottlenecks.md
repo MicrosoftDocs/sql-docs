@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Identify Bottlenecks

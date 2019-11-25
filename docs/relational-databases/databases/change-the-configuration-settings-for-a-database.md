@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c29c3385-5043-400f-bb4e-044a4c9a9a4b
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change the Configuration Settings for a Database

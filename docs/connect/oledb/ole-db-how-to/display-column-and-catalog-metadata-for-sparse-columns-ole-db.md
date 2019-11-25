@@ -10,7 +10,6 @@ ms.technology: connectivity
 ms.topic: "reference"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Display Column and Catalog Metadata for Sparse Columns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -111,7 +110,7 @@ void DumpErrorInfo ( IUnknown* pObjectWithError, REFIID IID_InterfaceWithError )
    SSERRORINFO * pSSErrorInfo = NULL;  
    OLECHAR * pSSErrorStrings = NULL;  
   
-   // Hard-code an American English locale for the example.  
+   // Hard-code an English (United States) locale for the example.  
    DWORD MYLOCALEID = 0x0409;  
   
    // Only ask for error information if the interface supports it.  

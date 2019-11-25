@@ -61,7 +61,7 @@ manager: craigg
   
 2.  Expand the **Management** node.  
   
-3.  Tight-click **Database Mail**, and then click **Configure Database Mail**.  
+3.  Right-click **Database Mail**, and then click **Configure Database Mail**.  
   
 4.  Complete the Wizard dialogs  
   

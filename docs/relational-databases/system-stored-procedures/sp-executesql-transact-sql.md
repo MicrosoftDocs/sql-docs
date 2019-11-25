@@ -18,14 +18,10 @@ helpviewer_keywords:
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
   Executes a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch that can be reused many times, or one that has been built dynamically. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch can contain embedded parameters.  
   
@@ -55,7 +51,7 @@ sp_executesql [ @stmt = ] statement
   
  Each parameter included in \@stmt must have a corresponding entry in both the \@params parameter definition list and the parameter values list.  
   
- [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
+ [ \@params= ] N'\@*parameter_name* *data_type* [ ,... *n* ] '  
  Is one string that contains the definitions of all parameters that have been embedded in \@stmt. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. *n* is a placeholder that indicates additional parameter definitions. Every parameter specified in \@stmt must be defined in \@params. If the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in \@stmt does not contain parameters, \@params is not required. The default value for this parameter is NULL.  
   
  [ \@param1= ] '*value1*'  
@@ -246,8 +242,6 @@ EXECUTE sp_executesql
           N'@level tinyint',  
           @level = 109;  
 ```  
-  
- For additional examples, see [sp_executesql (Transact-SQL)](https://msdn.microsoft.com/library/ms188001.aspx).  
   
 ## See Also  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

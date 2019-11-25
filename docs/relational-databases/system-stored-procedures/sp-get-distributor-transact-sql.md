@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

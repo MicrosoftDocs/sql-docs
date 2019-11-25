@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "FOR XML clause, invalid characters"
   - "FOR XML clause, escape rules"
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Invalid Characters and Escape Rules
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

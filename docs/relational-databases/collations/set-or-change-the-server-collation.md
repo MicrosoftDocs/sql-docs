@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ms.reviewer: carlrab
 ---
 # Set or Change the Server Collation
@@ -25,7 +24,7 @@ ms.reviewer: carlrab
   
 ## Setting the server collation in SQL Server
 
-  The server collation is specified during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. Default server-level collation is **SQL_Latin1_General_CP1_CI_AS**. Unicode-only collations cannot be specified as the server-level collation. For more information, see [Server Configuration - Collation](/sql/sql-server/install/server-configuration-collation.md).
+  The server collation is specified during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. Default server-level collation is **SQL_Latin1_General_CP1_CI_AS**. Unicode-only collations cannot be specified as the server-level collation. For more information, see [Collation and Unicode Support](collation-and-unicode-support.md).
   
 ## Changing the server collation in SQL Server
 
@@ -56,7 +55,7 @@ ms.reviewer: carlrab
   
 ## Setting the server collation in Managed Instance
 
-Server-level collation (Preview) in Azure SQL Managed Instance can be specified when the instance is created and cannot be changed later. You can set server-level collation via [Azure portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) or [PowerShell and Resource Manager template](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) while you are creating the instance. Default server-level collation is **SQL_Latin1_General_CP1_CI_AS**. Unicode-only and new UTF-8 collations cannot be specified as server-level collation.
+Server-level collation in Azure SQL Managed Instance can be specified when the instance is created and cannot be changed later. You can set server-level collation via [Azure portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) or [PowerShell and Resource Manager template](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) while you are creating the instance. Default server-level collation is **SQL_Latin1_General_CP1_CI_AS**. Unicode-only and new UTF-8 collations cannot be specified as server-level collation.
 If you are migrating databases from SQL Server to Managed Instance, check the server collation in the source SQL Server using `SERVERPROPERTY(N'Collation')` function and create a Managed Instance that matches the collation of your SQL Server. Migrating a database from SQL Server to Managed Instance with the server-level collations that are not matched might cause several unexpected errors in the queries. You cannot change the server-level collation on the existing Managed Instance.
 
 ## See Also

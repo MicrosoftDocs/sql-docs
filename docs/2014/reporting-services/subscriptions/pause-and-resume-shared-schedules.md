@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "pausing schedules"
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "schedules [Reporting Services], resuming"
   - "schedules [Reporting Services], pausing"
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Pause and Resume Shared Schedules

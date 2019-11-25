@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b72a978d-6a60-475a-b7d9-c424d77bbe30
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSpecialColumns (Visual FoxPro ODBC Driver)
 > [!NOTE]  

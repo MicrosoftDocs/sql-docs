@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "connections [Reporting Services], data sources"
   - "reports [Reporting Services], data"
   - "data sources [Reporting Services], methods"
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Data Sources and Connection Methods

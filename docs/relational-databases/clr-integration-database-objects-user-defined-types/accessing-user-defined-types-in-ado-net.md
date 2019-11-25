@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4b0d876c-8066-490e-8e18-327c0e942b19
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Accessing User-Defined Types in ADO.NET
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

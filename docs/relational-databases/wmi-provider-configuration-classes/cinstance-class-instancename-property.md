@@ -1,6 +1,6 @@
 ---
-title: "InstanceName Property (CInstance Class) | Microsoft Docs"
-ms.custom: ""
+title: "InstanceName Property (CInstance)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # CInstance Class - InstanceName Property
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

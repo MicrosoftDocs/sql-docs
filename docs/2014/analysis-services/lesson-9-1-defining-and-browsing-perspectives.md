@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
@@ -186,7 +185,7 @@ manager: craigg
      ![Internet Sales and Reseller Sales measures](../../2014/tutorials/media/l9-perspectives-4.gif "Internet Sales and Reseller Sales measures")  
   
 ## Next Task in Lesson  
- [Defining and Browsing Translations](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
+ [Defining and Browsing Translations](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## See Also  
  [Perspectives](multidimensional-models-olap-logical-cube-objects/perspectives.md)   

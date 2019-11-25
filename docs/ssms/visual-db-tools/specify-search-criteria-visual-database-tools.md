@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "Visual Database Tools [SQL Server], queries"
   - "limiting rows returned"
 ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Specify Search Criteria (Visual Database Tools)

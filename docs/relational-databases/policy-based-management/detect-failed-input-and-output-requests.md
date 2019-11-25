@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 85373b2e-d9fe-42ef-9653-6e22fe5ecab0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Detect Failed Input and Output Requests
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

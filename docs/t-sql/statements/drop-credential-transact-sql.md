@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DROP CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

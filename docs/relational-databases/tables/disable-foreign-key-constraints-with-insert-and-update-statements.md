@@ -1,6 +1,6 @@
 ---
-title: "Disable Foreign Key Constraints with INSERT and UPDATE Statements | Microsoft Docs"
-ms.custom: ""
+title: Disable Foreign Key Constraints in INSERT & UPDATE Statements
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Disable Foreign Key Constraints with INSERT and UPDATE Statements

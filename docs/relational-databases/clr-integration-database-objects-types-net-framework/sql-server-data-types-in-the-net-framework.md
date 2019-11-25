@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # SQL Server Data Types in the .NET Framework
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

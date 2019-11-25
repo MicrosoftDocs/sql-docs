@@ -14,9 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IsNull (geometry Data Type)"
 ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # IsNull (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

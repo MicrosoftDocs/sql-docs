@@ -1,7 +1,7 @@
 ---
 title: "CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/12/2017"
+ms.date: "06/11/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ CREATE SYMMETRIC KEY key_name
   
 ## Arguments  
  *Key_name*  
- Specifies the unique name by which the symmetric key is known in the database. The names of temporary keys should begin with one number (#) sign. For example, **#temporaryKey900007**. You cannot create a symmetric key that has a name that starts with more than one #. You cannot create a temporary symmetric key using an EKM provider.  
+ Specifies the unique name by which the symmetric key is known in the database. Temporary keys are designated when the _key_name_ begins with one number (#) sign. For example, **#temporaryKey900007**. You cannot create a symmetric key that has a name that starts with more than one #. You cannot create a temporary symmetric key using an EKM provider.  
   
  AUTHORIZATION *owner_name*  
  Specifies the name of the database user or application role that will own this key.  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "UAC"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "windows server 2008"
   - "Vista"
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Configure a Native Mode Report Server for Local Administration (SSRS)

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1487e188-52c8-4f48-b4fe-25a650dd9e97
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Adding a Visual FoxPro Data Source
 To access Visual FoxPro data from your application, you must have a data source. You can create a data source as follows:  

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: ea0f95d0-0238-4dc8-9f26-7ff9b65f30c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getSearchStringEscape Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

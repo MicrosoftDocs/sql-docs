@@ -12,12 +12,10 @@ helpviewer_keywords:
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Finding More SQL Server Native Client Information
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client and other types of data access programming, see the following online resources:  
   

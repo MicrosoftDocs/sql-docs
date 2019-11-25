@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: af57bf0c-a265-410f-9bab-63b78569b4a6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sys.linked_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

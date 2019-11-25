@@ -1,14 +1,14 @@
 ---
-title: Configure WSUS - Analytics Platform System | Microsoft Docs
+title: Configure WSUS
 description: These instructions walk you through the steps for using the Windows Server Update Services (WSUS) Configuration Wizard to configure WSUS for Analytics Platform System.   
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Configure Windows Server Update Services (WSUS) in Analytics Platform System

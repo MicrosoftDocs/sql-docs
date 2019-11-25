@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "shared data sources [Reporting Services]"
   - "data sources [Reporting Services], shared"
   - "security [Reporting Services], data sources"
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Secure Shared Data Source Items

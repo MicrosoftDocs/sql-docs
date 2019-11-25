@@ -1,6 +1,6 @@
 ---
-title: "Creating, Altering, and Removing Stored Procedures | Microsoft Docs"
-ms.custom: ""
+title: "Creating, Altering, and Removing Stored Procedures"
+ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -11,9 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "stored procedures [SMO]"
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Stored Procedures

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Converting SAP ASE database objects (SybaseToSQL)
 After you have connected to SAP Adaptive Server Enterprise (ASE), connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL and set project and data mapping options, you can convert SAP Adaptive Server Enterprise (ASE) database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL database objects.  

@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "displaying XML schema collections"
   - "viewing XML schema collections"
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # View a Stored XML Schema Collection
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

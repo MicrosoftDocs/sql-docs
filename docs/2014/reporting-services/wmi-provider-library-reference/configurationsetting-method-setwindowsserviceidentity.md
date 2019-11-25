@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)"
@@ -16,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "SetWindowsServiceIdentity method"
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # SetWindowsServiceIdentity Method (WMI MSReportServer_ConfigurationSetting)

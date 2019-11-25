@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getMaxRows Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

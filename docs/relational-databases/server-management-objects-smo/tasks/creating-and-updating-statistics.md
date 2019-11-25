@@ -1,6 +1,6 @@
 ---
-title: "Creating and Updating Statistics | Microsoft Docs"
-ms.custom: ""
+title: "Creating and Updating Statistics"
+ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -11,9 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "statistical information [SMO]"
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating and Updating Statistics

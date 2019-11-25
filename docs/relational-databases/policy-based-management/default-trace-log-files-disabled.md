@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c27761e6-75ed-4ee4-a236-0cbc42e500a1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Default Trace Log Files Disabled
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

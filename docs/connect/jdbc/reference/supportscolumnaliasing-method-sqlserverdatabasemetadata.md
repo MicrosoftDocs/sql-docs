@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 85699f09-6456-4ee7-b46b-d6103e6ce0ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # supportsColumnAliasing Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

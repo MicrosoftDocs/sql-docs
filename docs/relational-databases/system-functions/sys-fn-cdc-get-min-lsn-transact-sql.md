@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: f8a8ea39-5a09-4662-801e-b43519467def
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.views (Transact-SQL)

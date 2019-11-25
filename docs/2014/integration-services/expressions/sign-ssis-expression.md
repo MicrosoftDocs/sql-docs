@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SIGN function"
   - "negative values"
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SIGN (SSIS Expression)

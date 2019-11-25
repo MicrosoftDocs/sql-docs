@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STIntersects (geometry Data Type)"
 ms.assetid: 7c18f5be-5a29-422e-8ca7-d8a5f38e03f5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STIntersects (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

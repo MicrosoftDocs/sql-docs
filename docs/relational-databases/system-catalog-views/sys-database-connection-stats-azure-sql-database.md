@@ -1,6 +1,6 @@
 ---
-title: "sys.database_connection_stats (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
+title: "sys.database_connection_stats"
+titleSuffix: Azure SQL Database
 ms.date: "01/28/2019"
 ms.service: sql-database
 ms.reviewer: ""
@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: stevestein
 ms.author: sstein
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.database_connection_stats (Azure SQL Database)
@@ -95,6 +95,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 
 ## See Also
 
- [Troubleshooting Windows Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
+ [Troubleshoot connection issues to Azure SQL Database](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   
   

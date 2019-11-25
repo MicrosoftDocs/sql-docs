@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBCCONF.EXE
 ODBCCONF.exe is a command-line tool that allows you to configure ODBC drivers and data source names.  
@@ -22,7 +21,7 @@ ODBCCONF.exe is a command-line tool that allows you to configure ODBC drivers an
   
 ## Syntax  
   
-```  
+```console  
 ODBCCONF [switches] action  
 ```  
   

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f7a5cb0a-3be7-4f46-82f9-64ffdbceaa9b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Table Names
 When the dBASE, Microsoft Excel, Paradox, or Text driver is used, table names that occur in the FROM clause of SELECT or DELETE, after the INTO clause in INSERT, and after UPDATE, CREATE TABLE, and DROP TABLE can contain a valid path, primary name, and file name extension.  

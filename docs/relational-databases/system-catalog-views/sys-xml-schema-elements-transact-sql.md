@@ -17,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_elements catalog view"
 ms.assetid: 190ed0cd-0c5e-4607-9db4-9e77cacf17d7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # sys.xml_schema_elements (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

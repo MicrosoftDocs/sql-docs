@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a2308f6c-2fa1-47e9-903f-37c2a03c723a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLParamData (Visual FoxPro ODBC Driver)
 > [!NOTE]  

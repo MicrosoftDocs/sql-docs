@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MinDbCompatibilityLevel method (geography)"
 ms.assetid: a9e44748-4a9e-4179-abc4-7631597be5a7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # MinDbCompatibilityLevel (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

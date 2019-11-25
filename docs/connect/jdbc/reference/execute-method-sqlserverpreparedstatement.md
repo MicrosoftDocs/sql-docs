@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: db876c2e-dffe-4ef2-8fea-486cf27b0eb3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # execute Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

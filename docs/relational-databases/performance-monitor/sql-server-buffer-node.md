@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server:Buffer Node
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

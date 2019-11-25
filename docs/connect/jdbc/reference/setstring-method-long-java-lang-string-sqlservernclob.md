@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 698073b2-3f0c-449c-ad68-48144698fe8f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # setString Method (long, java.lang.String) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

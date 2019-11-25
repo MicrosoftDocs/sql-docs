@@ -2,7 +2,7 @@
 title: "IsWindowsServiceEnabled Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "IsWindowsServiceEnabled property"
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Property - IsWindowsServiceEnabled
   Indicates whether the Report Server Windows service is enabled. Read-only.  

@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], serialization"
   - "typed XML"
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Define the Serialization of XML Data
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
 <Δ/>  
 ```  
   
- If the SQL target type is VARCHAR or NCHAR, the result is serialized in the encoding that corresponds to the database's collation code page without a byte order mark or XML declaration. If the target type is too small or the value cannot be mapped to the target collation code page, an error is raised.  
+ If the SQL target type is VARCHAR or CHAR, the result is serialized in the encoding that corresponds to the database's collation code page without a byte order mark or XML declaration. If the target type is too small or the value cannot be mapped to the target collation code page, an error is raised.  
   
  For example:  
   

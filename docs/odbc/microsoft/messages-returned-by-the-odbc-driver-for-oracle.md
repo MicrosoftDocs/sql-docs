@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 150bde1d-adb6-4e77-90e9-4dc93499a746
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Messages Returned by the ODBC Driver for Oracle
 > [!IMPORTANT]  

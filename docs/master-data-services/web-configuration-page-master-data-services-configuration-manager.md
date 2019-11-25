@@ -1,5 +1,5 @@
 ---
-title: "Web Configuration Page (Master Data Services Configuration Manager) | Microsoft Docs"
+title: Web Configuration Page
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.mds.configmanager.webconfigpg.f1"
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Web Configuration Page (Master Data Services Configuration Manager)
 

@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "statements [SQL Server], skipping"
   - "GOTO statement"
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # GOTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

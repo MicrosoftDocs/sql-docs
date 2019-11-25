@@ -24,9 +24,8 @@ helpviewer_keywords:
   - "disk space [SQL Server], allocation consistency checks"
   - "space allocation [SQL Server], checking"
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,7 +88,7 @@ DBCC CHECKALLOC
  TABLOCK  
  Causes the DBCC command to obtain an exclusive database lock.
 
- ESTIMATE ONLY  
+ ESTIMATEONLY  
  Displays the estimated amount of tempdb space that is required to run DBCC CHECKALLOC when all the other options are specified.
   
 ## Remarks  

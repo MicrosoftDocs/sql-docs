@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ADO for Visual C++ Syntax Index for COM
 This index is a cross-reference to the ADO Language Reference based on Microsoft Visual C++.  

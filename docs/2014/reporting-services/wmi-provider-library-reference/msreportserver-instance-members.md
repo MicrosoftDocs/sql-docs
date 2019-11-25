@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "MSReportServer_Instance Members"
@@ -16,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "MSReportServer_Instance class"
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # MSReportServer_Instance Members

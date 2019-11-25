@@ -9,7 +9,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Domains"
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---
@@ -32,7 +32,7 @@ manager: craigg
   
 -   **Matching:** the identification of semantic duplicates in a rules-based process that enables you to determine what constitutes a match and perform de-duplication. For more information, see [Data Matching](../../2014/data-quality-services/data-matching.md).  
   
--   **Reference Data Services:** verification of the quality of your data using the services of a reference data provider. You can use reference data services from Windows Azure Marketplace DataMarket to easily cleanse, validate, match, and enrich data. For more information, see [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
+-   **Reference Data Services:** verification of the quality of your data using the services of a reference data provider. You can use reference data services from Azure Marketplace DataMarket to easily cleanse, validate, match, and enrich data. For more information, see [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
 -   **Profiling:** the analysis of a data source to provide insight into the quality of the data at every stage in the knowledge discovery, domain management, matching, and data cleansing processes. Profiling is a powerful tool in a DQS data quality solution. You can create a data quality solution in which profiling is just as important as knowledge management, matching, or data cleansing. For more information, see [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   

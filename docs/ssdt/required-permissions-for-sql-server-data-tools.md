@@ -8,9 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Required Permissions for SQL Server Data Tools
 Before you can perform an action on a database in Visual Studio, you must log on with an account that has certain permissions on that database. The specific permissions that you need vary based on what action you want to perform. The following sections describe each action that you might want to perform and the specific permission that you need to perform it.  

@@ -1,5 +1,5 @@
 ---
-title: "Discontinued Master Data Services Features | Microsoft Docs"
+title: Discontinued Master Data Services Features
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: "erikre"
+manager: erikre
 ---
 # Discontinued Master Data Services Features
 

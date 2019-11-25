@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ee8a31aa-389d-4dd1-bfa9-547f6b50bc70
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Identifier Case
 In SQL statements and catalog function arguments, identifiers and quoted identifiers can be either case-sensitive or not, which an application can determine by calling **SQLGetInfo** with the SQL_IDENTIFIER_CASE and SQL_QUOTED_IDENTIFIER_CASE options.  

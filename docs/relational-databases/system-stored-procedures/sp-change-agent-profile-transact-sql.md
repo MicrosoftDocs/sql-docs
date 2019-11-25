@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_change_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Changes a parameter of a replication agent profile stored in the [MSagent_profiles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) table. This stored procedure is executed at the Distributor on any database.  
   
@@ -34,13 +33,13 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## Arguments  
- [ **@profile_id=** ] *profile_id*  
+`[ @profile_id = ] profile_id`
  Is the ID of the profile. *profile_id* is **int**, with no default.  
   
- [ **@property=** ] **'***property***'**  
+`[ @property = ] 'property'`
  Is the name of the property. *property* is **sysname**, with no default.  
   
- [ **@value=** ] **'***value***'**  
+`[ @value = ] 'value'`
  Is the new value of the property. *value* is **nvarchar(3000)**, with no default.  
   
  This table describes the profile properties that can be changed.  

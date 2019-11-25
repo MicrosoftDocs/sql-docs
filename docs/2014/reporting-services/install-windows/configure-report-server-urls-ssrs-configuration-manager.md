@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Server Windows service, virtual directories"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "virtual directories [Reporting Services]"
   - "Report Manager [Reporting Services], virtual directories"
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Configure Report Server URLs  (SSRS Configuration Manager)

@@ -1,13 +1,12 @@
 ---
-title: Performance best practices for SQL Server on Linux | Microsoft Docs
+title: Performance best practices for SQL Server on Linux
 description: This article provide performance best practices and guidelines for running SQL Server on Linux.
 author: rgward 
-ms.author: bobward 
-manager: craigg
+ms.author: bobward
+ms.reviewer: vanto
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ---
 
@@ -35,7 +34,7 @@ It is recommended to perform the following configuration tasks after you install
 
 ### Advanced Configuration
 
-The following recommendations are optional configuration settings that you may elect to perform after installation of SQL Server on Linux. These choices are based on the requirements of your workload and configuration of your Linux Operating System.
+The following recommendations are optional configuration settings that you may choose to perform after installation of SQL Server on Linux. These choices are based on the requirements of your workload and configuration of your Linux Operating System.
 
 - **Set a memory limit with mssql-conf**
 
@@ -69,7 +68,7 @@ The following table provides recommendations for disk settings:
 | Setting | Value | More information |
 |---|---|---|
 | disk readahead | 4096 | See the **blockdev** command |
-| sysctl settings | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | See the **sysctl** command |
+| sysctl settings | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 10 | See the **sysctl** command |
 
 ### Kernel setting auto numa balancing for multi-node NUMA systems
 

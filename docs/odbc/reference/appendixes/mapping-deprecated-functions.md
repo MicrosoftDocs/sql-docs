@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Mapping Deprecated Functions
-This section describes how deprecated functions are mapped by the ODBC 3*.x* Driver Manager to guarantee backward compatibility of ODBC 3*.x* drivers that are used with ODBC 2.*x* applications. The Driver Manager performs this mapping regardless of the version of the application. Because each of the ODBC 2.*x* functions in the following list is mapped to the corresponding ODBC 3*.x* function when called in an ODBC 3*.x* driver, the ODBC 3*.x* driver does not have to implement the ODBC 2.*x* functions.  
+This section describes how deprecated functions are mapped by the ODBC *3.x* Driver Manager to guarantee backward compatibility of ODBC *3.x* drivers that are used with ODBC *2.x* applications. The Driver Manager performs this mapping regardless of the version of the application. Because each of the ODBC *2.x* functions in the following list is mapped to the corresponding ODBC *3.x* function when called in an ODBC *3.x* driver, the ODBC *3.x* driver does not have to implement the ODBC *2.x* functions.  
   
- The mapping in the list is triggered when the driver is an ODBC 3*.x* driver and the driver does not support the function that is being mapped.  
+ The mapping in the list is triggered when the driver is an ODBC *3.x* driver and the driver does not support the function that is being mapped.  
   
- The following table lists all duplicated functionality that was introduced in ODBC 3*.x*.  
+ The following table lists all duplicated functionality that was introduced in ODBC *3.x*.  
   
-|ODBC 2.*x* function|ODBC 3*.x* function|  
+|ODBC *2.x* function|ODBC *3.x* function|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -46,7 +45,7 @@ This section describes how deprecated functions are mapped by the ODBC 3*.x* Dri
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1]   Even though this function did not exist in ODBC 2*.x*, it is in the Open Group and ISO standards.  
+ [1]   Even though this function did not exist in ODBC *2.x*, it is in the Open Group and ISO standards.  
   
  [2]   This is an ODBC 1.0 function.  
   

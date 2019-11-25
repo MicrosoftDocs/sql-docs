@@ -1,5 +1,5 @@
 ---
-title: "Validate Specific Members against Business Rules (Master Data Services) | Microsoft Docs"
+title: Validate Specific Members against Business Rules
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "applying business rules [Master Data Services]"
   - "business rules [Master Data Services], applying to select members"
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Validate Specific Members against Business Rules (Master Data Services)
 

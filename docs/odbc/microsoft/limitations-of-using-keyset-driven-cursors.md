@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 59d86fed-387c-4719-9550-36343e74da44
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Limitations of Using Keyset-Driven Cursors
 > [!IMPORTANT]  

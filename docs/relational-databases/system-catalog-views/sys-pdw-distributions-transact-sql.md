@@ -11,7 +11,6 @@ dev_langs:
 ms.assetid: 572b5187-9753-4063-adf8-65dea87d11f8
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_distributions (Transact-SQL)

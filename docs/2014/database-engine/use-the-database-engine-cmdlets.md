@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Cmdlets [SQL Server], Encode-Sqlname"
@@ -38,7 +37,7 @@ manager: craigg
 ### Partial Parameter Names  
  You do not have to specify the entire name of a cmdlet parameter. You only have to specify enough of the name to uniquely separate it from the other parameters that are supported by the cmdlet. For example, these examples show three ways of specifying the **Invoke-Sqlcmd -QueryTimeout** parameter:  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryTimeout 3  
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryTime 3  
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3  

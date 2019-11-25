@@ -31,9 +31,8 @@ helpviewer_keywords:
   - "KILL statement"
   - "terminating process"
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # KILL (Transact-SQL)
@@ -73,7 +72,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 _UOW_  
-**Applies to**: ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
 Identifies the Unit of Work ID (UOW) of distributed transactions. _UOW_ is a GUID that may be obtained from the request_owner_guid column of the sys.dm_tran_locks dynamic management view. _UOW_ also can be obtained from the error log or through the MS DTC monitor. For more information about monitoring distributed transactions, see the MS DTC documentation.  
   

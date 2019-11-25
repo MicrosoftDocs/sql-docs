@@ -30,7 +30,7 @@ manager: craigg
   
  The following code sample requires a directory called c:\Data.  
   
-```tsql  
+```sql  
 -- create a database with a memory-optimized filegroup and a container.  
 CREATE DATABASE imoltp   
 GO  

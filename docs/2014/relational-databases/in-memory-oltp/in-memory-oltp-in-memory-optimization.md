@@ -15,11 +15,12 @@ ms.author: genemi
 manager: craigg
 ---
 # In-Memory OLTP (In-Memory Optimization)
+
   New in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] can significantly improve OLTP database application performance. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] is a memory-optimized database engine integrated into the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] engine, optimized for OLTP.  
   
 |||  
 |-|-|  
-|![Azure Virtual Machine](../../master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|Do you want to try out SQL Server 2016? Sign up for Microsoft Azure, and then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with  SQL Server 2016 already installed. You can delete the Virtual Machine when you're finished.|  
+|![Azure Virtual Machine](../../master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|Do you want to try out SQL Server 2016? Sign up for Microsoft Azure, and then go **[Here](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with  SQL Server 2016 already installed. You can delete the Virtual Machine when you're finished.|  
   
  To use [!INCLUDE[hek_2](../../../includes/hek-2-md.md)], you define a heavily accessed table as memory optimized. Memory-optimized-tables are fully transactional, durable, and are accessed using [!INCLUDE[tsql](../../../includes/tsql-md.md)] in the same way as disk-based tables. A query can reference both memory-optimized tables and disk-based tables. A transaction can update data in memory-optimized tables and disk-based tables. Stored procedures that only reference memory-optimized tables can be natively compiled into machine code for further performance improvements. The [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] engine is designed for extremely high session concurrency for OLTP type of transactions driven from a highly scaled-out middle-tier. To achieve this, it uses latch-free data structures and optimistic, multi-version concurrency control. The result is predictable, sub-millisecond low latency and high throughput with linear scaling for database transactions. The actual performance gain depends on many factors, but 5-to-20 times performance improvements are common.  
   
@@ -84,7 +85,11 @@ manager: craigg
   
 -   [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [SQL Server In-Memory OLTP Internals Overview](https://msdn.microsoft.com/library/dn720242.aspx)  
+-   [SQL Server In-Memory OLTP Internals Overview](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)  
+    <!--
+         (https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)
+         (/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016?view=sql-server-2016)
+    -->
   
 ## See Also  
  [Database Features](../database-features.md)  

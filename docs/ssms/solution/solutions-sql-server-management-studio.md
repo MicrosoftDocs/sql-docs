@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], projects"
   - "scripts [SQL Server], SQL Server Management Studio"
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Solutions (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

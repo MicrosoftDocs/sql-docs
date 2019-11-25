@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 464f7e3f-3e8a-4b2d-aebd-1c040583d52c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # updateArray Method (int, java.sql.Array)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

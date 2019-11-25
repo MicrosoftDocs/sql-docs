@@ -1,5 +1,5 @@
 ---
-title: "ServerSettings Class | Microsoft Docs"
+title: "ServerSettings Class"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ServerSettings Class
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

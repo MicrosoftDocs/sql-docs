@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
@@ -23,16 +22,16 @@ manager: craigg
  [Defining and Browsing Perspectives](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
  In this task, you define and browse perspectives to simplify the view of the cube for specific users or uses.  
   
- [Defining and Browsing Translations](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
+ [Defining and Browsing Translations](lesson-9-2-defining-and-browsing-translations.md)  
  In this task, you define and browse translations of specific metadata to certain languages.  
   
 ## Next Lesson  
  [Lesson 10: Defining Administrative Roles](lesson-10-defining-administrative-roles.md)  
   
 ## See Also  
- [Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md)   
+ [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)   
  [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
- [Perspectives](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)   
+ [Perspectives](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives)   
  [Perspectives in Multidimensional Models](multidimensional-models/perspectives-in-multidimensional-models.md)   
  [Dimension Translations](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [Cube Translations](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   

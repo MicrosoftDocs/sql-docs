@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Configure Properties of a Data Collector
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

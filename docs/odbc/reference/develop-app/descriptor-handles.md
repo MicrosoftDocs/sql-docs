@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Descriptor Handles
 A *descriptor* is a collection of metadata that describes the parameters of an SQL statement or the columns of a result set, as seen by the application or driver (also known as the *implementation*). Thus, a descriptor can fill any of four roles:  

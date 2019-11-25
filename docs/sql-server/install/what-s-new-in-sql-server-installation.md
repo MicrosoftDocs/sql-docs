@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # What&#39;s New in SQL Server Installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

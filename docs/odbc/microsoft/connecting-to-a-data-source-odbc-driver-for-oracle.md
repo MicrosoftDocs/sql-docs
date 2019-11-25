@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f724a9c5-342a-4f4e-a030-ec34f7378eaf
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Connecting to a Data Source (ODBC Driver for Oracle)
 > [!IMPORTANT]  

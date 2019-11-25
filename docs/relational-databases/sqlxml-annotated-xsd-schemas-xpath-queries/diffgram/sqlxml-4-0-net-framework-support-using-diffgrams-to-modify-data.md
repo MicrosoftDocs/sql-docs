@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML 4.0 .NET Framework Support - Using DiffGrams to Modify Data

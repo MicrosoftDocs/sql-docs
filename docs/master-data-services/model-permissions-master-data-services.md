@@ -1,5 +1,5 @@
 ---
-title: "Model Permissions (Master Data Services) | Microsoft Docs"
+title: Model Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "models [Master Data Services], permissions"
   - "permissions [Master Data Services], models"
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Model Permissions (Master Data Services)
 

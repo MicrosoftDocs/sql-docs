@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Enable or Disable Backup Checksums During Backup or Restore (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ manager: craigg
 1.  Follow the steps to [create a database backup](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 2.  On the **Options** page, in the **Reliability** section, click **Perform checksum before writing to media**.  
-  
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To enable or disable backup checksum for a backup operation  

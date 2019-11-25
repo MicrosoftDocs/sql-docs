@@ -2,7 +2,7 @@
 title: "MSReportServer_ConfigurationSetting Class | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class"
   - "MSReportServer_ConfigurationSetting class"
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # MSReportServer_ConfigurationSetting Class
   Represents the installation and runtime parameters of a report server instance. These parameters are stored in the configuration file for the report server.  

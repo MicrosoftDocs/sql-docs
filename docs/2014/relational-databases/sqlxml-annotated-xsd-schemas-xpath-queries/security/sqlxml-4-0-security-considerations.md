@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "SQLXML, security"
   - "security [SQLXML]"
 ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLXML 4.0 Security Considerations

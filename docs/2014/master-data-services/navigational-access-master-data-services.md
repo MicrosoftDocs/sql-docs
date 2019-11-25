@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "navigational access [Master Data Services]"
   - "security [Master Data Services], navigational access"
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "rendered reports [Reporting Services]"
@@ -14,8 +12,8 @@ helpviewer_keywords:
   - "Windows Forms [Reporting Services]"
   - "SOAP [Reporting Services], Windows applications"
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using the SOAP API in a Windows Application

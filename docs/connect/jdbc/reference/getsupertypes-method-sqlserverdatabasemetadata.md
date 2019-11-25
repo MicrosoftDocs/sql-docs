@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 5b8e78e6-2bb0-4dc7-9c77-a5609654cb05
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getSuperTypes Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

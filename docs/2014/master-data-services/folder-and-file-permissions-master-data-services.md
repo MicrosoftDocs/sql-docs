@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "folders [Master Data Services]"
   - "files [Master Data Services]"
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 robots: noindex,nofollow

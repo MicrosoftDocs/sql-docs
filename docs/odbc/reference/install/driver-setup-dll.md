@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 49bab021-81fa-402e-b7a4-a5214f1fadc4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Driver Setup DLL
 > [!NOTE]  

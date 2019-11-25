@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "total read [SQL Server]"
   - "read activity since last started"
 ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # &#x40;&#x40;TOTAL_READ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

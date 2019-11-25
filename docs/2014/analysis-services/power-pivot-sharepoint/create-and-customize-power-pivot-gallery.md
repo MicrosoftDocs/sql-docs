@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "09/01/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 author: minewiskan
@@ -35,9 +34,9 @@ manager: craigg
   
     > [!NOTE]  
     >  The Power Pivot Gallery requires Microsoft Silverlight.  The Microsoft Edge browser does not support Silverlight.   
-    > To view the library contents in Edge, click the **Library** tab in  Power Pivot gallery, and then change the document library view to **All Documents**.    
+    > To view the library contents in Microsoft Edge, click the **Library** tab in  Power Pivot gallery, and then change the document library view to **All Documents**.    
     > To change  the default view , click  the **Library** tab and then click  Modify View. Click  "Make this the default view" and then click OK to save the  default view.  
-    >  For more information on what Edge supports, see the Windows blog, [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  For more information on what Microsoft Edge supports, see the Windows blog, [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   You must be a site owner to create a library.  
   

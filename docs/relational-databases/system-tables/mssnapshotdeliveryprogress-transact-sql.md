@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

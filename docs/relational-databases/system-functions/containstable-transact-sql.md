@@ -30,9 +30,8 @@ helpviewer_keywords:
   - "rankings [full-text search]"
   - "less precise (fuzzy) searches [full-text search]"
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONTAINSTABLE (Transact-SQL)
@@ -206,7 +205,7 @@ GO
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.|  
   
  The following example uses NEAR to search for "`bracket`" and "`reflector`" close to each other in the `Production.Document` table. Only rows with a rank value of 50 or higher are returned.  
   

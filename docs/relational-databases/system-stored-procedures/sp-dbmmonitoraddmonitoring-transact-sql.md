@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

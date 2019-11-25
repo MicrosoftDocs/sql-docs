@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "opening solutions"
   - "solutions [SQL Server Management Studio], opening"
 ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Open an Existing Solution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

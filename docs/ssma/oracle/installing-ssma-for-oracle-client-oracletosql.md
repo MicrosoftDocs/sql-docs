@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "v-thobro"
+manager: shamikg
 ---
 # Installing SSMA for Oracle Client (OracleToSQL)
 The SSMA client consists of the program files that perform the following tasks:  

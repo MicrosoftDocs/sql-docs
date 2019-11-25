@@ -1,5 +1,5 @@
 ---
-title: "WMI Provider for Server Events Concepts | Microsoft Docs"
+title: "WMI Provider for Server Events Concepts"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # WMI Provider for Server Events Concepts
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

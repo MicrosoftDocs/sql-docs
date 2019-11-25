@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 8f8472b6-e6fc-44f3-82c7-25f127461fa8
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # LOCALDB_ERROR_UNKNOWN_ERROR_CODE
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

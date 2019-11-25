@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "RESTORE HEADERONLY statement"
   - "backup header information [SQL Server]"
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-author: mashamsft
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - HEADERONLY (Transact-SQL)
@@ -66,12 +65,14 @@ FROM <backup_device>
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
-   | { DISK | TAPE } = { 'physical_backup_device_name' |  
+   | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
        @physical_backup_device_name_var }   
 }  
   
 ```  
-  
+> [!NOTE] 
+> URL is the format used to specify the location and the file name for  Microsoft Azure Blob Storage and is supported starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seamless restore experience for all the three devices.
+
 ## Arguments  
  For descriptions of the RESTORE HEADERONLY arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
@@ -138,7 +139,7 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|Backup type as string, one of:<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|Unique identification number of the backup set, by which it is identified on the media.|  
 |**CompressedBackupSize**|**bigint**|Byte count of the backup set. For uncompressed backups, this value is the same as **BackupSize**.<br /><br /> To calculate the compression ratio, use **CompressedBackupSize** and **BackupSize**.<br /><br /> During an **msdb** upgrade, this value is set to match the value of the **BackupSize** column.|  
-|**containment**|**tinyint** not NULL|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indicates the containment status of the database.<br /><br /> 0 = database containment is off<br /><br /> 1 = database is in partial containment|  
+|**containment**|**tinyint** not NULL|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Indicates the containment status of the database.<br /><br /> 0 = database containment is off<br /><br /> 1 = database is in partial containment|  
 |**KeyAlgorithm**|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The encryption algorithm used to encrypt the backup. NO_Encryption indicates that the backup was not encrypted. When the correct value cannot be determined the value should be NULL.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The thumbprint of the encryptor which can be used to find certificate or the asymmetric key in the database. When the backup was not encrypted, this value is NULL.|  
 |**EncryptorType**|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The type of encryptor used: Certificate or Asymmetric Key. When the backup was not encrypted, this value is NULL.|  

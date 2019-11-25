@@ -1,5 +1,6 @@
 ---
-title: "sp_pdw_remove_network_credentials (SQL Data Warehouse) | Microsoft Docs"
+title: "sp_pdw_remove_network_credentials"
+titleSuffix: Azure SQL Data Warehouse
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod_service: "sql-data-warehouse, pdw"
@@ -12,8 +13,8 @@ dev_langs:
 ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+ms.custom: seo-dt-2019
 ---
 # sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

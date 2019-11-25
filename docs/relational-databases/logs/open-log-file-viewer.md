@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Open Log File Viewer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

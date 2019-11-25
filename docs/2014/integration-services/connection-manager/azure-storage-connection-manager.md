@@ -10,8 +10,8 @@ f1_keywords:
   - "sql12.dts.designer.afpstorageconn.f1"
   - "sql11.dts.designer.afpstorageconn.f1"
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure Storage Connection Manager

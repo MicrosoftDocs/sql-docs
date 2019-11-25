@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [Reporting Services], My Subscriptions page"
   - "My Subscriptions page [Reporting Services]"
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Use My Subscriptions
@@ -36,7 +35,7 @@ manager: kfile
   
  The following PowerShell script will return the list of subscriptions and subscription properties for the current user. For more information, see [ReportingService2010.ListMySubscriptions Method](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx).  
   
-```  
+```powershell
 #server -  all subscriptions of the current user at the given server or site  
 $server="[server name]/reportserver"  
 $rs2010 = New-WebServiceProxy -Uri "http://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential ;  
@@ -44,13 +43,10 @@ $rs2010 = New-WebServiceProxy -Uri "http://$server/ReportService2010.asmx" -Name
 $subscriptions=ListMySubscriptions(ItemPathOrSiteURL)  
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status  
 #uncomment the following to list all the subscription properties  
-#$subscriptions  
-  
+#$subscriptions
 ```  
   
 ## See Also  
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Create and Manage Subscriptions for Native Mode Report Servers](../create-manage-subscriptions-native-mode-report-servers.md)  
-  
-  

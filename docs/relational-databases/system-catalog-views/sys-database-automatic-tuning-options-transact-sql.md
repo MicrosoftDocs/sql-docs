@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database\_automatic\_tuning_options (Transact-SQL)

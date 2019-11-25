@@ -1,5 +1,5 @@
 ---
-title: "SetStringValue Method (SqlServiceAdvancedProperty Class ) | Microsoft Docs"
+title: "SetStringValue Method (SqlServiceAdvancedProperty Class )"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetStringValue Method (SqlServiceAdvancedProperty Class )
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

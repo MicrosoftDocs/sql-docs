@@ -32,7 +32,7 @@ manager: craigg
 ## Creating, Altering, and Removing a Database in Visual C#  
  This code example creates a new database. Files and file groups are automatically created for the database.  
   
-```  
+```csharp
 {  
                 //Connect to the local, default instance of SQL Server.   
                 Server srv;  
@@ -53,16 +53,16 @@ manager: craigg
 ## Creating, Altering, and Removing a Database in PowerShell  
  This code example creates a new database. Files and file groups are automatically created for the database.  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 cd \sql\localhost\  
-$srv = get-item default  
+$srv = Get-Item default  
   
 #Create a new database  
 $db = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Database -argumentlist $srv, "Test_SMO_Database"  
 $db.Create()  
   
-#Reference the database and display the date when it was created.   
+#Reference the database and display the date when it was created.
 $db = $srv.Databases["Test_SMO_Database"]  
 $db.CreateDate  
   
@@ -72,5 +72,3 @@ $db.Drop()
   
 ## See Also  
  <xref:Microsoft.SqlServer.Management.Smo.Database>  
-  
-  

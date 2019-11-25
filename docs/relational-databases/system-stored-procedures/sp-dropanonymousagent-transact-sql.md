@@ -14,10 +14,10 @@ helpviewer_keywords:
   - "sp_dropanonymousagent"
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
-manager: craigg
-manager: craigg
+author: VanMSFT
 ---
 # sp_dropanonymousagent (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Drops an anonymous agent for replication monitoring at the distributor from the Publisher. This stored procedure is executed at the Publisher on any database.  
@@ -27,15 +27,14 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type  
 ```  
   
 ## Arguments  
- [ **@subid=**] *sub_id*  
+`[ @subid = ] sub_id`
  Is the global identifier for an anonymous subscription. *sub_id* is **uniqueidentifier**, with no default. This identifier can be retrieved at the Subscriber using **sp_helppullsubscription**. The value in the **subid** field of the returned result set is this global identifier.  
   
- [ **@type=**] *type*  
+`[ @type = ] type`
  Is the type of subscription. *type* is **int**, with no default. Valid values are **1** or **2**. Specify **1**, if snapshot replication or transactional replication using the Distribution Agent. Specify **2**, if merge replication using the Merge Agent.  
   
 ## Return Code Values  

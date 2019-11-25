@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Resource Governor Classifier Function
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ manager: craigg
 2.  LOGON trigger execution  
   
 3.  Classification  
-  
+
  When classification starts, Resource Governor executes the classifier function and uses the value returned by the function to send requests to the appropriate workload group.  
   
 > [!NOTE]  

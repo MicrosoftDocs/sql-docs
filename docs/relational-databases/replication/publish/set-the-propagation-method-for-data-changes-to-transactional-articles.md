@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Set the Propagation Method for Data Changes to Transactional Articles
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   This topic describes how to set the propagation method for data changes to transactional articles in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  By default, transactional replication propagates changes to Subscribers using a set of stored procedures for each article. You can replace these procedures with custom procedures. For more information, see [Specify How Changes Are Propagated for Transactional Articles](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
@@ -53,7 +53,7 @@ manager: craigg
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
-  
+
 #### To generate and use custom stored procedures  
   
 1.  On the **Articles** page of the New Publication Wizard or the **Publication Properties - \<Publication>** dialog box, select a table, and then click **Article Properties**.  
@@ -80,13 +80,13 @@ manager: craigg
   
 #### To create an article that uses Transact-SQL commands to propagate data changes  
   
-1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, and a value of **SQL** for at least one of the following parameters:  
+1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify the name of the publication to which the article belongs for **\@publication**, a name for the article for **\@article**, the database object being published for **\@source_object**, and a value of **SQL** for at least one of the following parameters:  
   
-    -   **@ins_cmd** - controls the replication of [INSERT](../../../t-sql/statements/insert-transact-sql.md) commands.  
+    -   **\@ins_cmd** - controls the replication of [INSERT](../../../t-sql/statements/insert-transact-sql.md) commands.  
   
-    -   **@upd_cmd** - controls the replication of [UPDATE](../../../t-sql/queries/update-transact-sql.md) commands.  
+    -   **\@upd_cmd** - controls the replication of [UPDATE](../../../t-sql/queries/update-transact-sql.md) commands.  
   
-    -   **@del_cmd** - controls the replication of [DELETE](../../../t-sql/statements/delete-transact-sql.md) commands.  
+    -   **\@del_cmd** - controls the replication of [DELETE](../../../t-sql/statements/delete-transact-sql.md) commands.  
   
     > [!NOTE]  
     >  When specifying a value of **SQL** for any of the above parameters, commands of that type will be replicated to the Subscriber as the appropriate [!INCLUDE[tsql](../../../includes/tsql-md.md)] command.  
@@ -95,13 +95,13 @@ manager: craigg
   
 #### To create an article that does not propagate data changes  
   
-1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, and a value of **NONE** for at least one of the following parameters:  
+1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify the name of the publication to which the article belongs for **\@publication**, a name for the article for **\@article**, the database object being published for **\@source_object**, and a value of **NONE** for at least one of the following parameters:  
   
-    -   **@ins_cmd** - controls the replication of [INSERT](../../../t-sql/statements/insert-transact-sql.md) commands.  
+    -   **\@ins_cmd** - controls the replication of [INSERT](../../../t-sql/statements/insert-transact-sql.md) commands.  
   
-    -   **@upd_cmd** - controls the replication of [UPDATE](../../../t-sql/queries/update-transact-sql.md) commands.  
+    -   **\@upd_cmd** - controls the replication of [UPDATE](../../../t-sql/queries/update-transact-sql.md) commands.  
   
-    -   **@del_cmd** - controls the replication of [DELETE](../../../t-sql/statements/delete-transact-sql.md) commands.  
+    -   **\@del_cmd** - controls the replication of [DELETE](../../../t-sql/statements/delete-transact-sql.md) commands.  
   
     > [!NOTE]  
     >  When specifying a value of **NONE** for any of the above parameters, commands of that type will not be replicated to the Subscriber.  
@@ -110,13 +110,13 @@ manager: craigg
   
 #### To create an article with user-modified custom stored procedures  
   
-1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, a value for the **@schema_option** bitmask that contains the value **0x02** (enables automatic generation of custom stored procedures), and at least one of the following parameters:  
+1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify the name of the publication to which the article belongs for **\@publication**, a name for the article for **\@article**, the database object being published for **\@source_object**, a value for the **\@schema_option** bitmask that contains the value **0x02** (enables automatic generation of custom stored procedures), and at least one of the following parameters:  
   
-    -   **@ins_cmd** - specify a value of **CALL sp_MSins_*article_name***, where ***article_name*** is the value specified for **@article**.  
+    -   **\@ins_cmd** - specify a value of **CALL sp_MSins_*article_name***, where ***article_name*** is the value specified for **\@article**.  
   
-    -   **@del_cmd** - specify a value of **CALL sp_MSdel_*article_name*** or **XCALL sp_MSdel_*article_name***, where ***article_name*** is the value specified for **@article**.  
+    -   **\@del_cmd** - specify a value of **CALL sp_MSdel_*article_name*** or **XCALL sp_MSdel_*article_name***, where ***article_name*** is the value specified for **\@article**.  
   
-    -   **@upd_cmd** - specify a value of **SCALL sp_MSupd_*article_name***, **CALL sp_MSupd_*article_name***, **XCALL sp_MSupd_*article_name***, or **MCALL sp_MSupd_*article_name***, where ***article_name*** is the value specified for **@article**.  
+    -   **\@upd_cmd** - specify a value of **SCALL sp_MSupd_*article_name***, **CALL sp_MSupd_*article_name***, **XCALL sp_MSupd_*article_name***, or **MCALL sp_MSupd_*article_name***, where ***article_name*** is the value specified for **\@article**.  
   
     > [!NOTE]  
     >  For each of the above command parameters, you can specify your own name for the stored procedures that replication generates.  
@@ -130,13 +130,13 @@ manager: craigg
   
 #### To create an article with custom scripting in the custom stored procedures to propagate data changes  
   
-1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, a value for the **@schema_option** bitmask that contains the value **0x02** (enables automatic generation of custom stored procedures), and at least one of the following parameters:  
+1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify the name of the publication to which the article belongs for **\@publication**, a name for the article for **\@article**, the database object being published for **\@source_object**, a value for the **\@schema_option** bitmask that contains the value **0x02** (enables automatic generation of custom stored procedures), and at least one of the following parameters:  
   
-    -   **@ins_cmd** - specify a value of **CALL sp_MSins_*article_name***, where ***article_name*** is the value specified for **@article**.  
+    -   **\@ins_cmd** - specify a value of **CALL sp_MSins_*article_name***, where ***article_name*** is the value specified for **\@article**.  
   
-    -   **@del_cmd** - specify a value of **CALL sp_MSdel_*article_name*** or **XCALL sp_MSdel_*article_name***, where ***article_name*** is the value specified for **@article**.  
+    -   **\@del_cmd** - specify a value of **CALL sp_MSdel_*article_name*** or **XCALL sp_MSdel_*article_name***, where ***article_name*** is the value specified for **\@article**.  
   
-    -   **@upd_cmd** - specify a value of **SCALL sp_MSupd_*article_name***, **CALL sp_MSupd_*article_name***, **XCALL sp_MSupd_*article_name***, **MCALL sp_MSupd_*article_name***, where ***article_name*** is the value specified for **@article**.  
+    -   **\@upd_cmd** - specify a value of **SCALL sp_MSupd_*article_name***, **CALL sp_MSupd_*article_name***, **XCALL sp_MSupd_*article_name***, **MCALL sp_MSupd_*article_name***, where ***article_name*** is the value specified for **\@article**.  
   
     > [!NOTE]  
     >  For each of the above command parameters, you can specify your own name for the stored procedures that replication generates.  
@@ -150,7 +150,7 @@ manager: craigg
   
 #### To change the method of propagating changes for an existing article  
   
-1.  At the Publisher on the publication database, execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). Specify **@publication**, **@article**, a value of **ins_cmd**, **upd_cmd**, or **del_cmd** for **@property**, and the appropriate propagation method for **@value**.  
+1.  At the Publisher on the publication database, execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). Specify **\@publication**, **\@article**, a value of **ins_cmd**, **upd_cmd**, or **del_cmd** for **\@property**, and the appropriate propagation method for **\@value**.  
   
 2.  Repeat step 1 for each propagation method to be changed.  
   

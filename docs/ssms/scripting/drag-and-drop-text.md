@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "dragging and dropping text"
   - "Query Editor [SQL Server Management Studio], dragging and dropping text"
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Drag and Drop Text

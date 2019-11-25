@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # default trace enabled Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

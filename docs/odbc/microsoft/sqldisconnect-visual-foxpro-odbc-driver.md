@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 78ae1695-b53e-48ff-be49-ecff1f599e61
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLDisconnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  

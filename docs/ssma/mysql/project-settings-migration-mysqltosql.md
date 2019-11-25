@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Project Settings (Migration) (MySQLToSQL)
 The Migration page of the **Project Settings** dialog box contains settings that customize how SSMA migrates data from MySQL to SQL Server.  

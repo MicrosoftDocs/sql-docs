@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], WITH XMLNAMESPACES clause"
   - "WITH XMLNAMESPACES clause"
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Add Namespaces to Queries with WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

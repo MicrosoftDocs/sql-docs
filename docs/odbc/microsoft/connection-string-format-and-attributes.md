@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Connection String Format and Attributes
 > [!IMPORTANT]  

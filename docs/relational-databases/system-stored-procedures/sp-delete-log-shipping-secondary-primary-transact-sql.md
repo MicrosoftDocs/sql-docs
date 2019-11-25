@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 507fc744-73d9-4cb7-8d2a-bcff88841c6a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_delete_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +35,10 @@ sp_delete_log_shipping_secondary_primary
 ```  
   
 ## Arguments  
- [ **@primary_server** = ] '*primary_server*'  
+`[ @primary_server = ] 'primary_server'`
  The name of the primary instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in the log shipping configuration. *primary_server* is **sysname** and cannot be NULL.  
   
- [ **@primary_database** = ] '*primary_database*'  
+`[ @primary_database = ] 'primary_database'`
  Is the name of the database on the primary server. *primary_database* is **sysname**, with no default.  
   
 ## Return Code Values  

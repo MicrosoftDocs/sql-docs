@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Attach Query Hints to a Plan Guide
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

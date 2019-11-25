@@ -1,5 +1,6 @@
 ---
-title: "Work with Change Data (SQL Server) | Microsoft Docs"
+title: "Work with Change Data"
+ms.custom: seo-dt-2019
 ms.date: "01/02/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Work with Change Data (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 6b1f31c1-97de-4fc6-8d23-71d299f7bc28
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # DateTimeOffset Methods
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

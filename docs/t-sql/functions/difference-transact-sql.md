@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "comparing SOUNDEX values"
   - "SOUNDEX values"
 ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DIFFERENCE (Transact-SQL)

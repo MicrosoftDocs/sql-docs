@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +30,7 @@ IsTrainingCase()
  You can determine whether the data in a particular data mining structure has been partitioned into testing and training sets by viewing the value of the <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> and <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> properties.  
   
 > [!NOTE]  
->  Drillthrough must be enabled on the model if you want to use the IsTrainingCase or IsTestCase functions to return details about the cases in the model. For more information, see [Enable Drillthrough for a Mining Model](../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md).  
+>  Drillthrough must be enabled on the model if you want to use the IsTrainingCase or IsTestCase functions to return details about the cases in the model. For more information, see [Enable Drillthrough for a Mining Model](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
   
  To return cases that are part of the test data set, use the function [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md).  
   
@@ -48,8 +47,8 @@ AND [Age] <40
  For other examples of how to query cases used in data mining, see [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md) and [SELECT FROM &#60;structure&#62;.CASES](../dmx/select-from-structure-cases.md).  
   
 ## See Also  
- [Training and Testing Data Sets](../analysis-services/data-mining/training-and-testing-data-sets.md)   
+ [Training and Testing Data Sets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)   
  [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Data Mining Queries](../analysis-services/data-mining/data-mining-queries.md)  
+ [Data Mining Queries](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)  
   
   

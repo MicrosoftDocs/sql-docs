@@ -1,5 +1,5 @@
 ---
-title: "Validation (Master Data Services) | Microsoft Docs"
+title: Validation
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 98eb49e7-b190-4a21-8316-08c07cde14ed
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Validation (Master Data Services)
 

@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Configuration element"
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Configuration Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

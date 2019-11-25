@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: d3c0fb5d-ca05-43f7-9f38-fba6cf3705c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # updateBinaryStream Method (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Data Warehouse
@@ -33,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -   Snapshot isolation for database compatibility level 130 and higher.  
   
 ## Improve performance by combining nonclustered and columnstore indexes  
- Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can define nonclustered indexes on a clustered columnstore index.   
+ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can define nonclustered indexes on a clustered columnstore index.   
   
 ### Example: Improve efficiency of table seeks with a nonclustered index  
  To improve efficiency of table seeks in a data warehouse, you can create a nonclustered index designed to run queries that perform best with table seeks. For example, queries that look for matching values or return a small range of values will perform better against a B-tree index rather than a columnstore index. They don't require a full table scan through the columnstore index and will return the correct result faster by doing a binary search through a B-tree index.  
@@ -65,7 +64,7 @@ CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);
   
  The result is a columnstore index with a nonclustered index that enforces a primary key constraint on both indexes.  
   
-```sql 
+```sql
 --EXAMPLE: Enforce a primary key constraint on a columnstore table.   
   
 --Create a rowstore table with a unique constraint.  
@@ -126,6 +125,6 @@ END TRAN
  [Columnstore Indexes Data Loading Guidance](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Get started with Columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Columnstore Indexes Defragmentation](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+ [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) 
   

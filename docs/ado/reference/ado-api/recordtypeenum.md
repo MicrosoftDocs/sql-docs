@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f557e537-015d-4ba7-8a41-a6f00b366a91
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # RecordTypeEnum
 Specifies the type of [Record](../../../ado/reference/ado-api/record-object-ado.md) object.  

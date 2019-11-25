@@ -2,7 +2,7 @@
 title: "Design Reports with Report Designer (SSRS) | Microsoft Docs"
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 
@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Designer [Reporting Services], report creation"
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Design Reporting Services Paginated Reports with Report Designer (SSRS)
@@ -41,7 +41,7 @@ Report projects act as containers for report definitions and resources. Use proj
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is a client tool. You can test your reporting solution locally on your computer, deploy it to a test environment for testing the server solution, and then deploy it to a production environment. After deployment, verify that the data source processing extensions and data source credentials are configured for the report server environment. You can use Configuration Manager to help manage the properties for different deployments. For more information, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
- For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ For more information, see [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
    
 ##  <a name="bkmk_SharedDatasets"></a> Shared Datasets  
  Use [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] to define and deploy shared datasets for a reporting solution. Shared datasets can be deployed independently from other items in a project by using the **OverwriteDatasets** and **TargetDatasetFolder** properties. For more information, see [Set Deployment Properties &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  

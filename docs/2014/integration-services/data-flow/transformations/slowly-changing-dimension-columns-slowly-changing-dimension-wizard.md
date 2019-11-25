@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.loaddimwizard.scdsupport.f1"
 ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Slowly Changing Dimension Columns (Slowly Changing Dimension Wizard)

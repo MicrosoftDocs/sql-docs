@@ -12,7 +12,6 @@ dev_langs:
 ms.assetid: a6fb85b2-b010-4ca9-b65f-4402917076ea
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # System Metadata Functions
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

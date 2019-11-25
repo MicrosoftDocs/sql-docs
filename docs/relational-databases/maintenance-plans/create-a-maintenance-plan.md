@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Create a Maintenance Plan
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +129,7 @@ The [Agent XPs Server Configuration Option](../../database-engine/configure-wind
     GO  
     -- Attaches the RunOnce schedule to the job HistoryCleanupTask_1.   
     EXEC sp_attach_schedule  
-       @job_name = N'HistoryCleanupTask_1'  
+       @job_name = N'HistoryCleanupTask_1',  
        @schedule_name = N'RunOnce' ;   
     GO  
   

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Microsoft Replication Conflict Viewer and Interactive Resolver
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

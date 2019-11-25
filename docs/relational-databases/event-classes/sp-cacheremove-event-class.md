@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SP:CacheRemove Event Class

@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], database objects"
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Semantic Search DDL, Functions, Stored Procedures, and Views

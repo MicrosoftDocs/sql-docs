@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ResyncEnum
 Specifies whether underlying values are overwritten by a call to [Resync](../../../ado/reference/ado-api/resync-method.md).  

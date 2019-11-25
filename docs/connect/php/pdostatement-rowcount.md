@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 0569f26a-2376-4c20-8813-bd3c87d0ae9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # PDOStatement::rowCount
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

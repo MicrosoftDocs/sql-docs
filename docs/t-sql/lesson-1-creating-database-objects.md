@@ -9,20 +9,16 @@ ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Lesson 1: Create and query database objects
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
-
 This lesson shows you how to create a database, create a table in the database, and then access and change the data in the table. Because this lesson is an introduction to using [!INCLUDE[tsql](../includes/tsql-md.md)], it does not use or describe the many options that are available for these statements.  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] statements can be written and submitted to the [!INCLUDE[ssDE](../includes/ssde-md.md)] in the following ways:  
   
--   By using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. This tutorial assumes that you are using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], but you can also use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, which is available as a free download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=67359).  
+-   By using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. This tutorial assumes that you are using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], but you can also use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, which is available as a free download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=7593).  
   
 -   By using the [sqlcmd utility](../tools/sqlcmd-utility.md).  
   

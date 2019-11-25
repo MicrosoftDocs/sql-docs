@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +33,13 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [**@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with no default.  
   
- [**@schema** = ] **'***schema***'**  
+`[ @schema = ] 'schema'`
  Is the name of the schema. *schema* is **sysname**, with a default value of NULL.  
   
- [**@operation** = ] **'***operation***'**  
+`[ @operation = ] 'operation'`
  Is the action to be taken on this schema. *operation* is **nvarchar(4)**, and can be one of the following values.  
   
 |Value|Description|  

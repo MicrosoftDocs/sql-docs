@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STSymDifference (geometry Data Type)"
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STSymDifference (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

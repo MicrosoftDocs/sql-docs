@@ -21,10 +21,10 @@ helpviewer_keywords:
 ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # View and Modify Article Properties
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   This topic describes how to view and modify article properties in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
  **In This Topic**  
@@ -98,29 +98,29 @@ manager: craigg
   
 #### To view the properties of an article belonging to a snapshot or transactional publication  
   
-1.  Execute [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md), specifying the name of the publication for the **@publication** parameter and the name of the article for the **@article** parameter. If you do not specify **@article**, information will be returned for all articles in the publication.  
+1.  Execute [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md), specifying the name of the publication for the `@publication` parameter and the name of the article for the `@article` parameter. If you do not specify `@article`, information will be returned for all articles in the publication.  
   
 2.  Execute [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) for table articles to list all columns available in the base table.  
   
 #### To modify the properties of an article belonging to a snapshot or transactional publication  
   
-1.  Execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md), specifying the article property being changed in the **@property** parameter and the new value of this property in the **@value** parameter.  
+1.  Execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md), specifying the article property being changed in the `@property` parameter and the new value of this property in the `@value` parameter.  
   
     > [!NOTE]  
-    >  If the change requires the generation of a new snapshot, you must also specify a value of **1** for **@force_invalidate_snapshot**, and if the change requires that Subscribers be reinitialized, you must also specify a value of **1** for **@force_reinit_subscription**. For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  If the change requires the generation of a new snapshot, you must also specify a value of `1` for `@force_invalidate_snapshot`, and if the change requires that Subscribers be reinitialized, you must also specify a value of `1` for `@force_reinit_subscription`. For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### To view the properties of an article belonging to a merge publication  
   
-1.  Execute [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md), specifying the name of the publication for the **@publication** parameter and the name of the article for the **@article** parameter. If you do not specify these parameters, information will be returned for all articles in a publication or at the publisher.  
+1.  Execute [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md), specifying the name of the publication for the `@publication` parameter and the name of the article for the `@article` parameter. If you do not specify these parameters, information will be returned for all articles in a publication or at the publisher.  
   
 2.  Execute [sp_helpmergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql.md) for table articles to list all columns available in the base table.  
   
 #### To modify the properties of an article belonging to a merge publication  
   
-1.  Execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying the article property being changed in the **@property** parameter and the new value of this property in the **@value** parameter.  
+1.  Execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying the article property being changed in the `@property` parameter and the new value of this property in the `@value` parameter.  
   
     > [!NOTE]  
-    >  If the change requires the generation of a new snapshot, you must also specify a value of **1** for **@force_invalidate_snapshot**, and if the change requires that Subscribers be reinitialized, you must also specify a value of **1** for **@force_reinit_subscription**. For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  If the change requires the generation of a new snapshot, you must also specify a value of `1` for `@force_invalidate_snapshot`, and if the change requires that Subscribers be reinitialized, you must also specify a value of `1` for `@force_reinit_subscription`. For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This transactional replication example returns the properties of the published article.  

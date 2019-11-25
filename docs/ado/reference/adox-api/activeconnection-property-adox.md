@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ActiveConnection Property (ADOX)
 Indicates the ADO [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object to which the [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md) belongs.  

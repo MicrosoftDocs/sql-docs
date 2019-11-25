@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 1cf15ec4-d9d9-4ab3-bfee-2ea43ff609a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # setSavepoint Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

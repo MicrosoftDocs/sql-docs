@@ -1,7 +1,7 @@
 ---
-title: "Using a Stored Procedure with No Parameters | Microsoft Docs"
+title: "Using a stored procedure with no parameters | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,10 +10,9 @@ ms.topic: conceptual
 ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 
-# Using a Stored Procedure with No Parameters
+# Using a stored procedure with no parameters
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -24,7 +23,7 @@ When you use the JDBC driver to call a stored procedure without parameters, you 
 `{call procedure-name}`
 
 > [!NOTE]  
-> For more information about the SQL escape sequences, see [Using SQL Escape Sequences](../../connect/jdbc/using-sql-escape-sequences.md).
+> For more information about the SQL escape sequences, see [Using SQL escape sequences](../../connect/jdbc/using-sql-escape-sequences.md).
 
 As an example, create the following stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database:
 
@@ -53,6 +52,6 @@ public static void executeSprocNoParams(Connection con) throws SQLException {
 }
 ```
 
-## See Also
+## See also
 
-[Using Statements with Stored Procedures](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Using statements with stored procedures](../../connect/jdbc/using-statements-with-stored-procedures.md)

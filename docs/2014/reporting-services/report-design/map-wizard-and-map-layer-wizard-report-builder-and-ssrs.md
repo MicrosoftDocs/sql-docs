@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.mapandlayerwizard.f1"
   - "10542"
   - "MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME"
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Map Wizard and Map Layer Wizard (Report Builder and SSRS)
@@ -119,7 +118,7 @@ manager: kfile
  The map gallery contains maps from reports that are located in the map gallery folder for the report authoring environment. Maps from the gallery provide a quick start to add a map to your report. The predefined maps in the gallery are provided by a map provider.  
   
 > [!NOTE]  
->  This [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mapping feature uses data from TIGER/Line Shapefiles provided courtesy of the U.S. Census Bureau ([http://www.census.gov/](http://www.census.gov/)). TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. TIGER/Line Shapefiles are available without charge from the U.S. Census Bureau. To obtain more information about the TIGER/Line Shapefiles go to [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). The boundary information in the TIGER/Line Shapefiles are for statistical data collection and tabulation purposes only; their depiction and designation for statistical purposes does not constitute a determination of jurisdictional authority or rights of ownership or entitlement and they are not legal land descriptions. Census TIGER and TIGER/Line are registered trademarks of the U.S. Bureau of the Census.  
+>  This [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mapping feature uses data from TIGER/Line Shapefiles provided courtesy of the U.S. Census Bureau ([http://www.census.gov/](http://www.census.gov/)). TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. TIGER/Line Shapefiles are available without charge from the U.S. Census Bureau. To obtain more information about the TIGER/Line Shapefiles go to [TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html). The boundary information in the TIGER/Line Shapefiles are for statistical data collection and tabulation purposes only; their depiction and designation for statistical purposes does not constitute a determination of jurisdictional authority or rights of ownership or entitlement and they are not legal land descriptions. Census TIGER and TIGER/Line are registered trademarks of the U.S. Bureau of the Census.  
   
  To extend the map gallery, you can add or remove reports from the map gallery directory, and add folders to organize the maps. For more information, see [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md).  
   

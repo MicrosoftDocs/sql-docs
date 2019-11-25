@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # sys.sp_cdc_help_jobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

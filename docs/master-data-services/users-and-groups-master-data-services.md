@@ -1,5 +1,5 @@
 ---
-title: "Users and Groups (Master Data Services) | Microsoft Docs"
+title: Users and Groups
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "users [Master Data Services], about users"
   - "groups [Master Data Services], about groups"
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Users and Groups (Master Data Services)
 

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Setting Options Programmatically for the Access Driver
 

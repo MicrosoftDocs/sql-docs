@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "filters [full-text search]"
   - "word breakers [full-text search]"
 ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # View or Change Registered Filters and Word Breakers

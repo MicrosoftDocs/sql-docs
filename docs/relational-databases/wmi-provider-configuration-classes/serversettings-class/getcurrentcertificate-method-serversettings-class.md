@@ -1,6 +1,6 @@
 ---
-title: "GetCurrentCertificate Method (ServerSettings Class) | Microsoft Docs"
-ms.custom: ""
+title: "GetCurrentCertificate Method (ServerSettings)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # GetCurrentCertificate Method (ServerSettings Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

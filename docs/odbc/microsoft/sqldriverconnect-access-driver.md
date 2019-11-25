@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9d133e9b-7545-464d-aa3c-677fa7e2a41d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLDriverConnect (Access Driver)
 > [!NOTE]  

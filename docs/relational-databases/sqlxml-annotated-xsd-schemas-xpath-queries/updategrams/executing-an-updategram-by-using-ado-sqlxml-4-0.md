@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing an Updategram by Using ADO (SQLXML 4.0)

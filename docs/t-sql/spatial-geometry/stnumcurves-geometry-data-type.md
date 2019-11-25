@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STNumCurves method (geometry)"
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STNumCurves (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

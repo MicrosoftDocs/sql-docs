@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 159ca21a-ccc4-45e2-97ca-2a9387efa7df
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLTransact (dBASE Driver)
 > [!NOTE]  

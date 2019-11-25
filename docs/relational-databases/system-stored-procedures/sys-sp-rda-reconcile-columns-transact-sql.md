@@ -14,9 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_reconcile_columns stored procedure"
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

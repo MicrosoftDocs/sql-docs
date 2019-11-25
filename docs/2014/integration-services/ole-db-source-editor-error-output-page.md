@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.oledbsourceadapter.errorhandling.f1"
 helpviewer_keywords: 
   - "OLE DB Source Editor"
 ms.assetid: 7737c6ae-c16b-4856-aa6e-5882640093b7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # OLE DB Source Editor (Error Output Page)

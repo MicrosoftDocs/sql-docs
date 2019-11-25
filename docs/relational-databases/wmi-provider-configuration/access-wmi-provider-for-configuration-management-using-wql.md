@@ -1,6 +1,6 @@
 ---
-title: "Access WMI Provider for Configuration Management using WQL | Microsoft Docs"
-ms.custom: ""
+title: "Use WQL to access the WMI Provider"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Access WMI Provider for Configuration Management using WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

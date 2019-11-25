@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.job.targets.f1"
 ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Job Properties - New Job (Targets Page)

@@ -1,6 +1,5 @@
 ---
-title: "SQL Server Express LocalDB Header and Version Information | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server Express LocalDB header & version information"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,7 +12,7 @@ apilocation:
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
+ms.custom: seo-dt-2019
 ---
 # SQL Server Express LocalDB Header and Version Information
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

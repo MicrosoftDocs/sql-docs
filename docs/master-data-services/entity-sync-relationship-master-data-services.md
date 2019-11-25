@@ -1,5 +1,5 @@
 ---
-title: "Entity Sync Relationship (Master Data Services) | Microsoft Docs"
+title: Entity Sync Relationship
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Entity Sync Relationship (Master Data Services)
 

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +38,10 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'**_plan_id_**'**  
+`[ @plan_id = ] 'plan_id'`
  Specifies the ID of the maintenance plan. *plan_id* is **uniqueidentifier**, and must be a valid ID.  
   
- [ **@job_id =**] **'**_job_id_**'**  
+`[ @job_id = ] 'job_id'`
  Specifies the ID of the job to be associated with the maintenance plan. *job_id* is **uniqueidentifier**, and must be a valid ID. To create a job or jobs, execute **sp_add_job**, or use SQL Server Management Studio.  
   
 ## Return Code Values  

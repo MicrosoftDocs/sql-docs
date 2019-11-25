@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "REPLICATE function"
   - "repeating character expressions"
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REPLICATE (Transact-SQL)

@@ -1,6 +1,6 @@
 ---
-title: "Backing Up a Database with Memory-Optimized Tables | Microsoft Docs"
-ms.custom: ""
+title: "Database backup with Memory-optimized tables"
+ms.custom: seo-dt-2019
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Backing Up a Database with Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

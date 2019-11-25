@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Delete a Plan Guide
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ manager: craigg
 3.  Right-click the plan guide you want to delete and select **Delete**.  
   
 4.  In the **Delete Object** dialog box, ensure that the correct plan guide is selected and then click **OK**.  
-  
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To delete a single plan guide  

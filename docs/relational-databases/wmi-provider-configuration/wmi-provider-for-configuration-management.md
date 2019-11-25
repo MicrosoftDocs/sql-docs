@@ -1,5 +1,5 @@
 ---
-title: "WMI Provider for Configuration Management Concepts | Microsoft Docs"
+title: "WMI Provider for Configuration Management Concepts"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # WMI Provider for Configuration Management
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

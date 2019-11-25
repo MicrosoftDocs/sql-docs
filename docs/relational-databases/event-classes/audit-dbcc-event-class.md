@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 73724190-d6b7-4f11-9446-78bcafa6c693
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit DBCC Event Class

@@ -25,7 +25,7 @@ manager: craigg
   
  Consider the following table and query:  
   
-```tsql  
+```sql  
 CREATE TABLE [dbo].[od]  
 (  
      o_id INT NOT NULL,  
@@ -50,7 +50,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
 -   Add a new hash index that matches with the columns in the WHERE clause of the query. In the example, the resulting table definition would look at follows:  
   
-    ```tsql  
+    ```sql  
     CREATE TABLE dbo.od  
      ( o_id INT NOT NULL,  
      od_id INT NOT NULL,  

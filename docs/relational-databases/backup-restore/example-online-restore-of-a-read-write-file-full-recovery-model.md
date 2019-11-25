@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Example: Online Restore of a Read-Write File (Full Recovery Model)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ manager: craigg
     RESTORE LOG adb FROM log_backup1 WITH NORECOVERY;  
     RESTORE LOG adb FROM log_backup2 WITH NORECOVERY;  
     RESTORE LOG adb FROM log_backup3 WITH NORECOVERY;  
-    RESTORE LOG adb WITH RECOVERY;  
+    RESTORE DATABASE adb WITH RECOVERY;  
     ```  
   
      File `a1` is now online.  

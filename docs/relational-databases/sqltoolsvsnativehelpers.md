@@ -10,7 +10,6 @@ ms.topic: "reference"
 ms.assetid: d33cb556-0380-490a-9220-b74062dbd6d9
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SqlToolsVSNativeHelpers

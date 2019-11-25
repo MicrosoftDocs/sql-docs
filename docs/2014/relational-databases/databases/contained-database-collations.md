@@ -26,13 +26,13 @@ manager: craigg
 ### Example 1  
  For example, if we were working in Beijing, we might use a Chinese collation:  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  Now if we create a column, its default collation will be this Chinese collation, but we can choose another one if we want:  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -45,7 +45,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -57,7 +57,7 @@ mycolumn2       Frisian_100_CS_AS
 ### Example 2  
  For example, consider the (Chinese) database above when used on an instance with a **Latin1_General** collation:  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -81,7 +81,7 @@ JOIN #T2
   
  We can fix this by explicitly collating the temporary table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] makes this somewhat easier by providing the `DATABASE_DEFAULT` keyword for the `COLLATE` clause.  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -131,7 +131,7 @@ END;
   
  If we temp table example previously described, we can see that this collation behavior eliminates the need for an explicit `COLLATE` clause in most temp table uses. In a contained database, this code now runs without error, even if the database and instance collations differ:  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  

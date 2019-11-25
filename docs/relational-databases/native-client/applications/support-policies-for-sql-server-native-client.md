@@ -9,12 +9,10 @@ ms.topic: "reference"
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Support Policies for SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   This topic discusses how various data-access components can be used with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

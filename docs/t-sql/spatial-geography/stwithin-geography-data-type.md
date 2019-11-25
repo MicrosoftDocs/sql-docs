@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STWithin method (geography)"
 ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STWithin (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

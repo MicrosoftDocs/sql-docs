@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.mapembeddedpolygonlayerproperties.general.f1"
@@ -18,8 +17,8 @@ f1_keywords:
   - "10531"
   - "10536"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Vary Polygon, Line, and Point Display by Rules and Analytical Data (Report Builder and SSRS)

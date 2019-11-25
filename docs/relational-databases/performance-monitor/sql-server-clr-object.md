@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, CLR Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

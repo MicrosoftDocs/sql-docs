@@ -1,5 +1,5 @@
 ---
-title: "Reverse a Transaction (Master Data Services) | Microsoft Docs"
+title: Reverse a Transaction
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [Master Data Services], reversing"
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Reverse a Transaction (Master Data Services)
 

@@ -1,6 +1,6 @@
 ---
-title: "IPAddressName Property (ServerNetworkProtocolProperty Class) | Microsoft Docs"
-ms.custom: ""
+title: "IPAddressName Property (ServerNetworkProtocolProperty)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b27ea0fa-ab31-424b-80cf-aad1e87f3816
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # IPAddressName Property (ServerNetworkProtocolProperty Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: "Configure Email Notifications (Master Data Services) | Microsoft Docs"
+title: Configure Email Notifications
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "e-mail [Master Data Services], configuring"
   - "notifications [Master Data Services], configuring notifications"
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Configure Email Notifications (Master Data Services)
 

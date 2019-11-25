@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Value for Extended Property Dialog Box

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ADO Enumerated Constants
 To assist in debugging, the ADO enumerations list a value for each constant. However, this value is purely advisory, and may change from one release of ADO to another. Your code should only depend on the name, not the actual value, of each enumerated constant.  

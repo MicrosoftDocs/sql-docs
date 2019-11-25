@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SaveToFile Method
 Saves the binary contents of a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) to a file.  

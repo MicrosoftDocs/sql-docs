@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: a005e885-7813-4c7e-b332-b01d9e9d4054
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Data Collector Views (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

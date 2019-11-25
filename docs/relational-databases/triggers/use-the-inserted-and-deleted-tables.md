@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the inserted and deleted Tables

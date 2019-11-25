@@ -1,5 +1,5 @@
 ---
-title: "Change a Version Flag Name (Master Data Services) | Microsoft Docs"
+title: Change a Version Flag Name
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "version flags [Master Data Services], changing name"
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Change a Version Flag Name (Master Data Services)
 

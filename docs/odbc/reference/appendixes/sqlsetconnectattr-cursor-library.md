@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 6f70bbd0-a057-49ef-8b05-4c80b58fc6e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetConnectAttr (Cursor Library)
 > [!IMPORTANT]  

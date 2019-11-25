@@ -14,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Agent Profiles (single agent)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Use the **Agent Profiles** dialog box to manage profiles for an agent. Agent profiles provide a convenient way to manage the runtime parameters for each agent. Each agent has a default profile, and some agents have additional predefined profiles. For example, the Merge Agent has a "slow link" profile designed for low bandwidth connections. Predefined profiles are sufficient for most applications, but you can also create user-defined profiles, allowing you to customize agent behavior.  
   
 ## Options  

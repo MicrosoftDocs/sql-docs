@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Type System - Sequence Type Matching
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Isolate Performance Problems

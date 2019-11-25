@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "bookmarks [SQL Server Management Studio]"
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage Bookmarks

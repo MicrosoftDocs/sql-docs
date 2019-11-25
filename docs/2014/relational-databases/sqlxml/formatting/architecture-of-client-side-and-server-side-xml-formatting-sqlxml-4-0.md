@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Native Client, XML"
   - "SQLXMLOLEDB Provider, XML formatting architecture"
 ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Architecture of Client-side and Server-side XML Formatting (SQLXML 4.0)

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0c4cb5a4-9729-4b2e-a0c6-52027b92e8fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLPrepare (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Return Data from a Stored Procedure
@@ -20,8 +19,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   There are three ways of returning data from a procedure to a calling program: result sets, output parameters, and return codes. This topic provides information on the three approaches.  
   
-  ## Returning Data Using Result Sets
- If you include a SELECT statement in the body of a stored procedure (but not a SELECT ... INTO or INSERT ... SELECT), the rows specified by the SELECT statement will be sent directly to the client.  For large result sets the stored procedure execution will not continue to the next statement until the result set has been completely sent to the client.  For small result sets the results will be spooled for return to the client and execution will continue.  If multiple such SELECT statements are run during the exeuction of the stored proceudre, multiple result sets will be sent to the client.  This behavior also applies to nested TSQL batches, nested stored procedures and top-level TSQL batches.
+## Returning Data Using Result Sets
+If you include a SELECT statement in the body of a stored procedure (but not a SELECT ... INTO or INSERT ... SELECT), the rows specified by the SELECT statement will be sent directly to the client.  For large result sets, the stored procedure execution will not continue to the next statement until the result set has been completely sent to the client.  For small result sets, the results will be spooled for return to the client and execution will continue.  If multiple such SELECT statements are run during the execution of the stored procedure, multiple result sets will be sent to the client.  This behavior also applies to nested TSQL batches, nested stored procedures and top-level TSQL batches.
  
  
  ### Examples of Returning Data Using a Result Set 

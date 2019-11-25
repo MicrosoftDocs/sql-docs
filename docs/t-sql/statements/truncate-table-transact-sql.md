@@ -24,14 +24,10 @@ helpviewer_keywords:
 ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 Removes all rows from a table or specified partitions of a table, without logging the individual row deletions. TRUNCATE TABLE is similar to the DELETE statement with no WHERE clause; however, TRUNCATE TABLE is faster and uses fewer system and transaction log resources.  
   
@@ -43,8 +39,7 @@ Removes all rows from a table or specified partitions of a table, without loggin
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
-    [ { database_name .[ schema_name ] . | schema_name . } ]  
-    table_name  
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( PARTITIONS ( { <partition_number_expression> | <range> }   
     [ , ...n ] ) ) ]  
 [ ; ]  
@@ -56,7 +51,7 @@ TRUNCATE TABLE
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_name  
+TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  
 [;]  
 ```  
   

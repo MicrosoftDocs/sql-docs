@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "adding rows"
   - "table values [SQL Server]"
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Create Insert Values Queries (Visual Database Tools)

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deterministic and Nondeterministic Functions

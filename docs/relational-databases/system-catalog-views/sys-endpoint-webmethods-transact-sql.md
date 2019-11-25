@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

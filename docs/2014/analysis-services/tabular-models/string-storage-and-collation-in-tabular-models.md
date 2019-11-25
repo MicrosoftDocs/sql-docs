@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
@@ -42,7 +41,7 @@ manager: craigg
   
  Perhaps the data came from many different sources, and so the casing and use of accents was inconsistent, and the relational database stored those differences as is. But in general the values are either **Plant** or **Tree**, just with different casing.  
   
- When these values are loaded into a tabular model that uses the default collation and sorting order for American English, case is not important, so only two values would be stored for the entire column:  
+ When these values are loaded into a tabular model that uses the default collation and sorting order for English (United States), case is not important, so only two values would be stored for the entire column:  
   
 |Classification - English|  
 |-------------------------------|  

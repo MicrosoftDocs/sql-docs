@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Manage a Reporting Services SharePoint Service Application
@@ -144,8 +143,8 @@ manager: kfile
   
  The following is an example PowerShell command to return the list of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service applications with the UEAccount property:  
   
-```  
-Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
+```powershell
+Get-SPRSServiceApplication | Select typename, name, service, ueaccountname  
 ```  
   
  For more information, see [PowerShell cmdlets for Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server XTP Transaction Log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

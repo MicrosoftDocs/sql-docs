@@ -2,12 +2,12 @@
 title: "Getting started with the ReportViewer 2016 control | Microsoft Docs"
 ms.date: 09/18/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
 ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Integrating Reporting Services Using the Report Viewer Controls - Get Started
 

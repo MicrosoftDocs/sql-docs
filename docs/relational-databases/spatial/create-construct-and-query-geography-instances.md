@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "geodetic data type [SQL Server]"
   - "geography data type [SQL Server], about geography data type"
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create, Construct, and Query geography Instances

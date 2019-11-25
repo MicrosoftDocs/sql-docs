@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Manage the size of the transaction log file
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

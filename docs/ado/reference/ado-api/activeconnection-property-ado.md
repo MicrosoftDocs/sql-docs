@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ActiveConnection Property (ADO)
 Indicates to which [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object the specified [Command](../../../ado/reference/ado-api/command-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), or [Record](../../../ado/reference/ado-api/record-object-ado.md) object currently belongs.  

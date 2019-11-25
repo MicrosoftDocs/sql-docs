@@ -33,7 +33,7 @@ manager: craigg
 ##  <a name="bkmk_ExampleTable"></a> Example memory-optimized table  
  Consider the following memory-optimized table schema:  
   
-```tsql  
+```sql  
   
 CREATE TABLE t_hk (  
 col1 int NOT NULL PRIMARY KEY NONCLUSTERED,  
@@ -80,7 +80,7 @@ GO
   
  Hash indexes achieve very fast equality lookups such as:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 = 3  
@@ -89,7 +89,7 @@ SELECT * FROM t_hk
   
  Nonclustered indexes are faster for range lookups such as:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 >= 3  
@@ -98,7 +98,7 @@ SELECT * FROM t_hk
   
  If you are migrating a disk-based table you can use the following to determine the number of unique values for the index t1c2_index.  
   
-```tsql  
+```sql  
   
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk  
@@ -121,24 +121,24 @@ SELECT COUNT(DISTINCT [Col2])
   
  Since we have three hash indexes, the memory needed for the hash indexes is 3 * 64MB = 192MB.  
   
- **Memory for non-clustered indexes**  
+ **Memory for nonclustered indexes**  
   
- Non-clustered indexes are implemented as BTrees with the inner nodes containing the index value and pointers to subsequent nodes.  Leaf nodes contain the index value and a pointer to the table row in memory.  
+ Nonclustered indexes are implemented as BTrees with the inner nodes containing the index value and pointers to subsequent nodes.  Leaf nodes contain the index value and a pointer to the table row in memory.  
   
- Unlike hash indexes, non-clustered indexes do not have a fixed bucket size. The index grows and shrinks dynamically with the data.  
+ Unlike hash indexes, nonclustered indexes do not have a fixed bucket size. The index grows and shrinks dynamically with the data.  
   
- Memory needed by non-clustered indexes can be computed as follows:  
+ Memory needed by nonclustered indexes can be computed as follows:  
   
 -   **Memory allocated to non-leaf nodes**   
     For a typical configuration, the memory allocated to non-leaf nodes is a small percentage of the overall memory taken by the index. This is so small it can safely be ignored.  
   
 -   **Memory for leaf nodes**   
-    The leaf nodes have one row for each unique key in the table that points to the data rows with that unique key.  If you have multiple rows with the same key (i.e., you have a non-unique non-clustered index), there is only one row in the index leaf node that points to one of the rows with the other rows linked to each other.  Thus, the total memory required can be approximated by:   
+    The leaf nodes have one row for each unique key in the table that points to the data rows with that unique key.  If you have multiple rows with the same key (i.e., you have a non-unique nonclustered index), there is only one row in the index leaf node that points to one of the rows with the other rows linked to each other.  Thus, the total memory required can be approximated by:   
     memoryForNonClusteredIndex = (pointerSize + sum(keyColumnDataTypeSizes)) * rowsWithUniqueKeys  
   
- Non-clustered indexes are best when used for range lookups, as exemplified by the following query:  
+ Nonclustered indexes are best when used for range lookups, as exemplified by the following query:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE c2 > 5  

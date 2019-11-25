@@ -1,5 +1,5 @@
 ---
-title: "Add a Collection Item to a Collection Set (Transact-SQL) | Microsoft Docs"
+title: "Add Collection Item to Collection Set (T-SQL)"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+ms.custom: "seo-lt-2019"
 ---
 # Add a Collection Item to a Collection Set (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

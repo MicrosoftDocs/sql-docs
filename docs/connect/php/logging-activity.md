@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Logging Activity
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

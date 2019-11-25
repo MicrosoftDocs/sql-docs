@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # CubeDef Object (ADO MD)
 Represents a cube from a multidimensional schema, containing a set of related dimensions.  

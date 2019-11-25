@@ -1,5 +1,5 @@
 ---
-title: "Create a File Attribute (Master Data Services) | Microsoft Docs"
+title: Create a File Attribute
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "creating file attributes [Master Data Services]"
   - "attributes [Master Data Services], creating file attributes"
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a File Attribute (Master Data Services)
 

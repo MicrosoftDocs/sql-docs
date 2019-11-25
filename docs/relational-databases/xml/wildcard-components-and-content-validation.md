@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "wildcard components [XML]"
   - "content validation [XML]"
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Wildcard Components and Content Validation
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

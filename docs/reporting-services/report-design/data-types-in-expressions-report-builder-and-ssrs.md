@@ -2,14 +2,14 @@
 title: "Data Types in Expressions (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Data Types in Expressions (Report Builder and SSRS)
   Data types represent different kinds of data so that it can be stored and processed efficiently. Typical data types include text (also known as strings), numbers with and without decimal places, dates and times, and images. Values in a report must be an Report Definition Language (RDL) data type. You can format a value according to your preference when you display it in a report. For example, a field that represents currency is stored in the report definition as a floating point number, but can be displayed in a variety of formats depending on the format property you choose.  
@@ -134,7 +134,7 @@ ms.author: maghan
   
  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md), and [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data types, see [Data Types in Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md).  
+ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data types, see [Data Types in Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services).  
   
 ## See Also  
  [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

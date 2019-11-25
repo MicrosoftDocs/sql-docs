@@ -1,5 +1,5 @@
 ---
-title: "Create a Text Attribute (Master Data Services) | Microsoft Docs"
+title: Create a Text Attribute
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "attributes [Master Data Services], creating text attributes"
   - "creating text attributes [Master Data Services]"
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Text Attribute (Master Data Services)
 

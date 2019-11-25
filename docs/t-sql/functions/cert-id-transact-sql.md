@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "IDs [SQL Server], certificates"
   - "certificates [SQL Server], IDs"
 ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # CERT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

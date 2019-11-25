@@ -2,7 +2,7 @@
 title: "Excel Device Information Settings | Microsoft Docs"
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "device information settings [Reporting Services], Excel rendering"
   - "Excel [Reporting Services], rendering"
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Excel Device Information Settings
   The following table lists the device information settings for rendering in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] format.  

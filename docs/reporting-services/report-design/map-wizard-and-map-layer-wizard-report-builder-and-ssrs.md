@@ -2,7 +2,7 @@
 title: "Map Wizard and Map Layer Wizard (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -12,8 +12,8 @@ f1_keywords:
   - "10542"
   - "MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME"
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Map Wizard and Map Layer Wizard (Report Builder and SSRS)
  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, the Map Wizard and Map Layer Wizard automate the task of creating a map, adding a map layer, or changing map layer options on an existing layer.  
@@ -110,7 +110,7 @@ ms.author: maghan
  The map gallery contains maps from reports that are located in the map gallery folder for the report authoring environment. Maps from the gallery provide a quick start to add a map to your report. The predefined maps in the gallery are provided by a map provider.  
   
 > [!NOTE]  
->  This [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mapping feature uses data from TIGER/Line Shapefiles provided courtesy of the U.S. Census Bureau ([https://www.census.gov/](https://www.census.gov/)). TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. TIGER/Line Shapefiles are available without charge from the U.S. Census Bureau. To obtain more information about the TIGER/Line Shapefiles go to [https://www.census.gov/geo/www/tiger](https://www.census.gov/geo/www/tiger). The boundary information in the TIGER/Line Shapefiles are for statistical data collection and tabulation purposes only; their depiction and designation for statistical purposes does not constitute a determination of jurisdictional authority or rights of ownership or entitlement and they are not legal land descriptions. Census TIGER and TIGER/Line are registered trademarks of the U.S. Bureau of the Census.  
+>  This [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mapping feature uses data from TIGER/Line Shapefiles provided courtesy of the U.S. Census Bureau ([https://www.census.gov/](https://www.census.gov/)). TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. TIGER/Line Shapefiles are available without charge from the U.S. Census Bureau. To obtain more information about the TIGER/Line Shapefiles go to [TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html). The boundary information in the TIGER/Line Shapefiles are for statistical data collection and tabulation purposes only; their depiction and designation for statistical purposes does not constitute a determination of jurisdictional authority or rights of ownership or entitlement and they are not legal land descriptions. Census TIGER and TIGER/Line are registered trademarks of the U.S. Bureau of the Census.  
   
  To extend the map gallery, you can add or remove reports from the map gallery directory, and add folders to organize the maps. For more information, see [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
@@ -130,7 +130,7 @@ ms.author: maghan
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spatial query is a dataset query that specifies data that is either a SQLGeometry or a SQLGeography data type from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational database.  
   
 > [!NOTE]  
->  When you define a data source in the wizard, you will see different query designers in the Design a Query page, depending on what type of data source you are connecting to. For more information, see [Query Designers &#40;Report Builder&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
+>  When you define a data source in the wizard, you will see different query designers in the Design a Query page, depending on what type of data source you are connecting to. For more information, see [Query Design Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
   
  When you run the query in the query designer, the result set displays a column with spatial data that appears as text. For example, one row might contain spatial data that is a single point and the next row might contain spatial data that defines a set of points. Each row becomes one map element. You can vary the display of each map element as an indivisible unit.  
   

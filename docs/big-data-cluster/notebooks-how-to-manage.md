@@ -1,24 +1,25 @@
 ---
 title: Manage notebooks in Azure Data Studio
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Learn how to manage notebooks in Azure Data Studio. This includes opening notebooks, saving them, and changing your big data cluster connection.
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # How to manage notebooks in Azure Data Studio
 
-This article shows you how to open and save notebook files in Azure Data Studio with SQL Server 2019 preview. It also demonstrates how to change your connection to your SQL Server big data cluster.
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+This article shows you how to open and save notebook files in Azure Data Studio with SQL Server. It also demonstrates how to change your connection to your SQL Server big data cluster.
 
 ## Prerequisites
 
-This article assumes that you already have a notebook that you want to use in Azure Data Studio. If you want to create a notebook, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md). To use notebooks in Azure Data Studio, you must meet the following prerequisites:
+This article assumes that you already have a notebook that you want to use in Azure Data Studio. If you want to create a notebook, see [How to use notebooks in SQL Server](notebooks-guidance.md). To use notebooks in Azure Data Studio, you must meet the following prerequisites:
 
 - [Deploy a big data cluster](quickstart-big-data-cluster-deploy.md).
 - [SQL Server 2019 big data tools](deploy-big-data-tools.md):
@@ -74,4 +75,4 @@ To change the SQL Server big data cluster for a notebook:
 
 ## Next steps
 
-For more information about notebooks in Azure Data Studio, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
+For more information about notebooks in Azure Data Studio, see [How to use notebooks in SQL Server 2019](notebooks-guidance.md).

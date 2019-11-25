@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f7457b8a-df31-4999-883e-8cc386a48ceb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # setClob Method (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

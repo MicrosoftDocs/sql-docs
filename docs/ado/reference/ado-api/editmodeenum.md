@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 45d54b6e-db2c-4553-9fd0-528147d6da2f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # EditModeEnum
 Specifies the editing status of a record.  

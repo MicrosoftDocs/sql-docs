@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Broker Login Event Class

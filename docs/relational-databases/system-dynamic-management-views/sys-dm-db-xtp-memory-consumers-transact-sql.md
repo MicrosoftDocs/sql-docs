@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_memory_consumers (Transact-SQL)

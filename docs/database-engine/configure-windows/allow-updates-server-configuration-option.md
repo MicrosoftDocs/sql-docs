@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3967c3ed-280a-4de8-a2ce-393e82745a7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # allow updates Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

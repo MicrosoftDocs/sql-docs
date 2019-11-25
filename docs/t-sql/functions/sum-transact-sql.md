@@ -22,9 +22,8 @@ helpviewer_keywords:
   - "totals [SQL Server], SUM"
   - "summary values [SQL Server]"
 ms.assetid: 9af94d0f-55d4-428f-a840-ec530160f379
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SUM (Transact-SQL)

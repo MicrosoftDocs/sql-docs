@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Installing ODBC Components
 > [!NOTE]  

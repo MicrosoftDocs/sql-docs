@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Optimize Merge Replication Performance with Conditional Delete Tracking
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

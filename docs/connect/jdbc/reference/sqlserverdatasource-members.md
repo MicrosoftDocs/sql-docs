@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLServerDataSource Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

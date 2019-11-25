@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10426"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "Help, dialog boxes"
   - "user interface, dialog boxes"
 ms.assetid: 2da24891-0b6d-4d3c-8b18-81b98752642f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Builder Help for Dialog Boxes, Panes, and Wizards

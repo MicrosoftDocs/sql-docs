@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Connecting to SQL Server (MySQLToSQL)
 To migrate MySQL databases to SQL Server, you must connect to the target instance of SQL Server. When you connect, SSMA obtains metadata about all the databases in the instance of SQL Server and displays database metadata in the SQL Server Metadata Explorer. SSMA stores information of the instance of SQL Server you are connected to, but does not store passwords.  

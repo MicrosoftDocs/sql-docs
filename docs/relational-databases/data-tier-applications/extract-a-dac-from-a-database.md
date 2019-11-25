@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Extract a DAC From a Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

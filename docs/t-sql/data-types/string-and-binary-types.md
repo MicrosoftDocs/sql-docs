@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: fe8ee5b6-7392-4aae-a551-973bae02de8d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # String and Binary Types
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

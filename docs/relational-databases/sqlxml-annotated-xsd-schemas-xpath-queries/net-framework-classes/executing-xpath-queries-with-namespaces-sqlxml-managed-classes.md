@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing XPath Queries with Namespaces (SQLXML Managed Classes)
@@ -104,5 +103,4 @@ class Test
      This creates an executable (DocSample.exe).  
   
 4.  At the command prompt, execute DocSample.exe.  
-  
-  
+

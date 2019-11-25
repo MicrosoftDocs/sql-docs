@@ -1,5 +1,5 @@
 ---
-title: "Change Sets and Approval (MDS Add-in for Excel) | Microsoft Docs"
+title: Change Sets and Approval
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Change Sets and Approval (MDS Add-in for Excel)
 

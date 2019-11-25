@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ba973025-18c8-481b-a383-6ed935237894
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLAllocStmt (Visual FoxPro ODBC Driver)
 > [!NOTE]  

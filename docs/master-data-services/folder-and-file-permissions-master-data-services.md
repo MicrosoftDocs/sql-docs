@@ -1,5 +1,5 @@
 ---
-title: "Folder and File Permissions (Master Data Services) | Microsoft Docs"
+title: Folder and File Permissions
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "folders [Master Data Services]"
   - "files [Master Data Services]"
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Folder and File Permissions (Master Data Services)
 

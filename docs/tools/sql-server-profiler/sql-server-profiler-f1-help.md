@@ -39,9 +39,8 @@ helpviewer_keywords:
   - "Replay Configuration dialog box"
   - "Find dialog box"
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # SQL Server Profiler dialog boxes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

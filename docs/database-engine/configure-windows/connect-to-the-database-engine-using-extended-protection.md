@@ -1,7 +1,7 @@
 ---
 title: "Connect to the Database Engine Using Extended Protection | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/21/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -15,16 +15,15 @@ helpviewer_keywords:
   - "channel binding"
   - "Extended Protection"
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # Connect to the Database Engine Using Extended Protection
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports **Extended Protection** beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. **Extended Protection for Authentication** is a feature of the network components implemented by the operating system. **Extended Protection** is supported in Windows 7 and Windows Server 2008 R2. **Extended Protection** is included in service packs for older [!INCLUDE[msCoName](../../includes/msconame-md.md)] operating systems. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is more secure when connections are made using **Extended Protection**.  
   
 > [!IMPORTANT]  
->  Windows does not enable **Extended Protection** by default. For information about how to enable **Extended Protection** in Windows, see [Extended Protection for Authentication](https://support.microsoft.com/kb/968389).  
+> Windows does not enable **Extended Protection** by default. For information about how to enable **Extended Protection** in Windows, see [Extended Protection for Authentication](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview).
   
 ## Description of Extended Protection  
  **Extended Protection** uses service binding and channel binding to help prevent an authentication relay attack. In an authentication relay attack, a client that can perform NTLM authentication (for example, Windows Explorer, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, a .NET SqlClient application, etc.), connects to an attacker (for example, a malicious CIFS file server). The attacker uses the client's credentials to masquerade as the client and authenticate to a service (for example, an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] service).  
@@ -51,7 +50,7 @@ manager: craigg
   
 -   [Integrated Windows Authentication with Extended Protection](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Microsoft Security Advisory (973811), Extended Protection for Authentication](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Microsoft Security Advisory (973811), Extended Protection for Authentication](/security-updates/SecurityAdvisories/2009/973811)
   
 ## Settings  
  There are three [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection settings that affect service binding and channel binding. The settings can be configured by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, or by using WMI, and can by viewed by using the **Server Protocol Settings** facet of Policy Based Management.  
@@ -75,7 +74,7 @@ manager: craigg
      The **Accepted NTLM SPNs** variable is needed when a server is known by more than one SPN. When a client attempts to connect to the server by using a valid SPN that the server does not know, service binding will fail. To avoid this problem, users can specify several SPNs that represent the server by using **Accepted NTLM SPNs**. **Accepted NTLM SPNs** is a series of SPNs separated my semicolons. For example, to allow the SPNs **MSSQLSvc/ HostName1.Contoso.com** and **MSSQLSvc/ HostName2.Contoso.com**, type **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** in the **Accepted NTLM SPNs** box. The variable has a maximum length of 2,048 characters. **Accepted NTLM SPNs** is on the **Protocols for MSSQLSERVER Properties (Advanced Tab)** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
 ## Enabling Extended Protection for the Database Engine  
- To use **Extended Protection**, both the server and the client must have an operating system on that supports **Extended Protection**, and **Extended Protection** must be enabled on the operating system. For more information about how to enable **Extended Protection** for the operating system, see [Extended Protection for Authentication](https://support.microsoft.com/kb/968389).  
+ To use **Extended Protection**, both the server and the client must have an operating system on that supports **Extended Protection**, and **Extended Protection** must be enabled on the operating system. For more information about how to enable **Extended Protection** for the operating system, see [Extended Protection for Authentication](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports **Extended Protection** beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. **Extended Protection** for some earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will be made available in future updates. After enabling **Extended Protection** on the server computer, use the following steps to enable **Extended Protection**:  
   

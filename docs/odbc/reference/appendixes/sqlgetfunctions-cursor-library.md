@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 931acd12-4eb6-4a78-9a77-157a18a9a2d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetFunctions (Cursor Library)
 > [!IMPORTANT]  

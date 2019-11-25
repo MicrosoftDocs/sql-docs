@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change Tracking Catalog Views - sys.change_tracking_databases

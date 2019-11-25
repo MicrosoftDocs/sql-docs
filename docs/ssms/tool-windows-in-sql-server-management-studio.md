@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], tool windows"
   - "tool windows [SQL Server Management Studio]"
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Tool Windows in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

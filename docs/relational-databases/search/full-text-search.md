@@ -1,18 +1,16 @@
 ---
 title: "Full-Text Search | Microsoft Docs"
-ms.custom: ""
 ms.date: "04/10/2018"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
-ms.technology:
+ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server]"
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Full-Text Search
@@ -69,7 +67,7 @@ A full-text index includes one or more character-based columns in a table. These
     ```  
     SELECT candidate_name,SSN   
     FROM candidates   
-    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division =DBA;  
+    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division = 'DBA';  
     ```  
   
  For more information, see [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md).  
@@ -107,7 +105,7 @@ A full-text index includes one or more character-based columns in a table. These
 
     >[!NOTE]  
     >  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, the Full-Text Engine resides in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process, rather than in a separate service. Integrating the Full-Text Engine into the Database Engine improved full-text manageability, optimization of mixed query, and overall performance.  
- 
+
 -   **Index writer (indexer).** The index writer builds the structure that is used to store the indexed tokens.  
   
 -   **Filter daemon manager.** The filter daemon manager is responsible for monitoring the status of the Full-Text Engine filter daemon host.  

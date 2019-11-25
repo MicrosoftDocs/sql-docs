@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Batch Mode
 Batch mode is in effect when the **LockType** property is set to **adLockBatchOptimistic** and batch updating is supported by the provider. Certain lock type settings are not available depending on cursor location. For instance, a pessimistic lock type is not available when the **CursorLocation** is set to **adUseClient**. Conversely, a provider cannot support a batch optimistic lock when the cursor location is on the server. You should use batch updating with either a keyset or static cursor only.  

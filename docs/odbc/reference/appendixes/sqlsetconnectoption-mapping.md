@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetConnectOption Mapping
 When an ODBC 2.*x* application calls **SQLSetConnectOption** through an ODBC 3*.x* driver, the call to  

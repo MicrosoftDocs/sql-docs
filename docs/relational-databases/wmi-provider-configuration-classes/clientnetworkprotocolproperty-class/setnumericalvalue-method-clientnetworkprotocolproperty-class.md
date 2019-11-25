@@ -1,6 +1,6 @@
 ---
-title: "SetNumericalValue Method (ClientNetworkProtocolProperty Class) | Microsoft Docs"
-ms.custom: ""
+title: "SetNumericalValue Method (ClientNetworkProtocolProperty)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: wmi
 ms.topic: "reference"
 apiname: 
-  - "SetNumericalValue Method (ClientNetworkProtocolProperty Class)"
+  - "SetNumericalValue Method (ClientNetworkProtocolProperty"
 apilocation: 
   - "sqlmgmproviderxpsp2up.mof"
 apitype: "MOFDef"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d4d6df52-9e68-4003-9e28-ece6716ba7f1
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetNumericalValue Method (ClientNetworkProtocolProperty Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

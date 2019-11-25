@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Optimize SQL Trace
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

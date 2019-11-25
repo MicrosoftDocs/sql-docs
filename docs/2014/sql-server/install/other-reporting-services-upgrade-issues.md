@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "command line setup [Reporting Services]"
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "report compilation errors [Reporting Services]"
   - "authentication [Reporting Services]"
 ms.assetid: 42dd2f06-1de9-449e-ab9d-f4ef25f8b728
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Other Reporting Services Upgrade Issues

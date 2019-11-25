@@ -1,5 +1,5 @@
 ---
-title: "Delete Hierarchy Member Permissions (Master Data Services) | Microsoft Docs"
+title: Delete Hierarchy Member Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "members [Master Data Services], deleting permissions"
   - "permissions [Master Data Services], deleting member permissions"
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete Hierarchy Member Permissions (Master Data Services)
 

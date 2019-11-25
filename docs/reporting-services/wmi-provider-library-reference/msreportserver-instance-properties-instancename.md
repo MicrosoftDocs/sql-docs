@@ -2,7 +2,7 @@
 title: "InstanceName Property (WMI MSReportServer_Instance) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "InstanceName property"
 ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # MSReportServer_Instance Properties - InstanceName
   Returns the name of a report server instance on a specific computer. Read-only.  

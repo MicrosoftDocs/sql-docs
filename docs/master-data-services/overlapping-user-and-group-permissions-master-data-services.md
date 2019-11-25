@@ -1,5 +1,5 @@
 ---
-title: "Overlapping User and Group Permissions (Master Data Services) | Microsoft Docs"
+title: Overlapping User and Group Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "permissions [Master Data Services], user and group overlaps"
   - "groups [Master Data Services], resolving permissions"
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Overlapping User and Group Permissions (Master Data Services)
 

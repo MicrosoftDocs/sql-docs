@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Automatically Generate Join Filters Between Merge Articles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,7 +10,6 @@ ms.reviewer: "alayu; sstein"
 ms.topic: conceptual
 author: "meet-bhagdev"
 ms.author: "meetb"
-manager: craigg
 ---
 # Connect [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your SQL Server using Windows authentication - Kerberos 
 
@@ -154,7 +153,7 @@ Get a Ticket Granting Ticket (TGT) from KDC.
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-View the available tickets using kinit. If the kinit was successful, you should see a ticket. 
+View the available tickets using klist. If the kinit was successful, you should see a ticket. 
 
 ```bash
 klist

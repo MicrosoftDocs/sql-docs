@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: a0316c4e-4b8c-4754-8a35-222f3c0907d1
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLEDB Provider Information Event Class

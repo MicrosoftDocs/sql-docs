@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4ae40066-5911-4d32-937a-040bacc853ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Date Arithmetic Limitations
 Date arithmetic is not supported for subtracting a DATE data type from a DATE data type.

@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "XMLTEXT directive"
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Example: Specifying the XMLTEXT Directive
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -13,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLFreeConnect Mapping
-When an application calls **SQLFreeConnect** through an ODBC 3*.x* driver, the call to  
+When an application calls **SQLFreeConnect** through an ODBC *3.x* driver, the call to  
   
 ```  
 SQLFreeConnect(hdbc)   

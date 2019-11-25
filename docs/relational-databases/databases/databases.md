@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Databases

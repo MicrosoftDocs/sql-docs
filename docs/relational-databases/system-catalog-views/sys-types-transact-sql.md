@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.types (Transact-SQL)

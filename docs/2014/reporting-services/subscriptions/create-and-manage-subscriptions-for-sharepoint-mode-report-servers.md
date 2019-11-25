@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [Reporting Services], creating"
   - "subscriptions [Reporting Services], deleting"
   - "subscriptions [Reporting Services], managing"
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create and Manage Subscriptions for SharePoint Mode Report Servers

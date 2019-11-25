@@ -1,7 +1,7 @@
 ---
 title: "SQLNumParams Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,6 +11,7 @@ apiname:
   - "SQLNumParams"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLNumParams"
@@ -19,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: dbf2da44-253b-4094-bd6b-29bafc23c7a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLNumParams Function
 **Conformance**  
@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLNumParams(  
      SQLHSTMT        StatementHandle,  

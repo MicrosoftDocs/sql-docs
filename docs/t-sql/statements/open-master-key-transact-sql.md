@@ -28,7 +28,6 @@ helpviewer_keywords:
 ms.assetid: 1674753e-ca1e-4913-9ba4-b442e7106121
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OPEN MASTER KEY (Transact-SQL)

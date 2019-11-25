@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
@@ -81,7 +79,7 @@ Casts to the Boolean data type of any other string results in an error.
 **Cast from string to date/time**  
 In DirectQuery mode, casts from string representations of dates and times to actual **datetime** values behave the same way as they do in SQL Server.  
   
-For information about the rules governing casts from string to **datetime** data types in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] models, see the [DAX Syntax Reference](https://msdn.microsoft.com/library/ee634217.aspx).  
+For information about the rules governing casts from string to **datetime** data types in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] models, see the [DAX Syntax Reference](/dax/dax-syntax-reference).
   
 Models that use the in-memory data store support a more limited range of text formats for dates than the string formats for dates that are supported by SQL Server. However, DAX supports custom date and time formats.  
   
@@ -129,7 +127,7 @@ SQL Server handles nulls and blanks differently than the xVelocity engine. As a 
   
 The same limitations apply to the other logarithmic functions: LOG10 and LN.  
   
-For more information about the **blank** data type in DAX, see [DAX Syntax Reference](https://msdn.microsoft.com/library/ee634217.aspx).  
+For more information about the **blank** data type in DAX, see [DAX Syntax Reference](/dax/dax-syntax-reference).
   
 **Division by 0 and division by Blank**  
 In DirectQuery mode, division by zero (0) or division by BLANK will always result in an error. SQL Server does not support the notion of infinity, and because the natural result of any division by 0 is infinity, the result is an error. However, SQL Server supports division by nulls, and the result must always equal null.  

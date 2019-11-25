@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  For a plan guide to match a batch submitted from an application, *batch_tex*t must be provided in the same format, character-for-character, as it is submitted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No internal conversion is performed to facilitate this match. For more information, see the Remarks section.  
   
- [*schema_name*.]*object_name* specifies the name of a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, scalar function, multistatement table-valued function, or [!INCLUDE[tsql](../../includes/tsql-md.md)] DML trigger that contains *statement_text*. If *schema_name* is not specified, *schema_name* uses the schema of the current user. If NULL is specified and \@type = 'SQL', the value of \@module_or_batch is set to the value of \@stmt. If \@type = 'TEMPLATE**'**, \@module_or_batch must be NULL.  
+ [*schema_name*.]*object_name* specifies the name of a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, scalar function, multistatement table-valued function, or [!INCLUDE[tsql](../../includes/tsql-md.md)] DML trigger that contains *statement_text*. If *schema_name* is not specified, *schema_name* uses the schema of the current user. If NULL is specified and \@type = 'SQL', the value of \@module_or_batch is set to the value of \@stmt. If \@type = 'TEMPLATE**\'**, \@module_or_batch must be NULL.  
   
  [ \@params = ]{ N'*\@parameter_name data_type* [ ,*...n* ]' | NULL }  
  Specifies the definitions of all parameters that are embedded in *statement_text*. \@params applies only when either of the following is true:  
@@ -111,7 +110,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  When \@type = 'SQL' and \@module_or_batch is set to NULL, the value of \@module_or_batch is set to the value of \@stmt. This means that the value for *statement_text* must be provided in exactly the same format, character-for-character, as it is submitted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No internal conversion is performed to facilitate this match.  
   
- When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] matches the value of *statement_text* to *batch_text* and *\@parameter_name data_type* [,*...n* ], or if \@type = **'**OBJECT', to the text of the corresponding query inside *object_name*, the following string elements are not considered:  
+ When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] matches the value of *statement_text* to *batch_text* and *\@parameter_name data_type* [,*...n* ], or if \@type = **\'**OBJECT', to the text of the corresponding query inside *object_name*, the following string elements are not considered:  
   
 -   White space characters (tabs, spaces, carriage returns, or line feeds) inside the string.  
   

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLNativeSql Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLNativeSql(  
      SQLHDBC        ConnectionHandle,  
@@ -91,25 +90,25 @@ SQLRETURN SQLNativeSql(
 ## Comments  
  The following are examples of what **SQLNativeSql** might return for the following input SQL string containing the scalar function CONVERT. Assume that the column empid is of type INTEGER in the data source:  
   
-```  
+```sql  
 SELECT { fn CONVERT (empid, SQL_SMALLINT) } FROM employee  
 ```  
   
  A driver for Microsoft SQL Server might return the following translated SQL string:  
   
-```  
+```sql  
 SELECT convert (smallint, empid) FROM employee  
 ```  
   
  A driver for ORACLE Server might return the following translated SQL string:  
   
-```  
+```sql  
 SELECT to_number (empid) FROM employee  
 ```  
   
  A driver for Ingres might return the following translated SQL string:  
   
-```  
+```sql  
 SELECT int2 (empid) FROM employee  
 ```  
   

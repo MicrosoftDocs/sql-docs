@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: eef42653-85d0-4eaf-94bd-2ea1b024cd23
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # backup checksum default
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

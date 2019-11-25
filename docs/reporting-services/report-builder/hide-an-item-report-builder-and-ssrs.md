@@ -2,7 +2,7 @@
 title: "Hide an Item (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 
 
@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.shared.visibility.f1"
   - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Hide an Item (Report Builder and SSRS)
   Set the visibility of a report item when you want to conditionally hide an item based on a report parameter or some other expression that you specify.  

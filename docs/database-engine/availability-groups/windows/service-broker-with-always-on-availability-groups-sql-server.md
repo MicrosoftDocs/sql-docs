@@ -12,18 +12,12 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Service Broker with Always On Availability Groups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic contains information about configuring Service Broker to work with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- **In This Topic:**  
-  
--   [Requirements for a Service in an Availability Group to Receive Remote Messages](#ReceiveRemoteMessages)  
-  
--   [Requirements for Sending Messages to a Remote Service in an Availability Group](#SendRemoteMessages)  
   
 ##  <a name="ReceiveRemoteMessages"></a> Requirements for a Service in an Availability Group to Receive Remote Messages  
   

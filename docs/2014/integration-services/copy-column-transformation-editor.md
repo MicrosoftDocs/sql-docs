@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.copymaptransformation.f1"
 helpviewer_keywords: 
   - "Copy Column Transformation Editor"
 ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Copy Column Transformation Editor

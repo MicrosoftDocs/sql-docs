@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLDriverConnect Function
 **Conformance**  
@@ -42,7 +41,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLDriverConnect(  
      SQLHDBC         ConnectionHandle,  
@@ -285,7 +284,7 @@ SQLRETURN SQLDriverConnect(
   
  For more information, see [Connecting with SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md).  
   
-```  
+```cpp  
 // SQLDriverConnect_ref.cpp  
 // compile with: odbc32.lib user32.lib  
 #include <windows.h>  

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.edge_constraints (Transact-SQL)

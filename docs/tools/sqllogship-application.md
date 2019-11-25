@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "sqllogship"
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sqllogship Application
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

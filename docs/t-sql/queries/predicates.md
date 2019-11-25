@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "predicates [full-text search]"
   - "expressions [SQL Server], predicates"
 ms.assetid: ddbc530c-f44d-4551-9ca3-3430258eb6c0
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # Predicates
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

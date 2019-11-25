@@ -1,7 +1,7 @@
 ---
-title: "Caching Result Set Data Sample | Microsoft Docs"
+title: "Caching result set data sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,9 +10,8 @@ ms.topic: conceptual
 ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
-# Caching Result Set Data Sample
+# Caching result set data sample
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -24,7 +23,7 @@ This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample app
 To set a limit on the number of rows cached on the client, you must first use a server-side cursor when you create one of the Statement objects by specifically stating the cursor type to use when creating the Statement object. For example, the JDBC driver provides the TYPE_SS_SERVER_CURSOR_FORWARD_ONLY cursor type, which is a fast forward-only, read-only server-side cursor for use with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases.  
   
 > [!NOTE]  
-> An alternative to using the SQL Server specific cursor type is to use the selectMethod connection string property, setting its value to "cursor". For more information about the cursor types supported by the JDBC driver, see [Understanding Cursor Types](../../../connect/jdbc/understanding-cursor-types.md).  
+> An alternative to using the SQL Server specific cursor type is to use the selectMethod connection string property, setting its value to "cursor". For more information about the cursor types supported by the JDBC driver, see [Understanding cursor types](../../../connect/jdbc/understanding-cursor-types.md).  
   
 After you have run the query in the Statement object and the data is returned to the client as a result set, you can call the setFetchSize method to control how much data is retrieved from the database at one time. For example, if you have a table that 100 rows of data, and you set the fetch size to 10, only 10 rows of data will be cached on the client at any time. Although this will slow down the speed at which the data is processed, it has the advantage of using less memory on the client, which can be especially useful when you need to process large amounts of data.  
   
@@ -119,6 +118,6 @@ public class CacheResultSet {
 }
 ```
 
-## See Also  
+## See also  
 
-[Working with Result Sets](../../../connect/jdbc/code-samples/working-with-result-sets.md)  
+[Working with result sets](../../../connect/jdbc/code-samples/working-with-result-sets.md)  

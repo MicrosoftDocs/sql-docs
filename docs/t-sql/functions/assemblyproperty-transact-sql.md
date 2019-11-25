@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "ASSEMBLYPROPERTY statement"
   - "assemblies [CLR integration], properties"
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

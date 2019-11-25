@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Other Access Driver Programming Details
 > [!NOTE]  

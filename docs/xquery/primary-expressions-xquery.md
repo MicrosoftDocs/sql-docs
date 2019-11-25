@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Primary Expressions (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +30,11 @@ manager: craigg
   
 |Entity reference|Represents|  
 |----------------------|----------------|  
-|&lt;|\<|  
-|&gt;|>|  
-|&amp;|&|  
-|&quot;|"|  
-|&apos;|'|  
+|`&lt;`|\<|  
+|`&gt;`|>|  
+|`&amp;`|&|  
+|`&quot;`|"|  
+|`&apos;`|'|  
   
  A string literal can also contain a character reference, an XML-style reference to a Unicode character, that is identified by its decimal or hexadecimal code point. For example, the Euro symbol can be represented by the character reference, "&\#8364;".  
   
@@ -59,7 +58,7 @@ GO
 ```  
 DECLARE @var XML  
 SET @var = ''  
-SELECT @var.query(' <SalaryRange>Salary > 50000 and < 100000</SalaryRange>')  
+SELECT @var.query(' <SalaryRange>Salary &gt; 50000 and &lt; 100000</SalaryRange>')  
 GO  
 ```  
   
@@ -177,6 +176,5 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
 -   Function import is not supported.  
   
 ## See Also  
- [XML Construction &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
-  
-  
+ [XML Construction &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)
+ 

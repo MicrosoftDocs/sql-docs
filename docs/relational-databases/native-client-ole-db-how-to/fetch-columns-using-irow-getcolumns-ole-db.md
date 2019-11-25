@@ -12,12 +12,10 @@ helpviewer_keywords:
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetch Columns Using IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The **IRow** interface allows direct access to columns of a single row in the result set. Thus, **IRow** is an efficient way to retrieve columns from a result set with one row.  
   
@@ -39,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Execute IRow::GetColumns() to fetch one or more columns in the resulting row. If you want to find the actual column size before fetching data, set the pData in DBCOLUMNACCESS to NULL. The call to IRow::GetColumns() returns only the column width. Another call the IRow::GetColumns() will fetch the data.  
   
 4.  Execute IRow::GetColumns() until all the columns you need are accessed. The columns must be accessed in sequence.  
-  
+
 ## Example  
  This sample shows how to use the IRow interface to allow direct access to columns of a single row in the result set. The example shows:  
   

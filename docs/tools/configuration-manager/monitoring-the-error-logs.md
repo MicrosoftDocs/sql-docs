@@ -22,10 +22,9 @@ helpviewer_keywords:
   - "error logs [SQL Server]"
   - "logs [SQL Server], Windows application logs"
 ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Monitoring the Error Logs
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

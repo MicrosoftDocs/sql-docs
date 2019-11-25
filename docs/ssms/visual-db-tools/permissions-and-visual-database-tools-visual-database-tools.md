@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "multiuser environments [Visual Database Tools]"
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Permissions and Visual Database Tools (Visual Database Tools)

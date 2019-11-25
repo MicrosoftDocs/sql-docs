@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 111e2dd7-d64e-4670-8bf0-2135d0a056b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # DISTINCT Keyword Limitations
 Not supported for Long Text fields (Microsoft Access) or Memo fields (dBASE).

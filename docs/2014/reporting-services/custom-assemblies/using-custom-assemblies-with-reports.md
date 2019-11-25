@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "custom assemblies [Reporting Services]"
   - "assemblies [Reporting Services], custom"
   - "custom assemblies [Reporting Services], about custom assemblies"
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using Custom Assemblies with Reports

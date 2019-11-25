@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c4459092-1177-4b2a-b7f5-e0083d3bf2b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLNativeSql (Cursor Library)
 > [!IMPORTANT]  

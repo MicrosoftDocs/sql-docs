@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, FileTable Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

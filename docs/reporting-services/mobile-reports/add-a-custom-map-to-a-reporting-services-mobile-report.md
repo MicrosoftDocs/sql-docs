@@ -7,8 +7,8 @@ ms.technology: mobile-reports
 
 ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add a custom map to a Reporting Services mobile report
 Custom maps require two files:  

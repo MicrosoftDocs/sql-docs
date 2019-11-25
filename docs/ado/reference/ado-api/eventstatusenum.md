@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # EventStatusEnum
 Specifies the current status of the execution of an event.  

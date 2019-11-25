@@ -1,18 +1,18 @@
 ---
-title: RevoScaleR R function library - SQL Server Machine Learning Services
-description: Introduction to the RevoScaleR function library in SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services with R.
+title: RevoScaleR R function library
+description: Introduction to the RevoScaleR function library in SQL Server 2016 R Services and SQL Server Machine Learning Services with R.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/04/2018  
+ms.date: 11/06/2019  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # RevoScaleR (R library in SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **RevoScaleR** is a library of high-performance data science functions from Microsoft. Functions support data import, data transformation, summarization, visualization, and analysis.
 
@@ -31,12 +31,12 @@ The **RevoScaleR** library is distributed in multiple Microsoft products, but us
 The **RevoScaleR** library is based on R 3.4.3 and available only when you install one of the following Microsoft products or downloads:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 or later](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R client](set-up-a-data-science-client.md)
 
 > [!NOTE]
-> Full product release versions are Windows-only, starting with SQL Server 2017. Linux support for **RevoScaleR** is new in [SQL Server 2019 Preview](../../linux/sql-server-linux-setup-machine-learning.md).
+> Full product release versions are Windows-only in SQL Server 2017. Both Windows and Linux are supported for **RevoScaleR** in [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md).
 
 ## Functions by category
 

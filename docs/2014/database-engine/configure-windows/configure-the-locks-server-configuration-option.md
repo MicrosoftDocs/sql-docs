@@ -76,7 +76,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to set the value of the `locks` option to set the number of locks available for all users to `20000`.  
   
-```tsql  
+```sql  
 Use AdventureWorks2012 ;  
 GO  
 sp_configure 'show advanced options', 1;  

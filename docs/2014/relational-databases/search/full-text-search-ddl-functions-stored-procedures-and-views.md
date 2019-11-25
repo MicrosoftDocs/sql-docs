@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 98c36715-4195-482e-a4a3-d93ff65b75f1
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Full-Text Search DDL, Functions, Stored Procedures, and Views

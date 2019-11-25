@@ -1,1 +1,1 @@
-Machine Learning Services (In-Database) 
+Machine Learning Services 

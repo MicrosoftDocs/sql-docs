@@ -2,7 +2,7 @@
 title: "Formatting Numbers and Dates (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -17,8 +17,8 @@ f1_keywords:
   - "10285"
   - "sql13.rtp.rptdesigner.axisproperties.number.f1"
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Formatting Numbers and Dates (Report Builder and SSRS)
   You can format numbers and dates in data regions by selecting a format from the **Number** page of the corresponding data region's **Properties** dialog box.  

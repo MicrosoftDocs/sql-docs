@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "exceptions [Reporting Services], try/catch blocks"
   - "try/catch blocks [Reporting Services]"
 ms.assetid: a7a9ef53-e3b6-4bf7-81f3-d85615954e6f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using Try and Catch Blocks

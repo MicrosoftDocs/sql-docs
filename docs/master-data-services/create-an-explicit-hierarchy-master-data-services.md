@@ -1,5 +1,5 @@
 ---
-title: "Create an Explicit Hierarchy (Master Data Services) | Microsoft Docs"
+title: Create an Explicit Hierarchy
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "creating explicit hierarchies [Master Data Services]"
   - "explicit hierarchies, creating"
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create an Explicit Hierarchy (Master Data Services)
 

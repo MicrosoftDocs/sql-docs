@@ -1,5 +1,5 @@
 ---
-title: "Annotations (Master Data Services) | Microsoft Docs"
+title: Annotations
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "annotations [Master Data Services]"
   - "annotations [Master Data Services], about annotations"
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Annotations (Master Data Services)
 

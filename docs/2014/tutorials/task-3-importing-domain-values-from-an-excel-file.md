@@ -7,9 +7,11 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
-
+ms.author: lle
+author: lrtoyou1223
 ---
 # Task 3: Importing Domain Values from an Excel File
+
   In this task, you import values for the **State** domain from a worksheet of an Excel file.  
   
 1.  Click **State** domain in the **Domain list**.  

@@ -8,7 +8,6 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -248,7 +247,7 @@ OR [Model Region] = 'M200 North America'
   
 ## See Also  
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Time Series Model Query Examples](../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Time Series Model Query Examples](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
  [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

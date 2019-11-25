@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "database_usage"
   - "sys.database_usage"
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.database_usage (Azure SQL Database)
@@ -45,6 +44,6 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
   
 ## See Also  
  [SQL Database Pricing Details](https://go.microsoft.com/fwlink/?LinkID=394978)   
- [Accounts and Billing in Windows Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [Accounts and Billing in Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Create New Condition or Open Condition Dialog Box, General Page
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

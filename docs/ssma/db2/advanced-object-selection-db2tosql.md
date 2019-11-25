@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Advanced Object Selection (DB2ToSQL)
 The **Advanced Object Section** dialog box lets you filter database objects by using strings and substrings in the object name, and then select or deselect those objects. SSMA performs conversion and migration operations on selected objects.  

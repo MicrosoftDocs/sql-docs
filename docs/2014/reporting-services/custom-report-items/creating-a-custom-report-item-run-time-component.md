@@ -4,20 +4,33 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "custom report items, creating"
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Creating a Custom Report Item Run-Time Component
   The custom report item run-time component is implemented as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] component using any CLS-compliant language, and is called by the report processor at run time. You define the properties for the run-time component in the design environment by modifying the custom report item's corresponding design-time component.  
-  
+
+<!--
+Replacing the following multiValue.....
+
+ms.technology: 
+  - "docset-sql-devref"
+  - "reporting-services-native"
+
+.....with the following single value.....
+
+ms.technology: reporting-services
+.
+
+(GeneMi = MightyPen  ,  2019-04-20  ,  DevO= 1515083)
+-->
+
  For a sample of a fully implemented custom report item, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## Definition and Instance Objects  

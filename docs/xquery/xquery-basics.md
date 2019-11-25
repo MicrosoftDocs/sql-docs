@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # XQuery Basics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

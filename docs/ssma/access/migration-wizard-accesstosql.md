@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Migration Wizard (AccessToSQL)
 The Migration Wizard guides you through the migration of one or more databases from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Or SQL Azure. By using the wizard, you will create a project, add databases to the project, select objects to migrate, and connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Or SQL Azure. You will also convert, load, and migrate Access schemas and data. Optionally, you can link Access tables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Or SQL Azure tables.  
@@ -70,7 +69,7 @@ If you have many objects, you might want to use the **Advanced Object Selection*
 For more information about filtering, see the Options section of [Advanced Object Selection (SSMA Common)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c).  
   
 ## Connect to SQL Server Page  
-On the Connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] page, you specify connection properties, and then connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Connect to SQL Server](https://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
+On the Connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] page, you specify connection properties, and then connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Connect to SQL Server](connect-to-sql-server-accesstosql.md).
   
 > [!IMPORTANT]  
 > As soon as the connection succeeds, you will encounter **Link Tables** page where you have an option of linking the tables. Click **Next** and the migration starts.  

@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], Results pane"
   - "Results pane"
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Rules for Updating Results (Visual Database Tools)

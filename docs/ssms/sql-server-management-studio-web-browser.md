@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "Web browsers [SQL Server Management Studio]"
   - "integrated Web browsers [SQL Server Management Studio]"
 ms.assetid: 493dd3d0-50c6-4d8d-aba1-cd7c3030a581
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # SQL Server Management Studio Web Browser
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

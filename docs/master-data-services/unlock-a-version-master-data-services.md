@@ -1,5 +1,5 @@
 ---
-title: "Unlock a Version (Master Data Services) | Microsoft Docs"
+title: Unlock a Version
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "unlocking versions [Master Data Services]"
   - "versions [Master Data Services], unlocking"
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Unlock a Version (Master Data Services)
 

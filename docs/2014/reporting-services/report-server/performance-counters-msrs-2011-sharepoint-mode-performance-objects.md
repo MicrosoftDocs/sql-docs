@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance counters [Reporting Services]"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "Scheduling and Delivery Processor performance object [Reporting Services]"
   - "performance [Reporting Services]"
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Performance Counters for the MSRS 2014 Web Service SharePoint Mode and MSRS 2014 Windows Service SharePoint Mode Performance Objects (SharePoint Mode)
@@ -117,21 +116,23 @@ manager: kfile
 ##  <a name="bkmk_powershell"></a> Use PowerShell Cmdlets to return lists  
  ![PowerShell related content](../media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script will return the counter sets where the CounterSetName starts with "msr"  
   
-```  
-get-counter -listset msr*  
-Returns a list with the following information  
+```powershell
+Get-Counter -ListSet msr*
+```
+
+Returns a list with the following information:
+
+```
 CounterSetName     : MSRS 2014 Windows Service SharePoint Mode  
 CounterSetName     : MSRS 2014 Web Service SharePoint Mode  
 ```  
   
  The following Windows PowerShell script will return the list of performance counters for the CounterSetName "MSRS 2014 Windows Service SharePoint Mode".  
   
-```  
-(get-counter -listset "MSRS 2014 Windows Service SharePoint Mode").paths  
+```powershell
+(Get-Counter -ListSet "MSRS 2014 Windows Service SharePoint Mode").Paths  
 ```  
   
 ## See Also  
  [Monitoring Report Server Performance](monitoring-report-server-performance.md)   
  [Performance Counters for the MSRS 2014 Web Service and MSRS 2014 Windows Service Performance Objects &#40;Native Mode&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
-  
-  

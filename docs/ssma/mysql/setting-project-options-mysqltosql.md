@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Setting Project Options (MySQLToSQL)
 For each SSMA project, you can set project-level options. These options specify how objects are converted, how data is migrated, and how source data types map to target data types.  Before you convert objects to SQL Server or SQL Azure or migrate data into SQL Server or SQL Azure, verify that the configuration options are appropriate for the project.  

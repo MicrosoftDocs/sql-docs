@@ -2,14 +2,14 @@
 title: "Plan for report design and report deployment | Reporting Services | Microsoft Docs"
 ms.date: 09/12/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Plan for report design and report deployment | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides several approaches for authoring and deploying paginated reports. Learn how to plan a report authoring and report server environment that work together.
@@ -47,8 +47,12 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
 -   **Report Builder:** Save a report to the report server from Report Builder.  
   
 -   **Web Portal:** Upload a report to a native mode report server from the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 -   **SharePoint:** Upload a report to a SharePoint site that is configured with a SharePoint mode report server.  
+
+::: moniker-end
   
 -   **Programmatically:** Programmatically publish a report by using the SOAP API interfaces to a report server. For more information, see [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
@@ -62,7 +66,13 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
   
  When you upload a report definition to the report server or upgrade a report server that contains existing reports, the report server preserves the report definition in the original format. **On first use**, the report server upgrades the report in the report server database to a binary format that is preserved for subsequent views. The report definition (.rdl) itself is not upgraded.  
   
- You can extract from the report server a read-only copy of the report definition file (.rdl). On a native mode report server, browse to the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the report and click **Download**. In a SharePoint mode deployment, browse to the document library, select the report and click **Download a Copy**.  
+ You can extract from the report server a read-only copy of the report definition file (.rdl). On a native mode report server, browse to the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the report and click **Download**. 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+In a SharePoint mode deployment, browse to the document library, select the report and click **Download a Copy**.  
+
+::: moniker-end
   
  To upgrade the report definition, you must open the report in a report authoring environment, such as SQL Server Data Tools or Report Builder, and then save it.  
   

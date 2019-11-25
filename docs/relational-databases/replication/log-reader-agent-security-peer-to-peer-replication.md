@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Log Reader Agent Security (Peer-to-Peer Replication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

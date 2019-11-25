@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Cursors Event Category

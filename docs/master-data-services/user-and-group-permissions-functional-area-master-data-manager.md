@@ -1,5 +1,5 @@
 ---
-title: "User and Group Permissions Functional Area (Master Data Manager) | Microsoft Docs"
+title: User and Group Permissions Functional Area
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # User and Group Permissions Functional Area (Master Data Manager)
 

@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "table mapping [SQLXML], explicit mapping"
   - "element/attribute mapping [SQLXML]"
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Explicit Mapping of XSD Elements and Attributes to Tables and Columns (SQLXML 4.0)

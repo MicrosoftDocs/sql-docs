@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ed44de2b-0b01-4dce-a340-f5eb3aac30b7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLColAttributes (dBASE Driver)
 > [!NOTE]  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Functions on Sequences - empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.executepackagetask.parameter.F1"
   - "sql12.dts.designer.executepackagetask.package.f1"
   - "sql12.dts.designer.executepackagetask.general.f1"
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Execute Package Task Editor

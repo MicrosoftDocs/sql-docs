@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1d7f0c4c-f092-4bbb-9643-f7c9d07ed1af
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLTransact (Paradox Driver)
 > [!NOTE]  

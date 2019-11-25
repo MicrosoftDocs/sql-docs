@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "adExecuteStream flag"
   - "SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider"
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Introduction to the SQLXMLOLEDB Provider (SQLXML 4.0)

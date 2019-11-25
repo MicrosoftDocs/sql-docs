@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "SIGNBYCERT function"
   - "cryptography [SQL Server], certificates"
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # SIGNBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  *certificate_ID*  
  Is the ID of a certificate in the current database. *certificate_ID* is **int**.  
   
- *@cleartext*  
+ *\@cleartext*  
  Is a variable of type **nvarchar**, **char**, **varchar**, or **nchar** that contains data that will be signed.  
   
  **'** *password* **'**  

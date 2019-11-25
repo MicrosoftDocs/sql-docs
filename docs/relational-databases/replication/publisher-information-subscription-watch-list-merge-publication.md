@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Publisher Information, Subscription Watch List (Merge Publication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ manager: craigg
  The name of each subscription, in the form:*SubscriberName: SubscriptionDatabaseName*.  
   
  **Friendly Name**  
- The description of each subscription. The description is entered in the **Subscription Properties** dialog box or specified with the **@description** parameter of [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) or [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Users often use the description as a "friendly name" or nickname for the subscription.  
+ The description of each subscription. The description is entered in the **Subscription Properties** dialog box or specified with the `@description` parameter of [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) or [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Users often use the description as a "friendly name" or nickname for the subscription.  
   
  **Publication**  
  The name of the publication with which a subscription synchronizes, in the form: *PublicationDatabaseName: PublicationName*.  

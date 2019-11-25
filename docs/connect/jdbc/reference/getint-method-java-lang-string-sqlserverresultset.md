@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 76b7054d-46dd-4d87-93a4-a7ea2ae9b7fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getInt Method (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

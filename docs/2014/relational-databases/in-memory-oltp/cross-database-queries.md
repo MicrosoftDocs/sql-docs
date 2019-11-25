@@ -18,7 +18,7 @@ manager: craigg
   
  For example, to copy the row from table t1 in database db1 to table t2 in db2, using variable @v1 of type dbo.tt1, you can use something like:  
   
-```tsql  
+```sql  
 USE db2   
 GO   
 DECLARE @v1 dbo.tt1   

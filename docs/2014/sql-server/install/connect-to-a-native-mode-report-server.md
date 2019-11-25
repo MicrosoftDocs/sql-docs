@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.connectiondialog.F1"
 helpviewer_keywords: 
   - "report servers [Reporting Services], configuring"
 ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT 
+ms.author: maggies
 manager: craigg
 ---
 # Connect to a Native Mode Report Server

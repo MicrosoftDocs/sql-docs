@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_help_jobcount (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +35,10 @@ sp_help_jobcount
 ```  
   
 ## Arguments  
- [ **@schedule_id=** ] *schedule_id*  
+`[ @schedule_id = ] schedule_id`
  The identifier of the schedule to list. *schedule_id* is **int**, with no default. Either *schedule_id* or *schedule_name* may be specified.  
   
- [ **@schedule_name=** ]  **'***schedule_name***'**  
+`[ @schedule_name = ] 'schedule_name'`
  The name of the schedule to list. *schedule_name* is **sysname**, with no default. Either *schedule_id* or *schedule_name* may be specified.  
   
 ## Return Code Values  

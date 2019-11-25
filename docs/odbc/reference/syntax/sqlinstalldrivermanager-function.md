@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLInstallDriverManager Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLInstallDriverManager(  
      LPSTR    lpszPath,  

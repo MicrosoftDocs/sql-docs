@@ -26,17 +26,13 @@ helpviewer_keywords:
   - "CATCH block"
   - "messages [SQL Server], RAISERROR statement"
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
   Generates an error message and initiates error processing for the session. RAISERROR can either reference a user-defined message stored in the sys.messages catalog view or build a message dynamically. The message is returned as a server error message to the calling application or to an associated CATCH block of a TRY...CATCH construct. New applications should use [THROW](../../t-sql/language-elements/throw-transact-sql.md) instead.  
   
@@ -121,8 +117,8 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  To convert a value to the [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** data type, specify **%I64d**.  
   
- *@local_variable*  
- Is a variable of any valid character data type that contains a string formatted in the same manner as *msg_str*. *@local_variable* must be **char** or **varchar**, or be able to be implicitly converted to these data types.  
+ *\@local_variable*  
+ Is a variable of any valid character data type that contains a string formatted in the same manner as *msg_str*. *\@local_variable* must be **char** or **varchar**, or be able to be implicitly converted to these data types.  
   
  *severity*  
  Is the user-defined severity level associated with this message. When using *msg_id* to raise a user-defined message created using sp_addmessage, the severity specified on RAISERROR overrides the severity specified in sp_addmessage.  

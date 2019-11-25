@@ -2,7 +2,7 @@
 title: "Element Path Syntax for XML Report Data (SSRS) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ElementPath syntax"
   - "XML [Reporting Services], data retrieval"
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Element Path Syntax for XML Report Data (SSRS)
   In Report Designer, you specify the data to use for a report from an XML data source by defining a case-sensitive element path. An element path indicates how to traverse the XML hierarchical nodes and their attributes in the XML data source. To use the default element path, leave the dataset query or the XML **ElementPath** of the XML **Query** empty. When data is retrieved from the XML data source, element nodes that have text values and element node attributes become columns in the result set. The values of the nodes and attributes become the row data when you run the query. The columns appear as the dataset field collection in the Report Data pane. This topic describes the element path syntax.  
@@ -74,7 +74,7 @@ XMLLocalName :: =
 |**Encoding**|Indicates that the **Value** for this element is encoded XML and needs to be decoded and included as a subelement of this element.|  
 |**FieldList**|Defines the set of elements and attributes to use to retrieve data.<br /><br /> If not specified, all attributes and subelements are used as fields. If the empty field list is specified (**{}**), no fields from this node are used.<br /><br /> A **FieldList** may not contain both a **Value** and an **Element** or **ElementNode**.|  
 |**Field**|Specifies the data that is retrieved as a dataset field.|  
-|**Attribute**|A name-value pair within the **ElementNode**. For example, in the element node \<Customer ID="1">, **ID** is an attribute and **@ID(Integer)** returns "1" as an integer type in the corresponding data field **ID**.|  
+|**Attribute**|A name-value pair within the **ElementNode**. For example, in the element node \<Customer ID="1">, **ID** is an attribute and **\@ID(Integer)** returns "1" as an integer type in the corresponding data field **ID**.|  
 |**Value**|The value of the element. **Value** can only be used on the last **ElementNode** in the element path. For example, because \<Return> is a leaf node, if you include it at the end of an element path, the value of **Return {@}** is **Chair**.|  
 |**Element**|The value of the named subelement. For example, Customers {}/Customer {}/LastName retrieves values for only the LastName element.|  
 |**Type**|The optional data type to use for the field created from this element.|  

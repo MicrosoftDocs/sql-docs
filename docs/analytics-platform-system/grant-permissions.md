@@ -1,14 +1,14 @@
 ---
-title: Grant T-SQL permissions - Parallel Data Warehouse | Microsoft Docs
+title: Grant T-SQL permissions
 description: Grant T-SQL permissions for database operations in Parallel Data Warehouse.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Grant T-SQL permissions for Parallel Data Warehouse

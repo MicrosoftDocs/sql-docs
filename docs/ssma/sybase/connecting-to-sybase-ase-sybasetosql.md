@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Connecting to Sybase ASE (SybaseToSQL)
 To migrate Sybase Adaptive Server Enterprise (ASE) databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you must connect to the Adaptive Server that contains the databases that you want to migrate. When you connect, SSMA obtains metadata about all databases on the Adaptive Server and displays database metadata in the Sybase Metadata Explorer pane. SSMA stores information about the database server, but does not store passwords.  

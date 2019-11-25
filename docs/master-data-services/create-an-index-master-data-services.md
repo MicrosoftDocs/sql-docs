@@ -1,5 +1,5 @@
 ---
-title: "Create an Index (Master Data Services) | Microsoft Docs"
+title: Create an Index
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create an Index (Master Data Services)
 

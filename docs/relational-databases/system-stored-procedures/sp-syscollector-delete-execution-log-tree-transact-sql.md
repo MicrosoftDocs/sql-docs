@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_syscollector_delete_execution_log_tree (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +35,10 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
 ```  
   
 ## Arguments  
- [ **@log_id =** ] *log_id*  
+`[ @log_id = ] log_id`
  Is the unique identifier for the collection set log. *log_id* is **int**.  
   
- [ **@from_collection_set =** ] *from_collection_set*  
+`[ @from_collection_set = ] from_collection_set`
  Is the identifier for the collection set. *from_collection_set* is **bit=1**.  
   
 ## Return Code Values  

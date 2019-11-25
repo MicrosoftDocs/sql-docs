@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # How to: Connect on a Specified Port
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

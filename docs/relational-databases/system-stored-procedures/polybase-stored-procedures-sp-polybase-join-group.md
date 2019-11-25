@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # sp_polybase_join_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,14 +34,14 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## Arguments  
- *@head_node_address* = N'*head_node_address*'  
- The name of the machine that hosts the SQL Server head node of the PolyBase scale-out group. *@head_node_address* is nvarchar(255).  
+ *\@head_node_address* = N'*head_node_address*'  
+ The name of the machine that hosts the SQL Server head node of the PolyBase scale-out group. *\@head_node_address* is nvarchar(255).  
   
- *@dms_control_channel_port* = dms_control_channel_port  
- The port where the control channel for the head node PolyBase Data Movement Service is running. *@dms_control_channel_port* is an unsigned __int16. The default is **16450**.  
+ *\@dms_control_channel_port* = dms_control_channel_port  
+ The port where the control channel for the head node PolyBase Data Movement Service is running. *\@dms_control_channel_port* is an unsigned __int16. The default is **16450**.  
   
- *@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- The name of the head node SQL Server instance in the PolyBase scale-out group. *@head_node_sql_server_instance_name* is nvarchar(16).  
+ *\@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
+ The name of the head node SQL Server instance in the PolyBase scale-out group. *\@head_node_sql_server_instance_name* is nvarchar(16).  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "vdt.designers.properties.QueryViewColumn"
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Table-Valued Object (Column) Properties (Visual Database Tools)

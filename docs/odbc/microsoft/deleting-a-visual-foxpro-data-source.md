@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 8468957a-632a-4d7b-a3e1-66b34e7df639
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Deleting a Visual FoxPro Data Source
 ### To delete a Visual FoxPro data source  

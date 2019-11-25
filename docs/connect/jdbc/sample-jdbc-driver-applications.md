@@ -1,7 +1,7 @@
 ---
-title: "Sample JDBC Driver Applications | Microsoft Docs"
+title: "Sample JDBC driver applications | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,9 +10,8 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
-# Sample JDBC Driver Applications
+# Sample JDBC driver applications
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -26,7 +25,7 @@ All the sample applications are contained in *.java code files that can be compi
 
 The topics in this section describe how to configure and run the sample applications, and include a discussion of what the sample applications demonstrate.  
   
-## In This Section  
+## In this section  
   
 | Topic                                                                                                        | Description                                                                                                                                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -34,9 +33,9 @@ The topics in this section describe how to configure and run the sample applicat
 | [Working with Data Types &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)                 | These sample applications demonstrate how to use the JDBC driver data type methods to work with data in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.                                                                                           |
 | [Working with Result Sets](../../connect/jdbc/working-with-result-sets.md)                                   | These sample applications demonstrate how to use result sets to process data contained in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.                                                                                                         |
 | [Working with Large Data](../../connect/jdbc/working-with-large-data.md)                                     | These sample applications demonstrate how to use adaptive buffering to retrieve large-value data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database without the overhead of server cursors.                                                      |
-| [SQL data discovery and classification](../../connect/jdbc/data-discovery-classification-sample.md) | This sample application demonstrates how to retreive Data Discovery and Classification information contained in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database from a ResultSet object using JDBC Driver.                                      |
+| [SQL Data Discovery and Classification](../../connect/jdbc/data-discovery-classification-sample.md) | This sample application demonstrates how to retreive Data Discovery and Classification information contained in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database from a ResultSet object using JDBC Driver.                                      |
   
-## See Also
+## See also
 
-[Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   

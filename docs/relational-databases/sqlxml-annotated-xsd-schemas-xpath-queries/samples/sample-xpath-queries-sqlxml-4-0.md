@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sample XPath Queries (SQLXML 4.0)

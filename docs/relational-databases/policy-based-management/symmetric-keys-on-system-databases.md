@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 28e25ae3-d3dc-45ec-b316-f219512a1a47
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Symmetric Keys on System Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

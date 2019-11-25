@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1ba0f6cc-dfa7-4fe8-8bc2-f862b386156d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC Reference
 The following topics contain syntax and semantic information for all ODBC functions.  

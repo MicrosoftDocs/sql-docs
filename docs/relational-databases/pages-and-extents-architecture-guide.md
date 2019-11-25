@@ -1,7 +1,7 @@
 ---
 title: "Pages and Extents Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/23/2018"
+ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Pages and Extents Architecture Guide
@@ -25,11 +24,13 @@ The page is the fundamental unit of data storage in [!INCLUDE[ssNoVersion](../in
 
 The fundamental unit of data storage in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is the page. The disk space allocated to a data file (.mdf or .ndf) in a database is logically divided into pages numbered contiguously from 0 to n. Disk I/O operations are performed at the page level. That is, SQL Server reads or writes whole data pages.
 
-Extents are a collection of eight physically contiguous pages and are used to efficiently manage the pages. All pages are stored in extents.
+Extents are a collection of eight physically contiguous pages and are used to efficiently manage the pages. All pages are organized into extents.
 
 ### Pages
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the page size is 8-KB. This means [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases have 128 pages per megabyte. Each page begins with a 96-byte header that is used to store system information about the page. This information includes the page number, page type, the amount of free space on the page, and the allocation unit ID of the object that owns the page.
+Take a regular book: all content in it is written on pages. Similar to a book, in SQL Server all the data rows are written on pages. In a book, all pages are the same physical size. Similarly, in SQL Server all data pages are the same size - 8 kilobytes. In a book most pages contain the data - the main content of the book - and some pages contain metadata about the content - for example table of contents and index. Again, SQL Server is not different: most pages contain actual rows of data which were stored by users; these are called Data pages and text/image pages (for special cases). The Index pages contain index references about where the data is and finally there are system pages that store variety of metadata about the organization of the data (PFS, GAM, SGAM, IAM, DCM, BCM pages). See table below for page types and their description.
+
+As mentioned, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the page size is 8-KB. This means [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases have 128 pages per megabyte. Each page begins with a 96-byte header that is used to store system information about the page. This information includes the page number, page type, the amount of free space on the page, and the allocation unit ID of the object that owns the page.
 
 The following table shows the page types used in the data files of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.
 
@@ -58,6 +59,19 @@ Rows cannot span pages, however portions of the row may be moved off the row's p
 This restriction is relaxed for tables that contain varchar, nvarchar, varbinary, or sql_variant columns. When the total row size of all fixed and variable columns in a table exceeds the 8,060-byte limitation, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dynamically moves one or more variable length columns to pages in the ROW_OVERFLOW_DATA allocation unit, starting with the column with the largest width. 
 
 This is done whenever an insert or update operation increases the total size of the row beyond the 8,060-byte limit. When a column is moved to a page in the ROW_OVERFLOW_DATA allocation unit, a 24-byte pointer on the original page in the IN_ROW_DATA allocation unit is maintained. If a subsequent operation reduces the row size, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dynamically moves the columns back to the original data page. 
+
+##### Row-Overflow Considerations 
+
+When you combine varchar, nvarchar, varbinary, sql_variant, or CLR user-defined type columns that exceed 8,060 bytes per row, consider the following: 
+-  Moving large records to another page occurs dynamically as records are lengthened based on update operations. Update operations that shorten records may cause records to be moved back to the original page in the IN_ROW_DATA allocation unit. 
+   Querying and performing other select operations, such as sorts or joins on large records that contain row-overflow data slows processing time, because these records are processed synchronously instead of asynchronously.   
+   Therefore, when you design a table with multiple varchar, nvarchar, varbinary, sql_variant, or CLR user-defined type columns, consider the percentage of rows that are likely to flow over and the frequency with which this overflow data is likely to be queried. If there are likely to be frequent queries on many rows of row-overflow data, consider normalizing the table so that some columns are moved to another table. This can then be queried in an asynchronous JOIN operation. 
+-  The length of individual columns must still fall within the limit of 8,000 bytes for varchar, nvarchar, varbinary, sql_variant, and CLR user-defined type columns. Only their combined lengths can exceed the 8,060-byte row limit of a table.
+-  The sum of other data type columns, including char and nchar data, must fall within the 8,060-byte row limit. Large object data is also exempt from the 8,060-byte row limit. 
+-  The index key of a clustered index cannot contain varchar columns that have existing data in the ROW_OVERFLOW_DATA allocation unit. If a clustered index is created on a varchar column and the existing data is in the IN_ROW_DATA allocation unit, subsequent insert or update actions on the column that would push the data off-row will fail. For more information about allocation units, see Table and Index Organization.
+-  You can include columns that contain row-overflow data as key or nonkey columns of a nonclustered index.
+-  The record-size limit for tables that use sparse columns is 8,018 bytes. When the converted data plus existing record data exceeds 8,018 bytes, [MSSQLSERVER ERROR 576](../relational-databases/errors-events/database-engine-events-and-errors.md) is returned. When columns are converted between sparse and nonsparse types, Database Engine keeps a copy of the current record data. This temporarily doubles the storage that is required for the record.
+-  To obtain information about tables or indexes that might contain row-overflow data, use the [sys.dm_db_index_physical_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management function.
 
 ### Extents 
 
@@ -175,4 +189,6 @@ The interval between DCM pages and BCM pages is the same as the interval between
 
 ## See Also
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
-[Heaps &#40;Tables without Clustered Indexes&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    
+[Heaps &#40;Tables without Clustered Indexes&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[Reading Pages](../relational-databases/reading-pages.md)   
+[Writing Pages](../relational-databases/writing-pages.md)   

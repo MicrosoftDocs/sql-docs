@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Name element"
 ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Name Element for Index (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

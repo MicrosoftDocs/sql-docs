@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

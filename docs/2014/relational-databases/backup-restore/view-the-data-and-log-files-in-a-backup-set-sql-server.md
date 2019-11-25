@@ -65,7 +65,7 @@ manager: craigg
   
 3.  Use the [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql) statement. This example returns information about the second backup set (`FILE=2`) on the `AdventureWorksBackups` backup device.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 RESTORE FILELISTONLY FROM AdventureWorksBackups   
    WITH FILE=2;  

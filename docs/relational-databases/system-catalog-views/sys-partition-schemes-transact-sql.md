@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ed557fd5-12b0-4cef-9e4f-440b02e99d1f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.partition_schemes (Transact-SQL)

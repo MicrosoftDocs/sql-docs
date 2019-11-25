@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 8eab6a8e-91f3-47b1-8707-5e57368ad0c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getDouble Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

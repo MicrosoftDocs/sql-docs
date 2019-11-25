@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], examples"
   - "SSIS Script task, Foreach loops"
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Gathering a List for the ForEach Loop with the Script Task

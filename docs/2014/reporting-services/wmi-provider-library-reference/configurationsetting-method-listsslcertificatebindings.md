@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ListSSLCertificateBindings method"
 ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # ListSSLCertificateBindings Method (WMI MSReportServer_ConfigurationSetting)

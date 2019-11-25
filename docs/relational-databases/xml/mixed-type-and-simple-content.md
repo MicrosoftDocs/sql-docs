@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "mixed types [SQL Server]"
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Mixed Type and Simple Content
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

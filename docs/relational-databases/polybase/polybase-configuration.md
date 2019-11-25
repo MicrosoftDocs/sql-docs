@@ -1,14 +1,13 @@
 ---
 title: "PolyBase configuration and security for Hadoop | Microsoft Docs"
-ms.custom: ""
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
+monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 
 # PolyBase configuration and security for Hadoop
@@ -28,6 +27,8 @@ A common way to secure communication in a hadoop cluster is by changing the hado
      <value></value>
    </property> 
 ```
+
+To use 'Privacy' or 'Integrity' for hadoop.rpc.protection, SQL Server must be at least SQL Server 2016 SP1 CU7, SQL Server 2016 SP2, or SQL Server 2017 CU3.
 
 ## Example XML files for CDH 5.X cluster
 

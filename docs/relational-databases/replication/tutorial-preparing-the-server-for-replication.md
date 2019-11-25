@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Tutorial: Prepare SQL Server for replication (publisher, distributor, subscriber)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -208,7 +207,7 @@ If your SQL Server Management Studio instance is running with administrative rig
 >[!NOTE]
 > If the SQL Agent doesn't visibly start, right-click the SQL Server Agent in SSMS and select **Refresh**. If it's still in the stopped state, start it manually from SQL Server Configuration Manager.    
   
-### Set database permissions at the publisher  
+## Set database permissions  
   
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Security**, right-click **Logins**, and then select **New Login**:  
 
@@ -229,7 +228,7 @@ If your SQL Server Management Studio instance is running with administrative rig
 5. Repeat steps 1-4 to create a login for the other local accounts (repl_distribution, repl_logreader, and repl_merge). These logins must also be mapped to users who are members of the **db_owner** fixed database role in the **distribution** and **AdventureWorks** databases.  
 
    ![View of all four accounts in Object Explorer](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
-  
+   
   
 For more information, see:
 - [Configure distribution](../../relational-databases/replication/configure-distribution.md) 

@@ -1,6 +1,5 @@
 ---
-title: "Use a Format File to Map Table Columns to Data-File Fields (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Map table columns to data-file fields with a format file" 
 ms.date: "09/19/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -11,12 +10,12 @@ helpviewer_keywords:
   - "mapping columns to fields during import [SQL Server]"
   - "format files [SQL Server], mapping columns to fields"
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
-# Use a Format File to Map Table Columns to Data-File Fields (SQL Server)
+# Use a format file to map table columns to data-file fields (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 A data file can contain fields arranged in a different order from the corresponding columns in the table. This topic presents both non-XML and XML format files that have been modified to accommodate a data file whose fields are arranged in a different order from the table columns. The modified format file maps the data fields to their corresponding table columns.  Please review [Create a Format File (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) for additional information.
 
@@ -96,10 +95,10 @@ Compare the changes:
 
 ```
 The modified format file now reflects:
-* The first data field in `myRemap.bcp` is mapped to the first column, ` myRemap.. PersonID`
+* The first data field in `myRemap.bcp` is mapped to the first column, `myRemap.. PersonID`
 * The second data field in `myRemap.bcp` is mapped to the third column, `myRemap.. LastName`
 * The third data field in `myRemap.bcp` is mapped to the second column, `myRemap.. FirstName`
-* The fourth data field in `myRemap.bcp` is mapped to the fourth column, ` myRemap.. Gender`
+* The fourth data field in `myRemap.bcp` is mapped to the fourth column, `myRemap.. Gender`
 
 ### Creating an XML Format File <a name="xml_format_file"></a>  
 Please review [XML Format Files (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) for detailed information.  The following command will use the [bcp utility](../../tools/bcp-utility.md) to create an xml format file, `myRemap.xml`, based on the schema of `myRemap`.  In addition, the qualifier `c` is used to specify character data, `t,` is used to specify a comma as a field terminator, and `T` is used to specify a trusted connection using integrated security.  The `x` qualifier must be used to generate an XML-based format file.  At a command prompt, enter the following command:

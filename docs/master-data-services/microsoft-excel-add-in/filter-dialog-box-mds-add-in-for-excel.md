@@ -1,5 +1,5 @@
 ---
-title: "Filter Dialog Box (MDS Add-in for Excel) | Microsoft Docs"
+title: Filter Dialog Box
 ms.custom: microsoft-excel-add-in
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Filter Dialog Box (MDS Add-in for Excel)
 

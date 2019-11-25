@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "non-deterministic content models"
   - "content models [XML in SQL Server]"
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Non-Deterministic Content Models
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

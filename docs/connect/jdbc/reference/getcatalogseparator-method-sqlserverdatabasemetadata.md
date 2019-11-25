@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 0bbd6842-7210-432a-bef4-e15a63f5cc96
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getCatalogSeparator Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

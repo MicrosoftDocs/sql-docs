@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STLength method"
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STLength (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

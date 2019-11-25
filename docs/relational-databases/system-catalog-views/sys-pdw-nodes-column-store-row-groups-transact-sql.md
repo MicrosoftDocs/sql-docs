@@ -1,6 +1,6 @@
 ---
-title: "sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.pdw_nodes_column_store_row_groups (Transact-SQL)"
+ms.custom: seo-dt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.technology: data-warehouse
@@ -11,7 +11,6 @@ dev_langs:
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_column_store_row_groups (Transact-SQL)

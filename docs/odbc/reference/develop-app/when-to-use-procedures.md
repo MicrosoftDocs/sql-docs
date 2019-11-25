@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # When to Use Procedures
 There are a number of advantages to using procedures, all based on the fact that using procedures moves SQL statements from the application to the data source. What is left in the application is an interoperable procedure call. These advantages include:  

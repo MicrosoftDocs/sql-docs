@@ -1,6 +1,6 @@
 ---
-title: "SetEnable Method (ClientNetworkProtocol Class) | Microsoft Docs"
-ms.custom: ""
+title: "SetEnable Method (ClientNetworkProtocol)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetEnable Method (ClientNetworkProtocol Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_updatestats (Transact-SQL)
@@ -39,7 +38,7 @@ sp_updatestats [ [ @resample = ] 'resample']
  0 (success) or 1 (failure)  
   
 ## Arguments  
- [ **@resample** =] **'resample'**  
+`[ @resample = ] 'resample'`
  Specifies that **sp_updatestats** will use the RESAMPLE option of the [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) statement. If **'resample'** is not specified, **sp_updatestats** updates statistics by using the default sampling. **resample** is **varchar(8)** with a default value of NO.  
   
 ## Remarks  

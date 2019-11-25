@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "DROP EVENT NOTIFICATION statement"
   - "removing event notifications"
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # DROP EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: "Derived Hierarchies with Explicit Caps (Master Data Services) | Microsoft Docs"
+title: Derived Hierarchies with Explicit Caps
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "explicit hierarchies, derived hierarchies with explicit caps"
   - "derived hierarchies, derived hierarchies with explicit caps"
 ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Derived Hierarchies with Explicit Caps (Master Data Services)
 

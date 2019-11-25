@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Environment Transitions
 ODBC environments have the following three states.  

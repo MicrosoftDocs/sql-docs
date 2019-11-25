@@ -2,7 +2,7 @@
 title: "Report and Group Variables Collections References (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -17,8 +17,8 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1"
   - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Built-in Collections - Report and Group Variables References (Report Builder)
   When you have a complex calculation that is used more than once in expressions in a report, you might want to create a variable. You can create a report variable or a group variable. Variable names must be unique in a report.  

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sys.hash_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

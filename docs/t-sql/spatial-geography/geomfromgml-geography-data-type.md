@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "GeomFromGML (geography Data Type)"
   - "GeomFromGML method"
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # GeomFromGML (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # sp_help_spatial_geometry_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  Properties containing NULL values are not included in the return set.  
   
 ## Example  
- The following example uses `sp_help_spatial_geometry_index` to investigate the spatial index **SIndx_SpatialTable_geometry_col2** defined on table **geometry_col** for the given query sample in **@qs**. This example returns only the core properties of the specified index.  
+ The following example uses `sp_help_spatial_geometry_index` to investigate the spatial index **SIndx_SpatialTable_geometry_col2** defined on table **geometry_col** for the given query sample in **\@qs**. This example returns only the core properties of the specified index.  
   
 ```  
 declare @qs geometry  

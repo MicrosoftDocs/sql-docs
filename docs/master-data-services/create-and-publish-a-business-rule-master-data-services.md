@@ -1,5 +1,5 @@
 ---
-title: "Create and Publish a Business Rule (Master Data Services) | Microsoft Docs"
+title: Create and Publish a Business Rule
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "business rules [Master Data Services], creating"
   - "creating business rules [Master Data Services]"
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create and Publish a Business Rule (Master Data Services)
 

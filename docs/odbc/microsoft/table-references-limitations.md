@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: de674d5e-a16a-4cf1-b7e7-0222ef19a6f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Table References Limitations
 A maximum of 16 table references can be included in any query statement.

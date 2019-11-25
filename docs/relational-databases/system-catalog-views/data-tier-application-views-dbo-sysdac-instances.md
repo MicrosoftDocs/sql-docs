@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Data-tier Application Views - dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

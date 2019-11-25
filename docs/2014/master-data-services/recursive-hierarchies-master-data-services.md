@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "recursive hierarchies [Master Data Services]"
   - "hierarchies [Master Data Services], recursive hierarchies"
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

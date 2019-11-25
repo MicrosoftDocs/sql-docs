@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # access check cache Server Configuration Options
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "configuration options [Reporting Services]"
   - "report servers [Reporting Services], configuring"
   - "components [Reporting Services], Reporting Services Configuration tool"
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Reporting Services Configuration Manager (Native Mode)
@@ -23,7 +23,7 @@ ms.author: maghan
 Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to configure a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode installation. If you installed a report server by using the files-only installation option, you must use the Configuration Manager to configure the server before you can use it. If you installed a report server by using the default configuration installation option, you can use the Configuration Manager to verify or modify the settings that were specified during setup. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager can be used to configure a local or remote report server instance.
 
 > [!NOTE]
-> Starting with the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] release, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is not designed to manage SharePoint mode report servers. SharePoint mode is managed and configured by using SharePoint Central Administration and PowerShell scripts.  
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016. Starting with the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] release, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is not designed to manage SharePoint mode report servers. SharePoint mode is managed and configured by using SharePoint Central Administration and PowerShell scripts.  
   
 ##  <a name="bkmk_scenarios"></a> Scenarios to use Reporting Services Configuration Manager  
  You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to perform the following tasks:  
@@ -56,7 +56,7 @@ To use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configu
 
 - Windows Management Instrumentation (WMI) service must be enabled and running on any report server you are configuring. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager uses the report server WMI provider to connect to local and remote report servers. If you are configuring a remote report server, the computer must allow remote WMI access. For more information, see [Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
 
-- Before you can connect to and configure a remote report server instance, you must enable remote Windows Management Instrumentation (WMI) calls to pass through Windows Firewall. For more information, see [Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.
+- Before you can connect to and configure a remote report server instance, you must enable remote Windows Management Instrumentation (WMI) calls to pass through Windows Firewall. For more information, see [Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).
 
 The Reporting Services Configuration Manager is installed automatically when you install SQL Server Reporting Services.
 

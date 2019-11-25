@@ -1,7 +1,7 @@
 ---
 title: "MATCH (SQL Graph) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/05/2017"
+ms.date: "06/26/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -9,14 +9,15 @@ ms.topic: "language-reference"
 f1_keywords: 
   - "MATCH"
   - "MATCH_TSQL"
+  - "SHORTEST_PATH"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "MATCH statement [SQL Server], SQL graph"
   - "SQL graph, MATCH statement"
+  - "Shortest Path, shortest_path"
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MATCH (Transact-SQL)
@@ -32,25 +33,83 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
 MATCH (<graph_search_pattern>)
 
 <graph_search_pattern>::=
-    {<node_alias> { 
-                     { <-( <edge_alias> )- } 
-                   | { -( <edge_alias> )-> }
-                 <node_alias> 
-                 } 
-     }
-     [ { AND } { ( <graph_search_pattern> ) } ]
-     [ ,...n ]
-  
+  {  
+      <simple_match_pattern> 
+    | <arbitrary_length_match_pattern>  
+    | <arbitrary_length_match_last_node_predicate> 
+  }
+
+<simple_match_pattern>::=
+  {
+      LAST_NODE(<node_alias>) | <node_alias>   { 
+          { <-( <edge_alias> )- } 
+        | { -( <edge_alias> )-> }
+        <node_alias> | LAST(<node_alias>)
+        } 
+  }
+  [ { AND } { ( <simple_match_pattern> ) } ]
+  [ ,...n ]
+
 <node_alias> ::=
-    node_table_name | node_alias 
+  node_table_name | node_table_alias 
 
 <edge_alias> ::=
-    edge_table_name | edge_alias
+  edge_table_name | edge_table_alias
+
+
+<arbitrary_length_match_pattern>  ::=
+  { 
+    SHORTEST_PATH( 
+      <arbitrary_length_pattern> 
+      [ { AND } { <arbitrary_length_pattern> } ] 
+      [ ,…n] 
+    )
+  } 
+
+<arbitrary_length_match_last_node_predicate> ::=
+  {  LAST_NODE( <node_alias> ) = LAST_NODE( <node_alias> ) }
+
+
+<arbitrary_length_pattern> ::=
+	{  LAST_NODE( <node_alias> )   | <node_alias>
+     ( <edge_first_al_pattern> [<edge_first_al_pattern>…,n] )
+     <al_pattern_quantifier> 
+  }
+ 	|  ( {<node_first_al_pattern> [<node_first_al_pattern> …,n] )
+  	  	<al_pattern_quantifier> 
+        LAST_NODE( <node_alias> ) | <node_alias> 
+ }
+	
+<edge_first_al_pattern> ::=
+  { (  
+        { -( <edge_alias> )->   } 
+      | { <-( <edge_alias> )- } 
+      <node_alias>
+	  ) 
+  } 
+
+<node_first_al_pattern> ::=
+  { ( 
+      <node_alias> 
+        { <-( <edge_alias> )- } 
+      | { -( <edge_alias> )-> }
+ 	  ) 
+  } 
+
+
+<al_pattern_quantifier> ::=
+  {
+	    +
+	  | { 1 , n }
+  }
+
+n -  positive integer only.
+ 
 ```
 
 ## Arguments  
 *graph_search_pattern*  
-Specifies the pattern to search or path to traverse in the graph. This pattern uses ASCII art syntax to traverse a path in the graph. The pattern goes from one node to another via an edge, in the direction of the arrow provided. Edge names or aliases are provided inside parantheses. Node names or aliases appear at the two ends of the arrow. The arrow can go in either direction in the pattern.
+Specifies the pattern to search or path to traverse in the graph. This pattern uses ASCII art syntax to traverse a path in the graph. The pattern goes from one node to another via an edge, in the direction of the arrow provided. Edge names or aliases are provided inside parentheses. Node names or aliases appear at the two ends of the arrow. The arrow can go in either direction in the pattern.
 
 *node_alias*  
 Name or alias of a node table provided in the FROM clause.
@@ -58,6 +117,16 @@ Name or alias of a node table provided in the FROM clause.
 *edge_alias*  
 Name or alias of an edge table provided in the FROM clause.
 
+*SHORTEST_PATH*   
+Shortest path function is used to find shortest path between two given nodes in a graph or between a given node and all the other nodes in a graph. It takes an arbitrary length pattern as input, that is searched repeatedly in a graph. 
+
+*arbitrary_length_match_pattern*  
+Specifies the nodes and edges that must be traversed repeatedly until the desired node is reached or until the maximum number of iterations as specified in the pattern is met. 
+
+*al_pattern_quantifier*   
+The arbitrary length pattern takes regular expression style pattern quantifiers in order to specify the number of times a given search pattern is repeated. The supported search pattern quantifiers are:   
+* **+**: Repeat the pattern 1 or more times. Terminate as soon as a shortest path is found.    
+* **{1,n}**: Repeat the pattern 1 to ‘n’ times. Terminate as soon as a shortest path is found.     
 
 ## Remarks  
 The node names inside MATCH can be repeated.  In other words, a node can be traversed an arbitrary number of times in the same query.  

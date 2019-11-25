@@ -1,5 +1,5 @@
 ---
-title: "Tracing (Master Data Services) | Microsoft Docs"
+title: Tracing
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: "erikre"
+manager: erikre
 ---
 # Tracing (Master Data Services)
 

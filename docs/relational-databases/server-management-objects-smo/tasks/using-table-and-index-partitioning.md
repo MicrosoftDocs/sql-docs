@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], SMO"
   - "partitioned indexes [SQL Server], SMO"
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Table and Index Partitioning

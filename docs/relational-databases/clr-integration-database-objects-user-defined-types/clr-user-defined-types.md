@@ -31,7 +31,6 @@ helpviewer_keywords:
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # CLR User-Defined Types
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

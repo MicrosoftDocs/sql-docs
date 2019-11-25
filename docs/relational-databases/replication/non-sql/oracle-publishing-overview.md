@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Oracle Publishing Overview  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

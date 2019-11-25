@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], master jobs"
   - "master SQL Server Agent job [SQL Server]"
 ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Modify a SQL Server Agent Master Job

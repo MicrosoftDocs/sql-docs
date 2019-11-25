@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # RelatedTable Property (ADOX)
 Indicates the name of the related table.  

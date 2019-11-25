@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: bb1a04f0-111b-412e-b2fb-090b62e74d59
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # NOT NULL Limitations
 The NOT NULL constraint in the CREATE TABLE statement is not supported.

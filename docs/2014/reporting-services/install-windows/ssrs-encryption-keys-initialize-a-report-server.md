@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], initializing"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "initializing report servers [Reporting Services]"
   - "verifying report server initializations"
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Initialize a Report Server (SSRS Configuration Manager)

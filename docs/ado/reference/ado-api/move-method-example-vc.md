@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Move Method Example (VC++)
 This example uses the [Move](../../../ado/reference/ado-api/move-method-ado.md) method to position the record pointer based on user input.  

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # GetAncestor (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

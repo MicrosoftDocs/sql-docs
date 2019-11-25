@@ -55,7 +55,7 @@ manager: craigg
   
  The following example shows how to obtain the initial synchronization version and the initial data set.  
   
-```tsql  
+```sql  
     -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
     SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -69,7 +69,7 @@ manager: craigg
 ### Using the Change Tracking Functions to Obtain Changes  
  To obtain the changed rows for a table and information about the changes, use CHANGETABLE(CHANGES...). For example, the following query obtains changes for the `SalesLT.Product` table.  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  
@@ -80,7 +80,7 @@ FROM
   
  Usually, a client will want to obtain the latest data for a row instead of only the primary keys for the row. Therefore, an application would join the results from CHANGETABLE(CHANGES ...) with the data in the user table. For example, the following query joins with the `SalesLT.Product` table to obtain the values for the `Name` and `ListPrice` columns. Note the use of `OUTER JOIN`. This is required to make sure that the change information is returned for those rows that have been deleted from the user table.  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, P.Name, P.ListPrice,  
     CT.SYS_CHANGE_OPERATION, CT.SYS_CHANGE_COLUMNS,  
@@ -95,13 +95,13 @@ ON
   
  To obtain the version for use in the next change enumeration, use CHANGE_TRACKING_CURRENT_VERSION(), as shown in the following example.  
   
-```tsql  
+```sql  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
   
  When an application obtains changes, it must use both CHANGETABLE(CHANGES...) and CHANGE_TRACKING_CURRENT_VERSION(), as shown in the following example.  
   
-```tsql  
+```sql  
 -- Obtain the current synchronization version. This will be used the next time CHANGETABLE(CHANGES...) is called.  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -128,7 +128,7 @@ ON
   
  The following example shows how to verify the validity of the value of `last_synchronization_version` for each table.  
   
-```tsql  
+```sql  
 -- Check individual table.  
 IF (@last_synchronization_version < CHANGE_TRACKING_MIN_VALID_VERSION(  
                                    OBJECT_ID('SalesLT.Product')))  
@@ -140,7 +140,7 @@ END
   
  As the following example shows, the validity of the value of `last_synchronization_version` can be checked against all tables in the database.  
   
-```tsql  
+```sql  
 -- Check all tables with change tracking enabled  
 IF EXISTS (  
   SELECT COUNT(*) FROM sys.change_tracking_tables  
@@ -160,7 +160,7 @@ END
   
  In the following example, the `CT_ThumbnailPhoto` column will be `NULL` if that column did not change. This column could also be `NULL` because it was changed to `NULL` - the application can use the `CT_ThumbNailPhoto_Changed` column to determine whether the column changed.  
   
-```tsql  
+```sql  
 DECLARE @PhotoColumnId int = COLUMNPROPERTY(  
     OBJECT_ID('SalesLT.Product'),'ThumbNailPhoto', 'ColumnId')  
   
@@ -238,7 +238,7 @@ ON
   
  The following example shows how snapshot isolation is enabled for a database.  
   
-```tsql  
+```sql  
 -- The database must be configured to enable snapshot isolation.  
 ALTER DATABASE AdventureWorksLT  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
@@ -246,7 +246,7 @@ ALTER DATABASE AdventureWorksLT
   
  A snapshot transaction is used as follows:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
 BEGIN TRAN  
   -- Verify that version of the previous synchronization is valid.  
@@ -307,7 +307,7 @@ COMMIT TRAN
   
  The following example shows how to use the CHANGETABLE(VERSION ...) function to check for conflicts in the most efficient way, without a separate query. In the example, `CHANGETABLE(VERSION ...)` determines the `SYS_CHANGE_VERSION` for the row specified by `@product id`. `CHANGETABLE(CHANGES ...)` can obtain the same information, but that would be less efficient. If the value of `SYS_CHANGE_VERSION` for the row is larger than the value of `@last_sync_version`, there is a conflict. If there is a conflict, the row will not be updated. The `ISNULL()` check is required because there might be no change information available for the row. No change information would exist if the row had not been updated since change tracking was enabled or since the change information was cleaned up.  
   
-```tsql  
+```sql  
 -- Assumption: @last_sync_version has been validated.  
   
 UPDATE  
@@ -327,7 +327,7 @@ WHERE
   
  The following code can check the updated row count and can identify more information about the conflict.  
   
-```tsql  
+```sql  
 -- If the change cannot be made, find out more information.  
 IF (@@ROWCOUNT = 0)  
 BEGIN  
@@ -353,7 +353,7 @@ END
   
  Context information is typically used to identify the source of the changes. If the source of the change can be identified, that information can be used by a data store to avoid obtaining changes when it synchronizes again.  
   
-```tsql  
+```sql  
   -- Try to update the row and check for a conflict.  
   WITH CHANGE_TRACKING_CONTEXT (@source_id)  
   UPDATE  
@@ -376,7 +376,7 @@ END
 > [!IMPORTANT]  
 >  We recommend that you use snapshot isolation and make the changes within a snapshot transaction.  
   
-```tsql  
+```sql  
 -- Prerequisite is to ensure ALLOW_SNAPSHOT_ISOLATION is ON for the database.  
   
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  

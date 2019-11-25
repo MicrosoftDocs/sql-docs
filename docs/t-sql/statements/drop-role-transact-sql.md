@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP ROLE (Transact-SQL)

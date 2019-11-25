@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Auto Stats Event Class
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

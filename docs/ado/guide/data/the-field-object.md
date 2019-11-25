@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # The Field Object
 Each **Field** object usually corresponds to a column in a database table. However, a **Field** can also represent a pointer to another **Recordset**, called a chapter. Exceptions, such as chapter columns, will be covered later in this guide.  

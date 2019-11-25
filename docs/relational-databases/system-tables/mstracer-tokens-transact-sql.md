@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b273aa48-8188-4213-8e2c-311543c3236f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MStracer_tokens (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

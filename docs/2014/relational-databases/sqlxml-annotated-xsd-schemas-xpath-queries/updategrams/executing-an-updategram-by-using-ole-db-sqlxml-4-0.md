@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "OLE DB, SQLXML"
   - "executing updategrams [SQLXML]"
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Executing an Updategram by Using OLE DB (SQLXML 4.0)

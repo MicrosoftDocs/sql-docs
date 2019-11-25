@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Map TCP IP Ports to NUMA Nodes (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

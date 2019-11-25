@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: aabff9d9-20ea-4b68-b8fd-1e33061bd0ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Text File Driver Programming Considerations
 This section contains the following topics:  

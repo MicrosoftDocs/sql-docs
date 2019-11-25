@@ -2,7 +2,7 @@
 title: "Script with the rs.exe Utility and the Web Service | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Report Server Web service, scripts"
   - "scripts [Reporting Services], Web service"
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Script with the rs.exe Utility and the Web Service
   Developers and report server administrators can perform operations on a report server through the use of the **rs** utility (RS.exe). Using this utility, you can programmatically administer a report server using scripts written with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  

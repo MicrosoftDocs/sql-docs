@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Immediate Mode
 Immediate mode is in effect when the **LockType** property is set to **adLockOptimistic** or **adLockPessimistic**. In immediate mode, changes to a record are propagated to the data source as soon as you declare the work on a row complete by calling the **Update** method.  

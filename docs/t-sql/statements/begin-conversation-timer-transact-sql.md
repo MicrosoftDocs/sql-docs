@@ -32,10 +32,9 @@ helpviewer_keywords:
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # BEGIN CONVERSATION TIMER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Starts a timer. When the time-out expires, [!INCLUDE[ssSB](../../includes/sssb-md.md)] puts a message of type `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` on the local queue for the conversation.  
   

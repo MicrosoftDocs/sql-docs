@@ -8,12 +8,12 @@ ms.technology: integration-services
 ms.topic: "reference"
 dev_langs: 
   - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Script task [Integration Services], comparing to Script component"
   - "Script component [Integration Services], comparing to Script task"
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Comparing the Script Task and the Script Component
@@ -48,6 +48,6 @@ manager: craigg
 ## See Also  
  [Extending the Package with the Script Task](task/extending-the-package-with-the-script-task.md)   
  [Extending the Data Flow with the Script Component](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
- [Consume Web Services in SSIS using Scripts (Curated Answer)](https://go.microsoft.com/fwlink/?LinkId=321996)  
+ [Using a Script Task in SQL Server Integration Services SSIS to Connect to a Web Service](https://www.mssqltips.com/sqlservertip/4288/using-a-script-task-in-sql-server-integration-services-ssis-to-connect-to-a-web-service/)  
   
   

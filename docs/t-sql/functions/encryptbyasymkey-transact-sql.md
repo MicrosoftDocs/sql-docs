@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "encryption [SQL Server], asymmetric keys"
   - "asymmetric keys [SQL Server], ENCRYPTBYASYMKEY function"
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ or
  
 data type.  
   
-**@plaintext**  
-A variable holding a value that `ENCRYPTBYASYMKEY` will encrypt with the asymmetric key. **@plaintext** can have a
+**\@plaintext**  
+A variable holding a value that `ENCRYPTBYASYMKEY` will encrypt with the asymmetric key. **\@plaintext** can have a
   
 + **binary**
 + **char**

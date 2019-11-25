@@ -2,7 +2,7 @@
 title: "Data Alert Manager for Alerting Administrators | Microsoft Docs"
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "managing, alerts"
   - "managing, data alerts"
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Data Alert Manager for Alerting Administrators

@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.unittesting.createtest"
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: Create an Empty SQL Server Unit Test
 Include unit tests in your database project to verify changes you make to database objects do not break existing functionality. The following procedures explain how to create SQL Server unit tests for any database object. SQL Server Data Tools includes some additional support for database functions, triggers, and stored procedures. For more information, see [How to: Create SQL Server Unit Tests for Functions, Triggers, and Stored Procedures](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  

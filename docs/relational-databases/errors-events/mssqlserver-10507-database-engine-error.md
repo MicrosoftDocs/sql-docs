@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_10507
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +24,7 @@ manager: craigg
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|PG_STMT_DOES_NOT_MATCH|  
-|Message Text|Cannot create plan guide '%.\*ls' because the statement specified by **@stmt** and **@module_or_batch**, or by **@plan_handle** and **@statement_start_offset**, does not match any statement in the specified module or batch. Modify the values to match a statement in the module or batch.|  
+|Message Text|Cannot create plan guide '%.\*ls' because the statement specified by **\@stmt** and **\@module_or_batch**, or by **\@plan_handle** and **\@statement_start_offset**, does not match any statement in the specified module or batch. Modify the values to match a statement in the module or batch.|  
   
 ## Explanation  
 A statement in the specified module or batch could not be matched to the specified statement or statement offset value.  

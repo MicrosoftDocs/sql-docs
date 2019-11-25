@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # dbo.sysnotifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

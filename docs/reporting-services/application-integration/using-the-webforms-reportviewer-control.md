@@ -10,8 +10,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "ReportViewer controls"
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Using the WebForms ReportViewer Control
   To view reports deployed to a report server or reports that exist on the local file system, you can use the WebForms ReportViewer control to render them in a Web application.  
@@ -22,7 +22,7 @@ ms.author: maghan
   
      \- Or -  
   
-     Open an exiting ASP.NET Web Site and add a new Web Form.  
+     Open an existing ASP.NET Web Site and add a new Web Form.  
   
 2.  Locate the **ScriptManager** control in the **AJAX Extensions** group in the **Toolbox** window, and drag it to the design surface of the Web form.  
   

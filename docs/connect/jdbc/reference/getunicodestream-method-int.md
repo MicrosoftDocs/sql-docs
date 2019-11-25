@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 0de79b65-a25e-4028-9cc2-7ac02340115b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getUnicodeStream Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
@@ -127,7 +126,7 @@ manager: craigg
      ![Filter pane containing two named sets](../../2014/tutorials/media/l6-named-set-05.gif "Filter pane containing two named sets")  
   
 ## Next Task in Lesson  
- [Lesson 7: Defining Key Performance Indicators &#40;KPIs&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Lesson 7: Defining Key Performance Indicators &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## See Also  
  [Calculations](multidimensional-models-olap-logical-cube-objects/calculations.md)   

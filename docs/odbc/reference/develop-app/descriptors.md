@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Descriptors
 A descriptor handle refers to a data structure that holds information about either columns or dynamic parameters.  

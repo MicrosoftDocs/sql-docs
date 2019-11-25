@@ -1270,7 +1270,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string publicationDbName = "AdventureWorks2012";
 
 			//Create a connection to the Publisher.
-			ServerConnection conn = new ServerConnection(subscriberName);
+			ServerConnection conn = new ServerConnection(publisherName);
 
 			// Create the objects that we need.
 			TransPublication publication;
@@ -1548,7 +1548,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string hostname = @"adventure-works\garrett1";
 
 			//Create a connection to the Publisher.
-			ServerConnection conn = new ServerConnection(subscriberName);
+			ServerConnection conn = new ServerConnection(publisherName);
 
 			// Create the objects that we need.
 			MergePublication publication;

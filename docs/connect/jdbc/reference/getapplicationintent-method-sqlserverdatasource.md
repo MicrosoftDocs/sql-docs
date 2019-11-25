@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 19411e6c-c456-4533-8252-54569a2a6b1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getApplicationIntent Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

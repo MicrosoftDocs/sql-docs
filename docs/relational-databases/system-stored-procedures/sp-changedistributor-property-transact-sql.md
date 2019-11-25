@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_changedistributor_property (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Changes the properties of the Distributor. This stored procedure is executed at the Distributor on any database.  
   
@@ -33,7 +32,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## Arguments  
- [ **@property=**]  **'**_property_**'**  
+`[ @property = ] 'property'`
  Is the property for a given Distributor. *property* is **sysname**, and can be one of these values.  
   
 |Value|Description|  
@@ -41,7 +40,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 |**heartbeat_interval**|Maximum number of minutes that an agent can run without logging a progress message.|  
 |NULL (default)|All available *property* values are printed.|  
   
- [ **@value=**]  **'**_value_**'**  
+`[ @value = ] 'value'`
  Is the value for the given Distributor property. *value* is **varchar(255)**, with a default of NULL.  
   
 ## Return Code Values  

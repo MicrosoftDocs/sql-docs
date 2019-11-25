@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "Arguments dialog box"
   - "arguments [SQL Server Management Studio]"
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Arguments Dialog Box
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

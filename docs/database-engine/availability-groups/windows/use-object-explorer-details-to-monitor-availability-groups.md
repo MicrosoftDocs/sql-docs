@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Use Object Explorer Details to Monitor Availability Groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,21 +23,8 @@ manager: craigg
 > [!NOTE]  
 >  For information about using the Object Explorer Details pane, see [Object Explorer Details Pane](../../../ssms/object/object-explorer-details-pane.md).  
   
--   **Before you begin:**  [Prerequisites](#Prerequisites)  
   
--   **To Monitor an Availability Group, using:**  [SQL Server Management Studio](#SSMSProcedure)  
-  
--   **Object Explorer Details:**  
-  
-     [Availability Groups Details](#AvGroupsDetails)  
-  
-     [Availability Replica Details](#AvReplicaDetails)  
-  
-     [Availability Database Details](#AvDbDetails)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Prerequisites  
  You must be connected to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (server instance) that hosts either the primary replica or a secondary replica.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  

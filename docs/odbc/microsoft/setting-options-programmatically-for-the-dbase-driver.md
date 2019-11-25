@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Setting Options Programmatically for the dBASE Driver
 

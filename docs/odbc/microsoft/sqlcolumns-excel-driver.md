@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4bae3fcd-0287-4f79-ad7c-8f7ab2f6f940
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLColumns (Excel Driver)
 > [!NOTE]  

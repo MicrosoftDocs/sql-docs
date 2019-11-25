@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance counters [Reporting Services]"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "counters [Reporting Services]"
   - "performance [Reporting Services]"
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Performance Counters for the MSRS 2014 Web Service and MSRS 2014 Windows Service Performance Objects (Native Mode)
@@ -111,19 +110,17 @@ manager: kfile
 ##  <a name="bkmk_powershell"></a> Use PowerShell Cmdlets to return lists  
  ![PowerShell related content](../media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script returns the counter sets where the CounterSetName starts with "msr":  
   
-```  
-get-counter -listset msr*  
+```powershell
+Get-Counter -ListSet msr*  
 ```  
   
  The following Windows PowerShell script returns the list of performance counters for the CounterSetName.  
   
-```  
-(get-counter -listset "MSRS 2014 Windows Service").paths  
+```powershell
+(Get-Counter -ListSet "MSRS 2014 Windows Service").Paths  
 ```  
   
 ## See Also  
  [Monitoring Report Server Performance](monitoring-report-server-performance.md)   
  [Performance Counters for the MSRS 2014 Web Service SharePoint Mode and MSRS 2014 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](performance-counters-reportserver-service-performance-objects.md)  
-  
-  

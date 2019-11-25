@@ -2,7 +2,7 @@
 title: "Convert Data Sources (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "data sources [Reporting Services], embedded"
   - "data sources [Reporting Services], shared"
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Convert Data Sources (Report Builder and SSRS)
   Each data source in the Report Data pane is embedded and specific to the report or is shared. In Report Builder, a shared data source points to a published shared data source on a report server or SharePoint site. In Report Designer, a shared data source points to a shared data source in the **Shared Data Sources** folder in Solution Explorer.  
@@ -57,6 +57,6 @@ ms.author: maghan
   
 ## See Also  
  [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

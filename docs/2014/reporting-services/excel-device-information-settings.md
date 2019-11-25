@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "device information settings [Reporting Services], Excel rendering"
   - "Excel [Reporting Services], rendering"
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Excel Device Information Settings

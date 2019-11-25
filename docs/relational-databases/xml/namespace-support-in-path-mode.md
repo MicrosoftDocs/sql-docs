@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "PATH FOR XML mode, namespace support"
   - "namespaces [XML in SQL Server]"
 ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Namespace Support in PATH Mode
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

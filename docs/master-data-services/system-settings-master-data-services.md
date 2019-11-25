@@ -1,5 +1,5 @@
 ---
-title: "System Settings (Master Data Services) | Microsoft Docs"
+title: System Settings
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "Master Data Services, system settings"
   - "system settings [Master Data Services]"
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # System Settings (Master Data Services)
 

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
@@ -99,7 +98,7 @@ manager: craigg
      ![Modified Employees hierarchy](../../2014/tutorials/media/l4-employee-2.png "Modified Employees hierarchy")  
   
 ## Next Task in Lesson  
- [Automatically Grouping Attribute Members](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
+ [Automatically Grouping Attribute Members](lesson-4-3-automatically-grouping-attribute-members.md)  
   
 ## See Also  
  [Parent-Child Hierarchy](multidimensional-models/parent-child-dimension.md)   

@@ -1,6 +1,6 @@
 ---
-title: "SetCurrentCertificate Method (SInstance Class) | Microsoft Docs"
-ms.custom: ""
+title: "SetCurrentCertificate Method (SInstance)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetCurrentCertificate Method (SInstance Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

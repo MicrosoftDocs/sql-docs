@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 577d84c1-9285-4580-b6f5-86fbc4827547
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Boolean Constructor Functions - false (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

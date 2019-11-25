@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "delivery extensions [Reporting Services], notifications"
@@ -14,8 +12,8 @@ helpviewer_keywords:
   - "retry queues"
   - "Nofication class"
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using a Notification Class for a Delivery Extension

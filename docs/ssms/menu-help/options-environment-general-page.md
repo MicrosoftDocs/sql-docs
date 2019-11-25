@@ -11,9 +11,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions"
   - "DevLang-TSQL"
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Options (Environment - General Page)
 

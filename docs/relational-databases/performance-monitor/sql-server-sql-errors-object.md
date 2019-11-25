@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, SQL Errors Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

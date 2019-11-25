@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "instances of SQL Server, connections"
   - "SMO [SQL Server], connections"
 ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Connecting to an Instance of SQL Server

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLPoolConnect Function
 **Conformance**  
@@ -23,7 +22,8 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp
+  
 SQLRETURN  SQLPoolConnect(  
                 SQLHDBC              hDbc,  
                 SQLHDBC_INFO_TOKEN   hDbcInfoToken,  

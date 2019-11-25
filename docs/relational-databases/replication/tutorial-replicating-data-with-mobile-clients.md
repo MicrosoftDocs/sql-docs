@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tutorial: Configure replication between a server and mobile clients (merge)
@@ -40,7 +39,7 @@ To complete this tutorial, you need SQL Server, SQL Server Management Studio (SS
    - Any edition of SQL Server, except for SQL Server Express or SQL Server Compact. These editions cannot be a replication publisher.   
    - The [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
   
-- At the subscriber server (destination), install any edition of SQL Server, except for [!INCLUDE[ssEW](../../includes/ssew-md.md)]. The publication that's created in this tutorial does not support [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
+- At the subscriber server (destination), install any edition of SQL Server, except SQL Server Express or SQL Server Compact. The publication that's created in this tutorial does not support either SQL Server Express or SQL Server Compact. 
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer edition](https://www.microsoft.com/sql-server/sql-server-downloads).

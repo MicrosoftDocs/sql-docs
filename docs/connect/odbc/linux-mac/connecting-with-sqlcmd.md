@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Connecting with sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -40,7 +39,7 @@ In the current release, the following options are available:
   
 - -C Trust server certificate.  
 
-- -d *database_name*  Issue a `USE `*database_name* statement when you start `sqlcmd`.  
+- -d *database_name*  Issue a `USE` *database_name* statement when you start `sqlcmd`.  
 
 - -D Causes the value passed to the `sqlcmd` -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in `sqlcmd` and `bcp`" at the end of this topic.  
   

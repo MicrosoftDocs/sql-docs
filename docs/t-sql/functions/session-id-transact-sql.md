@@ -9,9 +9,8 @@ ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SESSION_ID (Transact-SQL)

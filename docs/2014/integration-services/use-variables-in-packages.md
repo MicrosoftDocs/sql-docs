@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined variables [Integration Services]"
   - "variables [Integration Services], use scenarios"
   - "system variables [Integration Services]"
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Use Variables in Packages

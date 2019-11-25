@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: f81f7ba0-7d75-4b42-861c-be00c0032335
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # updateTimestamp Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

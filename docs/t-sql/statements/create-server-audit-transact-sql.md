@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # CREATE SERVER AUDIT (Transact-SQL)
@@ -65,7 +64,7 @@ CREATE SERVER AUDIT audit_name
 }  
   
 <predicate_factor>::=   
-    event_field_name { = | < > | ! = | > | > = | < | < = } { number | ' string ' }  
+    event_field_name { = | < > | ! = | > | > = | < | < = | LIKE } { number | ' string ' }  
 ```  
   
 ## Arguments  
@@ -85,7 +84,7 @@ CREATE SERVER AUDIT audit_name
  Specifies the maximum number of files to retain in the file system in addition to the current file. The *MAX_ROLLOVER_FILES* value must be an integer or UNLIMITED. The default value is UNLIMITED. This parameter is evaluated whenever the audit restarts (which can happen when the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] restarts or when the audit is turned off and then on again) or when a new file is needed because the MAXSIZE has been reached. When *MAX_ROLLOVER_FILES* is evaluated, if the number of files exceeds the *MAX_ROLLOVER_FILES* setting, the oldest file is deleted. As a result, when the setting of *MAX_ROLLOVER_FILES* is 0 a new file is created each time the *MAX_ROLLOVER_FILES* setting is evaluated. Only one file is automatically deleted when *MAX_ROLLOVER_FILES* setting is evaluated, so when the value of *MAX_ROLLOVER_FILES* is decreased, the number of files does not shrink unless old files are manually deleted. The maximum number of files that can be specified is 2,147,483,647.  
   
  MAX_FILES =*integer*  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Specifies the maximum number of audit files that can be created. Does not rollover to the first file when the limit is reached. When the MAX_FILES limit is reached, any action that causes additional audit events to be generated, fails with an error.  
   
@@ -106,18 +105,18 @@ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
  FAIL_OPERATION  
  Database actions fail if they cause audited events. Actions, which do not cause audited events can continue, but no audited events can occur. The audit continues to attempt to log events and resumes if the failure condition is resolved. Use this option when maintaining a complete audit is more important than full access to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.
 
  AUDIT_GUID =*uniqueidentifier*  
  To support scenarios such as database mirroring, an audit needs a specific GUID that matches the GUID found in the mirrored database. The GUID cannot be modified after the audit has been created.  
   
  predicate_expression  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Specifies the predicate expression used to determine if an event should be processed or not. Predicate expressions are limited to 3000 characters, which limits string arguments.  
   
  event_field_name  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Is the name of the event field that identifies the predicate source. Audit fields are described in [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). All fields can be filtered except `file_name`, `audit_file_offset`, and `event_time`.  
 
@@ -132,12 +131,12 @@ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 
  number  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Is any numeric type including **decimal**. Limitations are the lack of available physical memory or a number that is too large to be represented as a 64-bit integer.  
   
  ' string '  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Either an ANSI or Unicode string as required by the predicate compare. No implicit string type conversion is performed for the predicate compare functions. Passing the wrong type results in an error.  
   

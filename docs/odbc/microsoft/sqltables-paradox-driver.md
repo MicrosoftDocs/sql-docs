@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d68adad6-97bd-4b47-bcf9-0102aafb00d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLTables (Paradox Driver)
 > [!NOTE]  

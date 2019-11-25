@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Z method"
 ms.assetid: 9abc79c5-43c9-4cc2-b37f-d2ecdec7c234
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Z (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

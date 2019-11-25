@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 0610d667-a16d-4201-a14b-0a40048911e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getTablePrivileges Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

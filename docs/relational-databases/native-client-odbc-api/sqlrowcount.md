@@ -13,12 +13,10 @@ helpviewer_keywords:
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLRowCount
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   When arrays of parameter values are bound for statement execution, **SQLRowCount** returns SQL_ERROR if any row of parameter values generates an error condition in statement execution. No value is returned through the *RowCountPtr* argument of the function.  
   

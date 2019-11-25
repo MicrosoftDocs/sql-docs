@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: d73abd3a-80df-4293-b973-1723069db049
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Connect to SQL Server (MySQLToSQL)
 Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you want to migrate to. To access the **Connect to SQL Server** dialog box, on the **File** menu, click **Connect to SQL Server**.  

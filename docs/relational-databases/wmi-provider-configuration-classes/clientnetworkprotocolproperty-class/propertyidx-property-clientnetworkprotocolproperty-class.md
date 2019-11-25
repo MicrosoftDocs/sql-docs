@@ -1,6 +1,6 @@
 ---
-title: "PropertyIdx Property (ClientNetworkProtocolProperty Class) | Microsoft Docs"
-ms.custom: ""
+title: "PropertyIdx Property (ClientNetworkProtocolProperty)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # PropertyIdx Property (ClientNetworkProtocolProperty Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

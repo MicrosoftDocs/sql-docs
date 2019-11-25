@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STPointFromText (geometry Data Type)"
 ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STPointFromText (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

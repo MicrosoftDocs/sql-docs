@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "database [Master Data Services], logins"
   - "security [Master Data Services], database logins"
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

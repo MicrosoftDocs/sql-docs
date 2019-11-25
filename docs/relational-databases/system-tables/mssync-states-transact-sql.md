@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSsync_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

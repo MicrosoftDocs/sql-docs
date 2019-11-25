@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Mapping Data Types (ODBC Driver for Oracle)
 > [!IMPORTANT]  

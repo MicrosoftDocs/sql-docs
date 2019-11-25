@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

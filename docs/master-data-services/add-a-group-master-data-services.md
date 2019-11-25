@@ -1,5 +1,5 @@
 ---
-title: "Add a Group (Master Data Services) | Microsoft Docs"
+title: Add a Group
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "groups [Master Data Services], adding"
   - "adding groups [Master Data Services]"
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Add a Group (Master Data Services)
 

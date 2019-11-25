@@ -15,7 +15,6 @@ apitype: "DLLExport"
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # LocalDBGetInstanceInfo Function
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

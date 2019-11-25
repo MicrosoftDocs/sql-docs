@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services Developer Documentation | Microsoft Docs"
+title: Developer Documentation
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -9,9 +9,8 @@ ms.technology:
 
 ms.topic: "reference"
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Master Data Services Developer Documentation
 

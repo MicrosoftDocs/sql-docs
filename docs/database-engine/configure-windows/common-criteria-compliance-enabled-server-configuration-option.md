@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 ---
 # Common Criteria Compliance Enabled Server Configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

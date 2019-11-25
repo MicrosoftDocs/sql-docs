@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "dragging and dropping text"
   - "designer controls [SQL Server Management Studio]"
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Use the Toolbox
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_droppullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Drops a subscription at the current database of the Subscriber. This stored procedure is executed at the Subscriber on the pull subscription database.  
   
@@ -35,16 +34,16 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Is the remote server name. *publisher* is **sysname**, with no default. If **all**, the subscription is dropped at all the Publishers.  
   
- [ **@publisher_db=** ] **'**_publisher_db_**'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with no default. **all** means all the Publisher databases.  
   
- [ **@publication=** ] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the publication name. *publication* is **sysname**, with no default. If **all**, the subscription is dropped to all the publications.  
   
- [ **@reserved=** ] *reserved*  
+`[ @reserved = ] reserved`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

@@ -1,5 +1,5 @@
 ---
-title: "ServerNetworkProtocolProperty Class | Microsoft Docs"
+title: "ServerNetworkProtocolProperty Class"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ServerNetworkProtocolProperty Class
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

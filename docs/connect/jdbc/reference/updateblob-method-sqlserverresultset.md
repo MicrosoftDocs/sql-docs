@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 78e367c6-5e4d-4715-8cb7-e841e4f76a7c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # updateBlob Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

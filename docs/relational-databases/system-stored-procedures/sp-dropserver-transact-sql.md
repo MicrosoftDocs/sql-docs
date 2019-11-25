@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sp_dropserver (Transact-SQL)

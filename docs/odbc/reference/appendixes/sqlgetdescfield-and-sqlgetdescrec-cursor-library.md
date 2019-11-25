@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1a801f22-6fea-48aa-a723-3187a2ad852b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetDescField and SQLGetDescRec (Cursor Library)
 > [!IMPORTANT]  

@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.multifile.advanced.f1"
 helpviewer_keywords: 
   - "Multiple Flat Files Connection Manager Editor"
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Multiple Flat Files Connection Manager Editor (Advanced Page)

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Import and Export Wizard"
   - "starting Import and Export Wizard"
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Run the SQL Server Import and Export Wizard

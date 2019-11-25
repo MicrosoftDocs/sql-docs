@@ -15,26 +15,25 @@ dev_langs:
 helpviewer_keywords: 
   - "HasM geography"
 ms.assetid: e752e97f-1619-437d-b962-48c188b4e94c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # HasM (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Returns 1 (true) if a spatial object contains at least one M value; otherwise, it returns 0 (false).  
+Returns 1 (true) if a spatial object contains at least one M value; otherwise, it returns 0 (false).  
   
 ## Syntax  
   
-```  
+```sql  
   
 .HasM  
 ```  
   
 ## Return Types  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
   
- CLR return type: **Boolean**  
+CLR return type: **Boolean**  
   
 ## Remarks  
   

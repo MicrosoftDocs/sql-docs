@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 9a86daeb-03b2-45ef-82d3-495f33fb0113
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getNClob Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -2,7 +2,7 @@
 title: "Reporting Services Login Dialog Box (SSRS) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 
@@ -10,8 +10,8 @@ ms.topic: reference
 f1_keywords: 
   - "sql13.rtp.rptdesigner.reportservicelogin.f1"
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Reporting Services Login Dialog Box (SSRS)
   Use the **Reporting Services Login** dialog box to provide credentials to publish reports to the report server.  
@@ -29,7 +29,7 @@ ms.author: maghan
  Type the password to log in to the Web service.  
   
 ## See Also  
- [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Report Designer F1 Help](../../reporting-services/tools/report-designer-f1-help.md)  
   

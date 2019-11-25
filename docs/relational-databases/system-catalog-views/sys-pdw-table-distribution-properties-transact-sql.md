@@ -1,6 +1,6 @@
 ---
-title: "sys.pdw_table_distribution_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.pdw_table_distribution_properties (Transact-SQL)"
+ms.custom: seo-dt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.technology: data-warehouse
@@ -11,7 +11,6 @@ dev_langs:
 ms.assetid: 639a7475-7c92-41e0-a8ab-ad630eb5aea3
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_table_distribution_properties (Transact-SQL)

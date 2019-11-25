@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Numeric Values Functions - floor
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

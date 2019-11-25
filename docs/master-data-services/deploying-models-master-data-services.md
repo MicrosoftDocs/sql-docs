@@ -1,5 +1,5 @@
 ---
-title: "Deploying Models (Master Data Services) | Microsoft Docs"
+title: Deploying Models
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "deployment packages [Master Data Services], about deployment packages"
   - "deployment packages [Master Data Services]"
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Deploying Models (Master Data Services)
 

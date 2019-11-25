@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: fae5d600-586d-45fa-9d6d-03224cc13304
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Resource Governor Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

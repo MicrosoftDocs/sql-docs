@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "mapping-schema attribute"
   - "record deletions [SQLXML]"
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Deleting Data Using XML Updategrams (SQLXML 4.0)

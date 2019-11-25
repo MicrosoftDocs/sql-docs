@@ -1,5 +1,5 @@
 ---
-title: "ServerSettingsGeneralFlag Class | Microsoft Docs"
+title: "ServerSettingsGeneralFlag Class"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ServerSettingsGeneralFlag Class
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "Diagram pane [Visual Database Tools]"
   - "names [SQL Server], columns"
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Show Column Names in the Diagram Pane (Visual Database Tools)

@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CurveToLineWithTolerance method (geography)"
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # CurveToLineWithTolerance (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

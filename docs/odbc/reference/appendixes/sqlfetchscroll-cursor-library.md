@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLFetchScroll (Cursor Library)
 > [!IMPORTANT]  

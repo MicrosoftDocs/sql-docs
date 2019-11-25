@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TSQL Event Category

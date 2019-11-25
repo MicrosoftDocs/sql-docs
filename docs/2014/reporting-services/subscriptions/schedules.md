@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "schedules [Reporting Services]"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], scheduling"
   - "automatic report processing"
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Schedules

@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "aggregate queries [SQL Server]"
   - "WHERE clause, query summary results"
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Work with Columns in Aggregate Queries (Visual Database Tools)

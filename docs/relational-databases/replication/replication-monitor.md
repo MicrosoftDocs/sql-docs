@@ -14,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Replication Monitor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   This section of the documentation includes information on the Replication Monitor. The pages and dialog boxes displayed in the monitor differ depending on the type of replication and the version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is monitored.  
   
 -   [Replication Monitor, Main Page](../../relational-databases/replication/replication-monitor-main-page.md)  

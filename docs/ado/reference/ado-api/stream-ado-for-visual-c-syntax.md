@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Stream (ADO for Visual C++ Syntax)
 ## Methods  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "namespaces [Reporting Services]"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "xmldp [Reporting Services]"
   - "XML [Reporting Services], data retrieval"
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # XML Query Syntax for XML Report Data (SSRS)

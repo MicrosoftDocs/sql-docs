@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sysmail_start_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "rendered reports [Reporting Services]"
@@ -14,8 +12,8 @@ helpviewer_keywords:
   - "methods [Reporting Services], execution options"
   - "methods [Reporting Services], rendering"
 ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Rendering and Execution Methods

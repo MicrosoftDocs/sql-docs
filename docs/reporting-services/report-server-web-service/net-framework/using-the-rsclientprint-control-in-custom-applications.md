@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "custom printing [Reporting Services]"
   - "client-side printing"
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Using the RSClientPrint Control in Custom Applications
   The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX control, **RSPrintClient**, provides client-side printing for reports viewed in HTML Viewer. It provides a **Print** dialog box so that a user can initiate a print job, preview a report, specify pages to print, and change the margins. During a client-side print operation, the report server renders the report in the Image (EMF) rendering extension and uses the print capabilities of the operating system to create the print job and send it to a printer.  
@@ -25,15 +25,14 @@ ms.author: maghan
   
 -   Use the control to improve printing for Web-based reports. You can specify the object in any of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-compatible programming languages or in script. The control is not intended for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Forms applications.  
   
--   Copy the .cab file from the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] program files and add it to your custom application code base.  
-  
+-   Copy the .cab file from the [!INCLUDE[ssRSNoVersion](../../../includes/ssrsnoversion-md.md)] program files and add it to your custom application code base.  
+ 
 -   Use an \<OBJECT> tag to specify the control.  
   
 -   Specify a relative or fully qualified URL to the .cab file in the OBJECT CODEBASE attribute.  
   
 -   Specify your own application version information for the .cab file to track which version is used in your application.  
-  
--   Review the Books Online topics about Image (EMF) rendering to understand how pages are rendered for print preview and output.  
+    
   
 ## RSPrintClient Overview  
  The control displays a custom print dialog box that supports features common to other print dialog boxes, including print preview, page selections for specifying specific pages and ranges, page margins, and orientation. The control is packaged as a CAB file. The text in the **Print** dialog box is localized into all of the languages supported in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **RSPrintClient** ActiveX control uses the Image rendering extension (EMF) to print the report. The following EMF device information is used: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight, and PageWidth. Other device information settings for image rendering are not supported.  
@@ -87,7 +86,7 @@ ms.author: maghan
   
 -   60677965-AB8B-464f-9B04-4BA871A2F17F  
   
- When you are running the report in Windows Azure SQL Reporting, you use the following CLSID values.  
+ When you are running the report in Azure SQL Reporting, you use the following CLSID values.  
   
 -   3DD32426-554D-48C0-A200-65D3BF880E38  
   

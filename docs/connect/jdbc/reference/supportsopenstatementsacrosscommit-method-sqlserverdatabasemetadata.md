@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: e733586c-9222-43cb-92ea-ba474f442a43
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # supportsOpenStatementsAcrossCommit Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

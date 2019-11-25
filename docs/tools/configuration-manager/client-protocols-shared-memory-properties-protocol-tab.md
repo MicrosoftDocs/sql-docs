@@ -11,10 +11,9 @@ helpviewer_keywords:
   - "shared memory [SQL Server]"
   - "client protocols [SQL Server]"
 ms.assetid: 941369bd-cd4d-4a64-8e42-724d9a866eb7
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Client Protocols - Shared Memory Properties (Protocol Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

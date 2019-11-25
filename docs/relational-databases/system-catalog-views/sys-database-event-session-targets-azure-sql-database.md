@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_event_session_targets (Azure SQL Database)

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # CommandText Property (ADO)
 Indicates the text of a command to be issued against a provider.  

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysopentapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,6 @@
 ---
-title: "SQL Server Integration Services Support for In-Memory OLTP | Microsoft Docs"
-ms.custom: ""
+title: "SSIS support for in-memory OLTP"
+ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Integration Services Support for In-Memory OLTP

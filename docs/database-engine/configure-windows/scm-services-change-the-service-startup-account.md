@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SCM Services - Change the Service Startup Account
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ manager: craigg
   
 3.  In the details pane, right-click the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance for which you want to change the service startup account, and then click **Properties**.  
   
-4.  In the **SQL Server \<***instancename***> Properties** dialog box, click the **Log On** tab, and select a **Log on as** account type.  
+4.  In the **SQL Server \<**_instancename_**> Properties** dialog box, click the **Log On** tab, and select a **Log on as** account type.  
   
 5.  After selecting the new service startup account, click **OK**.  
   

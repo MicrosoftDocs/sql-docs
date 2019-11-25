@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +32,10 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication** = ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to be scripted. *publication* is **sysname**, with no default.  
   
- [ **@article** = ] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article to be scripted. *article* is **sysname**, with a default of **all**, which specifies all articles are scripted.  
   
 ## Return Code Values  

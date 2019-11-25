@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8ea84d69-2292-4128-89a0-f184f68abb98
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQL to C: Day-Time Intervals
 

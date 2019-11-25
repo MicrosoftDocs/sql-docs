@@ -7,8 +7,8 @@ ms.technology: mobile-reports
 
 ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Prepare Excel data for Reporting Services mobile reports
   

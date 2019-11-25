@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Create a New Policy-Based Management Condition
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

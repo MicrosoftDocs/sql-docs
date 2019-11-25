@@ -30,9 +30,8 @@ helpviewer_keywords:
   - "default database"
   - "LOGINPROPERTY function"
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # LOGINPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

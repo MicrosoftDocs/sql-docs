@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 0ed9d0f8-3297-4e31-a3e9-4a827f381789
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # LOCALDB_ERROR_INSTANCE_BUSY
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

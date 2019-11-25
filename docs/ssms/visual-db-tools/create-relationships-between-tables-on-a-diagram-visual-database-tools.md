@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "diagrams [SQL Server], designing"
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Create Relationships Between Tables on a Diagram (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +25,7 @@ You can create relationships between columns in different tables in the Diagram 
   
 3.  Two dialog boxes appear: **Foreign Key Relationship** and **Tables and Columns**, with the latter appearing in the foreground.  
   
-4.  **Relationship name** has a system-provided name in the format FK_*localtable*_*foreigntable*. You may change this value.  
+4.  **Relationship name** has a system-provided name in the format FK_*localtable*\_*foreigntable*. You may change this value.  
   
 5.  Verify that **Primary key table** specifies the correct table.  
   

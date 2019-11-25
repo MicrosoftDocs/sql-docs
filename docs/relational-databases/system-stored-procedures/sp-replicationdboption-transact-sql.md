@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_replicationdboption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Sets a replication database option for the specified database. This stored procedure is executed at the Publisher or Subscriber on any database.  
   
@@ -36,10 +35,10 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## Arguments  
- [**@dbname=**] **'***dbname***'**  
+`[ @dbname = ] 'dbname'`
  Is the database for which the replication database option is being set. *db_name* is **sysname**, with no default.  
   
- [**@optname=**] **'***optname***'**  
+`[ @optname = ] 'optname'`
  Is the replication database option to enable or disable. *optname* is **sysname**, and can be one of these values.  
   
 |Value|Description|  
@@ -49,13 +48,13 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**subscribe**|Database is a subscription database.|  
 |**sync with backup**|Database is enabled for coordinated backup. For more information, see [Enable Coordinated Backups for Transactional Replication &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
- [ **@value=**] **'***value***'**  
+`[ @value = ] 'value'`
  Is whether to enable or disable the given replication database option. *value* is **sysname**, and can be **true** or **false**. When this value is **false** and *optname* is **merge publish**, subscriptions to the merge published database are also dropped.  
   
- [ **@ignore_distributor=**]  *ignore_distributor*  
+`[ @ignore_distributor = ] ignore_distributor`
  Indicates whether this stored procedure is executed without connecting to the Distributor. *ignore_distributor* is **bit**, with a default of **0**, meaning the Distributor should be connected to and updated with the new status of the publishing database. The value **1** should be specified only if the Distributor is inaccessible and **sp_replicationdboption** is being used to disable publishing.  
   
- [ **@from_scripting=**]  *from_scripting*  
+`[ @from_scripting = ] from_scripting`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  
@@ -64,7 +63,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## Remarks  
  **sp_replicationdboption** is used in snapshot replication, transactional replication, and merge replication.  
   
- This procedure creates or drops specific replication system tables, security accounts, and so on, depending on the options given. Sets the corresponding category bit in the **master.sysdatabases** system table and creates the necessary system tables.  
+ This procedure creates or drops specific replication system tables, security accounts, and so on, depending on the options given. Sets the corresponding **is_published** (transacational or snapshot replication), **is_merge_published** (merge replication), or **is_distributor** bits in the **master.databases** system table and creates the necessary system tables.  
   
  To disable publishing, the publication database must be online. If a database snapshot exists for the publication database, it must be dropped before disabling publishing. A database snapshot is a read-only offline copy of a database, and is not related to a replication snapshot. For more information, see [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
@@ -76,7 +75,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Delete a Publication](../../relational-databases/replication/publish/delete-a-publication.md)   
  [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

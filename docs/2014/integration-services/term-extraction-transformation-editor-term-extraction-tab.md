@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.termextraction.termextraction.f1"
 helpviewer_keywords: 
   - "Term Extraction Transformation Editor"
 ms.assetid: 4c305b7d-a231-4d03-a09f-8e2d6564fa76
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Term Extraction Transformation Editor (Term Extraction Tab)

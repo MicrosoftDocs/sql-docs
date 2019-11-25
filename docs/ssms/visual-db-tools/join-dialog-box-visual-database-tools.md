@@ -11,9 +11,8 @@ f1_keywords:
   - "vdt.ppg.joinline"
   - "vdtsql.chm:69638"
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Join Dialog Box (Visual Database Tools)

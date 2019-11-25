@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.codeanalysis.configuring"
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Analyze Script Performance
 You can use the tools provided by SQL Server Data Tools to determine whether you can improve the performance of your query, stored procedures, or scripts. For example, by monitoring client statistics such as the response times for frequently used queries, you can determine whether changes to the query or indexes on the tables are required. Such statistics can include client execution time, query profile, and packets/bytes sent and received.  

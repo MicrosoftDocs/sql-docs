@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "adding indexes"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Creating SQL Server Indexes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

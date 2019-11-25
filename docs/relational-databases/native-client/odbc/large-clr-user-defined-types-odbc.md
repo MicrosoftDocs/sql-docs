@@ -13,12 +13,10 @@ helpviewer_keywords:
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Large CLR User-Defined Types (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   This topic discusses the changes to ODBC in SQL Server Native Client to support large common language runtime (CLR) user-defined types (UDTs).  
   

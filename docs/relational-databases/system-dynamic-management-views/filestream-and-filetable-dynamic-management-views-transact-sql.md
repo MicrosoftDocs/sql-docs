@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e50a135d-6644-42a4-a0df-1c7a2b722051
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Filestream and FileTable Dynamic Management Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

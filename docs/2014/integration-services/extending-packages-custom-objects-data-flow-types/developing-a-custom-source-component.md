@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "custom sources [Integration Services]"
   - "source components [Integration Services]"
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Developing a Custom Source Component

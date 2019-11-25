@@ -12,10 +12,10 @@ f1_keywords:
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Publisher Information, Agents
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Agents** tab displays information about the agents and maintenance jobs that are associated with the Publisher:  
   
 -   Snapshot Agent, which is displayed for all publications.  

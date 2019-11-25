@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +31,10 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## Arguments  
- [ **@source_object=**] **'***source_object***'**  
+`[ @source_object = ] 'source_object'`
  Is the name of the source object. *source_object*is **nvarchar(386)**, with no default.  
   
- [ **@rowguid=**] **'***rowguid***'**  
+`[ @rowguid = ] 'rowguid'`
  Is the row identifier. *rowguid* is **uniqueidentifier**, with no default.  
   
 ## Return Code Values  

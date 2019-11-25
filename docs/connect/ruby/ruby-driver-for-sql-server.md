@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Ruby Driver for SQL Server
 

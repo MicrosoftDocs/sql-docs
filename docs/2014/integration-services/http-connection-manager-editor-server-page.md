@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.httpconnection.server.f1"
 helpviewer_keywords: 
   - "HTTP Connection Manager Editor"
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # HTTP Connection Manager Editor (Server Page)

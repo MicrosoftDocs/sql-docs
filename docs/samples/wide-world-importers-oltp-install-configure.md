@@ -1,15 +1,14 @@
 ---
-title: "Install and configure WideWorldImporters sample database - SQL | Microsoft Docs"
+title: "Install and configure WideWorldImporters sample database"
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
-ms.custom: ""
 ms.date: "04/04/2018"
 ms.reviewer: ""
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+ms.custom: "seo-lt-2019"
 ---
 # Installation and configuration
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

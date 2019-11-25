@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "TRUE"
   - "single-column set of values [SQL Server]"
 ms.assetid: ddadefd7-49ad-4be1-b34d-dcf155558d34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

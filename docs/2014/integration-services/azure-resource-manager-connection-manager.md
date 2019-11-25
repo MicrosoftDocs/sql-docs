@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "02/28/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.DTS.DESIGNER.AFPARMCM.F1"
   - "SQL11.DTS.DESIGNER.AFPARMCM.F1"
 ms.assetid: a2380258-0418-4a8c-a731-5071a44ddf1e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure Resource Manager Connection Manager

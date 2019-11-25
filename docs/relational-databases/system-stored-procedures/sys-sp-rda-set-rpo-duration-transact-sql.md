@@ -14,9 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_set_rpo_duration stored procedure"
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # sys.sp_rda_set_rpo_duration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

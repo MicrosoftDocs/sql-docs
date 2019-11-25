@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "firewall systems [Reporting Services]"
   - "configuring servers [Reporting Services]"
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Configure a Firewall for Report Server Access

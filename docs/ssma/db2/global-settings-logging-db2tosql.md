@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Global Settings (Logging) (DB2ToSQL)
 Use the **Global Settings** dialog box to specify the logging settings for SSMA. Typically, you would change these settings only when working with product support.  

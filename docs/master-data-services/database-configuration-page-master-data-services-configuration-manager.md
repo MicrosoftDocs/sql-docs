@@ -1,6 +1,6 @@
 ---
-title: "Database Configuration Page (Master Data Services Configuration Manager) | Microsoft Docs"
-ms.custom: ""
+title: Database Configuration Page
+ms.custom: "seo-lt-2019"
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "mds"
@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.mds.configmanager.dbpg.f1"
 ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Database Configuration Page (Master Data Services Configuration Manager)
 

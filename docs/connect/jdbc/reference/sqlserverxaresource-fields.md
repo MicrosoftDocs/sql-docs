@@ -14,7 +14,6 @@ apilocation:
 ms.assetid: a62bbaf4-9ec3-44b5-8a26-7213786b67b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLServerXAResource Fields
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

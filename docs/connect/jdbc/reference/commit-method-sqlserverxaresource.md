@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 1d0f8612-fb4a-4eca-bc37-8342e1419fd4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # commit Method (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

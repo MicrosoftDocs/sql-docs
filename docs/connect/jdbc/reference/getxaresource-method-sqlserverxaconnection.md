@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: e1d2828f-fd20-44b0-b796-dc70f77c5b03
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getXAResource Method (SQLServerXAConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

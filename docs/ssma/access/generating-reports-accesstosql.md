@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Generating Reports (AccessToSQL)
 The reports of certain activities performed using commands are generated in SSMA Console at object tree level.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3c81fc58-57f0-4dd7-be16-2b146eb15cbc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # CONVERT Function Limitations
 Type conversion failures result in the affected column being set to NULL.  

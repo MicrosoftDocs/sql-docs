@@ -13,11 +13,16 @@ helpviewer_keywords:
   - "report servers [Reporting Services], verifying installations"
   - "Setup [Reporting Services], verifying installations"
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers can be installed in one of two modes, Native or SharePoint. The steps you should follow for verifying the installation depend on the report server mode.  
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ##  <a name="bkmk_sharepointmode"></a> Verify SharePoint Mode Installation  
   
@@ -66,6 +71,8 @@ ms.author: maghan
 1.  Complete one of the Reporting Services tutorials. For more information, see [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 2.  Download the Adventure works sample database and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sample reports from GitHub. For more information, see [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases).  
+
+::: moniker-end
   
 ##  <a name="bkmk_nativemode"></a> Verify a Native Mode Installation  
  When you install a Native mode report server using the default configuration, Setup installs and deploys the server. You can verify whether Setup deployed the report server by performing a few simple tests. You must be a local administrator to perform these steps. To enable other users to perform testing, you must configure report server access for those users.  
@@ -88,11 +95,11 @@ ms.author: maghan
   
 2.  Use the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to create a new folder or upload a file to test whether definitions are passed back to the report server database. If these operations are successful, the connection is functional.  
   
-     For more information, see [Web Portal &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     For more information, see [Web Portal &#40;SSRS Native Mode&#41;](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
 ### To verify that Report Designer is installed and running  
   
-1.  Open [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and create a new project based on a Report Server project type. For more information on using the Report Server Project Wizard, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) in SQL Server Books Online.  
+1.  Open [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and create a new project based on a Report Server project type. For more information on using the Report Server Project Wizard, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
 2.  If you installed report samples, open the sample report project files and publish the reports to a report server.  
   

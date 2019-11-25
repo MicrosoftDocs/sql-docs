@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Path Expressions - Specifying Axis
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

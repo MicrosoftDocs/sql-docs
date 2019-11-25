@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], viewing properties"
   - "viewing project properties"
 ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # View Project Properties
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

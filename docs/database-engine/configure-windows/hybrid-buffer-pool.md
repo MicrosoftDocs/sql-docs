@@ -94,12 +94,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 When formatting your PMEM device on Windows, use the largest allocation unit size available for NTFS (2 MB in Windows Server 2019) and ensure the device has been formatted for DAX (Direct Access).
 
-Enable large pages.
+Use the large page memory allocation model which is enabled with [trace flag 834](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql). This is a startup trace flag.
 
-For optimal performance, enable [Locked Pages in Memory](./enable-the-lock-pages-in-memory-option-windows.md) on Windows.
+Using the large page memory allocation model requires the use of [Locked Pages in Memory](./enable-the-lock-pages-in-memory-option-windows.md) on Windows.
 
 Files sizes should be a multiple of 2 MB (modulo 2 MB should equal zero).
 
 If the server scoped setting for Hybrid buffer pool is set to disabled, Hybrid buffer pool will not be used by any user database.
 
-If the server scoped setting for Hybrid Buffer is enabled, you can disable Hybrid buffer pool usage for individual user databases by following the steps to disable Hybrid buffer pool at the database scoped level for those user databases.
+If the server scoped setting for Hybrid Buffer Pool is enabled, you can disable Hybrid Buffer Pool usage for individual user databases by following the steps to disable Hybrid Buffer Pool at the database scoped level for those user databases.

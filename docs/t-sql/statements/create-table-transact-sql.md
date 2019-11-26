@@ -1593,7 +1593,7 @@ Msg 1750, Level 16, State 1, Line 1
 Could not create constraint or index. See previous errors.
 ```
 
-The problem arises from the fact that while the temp table name is uniquified, the constraint names are not.
+The problem arises from the fact that while the temp table name is unique, the constraint names are not.
 
 ### V. Using global temporary tables in Azure SQL Database
 

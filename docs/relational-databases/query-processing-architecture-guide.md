@@ -1,7 +1,7 @@
 ---
 title: "Query Processing Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/24/2019"
+ms.date: "11/26/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -132,17 +132,18 @@ The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses constant folding with the following types of expressions:
 - Arithmetic expressions, such as 1+1, 5/3*2, that contain only constants.
 - Logical expressions, such as 1=1 and 1>2 AND 3>4, that contain only constants.
+- Deterministic scalar-valued CLR user-defined functions and deterministic methods of CLR user-defined types (starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). These are foldable only if they are marked as `IsDeterministic=true` and do not perform any data access.
 - Built-in functions that are considered foldable by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], including `CAST` and `CONVERT`. Generally, an intrinsic function is foldable if it is a function of its inputs only and not other contextual information, such as SET options, language settings, database options, and encryption keys. Nondeterministic functions are not foldable. Deterministic built-in functions are foldable, with some exceptions.
 
 > [!NOTE] 
-> An exception is made for large object types. If the output type of the folding process is a large object type (text, image, nvarchar(max), varchar(max), or varbinary(max)), then [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not fold the expression.
+> An exception is made for large object types. If the output type of the folding process is a large object type (ntext, text, image, nvarchar(max), varchar(max), varbinary(max), or xml), then [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not fold the expression.
 
 #### Nonfoldable Expressions
 All other expression types are not foldable. In particular, the following types of expressions are not foldable:
 - Nonconstant expressions such as an expression whose result depends on the value of a column.
 - Expressions whose results depend on a local variable or parameter, such as @x.
 - Nondeterministic functions.
-- User-defined functions (both [!INCLUDE[tsql](../includes/tsql-md.md)] and CLR).
+- User-defined functions (both [!INCLUDE[tsql](../includes/tsql-md.md)] and CLR with exceptions noted above under "Foldable Expressions").
 - Expressions whose results depend on language settings.
 - Expressions whose results depend on SET options.
 - Expressions whose results depend on server configuration options.

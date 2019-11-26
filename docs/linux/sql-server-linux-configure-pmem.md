@@ -13,20 +13,18 @@ monikerRange: ">= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallprod
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article describes how to configure persistent memory (PMEM) for SQL Server on Linux.
-=======
-This article describes how to configure the persistent memory (PMEM) for SQL Server on Linux. PMEM support on Linux was introduced in SQL Server 2019.
+This article describes how to configure the persistent memory (PMEM) for [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] on Linux.
 
 ## Overview
 
 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] has a number of in-memory features that use persistent memory. This document covers the steps required to configure persistent memory for SQL Server on Linux.
 
 > [!NOTE]
-> The term "enlightenment" was introduced to convey the concept of working with a persistent memory aware file system which provides direct access to applications in user-space. When a file is memory mapped from this type of file system (XFS/EXT4) load/store, non-paged access to the file is provided. The application can use memory regions on this file system in a manner similar to memory regions in volatile memory.
+> The term _enlightenment_ was introduced to convey the concept of working with a persistent memory aware file system. Direct access to the file system from user-space applications is facilitated using memory mapping (mmap()). When a memory mapping for a file is created the application can issue load/store instructions bypassing the I/O stack completely. This is considered an "enlightened" file access method from the perspective of the host extension application (which is the black box code that allows SQLPAL interact with the Windows or Linux OS).
 
 ## Create namespaces for PMEM devices
 
-1. Configure the devices.
+### Configure the devices
 
   In Linux, use the `ndctl` utility.
 
@@ -43,19 +41,19 @@ This article describes how to configure the persistent memory (PMEM) for SQL Ser
   Sample output follows:
 
 ```bash
-ndctl list
-[
-  {
-    "dev":"namespace0.0",
-    "mode":"memory",
-    "size":1099511627776,
-    "blockdev":"pmem0",
-    "numa_node":0
-  }
-]
+# ndctl list -N
+{
+  "dev":"namespace0.0",
+  "mode":"fsdax",
+  "map":"dev",
+  "size":4294967296,
+  "sector_size":512,
+  "blockdev":"pmem0",
+  "numa_node":0
+}
 ```
 
-  - Create and mount PMEM device
+### Create and mount PMEM device
 
     For example, with XFS
 
@@ -72,18 +70,16 @@ ndctl list
     mount -o dax,noatime /dev/pmem0 /mnt/dax
     ```
 
-    Important to note the following
+## Important to note the following
 
-    - Block allocation of 2MB for either XFS/EXT4 as described above.
-    - Misalignment between block allocation and mmap will result in silent fallback to 4KB.
-    - Transparent Huge Pages should be enabled.
-    - Huge pagefaults should be set to 2MB.
+    - Block allocation of 2MB for either XFS/EXT4 as described above
+    - Misalignment between block allocation and mmap will result in silent fallback to 4KB
+    - File sizes should be a multiple of 2MB (modulo 2MB)
+    - Do not disable Transparent Huge Pages (THP) - this is enabled by default on most distros
 
-  Once the device has been configured with ndctl, formatted and mounted, you can place database files in it. You can also create a new database.
+  Once the device has been configured with ndctl, created and mounted, you can place database files in it or create a new database.
 
-1. Since PMEM devices are O_DIRECT safe, enable trace flag 3979 to disable the forced flush mechanism. This trace flag is a startup trace flag, and as such needs to be enabled using the mssql-conf utility. Please note that this is a server-wide configuration change, and you should not use this trace flag if you have any O_DIRECT non-compliant devices that need the forced flush mechanism to ensure data integrity. For more information see https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
-
-1. Restart SQL Server.
+PMEM devices are O_DIRECT (direct I/O) safe, you can consider enabling trace flag 3979 to disable the forced flush mechanism. For more information see [FUA support](https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Forced unit access internals are covered here [FUA internals](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/).
 
 ## Next steps
 

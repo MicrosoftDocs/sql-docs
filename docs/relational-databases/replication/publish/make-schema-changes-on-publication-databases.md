@@ -67,7 +67,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 -   All objects on the Subscriber that are referenced when adding a foreign key must have the same name and owner as the corresponding object on the Publisher.  
   
--   Explicitly adding, dropping, or altering indexes is not supported. Indexes created implicitly for constraints (such as a primary key constraint) are supported.  
+-   Explicit adding, dropping, or altering indexes is not replicated and any change involving an explicit index will need to be run on each replica set individually. Indexes created implicitly for constraints (such as a primary key constraint) are supported.  
   
 -   Altering or dropping identity columns that are managed by replication is not supported. For more information about automatic management of identity columns, see [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   

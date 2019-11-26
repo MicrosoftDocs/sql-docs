@@ -1,7 +1,7 @@
 ---
 title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/26/2019
+ms.date: 11/25/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -198,7 +198,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 < table_index > ::=
 {  
     {  
-      INDEX index_name [ CLUSTERED | NONCLUSTERED ]
+      INDEX index_name [ CLUSTERED | NONCLUSTERED ] [ UNIQUE ]
          (column_name [ ASC | DESC ] [ ,... n ] )
     | INDEX index_name CLUSTERED COLUMNSTORE
     | INDEX index_name [ NONCLUSTERED ] COLUMNSTORE (column_name [ ,... n ] )
@@ -1593,7 +1593,7 @@ Msg 1750, Level 16, State 1, Line 1
 Could not create constraint or index. See previous errors.
 ```
 
-The problem arises from the fact that while the temp table name is uniquified, the constraint names are not.
+The problem arises from the fact that while the temp table name is unique, the constraint names are not.
 
 ### V. Using global temporary tables in Azure SQL Database
 

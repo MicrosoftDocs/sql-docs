@@ -26,9 +26,9 @@ manager: "amitban"
 
 This page is intended to serve as a reference page for in-memory features and technologies within SQL Server. The concept of an in-memory database system refers to a database system that has been designed to take advantage of larger memory capacities available on modern database systems. An in-memory database may be relational or non-relational in nature.
 
-It is implied frequently that the performance advantages of an in-memory database system are entirely due to the fact that it is faster to access data in memory than even the fastest available disk subsystems currently, by several orders of magnitude. However, many SQL Server workloads can fit their entire working set in available memory. Many in-memory database systems can persist data to disk and may not always be able to fit the entire data set in available memory.
+It is implied sometimes that the performance advantages of an in-memory database system are mostly owing to it being faster to access data in memory than even the fastest available disk subsystems (by several orders of magnitude). However, many SQL Server workloads can fit their entire working set in available memory. Many in-memory database systems can persist data to disk and may not always be able to fit the entire data set in available memory.
 
-The fast volatile cache that fronts a considerably slower stable durable media, is a dynamic that has been predominant for relational database workloads necessitates a certain approach to workload management. The opportunities presented by faster memory transfer rates, greater capacity or persistent memory will facilitate the development of new features and technologies that spur new approaches to relational database workload management. As we develop new in-memory technologies and features we will continue to list them on this reference page.
+The fast volatile cache that fronts a considerably slower but stable durable media - is a dynamic that has been predominant for relational database workloads and necessitates a certain approach to workload management. The opportunities presented by faster memory transfer rates, greater capacity or even persistent memory will facilitate the development of new features and technologies that can spur new approaches to relational database workload management. As we develop new in-memory technologies and features we will continue to list them on this reference page.
 
 ## Hybrid Buffer Pool
 
@@ -46,7 +46,7 @@ The fast volatile cache that fronts a considerably slower stable durable media, 
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[In-Memory OLTP](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) is the premier technology available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../includes/sssds-md.md)] for optimizing performance of transaction processing, data ingestion, data load, and transient data scenarios.
+[In-Memory OLTP](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) is a database technology available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../includes/sssds-md.md)] for optimizing performance of transaction processing, data ingestion, data load, and transient data scenarios.
 
 **Applies to:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 

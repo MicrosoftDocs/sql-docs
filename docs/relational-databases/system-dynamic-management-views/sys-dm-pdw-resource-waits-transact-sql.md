@@ -40,14 +40,14 @@ With the introduction of [workload groups](https://docs.microsoft.com/azure/sql-
 select rw.wait_id
       ,rw.session_id
       ,rw.type
-	    ,rw.object_type
-	    ,rw.object_name
-	    ,rw.request_id
-	    ,rw.request_time
-	    ,rw.acquire_time
-	    ,rw.state
+      ,rw.object_type
+      ,rw.object_name
+      ,rw.request_id
+      ,rw.request_time
+      ,rw.acquire_time
+      ,rw.state
       ,resources_requested = s.effective_request_min_resource_grant_percent
-	    ,r.group_name
+      ,r.group_name
   from sys.dm_workload_management_workload_groups_stats s
   join sys.dm_pdw_exec_requests r on r.group_name = s.name collate SQL_Latin1_General_CP1_CI_AS
   join sys.dm_pdw_resource_waits rw on rw.request_id = r.request_id

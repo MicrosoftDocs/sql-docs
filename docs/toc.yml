@@ -16234,7 +16234,6 @@
         - name: PUBLISHINGSERVERNAME
           href: t-sql/functions/replication-functions-publishingservername.md
       - name: Rowset
-        href: t-sql/functions/rowset-functions-transact-sql.md
         items:
         - name: OPENDATASOURCE
           href: t-sql/functions/opendatasource-transact-sql.md

@@ -43,11 +43,11 @@ The volume or mount the new log file is placed must be formatted with DAX (NTFS)
 
 ## Remove a persisted log buffer
 
-```ALTER DATABASE <MyDB> SET SINGLE_USER;```
-```ALTER DATABASE <MyDB> REMOVE FILE <DAXlog>;```
-```ALTER DATABASE <MyDB> SET MULTI_USER;```
+`ALTER DATABASE <MyDB> SET SINGLE_USER;`
+`ALTER DATABASE <MyDB> REMOVE FILE <DAXlog>;`
+`ALTER DATABASE <MyDB> SET MULTI_USER;`
 
-Database must be placed in single user mode in order to drain the persisted log buffer and remove it safely.
+Database must be placed in single user mode in order to drain the persisted log buffer and be able to remove it safely.
 
 ## Limitations
 

@@ -139,7 +139,7 @@ The external (source) columns that you selected are listed in order. To change t
 **Output Column**
 
 The name of the selected external (source) column is the default output name. While you can input any unique name.
->**Note**
+>[!NOTE]
 >
 >If there are columns with unsupported data types, there will be a warning shown the data types are not supported, and related columns will be removed from mapping columns.
 

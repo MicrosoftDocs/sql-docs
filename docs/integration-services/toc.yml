@@ -1529,7 +1529,7 @@
 - name: Microsoft connector for Teradata
   href: ../integration-services/data-flow/Teradata-connector.md
   items:
-  - name: Teradata connection Manager
+  - name: Teradata connection manager
     href: ../integration-services/data-flow/Teradata-connection-manager.md
   - name: Teradata source
     href: ../integration-services/data-flow/Teradata-source.md

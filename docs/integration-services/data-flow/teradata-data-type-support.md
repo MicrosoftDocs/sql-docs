@@ -16,7 +16,7 @@ ms.author: chugu
 
 SSIS components use Teradata Parallel Transporter API (TPT API) to load and transfer data from and to Teradata Database, thus only TPT API supported data type can be used in SSIS.
 
-> **NOTE**
+> [!NOTE]
 >
 > TIME, TIMESTAMP, and INTERVAL data types in Teradata are handled by TPT API as fixed-sized character strings. They are handled by the SSIS components for Teradata as a string.
 
@@ -52,7 +52,6 @@ The following table shows the Teradata database data types and their default map
 |PERIOD(DATE)|DT_STR|
 |PERIOD(TIME)|DT_STR|
 |NUMBER|DT_STR|
-||| 
 |CHARACTER|DT_STR|
 |VARCHAR|DT_STR (DT_WSTR for Unicode character set)<br>**Notes**:<br> Maximum length of VARCHAR supported is 32000. <br> Maximum allowed length of DT_STR is 8000 characters, DT_WSTR is 4000 characters. Data is truncated if exceeds.|
 |LONG VARCHAR|Not supported|

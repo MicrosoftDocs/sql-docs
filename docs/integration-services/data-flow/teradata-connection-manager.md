@@ -33,7 +33,7 @@ Enter information about the connection manager.
 
 Enter a name for the connection. The default name is **Teradata Connection Manager**.
 
-**Description**:
+**Description**
 
 Enter a description of the connection. This is optional.
 

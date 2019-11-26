@@ -89,7 +89,7 @@ The following table describes the custom properties of the Teradata destination.
 |ErrorTableName|String|Error table name. Default is the target table name|
 |ExtendedStringColumnsAllocation|Boolean|**Maximal Transfer Character Allocation Factor** is use if **True**. <br> This value should be set to **True** if the Teradata database **Export Width Table ID** property is set to **Maximal Defaults**. <br> Default is **False**.|
 |FastLoad|Boolean|Fast Loading is used if **True**. The default value is **false**. This can also be set in the [Teradata Destination Editor (Connection Manager Page)](#teradata-destination-editor-connection-manager-page).|
-|MaxErrors|Integer|The number of errors that can occur before the data flow is stopped. The default value is **0**, which means no limit of error number.<br> If **Redirect flow** is selected in the **Error handling** page. Before the error number limit reaches, all errors are returned in the error output. For more information, see [Teradata Destination Editor (Error Output Page)](#teradata-destination-editor-error-output-page).|Used only in Fast Load mode.|
+|MaxErrors|Integer|The number of errors that can occur before the data flow is stopped. The default value is **0**, which means no limit of error number.<br> If **Redirect flow** is selected in the **Error handling** page. Before the error number limit reaches, all errors are returned in the error output. For more information, see [Teradata Destination Editor (Error Output Page)](#teradata-destination-editor-error-output-page).|
 |MaxSessions|Integer|The maximum number of sessions that are logged on. This value must be greater than one. The default value is one session for each available AMP.|
 |MinSessions|Integer|The minimum number of sessions that are logged on. This value must be greater than one. The default value is one session for each available AMP.|
 |Pack|Integer|The number of statements to pack into a multi-statement request. Default is 20, maximum allowed is 2400. Only applicable for TPT Stream. This property is in **Advanced Editor**.|
@@ -151,8 +151,8 @@ Select the method for selecting data from the source. The options are shown in t
 
 |Option|Description|
 |:-|:-|
-|Table Name - TPT Stream|Incremental mode using the TPT Stream operator. <br>**Name of the table or the vie**: Select an existing table or view from the list. This list only shows the first 1000 tables. You can type table name prefix or use any part of the name with the (*) wild card to list the table or tables you want to use.|
-|Table Name – TPL Load|Fast (Direct Path) load mode using the TPT API Load operator (Teradata FastLoad protocol).<br>**Name of the table or the view**: Select an existing table or view from the list. This list only shows the first 1000 tables. You can type table name prefix or use any part of the name with the (*) wild card to list the table or tables you want to use.|
+|Table Name - TPT Stream|Incremental mode using the TPT Stream operator. <br>**Name of the table or the vie**: Select an existing table or view from the list. This list only shows the first 1000 tables. You can type table name prefix or use any part of the name with the (*) wildcard to list the table or tables you want to use.|
+|Table Name – TPL Load|Fast (Direct Path) load mode using the TPT API Load operator (Teradata FastLoad protocol).<br>**Name of the table or the view**: Select an existing table or view from the list. This list only shows the first 1000 tables. You can type table name prefix or use any part of the name with the (*) wildcard to list the table or tables you want to use.|
 
 **Data encryption**
 Check box to enable data encryption. Default is not selected.
@@ -202,7 +202,7 @@ View the input columns that you selected. You can remove mappings by selecting *
 
 View all available destination columns, both mapped and unmapped.
 
->**Note**
+>[!NOTE]
 >
 >Columns of unsupported data types will be deleted from mapping with a warning.
 

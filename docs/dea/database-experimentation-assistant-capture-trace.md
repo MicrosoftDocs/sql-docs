@@ -16,7 +16,7 @@ ms.reviewer: mathoma
 
 # Capture a trace in Database Experimentation Assistant
 
-You can use a trace capture in Database Experimentation Assistant (DEA) to create a trace file that has a log of captured server events. A captured server event is an event that occurs on a specific server during a specific time period. A trace capture must be run once per server.
+You can use Database Experimentation Assistant (DEA) to create a trace file with a log of captured server events. A captured server event is an event that occurs on a specific server during a specific time period. A trace capture must be run one time per server.
 
 Before you start a trace capture, make sure that you back up all target databases.
 
@@ -45,23 +45,21 @@ Query caching in SQL Server might affect evaluation results. We recommend that y
 
 ## Start the trace capture
 
-After you enter or select the required information, select **Start** to start capturing traces. If the information you entered is valid, the trace capture process begins. Otherwise, the text boxes that have invalid entries are highlighted with red.
+After you enter or select the required information, select **Start** to initiate the trace capture. If the information you've provided on the **New Capture** page is valid, the trace capture process begins without issue. Otherwise, text boxes with invalid entries are highlighted with red. Provide corrected information, and then try again.
 
-Make sure that the values you've selected or entered are correct, and then select **Start**.
-
-When the trace capture is finished running, locate your new trace file in the file location that you specified in **Path to store output trace file**. Select the bell icon at the bottom of the left menu to monitor the progress of the capture.
+Select the bell icon at the bottom of the left menu to monitor the progress of the capture.
 
 ![Capture Traces progress](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-progress.png)
 
 ### Trace file
 
-The trace capture writes out a .trc file in the specified location. The trace file includes trace results of the activity of a SQL Server database. TRC files are designed to provide more information about errors that are detected and reported by SQL Server.
+When the trace capture finishes running, a .trc file is written in the location specified in the **Path to store output trace file** field. The trace file includes trace results of the activity of a SQL Server database. .trc files are designed to provide more information about errors that are detected and reported by SQL Server.
 
 ## Frequently asked questions about trace capture
 
 Following are some frequently asked questions about trace capture in DEA.
 
-### What events are captured when I run a trace capture on a production database?
+**Q: What events are captured when I run a trace capture on a production database?**
 
 The following table provides the list of events and the corresponding column data that we collect for traces:
   
@@ -114,12 +112,12 @@ Yes. DEA supports XEvents. Download the latest version of DEA and give it a try.
 
 ## Troubleshoot trace captures
 
-If you see an error when you run a trace capture, review the following prerequisites:
+If you see an error when you run a trace capture, confirm that:
 
-- Confirm that the name of the computer running SQL Server is valid. To confirm, try to connect to the computer running SQL Server by using SQL Server Management Studio (SSMS).
-- Confirm that your firewall configuration doesn't block connections to the computer running SQL Server.
-- Confirm that the user has the permissions that are listed in the blog posting [Replay FAQ](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/).
-- Confirm that the trace name doesn't follow the standard rollover convention (Capture\_1). Instead, try trace names like Capture\_1A or Capture1.
+- The name of the computer running SQL Server is valid. To confirm, try to connect to the computer running SQL Server by using SQL Server Management Studio (SSMS).
+- Your firewall configuration doesn't block connections to the computer running SQL Server.
+- The user has the permissions that are listed in the blog posting [Replay FAQ](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/).
+- The trace name doesn't follow the standard rollover convention (Capture\_1). Instead, try trace names like Capture\_1A or Capture1.
 
 Following are some possible errors you might see and solutions for resolving them:
 
@@ -134,4 +132,4 @@ If you see any other errors labeled *Sql Error Code*, see [Database Engine Error
 
 ## See also
 
-- To learn how to configure the Distributed Replay tools in SQL Server before you replay a captured trace, see [Configure Distributed Replay](database-experimentation-assistant-configure-replay.md).
+- To learn how to configure the Distributed Replay tools in SQL Server before you replay a captured trace, see [Configure replay in Database Experimentation Assistant](database-experimentation-assistant-configure-replay.md).

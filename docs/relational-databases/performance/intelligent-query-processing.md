@@ -2,7 +2,7 @@
 title: "Intelligent query processing"
 description: "Intelligent query processing features to improve query performance in SQL Server and Azure SQL Database."
 ms.custom: seo-dt-2019
-ms.date: 11/12/2019
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -274,13 +274,55 @@ A USE HINT query hint takes precedence over a database scoped configuration or t
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
-Table variable deferred compilation improves plan quality and overall performance for queries that reference table variables. During optimization and initial compilation, this feature propagates cardinality estimates that are based on actual table variable row counts. This accurate row count information optimizes downstream plan operations.
+**Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial plan compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts. This exact row count information will then be used for optimizing downstream plan operations.
 
-Table variable deferred compilation defers compilation of a statement that references a table variable until the first actual run of the statement. This deferred compilation behavior is the same as that of temporary tables. This change results in the use of actual cardinality instead of the original one-row guess. 
+With table variable deferred compilation, compilation of a statement that references a table variable is deferred until the first actual execution of the statement. This deferred compilation behavior is identical to the behavior of temporary tables. This change results in the use of actual cardinality instead of the original one-row guess. 
 
-You can enable table variable deferred compilation in Azure SQL Database. To do that, enable compatibility level 150 for the database you're connected to when you run the query.
+To enable table variable deferred compilation, enable database compatibility level 150 for the database you're connected to when the query runs.
 
-For more information, see [Table variable deferred compilation](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
+Table variable deferred compilation **doesn't** change any other characteristics of table variables. For example, this feature doesn't add column statistics to table variables.
+
+Table variable deferred compilation **doesn't increase recompilation frequency**. Rather, it shifts where the initial compilation occurs. The resulting cached plan generates based on the initial deferred compilation table variable row count. The cached plan is reused by consecutive queries. It's reused until the plan is evicted or recompiled. 
+
+Table variable row count that is used for initial plan compilation represents a typical value might be different from a fixed row count guess. If it's different, downstream operations will benefit. Performance may not be improved by this feature if the table variable row count varies significantly across executions.
+
+### Disabling table variable deferred compilation without changing the compatibility level
+Disable table variable deferred compilation at the database or statement scope while still maintaining database compatibility level 150 and higher. To disable table variable deferred compilation for all query executions originating from the database, execute the following example within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+To re-enable table variable deferred compilation for all query executions originating from the database, execute the following example within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+You can also disable table variable deferred compilation for a specific query by assigning DISABLE_DEFERRED_COMPILATION_TV as a USE HINT query hint.  For example:
+
+```sql
+DECLARE @LINEITEMS TABLE 
+	(L_OrderKey INT NOT NULL,
+	 L_Quantity INT NOT NULL
+	);
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT	O_OrderKey,
+	O_CustKey,
+	O_OrderStatus,
+	L_QUANTITY
+FROM	
+	ORDERS,
+	@LINEITEMS
+WHERE	O_ORDERKEY	=	L_ORDERKEY
+	AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
 ## Scalar UDF inlining
 

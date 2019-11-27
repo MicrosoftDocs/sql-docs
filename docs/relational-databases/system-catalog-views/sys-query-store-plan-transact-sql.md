@@ -66,7 +66,7 @@ First, if the plan contains following constructions:
 * Invalid star join specification 
 
 > [!NOTE]
-> Azure SQL Database and SQL Server 2019 (preview) support plan forcing for static and fast forward cursors.
+> Azure SQL Database and SQL Server 2019 support plan forcing for static and fast forward cursors.
 
 Second, when objects that plan relies on, are no longer available:
 * Database (if Database, where plan originated, does not exist anymore)

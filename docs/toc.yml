@@ -2489,7 +2489,7 @@
     - name: Format Query Results
       href: relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
       items:
-      - name: Format nested output with PATH ode
+      - name: Format nested output with PATH Mode
         href: relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md
       - name: Format with AUTO Mode
         href: relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md
@@ -4206,7 +4206,6 @@
       - name: Local audit for SQL Server
         href: sql-server/usage-and-diagnostic-data-in-local-audit.md
   - name: Install SQL Server
-    href: database-engine/install-windows/installation-for-sql-server.md
     items:
     - name: Overview
       href: database-engine/install-windows/install-sql-server.md
@@ -8196,6 +8195,10 @@
                 items:
                   - name: Plan for Host Guardian Service attestation
                     href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
+                  - name: Deploy the Host Guardian Service
+                    href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md
+                  - name: Register computer with Host Guardian Service
+                    href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-register.md
           - name: Manage keys for Always Encrypted with secure enclaves
             items:
               - name: Manage enclave-enabled keys
@@ -16231,7 +16234,6 @@
         - name: PUBLISHINGSERVERNAME
           href: t-sql/functions/replication-functions-publishingservername.md
       - name: Rowset
-        href: t-sql/functions/rowset-functions-transact-sql.md
         items:
         - name: OPENDATASOURCE
           href: t-sql/functions/opendatasource-transact-sql.md

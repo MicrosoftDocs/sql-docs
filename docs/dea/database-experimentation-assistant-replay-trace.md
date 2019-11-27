@@ -2,7 +2,7 @@
 title: Replay a trace for SQL Server upgrades
 description: Replay a trace with Database Experimentation Assistant for SQL Server upgrades
 ms.custom: "seo-lt-2019"
-ms.date: 11/21/2019
+ms.date: 11/22/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -19,12 +19,12 @@ ms.reviewer: mathoma
 In Database Experimentation Assistant (DEA), you can replay a captured trace file against an upgraded test environment. For example, consider a production workload that runs on SQL Server 2008 R2. The trace file for the workload must be replayed twice: once on an environment with the same version of SQL Server that runs on production and again on an environment that has the upgrade target SQL Server version, such as SQL Server 2016.
 
 > [!NOTE]
-> To run this action, you must manually set up virtual machines or physical machines to run Distributed Replay traces. For more information, see [Distributed Replay controller and clients setup](https://blogs.msdn.microsoft.com/datamigration/distributed-replay-controller-and-client-setup/).
+> Replaying a trace requires that you manually set up virtual machines or physical computers to run Distributed Replay traces. For more information, see [Configure Distributed Replay for Database Experimentation Assistant](database-experimentation-assistant-configure-replay.md).
 >
 
 ## Create a trace replay
 
-In Database Experimentation Assistant, select the menu icon. In the expanded menu, select **Replay Traces** next to the play icon.
+In DEA, select the menu icon. In the expanded menu, select **Replay Traces** next to the play icon.
 
 ![Select Replay Traces in the menu](./media/database-experimentation-assistant-replay-trace/dea-replay-trace-open.png)
 
@@ -111,7 +111,7 @@ DEA captures trace events that contain performance-related information. The capt
 
 ## Troubleshoot trace replay
 
-**Q: I can't connect to the computer that's running SQL Server**
+**Q: Why can't I connect to the computer that's running SQL Server?**
 
 - Confirm that the name of the computer running SQL Server is valid. To confirm, try to connect to the server by using SQL Server Management Studio (SSMS).
 - Confirm that the firewall configuration doesn't block connections to the computer running SQL Server.
@@ -120,7 +120,7 @@ DEA captures trace events that contain performance-related information. The capt
 
 You can get more details in the logs in %temp%\\DEA. If the problem persists, contact the product team.
 
-**Q: I can't connect to the Distributed Replay controller**
+**Q: Why can't I connect to the Distributed Replay controller?**
 
 - Verify that the Distributed Replay controller service is running on the controller machine. To verify, use the Distributed Replay Management Tools (run the command `dreplay.exe status -f 1`).
 - If the replay is started remotely:
@@ -128,7 +128,7 @@ You can get more details in the logs in %temp%\\DEA. If the problem persists, co
   - Make sure that DCOM Remote Launch and Remote Activation are allowed for the user of the Distributed Replay controller.
   - Make sure that DCOM Remote Access user rights are allowed for the user of Distributed Replay controller.
 
-**Q: The trace file path exists on my machine. Why can't Distributed Replay controller find it?**
+**Q: The trace file path exists on my computer. Why can't Distributed Replay controller find it?**
 
 Distributed Replay can access only local disk resources. You must copy source trace files to the Distributed Replay controller machine before you start the replay. Also, you must provide the path on the DEA **New Replay** page.
 
@@ -138,11 +138,11 @@ UNC paths aren't compatible with Distributed Replay. Distributed Replay paths mu
 
 Because we can't browse a remote machine's folders, browsing for files isn't useful. Copying and pasting the absolute paths is more efficient.
 
-**Q: I started replay with a trace but Distributed Replay didn't replay any events**
+**Q: I started replay with a trace but Distributed Replay didn't replay any events. Why?**
 
 This issue might occur because the trace file either doesn't have replayable events or it doesn't have information about how to replay events. Confirm whether the trace file path provided is a source trace file. The source trace file is created by using the configuration provided in the StartCaptureTrace.sql script.
 
-**Q: I see "Unexpected error occurred!" when I try to preprocess my trace files by using the SQL Server 2017 Distributed Replay controller**
+**Q: I see "Unexpected error occurred!" when I try to preprocess my trace files by using the SQL Server 2017 Distributed Replay controller. Why?**
 
 This issue is known in the RTM version of SQL Server 2017. For more information, see [Unexpected error when you use the DReplay feature to replay a captured trace in SQL Server 2017](https://support.microsoft.com/help/4045678/fix-unexpected-error-when-you-use-the-dreplay-feature-to-replay-a).  
   

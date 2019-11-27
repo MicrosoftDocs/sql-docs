@@ -84,20 +84,20 @@ The following R packages are installed with SQL Server R Services.
 |Packages | Version | Description |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | Used for including R script in stored procedures. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Used for including R script in stored procedures. |
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 The following R packages are installed with SQL Server Machine Learning Services when you select the R feature during setup.
 
 |Packages | Version | Description |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 9.2 | Used for including R script in stored procedures. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.2 | Adds machine learning algorithms in R. | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 9.2 | Used for writing MDX statements in R. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Used for including R script in stored procedures. |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | Adds machine learning algorithms in R. | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Used for writing MDX statements in R. |
 
 ::: moniker-end
 
@@ -175,7 +175,12 @@ print(packageDescription("glue"))
 
 ## Next steps
 
-+ [Install new R packages](../r/install-additional-r-packages-on-sql-server.md)
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
++ [Install packages with R tools](install-r-packages-standard-tools.md)
+::: moniker-end
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
++ [Install new R packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
+::: moniker-end
 + [Get Python package information](python-package-information.md)
 + [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md)
 + [R and Python tutorials](../tutorials/machine-learning-services-tutorials.md)

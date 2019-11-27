@@ -1,5 +1,5 @@
 ---
-title: Restore master database - Analytics Platform System (APS) | Microsoft Docs
+title: Restore master database
 description: Restore the master database in Analytics Platform System (APS).
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Restore the master database in Analytics Platform System (APS)

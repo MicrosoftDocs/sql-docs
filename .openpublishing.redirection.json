@@ -51,9 +51,14 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/database-engine/install-windows/installation-for-sql-server.md",
+            "redirect_url": "/sql/database-engine/install-windows/install-sql-server",
+            "redirect_document_id": false
+        },        
+        {
             "source_path": "docs/database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md",
             "redirect_url": "/sql/database-engine/discontinued-database-engine-functionality-in-sql-server",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/sql-server/sql-server-technical-documentation.md",
@@ -651,26 +656,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/advanced-analytics/r/installing-and-managing-r-packages.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/default-packages",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "docs/advanced-analytics/package-management/default-packages.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/advanced-analytics/r/determine-which-packages-are-installed-on-sql-server.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/installed-package-information",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "docs/advanced-analytics/package-management/installed-package-information.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
-            "redirect_document_id": true
-        },
-        {
             "source_path": "docs/advanced-analytics/tutorials/tutorial-python-clustering-model.md",
             "redirect_url": "/sql/advanced-analytics/tutorials/python-clustering-model",
             "redirect_document_id": true
@@ -1118,11 +1103,6 @@
         {
             "source_path": "docs/advanced-analytics/tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md",
             "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/advanced-analytics/r/r-package-management-for-sql-server-r-services.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
@@ -1736,16 +1716,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/advanced-analytics/r-services/create-a-local-package-repository-using-minicran.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/create-a-local-package-repository-using-minicran",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/advanced-analytics/r/create-a-local-package-repository-using-minicran.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/create-a-local-package-repository-using-minicran",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "docs/advanced-analytics/r-services/create-a-standalone-r-server.md",
             "redirect_url": "/sql/advanced-analytics/r/create-a-standalone-r-server",
             "redirect_document_id": false
@@ -1823,11 +1793,6 @@
         {
             "source_path": "docs/advanced-analytics/r-services/index.md",
             "redirect_url": "/sql/advanced-analytics/index",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
@@ -2011,16 +1976,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/advanced-analytics/r-services/packages-installed-in-user-libraries.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/tips-for-using-r-packages",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/advanced-analytics/r/packages-installed-in-user-libraries.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/tips-for-using-r-packages",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "docs/advanced-analytics/r-services/performance-case-study-r-services.md",
             "redirect_url": "/sql/advanced-analytics/r/performance-case-study-r-services",
             "redirect_document_id": false
@@ -2076,13 +2031,68 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/advanced-analytics/r/installing-and-managing-r-packages.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/default-packages",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/package-management/default-packages.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/determine-which-packages-are-installed-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/installed-package-information",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/package-management/installed-package-information.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/r-package-management-for-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/create-a-local-package-repository-using-minicran.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/create-a-local-package-repository-using-minicran",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/create-a-local-package-repository-using-minicran.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/create-a-local-package-repository-using-minicran",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/packages-installed-in-user-libraries.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/tips-for-using-r-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/packages-installed-in-user-libraries.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/tips-for-using-r-packages",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/advanced-analytics/r/r-package-how-to-enable-or-disable.md",
             "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/advanced-analytics/r/install-r-packages-tsql.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-r-packages-with-tsql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/use-r-package-managers-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-r-packages-standard-tools",
             "redirect_document_id": false
         },
         {
@@ -2092,7 +2102,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/use-revoscaler-to-manage-r-packages.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-r-packages-with-revoscaler",
             "redirect_document_id": false
         },
         {
@@ -2107,7 +2117,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/python/install-additional-python-packages-on-sql-server.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-python-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-python-packages-with-pip",
             "redirect_document_id": false
         },
         {
@@ -2603,6 +2613,11 @@
         {
             "source_path": "docs/relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md",
             "redirect_url": "/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/functions/rowset-functions-transact-sql.md",
+            "redirect_url": "/sql/t-sql/functions/opendatasource-transact-sql",
             "redirect_document_id": false
         },
         {

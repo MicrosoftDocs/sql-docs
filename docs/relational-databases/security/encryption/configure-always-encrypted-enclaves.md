@@ -21,7 +21,9 @@ For a tutorial that shows you how to quickly get started with Always Encrypted w
 
 ## Set up your environment to support enclaves and attestation
 For details, see the following articles:
-- [Setting up the Host Guardian Service for Always Encrypted in SQL Server](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server).
+- [Plan for Host Guardian Service attestation](./always-encrypted-enclaves-host-guardian-service-plan.md)
+- [Deploy the Host Guardian Service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md)
+- [Register your computer with the Host Guardian Service](./always-encrypted-enclaves-host-guardian-service-register.md)
 
 ## Manage keys for Always Encrypted with secure enclaves
 See the following articles for details:

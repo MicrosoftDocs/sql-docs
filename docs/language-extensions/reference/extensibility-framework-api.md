@@ -111,3 +111,16 @@ SQLRETURN InitParam(
     SQLSMALLINT InputOutputType
 );
 ```
+
+- **ParamNumber:** Number of the parameter. Parameters are numbered sequentially in increasing order starting at 0.
+- **ParamName:** Pointer to a null-terminated buffer that contains the parameter’s name.
+- **ParamNameLength:** The length (excluding the null termination character) of ParamName in bytes.
+- **DataType:** The C type identifier of the parameter.
+- **ParamSize:** The size of the parameter type in bytes.
+- **DecimalDigits:** The number of decimal digits of the parameter on the data source. If the number of decimal digits cannot be determined or is not applicable, contains 0.
+- **StrLen_or_Ind:** The length or indicator value. Possible values:
+    - n, where n > 0. Indicating the length of the data in bytes.
+    - SQL_NULL_DATA
+- **InputOutputType:** Possible values:
+    - SQL_PARAM_INPUT
+    - SQL_PARAM_INPUT_OUTPUT

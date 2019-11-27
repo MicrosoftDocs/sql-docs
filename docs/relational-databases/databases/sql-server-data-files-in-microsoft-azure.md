@@ -15,28 +15,35 @@ ms.author: mikeray
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   ![Data files on Azure](../../relational-databases/databases/media/data-files-on-azure.png "Data files on Azure")  
   
- SQL Server Data Files in Microsoft Azure enables native support for SQL Server database files stored as Microsoft Azure Blobs. It allows you to create a database in SQL Server running in on-premises or in a virtual machine in Microsoft Azure with a dedicated storage location for your data in Microsoft Azure Blob Storage. This enhancement especially simplifies to move databases between machines by using detach and attach operations. In addition, it provides an alternative storage location for your database backup files by allowing you to restore from or to Microsoft Azure Storage. Therefore, it enables several hybrid solutions by providing several benefits for data virtualization, data movement, security and availability, and any easy low costs and maintenance for high-availability and elastic scaling.
+SQL Server Data Files in Microsoft Azure enables native support for SQL Server database files stored as Microsoft Azure Blobs. It allows you to create a database in SQL Server running in on-premises or in a virtual machine in Microsoft Azure with a dedicated storage location for your data in Microsoft Azure Blob Storage. This enhancement especially simplifies to move databases between machines by using detach and attach operations. In addition, it provides an alternative storage location for your database backup files by allowing you to restore from or to Microsoft Azure Storage. Therefore, it enables several hybrid solutions by providing several benefits for data virtualization, data movement, security and availability, and any easy low costs and maintenance for high-availability and elastic scaling.
  
 > [!IMPORTANT]  
 >  Storing system databases in Azure blob storage is not recommended and is not supported. 
 
-  
  This topic introduces concepts and considerations that are central to storing SQL Server data files in Microsoft Azure Storage Service.  
   
  For a practical hands-on experience on how to use this new feature, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 ## Why use SQL Server data files in Microsoft Azure? 
-  
--   **Easy and fast migration benefits:** This feature simplifies the migration process by moving one database at a time between machines in on-premises as well as between on-premises and cloud environments without any application changes. Therefore, it supports an incremental migration while maintaining your existing on-premises infrastructure in place. In addition, having access to a centralized data storage simplifies the application logic when an application needs to run in multiple locations in an on-premises environment. In some cases, you may need to rapidly setup computer centers in geographically dispersed locations, which gather data from many different sources. By using this new enhancement, instead of moving data from one location to another, you can store many databases as Microsoft Azure blobs, and then run Transact-SQL scripts to create databases on the local machines or virtual machines.  
-  
--   **Cost and limitless storage benefits:** This feature enables you to have limitless off-site storage in Microsoft Azure while leveraging on-premises compute resources. When you use Microsoft Azure as a storage location, you can easily focus on the application logic without the overhead of hardware management. If you lose a computation node on-premises, you can set up a new one without any data movement.  
-  
--   **High availability and disaster recovery benefits:** Using SQL Server Data Files in Microsoft Azure feature might simplify the high availability and disaster recovery solutions. For example, if a virtual machine in Microsoft Azure or an instance of SQL Server crashes, you can re-create your databases in a new SQL Server instance by just re-establishing links to Microsoft Azure Blobs.  
-  
--   **Security benefits:** This new enhancement allows you to separate a compute instance from a storage instance. You can have a fully encrypted database with decryption only occurring on compute instance but not in a storage instance. In other words, using this new enhancement, you can encrypt all data in public cloud using Transparent Data Encryption (TDE)  certificates, which are physically separated from the data. The TDE keys can be stored in the master database, which is stored locally in your physically secure on-premises computer and backed up locally. You can use these local keys to encrypt the data, which resides in Microsoft Azure Storage. If your cloud storage account credentials are stolen, your data still stays secure as the TDE certificates always reside in on-premises.  
-  
--   **Snapshot backup:**  This feature enables you to use Azure snapshots to provide nearly instantaneous backups and quicker restores for database files stored using the Azure Blob storage service. This capability enables you to simplify your backup and restore policies. For more information, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
-  
+
+- **[Use file-Snapshot backups for database files in Azure](../backup-restore/file-snapshot-backups-for-database-files-in-azure.md):** The biggest advantage of putting the database files on page blobs for very large databases is you can use file-snapshot backups for database files in Azure.
+
+   >[!NOTE]
+   >Putting the database files on page blobs is a more advanced feature than using Azure Disks, which are very simple and user-friendly. 
+   >
+   >The basic guidance is to use Azure Disks, unless you have a scenario where you really need to avoid creating a copy of the data for backups, or restoring as a size-of-data operation. For high availability and disaster recovery, using regular backup to URL or managed backup to Azure Blob storage is also much more useful than file snapshot backups, as you get life-cycle management, multi-region support, soft delete, and all the other features of blob storage of your backups.
+
+- **Support for [Azure Backup](/azure/backup/) and [Azure Site Recovery](/azure/site-recovery/):** Azure disks are compatible with enterprise-wide business continuity and disaster recovery solutions. If you store your databases directly on blobs, or in Azure Premium Files the data is not automatically associated with your VM for infrastructure, management, and monitoring.
+
+-   **Easy and fast migration benefits:** This feature simplifies the migration process by moving one database at a time between machines in on-premises as well as between on-premises and cloud environments without any application changes. Therefore, it supports an incremental migration while maintaining your existing on-premises infrastructure in place. In addition, having access to a centralized data storage simplifies the application logic when an application needs to run in multiple locations in an on-premises environment. In some cases, you may need to rapidly setup computer centers in geographically dispersed locations, which gather data from many different sources. By using this new enhancement, instead of moving data from one location to another, you can store many databases as Microsoft Azure blobs, and then run Transact-SQL scripts to create databases on the local machines or virtual machines.
+
+- **Cost and limitless storage benefits:** This feature enables you to have limitless off-site storage in Microsoft Azure while leveraging on-premises compute resources. When you use Microsoft Azure as a storage location, you can easily focus on the application logic without the overhead of hardware management. If you lose a computation node on-premises, you can set up a new one without any data movement.
+- **High availability and disaster recovery benefits:** Using SQL Server Data Files in Microsoft Azure feature might simplify the high availability and disaster recovery solutions. For example, if a virtual machine in Microsoft Azure or an instance of SQL Server crashes, you can re-create your databases in a new SQL Server instance by just re-establishing links to Microsoft Azure Blobs.
+
+- **Security benefits:** This new enhancement allows you to separate a compute instance from a storage instance. You can have a fully encrypted database with decryption only occurring on compute instance but not in a storage instance. In other words, using this new enhancement, you can encrypt all data in public cloud using Transparent Data Encryption (TDE)  certificates, which are physically separated from the data. The TDE keys can be stored in the master database, which is stored locally in your physically secure on-premises computer and backed up locally. You can use these local keys to encrypt the data, which resides in Microsoft Azure Storage. If your cloud storage account credentials are stolen, your data still stays secure as the TDE certificates always reside in on-premises.
+
+- **Snapshot backup:**  This feature enables you to use Azure snapshots to provide nearly instantaneous backups and quicker restores for database files stored using the Azure Blob storage service. This capability enables you to simplify your backup and restore policies. For more information, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+
 ## Concepts and Requirements  
   
 ### Azure Storage Concepts  
@@ -45,16 +52,18 @@ ms.author: mikeray
  In [Microsoft Azure](https://azure.microsoft.com), an [Azure storage](https://azure.microsoft.com/services/storage/) account represents the highest level of the namespace for accessing Blobs. A storage account can contain an unlimited number of containers, as long as their total size is below the storage limits. For the latest information on storage limits, see [Azure Subscription and Service Limits, Quotas, and Constraints](https://docs.microsoft.com/azure/azure-subscription-service-limits). A container provides a grouping of a set of [Blobs](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). All Blobs must be in a container. An account can contain an unlimited number of containers. Similarly, a container can store an unlimited number of Blobs as well. There are two types of blobs that can be stored in Azure Storage: block and page blobs. This new feature uses Page blobs, which are more efficient when ranges of bytes in a file are modified frequently. You can access Blobs using the following URL format: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### Azure billing considerations  
+
  Estimating the cost of using Azure Services is an important matter in the decision making and planning process. When storing SQL Server data files in Azure Storage, you need to pay costs associated with storage and transactions. In addition, the implementation of SQL Server Data Files in Azure Storage feature requires a renewal of Blob lease every 45 to 60 seconds implicitly. This also results in transaction costs per database file, such as .mdf or .ldf. Use the information on the [Azure Pricing](https://azure.microsoft.com/pricing/) page to help estimate the monthly costs associated with the use of Azure Storage and Azure Virtual Machines.  
   
 ### SQL Server concepts  
- When using this new enhancement, you are required to do the followings:  
-  
--   You must create a policy on a container and also generate a shared access signature (SAS) key.  
-  
--   For each container used by a data or a log file, you must create a SQL Server Credential whose name matches the container path.  
-  
--   You must store the information regarding Azure Storage container, its associated policy name, and SAS key in the SQL Server credential store.  
+
+ When using this new enhancement, you are required to do the followings:
+
+- You must create a policy on a container and also generate a shared access signature (SAS) key.
+
+- For each container used by a data or a log file, you must create a SQL Server Credential whose name matches the container path.
+
+- You must store the information regarding Azure Storage container, its associated policy name, and SAS key in the SQL Server credential store.  
   
  The following example assumes that an Azure storage container has been created, and a policy has been created with read, write, list, rights. Creating a policy on a container generates a SAS key which is safe to keep unencrypted in memory and needed by SQL Server to access the blob files in the container. In the following code snippet, replace `'<your SAS key>'` with an entry similar to the following: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. For more information, see [Manage Access to Azure Storage Resources](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)  
   
@@ -75,20 +84,20 @@ ON
  **Important note:** If there are any active references to data files in a container, attempts to delete the corresponding SQL Server credential fails.  
   
 ### Security  
- The following are security considerations and requirements when storing SQL Server Data Files in Azure Storage.  
-  
--   When creating a container for the Azure Blob storage service, we recommend that you set the access to private. When you set the access to private, container and blob data can be read by the Azure account owner only.  
-  
--   When storing SQL Server database files in Azure Storage, you need to use a shared access signature, a URI that grants restricted access rights to containers, blobs, queues, and tables. By using a shared access signature, you can enable SQL Server to access resources in your storage account without sharing your Azure storage account key.  
-  
--   In addition, we recommend that you continue implementing the traditional on-premises security practices for your databases.  
+ The following are security considerations and requirements when storing SQL Server Data Files in Azure Storage.
+
+- When creating a container for the Azure Blob storage service, we recommend that you set the access to private. When you set the access to private, container and blob data can be read by the Azure account owner only.
+
+- When storing SQL Server database files in Azure Storage, you need to use a shared access signature, a URI that grants restricted access rights to containers, blobs, queues, and tables. By using a shared access signature, you can enable SQL Server to access resources in your storage account without sharing your Azure storage account key.
+
+- In addition, we recommend that you continue implementing the traditional on-premises security practices for your databases.  
   
 ### Installation prerequisites  
- The followings are installation prerequisites when storing SQL Server Data Files in Azure.  
-  
--   **SQL Server on-premises:** SQL Server 2016 and later include this feature. To learn how to download the latest version of SQL Server, see [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).  
-  
--   SQL Server running in an Azure virtual machine: If you are installing [SQL Server on an Azure Virtual Machine](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1), install SQL Server 2016, or update your existing instance. Similarly, you can also create a new virtual machine in Azure using SQL Server 2016 platform image.
+ The followings are installation prerequisites when storing SQL Server Data Files in Azure.
+
+- **SQL Server on-premises:** SQL Server 2016 and later include this feature. To learn how to download the latest version of SQL Server, see [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).
+
+- SQL Server running in an Azure virtual machine: If you are installing [SQL Server on an Azure Virtual Machine](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1), install SQL Server 2016, or update your existing instance. Similarly, you can also create a new virtual machine in Azure using SQL Server 2016 platform image.
 
   
 ###  <a name="bkmk_Limitations"></a> Limitations  
@@ -129,9 +138,9 @@ ON
  When using the SQL Server Data Files in Azure feature, all SQL Server Management Objects (SMO) are supported. If an SMO object requires a file path, use the BLOB URL format instead of a local file path, such as `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. For more information about SQL Server Management Objects (SMO), see [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) in SQL Server Books Online.  
   
 ### Transact-SQL support  
- This new feature has introduced the following change in the Transact-SQL surface area:  
-  
--   A new **int** column, **credential_id**, in the **sys.master_files** system view. The **credential_id** column is used to enable Azure Storage enabled data files to be cross-referenced back to sys.credentials for the credentials created for them. You can use it for troubleshooting, such as a credential cannot be deleted when there is a database file which uses it.  
+ This new feature has introduced the following change in the Transact-SQL surface area:
+
+- A new **int** column, **credential_id**, in the **sys.master_files** system view. The **credential_id** column is used to enable Azure Storage enabled data files to be cross-referenced back to sys.credentials for the credentials created for them. You can use it for troubleshooting, such as a credential cannot be deleted when there is a database file which uses it.  
   
 ##  <a name="bkmk_Troubleshooting"></a> Troubleshooting for SQL Server Data Files in Microsoft Azure  
  To avoid errors due to unsupported features or limitations, first review [Limitations](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations).  
@@ -163,7 +172,7 @@ ON
   
 3.  *Error code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*   
 
-    Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidently started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  
+    Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidentally started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  
   
      To resolve this issue, first determine if you need ServerA to access the database file in Azure Storage or not. If not, simply remove any connection between ServerA and the database files in Azure Storage. To do this, follow these steps:  
   

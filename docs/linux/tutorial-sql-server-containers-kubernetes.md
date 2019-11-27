@@ -183,7 +183,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
                  key: SA_PASSWORD 
            volumeMounts:
            - name: mssqldb
-             mountPath: /var/opt/mssql
+             mountPath: /var/opt/mssql/data
          volumes:
          - name: mssqldb
            persistentVolumeClaim:

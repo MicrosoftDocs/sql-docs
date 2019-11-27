@@ -88,7 +88,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 The following sections describe known issues with the General Availability (GA) release of SQL Server 2019 (15.x) on Linux.
 
-#### General
+### General
 
 - The length of the hostname where [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is installed needs to be 15 characters or less. 
 
@@ -108,7 +108,11 @@ The following sections describe known issues with the General Availability (GA) 
 
     - **Resolution**: Change the language of the **sa** login with the **ALTER LOGIN** statement.
 
-#### Databases
+- OLEDB provider logs the following warning: `Failed to verify the Authenticode signature of 'C:\binn\msoledbsql.dll'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support.`
+
+   - **Resolution**: No action is required. The OLEDB provider is signed using SHA256. SQL Server Database engine does not validate the signed .dll correctly.
+
+### Databases
 
 - The master database cannot be moved with the mssql-conf utility. Other system databases can be moved with mssql-conf.
 
@@ -138,7 +142,7 @@ The following sections describe known issues with the General Availability (GA) 
 
 - User permission **ADMINISTER BULK OPERATIONS** is not supported on Linux at this time.
 
-#### Networking
+### Networking
 
 Features that involve outbound TCP connections from the sqlservr process, such as linked servers or Availability Groups, might not work if both the following conditions are met:
 
@@ -165,7 +169,7 @@ If you use **Network File System (NFS)** remote shares in production, note the f
 - Locate only the **/var/opt/mssql** directories on the NFS mount. Other files, such as the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system binaries, are not supported.
 - Ensure that NFS clients use the 'nolock' option when mounting the remote share.
 
-#### Localization
+### Localization
 
 - If your locale is not English (en_us) during setup, you must use UTF-8 encoding in your bash session/terminal. If you use ASCII encoding, you might see an error similar to the following:
 
@@ -185,7 +189,7 @@ If you use **Network File System (NFS)** remote shares in production, note the f
 
 - Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).
 
-#### <a id="ssis"></a> SQL Server Integration Services (SSIS)
+### <a id="ssis"></a> SQL Server Integration Services (SSIS)
 
 - The **mssql-server-is** package is not supported on SUSE in this release. It is currently supported on Ubuntu and on Red Hat Enterprise Linux (RHEL).
 
@@ -209,7 +213,7 @@ For more info about SSIS on Linux, see the following articles:
 -   [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
 -   [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
 
-#### <a id="ssms"></a> SQL Server Management Studio (SSMS)
+### <a id="ssms"></a> SQL Server Management Studio (SSMS)
 
 The following limitations apply to [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] on Windows connected to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux.
 

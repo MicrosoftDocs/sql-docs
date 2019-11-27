@@ -61,65 +61,52 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Requires ALTER permission on the specified procedure.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
-  
-### To recompile a stored procedure by using the WITH RECOMPILE option  
-  
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  From the Standard bar, click **New Query**.  
-  
-3.  Copy and paste the following example into the query window and click **Execute**. This example creates the procedure definition.  
 
-```sql
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
-    DROP PROCEDURE dbo.uspProductByVendor;  
-GO  
-CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
-WITH RECOMPILE  
-AS  
-    SET NOCOUNT ON;  
-    SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
-    FROM Purchasing.Vendor AS v   
-    JOIN Purchasing.ProductVendor AS pv   
-      ON v.BusinessEntityID = pv.BusinessEntityID   
-    JOIN Production.Product AS p   
-      ON pv.ProductID = p.ProductID  
-    WHERE v.Name LIKE @Name;  
+1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-```  
+1. From the Standard bar, click **New Query**.  
   
-### To recompile a stored procedure by using the WITH RECOMPILE option  
+1. Copy and paste the following example into the query window and click **Execute**. This example creates the procedure definition.  
+
+   ```sql
+   USE AdventureWorks2012;  
+   GO  
+   IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
+       DROP PROCEDURE dbo.uspProductByVendor;  
+   GO  
+   CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
+   WITH RECOMPILE  
+   AS  
+       SET NOCOUNT ON;  
+       SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
+       FROM Purchasing.Vendor AS v   
+       JOIN Purchasing.ProductVendor AS pv   
+         ON v.BusinessEntityID = pv.BusinessEntityID   
+       JOIN Production.Product AS p   
+         ON pv.ProductID = p.ProductID  
+       WHERE v.Name LIKE @Name;  
+   ```  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+### To recompile a stored procedure by using the WITH RECOMPILE option   
   
-2.  From the Standard bar, click **New Query**.  
-  
-3.  Copy and paste the following code example into the query window and click **Execute**. This executes the procedure and recompiles the procedure's query plan.  
+Select **New Query**, then copy and paste the following code example into the query window and click **Execute**. This executes the procedure and recompiles the procedure's query plan.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE HumanResources.uspProductByVendor WITH RECOMPILE;  
-GO  
-  
+GO
 ```  
   
 ### To recompile a stored procedure by using sp_recompile  
-  
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  From the Standard bar, click **New Query**.  
-  
-3.  Copy and paste the following example into the query window and click **Execute**. This does not execute the procedure but it does mark the procedure to be recompiled so that its query plan is updated the next time that the procedure is executed.  
-  
+
+Select **New Query**, then copy and paste the following example into the query window and click **Execute**. This does not execute the procedure but it does mark the procedure to be recompiled so that its query plan is updated the next time that the procedure is executed.  
+
 ```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_recompile N'dbo.uspProductByVendor';   
-GO  
-  
+GO
 ```  
   
 ## See Also  

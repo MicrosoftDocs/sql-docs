@@ -18,6 +18,17 @@ ms.custom: "seo-lt-2019"
 
 # Perform a SQL Server Integration Service migration assessment with Data Migration Assistant
 
+## Prerequisites
+
+To assess SQL Server Integration Service(SSIS) packages, below components need to be installed with Data Migration Assistant:
+
+- SQL Server Integration Service with the same version as the SSIS packages to assess.
+- Azure Feature Pack or other 3rd party components if SSIS packages to assess have these components.  
+
+DMA needs to run with **administrator** access to assess SSIS packages in Package Store.
+
+## Performance assessments
+
 The following step-by-step instructions help you perform your first assessment for migrating SQL Server Integration Service (SSIS) packages to Azure SQL Database or Azure SQL Database managed instance, by using Data Migration Assistant.
 
 ## Create an assessment

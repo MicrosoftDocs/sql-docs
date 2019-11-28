@@ -1,8 +1,7 @@
 ### YamlMime:Landing
 
 title: SQL Server 2014 documentation
-summary: Choose the area of SQL Server 2014 you are interested in.
-
+summary: Microsoft SQL Server 2014 on-premises is a relational database.
 
 metadata:
   title: SQL Server 2014 topics
@@ -13,10 +12,13 @@ metadata:
   ms.author: genemi
   ms.date: 11/25/2019
 
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
+# Cards and links should be based on top customer tasks or top subjects (or by Persona or JobRole).
+# Start card title with a verb.
 
-
+  # Card
   - title: Special articles
     linkLists:
     - linkListType: whats-new
@@ -27,11 +29,12 @@ landingContent:
         url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server?view=sql-server-2016
 
 
+  # Card
   - title: Backend Development
     linkLists:
     - linkListType: get-started
       links:
-      - text:
+      - text: Engine overview
         url: https://docs.microsoft.com/sql/database-engine/sql-server-database-engine-overview?view=sql-server-2014
       - text: CREATE DATABASE
         url: https://docs.microsoft.com/sql/t-sql/statements/create-database-transact-sql?view=sql-server-2016
@@ -55,6 +58,7 @@ landingContent:
         url: https://docs.microsoft.com/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-2014
 
 
+  # Card
   - title: Advanced Backend Dev
     linkLists:
     - linkListType: reference
@@ -83,6 +87,7 @@ landingContent:
         url: https://docs.microsoft.com/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016
 
 
+  # Card
   - title: Administration
     linkLists:
     - linkListType: download
@@ -111,6 +116,7 @@ landingContent:
         url: https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler?view=sql-server-2014
 
 
+  # Card
   - title: Data administration
     linkLists:
     - linkListType: overview
@@ -129,6 +135,7 @@ landingContent:
         url: https://docs.microsoft.com/sql/master-data-services/master-data-services?view=sql-server-2014
 
 
+  # Card
   - title: Frontend Development
     linkLists:
     - linkListType: reference
@@ -143,6 +150,7 @@ landingContent:
         url: https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide?view=sql-server-2014
 
 
+  # Card
   - title: Client services
     linkLists:
     - linkListType: overview
@@ -155,6 +163,7 @@ landingContent:
         url: https://docs.microsoft.com/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-2014
 
 
+  # Card
   - title: Sister database products
     linkLists:
     - linkListType: overview
@@ -173,6 +182,7 @@ landingContent:
         url: https://docs.microsoft.com/sql/analytics-platform-system/
 
 
+  # Card
   - title: Other database products
     linkLists:
     - linkListType: overview

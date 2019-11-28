@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in SQL Server 2014 | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2017"
+ms.date: 11/25/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: install
@@ -76,7 +76,7 @@ manager: craigg
 
 
 ## Additional Information  
- [SQL Server 2014 Resources](../2014-toc/books-online-for-sql-server-2014.md)  
+ [SQL Server 2014 Resources](../2014-toc/index.yml)  
   
  [SQL Server 2014 Release Notes](https://go.microsoft.com/fwlink/p/?linkID=296445)  
   

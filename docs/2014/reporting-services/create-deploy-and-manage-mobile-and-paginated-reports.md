@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: 11/25/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: "reporting-services-native"
@@ -26,7 +26,7 @@ manager: kfile
   
  For more information about features new in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md).  
   
- For information about other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components, tools, and resources, see [SQL Server Books Online](../2014-toc/books-online-for-sql-server-2014.md).  
+ For information about other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components, tools, and resources, see [SQL Server Books Online](../2014-toc/index.yml).  
   
  **Browse Content by Area**  
  ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)  

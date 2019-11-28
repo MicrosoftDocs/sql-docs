@@ -58,7 +58,7 @@ manager: craigg
   
  Books Online can be accessed in the following ways:  
   
--   A copy of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Books Online is published in both the MSDN Library and the TechNet Library on the Internet. The topics in these copies of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online include comments from the community, such as additional information and code examples from other customers. You can view the MSDN Library copy at the [SQL Server 2014 Books Online](../2014-toc/index.md).  
+-   A copy of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Books Online is published in both the MSDN Library and the TechNet Library on the Internet. The topics in these copies of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online include comments from the community, such as additional information and code examples from other customers. You can view the MSDN Library copy at the [SQL Server 2014 Books Online](../2014-toc/index.yml).  
   
 -   You can use the Help Library Manager to install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online on a local computer. For more information, see [Add or Remove Product Documentation for SQL Server](../2014-toc/index.yml).  
   

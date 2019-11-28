@@ -140,7 +140,7 @@
         "integration-services/**/*.md": "SQL Server Integration Services (SSIS)",
         "language-extensions/**/*.md": "SQL Server Language Extensions",
         "relational-database/replication/**/*.md": "SQL Server Replication",
-        "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
+        "reporting-services/**/*.md": "Reporting Services (SSRS)",
         "dea/**/*.md": "Database Experimentation Assistant",
         "sql-server/failover-clusters/**/*.md": "SQL Server Always On",
         "database-engine/availability-groups/windows/**/*.md": "SQL Server Always On",

@@ -130,7 +130,7 @@ landingContent:
       - text: Bulk Copy Program (BCP.exe)
         url: ../tools/bcp-utility.md?view=sql-server-2014
       - text: Data compression
-        url: ../relational-databases/data-compression.md?view=sql-server-2014
+        url: ../relational-databases/data-compression/data-compression.md?view=sql-server-2014
     - linkListType: architecture
       links:
       - text: Data Quality Service (DQS)

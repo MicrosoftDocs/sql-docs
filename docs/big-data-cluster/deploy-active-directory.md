@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters in an Active Dire
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/25/2019
+ms.date: 11/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -170,13 +170,13 @@ AD integration requires the following parameters. Add these parameters to the `c
 
 - `security.domainDnsName`: Name of your domain (e.g. `contoso.local`).
 
-- `security.clusterAdmins`: This parameter takes *one- AD group. Members of this group will get administrator permissions in the cluster. This means that they will have sysadmin permissions in SQL Server, superuser permissions in HDFS and administrators in Controller. **Please note that this group needs to exist in AD before deployment begins**
+- `security.clusterAdmins`: This parameter takes **one AD group**. Members of this group will get administrator permissions in the cluster. This means that they will have sysadmin permissions in SQL Server, superuser permissions in HDFS and administrators in Controller. **Please note that this group needs to exist in AD before deployment begins**
 
-- `security.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster. **Please note that these groups needs to exist in AD before deployment begins**
+- `security.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster. **Please note that these groups need to exist in AD before deployment begins**
 
-- `security.appOwners` **Optional parameter**: List of the AD groups who have permissions to create, delete, and run any application.
+- `security.appOwners` **Optional parameter**: List of the AD groups who have permissions to create, delete, and run any application. **Please note that these groups need to exist in AD before deployment begins**
 
-- `security.appReaders` **Optional parameter**: list of the AD users or Groups who have permissions to run any application. 
+- `security.appReaders` **Optional parameter**: list of the AD groups who have permissions to run any application. **Please note that these groups need to exist in AD before deployment begins**
 
 If you have not already initialized the deployment configuration file, you can run this command to get a copy of the configuration.
 

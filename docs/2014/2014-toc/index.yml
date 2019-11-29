@@ -162,7 +162,7 @@ landingContent:
       - text: Analysis Services (SSAS)
         url: ../analysis-services/analysis-services.md?view=sql-server-2014
       - text: Integration Services (SSIS)
-        url: https://www.microsoft.com/sql/integration-services/sql-server-integration-services.md?view=sql-server-2014
+        url: https://docs.microsoft.com/sql/integration-services/sql-server-integration-services.md?view=sql-server-2014
       - text: Reporting Services (SSRS)
         url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md?view=sql-server-2014
 
@@ -182,7 +182,7 @@ landingContent:
         url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/
       - text: SQL Data Warehouse
         url: https://docs.microsoft.com/azure/sql-data-warehouse/
-      - text: Analytics Platform System (APS-PDW)
+      - text: Azure Synapse Analytics (was APS-PDW)
         url: /sql/analytics-platform-system/?view=aps-pdw-2016-au7
 
 

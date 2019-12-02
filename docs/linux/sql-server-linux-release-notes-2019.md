@@ -100,7 +100,7 @@ The following sections describe known issues with the General Availability (GA) 
 
 - Only single instance installations are supported.
 
-    - **Resolution**: If you want to have more than one instance on a given host, consider using VMs or Docker containers. 
+    - **Resolution**: If you want to have more than one instance on a given host, cgonsider using VMs or Docker containers. 
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager can't connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux.
 

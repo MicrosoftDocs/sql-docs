@@ -76,7 +76,7 @@ manager: craigg
   
 4.  Click **OK**.  
   
- If you cannot obtain a server certificate from a CA, you can specify a certificate for testing. To configure IIS 6.0 for testing, install a certificate by using the SelfSSL utility. This utility is available in the IIS 6.0 Resource Kit. You can download the tools from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=30958). For IIS 5.0, go to [Microsoft Help and Support](https://go.microsoft.com/fwlink/?LinkId=46229).  
+ If you cannot obtain a server certificate from a CA, you can specify a certificate for testing. To configure IIS 6.0 for testing, install a certificate by using the SelfSSL utility. This utility is available in the IIS 6.0 Resource Kit. You can download the tools from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5135). For IIS 5.0, go to [Microsoft Help and Support](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
 > [!NOTE]  
 >  A certificate must be associated with a Web site before that Web site can use SSL. SelfSSL automatically associates the certificate with the default Web site. If you already have a certificate or later install a certificate from a CA, you must explicitly associate that certificate with the Web site that is used by Web synchronization. Make sure there is only one certificate associated with the Web site that is used to synchronize subscriptions. If there are multiple certificates, the Subscriber will use the first available Web site.  

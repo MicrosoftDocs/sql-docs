@@ -19,6 +19,11 @@ This article will cover the key security-related concepts in the big data cluste
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] provide coherent and consistent authorization and authentication. A big data cluster can be integrated with Active Directory through a fully automated deployment that sets up Active Directory integration against an existing domain. Once a big data cluster is configured with Active Directory integration, you can leverage existing identities and user groups for unified access across all endpoints. In addition, once you have created external tables in SQL Server, you can control access to data sources by granting access to external tables to Active Directory users and groups, thus centralizing the data access policies to a single location.
 
+In this 14-minute video you will get an overview of big data cluster security:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Big-Data-Cluster-Security/player?WT.mc_id=dataexposed-c9-niner]
+
+
 ## Authentication
 
 The external cluster endpoints support Active Directory authentication. This means that you can use your AD identity to authenticate to the big data cluster.

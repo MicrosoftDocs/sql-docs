@@ -45,7 +45,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**allow_encrypted_value_modifications**|**bit**|**Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Suppresses cryptographic metadata checks on the server in bulk copy operations. This enables the user to bulk copy data encrypted using Always Encrypted, between tables or databases, without decrypting the data. The default is OFF. |      
   
 ## Remarks  
- The *PasswordLastSetTime* properties are available on all supported configurations of SQL Server, but the other properties are only available when SQL Server is running on Windows Server 2003 or later and both CHECK_POLICY and CHECK_EXPIRATION are enabled. See [Password Policy](../../relational-databases/security/password-policy.md) for more information.  
+ The *PasswordLastSetTime* properties are available on all supported configurations of SQL Server, but the other properties are only available when SQL Server is running on Windows Server 2003 or later and both CHECK_POLICY and CHECK_EXPIRATION are enabled. See [Password Policy](../../relational-databases/security/password-policy.md) for more information.
+The values of the principal_id may be reused in the case that principals have been dropped and therefore is not guaranteed to be ever-increasing.
   
 ## Permissions  
  Any user can see their own user name, the system users, and the fixed database roles. To see other users, requires ALTER ANY USER, or a permission on the user. To see user-defined roles, requires ALTER ANY ROLE, or membership in the role.  

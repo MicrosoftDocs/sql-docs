@@ -57,8 +57,10 @@ GO
 UPDATE HumanResources.EmployeePayHistory  
     SET PayFrequency = 4  
     WHERE BusinessEntityID = 1;  
-IF @@ERROR = 547  
-    PRINT N'A check constraint violation occurred.';  
+IF @@ERROR = 547
+    BEGIN
+    PRINT N'A check constraint violation occurred.';
+    END
 GO  
 ```  
   

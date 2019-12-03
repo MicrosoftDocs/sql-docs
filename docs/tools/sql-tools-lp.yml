@@ -24,7 +24,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: SQL query and management tools for SQL Server
+          - text: SQL query and management tools
             url:  ../tools/overview-sql-tools.md
 
   - title: SSMS

@@ -18,26 +18,26 @@ ms.technology: big-data-cluster
 The upgrade path depends on the current version of SQL Server Big Data Cluster (BDC). To upgrade from a supported release, including general distribution release (GDR), cumulative update (CU), or quick fix engineering (QFE) update, you can upgrade in place. In-place upgrade from a customer technology preview (CTP) or release candidate version of BDC is not supported. You need to remove and recreate the cluster. The following sections describe the steps for each scenario:
 
 - [Upgrade from supported release](#upgrade-from-supported-release)
-- [Update a BDC depoloyment from CTP or release candidate](#update-a-bdc-from-ctp-or-release-candidate)
+- [Update a BDC deployment from CTP or release candidate](#update-a-bdc-deployment-from-ctp-or-release-candidate)
 
 ## Upgrade from supported release
 
 This section explains how to upgrade a SQL Server BDC from a supported release to a newer supported release.
 
 1. Back up SQL Server master instance.
-2. Back up HDFS
-
-   You can [back up HDFS with `curl`](data-ingestion-curl.md) or use the following `azdata` command:
+2. Back up HDFS.
 
    ```
    azdata bdc hdfs cp --from-path <path> --to-path <path>
    ```
+   
+   For example: 
 
    ```
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-3. Update `azdata` 
+3. Update `azdata`.
 
    Follow the instructions for installing `azdata`. 
    - [Windwos installer](/deploy-install-azdata-installer.md#install-azdata-with-the-microsoft-windows-installer)
@@ -46,7 +46,7 @@ This section explains how to upgrade a SQL Server BDC from a supported release t
    >[!NOTE]
    >If `azdata` was installed with `pip` you need to manually remove it before installing with the Windows installer or the Linux package manager.
 
-1. Update the Big Data Cluster
+1. Update the Big Data Cluster.
 
    ```
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
@@ -58,7 +58,7 @@ This section explains how to upgrade a SQL Server BDC from a supported release t
    azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04-r mcr.microsoft.com/mssql/bdc
    ```
 
-## Update a BDC depoloyment from CTP or release candidate
+## Update a BDC deployment from CTP or release candidate
 
 In-place upgrade from a CTP or release candidate build of SQL Server Big Data Clusters is not supported. The following section explains how to manually remove and recreate the cluster.
 
@@ -80,7 +80,7 @@ Currently, there is no in place upgrade for big data clusters, the only way to u
    > [!Note]
    > Issuing a `azdata bdc delete` command will result in all objects created within the namespace identified with the big data cluster name to be deleted, but not the namespace itself. Namespace can be reused for subsequent deployments as long as it is empty and no other applications were created within.
 
-1. Uninstall the old version of `azdata`
+1. Uninstall the old version of `azdata`.
 
    ```powershell
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt

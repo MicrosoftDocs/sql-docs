@@ -124,3 +124,28 @@ SQLRETURN InitParam(
 - **InputOutputType:** Possible values:
     - SQL_PARAM_INPUT
     - SQL_PARAM_INPUT_OUTPUT
+
+### Execute
+
+Execute the script.
+
+```C++
+SQLRETURN Execute(
+    SQLGUID		SessionId,
+    SQLUSMALLINT	TaskId,
+    SQLULEN		RowsNumber,
+    SQLPOINTER*	Data,
+    SQLINTEGER**	StrLen_or_Ind,
+    SQLUSMALLINT*    	OutputSchemaColumnsNumber
+);
+```
+
+- **RowsNumber:** Number of rows in the input dataset passes in Data.
+- **Data:** A 2D array of the input dataset. The length of the array is \[InputSchemaColumnsNumber\] (received in the InitSession call). Each column’s array has \[RowsNumber\] elements that should be interpreted according to the column type (from InitColumn). Each such element is the value of row \[i\] of column\[j\].
+- **StrLen_or_Ind:** A 2D array the size of the input data that represents the length or null indicator value. Possible values of each cell:
+    - n, where n > 0. Indicating the length of the data in bytes
+    - SQL_NULL_DATA
+
+    The length of the array is \[InputSchemaColumnsNumber\] (received in the InitSession call). Each column’s array has \[RowsNumber\] elements that should be interpreted according to the column type (from InitColumn).
+
+    If column col is not nullable and represents a data type of fixed size, StrLen_or_Ind\[col\] is a null pointer. Otherwise it points to a valid array with \[RowsNumber\] elements, and for each element it contains its length or null indicator data.

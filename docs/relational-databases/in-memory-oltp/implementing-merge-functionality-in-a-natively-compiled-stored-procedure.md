@@ -1,6 +1,6 @@
 ---
-title: "Implementing MERGE Functionality in a Natively Compiled Stored Procedure | Microsoft Docs"
-ms.custom: ""
+title: "MERGE function - natively compiled stored procedure"
+ms.custom: seo-dt-2019
 ms.date: "11/17/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

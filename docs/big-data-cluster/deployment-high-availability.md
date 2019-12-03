@@ -195,6 +195,7 @@ The known issues and limitations with availability groups for SQL Server master 
 - Databases created as result of workflows other than `CREATE DATABASE` like `RESTORE DATABSE`, `CREATE DATABASE FROM SNAPSHOT` are not automatically added to the availability group. [Connect to the instance](#instance-connect) and add the database to the availability group manually.
 - Certain operations like running server configuration settings with `sp_configure` require a connection to the SQL Server instance `master` database, not the availability group `master`. You cannot use the corresponding primary endpoint. Follow [the instructions](#instance-connect) to expose an endpoint and connect to the SQL Server instance and run `sp_configure`. You can only use SQL authentication when manually exposing the endpoint to connect to the SQL Server instance `master` database.
 - The high availability configuration must be created when big data cluster is deployed. You cannot enable the high availability configuration with availability groups post deployment.
+- While contained msdb database is included in the availability group and the SQL Agent jobs are replicated across, the jobs are nit triggered per schedule. The workaround is to [connect to each of the SQL Server instances](#instance-connect) and create the jobs in the instance msdb.
 
 ## Next steps
 

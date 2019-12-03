@@ -1,7 +1,7 @@
 ---
 title: "SqlClient driver support lifecycle"
 description: "Page that contains product support lifecycle information."
-ms.date: "08/15/2019"
+ms.date: "11/25/2019"
 dev_langs: 
   - "csharp"
   - "vb"
@@ -18,15 +18,25 @@ ms.reviewer: rothja
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Each iteration of the Microsoft SqlClient Data Provider for SQL Server ships with its associated platform. Below are the lifecycle details:
+Microsoft.Data.SqlClient library follows the latest .NET Core support policy for all releases.
 
-## Microsoft support for .NET Core
+[View the .NET Core Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)
 
-|  Version  |  Release Date | Support Level | Supported Patch Version | End of Support |
-| -- | -- | -- | -- | -- |
-| [.NET Core 2.2](https://aka.ms/netcore22announce) | December 04, 2018 | Current | [2.2.6](https://www.microsoft.com/net/download/dotnet-core/runtime-2.2.6) | |
-| [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1) | May 30, 2018 | LTS | [2.1.12](https://www.microsoft.com/net/download/dotnet-core/runtime-2.1.12) | At least three years from LTS declaration (August 21, 2018). |
+## Microsoft.Data.SqlClient release cadence
 
-## Microsoft support for .NET Framework
+New stable (GA) releases will be published every six months on a regular cadence beginning with version 1.2, along with 2 to 3 preview releases in between. Long Term Support (LTS) releases will be chosen by stakeholders and maintainers based on a few qualifications and customer response.
 
-.Net Framework product lifecycle can be viewed from the [this](https://support.microsoft.com/lifecycle/search?alpha=.net%20framework) page.
+## Release Life Cycles
+
+| Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level  | End of Support |
+| -- | -- | -- | -- | -- | -- |
+| 1.1 | November 20, 2019 |  |  | Current |  |
+| 1.0 | August 28, 2019 | 1.0.19269.1 | September 26, 2019 | Current | February 20, 2020 |
+
+## Long Term Support (LTS) Releases
+
+LTS releases are supported for three years after the initial release.
+
+## Current Releases
+
+Current releases are supported for three months after a subsequent Current or LTS release.

@@ -1,6 +1,6 @@
 ---
-title: "Implementing SQL_VARIANT in a Memory-Optimized Table | Microsoft Docs"
-ms.custom: ""
+title: "SQL_VARIANT in a memory-optimized table"
+ms.custom: seo-dt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

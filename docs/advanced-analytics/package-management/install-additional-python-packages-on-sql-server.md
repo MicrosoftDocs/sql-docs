@@ -52,7 +52,7 @@ For more information about package location and installation paths, see [Get Pyt
 
 ## Install sqlmlutils on the client computer
 
-To use **sqlmlutils**, you first need to install it on the client computer that you use to connect to SQL Server.
+To use **sqlmlutils**, you first need to install it on the client computer that you use to connect to SQL Server. Make sure you have `pip` installed, see [pip installation](https://pip.pypa.io/en/stable/installing/) for more information.
 
 1. Download the latest **sqlmlutils** zip file from https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist to the client computer. Don't unzip the file.
 

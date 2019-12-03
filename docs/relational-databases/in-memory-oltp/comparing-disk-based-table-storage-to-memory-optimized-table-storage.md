@@ -1,6 +1,6 @@
 ---
-title: "Comparing Disk-Based Table Storage to Memory-Optimized Table Storage | Microsoft Docs"
-ms.custom: ""
+title: "Compare disk-based to memory-optimized table storage"
+ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -49,6 +49,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**auto_created**|**bit**|1 = Index was created by the automatic tuning.<br /><br />0 = Index was created by the user.
 |**optimize_for_sequential_key**|**bit**|1 = Index has last-page insert optimization enabled.<br><br>0 = Default value. Index has last-page insert optimization disabled.|
 
+> [!NOTE]
+> The **optimize_for_sequential_key** bit is only supported in versions SQL Server 2019 CTP 3.1 and higher.
   
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

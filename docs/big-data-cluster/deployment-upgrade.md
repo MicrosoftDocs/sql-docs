@@ -15,14 +15,52 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The upgrade path depends on the current version of SQL Server Big Data Cluster. To upgrade from a customer technology preview (CTP) or release candidate version of Big Data Cluster, you need to remove and recreate the cluster. To upgrade from a supported release, including general distribution release (GDR), cumulative update (CU), or quick fix engineering (QFE) update, you can upgrade in place. The following sections describe the steps:
+The upgrade path depends on the current version of SQL Server Big Data Cluster (BDC). To upgrade from a supported release, including general distribution release (GDR), cumulative update (CU), or quick fix engineering (QFE) update, you can upgrade in place. In-place upgrade from a customer technology preview (CTP) or release candidate version of BDC is not supported. You need to remove and recreate the cluster. The following sections describe the steps for each scenario:
 
-- [CTP or release candidate](#Upgrade-from-CTP-or-release-candidate)
-- [Supported release](#Upgrade-from-supported-release)
+- [Upgrade from supported release](#upgrade-from-supported-release)
+- [Update a BDC depoloyment from CTP or release candidate](#update-a-bdc-from-ctp-or-release-candidate)
 
-## Upgrade from CTP or release candidate
+## Upgrade from supported release
 
-The steps in this section specifically apply to how to upgrade from a preview release to SQL Server 2019 service update release.
+This section explains how to upgrade a SQL Server BDC from a supported release to a newer supported release.
+
+1. Back up SQL Server master instance.
+2. Back up HDFS
+
+   You can [back up HDFS with `curl`](data-ingestion-curl.md) or use the following `azdata` command:
+
+   ```
+   azdata bdc hdfs cp --from-path <path> --to-path <path>
+   ```
+
+   ```
+   azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
+   ```
+
+3. Update `azdata` 
+
+   Follow the instructions for installing `azdata`. 
+   - [Windwos installer](/deploy-install-azdata-installer.md#install-azdata-with-the-microsoft-windows-installer)
+   - [Linux package manager](deploy-install-azdata-linux-package.md)
+
+   >[!NOTE]
+   >If `azdata` was installed with `pip` you need to manually remove it before installing with the Windows installer or the Linux package manager.
+
+1. Update the Big Data Cluster
+
+   ```
+   azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
+   ```
+
+   For example:
+
+   ```
+   azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04-r mcr.microsoft.com/mssql/bdc
+   ```
+
+## Update a BDC depoloyment from CTP or release candidate
+
+In-place upgrade from a CTP or release candidate build of SQL Server Big Data Clusters is not supported. The following section explains how to manually remove and recreate the cluster.
 
 ### Backup and delete the old cluster
 
@@ -76,37 +114,6 @@ azdata --version
 ### Install the new release
 
 After removing the previous big data cluster and installing the latest `azdata`, deploy the new big data cluster by using the current deployment instructions. For more information, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md). Then, restore any required databases or files.
-
-## Upgrade from supported release
-
-This section explains how to upgrade a SQL Server Big Data Cluster from a supported release to a newer supported release. 
-
-1. Backup SQL Server master instance.
-2. Backup HDFS
-
-   ```
-   azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
-
-3. Update `azdata` 
-
-   Follow the instructions for installing `azdata`. 
-   - [Windwos installer](/deploy-install-azdata-installer.md#install-azdata-with-the-microsoft-windows-installer)
-   - [Linux package manager](deploy-install-azdata-linux-package.md)
-
-   >[!NOTE]
-   >If `azdata` was installed with `pip` you need to manually remove it before installing with the Windows installer or the Linux package manager.]
-
-1. Update in the Big Data Cluster
-
-   ```
-   azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
-   ```
-
-   For example:
-
-   ```
-   azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04-r mcr.microsoft.com/ mssql/bdc
-   ```
 
 ## Next steps
 

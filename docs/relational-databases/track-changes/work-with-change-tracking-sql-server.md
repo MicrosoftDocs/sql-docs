@@ -177,7 +177,7 @@ SELECT
       END AS CT_ThumbNailPhoto,  
       CHANGE_TRACKING_IS_COLUMN_IN_MASK(  
                      @PhotoColumnId, CT.SYS_CHANGE_COLUMNS) AS  
-                                   CT_ThumbNailPhoto_Changed  
+                                   CT_ThumbNailPhoto_Changed,  
      CT.SYS_CHANGE_OPERATION, CT.SYS_CHANGE_COLUMNS,  
      CT.SYS_CHANGE_CONTEXT  
 FROM  

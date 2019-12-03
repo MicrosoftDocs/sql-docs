@@ -59,5 +59,9 @@ Then configure managed identity authentication for the Azure Storage connection 
 > [!NOTE]
 >  To configure managed identity authentication on existing packages, the preferred way is to rebuild your SSIS project with the [latest SSIS Designer](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) at least once. Redeploy that SSIS project to your Azure-SSIS integration runtime, so that the new connection manager property `ConnectUsingManagedIdentity` is automatically added to all Azure Storage connection managers in your SSIS project. The alternative way is to directly use a property override with property path **\Package.Connections[{the name of your connection manager}].Properties[ConnectUsingManagedIdentity]** at runtime.
 
+## Secure network traffic to your storage account
+Azure Data Factory is now a [trusted Microsoft service](https://docs.microsoft.com/azure/storage/common/storage-network-security#trusted-microsoft-services) to Azure storage. When you use managed identity authentication, it is possible to 
+secure your storage account by [limiting access to selected networks](https://docs.microsoft.com/azure/storage/common/storage-network-security#change-the-default-network-access-rule) while still allowing your data factory to access your storage account. Please refer to [Managing exceptions](https://docs.microsoft.com/azure/storage/common/storage-network-security#managing-exceptions) for instructions.
+
 ## See also  
  [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)

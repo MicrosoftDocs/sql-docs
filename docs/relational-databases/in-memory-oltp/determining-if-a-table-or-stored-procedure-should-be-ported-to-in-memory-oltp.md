@@ -1,6 +1,6 @@
 ---
-title: "Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP | Microsoft Docs"
-ms.custom: ""
+title: "Should table or stored procedure be ported to in-memory OLTP"
+ms.custom: seo-dt-2019
 ms.date: "08/02/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -1,6 +1,6 @@
 ---
-title: "sys.pdw_table_distribution_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.pdw_table_distribution_properties (Transact-SQL)"
+ms.custom: seo-dt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.technology: data-warehouse

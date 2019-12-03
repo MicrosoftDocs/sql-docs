@@ -187,7 +187,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  SQL Server Management Studio provides an easy, graphical way to manage jobs, and is the recommended way to create and manage the job infrastructure.  
   
- A job step must specify a proxy unless the creator of the job step is a member of the **sysadmin** fixed security role.  
+ By default, a job step will run as the service account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent unless another proxy is specified. A requirement of this account is to be a member of the **sysadmin** fixed security role.
   
  A proxy may be identified by *proxy_name* or *proxy_id*.  
   

@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters to a new release.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,9 +15,16 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article provides guidance on how to upgrade a SQL Server big data cluster to a new release. The steps in this article specifically apply to how to upgrade from a preview release to SQL Server 2019 service update release.
+The upgrade path depends on the current version of SQL Server Big Data Cluster. To upgrade from a customer technology preview (CTP) or release candidate version of Big Data Cluster, you need to remove and recreate the cluster. To upgrade from a supported release, including general distribution release (GDR), cumulative update (CU), or quick fix engineering (QFE) update, you can upgrade in place. The following sections describe the steps:
 
-## Backup and delete the old cluster
+- [CTP or release candidate](#Upgrade-from-CTP-or-release-candidate)
+- [Supported release](#Upgrade-from-supported-release)
+
+## Upgrade from CTP or release candidate
+
+The steps in this section specifically apply to how to upgrade from a preview release to SQL Server 2019 service update release.
+
+### Backup and delete the old cluster
 
 Currently, there is no in place upgrade for big data clusters, the only way to upgrade to a new release is to manually remove and recreate the cluster. Each release has a unique version of `azdata` that is not compatible with the previous version. Also, if an older cluster had to download a container image on a new node, the latest image might not be compatible with the older images on the cluster. Note that the newer image is pulled only if you are using the `latest` image tag for in the deployment configuration file for the container settings. By default, each release has a specific image tag corresponding to the SQl Server release version. To upgrade to the latest release, use the following steps:
 
@@ -58,7 +65,7 @@ Currently, there is no in place upgrade for big data clusters, the only way to u
    > [!IMPORTANT]
    > For each release, the path to the `n-1` version of `azdata` changes. Even if you previously installed `azdata`, you must reinstall from the latest path before creating the new cluster.
 
-## <a id="azdataversion"></a> Verify the azdata version
+### <a id="azdataversion"></a> Verify the azdata version
 
 Before deploying a new big data cluster, verify that you are using the latest version of `azdata` with the `--version` parameter:
 
@@ -66,9 +73,40 @@ Before deploying a new big data cluster, verify that you are using the latest ve
 azdata --version
 ```
 
-## Install the new release
+### Install the new release
 
 After removing the previous big data cluster and installing the latest `azdata`, deploy the new big data cluster by using the current deployment instructions. For more information, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md). Then, restore any required databases or files.
+
+## Upgrade from supported release
+
+This section explains how to upgrade a SQL Server Big Data Cluster from a supported release to a newer supported release. 
+
+1. Backup SQL Server master instance.
+2. Backup HDFS
+
+   ```
+   azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
+
+3. Update `azdata` 
+
+   Follow the instructions for installing `azdata`. 
+   - [Windwos installer](/deploy-install-azdata-installer.md#install-azdata-with-the-microsoft-windows-installer)
+   - [Linux package manager](deploy-install-azdata-linux-package.md)
+
+   >[!NOTE]
+   >If `azdata` was installed with `pip` you need to manually remove it before installing with the Windows installer or the Linux package manager.]
+
+1. Update in the Big Data Cluster
+
+   ```
+   azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
+   ```
+
+   For example:
+
+   ```
+   azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04-r mcr.microsoft.com/ mssql/bdc
+   ```
 
 ## Next steps
 

@@ -63,7 +63,7 @@
         {
             "source_path": "docs/sql-server/sql-server-technical-documentation.md",
             "redirect_url": "/sql/sql-server/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-databases/system-catalog-views/sys-sql-feature-restrictions.md",
@@ -719,6 +719,11 @@
             "source_path": "docs/database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md",
             "redirect_url": "/sql/database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/2014/2014-toc/books-online-for-sql-server-2014.md",
+            "redirect_url": "/sql/2014-toc/index?view=sql-server-2014",
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/2014/relational-databases/replication/what-s-new-replication.md",

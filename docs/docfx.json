@@ -128,7 +128,7 @@
         "2014/**/*.md": "SQL Server 2014",
         "2014/integration-services/**/*.md": "SQL Server 2014 Integration Services",
         "2014/relational-database/replication/**/*.md": "SQL Server 2014 Replication",
-        "2014/reporting-services/**/*.md": "SQL Server 2014 Reporting Services",
+        "2014/reporting-services/**/*.md": "SQL Server 2014 Reporting Services (SSRS)",
         "2014/database-engine/availability-groups/windows/**/*.md": "SQL Server 2014 Always On",
         "2014/sql-server/failover-clusters/**/*.md": "SQL Server 2014 Always On",
 
@@ -140,7 +140,7 @@
         "integration-services/**/*.md": "SQL Server Integration Services (SSIS)",
         "language-extensions/**/*.md": "SQL Server Language Extensions",
         "relational-database/replication/**/*.md": "SQL Server Replication",
-        "reporting-services/**/*.md": "Reporting Services (SSRS)",
+        "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
         "dea/**/*.md": "Database Experimentation Assistant",
         "sql-server/failover-clusters/**/*.md": "SQL Server Always On",
         "database-engine/availability-groups/windows/**/*.md": "SQL Server Always On",

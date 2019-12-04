@@ -8373,7 +8373,6 @@
     - name: Permissions or Securables page
       href: relational-databases/security/permissions-or-securables-page.md
 - name: Tools
-  href: tools/sql-tools-lp.yml
   items:
   - name: Overview
     href: tools/overview-sql-tools.md

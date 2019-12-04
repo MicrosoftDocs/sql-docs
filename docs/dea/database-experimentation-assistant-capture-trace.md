@@ -73,7 +73,7 @@ Following are some frequently asked questions about trace capture in DEA.
 
 **Q: What events are captured when I run a trace capture on a production database?**
 
-The following table provides the list of events and the corresponding column data that we collect for traces:
+The following table lists the events and corresponding column data that DEA collects for traces:
   
 |Event Name|Text Data (1)|Binary Data (2)|Database ID (3)|Host Name (8)|Application Name (10)|Login Name (11)|SPID (12)|Start Time (14)|End Time (15)|Database Name (35)|Event Sequence (51)|IsSystem (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  

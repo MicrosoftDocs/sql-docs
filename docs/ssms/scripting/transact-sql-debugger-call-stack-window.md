@@ -1,5 +1,6 @@
 ---
 title: Call Stack Window
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual

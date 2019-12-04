@@ -1,5 +1,6 @@
 ---
-title: "Transact-SQL Debugger Information"
+title: Transact-SQL Debugger Information
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual

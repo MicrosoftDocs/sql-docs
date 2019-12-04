@@ -1,5 +1,6 @@
 ---
 title: Error List Window
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual

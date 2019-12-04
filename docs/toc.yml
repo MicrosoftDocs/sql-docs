@@ -10204,10 +10204,6 @@
         href: ssms/sql-server-management-studio-telemetry-ssms.md
       - name: Feedback >> 
         href: https://aka.ms/sqlfeedback
-  - name: Visual Studio Code
-    items:
-    - name: mssql extension
-      href: visual-studio-code/sql-server-develop-use-vscode.md
   - name: SqlPackage.exe
     items:
     - name: Install sqlpackage
@@ -10343,10 +10339,14 @@
       href: relational-databases/sqltoolsvsnativehelpers.md
     - name: FrameWindowVisible
       href: relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
+  - name: Visual Studio Code
+    items:
+    - name: mssql extension
+      href: visual-studio-code/sql-server-develop-use-vscode.md
   - name: Extended Features
     items: 
-      - name: Extended features and tools
-        href: tools/download-sql-feature-packs.md
+    - name: Extended features and tools
+      href: tools/download-sql-feature-packs.md
 - name: Tutorials
   items:
   - name: SQL Server

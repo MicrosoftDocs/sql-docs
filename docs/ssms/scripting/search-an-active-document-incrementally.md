@@ -1,5 +1,5 @@
 ---
-title: "Search an Active Document Incrementally | Microsoft Docs"
+title: "Search an Active Document Incrementally"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Search Documents Using Results Lists | Microsoft Docs"
+title: "Search Documents Using Results Lists"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

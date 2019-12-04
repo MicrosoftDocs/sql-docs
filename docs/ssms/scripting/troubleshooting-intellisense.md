@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting IntelliSense (SQL Server Management Studio) | Microsoft Docs"
+title: "Troubleshooting IntelliSense (SQL Server Management Studio)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

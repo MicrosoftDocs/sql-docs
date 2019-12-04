@@ -1,5 +1,5 @@
 ---
-title: "Complete Word (IntelliSense) | Microsoft Docs"
+title: "Complete Word (IntelliSense)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

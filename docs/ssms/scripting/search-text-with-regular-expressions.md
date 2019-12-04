@@ -1,5 +1,5 @@
 ---
-title: "Search Text with Regular Expressions | Microsoft Docs"
+title: "Search Text with Regular Expressions"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

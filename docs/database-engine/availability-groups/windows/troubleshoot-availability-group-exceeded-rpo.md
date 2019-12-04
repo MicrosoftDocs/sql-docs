@@ -1,6 +1,7 @@
 ---
-title: "Troubleshoot: Availability group exceeded RPO (SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "Availability group exceeded RPO"
+description: "Common issues and resolutions for when your Always On availability group exceeds the recovery point objective (RPO)"
+ms.custom: "seo-lt-2019"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""

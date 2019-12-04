@@ -1,6 +1,7 @@
 ---
-title: "Automatic Page Repair (Availability Groups: Database Mirroring) | Microsoft Docs"
-ms.custom: ""
+title: "Automatic page repair for availability groups & database mirroring"
+description: "Automatically repair certain types of page corruption when a database participates in an Always On availability group or a database mirroring relationship. This topic provides information on types of errors and their possible resolutions. "
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability

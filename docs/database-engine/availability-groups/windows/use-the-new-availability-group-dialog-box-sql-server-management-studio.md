@@ -1,6 +1,7 @@
 ---
-title: "Use the New Availability Group Dialog Box (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "New Availability Group Dialog Box in SSMS"
+description: This article contains information about how to use the 'New Availability Group' dialog box of SQL Server Management Studio to configure an Always On availability group. 
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

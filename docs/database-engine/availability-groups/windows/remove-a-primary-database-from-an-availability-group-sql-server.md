@@ -1,7 +1,7 @@
 ---
-title: "Remove a primary database from an availability group"
+title: "Remove database from an availability group"
 description: "Steps to remove a primary database from an Always On availability group using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-ms.custom: "seodec18"
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

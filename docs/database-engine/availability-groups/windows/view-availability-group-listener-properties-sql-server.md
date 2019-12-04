@@ -1,6 +1,7 @@
 ---
-title: "View Availability Group Listener Properties (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "View availability group listener properties"
+description: "Describes how to view the properties of an Always On availability group listener with SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or SQL PowerShell. "
+ms.custom: "seo-lt-2019"
 ms.date: "07/11/2016"
 ms.prod: sql
 ms.reviewer: ""

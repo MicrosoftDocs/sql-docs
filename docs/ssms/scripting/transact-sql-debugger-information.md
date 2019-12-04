@@ -1,5 +1,5 @@
 ---
-title: "Transact-SQL Debugger Information | Microsoft Docs"
+title: "Transact-SQL Debugger Information"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

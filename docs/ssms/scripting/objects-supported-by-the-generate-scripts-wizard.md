@@ -1,5 +1,5 @@
 ---
-title: "Objects Supported by the Generate Scripts Wizard | Microsoft Docs"
+title: "Objects Supported by the Generate Scripts Wizard"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Connect to the Database Engine With sqlcmd | Microsoft Docs"
+title: "Connect to the Database Engine With sqlcmd"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

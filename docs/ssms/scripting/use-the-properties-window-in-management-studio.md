@@ -1,5 +1,5 @@
 ---
-title: "Use the Properties Window in Management Studio | Microsoft Docs"
+title: "Use the Properties Window in Management Studio"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

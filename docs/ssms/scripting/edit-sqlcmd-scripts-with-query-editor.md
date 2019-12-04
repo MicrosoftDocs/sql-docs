@@ -1,5 +1,5 @@
 ---
-title: "Edit SQLCMD Scripts with Query Editor | Microsoft Docs"
+title: "Edit SQLCMD Scripts with Query Editor"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

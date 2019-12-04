@@ -1,5 +1,5 @@
 ---
-title: "Command Window | Microsoft Docs"
+title: "Command Window"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

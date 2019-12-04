@@ -1,5 +1,5 @@
 ---
-title: "Run Transact-SQL Script Files Using sqlcmd | Microsoft Docs"
+title: "Run Transact-SQL Script Files Using sqlcmd"
 ms.custom: ""
 ms.date: "07/15/2016"
 ms.prod: sql

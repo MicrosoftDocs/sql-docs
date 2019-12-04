@@ -1,5 +1,5 @@
 ---
-title: "Spatial Results Window | Microsoft Docs"
+title: "Spatial Results Window"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

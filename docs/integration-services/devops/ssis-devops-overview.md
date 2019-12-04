@@ -129,7 +129,7 @@ SSIS Deploy Task doesn’t support following scenarios currently:
 
 ### Version 0.1.0 Preview
 
-Release Date: December 4, 2019
+Release Date: December 5, 2019
 
 Initial release of SSIS DevOps Tools. This is a preview release.
 

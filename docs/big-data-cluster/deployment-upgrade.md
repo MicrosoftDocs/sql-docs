@@ -52,7 +52,7 @@ This section explains how to upgrade a SQL Server BDC from a supported release t
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   For example, the following scrupt uses `2019-CU1-ubuntu-16.04` image tag:
+   For example, the following script uses `2019-CU1-ubuntu-16.04` image tag:
 
    ```
    azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc

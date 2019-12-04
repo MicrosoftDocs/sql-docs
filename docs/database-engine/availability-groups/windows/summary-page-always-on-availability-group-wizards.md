@@ -34,7 +34,7 @@ ms.author: mathoma
  Once you are satisfied with your choices, click to make the wizard proceed with creating the availability group.  
   
  **Cancel**  
- Click to cancel the wizard. On the **Summary** page, cancelling the wizard causes it to exit without performing any actions.  
+ Click to cancel the wizard. On the **Summary** page, canceling the wizard causes it to exit without performing any actions.  
   
  ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [&#91;Top&#93;](#Top)  
   

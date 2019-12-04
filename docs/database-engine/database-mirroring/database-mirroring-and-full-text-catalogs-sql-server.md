@@ -1,5 +1,5 @@
 ---
-title: "Database Mirroring and Full-Text Catalogs"
+title: "Database mirroring and full-text catalogs"
 description: Describes how to configure a database mirror on a database that has a full-text catalog.
 ms.custom: "seo-lt-2019"
 ms.date: "03/03/2017"
@@ -16,7 +16,7 @@ ms.assetid: e34072ae-fe8a-462d-bb03-02fa0987f793
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# Database Mirroring and Full-Text Catalogs (SQL Server)
+# Database mirroring and full-text catalogs (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   To mirror a database that has a full-text catalog, use backup as usual to create a full database backup of the principal database, and then restore the backup to copy the database to the mirror server. For more information, see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot Orphaned Users"
+title: "Troubleshoot orphaned users"
 description: Orphaned users occur when a database user login no longer exist in the master database. This topic discusses how to identify and resolve orphaned users. 
 ms.custom: "seo-lt-2019"
 ms.date: "07/14/2016"
@@ -21,7 +21,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Troubleshoot Orphaned Users (SQL Server)
+# Troubleshoot orphaned users (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Orphaned users in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] occur when a database user is based on  a login in the **master** database, but the login no longer exists in **master**. This can occur when the login is deleted, or when the database is moved to another server where the login does not exist. This topic describes how to find orphaned users, and remap them to logins.  

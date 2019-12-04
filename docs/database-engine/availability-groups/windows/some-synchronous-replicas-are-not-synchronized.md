@@ -1,6 +1,6 @@
 ---
 title: "Some synchronous replicas are not synchronized"
-description: Describes some possible causes and solutions for when a synchronous replica is not synchronized for an Always On availability gropu
+description: Describes some possible causes and solutions for when a synchronous replica is not synchronized for an Always On availability group
 ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql

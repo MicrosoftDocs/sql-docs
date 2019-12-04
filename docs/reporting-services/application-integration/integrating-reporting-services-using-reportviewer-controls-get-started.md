@@ -1,5 +1,7 @@
 ---
-title: "Getting started with the ReportViewer 2016 control | Microsoft Docs"
+title: "Get started with Report Viewer controls"
+description: The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps. 
+ms.custom: seo-lt-2019
 ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

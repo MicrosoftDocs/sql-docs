@@ -1,7 +1,7 @@
 ---
 title: "Delete PowerPivot Gallery | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/14/2017"
+ms.date: 11/25/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: "analysis-services"
@@ -44,6 +44,6 @@ manager: craigg
 5.  Under Permissions and Management, click **Delete this library**.  
   
 ## See Also  
- [PowerPivot Gallery](../../2014-toc/books-online-for-sql-server-2014.md)  
+ [PowerPivot Gallery](../../2014-toc/index.yml)  
   
   

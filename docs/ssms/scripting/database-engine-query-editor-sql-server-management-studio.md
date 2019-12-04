@@ -1,5 +1,5 @@
 ---
-title: "Database Engine Query Editor (SQL Server Management Studio) | Microsoft Docs"
+title: "Database Engine Query Editor (SQL Server Management Studio)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

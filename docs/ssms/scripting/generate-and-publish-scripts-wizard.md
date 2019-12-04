@@ -1,5 +1,5 @@
 ---
-title: "Generate and Publish Scripts Wizard | Microsoft Docs"
+title: "Generate and Publish Scripts Wizard"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

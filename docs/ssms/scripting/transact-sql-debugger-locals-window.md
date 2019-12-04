@@ -1,5 +1,5 @@
 ---
-title: "Locals Window | Microsoft Docs"
+title: "Locals Window"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

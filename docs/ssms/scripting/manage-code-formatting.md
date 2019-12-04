@@ -1,5 +1,5 @@
 ---
-title: "Manage Code Formatting | Microsoft Docs"
+title: "Manage Code Formatting"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

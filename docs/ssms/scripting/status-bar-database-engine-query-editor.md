@@ -1,5 +1,5 @@
 ---
-title: "Status Bar (Database Engine Query Editor) | Microsoft Docs"
+title: "Status Bar (Database Engine Query Editor)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

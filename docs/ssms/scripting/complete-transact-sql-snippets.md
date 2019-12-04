@@ -1,5 +1,5 @@
 ---
-title: "Complete Transact-SQL Snippets | Microsoft Docs"
+title: "Complete Transact-SQL Snippets"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

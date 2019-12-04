@@ -1,5 +1,5 @@
 ---
-title: "Associate File Extensions to a Code Editor | Microsoft Docs"
+title: "Associate File Extensions to a Code Editor"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

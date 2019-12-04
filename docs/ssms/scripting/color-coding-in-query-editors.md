@@ -1,5 +1,5 @@
 ---
-title: "Color Coding in Query Editors | Microsoft Docs"
+title: "Color Coding in Query Editors"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

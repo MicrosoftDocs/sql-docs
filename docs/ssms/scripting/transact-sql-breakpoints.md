@@ -1,5 +1,5 @@
 ---
-title: "Transact-SQL Breakpoints | Microsoft Docs"
+title: "Transact-SQL Breakpoints"
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual

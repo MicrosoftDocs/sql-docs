@@ -1,5 +1,5 @@
 ---
-title: "Specify a Hit Count | Microsoft Docs"
+title: "Specify a Hit Count"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

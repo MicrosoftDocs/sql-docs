@@ -168,3 +168,11 @@ SQLRETURN GetResultColumn(
 
 - **ColumnNumber:** Number of the requested output schema column. Columns are numbered sequentially in increasing order starting at 0. 
 - **DataType:** \[Output\] A pointer to the buffer that contains the C type identifier of the column.
+- **ColumnSize:** \[Output\] The size of the column on the data source in bytes.
+- **DecimalDigits:** \[Output\] The number of decimal digits of the column on the data source. If the number of decimal digits cannot be determined or is not applicable, contains 0. 
+- **Nullable:** \[Output\] A value that indicates whether the column allows NULL values. Possible values: 
+    - SQL_NO_NULLS: The column does not allow NULL values. 
+    - SQL_NULLABLE: The column allows NULL values. 
+    - SQL_NULLABLE_UNKNOWN
+
+    If other values are passed, execution stops and errors out.

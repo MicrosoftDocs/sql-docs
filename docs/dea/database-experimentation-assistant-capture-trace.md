@@ -26,26 +26,26 @@ Query caching in SQL Server might affect evaluation results. We recommend that y
 
 1. In DEA, on the left-hand navigation bar, select the camera icon, and then on the **All Captures** page, select **New Capture**.
 
-  ![Select Capture Traces in the menu](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
+    ![Select Capture Traces in the menu](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
 
 2. On the **New Capture** page, under **Capture details**, enter or select the following information:
 
-- **Capture name**: Enter a name for the trace file for your capture.
-- **Format**: Specify the format (Trace or XEvents) for the capture.
-- **Duration**: Select the length of time (in minutes) that you want the trace capture to run.
-- **Capture Location**: Select the destination path for the trace file.
+    - **Capture name**: Enter a name for the trace file for your capture.
+    - **Format**: Specify the format (Trace or XEvents) for the capture.
+    - **Duration**: Select the length of time (in minutes) that you want the trace capture to run.
+    - **Capture Location**: Select the destination path for the trace file.
 
-  > [!NOTE]
-  > The file path to the trace file must be on the computer that's running SQL Server. If the SQL Server service isn't set for a specific account, the service might need write permissions to the specified folder for the trace file to be written.
+    > [!NOTE]
+    > The file path to the trace file must be on the computer that's running SQL Server. If the SQL Server service isn't set for a specific account, the service might need write permissions to the specified folder for the trace file to be written.
 
   Also be sure to select the **Yes, I have manually taken the backup…** check box.
 
 3. Under **Capture details**, enter or select the following information:
 
-- **Server Type**: Specify the type of the SQL server (**SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
-- **Server name**: Specify the server name or IP address of your SQL Server.
-- **Authentication Type**: For the authentication type, select **Windows**.
-- **Database name**: Enter a name for a database on which to start a database trace. If you don't specify a database, trace is captured on all the databases on the server.
+    - **Server Type**: Specify the type of the SQL server (**SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
+    - **Server name**: Specify the server name or IP address of your SQL Server.
+    - **Authentication Type**: For the authentication type, select **Windows**.
+    - **Database name**: Enter a name for a database on which to start a database trace. If you don't specify a database, trace is captured on all the databases on the server.
 
   Also be sure to select or deselect the **Encrypt connection** and **Trust server certificate** check boxes as appropriate for your scenario.
 
@@ -55,17 +55,17 @@ Query caching in SQL Server might affect evaluation results. We recommend that y
 
 1. After you enter or select the required information, select **Start** to initiate the trace capture.
 
-  If the information you entered is valid, the trace capture process begins. Otherwise, text boxes with invalid entries are highlighted in red. If you do encounter errors, correct any necessary entries, and then select **Start** again.
+    If the information you entered is valid, the trace capture process begins. Otherwise, text boxes with invalid entries are highlighted in red. If you do encounter errors, correct any necessary entries, and then select **Start** again.
 
-  While the trace capture is running, under **Capture details**, the status and progress of the trace capture process is displayed.
+    While the trace capture is running, under **Capture details**, the status and progress of the trace capture process is displayed.
 
-  ![Monitor capture progress](./media/database-experimentation-assistant-capture-trace/dea-capture-running.png)
+    ![Monitor capture progress](./media/database-experimentation-assistant-capture-trace/dea-capture-running.png)
 
 2. When the trace capture is finished running, the new trace (.trc) file is saved in the **Capture location** you specific during initial configuration.
 
-  ![Completed trace capture](./media/database-experimentation-assistant-capture-trace/dea-capture-complete.png)
+    ![Completed trace capture](./media/database-experimentation-assistant-capture-trace/dea-capture-complete.png)
 
-   The trace file includes trace results of the activity of a SQL Server database. .trc files are designed to provide more information about errors that are detected and reported by SQL Server.
+    The trace file includes trace results of the activity of a SQL Server database. .trc files are designed to provide more information about errors that are detected and reported by SQL Server.
 
 ## Frequently asked questions about trace capture
 

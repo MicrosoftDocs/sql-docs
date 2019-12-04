@@ -17,6 +17,21 @@ ms.technology: big-data-cluster
 
 Starting with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers running on Kubernetes. These components are running side by side to enable you to read, write, and process big data from Transact-SQL or Spark, allowing you to easily combine and analyze your high-value relational data with high-volume big data.
 
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduces SQL Server Big Data Clusters.
+
+Use SQL Server Big Data Clusters to:
+
+- [Deploy scalable clusters](../big-data-cluster/deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes. 
+- Read, write, and process big data from Transact-SQL or Spark.
+- Easily combine and analyze high-value relational data with high-volume big data.
+- Query external data sources.
+- Store big data in HDFS managed by SQL Server.
+- Query data from multiple external data sources through the cluster.
+- Use the data for AI, machine learning, and other analysis tasks.
+- [Deploy and run applications](../big-data-cluster/concept-application-deployment.md) in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
+- Virtualize data with [PolyBase](../relational-databases/polybase/polybase-guide.md). Query data from external SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources with external tables.
+- Provide high availability for the SQL Server master instance and all databases by using Always On availability group technology.
+
 For more information about new features and known issues for latest release, see the [release notes](release-notes-big-data-cluster.md).
 
 ## Scenarios

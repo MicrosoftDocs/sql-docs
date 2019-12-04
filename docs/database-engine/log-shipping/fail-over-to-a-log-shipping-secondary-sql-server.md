@@ -1,6 +1,7 @@
 ---
-title: "Fail Over to a Log Shipping Secondary (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Fail over to a log shipping secondary"
+description: "Instructions for how to fail over to a SQL Server log shipping secondary."
+ms.custom: "seo-lt-2019"
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.reviewer: ""

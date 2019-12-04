@@ -63,7 +63,7 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../inc
 
 ## <a id="cu1"></a> CU1 (Dec 2019)
 
-This is the Cumulative Update 1 (CU1) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4003.1.
+Cumulative Update 1 (CU1) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4003.1.
 
 |Package version | Image tag |
 |-----|-----|
@@ -71,7 +71,7 @@ This is the Cumulative Update 1 (CU1) release for SQL Server 2019. The SQL Serve
 
 ## <a id="rtm"></a> GDR1 (Nov 2019)
 
-SQL Server 2019 General Distribution Release 1 (GDR1) introduces general availability for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. The SQL Server Database Engine version for this release is 15.0.2070.34.
+SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general availability for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. The SQL Server Database Engine version for this release is 15.0.2070.34.
 
 |Package version | Image tag |
 |-----|-----|
@@ -87,7 +87,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) introduces general availab
 
 This happens in the following scenarios:
 
-- Zookeeper pods or process for each zookeeper instance are restarted a few times.
+- Zookeeper pods, or processes for each zookeeper instance, are restarted a few times.
 - When networking connectivity is unreliable between `sparkhead` pod and Zookeeper pods.
 
 **Workaround**: Restarting both Livy servers.

@@ -1,5 +1,5 @@
 ---
-title: "XML Editor (SQL Server Management Studio) | Microsoft Docs"
+title: "XML Editor (SQL Server Management Studio)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

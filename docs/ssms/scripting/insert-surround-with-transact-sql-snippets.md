@@ -1,5 +1,5 @@
 ---
-title: "Insert Surround-with Transact-SQL snippets | Microsoft Docs"
+title: "Insert Surround-with Transact-SQL snippets"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Bookmarks F1 Help | Microsoft Docs"
+title: "Bookmarks F1 Help"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

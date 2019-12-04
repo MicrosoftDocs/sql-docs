@@ -943,7 +943,7 @@
         - name: Remove a cluster
           href: sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md
         - name: Upgrade a cluster
-          href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+          href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
         - name: Migrating to Windows Server 2012 & 2016
           href: sql-server/failover-clusters/windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
       - name: Configuration
@@ -980,8 +980,6 @@
       items:
       - name: Configuration
         items:
-        - name: Upgrade
-          href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
         - name: Quorum Modes & Voting
           href: sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
         - name: Multi-Subnet Clustering

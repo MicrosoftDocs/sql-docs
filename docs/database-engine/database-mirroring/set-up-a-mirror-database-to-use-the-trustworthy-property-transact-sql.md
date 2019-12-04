@@ -1,6 +1,7 @@
 ---
-title: "Set Up a Mirror Database to Use the Trustworthy Property (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Enable trustworthy property for a mirrored database"
+description: Describes the steps necessary to enable the trustworthy property on a newly mirrored database. 
+ms.custom: "seo-lt-2019"
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: high-availability

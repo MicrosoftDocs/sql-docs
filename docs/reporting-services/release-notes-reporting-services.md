@@ -54,7 +54,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | Users with Browser role and default settings didn't have permissions to download Excel files  | &nbsp; |
 | Upgrading to Power BI Report Server from SQL Server 2016 Reporting Services failed during upgrade | &nbsp; |
 | After upgrading from SQL Server 2012 Reporting Services, subscriptions failed with “An invalid character was found in the mail header: ','” message | &nbsp; |
-| Configuration tool: cancelling modal windows in Database section would restart the Reporting Services service | &nbsp; |
+| Configuration tool: canceling modal windows in Database section would restart the Reporting Services service | &nbsp; |
 | BorderStyle property expression of Textbox controls weren't rendered to Excel format  | &nbsp; |
 | Pagination issue that could get certain reports stuck with rendering the same page without ever reaching the last page of the report | &nbsp; |
 

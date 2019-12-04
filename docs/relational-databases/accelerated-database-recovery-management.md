@@ -79,10 +79,10 @@ Changing the location of the PVS is a three-step process.
    In order to be able to turn on ADR with a new location for the persistent version store, you must first make sure that all of the version information has been purged from the previous PVS location. In order to force that cleanup to happen, run the command:
 
    ```sql
-   EXEC sys.sp_persistent_version_store_cleanup [database name]
+   EXEC sys.sp_persistent_version_cleanup [database name]
    ```
 
-   `sys.sp_persistent_version_store_cleanup` stored procedure is synchronous, meaning that it will not complete until all version information is cleaned up from the current PVS.  Once it completes, you can verify that the version information is indeed removed by querying the DMV `sys.dm_persistent_version_store_stats` and examining the value of `persistent_version_store_size_kb`.
+   `sys.sp_persistent_version_cleanup` stored procedure is synchronous, meaning that it will not complete until all version information is cleaned up from the current PVS.  Once it completes, you can verify that the version information is indeed removed by querying the DMV `sys.dm_persistent_version_store_stats` and examining the value of `persistent_version_store_size_kb`.
 
    ```sql
    SELECT DB_Name(database_id), persistent_version_store_size_kb 

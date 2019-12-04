@@ -1,6 +1,7 @@
 ---
-title: "Remove the Witness from a Database Mirroring Session (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Remove database mirroring witness"
+description: "Describes how to remove a witness from a database mirroring session with SQL Server Management Studio (SSMS), or Transact-SQL (T-SQL)."
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability

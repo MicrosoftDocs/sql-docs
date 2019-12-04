@@ -1,6 +1,6 @@
 ---
-title: "CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)"
+ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse

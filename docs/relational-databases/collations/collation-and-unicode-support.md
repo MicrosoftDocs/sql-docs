@@ -644,6 +644,6 @@ For more information, see the following related content:
 ## See also    
 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)     
 [Choose a Language When Creating a Full-Text Index](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
-[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
-    
+[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
+[Single-Byte and Multibyte Character Sets](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
  

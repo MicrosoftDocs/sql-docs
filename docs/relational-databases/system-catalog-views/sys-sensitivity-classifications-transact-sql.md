@@ -70,6 +70,8 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 ```
 
 ## Permissions  
+ Requires the **VIEW ANY SENSITIVITY CLASSIFICATION** permission. 
+ 
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## See Also  

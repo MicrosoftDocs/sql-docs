@@ -1,5 +1,5 @@
 ---
-title: Monitor with SCOM - Analytics Platform System | Microsoft Docs
+title: Monitor with SCOM
 description: Use System Center Operations Manager (SCOM) to monitor the Analytics Platform System  (APS)appliance.
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Monitor with System Center Operations Manager - Analytics Platform System

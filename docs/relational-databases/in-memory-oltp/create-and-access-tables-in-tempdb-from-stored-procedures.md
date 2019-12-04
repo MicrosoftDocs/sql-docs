@@ -1,6 +1,6 @@
 ---
-title: "Create and Access Tables in TempDB from Stored Procedures | Microsoft Docs"
-ms.custom: ""
+title: "Create & access tempdb tables from stored procedures"
+ms.custom: seo-dt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

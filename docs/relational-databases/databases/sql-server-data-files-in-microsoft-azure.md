@@ -26,15 +26,6 @@ SQL Server Data Files in Microsoft Azure enables native support for SQL Server d
   
 ## Why use SQL Server data files in Microsoft Azure? 
 
-- **[Use file-Snapshot backups for database files in Azure](../backup-restore/file-snapshot-backups-for-database-files-in-azure.md):** The biggest advantage of putting the database files on page blobs for very large databases is you can use file-snapshot backups for database files in Azure.
-
-   >[!NOTE]
-   >Putting the database files on page blobs is a more advanced feature than using Azure Disks, which are very simple and user-friendly. 
-   >
-   >The basic guidance is to use Azure Disks, unless you have a scenario where you really need to avoid creating a copy of the data for backups, or restoring as a size-of-data operation. For high availability and disaster recovery, using regular backup to URL or managed backup to Azure Blob storage is also much more useful than file snapshot backups, as you get life-cycle management, multi-region support, soft delete, and all the other features of blob storage of your backups.
-
-- **Support for [Azure Backup](/azure/backup/) and [Azure Site Recovery](/azure/site-recovery/):** Azure disks are compatible with enterprise-wide business continuity and disaster recovery solutions. If you store your databases directly on blobs, or in Azure Premium Files the data is not automatically associated with your VM for infrastructure, management, and monitoring.
-
 -   **Easy and fast migration benefits:** This feature simplifies the migration process by moving one database at a time between machines in on-premises as well as between on-premises and cloud environments without any application changes. Therefore, it supports an incremental migration while maintaining your existing on-premises infrastructure in place. In addition, having access to a centralized data storage simplifies the application logic when an application needs to run in multiple locations in an on-premises environment. In some cases, you may need to rapidly setup computer centers in geographically dispersed locations, which gather data from many different sources. By using this new enhancement, instead of moving data from one location to another, you can store many databases as Microsoft Azure blobs, and then run Transact-SQL scripts to create databases on the local machines or virtual machines.
 
 - **Cost and limitless storage benefits:** This feature enables you to have limitless off-site storage in Microsoft Azure while leveraging on-premises compute resources. When you use Microsoft Azure as a storage location, you can easily focus on the application logic without the overhead of hardware management. If you lose a computation node on-premises, you can set up a new one without any data movement.
@@ -46,18 +37,24 @@ SQL Server Data Files in Microsoft Azure enables native support for SQL Server d
 
 ## Concepts and Requirements  
   
+Azure disks are compatible with enterprise-wide business continuity and disaster recovery solutions. If you store your databases directly on blobs, or in Azure Premium Files the data is not automatically associated with your VM for infrastructure, management, and monitoring.
+
+Putting the database files on page blobs is a more advanced feature than using Azure Disks, which are very simple and user-friendly. 
+
+The basic guidance is to use Azure Disks, unless you have a scenario where you really need to avoid creating a copy of the data for backups, or restoring as a size-of-data operation. For high availability and disaster recovery, using regular backup to URL or managed backup to Azure Blob storage is also much more useful than file snapshot backups, as you get life-cycle management, multi-region support, soft delete, and all the other features of blob storage of your backups.
+
 ### Azure Storage Concepts  
- When using SQL Server Data Files in Azure feature, you need to create a storage account and a container in Azure. Then, you need to create a SQL Server credential, which includes information on the policy of the container as well as a shared access signature that is necessary to access the container.  
-  
- In [Microsoft Azure](https://azure.microsoft.com), an [Azure storage](https://azure.microsoft.com/services/storage/) account represents the highest level of the namespace for accessing Blobs. A storage account can contain an unlimited number of containers, as long as their total size is below the storage limits. For the latest information on storage limits, see [Azure Subscription and Service Limits, Quotas, and Constraints](https://docs.microsoft.com/azure/azure-subscription-service-limits). A container provides a grouping of a set of [Blobs](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). All Blobs must be in a container. An account can contain an unlimited number of containers. Similarly, a container can store an unlimited number of Blobs as well. There are two types of blobs that can be stored in Azure Storage: block and page blobs. This new feature uses Page blobs, which are more efficient when ranges of bytes in a file are modified frequently. You can access Blobs using the following URL format: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
-  
+When using SQL Server Data Files in Azure feature, you need to create a storage account and a container in Azure. Then, you need to create a SQL Server credential, which includes information on the policy of the container as well as a shared access signature that is necessary to access the container.  
+
+In [Microsoft Azure](https://azure.microsoft.com), an [Azure storage](https://azure.microsoft.com/services/storage/) account represents the highest level of the namespace for accessing Blobs. A storage account can contain an unlimited number of containers, as long as their total size is below the storage limits. For the latest information on storage limits, see [Azure Subscription and Service Limits, Quotas, and Constraints](https://docs.microsoft.com/azure/azure-subscription-service-limits). A container provides a grouping of a set of [Blobs](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). All Blobs must be in a container. An account can contain an unlimited number of containers. Similarly, a container can store an unlimited number of Blobs as well. There are two types of blobs that can be stored in Azure Storage: block and page blobs. This new feature uses Page blobs, which are more efficient when ranges of bytes in a file are modified frequently. You can access Blobs using the following URL format: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+
 ### Azure billing considerations  
 
  Estimating the cost of using Azure Services is an important matter in the decision making and planning process. When storing SQL Server data files in Azure Storage, you need to pay costs associated with storage and transactions. In addition, the implementation of SQL Server Data Files in Azure Storage feature requires a renewal of Blob lease every 45 to 60 seconds implicitly. This also results in transaction costs per database file, such as .mdf or .ldf. Use the information on the [Azure Pricing](https://azure.microsoft.com/pricing/) page to help estimate the monthly costs associated with the use of Azure Storage and Azure Virtual Machines.  
   
 ### SQL Server concepts  
 
- When using this new enhancement, you are required to do the followings:
+When using this new enhancement, you are required to do the followings:
 
 - You must create a policy on a container and also generate a shared access signature (SAS) key.
 

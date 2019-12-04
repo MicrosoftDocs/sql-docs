@@ -79,7 +79,7 @@ conceptualContent:
           url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
           itemType: whats-new
         - text: Azure Data Studio
-          url: azure-data-studio/what-is.md
+          url: azure-data-studio/release-notes-azure-data-studio.md
           itemType: whats-new
         - text: Azure Database Migration Service
           url: https://docs.microsoft.com/azure/dms/dms-overview
@@ -94,6 +94,9 @@ conceptualContent:
           itemType: deploy
         - text: SQL Server Management Studio (SSMS)
           url: ssms/download-sql-server-management-studio-ssms.md
+          itemType: deploy
+        - text: Azure Data Studio
+          url: azure-data-studio/download.md
           itemType: deploy
         - text: Analysis Services (SSAS)
           url: https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services/
@@ -224,4 +227,4 @@ additionalContent:
           - text: Distributed replay
             url: tools/distributed-replay/sql-server-distributed-replay.md
           - text: See more tools
-            url: tools/sql-tools-lp.yml
+            url: tools/overview-sql-tools.md

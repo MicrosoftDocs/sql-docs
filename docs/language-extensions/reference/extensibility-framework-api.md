@@ -149,3 +149,22 @@ SQLRETURN Execute(
     The length of the array is \[InputSchemaColumnsNumber\] (received in the InitSession call). Each column’s array has \[RowsNumber\] elements that should be interpreted according to the column type (from InitColumn).
 
     If column col is not nullable and represents a data type of fixed size, StrLen_or_Ind\[col\] is a null pointer. Otherwise it points to a valid array with \[RowsNumber\] elements, and for each element it contains its length or null indicator data.
+
+### GetResultColumn
+
+Get the information regarding a given column in the output dataset for a particular session:
+
+```C++
+SQLRETURN GetResultColumn(
+    SQLGUID		SessionId,
+    SQLUSMALLINT	TaskId,
+    SQLUSMALLINT	ColumnNumber,
+    SQLSMALLINT*	DataType,
+    SQLINTEGER*	ColumnSize,
+    SQLSMALLINT*	DecimalDigits,
+    SQLSMALLINT*	Nullable
+);
+```
+
+- **ColumnNumber:** Number of the requested output schema column. Columns are numbered sequentially in increasing order starting at 0. 
+- **DataType:** \[Output\] A pointer to the buffer that contains the C type identifier of the column.

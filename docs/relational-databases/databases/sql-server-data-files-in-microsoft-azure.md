@@ -1,7 +1,7 @@
 ---
 title: "SQL Server data files in Microsoft Azure | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/02/2017"
+ms.date: "12/04/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""

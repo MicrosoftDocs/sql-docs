@@ -71,7 +71,7 @@ This is the Cumulative Update 1 (CU1) release for SQL Server 2019. The SQL Serve
 
 ## <a id="rtm"></a> GDR1 (Nov 2019)
 
-SQL Server 2019 build number `15.0.2070.34` introduces general availability for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. This build is servicing update GDR1.
+SQL Server 2019 General Distribution Release 1 (GDR1) introduces general availability for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. The SQL Server Database Engine version for this release is 15.0.2070.34.
 
 |Package version | Image tag |
 |-----|-----|
@@ -83,12 +83,12 @@ SQL Server 2019 build number `15.0.2070.34` introduces general availability for 
 
 ### Livy job submission from Azure Data Studio (ADS) or curl fail with 500 error
 
-**Issue and customer impact**: In an HA configuration, Spark shared resources (sparkhead) are configured with multiple replicas. In this case, you might experience failures with Livy job submission from Azure Data Studio (ADS) or `curl`. To verify, `curl` to any sparkhead pod results in refused connection. For example, `curl https://sparkhead-0:8998/` or `curl https://sparkhead-1:8998` returns 500 error.
+**Issue and customer impact**: In an HA configuration, Spark shared resources `sparkhead` are configured with multiple replicas. In this case, you might experience failures with Livy job submission from Azure Data Studio (ADS) or `curl`. To verify, `curl` to any `sparkhead` pod results in refused connection. For example, `curl https://sparkhead-0:8998/` or `curl https://sparkhead-1:8998` returns 500 error.
 
 This happens in the following scenarios:
 
 - Zookeeper pods or process for each zookeeper instance are restarted a few times.
-- When networking connectivity is unreliable between Sparkhead pod and Zookeeper pods.
+- When networking connectivity is unreliable between `sparkhead` pod and Zookeeper pods.
 
 **Workaround**: Restarting both Livy servers.
 

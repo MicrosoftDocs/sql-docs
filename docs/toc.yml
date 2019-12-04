@@ -2489,7 +2489,7 @@
     - name: Format Query Results
       href: relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
       items:
-      - name: Format nested output with PATH ode
+      - name: Format nested output with PATH Mode
         href: relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md
       - name: Format with AUTO Mode
         href: relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md
@@ -16234,7 +16234,6 @@
         - name: PUBLISHINGSERVERNAME
           href: t-sql/functions/replication-functions-publishingservername.md
       - name: Rowset
-        href: t-sql/functions/rowset-functions-transact-sql.md
         items:
         - name: OPENDATASOURCE
           href: t-sql/functions/opendatasource-transact-sql.md

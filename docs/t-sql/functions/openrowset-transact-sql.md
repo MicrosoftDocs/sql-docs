@@ -495,7 +495,6 @@ For additional examples that show using `INSERT...SELECT * FROM OPENROWSET(BULK.
 - [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
 - [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)
 - [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)
-- [Rowset Functions &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)
 - [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
 - [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
 - [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)

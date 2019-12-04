@@ -106,7 +106,7 @@ ms.author: mikeray
     > [!NOTE]  
     >  For some earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] there is no **Startup Parameters** tab. In that case, on the **Advanced** tab, double-click **Startup Parameters**. The parameters open up in a very small window. Remove the `;-m` which you added earlier, and then click **OK**.  
   
-12. Right-click your server name, and then click **Restart**.  
+12. Right-click your server name, and then click **Restart**. Make sure to start SQL Server Agent again.
   
  Now you should be able to connect normally with one of the accounts which is now a member of the **sysadmin** fixed server role.  
   

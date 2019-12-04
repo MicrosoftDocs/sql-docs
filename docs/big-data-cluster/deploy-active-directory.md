@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters in an Active Dire
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/13/2019
+ms.date: 12/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -170,13 +170,16 @@ AD integration requires the following parameters. Add these parameters to the `c
 
 - `security.domainDnsName`: Name of your domain (e.g. `contoso.local`).
 
-- `security.clusterAdmins`: This parameter takes *one- AD group. Members of this group will get administrator permissions in the cluster. TThis means that they will have sysadmin permissions in SQL Server, superuser permissions in HDFS and administrators in Controller.
+- `security.clusterAdmins`: This parameter takes **one AD group**. Members of this group will get administrator permissions in the cluster. This means that they will have sysadmin permissions in SQL Server, superuser permissions in HDFS and administrators in Controller. **Please note that this group needs to exist in AD before deployment begins. Also note that this group can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
 
-- `security.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster.
+- `security.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster. **Please note that these groups need to exist in AD before deployment begins. Also note that these groups can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
 
-- `security.appOwners` **Optional parameter**: List of the AD groups who have permissions to create, delete, and run any application.
+- `security.appOwners` **Optional parameter**: List of the AD groups who have permissions to create, delete, and run any application. **Please note that these groups need to exist in AD before deployment begins. Also note that these groups can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
 
-- `security.appReaders` **Optional parameter**: list of the AD users or Groups who have permissions to run any application. 
+- `security.appReaders` **Optional parameter**: list of the AD groups who have permissions to run any application. **Please note that these groups need to exist in AD before deployment begins. Also note that these groups can not be DomainLocal scoped in Active Directory. A domain local scoped group will result in deployment failure.**
+
+**How to check AD group scope:**
+[Click here for instructions](https://docs.microsoft.com/en-us/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) for checking the scope of an AD group, to determine if it is DomainLocal.
 
 If you have not already initialized the deployment configuration file, you can run this command to get a copy of the configuration.
 
@@ -195,6 +198,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dom
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
 ```
 
 In addition to the above information, you also need to provide DNS names for the different cluster endpoints. The DNS entries using your provided DNS names will automatically be created in your DNS Server upon deployment. You will use these names when connecting to the different cluster endpoints. For example, if the DNS name for SQL master instance is `mastersql`, you will use `mastersql.contoso.local,31433` to connect to the master instance from the tools.
@@ -289,3 +293,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - The secure AD mode will only work on `kubeadm` deployment environments and not on AKS right now. The `kubeadm-prod` deployment profile includes the security sections by default.
 
 - Only one BDC per domain is allowed at this time. Enabling multiple BDCs per domain is planned for a future release.
+
+- None of the AD groups specified in security configurations can be DomainLocal scoped. You can check the scope of an AD group by following [these instructions](https://docs.microsoft.com/en-us/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).

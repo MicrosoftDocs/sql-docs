@@ -1,6 +1,6 @@
 ---
-title: "SQL and Parallel Data Warehouse Dynamic Management Views | Microsoft Docs"
-ms.custom: ""
+title: "SQL and Parallel Data Warehouse Dynamic Management Views"
+ms.custom: seo-dt-2019
 ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: data-warehouse

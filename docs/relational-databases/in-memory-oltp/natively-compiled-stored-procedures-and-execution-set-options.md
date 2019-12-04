@@ -1,6 +1,6 @@
 ---
-title: "Natively Compiled Stored Procedures and Execution Set Options | Microsoft Docs"
-ms.custom: ""
+title: "Natively compiled stored procedures & set options"
+ms.custom: seo-dt-2019
 ms.date: "10/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

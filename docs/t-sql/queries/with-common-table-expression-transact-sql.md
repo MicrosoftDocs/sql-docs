@@ -282,9 +282,7 @@ INSERT INTO dbo.MyEmployees VALUES
 ,(23,  N'Mary', N'Gibson', N'Marketing Specialist', 4, 16);  
 ```  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -301,12 +299,10 @@ FROM DirectReports
 ORDER BY ManagerID;   
 ```  
   
-### E. Using a recursive common table expression to display two levels of recursion  
+#### Using a recursive common table expression to display two levels of recursion  
  The following example shows managers and the employees reporting to them. The number of levels returned is limited to two.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -323,12 +319,10 @@ FROM DirectReports
 WHERE EmployeeLevel <= 2 ;  
 ```  
   
-### F. Using a recursive common table expression to display a hierarchical list  
- The following example builds on Example D by adding the names of the manager and employees, and their respective titles. The hierarchy of managers and employees is additionally emphasized by indenting each level.  
+#### Using a recursive common table expression to display a hierarchical list  
+ The following example adds the names of the manager and employees, and their respective titles. The hierarchy of managers and employees is additionally emphasized by indenting each level.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(Name, Title, EmployeeID, EmployeeLevel, Sort)  
 AS (SELECT CONVERT(varchar(255), e.FirstName + ' ' + e.LastName),  
         e.Title,  
@@ -353,12 +347,10 @@ FROM DirectReports
 ORDER BY Sort;  
 ```  
   
-### G. Using MAXRECURSION to cancel a statement  
+#### Using MAXRECURSION to cancel a statement  
  `MAXRECURSION` can be used to prevent a poorly formed recursive CTE from entering into an infinite loop. The following example intentionally creates an infinite loop and uses the `MAXRECURSION` hint to limit the number of recursion levels to two.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 --Creates an infinite loop  
 WITH cte (EmployeeID, ManagerID, Title) as  
 (  
@@ -379,9 +371,7 @@ OPTION (MAXRECURSION 2);
   
  After the coding error is corrected, MAXRECURSION is no longer required. The following example shows the corrected code.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH cte (EmployeeID, ManagerID, Title)  
 AS  
 (  
@@ -397,7 +387,7 @@ SELECT EmployeeID, ManagerID, Title
 FROM cte;  
 ```  
   
-### H. Using a common table expression to selectively step through a recursive relationship in a SELECT statement  
+### E. Using a common table expression to selectively step through a recursive relationship in a SELECT statement  
  The following example shows the hierarchy of product assemblies and components that are required to build the bicycle for `ProductAssemblyID = 800`.  
   
 ```sql  
@@ -426,7 +416,7 @@ FROM Parts AS p
 ORDER BY ComponentLevel, AssemblyID, ComponentID;  
 ```  
   
-### I. Using a recursive CTE in an UPDATE statement  
+### F. Using a recursive CTE in an UPDATE statement  
  The following example updates the `PerAssemblyQty` value for all parts that are used to build the product 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`). The common table expression returns a hierarchical list of parts that are used to build `ProductAssemblyID 800` and the components that are used to create those parts, and so on. Only the rows returned by the common table expression are modified.  
   
 ```sql  
@@ -454,7 +444,7 @@ JOIN Parts AS d ON c.ProductAssemblyID = d.AssemblyID
 WHERE d.ComponentLevel = 0;  
 ```  
   
-### J. Using multiple anchor and recursive members  
+### H. Using multiple anchor and recursive members  
  The following example uses multiple anchor and recursive members to return all the ancestors of a specified person. A table is created and values inserted to establish the family genealogy returned by the recursive CTE.  
   
 ```sql  
@@ -501,7 +491,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. Using analytical functions in a recursive CTE  
+###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> I. Using analytical functions in a recursive CTE  
  The following example shows a pitfall that can occur when using an analytical or aggregate function in the recursive part of a CTE.  
   
 ```sql  
@@ -574,7 +564,7 @@ Lvl  N
   
 ## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### L. Using a common table expression within a CTAS statement  
+### J. Using a common table expression within a CTAS statement  
  The following example creates a new table containing the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```sql  
@@ -603,7 +593,7 @@ AS
 GO  
 ```  
   
-### M. Using a common table expression within a CETAS statement  
+### K. Using a common table expression within a CETAS statement  
  The following example creates a new external table containing the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```sql  
@@ -633,7 +623,7 @@ AS
 GO  
 ```  
   
-### N. Using multiple comma separated CTEs in a statement  
+### L. Using multiple comma separated CTEs in a statement  
  The following example demonstrates including two CTEs in a single statement. The CTEs cannot be nested (no recursion).  
   
 ```sql  

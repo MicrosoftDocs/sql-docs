@@ -128,5 +128,6 @@ For details about this release, see [the SSMS release notes](release-notes-ssms.
 - [SQL Server Management Studio documentation](sql-server-management-studio-ssms.md)
 - [Additional updates and service packs](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Azure Data Architecture Guide](https://docs.microsoft.com/azure/architecture/data-guide/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

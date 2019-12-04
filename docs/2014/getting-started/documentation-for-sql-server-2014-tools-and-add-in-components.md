@@ -1,7 +1,7 @@
 ---
 title: "Documentation for SQL Server 2014 Tools and Add-in Components | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2017"
+ms.date: 11/25/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: database-engine
@@ -33,6 +33,6 @@ manager: craigg
 |[Power Pivot for SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|Power Pivot for SharePoint is an Analysis Services server running in SharePoint mode.|  
   
 ## See Also  
- [SQL Server 2014 Resources](../2014-toc/books-online-for-sql-server-2014.md)  
+ [SQL Server 2014 Resources](../2014-toc/index.yml)  
   
   

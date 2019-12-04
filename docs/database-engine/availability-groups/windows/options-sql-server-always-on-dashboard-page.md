@@ -1,6 +1,6 @@
 ---
-title: "Options (SQL Server Always On, Dashboard Page) | Microsoft Docs"
-description: "A description of the 'Options' page found on the SQL Server Always On Dashboard."
+title: "Availability group dashboard in SSMS"
+description: "A description of the 'Options' page found on the SQL Server Always On Dashboard in SQL Server Management Studio."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql

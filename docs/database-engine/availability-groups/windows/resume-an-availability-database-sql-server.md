@@ -1,6 +1,7 @@
 ---
-title: "Resume an Availability Database (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Resume an availability group database"
+description: Steps to resume a database that's been paused within an Always On availability group using either SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or SQL PowerShell. 
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

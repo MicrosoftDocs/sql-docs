@@ -943,7 +943,7 @@
         - name: Remove a cluster
           href: sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md
         - name: Upgrade a cluster
-          href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+          href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
         - name: Migrating to Windows Server 2012 & 2016
           href: sql-server/failover-clusters/windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
       - name: Configuration
@@ -980,8 +980,6 @@
       items:
       - name: Configuration
         items:
-        - name: Upgrade
-          href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
         - name: Quorum Modes & Voting
           href: sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
         - name: Multi-Subnet Clustering
@@ -2489,7 +2487,7 @@
     - name: Format Query Results
       href: relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
       items:
-      - name: Format nested output with PATH ode
+      - name: Format nested output with PATH Mode
         href: relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md
       - name: Format with AUTO Mode
         href: relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md
@@ -16234,7 +16232,6 @@
         - name: PUBLISHINGSERVERNAME
           href: t-sql/functions/replication-functions-publishingservername.md
       - name: Rowset
-        href: t-sql/functions/rowset-functions-transact-sql.md
         items:
         - name: OPENDATASOURCE
           href: t-sql/functions/opendatasource-transact-sql.md

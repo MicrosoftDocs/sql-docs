@@ -1,6 +1,6 @@
 ---
-title: "Quick Survey 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance | Microsoft Docs"
-ms.custom: ""
+title: "In-memory OLTP for faster T-SQL Performance"
+ms.custom: seo-dt-2019
 ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

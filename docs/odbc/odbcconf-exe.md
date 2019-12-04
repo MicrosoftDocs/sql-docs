@@ -17,7 +17,7 @@ ms.author: genemi
 ODBCCONF.exe is a command-line tool that allows you to configure ODBC drivers and data source names.  
   
 > [!NOTE]  
->  ODBCCONF.exe will be removed in a future version of Windows Data Access Components. Avoid using this feature, and plan to modify applications that currently use this feature. You can use PowerShell commands to manage drivers and data sources. For more information about these PowerShell commands, see [Windows Data Access Components cmdlets](https://technet.microsoft.com/library/hh771019.aspx).  
+>  ODBCCONF.exe will be removed in a future version of Windows Data Access Components. Avoid using this feature, and plan to modify applications that currently use this feature. You can use PowerShell commands to manage drivers and data sources. For more information about these PowerShell commands, see [Windows Data Access Components cmdlets](/powershell/module/wdac).  
   
 ## Syntax  
   

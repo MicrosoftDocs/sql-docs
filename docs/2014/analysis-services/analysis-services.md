@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2014 Analysis Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/07/2019"
+ms.date: "11/25/2019"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: "analysis-services"
@@ -28,7 +28,7 @@ manager: craigg
 Documentation is separated by version. You are currently in SQL Server 2014 Analysis Services documentation.
 
 - To learn more about SQL Server 2012 and earlier, see [SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/).
-- To learn more about SQL Server 2014, see [Books Online for SQL Server 2014](../2014-toc/books-online-for-sql-server-2014.md)
+- To learn more about SQL Server 2014, see [Books Online for SQL Server 2014](../2014-toc/index.yml)
 - To learn more about SQL Server 2016 and later, see [Microsoft SQL documentation](https://docs.microsoft.com/sql/).
 - To learn more about Azure Analysis Services, see [Azure Analysis Services Documentation](https://docs.microsoft.com/azure/analysis-services/).
 

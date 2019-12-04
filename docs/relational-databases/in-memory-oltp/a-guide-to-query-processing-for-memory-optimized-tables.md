@@ -1,6 +1,6 @@
 ---
-title: "A Guide to Query Processing for Memory-Optimized Tables | Microsoft Docs"
-ms.custom: ""
+title: "Query processing for memory-optimized tables"
+ms.custom: seo-dt-2019
 ms.date: "05/09/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

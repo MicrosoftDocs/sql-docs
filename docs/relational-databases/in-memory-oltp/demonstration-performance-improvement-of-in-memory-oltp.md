@@ -1,6 +1,6 @@
 ---
-title: "Demonstration: Performance Improvement of In-Memory OLTP | Microsoft Docs"
-ms.custom: ""
+title: "Performance improvement - in-memory OLTP"
+ms.custom: seo-dt-2019
 ms.date: "08/19/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

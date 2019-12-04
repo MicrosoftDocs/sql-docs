@@ -2,7 +2,7 @@
 title: Overview of the Database Experimentation Assistant 
 description: Overview of Database Experimentation Assistant
 ms.custom: ""
-ms.date: 11/16/2019
+ms.date: 11/22/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -17,19 +17,15 @@ ms.custom: "seo-lt-2019"
 
 # Overview of Database Experimentation Assistant
 
-Database Experimentation Assistant (DEA) is an experimentation solution for SQL Server upgrades. DEA can help you evaluate a targeted version of SQL Server for a specific workload. Customers who are upgrading from earlier SQL Server versions (starting with 2005) to a more recent version of SQL Server can use the analysis metrics that the tool provides.
+Database Experimentation Assistant (DEA) is an experimentation solution for SQL Server upgrades. DEA can help you evaluate a targeted version of SQL Server for a specific workload. Customers upgrading from earlier versions of SQL Server (starting with 2005) to more recent versions of SQL Server can use the analysis metrics that the tool provides.
 
 DEA analysis metrics include:
 
-- Queries that have compatibility errors
-- Degraded queries and query plans
-- Other workload comparison data
+- Queries that have compatibility errors.
+- Degraded queries and query plans.
+- Other workload comparison data.
 
-Comparison data can lead to higher confidence and a successful upgrade experience.
-
-For a 19-minute introduction to DEA and a demonstration, watch the following video:
-
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player?WT.mc_id=dataexposed-c9-niner]
+Comparison data can lead to higher confidence and help ensure a successful upgrade experience.
 
 ## Get DEA
 
@@ -46,16 +42,16 @@ The following diagram shows the solution architecture for a workload comparison.
 Following are some prerequisites for running DEA:
 
 - Minimum hardware requirement: A single-core machine with 3.5 GB of RAM.
-- Ideal hardware requirement: An eight-core CPU (with 3.5 GB of RAM or more). Processors that have more than eight cores don't improve DEA runtimes.
+- Ideal hardware requirement: An eight-core CPU (with 3.5 GB of RAM or more). Processors with more than eight cores don't improve DEA runtimes.
 - An additional 33% of performance trace size is needed to store A, B, and report analysis databases.
 
 ## Configure DEA
 
-In the prerequisite environment architecture, we recommend that you install DEA *on the same machine as the Distributed Replay controller*. This practice avoids cross-machine calls and simplifies configuration.
+In the prerequisite environment architecture, we recommend that you install DEA *on the same machine as the Distributed Replay controller*. This practice avoids cross-computer calls and simplifies configuration.
 
 ### Required configuration for workload comparison using DEA
 
-DEA connects to database servers by using Windows authentication. Be sure that a user running DEA can connect to database servers (source, target, and analysis) by using Windows authentication.
+DEA connects to database servers using Windows authentication. Be sure that the user running DEA can connect to database servers (source, target, and analysis) using Windows authentication.
 
 **Capture configuration requirements**
 
@@ -111,4 +107,4 @@ DEA is governed by the [Microsoft Privacy Statement](https://aka.ms/dea-privacy)
 
 ## See also
 
-[Overview of the workload comparison process](database-experimentation-assistant-get-started.md), which explains the process involved in comparing workloads in two environments.
+- [Overview of the workload comparison process](database-experimentation-assistant-get-started.md), which explains the process involved in comparing workloads in two environments.

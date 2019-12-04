@@ -164,7 +164,10 @@ Key backups can be restored across Azure regions, as long as they remain in the 
  The Connector talks to two endpoints, which need to be whitelisted. The only port required for outbound communication to these other services is 443 for Https:
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
-  
+
+**How do I connect to Azure Key Vault through an HTTP(S) Proxy Server?**
+  The Connector uses Internet Explorer's Proxy configuration settings. These settings can be controlled via [Group Policy](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/) or via the Registry, but it is important to note that they are not system-wide settings and will need to be targeted to the service account running the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If a Database Administrator views or edits the settings in Internet Explorer, they will only affect the Database Administrator's account rather than the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] engine. Logging onto the server interactively using the service account is not recommended and is blocked in many secure environments. Changes to the configured proxy settings may require restarting the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance to take effect as they are cached when the Connector first attempts to connect to a key vault.
+
 **What are the minimum permission levels required for each configuration step in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Though you could perform all the configuration steps as a member of the sysadmin fixed server role, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] encourages you to minimize the permissions you use. The following list defines the minimum permission level for each action.  
   

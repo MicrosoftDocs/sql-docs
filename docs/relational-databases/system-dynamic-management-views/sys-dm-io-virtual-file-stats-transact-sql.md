@@ -86,6 +86,8 @@ ID of the file. *file_id* is int, with no default. Valid inputs are the ID numbe
 |**io_stall_queued_write_ms**|**bigint**|**Does not apply to:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Total IO latency introduced by IO resource governance for writes. Is not nullable.|
 |**pdw_node_id**|**int**|**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identifier of the node for the distribution.
  
+## Remarks
+The counters are initialized to empty whenever the SQL Server (MSSQLSERVER) service is started.
   
 ## Permissions  
  Requires VIEW SERVER STATE permission. For more information, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  

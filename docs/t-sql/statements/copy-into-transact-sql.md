@@ -59,7 +59,7 @@ WITH
 Is optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* is not specified, and the default schema of the user performing the COPY operation is different from the specified table, COPY will be canceled, and an error message will be returned.  
 
 *table_name*  
-Is the name of the table to COPY data into. The target table can be a temporary table or permanent table.
+Is the name of the table to COPY data into. The target table can be a temporary or permanent table and must already exist in the database. 
 
 *(column_list)*  
 Is an optional list of one or more columns used to map source data fields to target table columns for loading data. *column_list* must be enclosed in parentheses and delimited by commas. The column list is of the following format:
@@ -215,14 +215,13 @@ The COPY command will autodetect the compression type based on the file extensio
 > FIELDQUOTE characters are escaped in string columns where there is a presence of a double FIELDQUOTE (delimiter). 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* Only applies to CSV. Specifies the field terminator that will be used in the CSV file. The
-field terminator can be multi-character. The default field terminator is a (,).
+*FIELDTERMINATOR* Only applies to CSV. Specifies the field terminator that will be used in the CSV file. The field terminator can be specified using hexadecimal notation. The field terminator can be multi-character. The default field terminator is a (,).
 For more information, see [Specify Field and Row Terminators (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017).
 
 ROW TERMINATOR = 'row_terminator'</br>
-*ROW TERMINATOR* Only applies to CSV. Specifies the row terminator that will be used in the CSV file. The row terminator can be multi-character. By default, the row terminator is \r\n. 
+*ROW TERMINATOR* Only applies to CSV. Specifies the row terminator that will be used in the CSV file. The row terminator can be specified using hexadecimal notation. The row terminator can be multi-character. By default, the row terminator is \r\n. 
 
-The COPY command prefixes the \r character when specifying \n (newline) resulting in \r\n. To specify only the \n character, use hexadecimal (0x0A). When specifying multi-character row terminators in hexadecimal, do not specify 0x between each character.
+The COPY command prefixes the \r character when specifying \n (newline) resulting in \r\n. To specify only the \n character, use hexadecimal notation (0x0A). When specifying multi-character row terminators in hexadecimal, do not specify 0x between each character.
 
 Please review the following [documentation](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators) for additional guidance on specifying row terminators.
 

@@ -139,8 +139,11 @@ Set the process timeout in minutes. *Default is 30.*
 **MaxFileSizeMb**
 Set the max file size of the report in MB. *Default is 1000.  Max is 2000.*
 
-**ModelCleanupCycleminutes**
-Set the model cleanup cycle in minutes. *Default is 15.*
+**ModelCleanupCycleminutes** ***(Power BI Report Server only)***
+Set the frequency to check for unused models in memory in minutes. *Default is 15.*
+
+**ModelCleanupCycleminutes** ***(Power BI Report Server only)***
+Set the frequency when unused models are evicted from memory in minutes. *Default is 60.*
 
 **OfficeAccessTokenExpirationSeconds** ***(Power BI Report Server only)***
 Set for how long you want the office access token to expire in seconds. *Default is 60.*

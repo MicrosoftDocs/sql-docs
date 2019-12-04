@@ -4,13 +4,13 @@ description: Learn how to use sqlmlutils to install new R packages to an instanc
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # Install new R packages with sqlmlutils

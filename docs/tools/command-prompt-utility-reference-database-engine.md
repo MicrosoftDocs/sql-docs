@@ -1,10 +1,7 @@
 ---
-title: "SQL Command Prompt Utilities (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: SQL Command Prompt Utilities (Database Engine)
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,15 +13,20 @@ helpviewer_keywords:
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 03/14/2017
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
+
 # SQL Command Prompt Utilities (Database Engine)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Command prompt utilities enable you to script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] operations. The following table contains a list of many command prompt utilities that ship with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+
+Command prompt utilities enable you to script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] operations. The following table contains a list of many command prompt utilities that ship with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 For information on the *main* SQL gui and command-line tools, see [SQL Tools Overview](overview-sql-tools.md).
 
-  
 |**Utility**|**Description**|**Installed in**|  
 |-----------------|---------------------|----------------------|  
 |[bcp Utility](../tools/bcp-utility.md)|Used to copy data between an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format.|\<*drive*:>\Program Files\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\Client SDK\ODBC\110\Tools\Binn|  
@@ -56,12 +58,11 @@ For information on the *main* SQL gui and command-line tools, see [SQL Tools Ove
 |`monospace`|Sample commands and program code.|  
 |*italic*|User-supplied parameters.|  
 |**bold**|Commands, parameters, and other syntax that must be typed exactly as shown.|  
-  
-## See Also  
- [Replication Distribution Agent](../relational-databases/replication/agents/replication-distribution-agent.md)   
- [Replication Log Reader Agent](../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [Replication Merge Agent](../relational-databases/replication/agents/replication-merge-agent.md)   
- [Replication Queue Reader Agent](../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)  
-  
-  
+
+## See Also
+
+* [Replication Distribution Agent](../relational-databases/replication/agents/replication-distribution-agent.md)
+* [Replication Log Reader Agent](../relational-databases/replication/agents/replication-log-reader-agent.md)
+* [Replication Merge Agent](../relational-databases/replication/agents/replication-merge-agent.md)
+* [Replication Queue Reader Agent](../relational-databases/replication/agents/replication-queue-reader-agent.md)
+* [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)

@@ -39,7 +39,7 @@ ms.author: sstein
 |**snapshot_seqno_flag**|**bit**|Indicates the source of the snapshot transaction sequence number, where a value of **1** means that **subscription_seqno** is the snapshot sequence number.|  
 |**independent_agent**|**bit**|Indicates whether there is a stand-alone Distribution Agent for this publication.|  
 |**subscription_time**|**datetime**|Internal use only.|  
-|**loopback_detection**|**bit**|Applies to subscriptions that are part of a bidirectional transactional replication topology. Loopback detection determines whether the Distribution Agent sends transactions originated at the Subscriber back to the Subscriber:<br /><br /> **1** = Does not send back.<br /><br /> **0** = Sends back.<br /><br /> Note: This column is supported only for backward compatibility with the bi-directional replication functionality in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. For later versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], peer-to-peer replication should be used instead. For more information, see [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|**loopback_detection**|**bit**|Applies to subscriptions that are part of a bidirectional transactional replication topology. Loopback detection determines whether the Distribution Agent sends transactions originated at the Subscriber back to the Subscriber:<br /><br /> **1** = Does not send back.<br /><br /> **0** = Sends back.<br /><br />|  
 |**agent_id**|**int**|The ID of the agent.|  
 |**update_mode**|**tinyint**|The type of update.|  
 |**publisher_seqno**|**varbinary(16)**|The sequence number of the transaction at the Publisher for this subscription.|  

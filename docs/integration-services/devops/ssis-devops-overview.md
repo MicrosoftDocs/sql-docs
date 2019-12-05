@@ -42,11 +42,11 @@ Path of a separate folder to save build results, which can be published as build
 
 ### Limitations and known issues
 
-1. SSIS Build task relies on Visual Studio and SSIS designer, which is mandatory on build agents. Thus, to run SSIS Build task in the pipeline, you must choose **vs2017-win2016** for Microsoft-hosted agents, or install Visual Studio and SSIS designer (either VS2017 + SSDT2017, or VS2019 + SSIS Projects extension) on self-hosted agents.
+- SSIS Build task relies on Visual Studio and SSIS designer, which is mandatory on build agents. Thus, to run SSIS Build task in the pipeline, you must choose **vs2017-win2016** for Microsoft-hosted agents, or install Visual Studio and SSIS designer (either VS2017 + SSDT2017, or VS2019 + SSIS Projects extension) on self-hosted agents.
 
-2. To build SSIS projects using any out-of-box components (including SSIS Azure feature pack, and other third-party components), those out-of-box components must be installed on the pipeline agent.  For Microsoft-hosted agent, user can add a [PowerShell Script task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) or [Command Line Script task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) to download and install the components before SSIS Build task  is executed.
+- To build SSIS projects using any out-of-box components (including SSIS Azure feature pack, and other third-party components), those out-of-box components must be installed on the pipeline agent.  For Microsoft-hosted agent, user can add a [PowerShell Script task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) or [Command Line Script task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) to download and install the components before SSIS Build task  is executed.
 
-3. Protection level **EncryptSensitiveWithPassword** and **EncryptAllWithPassword** are not supported in SSIS Build task. Please make sure all SSIS projects in codebase are not using these two protection levels, or SSIS Build task will hang and timeout during execution.
+- Protection level **EncryptSensitiveWithPassword** and **EncryptAllWithPassword** are not supported in SSIS Build task. Please make sure all SSIS projects in codebase are not using these two protection levels, or SSIS Build task will hang and timeout during execution.
 
 ## SSIS Deploy task
 
@@ -119,11 +119,11 @@ Specify whether tp continue deployment for remaining projects or files when an e
 
 ### Limitations and known issues
 
-SSIS Deploy Task doesn’t support following scenarios currently:
+SSIS Deploy Task doesn’t support the following scenarios currently:
 
-1. Configure environment in SSIS catalog.
-2. Deploy ispac to Azure SQL Server or Azure SQL Managed Instance which only allows multi-factor authentication (MFA).
-3. Deploy packages to MSDB or SSIS Package Store.
+- Configure environment in SSIS catalog.
+- Deploy ispac to Azure SQL Server or Azure SQL Managed Instance which only allows multi-factor authentication (MFA).
+- Deploy packages to MSDB or SSIS Package Store.
 
 ## Release notes
 

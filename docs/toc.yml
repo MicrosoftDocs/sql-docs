@@ -2539,7 +2539,7 @@
       items:
       - name: Extensibility Framework API
         href: language-extensions/how-to/call-java-from-sql.md
-   - name: SQL Server Native Client
+  - name: SQL Server Native Client
     href: relational-databases/native-client/sql-server-native-client.md
     items:
     - name: Overview

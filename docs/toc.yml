@@ -10341,8 +10341,12 @@
       href: relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
   - name: Extended Features
     items: 
-      - name: Extended features and tools
-        href: tools/download-sql-feature-packs.md
+    - name: Extended features and tools
+      href: tools/download-sql-feature-packs.md
+  - name: Visual Studio Code
+    items: 
+    - name: T-SQL scripts
+      href: visual-studio-code/sql-server-develop-use-vscode.md
 - name: Tutorials
   items:
   - name: SQL Server

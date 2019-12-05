@@ -1,8 +1,10 @@
 ---
-title: "E-Mail Settings - Reporting Services Native mode (Configuration Manager) | Microsoft Docs"
-ms.date: 06/01/2016
+title: "E-Mail Settings in SSRS Native mode (Configuration Manager) | Microsoft Docs"
+description: "SQL ServerReporting Services includes an e-mail delivery extension so that you can distribute reports through e-mail."
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
+ms.custom: seo-lt-2019​, seo-mmd-2019
 
 ms.topic: conceptual
 f1_keywords: 
@@ -14,7 +16,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # E-Mail Settings - Reporting Services Native mode (Configuration Manager)
-Reporting Services includes an e-mail delivery extension so that you can distribute reports through e-mail. Depending on how you define the e-mail subscription, a delivery might consist of a notification, link, attachment, or embedded report. The e-mail delivery extension works with your existing mail server technology. The mail server must be an SMTP server or forwarder. The report server connects to an SMTP server through Collaboration Data Objects (CDO) libraries (cdosys.dll) that are provided by the operating system.
+SQL Server Reporting Services includes an e-mail delivery extension so that you can distribute reports through e-mail. Depending on how you define the e-mail subscription, a delivery might consist of a notification, link, attachment, or embedded report. The e-mail delivery extension works with your existing mail server technology. The mail server must be an SMTP server or forwarder. The report server connects to an SMTP server through Collaboration Data Objects (CDO) libraries (cdosys.dll) that are provided by the operating system.
 
 The report server e-mail delivery extension is not configured by default. You must use the Reporting Services Configuration Manager to minimally configure the extension. To set advanced properties, you must edit the RSReportServer.config file. If you cannot configure the report server to use this extension, you can deliver reports to a shared folder instead. For more information, see File Share Delivery in Reporting Services.
 

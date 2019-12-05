@@ -8373,8 +8373,9 @@
     - name: Permissions or Securables page
       href: relational-databases/security/permissions-or-securables-page.md
 - name: Tools
-  href: tools/overview-sql-tools.md
   items:
+  - name: Overview
+    href: tools/overview-sql-tools.md
   - name: Azure Data Studio
     href: azure-data-studio/what-is.md
     items:

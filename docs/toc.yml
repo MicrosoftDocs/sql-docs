@@ -2534,11 +2534,11 @@
       - name: Java to SQL data types
         href: language-extensions/how-to/java-to-sql-data-types.md
       - name: Create a Java jar file
-        href: language-extensions/reference/extensibility-framework-api.md
+        href: language-extensions/how-to/call-java-from-sql.md
     - name: Reference
       items:
       - name: Extensibility Framework API
-        href: language-extensions/how-to/call-java-from-sql.md
+        href: language-extensions/reference/extensibility-framework-api.md
   - name: SQL Server Native Client
     href: relational-databases/native-client/sql-server-native-client.md
     items:

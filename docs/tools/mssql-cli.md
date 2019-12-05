@@ -33,7 +33,3 @@ Documentation for mssql-cli is located in the [mssql-cli GitHub repository](http
 - [Usage Guide](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
 
 Additional documentation is located in the [doc folder](https://github.com/dbcli/mssql-cli/tree/master/doc).
-
-
-
-  

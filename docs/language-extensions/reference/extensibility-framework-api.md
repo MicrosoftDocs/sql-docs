@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description:  
 author: dphansen
 ms.author: davidph 
-ms.date: 11/04/2019
+ms.date: 12/05/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions

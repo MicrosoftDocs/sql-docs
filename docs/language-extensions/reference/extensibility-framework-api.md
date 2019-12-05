@@ -176,3 +176,29 @@ SQLRETURN GetResultColumn(
     - SQL_NULLABLE_UNKNOWN
 
     If other values are passed, execution stops and errors out.
+
+### GetResults
+
+Get output data
+
+```C++
+SQLRETURN GetResults(
+    SQLGUID		SessionId,
+    SQLUSMALLINT	TaskId,
+    SQLULEN*		RowsNumber,
+    SQLPOINTER**	Data,
+    SQLINTEGER***	StrLen_or_Ind
+);
+```
+
+- **RowsNumber:** \[Output\] Number of rows in the output dataset being passes in Data.
+
+- **Data:** \[Output\] A 2D array of the output dataset allocated by the extension. The length of the array is \[OutputSchemaColumnsNumber\] (known from the `Execute()` call). Each column’s array should have \[RowsNumber\] elements that should be interpreted according to the column type (known from `GetResultColumn()`). Each such element is the value of row \[i\] of column\[j\]. 
+
+- **StrLen_or_Ind:** \[Output\] A 2D array the size of the output data that represents the length or null indicator value. Possible values of each cell: 
+    - n, where n > 0. Indicating the length of the data in bytes 
+    - SQL_NULL_DATA 
+ 
+    The length of the array is \[OutputSchemaColumnsNumber\] (known from the `Execute()` call). Each column’s array has \[RowsNumber\] elements that should be interpreted according to the column type (known from GetResultColumn()). 
+
+    If column col is not nullable and represents a data type of fixed size, StrLen_or_Ind\[col\] is ignored.

@@ -222,3 +222,70 @@ SQLRETURN GetOutputParam(
     - n, where n > 0. Indicating the length of the data in bytes.
     - SQL_NULL_DATA 
 
+### CleanupSession
+
+Clean up per-session information.
+
+```C++
+SQLRETURN CleanupSession(
+    SQLGUID		SessionId,
+    SQLUSMALLINT	TaskId
+);
+```
+
+### Cleanup
+
+Clean up global, shared information (e.g. jvm).
+
+```C++
+SQLRETURN Cleanup();
+```
+
+### GetTelemetryResults
+
+Retrieve telemtry collected by the extension.
+
+```C++
+SQLRETURN GetTelemetryResults(
+    SQLGUID         SessionId,
+    SQLUSMALLINT TaskId,
+    SQLUINTEGER     *RowsNumber,
+    SQLCHAR         ***CounterNames,
+    SQLINTEGER     **CounterNamesLength,
+    SQLBIGINT     **CounterValues
+);
+```
+
+### InstallExternalLibrary
+
+Installs a library.
+
+```C++
+SQLRETURN InstallExternalLibrary(
+    SQLGUID	   SetupSessionId,
+    SQLCHAR	   *LibraryName,
+    SQLINTEGER LibraryNameLength,
+    SQLCHAR	   *LibraryFile,
+    SQLINTEGER LibraryFileLength,
+    SQLCHAR	   *LibraryInstallDirectory,
+    SQLINTEGER LibraryInstallDirectoryLength,
+    SQLCHAR	   **LibraryError,
+    SQLINTEGER *LibraryErrorLength
+);
+```
+
+### UninstallLibrary
+
+Uninstalls a library.
+
+```C++
+SQLRETURN UninstallExternalLibrary(
+    SQLGUID	   SetupSessionId,
+    SQLCHAR	   *LibraryName,
+    SQLINTEGER LibraryNameLength,
+    SQLCHAR	   *LibraryInstallDirectory,
+    SQLINTEGER LibraryInstallDirectoryLength,
+    SQLCHAR	   **LibraryError,
+    SQLINTEGER *LibraryErrorLength
+);
+```

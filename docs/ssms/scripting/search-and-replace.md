@@ -1,5 +1,5 @@
 ---
-title: "Search and Replace | Microsoft Docs"
+title: "Search and Replace"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

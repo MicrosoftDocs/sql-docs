@@ -1,5 +1,5 @@
 ---
-title: "Use sqlcmd with Scripting Variables | Microsoft Docs"
+title: "Use sqlcmd with Scripting Variables"
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql

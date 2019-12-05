@@ -80,6 +80,8 @@
   href: ../integration-services/integration-services-ssis-development-and-management-tools.md
 - name: Projects and solutions
   href: ../integration-services/integration-services-ssis-projects-and-solutions.md
+- name: SSIS DevOps
+  href: ../integration-services/devops/ssis-devops-overview.md
 - name: User interface
   href: ../integration-services/integration-services-user-interface.md
   items:

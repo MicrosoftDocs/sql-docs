@@ -1,5 +1,5 @@
 ---
-title: "Replace in Files | Microsoft Docs"
+title: "Replace in Files"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

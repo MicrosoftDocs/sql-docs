@@ -1,8 +1,10 @@
 ---
-title: "Create a Native Mode Report Server Database  (SSRS Configuration Manager) | Microsoft Docs"
-ms.date: 05/24/2018
+title: "Create a Native Mode Report Server Database (Configuration Manager) | Microsoft Docs"
+description: "Native mode Reporting Services uses a SQL Server database for internal storage. The database is required and it is used to store published reports, models, shared data sources, session data, resources, and server metadata."
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
+ms.custom: seo-lt-2019​, seo-mmd-2019
 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Create a Native Mode Report Server Database
+# Create a Native Mode Report Server Database (SSRS Configuration Manager)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-Native Mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database for internal storage. The database is required and it is used to store published reports, models, shared data sources, session data, resources, and server metadata.  
+Native mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database for internal storage. The database is required and it is used to store published reports, models, shared data sources, session data, resources, and server metadata.  
 
 To create a report server database or to change the connection string or credentials, use the options in the Database page in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Change Font Color, Size, and Style | Microsoft Docs"
+title: "Change Font Color, Size, and Style"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

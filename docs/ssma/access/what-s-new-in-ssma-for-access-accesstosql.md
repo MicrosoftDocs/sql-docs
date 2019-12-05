@@ -2,7 +2,7 @@
 title: "What's New in SSMA for Access (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
-ms.date: "11/13/2019"
+ms.date: "12/04/2019"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -12,14 +12,23 @@ ms.author: "Shamikg"
 ---
 # What's New in SSMA for Access (AccessToSQL)
 
-This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.  
+This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
+
+## SSMA v8.5
+
+The v8.5 release of SSMA for Access is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL server, together with a targeted set of fixes designed to improve usability and performance.
+
+In addition, SSMA for Access now supports conversion of multiple standard functions (ISNULL, IIF, etc.).
+
+> [!IMPORTANT]
+> With SSMA v8.5, .Net 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## SSMA v8.4
 
 The v8.4 release of SSMA for Access is enhanced with targeted fixes that are designed to address accessibility issues and fix a bug related to max index columns (to allow 32 instead of 16) for SQL Server 2016 and later versions.
 
 > [!IMPORTANT]
-> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
+> With SSMA versions 7.4 though 8.4, .Net 4.5.2 is an installation pre-requisite.
 
 ## SSMA v8.3
 
@@ -178,8 +187,8 @@ The July 2014 release of SSMA for Access contains the following changes:
 The April 2014 release of SSMA for Access contains the following changes:  
   
 * Added support for MS SQL Server 2014.
-* Fixed bugs regarding conversion to Azure.  
-* Fixed bugs regarding invisible report pages in IE 10.  
+* Fixed bugs related to conversion to Azure.  
+* Fixed bugs related to invisible report pages in IE 10.  
   
 ## January 2012
 

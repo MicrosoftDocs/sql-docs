@@ -10339,10 +10339,6 @@
       href: relational-databases/sqltoolsvsnativehelpers.md
     - name: FrameWindowVisible
       href: relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
-  - name: Visual Studio Code
-    items:
-    - name: mssql extension
-      href: visual-studio-code/sql-server-develop-use-vscode.md
   - name: Extended Features
     items: 
     - name: Extended features and tools

@@ -1,12 +1,13 @@
 ---
-title: "Configure the Report Server Service Account (SSRS Configuration Manager) | Microsoft Docs"
+title: "Configure the Report Server Service Account (Configuration Manager) | Microsoft Docs"
+description: "Reporting Services is implemented as a single service that contains a Report Server Web service, web portal, and a background processing application that is used for scheduled report processing and subscription delivery."
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
-ms.custom: seodec18
-ms.date: 12/10/2018 
+ms.custom: seo-lt-2019​, seo-mmd-2019
+ms.date: 12/04/2019 
 ---
 
 # Configure the Report Server Service Account (SSRS Configuration Manager)

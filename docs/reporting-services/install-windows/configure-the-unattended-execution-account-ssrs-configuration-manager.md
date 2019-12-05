@@ -1,8 +1,10 @@
 ---
-title: "Configure the Unattended Execution Account (SSRS Configuration Manager) | Microsoft Docs"
-ms.date: 05/31/2016
+title: "Configure the Unattended Execution Account (Configuration Manager) | Microsoft Docs"
+description: "Reporting Services provides a special account that is used for unattended report processing and for sending connection requests across the network."
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
+ms.custom: seo-lt-2019​, seo-mmd-2019
 
 ms.topic: conceptual
 helpviewer_keywords: 

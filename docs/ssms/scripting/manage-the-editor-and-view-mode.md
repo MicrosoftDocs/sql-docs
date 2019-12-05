@@ -1,5 +1,5 @@
 ---
-title: "Manage the Editor and View Mode | Microsoft Docs"
+title: "Manage the Editor and View Mode"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

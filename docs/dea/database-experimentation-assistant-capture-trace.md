@@ -2,7 +2,7 @@
 title: Capture a trace for SQL Server upgrades
 description: Capture a trace in Database Experimentation Assistant for SQL Server upgrades
 ms.custom: "seo-lt-2019"
-ms.date: 11/21/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -22,38 +22,51 @@ Before you start a trace capture, make sure that you back up all target database
 
 Query caching in SQL Server might affect evaluation results. We recommend that you restart the SQL Server service (MSSQLSERVER) in the services application to improve the consistency of evaluation results.
 
-## Create a trace capture
+## Configure a trace capture
 
-1. In DEA, select the menu icon in the left menu. In the expanded menu, select **Capture Traces** next to the camera icon.
+1. In DEA, on the left-hand navigation bar, select the camera icon, and then on the **All Captures** page, select **New Capture**.
 
-    ![Select Capture Traces in the menu](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-capture.png)
+    ![Select Capture Traces in the menu](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
 
-2. Under **New Capture**, enter or select the following information:
+2. On the **New Capture** page, under **Capture details**, enter or select the following information:
 
-    - **SQL Server instance name**: Enter a name for the computer running SQL Server on which you want to capture a server trace.
-    - **Database name**: Enter a name for a database on which to start a database trace. If you don't specify a database, trace is captured on all the databases on the server.
-    - **Trace file name**: Enter a name for the trace file for your capture.
-    - **Max file size (MB)**: Select the rollover size for files. A new file is created as needed at the file size you select. The recommended rollover size is 200 MB.
-    - **Duration (in min)**: Select the length of time (in minutes) that you want the trace capture to run.
-    - **Path to store output trace file**: Select the destination path for the trace file.
+    - **Capture name**: Enter a name for the trace file for your capture.
+    - **Format**: Specify the format (Trace or XEvents) for the capture.
+    - **Duration**: Select the length of time (in minutes) that you want the trace capture to run.
+    - **Capture Location**: Select the destination path for the trace file.
+
 
     > [!NOTE]
     > The file path to the trace file must be on the computer that's running SQL Server. If the SQL Server service isn't set for a specific account, the service might need write permissions to the specified folder for the trace file to be written.
-    >
 
-    ![New Capture page](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-inputs.png)
+    Also be sure to select the **Yes, I have manually taken the backup…** check box.
+
+3. Under **Capture details**, enter or select the following information:
+
+    - **Server Type**: Specify the type of the SQL server (**SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
+    - **Server name**: Specify the server name or IP address of your SQL Server.
+    - **Authentication Type**: For the authentication type, select **Windows**.
+    - **Database name**: Enter a name for a database on which to start a database trace. If you don't specify a database, trace is captured on all the databases on the server.
+
+    Also be sure to select or deselect the **Encrypt connection** and **Trust server certificate** check boxes as appropriate for your scenario.
+
+    ![New Capture page](./media/database-experimentation-assistant-capture-trace/dea-new-capture.png)
 
 ## Start the trace capture
 
-After you enter or select the required information, select **Start** to initiate the trace capture. If the information you've provided on the **New Capture** page is valid, the trace capture process begins without issue. Otherwise, text boxes with invalid entries are highlighted with red. Provide corrected information, and then try again.
+1. After you enter or select the required information, select **Start** to initiate the trace capture.
 
-Select the bell icon at the bottom of the left menu to monitor the progress of the capture.
+    If the information you entered is valid, the trace capture process begins. Otherwise, text boxes with invalid entries are highlighted in red. If you do encounter errors, correct any necessary entries, and then select **Start** again.
 
-![Capture Traces progress](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-progress.png)
+    While the trace capture is running, under **Capture details**, the status and progress of the trace capture process is displayed.
 
-### Trace file
+    ![Monitor capture progress](./media/database-experimentation-assistant-capture-trace/dea-capture-running.png)
 
-When the trace capture finishes running, a .trc file is written in the location specified in the **Path to store output trace file** field. The trace file includes trace results of the activity of a SQL Server database. .trc files are designed to provide more information about errors that are detected and reported by SQL Server.
+2. When the trace capture is finished running, the new trace (.trc) file is saved in the **Capture location** you specific during initial configuration.
+
+    ![Completed trace capture](./media/database-experimentation-assistant-capture-trace/dea-capture-complete.png)
+
+    The trace file includes trace results of the activity of a SQL Server database. .trc files are designed to provide more information about errors that are detected and reported by SQL Server.
 
 ## Frequently asked questions about trace capture
 
@@ -61,7 +74,7 @@ Following are some frequently asked questions about trace capture in DEA.
 
 **Q: What events are captured when I run a trace capture on a production database?**
 
-The following table provides the list of events and the corresponding column data that we collect for traces:
+The following table lists the events and corresponding column data that DEA collects for traces:
   
 |Event Name|Text Data (1)|Binary Data (2)|Database ID (3)|Host Name (8)|Application Name (10)|Login Name (11)|SPID (12)|Start Time (14)|End Time (15)|Database Name (35)|Event Sequence (51)|IsSystem (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  

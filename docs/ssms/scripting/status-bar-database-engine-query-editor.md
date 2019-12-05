@@ -1,7 +1,6 @@
 ---
-title: "Status Bar (Database Engine Query Editor) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+title: Status Bar (Database Engine Query Editor)
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
@@ -9,25 +8,34 @@ ms.topic: conceptual
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: markingmyname
 ms.author: maghan
+ms.custom: ""
+ms.date: 12/04/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Status Bar (Database Engine Query Editor)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  The status bar of [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor windows can be color coded to indicate which instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] each window is connected to.  
-  
-1.  **Before you begin:**  [Status Bar Colors](#StatusBarColors)  
-  
-2.  **To set a server status color in:**  [Object Explorer](#SetOEServerColor), [Registered Server](#SetRegServerColor)  
-  
-3.  **To use a status color:**  [Open Query Editor Using a Server Color](#OpenServerColor), [Open a Query Editor Specifying a Status Color](#OpenSpecColor)  
-  
-##  <a name="StatusBarColors"></a> Status Bar Colors  
- You can associate a status bar color with a specific server node in either **Object Explorer** or **Registered Servers**. The colors can only be specified for server nodes connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], not server nodes for other SQL Server technologies. You can also specify a custom status bar color each time you connect a new [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. You can then open a query editor window using either the status color defined for the server node, or specify a unique color for that editor window.  
-  
- Setting a custom status bar color for a server node in Object Explorer must be done when making the connection. To change the color associated with an existing server node, you must disconnect and then reconnect specifying the new color.  
-  
-##  <a name="SetOEServerColor"></a> Set the Status Color for a Server in Object Explorer  
- **To set a server status color in Object Explorer**  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+The status bar of [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor windows can be color coded to indicate which instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] each window is connected to.
+
+1. **Before you begin:**  [Status Bar Colors](#StatusBarColors)  
+
+2. **To set a server status color in:**  [Object Explorer](#SetOEServerColor), [Registered Server](#SetRegServerColor)  
+
+3. **To use a status color:**  [Open Query Editor Using a Server Color](#OpenServerColor), [Open a Query Editor Specifying a Status Color](#OpenSpecColor)  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+##  <a name="StatusBarColors"></a> Status Bar Colors
+
+You can associate a status bar color with a specific server node in either **Object Explorer** or **Registered Servers**. The colors can only be specified for server nodes connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], not server nodes for other SQL Server technologies. You can also specify a custom status bar color each time you connect a new [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. You can then open a query editor window using either the status color defined for the server node, or specify a unique color for that editor window.  
+
+Setting a custom status bar color for a server node in Object Explorer must be done when making the connection. To change the color associated with an existing server node, you must disconnect and then reconnect specifying the new color.  
+
+##  <a name="SetOEServerColor"></a> Set the Status Color for a Server in Object Explorer
+
+**To set a server status color in Object Explorer**  
   
 1.  In **Object Explorer**, select the **Connect** button and then select **Database Engine...**.  
   

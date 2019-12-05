@@ -1,5 +1,5 @@
 ---
-title: "Query and Text Editors (SQL Server Management Studio) | Microsoft Docs"
+title: "Query and Text Editors (SQL Server Management Studio)"
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual

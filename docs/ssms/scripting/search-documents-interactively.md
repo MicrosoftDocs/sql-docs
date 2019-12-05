@@ -1,5 +1,5 @@
 ---
-title: "Search Documents Interactively | Microsoft Docs"
+title: "Search Documents Interactively"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

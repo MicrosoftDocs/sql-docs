@@ -202,3 +202,23 @@ SQLRETURN GetResults(
     The length of the array is \[OutputSchemaColumnsNumber\] (known from the `Execute()` call). Each column’s array has \[RowsNumber\] elements that should be interpreted according to the column type (known from GetResultColumn()). 
 
     If column col is not nullable and represents a data type of fixed size, StrLen_or_Ind\[col\] is ignored.
+
+### GetOutputParam
+
+Get output parameters at the end of the script.
+
+```C++
+SQLRETURN GetOutputParam(
+    SQLGUID		SessionId,
+    SQLUSMALLINT	ParamNumber,
+    SQLPOINTER*	ParamValue,
+    SQLINTEGER*	StrLen_or_Ind
+);
+```
+
+- **ParamValue:** \[Output\] The value of the output parameter
+
+- **StrLen_or_Ind:** \[Output\] The length or indicator value. Possible values:
+    - n, where n > 0. Indicating the length of the data in bytes.
+    - SQL_NULL_DATA 
+

@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL debugger
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -10,7 +11,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 11/04/2019
+ms.date: 12/04/2019
 monikerRange: ">= sql-server-2014 || = sqlallproducts-allversions" 
 ---
 

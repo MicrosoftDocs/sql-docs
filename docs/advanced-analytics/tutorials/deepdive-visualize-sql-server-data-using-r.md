@@ -1,6 +1,6 @@
 ---
 title: Visualize data using RevoScaleR
-description: Tutorial walkthrough on how to visualize data using the R language on SQL Server.
+description: description: RevoScaleR tutorial on how to visualize data using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 

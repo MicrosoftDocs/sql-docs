@@ -1,6 +1,6 @@
 ---
 title: Data science solution templates
-description: This article describes templates that demonstrate best practices and provide building blocks to help you implement a solution fast. Each template is designed to solve a specific problem, for a specific vertical or industry.
+description: This article describes industry-specific templates that demonstrate best practices and provide building blocks to help you implement a solution fast.
 ms.prod: sql
 ms.technology: machine-learning
 

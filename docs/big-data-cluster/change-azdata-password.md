@@ -5,7 +5,7 @@ description: Update the `AZDATA_PASSWORD` manually
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/06/2019
+ms.date: 12/19/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

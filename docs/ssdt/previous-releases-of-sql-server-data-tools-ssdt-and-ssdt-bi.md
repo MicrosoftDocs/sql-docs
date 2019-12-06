@@ -27,6 +27,7 @@ The last few downloads are provided for the unlikely event that you experience i
 
 |SSDT release| Visual Studio 2017|
 |:---|:---|
+|15.9.2|[SSDT for VS2017 15.9.2](https://go.microsoft.com/fwlink/?linkid=2095463)|
 |15.9.1|[SSDT for VS2017 15.9.1](https://go.microsoft.com/fwlink/?linkid=2086373)|
 |15.9.0|[SSDT for VS2017 15.9.0](https://go.microsoft.com/fwlink/?linkid=2052454)|
 |15.8.2|[SSDT for VS2017 15.8.2](https://go.microsoft.com/fwlink/?linkid=2038031)|

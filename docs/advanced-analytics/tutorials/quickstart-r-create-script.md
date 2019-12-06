@@ -1,6 +1,5 @@
 ---
 title: "Quickstart: Create R scripts"
-titleSuffix: SQL Server Machine Learning Services
 description: Create and run simple R scripts in a SQL Server instance with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning

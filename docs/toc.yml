@@ -189,7 +189,7 @@
         href: big-data-cluster/manage-notebooks.md
       - name: Manage with controller dashboard
         href: big-data-cluster/manage-with-controller-dashboard.md
-      - name: Access
+      - name: Security
         items:
         - name: Update AZDATA_PASSWORD
           href: big-data-cluster/change-azdata-password.md

@@ -1,6 +1,6 @@
 ---
 title: Data science solution templates
-description: This article describes templates that demonstrate best practices and provide building blocks to help you implement a solution fast. Each template is designed to solve a specific problem, for a specific vertical or industry.
+description: This article describes industry-specific templates that demonstrate best practices and provide building blocks to help you implement a solution fast.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -14,7 +14,8 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Data science scenarios and solution templates
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Templates are sample solutions that demonstrate best practices and provide building blocks to help you implement a solution fast. Each template is designed to solve a specific problem, for a specific vertical or industry. The tasks in each template extend from data preparation and feature engineering to model training and scoring. Use these templates to learn how [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] works. Then, feel free to customize the template to fit your own scenario and build a custom solution. 
+This article describes templates that demonstrate best practices and provide building blocks to help you implement a solution fast. Each template is designed to solve a specific problem, for a specific vertical or industry.
+The tasks in each template extend from data preparation and feature engineering to model training and scoring. Use these templates to learn how [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] works. Then, feel free to customize the template to fit your own scenario and build a custom solution. 
 
 Each solution includes sample data, R code or Python code, and SQL stored procedures if applicable. The code can be run in your preferred R or Python development environment, with computations done in SQL Server. In some cases, you can run code directly using T-SQL and any SQL client tool, such as SQL Server Management Studio.
 

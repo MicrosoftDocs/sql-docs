@@ -1,6 +1,6 @@
 ---
 title: "Python tutorial: Deploy model"
-description: In this tutorial you will use Python and linear regression in SQL Server Machine Learning Services to predict the number of ski rentals. You'll deploy a linear regression model developed in Python into a SQL Server database using Machine Learning Services.
+description: In part four of this four-part tutorial series, you'll deploy a Python model to predict ski rentals into a SQL Server database using Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019

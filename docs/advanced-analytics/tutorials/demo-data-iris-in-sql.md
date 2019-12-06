@@ -1,6 +1,6 @@
 ---
 title: Iris demo data set for tutorials
-Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
+Description: Create a database containing the Iris dataset and predictive models. This dataset is used in R and Python tutorials for SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 

@@ -41,6 +41,7 @@ Specifies the number of seconds the results of the preflight request can be cach
 (Power BI Report Server & Reporting Services 2017 and later only) Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
 ### Custom Headers
 
 Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default, there are no custom headers and value is blank.
@@ -63,7 +64,7 @@ Sets header values for all URLs matching the specified regex pattern. Users can 
 #### Setting the custom header property
 
 - You can set it using [SetSystemProperties](https://docs.microsoft.com/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP endpoint passing CustomHeader property as parameter.
-- We can use REST endpoint [UpdateSystemProperties](https://app.swaggerhub.com/apis/microsoft-rs/PBIRS/2.0#/System/UpdateSystemProperties):  `/System/Properties` passing CustomHeader property
+- You can use REST endpoint [UpdateSystemProperties](https://app.swaggerhub.com/apis/microsoft-rs/PBIRS/2.0#/System/UpdateSystemProperties):  `/System/Properties` passing CustomHeader property
 
 #### Example
 
@@ -91,6 +92,7 @@ The first header in the above XML adds `Strict-Transport-Security: max-age=86400
 The second header in above XML adds `Embed: True` header for URL which contains `/reports/` and `rs:embed=true` query parameter.
 - https://adventureworks/reports/mobilereport/New%20Mobile%20Report?rs:embed=true - Match
 - https://adventureworks/reports/mobilereport/New%20Mobile%20Report?rs:embed=false - Fail to Match
+
 ::: moniker-end
 
 ### EditSessionCacheLimit

@@ -1,6 +1,6 @@
 ---
 title: Modify SQL data using RevoScaleR
-description: description: RevoScaleR tutorial on how to query and modify data using the R language on SQL Server.
+description: RevoScaleR tutorial on how to query and modify data using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 

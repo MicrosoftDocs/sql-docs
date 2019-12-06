@@ -1,6 +1,6 @@
 ---
 title: Database for RevoScaleR tutorials
-description: description: RevoScaleR tutorial on how to create a SQL Server database for R tutorials.
+description: RevoScaleR tutorial on how to create a SQL Server database for R tutorials.
 ms.prod: sql
 ms.technology: machine-learning
 

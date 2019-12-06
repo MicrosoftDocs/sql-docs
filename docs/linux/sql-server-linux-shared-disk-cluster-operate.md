@@ -4,7 +4,7 @@ description: This article explains how to operate a SQL Server failover cluster 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 08/28/2017
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -57,7 +57,7 @@ In Suse Linux Enterprise Server (SLES), use the `migrate` command to manually fa
 crm resource migrate <FCIResourceName> <NewHostNode>
 ```
 
-\<FCIResourceName> is the reource name for the failover cluster instance. 
+\<FCIResourceName> is the resource name for the failover cluster instance. 
 
 \<NewHostNode> is the name of the new destination host. 
 

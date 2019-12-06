@@ -37,7 +37,7 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--Website links -->
 [dellemc_website]:http://www.dellemc.com
 [hpe_website]: https://www.hpe.com/us/en/product-catalog/detail/pip.376220.html
-[azuredatalake_website]:https://azure.microsoft.com/en-us/services/data-lake-analytics
+[azuredatalake_website]:https://azure.microsoft.com/services/data-lake-analytics
 
 <!--Get Started Links-->
 
@@ -46,7 +46,7 @@ To learn more about some of our other partners, see [High availability, and disa
 [hpe_datasheet]:https://www.hpe.com/h20195/v2/default.aspx?cc=us&lc=en&oid=376220
 
 <!--Marketplace Links -->
-[dellemc_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/dellemc.dell-emc-avamar-virtual-edition
+[dellemc_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/dellemc.dell-emc-avamar-virtual-edition
 
 <!--YouTube links-->
 [dellemc_youtube]:https://www.youtube.com/watch?v=_52Y-qDKT-4

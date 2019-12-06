@@ -39,6 +39,38 @@ GeneMi , 2019/03/22.
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
 
+## 15.9.3,&nbsp; SSDT for VS 2017
+
+_Released:_ &nbsp; December 9, 2019  
+_Build Number:_ &nbsp; 14.0.16199.0  
+_SSDT for Visual Studio 2017._
+
+### What's New?
+
+| New Item | Details |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Fixed major UI layout issues in high DPI mode |
+| Integration Services (SSIS) | Upgraded .NET framework version to 4.7 for script task/component when the target server version is SQL Server 2019. |
+| Integration Services (SSIS) | Added ConnectByProxy property in ODBC Connection Manager so as to support enabling self-hosted Integration Runtime as proxy in ODBC connection manager. |
+| Integration Services (SSIS) | Fixed an issue that users could not add new data sources under package deployment mode. |
+| Integration Services (SSIS) | Fixed an issue that users could not debug script task/component if the code used any new syntaxes introduced after .NET 4.5. |
+| Integration Services (SSIS) | Fixed an issue that creating the first Data Factory in Azure subscription via Integration Runtime Creation Wizard might fail due to Data Factory resource provider not being registered. |
+| Integration Services (SSIS) | Fixed an issue that the SSIS in ADF Connection Wizard could not display the Azure storage account list correctly when there was a file only storage account in the subscription. |
+| Integration Services (SSIS) | Fixed an issue that "Execute in Azure" did not work when the package included a container. |
+| Integration Services (SSIS) | Fixed an issue that char(n char) and varchar2(n char) were mapped to incorrect DTS types in Oracle Connector. |
+
+
+### Known issues
+
+| Known issue | Details |
+| :---------- | :------ |
+| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted. |
+| SSDT for Visual Studio 2017 higher than 15.8 doesn't support designing packages that contain Teradata source/destination. | Use SSDT for Visual Studio 2017 (15.8). |
+| Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source is not localized | &nbsp; |
+| &nbsp; | &nbsp; |
+
 ## 15.9.2,&nbsp; SSDT for VS 2017
 
 _Released:_ &nbsp; July 17, 2019  

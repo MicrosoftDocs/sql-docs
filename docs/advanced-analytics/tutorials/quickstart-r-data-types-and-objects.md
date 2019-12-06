@@ -1,6 +1,5 @@
 ---
 title: "Quickstart: R data types"
-titleSuffix: SQL Server Machine Learning Services
 description: In this quickstart, learn how to work with data types and data objects in R and SQL Server with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning

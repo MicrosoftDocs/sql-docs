@@ -1,7 +1,7 @@
 ---
 title: "Set or Change the Column Collation | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "12/05/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -20,14 +20,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   The COLLATE clause of [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) and [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). For example:  
   
-    ```  
-    CREATE TABLE dbo.MyTable  
-      (PrimaryKey   int PRIMARY KEY,  
-       CharCol      varchar(10) COLLATE French_CI_AS NOT NULL  
+    ```sql  
+    CREATE TABLE dbo.MyTable (
+        IdCol int PRIMARY KEY,  
+        CharCol VARCHAR(10) COLLATE French_CI_AS NOT NULL  
       );  
     GO  
-    ALTER TABLE dbo.MyTable ALTER COLUMN CharCol  
-                varchar(10)COLLATE Latin1_General_CI_AS NOT NULL;  
+    ALTER TABLE dbo.MyTable 
+    ALTER COLUMN CharCol VARCHAR(10) COLLATE Latin1_General_CI_AS NOT NULL;  
     GO  
     ```  
   
@@ -41,7 +41,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   An index  
   
--   Distribution statistics, either generated automatically or by the CREATE STATISTICS statement  
+-   Distribution statistics, either generated automatically or by the `CREATE STATISTICS` statement  
   
 -   A CHECK constraint  
   
@@ -57,7 +57,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  This could lead to problems with a mismatch in collations between user-defined databases and system database objects. For example, an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the Latin1_General_CS_AS collation and you execute the following statements:  
   
-```  
+```sql  
 CREATE DATABASE TestDB COLLATE Estonian_CS_AS;  
 USE TestDB;  
 CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );  
@@ -65,7 +65,7 @@ CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );
   
  In this system, the **tempdb** database uses the Latin1_General_CS_AS collation with code page 1252, and `TestDB` and `TestPermTab.Col1` use the `Estonian_CS_AS` collation with code page 1257. For example:  
   
-```  
+```sql  
 USE TestDB;  
 GO  
 -- Create a temporary table with the same column declarations  
@@ -78,7 +78,7 @@ GO
   
  With the previous example, the **tempdb** database uses the Latin1_General_CS_AS collation, and `TestDB` and `TestTab.Col1` use the `Estonian_CS_AS` collation. For example:  
   
-```  
+```sql  
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
@@ -88,7 +88,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
   
 -   Specify that the temporary table column use the default collation of the user database, not **tempdb**. This enables the temporary table to work with similarly formatted tables in multiple databases, if that is required of your system.  
   
-    ```  
+    ```sql  
     CREATE TABLE #TestTempTab  
        (PrimaryKey int PRIMARY KEY,  
         Col1 nchar COLLATE database_default  
@@ -97,7 +97,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
   
 -   Specify the correct collation for the `#TestTempTab` column:  
   
-    ```  
+    ```sql  
     CREATE TABLE #TestTempTab  
        (PrimaryKey int PRIMARY KEY,  
         Col1 nchar COLLATE Estonian_CS_AS  

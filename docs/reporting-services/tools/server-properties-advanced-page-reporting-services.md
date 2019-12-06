@@ -21,12 +21,14 @@ To open this page, start SQL Server Management Studio, connect to a report serve
 
 ### Custom Headers
 
-Sets header values for all URLs matching the specified regex pattern. 
-Users can update custom header value with valid XML to set header values for selected request URLs. Admin can add any number of headers in the XML and note that too many headers may impact the performance. By default, there are no custom headers and value is blank.
+Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default, there are no custom headers and value is blank.
+
+> [!NOTE]
+> Too many headers may impact performance. 
 
 #### Custom headers XML format
 
-```
+```xml
 <CustomHeaders>
     <Header>
         <Name>{Name of the header}</Name>
@@ -36,13 +38,16 @@ Users can update custom header value with valid XML to set header values for sel
 </CustomHeaders>
 ```
 
-Setting the custom header property:
-•	We can set using SetSystemProperties SOAP endpoint passing CustomHeader property as parameter.
-•	We can use REST endpoint UpdateSystemProperties:  ‘/System/Properties’ passing CustomHeader property
+#### Setting the custom header property
 
-Example:
+- You can set it using SetSystemProperties SOAP endpoint passing CustomHeader property as parameter.
+- We can use REST endpoint UpdateSystemProperties:  ‘/System/Properties’ passing CustomHeader property
+
+#### Example
+
 The below example shows how to set the HSTS and other custom headers for URLs with matching regex pattern.
 
+```xml
 <CustomHeaders>
     <Header>
         <Name>Strict-Transport-Security</Name>
@@ -55,75 +60,15 @@ The below example shows how to set the HSTS and other custom headers for URLs wi
         <Value>True</Value>
     </Header>
 </CustomHeaders>
+```
 
-The first header in the above XML will add 'Strict-Transport-Security: max-age=86400' header to the matched requests.
-http://adventureworks/Reports/mobilereport/New%20Mobile%20Report - Regex matched and will set HSTS header
-http://adventureworks/ReportServer/mobilereport/New%20Mobile%20Report – Match Failed
+The first header in the above XML adds 'Strict-Transport-Security: max-age=86400' header to the matched requests.
+- http://adventureworks/Reports/mobilereport/New%20Mobile%20Report - Regex matched and will set HSTS header
+- http://adventureworks/ReportServer/mobilereport/New%20Mobile%20Report – Match Failed
 
-The second header in above XML will add 'Embed: True' header for URL which contains '/reports/' and 'rs:embed=true' query parameter.
-https://adventureworks/reports/mobilereport/New%20Mobile%20Report?rs:embed=true - Match
-https://adventureworks/reports/mobilereport/New%20Mobile%20Report?rs:embed=false - Fail to Match
-
-
-### EnableMyReports  
-Indicates whether the My Reports feature is enabled. A value of **true** indicates that the feature is enabled.  
-
-###  MyReportsRole  
-The name of the role used when creating security policies on user's My Reports folders. The default value is **My Reports Role**.  
-
-###  EnableClientPrinting  
-Determines whether the RSClientPrint ActiveX control is available for download from the report server. The valid values are **true** and **false**. The default value is **true**. For more information about additional settings that are required for this control, see [Enable and Disable Client-Side Printing for Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
-
-###  EnableExecutionLogging  
-Indicates whether report execution logging is enabled. The default value is **true**. For more information about the report server execution log, see [Report Server ExecutionLog and the ExecutionLog3 View](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
-
-###  ExecutionLogDaysKept  
-The number of days to keep report execution information in the execution log. Valid values for this property include **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, entries are not deleted from the Execution Log table. The default value is **60**.  
-
-> [!NOTE]
-> Setting a value of **0** *deletes* all entries from the execution log. A value of **-1** keeps the entries of the execution log and doesn't delete them.
-
-###  RDLXReportTimetout
-RDLX report *(Power View reports in a SharePoint Server)* processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace do not time out during processing. The default value is **1800**.
-
-### SessionTimeout
-The length of time, in seconds, that a session remains active. The default value is **600**.  
-
-### SharePointIntegratedMode
-This read-only property indicates the server mode. If this value is False, the report server runs in native mode.  
-
-### SiteName
-The name of the report server site displayed in the page title of the web portal. The default value is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. This property can be an empty string. The maximum length is 8,000 characters.  
-
-### StoredParametersLifetime
-Specifies the maximum number of days that a stored parameter can be stored. Valid values are **-1**, **+1** through **2,147,483,647**. The default value is **180** days.  
-
-### StoredParametersThreshold
-Specifies the maximum number of parameter values that can be stored by the report server. Valid values are **-1**, **+1** through **2,147,483,647**. The default value is **1500**.  
-
-### UseSessionCookies
-Indicates whether the report server should use session cookies when communicating with client browsers. The default value is **true**.  
-
-### ExternalImagesTimeout
-Determines the length of time within which an external image file must be retrieved before the connection is timed out. The default is **600** seconds.  
-
-### SnapshotCompression
-A snapshot of the report server at that time.
-
-### SnapshotCompression
-Defines how snapshots are compressed. The default value is **SQL**. The valid values are as follows:
-
-|Values|Description|
-|---------|---------|
-|**SQL**|Snapshots are compressed when stored in the report server database. This compression is the current behavior.|
-|**None**|Snapshots are not compressed.|
-|**All**|Snapshots are compressed for all storage options, which include the report server database or the file system.|
-
-### SystemReportTimeout
-The default report processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace do not time out during processing. The default value is **1800**.  
-
-### SystemSnapshotLimit
-The maximum number of snapshots that are stored for a report. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, there is no snapshot limit.  
+The second header in above XML adds 'Embed: True' header for URL which contains '/reports/' and 'rs:embed=true' query parameter.
+- https://adventureworks/reports/mobilereport/New%20Mobile%20Report?rs:embed=true - Match
+- https://adventureworks/reports/mobilereport/New%20Mobile%20Report?rs:embed=false - Fail to Match
 
 ### AccessControlAllowCredentials
 Indicates whether the response to the client request can be exposed when the 'credentials' flag is set to true. The default value is **false**.
@@ -146,14 +91,20 @@ Specifies the number of seconds the results of the preflight request can be cach
 ### AllowedResourceExtensionsForUpload
 (Power BI Report Server & Reporting Services 2017 and later only) Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
 
-### RestrictedResourceMimeTypeForUpload
-Set of mime types users aren't allowed to upload content with. Any resources that are already stored with a restricted mime type can only be downloaded as an application/octet-stream instead of being opened/executed by the browser.  By default, there are no restricted items in this list, but we recommended that organizations populate this to provide the most secure experience.
-
 ### EditSessionCacheLimit
 Specifies the number of data cache entries that can be active in a report edit session. The default number is 5.  
 
 ### EditSessionTimeout
 Specifies the number of seconds until a report edit session times out. The default value is 7200 seconds (two hours).  
+
+###  EnableClientPrinting  
+Determines whether the RSClientPrint ActiveX control is available for download from the report server. The valid values are **true** and **false**. The default value is **true**. For more information about additional settings that are required for this control, see [Enable and Disable Client-Side Printing for Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+
+### EnableCustomVisuals (Power BI Report Server only)
+To enable the display of Power BI custom visuals. Values are True/False. *Default is True.*  
+
+###  EnableExecutionLogging  
+Indicates whether report execution logging is enabled. The default value is **true**. For more information about the report server execution log, see [Report Server ExecutionLog and the ExecutionLog3 View](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
 
 ### EnableIntegratedSecurity
 Determines whether Windows-integrated security is supported for report data source connections. The default is **True**. The valid values are as follows:
@@ -170,14 +121,29 @@ If you clear this option, the property is set to False. Report server won't gene
 
 Turning off this option mitigates a threat whereby a malicious user launches a denial of service attack by overloading the report server with LoadReportDefinition requests.  
 
+### EnableMyReports  
+Indicates whether the My Reports feature is enabled. A value of **true** indicates that the feature is enabled.  
+
+### EnablePowerBIReportExportData (Power BI Report Server only)  
+Enable Power BI Report Server data export from Power BI visuals. Values are True, False.  Default is True.  
+
 ### EnableRemoteErrors
 Includes external error information (for example, error information about report data sources) with the error messages that are returned for users who request reports from remote computers. Valid values are **true** and **false**. The default value is **false**. For more information, see [Enable Remote Errors &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
 
-### EnableCustomVisuals (Power BI Report Server only)
-To enable the display of Power BI custom visuals. Values are True/False. *Default is True.*  
+### EnableTestConnectionDetailedErrors
+Indicates whether to send detailed error messages to the client computer when users test data source connections using the report server. The default value is **true**. If the option is set to **false**, only generic error messages are sent.
+
+###  ExecutionLogDaysKept  
+The number of days to keep report execution information in the execution log. Valid values for this property include **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, entries are not deleted from the Execution Log table. The default value is **60**.  
+
+> [!NOTE]
+> Setting a value of **0** *deletes* all entries from the execution log. A value of **-1** keeps the entries of the execution log and doesn't delete them.
 
 ### ExecutionLogLevel
 Set the Execution Log Level. *Default is Normal.*
+
+### ExternalImagesTimeout
+Determines the length of time within which an external image file must be retrieved before the connection is timed out. The default is **600** seconds.  
 
 ### InterProcessTimeoutMinutes
 Set the process timeout in minutes. *Default is 30.*
@@ -191,23 +157,62 @@ Set the frequency to check for unused models in memory in minutes. *Default is 1
 ### ModelCleanupCycleminutes (Power BI Report Server only)
 Set the frequency when unused models are evicted from memory in minutes. *Default is 60.*
 
+###  MyReportsRole  
+The name of the role used when creating security policies on user's My Reports folders. The default value is **My Reports Role**.  
+
 ### OfficeAccessTokenExpirationSeconds (Power BI Report Server only)
 Set for how long you want the office access token to expire in seconds. *Default is 60.*
 
 ### OfficeOnlineDiscoveryURL (Power BI Report Server only)
 Set the address of your Office Online Server instance for viewing Excel Workbooks.
 
+### RDLXReportTimetout
+RDLX report *(Power View reports in a SharePoint Server)* processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace do not time out during processing. The default value is **1800**.
+
 ### RequireIntune
 Requires Intune to access your organization's reports via the Power BI mobile app. *Default is False.*
 
+### RestrictedResourceMimeTypeForUpload
+Set of mime types users aren't allowed to upload content with. Any resources that are already stored with a restricted mime type can only be downloaded as an application/octet-stream instead of being opened/executed by the browser.  By default, there are no restricted items in this list, but we recommended that organizations populate this to provide the most secure experience.
+
 ### ScheduleRefreshTimeoutMinutes (Power BI Report Server only)
-Set for how long you want the schedule refresh to time out. *Default is 120.*
+Data refresh timeout in minutes for scheduled refresh on Power BI reports with embedded AS models. Default is 120 minutes.
+
+### SessionTimeout
+The length of time, in seconds, that a session remains active. The default value is **600**.  
+
+### SharePointIntegratedMode
+This read-only property indicates the server mode. If this value is False, the report server runs in native mode.  
 
 ### ShowDownloadMenu
 Enables the client tools download menu. *Default is true.*
 
+### SiteName
+The name of the report server site displayed in the page title of the web portal. The default value is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. This property can be an empty string. The maximum length is 8,000 characters.  
+
+### SnapshotCompression
+Defines how snapshots are compressed. The default value is **SQL**. The valid values are as follows:
+
+|Values|Description|
+|---------|---------|
+|**SQL**|Snapshots are compressed when stored in the report server database. This compression is the current behavior.|
+|**None**|Snapshots are not compressed.|
+|**All**|Snapshots are compressed for all storage options, which include the report server database or the file system.|
+
+### StoredParametersLifetime
+Specifies the maximum number of days that a stored parameter can be stored. Valid values are **-1**, **+1** through **2,147,483,647**. The default value is **180** days.  
+
+### StoredParametersThreshold
+Specifies the maximum number of parameter values that can be stored by the report server. Valid values are **-1**, **+1** through **2,147,483,647**. The default value is **1500**.  
+
 ### SupportedHyperlinkSchemes (Power BI Report Server only)
 Sets a comma separated list of the URI schemes allowed to be defined on Hyperlink actions that are allowed to be rendered or “&ast;” to enable all hyperlink schemes. For example, setting “http,https” would allow hyperlinks to “https://www. contoso.com”, but would remove hyperlinks to “mailto:bill@contoso.com” or “javascript:window.open(‘www.contoso.com’, ‘_blank’)”. Default is “&ast;”.
+
+### SystemReportTimeout
+The default report processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace do not time out during processing. The default value is **1800**.  
+
+### SystemSnapshotLimit
+The maximum number of snapshots that are stored for a report. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, there is no snapshot limit.  
 
 ### TimeInitialDelaySeconds
 Set for how long you want the initial time to be delayed in seconds. *Default is 60.*
@@ -215,14 +220,8 @@ Set for how long you want the initial time to be delayed in seconds. *Default is
 ### TrustedFileFormat
 Set all the external file formats that open within the browser under the Reporting Services portal site. External file formats not listed prompts to download the option in the browser. The default values are jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png.
 
-### EnablePowerBIReportExportData (Power BI Report Server only)  
-Enable Power BI Report Server data export from Power BI visuals. Values are True, False.  Default is True.  
-
-### ScheduleRefreshTimeoutMinutes (Power BI Report Server only)
-Data refresh timeout in minutes for scheduled refresh on Power BI reports with embedded AS models. Default is 120 minutes.
-
-### EnableTestConnectionDetailedErrors
-Indicates whether to send detailed error messages to the client computer when users test data source connections using the report server. The default value is **true**. If the option is set to **false**, only generic error messages are sent.
+### UseSessionCookies
+Indicates whether the report server should use session cookies when communicating with client browsers. The default value is **true**.  
 
 ## See Also
 

@@ -35,20 +35,19 @@ Query caching in SQL Server might affect evaluation results. We recommend that y
     - **Duration**: Select the length of time (in minutes) that you want the trace capture to run.
     - **Capture Location**: Select the destination path for the trace file.
 
+           > [!NOTE]
+           > The file path to the trace file must be on the computer that's running SQL Server. If the SQL Server service isn't set for a specific account, the service might need write permissions to the specified folder for the trace file to be written.
 
-    > [!NOTE]
-    > The file path to the trace file must be on the computer that's running SQL Server. If the SQL Server service isn't set for a specific account, the service might need write permissions to the specified folder for the trace file to be written.
+3. Verify that you have taken a backup by selecting the **Yes, I have manually taken the backup…** check box.
 
-    Also be sure to select the **Yes, I have manually taken the backup…** check box.
-
-3. Under **Capture details**, enter or select the following information:
+4. Under **Capture details**, enter or select the following information:
 
     - **Server Type**: Specify the type of the SQL server (**SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
     - **Server name**: Specify the server name or IP address of your SQL Server.
     - **Authentication Type**: For the authentication type, select **Windows**.
     - **Database name**: Enter a name for a database on which to start a database trace. If you don't specify a database, trace is captured on all the databases on the server.
 
-    Also be sure to select or deselect the **Encrypt connection** and **Trust server certificate** check boxes as appropriate for your scenario.
+5. Select or deselect the **Encrypt connection** and **Trust server certificate** check boxes as appropriate for your scenario.
 
     ![New Capture page](./media/database-experimentation-assistant-capture-trace/dea-new-capture.png)
 

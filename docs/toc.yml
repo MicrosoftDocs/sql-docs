@@ -8377,8 +8377,9 @@
     - name: Permissions or Securables page
       href: relational-databases/security/permissions-or-securables-page.md
 - name: Tools
-  href: tools/overview-sql-tools.md
   items:
+  - name: Overview
+    href: tools/overview-sql-tools.md
   - name: Azure Data Studio
     href: azure-data-studio/what-is.md
     items:
@@ -10344,8 +10345,12 @@
       href: relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
   - name: Extended Features
     items: 
-      - name: Extended features and tools
-        href: tools/download-sql-feature-packs.md
+    - name: Extended features and tools
+      href: tools/download-sql-feature-packs.md
+  - name: Visual Studio Code
+    items: 
+    - name: T-SQL scripts
+      href: visual-studio-code/sql-server-develop-use-vscode.md
 - name: Tutorials
   items:
   - name: SQL Server

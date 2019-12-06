@@ -1,6 +1,6 @@
 ---
 title: Create RxSqlServerData objects
-description: Tutorial walkthrough on how to create data objects using the R language on SQL Server.
+description: RevoScaleR tutorial on how to create data objects using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 

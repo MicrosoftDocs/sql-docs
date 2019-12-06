@@ -93,12 +93,6 @@ manager: craigg
   
 -   [Plan for disaster recovery (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
   
--   [Microsoft® SQL Server Backup to Microsoft Windows® Azure®Tool](https://www.microsoft.com/download/details.aspx?id=40740)  
-  
- **Community content**  
-  
--   [Managing Service Instances on SharePoint 2013](http://www.petri.co.il/manage-service-instances-sharepoint-2013.htm)  
-  
--   [Backup Database SQL Server Script](http://megaupl0ad.net/free/backup%20database%20sql%20server%20script)  
+
   
   

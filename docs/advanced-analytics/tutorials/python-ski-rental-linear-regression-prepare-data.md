@@ -1,6 +1,6 @@
 ---
 title: "Python tutorial: Prepare data"
-description: In this tutorial you will use Python and linear regression in SQL Server Machine Learning Services to predict the number of ski rentals. You'll prepare data from a SQL Server database using Python.
+description: In part two of this four-part tutorial series, you'll use Python to prepare data to predict ski rentals in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019

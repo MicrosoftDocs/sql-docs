@@ -1,6 +1,6 @@
 ---
 title: Score data using RevoScaleR
-description: Tutorial walkthrough on how to score data using the R language on SQL Server.
+description: RevoScaleR tutorial on how to score data using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 

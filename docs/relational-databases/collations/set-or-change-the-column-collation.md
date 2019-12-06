@@ -69,7 +69,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         
     For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, [Modify Columns (Database Engine)](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Modify Columns (Database Engine)](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure).  
   
 -   Using the **Column.Collation** property in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   

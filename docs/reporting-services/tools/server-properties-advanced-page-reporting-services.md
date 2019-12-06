@@ -1,5 +1,5 @@
 ---
-title: "Server Properties Advanced Page - Reporting Services | Microsoft Docs"
+title: "Server Properties Advanced Page | Microsoft Docs"
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.date: 12/05/2019
 ---
 
-# Server Properties Advanced Page - Reporting Services
+# Server Properties Advanced Page - SQL Server Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -19,6 +19,28 @@ To open this page, start SQL Server Management Studio, connect to a report serve
 
 ## Options
 
+### AccessControlAllowCredentials
+Indicates whether the response to the client request can be exposed when the `credentials` flag is set to true. The default value is **false**.
+
+### AccessControlAllowHeaders
+A comma-separated list of headers that the server will allow when a client makes a request. This property can be an empty string, specifying * will allow all headers.
+
+### AccessControlAllowMethods
+A comma-separated list of HTTP methods that the server will allow when a client makes a request. The default values are (GET, PUT, POST, PATCH, DELETE), specifying * will allow all methods.
+
+### AccessControlAllowOrigin
+A comma-separated list of origins that the server will allow when a client makes a request. The default value is blank, which prevents all requests, specifying * will allow all origins when credentials are not set; if credentials are specified an explicit list of origins must be specified.
+
+### AccessControlExposeHeaders
+A comma-separated list of headers that the server will expose to clients. The default value is blank.
+
+### AccessControlMaxAge
+Specifies the number of seconds the results of the preflight request can be cached. The default value is 600 (10 minutes).
+
+### AllowedResourceExtensionsForUpload
+(Power BI Report Server & Reporting Services 2017 and later only) Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ### Custom Headers
 
 Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default, there are no custom headers and value is blank.
@@ -40,8 +62,8 @@ Sets header values for all URLs matching the specified regex pattern. Users can 
 
 #### Setting the custom header property
 
-- You can set it using SetSystemProperties SOAP endpoint passing CustomHeader property as parameter.
-- We can use REST endpoint UpdateSystemProperties:  ‘/System/Properties’ passing CustomHeader property
+- You can set it using [SetSystemProperties](https://docs.microsoft.com/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP endpoint passing CustomHeader property as parameter.
+- We can use REST endpoint [UpdateSystemProperties](https://app.swaggerhub.com/apis/microsoft-rs/PBIRS/2.0#/System/UpdateSystemProperties):  `/System/Properties` passing CustomHeader property
 
 #### Example
 
@@ -62,34 +84,14 @@ The below example shows how to set the HSTS and other custom headers for URLs wi
 </CustomHeaders>
 ```
 
-The first header in the above XML adds 'Strict-Transport-Security: max-age=86400' header to the matched requests.
+The first header in the above XML adds `Strict-Transport-Security: max-age=86400` header to the matched requests.
 - http://adventureworks/Reports/mobilereport/New%20Mobile%20Report - Regex matched and will set HSTS header
 - http://adventureworks/ReportServer/mobilereport/New%20Mobile%20Report – Match Failed
 
-The second header in above XML adds 'Embed: True' header for URL which contains '/reports/' and 'rs:embed=true' query parameter.
+The second header in above XML adds `Embed: True` header for URL which contains `/reports/` and `rs:embed=true` query parameter.
 - https://adventureworks/reports/mobilereport/New%20Mobile%20Report?rs:embed=true - Match
 - https://adventureworks/reports/mobilereport/New%20Mobile%20Report?rs:embed=false - Fail to Match
-
-### AccessControlAllowCredentials
-Indicates whether the response to the client request can be exposed when the 'credentials' flag is set to true. The default value is **false**.
-
-### AccessControlAllowHeaders
-A comma-separated list of headers that the server will allow when a client makes a request. This property can be an empty string, specifying * will allow all headers.
-
-### AccessControlAllowMethods
-A comma-separated list of HTTP methods that the server will allow when a client makes a request. The default values are (GET, PUT, POST, PATCH, DELETE), specifying * will allow all methods.
-
-### AccessControlAllowOrigin
-A comma-separated list of origins that the server will allow when a client makes a request. The default value is blank, which prevents all requests, specifying * will allow all origins when credentials are not set; if credentials are specified an explicit list of origins must be specified.
-
-### AccessControlExposeHeaders
-A comma-separated list of headers that the server will expose to clients. The default value is blank.
-
-### AccessControlMaxAge
-Specifies the number of seconds the results of the preflight request can be cached. The default value is 600 (10 minutes).
-
-### AllowedResourceExtensionsForUpload
-(Power BI Report Server & Reporting Services 2017 and later only) Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
+::: moniker-end
 
 ### EditSessionCacheLimit
 Specifies the number of data cache entries that can be active in a report edit session. The default number is 5.  

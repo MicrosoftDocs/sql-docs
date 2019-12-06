@@ -1,7 +1,7 @@
 ---
 title: "Collation and Unicode support | Microsoft Docs"
 ms.custom: ""
-ms.date: 09/18/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -617,12 +617,12 @@ Before you choose whether to use UTF-8 or UTF-16 encoding for a database or colu
 
 For other considerations, see [Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md).
 
-### <a name="converting"></a> Converting from UTF-16 to UTF-8
+### <a name="converting"></a> Converting to UTF-8
 Because in [CHAR(*n*) and VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) or in [NCHAR(*n*) and NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), the *n* defines the byte storage size, not the number of characters that can be stored, it's important to determine the data type size you must convert to, in order to avoid data truncation. 
 
 For example, consider a column defined as **NVARCHAR(100)** that stores 180 bytes of Japanese characters. In this example, the column data is currently encoded using UCS-2 or UTF-16, which uses 2 bytes per character. Converting the column type to **VARCHAR(200)** is not enough to prevent data truncation, because the new data type can only store 200 bytes, but Japanese characters require 3 bytes when encoded in UTF-8. So the column must be defined as **VARCHAR(270)** to avoid data loss through data truncation.
 
-Therefore, it's required to know in advance what's the projected byte size for the column definition before converting existing data to UTF-8, and adjust the new data type size accordingly. Refer to the [!INCLUDE[tsql](../../includes/tsql-md.md)] script or the SQL Notebook in the [Data Samples GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/unicode), which use the [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) fucntion and the [COLLATE](../../t-sql/statements/collations.md) statement to determine the correct data length requirements for UTF-16 to UTF-8 conversion operations in an existing database.
+Therefore, it's required to know in advance what's the projected byte size for the column definition before converting existing data to UTF-8, and adjust the new data type size accordingly. Refer to the [!INCLUDE[tsql](../../includes/tsql-md.md)] script or the SQL Notebook in the [Data Samples GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/unicode), which use the [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) function and the [COLLATE](../../t-sql/statements/collations.md) statement to determine the correct data length requirements for UTF-8 conversion operations in an existing database.
 
 To change the server collation, allowing new databases to inherit the system collation by default, see [Set or Change the Server Collation](../../relational-databases/collations/set-or-change-the-server-collation.md).
 

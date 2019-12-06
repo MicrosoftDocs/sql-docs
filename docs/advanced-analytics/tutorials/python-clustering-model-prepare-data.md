@@ -1,6 +1,6 @@
 ---
 title: "Python tutorial: Prepare cluster data"
-description: In part two of this four-part tutorial series, you'll prepare the data from a SQL Server database to perform clustering in Python with SQL Server Machine Learning Services.
+description: In part two of this four-part tutorial series, you'll prepare SQL data to perform clustering in Python with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python

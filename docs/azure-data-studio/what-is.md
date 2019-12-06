@@ -16,12 +16,11 @@ ms.date: "10/15/2019"
 
 Azure Data Studio is a cross-platform database tool for data professionals using the Microsoft family of on-premises and cloud data platforms on Windows, MacOS, and Linux.
 
-Previously released under the preview name SQL Operations Studio, Azure Data Studio offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal. It is engineered with the data platform user in mind, with built in charting of query result sets and customizable dashboards.
+Azure Data Studio offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal. It's engineered with the data platform user in mind, with built-in charting of query result sets and customizable dashboards.
 
 The source code for Azure Data Studio and its data providers is available on GitHub under a source code EULA that provides rights to modify and use the software, but not to redistribute it or host it in a cloud service. For more information, see [Azure Data Studio FAQ](faq.md).
 
 **[Download and Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
-
 
 ## SQL code editor with IntelliSense
 
@@ -32,7 +31,6 @@ The source code for Azure Data Studio and its data providers is available on Git
 SQL code snippets generate the proper SQL syntax to create databases, tables, views, stored procedures, users, logins, roles, etc., and to update existing database objects. Use smart snippets to quickly create copies of your database for development or testing purposes, and to generate and execute CREATE and INSERT scripts.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] also provides functionality to create custom SQL code snippets. To learn more, see [Create and use code snippets](code-snippets.md).
-
 
 ## Customizable Server and Database Dashboards
 
@@ -56,16 +54,18 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 ## Feature comparison with SQL Server Management Studio (SSMS)
 
 **Use Azure Data Studio if you:**
+
 - Need to run on macOS or Linux
 - Are connecting to a SQL Server 2019 big data cluster
 - Spend most of your time editing or executing queries
 - Need the ability to quickly chart and visualize result sets
 - Can execute most administrative tasks via the integrated terminal using sqlcmd or Powershell
 - Have minimal need for wizard experiences
-- Do not need to do deep administrative configuration
-- Want to 
+- Don't need to do deep administrative configuration
+- Want to
 
 **Use SQL Server Management Studio if you:**
+
 - Spend most of your time on database administration tasks
 - Are doing deep administrative configuration
 - Are doing security management, including user management, vulnerability assessment, and configuration of security features
@@ -95,7 +95,6 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |Import\Export DACPAC||Yes|
 |Object Properties||Yes|
 |Table Designer||Yes|
-
 
 ### Query Editor
 
@@ -148,7 +147,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |Error Log Viewer||Yes|
 |Maintenance Plans||Yes|
 |Multi-Server Query||Yes|
-|Policy Based Management||Yes|
+|Policy-Based Management||Yes|
 |PolyBase||Yes|
 |Query Store||Yes|
 |Registered Servers||Yes|

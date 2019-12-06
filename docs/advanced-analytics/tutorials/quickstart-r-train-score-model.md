@@ -1,6 +1,5 @@
 ---
 title: "Quickstart: Train a model in R"
-titleSuffix: SQL Server Machine Learning Services
 description: Create a simple predictive model in R using SQL Server Machine Learning Services, then predict a result using new data.
 ms.prod: sql
 ms.technology: machine-learning

@@ -624,67 +624,16 @@ For example, consider a column defined as **NVARCHAR(100)** that stores 180 byte
 
 Therefore, it's required to know in advance what's the projected byte size for the column definition before converting existing data to UTF-8, and adjust the new data type size accordingly. Refer to the [!INCLUDE[tsql](../../includes/tsql-md.md)] script or the SQL Notebook in the [Data Samples GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/unicode), which use the [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) function and the [COLLATE](../../t-sql/statements/collations.md) statement to determine the correct data length requirements for UTF-8 conversion operations in an existing database.
 
-To change the server collation, allowing new databases to inherit the system collation by default, see [Set or Change the Server Collation](../../relational-databases/collations/set-or-change-the-server-collation.md).
+To change the column collation and data type in an existing table, use one of the methods described in [Set or Change the Column Collation](../../relational-databases/collations/set-or-change-the-column-collation.md).
 
-To change the database collation, allowing new objects to inherit the database collation by default, see [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).
-
-To change the column collation and data type in an existing table, use one of the methods described below. For more information, see [Set or Change the Column Collation](../../relational-databases/collations/set-or-change-the-column-collation.md).
-
-#### Convert column data
-Consider one of the existing tables defined below:
-
-```sql
--- NVARCHAR column is encoded in UTF-16 because a supplementary character enabled collation is used
-CREATE TABLE dbo.MyTable (CharCol NVARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC);
-
--- VARCHAR column is encoded the Latin code page and therefore is not Unicode capable
-CREATE TABLE dbo.MyTable (CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI);
-```
-
-To convert the column in-place to use UTF-8, run an `ALTER COLUMN` statement that sets the new data type and collation:
-
-```sql 
-ALTER TABLE dbo.MyTable 
-ALTER COLUMN CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8
-```
-
-This method is easy to implement, however it's a possibly blocking operation which may become an issue for large tables and busy applications.
-
-#### Copy and Replace
-Consider one of the existing tables defined below:
-
-```sql
--- NVARCHAR column is encoded in UTF-16 because a supplementary character enabled collation is used
-CREATE TABLE dbo.MyTable (CharCol NVARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC);
-GO
-
--- VARCHAR column is encoded using the Latin code page and therefore is not Unicode capable
-CREATE TABLE dbo.MyTable (CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI);
-GO
-```
-
-To convert the column to use UTF-8, copy the data to a new table where the target column is already using UTF-8, and then replace the old table:
-
-```sql
-CREATE TABLE dbo.MyTableNew (CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8);
-GO
-INSERT INTO dbo.MyTableNew 
-SELECT * FROM dbo.MyTable;
-GO
-DROP TABLE dbo.MyTable;
-GO
-EXEC sp_rename 'dbo.MyTableNew', 'dbo.MyTable’;
-GO
-```
-
-This method is much faster than in-place conversion, but handling complex schemas with many dependencies (FKs, PKs, Triggers, DFs) and synching the tail of the table (if the database is in use) requires more planning.
+To change the database collation, allowing new objects to inherit the database collation by default, or to change the server collation, allowing new databases to inherit the system collation by default, see the [Related tasks](#Related_Tasks) section of this article. 
 
 ##  <a name="Related_Tasks"></a> Related tasks    
     
 |Task|Topic|    
 |----------|-----------|    
-|Describes how to set or change the collation of the instance of SQL Server|[Set or Change the Server Collation](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
-|Describes how to set or change the collation of a user database|[Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
+|Describes how to set or change the collation of the instance of SQL Server. Note that changing the server collation does not change the collation of existing databases.|[Set or Change the Server Collation](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
+|Describes how to set or change the collation of a user database. Note that changing a database collation does not change the collation of existing table columns.|[Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
 |Describes how to set or change the collation of a column in the database|[Set or Change the Column Collation](../../relational-databases/collations/set-or-change-the-column-collation.md)|    
 |Describes how to return collation information at the server, database, or column level|[View Collation Information](../../relational-databases/collations/view-collation-information.md)|    
 |Describes how to write Transact-SQL statements that are more portable from one language to another, or support multiple languages more easily|[Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md)|    

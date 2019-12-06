@@ -24,11 +24,11 @@ All the functions return a **SQLRETURN** parameter. If the value is anything oth
 
 ### Init
 
-Initialize global, shared information. For example, jvm. 
+Initialize global, shared information. For example, jvm.
 
 ```C++
 SQLRETURN Init(
-    SQLPOINTER		PropertyBag
+    SQLPOINTER    PropertyBag
 );
 ```
 
@@ -40,16 +40,16 @@ Initialize per-session information.
 
 ```C++
 SQLRETURN InitSession(
-    SQLGUID		    SessionId,
+    SQLGUID         SessionId,
     SQLUSMALLINT    TaskId,
-    SQLCHAR*       	Script,
+    SQLCHAR*        Script,
     SQLULEN         ScriptLength,
     SQLUSMALLINT    InputSchemaColumnsNumber,
     SQLUSMALLINT    ParametersNumber
-    SQLCHAR*       	InputDataName,
-    SQLUSMALLINT	InputDataNameLength,
-    SQLCHAR*       	OutputDataName,
-    SQLUSMALLINT	OutputDataNameLength
+    SQLCHAR*        InputDataName,
+    SQLUSMALLINT    InputDataNameLength,
+    SQLCHAR*        OutputDataName,
+    SQLUSMALLINT    OutputDataNameLength
 );
 ```
 
@@ -108,7 +108,7 @@ SQLRETURN InitParam(
     SQLSMALLINT  DecimalDigits,
     SQLPOINTER   ParamValue,
     SQLINTEGER   StrLen_or_Ind,
-    SQLSMALLINT InputOutputType
+    SQLSMALLINT  InputOutputType
 );
 ```
 
@@ -131,12 +131,12 @@ Execute the script.
 
 ```C++
 SQLRETURN Execute(
-    SQLGUID		SessionId,
-    SQLUSMALLINT	TaskId,
-    SQLULEN		RowsNumber,
-    SQLPOINTER*	Data,
-    SQLINTEGER**	StrLen_or_Ind,
-    SQLUSMALLINT*    	OutputSchemaColumnsNumber
+    SQLGUID         SessionId,
+    SQLUSMALLINT    TaskId,
+    SQLULEN         RowsNumber,
+    SQLPOINTER*     Data,
+    SQLINTEGER**    StrLen_or_Ind,
+    SQLUSMALLINT*   OutputSchemaColumnsNumber
 );
 ```
 
@@ -156,13 +156,13 @@ Get the information regarding a given column in the output dataset for a particu
 
 ```C++
 SQLRETURN GetResultColumn(
-    SQLGUID		SessionId,
-    SQLUSMALLINT	TaskId,
-    SQLUSMALLINT	ColumnNumber,
-    SQLSMALLINT*	DataType,
-    SQLINTEGER*	ColumnSize,
-    SQLSMALLINT*	DecimalDigits,
-    SQLSMALLINT*	Nullable
+    SQLGUID         SessionId,
+    SQLUSMALLINT    TaskId,
+    SQLUSMALLINT    ColumnNumber,
+    SQLSMALLINT*    DataType,
+    SQLINTEGER*     ColumnSize,
+    SQLSMALLINT*    DecimalDigits,
+    SQLSMALLINT*    Nullable
 );
 ```
 
@@ -183,11 +183,11 @@ Get output data
 
 ```C++
 SQLRETURN GetResults(
-    SQLGUID		SessionId,
-    SQLUSMALLINT	TaskId,
-    SQLULEN*		RowsNumber,
-    SQLPOINTER**	Data,
-    SQLINTEGER***	StrLen_or_Ind
+    SQLGUID         SessionId,
+    SQLUSMALLINT    TaskId,
+    SQLULEN*        RowsNumber,
+    SQLPOINTER**    Data,
+    SQLINTEGER***   StrLen_or_Ind
 );
 ```
 
@@ -209,10 +209,10 @@ Get output parameters at the end of the script.
 
 ```C++
 SQLRETURN GetOutputParam(
-    SQLGUID		SessionId,
-    SQLUSMALLINT	ParamNumber,
-    SQLPOINTER*	ParamValue,
-    SQLINTEGER*	StrLen_or_Ind
+    SQLGUID        SessionId,
+    SQLUSMALLINT   ParamNumber,
+    SQLPOINTER*    ParamValue,
+    SQLINTEGER*    StrLen_or_Ind
 );
 ```
 
@@ -228,8 +228,8 @@ Clean up per-session information.
 
 ```C++
 SQLRETURN CleanupSession(
-    SQLGUID		SessionId,
-    SQLUSMALLINT	TaskId
+    SQLGUID        SessionId,
+    SQLUSMALLINT   TaskId
 );
 ```
 
@@ -247,12 +247,12 @@ Retrieve telemtry collected by the extension.
 
 ```C++
 SQLRETURN GetTelemetryResults(
-    SQLGUID         SessionId,
-    SQLUSMALLINT TaskId,
-    SQLUINTEGER     *RowsNumber,
-    SQLCHAR         ***CounterNames,
-    SQLINTEGER     **CounterNamesLength,
-    SQLBIGINT     **CounterValues
+    SQLGUID        SessionId,
+    SQLUSMALLINT   TaskId,
+    SQLUINTEGER    *RowsNumber,
+    SQLCHAR        ***CounterNames,
+    SQLINTEGER      **CounterNamesLength,
+    SQLBIGINT       **CounterValues
 );
 ```
 
@@ -262,14 +262,14 @@ Installs a library.
 
 ```C++
 SQLRETURN InstallExternalLibrary(
-    SQLGUID	   SetupSessionId,
-    SQLCHAR	   *LibraryName,
+    SQLGUID    SetupSessionId,
+    SQLCHAR    *LibraryName,
     SQLINTEGER LibraryNameLength,
-    SQLCHAR	   *LibraryFile,
+    SQLCHAR    *LibraryFile,
     SQLINTEGER LibraryFileLength,
-    SQLCHAR	   *LibraryInstallDirectory,
+    SQLCHAR    *LibraryInstallDirectory,
     SQLINTEGER LibraryInstallDirectoryLength,
-    SQLCHAR	   **LibraryError,
+    SQLCHAR    **LibraryError,
     SQLINTEGER *LibraryErrorLength
 );
 ```
@@ -280,12 +280,12 @@ Uninstalls a library.
 
 ```C++
 SQLRETURN UninstallExternalLibrary(
-    SQLGUID	   SetupSessionId,
-    SQLCHAR	   *LibraryName,
+    SQLGUID    SetupSessionId,
+    SQLCHAR    *LibraryName,
     SQLINTEGER LibraryNameLength,
-    SQLCHAR	   *LibraryInstallDirectory,
+    SQLCHAR    *LibraryInstallDirectory,
     SQLINTEGER LibraryInstallDirectoryLength,
-    SQLCHAR	   **LibraryError,
+    SQLCHAR    **LibraryError,
     SQLINTEGER *LibraryErrorLength
 );
 ```

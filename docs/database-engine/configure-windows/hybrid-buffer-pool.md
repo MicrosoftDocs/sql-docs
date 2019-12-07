@@ -29,7 +29,7 @@ The hybrid buffer pool feature is available for both Windows and Linux. The PMEM
 
 For more on Windows Server support for PMEM, also referred to as Storage Class Memory (SCM) see [deploy persistent memory on Windows Server](/windows-server/storage/storage-spaces/deploy-pmem/).
 
-For more on configuring SQL Server on Linux for PMEM devices see [deploy persistent memory](../../linux/sql-server-linux-configure-pmem.md)).
+For more on configuring SQL Server on Linux for PMEM devices [deploy persistent memory](../../linux/sql-server-linux-configure-pmem.md).
 
 
 ## Enable hybrid buffer pool
@@ -42,7 +42,7 @@ The following example enables hybrid buffer pool for an instance of SQL Server:
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
 ```
 
-By default, hybrid buffer pool is set to disabled at the instance scope. Note in order for the setting change to take effect, the SQL Server instance must be restarted. A restart is needed to facilitate allocating sufficient hash pages, to account for total PMEM capacity on the server.
+By default, hybrid buffer pool is disabled at the instance scope. Note in order for the setting change to take effect, the SQL Server instance must be restarted. A restart is needed to facilitate allocating sufficient hash pages, to account for total PMEM capacity on the server.
 
 The following example enables hybrid buffer pool for a specific database.
 
@@ -50,7 +50,7 @@ The following example enables hybrid buffer pool for a specific database.
 ALTER DATABASE <databaseName> SET MEMORY_OPTIMIZED = ON;
 ```
 
-By default, hybrid buffer pool is set to enabled at the database scope.
+By default, hybrid buffer pool is enabled at the database scope.
 
 ## Disable hybrid buffer pool
 
@@ -60,7 +60,7 @@ The following example disables hybrid buffer pool at the instance level:
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = OFF;
 ```
 
-By default, hybrid buffer pool is set to disabled at the instance level. In order for this change to take effect, the instance must be restarted. This is to ensure a sufficient number of hash page are allocated for the buffer pool, as PMEM capacity on the server now needs to be accounted for.
+By default, hybrid buffer pool is disabled at the instance level. In order for this change to take effect, the instance must be restarted. This is to ensure a sufficient number of hash page are allocated for the buffer pool, as PMEM capacity on the server now needs to be accounted for.
 
 The following example disables hybrid buffer pool for a specific database.
 
@@ -68,7 +68,7 @@ The following example disables hybrid buffer pool for a specific database.
 ALTER DATABASE <databaseName> SET MEMORY_OPTIMIZED = OFF;
 ```
 
-By default, hybrid buffer pool is set to enabled at the database scope.
+By default, hybrid buffer pool is enabled at the database scope.
 
 ## View hybrid buffer pool configuration
 
@@ -94,12 +94,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 When formatting your PMEM device on Windows, use the largest allocation unit size available for NTFS (2 MB in Windows Server 2019) and ensure the device has been formatted for DAX (Direct Access).
 
-Use the large page memory allocation model which is enabled with [trace flag 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). This is a startup trace flag.
+Use the large page memory allocation model which can be enabled with [trace flag 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). This is a startup trace flag.
 
 Using the large page memory allocation model requires the use of [Locked Pages in Memory](./enable-the-lock-pages-in-memory-option-windows.md) on Windows.
 
 Files sizes should be a multiple of 2 MB (modulo 2 MB should equal zero).
 
-If the server scoped setting for hybrid buffer pool is set to disabled, hybrid buffer pool will not be used by any user database.
+If the server scoped setting for hybrid buffer pool is disabled, hybrid buffer pool will not be used by any user database.
 
-If the server scoped setting for hybrid buffer pool is enabled, you can disable hybrid buffer pool usage for individual user databases by following the steps to disable hybrid buffer pool at the database scoped level for those user databases.
+If the server scoped setting for hybrid buffer pool has been enabled, you can disable hybrid buffer pool usage for individual user databases by following the steps to disable hybrid buffer pool at the database scoped level for those user databases.

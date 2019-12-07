@@ -19,17 +19,17 @@ Hybrid Buffer Pool enables buffer pool objects to reference data pages in databa
 
 ![Hybrid Buffer Pool](./media/hybrid-buffer-pool.png)
 
-Persistent memory (PMEM) devices are byte-addressable and if a direct access (DAX) persistent-memory aware file system (such as XFS, EXT4 or NTFS) is used, files on the file system can be accessed using the usual file system APIs in the OS. Alternatively, it can perform what is known as load and store operations against memory maps of the files on the device. This allows PMEM aware applications such as SQL Server to access files on the device without traversing the traditional storage stack.
+Persistent memory (PMEM) devices are byte-addressable and if a direct access (DAX) persistent-memory aware file system (such as XFS, EXT4, or NTFS) is used, files on the file system can be accessed using the usual file system APIs in the OS. Alternatively, it can perform what is known as load and store operations against memory maps of the files on the device. This allows PMEM aware applications such as SQL Server to access files on the device without traversing the traditional storage stack.
 
 The hybrid buffer pool uses this ability to perform load and store operations against memory mapped files, to leverage the PMEM device as cache for the buffer pool as well as storing database files. This creates the unique situation where both a logical read and a physical read are essentially the same operation. Persistent memory devices are accessible via the memory bus just like regular volatile DRAM.
 
 Only clean data pages are cached on the device for the Hybrid Buffer Pool. When a page is marked as dirty, it is copied to the DRAM buffer pool before eventually being written back to the PMEM device and marked as clean again. This will occur during regular checkpoint operations in a manner similar to that performed against a standard block device.
 
-The hybrid buffer pool feature is available for both Windows and Linux. The PMEM device must be formatted with a filesystem that supports DAX (DirectAccess). XFS, EXT4, and NTFS file systems all have support for DAX. SQL Server will automatically detect if data files reside on an appropriately formatted PMEM device and perform memory mapping of database files upon startup, when a new database is attached, restored or created.
+The hybrid buffer pool feature is available for both Windows and Linux. The PMEM device must be formatted with a filesystem that supports DAX (DirectAccess). XFS, EXT4, and NTFS file systems all have support for DAX. SQL Server will automatically detect if data files reside on an appropriately formatted PMEM device and perform memory mapping of database files upon startup, when a new database is attached, restored, or created.
 
 For more on Windows Server support for PMEM, also referred to as Storage Class Memory (SCM) see [deploy persistent memory on Windows Server](/windows-server/storage/storage-spaces/deploy-pmem/).
 
-For more on configuring SQL Server on Linux for PMEM devices [deploy persistent memory](../../linux/sql-server-linux-configure-pmem.md).
+For more on configuring SQL Server on Linux for PMEM devices see [persistent memory configuration for Linux](../../linux/sql-server-linux-configure-pmem.md).
 
 
 ## Enable hybrid buffer pool
@@ -94,12 +94,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 When formatting your PMEM device on Windows, use the largest allocation unit size available for NTFS (2 MB in Windows Server 2019) and ensure the device has been formatted for DAX (Direct Access).
 
-Use the large page memory allocation model which can be enabled with [trace flag 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). This is a startup trace flag.
+Use the large page memory allocation model, which can be enabled with [trace flag 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Trace flag 834 is a startup trace flag.
 
 Using the large page memory allocation model requires the use of [Locked Pages in Memory](./enable-the-lock-pages-in-memory-option-windows.md) on Windows.
 
 Files sizes should be a multiple of 2 MB (modulo 2 MB should equal zero).
 
-If the server scoped setting for hybrid buffer pool is disabled, hybrid buffer pool will not be used by any user database.
+If the server scoped setting for hybrid buffer pool is disabled, the feature will not be used by any user database.
 
-If the server scoped setting for hybrid buffer pool has been enabled, you can disable hybrid buffer pool usage for individual user databases by following the steps to disable hybrid buffer pool at the database scoped level for those user databases.
+If the server scoped setting for hybrid buffer pool is enabled, you can use the database scoped setting to disable the feature for individual user databases.

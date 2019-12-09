@@ -1,22 +1,20 @@
 ---
-title: "Filter Events Based on the Event End Time (SQL Server Profiler)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
+title: Filter Events Based on the Event End Time
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  -"event end times [SQL Server]"
-  -"filters [SQL Server], traces"
-  -"traces [SQL Server], filters"
-  -"traces [SQL Server], events"
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: "03/14/2017"
 ---
+
 # Filter Events Based on the Event End Time (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to filter trace events based on the event ending time by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

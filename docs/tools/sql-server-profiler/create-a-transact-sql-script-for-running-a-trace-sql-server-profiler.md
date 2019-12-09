@@ -6,9 +6,6 @@ ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  -"traces [SQL Server], running"
-  -"scripts [SQL Server], traces"
 ms.assetid: 6b0e2519-998d-40d5-b8ba-5e6a773f91a6
 author: markingmyname
 ms.author: maghan

@@ -6,9 +6,6 @@ ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  -"templates [SQL Server], traces"
-  -"trace templates [SQL Server]"
 ms.assetid: 25a3b845-affb-4b2a-a382-198a4bdd9ad1
 author: markingmyname
 ms.author: maghan

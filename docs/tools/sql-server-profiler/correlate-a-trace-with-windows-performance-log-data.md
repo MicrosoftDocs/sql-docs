@@ -6,12 +6,6 @@ ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  -"correlating trace with log data"
-  -"logs [SQL Server], traces"
-  -"Profiler [SQL Server Profiler], correlating trace with log data"
-  -"traces [SQL Server], logs"
-  -"SQL Server Profiler, correlating trace with log data"
 ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
 author: markingmyname
 ms.author: maghan

@@ -6,10 +6,6 @@ ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  -"events [SQL Server], Showplan"
-  -"Profiler [SQL Server Profiler], Showplan results"
-  -"SQL Server Profiler, Showplan results"
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 author: markingmyname
 ms.author: maghan

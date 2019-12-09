@@ -76,7 +76,7 @@ If you are updating existing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.m
 
 ## <a id="CU18"></a> CU18 (December 2019)
 
-This is the Cumulative Update 18 (CU17) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3257.3. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4527377](https://support.microsoft.com/en-us/help/4527377).
+This is the Cumulative Update 18 (CU18) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3257.3. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4527377](https://support.microsoft.com/en-us/help/4527377).
 
 ### Package details
 

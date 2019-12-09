@@ -52,7 +52,7 @@ ms.author: "jroth"
 |hostname|**nchar(128)**|Name of the workstation.|  
 |program_name|**nchar(128)**|Name of the application program.|  
 |hostprocess|**nchar(10)**|Workstation process ID number.|  
-|cmd|**nchar(16)**|Command currently being executed.|  
+|cmd|**nchar(26)**|Command currently being executed.|  
 |nt_domain|**nchar(128)**|Windows domain for the client, if using Windows Authentication, or a trusted connection.|  
 |nt_username|**nchar(128)**|Windows user name for the process, if using Windows Authentication, or a trusted connection.|  
 |net_address|**nchar(12)**|Assigned unique identifier for the network adapter on the workstation of each user. When a user logs in, this identifier is inserted in the net_address column.|  

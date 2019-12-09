@@ -1,49 +1,22 @@
 ---
-title: "SQL Server Profiler dialog boxes | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/07/2017"
+title: SQL Server Profiler dialog boxes
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: "reference"
-f1_keywords: 
-  - "sql13.pro.traceproperties.general.f1;"
-  - "sql13.pro.traceproperties.eventsselection.f1;"
-  - "sql13.pro.traceproperties.eventsselection.f1"
-  - "sql13.pro.traceproperties.general.f1"
-  - "sql13.pro.tracetemplateproperties"
-  - "sql13.pro.edittracetemplateproperties.general.f1"
-  - "sql13.pro.edittracetemplateproperties.eventsselection.f1"
-  - "sql13.pro.tracefileproperties.general.f1"
-  - "sql13.pro.tracefileproperties.eventsselection.f1"
-  - "sql13.pro.performancecounterlimit.f1"
-  - "sql13.pro.replay.tools.generaloptions.f1"
-  - "sql13.pro.replay.tools.sourcetable.f1"
-  - "sql13.pro.replay.tools.destinationtable.f1"
-  - "sql13.pro.replay.generaloptions.f1"
-  - "sql13.pro.replay.generaloptions.advanced.f1"
-  - "sql13.pro.find.f1"
-  - "sql13.pro.organize.columns.f1"
-  - "sql13.pro.editfilter.f1"
-helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], help"
-  - "SQL Server Profiler, help"
-  - "Trace Properties dialog box"
-  - "Trace Template Properties dialog box"
-  - "Trace Files Properties dialog box"
-  - "Performance Counters List dialog box"
-  - "General Options dialog box"
-  - "Select Workload Table dialog box"
-  - "Destination Table dialog box"
-  - "Replay Configuration dialog box"
-  - "Find dialog box"
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 07/07/2017
 ---
+
 # SQL Server Profiler dialog boxes
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is a tool that captures [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events from a server. The events are saved in a trace file that can later be analyzed or used to replay a specific series of steps when trying to diagnose a problem. The following are the commands and settings available in the dialog boxes of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 ## Trace properties
 ### General tab
@@ -260,7 +233,7 @@ Use the **Find** dialog box to search a trace for specific characters or words. 
 
 |Item|Description
 |---|---
-|**Find what**|Enter the text that you want to search for. The search matches any string containing the specified string. For example, searching for "Completed" matches "SQL:BatchCompleted." Wild card characters (*, ?, etc.) are not supported.  
+|**Find what**|Enter the text that you want to search for. The search matches any string containing the specified string. For example, searching for"Completed" matches"SQL:BatchCompleted." Wild card characters (*, ?, etc.) are not supported.  
 |**Search in column**|Click a data column to search, or click **\<All columns>** to search all the data columns in the trace.  
 |**Match case**|Finds text that has the same case as the **Find what** box. Clear this check box to find examples in the trace that are in both uppercase and lowercase text characters.  
 |**Match whole word**|Restricts the search to entire words. Clear the **Match whole word** check box to search for characters within a word.  

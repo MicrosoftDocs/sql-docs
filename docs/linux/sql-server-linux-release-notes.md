@@ -104,7 +104,7 @@ SQL Server 2017 containers now have a new tagging pattern as described below wit
 
 `mcr.microsoft.com/mssql/server:2017-CU18-ubuntu-16.04`
 
-This will pull SQL Server 2017 CU18 based on the Ubuntu 16.04 container
+This will pull SQL Server 2017 CU18 based on the Ubuntu 16.04 container.
 
 `mcr.microsoft.com/mssql/server:2017-latest`
 

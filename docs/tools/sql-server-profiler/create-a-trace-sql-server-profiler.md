@@ -1,12 +1,6 @@
 ---
-<<<<<<< HEAD
-title: "Create a Trace (SQL Server Profiler)"
-ms.custom: seo-lt-2019
-ms.date: "08/01/2016"
-=======
 title: Create a Trace
 titleSuffix: SQL Server Profiler
->>>>>>> a481a438b2b10df468258a329ec212936fac3d4c
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

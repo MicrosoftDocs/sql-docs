@@ -1,12 +1,6 @@
 ---
-<<<<<<< HEAD
-title: "Set a Maximum Table Size for a Trace Table (SQL Server Profiler)"
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-=======
 title: Set a Maximum Table Size for a Trace Table
 titleSuffix: SQL Server Profiler
->>>>>>> a481a438b2b10df468258a329ec212936fac3d4c
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -16,7 +10,7 @@ ms.assetid: d0ae83e5-1c88-4a2e-be05-2c341280b978
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ---
 
 # Set a Maximum Table Size for a Trace Table (SQL Server Profiler)

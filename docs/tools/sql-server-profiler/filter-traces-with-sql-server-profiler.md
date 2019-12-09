@@ -1,12 +1,6 @@
 ---
-<<<<<<< HEAD
-title: "Filter Traces with SQL Server Profiler"
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-=======
 title: Filter Traces
 titleSuffix: SQL Server Profiler
->>>>>>> a481a438b2b10df468258a329ec212936fac3d4c
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -16,7 +10,7 @@ ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ---
 
 # Filter Traces with SQL Server Profiler

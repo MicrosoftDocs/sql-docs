@@ -1,12 +1,6 @@
 ---
-<<<<<<< HEAD
-title: "Modify Trace Templates"
-ms.custom: seo-lt-2019
-ms.date: "07/12/2017"
-=======
 title: Modify Trace Templates
 titleSuffix: SQL Server Profiler
->>>>>>> a481a438b2b10df468258a329ec212936fac3d4c
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

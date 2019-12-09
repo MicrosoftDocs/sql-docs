@@ -1,12 +1,6 @@
 ---
-<<<<<<< HEAD
-title: "Replay a Trace File (SQL Server Profiler)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-=======
 title: Replay a Trace File
 titleSuffix: SQL Server Profiler
->>>>>>> a481a438b2b10df468258a329ec212936fac3d4c
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -16,7 +10,7 @@ ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ---
 
 # Replay a Trace File (SQL Server Profiler)

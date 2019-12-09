@@ -1,12 +1,6 @@
 ---
-<<<<<<< HEAD
-title: "Filter Events Based on the Event End Time (SQL Server Profiler)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-=======
 title: Filter Events Based on the Event End Time
 titleSuffix: SQL Server Profiler
->>>>>>> a481a438b2b10df468258a329ec212936fac3d4c
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -16,7 +10,7 @@ ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ---
 
 # Filter Events Based on the Event End Time (SQL Server Profiler)

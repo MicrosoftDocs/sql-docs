@@ -1,12 +1,6 @@
 ---
-<<<<<<< HEAD
-title: "Derive a Template from a Trace File or Trace Table (SQL Server Profiler)"
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-=======
 title: Derive a Template from a Trace File or Trace Table
 titleSuffix: SQL Server Profiler
->>>>>>> a481a438b2b10df468258a329ec212936fac3d4c
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

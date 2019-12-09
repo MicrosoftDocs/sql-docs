@@ -1,7 +1,6 @@
 ---
-title: "Analyze Queries with SHOWPLAN Results in SQL Server Profiler"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Analyze Queries with SHOWPLAN Results
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -14,8 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # Analyze Queries with SHOWPLAN Results in SQL Server Profiler
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   You can add Showplan event classes to a trace definition that cause [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to gather and display query plan information in the trace. It is also possible to extract Showplan events from the other events collected in the trace and to save these Showplan events in a separate XML file.  
   

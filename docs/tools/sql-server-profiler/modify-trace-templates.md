@@ -1,6 +1,6 @@
 ---
 title: "Modify Trace Templates"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "07/12/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

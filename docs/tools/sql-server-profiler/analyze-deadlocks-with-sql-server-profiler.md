@@ -1,7 +1,5 @@
 ---
-title: "Analyze Deadlocks with SQL Server Profiler"
-ms.custom: ""
-ms.date: "03/03/2017"
+title: Analyze Deadlocks with SQL Server Profiler
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -19,7 +17,10 @@ helpviewer_keywords:
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/03/2017
 ---
+
 # Analyze Deadlocks with SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to identify the cause of a deadlock. A deadlock occurs when there is a cyclic dependency between two or more threads, or processes, for some set of resources within SQL Server. Using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], you can create a trace that records, replays, and displays deadlock events for analysis.  

@@ -1,6 +1,6 @@
 ---
 title: "View and Analyze Traces with SQL Server Profiler"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

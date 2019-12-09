@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Profiler"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "11/27/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"

@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Enable the table space usage sample insight widget"
+title: Enable the table space usage sample insight widget
 titleSuffix: Azure Data Studio
 description: This tutorial demonstrates how to enable the table space usage sample insight widget on the Azure Data Studio database dashboard.
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.topic: "tutorial"
 author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
-ms.custom: "seodec18"
-ms.date: "09/10/2019"
+ms.custom: seodec18; seo-lt-2019
+ms.date: 09/10/2019
 ---
 
 # Tutorial: Enable the table space usage sample insight widget using [!INCLUDE[name-sos](../includes/name-sos-short.md)]

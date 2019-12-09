@@ -1,33 +1,22 @@
 ---
-title: "SQL Server Profiler"
-ms.custom: seo-lt-2019
-ms.date: "11/27/2018"
+title: SQL Server Profiler
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  -"Profiler [SQL Server Profiler], about SQL Server Profiler"
-  -"traces [SQL Server], SQL Server Profiler"
-  -"database monitoring [SQL Server], SQL Server Profiler"
-  -"tuning databases [SQL Server], SQL Server Profiler"
-  -"SQL Server Profiler"
-  -"server performance [SQL Server], SQL Server Profiler"
-  -"Profiler [SQL Server Profiler]"
-  -"tracing [SQL Server]"
-  -"monitoring performance [SQL Server], SQL Server Profiler"
-  -"events [SQL Server], SQL Server Profiler"
-  -"SQL Server Profiler, about SQL Server Profiler"
-  -"tools [SQL Server], SQL Server Profiler"
-  -"database performance [SQL Server], SQL Server Profiler"
-  -"trace [SQL Server]"
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 11/27/2018
 ---
+
 # SQL Server Profiler
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is an interface to create and manage traces and analyze and replay trace results. Events are saved in a trace file that can later be analyzed or used to replay a specific series of steps when trying to diagnose a problem.  
   
 > [!IMPORTANT]

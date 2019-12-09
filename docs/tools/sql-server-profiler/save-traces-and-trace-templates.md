@@ -1,28 +1,23 @@
 ---
-title: "Save Traces and Trace Templates"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
+title: Save Traces and Trace Templates
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  -"saving traces"
-  -"traces [SQL Server], saving"
-  -"templates [SQL Server], SQL Server Profiler"
-  -"Profiler [SQL Server Profiler], templates"
-  -"trace templates [SQL Server]"
-  -"exporting trace templates"
-  -"importing trace templates"
-  -"SQL Server Profiler, templates"
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # Save Traces and Trace Templates
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  It is important to distinguish saving trace files from saving trace templates. Saving a trace file involves saving the captured event data to a specified place. Saving a trace template involves saving the definition of the trace, such as specified data columns, event classes, or filters.  
+
+It is important to distinguish saving trace files from saving trace templates. Saving a trace file involves saving the captured event data to a specified place. Saving a trace template involves saving the definition of the trace, such as specified data columns, event classes, or filters.  
   
 ## Saving Traces  
  Save captured event data to a file or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table when you need to analyze or replay the captured data at a later time. Use a trace file to do the following:  

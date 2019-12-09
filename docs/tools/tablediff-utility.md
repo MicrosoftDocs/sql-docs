@@ -1,5 +1,5 @@
 ---
-title: "tablediff Utility | Microsoft Docs"
+title: "tablediff Utility"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

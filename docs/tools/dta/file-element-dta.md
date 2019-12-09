@@ -1,5 +1,5 @@
 ---
-title: "File Element (DTA) | Microsoft Docs"
+title: "File Element (DTA)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

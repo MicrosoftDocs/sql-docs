@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Properties (Service Tab) | Microsoft Docs"
+title: "SQL Server Properties (Service Tab)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

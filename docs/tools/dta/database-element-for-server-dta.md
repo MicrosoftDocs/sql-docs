@@ -1,5 +1,5 @@
 ---
-title: "Database Element for Server (DTA) | Microsoft Docs"
+title: "Database Element for Server (DTA)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

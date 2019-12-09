@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Browser Properties (Service Tab) | Microsoft Docs"
+title: "SQL Server Browser Properties (Service Tab)"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Analysis Server Properties (Advanced Tab) | Microsoft Docs"
+title: "Analysis Server Properties (Advanced Tab)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

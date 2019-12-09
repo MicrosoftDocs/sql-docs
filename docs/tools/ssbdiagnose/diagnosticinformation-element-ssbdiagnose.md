@@ -1,5 +1,5 @@
 ---
-title: "DiagnosticInformation Element (ssbdiagnose) | Microsoft Docs"
+title: "DiagnosticInformation Element (ssbdiagnose)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

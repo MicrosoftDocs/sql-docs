@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Services | Microsoft Docs"
+title: "SQL Server Services"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

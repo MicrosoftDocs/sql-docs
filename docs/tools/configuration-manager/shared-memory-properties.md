@@ -1,5 +1,5 @@
 ---
-title: "Shared Memory Properties | Microsoft Docs"
+title: "Shared Memory Properties"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

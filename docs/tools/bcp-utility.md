@@ -1,5 +1,5 @@
 ﻿---
-title: "bcp Utility | Microsoft Docs"
+title: "bcp Utility"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: tools-other

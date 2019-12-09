@@ -1,5 +1,5 @@
 ---
-title: "Filter Events Based on the Event Start Time (SQL Server Profiler) | Microsoft Docs"
+title: "Filter Events Based on the Event Start Time (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

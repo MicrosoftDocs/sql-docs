@@ -1,5 +1,5 @@
 ---
-title: "DTAInput Element (DTA) | Microsoft Docs"
+title: "DTAInput Element (DTA)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

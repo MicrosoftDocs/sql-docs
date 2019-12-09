@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Native Client Configuration Properties (Flags Tab) | Microsoft Docs"
+title: "SQL Server Native Client Configuration Properties (Flags Tab)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

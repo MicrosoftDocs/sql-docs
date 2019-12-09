@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Configuration Manager Help | Microsoft Docs"
+title: "SQL Server Configuration Manager Help"
 ms.custom: ""
 ms.date: "02/01/2018"
 ms.prod: sql

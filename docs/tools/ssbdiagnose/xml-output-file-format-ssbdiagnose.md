@@ -1,5 +1,5 @@
 ---
-title: "XML Output File Format (ssbdiagnose) | Microsoft Docs"
+title: "XML Output File Format (ssbdiagnose)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

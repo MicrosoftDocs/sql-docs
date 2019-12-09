@@ -1,5 +1,5 @@
 ---
-title: "TCP/IP Properties (IP Addresses Tab) | Microsoft Docs"
+title: "TCP/IP Properties (IP Addresses Tab)"
 ms.custom: ""
 ms.date: "08/24/2016"
 ms.prod: sql

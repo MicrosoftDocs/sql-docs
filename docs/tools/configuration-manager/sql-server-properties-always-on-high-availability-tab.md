@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Properties (Always On High Availability Tab) | Microsoft Docs"
+title: "SQL Server Properties (Always On High Availability Tab)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

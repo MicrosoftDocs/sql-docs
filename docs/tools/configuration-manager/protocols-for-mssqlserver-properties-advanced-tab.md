@@ -1,5 +1,5 @@
 ---
-title: "Protocols for MSSQLSERVER Properties (Advanced Tab) | Microsoft Docs"
+title: "Protocols for MSSQLSERVER Properties (Advanced Tab)"
 ms.custom: ""
 ms.date: 01/24/2019
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Viewing the Windows Application Log | Microsoft Docs"
+title: "Viewing the Windows Application Log"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Network Configuration | Microsoft Docs"
+title: "SQL Server Network Configuration"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

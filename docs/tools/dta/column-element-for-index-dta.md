@@ -1,5 +1,5 @@
 ---
-title: "Column Element for Index (DTA) | Microsoft Docs"
+title: "Column Element for Index (DTA)"
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Set a Maximum Table Size for a Trace Table (SQL Server Profiler) | Microsoft Docs"
+title: "Set a Maximum Table Size for a Trace Table (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

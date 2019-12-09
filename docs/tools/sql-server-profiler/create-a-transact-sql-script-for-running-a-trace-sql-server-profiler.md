@@ -1,5 +1,5 @@
 ---
-title: "Create a Transact-SQL Script for Running a Trace (SQL Server Profiler) | Microsoft Docs"
+title: "Create a Transact-SQL Script for Running a Trace (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

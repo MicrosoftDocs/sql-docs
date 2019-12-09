@@ -1,5 +1,5 @@
 ---
-title: "Client Protocols - Named Pipes Properties (Protocol Tab) | Microsoft Docs"
+title: "Client Protocols - Named Pipes Properties (Protocol Tab)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "sqlagent90 Application | Microsoft Docs"
+title: "sqlagent90 Application"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

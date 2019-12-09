@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Database Engine Tuning Advisor | Microsoft Docs"
+title: "Tutorial: Database Engine Tuning Advisor"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

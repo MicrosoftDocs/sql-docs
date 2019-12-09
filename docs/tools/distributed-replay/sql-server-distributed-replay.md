@@ -1,20 +1,21 @@
 ---
-title: "SQL Server Distributed Replay | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: SQL Server Distributed Replay
+titleSuffix: Distributed Replay
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "Distributed Replay"
-  - "SQL Server Distributed Replay"
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # SQL Server Distributed Replay
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature helps you assess the impact of future [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upgrades. You can also use it to help assess the impact of hardware and operating system upgrades, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tuning.  
+
+The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature helps you assess the impact of future [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upgrades. You can also use it to help assess the impact of hardware and operating system upgrades, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tuning.  
   
 ## Benefits of Distributed Replay  
  Similar to [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], you can use Distributed Replay to replay a captured trace against an upgraded test environment. Unlike [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], Distributed Replay is not limited to replaying the workload from a single computer.  

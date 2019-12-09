@@ -1,5 +1,5 @@
 ---
-title: "Save Trace Results to a File (SQL Server Profiler) | Microsoft Docs"
+title: "Save Trace Results to a File (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

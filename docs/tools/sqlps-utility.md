@@ -1,5 +1,5 @@
 ---
-title: "sqlps Utility | Microsoft Docs"
+title: "sqlps Utility"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

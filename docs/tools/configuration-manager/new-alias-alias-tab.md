@@ -1,5 +1,5 @@
 ---
-title: "New Alias (Alias Tab) | Microsoft Docs"
+title: "New Alias (Alias Tab)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

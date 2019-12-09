@@ -1,5 +1,5 @@
 ---
-title: "Considerations for Replaying Traces (SQL Server Profiler) | Microsoft Docs"
+title: "Considerations for Replaying Traces (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

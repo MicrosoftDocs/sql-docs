@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Integration Services Properties (Advanced Tab) | Microsoft Docs"
+title: "SQL Server Integration Services Properties (Advanced Tab)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

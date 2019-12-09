@@ -1,5 +1,5 @@
 ---
-title: "Client Protocols Properties (Order Tab) | Microsoft Docs"
+title: "Client Protocols Properties (Order Tab)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

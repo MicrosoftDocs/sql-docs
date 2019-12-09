@@ -1,5 +1,5 @@
 ---
-title: "Run a Trace After It Has Been Paused or Stopped (SQL Server Profiler) | Microsoft Docs"
+title: "Run a Trace After It Has Been Paused or Stopped (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

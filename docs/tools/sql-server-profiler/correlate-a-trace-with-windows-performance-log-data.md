@@ -1,5 +1,5 @@
 ---
-title: "Correlate a Trace with Windows Performance Log Data | Microsoft Docs"
+title: "Correlate a Trace with Windows Performance Log Data"
 ms.custom: ""
 ms.date: "07/12/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Start a Trace Automatically after Connecting to a Server (SQL Server Profiler) | Microsoft Docs"
+title: "Start a Trace Automatically after Connecting to a Server (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

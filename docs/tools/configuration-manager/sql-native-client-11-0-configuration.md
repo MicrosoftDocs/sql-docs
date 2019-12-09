@@ -1,5 +1,5 @@
 ---
-title: "SQL Native Client 11.0 Configuration | Microsoft Docs"
+title: "SQL Native Client 11.0 Configuration"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

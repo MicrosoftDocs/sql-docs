@@ -1,5 +1,5 @@
 ---
-title: "Create a Trace (SQL Server Profiler) | Microsoft Docs"
+title: "Create a Trace (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql

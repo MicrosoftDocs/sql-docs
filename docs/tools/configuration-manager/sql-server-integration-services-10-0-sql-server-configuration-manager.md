@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Integration Services 10.0 (SQL Server Configuration Manager) | Microsoft Docs"
+title: "SQL Server Integration Services 10.0 (SQL Server Configuration Manager)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

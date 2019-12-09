@@ -1,5 +1,5 @@
 ---
-title: "View and Analyze Traces with SQL Server Profiler | Microsoft Docs"
+title: "View and Analyze Traces with SQL Server Profiler"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

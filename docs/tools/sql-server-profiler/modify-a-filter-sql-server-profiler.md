@@ -1,5 +1,5 @@
 ---
-title: "Modify a Filter (SQL Server Profiler) | Microsoft Docs"
+title: "Modify a Filter (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

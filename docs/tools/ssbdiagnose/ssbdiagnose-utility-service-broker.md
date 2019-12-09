@@ -1,5 +1,5 @@
 ---
-title: "ssbdiagnose Utility (Service Broker) | Microsoft Docs"
+title: "ssbdiagnose Utility (Service Broker)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "dta Utility | Microsoft Docs"
+title: "dta Utility"
 ms.custom: ""
 ms.date: "01/09/2017"
 ms.prod: sql

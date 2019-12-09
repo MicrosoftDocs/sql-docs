@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Profiler dialog boxes | Microsoft Docs"
+title: "SQL Server Profiler dialog boxes"
 ms.custom: ""
 ms.date: "07/07/2017"
 ms.prod: sql

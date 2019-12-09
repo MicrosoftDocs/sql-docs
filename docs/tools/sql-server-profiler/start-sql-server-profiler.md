@@ -1,5 +1,5 @@
 ---
-title: "Run SQL Server Profiler | Microsoft Docs"
+title: "Run SQL Server Profiler"
 ms.custom: ""
 ms.date: "07/07/2017"
 ms.prod: sql

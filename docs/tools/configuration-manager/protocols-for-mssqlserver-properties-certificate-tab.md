@@ -1,5 +1,5 @@
 ---
-title: "Protocols for MSSQLSERVER Properties (Certificate Tab) | Microsoft Docs"
+title: "Protocols for MSSQLSERVER Properties (Certificate Tab)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

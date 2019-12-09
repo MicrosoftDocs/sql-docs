@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Agent &lt;server&gt; (SQL Server Configuration Manager) | Microsoft Docs"
+title: "SQL Server Agent &lt;server&gt; (SQL Server Configuration Manager)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

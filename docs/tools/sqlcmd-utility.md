@@ -1,5 +1,5 @@
 ---
-title: "sqlcmd Utility | Microsoft Docs"
+title: "sqlcmd Utility"
 ms.custom: ""
 ms.date: "11/27/2018"
 ms.prod: sql

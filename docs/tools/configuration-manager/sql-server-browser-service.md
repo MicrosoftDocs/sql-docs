@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Browser Service | Microsoft Docs"
+title: "SQL Server Browser Service"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

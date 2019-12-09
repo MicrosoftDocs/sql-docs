@@ -1,5 +1,5 @@
 ---
-title: "sqlservr Application | Microsoft Docs"
+title: "sqlservr Application"
 ms.custom: ""
 ms.date: "08/01/2019"
 ms.prod: sql

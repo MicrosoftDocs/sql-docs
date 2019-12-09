@@ -1,5 +1,5 @@
 ---
-title: "Profiler Utility | Microsoft Docs"
+title: "Profiler Utility"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

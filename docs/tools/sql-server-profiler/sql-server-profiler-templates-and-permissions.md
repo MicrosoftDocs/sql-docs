@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Profiler Templates and Permissions | Microsoft Docs"
+title: "SQL Server Profiler Templates and Permissions"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,7 +1,6 @@
 ---
-title: "Install Distributed Replay | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Install Distributed Replay
+titleSuffix: Distributed Replay
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -9,10 +8,15 @@ ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: "MikeRayMSFT"
 ms.author: "mikeray"
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # Install Distributed Replay
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  You can install Distributed Replay in one of three ways:  
+
+You can install Distributed Replay in one of three ways:  
   
 -   [Install Distributed Replay from the Installation Wizard](#bkmk_wizard)  
   

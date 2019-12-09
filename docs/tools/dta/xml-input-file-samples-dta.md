@@ -1,5 +1,5 @@
 ---
-title: "XML Input File Samples (DTA) | Microsoft Docs"
+title: "XML Input File Samples (DTA)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

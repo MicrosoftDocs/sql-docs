@@ -1,5 +1,5 @@
 ---
-title: "Index Element (DTA) | Microsoft Docs"
+title: "Index Element (DTA)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

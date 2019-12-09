@@ -1,5 +1,5 @@
 ---
-title: "Analyze Deadlocks with SQL Server Profiler | Microsoft Docs"
+title: "Analyze Deadlocks with SQL Server Profiler"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

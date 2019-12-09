@@ -1,5 +1,5 @@
 ---
-title: "Monitoring the Error Logs | Microsoft Docs"
+title: "Monitoring the Error Logs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

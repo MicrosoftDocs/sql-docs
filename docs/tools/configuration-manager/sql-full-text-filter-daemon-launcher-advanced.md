@@ -1,5 +1,5 @@
 ---
-title: "SQL Full-text Filter Daemon Launcher (Advanced) | Microsoft Docs"
+title: "SQL Full-text Filter Daemon Launcher (Advanced)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

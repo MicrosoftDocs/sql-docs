@@ -1,7 +1,6 @@
 ---
-title: "Complete the Post-Installation Steps | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Complete the Post-Installation Steps
+titleSuffix: Distributed Replay
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -10,7 +9,10 @@ ms.topic: conceptual
 ms.assetid: 0a788a2a-9b4f-4bfc-b1b5-83eeb1ea9ab2
 author: "MikeRayMSFT"
 ms.author: "mikeray"
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # Complete the Post-Installation Steps
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   After you install Distributed Replay you must modify the Distributed Replay controller and client services accounts.  

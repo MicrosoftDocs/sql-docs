@@ -1,5 +1,5 @@
 ---
-title: "Modify Trace Templates | Microsoft Docs"
+title: "Modify Trace Templates"
 ms.custom: ""
 ms.date: "07/12/2017"
 ms.prod: sql

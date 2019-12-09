@@ -1,5 +1,5 @@
 ---
-title: "Lesson 3: Using the dta Command Prompt Utility | Microsoft Docs"
+title: "Lesson 3: Using the dta Command Prompt Utility"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

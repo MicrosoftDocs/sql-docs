@@ -1,5 +1,5 @@
 ---
-title: "Replay a Trace File (SQL Server Profiler) | Microsoft Docs"
+title: "Replay a Trace File (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

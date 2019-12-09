@@ -1,5 +1,5 @@
 ---
-title: "Extract a Script from a Trace (SQL Server Profiler) | Microsoft Docs"
+title: "Extract a Script from a Trace (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

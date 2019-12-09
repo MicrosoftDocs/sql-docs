@@ -1,5 +1,5 @@
 ---
-title: "NS$&lt;service name&gt; Properties (Advanced Tab) | Microsoft Docs"
+title: "NS$&lt;service name&gt; Properties (Advanced Tab)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

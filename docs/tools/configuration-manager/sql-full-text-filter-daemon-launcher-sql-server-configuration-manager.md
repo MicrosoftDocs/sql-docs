@@ -1,5 +1,5 @@
 ---
-title: "SQL Full-text Filter Daemon Launcher (SQL Server Configuration Manager) | Microsoft Docs"
+title: "SQL Full-text Filter Daemon Launcher (SQL Server Configuration Manager)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

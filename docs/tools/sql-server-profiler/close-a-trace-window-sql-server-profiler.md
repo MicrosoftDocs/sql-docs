@@ -1,5 +1,5 @@
 ---
-title: "Close a Trace Window (SQL Server Profiler) | Microsoft Docs"
+title: "Close a Trace Window (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

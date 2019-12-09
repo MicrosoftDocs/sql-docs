@@ -1,5 +1,5 @@
 ---
-title: "Creating a Valid Connection String Using Shared Memory Protocol | Microsoft Docs"
+title: "Creating a Valid Connection String Using Shared Memory Protocol"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

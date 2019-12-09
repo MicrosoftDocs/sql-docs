@@ -1,5 +1,5 @@
 ---
-title: "Named Pipes Properties | Microsoft Docs"
+title: "Named Pipes Properties"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

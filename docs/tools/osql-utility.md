@@ -1,5 +1,5 @@
 ---
-title: "osql Utility | Microsoft Docs"
+title: "osql Utility"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

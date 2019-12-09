@@ -1,5 +1,5 @@
 ---
-title: "Set Trace Definition Defaults (SQL Server Profiler) | Microsoft Docs"
+title: "Set Trace Definition Defaults (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

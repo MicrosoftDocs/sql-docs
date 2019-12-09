@@ -1,5 +1,5 @@
 ---
-title: "Start a Trace | Microsoft Docs"
+title: "Start a Trace"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

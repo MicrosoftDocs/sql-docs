@@ -1,5 +1,5 @@
 ---
-title: "Unknown Service (Log On Tab) | Microsoft Docs"
+title: "Unknown Service (Log On Tab)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Specify Events and Data Columns for a Trace File (SQL Server Profiler) | Microsoft Docs"
+title: "Specify Events and Data Columns for a Trace File (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

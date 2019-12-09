@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Key Management with key vault"
   - "SQL Server Connector, about"
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ---
 # Extensible Key Management Using Azure Key Vault (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

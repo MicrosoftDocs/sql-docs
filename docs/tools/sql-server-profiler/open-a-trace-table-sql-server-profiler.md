@@ -1,5 +1,5 @@
 ---
-title: "Open a Trace Table (SQL Server Profiler) | Microsoft Docs"
+title: "Open a Trace Table (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "opening trace tables"
+  -"opening trace tables"
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
 author: markingmyname
 ms.author: maghan

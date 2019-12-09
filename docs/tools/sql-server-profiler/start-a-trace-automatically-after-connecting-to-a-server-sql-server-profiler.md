@@ -1,5 +1,5 @@
 ---
-title: "Start a Trace Automatically after Connecting to a Server (SQL Server Profiler) | Microsoft Docs"
+title: "Start a Trace Automatically after Connecting to a Server (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "automatic trace start"
-  - "traces [SQL Server], starting"
-  - "starting trace automatically"
+  -"automatic trace start"
+  -"traces [SQL Server], starting"
+  -"starting trace automatically"
 ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
 author: markingmyname
 ms.author: maghan

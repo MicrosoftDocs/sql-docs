@@ -1,5 +1,5 @@
 ---
-title: "Export a Trace Template (SQL Server Profiler) | Microsoft Docs"
+title: "Export a Trace Template (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "templates [SQL Server], traces"
-  - "trace templates [SQL Server]"
-  - "exporting trace templates"
+  -"templates [SQL Server], traces"
+  -"trace templates [SQL Server]"
+  -"exporting trace templates"
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 author: markingmyname
 ms.author: maghan

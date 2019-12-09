@@ -1,5 +1,5 @@
 ---
-title: "Create a Trace Template (SQL Server Profiler) | Microsoft Docs"
+title: "Create a Trace Template (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "templates [SQL Server], traces"
-  - "trace templates [SQL Server]"
-  - "saving trace template"
+  -"templates [SQL Server], traces"
+  -"trace templates [SQL Server]"
+  -"saving trace template"
 ms.assetid: 025868b0-3790-4cda-8757-5a58327bfba0
 author: markingmyname
 ms.author: maghan

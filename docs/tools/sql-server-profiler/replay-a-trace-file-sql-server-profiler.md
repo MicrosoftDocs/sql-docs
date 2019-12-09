@@ -1,5 +1,5 @@
 ---
-title: "Replay a Trace File (SQL Server Profiler) | Microsoft Docs"
+title: "Replay a Trace File (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "traces [SQL Server], replaying"
-  - "replaying traces"
+  -"traces [SQL Server], replaying"
+  -"replaying traces"
 ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
 author: markingmyname
 ms.author: maghan

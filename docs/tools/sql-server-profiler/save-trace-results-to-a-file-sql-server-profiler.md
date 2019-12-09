@@ -1,5 +1,5 @@
 ---
-title: "Save Trace Results to a File (SQL Server Profiler) | Microsoft Docs"
+title: "Save Trace Results to a File (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "saving traces"
-  - "traces [SQL Server], saving"
+  -"saving traces"
+  -"traces [SQL Server], saving"
 ms.assetid: ac528747-0c19-4f3d-96f5-44c762a4abed
 author: markingmyname
 ms.author: maghan

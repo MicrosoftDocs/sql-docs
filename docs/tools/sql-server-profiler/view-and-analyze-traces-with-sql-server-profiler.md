@@ -1,5 +1,5 @@
 ---
-title: "View and Analyze Traces with SQL Server Profiler | Microsoft Docs"
+title: "View and Analyze Traces with SQL Server Profiler"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], viewing traces"
-  - "SQL Server Profiler, viewing traces"
-  - "traces [SQL Server], viewing"
-  - "SQL Server Profiler, troubleshooting"
-  - "troubleshooting [SQL Server], traces"
-  - "events [SQL Server], finding inside trace"
-  - "Profiler [SQL Server Profiler], troubleshooting"
-  - "traces [SQL Server], events"
+  -"Profiler [SQL Server Profiler], viewing traces"
+  -"SQL Server Profiler, viewing traces"
+  -"traces [SQL Server], viewing"
+  -"SQL Server Profiler, troubleshooting"
+  -"troubleshooting [SQL Server], traces"
+  -"events [SQL Server], finding inside trace"
+  -"Profiler [SQL Server Profiler], troubleshooting"
+  -"traces [SQL Server], events"
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 author: markingmyname
 ms.author: maghan

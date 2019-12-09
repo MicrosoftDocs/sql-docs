@@ -1,5 +1,5 @@
 ---
-title: "Derive a Template from a Trace File or Trace Table (SQL Server Profiler) | Microsoft Docs"
+title: "Derive a Template from a Trace File or Trace Table (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "templates [SQL Server], traces"
-  - "trace templates [SQL Server]"
+  -"templates [SQL Server], traces"
+  -"trace templates [SQL Server]"
 ms.assetid: 305817b7-4d23-49fb-9e6c-4d34359877bf
 author: markingmyname
 ms.author: maghan

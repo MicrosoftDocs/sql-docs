@@ -1,5 +1,5 @@
 ---
-title: "Create a Transact-SQL Script for Running a Trace (SQL Server Profiler) | Microsoft Docs"
+title: "Create a Transact-SQL Script for Running a Trace (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "traces [SQL Server], running"
-  - "scripts [SQL Server], traces"
+  -"traces [SQL Server], running"
+  -"scripts [SQL Server], traces"
 ms.assetid: 6b0e2519-998d-40d5-b8ba-5e6a773f91a6
 author: markingmyname
 ms.author: maghan

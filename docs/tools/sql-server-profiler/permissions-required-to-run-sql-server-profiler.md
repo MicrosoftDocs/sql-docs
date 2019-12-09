@@ -1,5 +1,5 @@
 ---
-title: "Permissions Required to Run SQL Server Profiler | Microsoft Docs"
+title: "Permissions Required to Run SQL Server Profiler"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,11 +8,11 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], permissions"
-  - "traces [SQL Server], replaying"
-  - "replaying traces"
-  - "SQL Server Profiler, permissions"
-  - "security [SQL Server], SQL Server Profiler"
+  -"Profiler [SQL Server Profiler], permissions"
+  -"traces [SQL Server], replaying"
+  -"replaying traces"
+  -"SQL Server Profiler, permissions"
+  -"security [SQL Server], SQL Server Profiler"
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 author: markingmyname
 ms.author: maghan
@@ -57,7 +57,7 @@ ms.author: maghan
   
  The following diagram shows this process of checking permission when replaying traces:  
   
- ![SQL Server Profiler replay trace permissions](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "SQL Server Profiler replay trace permissions")  
+ ![SQL Server Profiler replay trace permissions](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif"SQL Server Profiler replay trace permissions")  
   
 ## See Also  
  [SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   

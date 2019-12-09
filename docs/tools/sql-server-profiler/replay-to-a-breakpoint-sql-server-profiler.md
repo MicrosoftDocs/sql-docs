@@ -1,5 +1,5 @@
 ---
-title: "Replay to a Breakpoint (SQL Server Profiler) | Microsoft Docs"
+title: "Replay to a Breakpoint (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "breakpoints [SQL Server]"
-  - "traces [SQL Server], replaying"
+  -"breakpoints [SQL Server]"
+  -"traces [SQL Server], replaying"
 ms.assetid: 3caf751e-df3b-40c7-b5e8-4490ae178e0c
 author: markingmyname
 ms.author: maghan

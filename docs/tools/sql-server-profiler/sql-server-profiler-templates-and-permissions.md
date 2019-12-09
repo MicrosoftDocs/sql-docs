@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Profiler Templates and Permissions | Microsoft Docs"
+title: "SQL Server Profiler Templates and Permissions"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], about SQL Server Profiler"
-  - "SQL Server Profiler, about SQL Server Profiler"
+  -"Profiler [SQL Server Profiler], about SQL Server Profiler"
+  -"SQL Server Profiler, about SQL Server Profiler"
 ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
 author: markingmyname
 ms.author: maghan

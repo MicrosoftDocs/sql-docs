@@ -1,5 +1,5 @@
 ---
-title: "Analyze Deadlocks with SQL Server Profiler | Microsoft Docs"
+title: "Analyze Deadlocks with SQL Server Profiler"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "process nodes [SQL Server Profiler]"
-  - "Profiler [SQL Server Profiler], deadlocks"
-  - "deadlocks [SQL Server], identifying cause"
-  - "resource nodes [SQL Server Profiler]"
-  - "graphs [SQL Server Profiler]"
-  - "SQL Server Profiler, deadlocks"
-  - "events [SQL Server], deadlocks"
-  - "edges [SQL Server Profiler]"
+  -"process nodes [SQL Server Profiler]"
+  -"Profiler [SQL Server Profiler], deadlocks"
+  -"deadlocks [SQL Server], identifying cause"
+  -"resource nodes [SQL Server Profiler]"
+  -"graphs [SQL Server Profiler]"
+  -"SQL Server Profiler, deadlocks"
+  -"events [SQL Server], deadlocks"
+  -"edges [SQL Server Profiler]"
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: markingmyname
 ms.author: maghan

@@ -1,5 +1,5 @@
 ---
-title: "Specify Events and Data Columns for a Trace File (SQL Server Profiler) | Microsoft Docs"
+title: "Specify Events and Data Columns for a Trace File (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,11 +8,11 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "adding events"
-  - "traces [SQL Server], data columns"
-  - "deleting events"
-  - "removing events"
-  - "traces [SQL Server], events"
+  -"adding events"
+  -"traces [SQL Server], data columns"
+  -"deleting events"
+  -"removing events"
+  -"traces [SQL Server], events"
 ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
 author: markingmyname
 ms.author: maghan

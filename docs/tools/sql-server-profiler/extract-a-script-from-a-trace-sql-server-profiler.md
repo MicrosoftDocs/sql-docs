@@ -1,5 +1,5 @@
 ---
-title: "Extract a Script from a Trace (SQL Server Profiler) | Microsoft Docs"
+title: "Extract a Script from a Trace (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "scripts [SQL Server], traces"
-  - "extracting script from trace [SQL Server]"
+  -"scripts [SQL Server], traces"
+  -"extracting script from trace [SQL Server]"
 ms.assetid: 431126a6-ff91-4818-8763-4442152bd571
 author: markingmyname
 ms.author: maghan

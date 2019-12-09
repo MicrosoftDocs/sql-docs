@@ -1,5 +1,5 @@
 ---
-title: "Clear a Trace Window (SQL Server Profiler) | Microsoft Docs"
+title: "Clear a Trace Window (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "trace window [SQL Server]"
-  - "clearing trace window"
+  -"trace window [SQL Server]"
+  -"clearing trace window"
 ms.assetid: 8a9f0892-d812-4173-a498-abc36b230147
 author: markingmyname
 ms.author: maghan

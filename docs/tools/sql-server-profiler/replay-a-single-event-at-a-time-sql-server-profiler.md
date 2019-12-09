@@ -1,5 +1,5 @@
 ---
-title: "Replay a Single Event at a Time (SQL Server Profiler) | Microsoft Docs"
+title: "Replay a Single Event at a Time (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "events [SQL Server], replaying single event at a time"
-  - "traces [SQL Server], replaying"
-  - "replaying traces"
+  -"events [SQL Server], replaying single event at a time"
+  -"traces [SQL Server], replaying"
+  -"replaying traces"
 ms.assetid: 220fb192-9636-41a2-b15c-62af6cab8fff
 author: markingmyname
 ms.author: maghan

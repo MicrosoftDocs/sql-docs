@@ -1,5 +1,5 @@
 ---
-title: "Filter Events in a Trace (SQL Server Profiler) | Microsoft Docs"
+title: "Filter Events in a Trace (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "filters [SQL Server], traces"
-  - "traces [SQL Server], filters"
-  - "traces [SQL Server], events"
+  -"filters [SQL Server], traces"
+  -"traces [SQL Server], filters"
+  -"traces [SQL Server], events"
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
 author: markingmyname
 ms.author: maghan

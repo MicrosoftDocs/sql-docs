@@ -1,5 +1,5 @@
 ---
-title: "Filter Events Based on the Event Start Time (SQL Server Profiler) | Microsoft Docs"
+title: "Filter Events Based on the Event Start Time (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,10 +8,10 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "event start times [SQL Server]"
-  - "filters [SQL Server], traces"
-  - "traces [SQL Server], filters"
-  - "traces [SQL Server], events"
+  -"event start times [SQL Server]"
+  -"filters [SQL Server], traces"
+  -"traces [SQL Server], filters"
+  -"traces [SQL Server], events"
 ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
 author: markingmyname
 ms.author: maghan

@@ -1,5 +1,5 @@
 ---
-title: "Pause a Trace (SQL Server Profiler) | Microsoft Docs"
+title: "Pause a Trace (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,10 +8,10 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "pausing traces"
-  - "temporarily stopping traces"
-  - "traces [SQL Server], pausing"
-  - "stopping traces"
+  -"pausing traces"
+  -"temporarily stopping traces"
+  -"traces [SQL Server], pausing"
+  -"stopping traces"
 ms.assetid: 432b9b0c-b5e7-47f3-a71b-310fb3bf2445
 author: markingmyname
 ms.author: maghan

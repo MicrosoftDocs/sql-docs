@@ -1,5 +1,5 @@
 ---
-title: "Modify Trace Templates | Microsoft Docs"
+title: "Modify Trace Templates"
 ms.custom: ""
 ms.date: "07/12/2017"
 ms.prod: sql
@@ -8,11 +8,11 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "templates [SQL Server], SQL Server Profiler"
-  - "Profiler [SQL Server Profiler], templates"
-  - "trace templates [SQL Server]"
-  - "modifying trace templates"
-  - "SQL Server Profiler, templates"
+  -"templates [SQL Server], SQL Server Profiler"
+  -"Profiler [SQL Server Profiler], templates"
+  -"trace templates [SQL Server]"
+  -"modifying trace templates"
+  -"SQL Server Profiler, templates"
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 author: markingmyname
 ms.author: maghan

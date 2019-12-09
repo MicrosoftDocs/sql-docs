@@ -1,5 +1,5 @@
 ---
-title: "Modify a Filter (SQL Server Profiler) | Microsoft Docs"
+title: "Modify a Filter (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "filters [SQL Server], modifying"
-  - "modifying filters, modifying"
-  - "filters [SQL Server], traces"
+  -"filters [SQL Server], modifying"
+  -"modifying filters, modifying"
+  -"filters [SQL Server], traces"
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
 author: markingmyname
 ms.author: maghan

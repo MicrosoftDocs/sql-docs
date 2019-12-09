@@ -1,5 +1,5 @@
 ---
-title: "Set a Maximum File Size for a Trace File (SQL Server Profiler) | Microsoft Docs"
+title: "Set a Maximum File Size for a Trace File (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "maximum file size for traces"
-  - "size [SQL Server], trace files"
+  -"maximum file size for traces"
+  -"size [SQL Server], trace files"
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 author: markingmyname
 ms.author: maghan
@@ -40,7 +40,7 @@ ms.author: maghan
      With the file rollover option on, the trace continues until it is stopped by some other means. To stop the trace after you have reached the file size limit, disable the file rollover option.  
   
     > [!NOTE]  
-    >  The FAT32 file system limits files to slightly less than 4 gigabytes (GB). When the trace file reaches that size, the trace fails with the error "Not enough disk space." To create larger files, use the NTFS file system.  
+    >  The FAT32 file system limits files to slightly less than 4 gigabytes (GB). When the trace file reaches that size, the trace fails with the error"Not enough disk space." To create larger files, use the NTFS file system.  
   
 ## See Also  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

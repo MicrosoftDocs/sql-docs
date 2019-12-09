@@ -1,5 +1,5 @@
 ---
-title: "View Filter Information (SQL Server Profiler) | Microsoft Docs"
+title: "View Filter Information (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,11 +8,11 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "displaying filter information"
-  - "filters [SQL Server], viewing"
-  - "filters [SQL Server], traces"
-  - "traces [SQL Server], filters"
-  - "viewing filter information"
+  -"displaying filter information"
+  -"filters [SQL Server], viewing"
+  -"filters [SQL Server], traces"
+  -"traces [SQL Server], filters"
+  -"viewing filter information"
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 author: markingmyname
 ms.author: maghan

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Profiler | Microsoft Docs"
+title: "SQL Server Profiler"
 ms.custom: ""
 ms.date: "11/27/2018"
 ms.prod: sql
@@ -8,20 +8,20 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], about SQL Server Profiler"
-  - "traces [SQL Server], SQL Server Profiler"
-  - "database monitoring [SQL Server], SQL Server Profiler"
-  - "tuning databases [SQL Server], SQL Server Profiler"
-  - "SQL Server Profiler"
-  - "server performance [SQL Server], SQL Server Profiler"
-  - "Profiler [SQL Server Profiler]"
-  - "tracing [SQL Server]"
-  - "monitoring performance [SQL Server], SQL Server Profiler"
-  - "events [SQL Server], SQL Server Profiler"
-  - "SQL Server Profiler, about SQL Server Profiler"
-  - "tools [SQL Server], SQL Server Profiler"
-  - "database performance [SQL Server], SQL Server Profiler"
-  - "trace [SQL Server]"
+  -"Profiler [SQL Server Profiler], about SQL Server Profiler"
+  -"traces [SQL Server], SQL Server Profiler"
+  -"database monitoring [SQL Server], SQL Server Profiler"
+  -"tuning databases [SQL Server], SQL Server Profiler"
+  -"SQL Server Profiler"
+  -"server performance [SQL Server], SQL Server Profiler"
+  -"Profiler [SQL Server Profiler]"
+  -"tracing [SQL Server]"
+  -"monitoring performance [SQL Server], SQL Server Profiler"
+  -"events [SQL Server], SQL Server Profiler"
+  -"SQL Server Profiler, about SQL Server Profiler"
+  -"tools [SQL Server], SQL Server Profiler"
+  -"database performance [SQL Server], SQL Server Profiler"
+  -"trace [SQL Server]"
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: markingmyname
 ms.author: maghan

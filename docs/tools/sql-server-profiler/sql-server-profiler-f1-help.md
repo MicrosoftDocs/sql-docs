@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Profiler dialog boxes | Microsoft Docs"
+title: "SQL Server Profiler dialog boxes"
 ms.custom: ""
 ms.date: "07/07/2017"
 ms.prod: sql
@@ -8,36 +8,36 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: "reference"
 f1_keywords: 
-  - "sql13.pro.traceproperties.general.f1;"
-  - "sql13.pro.traceproperties.eventsselection.f1;"
-  - "sql13.pro.traceproperties.eventsselection.f1"
-  - "sql13.pro.traceproperties.general.f1"
-  - "sql13.pro.tracetemplateproperties"
-  - "sql13.pro.edittracetemplateproperties.general.f1"
-  - "sql13.pro.edittracetemplateproperties.eventsselection.f1"
-  - "sql13.pro.tracefileproperties.general.f1"
-  - "sql13.pro.tracefileproperties.eventsselection.f1"
-  - "sql13.pro.performancecounterlimit.f1"
-  - "sql13.pro.replay.tools.generaloptions.f1"
-  - "sql13.pro.replay.tools.sourcetable.f1"
-  - "sql13.pro.replay.tools.destinationtable.f1"
-  - "sql13.pro.replay.generaloptions.f1"
-  - "sql13.pro.replay.generaloptions.advanced.f1"
-  - "sql13.pro.find.f1"
-  - "sql13.pro.organize.columns.f1"
-  - "sql13.pro.editfilter.f1"
+  -"sql13.pro.traceproperties.general.f1;"
+  -"sql13.pro.traceproperties.eventsselection.f1;"
+  -"sql13.pro.traceproperties.eventsselection.f1"
+  -"sql13.pro.traceproperties.general.f1"
+  -"sql13.pro.tracetemplateproperties"
+  -"sql13.pro.edittracetemplateproperties.general.f1"
+  -"sql13.pro.edittracetemplateproperties.eventsselection.f1"
+  -"sql13.pro.tracefileproperties.general.f1"
+  -"sql13.pro.tracefileproperties.eventsselection.f1"
+  -"sql13.pro.performancecounterlimit.f1"
+  -"sql13.pro.replay.tools.generaloptions.f1"
+  -"sql13.pro.replay.tools.sourcetable.f1"
+  -"sql13.pro.replay.tools.destinationtable.f1"
+  -"sql13.pro.replay.generaloptions.f1"
+  -"sql13.pro.replay.generaloptions.advanced.f1"
+  -"sql13.pro.find.f1"
+  -"sql13.pro.organize.columns.f1"
+  -"sql13.pro.editfilter.f1"
 helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], help"
-  - "SQL Server Profiler, help"
-  - "Trace Properties dialog box"
-  - "Trace Template Properties dialog box"
-  - "Trace Files Properties dialog box"
-  - "Performance Counters List dialog box"
-  - "General Options dialog box"
-  - "Select Workload Table dialog box"
-  - "Destination Table dialog box"
-  - "Replay Configuration dialog box"
-  - "Find dialog box"
+  -"Profiler [SQL Server Profiler], help"
+  -"SQL Server Profiler, help"
+  -"Trace Properties dialog box"
+  -"Trace Template Properties dialog box"
+  -"Trace Files Properties dialog box"
+  -"Performance Counters List dialog box"
+  -"General Options dialog box"
+  -"Select Workload Table dialog box"
+  -"Destination Table dialog box"
+  -"Replay Configuration dialog box"
+  -"Find dialog box"
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan
@@ -260,7 +260,7 @@ Use the **Find** dialog box to search a trace for specific characters or words. 
 
 |Item|Description
 |---|---
-|**Find what**|Enter the text that you want to search for. The search matches any string containing the specified string. For example, searching for "Completed" matches "SQL:BatchCompleted." Wild card characters (*, ?, etc.) are not supported.  
+|**Find what**|Enter the text that you want to search for. The search matches any string containing the specified string. For example, searching for"Completed" matches"SQL:BatchCompleted." Wild card characters (*, ?, etc.) are not supported.  
 |**Search in column**|Click a data column to search, or click **\<All columns>** to search all the data columns in the trace.  
 |**Match case**|Finds text that has the same case as the **Find what** box. Clear this check box to find examples in the trace that are in both uppercase and lowercase text characters.  
 |**Match whole word**|Restricts the search to entire words. Clear the **Match whole word** check box to search for characters within a word.  

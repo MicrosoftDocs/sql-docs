@@ -1,5 +1,5 @@
 ---
-title: "Open a Trace File (SQL Server Profiler) | Microsoft Docs"
+title: "Open a Trace File (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "opening trace files"
+  -"opening trace files"
 ms.assetid: f9ec6032-c961-4b00-ba38-208454fd2bdb
 author: markingmyname
 ms.author: maghan

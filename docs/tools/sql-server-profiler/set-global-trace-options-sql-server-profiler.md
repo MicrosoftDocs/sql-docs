@@ -1,5 +1,5 @@
 ---
-title: "Set Global Trace Options (SQL Server Profiler) | Microsoft Docs"
+title: "Set Global Trace Options (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "global trace options [SQL Server]"
+  -"global trace options [SQL Server]"
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: markingmyname
 ms.author: maghan

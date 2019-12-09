@@ -1,5 +1,5 @@
 ---
-title: "Replay Requirements | Microsoft Docs"
+title: "Replay Requirements"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,10 +8,10 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "event classes [SQL Server], replaying traces"
-  - "traces [SQL Server], replaying"
-  - "replaying traces"
-  - "TSQL_Replay template [SQL Server]"
+  -"event classes [SQL Server], replaying traces"
+  -"traces [SQL Server], replaying"
+  -"replaying traces"
+  -"TSQL_Replay template [SQL Server]"
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 author: markingmyname
 ms.author: maghan

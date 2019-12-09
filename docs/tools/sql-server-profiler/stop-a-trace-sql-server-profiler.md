@@ -1,5 +1,5 @@
 ---
-title: "Stop a Trace (SQL Server Profiler) | Microsoft Docs"
+title: "Stop a Trace (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "traces [SQL Server], stopping"
-  - "stopping traces"
+  -"traces [SQL Server], stopping"
+  -"stopping traces"
 ms.assetid: 47c4f33d-63e0-4444-bec8-4c1c91f8e25c
 author: markingmyname
 ms.author: maghan

@@ -1,5 +1,5 @@
 ---
-title: "Start a Trace | Microsoft Docs"
+title: "Start a Trace"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,18 +8,18 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "SQL Server Profiler, stopping traces"
-  - "pausing traces"
-  - "Profiler [SQL Server Profiler], stopping traces"
-  - "Profiler [SQL Server Profiler], starting traces"
-  - "traces [SQL Server], starting"
-  - "SQL Server Profiler, pausing traces"
-  - "traces [SQL Server], stopping"
-  - "Profiler [SQL Server Profiler], pausing traces"
-  - "traces [SQL Server], pausing"
-  - "SQL Server Profiler, starting traces"
-  - "stopping traces"
-  - "starting traces"
+  -"SQL Server Profiler, stopping traces"
+  -"pausing traces"
+  -"Profiler [SQL Server Profiler], stopping traces"
+  -"Profiler [SQL Server Profiler], starting traces"
+  -"traces [SQL Server], starting"
+  -"SQL Server Profiler, pausing traces"
+  -"traces [SQL Server], stopping"
+  -"Profiler [SQL Server Profiler], pausing traces"
+  -"traces [SQL Server], pausing"
+  -"SQL Server Profiler, starting traces"
+  -"stopping traces"
+  -"starting traces"
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 author: markingmyname
 ms.author: maghan

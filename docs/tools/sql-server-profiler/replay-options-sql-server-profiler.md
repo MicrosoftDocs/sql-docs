@@ -1,5 +1,5 @@
 ---
-title: "Replay Options (SQL Server Profiler) | Microsoft Docs"
+title: "Replay Options (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,10 +8,10 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "traces [SQL Server], replaying"
-  - "replaying traces"
-  - "health monitor [SQL Server]"
-  - "Replay Configuration dialog box"
+  -"traces [SQL Server], replaying"
+  -"replaying traces"
+  -"health monitor [SQL Server]"
+  -"Replay Configuration dialog box"
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: markingmyname
 ms.author: maghan

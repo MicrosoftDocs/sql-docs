@@ -1,5 +1,5 @@
 ---
-title: "Filter Server Process IDs (SPIDs) in a Trace (SQL Server Profiler) | Microsoft Docs"
+title: "Filter Server Process IDs (SPIDs) in a Trace (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "filters [SQL Server], traces"
-  - "filters [SQL Server], SPIDs"
-  - "traces [SQL Server], filters"
+  -"filters [SQL Server], traces"
+  -"filters [SQL Server], SPIDs"
+  -"traces [SQL Server], filters"
 ms.assetid: f5945c39-be6b-4632-91cb-92066c80e188
 author: markingmyname
 ms.author: maghan

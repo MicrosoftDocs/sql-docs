@@ -1,5 +1,5 @@
 ---
-title: "Replay to a Cursor (SQL Server Profiler) | Microsoft Docs"
+title: "Replay to a Cursor (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "replaying cursors"
-  - "traces [SQL Server], replaying"
-  - "replaying traces"
+  -"replaying cursors"
+  -"traces [SQL Server], replaying"
+  -"replaying traces"
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
 author: markingmyname
 ms.author: maghan

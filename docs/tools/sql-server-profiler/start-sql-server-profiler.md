@@ -1,5 +1,5 @@
 ---
-title: "Run SQL Server Profiler | Microsoft Docs"
+title: "Run SQL Server Profiler"
 ms.custom: ""
 ms.date: "07/07/2017"
 ms.prod: sql
@@ -8,12 +8,12 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], starting"
-  - "SQL Server Profiler, starting"
-  - "starting SQL Server Profiler"
-  - "Profiler [SQL Server Profiler], running"
-  - "SQL Server Profiler, running"
-  - "running SQL Server Profiler"
+  -"Profiler [SQL Server Profiler], starting"
+  -"SQL Server Profiler, starting"
+  -"starting SQL Server Profiler"
+  -"Profiler [SQL Server Profiler], running"
+  -"SQL Server Profiler, running"
+  -"running SQL Server Profiler"
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: markingmyname
 ms.author: maghan
@@ -24,7 +24,7 @@ ms.author: maghan
   
 When you first start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] and select **New Trace** from the **File** menu, the application displays a **Connect to Server** dialog box where you can specify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to connect to.  
 ## To start SQL Server Profiler from the Windows 10 Start menu  
--  Click the Windows **Start** icon or press the Windows key and start to type "SQL Server Profiler 17". When the **SQL Server Profiler 17** tile appears, click it.   
+-  Click the Windows **Start** icon or press the Windows key and start to type"SQL Server Profiler 17". When the **SQL Server Profiler 17** tile appears, click it.   
 
 ## To start SQL Server Profiler in Database Engine Tuning Advisor  
 -  On the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor **Tools** menu, click **SQL Server Profiler**.  

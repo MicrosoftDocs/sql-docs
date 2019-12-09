@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Profiler Templates | Microsoft Docs"
+title: "SQL Server Profiler Templates"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,12 +8,12 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "default SQL Server Profiler templates"
-  - "templates [SQL Server], SQL Server Profiler"
-  - "Profiler [SQL Server Profiler], templates"
-  - "trace templates [SQL Server]"
-  - "predefined templates [SQL Server Profiler]"
-  - "SQL Server Profiler, templates"
+  -"default SQL Server Profiler templates"
+  -"templates [SQL Server], SQL Server Profiler"
+  -"Profiler [SQL Server Profiler], templates"
+  -"trace templates [SQL Server]"
+  -"predefined templates [SQL Server Profiler]"
+  -"SQL Server Profiler, templates"
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: markingmyname
 ms.author: maghan

@@ -1,5 +1,5 @@
 ---
-title: "Organize Columns Displayed in a Trace (SQL Server Profiler) | Microsoft Docs"
+title: "Organize Columns Displayed in a Trace (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "organizing trace columns displayed [SQL Server]"
-  - "arranging trace columns displayed"
-  - "traces [SQL Server], data columns"
+  -"organizing trace columns displayed [SQL Server]"
+  -"arranging trace columns displayed"
+  -"traces [SQL Server], data columns"
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 author: markingmyname
 ms.author: maghan

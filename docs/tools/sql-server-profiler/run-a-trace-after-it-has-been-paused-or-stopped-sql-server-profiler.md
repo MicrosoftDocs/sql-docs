@@ -1,5 +1,5 @@
 ---
-title: "Run a Trace After It Has Been Paused or Stopped (SQL Server Profiler) | Microsoft Docs"
+title: "Run a Trace After It Has Been Paused or Stopped (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,10 +8,10 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "traces [SQL Server], restarting"
-  - "traces [SQL Server], stopping"
-  - "restarting traces"
-  - "stopping traces"
+  -"traces [SQL Server], restarting"
+  -"traces [SQL Server], stopping"
+  -"restarting traces"
+  -"stopping traces"
 ms.assetid: 022dd1b7-08be-4a42-9b3a-c3bd09703e27
 author: markingmyname
 ms.author: maghan

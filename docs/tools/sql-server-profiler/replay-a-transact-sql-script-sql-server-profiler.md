@@ -1,5 +1,5 @@
 ---
-title: "Replay a Transact-SQL Script (SQL Server Profiler) | Microsoft Docs"
+title: "Replay a Transact-SQL Script (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "traces [SQL Server], replaying"
-  - "scripts [SQL Server], traces"
-  - "replaying traces"
+  -"traces [SQL Server], replaying"
+  -"scripts [SQL Server], traces"
+  -"replaying traces"
 ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
 author: markingmyname
 ms.author: maghan

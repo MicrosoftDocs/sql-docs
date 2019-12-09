@@ -1,5 +1,5 @@
 ---
-title: "Set Trace Display Defaults (SQL Server Profiler) | Microsoft Docs"
+title: "Set Trace Display Defaults (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "traces [SQL Server], defaults"
+  -"traces [SQL Server], defaults"
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 author: markingmyname
 ms.author: maghan

@@ -1,5 +1,5 @@
 ---
-title: "Find a Value or Data Column While Tracing (SQL Server Profiler) | Microsoft Docs"
+title: "Find a Value or Data Column While Tracing (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "searching while trace running"
-  - "traces [SQL Server], running"
-  - "traces [SQL Server], searching while trace running"
+  -"searching while trace running"
+  -"traces [SQL Server], running"
+  -"traces [SQL Server], searching while trace running"
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
 author: markingmyname
 ms.author: maghan

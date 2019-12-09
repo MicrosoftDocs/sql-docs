@@ -1,5 +1,5 @@
 ---
-title: "Filter Traces with SQL Server Profiler | Microsoft Docs"
+title: "Filter Traces with SQL Server Profiler"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,12 +8,12 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], filters"
-  - "filters [SQL Server], events"
-  - "events [SQL Server], filters"
-  - "SQL Server Profiler, filters"
-  - "filters [SQL Server], traces"
-  - "traces [SQL Server], filters"
+  -"Profiler [SQL Server Profiler], filters"
+  -"filters [SQL Server], events"
+  -"events [SQL Server], filters"
+  -"SQL Server Profiler, filters"
+  -"filters [SQL Server], traces"
+  -"traces [SQL Server], filters"
 ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
 author: markingmyname
 ms.author: maghan

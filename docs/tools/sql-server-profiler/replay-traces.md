@@ -1,5 +1,5 @@
 ---
-title: "Replay Traces | Microsoft Docs"
+title: "Replay Traces"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "SQL Server Profiler, replaying traces"
-  - "Run to Cursor option"
-  - "Toggle Breakpoint option"
-  - "traces [SQL Server], replaying"
-  - "replaying traces"
-  - "playback engine [SQL Server Profiler]"
-  - "events [SQL Server], replaying traces"
-  - "Profiler [SQL Server Profiler], replaying traces"
+  -"SQL Server Profiler, replaying traces"
+  -"Run to Cursor option"
+  -"Toggle Breakpoint option"
+  -"traces [SQL Server], replaying"
+  -"replaying traces"
+  -"playback engine [SQL Server Profiler]"
+  -"events [SQL Server], replaying traces"
+  -"Profiler [SQL Server Profiler], replaying traces"
 ms.assetid: da958d3c-7f3e-44c9-aecc-8a9493bea7c0
 author: markingmyname
 ms.author: maghan

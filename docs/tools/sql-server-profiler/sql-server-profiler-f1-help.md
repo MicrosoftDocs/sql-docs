@@ -6,25 +6,6 @@ ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: "reference"
-f1_keywords: 
-  -"sql13.pro.traceproperties.general.f1;"
-  -"sql13.pro.traceproperties.eventsselection.f1;"
-  -"sql13.pro.traceproperties.eventsselection.f1"
-  -"sql13.pro.traceproperties.general.f1"
-  -"sql13.pro.tracetemplateproperties"
-  -"sql13.pro.edittracetemplateproperties.general.f1"
-  -"sql13.pro.edittracetemplateproperties.eventsselection.f1"
-  -"sql13.pro.tracefileproperties.general.f1"
-  -"sql13.pro.tracefileproperties.eventsselection.f1"
-  -"sql13.pro.performancecounterlimit.f1"
-  -"sql13.pro.replay.tools.generaloptions.f1"
-  -"sql13.pro.replay.tools.sourcetable.f1"
-  -"sql13.pro.replay.tools.destinationtable.f1"
-  -"sql13.pro.replay.generaloptions.f1"
-  -"sql13.pro.replay.generaloptions.advanced.f1"
-  -"sql13.pro.find.f1"
-  -"sql13.pro.organize.columns.f1"
-  -"sql13.pro.editfilter.f1"
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan

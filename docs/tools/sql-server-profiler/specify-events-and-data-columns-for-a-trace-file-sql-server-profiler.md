@@ -1,5 +1,5 @@
 ---
-title: Specify Events and Data Columns for a Trace
+title: Specify Events and Data Columns for a Trace file
 titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: "sql-tools"

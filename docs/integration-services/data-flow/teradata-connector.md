@@ -10,7 +10,7 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ---
-# Microsoft connector for Teradata
+# Microsoft connector for Teradata (preview)
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 Microsoft connector for Teradata enables to export data from and load data into Teradata databases in an SSIS package.

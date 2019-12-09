@@ -1,6 +1,5 @@
 ---
 title: "Quickstart: Train a model in Python"
-titleSuffix: SQL Server Machine Learning Services
 description: Create a simple predictive model in Python using SQL Server Machine Learning Services, then predict a result using new data.
 ms.prod: sql
 ms.technology: machine-learning

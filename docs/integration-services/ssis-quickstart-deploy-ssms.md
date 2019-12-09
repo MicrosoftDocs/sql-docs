@@ -88,7 +88,7 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog.
   
 3.  On the **Select Destination** page, select the destination for the project.
     -   Enter the fully qualified server name. If the target server is an Azure SQL Database server, the name is in this format `<server_name>.database.windows.net`.
-    -   Provide authentication information, and then select **Connect**. See [Authentication methods in the Deployment Wizard](#wizard_auth) in this article.
+    -   Provide authentication information, and then select **Connect**. See [authentication methods in the deployment](#authentication-methods-for-deployment) in this article.
     -   Then select **Browse** to select the target folder in SSISDB.
     -   Then select **Next** to open the **Review** page. (The **Next** button is enabled only after you select **Connect**.)
   

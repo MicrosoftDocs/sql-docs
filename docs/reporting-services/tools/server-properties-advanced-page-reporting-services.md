@@ -44,10 +44,12 @@ Specifies the number of seconds the results of the preflight request can be cach
 
 ### Custom Headers
 
-Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default, there are no custom headers and value is blank.
+Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default, there are no custom headers and value is blank. 
 
 > [!NOTE]
 > Too many headers may impact performance. 
+
+Admins, we recommend validating the configuration of your topology to ensure the set of headers is compatible with your deployment of Reporting Services. It's possible to choose settings that cause errors in browsers if the browsers don't also have the appropriate settings. For example, you shouldn't add a HTSTS configuration if your server isn't configured for https. Some CSP policy headers may cause issues with browser rendering as well.
 
 #### Custom headers XML format
 

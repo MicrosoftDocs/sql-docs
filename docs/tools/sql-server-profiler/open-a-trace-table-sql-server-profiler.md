@@ -1,7 +1,7 @@
 ---
 <<<<<<< HEAD
 title: "Open a Trace Table (SQL Server Profiler)"
-ms.custom: ""
+ms.custom: seo-lt-2019
 =======
 title: Open a Trace Table
 titleSuffix: SQL Server Profiler

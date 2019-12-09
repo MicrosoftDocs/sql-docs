@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 author: markingmyname
 ms.author: maghan
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---

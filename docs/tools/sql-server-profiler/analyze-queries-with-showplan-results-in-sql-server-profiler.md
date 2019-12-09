@@ -1,7 +1,7 @@
 ---
 <<<<<<< HEAD
 title: "Analyze Queries with SHOWPLAN Results in SQL Server Profiler"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 =======
 title: Analyze Queries with SHOWPLAN Results

@@ -1,7 +1,7 @@
 ---
 <<<<<<< HEAD
 title: "Set a Maximum File Size for a Trace File (SQL Server Profiler)"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 =======
 title: Set a Maximum File Size for a Trace File

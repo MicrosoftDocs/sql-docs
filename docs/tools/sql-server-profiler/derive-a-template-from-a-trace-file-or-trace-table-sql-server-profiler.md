@@ -1,7 +1,7 @@
 ---
 <<<<<<< HEAD
 title: "Derive a Template from a Trace File or Trace Table (SQL Server Profiler)"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 =======
 title: Derive a Template from a Trace File or Trace Table

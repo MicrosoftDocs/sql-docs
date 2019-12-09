@@ -1,7 +1,7 @@
 ---
 <<<<<<< HEAD
 title: "Run SQL Server Profiler"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "07/07/2017"
 =======
 title: Run SQL Server Profiler

@@ -1,7 +1,7 @@
 ---
 <<<<<<< HEAD
 title: "SQL Server Profiler dialog boxes"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "07/07/2017"
 =======
 title: SQL Server Profiler dialog boxes

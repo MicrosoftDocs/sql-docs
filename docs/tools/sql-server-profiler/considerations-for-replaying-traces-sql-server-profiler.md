@@ -1,7 +1,7 @@
 ---
 <<<<<<< HEAD
 title: "Considerations for Replaying Traces (SQL Server Profiler)"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
 =======
 title: Considerations for Replaying Traces

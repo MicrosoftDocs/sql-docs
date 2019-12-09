@@ -1,6 +1,6 @@
 ---
 title: "SQL Full-text Filter Daemon Launcher (SQL Server Configuration Manager)"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

@@ -1,7 +1,7 @@
 ---
 <<<<<<< HEAD
 title: "Set a Maximum Table Size for a Trace Table (SQL Server Profiler)"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 =======
 title: Set a Maximum Table Size for a Trace Table

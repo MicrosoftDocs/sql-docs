@@ -1,7 +1,7 @@
 ---
 <<<<<<< HEAD
 title: "Extract a Script from a Trace (SQL Server Profiler)"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 =======
 title: Extract a Script from a Trace

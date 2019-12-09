@@ -1,7 +1,7 @@
 ---
 <<<<<<< HEAD
 title: "Create a Trace (SQL Server Profiler)"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "08/01/2016"
 =======
 title: Create a Trace

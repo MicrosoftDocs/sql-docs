@@ -1,7 +1,7 @@
 ---
 <<<<<<< HEAD
 title: "Organize Columns Displayed in a Trace (SQL Server Profiler)"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 =======
 title: Organize Columns Displayed in a Trace

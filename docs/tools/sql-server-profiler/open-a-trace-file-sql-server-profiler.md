@@ -1,7 +1,7 @@
 ---
 title: "Open a Trace File (SQL Server Profiler)"
 <<<<<<< HEAD
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 =======
 >>>>>>> a481a438b2b10df468258a329ec212936fac3d4c

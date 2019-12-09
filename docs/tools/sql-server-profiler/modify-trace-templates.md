@@ -1,7 +1,7 @@
 ---
 <<<<<<< HEAD
 title: "Modify Trace Templates"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "07/12/2017"
 =======
 title: Modify Trace Templates

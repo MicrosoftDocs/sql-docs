@@ -1,7 +1,7 @@
 ---
 <<<<<<< HEAD
 title: "Correlate a Trace with Windows Performance Log Data"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "07/12/2017"
 =======
 title: Correlate a Trace with Windows Performance Log Data

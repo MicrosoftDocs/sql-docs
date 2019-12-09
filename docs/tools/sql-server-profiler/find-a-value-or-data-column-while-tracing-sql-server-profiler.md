@@ -1,7 +1,7 @@
 ---
 <<<<<<< HEAD
 title: "Find a Value or Data Column While Tracing (SQL Server Profiler)"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 =======
 title: Find a Value or Data Column While Tracing

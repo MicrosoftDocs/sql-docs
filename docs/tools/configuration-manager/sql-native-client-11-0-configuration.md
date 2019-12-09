@@ -1,6 +1,6 @@
 ---
 title: "SQL Native Client 11.0 Configuration"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

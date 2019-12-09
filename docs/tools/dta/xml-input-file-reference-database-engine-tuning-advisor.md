@@ -6,7 +6,6 @@ ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual
-dev_langs: "XML"
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 author: markingmyname
 ms.author: maghan

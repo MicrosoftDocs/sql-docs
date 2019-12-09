@@ -7,6 +7,7 @@ ms.prod_service: "reporting-services-native"
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 12/05/2019
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 
 # Server Properties Advanced Page - SQL Server Reporting Services

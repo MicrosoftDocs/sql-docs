@@ -35,7 +35,7 @@ In [part three](python-ski-rental-linear-regression-train-model.md), you learned
 
 ## Create a stored procedure that generates the model
 
-Now, using the Python scripts you developed, create a stored procedure **generate_rental_rx_model** that trains and generates the linear regression model using LinearRegression from  scikit-learn.
+Now, using the Python scripts you developed, create a stored procedure **generate_rental_py_model** that trains and generates the linear regression model using LinearRegression from  scikit-learn.
 
 Run the following T-SQL statement in Azure Data Studio to create the stored procedure to train the model.
 

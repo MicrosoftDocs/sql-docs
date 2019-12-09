@@ -1,24 +1,29 @@
 ---
+<<<<<<< HEAD
 title: "Replay Requirements"
 ms.custom: ""
 ms.date: "03/14/2017"
+=======
+title: Replay Requirements
+titleSuffix: SQL Server Profiler
+>>>>>>> a481a438b2b10df468258a329ec212936fac3d4c
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "event classes [SQL Server], replaying traces"
-  - "traces [SQL Server], replaying"
-  - "replaying traces"
-  - "TSQL_Replay template [SQL Server]"
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # Replay Requirements
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In order to replay trace data with [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] or the Distributed Replay Utility, a specific set of event classes and columns must be captured in the trace. These settings are enabled by default if the **TSQL_Replay** trace template is used to configure a trace that is later used for replay. This topic describes these settings and other replay requirements.  
+
+In order to replay trace data with [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] or the Distributed Replay Utility, a specific set of event classes and columns must be captured in the trace. These settings are enabled by default if the **TSQL_Replay** trace template is used to configure a trace that is later used for replay. This topic describes these settings and other replay requirements.  
   
 > [!NOTE]  
 >  We recommend using the Distributed Replay Utility for replaying an intensive OLTP application (with many active concurrent connections or high throughput). The Distributed Replay Utility can replay trace data from multiple computers, better simulating a mission-critical workload. For more information, see [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  

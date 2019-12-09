@@ -1,21 +1,29 @@
 ---
+<<<<<<< HEAD
 title: "Set Global Trace Options (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
+=======
+title: Set Global Trace Options
+titleSuffix: SQL Server Profiler
+>>>>>>> a481a438b2b10df468258a329ec212936fac3d4c
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "global trace options [SQL Server]"
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # Set Global Trace Options (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to set options that apply to all traces that are created with a specific instance of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+
+This topic describes how to set options that apply to all traces that are created with a specific instance of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### To set global trace options  
   

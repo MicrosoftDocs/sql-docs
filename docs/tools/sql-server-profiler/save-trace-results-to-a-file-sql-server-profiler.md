@@ -1,22 +1,29 @@
 ---
+<<<<<<< HEAD
 title: "Save Trace Results to a File (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/14/2017"
+=======
+title: Save Trace Results to a File
+titleSuffix: SQL Server Profiler
+>>>>>>> a481a438b2b10df468258a329ec212936fac3d4c
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "saving traces"
-  - "traces [SQL Server], saving"
 ms.assetid: ac528747-0c19-4f3d-96f5-44c762a4abed
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # Save Trace Results to a File (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to save trace results to a file by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+
+This topic describes how to save trace results to a file by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### To save trace results to a file  
   

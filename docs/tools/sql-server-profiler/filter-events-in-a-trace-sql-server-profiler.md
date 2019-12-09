@@ -1,23 +1,29 @@
 ---
+<<<<<<< HEAD
 title: "Filter Events in a Trace (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "03/01/2017"
+=======
+title: Filter Events in a Trace
+titleSuffix: SQL Server Profiler
+>>>>>>> a481a438b2b10df468258a329ec212936fac3d4c
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "filters [SQL Server], traces"
-  - "traces [SQL Server], filters"
-  - "traces [SQL Server], events"
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # Filter Events in a Trace (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Filters limit the events collected in a trace. If a filter is not set, all events of the selected event classes are returned in the trace output. It is not mandatory to set a filter for a trace. However, a filter minimizes the overhead that is incurred during tracing.  
+
+Filters limit the events collected in a trace. If a filter is not set, all events of the selected event classes are returned in the trace output. It is not mandatory to set a filter for a trace. However, a filter minimizes the overhead that is incurred during tracing.  
   
  You add filters to trace definitions by using the **Events Selection** tab of the **Trace Properties** or **Trace Template Properties** dialog box.  
   

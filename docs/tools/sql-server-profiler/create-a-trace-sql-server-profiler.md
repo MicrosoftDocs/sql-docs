@@ -1,21 +1,29 @@
 ---
+<<<<<<< HEAD
 title: "Create a Trace (SQL Server Profiler)"
 ms.custom: ""
 ms.date: "08/01/2016"
+=======
+title: Create a Trace
+titleSuffix: SQL Server Profiler
+>>>>>>> a481a438b2b10df468258a329ec212936fac3d4c
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "traces [SQL Server], creating"
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 08/01/2016
 ---
+
 # Create a Trace (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to create a trace.  
+
+This topic describes how to use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to create a trace.  
   
 ### To create a trace  
   

@@ -41,7 +41,9 @@ Specifies the number of seconds the results of the preflight request can be cach
 ### AllowedResourceExtensionsForUpload
 (Power BI Report Server & Reporting Services 2017 and later only) Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
 
-### Custom Headers (SQL Server 2019 Reporting Services and Power BI Report Server only)
+### Custom Headers 
+
+(SQL Server 2019 Reporting Services and Power BI Report Server only)
 
 Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default, there are no custom headers and value is blank. 
 
@@ -103,7 +105,9 @@ Specifies the number of seconds until a report edit session times out. The defau
 ###  EnableClientPrinting  
 Determines whether the RSClientPrint ActiveX control is available for download from the report server. The valid values are **true** and **false**. The default value is **true**. For more information about additional settings that are required for this control, see [Enable and Disable Client-Side Printing for Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
 
-### EnableCustomVisuals (Power BI Report Server only)
+### EnableCustomVisuals 
+
+(Power BI Report Server only)
 To enable the display of Power BI custom visuals. Values are True/False. *Default is True.*  
 
 ###  EnableExecutionLogging  
@@ -127,7 +131,10 @@ Turning off this option mitigates a threat whereby a malicious user launches a d
 ### EnableMyReports  
 Indicates whether the My Reports feature is enabled. A value of **true** indicates that the feature is enabled.  
 
-### EnablePowerBIReportExportData (Power BI Report Server only)  
+### EnablePowerBIReportExportData 
+
+(Power BI Report Server only)
+
 Enable Power BI Report Server data export from Power BI visuals. Values are True, False.  Default is True.  
 
 ### EnableRemoteErrors
@@ -154,19 +161,31 @@ Set the process timeout in minutes. *Default is 30.*
 ### MaxFileSizeMb
 Set the max file size of the report in MB. *Default is 1000.  Max is 2000.*
 
-### ModelCleanupCycleminutes (Power BI Report Server only)
+### ModelCleanupCycleminutes 
+
+(Power BI Report Server only)
+
 Set the frequency to check for unused models in memory in minutes. *Default is 15.*
 
-### ModelCleanupCycleminutes (Power BI Report Server only)
+### ModelCleanupCycleminutes 
+
+(Power BI Report Server only)
+
 Set the frequency when unused models are evicted from memory in minutes. *Default is 60.*
 
 ###  MyReportsRole  
 The name of the role used when creating security policies on user's My Reports folders. The default value is **My Reports Role**.  
 
-### OfficeAccessTokenExpirationSeconds (Power BI Report Server only)
+### OfficeAccessTokenExpirationSeconds 
+
+(Power BI Report Server only)
+
 Set for how long you want the office access token to expire in seconds. *Default is 60.*
 
-### OfficeOnlineDiscoveryURL (Power BI Report Server only)
+### OfficeOnlineDiscoveryURL 
+
+(Power BI Report Server only)
+
 Set the address of your Office Online Server instance for viewing Excel Workbooks.
 
 ### RDLXReportTimetout
@@ -178,7 +197,10 @@ Requires Intune to access your organization's reports via the Power BI mobile ap
 ### RestrictedResourceMimeTypeForUpload
 Set of mime types users aren't allowed to upload content with. Any resources that are already stored with a restricted mime type can only be downloaded as an application/octet-stream instead of being opened/executed by the browser.  By default, there are no restricted items in this list, but we recommended that organizations populate this to provide the most secure experience.
 
-### ScheduleRefreshTimeoutMinutes (Power BI Report Server only)
+### ScheduleRefreshTimeoutMinutes 
+
+(Power BI Report Server only)
+
 Data refresh timeout in minutes for scheduled refresh on Power BI reports with embedded AS models. Default is 120 minutes.
 
 ### SessionTimeout
@@ -208,7 +230,10 @@ Specifies the maximum number of days that a stored parameter can be stored. Vali
 ### StoredParametersThreshold
 Specifies the maximum number of parameter values that can be stored by the report server. Valid values are **-1**, **+1** through **2,147,483,647**. The default value is **1500**.  
 
-### SupportedHyperlinkSchemes (Power BI Report Server only)
+### SupportedHyperlinkSchemes 
+
+(Power BI Report Server only)
+
 Sets a comma separated list of the URI schemes allowed to be defined on Hyperlink actions that are allowed to be rendered or “&ast;” to enable all hyperlink schemes. For example, setting “http,https” would allow hyperlinks to “https://www. contoso.com”, but would remove hyperlinks to “mailto:bill@contoso.com” or “javascript:window.open(‘www.contoso.com’, ‘_blank’)”. Default is “&ast;”.
 
 ### SystemReportTimeout

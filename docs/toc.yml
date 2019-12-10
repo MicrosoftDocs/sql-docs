@@ -4299,6 +4299,12 @@
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
       - name: Latest updates for SQL Server
         href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
+  - name: End of support
+    items:
+    - name: Overview
+      href: sql-server/end-of-support/sql-server-end-of-life-overview.md
+    - name: Extended security updates
+      href: sql-server/end-of-support/sql-server-extended-security-updates-overview.md
   - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:
@@ -4609,6 +4615,8 @@
         href: database-engine/configure-windows/server-properties-advanced-page.md
 - name: Migrate & load data
   items:
+  - name: Migration content
+    href: /sql-server/migrate/index.yml
   - name: SQL Server Integration Services (SSIS) > 
     href: integration-services/index.md
   - name: Bulk Copy Utility (bcp)

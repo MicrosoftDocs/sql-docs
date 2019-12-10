@@ -1,20 +1,27 @@
 ---
-title: "Are you upgrading from SQL Server 2005, 2008, or 2008R2? | Microsoft Docs"
+title: "Extended security updates overview"
+description: Learn how to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, and SQL Server 2008 R2. 
 ms.custom: ""
-ms.date: "07/18/2017"
+ms.date: "12/09/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
-ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
 author: MashaMSFT
 ms.author: mathoma
+ms.reviewer: pmasl
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Are you upgrading from SQL Server 2005, 2008, or 2008R2?
+# Extended security updates for SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
+Once SQL Server has reached the end of its support life cycle, you have the option to purchase an Extended Security Update subscription for your servers and remain protected until you are ready to upgrade to a newer version of SQL Server, for up to three years after the end of support date. 
+
+This article provides details about extended security updates for SQL Server 2008 and SQL Server 2008 R2. 
+
+
+
  The end of extended support for SQL Server is one reason to upgrade now to a newer version of SQL Server and to Azure SQL Database. Upgrading enables you to maintain security and compliance, achieve breakthrough performance, and optimize your data platform infrastructure.  
   
  For more info, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005) and [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008).  

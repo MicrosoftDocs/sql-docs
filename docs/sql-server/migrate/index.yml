@@ -21,9 +21,9 @@ landingContent:
     - linkListType: overview
       links:
       - text: Database Migration Assistant (DMA)
-        url: ../dma/dma-overview.md
+        url: ../../dma/dma-overview.md
       - text: Database Experimentation Assistant
-        url: ../dea/database-experimentation-assistant-overview.md
+        url: ../../dea/database-experimentation-assistant-overview.md
     - linkListType: learn
       links:
       - text: Database Migration Assistant
@@ -45,7 +45,7 @@ landingContent:
       - text: Database Migration Service (DMS)
         url: /azure/dms/
       - text: Database Migration Assistant (DMA)
-        url: ../dma/dma-overview.md
+        url: ../../dea/dma/dma-overview.md
     - linkListType: concept
       links:
       - text: Cloud adoption framework
@@ -61,7 +61,7 @@ landingContent:
     - linkListType: overview
       links:
       - text: SQL Server Migration Assistant (SSMA) 
-        url: ../ssma/sql-server-migration-assistant.md
+        url: ../../ssma/sql-server-migration-assistant.md
     - linkListType: get-started
       links:
       - text: From Oracle
@@ -87,7 +87,7 @@ landingContent:
       - text: Extend support with Azure VM
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support
       - text: Extended support updates (ESU) 
-        url: sql-server/end-of-support/sql-server-extended-security-updates.md
+        url: ../end-of-support/sql-server-extended-security-updates.md
     - linkListType: download
       links: 
       - text: Extended security updates datasheet PDF
@@ -109,7 +109,7 @@ landingContent:
     - linkListType: learn
       links:
       - text: Microsoft Assessment and Planning (MAP) toolkit
-        url: learn/modules/sql-server-discovery-using-map/
+        url: /learn/modules/sql-server-discovery-using-map/
     - linkListType: download
       links:
       - text: Microsoft Assessment and Planning (MAP) toolkit

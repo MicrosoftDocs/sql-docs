@@ -72,12 +72,12 @@ To create the SQL Server registry, follow these steps:
 1. Type `SQL Server registry` in the search box.  
 1. Choose the **SQL Server registry** option published by Microsoft, and then select **Create**. 
 
-   ![Choose the SQL Server registry service](../../end-of-support/media/sql-server-extended-security-updates/sql-server-registry-service.png)
+   ![Choose the SQL Server registry service](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
 1. Under **Project Details**, choose your subscription from the drop-down. Then either choose an existing **Resource group** or select **Create new** to create a new resource group for your new SQL Server registry service. 
 1. Under **Service Details**, provide a name and region for your new **SQL Server registry** resource: 
 
-   ![Choose the SQL Server registry service](../../end-of-support/media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
+   ![Choose the SQL Server registry service](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
 1. Select **Review + create** to review the details for your **SQL Server registry**. Select **Create** once validation has passed. 
 
@@ -94,7 +94,7 @@ To register a single SQL Server instance, follow these steps:
 1. Navigate to your **SQL Server registry** resource. 
 1. Select **+ Register** from the **Overview** pane: 
 
-   ![Choose register to register a single instance of SQL Server](../../end-of-support/media/sql-server-extended-security-updates/register-single-sql-server-instance.png)
+   ![Choose register to register a single instance of SQL Server](media/sql-server-extended-security-updates/register-single-sql-server-instance.png)
 
 1. Provide the required information as is detailed in this table, and then select **Register**: 
 
@@ -114,7 +114,7 @@ To register a single SQL Server instance, follow these steps:
 
 The newly registered SQL Server instance is now visible in the **Register SQL Server instances** section of the **Overview** pane: 
 
-![Registered SQL Server instances](../../end-of-support/media/sql-server-extended-security-updates/registered-sql-instance.png)
+![Registered SQL Server instances](media/sql-server-extended-security-updates/registered-sql-instance.png)
 
 Once a SQL Server instance has been registered, the **Security Updates** section becomes available. Any available ESUs will be posted there. 
 
@@ -126,11 +126,14 @@ Multiple SQL Server instances can be registered in bulk by uploading a .CSV file
 1. Navigate to your **SQL Server registry** resource. 
 1. Select **Bulk Register** from the **Overview** pane:  
 
-   ![Choose bulk register to register multiple instances of SQL Server](../../end-of-support/media/sql-server-extended-security-updates/bulk-register-sql-server-instances.png)
+   ![Choose bulk register to register multiple instances of SQL Server](media/sql-server-extended-security-updates/bulk-register-sql-server-instances.png)
 
 1. Select the file icon to browse to your .CSV file location. Select the .CSV file. Then select **Register** to upload the file and register multiple instances of SQL Server. 
 
-   ![Upload CSV file to register multiple instances of SQL Server](../../end-of-support/media/sql-server-extended-security-updates/upload-csv-file-for-bulk-registration.png)
+   ![Upload CSV file to register multiple instances of SQL Server](media/sql-server-extended-security-updates/upload-csv-file-for-bulk-registration.png)
+
+
+![csv]((media/sql-server-extended-security-updates/upload-csv-file-for-bulk-registration.png)
 
 ### Formatting requirements for CSV file
 - Values are comma-separated
@@ -195,7 +198,7 @@ To download ESUs, follow these steps:
 1. Navigate to your **SQL Server registry** resource. 
 1. Select **Security Updates** on the navigation pane. 
 
-   ![Check security updates pane for available updates](../../end-of-support/media/sql-server-extended-security-updates/security-updates-sql-registry.png)
+   ![Check security updates pane for available updates](media/sql-server-extended-security-updates/security-updates-sql-registry.png)
 
 1. Download security updates from here, if and when they are made available. 
 

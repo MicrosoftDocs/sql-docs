@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allve
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-In this tutorial you will configure SQL Server snapshot replication on Linux with two instances of SQL Server using Transact-SQL. The publisher and distributor will be the same instance, and the subscriber will be on a separate instance.
+In this tutorial, configure SQL Server snapshot replication on Linux with two instances of SQL Server using Transact-SQL. The publisher and distributor will be the same instance, and the subscriber will be on a separate instance.
 
 > [!div class="checklist"]
 > * Enable SQL Server replication agents on Linux
@@ -78,9 +78,7 @@ To complete this tutorial, you will need:
    sudo chgrp mssql /var/opt/mssql/data/ReplData/
    ```
 
-1. Configure distributor
-
-   In this example, the publisher will also be the distributor. Run the following commands on the publisher to configure
+1. Configure distributor. In this example, the publisher will also be the distributor. Run the following commands on the publisher to configure
 the instance for distribution as well.
 
    ```sql
@@ -114,8 +112,7 @@ the instance for distribution as well.
    GO
    ```
 
-1. Configure publisher
-   Run the following TSQL commands on the publisher.
+1. Configure publisher. Run the following TSQL commands on the publisher.
 
    ```sql
    DECLARE @publisher AS sysname

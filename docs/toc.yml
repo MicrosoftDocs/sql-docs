@@ -4304,7 +4304,7 @@
     - name: Overview
       href: sql-server/end-of-support/sql-server-end-of-life-overview.md
     - name: Extended security updates
-      href: sql-server/end-of-support/sql-server-extended-security-updates-overview.md
+      href: sql-server/end-of-support/sql-server-extended-security-updates.md
   - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:

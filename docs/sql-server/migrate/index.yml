@@ -45,7 +45,7 @@ landingContent:
       - text: Database Migration Service (DMS)
         url: /azure/dms/
       - text: Database Migration Assistant (DMA)
-        url: ../../dea/dma/dma-overview.md
+        url: ../../dma/dma-overview.md
     - linkListType: concept
       links:
       - text: Cloud adoption framework

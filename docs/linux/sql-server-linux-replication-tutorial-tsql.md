@@ -41,16 +41,14 @@ To complete this tutorial, you will need:
 
 ## Detailed steps
 
-1. Enable SQL Server Replication Agents on Linux
-   Enable SQL Server Agent to use Replication Agents. On both host machines, run the following commands in the terminal. 
+1. Enable SQL Server replication agents on Linux. On both host machines, run the following commands in the terminal. 
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
    sudo systemctl restart mssql-server
    ```
 
-1. Create Sample Database and Table
-   On your publisher create a sample database and table that will act as the articles for a publication.
+1. Create the sample database and table. On the publisher create a sample database and table that will act as the articles for a publication.
 
    ```sql
    CREATE DATABASE Sales
@@ -69,8 +67,7 @@ To complete this tutorial, you will need:
    GO
    ```
 
-1. Create Snapshot folder for SQL Server Agents to read/write to
-   On the distributor, create the snapshot folder and grant access to 'mssql' user 
+1. Create the snapshot folder for SQL Server Agents to read/write to on the distributor, create the snapshot folder and grant access to 'mssql' user 
 
    ```bash
    sudo mkdir /var/opt/mssql/data/ReplData/
@@ -78,8 +75,7 @@ To complete this tutorial, you will need:
    sudo chgrp mssql /var/opt/mssql/data/ReplData/
    ```
 
-1. Configure distributor. In this example, the publisher will also be the distributor. Run the following commands on the publisher to configure
-the instance for distribution as well.
+1. Configure distributor. In this example, the publisher will also be the distributor. Run the following commands on the publisher to configure the instance for distribution as well.
 
    ```sql
    DECLARE @distributor AS sysname
@@ -137,8 +133,7 @@ the instance for distribution as well.
    GO
    ```
 
-1. Configure publication Job
-   Run the following TSQL commands on the publisher.
+1. Configure publication job. Run the following TSQL commands on the publisher.
 
    ```sql
    DECLARE @replicationdb AS sysname
@@ -198,8 +193,7 @@ the instance for distribution as well.
    @vertical_partition = N'false'
    ```
 
-1. Configure Subscription
-   Run the following TSQL commands on the publisher.
+1. Configure Subscription. Run the following TSQL commands on the publisher.
 
    ```sql
    DECLARE @subscriber AS sysname
@@ -242,9 +236,7 @@ the instance for distribution as well.
    GO
    ```
 
-1. Run Replication Agent Jobs
-
-   Run the following query to get a list of jobs:
+1. Run replication agent jobs. Run the following query to get a list of jobs:
 
    ```sql
    SELECT name, date_modified FROM msdb.dbo.sysjobs order by date_modified desc
@@ -259,7 +251,7 @@ the instance for distribution as well.
    GO
    ```
 
-   Run the Snapshot replication job to generate the snapshot:
+   Run the snapshot replication job to generate the snapshot:
 
    ```sql
    USE msdb;
@@ -268,7 +260,7 @@ the instance for distribution as well.
    GO
    ```
 
-1. Connect subscriber and query replicated data	
+1. Connect subscriber and query replicated data.	
 
    On the subscriber, check that the replication is working by running the following query:
 

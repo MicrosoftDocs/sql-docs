@@ -1,7 +1,7 @@
 ---
-title: "How to: Change Target Platform and Publish a Database Project | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "How to: Change Target Platform and Publish a Database Project"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

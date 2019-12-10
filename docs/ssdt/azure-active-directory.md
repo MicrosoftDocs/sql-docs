@@ -1,6 +1,6 @@
 ---
-title: "Azure Active Directory in SQL Server Data Tools (SSDT) | Microsoft Docs"
-ms.custom: ""
+title: "Azure Active Directory in SQL Server Data Tools (SSDT)"
+ms.custom: seo-lt-2019""
 ms.date: "10/28/2019"
 ms.prod: sql
 ms.reviewer: ""

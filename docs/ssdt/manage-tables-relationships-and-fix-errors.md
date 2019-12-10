@@ -1,7 +1,7 @@
 ---
-title: "Manage Tables, Relationships, and Fix Errors | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "Manage Tables, Relationships, and Fix Errors"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

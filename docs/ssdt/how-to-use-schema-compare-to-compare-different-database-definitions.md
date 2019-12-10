@@ -1,7 +1,7 @@
 ---
-title: "How to: Use Schema Compare to Compare Different Database Definitions | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "How to: Use Schema Compare to Compare Different Database Definitions"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

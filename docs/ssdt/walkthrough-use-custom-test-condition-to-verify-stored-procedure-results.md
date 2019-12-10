@@ -1,7 +1,7 @@
 ---
-title: "Walkthrough: Using a Custom Test Condition to Verify the Results of a Stored Procedure | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "Walkthrough: Using a Custom Test Condition to Verify the Results of a Stored Procedure"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

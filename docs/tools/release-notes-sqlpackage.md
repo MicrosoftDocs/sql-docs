@@ -1,5 +1,5 @@
 ---
-title: DacFx and SqlPackage release notes | Microsoft Docs
+title: DacFx and SqlPackage release notes
 description: Release notes for Microsoft sqlpackage.
 ms.custom: "tools|sos"
 ms.date: 02/02/2019

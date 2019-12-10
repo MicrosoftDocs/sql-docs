@@ -1,7 +1,7 @@
 ---
-title: "How to: View Data Differences | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "How to: View Data Differences"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

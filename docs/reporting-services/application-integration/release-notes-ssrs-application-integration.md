@@ -39,7 +39,7 @@ For the release notes for SSRS, see [Release notes for SQL Server Reporting Serv
 |            | Accessibility fix for tool bar to narrate only for active items |
 | &nbsp; | &nbsp; |
 
-## 15.900.148
+## 150.900.148
 
 | Change description | Details |
 | :----------------- | :------ |

@@ -165,7 +165,7 @@ Specifies that the join order indicated by the query syntax is preserved during 
 Force or disable the pushdown of the computation of qualifying expressions in Hadoop. Only applies to queries using PolyBase. Won't push down to Azure storage.  
 
 { FORCE | DISABLE } SCALEOUTEXECUTION
-Force or disable scale out execution of PolyBase queries that are using External tables in a SQL Server 2019 Big Data Cluster. This hint will only be honored by a query using the master instance of a SQL Big Data Cluster. The scale out will occur across the Compute Pool of the Big Data cluster. 
+Force or disable scale out execution of PolyBase queries that are using external tables in a SQL Server 2019 big data cluster. This hint will only be honored by a query using the master instance of a SQL big data cluster. The scale out will occur across the compute pool of the big data cluster. 
 
 KEEP PLAN  
 Forces the Query Optimizer to relax the estimated recompile threshold for a query. The estimated recompile threshold starts an automatic recompile for the query when the estimated number of indexed column changes have been made to a table by running one of the following statements:

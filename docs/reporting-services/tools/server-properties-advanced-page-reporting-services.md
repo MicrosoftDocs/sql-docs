@@ -43,7 +43,7 @@ Specifies the number of seconds the results of the preflight request can be cach
 
 ### Custom Headers 
 
-(SQL Server 2019 Reporting Services and Power BI Report Server only)
+(SQL Server 2019 Reporting Services only)
 
 Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default, there are no custom headers and value is blank. 
 

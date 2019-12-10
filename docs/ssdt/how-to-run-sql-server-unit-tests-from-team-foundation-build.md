@@ -1,7 +1,7 @@
 ---
-title: "How to: Run SQL Server Unit Tests from Team Foundation Build | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "How to: Run SQL Server Unit Tests from Team Foundation Build"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

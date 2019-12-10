@@ -1,7 +1,7 @@
 ---
-title: "Project-Oriented Database Development using Command-Line Tools | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "Project-Oriented Database Development using Command-Line Tools"
+ms.custom: seo-lt-2019
+
 ms.date: "04/26/2017"
 ms.prod: "sql"
 ms.technology: ssdt

@@ -1,7 +1,7 @@
 ---
-title: "How to: Create New Database Objects Using Queries | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "How to: Create New Database Objects Using Queries"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

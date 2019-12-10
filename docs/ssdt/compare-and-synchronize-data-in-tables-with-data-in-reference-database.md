@@ -1,7 +1,7 @@
 ---
-title: "Compare and Synchronize Data in One or More Tables with Data in a Reference Database | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "Compare and Synchronize Data in One or More Tables with Data in a Reference Database"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

@@ -1,7 +1,7 @@
 ---
-title: "How to: Convert a Visual Studio 2010 Database Projects to SQL Server Database Projects and Retarget to a Different Platform | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "How to: Convert a Visual Studio 2010 Database Projects to SQL Server Database Projects and Retarget to a Different Platform"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

@@ -1,6 +1,6 @@
 ---
-title: "Previous releases of SQL Server Data Tools (SSDT and SSDT-BI) | Microsoft Docs"
-ms.custom: ""
+title: "Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)"
+ms.custom: seo-lt-2019""
 ms.date: "09/05/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"

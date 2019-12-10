@@ -4616,7 +4616,7 @@
 - name: Migrate & load data
   items:
   - name: Migration content
-    href: /sql-server/migrate/index.yml
+    href: sql-server/migrate/index.yml
   - name: SQL Server Integration Services (SSIS) > 
     href: integration-services/index.md
   - name: Bulk Copy Utility (bcp)

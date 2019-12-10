@@ -20,13 +20,13 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
-      - text: Database Migration Assistant (DMA)
+      - text: Data Migration Assistant (DMA)
         url: ../../dma/dma-overview.md
       - text: Database Experimentation Assistant
         url: ../../dea/database-experimentation-assistant-overview.md
     - linkListType: learn
       links:
-      - text: Database Migration Assistant
+      - text: Data Migration Assistant (DMA)
         url: /learn/modules/assess-convert-sql-server-databases-using-dma/
       - text: Database Experimentation Assistant
         url: /learn/modules/test-optimize-sql-server-databases-using-dea/
@@ -63,7 +63,7 @@ landingContent:
       links:        
       - text: Database Migration Service (DMS)
         url: /azure/dms/
-      - text: Database Migration Assistant (DMA)
+      - text: Data Migration Assistant (DMA)
         url: ../../dma/dma-overview.md
     - linkListType: concept
       links:
@@ -71,7 +71,7 @@ landingContent:
         url: /azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration
     - linkListType: learn
       links:
-      - text: Database Migration Assistant
+      - text: Data Migration Assistant (DMA)
         url: /learn/modules/assess-convert-sql-server-databases-using-dma/
 
   - title: Resources

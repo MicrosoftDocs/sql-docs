@@ -1,6 +1,6 @@
 ---
 title: "Extended security updates overview"
-description: Learn how to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, and SQL Server 2008 R2. 
+description: Learn how to use the SQL Server registry to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, and SQL Server 2008 R2. 
 ms.custom: ""
 ms.date: "12/09/2019"
 ms.prod: sql
@@ -16,30 +16,30 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-Once SQL Server has reached the end of its support life cycle, you have the option to purchase an Extended Security Update subscription for your servers and remain protected for up to three years, until you are ready to upgrade to a newer version of SQL Server. 
+Once SQL Server has reached the end of its support life cycle, you have the option to purchase an Extended Security Update (ESU) subscription for your servers and remain protected for up to three years, until you are ready to upgrade to a newer version of SQL Server. You can then use the **SQL Server registry** service in the Azure portal to register your end-of-support SQL Server instance and download updates when they are made available. 
 
-This article provides details about extended security updates for SQL Server 2008 and SQL Server 2008 R2. For more information about other options, see [End of support options](sql-server-end-of-life-overview.md). 
+This article provides information for using the SQL Server registry service to receive Extended Security Updates for SQL Server 2008 and SQL Server 2008 R2. For more information about other options, see [End of support options](sql-server-end-of-life-overview.md). 
 
-Microsoft recommends applying ESU patches as soon as they are available to keep your SQL Server instance protected. For detailed information and clarification, see the [ESU FAQ page](https://www.microsoft.com/en-us/cloud-platform/extended-security-updates). 
+Microsoft recommends applying ESU patches as soon as they are available to keep your SQL Server instance protected. For detailed information about ESUs, see the [ESU FAQ page](https://www.microsoft.com/cloud-platform/extended-security-updates). 
 
 [Extended support for SQL Server 2008 and SQL Server 2008 R2 ended on July 10, 2019](https://www.microsoft.com/cloud-platform/windows-sql-server-2008). 
 
-## What are Extended Security updates
-Extended Security Updates (ESUs) for SQL Server and SQL Server 2008 R2 include provision of security updates for customers who have purchased an Extended Support Update subscription. 
+## What are Extended Security Updates
+Extended Security Updates (ESUs) for SQL Server 2008 and SQL Server 2008 R2 include provision of security updates for customers who have purchased an Extended Support Update subscription. 
 
-ESUs are distributed **if and when available**, when a security vulnerability is discovered and is rated as **Critical** by [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com). Therefore, there is no regular release cadence for SQL Server ESUs. 
+ESUs are distributed **if and when available**, once a security vulnerability is discovered and is rated as **Critical** by [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com). Therefore, there is no regular release cadence for SQL Server ESUs. 
 
 ESUs do not include:
 - New features
 - Customer-requested non-security hotfixes
-- Design change requests. 
+- Design change requests
 
 ### Support
 
-ESUs do not include technical support, but you can use an active support contract such as [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3) or Premier/Unified Support on SQL Server 2008 / 2008 R2 to get technical support on workloads covered by ESUs if you choose to stay on-premises. Alternatively, if you're hosting on Azure, you can use an Azure Support plan to get technical support. 
+ESUs do not include technical support, but you can use an active support contract such as [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3) or Premier/Unified Support on SQL Server 2008 / 2008 R2 to get technical support on workloads covered by ESUs if you choose to stay on-premises. Alternatively, if you're hosting on Azure, you can use an Azure Support plan to get technical support. 
 
   > [!NOTE]
-  > Microsoft cannot provide technical support for SQL Server 2008 / 2008 R2 instances (both on-premises, and in hosting environments) that are not covered with an ESU subscription. 
+  > Microsoft cannot provide technical support for SQL Server 2008 and  2008 R2 instances (both on-premises, and in hosting environments) that are not covered with an ESU subscription. 
 
 
 ## ESU Availability
@@ -48,9 +48,9 @@ ESUs are available to customers running their workload in Azure, on-premises, or
 
 **In Azure**: If you migrate your workloads to Azure Virtual Machines (IaaS), you will have access to Extended Security Updates for SQL Server 2008 and 2008 R2 for three years after the End of Support for **no additional charges** above the cost of running the virtual machine. Customers do not need Software Assurance to receive Extended Security Updates in Azure. 
 
-**On-premises or hosted environments**: If you have Software Assurance, you can purchase Extended Security Updates for three years after the End of Support date, under an Enterprise Agreement (EA), Enterprise Subscription Agreement (EAS), a Server & Cloud Enrollment (SCE), or an Enrollment for Education Solutions **EES**. You can purchase Extended Security Updates only for the servers you need to cover. Extended Security Updates can be purchased directly from Microsoft or a Microsoft licensing partner. 
+**On-premises or hosted environments**: If you have Software Assurance, you can purchase Extended Security Updates for three years after the End of Support date, under an Enterprise Agreement (EA), Enterprise Subscription Agreement (EAS), a Server & Cloud Enrollment (SCE), or an Enrollment for Education Solutions (EES). You can purchase Extended Security Updates only for the servers you need to cover. Extended Security Updates can be purchased directly from Microsoft or a Microsoft licensing partner. 
 
-For more information, see the [Extended Security Updates frequently asked questions](https://www.microsoft.com/en-us/cloud-platform/extended-security-updates). 
+For more information, see the [Extended Security Updates frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates). 
 
 ## ESU Delivery
 
@@ -84,14 +84,14 @@ To create the SQL Server registry, follow these steps:
 
 ## Register instances for ESUs
 
-After the **SQL Server registry** resource is deployed, you can choose to register a [single](#single-sql-server-instance) SQL Server instance, or you can register a number of SQL Server instances in [bulk](#multiple-sql-server-instances-in-bulk). It's required that at least one SQL Server instance is registered in the scope of your SQL Server registry in order to download any ESU packages. 
+After the **SQL Server registry** resource is deployed, you can choose to register a [single](#single-sql-server-instance) SQL Server instance, or you can register a multiple instances of SQL Server instances in [bulk](#multiple-sql-server-instances-in-bulk). It's required that at least one SQL Server instance is registered in the scope of your SQL Server registry in order to download any ESU packages. 
 
 ### Single SQL Server instance
 
 To register a single SQL Server instance, follow these steps:
 
 1. Sign into the [Azure portal](https://portal.azure.com). 
-1. Navigate to your **SQL Server registry** resource. 
+1. Go to your **SQL Server registry** resource. 
 1. Select **+ Register** from the **Overview** pane: 
 
    ![Choose register to register a single instance of SQL Server](media/sql-server-extended-security-updates/register-single-sql-server-instance.png)
@@ -123,7 +123,7 @@ Once a SQL Server instance has been registered, the **Security Updates** section
 Multiple SQL Server instances can be registered in bulk by uploading a .CSV file. Once your [.CSV file has been formatted correctly](#formatting-requirements-for-csv-file), you can follow these steps to bulk register your SQL Server instances with the SQL Server registry resource: 
 
 1. Sign into the [Azure portal](https://portal.azure.com). 
-1. Navigate to your **SQL Server registry** resource. 
+1. Go to your **SQL Server registry** resource. 
 1. Select **Bulk Register** from the **Overview** pane:  
 
    ![Choose bulk register to register multiple instances of SQL Server](media/sql-server-extended-security-updates/bulk-register-sql-server-instances.png)
@@ -132,8 +132,6 @@ Multiple SQL Server instances can be registered in bulk by uploading a .CSV file
 
    ![Upload CSV file to register multiple instances of SQL Server](media/sql-server-extended-security-updates/upload-csv-file-for-bulk-registration.png)
 
-
-![csv]((media/sql-server-extended-security-updates/upload-csv-file-for-bulk-registration.png)
 
 ### Formatting requirements for CSV file
 - Values are comma-separated
@@ -195,7 +193,7 @@ Once your SQL Server instances have been registered with the SQL Server registry
 To download ESUs, follow these steps: 
 
 1. Sign into the [Azure portal](https://portal.azure.com). 
-1. Navigate to your **SQL Server registry** resource. 
+1. Go to your **SQL Server registry** resource. 
 1. Select **Security Updates** on the navigation pane. 
 
    ![Check security updates pane for available updates](media/sql-server-extended-security-updates/security-updates-sql-registry.png)
@@ -211,6 +209,7 @@ General frequently asked questions about Extended Security updates can be found 
 The End of Support date for SQL Server 2008 and 2008 R2 is July 9, 2019. 
 
 **What does End of Support mean?**
+
 Microsoft Lifecycle Policy offers 10 years of support (5 years for Mainstream Support and 5 years for Extended Support) for Business and Developer products (such as SQL Server and Windows Server). As per the policy, after the end of the Extended Support period there will be no patches or security updates, which may cause security and compliance issues, and expose customers’ applications and business to serious security risks.
 
 **What editions of SQL Server are eligible for Extended Security Updates?**
@@ -293,7 +292,7 @@ For advice on how to optimize performance for SQL Server on Azure virtual machin
 
 ## See also
 
-- [SQL Server 2008 / 2008 R2 lifecycle page](https://support.microsoft.com/en-us/lifecycle/search?alpha=sql%20server%202008)
+- [SQL Server 2008 / 2008 R2 lifecycle page](https://support.microsoft.com/lifecycle/search?alpha=sql%20server%202008)
 - [SQL Server 2008 / 2008 R2 end of support page](https://aka.ms/sqleos)
 - [Extended Security Updates frequently asked questions (FAQ)](https://aka.ms/sqleosfaq)
 - [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)

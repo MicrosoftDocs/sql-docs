@@ -21,9 +21,9 @@ landingContent:
     - linkListType: overview
       links:
       - text: Database Migration Assistant (DMA)
-        url: /dma/dma-overview.md
+        url: ../dma/dma-overview.md
       - text: Database Experimentation Assistant
-        url: /dea/database-experimentation-assistant-overview.md
+        url: ../dea/database-experimentation-assistant-overview.md
     - linkListType: learn
       links:
       - text: Database Migration Assistant
@@ -37,7 +37,7 @@ landingContent:
     - linkListType: overview
       links:
       - text: Azure SQL Database
-        url:  /azure/sql-database/sql-database-technical-overview
+        url: /azure/sql-database/sql-database-technical-overview
       - text: Azure SQL Server virtual machine
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
     - linkListType: deploy
@@ -45,7 +45,7 @@ landingContent:
       - text: Database Migration Service (DMS)
         url: /azure/dms/
       - text: Database Migration Assistant (DMA)
-        url: /dma/dma-overview.md
+        url: ../dma/dma-overview.md
     - linkListType: concept
       links:
       - text: Cloud adoption framework
@@ -65,15 +65,15 @@ landingContent:
     - linkListType: get-started
       links:
       - text: From Oracle
-        url: ../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md
+        url: ../../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md
       - text: From Access
-        url: ../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md
+        url: ../../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md
       - text: From DB2
-        url: ../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md
+        url: ../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md
       - text: From mySQL
-        url: ../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md
+        url: ../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md
       - text: From Sybase
-        url: ../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
+        url: ../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
 
 
   - title: End of support 
@@ -87,9 +87,7 @@ landingContent:
       - text: Extend support with Azure VM
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support
       - text: Extended support updates (ESU) 
-        url: sql-server/end-of-support/sql-server-end-of-life-overview.md
-      - text: ESU FAQ
-        url: sql-server/end-of-support/sql-server-extended-security-updates-faq.md
+        url: sql-server/end-of-support/sql-server-extended-security-updates.md
     - linkListType: download
       links: 
       - text: Extended security updates datasheet PDF
@@ -111,7 +109,7 @@ landingContent:
     - linkListType: learn
       links:
       - text: Microsoft Assessment and Planning (MAP) toolkit
-        url: /en-us/learn/modules/sql-server-discovery-using-map/
+        url: learn/modules/sql-server-discovery-using-map/
     - linkListType: download
       links:
       - text: Microsoft Assessment and Planning (MAP) toolkit

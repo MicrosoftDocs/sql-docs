@@ -13,7 +13,6 @@ ms.reviewer: pmasl
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server end of support options 
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
 Each version of SQL Server is backed by a minimum of 10 years support, which includes 5 years in mainstream support, and five years in extended support, including regular security updates. End of support means the end of security updates, which can cause security and compliance issues as well as put applications and their business at risk. Additionally, support options are limited for customers who call into Microsoft Support for a product that has reached the end of its support cycle. 
@@ -79,20 +78,22 @@ You may also want to consider a non-relational or NoSQL solution for certain dat
 
 ## Lifecycle dates
 
-The following table provides a brief overview of relevant lifecycle dates for SQL Server products. For more information, see the [Microsoft Lifecycle](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy) policy page. 
+The following table provides an approximation of lifecycle dates for SQL Server products. For greater details and accuracy, see the [Microsoft Lifecycle Policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy) page. 
 
-| **Version**     | **Release** | **Mainstream Support End Date** | **Extended Support End Date** | 
-| SQL Server 2019 | 11/04/2019 | 01/7/2025 | 1/09/2030 | 
-| SQL Server 2017 | 09/29/2017 | 10/11/2022 | 11/12/2017| 
-| SQL Server 2016 | 06/01/2016 | 07/13/2021 | 07/14/2026| 
-| SQL Server 2014 | 06/05/2014 | 07/09/2019 | 07/09/2024| 
-| SQL Server 2012 | 05/20/2012 | 01/10/2017 | 07/12/2022 | 
-| SQL Server 2008 R2 | 07/20/2010 | 7/10/2012 | [7/9/2019](https://www.microsoft.com/sql-server/sql-server-2008) | 
-| SQL Server 2008 | 11/6/2008 | 7/10/2012 | [7/9/2019](https://www.microsoft.com/sql-server/sql-server-2008) | 
-| SQL Server 2005 | 01/14/2006 | 4/12/2011 | [4/12/2016](https://www.microsoft.com/sql-server/sql-server-2005) | 
-| SQL Server 2000 | 11/30/2000 | 5/6/2005 | [4/9/2013](https://blogs.technet.microsoft.com/cdnitmanagers/2012/12/06/sql-server-2000-end-of-support-april-2013/) | 
+| **Version**     | **Release year** | **Mainstream Support end year** | **Extended Support end year** |
+| :---------------| :--------------- |:------------------------------- |
+| [SQL Server 2019](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202019) | 2019 | 2025 | 2030 |
+| [SQL Server 2017](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017) | 2017 | 2022 | 2027 |
+| [SQL Server 2016](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202016) | 2016 | 2021 | 2026 |
+| [SQL Server 2014](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202014) | 2014 | 2019 | 2024 |
+| [SQL Server 2012](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202012) | 2012 | 2017 | 2022 |
+| [SQL Server 2008 R2](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008%20R2) | 2010 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
+| [SQL Server 2008](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008) | 2008 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
+| [SQL Server 2005](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202005) | 2006 | 2011 | [2016](https://www.microsoft.com/sql-server/sql-server-2005) |
+| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](https://blogs.technet.microsoft.com/cdnitmanagers/2012/12/06/sql-server-2000-end-of-support-april-2013/) |
 
-
+  > [!IMPORTANT]
+  > If any discrepancy exists between this table, and the Microsoft Lifecycle page, then the Microsoft Lifecycle supersedes this table, as this table is meant to be used as an approximate reference.  
 
 
 

@@ -108,6 +108,7 @@ Determines whether the RSClientPrint ActiveX control is available for download f
 ### EnableCustomVisuals 
 
 (Power BI Report Server only)
+
 To enable the display of Power BI custom visuals. Values are True/False. *Default is True.*  
 
 ###  EnableExecutionLogging  

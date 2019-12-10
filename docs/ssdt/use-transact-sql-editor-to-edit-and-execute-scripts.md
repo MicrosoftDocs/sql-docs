@@ -3,15 +3,16 @@ title: "Use Transact-SQL Editor to Edit and Execute Scripts"
 ms.custom: seo-lt-2019
 
 ms.date: "02/09/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL.DATA.TOOLS.SQLEDITOR"
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: “”
 ---
 # Use Transact-SQL Editor to Edit and Execute Scripts
 The Transact\-SQL Editor provides you with a rich editing and debugging experience when you are working with scripts. It is invoked when you use the **View Code** contextual menu to open a database entity in a connected database or a project. It is also automatically opened when you use the **New Query** contextual menu from the SQL Server Object Explorer, or add a new script object to a database project.  
@@ -24,11 +25,11 @@ The Transact\-SQL Editor contains a main **T-SQL** pane where you can write and 
   
 |Topic|Description|  
 |---------|---------------|  
-|[How to: Outline and Add Snippets to Transact-SQL Script](../ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md)|Use the Snippet Picker to insert ready-made Transact\-SQL code to your query.|  
-|[How to: Navigate Between Scripts](../ssdt/how-to-navigate-between-scripts.md)|Use Go-To-Definition and Find All Reference to navigate between scripts.|  
-|[How to: Use Rename and Refactoring to Make Changes to your Database Objects](../ssdt/how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md)|Rename an object across all scripts and preview any changes.|  
-|[How to: Execute a Partial Query](../ssdt/how-to-execute-a-partial-query.md)|Highlight a specific segment of the script and execute it as a single query.|  
-|[How to: Debug Stored Procedures](../ssdt/how-to-debug-stored-procedures.md)|Create and debug a Transact\-SQL stored procedure by stepping into it.|  
+ Outline and Add Snippets to Transact-SQL Script](../ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md)|Use the Snippet Picker to insert ready-made Transact\-SQL code to your query.|  
+ Navigate Between Scripts](../ssdt/how-to-navigate-between-scripts.md)|Use Go-To-Definition and Find All Reference to navigate between scripts.|  
+ Use Rename and Refactoring to Make Changes to your Database Objects](../ssdt/how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md)|Rename an object across all scripts and preview any changes.|  
+ Execute a Partial Query](../ssdt/how-to-execute-a-partial-query.md)|Highlight a specific segment of the script and execute it as a single query.|  
+ Debug Stored Procedures](../ssdt/how-to-debug-stored-procedures.md)|Create and debug a Transact\-SQL stored procedure by stepping into it.|  
 |[Analyze Script Performance](../ssdt/analyze-script-performance.md)|Use execution plans, client statistics and code analysis to determine whether you can improve performance of your query, stored procedures, or scripts.|  
   
 ## See Also  

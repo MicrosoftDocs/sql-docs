@@ -1,15 +1,17 @@
 ---
-title: "Azure Active Directory in SQL Server Data Tools (SSDT)"
-ms.custom: seo-lt-2019""
-ms.date: "10/28/2019"
+title: Azure Active Directory in SSDT
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: ssdt
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
+manager: jroth
+reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 10/28/2019
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
+
 # Azure Active Directory support in SQL Server Data Tools (SSDT)
 
 [!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

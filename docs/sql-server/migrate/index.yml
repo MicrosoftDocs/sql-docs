@@ -100,8 +100,8 @@ landingContent:
     - linkListType: overview
       links:
       - text: Overview
-        url: /azure/sql-database/sql-database-single-database
-      - text: Options
+        url: ../end-of-support/sql-server-end-of-life-overview.md
+      - text: Marketing information (idk what else to call this right now)
         url: https://www.microsoft.com/cloud-platform/windows-sql-server-2008
       - text: Extend support with Azure VM
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support

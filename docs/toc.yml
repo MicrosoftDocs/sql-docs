@@ -4264,8 +4264,6 @@
       href: database-engine/install-windows/supported-version-and-edition-upgrades.md
     - name: Prepare for upgrade by running Data Migration Assistant
       href: database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
-    - name: Upgrading from SQL 2005, 2008, or 2008 R2
-      href: database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md
     - name: Analysis Services
       href: database-engine/install-windows/upgrade-analysis-services.md
     - name: Data Quality Services

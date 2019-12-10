@@ -19,15 +19,21 @@ Each version of SQL Server is backed by a minimum of 10 years support, which inc
 
 Once your SQL Server has reached the end of its support lifecycle, you have the following options:
 - Upgrade to a current version of SQL Server for the most advanced security, performance and innovation. 
-- Purchase an [Extended Security Update subscription](sql-server-extended-security-updates-overview.md) for your servers and remain protected until you are ready to upgrade to a newer version of SQL Server, for up to three yearse after the end of support date. 
-- [Migrate your existing SQL Server 2008 and 2008 R2 workloads as-is to Azure virtual machines](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support) to automatically subscribe to an additional three years of Extended Security updates at no additional cost apart from the cost of the virtual machine. 
+- Purchase an [Extended Security Update subscription](sql-server-extended-security-updates.md) for your servers and remain protected until you are ready to upgrade to a newer version of SQL Server, for up to three years after the end of support date. 
+- [Migrate your existing SQL Server 2008 and 2008 R2 workloads as-is to Azure virtual machines](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support) to automatically subscribe to an additional three years of Extended Security Updates at no additional cost apart from the cost of the virtual machine. 
 - Migrate your workload to an Azure cloud service such as to an Azure SQL Database single database or managed instance. 
 
 
-
- The end of extended support for SQL Server is one reason to upgrade now to a newer version of SQL Server and to Azure SQL Database. Upgrading enables you to maintain security and compliance, achieve breakthrough performance, and optimize your data platform infrastructure.  
   
- For more info, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005) and [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008).  
+For more information, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005) and [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008).  
+
+## Stay on-premises 
+
+If you would like to maintain your current system and stay on-premises, you can either choose to upgrade your SQL Server to a newer and supported version, or you can purchase Extended Security Updates for up to three years after the end of the support date. 
+
+
+
+
   
 ## Why upgrade?  
   

@@ -1,7 +1,7 @@
 ---
-title: "DAC Framework Compatibility | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "DAC Framework Compatibility"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

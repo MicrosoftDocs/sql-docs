@@ -1,7 +1,7 @@
 ---
-title: "Walkthrough Authoring a Custom Static Code Analysis Rule Assembly for SQL Server | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "Walkthrough Authoring a Custom Static Code Analysis Rule Assembly for SQL Server"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

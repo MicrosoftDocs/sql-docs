@@ -1,7 +1,7 @@
 ---
-title: "Analyze Script Performance | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "Analyze Script Performance"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

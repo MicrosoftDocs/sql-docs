@@ -43,7 +43,7 @@ USER_NAME ( [ id ] )
  Is the identification number associated with a database user. *id* is **int**. The parentheses are required.  
   
 ## Return Types  
- **nvarchar(256)**  
+ **nvarchar(128)**  
   
 ## Remarks  
  When *id* is omitted, the current user in the current context is assumed. If the parameter contains the word NULL will return NULL. When USER_NAME is called without specifying an *id* after an EXECUTE AS statement, USER_NAME returns the name of the impersonated user. If a Windows principal accesses the database by way of membership in a group, USER_NAME returns the name of the Windows principal instead of the group.  
@@ -154,6 +154,6 @@ User7
  [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
   

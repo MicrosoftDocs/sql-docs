@@ -1,7 +1,7 @@
 ---
-title: "Customize Database Build and Deployment by Using Build and Deployment Contributors | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "Customize Database Build and Deployment by Using Build and Deployment Contributors"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

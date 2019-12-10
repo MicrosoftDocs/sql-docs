@@ -1,24 +1,24 @@
 ### YamlMime:Hub
 title: Microsoft SQL documentation
-summary: Learn how to use Microsoft SQL Server to address your database needs, both on-premises, and in the cloud!
+summary: Learn how to use Microsoft SQL Server to address your database needs, both on-premises and in the cloud.
 brand: sql
 metadata:
    title: Microsoft SQL documentation | Microsoft Docs
-   description: Learn how to use Microsoft SQL Server to manage your database needs, both on-premises, and in the cloud!
+   description: Learn how to use Microsoft SQL Server to manage your database needs, both on-premises and in the cloud.
    ms.topic: hub-page
 
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 highlightedContent:
   items:
-   - title: Try SQL Server 2019 (Preview)
+   - title: Try SQL Server 2019
      itemType: download
-     url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp
+     url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019
    - title: Get an Azure VM with SQL Server
      itemType: overview
      url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm
-   - title: Download query data tools
-     itemType: download
+   - title: SQL tools
+     itemType: overview
      url: tools/overview-sql-tools.md
    - title: SQL Server Education Center
      itemType: learn
@@ -32,7 +32,7 @@ productDirectory:
       - url: https://docs.microsoft.com/azure/sql-database/
         text: Azure SQL Database
       - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
-        text: Azure SQL Data Warehouse
+        text: Azure Synapse Analytics (SQL DW)
   - title: SQL Server on Windows
     imageSrc: media/index/windows.png
     links:
@@ -73,13 +73,13 @@ conceptualContent:
     - title: What's new
       links:
         - text: SQL Server 2019
-          url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15?view=sql-server-ver15
+          url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15
           itemType: whats-new
         - text: SQL Server Big Data Cluster
-          url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
+          url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
           itemType: whats-new
         - text: Azure Data Studio
-          url: azure-data-studio/what-is.md
+          url: azure-data-studio/release-notes-azure-data-studio.md
           itemType: whats-new
         - text: Azure Database Migration Service
           url: https://docs.microsoft.com/azure/dms/dms-overview
@@ -94,6 +94,9 @@ conceptualContent:
           itemType: deploy
         - text: SQL Server Management Studio (SSMS)
           url: ssms/download-sql-server-management-studio-ssms.md
+          itemType: deploy
+        - text: Azure Data Studio
+          url: azure-data-studio/download.md
           itemType: deploy
         - text: Analysis Services (SSAS)
           url: https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services/
@@ -196,10 +199,10 @@ additionalContent:
       - title: Big data
         links:
           - text: SQL Server 2019 Big Data Clusters
-            url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
+            url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
           - text: Data Virtualization with Polybase
             url: relational-databases/polybase/polybase-guide.md
-          - text: Azure SQL Data Warehouse
+          - text: Azure Synapse Analytics (SQL DW)
             url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
           - text: Azure SQL Database Hyperscale
             url: https://docs.microsoft.com/azure/sql-database/sql-database-service-tier-hyperscale

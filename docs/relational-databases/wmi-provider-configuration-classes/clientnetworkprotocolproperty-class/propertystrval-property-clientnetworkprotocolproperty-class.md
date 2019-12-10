@@ -1,6 +1,6 @@
 ---
-title: "PropertyStrVal Property (ClientNetworkProtocolProperty Class) | Microsoft Docs"
-ms.custom: ""
+title: "PropertyStrVal Property (ClientNetworkProtocolProperty)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: wmi
 ms.topic: "reference"
 apiname: 
-  - "PropertyStrVal Property (ClientNetworkProtocolProperty Class)"
+  - "PropertyStrVal Property (ClientNetworkProtocolProperty)"
 apilocation: 
   - "sqlmgmproviderxpsp2up.mof"
 apitype: "MOFDef"

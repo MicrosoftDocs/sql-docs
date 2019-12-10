@@ -1,6 +1,6 @@
 ---
-title: "High Availability and Disaster Recovery for Master Data Services | Microsoft Docs"
-ms.custom: ""
+title: High Availability and Disaster Recovery
+ms.custom: "seo-lt-2019"
 ms.date: "07/28/2017"
 ms.prod: sql
 ms.prod_service: "mds"

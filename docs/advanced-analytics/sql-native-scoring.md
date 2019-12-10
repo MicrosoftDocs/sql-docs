@@ -1,5 +1,5 @@
 ---
-title: Native scoring using PREDICT T-SQL statement
+title: Native scoring using T-SQL PREDICT
 description: Generate predictions using the PREDICT T-SQL function, scoring dta inputs against a pre-trained model written in R or Python on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,7 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 

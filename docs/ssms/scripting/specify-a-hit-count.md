@@ -1,10 +1,8 @@
 ---
-title: "Specify a Hit Count | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Specify a Hit Count
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vs.debug.breakpt.hitcount"
@@ -13,13 +11,22 @@ helpviewer_keywords:
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 12/04/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Specify a Hit Count
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  A breakpoint hit count is a counter that is incremented by the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger each time the breakpoint is reached. If the specified hit count is reached and any specified breakpoint condition is satisfied, the debugger performs the action specified for the breakpoint.  
-  
-## Hit Count Considerations  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+A breakpoint hit count is a counter that is incremented by the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger each time the breakpoint is reached. If the specified hit count is reached and any specified breakpoint condition is satisfied, the debugger performs the action specified for the breakpoint.  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## Hit Count Considerations
+
  By default, execution breaks every time a breakpoint is hit. You can choose between the following options:  
   
 -   Break always (the default).  

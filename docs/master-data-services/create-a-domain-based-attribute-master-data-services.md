@@ -1,5 +1,5 @@
 ---
-title: "Create a Domain-Based Attribute (Master Data Services) | Microsoft Docs"
+title: Create a Domain-Based Attribute
 ms.custom: ""
 ms.date: "07/25/2017"
 ms.prod: sql

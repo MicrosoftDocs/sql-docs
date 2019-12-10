@@ -1,5 +1,5 @@
 ---
-title: "Deprecated Full-Text Search Features in SQL Server 2016 | Microsoft Docs"
+title: "Deprecated Full-Text Search features in SQL Server 2016"
 ms.custom: ""
 ms.date: "08/19/2016"
 ms.prod: sql
@@ -15,8 +15,9 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
-# Deprecated Full-Text Search Features in SQL Server 2016
+# Deprecated Full-Text Search features in SQL Server 2016
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This topic describes the deprecated full-text search features still available in SQL Server. These features are scheduled to be removed in a future release. Do not use deprecated features in new applications.  
   

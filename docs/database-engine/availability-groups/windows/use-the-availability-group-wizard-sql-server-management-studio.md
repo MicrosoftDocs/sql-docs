@@ -1,6 +1,7 @@
 ---
-title: "Use the Availability Group Wizard (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Configure availability group in SSMS"
+description: Create and configure an Always On availability group with the 'New Availability Group Wizard' in SQL Server Management Studio (SSMS).  
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

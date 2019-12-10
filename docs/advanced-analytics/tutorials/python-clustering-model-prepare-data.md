@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Prepare data to categorize customers in Python"
-description: In part two of this four-part tutorial series, you'll prepare the data from a SQL Server database to perform clustering in Python with SQL Server Machine Learning Services.
+title: "Python tutorial: Prepare cluster data"
+description: In part two of this four-part tutorial series, you'll prepare SQL data to perform clustering in Python with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -9,6 +9,7 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 

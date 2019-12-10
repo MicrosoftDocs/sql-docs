@@ -38,7 +38,7 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
-# CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) (preview)
+# CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -136,7 +136,8 @@ Requires CREATE VIEW permission in the database and ALTER permission on the sche
   
 ## See also
 
-[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
+[Performance tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
+[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)      
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   

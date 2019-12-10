@@ -1,6 +1,7 @@
 ---
-title: "Force Service in a Database Mirroring Session (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Force database mirroring service"
+description: "If the principal server fails while the mirror server is available, make the database available by forcing the service to fail over to the mirrored database (with possible data loss)"
+ms.custom: "seo-lt-2019"
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: high-availability

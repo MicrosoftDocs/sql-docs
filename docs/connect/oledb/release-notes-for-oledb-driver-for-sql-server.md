@@ -32,7 +32,7 @@ October 2019
 | Feature added | Details |
 | :------------ | :------ |
 | Azure Active Directory authentication support (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Using Azure Active Directory](features/using-azure-active-directory.md). |
-| Support for embedded Active Directory Authentication Library (ADAL). | A separate installation of ADAL isn't required anymore to use certain authentication methods. |
+| Include Azure Active Directory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, this will upgrade existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
 | &nbsp; | &nbsp; |
 
 ### Bugs fixed

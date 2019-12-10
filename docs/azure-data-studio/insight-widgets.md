@@ -1,8 +1,8 @@
 ---
-title: Use Insight widgets in Azure Data Studio to monitor servers and databases
+title: Use Insight widgets to monitor servers and databases
 titleSuffix: Azure Data Studio
 description: Learn about insight widgets in Azure Data Studio
-ms.custom: seodec18, sqlfreshmay19
+ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: "05/14/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -21,14 +21,12 @@ You can build awesome server and database management dashboards similar to the f
 
 ![database dashboard](media/insight-widgets/database-dashboard.png)
 
-
 To jump in and start creating different types of insight widgets, check out the following tutorials:
 
 - [Build a custom insight widget](tutorial-build-custom-insight-sql-server.md)
 - *Enable built-in insight widgets*
   - [Enable the performance monitoring insight](tutorial-qds-sql-server.md)
   - [Enable the table space usage insight](tutorial-table-space-sql-server.md)
-
 
 ## SQL Queries
 

@@ -12,10 +12,6 @@
       href: /sql/analytics-platform-system/
       homepage: /sql/analytics-platform-system/index
 
-    - name: SSAS
-      href: /sql/analysis-services/
-      homepage: /sql/analysis-services/analysis-services
-
     - name: ML
       href: /sql/advanced-analytics/
       homepage: /sql/advanced-analytics/

@@ -112,7 +112,7 @@ GO
 ```  
   
 ### B. Changing a cleanup job  
- The following example updates a cleanup job in the `AdventureWorks2012` database. All valid parameters for this job type, except **@threshold**, are specified. The value of **@threshold** is not modified.  
+ The following example updates a cleanup job in the `AdventureWorks2012` database. All valid parameters for this job type, except **\@threshold**, are specified. The value of **\@threshold** is not modified.  
   
 ```  
 USE AdventureWorks2012;  

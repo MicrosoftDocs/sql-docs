@@ -1,7 +1,7 @@
 ---
-title: "How to: Write a SQL Server Unit Test that Runs within the Scope of a Single Transaction | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "How to: Write a SQL Server Unit Test that Runs within the Scope of a Single Transaction"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

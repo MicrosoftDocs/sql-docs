@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "keys [SQL Server], database encryption"
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ---
 # SQL Server and Database Encryption Keys (Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

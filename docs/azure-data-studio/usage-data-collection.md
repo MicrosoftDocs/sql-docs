@@ -1,5 +1,5 @@
 ---
-title: Enable or disable usage data collection, and crash reporting
+title: Enable or disable usage data collection and crash reporting
 titleSuffix: Azure Data Studio
 description: This article explains how to control if usage and crash reporting data is collected and sent to Microsoft.
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
+ms.custom: seodec18; seo-lt-2019
+ms.date: 09/24/2018
 ---
 
 # Enable or disable usage data collection for [!INCLUDE[name-sos](../includes/name-sos-short.md)]

@@ -1,5 +1,6 @@
 ---
-title: Troubleshooting and FAQ for machine learning
+title: Troubleshooting
+description: Provides a starting point for working through known issues.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -7,13 +8,14 @@ ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # Troubleshoot machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Use this page as a starting point for working through known issues.
+Use this article as a starting point for working through known issues.
 
 ## Known issues
 

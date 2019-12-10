@@ -1,5 +1,5 @@
 ﻿---
-title: "bcp Utility | Microsoft Docs"
+title: "bcp Utility"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: tools-other
@@ -25,7 +25,7 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 01/14/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
@@ -63,7 +63,7 @@ The new BCP supports Azure AD authentication, including Multi-Factor Authenticat
 
 ### System Requirements
 
-Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2
+Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
 This component requires both [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) and [Microsoft ODBC Driver 17.3 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
 

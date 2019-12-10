@@ -1,12 +1,13 @@
 ---
-title: 'Python tutorial: Deploy model (linear regression)'
-description: In this tutorial you will use Python and linear regression in SQL Server Machine Learning Services to predict the number of ski rentals. You'll deploy a linear regression model developed in Python into a SQL Server database using Machine Learning Services.
+title: "Python tutorial: Deploy model"
+description: In part four of this four-part tutorial series, you'll deploy a Python model to predict ski rentals into a SQL Server database using Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Python Tutorial: Deploy a linear regression model to SQL Server Machine Learning Services
@@ -34,7 +35,7 @@ In [part three](python-ski-rental-linear-regression-train-model.md), you learned
 
 ## Create a stored procedure that generates the model
 
-Now, using the Python scripts you developed, create a stored procedure **generate_rental_rx_model** that trains and generates the linear regression model using LinearRegression from  scikit-learn.
+Now, using the Python scripts you developed, create a stored procedure **generate_rental_py_model** that trains and generates the linear regression model using LinearRegression from  scikit-learn.
 
 Run the following T-SQL statement in Azure Data Studio to create the stored procedure to train the model.
 

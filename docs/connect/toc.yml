@@ -11,8 +11,6 @@
 - name: SQL Data Developer
   href: ../connect/sql-data-developer.md
 
-
-
 - name: ADO.NET
   items:
   - name: Microsoft ADO.NET for SQL Server
@@ -145,6 +143,8 @@
         href: ../connect/ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md
       - name: SqlClient support for LocalDB
         href: ../connect/ado-net/sql/sqlclient-support-localdb.md
+      - name: SqlClient support for Always Encrypted
+        href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
 
 - name: JDBC
   items:
@@ -2513,8 +2513,6 @@
       href: ../connect/jdbc/understanding-java-ee-support.md
     - name: Deploying the JDBC Driver
       href: ../connect/jdbc/deploying-the-jdbc-driver.md
-    - name: Redistributing the Microsoft JDBC Driver
-      href: ../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md
     - name: Finding Additional JDBC Driver Information
       href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
     - name: Microsoft JDBC Driver for SQL Server Support Matrix
@@ -2770,7 +2768,6 @@
     href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
   - name: "Step 3: Proof of concept connecting to SQL using Node.js"
     href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
-
 
 
 # docs/connect/odbc/ , plus big expando for docs/odbc/ .

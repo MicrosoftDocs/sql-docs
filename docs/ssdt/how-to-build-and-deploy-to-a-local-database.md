@@ -1,7 +1,7 @@
 ---
-title: "How to: Build and Deploy to a Local Database | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "How to: Build and Deploy to a Local Database"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

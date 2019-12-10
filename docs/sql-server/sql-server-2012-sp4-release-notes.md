@@ -25,9 +25,9 @@ The Service Packs are available online only, not on the installation media, and 
 
 ### Download pages
 
-- [SQL Server 2012 SP4 Feature Pack](https://go.microsoft.com/fwlink/?linkid=846907)
-- [SQL Server 2012 SP4 Patch installation](https://go.microsoft.com/fwlink/?linkid=846829)
-- [SQL Server 2012 SP4 Express](https://go.microsoft.com/fwlink/?linkid=846905)
+- [SQL Server 2012 SP4 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041)
+- [SQL Server 2012 SP4 Patch installation](https://www.microsoft.com/download/details.aspx?id=56040)
+- [SQL Server 2012 SP4 Express](https://www.microsoft.com/download/details.aspx?id=56042)
 
 
 ### Performance and scale improvements

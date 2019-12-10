@@ -1,6 +1,6 @@
 ---
-title: "Categorizing customers using k-means clustering"
-description: In this four-part tutorial series, you'll perform clustering of customers, using the K-Means algorithm, in a SQL database using Python with SQL Server Machine Learning Services.
+title: "Python tutorial: Categorize users"
+description: In this four-part tutorial series, you'll  cluster customers, using K-Means, in a SQL database using Python with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -9,6 +9,7 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Configure and Manage Thesaurus Files for Full-Text Search | Microsoft Docs"
+title: "Configure & manage thesaurus files for Full-Text Search"
 ms.date: "12/04/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
@@ -13,6 +13,7 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
+ms.custom: "seo-lt-2019"
 ---
 # Configure and Manage Thesaurus Files for Full-Text Search
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

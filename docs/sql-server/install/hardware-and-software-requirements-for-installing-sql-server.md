@@ -116,19 +116,6 @@ The following requirements apply to all installations:
 
 **Server Core Support:**
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-
-Installing SQL Server 2019 on Server Core mode is supported by the following editions of Windows Server:
-
-|                              |                                |
-| :------------------------    | :------------------------------|
-| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
-| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
-   | &nbsp; | &nbsp; |
-
-::: moniker-end
-
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
 Installing SQL Server 2016 and 2017 on Server Core mode is supported by the following editions of Windows Server:
 
@@ -138,10 +125,7 @@ Installing SQL Server 2016 and 2017 on Server Core mode is supported by the foll
 | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
 | Windows Server 2012 R2 Standard | Windows Server 2012 R2  Datacenter|
 | Windows Server 2012 Standard | Windows Server 2012 Datacenter |
-| Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
-| Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
-   | &nbsp; | &nbsp; |
-::: moniker-end
+| &nbsp; | &nbsp; |
 
 For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
 
@@ -164,22 +148,6 @@ For more information on installing SQL Server on Server Core, see [Install SQL S
   
 ###  <a name="TOP_Principal"></a> OS Compatibility   
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-The following table shows which editions of SQL Server 2019 are compatible with which versions of Windows:  
-  
-
-| SQL Server edition:               | Enterprise | Developer | Standard | Web | Express |  
-| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
-| Windows Server 2019 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2019 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2019 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2016 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2016 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2016 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| &nbsp; | &nbsp; |
-::: moniker-end
-
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
 The following table shows which editions of SQL Server 2016 and 2017 are compatible with which versions of Windows:  
   
@@ -214,7 +182,6 @@ The following table shows which editions of SQL Server 2016 and 2017 are compati
 >  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint products  
-::: moniker-end
 
 
   

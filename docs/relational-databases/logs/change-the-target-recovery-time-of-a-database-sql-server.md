@@ -1,5 +1,5 @@
 ---
-title: "Change the Target Recovery Time of a Database (SQL Server) | Microsoft Docs"
+title: "Change target recovery time of a database"
 ms.custom: ""
 ms.date: "08/24/2016"
 ms.prod: sql
@@ -10,6 +10,7 @@ ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.custom: "seo-lt-2019"
 ---
 # Change the Target Recovery Time of a Database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

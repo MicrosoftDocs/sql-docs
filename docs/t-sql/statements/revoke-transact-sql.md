@@ -86,7 +86,7 @@ REVOKE
 >  If the principal has the specified permission without the GRANT option, the permission itself will be revoked.  
   
  ALL  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
  This option does not revoke all possible permissions. Revoking ALL is equivalent to revoking the following permissions.  
   
@@ -130,7 +130,7 @@ REVOKE
 >  A cascaded revocation of a permission granted WITH GRANT OPTION will revoke both GRANT and DENY of that permission.  
   
  AS *principal*  
- Use the AS principal clause to indicate that you are revoking a permission that was granted by a principal other than you. For example, presume that user Mary is principal_id 12 and user Raul is principal 15. Both Mary and Raul grant a user named Steven the same permission. The sys.database_permissions table will indicate the permissions twice but they will each have a different grantor_prinicpal_id value. Mary could revoke the permission using the `AS RAUL` clause to remove Raul's grant of the permission.
+ Use the AS principal clause to indicate that you are revoking a permission that was granted by a principal other than you. For example, presume that user Mary is principal_id 12 and user Raul is principal_id 15. Both Mary and Raul grant a user named Steven the same permission. The sys.database_permissions table will indicate the permissions twice but they will each have a different grantor_principal_id value. Mary could revoke the permission using the `AS RAUL` clause to remove Raul's grant of the permission.
  
 The use of AS in this statement does not imply the ability to impersonate another user.  
   

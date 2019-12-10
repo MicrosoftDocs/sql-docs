@@ -1,7 +1,7 @@
 ---
-title: "Filter and Sort Dialog Box | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "Filter and Sort Dialog Box"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

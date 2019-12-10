@@ -1,5 +1,5 @@
 ---
-title: "Parameter Info (IntelliSense) | Microsoft Docs"
+title: "Parameter Info (IntelliSense)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

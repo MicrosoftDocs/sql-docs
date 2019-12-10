@@ -1,6 +1,6 @@
 ---
-title: "Native Compilation of Tables and Stored Procedures | Microsoft Docs"
-ms.custom: ""
+title: "Native compilation of tables & stored procedures"
+ms.custom: seo-dt-2019
 ms.date: "04/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

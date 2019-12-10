@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Extensible Key Management"
   - "EKM, described"
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ---
 # Extensible Key Management (EKM)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

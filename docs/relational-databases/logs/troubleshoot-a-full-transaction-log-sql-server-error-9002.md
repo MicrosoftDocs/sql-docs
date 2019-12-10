@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot a Full Transaction Log (SQL Server Error 9002) | Microsoft Docs"
+title: "Troubleshoot full transaction log error 9002"
 ms.custom: ""
 ms.date: "08/05/2016"
 ms.prod: sql
@@ -18,6 +18,7 @@ helpviewer_keywords:
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.custom: "seo-lt-2019"
 ---
 # Troubleshoot a Full Transaction Log (SQL Server Error 9002)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

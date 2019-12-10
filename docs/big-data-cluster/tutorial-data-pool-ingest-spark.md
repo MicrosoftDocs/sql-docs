@@ -1,11 +1,11 @@
 ---
 title: Ingest data with Spark jobs
 titleSuffix: SQL Server big data clusters
-description: This tutorial demonstrates how to ingest data into the data pool of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] using Spark jobs in Azure Data Studio.
-author: MikeRayMSFT 
-ms.author: mikeray
-ms.reviewer: shivsood
-ms.date: 08/21/2019
+description: This tutorial demonstrates how to ingest data into the data pool of a SQL Server big data cluster using Spark jobs in Azure Data Studio.
+author: rajmera3 
+ms.author: raajmera
+ms.reviewer: mikeray
+ms.date: 11/19/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -48,6 +48,8 @@ The following steps create an external table in the data pool named **web_clicks
 1. Create an external data source to the data pool if it does not already exist.
 
    ```sql
+   USE Sales
+   GO
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
      WITH (LOCATION = 'sqldatapool://controller-svc/default');
@@ -92,8 +94,9 @@ The next step is to create a Spark streaming job that loads web clickstream data
       val datapool_table = "web_clickstreams_spark_results"
       val datasource_name = "SqlDataPool"
       val schema = StructType(Seq(
-      StructField("wcs_click_date_sk",IntegerType,true), StructField("wcs_click_time_sk",IntegerType,true), StructField("wcs_sales_sk",IntegerType,true), StructField("wcs_item_sk",IntegerType,true), 
-      StructField("wcs_web_page_sk",IntegerType,true), StructField("wcs_user_sk",IntegerType,true)
+      StructField("wcs_click_date_sk",LongType,true), StructField("wcs_click_time_sk",LongType,true), 
+      StructField("wcs_sales_sk",LongType,true), StructField("wcs_item_sk",LongType,true),
+      StructField("wcs_web_page_sk",LongType,true), StructField("wcs_user_sk",LongType,true)
       ))
 
       val hostname = "master-0.master-svc"
@@ -117,16 +120,16 @@ The next step is to create a Spark streaming job that loads web clickstream data
                   .option("dataPoolDataSource",datasource_name).save()
                }.start()
 
-      query.processAllAvailable()
       query.awaitTermination(40000)
+      query.stop()
       ```
 ## Query the data
 
 The following steps show that the Spark streaming job loaded the data from HDFS into the data pool.
 
-1. Before querying the ingested data, look at the task history output to see that the job completed.
+1. Before querying the ingested data, look at the Spark Execution Status including Yarn App ID, Spark UI and Driver Logs.
 
-   ![Spark job history](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
+   ![Spark Execution Details](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
 1. Return to the SQL Server master instance query window that you opened at the beginning of this tutorial.
 

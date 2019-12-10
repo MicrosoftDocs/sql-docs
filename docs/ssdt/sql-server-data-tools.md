@@ -1,7 +1,7 @@
 ---
-title: "SQL Server Data Tools | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "SQL Server Data Tools"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

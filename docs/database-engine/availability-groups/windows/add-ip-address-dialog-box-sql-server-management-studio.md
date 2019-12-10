@@ -1,7 +1,7 @@
 ---
-title: "'Add IP Address' in 'New Availability Group Listener' dialog box"
+title: "Availability group wizard: Add IP Address"
 description: "Describes the options of the 'Add IP Address' dialog box found on the 'Specify Replicas' page in the SQL Server Management Studio 'Availability Group Wizard'. "
-ms.custom: "seodec18"   
+ms.custom: "seo-lt-2019" 
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

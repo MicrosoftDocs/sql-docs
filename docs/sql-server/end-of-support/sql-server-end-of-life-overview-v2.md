@@ -29,14 +29,20 @@ For more information, guidance, and tools to plan and automate your upgrade or m
 
 ## Upgrade SQL Server
 
+The first option is to upgrade your existing SQL Server to a newer and supported version of SQL Server. 
+
 ### Benefits
-- benefit 1
-- benefit 2
+- Get the most out of innovation by taking advantage of the latest features and security improvements. 
+- You have the most control over features and scalability because you manage both hardware and software.
+- If you're upgrading from an older instance of SQL Server, this is the most similar environment.
+- Applicable for database applications of any kind, including OLTP systems and data warehousing. 
+
 
 ### Considerations
 
-- consideration 1
-- cosideration 2 
+- You have to make the biggest up-front investment and provide the most ongoing management, because you have to buy, maintain, and manage your own hardware and software.
+- There could be downtime, plus the inherent risk of running into issues during an in-place upgrade process.
+- If you're on Windows 2008 or 2008 R2, you will also need to upgrade the OS as the newer versions of SQL may not be supported on Windows 2008 or 2008 R2. There is added risk during the OS upgrade process, so doing a side-by-side migration may be the more prudent, yet more costly, approach. Additionally, in-place OS upgrades are not supported on failover cluster instances.
 
 ## Extend support 
 
@@ -44,7 +50,7 @@ For more information, guidance, and tools to plan and automate your upgrade or m
 
 ### Considerations
 
-## Azure SQL virtual machine
+## Azure virtual machine
 
 ### Benefits
 

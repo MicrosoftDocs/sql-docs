@@ -1,8 +1,5 @@
 ---
-title: "Walkthrough: Creating and Running a SQL Server Unit Test"
-ms.custom: seo-lt-2019
-
-ms.date: "02/09/2017"
+title: Creating and Running a SQL Server Unit Test
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -11,8 +8,12 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Walkthrough: Creating and Running a SQL Server Unit Test
+
 In this walkthrough, you create a SQL Server unit test that verifies the behavior of several stored procedures. You create SQL Server unit tests to help identify code defects that might cause incorrect application behavior. You can run SQL Server unit tests and application tests as part of an automated suite of tests.  
   
 In this walkthrough, you perform the following tasks:  

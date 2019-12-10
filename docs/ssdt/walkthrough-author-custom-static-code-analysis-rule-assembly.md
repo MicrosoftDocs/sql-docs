@@ -1,5 +1,5 @@
 ---
-title: Walkthrough Authoring a Custom Static Code Analysis Rule Assembly for SQL Server
+title: Authoring a Custom Static Code Analysis Rule Assembly for SQL Server
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,8 +8,6 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: “”
-ms.reviewer: ""
-manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ---

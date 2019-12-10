@@ -1,8 +1,5 @@
 ---
-title: "Transact-SQL Editor Options"
-ms.custom: seo-lt-2019
-
-ms.date: "02/09/2017"
+title: Transact-SQL Editor Options
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -28,8 +25,12 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Transact-SQL Editor Options
+
 This topic contains information about some of the options of the Transact-SQL Editor. To set these options, navigate to the **Option** dialog through the **Tools\Options** menu.  
   
 [Query Execution](#QueryExecution)  

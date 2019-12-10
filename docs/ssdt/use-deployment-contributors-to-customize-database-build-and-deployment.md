@@ -1,8 +1,5 @@
 ---
-title: "Customize Database Build and Deployment by Using Build and Deployment Contributors"
-ms.custom: seo-lt-2019
-
-ms.date: "02/09/2017"
+title: Customize Database Deployments Using Deployment Contributors
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -11,8 +8,12 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Customize Database Build and Deployment by Using Build and Deployment Contributors
+
 Visual Studio provides extensibility points that you can use to modify the behavior of the build and deployment actions for database projects.  
   
 ## Available Extensibility Points  

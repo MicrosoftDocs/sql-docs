@@ -1,8 +1,5 @@
 ---
-title: "Using MSDeploy with dbSqlPackage Provider"
-ms.custom: seo-lt-2019
-
-ms.date: "04/26/2017"
+title: Using MSDeploy with dbSqlPackage Provider
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -11,8 +8,12 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 04/26/2017
 ---
+
 # Using MSDeploy with dbSqlPackage Provider
+
 **DbSqlPackage** is an **MSDeploy** provider that allows you interact with SQL Server/SQL Azure databases. **DbSqlPackage** supports the following actions:  
   
 -   **Extract**: Creates a database snapshot (.dacpac) file from a live SQL Server or SQL Azure databases.  

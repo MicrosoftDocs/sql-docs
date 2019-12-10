@@ -1,8 +1,5 @@
 ---
-title: "Use Transact-SQL Editor to Edit and Execute Scripts"
-ms.custom: seo-lt-2019
-
-ms.date: "02/09/2017"
+title: Use Transact-SQL Editor to Edit and Execute Scripts
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -13,8 +10,12 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Use Transact-SQL Editor to Edit and Execute Scripts
+
 The Transact\-SQL Editor provides you with a rich editing and debugging experience when you are working with scripts. It is invoked when you use the **View Code** contextual menu to open a database entity in a connected database or a project. It is also automatically opened when you use the **New Query** contextual menu from the SQL Server Object Explorer, or add a new script object to a database project.  
   
 If you are not connected to a database, but want to execute a query against it, you can also use the **New Query Connection** dialog box in the **SQL** -> **Transact\-SQL Editor** menu option to connect to a database and launch the Transact\-SQL Editor.  

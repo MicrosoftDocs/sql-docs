@@ -1,8 +1,5 @@
 ---
-title: "Overview of Connection Strings and Permissions"
-ms.custom: seo-lt-2019
-
-ms.date: "02/09/2017"
+title: Connection Strings and Permissions
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -11,8 +8,12 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Overview of Connection Strings and Permissions
+
 To run SQL Server unit tests, you must connect to a database server by using one or two specific connection strings. Each connection string represents an account that has the specific permissions that you must have to perform the task or set of tasks in a particular script as part of the test. You can specify these strings in the **SQL Server Test Configuration** dialog box or by manually editing the app.config file for your test project.  
   
 ## Connection Strings  

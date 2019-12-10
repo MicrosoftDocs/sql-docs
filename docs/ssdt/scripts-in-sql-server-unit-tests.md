@@ -1,8 +1,5 @@
 ---
-title: "Scripts in SQL Server Unit Tests"
-ms.custom: seo-lt-2019
-
-ms.date: "02/09/2017"
+title: Scripts in SQL Server Unit Tests
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -11,8 +8,12 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Scripts in SQL Server Unit Tests
+
 Each SQL Server unit test contains a single pre-test action, test action, and post-test action. Each of these actions in turn contains the following:  
   
 -   A Transact\-SQL script that executes on a database.  

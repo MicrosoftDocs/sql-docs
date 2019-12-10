@@ -1,8 +1,5 @@
 ---
-title: "Project-Oriented Offline Database Development"
-ms.custom: seo-lt-2019
-
-ms.date: "02/09/2017"
+title: Project-Oriented Offline Database Development
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -14,8 +11,12 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Project-Oriented Offline Database Development
+
 This section describes features provided by SQL Server Data Tools (SSDT) for authoring, building, debugging and publishing a database project.  
   
 Using SSDT, you can create an offline database project and implement schema changes by adding, modifying or deleting the definitions of objects (represented by scripts) in the project, without a connection to a server instance. These can all be accomplished by using the table designer, or the Transact\-SQL Editor. You can also write and debug Transact\-SQL and CLR objects in the same project. You can use Schema Compare to ensure that your project stays in sync with the production database, and create snapshots for your project in each stage of the development cycle for comparison purposes. While you are working on your database projects in a team-based environment, you can employ version control for all the files. After your database project has been developed, tested and debugged, you can hand off your project to authorized personnel to be published to a production environment.  

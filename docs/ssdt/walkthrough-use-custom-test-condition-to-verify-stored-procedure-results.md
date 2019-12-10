@@ -1,8 +1,5 @@
 ---
-title: "Walkthrough: Using a Custom Test Condition to Verify the Results of a Stored Procedure"
-ms.custom: seo-lt-2019
-
-ms.date: "02/09/2017"
+title: Custom Test Condition to Verify the Results of a Stored Procedure
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -11,8 +8,12 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Walkthrough: Using a Custom Test Condition to Verify the Results of a Stored Procedure
+
 In this feature extension walkthrough, you will create a test condition, and you will verify its functionality by creating a SQL Server unit test. The process includes creating a class library project for the test condition, and signing and installing it. If you already have a test condition that you want to update, see [How to: Upgrade a Visual Studio 2010 Custom Test Condition from a Previous Release to SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
   
 This walkthrough illustrates the following tasks:  

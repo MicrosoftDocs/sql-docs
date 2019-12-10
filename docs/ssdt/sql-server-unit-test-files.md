@@ -1,8 +1,5 @@
 ---
-title: "SQL Server Unit Test Files"
-ms.custom: seo-lt-2019
-
-ms.date: "02/09/2017"
+title: SQL Server Unit Test Files
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -11,8 +8,12 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # SQL Server Unit Test Files
+
 Like the unit tests for managed code, SQL Server unit tests reside in test projects. You can see the items that compose a SQL Server unit test in the hierarchy of a test project in **Solution Explorer**.  
   
 A SQL Server unit test consists of multiple items that are contained in several files. The following table describes the files that interact to form a SQL Server unit test.  

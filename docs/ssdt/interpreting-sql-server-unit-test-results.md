@@ -1,8 +1,5 @@
 ---
-title: "Interpreting SQL Server Unit Test Results"
-ms.custom: seo-lt-2019
-
-ms.date: "02/09/2017"
+title: Interpreting SQL Server Unit Test Results
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -11,8 +8,12 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Interpreting SQL Server Unit Test Results
+
 When you run a SQL Server unit test, test results are automatically produced, saved to disk, and summarized in the **Test Results** window. As soon as you start a test run, the **Test Results** window appears and displays the progress of the test run. This display includes tests that are running and tests that have completed.  
   
 To see detailed information about a test result, double-click it in the **Test Results** window to display the **Test Results Details** page. For more information about a test result, double-click it.  

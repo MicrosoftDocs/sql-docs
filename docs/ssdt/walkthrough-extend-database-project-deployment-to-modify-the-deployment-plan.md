@@ -1,8 +1,5 @@
 ---
-title: "Walkthrough: Extend Database Project Deployment to Modify the Deployment Plan"
-ms.custom: seo-lt-2019
-
-ms.date: "02/09/2017"
+title: Extend Database Project Deployment to Modify the Deployment Plan
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -11,8 +8,12 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Walkthrough: Extend Database Project Deployment to Modify the Deployment Plan
+
 You can create deployment contributors to perform custom actions when you deploy a SQL project. You can create either a [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) or a [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Use a [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) to change the plan before it is executed and a [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) to perform operations while the plan is being executed. In this walkthrough, you create a [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) named SqlRestartableScriptContributor that adds IF statements to the batches in the deployment script to enable the script to be re-run until they are completed if an error occurs during execution.  
   
 In this walkthrough, you will accomplish the following major tasks:  

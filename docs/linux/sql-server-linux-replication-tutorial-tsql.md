@@ -4,11 +4,11 @@ description: This tutorial shows how to configure SQL Server snapshot replicatio
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 09/24/2018
+ms.date: 12/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ---
 # Configure Replication with T-SQL
 
@@ -35,6 +35,9 @@ To complete this tutorial, you will need:
 - A tool to issue T-SQL queries to set up replication such as SQLCMD or SSMS
 
   See [Use SSMS to Manage SQL Server on Linux](./sql-server-linux-manage-ssms.md).
+
+   >[!NOTE]
+   >[!INCLUDE[SQL Server 2017](../includes/sssqlv14-md.md)] ([CU18](https://support.microsoft.com/help/4527377)) and later support SQL Server Replication for instances of SQL Server on Linux.
 
 ## Detailed steps
 

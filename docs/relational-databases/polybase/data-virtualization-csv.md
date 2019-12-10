@@ -17,7 +17,7 @@ SQL Server 2019 also allows the ability to virtualize data from a CSV file in HD
 
 ## Prerequisite
 
-Starting in CTP 2.4, the data pool and storage pool external data sources are no longer created by default in your big data cluster. Before using the wizard, create the default **SqlStoragePool** external data source in your target database with the following Transact-SQL query. Make sure that you first change the context of the query to your target database.
+The Data Pool and Storage Pool external data sources are not created in a database by default in your Big Data Cluster. Before using the wizard, create the default **SqlStoragePool** external data source in your target database with the following Transact-SQL query. Make sure that you first change the context of the query to your target database.
 
 ```sql
 -- Create default data sources for SQL Big Data Cluster

@@ -1,7 +1,6 @@
 ---
-title: "Distributed Replay Security | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Distributed Replay security
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -10,10 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: "03/14/2017"
 ---
+
 # Distributed Replay Security
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Before you install and use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature, you should review the important security information in this topic. This topic describes the post-installation security configuration steps that are required before you can use Distributed Replay. This topic also describes important considerations with regard to data protection and important removal steps.  
+
+Before you install and use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature, you should review the important security information in this topic. This topic describes the post-installation security configuration steps that are required before you can use Distributed Replay. This topic also describes important considerations with regard to data protection and important removal steps.  
   
 ## User and Service Accounts  
  The following table describes the accounts that are used for Distributed Replay. After the Distributed Replay installation, you must assign the security principals that the controller and client service accounts will run as. Therefore, we recommend that you configure the corresponding domain user accounts before you install the Distributed Replay features.  

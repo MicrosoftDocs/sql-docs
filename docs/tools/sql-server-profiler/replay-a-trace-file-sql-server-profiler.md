@@ -10,7 +10,7 @@ ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ---
 
 # Replay a Trace File (SQL Server Profiler)

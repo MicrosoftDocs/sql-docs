@@ -1,6 +1,6 @@
 ---
-title: "SQL Server Browser Properties (Service Tab) | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server Browser Properties (Service Tab)"
+ms.custom: seo-lt-2019
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

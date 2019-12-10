@@ -5,13 +5,13 @@ helpviewer_keywords:
   - "troublshooting, tde akv"
   - "tde akv configuration, troubleshooting"
   - "tde troubleshooting"
-author: aliceku
+author: jaszymas
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
-ms.author: aliceku
+ms.author: jaszymas
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Common errors for transparent data encryption with customer-managed keys in Azure Key Vault

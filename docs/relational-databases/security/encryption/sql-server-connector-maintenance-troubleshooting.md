@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Connector, appendix"
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ---
 # SQL Server Connector Maintenance &amp; Troubleshooting
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

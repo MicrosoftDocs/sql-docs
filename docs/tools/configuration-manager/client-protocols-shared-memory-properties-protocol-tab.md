@@ -1,6 +1,6 @@
 ---
-title: "Client Protocols - Shared Memory Properties (Protocol Tab) | Microsoft Docs"
-ms.custom: ""
+title: "Client Protocols - Shared Memory Properties (Protocol Tab)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

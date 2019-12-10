@@ -10,7 +10,7 @@ ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ---
 
 # Filter Events Based on the Event End Time (SQL Server Profiler)

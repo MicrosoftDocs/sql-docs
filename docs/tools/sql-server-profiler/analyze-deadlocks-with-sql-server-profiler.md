@@ -1,5 +1,6 @@
 ---
-title: Analyze Deadlocks with SQL Server Profiler
+title: Analyze Deadlocks
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

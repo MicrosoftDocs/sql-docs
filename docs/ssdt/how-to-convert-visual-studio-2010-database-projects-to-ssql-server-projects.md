@@ -1,5 +1,6 @@
 ---
 title: Convert Visual Studio 2010 Database Projects to SQL Server Database Projects
+ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 f1_keywords: 

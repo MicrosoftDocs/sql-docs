@@ -6,7 +6,7 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 12/05/2019
+ms.date: 12/09/2019
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 
@@ -41,9 +41,7 @@ Specifies the number of seconds the results of the preflight request can be cach
 ### AllowedResourceExtensionsForUpload
 (Power BI Report Server & Reporting Services 2017 and later only) Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-
-### Custom Headers
+### Custom Headers (SQL Server 2019 Reporting Services and Power BI Report Server only)
 
 Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default, there are no custom headers and value is blank. 
 
@@ -95,8 +93,6 @@ The first header in the above XML adds `Strict-Transport-Security: max-age=86400
 The second header in above XML adds `Embed: True` header for URL which contains `/reports/` and `rs:embed=true` query parameter.
 - https://adventureworks/reports/mobilereport/New%20Mobile%20Report?rs:embed=true - Match
 - https://adventureworks/reports/mobilereport/New%20Mobile%20Report?rs:embed=false - Fail to Match
-
-::: moniker-end
 
 ### EditSessionCacheLimit
 Specifies the number of data cache entries that can be active in a report edit session. The default number is 5.  

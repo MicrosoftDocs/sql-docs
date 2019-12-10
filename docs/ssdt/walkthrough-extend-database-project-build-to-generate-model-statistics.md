@@ -1,7 +1,7 @@
 ---
-title: "Walkthrough: Extend Database Project Build to Generate Model Statistics | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "Walkthrough: Extend Database Project Build to Generate Model Statistics"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

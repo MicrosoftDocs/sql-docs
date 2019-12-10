@@ -1,5 +1,5 @@
 ---
-title: "Release notes for SQL Server Data Tools (SSDT) | Microsoft Docs"
+title: "Release notes for SQL Server Data Tools (SSDT)"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -8,7 +8,7 @@ ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.custom: ""
+ms.custom: seo-lt-2019""
 ms.date: 08/15/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---

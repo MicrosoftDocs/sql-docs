@@ -1,7 +1,7 @@
 ---
-title: "How to: View and Edit Data in a Table | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "How to: View and Edit Data in a Table"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

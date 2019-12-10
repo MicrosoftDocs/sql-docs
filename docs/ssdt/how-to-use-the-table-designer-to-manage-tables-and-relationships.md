@@ -1,7 +1,7 @@
 ---
-title: "How to: Use the Table Designer to Manage Tables and Relationships | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "How to: Use the Table Designer to Manage Tables and Relationships"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

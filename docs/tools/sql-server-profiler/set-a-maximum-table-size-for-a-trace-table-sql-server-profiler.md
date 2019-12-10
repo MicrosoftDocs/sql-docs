@@ -10,7 +10,7 @@ ms.assetid: d0ae83e5-1c88-4a2e-be05-2c341280b978
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ---
 
 # Set a Maximum Table Size for a Trace Table (SQL Server Profiler)

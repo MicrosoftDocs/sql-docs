@@ -1,6 +1,6 @@
 ---
-title: "dta Utility | Microsoft Docs"
-ms.custom: ""
+title: "dta Utility"
+ms.custom: seo-lt-2019
 ms.date: "01/09/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

@@ -1,5 +1,5 @@
 ---
-title: Download and install sqlpackage | Microsoft Docs
+title: Download and install sqlpackage
 description: 'Download and Install sqlpackage for Windows, macOS, or Linux'
 ms.custom: "tools|sos"
 ms.date: "06/20/2018"

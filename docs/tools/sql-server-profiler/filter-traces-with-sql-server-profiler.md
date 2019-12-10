@@ -10,7 +10,7 @@ ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ---
 
 # Filter Traces with SQL Server Profiler

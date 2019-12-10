@@ -31,8 +31,46 @@ For more information, guidance, and tools to plan and automate your upgrade or m
 
 If you would like to maintain your current system and stay on-premises, you can either choose to upgrade your SQL Server to a newer and supported version, or you can purchase Extended Security Updates for up to three years after the end of the support date. 
 
+### Upgrade SQL Server
+
+| Benefits                                       | Considerations                             |
+|:-----------------------------------------------| :----------------------------------------- |
+| - You have the most control over features and scalability because you manage both hardware and software. <br/> <br/> - Applicable for database applications of any kind. <br/> <br/> - Get the benefits of innovation and security provided by newer versions of SQL Server. <br/> <br/> - You can keep the existing hardware. <br/> <br/> - If you're upgrading from an older instance of SQL Server, this is the most similar environment. | - You have to make the biggest up-front investment and provide the most ongoing management, because you have to buy, maintain, and manage your own hardware and software. <br/> <br/> - There will be downtime, plus the  inherent risk of running into issues during an in-place upgrade process. <br/> <br/> - If you're on Windows 2008 or 2008 R2, you will also need to upgrade the OS as the newer versions of SQL may not be supported on Windows 2008 or 2008 R2. There is added risk during the OS upgrade process, so doing a side-by-side migration may be the more prudent, yet more costly, approach. Additionally, in-place OS upgrades are not supported on failover cluster instances. | 
 
 
+### Extend support 
+
+### Stay on-premises
+
+| Benefits                                       | Considerations                             |
+|:-----------------------------------------------| :----------------------------------------- |
+| - No necessary changes to infrastructure  <br/> <br/> - Maintain the system as-is for another three years | Extended support is only for three years, so eventually, you will still need to upgrade, or implement one of the other options available. <br/> <br/> - Extended support can be costly, approximately 75% of the on-premises license cost annually. |
+
+
+
+
+
+
+## Move to the Azure cloud 
+
+### Azure SQL virtual machine 
+
+| Benefits                                       | Considerations                             |
+|:-----------------------------------------------| :----------------------------------------- |
+| - Extended support is free when you migrate as-is to an Azure SQL VM. <br/> <br/> - Offload the cost of hardware, and maintenance with automated features such as automated backup and patching. | Extended support is only for three years, so eventually, you will still need to upgrade, or implement one of the other options available. <br/> <br/> - You will need to pay for the Azure virtual machine. |
+
+
+### Azure SQL Database single database 
+
+| Benefits                                       | Considerations                             |
+|:-----------------------------------------------| :----------------------------------------- |
+| - Extended support is free when you migrate as-is to an Azure SQL VM. <br/> <br/> - Offload the cost of hardware, and maintenance with automated features such as automated backup and patching. | Extended support is only for three years, so eventually, you will still need to upgrade, or implement one of the other options available. <br/> <br/> - You will need to pay for the Azure virtual machine. |
+
+### Azure SQL Database managed instance 
+
+| Benefits                                       | Considerations                             |
+|:-----------------------------------------------| :----------------------------------------- |
+| - Extended support is free when you migrate as-is to an Azure SQL VM. <br/> <br/> - Offload the cost of hardware, and maintenance with automated features such as automated backup and patching. | Extended support is only for three years, so eventually, you will still need to upgrade, or implement one of the other options available. <br/> <br/> - You will need to pay for the Azure virtual machine. |
 
   
 ## Why upgrade?  
@@ -64,22 +102,7 @@ You may also want to consider a non-relational or NoSQL solution for certain dat
   
 ## Plan your upgrade  
   
--   Read about how to plan your upgrade your SQL Server 2005 instance in the following series of blog posts from the SQL Server team. 
-    - Planning an efficient upgrade from SQL Server 2005: [Step 1 of 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx), [Step 2 of 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx), [Step 3 of 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)
-- Prepare for [SQL Server 2008 end of support](https://www.microsoft.com/sql-server/sql-server-2008).
-  
--   Review the requirements and considerations under [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md), including the [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
-  
--   Read about how to upgrade.  
-  
-    -   Review the available upgrade methods and learn how to plan and test in the article [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md).  
-  
-        > [!IMPORTANT]  
-        >- You can't upgrade a SQL Server 2005 instance to a SQL Server 2017 server in place. You have to install an instance of SQL Server 2017, then migrate your SQL Server 2005 databases to the new installation. For more info, see the section "New Installation Upgrade" in the article [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
-        >- It is possible to upgrade SQL 2008 and SQL 2008r2 in place to SQL 2017. For more information, see [Supported version and edition upgrades](supported-version-and-edition-upgrades-2017.md). 
 
-
--    For more info, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005) and [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008).  
   
 
 ## Lifecycle dates

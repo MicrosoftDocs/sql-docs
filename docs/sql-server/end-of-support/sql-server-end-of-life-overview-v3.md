@@ -1,0 +1,78 @@
+---
+title: "End of support options"
+description: Learn about the different options available for the end of support, and end of life for your SQL Server products, such as SQL Server 2005, SQL Server 2008, and SQL Server 2008 R2. 
+ms.custom: ""
+ms.date: "12/09/2019"
+ms.prod: sql
+ms.reviewer: ""
+ms.technology: install
+ms.topic: conceptual
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: pmasl
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+---
+# SQL Server end of support options 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
+Each version of SQL Server is backed by a minimum of 10 years support, which includes 5 years in mainstream support, and five years in extended support, including regular security updates. End of support means the end of security updates, which can cause security and compliance issues as well as put applications and their business at risk. Additionally, support options are limited for customers who call into Microsoft Support for a product that has reached the end of its support cycle. 
+
+Once your SQL Server has reached the end of its support lifecycle, you have the following options:
+- Upgrade to a current version of SQL Server for the most advanced security, performance and innovation. 
+- Purchase an [Extended Security Update subscription](sql-server-extended-security-updates.md) for your servers and remain protected until you are ready to upgrade to a newer version of SQL Server, for up to three years after the end of support date. 
+- [Migrate your existing SQL Server 2008 and 2008 R2 workloads as-is to Azure virtual machines](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support) to automatically subscribe to an additional three years of Extended Security Updates at no additional cost apart from the cost of the virtual machine. 
+- Migrate your workload to an Azure cloud service such as to an Azure SQL Database single database or managed instance. 
+
+
+  
+For more information, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005) and [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008).  
+
+## Stay on premises
+
+
+| Option | Benefit | Consideration| 
+|:-------| :------ | :----------- |
+| Upgrade SQL| benefits | considerations | 
+| Extend support | benefits | considerations | 
+
+## Move to the cloud
+
+
+| Option | Benefit | Consideration| 
+|:-------| :------ | :----------- |
+| SQL VM | benefits | considerations | 
+| Single database | benefits | considerations | 
+| Managed instance |benefits | considerations | 
+
+
+
+## Lifecycle dates
+
+The following table provides an approximation of lifecycle dates for SQL Server products. For greater details and accuracy, see the [Microsoft Lifecycle Policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy) page. 
+
+| **Version**     | **Release year** | **Mainstream Support end year** | **Extended Support end year** |
+| :---------------| :--------------- |:------------------------------- |
+| [SQL Server 2019](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202019) | 2019 | 2025 | 2030 |
+| [SQL Server 2017](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017) | 2017 | 2022 | 2027 |
+| [SQL Server 2016](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202016) | 2016 | 2021 | 2026 |
+| [SQL Server 2014](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202014) | 2014 | 2019 | 2024 |
+| [SQL Server 2012](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202012) | 2012 | 2017 | 2022 |
+| [SQL Server 2008 R2](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008%20R2) | 2010 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
+| [SQL Server 2008](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008) | 2008 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
+| [SQL Server 2005](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202005) | 2006 | 2011 | [2016](https://www.microsoft.com/sql-server/sql-server-2005) |
+| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](https://blogs.technet.microsoft.com/cdnitmanagers/2012/12/06/sql-server-2000-end-of-support-april-2013/) |
+
+  > [!IMPORTANT]
+  > If any discrepancy exists between this table, and the Microsoft Lifecycle page, then the Microsoft Lifecycle supersedes this table, as this table is meant to be used as an approximate reference.  
+
+
+
+## Get SQL Server  
+ To download an evaluation copy of SQL Server, see [SQL Server downloads](https://www.microsoft.com/sql-server/sql-server-downloads).  
+  
+## Next Steps  
+ [SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)   
+ [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005)   
+ [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008)
+  
+  

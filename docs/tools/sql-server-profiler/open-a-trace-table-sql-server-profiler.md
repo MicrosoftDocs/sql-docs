@@ -1,8 +1,6 @@
 ---
 title: Open a Trace Table
 titleSuffix: SQL Server Profiler
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -11,6 +9,8 @@ ms.topic: conceptual
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
 
 # Open a Trace Table (SQL Server Profiler)

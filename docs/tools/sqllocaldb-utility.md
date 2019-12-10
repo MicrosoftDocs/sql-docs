@@ -1,6 +1,6 @@
 ---
-title: "SqlLocalDB Utility | Microsoft Docs"
-ms.custom: ""
+title: "SqlLocalDB Utility"
+ms.custom: seo-lt-2019
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"

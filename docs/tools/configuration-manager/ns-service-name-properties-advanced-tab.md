@@ -1,6 +1,6 @@
 ---
-title: "NS$&lt;service name&gt; Properties (Advanced Tab) | Microsoft Docs"
-ms.custom: ""
+title: "NS$&lt;service name&gt; Properties (Advanced Tab)"
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

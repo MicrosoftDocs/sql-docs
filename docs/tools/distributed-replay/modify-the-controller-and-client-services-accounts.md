@@ -1,6 +1,6 @@
 ---
-title: Modify the Controller and Client Services Accounts
-titleSuffix: Distributed Replay
+title: Modify the controller and client services accounts
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

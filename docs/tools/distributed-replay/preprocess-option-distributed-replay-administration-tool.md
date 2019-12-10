@@ -1,6 +1,6 @@
 ---
-title: Preprocess Option
-titleSuffix: Distributed Replay
+title: Preprocess option
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

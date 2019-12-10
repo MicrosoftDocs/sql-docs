@@ -1,6 +1,6 @@
 ---
-title: Replay Trace Data
-titleSuffix: Distributed Replay
+title: Replay trace data
+titleSuffix: SQL Server Distributed Replay
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

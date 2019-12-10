@@ -1,5 +1,5 @@
 ---
-title: XML Input File Sample with Inline Workload
+title: XML Input file sample with inline workload
 titleSuffix: DTA
 ms.prod: sql
 ms.prod_service: sql-tools

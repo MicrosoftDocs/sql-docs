@@ -1,6 +1,6 @@
 ---
-title: Status Option in Admin tool
-titleSuffix: Distributed Replay
+title: Status Option in admin tool
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer:
 ms.technology: tools-other

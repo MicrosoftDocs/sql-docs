@@ -1,6 +1,6 @@
 ---
 title: SQL Server Distributed Replay
-titleSuffix: Distributed Replay
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual

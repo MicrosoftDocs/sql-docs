@@ -1,5 +1,5 @@
 ---
-title: XML Input File Samples (DTA)
+title: XML input file samples (DTA)
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

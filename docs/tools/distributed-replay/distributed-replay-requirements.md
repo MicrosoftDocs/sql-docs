@@ -1,6 +1,6 @@
 ---
-title: Distributed Replay Requirements
-titleSuffix: Distributed Replay
+title: Distributed Replay requirements
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

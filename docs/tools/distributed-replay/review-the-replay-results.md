@@ -1,6 +1,6 @@
 ---
-title: Review the Replay Results
-titleSuffix: Distributed Replay
+title: Review the replay results
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

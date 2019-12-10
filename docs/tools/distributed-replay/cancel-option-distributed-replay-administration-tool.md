@@ -1,6 +1,6 @@
 ---
-title: Cancel Option Admin Tool
-titleSuffix: Distributed Replay
+title: Cancel option admin tool
+titleSuffix: SQL Server Distributed Replay
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

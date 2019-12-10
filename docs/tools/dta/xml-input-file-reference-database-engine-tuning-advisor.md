@@ -1,5 +1,5 @@
 ---
-title: XML Input File Reference
+title: XML Input file reference
 titleSuffix: Database Engine Tuning Advisor
 ms.prod: sql
 ms.prod_service: "sql-tools"

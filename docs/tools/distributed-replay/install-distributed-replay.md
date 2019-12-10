@@ -1,6 +1,6 @@
 ---
 title: Install Distributed Replay
-titleSuffix: Distributed Replay
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

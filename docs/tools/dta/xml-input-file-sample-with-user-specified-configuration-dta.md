@@ -1,5 +1,5 @@
 ---
-title: XML Input File Sample with User-specified Configuration
+title: XML Input file sample with user-specified configuration
 titleSuffix: DTA
 ms.prod: sql
 ms.prod_service: "sql-tools"

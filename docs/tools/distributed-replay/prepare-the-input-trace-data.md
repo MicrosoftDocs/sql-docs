@@ -1,6 +1,6 @@
 ---
-title: Prepare the Input Trace Data
-titleSuffix: Distributed Replay
+title: Prepare the input trace data
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

@@ -1,6 +1,6 @@
 ---
-title: Replay Option in Admin Tool
-titleSuffix: Distributed Replay
+title: Replay option in admin tool
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

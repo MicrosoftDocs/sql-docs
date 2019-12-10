@@ -1,6 +1,6 @@
 ---
-title: Configure Distributed Replay
-titleSuffix: Distributed Replay
+title: Configure distributed replay
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

@@ -50,7 +50,7 @@ Sets header values for all URLs matching the specified regex pattern. Users can 
 > [!NOTE]
 > Too many headers may impact performance. 
 
-We recommend validating the configuration of your topology to ensure the set of headers is compatible with your deployment of Reporting Services. It's possible to choose settings that cause errors in browsers if the browsers don't also have the appropriate settings. For example, you shouldn't add a HTSTS configuration if your server isn't configured for https. Some CSP policy headers may cause issues with browser rendering as well.
+We recommend validating the configuration of your topology to ensure the set of headers is compatible with your deployment of Reporting Services. It's possible to choose settings that cause errors in browsers if the browsers don't also have the appropriate settings. For example, you shouldn't add a HSTS configuration if your server isn't configured for https. Incompatible headers may result in browser rendering errors.
 
 #### Custom headers XML format
 

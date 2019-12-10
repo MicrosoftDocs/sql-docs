@@ -1,15 +1,15 @@
 ---
-title: "Quickstart: Connect and query an Azure SQL database"
+title: Connect and query an Azure SQL database
 titleSuffix: Azure Data Studio
 description: This quickstart shows how to use Azure Data Studio to connect to a SQL database and run a query
-ms.custom: seodec18, sqlfreshmay19
-ms.date: "05/14/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
-ms.topic: "quickstart"
-author: "yualan"
-ms.author: "alayu"
+ms.reviewer: alayu; maghan; sstein
+ms.topic: quickstart
+author: yualan
+ms.author: alayu
+ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
+ms.date: 05/14/2019
 ---
 # Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query Azure SQL database
 

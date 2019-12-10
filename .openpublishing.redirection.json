@@ -308,7 +308,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/tutorials/deepdive-create-a-simple-simulation.md",
-            "redirect_url": "/sql/advanced-analytics/tutorials/r-tutorial-custom-r-functions",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-custom-r-functions-using-rxexec",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/r-tutorial-custom-r-functions.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-custom-r-functions-using-rxexec",
             "redirect_document_id": true
         },
         {

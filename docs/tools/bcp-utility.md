@@ -1,5 +1,5 @@
 ﻿---
-title: "bcp Utility | Microsoft Docs"
+title: "bcp Utility"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: tools-other
@@ -25,7 +25,7 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 01/14/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

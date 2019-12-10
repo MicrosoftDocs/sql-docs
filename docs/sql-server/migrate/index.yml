@@ -32,6 +32,25 @@ landingContent:
         url: /learn/modules/test-optimize-sql-server-databases-using-dea/
 
 
+  - title: non-SQL to SQL Server
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: SQL Server Migration Assistant (SSMA) 
+        url: ../../ssma/sql-server-migration-assistant.md
+    - linkListType: get-started
+      links:
+      - text: From Oracle
+        url: ../../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md
+      - text: From Access
+        url: ../../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md
+      - text: From DB2
+        url: ../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md
+      - text: From mySQL
+        url: ../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md
+      - text: From Sybase
+        url: ../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
+
   - title: to Azure SQL
     linkLists:
     - linkListType: overview
@@ -54,26 +73,6 @@ landingContent:
       links:
       - text: Database Migration Assistant
         url: /learn/modules/assess-convert-sql-server-databases-using-dma/
-
-
-  - title: non-SQL to SQL Server
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: SQL Server Migration Assistant (SSMA) 
-        url: ../../ssma/sql-server-migration-assistant.md
-    - linkListType: get-started
-      links:
-      - text: From Oracle
-        url: ../../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md
-      - text: From Access
-        url: ../../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md
-      - text: From DB2
-        url: ../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md
-      - text: From mySQL
-        url: ../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md
-      - text: From Sybase
-        url: ../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
 
 
   - title: End of support 

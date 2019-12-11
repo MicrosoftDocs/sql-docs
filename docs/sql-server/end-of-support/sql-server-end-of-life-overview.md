@@ -47,7 +47,7 @@ You can upgrade your existing SQL Server to a newer and supported version of SQL
 
 ### Resources
 
-<br/> [Installation media](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)
+[Installation media](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)
 <br/> What's new in [SQL Server 2016](../what-s-new-in-sql-server-2016.md), [SQL Server 2017](../what-s-new-in-sql-server-2017.md), and [SQL Server 2019](/sql-server/what-s-new-in-sql-server-ver15)
 <br/> [Upgrade SQL Server using Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 <br/> Hardware requirements for [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md) and [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md) 
@@ -84,7 +84,7 @@ You can purchase an Extended Security Updates subscription to receive **Critical
 
 ### Resources
 
-<br/> [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
+[Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
 <br/> [Detailed ESU frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates)
 <br/> [Extend support for free by migrating as-is to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
 <br/> [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default)
@@ -114,7 +114,7 @@ You can migrate your workload to a virtual machine hosted in Azure.
 
 ### Resources
 
-<br/> [SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)
+[SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)
 <br/> [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 <br/> [Migrate SQL Server to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
 <br/> [Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
@@ -155,7 +155,7 @@ You can migrate your workload to an Azure SQL Database single database or elasti
 
 ### Resources
 
-<br/> [Azure SQL Database overview](/azure/sql-database/sql-database-technical-overview)
+[Azure SQL Database overview](/azure/sql-database/sql-database-technical-overview)
 <br/> [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 <br/> [SQL Database feature comparison](/azure/sql-database/sql-database-features)
 <br/> [Migrate SQL Server to a single database](/azure/sql-database/sql-database-single-database-migrate)
@@ -191,7 +191,7 @@ You can migrate your workload to an Azure SQL Database managed instance or insta
 
 ### Resources
 
-<br/> [Azure SQL Database managed instance overview](/azure/sql-database/sql-database-managed-instance)
+[Azure SQL Database managed instance overview](/azure/sql-database/sql-database-managed-instance)
 <br/> [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 <br/> [SQL Database feature comparison](/azure/sql-database/sql-database-features)
 <br/> [Migrate SQL Server to a managed instance](/azure/sql-database/sql-database-managed-instance-migrate)
@@ -210,7 +210,6 @@ You may also want to consider a non-relational or NoSQL solution for certain dat
 |**Azure table storage**<br /><br /> Consider this option to store petabytes of semi-structured data in a cost-effective solution.<br /><br /> For more info, see [Table Storage](https://azure.microsoft.com/services/storage/tables/).|You can evolve your apps and your table schema without taking the data offline.<br /><br /> You can scale up without sharding your dataset.<br /><br /> You get geo-redundant storage that replicates data across multiple regions.|  
  
  
-
 ## Lifecycle dates
 
 The following table provides an approximation of lifecycle dates for SQL Server products. For greater details and accuracy, see the [Microsoft Lifecycle Policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy) page. 

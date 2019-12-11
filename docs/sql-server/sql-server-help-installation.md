@@ -139,38 +139,41 @@ Help Viewer 2.3 is also able to display the SQL Server 2014 Offline Books, after
 
 This process uses Help Viewer 1.x to download SQL Server 2014 help from the Microsoft Download Center and install it on your computer.
 
-1. Navigate to the [Product Documentation for Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42557) download site and click **Download**.  
-2. Click **Save** in the message box to save the *SQLServer2014Documentation\_\*.exe* file to your computer.  
-   
-   >[!NOTE]
-   >For firewall and proxy restricted environments, save the download to a USB drive or other portable media that can be carried into the environment.   
-   
-3. Double-click the .exe to unpack the help content file, and save the file to a local or shared folder.  
-4. Open the **Help Library Manager** by launching SSMS or VS and clicking **Manage Help Settings** on the Help menu.  
-5. Click **Install content from disk**, and browse to the folder where you unpacked the help content file.  
-   
+1. Navigate to the [Product Documentation for Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42557) download site and click **Download**.
+
+2. Click **Save** in the message box to save the *SQLServer2014Documentation\_\*.exe* file to your computer.
+
+   > [!NOTE]
+   > For firewall and proxy restricted environments, save the download to a USB drive or other portable media that can be carried into the environment.
+
+3. Double-click the .exe to unpack the help content file, and save the file to a local or shared folder.
+
+4. Open the **Help Library Manager** by launching SSMS or VS and clicking **Manage Help Settings** on the Help menu.
+
+5. Click **Install content from disk**, and browse to the folder where you unpacked the help content file.
+
    ![HelpLibraryManager_MainPage_InstallFromDisk](../sql-server/media/sql-server-help-installation/helplibrarymanager-mainpage-installfromdisk.png)
-   
+
    ![HelpLibraryManager_InstallContentFromDisk_dialog1](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog1.png)
-   
+
    > [!IMPORTANT]
-   > To avoid installing local help content that has only a partial table of contents, you must use the **Install content from disk** option in the **Help Library Manager**.  If you used **Install content from online** and the Help Viewer is displaying a partial table of contents, see this [blog post](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) for troubleshooting steps. 
-   
-8. Click the HelpContentSetup.msha file, click **Open**, and then click **Next**.  
-9. Click **Add** next to the documentation you want to install, and then click **Update**.  
-   
-   ![HelpLibraryManager_InstallContentFromDisk_dialog2](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog2.png)  
-   
-10. Click **Finish**, and then click **Exit**.
+   > To avoid installing local help content that has only a partial table of contents, you must use the **Install content from disk** option in the **Help Library Manager**.  If you used **Install content from online** and the Help Viewer is displaying a partial table of contents, see this [blog post](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) for troubleshooting steps.
+
+6. Click the `HelpContentSetup.msha` file, click **Open**, and then click **Next**.
+
+7. Click **Add** next to the documentation you want to install, and then click **Update**.
+
+   ![HelpLibraryManager_InstallContentFromDisk_dialog2](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog2.png)
+
+8. Click **Finish**, and then click **Exit**.
 
 ### To view offline help content with Help Viewer v1.x
 
-11. To view installed help, open **Help Library Manager**, click **Choose online or local help**, and then click **I want to use local help**.
-12. Open the Help Viewer to see the content by clicking **View Help** on the **Help** menu. The content you installed is listed in the left pane.  
-   
-   ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
-   
+1. To view installed help, open **Help Library Manager**, click **Choose online or local help**, and then click **I want to use local help**.
 
+2. Open the Help Viewer to see the content by clicking **View Help** on the **Help** menu. The content you installed is listed in the left pane.
+
+   ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
 
 ## View online help
 

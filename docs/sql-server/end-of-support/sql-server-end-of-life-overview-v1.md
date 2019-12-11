@@ -47,14 +47,14 @@ You can upgrade your existing SQL Server to a newer and supported version of SQL
 
 ### Resources
 
-- [Installation media](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)
-- What's new in [SQL Server 2016](../what-s-new-in-sql-server-2016.md), [SQL Server 2017](../what-s-new-in-sql-server-2017.md), and [SQL Server 2019](/sql-server/what-s-new-in-sql-server-ver15)
-- [Upgrade SQL Server using Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-- Hardware requirements for [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md) and [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md) 
-- Supported version and edition upgrades for [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016), [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md), and [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
-- Tools:
-    - [Database Experimentation Assistant](../../dea/database-experimentation-assistant-overview.md) can help evaluate the target version of SQL Server for a specific workload. 
-    - [Data Migration Assistant](../../dma/dma-overview.md) can help detect compatibility issues that can impact database functionality in your new version of SQL Server. 
+<br/> [Installation media](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)
+<br/> What's new in [SQL Server 2016](../what-s-new-in-sql-server-2016.md), [SQL Server 2017](../what-s-new-in-sql-server-2017.md), and [SQL Server 2019](/sql-server/what-s-new-in-sql-server-ver15)
+<br/> [Upgrade SQL Server using Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
+<br/> Hardware requirements for [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md) and [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md) 
+<br/> Supported version and edition upgrades for [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016), [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md), and [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
+<br/> Tools:
+    <br/> -  [Database Experimentation Assistant](../../dea/database-experimentation-assistant-overview.md) can help evaluate the target version of SQL Server for a specific workload. 
+    <br/> -  [Data Migration Assistant](../../dma/dma-overview.md) can help detect compatibility issues that can impact database functionality in your new version of SQL Server. 
 
 
 
@@ -70,7 +70,7 @@ You can purchase an Extended Security Updates subscription to receive **Critical
 - **Application support**: This is the best option if your application has not yet been certified for a newer version of SQL Server. 
 - **Consistent infrastructure**: You don't have to change your infrastructure in any way. 
 - **Technical support**: If you have Software Assurance, or another support plan, you can continue receiving technical support from Microsoft on your end-of-support SQL product. This is the only way to get support for SQL Server 2008 and SQL Server 2008 R2 after the end of the support date. 
-- **Time** This option is available for three years, giving you extra time to certify your applications. 
+- **Time**:  This option is available for three years, giving you extra time to certify your applications. 
 
 ### Considerations 
 
@@ -134,24 +134,24 @@ You can migrate your workload to an Azure SQL Database single database or elasti
 ### Benefits
 
 
- **Cost**:  Single database can be very cost-effective, since hardware, software, and maintenance is offloaded, and you can pay for usage by the second or the hour. 
- **Flexibility**:  Single database is particularly well suited for cloud-designed applications when developer productivity and fast time-to-market solutions are critical, or that have require external access.  
- **Common features**: The most commonly used SQL Server features are available, but not as many as for an Azure SQL Database managed instance.  
- **Deployability**: You can quickly deploy a single database. 
- **Scalability**: You can quickly and easily scale up and down as is needed for your business, providing additional cost-saving benefits. 
- **Availability**: The cost of the service includes both storage and high availability, with 99.995% availability guaranteed.  
- **Automation**: Patching and backups happening automatically, saving you valuable maintenance time.  
- **Intelligent Insights**: Gain insight about the performance of your database with built-in intelligence analytics.  
+- **Cost**:  Single database can be very cost-effective, since hardware, software, and maintenance is offloaded, and you can pay for usage by the second or the hour. 
+- **Flexibility**:  Single database is particularly well suited for cloud-designed applications when developer productivity and fast time-to-market solutions are critical, or that have require external access.  
+- **Common features**: The most commonly used SQL Server features are available, but not as many as for an Azure SQL Database managed instance.  
+- **Deployability**: You can quickly deploy a single database. 
+- **Scalability**: You can quickly and easily scale up and down as is needed for your business, providing additional cost-saving benefits. 
+- **Availability**: The cost of the service includes both storage and high availability, with 99.995% availability guaranteed.  
+- **Automation**: Patching and backups happening automatically, saving you valuable maintenance time.  
+- **Intelligent Insights**: Gain insight about the performance of your database with built-in intelligence analytics.  
 
 
 ### Considerations
 
 
 
- **Limited migration options**:  You can only migrate a single database at a time, rather than an entire instance.  
- **Limited features**:  The feature set for a single database is limited when compared to an Azure SQL Database managed instance or a fully-fledged SQL Server deployment on an Azure virtual machine. 
- **T-SQL differences**:  There are some Transact-SQL (T-SQL) differences between a single database and an on-premises SQL Server.  
- **Size limitations**:  A single database has a maximum database size of 100 TB, compared to a 524 PB size for SQL Server.  
+- **Limited migration options**:  You can only migrate a single database at a time, rather than an entire instance.  
+- **Limited features**:  The feature set for a single database is limited when compared to an Azure SQL Database managed instance or a fully-fledged SQL Server deployment on an Azure virtual machine. 
+- **T-SQL differences**:  There are some Transact-SQL (T-SQL) differences between a single database and an on-premises SQL Server.  
+- **Size limitations**:  A single database has a maximum database size of 100 TB, compared to a 524 PB size for SQL Server.  
 
 ### Resources
 
@@ -163,8 +163,8 @@ You can migrate your workload to an Azure SQL Database single database or elasti
 <br/> [vCore](/azure/sql-database/sql-database-vcore-resource-limits-single-databases) and [DTU](/azure/sql-database/sql-database-dtu-resource-limits-single-databases) resource limits
 <br/>[Intelligent Insights](/azure/sql-database/sql-database-intelligent-insights)
 <br/> Tools:
-    - [Data migration assistant](../../dma/dma-overview.md)
-    - [Database Migration Service](/azure/dms/dms-overview)
+    <br/> - [Data migration assistant](../../dma/dma-overview.md)
+    <br/> - [Database Migration Service](/azure/dms/dms-overview)
 
 ## Azure SQL Database managed instance
 
@@ -173,31 +173,31 @@ You can migrate your workload to an Azure SQL Database managed instance or insta
 ### Benefits
 
 
- **Cost**:   You can save costs by offloading software and hardware maintenance.  
- **Lift and shift**:  You can lift and shift your entire SQL Server on-premises instance to a managed instance, including all databases with minimal to no database change.  
- **Features**:  The feature set of a managed instance closely matches that of an on-premises instance of SQL Server, such as cross-database queries, transactional replication publishing and distribution, SQL job scheduling, and CLR support. 
- **Scalability**:  All databases within a managed instance share resources, and it is possible to scale up and down at any time.  
- **Automation**:  Patching and backups happening automatically, saving you valuable maintenance time.  
- **Availability**:  The cost of the service includes both storage and high availability, with 99.995% availability guaranteed.  
- **Intelligent Insights**:  Gain insight about the performance of your databases with built-in intelligence analytics.  
+- **Cost**:   You can save costs by offloading software and hardware maintenance.  
+- **Lift and shift**:  You can lift and shift your entire SQL Server on-premises instance to a managed instance, including all databases with minimal to no database change.  
+- **Features**:  The feature set of a managed instance closely matches that of an on-premises instance of SQL Server, such as cross-database queries, transactional replication publishing and distribution, SQL job scheduling, and CLR support. 
+- **Scalability**:  All databases within a managed instance share resources, and it is possible to scale up and down at any time.  
+- **Automation**:  Patching and backups happening automatically, saving you valuable maintenance time.  
+- **Availability**:  The cost of the service includes both storage and high availability, with 99.995% availability guaranteed.  
+- **Intelligent Insights**:  Gain insight about the performance of your databases with built-in intelligence analytics.  
 
 ### Considerations
 
- **Cost**:  The managed instance option can be more costly than the single database option.  
- **T-SQL differences**:  There are some Transact-SQL (T-SQL) differences between a single database and an on-premises SQL Server.  
- **Deployability**:  Deploying a managed instance can take significantly more time than a single database.  
- **Feature limitation**:  Although a managed instance shares most features with SQL Server, there are still some features that are unsupported.  
- **Networking**:  The networking requirements for a managed instance add an extra layer of complexity to your infrastructure.  
+- **Cost**:  The managed instance option can be more costly than the single database option.  
+- **T-SQL differences**:  There are some Transact-SQL (T-SQL) differences between a single database and an on-premises SQL Server.  
+- **Deployability**:  Deploying a managed instance can take significantly more time than a single database.  
+- **Feature limitation**:  Although a managed instance shares most features with SQL Server, there are still some features that are unsupported.  
+- **Networking**:  The networking requirements for a managed instance add an extra layer of complexity to your infrastructure.  
 
 ### Resources
 
-- [Azure SQL Database managed instance overview](/azure/sql-database/sql-database-managed-instance)
-- [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
-- [SQL Database feature comparison](/azure/sql-database/sql-database-features)
-- [Migrate SQL Server to a managed instance](/azure/sql-database/sql-database-managed-instance-migrate)
-- Tools:
-    - [Data migration assistant](../../dma/dma-overview.md)
-    - [Database Migration Service](/azure/dms/dms-overview)
+<br/> [Azure SQL Database managed instance overview](/azure/sql-database/sql-database-managed-instance)
+<br/> [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+<br/> [SQL Database feature comparison](/azure/sql-database/sql-database-features)
+<br/> [Migrate SQL Server to a managed instance](/azure/sql-database/sql-database-managed-instance-migrate)
+<br/> Tools:
+    <br/> -  [Data migration assistant](../../dma/dma-overview.md)
+    <br/> - [Database Migration Service](/azure/dms/dms-overview)
 
 
 ## Non-SQL options
@@ -230,10 +230,6 @@ The following table provides an approximation of lifecycle dates for SQL Server 
   > [!IMPORTANT]
   > If any discrepancy exists between this table, and the Microsoft Lifecycle page, then the Microsoft Lifecycle supersedes this table, as this table is meant to be used as an approximate reference.  
 
-
-
-## Get SQL Server  
- To download an evaluation copy of SQL Server, see [SQL Server downloads](https://www.microsoft.com/sql-server/sql-server-downloads).  
   
 ## Next Steps  
  [SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)   

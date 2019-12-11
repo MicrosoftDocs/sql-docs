@@ -54,15 +54,14 @@ You can upgrade your existing SQL Server to a newer and supported version of SQL
 
 ### Resources
 
-- [Installation media](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)
-- What's new in [SQL Server 2016](../what-s-new-in-sql-server-2016.md), [SQL Server 2017](../what-s-new-in-sql-server-2017.md), and [SQL Server 2019](/sql-server/what-s-new-in-sql-server-ver15)
-- [Upgrade SQL Server using Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-- Hardware requirements for [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md) and [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md) 
-- Supported version and edition upgrades for [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016), [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md), and [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
-- Tools:
-    - [Database Experimentation Assistant](../../dea/database-experimentation-assistant-overview.md) can help evaluate the target version of SQL Server for a specific workload. 
-    - [Data Migration Assistant](../../dma/dma-overview.md) can help detect compatibility issues that can impact database functionality in your new version of SQL Server. 
-
+<br/> [Installation media](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)
+<br/> What's new in [SQL Server 2016](../what-s-new-in-sql-server-2016.md), [SQL Server 2017](../what-s-new-in-sql-server-2017.md), and [SQL Server 2019](/sql-server/what-s-new-in-sql-server-ver15)
+<br/> [Upgrade SQL Server using Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
+<br/> Hardware requirements for [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md) and [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md) 
+<br/> Supported version and edition upgrades for [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016), [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md), and [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
+<br/> Tools:
+    <br/> -  [Database Experimentation Assistant](../../dea/database-experimentation-assistant-overview.md) can help evaluate the target version of SQL Server for a specific workload. 
+    <br/> -  [Data Migration Assistant](../../dma/dma-overview.md) can help detect compatibility issues that can impact database functionality in your new version of SQL Server. 
 
 
 
@@ -111,15 +110,15 @@ You can migrate your workload to a virtual machine hosted in Azure.
 
 |              |                |
 | :----------- | :--------------| 
-| **Free Extended Security Updates**: If you choose to keep your SQL Server as-is using SQL Server 2008 or SQL Server 2008 R2, you can get free Extended Security Updates for three years past the end of the support date, without having Software Assurance. |
-| **Cost-saving**: You save the cost of hardware and server software, only paying for hourly usage. |
-| **Hosted environment**: You will get the benefits of a hosted environment, such as offloading hardware, and software maintenance. |
-| **Automation**: If you're on Windows 2008 R2 and greater, you will get the benefit of automated patching, and automated backups. |
-| **OS Control**: You have control over the operating environment, but with the familiar feature set of SQL Server. |
-| **Deployability**: You can quickly deploy from a library of virtual machine images. |
-| **Scalability**: You can add additional storage without downtime. |
-| **License mobility**: You can bring your license, allowing you to decrease operating cost. |
-| **High availability**: Not only do you benefit from the built-in virtual machine high availability provided by availability set, or availability zone Azure infrastructure, but you can take advantage of high availability options such as failover cluster instances and Always On availability groups. |
+| **Free Extended Security Updates**| If you choose to keep your SQL Server as-is using SQL Server 2008 or SQL Server 2008 R2, you can get free Extended Security Updates for three years past the end of the support date, without having Software Assurance. |
+| **Cost-saving**| You save the cost of hardware and server software, only paying for hourly usage. |
+| **Hosted environment**| You will get the benefits of a hosted environment, such as offloading hardware, and software maintenance. |
+| **Automation**| If you're on Windows 2008 R2 and greater, you will get the benefit of automated patching, and automated backups. |
+| **OS Control**| You have control over the operating environment, but with the familiar feature set of SQL Server. |
+| **Deployability**| You can quickly deploy from a library of virtual machine images. |
+| **Scalability**| You can add additional storage without downtime. |
+| **License mobility**| You can bring your license, allowing you to decrease operating cost. |
+| **High availability**| Not only do you benefit from the built-in virtual machine high availability provided by availability set, or availability zone Azure infrastructure, but you can take advantage of high availability options such as failover cluster instances and Always On availability groups. |
 
 ### Considerations
 
@@ -131,16 +130,16 @@ You can migrate your workload to a virtual machine hosted in Azure.
 
 ### Resources
 
-- [SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)
-- [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
-- [Migrate SQL Server to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
-- [Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
-- [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
-- [Detailed ESU frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates)
-- [SQL virtual machine automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
-- [SQL virtual machine automated backup](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-backup-v2)
-- [SQL virtual machine high availability](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
-- [SQL virtual machine frequently asked questions](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-faq)
+<br/> [SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)
+<br/> [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+<br/> [Migrate SQL Server to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
+<br/> [Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
+<br/> [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
+<br/> [Detailed ESU frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates)
+<br/> [SQL virtual machine automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
+<br/> [SQL virtual machine automated backup](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-backup-v2)
+<br/> [SQL virtual machine high availability](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
+<br/> [SQL virtual machine frequently asked questions](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-faq)
 
 
 
@@ -174,16 +173,16 @@ You can migrate your workload to an Azure SQL Database single database or elasti
 
 ### Resources
 
-- [Azure SQL Database overview](/azure/sql-database/sql-database-technical-overview)
-- [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
-- [SQL Database feature comparison](/azure/sql-database/sql-database-features)
-- [Migrate SQL Server to a single database](/azure/sql-database/sql-database-single-database-migrate)
-- [Single database T-SQL differences](/azure/sql-database/sql-database-transact-sql-information)
-- [vCore](/azure/sql-database/sql-database-vcore-resource-limits-single-databases) and [DTU](/azure/sql-database/sql-database-dtu-resource-limits-single-databases) resource limits
-- [Intelligent Insights](/azure/sql-database/sql-database-intelligent-insights)
-- Tools:
-    - [Data migration assistant](../../dma/dma-overview.md)
-    - [Database Migration Service](/azure/dms/dms-overview)
+<br/> [Azure SQL Database overview](/azure/sql-database/sql-database-technical-overview)
+<br/> [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+<br/> [SQL Database feature comparison](/azure/sql-database/sql-database-features)
+<br/> [Migrate SQL Server to a single database](/azure/sql-database/sql-database-single-database-migrate)
+<br/> [Single database T-SQL differences](/azure/sql-database/sql-database-transact-sql-information)
+<br/> [vCore](/azure/sql-database/sql-database-vcore-resource-limits-single-databases) and [DTU](/azure/sql-database/sql-database-dtu-resource-limits-single-databases) resource limits
+<br/>[Intelligent Insights](/azure/sql-database/sql-database-intelligent-insights)
+<br/> Tools:
+    <br/> - [Data migration assistant](../../dma/dma-overview.md)
+    <br/> - [Database Migration Service](/azure/dms/dms-overview)
 
 
 
@@ -220,8 +219,8 @@ You can migrate your workload to an Azure SQL Database managed instance or insta
 <br/> [SQL Database feature comparison](/azure/sql-database/sql-database-features)
 <br/> [Migrate SQL Server to a managed instance](/azure/sql-database/sql-database-managed-instance-migrate)
 <br/> Tools:
-    - [Data migration assistant](../../dma/dma-overview.md)
-    - [Database Migration Service](/azure/dms/dms-overview)
+    <br/> - [Data migration assistant](../../dma/dma-overview.md)
+    <br/> - [Database Migration Service](/azure/dms/dms-overview)
 
 
 ## Non-SQL options
@@ -254,9 +253,6 @@ The following table provides an approximation of lifecycle dates for SQL Server 
   > If any discrepancy exists between this table, and the Microsoft Lifecycle page, then the Microsoft Lifecycle supersedes this table, as this table is meant to be used as an approximate reference.  
 
 
-
-## Get SQL Server  
- To download an evaluation copy of SQL Server, see [SQL Server downloads](https://www.microsoft.com/sql-server/sql-server-downloads).  
   
 ## Next Steps  
  [SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)   

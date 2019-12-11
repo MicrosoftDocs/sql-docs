@@ -75,10 +75,7 @@ landingContent:
       links:
       - text: Cloud adoption framework
         url: /azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration
-    - linkListType: learn
-      links:
-      - text: Data Migration Assistant (DMA)
-        url: /learn/modules/assess-convert-sql-server-databases-using-dma/
+
 
   - title: Resources
     linkLists:

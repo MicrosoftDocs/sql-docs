@@ -104,19 +104,20 @@ Another option is to migrate your workload to an Azure virtual machine running S
 - **Free Extended Security Updates**: If you choose to keep your SQL Server as-is using SQL Server 2008 or SQL Server 2008 R2, you can get free Extended Security Updates for three years past the end of the support date, without having Software Assurance. 
 - **Cost-saving**: You save the cost of hardware and server software, only paying for hourly usage. 
 - **Lift-and-shift**: You can lift-and-shift your SQL Server and application infrastructure into the cloud with minimal or no changes. 
-- **Hosted environment**: You will get the benefits of a hosted environment, such as offloading hardware, and software maintenance. Additionally, 
+- **Hosted environment**: You will get the benefits of a hosted environment, such as offloading hardware, and software maintenance. 
 - **Automation**: If you're on Windows 2008 R2 and greater, you will get the benefit of automated patching, and automated backups. 
 - **OS Control**: You have control over the operating environment, but with the familiar feature set of SQL Server. 
-- **Deployability**: You can quickly deploy from a library of virtual machine images. 
-- **Scalability**: You can add additional storage without downtime. 
+- **Rapid deployment**: You can quickly deploy from a library of virtual machine images. 
 - **License mobility**: You can bring your license, allowing you to decrease operating cost. 
-- **High availability**: Not only do you benefit from the built-in virtual machine high availability provided by availability set, or availability zone Azure infrastructure, but you can take advantage of high availability options such as failover cluster instances and Always On availability groups. 
+- **High availability**: Not only do you benefit from the built-in virtual machine availability by the Azure infrastructure boasting up to 99.99% availability, but you can also take advantage of SQL Server high availability options such as failover cluster instances and Always On availability groups. 
 
 ### Considerations
 
 - **Manageability**: You still have to manage both SQL Server and operating system software. 
 - **Networking**: You have to configure the virtual machine to integrate with your networking and active directory infrastructure, which is an added layer of complexity. 
 - **Shared storage FCI**: Azure virtual machines only support failover cluster instances using Storage Spaces Direct or Premium File Shares, and do not support a failover cluster instance using shared storage. 
+- **Scalability downtime**: there is downtime while changing the CPU and storage resources. 
+- **Size limitation**: Although the SQL Server instance can support as many databases as needed, the cumulative total of all databases for a single instance of SQL Server is 256TB, as opposed to 524 PB for an on-premises SQL Server. 
 
 ### Resources
 
@@ -142,7 +143,7 @@ If you'd like to offload maintenance, cost, and never worry about having to upgr
 - **Cost**:  Single database can be very cost-effective, since hardware, software, and maintenance is offloaded, and you can pay for usage by the second or the hour. 
 - **Flexibility**:  Single database is particularly well suited for cloud-designed applications when developer productivity and fast time-to-market solutions are critical, or that have require external access.  
 - **Common features**: The most commonly used SQL Server features are available, but not as many as for an Azure SQL Database managed instance.  
-- **Deployability**: You can quickly deploy a single database. 
+- **Rapid deployment**: You can quickly deploy a single database. 
 - **Scalability**: You can quickly and easily scale up and down as is needed for your business, providing additional cost-saving benefits. 
 - **Availability**: The cost of the service includes both storage and high availability, with 99.995% availability guaranteed.  
 - **Automation**: Patching and backups happening automatically, saving you valuable maintenance time.  
@@ -153,9 +154,10 @@ If you'd like to offload maintenance, cost, and never worry about having to upgr
 ### Considerations
 
 - **Limited migration options**:  You can only migrate a single database at a time, rather than an entire instance.  
-- **Feature limitation**:  The feature set for a single database is limited when compared to an Azure SQL Database managed instance or a fully-fledged SQL Server deployment on an Azure virtual machine. 
+- **Feature limitation**:  Although the most commonly used SQL Server features are available, the feature set for a single database is not as robust as for an Azure SQL Database managed instance, or SQL Server. 
 - **T-SQL differences**:  There are some Transact-SQL (T-SQL) differences between a single database and an on-premises SQL Server.  
 - **Size limitations**:  A single database has a maximum database size of 100 TB, compared to a 524 PB size for SQL Server. 
+- **Maintenance time**: There is no guarantee for the exact maintenance time, though it's nearly transparent. 
 
 
 ### Resources
@@ -182,9 +184,9 @@ If you'd like to take advantage of offloading maintenance and cost, but find the
 - **Cost**:   You can save costs by offloading software and hardware maintenance.  
 - **Lift and shift**:  You can lift and shift your entire SQL Server on-premises instance to a managed instance, including all databases with minimal to no database change. 
 - **Features**:  The feature set of a managed instance closely matches that of an on-premises instance of SQL Server, such as cross-database queries, transactional replication publishing and distribution, SQL job scheduling, and CLR support. 
-- **Scalability**:  All databases within a managed instance share resources, and it is possible to scale up and down at any time.  
+- **Scalability**:  All databases within a managed instance share resources, and it is possible to scale up and down at any time without downtime.   
 - **Automation**:  Patching and backups happening automatically, saving you valuable maintenance time.  
-- **Availability**:  The cost of the service includes both storage and high availability, with 99.995% availability guaranteed.  
+- **Availability**:  The cost of the service includes both storage and high availability, with 99.99% availability guaranteed.  
 - **Intelligent Insights**:  Gain insight about the performance of your databases with built-in intelligence analytics.  
 - **Versionless**: Azure SQL Database is versionless, meaning you are always on the latest version, and never have to worry about upgrading, or downtime. Plus, you're always on the latest and greatest, with our latest stable features being released to the cloud first.
 
@@ -193,8 +195,11 @@ If you'd like to take advantage of offloading maintenance and cost, but find the
 - **Cost**:  The managed instance option can be more costly than the single database option.  
 - **T-SQL differences**:  There are some Transact-SQL (T-SQL) differences between a single database and an on-premises SQL Server.  
 - **Deployability**:  Deploying a managed instance can take significantly more time than a single database.  
-- **Feature limitation**:  Although a managed instance shares most features with SQL Server, there are still some features that are unsupported.  
-- **Networking**:  The networking requirements for a managed instance add an extra layer of complexity to your infrastructure.  
+- **Feature limitation**:  Although a managed instance shares most features with SQL Server, there are still some features that are unsupported. 
+- **Size limitation**: The combined storage size for all SQL databases within a managed instance are limited to 8 TB, as opposed to 524 PB for SQL Server on-premises.  
+- **Networking**:  The networking requirements for a managed instance add an extra layer of complexity to your infrastructure, and requires either an Azure Express Route or VPN Gateway.
+- **Maintenance time**: There is no guarantee for the exact maintenance time, though it's nearly transparent. 
+
 
 ### Resources
 

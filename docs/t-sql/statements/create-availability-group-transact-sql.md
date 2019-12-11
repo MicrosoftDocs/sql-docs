@@ -215,7 +215,7 @@ CREATE AVAILABILITY GROUP group_name
  Is the network name that is used to access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster. Use this if the server instance participates as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover partner. Executing SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) on an FCI server instance returns its entire '*FCI_network_name*[\\*instance_name*]'  string (which is the full replica name).  
   
  *instance_name*  
- Is the name of an instance of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is hosted by *system_name* or *FCI_network_name* and that has HADR service is enabled. For a default server instance, *instance_name* is optional. The instance name is case insensitive. On a stand-alone server instance, this value name is the same as the value returned by executing SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md).  
+ Is the name of an instance of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is hosted by *system_name* or *FCI_network_name* and that has HADR service is enabled. For a default server instance, *instance_name* is optional. The instance name is case insensitive. On a named instance, this value name is the same as the value returned by executing `select ServerProperty(N'InstanceName');`.  
   
  \  
  Is a separator used only when specifying *instance_name*, in order to separate it from *system_name* or *FCI_network_name*.  

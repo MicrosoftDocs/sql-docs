@@ -1,5 +1,5 @@
 ---
-title: "Teradata connection manager | Microsoft Docs"
+title: "Teradata Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/22/2019"
 ms.prod: sql
@@ -10,78 +10,56 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ---
-# Teradata connection manager
+# Use Teradata Connection Manager
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-A Teradata Connection Manager is used to enable a package to extract data from Teradata databases and load data into Teradaata databases.
+You can use Teradata Connection Manager to enable a package to extract data from Teradata databases and load data into Teradata databases.
 
-The **ConnectionManagerType** property for the Teradata connection manager is set to **TERADATA**.
+You set the Teradata Connection Manager `ConnectionManagerType` property to *TERADATA*.
 
-## Configuring the Teradata connection manager
+## Configure Teradata Connection Manager
 
-Connection Manager configuration changes will be resolved  by Integration Services at runtime. Use the **Teradata Connection Manager Editor** dialog box to add a connection to a Teradata data source.
-![connection manager editor](media/teradata-connection-manager.png)
+Connection Manager configuration changes are resolved by Integration Services at runtime. To add a connection to a Teradata data source, complete the information in the **Teradata Connection Manager Editor** pane.
 
-### Options
+![The Teradata Connection Manager Editor pane](media/teradata-connection-manager.png)
 
-#### Connection manager information
+1. In the **Name** box, enter a name for the connection. The default name is **Teradata Connection Manager**.
 
-Enter information about the connection manager.
+1. (Optional) In the **Description** box, enter a description of the connection.
 
-**Name**
+1. In the **Server name** box, enter the name of the Teradata server to connect to.
 
-Enter a name for the connection. The default name is **Teradata Connection Manager**.
+1. Under **Authentication**, do either of the following:
 
-**Description**
+   - To use Windows authentication, select **Use Windows Authentication**.
+   - To use Teradata database authentication, select **Use Teradata Authentication**, and then enter the credentials for this type of authentication:
+     - In the **Mechanism** box, enter the security checking mechanism you want to use. Valid mechanism values include TD1, TD2, LDAP, KRB5, KRB5C, NTLM, and NTLMC.
+     - In the **Parameter** box, enter the types of parameters that are required for the security checking mechanism you've entered.
+     - In the **User name** box, enter the username that you use to connect to the Teradata database.  
+     - In the **Password** box, enter the Teradata database password of the user.
 
-Enter a description of the connection. This is optional.
+1. (Optional) In the **Default database** drop-down list, select the Teradata database to connect to. If this database-access permission is incorrect, an error is displayed, and you can then manually enter the database name.
 
-**Server info**
+1. (Optional) In the **Account** box, enter the name of the account that corresponds to the user name. If this value is empty, the account for the immediate owner of the database is used.
+1. Select **OK**.
 
-Enter the information of the Teradata server to connect.
+## Custom property
 
-**Server name**
-
-Enter the name of the Teradata server to connect.
-
-**Authentication**
-
-- **Use Windows Authentication**: Select this to use Windows authentication.
-- **Use Teradata Authentication**: Select this to use Teradata database authentication. Enter the credentials as below for this type of authentication:
-    - **Mechanism**: Select the desired security checking mechanism, valid Mechanism values include TD1, TD2, LDAP, KRB5, KRB5C, NTLM, NTLMC.
-    - **Parameter**: Type parameters required for the desired security checking mechanism.
-    - **User name**: Type user name used to connect to the Teradata database.  
-    - **Password**: Type Teradata database password of the user.
-
-**Default database**
-
-This is optional.
-Select the Teradata database to connect if access permission is correct. Drop-down will return error if access permission is not correct, then manually enter the database name.
-
-**Account**
-
-This is optional.
-Type the name of the account that identifies the user name.
-If this value is empty, the account for the immediate owner of the database is used.
-
-### Custom property
-
-**UseUTF8CharSet**:
-
-Specifies whether the UTF8 character set is used. The default value is true.
+The custom property `UseUTF8CharSet` specifies whether the UTF-8 character set is used. The default value is *True*.
 
 To set the property:
 
-1. From the Connection Manager area in SSDT, right click the Teradata Connection Manager and select Properties.
-2. In the Properties pane, select True or False for UseUTF8CharSet property.
+1. Open SQL Server Data Tools (SSDT).
+1. In the **Connection Manager** area, right-click **Teradata Connection Manager**, and then select **Properties**.
+1. In the **Properties** pane, for the `UseUTF8CharSet` property, select either *True* or *False*.
 
-## Teradata connection manager troubleshooting
+## Troubleshoot Teradata Connection Manager
 
-Enable Windows ODBC tracing in the Windows ODBC Data Source Administrator, to log Teradata connection manager calls to Teradata ODBC driver.
+To log Teradata Connection Manager calls to the Teradata Open Database Connectivity (ODBC) driver, enable Windows ODBC tracing in the Windows ODBC Data Source Administrator.
 
 ## Next steps
 
-- Configure [Teradata source](teradata-source.md)
-- Configure [Teradata destination](teradata-destination.md).
-- If you have questions, visit [Tech Community](https://aka.ms/AA5u35j).
+- Configure the [Teradata source](teradata-source.md).
+- Configure the [Teradata destination](teradata-destination.md).
+- If you have questions, visit the [Tech Community](https://aka.ms/AA5u35j).

@@ -18,6 +18,10 @@ ms.technology: big-data-cluster
 
 Starting from a pre-defined set of configuration profiles that are built into the `azdata` management tool, you can easily modify the default settings to better suit your BDC workload requirements. The structure of the configuration files enables you to granularly update settings for each service of the resource.
 
+Watch this 13-minute video for an overview of big data cluster configuration:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Cluster-Configuration/player?WT.mc_id=dataexposed-c9-niner]
+
 > [!TIP]
 > Please reference the articles on how to configure **high availability** for mission critical components like [SQL Server master](deployment-high-availability.md) or [HDFS name node](deployment-high-availability-hdfs-spark.md),  for details on how to deploy highly available services.
 

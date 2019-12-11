@@ -1,6 +1,6 @@
 ---
 title: "Create and Update Tables (SSMS)"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "08/25/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

@@ -11,7 +11,7 @@ ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
 author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: ""
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

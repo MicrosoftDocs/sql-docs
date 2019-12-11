@@ -1,6 +1,6 @@
 ---
 title: "Move a Registered Server or Registered Server Group"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

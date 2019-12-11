@@ -1,6 +1,6 @@
 ---
 title: "Connect to a SQL Server or Azure SQL Database"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "sql-tools"

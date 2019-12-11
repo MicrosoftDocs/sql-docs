@@ -1,6 +1,6 @@
 ---
 title: "Create a Multiserver Environment"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "01/30/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

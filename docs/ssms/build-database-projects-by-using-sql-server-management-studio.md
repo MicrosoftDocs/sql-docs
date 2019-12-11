@@ -1,6 +1,6 @@
 ---
 title: "Build Database Projects by Using SQL Server Management Studio"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

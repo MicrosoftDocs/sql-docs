@@ -7,7 +7,7 @@ ms.technology: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 04/25/2019
 ---
 

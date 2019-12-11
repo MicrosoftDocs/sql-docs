@@ -1,6 +1,6 @@
 ---
 title: "Use the sqlcmd Utility"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "06/06/2017"
 ms.prod: sql
 ms.technology: scripting

@@ -1,6 +1,6 @@
 ---
 title: "Search an Active Document Incrementally"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting

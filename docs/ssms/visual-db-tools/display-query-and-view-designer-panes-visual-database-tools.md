@@ -1,6 +1,6 @@
 ---
 title: "Display Query and View Designer Panes (Visual Database Tools)"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

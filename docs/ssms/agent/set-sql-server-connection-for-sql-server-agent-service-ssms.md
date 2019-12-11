@@ -1,6 +1,6 @@
 ---
 title: "Set the SQL Server Connection for the SQL Server Agent Service"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

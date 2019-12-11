@@ -1,6 +1,6 @@
 ---
 title: "Write Execution Trace Messages to SQL Server Agent Error Log"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

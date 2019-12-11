@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 The system_health session is an Extended Events session that is included by default with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This session starts automatically when the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] starts, and runs without any noticeable performance effects. The session collects system data that you can use to help troubleshoot performance issues in the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
 
 > [!IMPORTANT]
-> We recommend that you do not stop, alter, or delete the system health session. Any changes made to the system_health session settings may be overwritten by a future product update.
+> We recommend that you do not stop, alter, or delete the system_health session. Any changes made to the system_health session settings may be overwritten by a future product update.
   
 The session collects information that includes the following:  
   

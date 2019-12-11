@@ -1,6 +1,6 @@
 ---
 title: "Use sqlcmd with Scripting Variables"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.technology: scripting

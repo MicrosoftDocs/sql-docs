@@ -1,5 +1,5 @@
 ---
-title: "Synchronize Target Server Clocks (SQL Server Management Studio) | Microsoft Docs"
+title: "Synchronize Target Server Clocks (SQL Server Management Studio)"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 4fb80502-d271-4d06-bcbc-bfbbceb5f2a2
 author: "markingmyname"
 ms.author: "maghan"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

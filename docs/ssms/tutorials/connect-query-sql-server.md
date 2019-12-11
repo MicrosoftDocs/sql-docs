@@ -9,7 +9,7 @@ ms.topic: quickstart
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ---
 

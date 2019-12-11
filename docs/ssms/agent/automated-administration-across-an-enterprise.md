@@ -1,6 +1,6 @@
 ---
-title: "Automated Administration Across an Enterprise | Microsoft Docs"
-ms.custom: ""
+title: "Automated Administration Across an Enterprise"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

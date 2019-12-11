@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "Find SQL Server Instance"
   - "find instance name"
   - "find sql server instance name"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ---
 

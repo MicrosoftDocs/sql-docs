@@ -1,5 +1,5 @@
 ---
-title: "Automatically Delete a Job | Microsoft Docs"
+title: "Automatically Delete a Job"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
@@ -15,7 +15,7 @@ ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: ""
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

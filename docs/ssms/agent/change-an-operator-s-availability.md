@@ -1,6 +1,6 @@
 ---
-title: "Change an Operator&#39;s Availability | Microsoft Docs"
-ms.custom: ""
+title: "Change an Operator&#39;s Availability"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

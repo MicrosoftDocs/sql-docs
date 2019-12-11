@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: markingmyname
 ms.author: maghan
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

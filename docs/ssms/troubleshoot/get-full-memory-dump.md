@@ -9,7 +9,7 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: dineth, sstein
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 05/17/2019
 ---
 # Get Full Memory Dump

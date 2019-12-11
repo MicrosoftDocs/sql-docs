@@ -1,7 +1,7 @@
 ---
 title: "What's New in SQL Server 2014 | Microsoft Docs"
 ms.custom: ""
-ms.date: 11/25/2019
+ms.date: 12/10/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: install
@@ -22,8 +22,19 @@ manager: craigg
 
 This topic summarizes detailed links to new features in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and summarizes services packs for [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  
-**Try it out:** ![Azure Virtual Machine small](./media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png)     Have an Azure account?  Then go **[Here](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2014sp1EnterpriseWindowsServer2012R2)** to spin up a Virtual Machine with SQL Server 2014 Service Pack 1 (SP1) already installed. 
-  
+**Try it out:** ![Azure Virtual Machine small](./media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png)     Have an Azure account?  Then go **[Here](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2014sp1EnterpriseWindowsServer2012R2)** to spin up a Virtual Machine with SQL Server 2014 Service Pack 1 (SP1) already installed.
+
+> [!NOTE]
+> [Click here](../2014-toc/index.yml) for the home documentation page for SQL Server 2014.
+
+<!--
+Do not let this file's filename fool you.
+This filename contains "2016", but nevertheless...
+This file, at this exact GitHub path, is dedicated to SQL Server version 2014.
+-->
+
+## What's New articles
+
 -   [What's New &#40;Database Engine&#41;](../database-engine/whats-new-in-sql-server-2016.md)  
   
 -   [What's New in Analysis Services and Business Intelligence](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)  

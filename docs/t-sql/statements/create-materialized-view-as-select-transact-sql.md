@@ -82,7 +82,7 @@ Only HASH and ROUND_ROBIN distributions are supported.
 *select_statement*   
 The SELECT list in the materialized view definition needs to meet at least one of these two criteria:
 - The SELECT list contains an aggregate function.
-- GROUP BY is used in the Materialized view definition and all columns in GROUP BY are included in the SELECT list.  
+- GROUP BY is used in the Materialized view definition and all columns in GROUP BY are included in the SELECT list.  Up to 32 columns can be used in the GROUP BY clause.
 
 Aggregate functions are required in the SELECT list of the materialized view definition.  Supported aggregations include MAX, MIN, AVG, COUNT, COUNT_BIG, SUM, VAR, STDEV.
 

@@ -15,6 +15,8 @@ ms.author: chugu
 
 Microsoft connector for Teradata enables to export data from and load data into Teradata databases in an SSIS package.
 
+This new connector supports databases with 1MB-enabled tables.
+
 ## Version support
 
 The following Microsoft SQL Server products are supported by Microsoft Connector for Teradata:

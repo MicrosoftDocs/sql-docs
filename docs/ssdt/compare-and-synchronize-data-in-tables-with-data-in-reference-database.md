@@ -1,17 +1,19 @@
 ---
-title: "Compare and Synchronize Data in One or More Tables with Data in a Reference Database"
-ms.custom: seo-lt-2019
-
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Compare and Synchronize Data in Tables with Data in a Reference Database
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Compare and Synchronize Data in One or More Tables with Data in a Reference Database
+
 You can compare the data in a *source* database and a *target* database and specify which tables should be compared. You can review the data and decide which changes to synchronize. You can then either update the target to synchronize the databases or export the update script to the Transact\-SQL editor or to a file.  
   
 For example, you might synchronize databases to update a staging server with a copy of the production data. You might also synchronize one or more tables to populate them with reference data from another database. In addition, you might compare data before and after you run tests as an additional form of verification.  

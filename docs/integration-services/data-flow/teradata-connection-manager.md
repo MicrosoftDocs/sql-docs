@@ -16,7 +16,7 @@ ms.author: chugu
 
 A Teradata Connection Manager is used to enable a package to extract data from Teradata databases and load data into Teradaata databases.
 
-The **ConnectionManagerType** property for the Teradata connection manager is set to **MSTERA**.
+The **ConnectionManagerType** property for the Teradata connection manager is set to **TERADATA**.
 
 ## Configuring the Teradata connection manager
 

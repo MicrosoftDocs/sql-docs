@@ -28,7 +28,7 @@ Before deploying a SQL Server 2019 big data cluster, first [install the big data
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- SQL Server 2019 extension for Azure Data Studio
+- [Data Virtualization extension](../azure-data-studio/data-virtualization-extension.md) for Azure Data Studio
 
 ## <a id="prereqs"></a> Kubernetes prerequisites
 

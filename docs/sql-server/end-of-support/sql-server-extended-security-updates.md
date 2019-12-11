@@ -230,6 +230,7 @@ For End of Support events in the past, SQL Server provided only Critical Securit
 If there are situations where new SQL Server important updates will not be provided and it is deemed critical by the customer but not by MSRC, we will work with the customer on a case-by-case basis to suggest appropriate mitigation.
 
 **What Licensing programs are eligible for Extended Security Updates?**
+
 Software Assurance customers can purchase Extended Security Updates on-premises under an Enterprise Agreement (EA), Enterprise Subscription Agreement (EAS), a Server & Cloud Enrollment (SCE), or an Enrollment for Education Solutions (EES). Software Assurance does not need to be on the same enrollment.
 
 **Do SQL Server customers need to be running the most current Service Pack to benefit from Extended Security Updates?**

@@ -1,6 +1,6 @@
 ---
-title: "Create a SQL Server Agent Proxy | Microsoft Docs"
-ms.custom: ""
+title: "Create a SQL Server Agent Proxy"
+ms.custom: seo-lt-2019
 ms.date: "05/04/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

@@ -1,6 +1,6 @@
 ---
-title: "Designate an Events Forwarding Server | Microsoft Docs"
-ms.custom: ""
+title: "Designate an Events Forwarding Server"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

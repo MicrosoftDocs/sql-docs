@@ -1,6 +1,6 @@
 ---
-title: "Change the Name of Registered Server or Registered Server Group | Microsoft Docs"
-ms.custom: ""
+title: "Change the Name of Registered Server or Registered Server Group"
+ms.custom: seo-lt-2019
 ms.date: "08/02/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"

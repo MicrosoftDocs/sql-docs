@@ -34,7 +34,7 @@ You can upgrade your existing SQL Server to a newer and supported version of SQL
 
 ### Benefits
 
-| **Benefit** | **Description** | 
+
 | :----------- | :--------------| 
 | **Latest technology**| Get the most out of innovation by taking advantage of the latest features and security improvements. |
 | **Control**| You have the most control over features and scalability because you manage both hardware and software.|
@@ -44,22 +44,25 @@ You can upgrade your existing SQL Server to a newer and supported version of SQL
 
 ### Considerations
 
-| **Consideration** | **Description** | 
+
+
 | :----------- | :--------------| 
-0
 | **Costly**| You have to make the biggest up-front investment and provide the most ongoing management, because you have to buy, maintain, and manage your own hardware and software.
 | **Downtime**| There could be downtime, plus the inherent risk of running into issues during an in-place upgrade process.
 | **Potentially risky**| If you're on Windows 2008 or 2008 R2, you will also need to upgrade the OS as the newer versions of SQL may not be supported on Windows 2008 or 2008 R2. There is added risk during the OS upgrade process, so doing a side-by-side migration may be the more prudent, yet more costly, approach. Additionally, in-place OS upgrades are not supported on failover cluster instances.|
 
 ### Resources
 
-|            |          |          |          | 
-|:---------- | :------- | :--------| :------- | 
-| Installation |  [Upgrade SQL Server using Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) | [Installation media](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm) | 
-| What's new | [SQL Server 2016](../what-s-new-in-sql-server-2016.md) | [SQL Server 2017](../what-s-new-in-sql-server-2017.md) | [SQL Server 2019](/sql-server/what-s-new-in-sql-server-ver15) | 
-|Supported version & edition upgrades | [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016) | [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md) | [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md) | 
-| Hardware requirements | [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md) | [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md) | 
-| Tools | [Database Experimentation Assistant](../../dea/database-experimentation-assistant-overview.md) can help evaluate the target version of SQL Server for a specific workload.  | [Data Migration Assistant](../../dma/dma-overview.md) can help detect compatibility issues that can impact database functionality in your new version of SQL Server. | 
+- [Installation media](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)
+- What's new in [SQL Server 2016](../what-s-new-in-sql-server-2016.md), [SQL Server 2017](../what-s-new-in-sql-server-2017.md), and [SQL Server 2019](/sql-server/what-s-new-in-sql-server-ver15)
+- [Upgrade SQL Server using Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
+- Hardware requirements for [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md) and [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md) 
+- Supported version and edition upgrades for [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016), [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md), and [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
+- Tools:
+    - [Database Experimentation Assistant](../../dea/database-experimentation-assistant-overview.md) can help evaluate the target version of SQL Server for a specific workload. 
+    - [Data Migration Assistant](../../dma/dma-overview.md) can help detect compatibility issues that can impact database functionality in your new version of SQL Server. 
+
+
 
 
 ![25 years of SQL Server innovation](media/sql-server-end-of-life-overview/sql-server-version-improvements.png)
@@ -68,14 +71,19 @@ You can upgrade your existing SQL Server to a newer and supported version of SQL
 
 You can purchase an Extended Security Updates subscription to receive **Critical** security updates. 
 
-| **Benefit** | **Description** | 
+### Benefits
+
+
 | :----------- | :--------------| 
 | **Application support** | This is the best option if your application has not yet been certified for a newer version of SQL Server. | 
 | **Consistent infrastructure** | You don't have to change your infrastructure in any way. | 
 | **Technical support** | If you have Software Assurance, or another support plan, you can continue receiving technical support from Microsoft on your end-of-support SQL product. This is the only way to get support for SQL Server 2008 and SQL Server 2008 R2 after the end of the support date. | 
 | **Time** | This option is available for three years, giving you extra time to prepare your strategy, and certify your applications. | 
 
-| **Consideration** | **Description** | 
+
+### Considerations 
+
+
 | :----------- | :--------------| 
 | **Limited availability** | This option is only available to customers with Software Assurance or subscription licenses. |
 | **Costly** | This option can prove costly, as Extended Security Updates are approximately 75% of the on-premises license cost annually. | 
@@ -84,24 +92,6 @@ You can purchase an Extended Security Updates subscription to receive **Critical
 | **Limited support** | Extended Security Updates do not include new features, customer-requested non-security hotfixes, or design change requests. | 
 
 
-### Benefits 
-
-| **Benefit** | **Description** | 
-| :----------- | :--------------| 
-| **Application support**| This is the best option if your application has not yet been certified for a newer version of SQL Server. 
-| **Consistent infrastructure**| You don't have to change your infrastructure in any way. 
-| **Technical support**| If you have Software Assurance, or another support plan, you can continue receiving technical support from Microsoft on your end-of-support SQL product. This is the only way to get support for SQL Server 2008 and SQL Server 2008 R2 after the end of the support date. 
-| **Time**| This option is available for three years, giving you extra time to certify your applications. 
-
-### Considerations 
-
-| **Consideration** | **Description** | 
-| :----------- | :--------------| 
-| **Limited availability**| This option is only available to customers with Software Assurance or subscription licenses. 
-| **Costly**| This option can prove costly, as Extended Security Updates are approximately 75% of the on-premises license cost annually.
-| **Limited timeframe**| This option is only available for three years so you will still need to upgrade or migrate at the end of the three year period if you want to ensure your security and compliance. 
-| **No bug fixes**| If you encounter a bug with the product, Microsoft will not release a bug-fix for it. 
-| **Limited support**| Extended Security Updates do not include new features, customer-requested non-security hotfixes, or design change requests. 
 
 
 ### Resources
@@ -118,7 +108,7 @@ You can migrate your workload to a virtual machine hosted in Azure.
 
 ### Benefits
 
-| **Benefit** | **Description** | 
+
 | :----------- | :--------------| 
 | **Free Extended Security Updates**: If you choose to keep your SQL Server as-is using SQL Server 2008 or SQL Server 2008 R2, you can get free Extended Security Updates for three years past the end of the support date, without having Software Assurance. |
 | **Cost-saving**: You save the cost of hardware and server software, only paying for hourly usage. |
@@ -132,7 +122,7 @@ You can migrate your workload to a virtual machine hosted in Azure.
 
 ### Considerations
 
-| **Consideration** | **Description** | 
+
 | :----------- | :--------------| 
 | **Manageability**| You still have to manage both SQL Server and operating system software.| 
 | **Networking**| You have to configure the virtual machine to integrate with your networking and active directory infrastructure, which is an added layer of complexity. |
@@ -157,7 +147,10 @@ You can migrate your workload to a virtual machine hosted in Azure.
 
 You can migrate your workload to an Azure SQL Database single database or elastic pool.  
 
-| **Benefits** | **Description** | 
+### Benefits
+
+
+
 | :----------- | :--------------| 
 | **Cost**     | Single database can be very cost-effective, since hardware, software, and maintenance is offloaded, and you can pay for usage by the second or the hour. | 
 | **Flexibility** | Single database is particularly well suited for cloud-designed applications when developer productivity and fast time-to-market solutions are critical, or that have require external access. | 
@@ -168,8 +161,10 @@ You can migrate your workload to an Azure SQL Database single database or elasti
 | **Automation** | Patching and backups happening automatically, saving you valuable maintenance time. | 
 | **Intelligent Insights** | Gain insight about the performance of your database with built-in intelligence analytics. | 
 
+### Considerations
 
-| **Consideration** | **Description** | 
+
+
 | :----------- | :--------------| 
 | **Limited migration options** | You can only migrate a single database at a time, rather than an entire instance. | 
 | **Limited features** | The feature set for a single database is limited when compared to an Azure SQL Database managed instance or a fully-fledged SQL Server deployment on an Azure virtual machine. |
@@ -195,7 +190,7 @@ You can migrate your workload to an Azure SQL Database managed instance or insta
 
 ### Benefits
 
-| **Benefits** | **Description** | 
+
 | :----------- | :--------------| 
 | **Cost**     | You can save costs by offloading software and hardware maintenance. | 
 | **Lift and shift** | You can lift and shift your entire SQL Server on-premises instance to a managed instance, including all databases with minimal to no database change. | 
@@ -207,7 +202,7 @@ You can migrate your workload to an Azure SQL Database managed instance or insta
 
 ### Considerations
 
-| **Consideration** | **Description** | 
+
 | :----------- | :--------------| 
 | **Cost** | The managed instance option can be more costly than the single database option. | 
 | **T-SQL differences** | There are some Transact-SQL (T-SQL) differences between a single database and an on-premises SQL Server. | 

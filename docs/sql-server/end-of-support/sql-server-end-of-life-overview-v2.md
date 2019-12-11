@@ -17,14 +17,13 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
  
 Each version of SQL Server is backed by a minimum of 10 years support, which includes 5 years in mainstream support, and five years in extended support, including regular security updates. End of support means the end of security updates, which can cause security and compliance issues as well as put applications and their business at risk. Additionally, support options are limited for customers who call into Microsoft Support for a product that has reached the end of its support cycle. 
 
-Once your SQL Server has reached the end of its support lifecycle, you have the following options:
-- Upgrade to a current version of SQL Server for the most advanced security, performance and innovation. 
-- Purchase an [Extended Security Update subscription](sql-server-extended-security-updates.md) for your servers and remain protected until you are ready to upgrade to a newer version of SQL Server, for up to three years after the end of support date. 
-- [Migrate your existing SQL Server 2008 and 2008 R2 workloads as-is to Azure virtual machines](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support) to automatically subscribe to an additional three years of Extended Security Updates at no additional cost apart from the cost of the virtual machine. 
-- Migrate your workload to an Azure cloud service such as to an Azure SQL Database single database or managed instance. 
+Once your SQL Server has reached the end of its support lifecycle, you can choose to:
+- Upgrade to current version of SQL Server.
+- Purchase an [Extended Security Updates subscription](https://www.microsoft.com/en-us/cloud-platform/extended-security-updates). 
+- Migrate your workload to an Azure virtual machine as-is for [free Extended Security Updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support).
+- Migrate your workload to an [Azure SQL Database service](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-paas-vs-sql-server-iaas). 
 
 
-  
 For more information, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005) and [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008).  
 
 ## Upgrade SQL Server
@@ -39,10 +38,29 @@ The first option is to upgrade your existing SQL Server to a newer and supported
 
 
 ### Considerations
-
+0
 - You have to make the biggest up-front investment and provide the most ongoing management, because you have to buy, maintain, and manage your own hardware and software.
 - There could be downtime, plus the inherent risk of running into issues during an in-place upgrade process.
 - If you're on Windows 2008 or 2008 R2, you will also need to upgrade the OS as the newer versions of SQL may not be supported on Windows 2008 or 2008 R2. There is added risk during the OS upgrade process, so doing a side-by-side migration may be the more prudent, yet more costly, approach. Additionally, in-place OS upgrades are not supported on failover cluster instances.
+
+### Resources
+
+- What's new in [SQL Server 2016](../what-s-new-in-sql-server-2016.md), [SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md), and [SQL Server 2019](/sql-server/what-s-new-in-sql-server-ver15). 
+- [Upgrade SQL Server using Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
+- Hardware requirements for [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md) and [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md). 
+- Supported version and edition upgrades for [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md), [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md), and [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-2019.md)
+- Tools:
+    - [Database Experimentation Assistant](../../dea/database-experimentation-assistant-overview.md) can help evaluate the target version of SQL Server for a specific workload. 
+    - [Data Migration Assistant](../../dma/dma-overview.md) can help detect compatibility issues that can impact database functionality in your new version of SQL Server. 
+
+
+|            |          |          |          | 
+|:---------- | :------- | :--------| :------- | 
+| What's new | [SQL Server 2016](../what-s-new-in-sql-server-2016.md) | [SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) | [SQL Server 2019](/sql-server/what-s-new-in-sql-server-ver15) | 
+|Supported version & edition upgrades | [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md) | [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md) | [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-2019.md) | 
+| Hardware requirements | [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md) | [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md) | 
+| Tools | [Database Experimentation Assistant](../../dea/database-experimentation-assistant-overview.md) can help evaluate the target version of SQL Server for a specific workload.  | [Data Migration Assistant](../../dma/dma-overview.md) can help detect compatibility issues that can impact database functionality in your new version of SQL Server. | 
+| - [Upgrade SQL Server using Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) | 
 
 ## Extend support 
 

@@ -30,6 +30,12 @@ landingContent:
         url: /learn/modules/assess-convert-sql-server-databases-using-dma/
       - text: Database Experimentation Assistant
         url: /learn/modules/test-optimize-sql-server-databases-using-dea/
+    - linkListType: download
+      links:
+      - text: Data Migration Assistant (DMA)
+        url: https://www.microsoft.com/en-us/download/details.aspx?id=53595
+      - text: Database Experimentation Assistant
+        url: https://www.microsoft.com/download/details.aspx?id=54090
 
 
   - title: non-SQL to SQL Server

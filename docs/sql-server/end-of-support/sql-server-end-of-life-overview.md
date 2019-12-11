@@ -24,27 +24,60 @@ Once your SQL Server has reached the end of its support lifecycle, you have the 
 - Migrate your workload to an Azure cloud service such as to an Azure SQL Database single database or managed instance. 
 
 
+
+
+
   
 For more information, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005) and [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008).  
 
-## Stay on premises
+## Upgrade SQL Server
+
+The first option is to upgrade your existing SQL Server to a newer and supported version of SQL Server. 
+
+### Benefits
+- Get the most out of innovation by taking advantage of the latest features and security improvements. 
+- You have the most control over features and scalability because you manage both hardware and software.
+- If you're upgrading from an older instance of SQL Server, this is the most similar environment.
+- Applicable for database applications of any kind, including OLTP systems and data warehousing. 
 
 
-| Option | Benefit | Consideration| 
-|:-------| :------ | :----------- |
-| Upgrade SQL| benefits | considerations | 
-| Extend support | benefits | considerations | 
+### Considerations
+0
+- You have to make the biggest up-front investment and provide the most ongoing management, because you have to buy, maintain, and manage your own hardware and software.
+- There could be downtime, plus the inherent risk of running into issues during an in-place upgrade process.
+- If you're on Windows 2008 or 2008 R2, you will also need to upgrade the OS as the newer versions of SQL may not be supported on Windows 2008 or 2008 R2. There is added risk during the OS upgrade process, so doing a side-by-side migration may be the more prudent, yet more costly, approach. Additionally, in-place OS upgrades are not supported on failover cluster instances.
 
-## Move to the cloud
+### Resources
+
+- [Upgrade SQL Server using Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
+- Hardware requirements for [SQL Server 2019]
+
+## Extend support 
+
+### Benefits
+
+### Considerations
+
+## Azure virtual machine
+
+### Benefits
+
+### Considerations
 
 
-| Option | Benefit | Consideration| 
-|:-------| :------ | :----------- |
-| SQL VM | benefits | considerations | 
-| Single database | benefits | considerations | 
-| Managed instance |benefits | considerations | 
+## Azure SQL Database single database
 
+### Benefits
 
+### Considerations
+
+## Azure SQL Database managed instance
+
+### Benefits
+
+### Considerations
+
+ 
 
 ## Lifecycle dates
 

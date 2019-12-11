@@ -1,5 +1,5 @@
 ---
-title: "Modify a SQL Server Agent Proxy | Microsoft Docs"
+title: "Modify a SQL Server Agent Proxy"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms

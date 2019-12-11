@@ -1,5 +1,5 @@
 ---
-title: "View or Change the Properties of a Connection in a Project | Microsoft Docs"
+title: "View or Change the Properties of a Connection in a Project"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Jobs That Reference a Schedule | Microsoft Docs"
+title: "Jobs That Reference a Schedule"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

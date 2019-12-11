@@ -1,5 +1,5 @@
 ---
-title: "Options (SQL Server Object Explorer - Commands) | Microsoft Docs"
+title: "Options (SQL Server Object Explorer - Commands)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

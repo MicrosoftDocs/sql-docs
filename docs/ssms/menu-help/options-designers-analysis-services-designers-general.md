@@ -1,5 +1,5 @@
 ---
-title: "Options (Designers - Analysis Services Designers - General) | Microsoft Docs"
+title: "Options (Designers - Analysis Services Designers - General)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

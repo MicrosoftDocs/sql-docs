@@ -1,5 +1,5 @@
 ---
-title: "Change the Name of Registered Server or Registered Server Group | Microsoft Docs"
+title: "Change the Name of Registered Server or Registered Server Group"
 ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql

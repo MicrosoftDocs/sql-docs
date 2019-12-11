@@ -1,5 +1,5 @@
 ---
-title: "Create an Alert Using Severity Level | Microsoft Docs"
+title: "Create an Alert Using Severity Level"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Define the Response to an Alert (SQL Server Management Studio) | Microsoft Docs"
+title: "Define the Response to an Alert (SQL Server Management Studio)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

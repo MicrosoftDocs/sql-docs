@@ -1,5 +1,5 @@
 ---
-title: "Make a Target Server | Microsoft Docs"
+title: "Make a Target Server"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms

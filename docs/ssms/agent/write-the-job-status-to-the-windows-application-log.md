@@ -1,5 +1,5 @@
 ---
-title: "Write the Job Status to the Windows Application Log | Microsoft Docs"
+title: "Write the Job Status to the Windows Application Log"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

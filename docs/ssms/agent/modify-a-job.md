@@ -1,5 +1,5 @@
 ---
-title: "Modify a Job | Microsoft Docs"
+title: "Modify a Job"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms

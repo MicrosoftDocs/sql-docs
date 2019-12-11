@@ -1,5 +1,5 @@
 ---
-title: "Job Step Properties - New Job Step (General Page) | Microsoft Docs"
+title: "Job Step Properties - New Job Step (General Page)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

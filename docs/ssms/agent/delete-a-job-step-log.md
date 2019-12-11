@@ -1,5 +1,5 @@
 ---
-title: "Delete a Job Step Log | Microsoft Docs"
+title: "Delete a Job Step Log"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

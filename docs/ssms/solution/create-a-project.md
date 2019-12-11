@@ -1,5 +1,5 @@
 ---
-title: "Create a Project | Microsoft Docs"
+title: "Create a Project"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

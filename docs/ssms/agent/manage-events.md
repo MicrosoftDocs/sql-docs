@@ -1,5 +1,5 @@
 ---
-title: "Manage Events | Microsoft Docs"
+title: "Manage Events"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

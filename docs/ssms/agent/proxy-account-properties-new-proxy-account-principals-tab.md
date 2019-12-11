@@ -1,5 +1,5 @@
 ---
-title: "Proxy Account Properties - New Proxy Account (Principals Tab) | Microsoft Docs"
+title: "Proxy Account Properties - New Proxy Account (Principals Tab)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

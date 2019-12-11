@@ -1,5 +1,5 @@
 ---
-title: "Register a Connected Server (SQL Server Management Studio) | Microsoft Docs"
+title: "Register a Connected Server (SQL Server Management Studio)"
 ms.custom: ""
 ms.date: "07/28/2016"
 ms.prod: sql

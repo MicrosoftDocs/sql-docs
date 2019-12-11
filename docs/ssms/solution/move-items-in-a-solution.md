@@ -1,5 +1,5 @@
 ---
-title: "Move Items in a Solution | Microsoft Docs"
+title: "Move Items in a Solution"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

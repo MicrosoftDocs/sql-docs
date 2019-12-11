@@ -1,5 +1,5 @@
 ---
-title: "Create a New Solution | Microsoft Docs"
+title: "Create a New Solution"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

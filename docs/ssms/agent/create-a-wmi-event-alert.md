@@ -1,5 +1,5 @@
 ---
-title: "Create a WMI Event Alert | Microsoft Docs"
+title: "Create a WMI Event Alert"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

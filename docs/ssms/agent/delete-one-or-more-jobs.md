@@ -1,5 +1,5 @@
 ---
-title: "Delete One or More Jobs | Microsoft Docs"
+title: "Delete One or More Jobs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Hide System Objects in Object Explorer | Microsoft Docs"
+title: "Hide System Objects in Object Explorer"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

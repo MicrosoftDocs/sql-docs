@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Agent Fixed Database Roles | Microsoft Docs"
+title: "SQL Server Agent Fixed Database Roles"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

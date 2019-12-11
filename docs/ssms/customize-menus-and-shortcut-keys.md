@@ -1,5 +1,5 @@
 ---
-title: "Customize Menus and Shortcut Keys | Microsoft Docs"
+title: "Customize Menus and Shortcut Keys"
 ms.custom: ""
 ms.date: 11/04/2019
 ms.prod: sql

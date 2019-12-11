@@ -1,5 +1,5 @@
 ---
-title: "Create a Job Category | Microsoft Docs"
+title: "Create a Job Category"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

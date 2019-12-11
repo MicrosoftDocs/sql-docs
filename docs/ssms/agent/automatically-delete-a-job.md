@@ -1,5 +1,5 @@
 ---
-title: "Automatically Delete a Job | Microsoft Docs"
+title: "Automatically Delete a Job"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms

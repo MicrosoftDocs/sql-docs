@@ -1,5 +1,5 @@
 ---
-title: "Display Query and View Designer Panes (Visual Database Tools) | Microsoft Docs"
+title: "Display Query and View Designer Panes (Visual Database Tools)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Configure SQL Server Agent | Microsoft Docs"
+title: "Configure SQL Server Agent"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

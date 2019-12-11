@@ -1,5 +1,5 @@
 ---
-title: "Connect to a SQL Server or Azure SQL Database | Microsoft Docs"
+title: "Connect to a SQL Server or Azure SQL Database"
 ms.custom: ""
 ms.date: "01/28/2019"
 ms.prod: sql

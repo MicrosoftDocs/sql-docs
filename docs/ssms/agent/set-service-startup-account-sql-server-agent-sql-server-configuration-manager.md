@@ -1,5 +1,5 @@
 ---
-title: "Set the Service Startup Account for SQL Server Agent | Microsoft Docs"
+title: "Set the Service Startup Account for SQL Server Agent"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

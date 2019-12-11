@@ -1,5 +1,5 @@
 ---
-title: "Show Query Properties (Visual Database Tools) | Microsoft Docs"
+title: "Show Query Properties (Visual Database Tools)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

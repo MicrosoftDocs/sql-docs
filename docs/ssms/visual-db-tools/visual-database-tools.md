@@ -1,5 +1,5 @@
 ---
-title: "Visual Database Tools | Microsoft Docs"
+title: "Visual Database Tools"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms

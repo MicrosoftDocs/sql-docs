@@ -1,5 +1,5 @@
 ---
-title: "Options (Designers - Maintenance Plans Page) | Microsoft Docs"
+title: "Options (Designers - Maintenance Plans Page)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

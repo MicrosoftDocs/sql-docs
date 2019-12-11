@@ -1,5 +1,5 @@
 ---
-title: "Registered Servers F1 Help | Microsoft Docs"
+title: "Registered Servers F1 Help"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

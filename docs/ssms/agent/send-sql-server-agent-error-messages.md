@@ -1,5 +1,5 @@
 ---
-title: "Send SQL Server Agent Error Messages | Microsoft Docs"
+title: "Send SQL Server Agent Error Messages"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

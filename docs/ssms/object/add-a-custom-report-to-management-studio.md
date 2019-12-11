@@ -1,5 +1,5 @@
 ---
-title: "Add a Custom Report to Management Studio | Microsoft Docs"
+title: "Add a Custom Report to Management Studio"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

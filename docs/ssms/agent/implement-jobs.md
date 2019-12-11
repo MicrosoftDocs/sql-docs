@@ -1,5 +1,5 @@
 ---
-title: "Implement Jobs | Microsoft Docs"
+title: "Implement Jobs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

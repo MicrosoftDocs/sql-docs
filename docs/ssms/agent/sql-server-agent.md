@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Agent | Microsoft Docs"
+title: "SQL Server Agent"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

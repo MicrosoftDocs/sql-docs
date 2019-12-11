@@ -1,5 +1,5 @@
 ---
-title: "SQL Comment Dialog Box (Visual Database Tools) | Microsoft Docs"
+title: "SQL Comment Dialog Box (Visual Database Tools)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

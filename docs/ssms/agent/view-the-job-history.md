@@ -1,5 +1,5 @@
 ---
-title: "View the Job History | Microsoft Docs"
+title: "View the Job History"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Solution Explorer | Microsoft Docs"
+title: "Solution Explorer"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms

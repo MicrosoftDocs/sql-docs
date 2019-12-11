@@ -1,5 +1,5 @@
 ---
-title: "Handle Multiple Job Steps | Microsoft Docs"
+title: "Handle Multiple Job Steps"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

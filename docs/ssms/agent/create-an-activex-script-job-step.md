@@ -1,5 +1,5 @@
 ---
-title: "Create an ActiveX Script Job Step | Microsoft Docs"
+title: "Create an ActiveX Script Job Step"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Disable or Enable a Job | Microsoft Docs"
+title: "Disable or Enable a Job"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

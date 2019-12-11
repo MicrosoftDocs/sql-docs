@@ -1,5 +1,5 @@
 ---
-title: "Connect to Server (Connection Properties Page) Database Engine | Microsoft Docs"
+title: "Connect to Server (Connection Properties Page) Database Engine"
 ms.custom: ""
 ms.date: "08/14/2017"
 ms.prod: sql

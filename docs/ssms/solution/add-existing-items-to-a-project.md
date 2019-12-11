@@ -1,5 +1,5 @@
 ---
-title: "Add Existing Items to a Project | Microsoft Docs"
+title: "Add Existing Items to a Project"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

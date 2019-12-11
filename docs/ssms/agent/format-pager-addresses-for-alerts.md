@@ -1,5 +1,5 @@
 ---
-title: "Format Pager Addresses for Alerts | Microsoft Docs"
+title: "Format Pager Addresses for Alerts"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

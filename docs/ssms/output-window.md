@@ -1,5 +1,5 @@
 ---
-title: "SSMS Output Window | Microsoft Docs"
+title: "SSMS Output Window"
 ms.custom: ""
 ms.date: "08/09/2017"
 ms.prod: sql

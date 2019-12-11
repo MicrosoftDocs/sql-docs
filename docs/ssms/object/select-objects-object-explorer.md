@@ -1,5 +1,5 @@
 ---
-title: "Select Objects (Object Explorer) | Microsoft Docs"
+title: "Select Objects (Object Explorer)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

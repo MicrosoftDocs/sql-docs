@@ -1,5 +1,5 @@
 ---
-title: "Choose Search Folders Dialog Box (Visual Studio) | Microsoft Docs"
+title: "Choose Search Folders Dialog Box (Visual Studio)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

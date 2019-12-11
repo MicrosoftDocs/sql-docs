@@ -1,5 +1,5 @@
 ---
-title: "List Job Category Information | Microsoft Docs"
+title: "List Job Category Information"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Permissions and Visual Database Tools (Visual Database Tools) | Microsoft Docs"
+title: "Permissions and Visual Database Tools (Visual Database Tools)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

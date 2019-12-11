@@ -1,5 +1,5 @@
 ---
-title: "Move a Registered Server or Registered Server Group | Microsoft Docs"
+title: "Move a Registered Server or Registered Server Group"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql

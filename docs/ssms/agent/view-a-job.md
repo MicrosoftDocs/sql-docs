@@ -1,5 +1,5 @@
 ---
-title: "View a Job | Microsoft Docs"
+title: "View a Job"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

@@ -1,5 +1,5 @@
 ---
-title: "Assign a Job to a Job Category | Microsoft Docs"
+title: "Assign a Job to a Job Category"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms

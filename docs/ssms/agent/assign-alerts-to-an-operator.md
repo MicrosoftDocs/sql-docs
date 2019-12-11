@@ -1,5 +1,5 @@
 ---
-title: "Assign Alerts to an Operator | Microsoft Docs"
+title: "Assign Alerts to an Operator"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

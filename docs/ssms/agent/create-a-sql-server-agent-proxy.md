@@ -1,5 +1,5 @@
 ---
-title: "Create a SQL Server Agent Proxy | Microsoft Docs"
+title: "Create a SQL Server Agent Proxy"
 ms.custom: ""
 ms.date: "05/04/2017"
 ms.prod: sql

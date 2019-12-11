@@ -1,5 +1,5 @@
 ---
-title: "Implement SQL Server Agent Security | Microsoft Docs"
+title: "Implement SQL Server Agent Security"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

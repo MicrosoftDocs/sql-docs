@@ -1,5 +1,5 @@
 ---
-title: "Remove a Server Group (SQL Server Management Studio) | Microsoft Docs"
+title: "Remove a Server Group (SQL Server Management Studio)"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql

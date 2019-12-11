@@ -1,5 +1,5 @@
 ---
-title: "View Information About an Alert | Microsoft Docs"
+title: "View Information About an Alert"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

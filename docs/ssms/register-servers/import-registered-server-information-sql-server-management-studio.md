@@ -1,5 +1,5 @@
 ---
-title: "Import Registered Server Information (SQL Server Management Studio) | Microsoft Docs"
+title: "Import Registered Server Information (SQL Server Management Studio)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

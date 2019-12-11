@@ -1,5 +1,5 @@
 ---
-title: "Include or Exclude Rows (Visual Database Tools) | Microsoft Docs"
+title: "Include or Exclude Rows (Visual Database Tools)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

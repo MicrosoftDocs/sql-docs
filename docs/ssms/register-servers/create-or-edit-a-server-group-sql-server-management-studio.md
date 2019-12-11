@@ -1,5 +1,5 @@
 ---
-title: "Create or Edit a Server Group (SQL Server Management Studio) | Microsoft Docs"
+title: "Create or Edit a Server Group (SQL Server Management Studio)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

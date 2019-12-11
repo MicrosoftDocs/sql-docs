@@ -1,5 +1,5 @@
 ---
-title: "Use HAVING and WHERE Clauses in the Same Query | Microsoft Docs"
+title: "Use HAVING and WHERE Clauses in the Same Query"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

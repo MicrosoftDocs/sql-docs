@@ -1,5 +1,5 @@
 ---
-title: "Object Explorer | Microsoft Docs"
+title: "Object Explorer"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms

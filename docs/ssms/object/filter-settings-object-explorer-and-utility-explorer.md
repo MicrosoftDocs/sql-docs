@@ -1,5 +1,5 @@
 ---
-title: "Filter Settings (Object Explorer and Utility Explorer) | Microsoft Docs"
+title: "Filter Settings (Object Explorer and Utility Explorer)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

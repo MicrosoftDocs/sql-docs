@@ -1,5 +1,5 @@
 ---
-title: "Open With (New File) | Microsoft Docs"
+title: "Open With (New File)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Create a New Database Diagram (Visual Database Tools) | Microsoft Docs"
+title: "Create a New Database Diagram (Visual Database Tools)"
 ms.custom: ""
 ms.date: "09/24/2018"
 ms.prod: sql

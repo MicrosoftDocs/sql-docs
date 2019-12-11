@@ -1,5 +1,5 @@
 ---
-title: "Specify a Target Server Location | Microsoft Docs"
+title: "Specify a Target Server Location"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

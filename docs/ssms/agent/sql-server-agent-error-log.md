@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Agent Error Log | Microsoft Docs"
+title: "SQL Server Agent Error Log"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

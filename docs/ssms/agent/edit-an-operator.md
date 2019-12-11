@@ -1,5 +1,5 @@
 ---
-title: "Edit an Operator | Microsoft Docs"
+title: "Edit an Operator"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

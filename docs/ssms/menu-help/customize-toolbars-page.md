@@ -1,5 +1,5 @@
 ---
-title: "Customize (Toolbars Page) | Microsoft Docs"
+title: "Customize (Toolbars Page)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

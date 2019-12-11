@@ -1,5 +1,5 @@
 ---
-title: "Create a PowerShell Script Job Step | Microsoft Docs"
+title: "Create a PowerShell Script Job Step"
 ms.custom: ""
 ms.date: "01/20/2017"
 ms.prod: sql

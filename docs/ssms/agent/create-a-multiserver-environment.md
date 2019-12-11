@@ -1,5 +1,5 @@
 ---
-title: "Create a Multiserver Environment | Microsoft Docs"
+title: "Create a Multiserver Environment"
 ms.custom: ""
 ms.date: "01/30/2017"
 ms.prod: sql

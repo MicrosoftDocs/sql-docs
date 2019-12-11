@@ -1,5 +1,5 @@
 ---
-title: "Remove or Delete an Item or Project | Microsoft Docs"
+title: "Remove or Delete an Item or Project"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Advanced Save Options | Microsoft Docs"
+title: "Advanced Save Options"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

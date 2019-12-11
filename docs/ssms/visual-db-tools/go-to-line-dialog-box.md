@@ -1,5 +1,5 @@
 ---
-title: "Go To Line Dialog Box | Microsoft Docs"
+title: "Go To Line Dialog Box"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

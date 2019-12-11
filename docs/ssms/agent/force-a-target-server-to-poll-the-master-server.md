@@ -1,5 +1,5 @@
 ---
-title: "Force a Target Server to Poll the Master Server | Microsoft Docs"
+title: "Force a Target Server to Poll the Master Server"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Create Relationships Between Tables on a Diagram | Microsoft Docs"
+title: "Create Relationships Between Tables on a Diagram"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

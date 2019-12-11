@@ -1,5 +1,5 @@
 ---
-title: "Recycle SQL Server Agent Error Logs | Microsoft Docs"
+title: "Recycle SQL Server Agent Error Logs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Set Encryption Options on Target Servers | Microsoft Docs"
+title: "Set Encryption Options on Target Servers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

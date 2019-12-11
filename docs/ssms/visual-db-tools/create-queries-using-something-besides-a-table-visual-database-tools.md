@@ -1,5 +1,5 @@
 ---
-title: "Create Queries using Something Besides a Table | Microsoft Docs"
+title: "Create Queries using Something Besides a Table"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

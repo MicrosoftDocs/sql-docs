@@ -1,5 +1,5 @@
 ---
-title: "Start, Stop, or Pause the SQL Server Agent Service | Microsoft Docs"
+title: "Start, Stop, or Pause the SQL Server Agent Service"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

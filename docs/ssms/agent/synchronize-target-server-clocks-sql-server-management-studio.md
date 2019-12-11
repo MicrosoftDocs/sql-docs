@@ -1,5 +1,5 @@
 ---
-title: "Synchronize Target Server Clocks (SQL Server Management Studio) | Microsoft Docs"
+title: "Synchronize Target Server Clocks (SQL Server Management Studio)"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

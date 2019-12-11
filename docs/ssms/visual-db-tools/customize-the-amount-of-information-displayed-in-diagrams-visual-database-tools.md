@@ -1,5 +1,5 @@
 ---
-title: "Customize the Amount of Information Displayed in Diagrams | Microsoft Docs"
+title: "Customize the Amount of Information Displayed in Diagrams"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

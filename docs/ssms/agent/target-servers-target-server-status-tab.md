@@ -1,5 +1,5 @@
 ---
-title: "Target Servers (Target Server Status Tab) | Microsoft Docs"
+title: "Target Servers (Target Server Status Tab)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

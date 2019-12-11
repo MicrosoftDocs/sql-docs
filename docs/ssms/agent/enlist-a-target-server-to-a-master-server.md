@@ -1,5 +1,5 @@
 ---
-title: "Enlist a Target Server to a Master Server | Microsoft Docs"
+title: "Enlist a Target Server to a Master Server"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

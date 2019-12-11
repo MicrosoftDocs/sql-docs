@@ -1,5 +1,5 @@
 ---
-title: "Connect to Microsoft Azure Storage | Microsoft Docs"
+title: "Connect to Microsoft Azure Storage"
 ms.custom: ""
 ms.date: "07/12/2017"
 ms.prod: sql

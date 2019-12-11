@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Management Studio - Usage and Diagnostic Data (SSMS) | Microsoft Docs"
+title: "SQL Server Management Studio - Usage and Diagnostic Data (SSMS)"
 ms.custom: ""
 ms.date: "04/16/2019"
 ms.prod: sql

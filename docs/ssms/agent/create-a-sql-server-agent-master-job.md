@@ -1,5 +1,5 @@
 ---
-title: "Create a SQL Server Agent Master Job | Microsoft Docs"
+title: "Create a SQL Server Agent Master Job"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

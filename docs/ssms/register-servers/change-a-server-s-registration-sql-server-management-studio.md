@@ -1,5 +1,5 @@
 ---
-title: "Change a Server&#39;s Registration (SQL Server Management Studio) | Microsoft Docs"
+title: "Change a Server&#39;s Registration (SQL Server Management Studio)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

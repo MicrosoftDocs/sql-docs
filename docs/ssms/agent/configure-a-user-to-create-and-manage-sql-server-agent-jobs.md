@@ -1,5 +1,5 @@
 ---
-title: "Configure a User to Create and Manage SQL Server Agent Jobs | Microsoft Docs"
+title: "Configure a User to Create and Manage SQL Server Agent Jobs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

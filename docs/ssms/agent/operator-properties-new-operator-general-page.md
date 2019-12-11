@@ -1,5 +1,5 @@
 ---
-title: "Operator Properties - New Operator (General Page) | Microsoft Docs"
+title: "Operator Properties - New Operator (General Page)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

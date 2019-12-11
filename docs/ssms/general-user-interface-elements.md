@@ -1,5 +1,5 @@
 ---
-title: "General User Interface Elements | Microsoft Docs"
+title: "General User Interface Elements"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Development, Test, and Production Databases | Microsoft Docs"
+title: "Development, Test, and Production Databases"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

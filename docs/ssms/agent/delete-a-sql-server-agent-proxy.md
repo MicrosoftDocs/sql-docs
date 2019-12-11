@@ -1,5 +1,5 @@
 ---
-title: "Delete a SQL Server Agent Proxy | Microsoft Docs"
+title: "Delete a SQL Server Agent Proxy"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

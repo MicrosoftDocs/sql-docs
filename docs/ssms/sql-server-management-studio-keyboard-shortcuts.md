@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Management Studio Keyboard Shortcuts | Microsoft Docs"
+title: "SQL Server Management Studio Keyboard Shortcuts"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Reorder Output Columns (Visual Database Tools) | Microsoft Docs"
+title: "Reorder Output Columns (Visual Database Tools)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Job Properties - New Job (Alerts Page) | Microsoft Docs"
+title: "Job Properties - New Job (Alerts Page)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

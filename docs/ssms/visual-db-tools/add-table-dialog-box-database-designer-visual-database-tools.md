@@ -1,5 +1,5 @@
 ---
-title: "Add Table Dialog Box (Database Designer) (Visual Database Tools) | Microsoft Docs"
+title: "Add Table Dialog Box (Database Designer) (Visual Database Tools)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

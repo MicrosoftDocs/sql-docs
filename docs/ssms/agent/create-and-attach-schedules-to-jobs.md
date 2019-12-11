@@ -1,5 +1,5 @@
 ---
-title: "Create and Attach Schedules to Jobs | Microsoft Docs"
+title: "Create and Attach Schedules to Jobs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

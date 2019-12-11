@@ -1,5 +1,5 @@
 ---
-title: "Discard Changes Made to Queries (Visual Database Tools) | Microsoft Docs"
+title: "Discard Changes Made to Queries (Visual Database Tools)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Associate a Query with a Connection in a Project | Microsoft Docs"
+title: "Associate a Query with a Connection in a Project"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

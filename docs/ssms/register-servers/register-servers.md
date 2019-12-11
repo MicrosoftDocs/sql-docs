@@ -1,5 +1,5 @@
 ---
-title: "Register Servers | Microsoft Docs"
+title: "Register Servers"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Options (Environment - Keyboard Page) | Microsoft Docs"
+title: "Options (Environment - Keyboard Page)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Select an Account for the SQL Server Agent Service | Microsoft Docs"
+title: "Select an Account for the SQL Server Agent Service"
 ms.custom: ""
 ms.date: "05/04/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "About Dialog Box | Microsoft Docs"
+title: "About Dialog Box"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

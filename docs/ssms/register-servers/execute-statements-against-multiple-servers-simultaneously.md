@@ -1,5 +1,5 @@
 ---
-title: "Execute Statements Against Multiple Servers Simultaneously | Microsoft Docs"
+title: "Execute Statements Against Multiple Servers Simultaneously"
 ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: sql

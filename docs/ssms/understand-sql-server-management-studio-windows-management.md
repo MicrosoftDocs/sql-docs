@@ -1,5 +1,5 @@
 ---
-title: "Understand SQL Server Management Studio Windows Management | Microsoft Docs"
+title: "Understand SQL Server Management Studio Windows Management"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

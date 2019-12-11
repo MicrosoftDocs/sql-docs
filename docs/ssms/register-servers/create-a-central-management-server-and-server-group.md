@@ -1,5 +1,5 @@
 ---
-title: "Create a Central Management Server and Server Group | Microsoft Docs"
+title: "Create a Central Management Server and Server Group"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

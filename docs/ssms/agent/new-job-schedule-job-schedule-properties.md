@@ -1,5 +1,5 @@
 ---
-title: "New Job Schedule - Job Schedule Properties | Microsoft Docs"
+title: "New Job Schedule - Job Schedule Properties"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

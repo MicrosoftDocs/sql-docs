@@ -1,5 +1,5 @@
 ---
-title: "Defect Multiple Target Servers from a Master Server | Microsoft Docs"
+title: "Defect Multiple Target Servers from a Master Server"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

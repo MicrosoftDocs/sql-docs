@@ -1,5 +1,5 @@
 ---
-title: "Delete an Alert | Microsoft Docs"
+title: "Delete an Alert"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Choose Target Table for Insert Values Dialog Box | Microsoft Docs"
+title: "Choose Target Table for Insert Values Dialog Box"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Replace Template Parameters | Microsoft Docs"
+title: "Replace Template Parameters"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

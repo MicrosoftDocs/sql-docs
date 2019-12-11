@@ -1,5 +1,5 @@
 ---
-title: "External Tools Dialog Box | Microsoft Docs"
+title: "External Tools Dialog Box"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

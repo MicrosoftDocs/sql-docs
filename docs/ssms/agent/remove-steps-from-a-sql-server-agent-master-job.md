@@ -1,5 +1,5 @@
 ---
-title: "Remove Steps from a SQL Server Agent Master Job | Microsoft Docs"
+title: "Remove Steps from a SQL Server Agent Master Job"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

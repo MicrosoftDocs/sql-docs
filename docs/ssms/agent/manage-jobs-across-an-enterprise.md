@@ -1,5 +1,5 @@
 ---
-title: "Manage Jobs Across an Enterprise | Microsoft Docs"
+title: "Manage Jobs Across an Enterprise"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

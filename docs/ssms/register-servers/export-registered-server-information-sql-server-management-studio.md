@@ -1,5 +1,5 @@
 ---
-title: "Export Registered Server Information (SQL Server Management Studio) | Microsoft Docs"
+title: "Export Registered Server Information (SQL Server Management Studio)"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

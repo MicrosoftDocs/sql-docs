@@ -1,5 +1,5 @@
 ---
-title: "Options (Environment - Fonts and Colors Page) | Microsoft Docs"
+title: "Options (Environment - Fonts and Colors Page)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

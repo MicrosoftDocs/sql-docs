@@ -1,5 +1,5 @@
 ---
-title: "Use Custom Reports with Object Explorer Node Properties | Microsoft Docs"
+title: "Use Custom Reports with Object Explorer Node Properties"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

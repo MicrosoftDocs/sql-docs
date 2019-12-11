@@ -1,5 +1,5 @@
 ---
-title: "Monitor and Respond to Events | Microsoft Docs"
+title: "Monitor and Respond to Events"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

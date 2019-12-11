@@ -1,5 +1,5 @@
 ---
-title: "Close a Solution | Microsoft Docs"
+title: "Close a Solution"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

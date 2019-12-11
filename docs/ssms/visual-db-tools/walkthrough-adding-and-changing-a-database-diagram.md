@@ -1,5 +1,5 @@
 ---
-title: "Walkthrough: Adding and Changing a Database Diagram | Microsoft Docs"
+title: "Walkthrough: Adding and Changing a Database Diagram"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

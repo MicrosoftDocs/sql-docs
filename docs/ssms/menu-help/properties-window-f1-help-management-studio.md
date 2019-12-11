@@ -1,5 +1,5 @@
 ---
-title: "Properties Window F1 Help (Management Studio) | Microsoft Docs"
+title: "Properties Window F1 Help (Management Studio)"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

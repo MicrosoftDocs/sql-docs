@@ -1,5 +1,5 @@
 ---
-title: "Template Explorer | Microsoft Docs"
+title: "Template Explorer"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms

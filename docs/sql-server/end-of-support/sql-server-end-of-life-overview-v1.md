@@ -10,7 +10,7 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016=sqlallproducts-allversions"
 ---
 # SQL Server end of support options 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ You can upgrade your existing SQL Server to a newer and supported version of SQL
 
 
 ### Considerations
-0
+
 - **Costly**: You have to make the biggest up-front investment and provide the most ongoing management, because you have to buy, maintain, and manage your own hardware and software.
 - **Downtime**: There could be downtime, plus the inherent risk of running into issues during an in-place upgrade process.
 - **Potentially risky**: If you're on Windows 2008 or 2008 R2, you will also need to upgrade the OS as the newer versions of SQL may not be supported on Windows 2008 or 2008 R2. There is added risk during the OS upgrade process, so doing a side-by-side migration may be the more prudent, yet more costly, approach. Additionally, in-place OS upgrades are not supported on failover cluster instances.
@@ -57,13 +57,6 @@ You can upgrade your existing SQL Server to a newer and supported version of SQL
     - [Data Migration Assistant](../../dma/dma-overview.md) can help detect compatibility issues that can impact database functionality in your new version of SQL Server. 
 
 
-|            |          |          |          | 
-|:---------- | :------- | :--------| :------- | 
-| Installation |  [Upgrade SQL Server using Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) | [Installation media](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm) | 
-| What's new | [SQL Server 2016](../what-s-new-in-sql-server-2016.md) | [SQL Server 2017](../what-s-new-in-sql-server-2017.md) | [SQL Server 2019](/sql-server/what-s-new-in-sql-server-ver15) | 
-|Supported version & edition upgrades | [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016) | [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md) | [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md) | 
-| Hardware requirements | [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md) | [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md) | 
-| Tools | [Database Experimentation Assistant](../../dea/database-experimentation-assistant-overview.md) can help evaluate the target version of SQL Server for a specific workload.  | [Data Migration Assistant](../../dma/dma-overview.md) can help detect compatibility issues that can impact database functionality in your new version of SQL Server. | 
 
 
 ![25 years of SQL Server innovation](media/sql-server-end-of-life-overview/sql-server-version-improvements.png)
@@ -72,28 +65,12 @@ You can upgrade your existing SQL Server to a newer and supported version of SQL
 
 You can purchase an Extended Security Updates subscription to receive **Critical** security updates. 
 
-| **Benefit** | **Description** | 
-| :----------- | :--------------| 
-| **Application support** | This is the best option if your application has not yet been certified for a newer version of SQL Server. | 
-| **Consistent infrastructure** | You don't have to change your infrastructure in any way. | 
-| **Technical support** | If you have Software Assurance, or another support plan, you can continue receiving technical support from Microsoft on your end-of-support SQL product. This is the only way to get support for SQL Server 2008 and SQL Server 2008 R2 after the end of the support date. | 
-| **Time** | This option is available for three years, giving you extra time to prepare your strategy, and certify your applications. | 
-
-| **Consideration** | **Description** | 
-| :----------- | :--------------| 
-| **Limited availability** | This option is only available to customers with Software Assurance or subscription licenses. |
-| **Costly** | This option can prove costly, as Extended Security Updates are approximately 75% of the on-premises license cost annually. | 
-| **Limited timeframe** | This option is only available for three years so you will still need to upgrade or migrate at the end of the three year period if you want to ensure your security and compliance.| 
-| **No bug fixes** | If you encounter a bug with the product, Microsoft will not release a bug-fix for it. |
-| **Limited support** | Extended Security Updates do not include new features, customer-requested non-security hotfixes, or design change requests. | 
-
-
 ### Benefits 
 
 - **Application support**: This is the best option if your application has not yet been certified for a newer version of SQL Server. 
 - **Consistent infrastructure**: You don't have to change your infrastructure in any way. 
 - **Technical support**: If you have Software Assurance, or another support plan, you can continue receiving technical support from Microsoft on your end-of-support SQL product. This is the only way to get support for SQL Server 2008 and SQL Server 2008 R2 after the end of the support date. 
-- **Time**| This option is available for three years, giving you extra time to certify your applications. 
+- **Time** This option is available for three years, giving you extra time to certify your applications. 
 
 ### Considerations 
 
@@ -156,27 +133,25 @@ You can migrate your workload to an Azure SQL Database single database or elasti
 
 ### Benefits
 
-| **Benefits** | **Description** | 
-| :----------- | :--------------| 
-| **Cost**     | Single database can be very cost-effective, since hardware, software, and maintenance is offloaded, and you can pay for usage by the second or the hour. | 
-| **Flexibility** | Single database is particularly well suited for cloud-designed applications when developer productivity and fast time-to-market solutions are critical, or that have require external access. | 
-| **Common features** | The most commonly used SQL Server features are available, but not as many as for an Azure SQL Database managed instance. | 
-| **Deployability** | You can quickly deploy a single database. |
-| **Scalability** | You can quickly and easily scale up and down as is needed for your business, providing additional cost-saving benefits. |
-| **Availability** | The cost of the service includes both storage and high availability, with 99.995% availability guaranteed. | 
-| **Automation** | Patching and backups happening automatically, saving you valuable maintenance time. | 
-| **Intelligent Insights** | Gain insight about the performance of your database with built-in intelligence analytics. | 
+
+ **Cost**:  Single database can be very cost-effective, since hardware, software, and maintenance is offloaded, and you can pay for usage by the second or the hour. 
+ **Flexibility**:  Single database is particularly well suited for cloud-designed applications when developer productivity and fast time-to-market solutions are critical, or that have require external access.  
+ **Common features**: The most commonly used SQL Server features are available, but not as many as for an Azure SQL Database managed instance.  
+ **Deployability**: You can quickly deploy a single database. 
+ **Scalability**: You can quickly and easily scale up and down as is needed for your business, providing additional cost-saving benefits. 
+ **Availability**: The cost of the service includes both storage and high availability, with 99.995% availability guaranteed.  
+ **Automation**: Patching and backups happening automatically, saving you valuable maintenance time.  
+ **Intelligent Insights**: Gain insight about the performance of your database with built-in intelligence analytics.  
 
 
 ### Considerations
 
 
-| **Consideration** | **Description** | 
-| :----------- | :--------------| 
-| **Limited migration options** | You can only migrate a single database at a time, rather than an entire instance. | 
-| **Limited features** | The feature set for a single database is limited when compared to an Azure SQL Database managed instance or a fully-fledged SQL Server deployment on an Azure virtual machine. |
-| **T-SQL differences** | There are some Transact-SQL (T-SQL) differences between a single database and an on-premises SQL Server. | 
-| **Size limitations** | A single database has a maximum database size of 100 TB, compared to a 524 PB size for SQL Server. | 
+
+ **Limited migration options**:  You can only migrate a single database at a time, rather than an entire instance.  
+ **Limited features**:  The feature set for a single database is limited when compared to an Azure SQL Database managed instance or a fully-fledged SQL Server deployment on an Azure virtual machine. 
+ **T-SQL differences**:  There are some Transact-SQL (T-SQL) differences between a single database and an on-premises SQL Server.  
+ **Size limitations**:  A single database has a maximum database size of 100 TB, compared to a 524 PB size for SQL Server.  
 
 ### Resources
 
@@ -197,25 +172,22 @@ You can migrate your workload to an Azure SQL Database managed instance or insta
 
 ### Benefits
 
-| **Benefits** | **Description** | 
-| :----------- | :--------------| 
-| **Cost**     | You can save costs by offloading software and hardware maintenance. | 
-| **Lift and shift** | You can lift and shift your entire SQL Server on-premises instance to a managed instance, including all databases with minimal to no database change. | 
-| **Features** | The feature set of a managed instance closely matches that of an on-premises instance of SQL Server, such as cross-database queries, transactional replication publishing and distribution, SQL job scheduling, and CLR support.| 
-| **Scalability** | All databases within a managed instance share resources, and it is possible to scale up and down at any time. | 
-| **Automation** | Patching and backups happening automatically, saving you valuable maintenance time. | 
-| **Availability** | The cost of the service includes both storage and high availability, with 99.995% availability guaranteed. | 
-| **Intelligent Insights** | Gain insight about the performance of your databases with built-in intelligence analytics. | 
+
+ **Cost**:   You can save costs by offloading software and hardware maintenance.  
+ **Lift and shift**:  You can lift and shift your entire SQL Server on-premises instance to a managed instance, including all databases with minimal to no database change.  
+ **Features**:  The feature set of a managed instance closely matches that of an on-premises instance of SQL Server, such as cross-database queries, transactional replication publishing and distribution, SQL job scheduling, and CLR support. 
+ **Scalability**:  All databases within a managed instance share resources, and it is possible to scale up and down at any time.  
+ **Automation**:  Patching and backups happening automatically, saving you valuable maintenance time.  
+ **Availability**:  The cost of the service includes both storage and high availability, with 99.995% availability guaranteed.  
+ **Intelligent Insights**:  Gain insight about the performance of your databases with built-in intelligence analytics.  
 
 ### Considerations
 
-| **Consideration** | **Description** | 
-| :----------- | :--------------| 
-| **Cost** | The managed instance option can be more costly than the single database option. | 
-| **T-SQL differences** | There are some Transact-SQL (T-SQL) differences between a single database and an on-premises SQL Server. | 
-| **Deployability** | Deploying a managed instance can take significantly more time than a single database. | 
-| **Feature limitation** | Although a managed instance shares most features with SQL Server, there are still some features that are unsupported. | 
-| **Networking** | The networking requirements for a managed instance add an extra layer of complexity to your infrastructure. | 
+ **Cost**:  The managed instance option can be more costly than the single database option.  
+ **T-SQL differences**:  There are some Transact-SQL (T-SQL) differences between a single database and an on-premises SQL Server.  
+ **Deployability**:  Deploying a managed instance can take significantly more time than a single database.  
+ **Feature limitation**:  Although a managed instance shares most features with SQL Server, there are still some features that are unsupported.  
+ **Networking**:  The networking requirements for a managed instance add an extra layer of complexity to your infrastructure.  
 
 ### Resources
 
@@ -236,6 +208,7 @@ You may also want to consider a non-relational or NoSQL solution for certain dat
 |------------------------------|--------------|  
 |**Azure Cosmos DB**<br /><br /> Consider this option for modern, scalable, mobile, and web applications that use JSON data and require a combination of robust querying and transactional data processing.<br /><br /> For more info, see [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/).<br /><br /> For info about importing data, see [Import data to Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/import-data/).|Your documents are indexed and you can use familiar SQL syntax to query them.<br /><br /> The database is schema-free.<br /><br /> You can add properties to documents without having to rebuild indexes.<br /><br /> You get JSON and JavaScript support right inside the database engine.<br /><br /> You get native support for geospatial data and integration with other Azure Services including Azure Search, HDInsight, and Data Factory.<br /><br /> You get low latency, high-performance storage with reserved throughput levels.|  
 |**Azure table storage**<br /><br /> Consider this option to store petabytes of semi-structured data in a cost-effective solution.<br /><br /> For more info, see [Table Storage](https://azure.microsoft.com/services/storage/tables/).|You can evolve your apps and your table schema without taking the data offline.<br /><br /> You can scale up without sharding your dataset.<br /><br /> You get geo-redundant storage that replicates data across multiple regions.|  
+ 
  
 
 ## Lifecycle dates

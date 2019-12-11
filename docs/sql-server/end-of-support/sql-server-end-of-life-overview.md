@@ -1,6 +1,6 @@
 ---
 title: "End of support options"
-description: Learn about the different options available for the end of support, and end of life for your SQL Server products, such as SQL Server 2005, SQL Server 2008, and SQL Server 2008 R2. 
+description: Learn about the different options available for the end of support SQL Server products, such as SQL Server 2005, SQL Server 2008, and SQL Server 2008 R2. 
 ms.custom: ""
 ms.date: "12/09/2019"
 ms.prod: sql
@@ -10,12 +10,16 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
-monikerRange: ">=sql-server-2016=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server end of support options 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-Each version of SQL Server is backed by a minimum of 10 years support, which includes 5 years in mainstream support, and five years in extended support, including regular security updates. End of support means the end of security updates, which can cause security and compliance issues as well as put applications and their business at risk. Additionally, support options are limited for customers who call into Microsoft Support for a product that has reached the end of its support cycle. 
+Each version of SQL Server is backed by a minimum of 10 years support, which includes 5 years in mainstream support, and five years in extended support, including regular security updates. 
+
+**End of support** means the end of security updates, which can cause security and compliance issues as well as put applications and their business at risk. Additionally, support options are limited for customers who call into Microsoft Support for a product that has reached the end of its support cycle. 
+
+**End of life** means that Microsoft has stopped all development for the product, including security fixes, and the product can no longer be covered by an Extended Security update subscription. For example, as of 2019, SQL Server 2008 has reached the end of support, and SQL Server 2000 has reached end of life. 
 
 Once your SQL Server has reached the end of its support lifecycle, you can choose to:
 - Upgrade to current version of SQL Server.

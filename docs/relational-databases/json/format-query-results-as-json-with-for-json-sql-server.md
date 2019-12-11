@@ -153,6 +153,7 @@ JSON_F52E2B61-18A1-11d1-B105-00805F49916B
    {"ClassName":"Calculus Math","s":[{"StudentName":"Alice Apple"},{"StudentName":"Betty Boot"}]}
 ]
 ```
+Here are a few tips to help you get acquainted to the JSON. – Reading through unformatted JSON results can be a challenge. Use a [formatter to help](https://goonlinetools.com/json-formatter/).
 
 ### More info about FOR JSON AUTO
 

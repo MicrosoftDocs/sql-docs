@@ -14,11 +14,11 @@ ms.date: 02/09/2017
 
 # Manage Tables, Relationships, and Fix Errors
 
-Topics in this section describe how to use the Table Designer to design tables and manage table relationships. Additional topics describe how to fix common syntax or semantic errors.
-
-## In This Section
-
+Topics in this section describe how to use the Table Designer to design tables and manage table relationships. Additional topics describe how to fix common syntax or semantic errors.  
+  
+## In This Section  
+  
 |Topic|Description|  
 |---------|---------------|  
- Use the Table Designer to Manage Tables and Relationships](../ssdt/how-to-use-the-table-designer-to-manage-tables-and-relationships.md)|Use the new Table Designer to design tables and manage table relationships.|  
- Fix Errors](../ssdt/how-to-fix-errors.md)|Follow any syntax or semantic errors that show up in the Error List pane to fix errors.| 
+|[How to: Use the Table Designer to Manage Tables and Relationships](../ssdt/how-to-use-the-table-designer-to-manage-tables-and-relationships.md)|Use the new Table Designer to design tables and manage table relationships.|  
+|[How to: Fix Errors](../ssdt/how-to-fix-errors.md)|Follow any syntax or semantic errors that show up in the Error List pane to fix errors.| 

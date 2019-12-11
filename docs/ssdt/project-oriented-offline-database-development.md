@@ -32,19 +32,19 @@ Using SSDT, you can create an offline database project and implement schema chan
 |[Add Database Reference Dialog Box](../ssdt/add-database-reference-dialog-box.md)|Describes various ways to add a database reference.|  
 |[Check for Updates Dialog Box](../ssdt/check-for-updates-dialog-box.md)|Describes how SQL Server Data Tools can check for product updates.|  
 |[Database Project Settings](../ssdt/database-project-settings.md)|Describes various project settings to control aspects of your database and build configurations.|  
- Browse Objects in a SQL Server Database Project](../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md)|The SQL Server Object Explorer in Visual Studio now contains a dedicated Projects node, under which all SQL Server database projects in your solution are grouped in an SQL Server Management Studio-like hierarchy.|  
+|[How to: Browse Objects in a SQL Server Database Project](../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md)|The SQL Server Object Explorer in Visual Studio now contains a dedicated Projects node, under which all SQL Server database projects in your solution are grouped in an SQL Server Management Studio-like hierarchy.|  
 |[Data Tools Operations Window](../ssdt/data-tools-operations-window.md)|Describes the **Data Tools Operations** window, which shows the progress of some operations and notifies you of any errors.|  
 |[Transact-SQL Editor Options](../ssdt/transact-sql-editor-options.md)|Describes Transact\-SQL options.|  
- Create a New Database Project](../ssdt/how-to-create-a-new-database-project.md)|Create a database project and import existing database schema.|  
- Use Schema Compare to Compare Different Database Definitions](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)|Compare the schemas of a database and a project and sync up.|  
- Build and Deploy to a Local Database](../ssdt/how-to-build-and-deploy-to-a-local-database.md)|Use the local on-demand SQL Server instance, which is activated when you debug a database project.|  
- Change Target Platform and Publish a Database Project](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)|Change the target SQL Server platform for your project to any supported instance of SQL Server and validate syntax.|  
- Create a Snapshot of a Project](../ssdt/how-to-create-a-snapshot-of-a-project.md)|Create a read-only proxy of the database schema, and revert the source project when unwanted changes are applied to the project.|  
- Use Microsoft SQL Server 2012 Objects in Your Project](../ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md)|Add a new Sequence object to your project.|  
- Work with CLR Database Objects](../ssdt/how-to-work-with-clr-database-objects.md)|Create and publish CLR objects in the SQL Server Data Tools Database project.|  
- Convert a Visual Studio 2010 Database Projects to SQL Server Database Projects and Retarget to a Different Platform](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|Convert existing SQL Server Database, CLR objects, and Data-Tier Application projects created in Visual Studio 2010 to the SQL Server Data Tools Database project.|  
- Specify Predeployment or Postdeployment Scripts](../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md)|Discusses how to use scripts that you want to run before or after the deployment of your database.|  
+|[How to: Create a New Database Project](../ssdt/how-to-create-a-new-database-project.md)|Create a database project and import existing database schema.|  
+|[How to: Use Schema Compare to Compare Different Database Definitions](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)|Compare the schemas of a database and a project and sync up.|  
+|[How to: Build and Deploy to a Local Database](../ssdt/how-to-build-and-deploy-to-a-local-database.md)|Use the local on-demand SQL Server instance, which is activated when you debug a database project.|  
+|[How to: Change Target Platform and Publish a Database Project](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)|Change the target SQL Server platform for your project to any supported instance of SQL Server and validate syntax.|  
+|[How to: Create a Snapshot of a Project](../ssdt/how-to-create-a-snapshot-of-a-project.md)|Create a read-only proxy of the database schema, and revert the source project when unwanted changes are applied to the project.|  
+|[How to: Use Microsoft SQL Server 2012 Objects in Your Project](../ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md)|Add a new Sequence object to your project.|  
+|[How to: Work with CLR Database Objects](../ssdt/how-to-work-with-clr-database-objects.md)|Create and publish CLR objects in the SQL Server Data Tools Database project.|  
+|[How to: Convert a Visual Studio 2010 Database Projects to SQL Server Database Projects and Retarget to a Different Platform](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|Convert existing SQL Server Database, CLR objects, and Data-Tier Application projects created in Visual Studio 2010 to the SQL Server Data Tools Database project.|  
+|[How to: Specify Predeployment or Postdeployment Scripts](../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md)|Discusses how to use scripts that you want to run before or after the deployment of your database.|  
   
-## Related Sections  
-[Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md)  
-  
+## Related Sections
+
+[Manage Tables, Relationships, and Fix Errors](../ssdt/manage-tables-relationships-and-fix-errors.md)

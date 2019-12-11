@@ -35,6 +35,7 @@ You can upgrade your existing SQL Server to a newer and supported version of SQL
 ### Benefits
 
 
+|              |                |
 | :----------- | :--------------| 
 | **Latest technology**| Get the most out of innovation by taking advantage of the latest features and security improvements. |
 | **Control**| You have the most control over features and scalability because you manage both hardware and software.|
@@ -45,7 +46,7 @@ You can upgrade your existing SQL Server to a newer and supported version of SQL
 ### Considerations
 
 
-
+|              |                |
 | :----------- | :--------------| 
 | **Costly**| You have to make the biggest up-front investment and provide the most ongoing management, because you have to buy, maintain, and manage your own hardware and software.
 | **Downtime**| There could be downtime, plus the inherent risk of running into issues during an in-place upgrade process.
@@ -73,7 +74,7 @@ You can purchase an Extended Security Updates subscription to receive **Critical
 
 ### Benefits
 
-
+|              |                |
 | :----------- | :--------------| 
 | **Application support** | This is the best option if your application has not yet been certified for a newer version of SQL Server. | 
 | **Consistent infrastructure** | You don't have to change your infrastructure in any way. | 
@@ -83,7 +84,7 @@ You can purchase an Extended Security Updates subscription to receive **Critical
 
 ### Considerations 
 
-
+|              |                |
 | :----------- | :--------------| 
 | **Limited availability** | This option is only available to customers with Software Assurance or subscription licenses. |
 | **Costly** | This option can prove costly, as Extended Security Updates are approximately 75% of the on-premises license cost annually. | 
@@ -96,10 +97,10 @@ You can purchase an Extended Security Updates subscription to receive **Critical
 
 ### Resources
 
-- [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
-- [Detailed ESU frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates)
-- [Extend support for free by migrating as-is to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
-- [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default)
+<br/> [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
+<br/> [Detailed ESU frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates)
+<br/> [Extend support for free by migrating as-is to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
+<br/> [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default)
 
 
 ## Azure virtual machine
@@ -108,7 +109,7 @@ You can migrate your workload to a virtual machine hosted in Azure.
 
 ### Benefits
 
-
+|              |                |
 | :----------- | :--------------| 
 | **Free Extended Security Updates**: If you choose to keep your SQL Server as-is using SQL Server 2008 or SQL Server 2008 R2, you can get free Extended Security Updates for three years past the end of the support date, without having Software Assurance. |
 | **Cost-saving**: You save the cost of hardware and server software, only paying for hourly usage. |
@@ -122,7 +123,7 @@ You can migrate your workload to a virtual machine hosted in Azure.
 
 ### Considerations
 
-
+|              |                |
 | :----------- | :--------------| 
 | **Manageability**| You still have to manage both SQL Server and operating system software.| 
 | **Networking**| You have to configure the virtual machine to integrate with your networking and active directory infrastructure, which is an added layer of complexity. |
@@ -150,7 +151,7 @@ You can migrate your workload to an Azure SQL Database single database or elasti
 ### Benefits
 
 
-
+|              |                |
 | :----------- | :--------------| 
 | **Cost**     | Single database can be very cost-effective, since hardware, software, and maintenance is offloaded, and you can pay for usage by the second or the hour. | 
 | **Flexibility** | Single database is particularly well suited for cloud-designed applications when developer productivity and fast time-to-market solutions are critical, or that have require external access. | 
@@ -164,7 +165,7 @@ You can migrate your workload to an Azure SQL Database single database or elasti
 ### Considerations
 
 
-
+|              |                |
 | :----------- | :--------------| 
 | **Limited migration options** | You can only migrate a single database at a time, rather than an entire instance. | 
 | **Limited features** | The feature set for a single database is limited when compared to an Azure SQL Database managed instance or a fully-fledged SQL Server deployment on an Azure virtual machine. |
@@ -184,13 +185,15 @@ You can migrate your workload to an Azure SQL Database single database or elasti
     - [Data migration assistant](../../dma/dma-overview.md)
     - [Database Migration Service](/azure/dms/dms-overview)
 
+
+
 ## Azure SQL Database managed instance
 
 You can migrate your workload to an Azure SQL Database managed instance or instance pool. 
 
 ### Benefits
 
-
+|              |                |
 | :----------- | :--------------| 
 | **Cost**     | You can save costs by offloading software and hardware maintenance. | 
 | **Lift and shift** | You can lift and shift your entire SQL Server on-premises instance to a managed instance, including all databases with minimal to no database change. | 
@@ -202,7 +205,7 @@ You can migrate your workload to an Azure SQL Database managed instance or insta
 
 ### Considerations
 
-
+|              |                |
 | :----------- | :--------------| 
 | **Cost** | The managed instance option can be more costly than the single database option. | 
 | **T-SQL differences** | There are some Transact-SQL (T-SQL) differences between a single database and an on-premises SQL Server. | 
@@ -212,11 +215,11 @@ You can migrate your workload to an Azure SQL Database managed instance or insta
 
 ### Resources
 
-- [Azure SQL Database managed instance overview](/azure/sql-database/sql-database-managed-instance)
-- [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
-- [SQL Database feature comparison](/azure/sql-database/sql-database-features)
-- [Migrate SQL Server to a managed instance](/azure/sql-database/sql-database-managed-instance-migrate)
-- Tools:
+[Azure SQL Database managed instance overview](/azure/sql-database/sql-database-managed-instance)
+<br/> [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+<br/> [SQL Database feature comparison](/azure/sql-database/sql-database-features)
+<br/> [Migrate SQL Server to a managed instance](/azure/sql-database/sql-database-managed-instance-migrate)
+<br/> Tools:
     - [Data migration assistant](../../dma/dma-overview.md)
     - [Database Migration Service](/azure/dms/dms-overview)
 

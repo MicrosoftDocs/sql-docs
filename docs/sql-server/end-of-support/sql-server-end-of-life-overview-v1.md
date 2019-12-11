@@ -84,10 +84,10 @@ You can purchase an Extended Security Updates subscription to receive **Critical
 
 ### Resources
 
-- [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
-- [Detailed ESU frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates)
-- [Extend support for free by migrating as-is to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
-- [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default)
+<br/> [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
+<br/> [Detailed ESU frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates)
+<br/> [Extend support for free by migrating as-is to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
+<br/> [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default)
 
 
 ## Azure virtual machine
@@ -114,16 +114,16 @@ You can migrate your workload to a virtual machine hosted in Azure.
 
 ### Resources
 
-- [SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)
-- [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
-- [Migrate SQL Server to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
-- [Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
-- [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
-- [Detailed ESU frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates)
-- [SQL virtual machine automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
-- [SQL virtual machine automated backup](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-backup-v2)
-- [SQL virtual machine high availability](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
-- [SQL virtual machine frequently asked questions](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-faq)
+<br/> [SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)
+<br/> [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+<br/> [Migrate SQL Server to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
+<br/> [Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
+<br/> [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
+<br/> [Detailed ESU frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates)
+<br/> [SQL virtual machine automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
+<br/> [SQL virtual machine automated backup](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-backup-v2)
+<br/> [SQL virtual machine high availability](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
+<br/> [SQL virtual machine frequently asked questions](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-faq)
 
 
 
@@ -155,14 +155,14 @@ You can migrate your workload to an Azure SQL Database single database or elasti
 
 ### Resources
 
-- [Azure SQL Database overview](/azure/sql-database/sql-database-technical-overview)
-- [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
-- [SQL Database feature comparison](/azure/sql-database/sql-database-features)
-- [Migrate SQL Server to a single database](/azure/sql-database/sql-database-single-database-migrate)
-- [Single database T-SQL differences](/azure/sql-database/sql-database-transact-sql-information)
-- [vCore](/azure/sql-database/sql-database-vcore-resource-limits-single-databases) and [DTU](/azure/sql-database/sql-database-dtu-resource-limits-single-databases) resource limits
-- [Intelligent Insights](/azure/sql-database/sql-database-intelligent-insights)
-- Tools:
+<br/> [Azure SQL Database overview](/azure/sql-database/sql-database-technical-overview)
+<br/> [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+<br/> [SQL Database feature comparison](/azure/sql-database/sql-database-features)
+<br/> [Migrate SQL Server to a single database](/azure/sql-database/sql-database-single-database-migrate)
+<br/> [Single database T-SQL differences](/azure/sql-database/sql-database-transact-sql-information)
+<br/> [vCore](/azure/sql-database/sql-database-vcore-resource-limits-single-databases) and [DTU](/azure/sql-database/sql-database-dtu-resource-limits-single-databases) resource limits
+<br/>[Intelligent Insights](/azure/sql-database/sql-database-intelligent-insights)
+<br/> Tools:
     - [Data migration assistant](../../dma/dma-overview.md)
     - [Database Migration Service](/azure/dms/dms-overview)
 

@@ -1,17 +1,19 @@
 ---
-title: "Troubleshooting SQL Server Database Unit Testing Issues"
-ms.custom: seo-lt-2019
-
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Troubleshooting SQL Server Database Unit Testing Issues
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Troubleshooting SQL Server Database Unit Testing Issues
+
 You might encounter the issues in this topic when you work with SQL Server unit tests on a database:  
   
 -   [Unit Testing and App.Config Changes Ignored When You Run Unit Tests](#UnitTestingAndAppConfigChanges)  

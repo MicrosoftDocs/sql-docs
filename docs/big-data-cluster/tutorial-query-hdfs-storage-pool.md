@@ -26,6 +26,10 @@ In this tutorial, you learn how to:
 > [!TIP]
 > If you prefer, you can download and run a script for the commands in this tutorial. For instructions, see the [Data virtualization samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) on GitHub.
 
+This 7-minute video walks you through querying HDFS data in a big data cluster:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Query-HDFS-data-inside-SQL-Server-big-data-cluster/player?WT.mc_id=dataexposed-c9-niner]
+
 ## <a id="prereqs"></a> Prerequisites
 
 - [Big data tools](deploy-big-data-tools.md)

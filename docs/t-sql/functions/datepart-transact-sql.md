@@ -100,8 +100,8 @@ This table lists all *datepart* arguments, with corresponding return values, for
 |**month, mm, m**|10|  
 |**dayofyear, dy, y**|303|  
 |**day, dd, d**|30|  
-|**week, wk, ww**|45|  
-|**weekday, dw**|1|  
+|**week, wk, ww**|44|  
+|**weekday, dw**|3|  
 |**hour, hh**|12|  
 |**minute, n**|15|  
 |**second, ss, s**|32|  
@@ -109,6 +109,7 @@ This table lists all *datepart* arguments, with corresponding return values, for
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
 |**TZoffset, tz**|310|  
+|**ISO_WEEK, ISOWK, ISOWW**|44|  
   
 ## Week and weekday datepart arguments
 For a **week** (**wk**, **ww**) or **weekday** (**dw**) *datepart*, the `DATEPART` return value depends on the value set by [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).

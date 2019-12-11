@@ -1,7 +1,7 @@
 ---
-title: "How to: Configure SQL Server Unit Test Execution | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "How to: Configure SQL Server Unit Test Execution"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

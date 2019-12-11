@@ -1,7 +1,7 @@
 ---
-title: "Connected Database Development | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "Connected Database Development"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

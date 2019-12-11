@@ -1,7 +1,7 @@
 ---
-title: "How to: Work with CLR Database Objects | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "How to: Work with CLR Database Objects"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

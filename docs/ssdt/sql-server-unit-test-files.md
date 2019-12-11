@@ -1,7 +1,7 @@
 ---
-title: "SQL Server Unit Test Files | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+title: "SQL Server Unit Test Files"
+ms.custom: seo-lt-2019
+
 ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt

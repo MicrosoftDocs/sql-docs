@@ -19,7 +19,7 @@ Each version of SQL Server is backed by a minimum of 10 years support, which inc
 
 **End of support** means the end of security updates, which can cause security and compliance issues as well as put applications and their business at risk. Additionally, support options are limited for customers who call into Microsoft Support for a product that has reached the end of its support cycle. 
 
-**End of life** means that Microsoft has stopped all development for the product, including security fixes, and the product can no longer be covered by an Extended Security update subscription. For example, as of 2019, SQL Server 2008 has reached the end of support, and SQL Server 2000 has reached end of life. 
+**End of life** means that Microsoft has stopped all development for the product, including security fixes, and the product can no longer be covered by an Extended Security Update subscription. For example, as of 2019, SQL Server 2008 has reached end of support, and SQL Server 2000 has reached end of life. 
 
 Once your SQL Server has reached the end of its support lifecycle, you can choose to:
 - Upgrade to current version of SQL Server.
@@ -27,14 +27,16 @@ Once your SQL Server has reached the end of its support lifecycle, you can choos
 - Migrate your workload to an Azure virtual machine as-is for [free Extended Security Updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support).
 - Migrate your workload to an [Azure SQL Database service](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas). 
 
-
 For more information, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005) and [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008).  
 
-![25 years of SQL Server innovation](media/sql-server-end-of-life-overview/sql-server-upgrade-paths.png)
+
+![End of support options](media/sql-server-end-of-life-overview/sql-server-upgrade-paths.png)
 
 ## Upgrade SQL Server
 
-You can upgrade your existing SQL Server to a newer and supported version of SQL Server. 
+Once your SQL Server has reached the end of support, you can choose to upgrade to a newer and supported version of SQL Server. This gives you environmental consistency, allows you to leverage the latest and greatest feature set, and adopts the new version's support life cycle. 
+
+
 
 ### Benefits
 - **Latest technology**: Get the most out of innovation by taking advantage of the latest features and security improvements. 
@@ -57,17 +59,16 @@ You can upgrade your existing SQL Server to a newer and supported version of SQL
 <br/> Hardware requirements for [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md) and [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md) 
 <br/> Supported version and edition upgrades for [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016), [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md), and [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
 <br/> Tools:
-    <br/> -  [Database Experimentation Assistant](../../dea/database-experimentation-assistant-overview.md) can help evaluate the target version of SQL Server for a specific workload. 
-    <br/> -  [Data Migration Assistant](../../dma/dma-overview.md) can help detect compatibility issues that can impact database functionality in your new version of SQL Server. 
+    <br/> -  [Database Experimentation Assistant](../../dea/database-experimentation-assistant-overview.md) can help evaluate the target version of SQL Server for a specific workload. [Database Experimentation Assistant Learn module](/learn/modules/test-optimize-sql-server-databases-using-dea/)
+    <br/> -  [Data Migration Assistant](../../dma/dma-overview.md) can help detect compatibility issues that can impact database functionality in your new version of SQL Server. [Data Migration Assistant Learn module](/learn/modules/assess-convert-sql-server-databases-using-dma/)
 
-
-
+The following image provides an example of innovation over the various versions of SQL Server throughout the years: 
 
 ![25 years of SQL Server innovation](media/sql-server-end-of-life-overview/sql-server-version-improvements.png)
 
 ## Extend support 
 
-You can purchase an Extended Security Updates subscription to receive **Critical** security updates. 
+If you're not ready to upgrade, and you're not ready to move to the cloud, you have the ability to purchase an Extended Security Updates subscription to receive **Critical** security updates for up to three years past the end of the support date.  
 
 ### Benefits 
 
@@ -96,12 +97,13 @@ You can purchase an Extended Security Updates subscription to receive **Critical
 
 ## Azure virtual machine
 
-You can migrate your workload to a virtual machine hosted in Azure. 
+Another option is to migrate your workload to an Azure virtual machine running SQL Server. You can migrate your system as-is and keep your end-of-support SQL Server, or you can upgrade to a newer version of SQL Server. Best for migrations and applications requiring OS-level access. SQL virtual machines are lift-and-shift ready for existing applications that require fast migration to the cloud with minimal or no changes. 
 
 ### Benefits
 
 - **Free Extended Security Updates**: If you choose to keep your SQL Server as-is using SQL Server 2008 or SQL Server 2008 R2, you can get free Extended Security Updates for three years past the end of the support date, without having Software Assurance. 
 - **Cost-saving**: You save the cost of hardware and server software, only paying for hourly usage. 
+- **Lift-and-shift**: You can lift-and-shift your SQL Server and application infrastructure into the cloud with minimal or no changes. 
 - **Hosted environment**: You will get the benefits of a hosted environment, such as offloading hardware, and software maintenance. Additionally, 
 - **Automation**: If you're on Windows 2008 R2 and greater, you will get the benefit of automated patching, and automated backups. 
 - **OS Control**: You have control over the operating environment, but with the familiar feature set of SQL Server. 
@@ -133,10 +135,9 @@ You can migrate your workload to a virtual machine hosted in Azure.
 
 ## Azure SQL Database single database
 
-You can migrate your workload to an Azure SQL Database single database or elastic pool.  
+If you'd like to offload maintenance, cost, and never worry about having to upgrade again, you can move your workload to Azure SQL Database single database. This option is best for modern cloud applications that want to use the latest stable SQL Server features and have time constraints in development and marketing. 
 
 ### Benefits
-
 
 - **Cost**:  Single database can be very cost-effective, since hardware, software, and maintenance is offloaded, and you can pay for usage by the second or the hour. 
 - **Flexibility**:  Single database is particularly well suited for cloud-designed applications when developer productivity and fast time-to-market solutions are critical, or that have require external access.  
@@ -146,16 +147,16 @@ You can migrate your workload to an Azure SQL Database single database or elasti
 - **Availability**: The cost of the service includes both storage and high availability, with 99.995% availability guaranteed.  
 - **Automation**: Patching and backups happening automatically, saving you valuable maintenance time.  
 - **Intelligent Insights**: Gain insight about the performance of your database with built-in intelligence analytics.  
+- **Versionless**: Azure SQL Database is versionless, meaning you are always on the latest version, and never have to worry about upgrading, or downtime. Plus, you're always on the latest and greatest, with our latest stable features being released to the cloud first.
 
 
 ### Considerations
 
-
-
 - **Limited migration options**:  You can only migrate a single database at a time, rather than an entire instance.  
-- **Limited features**:  The feature set for a single database is limited when compared to an Azure SQL Database managed instance or a fully-fledged SQL Server deployment on an Azure virtual machine. 
+- **Feature limitation**:  The feature set for a single database is limited when compared to an Azure SQL Database managed instance or a fully-fledged SQL Server deployment on an Azure virtual machine. 
 - **T-SQL differences**:  There are some Transact-SQL (T-SQL) differences between a single database and an on-premises SQL Server.  
-- **Size limitations**:  A single database has a maximum database size of 100 TB, compared to a 524 PB size for SQL Server.  
+- **Size limitations**:  A single database has a maximum database size of 100 TB, compared to a 524 PB size for SQL Server. 
+
 
 ### Resources
 
@@ -163,6 +164,7 @@ You can migrate your workload to an Azure SQL Database single database or elasti
 <br/> [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 <br/> [SQL Database feature comparison](/azure/sql-database/sql-database-features)
 <br/> [Migrate SQL Server to a single database](/azure/sql-database/sql-database-single-database-migrate)
+<br/> [Cloud adoption framework](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 <br/> [Single database T-SQL differences](/azure/sql-database/sql-database-transact-sql-information)
 <br/> [vCore](/azure/sql-database/sql-database-vcore-resource-limits-single-databases) and [DTU](/azure/sql-database/sql-database-dtu-resource-limits-single-databases) resource limits
 <br/>[Intelligent Insights](/azure/sql-database/sql-database-intelligent-insights)
@@ -172,18 +174,19 @@ You can migrate your workload to an Azure SQL Database single database or elasti
 
 ## Azure SQL Database managed instance
 
-You can migrate your workload to an Azure SQL Database managed instance or instance pool. 
+If you'd like to take advantage of offloading maintenance and cost, but find the feature set of an Azure SQL Database single database too limiting, you can move to Azure SQL Database managed instance. A managed instance closely resembles an on-premises SQL Server, without having to worry about such things as hardware failure, or patching.  Managed instance is a collection of system and user databases with a shared set of resources that is lift-and-shift ready, and can be used for most migrations to the cloud. This option is best for new applications or existing on-premises applications that want to use the latest stable SQL Server features and that are migrated to the cloud with minimal changes. 
 
 ### Benefits
 
 
 - **Cost**:   You can save costs by offloading software and hardware maintenance.  
-- **Lift and shift**:  You can lift and shift your entire SQL Server on-premises instance to a managed instance, including all databases with minimal to no database change.  
+- **Lift and shift**:  You can lift and shift your entire SQL Server on-premises instance to a managed instance, including all databases with minimal to no database change. 
 - **Features**:  The feature set of a managed instance closely matches that of an on-premises instance of SQL Server, such as cross-database queries, transactional replication publishing and distribution, SQL job scheduling, and CLR support. 
 - **Scalability**:  All databases within a managed instance share resources, and it is possible to scale up and down at any time.  
 - **Automation**:  Patching and backups happening automatically, saving you valuable maintenance time.  
 - **Availability**:  The cost of the service includes both storage and high availability, with 99.995% availability guaranteed.  
 - **Intelligent Insights**:  Gain insight about the performance of your databases with built-in intelligence analytics.  
+- **Versionless**: Azure SQL Database is versionless, meaning you are always on the latest version, and never have to worry about upgrading, or downtime. Plus, you're always on the latest and greatest, with our latest stable features being released to the cloud first.
 
 ### Considerations
 
@@ -199,8 +202,9 @@ You can migrate your workload to an Azure SQL Database managed instance or insta
 <br/> [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 <br/> [SQL Database feature comparison](/azure/sql-database/sql-database-features)
 <br/> [Migrate SQL Server to a managed instance](/azure/sql-database/sql-database-managed-instance-migrate)
+<br/> [Cloud adoption framework](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 <br/> Tools:
-    <br/> -  [Data migration assistant](../../dma/dma-overview.md)
+    <br/> - [Data migration assistant](../../dma/dma-overview.md)
     <br/> - [Database Migration Service](/azure/dms/dms-overview)
 
 

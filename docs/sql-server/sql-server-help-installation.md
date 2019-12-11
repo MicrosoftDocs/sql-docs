@@ -27,17 +27,19 @@ There are two major versions of the Microsoft Help Viewer.  Versions 1.x and 2.x
 
 |**Content Set**|**Tools that install Help Viewer**|**Help Viewer version**|
 |-|-|-|
-|SQL Server 2019 Preview <br> SQL Server 2017<br>SQL Server 2016|[Visual Studio 2019 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)<br>[Visual Studio 2017 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017)<br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)<br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#download-ssms-1791)<br>[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)<br>Visual Studio 2015 | v2.3<br>V2.2|
-|SQL Server 2014<br>SQL Server 2012|SQL Server 2016 Setup (2)<br>SQL Server 2014 Management Studio<br>SQL Server 2014 Setup (2)<br>SQL Server Management Studio 2012<br>SQL Server 2012 Setup (2)| v1.x|
+|SQL Server 2019 <br><br>SQL Server 2017 <br>SQL Server 2016 | [Visual Studio 2019 (\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) <br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) <br><br>[Visual Studio 2017 (\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) <br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#download-ssms-1791) <br>[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) <br>Visual Studio 2015 | v2.3 <br><br>v2.2 |
+|SQL Server 2014<br>SQL Server 2012|SQL Server 2016 Setup (\*2)<br>SQL Server 2014 Management Studio<br>SQL Server 2014 Setup (\*2)<br>SQL Server Management Studio 2012<br>SQL Server 2012 Setup (\*2)| v1.x|
 | | | |
 
-(1) To install the Help Viewer with Visual Studio 2019 or 2017, on the Individual Components tab in the Visual Studio Installer, select **Help Viewer** under Code Tools, and then click **Install**.
+(\*1) To install the Help Viewer with Visual Studio 2019 or 2017, on the **Individual Components** tab in the Visual Studio Installer, select **Code Tools** \> **Help Viewer** \> **Install**.
 
-(2) Indicates the "Documentation Components" option in SQL Server Setup.
+(\*2) Indicates the **Documentation Components** option in SQL Server Setup.
 
 >[!NOTE]
-> - SQL Server 2016 installs Help Viewer 1.1, which does not support SQL Server 2016 help content. For more information, see [SQL Server 2016 Release Notes](sql-server-2016-release-notes.md).  To view SQL Server 2016 content you need the v2.x of the help viewer. 
-> - Starting with SQL Server 2017 the Help Viewer cannot be installed from SQL Server Setup.
+> - SQL Server 2016 installs Help Viewer 1.1, which does not support SQL Server 2016 help content. To view SQL Server 2016 content you need the v2.x of the help viewer. For more information, see [SQL Server 2016 Release Notes](sql-server-2016-release-notes.md).
+> - Help Viewer 2.x can display the documentation for SQL Server versions 2014 - 2019, at least.
+> - An easy way to obtain Help Viewer 2.3 or later is by first downloading the latest version of `SSMS.exe`, which is free. And then use the SSMS **Help** menu.
+> - Starting with SQL Server 2017, the Help Viewer cannot be installed from SQL Server Setup.
 
 ## Use Help Viewer v2.x
 

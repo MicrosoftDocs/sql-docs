@@ -49,7 +49,7 @@ landingContent:
       - text: Internals & architecture guides
         url: https://aka.ms/sqlserverguides
       - text: SQL Server 2014 docs
-        url: /sql/2014-toc/index.yml?view=sql-server-2014
+        url: /sql/2014-toc/index?view=sql-server-2014
       - text: Previous versions 2005-2014
         url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
 

@@ -63,7 +63,7 @@ ALTER ROLE role_name
   
  Specifies the database role to change.  
   
- ADD MEMBER *database_principal*l  
+ ADD MEMBER *database_principal*  
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Specifies to add the database principal to the membership of a database role.  

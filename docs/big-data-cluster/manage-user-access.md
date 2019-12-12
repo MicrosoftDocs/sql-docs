@@ -96,4 +96,4 @@ The following steps allow granting administrator access to controller as well as
 
 ## Next steps
 
-- [Security concepts for SQL Server Big Data Clusters](concept-security)
+- [Security concepts for SQL Server Big Data Clusters](concept-security.md)

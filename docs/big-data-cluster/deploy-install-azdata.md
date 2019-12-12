@@ -141,4 +141,4 @@ For more information about big data clusters, see [What are [!INCLUDE[big-data-c
 
 ## Next steps
 
-- [Security concepts for SQL Server Big Data Clusters](concept-security)
+- [Security concepts for SQL Server Big Data Clusters](concept-security.md)

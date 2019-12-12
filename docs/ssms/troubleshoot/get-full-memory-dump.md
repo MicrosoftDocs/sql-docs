@@ -1,5 +1,5 @@
 ---
-title: Get Full Memory Dump to troubleshoot SQL Server Management Studio (SSMS)
+title: Get Full Memory Dump to troubleshoot SSMS
 Description: Troubleshooting an SSMS hang or crash by collecting a full memory dump
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -12,6 +12,7 @@ ms.reviewer: dineth, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
 ---
+
 # Get Full Memory Dump
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

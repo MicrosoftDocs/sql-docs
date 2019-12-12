@@ -1,5 +1,5 @@
 ---
-title: Change the Name of Registered Server or Registered Server Group
+title: Change the Name of Registered Server or Server Group
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms

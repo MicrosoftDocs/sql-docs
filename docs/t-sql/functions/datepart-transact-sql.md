@@ -66,8 +66,8 @@ The specific part of the *date* argument for which `DATEPART` will return an **i
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-|**TZoffset**|**tz**|  
-|**ISO_WEEK**|**isowk**, **isoww**|  
+|**tzoffset**|**tz**|  
+|**iso_week**|**isowk**, **isoww**|  
   
 *date*  
 An expression that resolves to one of the following data types: 
@@ -108,8 +108,8 @@ This table lists all *datepart* arguments, with corresponding return values, for
 |**millisecond, ms**|123|  
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
-|**TZoffset, tz**|310|  
-|**ISO_WEEK, ISOWK, ISOWW**|44|  
+|**tzoffset, tz**|310|  
+|**iso_week, isowk, isoww**|44|  
   
 ## Week and weekday datepart arguments
 For a **week** (**wk**, **ww**) or **weekday** (**dw**) *datepart*, the `DATEPART` return value depends on the value set by [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).

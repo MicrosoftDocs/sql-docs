@@ -7,8 +7,8 @@ ms.custom: ""
 ms.topic: conceptual
 f1_keywords: 
 helpviewer_keywords: 
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ---
 # SQL Server privacy supplement
 

@@ -1,6 +1,6 @@
 ---
-title: "Create an Analysis Services Job Step | Microsoft Docs"
-ms.custom: ""
+title: "Create an Analysis Services Job Step"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

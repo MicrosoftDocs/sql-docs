@@ -1,6 +1,6 @@
 ---
-title: "Name Element for Index (DTA) | Microsoft Docs"
-ms.custom: ""
+title: "Name Element for Index (DTA)"
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

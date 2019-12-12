@@ -1,6 +1,6 @@
 ---
-title: "Change a Server&#39;s Registration (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Change a Server&#39;s Registration (SQL Server Management Studio)"
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

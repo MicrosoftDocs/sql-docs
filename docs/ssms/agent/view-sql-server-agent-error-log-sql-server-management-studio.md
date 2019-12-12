@@ -1,6 +1,6 @@
 ---
-title: "View SQL Server Agent Error Log (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "View SQL Server Agent Error Log (SQL Server Management Studio)"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

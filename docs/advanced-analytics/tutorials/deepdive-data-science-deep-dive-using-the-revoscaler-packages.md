@@ -14,9 +14,9 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Tutorial: Use RevoScaleR R functions with SQL Server data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) is a Microsoft R package providing distributed and parallel processing for data science and machine learning workloads. For R development in SQL Server, **RevoScaleR** is one of the core built-in packages, with functions for creating data source objects, setting a compute context, managing packages, and most importantly: working with data end-to-end, from import to visualization and analysis. Machine Learning algorithms in SQL Server have a dependency on **RevoScaleR** data sources. Given the importance of **RevoScaleR**, knowing when and how to call its functions is an essential skill. 
+In this multi-part tutorial series, you're introduced to a range of **RevoScaleR** functions for tasks associated with data science. In the process, you'll learn how to create a remote compute context, move data between local and remote compute contexts, and execute R code on a remote SQL Server. You'll also learn how to analyze and plot data both locally and on the remote server, and how to create and deploy models.
 
-In this multi-part tutorial, you are introduced to a range of **RevoScaleR** functions for tasks associated with data science. In the process, you will learn how to create a remote compute context, move data between local and remote compute contexts, and execute R code on a remote SQL Server. You also learn how to analyze and plot data both locally and on the remote server, and how to create and deploy models.
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) is a Microsoft R package providing distributed and parallel processing for data science and machine learning workloads. For R development in SQL Server, **RevoScaleR** is one of the core built-in packages, with functions for creating data source objects, setting a compute context, managing packages, and most importantly: working with data end-to-end, from import to visualization and analysis. Machine Learning algorithms in SQL Server have a dependency on **RevoScaleR** data sources. Given the importance of **RevoScaleR**, knowing when and how to call its functions is an essential skill. 
 
 ## Prerequisites
 
@@ -66,4 +66,4 @@ Recall that **RevoScaleR** is required on both local and remote computers. You c
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Lesson 1: Create database and permissions](deepdive-work-with-sql-server-data-using-r.md)
+> [Tutorial 1: Create database and permissions](deepdive-work-with-sql-server-data-using-r.md)

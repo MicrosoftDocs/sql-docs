@@ -1,6 +1,6 @@
 ---
-title: "Aliases (SQL Server Configuration Manager) | Microsoft Docs"
-ms.custom: ""
+title: "Aliases (SQL Server Configuration Manager)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

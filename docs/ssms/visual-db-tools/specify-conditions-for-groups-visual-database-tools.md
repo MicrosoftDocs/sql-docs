@@ -1,6 +1,6 @@
 ---
-title: "Specify Conditions for Groups (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
+title: "Specify Conditions for Groups (Visual Database Tools)"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

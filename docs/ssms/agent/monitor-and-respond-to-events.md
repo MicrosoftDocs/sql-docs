@@ -1,6 +1,6 @@
 ---
-title: "Monitor and Respond to Events | Microsoft Docs"
-ms.custom: ""
+title: "Monitor and Respond to Events"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

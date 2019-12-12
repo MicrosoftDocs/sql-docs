@@ -308,7 +308,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/tutorials/deepdive-create-a-simple-simulation.md",
-            "redirect_url": "/sql/advanced-analytics/tutorials/r-tutorial-custom-r-functions",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-custom-r-functions-using-rxexec",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/r-tutorial-custom-r-functions.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-custom-r-functions-using-rxexec",
             "redirect_document_id": true
         },
         {
@@ -2128,7 +2133,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/python/install-additional-python-packages-on-sql-server.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/install-python-packages-with-pip",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-python-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/package-management/install-python-packages-with-pip.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-python-packages-on-sql-server",
             "redirect_document_id": false
         },
         {

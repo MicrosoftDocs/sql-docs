@@ -1,6 +1,6 @@
 ---
-title: "Select an Account for the SQL Server Agent Service | Microsoft Docs"
-ms.custom: ""
+title: "Select an Account for the SQL Server Agent Service"
+ms.custom: seo-lt-2019
 ms.date: "05/04/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

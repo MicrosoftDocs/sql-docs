@@ -1,5 +1,5 @@
 ---
-title: "Make a Target Server | Microsoft Docs"
+title: "Make a Target Server"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
@@ -17,7 +17,7 @@ ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: ""
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 

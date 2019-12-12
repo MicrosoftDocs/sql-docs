@@ -1,6 +1,6 @@
 ---
-title: "Job Step Properties - New Job Step (General Page) | Microsoft Docs"
-ms.custom: ""
+title: "Job Step Properties - New Job Step (General Page)"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

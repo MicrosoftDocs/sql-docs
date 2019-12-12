@@ -1,6 +1,6 @@
 ---
-title: "Register a Connected Server (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Register a Connected Server (SQL Server Management Studio)"
+ms.custom: seo-lt-2019
 ms.date: "07/28/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"

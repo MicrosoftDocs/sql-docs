@@ -66,7 +66,7 @@ The specific part of the *date* argument for which `DATEPART` will return an **i
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-|** offset**|**tz**|  
+|**tzoffset**|**tz**|  
 |**iso_week**|**isowk**, **isoww**|  
   
 *date*  

@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting a hang or crash with SQL Server Management Studio (SSMS)
+title: Troubleshooting a hang or crash with SSMS
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -12,6 +12,7 @@ ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 09/18/2019
 ---
+
 # Get diagnostic data after a SQL Server Management Studio (SSMS) crash
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

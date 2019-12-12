@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-No matter if the cluster is operating with Active Directory integration or not, the `AZDATA_PASSWORD` which is a parameter set upon deployment, provides a basic authentication to the cluster controller and master instance. This document describes how to manually update the `AZDATA_PASSWORD` after deployment.
+No matter if the cluster is operating with Active Directory (AD) integration or not, the `AZDATA_PASSWORD` is set during deployment. It provides a basic authentication to the cluster controller and master instance. This document describes how to manually update the `AZDATA_PASSWORD`.
 
 ## Change `AZDATA_PASSWORD` for controller
 
@@ -47,13 +47,13 @@ The following steps are also updating the Gateway (Knox) password in case the cl
 
    To simplify the example, the next steps use "newPassword" as the generated password is "newPassword". 
 
-5. Get the hexsalt from users table
+5. Get the `hexsalt` from users table
 
    ```sql
    SELECT hexsalt FROM [auth].[users] WHERE username = '<username>'
    ```
 
-This returns a random hex string, for example: `64FC59DF31244FFEE02F457BC0750226`.
+`hexsalt` returns a random hex string, for example: `64FC59DF31244FFEE02F457BC0750226`.
 
 
 6. Install the platform appropriate dotnetcore app
@@ -62,7 +62,7 @@ This returns a random hex string, for example: `64FC59DF31244FFEE02F457BC0750226
 
    The app is self-contained and does not require any prerequisite such as dotnet runtimes.
 
-7. Encrypt the new complex password using the hexsalt
+7. Encrypt the new complex password using the `hexsalt`
 
    ```bash
    pbkdf2 <password> <hexsalt>

@@ -27,7 +27,7 @@ AD groups can be provided in the security section of the deployment profile as p
 
 To grant additional AD groups permissions to the cluster after the deployment, one option is to add any additional users and groups to the already nominated groups upon deployment. 
 
-However, it might not always be feasible for the administrators to alter the group memberships inside AD. To grat additional AD groups permissions without altering group memeberships inside AD, complete the following steps. 
+However, it might not always be feasible for the administrators to alter the group memberships inside AD. To grant additional AD groups permissions without altering group memeberships inside AD, complete the following steps. 
 
 ## Grant additional AD groups administrator permissions
 

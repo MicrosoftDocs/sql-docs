@@ -52,6 +52,8 @@ landingContent:
         url: /sql/samples/sql-samples-where-are?view=sql-server-2016
     - linkListType: reference
       links:
+      - text: T-SQL in SQL 2014 Offline Books
+        url: /sql/sql-server/sql-server-help-installation?view=sql-server-20165#use-help-viewer-v1x
       - text: INSERT data
         url: /sql/t-sql/statements/insert-transact-sql?view=sql-server-2016
       - text: SELECT - JOIN - GROUP BY

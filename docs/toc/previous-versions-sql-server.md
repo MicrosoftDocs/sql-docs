@@ -3,7 +3,7 @@ title: Previous versions of SQL Server | Microsoft Docs
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
-ms.date: "10/15/2019"
+ms.date: "12/10/2019"
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: ""
@@ -60,7 +60,9 @@ Starting with SQL Server 2016, the SQL Server offline books have their version y
 
 ### Help Viewer
 
-For additional details about the Help Viewer tool, see [SQL Server offline help and Help Viewer](../sql-server/sql-server-help-installation.md?view=sql-server-2017).
+For additional details about the Help Viewer tool, see [SQL Server offline help and Help Viewer](../sql-server/sql-server-help-installation.md?view=sql-server-2016).
+
+Transact-SQL reference documentation is available in the Offline Books for SQL Server 2014. For more information, see the section named [Use Help Viewer v1.x](../sql-server/sql-server-help-installation.md?view=sql-server-2016#use-help-viewer-v1x).
 
 ## Lifecycle policy
 

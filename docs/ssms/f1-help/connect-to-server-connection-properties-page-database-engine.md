@@ -1,6 +1,6 @@
 ---
-title: "Connect to Server (Connection Properties Page) Database Engine | Microsoft Docs"
-ms.custom: ""
+title: "Connect to Server (Connection Properties Page) Database Engine"
+ms.custom: seo-lt-2019
 ms.date: "08/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

@@ -1,6 +1,6 @@
 ---
-title: "Change the Font Color, Size, and Style in Diagrams | Microsoft Docs"
-ms.custom: ""
+title: "Change the Font Color, Size, and Style in Diagrams"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

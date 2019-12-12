@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Agent | Microsoft Docs"
+title: "SQL Server Agent"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: "markingmyname"
 ms.author: "maghan"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -1,6 +1,6 @@
 ---
-title: "Post Download Instructions | Microsoft Docs"
-ms.custom: ""
+title: "Post Download Instructions"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

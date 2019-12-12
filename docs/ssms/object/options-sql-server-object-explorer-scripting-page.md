@@ -1,6 +1,6 @@
 ---
-title: "Options (SQL Server Object Explorer - Scripting Page) | Microsoft Docs"
-ms.custom: ""
+title: "Options (SQL Server Object Explorer - Scripting Page)"
+ms.custom: seo-lt-2019
 ms.date: "08/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

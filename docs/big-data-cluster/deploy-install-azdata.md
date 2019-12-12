@@ -28,7 +28,7 @@ To find your installed version and see if you need to update, run `azdata --vers
    * [Install with yum on RHEL, Fedora, or CentOS](deploy-install-azdata-yum.md)
    * [Install with Zypper on openSUSE or SLE](deploy-install-azdata-zypper.md)
    * [Install from script](deploy-install-azdata-pip.md)
-S
+
 ## Next steps
 
 For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

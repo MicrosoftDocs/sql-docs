@@ -92,7 +92,7 @@ In order to access the RESTful web service for the app you have deployed you fir
 |GDR1|  `https://[IP]:[PORT]/docs/swagger.json`|
 |CU1 and later| `https://[IP]:[PORT]/api/v1/swagger.json`|
 
-Open the appropriate URL in your browser: `https://[IP]:[PORT]/docs/swagger.json` using the IP address and port you retrieved running the `describe` command above. You will have to sign in with the same credentials you used for `azdata login`.
+Open the appropriate URL in your browser using the IP address and port you retrieved running the [`describe`](#retrieve-the-endpoint) command above. Sign in with the same credentials you used for `azdata login`.
 
 Paste the contents of the `swagger.json` into the [Swagger Editor](https://editor.swagger.io) to understand what methods are available:
 

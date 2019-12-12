@@ -337,6 +337,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md",
+            "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-life-overview",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/relational-databases/performance/adaptive-query-processing.md",
             "redirect_url": "/sql/relational-databases/performance/intelligent-query-processing",
             "redirect_document_id": true

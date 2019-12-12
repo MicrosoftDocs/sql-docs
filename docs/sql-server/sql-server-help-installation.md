@@ -129,11 +129,11 @@ In this section, you do the following general steps:
 
 - Manually download the SQL Server 2014 Offline Books, which are a set of four.
 - Use the **Help** menu of SSMS or VS to start the Help Viewer.
-- Finally, you tell the Help Viewer where the SQL Server 2014 `*.msha` file is on your local harddrive.
+- Finally, you tell the Help Viewer where the SQL Server 2014 `*.msha` file is on your local hard drive.
 
 Earlier versions of SSMS and VS provided the 1.x versions of the Help Viewer. 1.x is able to display the Offline Books for SQL Server versions 2012 and 2014. But 1.x cannot display the Offline Book for SQL Server 2016 or later.
 
-Help Viewer 2.3 is also able to display the SQL Server 2014 Offline Books, after you download the SQL Server 2014 Offline Books to your local harddrive.
+Help Viewer 2.3 is also able to display the SQL Server 2014 Offline Books, after you download the SQL Server 2014 Offline Books to your local hard drive.
 
 ### To download and install offline help content with Help Viewer v1.x
 

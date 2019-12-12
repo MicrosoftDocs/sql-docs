@@ -35,8 +35,8 @@ Query caching in SQL Server might affect evaluation results. We recommend that y
     - **Duration**: Select the length of time (in minutes) that you want the trace capture to run.
     - **Capture Location**: Select the destination path for the trace file.
 
-           > [!NOTE]
-           > The file path to the trace file must be on the computer that's running SQL Server. If the SQL Server service isn't set for a specific account, the service might need write permissions to the specified folder for the trace file to be written.
+        > [!NOTE]
+        > The file path to the trace file must be on the computer that's running SQL Server. If the SQL Server service isn't set for a specific account, the service might need write permissions to the specified folder for the trace file to be written.
 
 3. Verify that you have taken a backup by selecting the **Yes, I have manually taken the backup…** check box.
 

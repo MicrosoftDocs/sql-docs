@@ -128,7 +128,7 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
   - Microsoft Connector Version 5.0 for Oracle by Attunity and Microsoft Connector Version 5.0 for Teradata by Attunity. To get these components, see [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179).
 
-## Nest steps
+## Next steps
 
 - [Installing Integration Services Versions Side by Side](installing-integration-services-versions-side-by-side.md)
 

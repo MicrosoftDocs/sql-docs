@@ -57,13 +57,11 @@ To grant an account the `Perform volume maintenance tasks` permission:
 
 1. Restart the SQL Server service.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]
 > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], this permission can be granted to the service account at install time, during setup. If using the [command prompt install](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), add the /SQLSVCINSTANTFILEINIT argument, or check the box *Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service* in the [installation wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
 
 > [!NOTE]
-> Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the column *instant_file_initialization_enabled* in the [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) DMV can be used to identify if instant file initialization is enabled.
+> Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later, the column *instant_file_initialization_enabled* in the [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) DMV can be used to identify if instant file initialization is enabled.
 
 ## Remarks
 If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account is granted *SE_MANAGE_VOLUME_NAME*, an informational message that resembles the following is logged in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log at startup: 
@@ -74,7 +72,7 @@ If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup
 
 `Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later)
 
 ## Security Considerations  
 When using Instant File Initialization (IFI), because the deleted disk content is overwritten only as new data is written to the files, the deleted content might be accessed by an unauthorized principal, until some other data writes on that specific area of the data file. 

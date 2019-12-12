@@ -1,15 +1,16 @@
 ---
-title: Install new R packages with sqlmlutils
+title: Install new R packages
 description: Learn how to use sqlmlutils to install new R packages to an instance of SQL Server Machine Learning Services or SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+ms.custom: seo-lt-2019
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # Install new R packages with sqlmlutils
@@ -124,15 +125,13 @@ If the client computer you use to connect to SQL Server has Internet access, you
 
 1. On the client computer, open RStudio and create a new **R Script** file.
 
-1. Use the following R script to install the **glue** package using **sqlmlutils**. Substitute your own SQL Server database connection information.
+1. Use the following R script to install the **glue** package using **sqlmlutils**. Substitute your own SQL Server database connection information (if you don't use Windows Authentication, add `uid` and `pwd` parameters).
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```
@@ -189,15 +188,13 @@ On the client computer:
 
 1. Open RStudio and create a new **R Script** file.
 
-1. Use the following R script to install the **glue** package using **sqlmlutils**. Substitute your own SQL Server database connection information.
+1. Use the following R script to install the **glue** package using **sqlmlutils**. Substitute your own SQL Server database connection information (if you don't use Windows Authentication, add `uid` and `pwd` parameters).
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
    localRepo = "c:/temp/packages/glue"
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC", repos=paste0("file:///",localRepo))

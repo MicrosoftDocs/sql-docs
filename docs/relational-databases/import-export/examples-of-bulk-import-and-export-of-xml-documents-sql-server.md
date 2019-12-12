@@ -1,6 +1,6 @@
 ---
-title: "Examples of Bulk Import and Export of XML Documents (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Bulk import & export of XML documents"
+ms.description: "Examples of bulk importing and exporting of XML documents with SQL Server"
 ms.date: "10/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -18,8 +18,9 @@ helpviewer_keywords:
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
+ms.custom: "seo-lt-2019"
 ---
-# Examples of Bulk Import and Export of XML Documents (SQL Server)
+# Examples of bulk import and export of XML documents (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
     
@@ -246,7 +247,7 @@ GO
  [&#91;Top&#93;](#top)  
   
 ## <a name="bulk_export_xml_data"></a> Bulk exporting XML data  
- The following example uses `bcp` to bulk export XML data from the table that is created in the preceding example by using the same XML format file. In the following `bcp` command, `<server_name>` and `<instance_name>` represent placeholders that must be replaced with appropriate values:  
+ The following example uses [bcp](../../tools/bcp-utility.md) to bulk export XML data from the table that is created in the preceding example by using the same XML format file. In the following `bcp` command, `<server_name>` and `<instance_name>` represent placeholders that must be replaced with appropriate values:  
   
 ```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  

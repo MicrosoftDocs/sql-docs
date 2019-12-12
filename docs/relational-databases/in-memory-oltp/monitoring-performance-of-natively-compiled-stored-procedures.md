@@ -1,6 +1,6 @@
 ---
-title: "Monitoring Performance of Natively Compiled Stored Procedures | Microsoft Docs"
-ms.custom: ""
+title: "Monitor performance of natively compiled stored procedures"
+ms.custom: seo-dt-2019
 ms.date: "04/03/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

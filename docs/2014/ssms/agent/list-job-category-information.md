@@ -29,7 +29,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql
     -- returns information about jobs that are administered locally  
     USE msdb ;  
     GO  
@@ -46,6 +46,3 @@ manager: craigg
  **To list job category information**  
   
  Use the `JobCategory` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell.. For more information, see [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
-  
-  
-  

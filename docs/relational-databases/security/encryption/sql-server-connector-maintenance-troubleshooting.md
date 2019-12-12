@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Connector, appendix"
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ---
 # SQL Server Connector Maintenance &amp; Troubleshooting
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +164,10 @@ Key backups can be restored across Azure regions, as long as they remain in the 
  The Connector talks to two endpoints, which need to be whitelisted. The only port required for outbound communication to these other services is 443 for Https:
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
-  
+
+**How do I connect to Azure Key Vault through an HTTP(S) Proxy Server?**
+  The Connector uses Internet Explorer's Proxy configuration settings. These settings can be controlled via [Group Policy](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/) or via the Registry, but it is important to note that they are not system-wide settings and will need to be targeted to the service account running the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If a Database Administrator views or edits the settings in Internet Explorer, they will only affect the Database Administrator's account rather than the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] engine. Logging onto the server interactively using the service account is not recommended and is blocked in many secure environments. Changes to the configured proxy settings may require restarting the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance to take effect as they are cached when the Connector first attempts to connect to a key vault.
+
 **What are the minimum permission levels required for each configuration step in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Though you could perform all the configuration steps as a member of the sysadmin fixed server role, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] encourages you to minimize the permissions you use. The following list defines the minimum permission level for each action.  
   
@@ -244,6 +247,8 @@ If you don't see your error code in this table, here are some other reasons the 
 -   You may have dropped the asymmetric key from Azure Key Vault or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Restore the key.  
   
 -   If you receive a "Cannot load library" error, make sure you have the appropriate version of the Visual Studio C++ redistributable installed based on the version of SQL Server that you are running. The table below specifies which version to install from the Microsoft Download Center.   
+
+The Windows event log also logs errors associated with the SQL Server Connnector, which can help with additional context on why the error is actually happening. The source in the Windows Application Event Log will be "SQL Server Connector for Microsoft Azure Key Vault".
   
 SQL Server Version  |Redistributable Install Link    
 ---------|--------- 

@@ -1,5 +1,5 @@
 ---
-title: "Create a Master Data Manager Web Application (Master Data Services) | Microsoft Docs"
+title: Create a Master Data Manager Web Application
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

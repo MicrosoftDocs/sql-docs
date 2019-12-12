@@ -68,7 +68,7 @@ manager: craigg
   
 4.  For more information on using the wizard, see [Upgrade a Data-tier Application](upgrade-a-data-tier-application.md).  
   
- **View Database Changes by Using PowerShell**  
+### View Database Changes by Using PowerShell
   
 1.  Create a SMO Server object and set it to the instance that contains the DAC to be viewed.  
   
@@ -78,15 +78,14 @@ manager: craigg
   
 4.  Use the `GetDatabaseChanges()` method to retrieve a `ChangeResults` object, and pipe the object to a text file to generate a simple report of new, deleted, and changed objects.  
   
-### View Database Changes Example (PowerShell)  
- **View Database Changes Example (PowerShell)**  
+### View Database Changes Example (PowerShell)
   
  The following example reports any database changes that have been made in a deployed DAC named MyApplicaiton.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -127,15 +126,14 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  Close the file stream used to read the DAC package file.  
   
-### View Upgrade Actions Example (PowerShell)  
- **View Upgrade Actions Example (PowerShell)**  
+### View Upgrade Actions Example (PowerShell)
   
  The following example reports the Transact-SQL statements that would be run to upgrading a DAC named MyApplicaiton to the schema defined in a MyApplicationVNext.dacpac file.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -168,5 +166,3 @@ $fileStream.Close()
  [Data-tier Applications](data-tier-applications.md)   
  [Deploy a Data-tier Application](deploy-a-data-tier-application.md)   
  [Upgrade a Data-tier Application](upgrade-a-data-tier-application.md)  
-  
-  

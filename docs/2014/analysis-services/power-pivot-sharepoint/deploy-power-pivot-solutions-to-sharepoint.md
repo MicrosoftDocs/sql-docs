@@ -35,8 +35,8 @@ manager: craigg
 ##  <a name="bkmk_classic"></a> Prerequisite: Verify the Web Application uses Classic Mode Authentication  
  PowerPivot for SharePoint is only supported for web applications that use Windows-classic mode authentication. To check whether the application uses Classic mode, run the following PowerShell cmdlet from the **SharePoint 2010 Management Shell**, replacing `http://<top-level site name>` with the name of your SharePoint site:  
   
-```  
-Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
+```powershell
+Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthentication  
 ```  
   
  The return value should be **false**. If it is **true**, you cannot access PowerPivot data with this web application.  
@@ -50,7 +50,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 2.  Run the following cmdlet to add the farm solution.  
   
-    ```  
+    ```powershell
     Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
@@ -58,7 +58,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Run the next cmdlet to deploy the farm solution:  
   
-    ```  
+    ```powershell
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
@@ -69,13 +69,13 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 2.  Run the following cmdlet to create a reference to Central Administration:  
   
-    ```  
+    ```powershell
     $centralAdmin = $(Get-SPWebApplication -IncludeCentralAdministration | Where { $_.IsAdministrationWebApplication -eq $TRUE})  
     ```  
   
 3.  Run the following cmdlet to add the farm solution.  
   
-    ```  
+    ```powershell
     Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
@@ -83,7 +83,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 4.  Run the next cmdlet to install the web application solution to Central Administration.  
   
-    ```  
+    ```powershell
     Install-SPSolution -Identity PowerPivotWebApp.wsp -GACDeployment -Force -WebApplication $centralAdmin  
     ```  
   
@@ -145,5 +145,3 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  [Upgrade PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [PowerPivot Server Administration and Configuration in Central Administration](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [PowerPivot Configuration using Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
-  
-  

@@ -1,5 +1,5 @@
 ---
-title: "Release notes for SQL Server Data Tools (SSDT) | Microsoft Docs"
+title: Release notes for SQL Server Data Tools (SSDT)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -7,8 +7,10 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: markingmyname
 ms.author: maghan
+manager: jroth
+ms.reviewer: “”
 ms.reviewer: ""
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 08/15/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
@@ -281,7 +283,7 @@ _SSDT for Visual Studio 2017._
 - Fix an issue that some strings in Hadoop connection manager editor are truncated in other languages.
 - Fix an issue that some strings are truncated in OData connection manager editor.
 - Fix an issue that some strings are truncated in Integration Services import project wizard window.
-- Fix an issue with the title in the SSIS tool box information window.
+- Fix an issue with the title: in the SSIS tool box information window.
 - Fix an issue that some strings are truncated in Integration Services Deployment Wizard window. 
 
 **Installer**

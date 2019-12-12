@@ -1,5 +1,5 @@
 ---
-title: "Delete a Subscription View (Master Data Services) | Microsoft Docs"
+title: Delete a Subscription View
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

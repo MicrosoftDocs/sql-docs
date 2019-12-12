@@ -202,8 +202,6 @@ In some cases, the request for an incremental population results in a full popul
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="crawl"></a> Troubleshoot errors in a full-text population (crawl)  
 When an error occurs during a crawl, the Full-Text Search crawl logging facility creates and maintains a crawl log, which is a plain text file. Each crawl log corresponds to a particular full-text catalog. By default, crawl logs for a given instance (in this example, the default instance) are located in `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` folder.
  

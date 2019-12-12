@@ -109,7 +109,7 @@ SELECT DATENAME(year, '12:10:30.123')
     ,DATENAME(weekday, '12:10:30.123');  
 ```  
   
-If *date* is specified as a variable or table column, and the data type for that variable or column does not have the specified *datepart*, `DATENAME` will return error 9810. In this example, variable *@t* has a **time** data type. The example fails because the date part year is invalid for the **time** data type:
+If *date* is specified as a variable or table column, and the data type for that variable or column does not have the specified *datepart*, `DATENAME` will return error 9810. In this example, variable *\@t* has a **time** data type. The example fails because the date part year is invalid for the **time** data type:
   
 ```sql
 DECLARE @t time = '12:10:30.123';   
@@ -150,7 +150,7 @@ This example returns the date parts for the specified date. Substitute a *datepa
 |**millisecond, ms**|123|  
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
-|**TZoffset, tz**|310|  
+|**TZoffset, tz**|+05:10|  
 |**ISO_WEEK, ISOWK, ISOWW**|44|  
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -178,7 +178,7 @@ SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');
 |**millisecond, ms**|123|  
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
-|**TZoffset, tz**|310|  
+|**TZoffset, tz**|+05:10|  
 |**ISO_WEEK, ISOWK, ISOWW**|44|  
   
 ## See also

@@ -44,6 +44,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To change the column order**  
   
- This task cannot be performed using Transact-SQL statements.  
+ This task is not supported using Transact-SQL statements.  
   
 ###  <a name="TsqlExample"></a>  

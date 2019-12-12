@@ -57,8 +57,6 @@ ms.author: mikeray
   
 5.  Restore logs WITH STOPATMARK.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Considerations for Using Marked Transactions  
  Before inserting named marks into the transaction log, consider the following:  
   

@@ -1,15 +1,15 @@
 ---
-title: Connect to and query a SQL Server instance by using SQL Server Management Studio (SSMS)
+title: Connect to and query a SQL Server instance
 description: A tutorial for connecting to a SQL Server instance by using SQL Server Management Studio and running basic T-SQL queries.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: sstein
+ms.reviewer: sstein; maghan
 ms.topic: quickstart
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ---
 

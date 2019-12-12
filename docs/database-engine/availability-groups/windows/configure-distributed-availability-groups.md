@@ -14,7 +14,7 @@ ms.author: mathoma
 # Configure an Always On distributed availability group  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-To create a distributed availability group, you must two availability groups each with its own listener. You then combine these availability groups into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example doesn't cover all of the details of creating availability groups and listeners; instead, it focuses on highlighting the key requirements.
+To create a distributed availability group, you must create two availability groups each with its own listener. You then combine these availability groups into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example doesn't cover all of the details of creating availability groups and listeners; instead, it focuses on highlighting the key requirements.
 
 For a technical overview of distributed availability groups, see [Distributed availability groups](distributed-availability-groups.md).
 

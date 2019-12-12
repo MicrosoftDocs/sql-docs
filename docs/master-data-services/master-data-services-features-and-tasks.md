@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services Features and Tasks | Microsoft Docs"
+title: Features and Tasks
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql

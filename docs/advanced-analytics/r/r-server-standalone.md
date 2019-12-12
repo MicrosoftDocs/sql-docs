@@ -1,5 +1,5 @@
 ---
-title: What are standalone Machine Learning Server or R Server in SQL Server?
+title: What is standalone Machine Learning Server or R Server?
 description: Overview introduction to standalone R Server and Machine Learning Server in SQL Server Setup
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,7 @@ ms.date: 08/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # What are standalone Machine Learning Server or R Server in SQL Server?

@@ -1,6 +1,6 @@
 ---
-title: "Proxy Editor - Add Principal | Microsoft Docs"
-ms.custom: ""
+title: "Proxy Editor - Add Principal"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

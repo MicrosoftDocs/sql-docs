@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "service master key [SQL Server], exporting"
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ---
 # Back Up the Service Master Key
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,5 @@ Requires CONTROL permission on the database.
 8. Copy the file to the backup medium and verify the copy.  
   
 9. Store the backup in a secure, off-site location.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md) and [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md).  

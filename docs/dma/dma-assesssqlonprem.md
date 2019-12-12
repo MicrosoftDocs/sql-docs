@@ -1,8 +1,9 @@
 ---
-title: "Perform a SQL Server migration assessment (Data Migration Assistant) | Microsoft Docs"
+title: "Perform a SQL Server migration assessment"
+titleSuffix: Data Migration Assistant
 description: Learn how to use Data Migration Assistant to assess an on-premises SQL Server before migrating to another SQL Server or to Azure SQL Database
 ms.custom: ""
-ms.date: "08/08/2019"
+ms.date: "12/10/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -14,11 +15,15 @@ helpviewer_keywords:
 ms.assetid: ""
 author: HJToland3
 ms.author: rajpo
+ms.custom: "seo-lt-2019"
 ---
 
 # Perform a SQL Server migration assessment with Data Migration Assistant
 
 The following step-by-step instructions help you perform your first assessment for migrating to on-premises SQL Server, SQL Server running on an Azure VM, or Azure SQL Database, by using Data Migration Assistant.
+
+   > [!NOTE]
+   > Data Migration Assistant v5.0 introduces support for analyzing database connectivity and embedded SQL queries in the application code. For more information, see the blog post [Using Data Migration Assistant to assess an application’s data access layer](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
 
 ## Create an assessment
 
@@ -135,9 +140,9 @@ For Azure SQL Database, the assessments provide migration blocking issues and fe
 
 ## Assess a data estate for target readiness
 
-If you want further extend these assessments to the entire data estate and find the relative readiness of SQL Server instances and databases for migration to Azure SQL Database, upload the results to the Azure migrate hub by selecting **Upload to Azure Migrate**.
+If you want further extend these assessments to the entire data estate and find the relative readiness of SQL Server instances and databases for migration to Azure SQL Database, upload the results to the Azure Migrate hub by selecting **Upload to Azure Migrate**.
 
-Doing so allows you to view the consolidated results on the Azure migrate hub project.
+Doing so allows you to view the consolidated results on the Azure Migrate hub project.
 
 Detailed, step-by-step guidance for target readiness assessments is available [here](https://docs.microsoft.com/sql/dma/dma-assess-sql-data-estate-to-sqldb?view=sql-server-2017).
 

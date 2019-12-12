@@ -39,8 +39,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  In the **Operation Mode (Requested)** box, select **Read Write**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### Use Transact-SQL Statements  
   
 Use the **ALTER DATABASE** statement to enable the query store. For example:  

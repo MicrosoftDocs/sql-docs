@@ -52,8 +52,6 @@ The following list outlines general steps that will help in troubleshooting memo
   
 5.  Check the workload (for example, number of concurrent sessions, currently executing queries).  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 The following actions may make more memory available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   If applications besides SQL Server are consuming resources, try stopping running these applications or consider running them on a separate server. This will remove external memory pressure.  

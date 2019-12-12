@@ -68,7 +68,7 @@ ms.author: maggies
   
  **Overwrite:** You can specify overwrite options to reuse the same file name for each report delivery or to create a new file. To overwrite the file, you must use the same file name and extension.  
   
- An alternative approach to creating unique files for every delivery is to include a timestamp in the file name. To do this, add the **@timestamp** variable to the file name (for example, *CompanySales@timestamp*). With this approach, the file name is unique by definition, so it will never be overwritten.  
+ An alternative approach to creating unique files for every delivery is to include a timestamp in the file name. To do this, add the **\@timestamp** variable to the file name (for example, *CompanySales@timestamp*). With this approach, the file name is unique by definition, so it will never be overwritten.  
   
  The following image is an example of the settings for a subscription configured for file share delivery.  
   

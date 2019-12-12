@@ -1,5 +1,5 @@
 ---
-title: Deploy an R model for predictions on SQL Server
+title: "R tutorial: Deploy model"
 description: Tutorial showing how to deploy an R model on SQL Server for in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,6 +8,7 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Deploy the R model and use it in SQL Server (walkthrough)
@@ -68,7 +69,7 @@ Create a stored procedure, *PredictTipBatchMode*, that generates multiple predic
 
     + You use a SELECT statement to call the stored model from a SQL table. The model is retrieved from the table as **varbinary(max)** data, stored in the SQL variable _\@lmodel2_, and passed as the parameter *mod* to the system stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + The data used as inputs for scoring is defined as a SQL query and stored as a string in the SQL variable _\@input_. As data is retrieved from the database, it is stored in a data frame called *InputDataSet*, which is just the default name for input data to the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedure; you can define another variable name if needed by using the parameter *_\@input_data_1_name_*.
+    + The data used as inputs for scoring is defined as a SQL query and stored as a string in the SQL variable _\@input_. As data is retrieved from the database, it is stored in a data frame called *InputDataSet*, which is just the default name for input data to the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedure; you can define another variable name if needed by using the parameter _\@input_data_1_name_.
 
     + To generate the scores, the stored procedure calls the rxPredict function from the **RevoScaleR** library.
 

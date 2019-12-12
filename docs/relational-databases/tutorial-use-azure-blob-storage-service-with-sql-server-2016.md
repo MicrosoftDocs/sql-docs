@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Use Azure Blob storage service with SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
+title: "Tutorial: Use Azure Blob storage service with SQL Server 2016"
+ms.custom: seo-dt-2019
 ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: 
@@ -36,8 +36,6 @@ To use this tutorial, you need an Azure storage account, SQL Server Management S
 - Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Download [AdventureWorks2016 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 - Assign the user account to the role of [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) and grant [alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) permissions. 
-
-[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## 1 - Create stored access policy and shared access storage
 

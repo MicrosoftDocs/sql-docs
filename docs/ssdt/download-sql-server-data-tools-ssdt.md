@@ -1,18 +1,20 @@
-﻿---
-title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
+---
+title: Download SQL Server Data Tools (SSDT)
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.technology: ssdt
 ms.topic: conceptual
 keywords: "install ssdt, download ssdt, latest ssdt"
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+manager: jroth
 ms.reviewer: ""
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 08/15/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
+
 # Download and install SQL Server Data Tools (SSDT) for Visual Studio
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,12 +28,12 @@ With Visual Studio 2019, the required functionality to enable Analysis Services,
 If you already have a license to Visual Studio 2019:
 
 - For SQL Database Projects, install the Data storage and Processing workload for Visual Studio
-- For Analysis Services, Integration Services or Reporting Services projects, install the appropriate extension(s) from the marketplace
+- For Analysis Services, Integration Services or Reporting Services projects, install the appropriate [extension(s)](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) from the marketplace
 
 If you don’t already have a license to Visual Studio 2019:
 
 - Install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)
-- Install the Analysis Services, Integration Services, or Reporting Services extension as appropriate
+- Install the Analysis Services, Integration Services, or Reporting Services [extension(s)](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) as appropriate
 
 ## Changes in SSDT for Visual Studio 2017
 

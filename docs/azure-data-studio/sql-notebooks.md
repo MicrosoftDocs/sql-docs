@@ -1,16 +1,17 @@
 ---
-title: How to use SQL Notebooks in Azure Data Studio
+title: How to use SQL Notebooks
 titleSuffix: Azure Data Studio
 description: Learn how to use SQL Notebooks in Azure Data Studio
-ms.custom: "seodec18"
-ms.date: "06/28/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "achatter; alayu; sstein"
+ms.reviewer: "achatter; alayu; maghan; sstein"
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
+ms.custom: "seodec18"
+ms.date: "06/28/2019"
 ---
+
 # How to use notebooks in Azure Data Studio
 
 This article describes how to launch the Notebook experience in Azure Data Studio and how to start authoring your own notebooks. It also shows how to write Notebooks using different kernels.

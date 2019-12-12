@@ -1,6 +1,7 @@
 ---
-title: "Resume an Availability Database (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Resume an availability group database"
+description: Steps to resume a database that's been paused within an Always On availability group using either SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or SQL PowerShell. 
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -62,9 +63,9 @@ ms.author: mathoma
   
 1.  Connect to the server instance that hosts the secondary replica whose database you want to resume.  
   
-2.  Resume the secondary database by using the following [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)statement:  
-  
-     ALTER DATABASE *database_name* SET HADR RESUME  
+2.  Resume the secondary database by using the following [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) statement:  
+
+     ALTER DATABASE *database_name* SET HADR RESUME;
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To resume a secondary database**  

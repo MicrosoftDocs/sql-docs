@@ -1,6 +1,6 @@
 ---
-title: Load data into memory using RevoScaleR rxImport
-description: Tutorial walkthrough on how to load data using the R language on SQL Server.
+title: Load data using rxImport
+description: "RevoScaleR tutorial 10: How to load data using the R language on SQL Server."
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -8,16 +8,17 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Load data into memory using rxImport (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 10 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+
+In this tutorial, you'll learn how to get data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then use the **rxImport** function to put the data of interest into a local file. That way, you can analyze it in the local compute context repeatedly, without having to re-query the database.
 
 The [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) function can be used to move data from a data source into a data frame in session memory, or into an XDF file on disk. If you don't specify a file as destination, data is put into memory as a data frame.
-
-In this step, you learn how to get data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then use the **rxImport** function to put the data of interest into a local file. That way, you can analyze it in the local compute context repeatedly, without having to re-query the database.
 
 ## Extract a subset of data from SQL Server to local memory
 

@@ -101,8 +101,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 5.  Follow the instructions in the next section for how to use the SQLXML 4.0 test script.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Using the SQLXML 4.0 Test Script  
  The following procedure describes how to use the Sqlxml4test.vbs files to test the example queries provided in this documentation.  
   

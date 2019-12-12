@@ -1,5 +1,5 @@
 ---
-title: "Enable enhanced database failover for an availability group"
+title: "Enhanced failover for an availability group"
 description: "Steps to enable enhanced database failover, which triggers a failover if a database in an Always On availability group is no longer able to write transactions."
 ms.custom: "seodec18"
 ms.date: "09/25/2017"
@@ -34,7 +34,7 @@ This has the same availability group configuration as Scenario 1. Rather than Dr
 
 An availability group is configured between Instance A and Instance B containing two databases: DB1 and DB2. The availability mode is set to synchronous commit with a failover mode of automatic, and enhanced database failover is enabled. Access to the disk containing DB2's data and transaction log files is lost. When the problem is detected, the availability group will automatically fail over to Instance B.
 
-## Configure and view the enhanced database failover option
+## Configure enhanced failover
 
 Enhanced database failover can be configured using SQL Server Management Studio or Transact-SQL. The PowerShell cmdlets do not currently have this ability. By default, enhanced database failover is disabled.
 

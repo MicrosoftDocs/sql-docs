@@ -1,6 +1,6 @@
 ---
-title: "A Guide to Query Processing for Memory-Optimized Tables | Microsoft Docs"
-ms.custom: ""
+title: "Query processing for memory-optimized tables"
+ms.custom: seo-dt-2019
 ms.date: "05/09/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -110,8 +110,6 @@ SQL Server query processing pipeline.
 5.  For each index seek, index scan, and table scan operator, the execution engine requests rows from the respective index and table structures from Access Methods.  
   
 6.  Access Methods retrieves the rows from the index and data pages in the buffer pool and loads pages from disk into the buffer pool as needed.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  For the first example query, the execution engine requests rows in the clustered index on Customer and the nonclustered index on Order from Access Methods. Access Methods traverses the B-tree index structures to retrieve the requested rows. In this case all rows are retrieved as the plan calls for full index scans.  
   

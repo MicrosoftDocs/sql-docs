@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "column level encryption"
   - "cell level encryption"
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Encrypt a Column of Data
@@ -53,8 +53,6 @@ Always back up your database master key. For more information on database master
 2. On the Standard bar, click **New Query**.  
   
 3. Copy and paste the following example into the query window and click **Execute**.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql
     USE AdventureWorks2012;  

@@ -1,15 +1,15 @@
 ---
-title: Create and score a predictive model in Python
-titleSuffix: SQL Server Machine Learning Services
+title: "Quickstart: Train a model in Python"
 description: Create a simple predictive model in Python using SQL Server Machine Learning Services, then predict a result using new data.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/04/2019  
+ms.date: 10/14/2019  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 In this quickstart, you'll create and train a predictive model using Python, save the model to a table in your SQL Server instance, then use the model to predict values from new data using [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
-You'll create and execute two stored procedures running in SQL. The first one uses the classic Iris flower data set and generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring - it calls the model generated in the first procedure to output a set of predictions based on new data. By placing code in a stored procedure, operations are contained, reusable, and callable by other stored procedures and client applications.
+You'll create and execute two stored procedures running in SQL. The first one uses the classic Iris flower data set and generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring - it calls the model generated in the first procedure to output a set of predictions based on new data. By placing Python code in a SQL stored procedure, operations are contained in SQL, are reusable, and can be called by other stored procedures and client applications.
 
 By completing this quickstart, you'll learn:
 
@@ -39,7 +39,9 @@ By completing this quickstart, you'll learn:
 
 In this step, you'll create a stored procedure that generates a model for predicting outcomes.
 
-1. Open a new query window in SSMS connected to the **irissql** database. 
+1. Open SSMS, connect to your SQL Server instance, and open a new query window.
+
+1. Connect to the irissql database.
 
     ```sql
     USE irissql
@@ -65,7 +67,7 @@ In this step, you'll create a stored procedure that generates a model for predic
     import pickle
     from sklearn.naive_bayes import GaussianNB
     GNB = GaussianNB()
-    trained_model = pickle.dumps(GNB.fit(iris_data[[0,1,2,3]], iris_data[[4]].values.ravel()))
+    trained_model = pickle.dumps(GNB.fit(iris_data[["Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"]], iris_data[["SpeciesId"]].values.ravel()))
     '
             , @input_data_1 = N'select "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "SpeciesId" from iris_data'
             , @input_data_1_name = N'iris_data'
@@ -131,9 +133,9 @@ Now that you have created, trained, and saved a model, move on to the next step:
            , @script = N'
    import pickle
    irismodel = pickle.loads(nb_model)
-   species_pred = irismodel.predict(iris_data[[1,2,3,4]])
+   species_pred = irismodel.predict(iris_data[["Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"]])
    iris_data["PredictedSpecies"] = species_pred
-   OutputDataSet = iris_data[[0,5,6]] 
+   OutputDataSet = iris_data[["id","SpeciesId","PredictedSpecies"]] 
    print(OutputDataSet)
    '
            , @input_data_1 = N'select id, "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "SpeciesId" from iris_data'

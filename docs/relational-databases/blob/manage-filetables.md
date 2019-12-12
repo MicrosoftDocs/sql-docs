@@ -109,8 +109,6 @@ GO
   
 3.  A valid directory has been specified at the database level.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="BasicsEnabling"></a> Disabling and Re-enabling the FileTable Namespace at the Table Level  
  Disabling the FileTable namespace disables all the system-defined constraints and triggers that were created with the FileTable. This is useful in cases where a FileTable has to be reorganized on a large scale by using [!INCLUDE[tsql](../../includes/tsql-md.md)] operations without incurring the expense of enforcing FileTable semantics. However these operations can leave the FileTable in an inconsistent state, and can prevent the re-enabling of the FileTable namespace.  
   

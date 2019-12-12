@@ -1,5 +1,5 @@
 ---
-title: "Configure Data Collection Parameters (Transact-SQL) | Microsoft Docs"
+title: "Configure Data Collection Parameters (T-SQL)"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -11,6 +11,7 @@ helpviewer_keywords:
 ms.assetid: 850905b6-35d2-4ed1-ab51-de64daa832b2
 author: MashaMSFT
 ms.author: mathoma
+ms.custom: "seo-lt-2019"
 ---
 # Configure Data Collection Parameters (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,8 +25,6 @@ ms.author: mathoma
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the database where you want to create a custom collection set.  
   
 2.  In Query Editor, issue the following statements.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql  
     USE msdb;  

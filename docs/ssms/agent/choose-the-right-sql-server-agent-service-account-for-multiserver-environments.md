@@ -1,6 +1,6 @@
 ---
-title: "Choose the Agent Service Account for Multiserver Environments | Microsoft Docs"
-ms.custom: ""
+title: "Choose the Agent Service Account for Multiserver Environments"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

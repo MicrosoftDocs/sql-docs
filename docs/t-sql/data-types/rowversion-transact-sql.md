@@ -59,7 +59,7 @@ CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;
   
 A nonnullable **rowversion** column is semantically equivalent to a **binary(8)** column. A nullable **rowversion** column is semantically equivalent to a **varbinary(8)** column.
   
-You can use the **rowversion** column of a row to easily determine whether the row has had an update statement ran against it since the last time it was read. If an update statement is ran against the row, the rowversion value is updated. If no update statements are ran against the row, the rowversion value is the same as when it was previously read. To return the current rowversion value for a database, use [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
+You can use the **rowversion** column of a row to easily determine whether an update statement has been run against the row since the last time it was read. If an update statement is run against the row, the rowversion value is updated. If no update statements are run against the row, the rowversion value is the same as when it was previously read. To return the current rowversion value for a database, use [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
   
 You can add a **rowversion** column to a table to help maintain the integrity of the database when multiple users are updating rows at the same time. You may also want to know how many rows and which rows were updated without re-querying the table.
   

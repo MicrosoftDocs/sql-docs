@@ -1,7 +1,7 @@
 ---
-title: "Configure a listener for an availability group"
+title: "Configure availability group listener"
 description: "Describes the steps to take when configuring a listener for an Always On availability group using PowerShell or SQL Server Management Studio. "
-ms.custom: "seodec18"
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

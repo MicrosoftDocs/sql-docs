@@ -1,5 +1,5 @@
 ---
-title: "Automatic Matching of Syntax Pairs | Microsoft Docs"
+title: "Automatic Matching of Syntax Pairs"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting

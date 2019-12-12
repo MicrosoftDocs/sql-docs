@@ -97,7 +97,7 @@ manager: kfile
 > [!TIP]  
 >  For a detailed example, see [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
-```  
+```vb
 Public Sub Main()  
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
@@ -124,5 +124,3 @@ End Sub
  [Report Server Command Prompt Utilities &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Reporting Services Tools](reporting-services-tools.md)  
-  
-  

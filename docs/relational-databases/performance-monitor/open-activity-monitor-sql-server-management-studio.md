@@ -1,6 +1,7 @@
 ---
-title: "Open Activity Monitor (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Open Activity Monitor (SSMS)"
+description: How to open activity monitor in SQL Server Management Studio (SSMS).
+ms.custom: seo-dt-2019
 ms.date: "08/05/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -16,7 +17,7 @@ ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
 ---
-# Open Activity Monitor (SQL Server Management Studio)
+# Open Activity Monitor in SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
    
  Activity Monitor runs queries on the monitored instance to obtain information for the Activity Monitor display panes. When the refresh interval is set to less than 10 seconds, the time that is used to run these queries can affect server performance  
@@ -51,8 +52,6 @@ Complete the **Connect to Server** dialog box if you are not already connected t
 3.  From the **At startup** drop-down list, select **Open Object Explorer and Activity Monitor**.  
 
 4.  Click **OK**.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   

@@ -30,7 +30,7 @@ manager: craigg
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
   
-##### To configure HealthCheckTimeout settings  
+### To configure HealthCheckTimeout settings  
   
 1.  Start an elevated Windows PowerShell via **Run as Administrator**.  
   
@@ -40,8 +40,7 @@ manager: craigg
   
 > [!TIP]  
 >  Every time you open a new PowerShell window, you need to import the `FailoverClusters` module.  
-  
-### Example (PowerShell)  
+
  The following example changes the HealthCheckTimeout setting on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource "`SQL Server (INST1)`" to 60000 milliseconds.  
   
 ```powershell  
@@ -49,7 +48,6 @@ Import-Module FailoverClusters
   
 $fci = "SQL Server (INST1)"  
 Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000  
-  
 ```  
   
 ### Related Content (PowerShell)  
@@ -77,12 +75,10 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  The following example sets the HealthCheckTimeout option to 15,000 milliseconds (15 seconds).  
   
-```  
+```sql
 ALTER SERVER CONFIGURATION   
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
 ## See Also  
  [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  
-  
-  

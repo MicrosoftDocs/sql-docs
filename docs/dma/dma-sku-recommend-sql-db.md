@@ -106,7 +106,7 @@ In addition, select one of the following arguments:
         - **AzureAuthenticationToken**: Set to the certificate token.
 
 > [!NOTE]
-> To get the ClientId and TenantId for interactive authentication, you need to configure a new AAD application. For more information on authentication and getting these credentials, in the article [Microsoft Azure Billing API Code Samples: RateCard API](https://azure.microsoft.com/resources/samples/billing-python-ratecard-api/), follow the instructions under **Step 1: Configure a Native Client application in your AAD tenant**.
+> To get the ClientId and TenantId for interactive authentication, you need to configure a new AAD application. For more information on authentication and getting these credentials, in the article [Microsoft Azure Billing API Code Samples: RateCard API](https://github.com/Azure-Samples/billing-dotnet-ratecard-api), follow the instructions under **Step 1: Configure a Native Client application in your AAD tenant**.
 
 Lastly, there is an optional argument you can use to specify the databases for which you want recommendations: 
 

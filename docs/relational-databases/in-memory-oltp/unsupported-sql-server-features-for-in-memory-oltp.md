@@ -1,5 +1,5 @@
 ---
-title: "Unsupported SQL Server Features for In-Memory OLTP | Microsoft Docs"
+title: "Features not supported - in-memory OLTP"
 ms.custom: ""
 ms.date: "05/29/2019"
 ms.prod: sql

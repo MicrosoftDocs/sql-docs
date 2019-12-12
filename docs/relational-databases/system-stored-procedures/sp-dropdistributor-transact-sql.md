@@ -52,7 +52,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## Remarks  
  **sp_dropdistributor** is used in all types of replication.  
   
- If other Publisher or distribution objects exist on the server, **sp_dropdistributor** fails unless **@no_checks** is set to **1**.  
+ If other Publisher or distribution objects exist on the server, **sp_dropdistributor** fails unless **\@no_checks** is set to **1**.  
   
  This stored procedure must be executed after dropping the distribution database by executing **sp_dropdistributiondb**.  
   

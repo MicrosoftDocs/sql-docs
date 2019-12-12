@@ -1,6 +1,6 @@
 ---
-title: Create a database and permissions for RevoScaleR tutorials
-description: Tutorial walkthrough on how to create a SQL Server database for R tutorials..
+title: Database for RevoScaleR tutorials
+description: "RevoScaleR tutorial 1: How to create a SQL Server database for R tutorials."
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -8,14 +8,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Create a database and permissions (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 1 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-Lesson one is about setting up a SQL Server database and permissions necessary for completing this tutorial. Use [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or another query editor to complete the following tasks:
+This tutorial describes how to create a SQL Server database and set the permissions necessary for completing the other tutorials in this series. Use [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or another query editor to complete the following tasks:
 
 > [!div class="checklist"]
 > * Create a new database to store the data for training and scoring two R models
@@ -23,7 +24,7 @@ Lesson one is about setting up a SQL Server database and permissions necessary f
   
 ## Create the database
 
-This tutorial requires a database for storing data and code. If you are not an administrator, ask your DBA to create the database and login for you. You will need permissions to write and read data, and to run R scripts.
+This tutorial requires a database for storing data and code. If you're not an administrator, ask your DBA to create the database and login for you. You'll need permissions to write and read data, and to run R scripts.
 
 1. In SQL Server Management Studio, connect to an R-enabled database instance.
 
@@ -31,7 +32,6 @@ This tutorial requires a database for storing data and code. If you are not an a
   
 2. Type a name for the new database: RevoDeepDive.
   
-
 ## Create a login
   
 1. Click **New Query**, and change the database context to  the master database.
@@ -109,7 +109,7 @@ This section lists some common issues that you might run across in the course of
   
 - **I don't have DDL privileges. Can I still run the tutorial?**?
   
-    Yes, but you should ask someone to pre-load the data into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables, and skip ahead to the next lesson. The functions that require DDL privileges are called out in the tutorial wherever possible.
+    Yes, but you should ask someone to pre-load the data into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables, and skip ahead to the next tutorial. The functions that require DDL privileges are called out in the tutorial wherever possible.
 
     Also, ask your administrator to grant you the permission, EXECUTE ANY EXTERNAL SCRIPT. It is needed for R script execution, whether remote or by using `sp_execute_external_script`.
 

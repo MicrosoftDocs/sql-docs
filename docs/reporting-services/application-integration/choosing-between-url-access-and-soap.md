@@ -1,17 +1,18 @@
 ---
-title: "Choosing between URL access and SOAP in Reporting Services | Microsoft Docs"
+title: "Choose between URL access and SOAP"
+description: "There are two ways to integrate Reporting Services into custom applications: URL access and the Reporting Services SOAP API. Which to use depends on several factors."
 ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
 
-
+ms.custom: seo-lt-2019
 ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Choosing between URL access and SOAP in Reporting Services
+# Choose between URL access and SOAP in Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 

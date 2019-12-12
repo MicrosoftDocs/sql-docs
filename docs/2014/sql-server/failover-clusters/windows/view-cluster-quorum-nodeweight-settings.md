@@ -55,7 +55,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
   
 ##  <a name="PowerShellProcedure"></a> Using Powershell  
   
-##### To view NodeWeight settings  
+### To view NodeWeight settings
   
 1.  Start an elevated Windows PowerShell via **Run as Administrator**.  
   
@@ -74,7 +74,7 @@ Import-Module FailoverClusters
 $cluster = "Cluster001"  
 $nodes = Get-ClusterNode -Cluster $cluster  
   
-$nodes | Format-Table -property NodeName, State, NodeWeight  
+$nodes | Format-Table -Property NodeName, State, NodeWeight  
 ```  
   
 ##  <a name="CommandPromptProcedure"></a> Using Cluster.exe  
@@ -91,7 +91,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ### Example (Cluster.exe)  
  The following example outputs some of the node properties for the cluster called "Cluster001".  
   
-```ms-dos  
+```cmd
 cluster.exe Cluster001 node /status /properties  
 ```  
   
@@ -100,5 +100,3 @@ cluster.exe Cluster001 node /status /properties
  [Configure Cluster Quorum NodeWeight Settings](configure-cluster-quorum-nodeweight-settings.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)   
  [Failover Cluster Cmdlets in Windows PowerShell Listed by Task Focus](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
-  
-  

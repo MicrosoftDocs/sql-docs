@@ -1,6 +1,6 @@
 ---
-title: "sqlservr Application | Microsoft Docs"
-ms.custom: ""
+title: "sqlservr Application"
+ms.custom: seo-lt-2019
 ms.date: "08/01/2019"
 ms.prod: sql
 ms.prod_service: "sql-tools"

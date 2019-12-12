@@ -4,10 +4,6 @@ ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "displaying Registered Servers"
-  - "viewing Registered Servers"
-  - "Registered Servers [SQL Server], viewing"
 ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
 author: markingmyname
 ms.author: maghan

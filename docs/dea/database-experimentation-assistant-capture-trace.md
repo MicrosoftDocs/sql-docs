@@ -2,7 +2,7 @@
 title: Capture a trace for SQL Server upgrades
 description: Capture a trace in Database Experimentation Assistant for SQL Server upgrades
 ms.custom: "seo-lt-2019"
-ms.date: 12/05/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,7 +10,7 @@ ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: HJToland3
-ms.author: jtoland
+ms.author: rajsell
 ms.reviewer: mathoma
 ---
 
@@ -26,7 +26,7 @@ Query caching in SQL Server might affect evaluation results. We recommend that y
 
 1. In DEA, on the left-hand navigation bar, select the camera icon, and then on the **All Captures** page, select **New Capture**.
 
-    ![Select Capture Traces in the menu](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
+    ![Create a capture in DEA](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
 
 2. On the **New Capture** page, under **Capture details**, enter or select the following information:
 
@@ -144,4 +144,4 @@ If you see any other errors labeled *Sql Error Code*, see [Database Engine Error
 
 ## See also
 
-- To learn how to configure the Distributed Replay tools in SQL Server before you replay a captured trace, see [Configure replay in Database Experimentation Assistant](database-experimentation-assistant-configure-replay.md).
+- To learn how to configure the Distributed Replay tools in SQL Server before you replay a captured trace, see [Configure Distributed Replay for Database Experimentation Assistant](database-experimentation-assistant-configure-replay.md).

@@ -3,7 +3,7 @@ title: "Execute Statements Against Multiple Servers Simultaneously"
 ms.custom: seo-lt-2019
 ms.date: "07/18/2016"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual

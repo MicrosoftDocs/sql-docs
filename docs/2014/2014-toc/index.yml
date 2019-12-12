@@ -164,7 +164,7 @@ landingContent:
       - text: Analysis Services (SSAS)
         url: ../analysis-services/analysis-services.md?view=sql-server-2014
       - text: Integration Services (SSIS)
-        url: https://docs.microsoft.com/sql/integration-services/sql-server-integration-services.md?view=sql-server-2014
+        url: https://docs.microsoft.com/sql/integration-services/sql-server-integration-services?view=sql-server-2014
       - text: Reporting Services (SSRS)
         url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md?view=sql-server-2014
 

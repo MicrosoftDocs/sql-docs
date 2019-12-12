@@ -1,6 +1,5 @@
 ---
 title: Update AZDATA_PASSWORD
-titleSuffix: Manually update AZDATA_PASSWORD
 description: Update the `AZDATA_PASSWORD` manually
 author: NelGson
 ms.author: negust

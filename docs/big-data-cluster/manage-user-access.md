@@ -1,6 +1,5 @@
 ---
 title: Manage cluster access in Active Directory mode
-titleSuffix: Manage cluster access in Active Directory mode
 description: Manage access to the big data cluster
 author: NelGson
 ms.author: negust
@@ -69,7 +68,7 @@ The following steps allow granting administrator access to controller as well as
    echo <password from kubectl command>  | base64 --decode && echo
    ```
 
-   2. In a separate command window, expose controller database server's port:
+2. In a separate command window, expose controller database server's port:
 
    ```bash
    kubectl port-forward controldb-0 1433:1433 --address 0.0.0.0 -n <cluster name>
@@ -94,3 +93,7 @@ The following steps allow granting administrator access to controller as well as
    ```
 
 5. For non-administrator users, you can verify access by authenticating to SQL Master Instance or to controller using `azdata login`.
+
+## Next steps
+
+- [Security concepts for SQL Server Big Data Clusters](concept-security)

@@ -1,5 +1,5 @@
 ---
-title: "Teradata Connection Manager | Microsoft Docs"
+title: "Use the Teradata connection manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/22/2019"
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ---
-# Use Teradata Connection Manager
+# Use the Teradata connection manager
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-You can use Teradata Connection Manager to enable a package to extract data from Teradata databases and load data into Teradata databases.
+With the Teradata connection manager, you can enable a package to extract data from Teradata databases and load data into Teradata databases.
 
-You set the Teradata Connection Manager `ConnectionManagerType` property to *TERADATA*.
+You set the Teradata connection manager `ConnectionManagerType` property to *TERADATA*.
 
-## Configure Teradata Connection Manager
+## Configure the Teradata connection manager
 
-Connection Manager configuration changes are resolved by Integration Services at runtime. To add a connection to a Teradata data source, complete the information in the **Teradata Connection Manager Editor** pane.
+Connection manager configuration changes are resolved by Integration Services at runtime. To add a connection to a Teradata data source, complete the information in the **Teradata Connection Manager Editor** pane.
 
 ![The Teradata Connection Manager Editor pane](media/teradata-connection-manager.png)
 
@@ -33,7 +33,7 @@ Connection Manager configuration changes are resolved by Integration Services at
 1. Under **Authentication**, do either of the following:
 
    - To use Windows authentication, select **Use Windows Authentication**.
-   - To use Teradata database authentication, select **Use Teradata Authentication**, and then enter the credentials for this type of authentication:
+   - To use Teradata database authentication, select **Use Teradata Authentication**, and then enter the following credentials for this type of authentication:
      - In the **Mechanism** box, enter the security checking mechanism you want to use. Valid mechanism values include TD1, TD2, LDAP, KRB5, KRB5C, NTLM, and NTLMC.
      - In the **Parameter** box, enter the types of parameters that are required for the security checking mechanism you've entered.
      - In the **User name** box, enter the username that you use to connect to the Teradata database.  
@@ -54,9 +54,9 @@ To set the property:
 1. In the **Connection Manager** area, right-click **Teradata Connection Manager**, and then select **Properties**.
 1. In the **Properties** pane, for the `UseUTF8CharSet` property, select either *True* or *False*.
 
-## Troubleshoot Teradata Connection Manager
+## Troubleshoot the Teradata connection manager
 
-To log Teradata Connection Manager calls to the Teradata Open Database Connectivity (ODBC) driver, enable Windows ODBC tracing in the Windows ODBC Data Source Administrator.
+To log Teradata connection manager calls to the Teradata Open Database Connectivity (ODBC) driver, enable Windows ODBC tracing in the Windows ODBC Data Source Administrator.
 
 ## Next steps
 

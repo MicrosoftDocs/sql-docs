@@ -66,8 +66,8 @@ The specific part of the *date* argument for which `DATEPART` will return an **i
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-|**TZoffset**|**tz**|  
-|**ISO_WEEK**|**isowk**, **isoww**|  
+|**tzoffset**|**tz**|  
+|**iso_week**|**isowk**, **isoww**|  
   
 *date*  
 An expression that resolves to one of the following data types: 
@@ -108,8 +108,8 @@ This table lists all *datepart* arguments, with corresponding return values, for
 |**millisecond, ms**|123|  
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
-|**TZoffset, tz**|310|  
-|**ISO_WEEK, ISOWK, ISOWW**|44|  
+|**tzoffset, tz**|310|  
+|**iso_week, isowk, isoww**|44|  
   
 ## Week and weekday datepart arguments
 For a **week** (**wk**, **ww**) or **weekday** (**dw**) *datepart*, the `DATEPART` return value depends on the value set by [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
@@ -142,7 +142,7 @@ serves as the default. After setting DATEFIRST, use this suggested SQL statement
 ## year, month, and day datepart Arguments  
 The values that are returned for DATEPART (**year**, *date*), DATEPART (**month**, *date*), and DATEPART (**day**, *date*) are the same as those returned by the functions [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md), and [DAY](../../t-sql/functions/day-transact-sql.md), respectively.
   
-## ISO_WEEK datepart  
+## iso_week datepart  
 ISO 8601 includes the ISO week-date system, a numbering system for weeks. Each week is associated with the year in which Thursday occurs. For example, week 1 of 2004 (2004W01) covered Monday, 29 December 2003 to Sunday, 4 January 2004. European countries / regions typically use this style of numbering. Non-European countries / regions typically do not use it.
 
 Note: the highest week number in a year could be either 52 or 53.
@@ -158,14 +158,14 @@ The numbering systems of different countries/regions might not comply with the I
 |Wednesday|1 January,<br /><br /> First Tuesday,<br /><br /> 1-7 days of year|Yes||  
 |Saturday|1 January,<br /><br /> First Friday,<br /><br /> 1-7 days of year|Yes||  
   
-## TZoffset  
-`DATEPART` returns the **TZoffset** (**tz**) value as the number of minutes (signed). This statement returns a time zone offset of 310 minutes:
+## tzoffset  
+`DATEPART` returns the **tzoffset** (**tz**) value as the number of minutes (signed). This statement returns a time zone offset of 310 minutes:
   
 ```sql
-SELECT DATEPART (TZoffset, '2007-05-10  00:00:01.1234567 +05:10');  
+SELECT DATEPART (tzoffset, '2007-05-10  00:00:01.1234567 +05:10');  
 ```  
-`DATEPART` renders the TZoffset value as follows:
-- For datetimeoffset and datetime2, TZoffset returns the time offset in minutes, where the offset for datetime2 is always 0 minutes.
+`DATEPART` renders the tzoffset value as follows:
+- For datetimeoffset and datetime2, tzoffset returns the time offset in minutes, where the offset for datetime2 is always 0 minutes.
 - For data types that can implicitly convert to **datetimeoffset** or **datetime2**, `DATEPART` returns the time offset in minutes. Exception: other date / time data types.
 - Parameters of all other types result in an error.
   

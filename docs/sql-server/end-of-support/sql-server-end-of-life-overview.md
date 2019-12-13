@@ -222,7 +222,7 @@ If you'd like to take advantage of offloading maintenance and cost, but find the
 <br/> [Migrate SQL Server to a managed instance](/azure/sql-database/sql-database-managed-instance-migrate)
 <br/> [Cloud adoption framework](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 <br/> Tools:
-    <br/> - [Data migration assistant](../../dma/dma-overview.md)
+    <br/> - [Data migration Assistant](../../dma/dma-overview.md)
     <br/> - [Database Migration Service](/azure/dms/dms-overview)
 
 
@@ -257,8 +257,14 @@ The following table provides an approximation of lifecycle dates for SQL Server 
 
   
 ## Next Steps  
- [SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)   
- [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005)   
- [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008)
+[SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)   
+[SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005)   
+[SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008)
+[Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)   
+[SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)   
+[Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)   
+[Azure SQL Database overview](/azure/sql-database/sql-database-technical-overview)    
+
+
   
   

@@ -1,9 +1,9 @@
 ---
 title: "Monitor and Respond to Events"
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -19,8 +19,10 @@ helpviewer_keywords:
   - "monitoring [SQL Server], events"
   - "responding to events automatically"
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Monitor and Respond to Events

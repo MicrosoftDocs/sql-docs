@@ -1,17 +1,19 @@
 ---
 title: "SQL Server Agent Properties (General Page)"
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.agent.general.f1"
 ms.assetid: b51601e9-5454-43c6-bb5e-24eb2ff043c8
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Agent Properties (General Page)

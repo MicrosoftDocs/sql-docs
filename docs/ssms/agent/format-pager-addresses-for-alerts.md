@@ -1,9 +1,9 @@
 ---
 title: "Format Pager Addresses for Alerts"
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -15,8 +15,10 @@ helpviewer_keywords:
   - "addresses [SQL Server]"
   - "alerts [SQL Server], pager addresses"
 ms.assetid: a9797d01-1050-442c-9038-ed4bfee1e76a
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Format Pager Addresses for Alerts

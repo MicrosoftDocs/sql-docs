@@ -7,7 +7,6 @@ ms.date: "12/13/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.custom: ""
 ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 

@@ -1,6 +1,6 @@
 ---
-title: "Configure PolyBase to access external data in Azure Blob Storage"
-ms.date: 04/23/2019
+title: "Access external data: Azure Blob Storage - PolyBase"
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,7 +8,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
-ms.custom: seo-dt-2019
+ms.custom: seo-dt-2019, seo-lt-2019
 
 ---
 # Configure PolyBase to access external data in Azure Blob Storage

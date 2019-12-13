@@ -1,6 +1,7 @@
 ---
-title: "Configure PolyBase to access external data with ODBC Generic Types | Microsoft Docs"
-ms.date: 04/23/2019
+title: "Access external data: ODBC generic types - PolyBase"
+ms.date: 12/13/2019
+ms.date: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual

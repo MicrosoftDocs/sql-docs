@@ -1,14 +1,15 @@
 ---
-title: Virtualize external data in SQL Server 2019 CTP 2.0 | Microsoft Docs
+title: "Virtualize external data: comma separated values (csv)"
 description: This page details the steps for using the Create external table wizard for a CSV file
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+ms.metadata: seo-lt-2019
 ---
 
 # Use the External Table Wizard with CSV files

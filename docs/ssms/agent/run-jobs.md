@@ -1,9 +1,9 @@
 ---
-title: "Run Jobs | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Run Jobs"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -13,8 +13,10 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], manually running"
   - "manual job processing [SQL Server]"
 ms.assetid: cd445949-dc10-42fc-8785-4db74c9723ad
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Run Jobs

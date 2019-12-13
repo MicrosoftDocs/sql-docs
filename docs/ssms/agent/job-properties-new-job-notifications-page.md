@@ -1,17 +1,19 @@
 ---
-title: "Job Properties - New Job (Notifications Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Job Properties - New Job (Notifications Page)"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.job.notifications.f1"
 ms.assetid: ed393cbd-4496-4399-a177-e5baa92fb689
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Job Properties - New Job (Notifications Page)

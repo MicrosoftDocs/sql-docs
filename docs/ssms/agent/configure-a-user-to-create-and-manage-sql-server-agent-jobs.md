@@ -1,9 +1,9 @@
 ---
-title: "Configure a User to Create and Manage SQL Server Agent Jobs | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Configure a User to Create and Manage SQL Server Agent Jobs"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -13,8 +13,10 @@ helpviewer_keywords:
   - "SQLAgentUserRole database role"
   - "proxy accounts [SQL Server Agent]"
 ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Configure a User to Create and Manage SQL Server Agent Jobs

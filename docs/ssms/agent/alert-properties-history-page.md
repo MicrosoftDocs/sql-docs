@@ -1,17 +1,19 @@
 ---
-title: "Alert Properties (History Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Alert Properties (History Page)"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.alert.history.f1"
 ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Alert Properties (History Page)

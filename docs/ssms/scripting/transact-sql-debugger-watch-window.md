@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: markingmyname
 ms.author: maghan
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.reviewer: ""
 ms.date: 12/04/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"

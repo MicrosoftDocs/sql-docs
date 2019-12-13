@@ -252,7 +252,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### C. Using a cursor to determine the row to delete  
- The following example deletes a single row from the `EmployeePayHistory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database using a cursor named `my_cursor`. The delete operation affects only the single row currently fetched from the cursor.  
+ The following example deletes a single row from the `EmployeePayHistory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database using a cursor named `complex_cursor`. The delete operation affects only the single row currently fetched from the cursor.  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  

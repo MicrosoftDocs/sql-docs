@@ -1,9 +1,9 @@
 ---
-title: "Select an Account for the SQL Server Agent Service | Microsoft Docs"
-ms.custom: ""
+title: "Select an Account for the SQL Server Agent Service"
+ms.custom: seo-lt-2019
 ms.date: "05/04/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -19,8 +19,10 @@ helpviewer_keywords:
   - "Windows domain accounts [SQL Server]"
   - "security [SQL Server], SQL Server Agent"
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Select an Account for the SQL Server Agent Service

@@ -80,7 +80,7 @@ The following table describes the custom properties of the Teradata destination.
 |ArraySupport|Boolean|Default is **True**. DML Groups use ArraySupport if **True**. Only applicable for TPT Stream. This property is in **Advanced Editor**.|
 |Buffers|Integer|The number of request buffers to be increased, value can be set from 2 to 64. Only applicable for TPT Stream. This property is in **Advanced Editor**.|
 |BufferMode|Boolean|Default is **True**. Must be **True** if PutBuffer feature is used. This property is in **Advanced Editor**.|
-|BufferSize|Integer|The output buffer size (in KB) used for sending load parcels. The default value is 1024. Only applicable for TPT Stream. This property is in **Advanced Editor**.|
+|BufferSize|Integer|The output buffer size (in KB) used for sending load parcels. The default value is 1024. Only applicable for TPT Load. This property is in **Advanced Editor**.|
 |DataEncryption|Boolean|Default is **False**. Full security encryption is used if **True**.|
 |DefaultCodePage|Integer|The code page to use when data source does not have code page information. <br>**Note**: This property is in **Advanced Editor**.|
 |DetailedTracingLevel|Integer (Enumeration)|Select one of the following options for advanced tracing: <br> **Off**: No advanced logging. <br> **General**: Driver-specific activities general tracing is logged. <br> **CLI**: CLIv2-related activities tracing is logged. <br> **Notify Method**: Notify feature-related activities tracing is logged. <br> **Common Library**: opcommon library activities tracing is logged. <br> **All**: All of the above activities tracing is logged. <br> The advanced tracing log file is defined in the **DetailedTracingFile** property. <br> **DetailedTracingFile** property must be set if option is not Off. <br> This property is in **Advanced Editor**.|
@@ -152,7 +152,7 @@ Select the method for selecting data from the source. The options are shown in t
 |Option|Description|
 |:-|:-|
 |Table Name - TPT Stream|Incremental mode using the TPT Stream operator. <br>**Name of the table or the vie**: Select an existing table or view from the list. This list only shows the first 1000 tables. You can type table name prefix or use any part of the name with the (*) wildcard to list the table or tables you want to use.|
-|Table Name – TPL Load|Fast (Direct Path) load mode using the TPT API Load operator (Teradata FastLoad protocol).<br>**Name of the table or the view**: Select an existing table or view from the list. This list only shows the first 1000 tables. You can type table name prefix or use any part of the name with the (*) wildcard to list the table or tables you want to use.|
+|Table Name – TPL Load|Fast (Direct Path) load mode using the TPT API Load operator (Teradata FastLoad protocol), which requires target table to be empty. <br>**Name of the table or the view**: Select an existing table or view from the list. This list only shows the first 1000 tables. You can type table name prefix or use any part of the name with the (*) wildcard to list the table or tables you want to use.|
 
 **Data encryption**
 Check box to enable data encryption. Default is not selected.

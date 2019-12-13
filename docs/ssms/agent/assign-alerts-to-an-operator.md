@@ -1,9 +1,9 @@
 ---
-title: "Assign Alerts to an Operator | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Assign Alerts to an Operator"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -15,8 +15,10 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], operators"
   - "notifications [SQL Server], job status"
 ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Assign Alerts to an Operator

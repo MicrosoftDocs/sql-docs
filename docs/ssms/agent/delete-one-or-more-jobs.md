@@ -1,9 +1,9 @@
 ---
-title: "Delete One or More Jobs | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Delete One or More Jobs"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -14,8 +14,10 @@ helpviewer_keywords:
   - "deleting jobs"
   - "removing jobs"
 ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Delete One or More Jobs

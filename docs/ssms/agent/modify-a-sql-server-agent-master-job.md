@@ -1,9 +1,9 @@
 ---
-title: "Modify a SQL Server Agent Master Job | Microsoft Docs"
-ms.custom: ""
+title: "Modify a SQL Server Agent Master Job"
+ms.custom: seo-lt-2019
 ms.date: "02/28/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -12,8 +12,10 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], master jobs"
   - "master SQL Server Agent job [SQL Server]"
 ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Modify a SQL Server Agent Master Job

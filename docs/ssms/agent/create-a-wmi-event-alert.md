@@ -1,17 +1,19 @@
 ---
-title: "Create a WMI Event Alert | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Create a WMI Event Alert"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "WMI event alerts [SQL Server Management Studio]"
 ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a WMI Event Alert

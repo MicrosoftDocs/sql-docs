@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Database Engine Tuning Advisor | Microsoft Docs"
-ms.custom: ""
+title: "Tutorial: Database Engine Tuning Advisor"
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

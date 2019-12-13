@@ -1,6 +1,6 @@
 ---
-title: "Add a Custom Report to Management Studio | Microsoft Docs"
-ms.custom: ""
+title: "Add a Custom Report to Management Studio"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

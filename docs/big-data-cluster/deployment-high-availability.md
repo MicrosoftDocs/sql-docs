@@ -124,7 +124,7 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 ## <a id="instance-connect"></a> Connect to SQL Server instance
 
-For certain operations like setting server level configurations or manually adding a database to the availability group, you must connect to the SQL Server instance. Operations like `sp_configure`, `RESTORE DATABASE` or any availability groups DDL will require this type of conneciton. By default, big data cluster does not include an endpoint that enables instance connection and you must expose this endpoint manually. 
+For certain operations like setting server level configurations or manually adding a database to the availability group, you must connect to the SQL Server instance. Operations like `sp_configure`, `RESTORE DATABASE` or any availability groups DDL will require this type of connection. By default, big data cluster does not include an endpoint that enables instance connection and you must expose this endpoint manually. 
 
 > [!IMPORTANT]
 > The endpoint exposed for SQL Server instance connections only supports SQL authentication, even in clusters where Active Directory is enabled. By default, during a big data cluster deployment, `sa` login is disabled and a new `sysadmin` login is provisioned based in the values provided at deployment time for `AZDATA_USERNAME` and `AZDATA_PASSWORD` environment variables.

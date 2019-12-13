@@ -1,6 +1,6 @@
 ---
 title: "Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
-ms.date: "07/26/2019"
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
@@ -12,7 +12,7 @@ manager: v-mabarw
 ---
 
 # Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server
-The following instructions assume a clean environment and show how to install PHP 7.x, the Microsoft ODBC driver, Apache, and the Microsoft Drivers for PHP for SQL Server on Ubuntu 16.04, 18.04, and 18.10, RedHat 7, Debian 8 and 9, Suse 12 and 15, and macOS 10.12, 10.13, and 10.14. These instructions advise installing the drivers using PECL, but you can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we do not add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).
+The following instructions assume a clean environment and show how to install PHP 7.x, the Microsoft ODBC driver, Apache, and the Microsoft Drivers for PHP for SQL Server on Ubuntu 16.04, 18.04, and 18.10, RedHat 7, Debian 8 and 9, Suse 12 and 15, and macOS 10.12, 10.13, and 10.14. These instructions advise installing the drivers using PECL, but you can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we do not add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
 These instructions install PHP 7.3 by default. Note that some supported Linux distros default to PHP 7.0 or earlier, which is not supported for the PHP drivers for SQL Server -- please see the notes at the beginning of each section to install PHP 7.1 or 7.2 instead.
 
@@ -30,7 +30,7 @@ These instructions install PHP 7.3 by default. Note that some supported Linux di
 > To install PHP 7.1 or 7.2, replace 7.3 with 7.1 or 7.2 in the following commands.
 
 ### Step 1. Install PHP
-```
+```bash
 sudo su
 add-apt-repository ppa:ondrej/php -y
 apt-get update

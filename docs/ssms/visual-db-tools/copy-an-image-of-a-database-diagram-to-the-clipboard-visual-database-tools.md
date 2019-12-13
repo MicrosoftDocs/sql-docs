@@ -1,6 +1,6 @@
 ---
-title: "Copy an Image of a Database Diagram to the Clipboard | Microsoft Docs"
-ms.custom: ""
+title: "Copy an Image of a Database Diagram to the Clipboard"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

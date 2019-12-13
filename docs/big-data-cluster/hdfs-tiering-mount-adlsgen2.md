@@ -138,7 +138,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 
 ## Refresh a mount
 
-The following example refreshes the mount. THis refresh will also clear the mount cache.
+The following example refreshes the mount. This refresh will also clear the mount cache.
 
 ```bash
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>

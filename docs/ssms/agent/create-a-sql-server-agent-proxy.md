@@ -1,17 +1,19 @@
 ---
-title: "Create a SQL Server Agent Proxy | Microsoft Docs"
-ms.custom: ""
+title: "Create a SQL Server Agent Proxy"
+ms.custom: seo-lt-2019
 ms.date: "05/04/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "proxies [SQL Server Agent], creating"
 ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a SQL Server Agent Proxy

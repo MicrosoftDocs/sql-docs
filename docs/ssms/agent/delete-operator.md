@@ -1,17 +1,19 @@
 ---
-title: "Delete Operator | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Delete Operator"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.operator.delete.f1"
 ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Delete Operator

@@ -1,9 +1,9 @@
 ---
-title: "Operators | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Operators"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -21,8 +21,10 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], operators"
   - "alerts [SQL Server], operators"
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Operators

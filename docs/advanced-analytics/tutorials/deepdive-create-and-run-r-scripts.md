@@ -1,6 +1,6 @@
 ---
 title: Summary statistics in RevoScaleR
-description: Tutorial walkthrough on how to compute statistical summary statistics using the R language on SQL Server.
+description: "RevoScaleR tutorial 5: How to compute statistical summary statistics using the R language on SQL Server."
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -14,18 +14,18 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Compute summary statistics in R (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 5 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-It uses the established data sources and compute contexts created in previous lessons to run high-powered R scripts in this one. In this lesson, you will use local and remote server compute contexts for the following tasks:
+This tutorial uses the established data sources and compute contexts created in previous tutorials to run high-powered R scripts. In this tutorial, you will use local and remote server compute contexts for the following tasks:
 
 > [!div class="checklist"]
 > * Switch the compute context to SQL Server
 > * Obtain summary statistics on remote data objects
 > * Compute a local summary
 
-If you completed the previous lessons, you should have these remote compute contexts: sqlCompute and sqlComputeTrace. Moving forward, you use will sqlCompute and the local compute context in subsequent lessons.
+If you completed the previous tutorials, you should have these remote compute contexts: sqlCompute and sqlComputeTrace. Moving forward, you use will sqlCompute and the local compute context in subsequent tutorials.
 
-Use an R IDE or **Rgui** to run the R script in this lesson.
+Use an R IDE or **Rgui** to run the R script in this tutorial.
 
 ## Compute summary statistics on remote data
 
@@ -33,9 +33,9 @@ Before you can run any R code remotely, you need to specify the remote compute c
 
 A compute context remains active until you change it. However, any R scripts that *cannot* run in a remote server context will automatically run locally.
 
-To see how a compute context works, generate summary statistics on the sqlFraudDS data source on the remote SQL Server. This data source object was created in [lesson two](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) and represents the ccFraudSmall table in the RevoDeepDive database. 
+To see how a compute context works, generate summary statistics on the sqlFraudDS data source on the remote SQL Server. This data source object was created in [tutorial two](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) and represents the ccFraudSmall table in the RevoDeepDive database. 
 
-1. Switch the compute context to sqlCompute created in the previous lesson:
+1. Switch the compute context to sqlCompute created in the previous tutorial:
   
     ```R
     rxSetComputeContext(sqlCompute)
@@ -106,7 +106,7 @@ Number of valid observations: 10000
   
    The actual results should be the same as when you run **rxSummary** in the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer. However, the operation might be faster or slower. Much depends on the connection to your database, because the data is being transferred to your local computer for analysis.
 
-4. Switch back to the remote compute context for the next several lessons.
+4. Switch back to the remote compute context for the next several tutorials.
 
     ```R
     rxSetComputeContext(sqlCompute)

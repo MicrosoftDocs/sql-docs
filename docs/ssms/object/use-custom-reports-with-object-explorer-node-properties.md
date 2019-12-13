@@ -1,6 +1,6 @@
 ---
-title: "Use Custom Reports with Object Explorer Node Properties | Microsoft Docs"
-ms.custom: ""
+title: "Use Custom Reports with Object Explorer Node Properties"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

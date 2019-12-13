@@ -1,9 +1,9 @@
 ---
-title: "Create a Multiserver Environment | Microsoft Docs"
-ms.custom: ""
+title: "Create a Multiserver Environment"
+ms.custom: seo-lt-2019
 ms.date: "01/30/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -13,8 +13,10 @@ helpviewer_keywords:
   - "target servers [SQL Server], about target servers"
   - "multiserver environments [SQL Server]"
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a Multiserver Environment

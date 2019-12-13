@@ -17,6 +17,8 @@ ms.author: genemi
 
 The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides support for Java Platform, Enterprise Edition/JDBC 2.0 optional distributed transactions. JDBC connections obtained from the [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) class can participate in standard distributed transaction processing environments such as Java Platform, Enterprise Edition (Java EE) application servers.  
 
+In this article, XA stands for extended architecture.
+
 > [!WARNING]  
 > Microsoft JDBC Driver 4.2 (and higher) for SQL includes new timeout options for the existing feature for automatic rollback of unprepared transactions. See [Configuring server-side timeout settings for automatic rollback of unprepared transactions](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) later in this topic for more detail.  
 
@@ -38,7 +40,7 @@ The following additional guidelines apply to tightly coupled transactions:
 
 - When you use XA transactions together with Microsoft Distributed Transaction Coordinator (MS DTC), you may notice that the current version of MS DTC doesn't support tightly coupled XA branch behavior. For example, MS DTC has a one-to-one mapping between an XA branch transaction ID (XID) and an MS DTC transaction ID and the work that is performed by loosely coupled XA branches is isolated from one another.  
   
-     The hotfix provided at [MSDTC and Tightly Coupled Transactions](https://support.microsoft.com/kb/938653) enables support for tightly-coupled XA branches where multiple XA branches with same global transaction ID (GTRID) are mapped to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see each other's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- MS DTC also supports tightly-coupled XA branches where multiple XA branches with same global transaction ID (GTRID) are mapped to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see each other's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 - A [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) flag allows applications to use tightly-coupled XA transactions which have different XA branch transaction IDs (BQUAL) but have the same global transaction ID (GTRID) and format ID (FormatID). In order to use that feature, you must set the [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) on the flags parameter of the XAResource.start method:
   

@@ -1,9 +1,9 @@
 ---
-title: "Edit an Alert | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Edit an Alert"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -12,8 +12,10 @@ helpviewer_keywords:
   - "alerts [SQL Server], modifying"
   - "modifying alerts"
 ms.assetid: f518e528-cc8f-446a-b37d-98505b86e430
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Edit an Alert

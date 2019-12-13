@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "security [SQL Server], encryption"
   - "cryptography [SQL Server], about cryptography"
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Encryption

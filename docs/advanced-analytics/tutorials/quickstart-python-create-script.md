@@ -1,6 +1,5 @@
 ---
 title: "Quickstart: Create Python scripts"
-titleSuffix: SQL Server Machine Learning Services
 description: Create and run simple Python scripts in a SQL Server instance with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning

@@ -1,7 +1,9 @@
 ---
-title: "Breaking Changes to Database Engine Features in SQL Server 2017 | Microsoft Docs"
+title: "Database Engine: Breaking changes | Microsoft Docs"
+titleSuffix: "SQL Server 2017"
 description: "Breaking changes to Database Engine Features in SQL Server 2017"
-ms.date: "11/27/2018"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""

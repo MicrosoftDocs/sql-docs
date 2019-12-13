@@ -1,7 +1,9 @@
 ---
-title: "Breaking changes to database engine | Microsoft Docs"
+title: "Database Engine: Breaking changes | Microsoft Docs"
+titleSuffix: "SQL Server 2019"
 description: "Breaking changes to database engine features in SQL Server 2019"
-ms.date: "11/13/2019"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""

@@ -1,7 +1,7 @@
 ---
 title: "Connection Options | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/11/2019"
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -36,7 +36,7 @@ This topic lists the options that are permitted in the associative array (when u
 |Encrypt|1 or **true** for encryption on.<br /><br />0 or **false** for encryption off.|Specifies whether the communication with SQL Server is encrypted (1 or **true**) or unencrypted (0 or **false**)<sup>3</sup>.|**false** (0)|  
 |FormatDecimals<br /><br />(not supported in the PDO_SQLSRV driver)|1 or **true** to format fetched decimal strings.<br /><br />0 or **false** for default decimal formatting behaviour.|Specifies whether to add leading zeroes to decimal strings when appropriate and enables the `DecimalPlaces` option for formatting money types. If left false, the default behaviour of returning exact precision and omitting leading zeroes for values less than 1 is used.<br /><br />For more information, see [Formatting Decimal Strings and Money Values](../../connect/php/formatting-decimals-sqlsrv-driver.md).|**false** (0)|
 |Failover_Partner|String|Specifies the server and instance of the database's mirror (if enabled and configured) to use when the primary server is unavailable.<br /><br />There are restrictions to using Failover_Partner with MultiSubnetFailover. For more information, see [Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|Not set.|  
-|KeyStoreAuthentication|**KeyVaultPassword**<br /><br />**KeyVaultClientSecret**|Authentication method for accessing Azure Key Vault. Controls what kind of credentials are used with KeyStorePrincipalId and KeyStoreSecret. For more information, see [Using Azure Key Vault](../../connect/php/using-always-encrypted-php-drivers.md###using-azure-key-vault).|Not set.|
+|KeyStoreAuthentication|**KeyVaultPassword**<br /><br />**KeyVaultClientSecret**|Authentication method for accessing Azure Key Vault. Controls what kind of credentials are used with KeyStorePrincipalId and KeyStoreSecret. For more information, see [Using Azure Key Vault](../../connect/php/using-always-encrypted-php-drivers.md#using-azure-key-vault).|Not set.|
 |KeyStorePrincipalId|String|Identifier for the account seeking to access Azure Key Vault. <br /><br />If KeyStoreAuthentication is **KeyVaultPassword**, this must be an Azure Active Directory username. <br /><br />If KeyStoreAuthentication is **KeyVaultClientSecret**, this must be an application client ID.|Not set.|
 |KeyStoreSecret|String|Credential secret for the account seeking to access Azure Key Vault. <br /><br />If KeyStoreAuthentication is **KeyVaultPassword**, this must be an Azure Active Directory password. <br /><br />If KeyStoreAuthentication is **KeyVaultClientSecret**, this must be an application client secret.|Not set.|
 |LoginTimeout|Integer (SQLSRV driver)<br /><br />String (PDO_SQLSRV driver)|Specifies the number of seconds to wait before failing the connection attempt.|No timeout.|  
@@ -54,6 +54,7 @@ This topic lists the options that are permitted in the associative array (when u
 |TrustServerCertificate|1 or **true** to trust certificate.<br /><br />0 or **false** to not trust certificate.|Specifies whether the client should trust (1 or **true**) or reject (0 or **false**) a self-signed server certificate.|**false** (0)|  
 |UID<br /><br />(not supported in the PDO_SQLSRV driver)|String|Specifies the User ID to be used when connecting with SQL Server Authentication<sup>4</sup>.|Not set.|  
 |WSID|String|Specifies the name of the computer for tracing.|Not set.|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 1. The `ConnectionPooling` attribute cannot be used to enable/disable connection pooling in Linux and Mac. See [Connection Pooling (Microsoft Drivers for PHP for SQL Server)](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
 

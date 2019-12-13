@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Backup to URL Best Practices and Troubleshooting | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/25/2019"
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -22,7 +22,7 @@ ms.author: mikeray
   
 -   [Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## Managing Backups  
+## <a name="managing-backups-mb1"></a> Managing Backups  
  The following list includes general recommendations to manage backups:  
   
 -   Unique file name for every backup is recommended to prevent accidentally overwriting the blobs.  
@@ -35,13 +35,13 @@ ms.author: mikeray
   
 -   Using the `WITH COMPRESSION` option during backup can minimize your storage costs and storage transaction costs. It can also decrease the time taken to complete the backup process.  
 
-- Set `MAXTRANSFERSIZE` and `BLOCKSIZE` arguments as reccomended at [SQL Server Backup to URL](./sql-server-backup-to-url.md).
+- Set `MAXTRANSFERSIZE` and `BLOCKSIZE` arguments as recomended at [SQL Server Backup to URL](./sql-server-backup-to-url.md).
   
 ## Handling Large Files  
   
 -   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup operation uses multiple threads to optimize data transfer to Azure Blob storage services.  However the performance depends on various factors, such as ISV bandwidth and size of the database. If you plan to back up large databases or filegroups from an on-premise SQL Server database, it is recommended that you do some throughput testing first. Azure [SLA for Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) has maximum processing times for blobs that you can take into consideration.  
   
--   Using the `WITH COMPRESSION` option as recommended in the [Managing Backup](##managing-backups) section, it is very important when backing up large files.  
+-   Using the `WITH COMPRESSION` option as recommended in the [Managing Backups](#managing-backups-mb1) section, it is very important when backing up large files.  
   
 ## Troubleshooting Backup To or Restore from URL  
  Following are some quick ways to troubleshoot errors when backing up to or restoring from the Azure Blob storage service.  
@@ -86,7 +86,7 @@ ms.author: mikeray
 
     -   Consider COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE and multiple URL arguments when backing up large databases.  See [Backing up a VLDB to Azure Blob Storage](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)
   
-		```
+		```console
 		Msg 3202, Level 16, State 1, Line 1
 		Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 1117(The request could not be performed because of an I/O device error.)
 		Msg 3013, Level 16, State 1, Line 1
@@ -127,11 +127,11 @@ ms.author: mikeray
   
  Proxy Servers can have settings that limit the number of connections per minute. The Backup to URL process is a multi-threaded process and hence can go over this limit. If this happens, the proxy server kills the connection. To resolve this issue, change the proxy settings so SQL Server is not using the proxy. Following are some examples of the types or error messages you may see in the error log:  
   
-```
+```console
 Write on "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" failed: Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   
-```
+```console
 A nonrecoverable I/O error occurred on file "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Error could not be gathered from Remote Endpoint.  
   
 Msg 3013, Level 16, State 1, Line 2  
@@ -139,7 +139,7 @@ Msg 3013, Level 16, State 1, Line 2
 BACKUP DATABASE is terminating abnormally.  
 ```
 
-```
+```console
 BackupIoRequest::ReportIoError: write failure on backup device https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   

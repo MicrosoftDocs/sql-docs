@@ -1,17 +1,19 @@
 ---
 title: "Job Properties - New Job (General Page)"
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.job.general.f1"
 ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Job Properties - New Job (General Page)

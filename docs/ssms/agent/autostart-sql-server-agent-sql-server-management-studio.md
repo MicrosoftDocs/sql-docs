@@ -1,9 +1,9 @@
 ---
 title: "Autostart SQL Server Agent (SQL Server Management Studio)"
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -11,8 +11,10 @@ helpviewer_keywords:
   - "SQL Server Agent, starting"
   - "autostart SQL Server Agent"
 ms.assetid: 2ea332da-0ede-4d2b-b122-c4c10eaca191
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Autostart SQL Server Agent (SQL Server Management Studio)

@@ -1,9 +1,9 @@
 ---
 title: "Define the Response to an Alert (SQL Server Management Studio)"
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -12,8 +12,10 @@ helpviewer_keywords:
   - "alerts [SQL Server], responding to"
   - "responding to alerts"
 ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Define the Response to an Alert (SQL Server Management Studio)

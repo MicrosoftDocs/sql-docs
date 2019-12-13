@@ -21,7 +21,7 @@ You can run Python and R scripts on the master instance of [SQL Server Big Data 
 
 ## Enable Machine Learning Services
 
-Machine Learning Services is installed by default on Big Data Clusters and does require separate installation.
+Machine Learning Services is installed by default on Big Data Clusters and does not require separate installation.
 
 To enable Machine Learning Services, run this statement on the master instance:
 

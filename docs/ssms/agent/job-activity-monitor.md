@@ -1,9 +1,9 @@
 ---
 title: "Job Activity Monitor"
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -11,8 +11,10 @@ f1_keywords:
   - "sql13.ag.jobactivitymonitor.alljobs.f1"
   - "SQL13.SWB.ACTIVITYMON.F1"
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Job Activity Monitor

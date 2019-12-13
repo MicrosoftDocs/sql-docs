@@ -1,9 +1,9 @@
 ---
 title: "Create a Transact-SQL Job Step"
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -12,8 +12,10 @@ helpviewer_keywords:
   - "job steps [Transact-SQL]"
   - "SQL Server Agent jobs, Transact-SQL step"
 ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a Transact-SQL Job Step

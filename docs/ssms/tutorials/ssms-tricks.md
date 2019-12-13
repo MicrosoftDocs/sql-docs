@@ -1,5 +1,5 @@
 ---
-title: Tips and tricks for using SQL Server Management Studio (SSMS)
+title: Tips and tricks using SSMS
 description:  Learn to comment and uncomment your code, indent your text, filter objects in object explorer, access your SQL Server error log, and find your SQL Server instance name using SQL Server Management Studio.
 ms.topic: tutorial
 ms.prod: sql

@@ -1,9 +1,9 @@
 ---
 title: "Handle Multiple Job Steps"
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -14,8 +14,10 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, job steps"
   - "control of flow for jobs [SQL Server]"
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Handle Multiple Job Steps

@@ -1,10 +1,7 @@
 ---
-title: "Import Registered Server Information (SQL Server Management Studio)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
+title: Import Registered Server Information
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
@@ -14,12 +11,19 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], importing"
   - "importing registered server information"
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # Import Registered Server Information (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  This topic describes how to import saved registered server information in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Exporting and then importing registered server files lets you easily configure several computers with the same servers in Registered Servers. This is useful when managing a large number of servers from computers in several locations, or when you want to configure basic connection settings for a less-experienced user.  
+
+This topic describes how to import saved registered server information in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Exporting and then importing registered server files lets you easily configure several computers with the same servers in Registered Servers. This is useful when managing a large number of servers from computers in several locations, or when you want to configure basic connection settings for a less-experienced user.  
   
 > [!NOTE]  
 >  You cannot import registered server information into [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

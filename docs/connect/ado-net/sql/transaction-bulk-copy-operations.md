@@ -9,9 +9,9 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
 ---
 # Transaction and bulk copy operations
 

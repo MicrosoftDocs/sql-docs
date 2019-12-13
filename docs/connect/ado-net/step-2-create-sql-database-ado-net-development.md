@@ -9,9 +9,9 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: dd0f6329-d379-458e-aba1-7b0b9e7277ae
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
 ---
 # Step 2: Create a SQL database for ADO.NET development
 

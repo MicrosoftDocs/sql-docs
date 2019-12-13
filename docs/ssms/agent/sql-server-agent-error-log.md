@@ -1,9 +1,9 @@
 ---
 title: "SQL Server Agent Error Log"
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -13,8 +13,10 @@ helpviewer_keywords:
   - "errors [SQL Server], logs"
   - "SQL Server Agent, errors"
 ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Agent Error Log

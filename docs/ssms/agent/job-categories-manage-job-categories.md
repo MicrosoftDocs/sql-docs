@@ -1,9 +1,9 @@
 ---
 title: "Job Categories - Manage Job Categories"
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -12,8 +12,10 @@ f1_keywords:
 helpviewer_keywords: 
   - "Job Categories dialog box"
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Job Categories - Manage Job Categories

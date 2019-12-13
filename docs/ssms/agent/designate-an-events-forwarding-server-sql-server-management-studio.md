@@ -1,9 +1,9 @@
 ---
 title: "Designate an Events Forwarding Server"
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -12,8 +12,10 @@ helpviewer_keywords:
   - "events [SQL Server], forwarding"
   - "alerts [SQL Server], forwarded events"
 ms.assetid: 81dfcbe4-3000-4e77-99de-bf85fef63a12
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Designate an Events Forwarding Server (SQL Server Management Studio)

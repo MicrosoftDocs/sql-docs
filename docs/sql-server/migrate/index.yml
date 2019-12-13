@@ -24,12 +24,6 @@ landingContent:
         url: ../../dma/dma-overview.md
       - text: Database Experimentation Assistant
         url: ../../dea/database-experimentation-assistant-overview.md
-    - linkListType: learn
-      links:
-      - text: Data Migration Assistant (DMA)
-        url: /learn/modules/assess-convert-sql-server-databases-using-dma/
-      - text: Database Experimentation Assistant
-        url: /learn/modules/test-optimize-sql-server-databases-using-dea/
     - linkListType: download
       links:
       - text: Data Migration Assistant (DMA)
@@ -89,10 +83,6 @@ landingContent:
         url: https://azure.microsoft.com/en-us/services/azure-migrate/
       - text: Data migration blog
         url: https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/bg-p/MicrosoftDataMigration
-    - linkListType: learn
-      links:
-      - text: Microsoft Assessment and Planning (MAP) toolkit
-        url: /learn/modules/sql-server-discovery-using-map/
     - linkListType: download
       links:
       - text: Microsoft Assessment and Planning (MAP) toolkit
@@ -104,7 +94,7 @@ landingContent:
       links:
       - text: Overview
         url: ../end-of-support/sql-server-end-of-life-overview.md
-      - text: Marketing information (idk what else to call this right now)
+      - text: SQL Server 2008
         url: https://www.microsoft.com/cloud-platform/windows-sql-server-2008
       - text: Extend support with Azure VM
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support

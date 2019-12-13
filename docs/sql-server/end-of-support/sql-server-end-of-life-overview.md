@@ -110,7 +110,7 @@ If you're not ready to upgrade, and you're not ready to move to the cloud, you h
 
 ## Azure virtual machine
 
-Another option is to migrate your workload to an Azure virtual machine running SQL Server. You can migrate your system as-is and keep your end-of-support SQL Server, or you can upgrade to a newer version of SQL Server. Best for migrations and applications requiring OS-level access. SQL virtual machines are lift-and-shift ready for existing applications that require fast migration to the cloud with minimal or no changes. 
+Another option is to migrate your workload to an [Azure virtual machine running SQL Server](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview). You can migrate your system as-is and keep your end-of-support SQL Server, or you can upgrade to a newer version of SQL Server. Best for migrations and applications requiring OS-level access. SQL virtual machines are lift-and-shift ready for existing applications that require fast migration to the cloud with minimal or no changes. 
 
 ### Benefits
 
@@ -149,7 +149,7 @@ Another option is to migrate your workload to an Azure virtual machine running S
 
 ## Azure SQL Database single database
 
-If you'd like to offload maintenance, cost, and never worry about having to upgrade again, you can move your workload to Azure SQL Database single database. This option is best for modern cloud applications that want to use the latest stable SQL Server features and have time constraints in development and marketing. 
+If you'd like to offload maintenance, cost, and never worry about having to upgrade again, you can move your workload to [Azure SQL Database single database](/azure/sql-database/sql-database-single-database). This option is best for modern cloud applications that want to use the latest stable SQL Server features and have time constraints in development and marketing. 
 
 ### Benefits
 
@@ -189,7 +189,7 @@ If you'd like to offload maintenance, cost, and never worry about having to upgr
 
 ## Azure SQL Database managed instance
 
-If you'd like to take advantage of offloading maintenance and cost, but find the feature set of an Azure SQL Database single database too limiting, you can move to Azure SQL Database managed instance. A managed instance closely resembles an on-premises SQL Server, without having to worry about such things as hardware failure, or patching.  Managed instance is a collection of system and user databases with a shared set of resources that is lift-and-shift ready, and can be used for most migrations to the cloud. This option is best for new applications or existing on-premises applications that want to use the latest stable SQL Server features and that are migrated to the cloud with minimal changes. 
+If you'd like to take advantage of offloading maintenance and cost, but find the feature set of an Azure SQL Database single database too limiting, you can move to [Azure SQL Database managed instance](/azure/sql-database/sql-database-managed-instance). A managed instance closely resembles an on-premises SQL Server, without having to worry about such things as hardware failure, or patching.  Managed instance is a collection of system and user databases with a shared set of resources that is lift-and-shift ready, and can be used for most migrations to the cloud. This option is best for new applications or existing on-premises applications that want to use the latest stable SQL Server features and that are migrated to the cloud with minimal changes. 
 
 ### Benefits
 

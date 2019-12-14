@@ -2,7 +2,6 @@
 title: Set a SQL Server Alias for the SQL Server Agent Service
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 

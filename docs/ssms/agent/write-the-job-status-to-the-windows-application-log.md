@@ -2,7 +2,6 @@
 title: Write the Job Status to the Windows Application Log
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 

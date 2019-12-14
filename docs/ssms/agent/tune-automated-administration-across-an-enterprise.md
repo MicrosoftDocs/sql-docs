@@ -2,7 +2,6 @@
 title: Tune Automated Administration Across an Enterprise
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 

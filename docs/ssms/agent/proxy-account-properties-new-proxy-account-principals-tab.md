@@ -2,7 +2,6 @@
 title: New Proxy Account (Principals Tab)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 

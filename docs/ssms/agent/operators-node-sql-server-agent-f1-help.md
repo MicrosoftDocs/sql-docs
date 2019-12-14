@@ -2,7 +2,6 @@
 title: Operators Node (SQL Server Agent F1 Help)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: f3665edc-b030-4c83-9ce7-2dfd39c6b398

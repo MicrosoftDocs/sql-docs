@@ -2,7 +2,6 @@
 title: Choose the Agent Service Account for Multiserver Environments
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 

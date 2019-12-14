@@ -1,7 +1,7 @@
 ---
-title: "Install SQL Server 2016 Business Intelligence Features | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/02/2016"
+title: "Install Business Intelligence Features"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

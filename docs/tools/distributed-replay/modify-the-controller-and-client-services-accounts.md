@@ -1,5 +1,5 @@
 ---
-title: Modify the controller and client services accounts
+title: Modify controller and client services accounts
 titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ""
@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ---
 
-# Modify the Controller and Client Services Accounts
+# Modify the controller and client services accounts
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

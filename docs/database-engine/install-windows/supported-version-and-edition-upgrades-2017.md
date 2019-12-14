@@ -1,7 +1,8 @@
 ---
-title: "Supported Version and Edition Upgrades - SQL Server 2017| Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2017"
+title: "Supported version and edition upgrades"
+titleSuffix: "SQL Server 2017"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -16,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Supported Version and Edition Upgrades for SQL Server 2017
+# Supported version and edition upgrades for SQL Server 2017
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   

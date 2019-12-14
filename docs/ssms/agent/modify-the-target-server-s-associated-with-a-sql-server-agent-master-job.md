@@ -1,5 +1,5 @@
 ---
-title: "Modify Target Server Associated with Agent Master Job"
+title: Modify Target Server Associated with Agent Master Job
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""

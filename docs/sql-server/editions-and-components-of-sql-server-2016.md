@@ -1,7 +1,9 @@
 ---
 title: "Editions and supported features"
 titleSuffix: SQL Server 2016
-ms.custom: "seo-lt-2019",sqlfreshmay19
+ms.custom: 
+   - seo-lt-2019
+   - sqlfreshmay19
 ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""

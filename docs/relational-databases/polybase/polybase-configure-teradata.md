@@ -1,6 +1,7 @@
 ---
-title: "Configure PolyBase to access external data in Teradata | Microsoft Docs"
-ms.date: 04/23/2019
+title: "Access external data: Teradata - PolyBase"
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual

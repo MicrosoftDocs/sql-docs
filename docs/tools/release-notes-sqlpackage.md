@@ -28,6 +28,21 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+## 18.4.1 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2113703)|December 13, 2019|18.4.1|15.0.4630.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2113705)|December 13, 2019| 18.4.1|15.0.4630.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2113331)|December 13, 2019| 18.4.1|15.0.4630.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2113704)|December 13, 2019| 18.4.1|15.0.4630.1|
+
+### Fixes
+| Fix | Details |
+| :-- | :------ |
+| ScriptDom |  A ScriptDom parsing regression was introduced in 18.3.1 where 'RENAME' is incorrectly treated as a top-level token, cause parsing to fail.
+| &nbsp; | &nbsp; |
+
 
 ## 18.4 sqlpackage
 

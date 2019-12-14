@@ -1,7 +1,7 @@
 ---
-title: "FILESTREAM DDL, Functions, Stored Procedures, and Views | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "FILESTREAM, functions, stored procedures, views | Microsoft Docs"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -11,7 +11,7 @@ ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# FILESTREAM DDL, Functions, Stored Procedures, and Views
+# FILESTREAM, functions, stored procedures, and views
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Lists the Transact-SQL statements and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects that support FILESTREAM.  
   

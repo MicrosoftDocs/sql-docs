@@ -6,6 +6,7 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
 ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

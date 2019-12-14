@@ -1,7 +1,7 @@
 ---
-title: "FileTable DDL, Functions, Stored Procedures, and Views | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "FileTable functions, stored procedures, views | Microsoft Docs"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -13,7 +13,8 @@ ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# FileTable DDL, Functions, Stored Procedures, and Views
+# FileTable DDL, functions, stored procedures, and views
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects that have been added or changed to support the FileTable feature in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

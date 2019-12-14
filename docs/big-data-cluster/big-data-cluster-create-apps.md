@@ -1,11 +1,12 @@
 ---
-title: Deploy applications using azdata
-titleSuffix: SQL Server big data clusters
+title: Deploy applications with azdata
+titleSuffix: SQL Server Big Data Clusters
 description: Deploy a Python or R script as an application on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

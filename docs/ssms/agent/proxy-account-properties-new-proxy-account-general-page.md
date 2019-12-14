@@ -1,5 +1,5 @@
 ---
-title: "Proxy Account Properties - New Proxy Account (General Page)"
+title: Proxy Account Properties - New Proxy Account (General Page)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
@@ -32,7 +32,7 @@ Type the name of the proxy.
 Type the name of the credential for the proxy.  
   
 > [!NOTE]  
-> The credential name provided must be the name of an existing credential. For information on creating credentials, see [How to: Create a Proxy (SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
+> The credential name provided must be the name of an existing credential. For information on creating credentials, see [How to: Create a Proxy](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
   
 **...**  
 Launches the **Select Credential** dialog.  

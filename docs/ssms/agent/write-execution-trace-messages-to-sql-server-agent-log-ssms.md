@@ -1,5 +1,5 @@
 ---
-title: "Write Execution Trace Messages to SQL Server Agent Error Log"
+title: Write Execution Trace Messages to SQL Server Agent Error Log
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,7 +20,7 @@ ms.manager: jroth
 ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
+# Write Execution Trace Messages to the SQL Server Agent Error Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

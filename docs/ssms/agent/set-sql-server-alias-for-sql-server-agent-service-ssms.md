@@ -1,5 +1,5 @@
 ---
-title: "Set a SQL Server Alias for the SQL Server Agent Service"
+title: Set a SQL Server Alias for the SQL Server Agent Service
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,7 +17,7 @@ ms.manager: jroth
 ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
+# Set a SQL Server Alias for the SQL Server Agent Service
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

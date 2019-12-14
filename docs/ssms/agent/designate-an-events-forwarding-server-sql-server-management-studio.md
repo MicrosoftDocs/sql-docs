@@ -1,5 +1,5 @@
 ---
-title: "Designate an Events Forwarding Server"
+title: Designate an Events Forwarding Server
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,7 +18,7 @@ ms.manager: jroth
 ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Designate an Events Forwarding Server (SQL Server Management Studio)
+# Designate an Events Forwarding Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

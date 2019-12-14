@@ -1,5 +1,5 @@
 ---
-title: "Define the Response to an Alert (SQL Server Management Studio)"
+title: Define the Response to an Alert
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,7 +18,7 @@ ms.manager: jroth
 ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Define the Response to an Alert (SQL Server Management Studio)
+# Define the Response to an Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

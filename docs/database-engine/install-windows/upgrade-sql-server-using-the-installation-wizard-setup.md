@@ -1,7 +1,7 @@
 ---
-title: "Upgrade SQL Server Using the Installation Wizard (Setup) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/24/2017"
+title: "Upgrade: Installation Wizard (Setup)"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

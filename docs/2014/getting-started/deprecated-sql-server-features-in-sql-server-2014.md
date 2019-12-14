@@ -23,10 +23,15 @@ manager: craigg
 |Data Programmability|[sys.endpoint_webmethods &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Windows Communications Foundation (WCF) or ASP.NET|Native XML Web Services|23|  
   
 ### Slipstream Functionality  
- The Product Update feature replaces the Slipstream functionality that was available in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1. Therefore the command-line parameters, /*PCUSource* and /*CUSource*, associated with Slipstream functionality should no longer be used. The parameters will continue to work, but may be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup. The /*UpdateSource* parameter combines the functionality of the Slipstream parameters, /*PCUSource* and /*CUSource*.  
+ The [Product Update feature](/previous-versions/sql/sql-server-2012/hh231670(v=sql.110)?redirectedfrom=MSDN) was introduced in SQL Server 2012 as an extension to the  Slipstream functionality that was available in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1. In SQL Server 2014, the Product Update feature is the recommended method to use for slipstreaming SQL Server. Therefore the command-line parameters, /*PCUSource* and /*CUSource*, associated with original Slipstream functionality, should no longer be used. These parameters will continue to work, but may be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup. The recommended parameter to use is /*UpdateSource* which combines the functionality of the original Slipstream parameters, /*PCUSource* and /*CUSource*.  
   
  For more information about Slipstream functionality that was available in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, see [Slipstream a SQL Server Update](https://go.microsoft.com/fwlink/?LinkId=219945) (https://go.microsoft.com/fwlink/?LinkId=219945).  
-  
+ For information on how to use /*UpdateSource* to slipstream SQL Server builds, refer to the following:
+ 
+ - [How to patch SQL Server 2012 Setup with an updated setup package (using UpdateSource to get a smart setup)](https://blogs.msdn.microsoft.com/jason_howell/2012/08/28/how-to-patch-sql-server-2012-setup-with-an-updated-setup-package-using-updatesource-to-get-a-smart-setup/)
+ 
+ - [SQL Server 2012 Setup just got smarter… ](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2012-Setup-just-got-smarter-8230/ba-p/317440)
+ 
 ## See Also  
  [Backward Compatibility](../../2014/getting-started/backward-compatibility.md)  
   

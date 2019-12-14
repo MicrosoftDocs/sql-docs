@@ -1,5 +1,5 @@
 ---
-title: Associate a Database and Web Application
+title: Associate database and web application
 ms.custom: "seo-lt-2019"
 ms.date: "03/17/2017"
 ms.prod: sql

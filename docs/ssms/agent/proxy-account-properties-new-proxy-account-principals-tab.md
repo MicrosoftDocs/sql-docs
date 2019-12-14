@@ -1,7 +1,5 @@
 ---
-title: "Proxy Account Properties - New Proxy Account (Principals Tab)"
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+title: New Proxy Account (Principals Tab)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
@@ -14,9 +12,13 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
+
 # Proxy Account Properties - New Proxy Account (Principals Tab)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

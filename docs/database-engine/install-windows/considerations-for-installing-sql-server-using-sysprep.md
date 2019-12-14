@@ -1,7 +1,7 @@
 ---
-title: "Considerations for Installing SQL Server Using SysPrep | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/05/2017"
+title: "Install SQL Server with SysPrep"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

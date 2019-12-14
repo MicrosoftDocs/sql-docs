@@ -1,7 +1,8 @@
 ---
-title: "Editions and supported features of SQL Server 2016 | Microsoft Docs"
-ms.custom: sqlfreshmay19
-ms.date: "05/29/2019"
+title: "Editions and supported features"
+titleSuffix: SQL Server 2016
+ms.custom: "seo-lt-2019",sqlfreshmay19
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

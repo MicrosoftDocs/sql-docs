@@ -1,7 +1,7 @@
 ---
 title: "Are you upgrading from SQL Server 2005? | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: 12/15/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: "database-engine"
@@ -28,7 +28,7 @@ manager: craigg
 ## Choose your upgrade option  
  If you're upgrading relational databases from SQL Server 2005, here are your options for relational storage on the Microsoft platform.  
   
- To see a more comprehensive analysis of these options, [click here](http://sql05upgrade.azurewebsites.net/).  
+ To see a more comprehensive analysis of these options, [click here](https://sql05upgrade.azurewebsites.net/).  
   
 |Relational storage option|Benefits|Other factors to consider|  
 |-------------------------------|--------------|-------------------------------|  
@@ -51,11 +51,11 @@ manager: craigg
   
 -   Read about how to plan your upgrade in the following series of blog posts from the SQL Server team.  
   
-    -   [Planning an efficient upgrade from SQL Server 2005: Step 1 of 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
+    -   [Planning an efficient upgrade from SQL Server 2005: Step 1 of 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
   
-    -   [Planning an efficient upgrade from SQL Server 2005: Step 2 of 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
+    -   [Planning an efficient upgrade from SQL Server 2005: Step 2 of 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
   
-    -   [Planning an efficient upgrade from SQL Server 2005: Step 3 of 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
+    -   [Planning an efficient upgrade from SQL Server 2005: Step 3 of 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
   
 -   Review the requirements and considerations under [Planning a SQL Server Installation](../../../2014/sql-server/install/planning-a-sql-server-installation.md), including the [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   

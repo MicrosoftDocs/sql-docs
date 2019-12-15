@@ -76,7 +76,7 @@ If you are updating existing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.m
 
 ## <a id="CU18"></a> CU18 (December 2019)
 
-This is the Cumulative Update 18 (CU18) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3257.3. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4527377](https://support.microsoft.com/en-us/help/4527377).
+This is the Cumulative Update 18 (CU18) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3257.3. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4527377](https://support.microsoft.com/help/4527377).
 
 ### Package details
 
@@ -116,7 +116,7 @@ This will pull the latest SQL Server 2017 version (CU18 as the time of this writ
 
 ## <a id="CU17"></a> CU17 (October 2019)
 
-This is the Cumulative Update 17 (CU17) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3238.1. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4515579](https://support.microsoft.com/en-us/help/4515579).
+This is the Cumulative Update 17 (CU17) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3238.1. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4515579](https://support.microsoft.com/help/4515579).
 
 ### Package details
 
@@ -130,7 +130,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="CU16"></a> CU16 (August 2019)
 
-This is the Cumulative Update 16 (CU16) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3223.3. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4508218](https://support.microsoft.com/en-us/help/4508218).
+This is the Cumulative Update 16 (CU16) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3223.3. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4508218](https://support.microsoft.com/help/4508218).
 
 ### What's New
 
@@ -150,7 +150,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="CU15"></a> CU15 (May 2019)
 
-This is the Cumulative Update 15 (CU15) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3162.1. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4498951).
+This is the Cumulative Update 15 (CU15) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3162.1. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4498951](https://support.microsoft.com/help/4498951).
 
 ### Package details
 

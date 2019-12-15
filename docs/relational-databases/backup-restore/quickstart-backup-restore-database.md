@@ -22,7 +22,7 @@ For a more detailed how-to, see [Create a full database backup](create-a-full-da
 ## Prerequisites
 To complete this quickstart, you will need the following: 
 
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 ## Create a test database 

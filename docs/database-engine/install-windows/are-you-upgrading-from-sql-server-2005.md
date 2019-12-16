@@ -1,7 +1,7 @@
 ---
-title: "Are you upgrading from SQL Server 2005, 2008, or 2008R2? | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2017"
+title: "Upgrade from SQL Server 2005, 2008, or 2008R2"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

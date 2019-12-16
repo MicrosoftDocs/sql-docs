@@ -1,6 +1,8 @@
 ---
-title: "Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse) | Microsoft Docs"
-ms.custom: ""
+title: "Aliasing"
+description: "Aliasing in Azure SQL Data Warehouse and Parallel Data Warehouse."
+titleSuffix: Azure SQL Data Warehouse
+ms.custom: "seo-lt-2019"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""

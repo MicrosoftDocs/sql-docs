@@ -1,7 +1,7 @@
 ---
 title: "Using ADO to Execute SQLXML 4.0 Queries | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 12/15/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -117,7 +117,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         > [!NOTE]  
         >  If you need to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, see [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
-2.  Verify that the version of MDAC installed for the client computer is 2.6 or later. If you need to verify MDAC version information, you can use the MDAC Component Checker tool, which is provided as free download from the Microsoft Web site (www.microsoft.com). Fore more information, search on "MDAC Component Checker" on the Microsoft Web site.  
+2.  Verify that the version of MDAC installed for the client computer is 2.6 or later. If you need to verify MDAC version information, you can use the MDAC Component Checker tool, which is provided as free download from the Microsoft Web site, [http://www.microsoft.com](http://www.microsoft.com). Fore more information, search on "MDAC Component Checker" on the Microsoft Web site.  
   
 3.  Execute the script.  
   

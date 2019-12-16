@@ -1,10 +1,8 @@
 ---
 title: "Accelerated database recovery | Microsoft Docs"
-ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 

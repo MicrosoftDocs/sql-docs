@@ -393,12 +393,12 @@
     {
       "source_path": "docs/advanced-analytics/tutorials/rtsql-create-a-predictive-model-r.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-predictive-model",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/rtsql-predict-from-model.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-predict-from-model",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/rtsql-r-and-sql-data-types-and-data-objects.md",
@@ -408,7 +408,7 @@
     {
       "source_path": "docs/advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-run-using-tsql",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data.md",
@@ -418,12 +418,12 @@
     {
       "source_path": "docs/advanced-analytics/tutorials/rtsql-verify-r-exists.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-verify",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/rtsql-working-with-inputs-and-outputs.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-inputs-and-outputs",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "sql/advanced-analytics/tutorials/quickstart-r-verify.md",
@@ -623,7 +623,7 @@
     {
       "source_path": "docs/advanced-analytics/security/add-sqlrusergroup-to-database.md",
       "redirect_url": "/sql/advanced-analytics/security/create-a-login-for-sqlrusergroup.md",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server.md",
@@ -1308,7 +1308,7 @@
     {
       "source_path": "docs/relational-databases/relational-databases-new-updated-sql-docs-pr.md",
       "redirect_url": "/sql/relational-databases/new-updated-relational-databases",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/reporting-services/report-builder/glossary-report-builder.md",
@@ -1383,12 +1383,12 @@
     {
       "source_path": "docs/sql-server/sql-server-new-updated-sql-docs-pr.md",
       "redirect_url": "/sql/sql-server/new-updated-sql-server",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/t-sql/t-sql-new-updated-sql-docs-pr.md",
       "redirect_url": "/sql/t-sql/new-updated-t-sql",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/linux/sql-server-linux-shared-disk-cluster-red-hat-7-troubleshoot.md",
@@ -3498,7 +3498,7 @@
     {
       "source_path": "docs/reporting-services/change-log-sql-server-reporting-services.md",
       "redirect_url": "/sql/reporting-services/release-notes-reporting-services/",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/reporting-services/security/grant-user-access-to-a-report-server-report-manager.md",
@@ -10058,27 +10058,27 @@
     {
       "source_path": "docs/ssdt/sql-server-data-tools-license-terms-vs2017.md",
       "redirect_url": "/Legal/sql/sql-server-data-tools-license-terms-vs2017",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/ssms/sql-server-management-studio-license-terms.md",
       "redirect_url": "/Legal/sql/sql-server-management-studio-license-terms",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/ssdt/data-tier-application-framework-license-terms.md",
       "redirect_url": "/Legal/sql/data-tier-application-framework-license-terms",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/ssdt/sql-server-data-tools-license-terms.md",
       "redirect_url": "/Legal/sql/sql-server-data-tools-license-terms",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/powershell/sql-server-powershell-license-terms.md",
       "redirect_url": "/Legal/sql/sql-server-powershell-license-terms",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/ssdt/install-sql-server-data-tools.md",

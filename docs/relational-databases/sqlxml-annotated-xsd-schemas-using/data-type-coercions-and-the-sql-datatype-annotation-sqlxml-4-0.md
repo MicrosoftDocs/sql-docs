@@ -1,6 +1,5 @@
 ---
 title: "Data Type Coercions and the sql:datatype Annotation (SQLXML) | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -21,6 +20,7 @@ ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data Type Coercions and the sql:datatype Annotation (SQLXML 4.0)

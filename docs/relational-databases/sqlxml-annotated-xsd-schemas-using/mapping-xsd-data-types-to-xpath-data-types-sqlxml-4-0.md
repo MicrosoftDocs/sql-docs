@@ -1,6 +1,5 @@
 ---
 title: "Mapping XSD Data Types to XPath Data Types (SQLXML) | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -19,6 +18,7 @@ ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Mapping XSD Data Types to XPath Data Types (SQLXML 4.0)

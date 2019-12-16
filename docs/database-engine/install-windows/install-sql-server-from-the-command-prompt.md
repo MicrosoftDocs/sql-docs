@@ -416,7 +416,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/FEATURES<br /><br /> **Required**|Specifies [components](#Feature) to repair.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance name.<br /><br /> For more information, see [Instance Configuration](../../sql-server/install/instance-configuration.md).|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Specifies the account for the engine service. The default is **NT Authority\NETWORK SERVICE**.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Specifies the password for the engine service account.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Specifies the password for the engine service account. This parameter can be omitted when using a managed service account, virtual account, or built-in account.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Specifies the startup mode for the PolyBase engine service: Automatic (default) , Disabled,  and Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Optional**|Specifies a port range with at least 6 ports for PolyBase services. Example:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **Optional**|Specifies if the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance will be used as a part of PolyBase Scale-out computational group. Supported values: **True**, **False**|  
@@ -503,7 +503,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/ENU<br /><br /> **Optional**|Use this parameter to install the English version of SQL Server on a localized operating system when the installation media includes language packs for both English and the language corresponding to the operating system.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/FAILOVERCLUSTERGROUP<br /><br /> **Optional**|Specifies the name of the resource group to be used for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] failover cluster. It can be the name of an existing cluster group or the name of a new resource group.<br /><br /> Default value:<br /><br /> SQL Server (\<InstanceName>)|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Specifies the account for the engine service. The default is **NT Authority\NETWORK SERVICE**.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Specifies the password for the engine service account. |  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Specifies the password for the engine service account. This parameter can be omitted when using a managed service account, virtual account, or built-in account. |  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Specifies the startup mode for the PolyBase engine service: Automatic (default), Disabled,  and Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Optional**|Specifies a port range with at least 6 ports for PolyBase services. Example:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **Optional**|Specifies if the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance will be used as a part of PolyBase Scale-out computational group. Supported values: **True**, **False**|  
@@ -600,7 +600,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/INSTANCEID<br /><br /> **Optional**|Specifies a nondefault value for an [InstanceID](#InstanceID).|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance name.<br /><br /> For more information, see [Instance Configuration](../../sql-server/install/instance-configuration.md).|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Specifies the account for the engine service. The default is **NT Authority\NETWORK SERVICE**.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Specifies the password for the engine service account.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Specifies the password for the engine service account. This parameter can be omitted when using a managed service account, virtual account, or built-in account.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Specifies the startup mode for the PolyBase engine service: Automatic (default) , Disabled,  and Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Optional**|Specifies a port range with at least 6 ports for PolyBase services. Example:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **Optional**|Specifies if the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance will be used as a part of PolyBase Scale-out computational group. Supported values: **True**, **False**|  
@@ -752,7 +752,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/INDICATEPROGRESS<br /><br /> **Optional**|Specifies that the verbose Setup log file will be piped to the console.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/INSTANCENAME<br /><br /> **Required**|Specifies a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance name.<br /><br /> For more information, see [Instance Configuration](../../sql-server/install/instance-configuration.md).|  
 |PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Specifies the account for the engine service. The default is **NT Authority\NETWORK SERVICE**.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Specifies the password for the engine service account.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Specifies the password for the engine service account. This parameter can be omitted when using a managed service account, virtual account, or built-in account.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Specifies the startup mode for the PolyBase engine service: Automatic (default) , Disabled,  and Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Optional**|Specifies a port range with at least 6 ports for PolyBase services. Example:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **Optional**|Specifies if the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance will be used as a part of PolyBase Scale-out computational group. Supported values: **True**, **False**|  

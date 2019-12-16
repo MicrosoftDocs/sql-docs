@@ -1,6 +1,6 @@
 ---
-title: "Search and Replace | Microsoft Docs"
-ms.custom: ""
+title: Search and Replace
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

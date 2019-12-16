@@ -79,11 +79,10 @@ manager: craigg
  [Install SQL Server BI Features with SharePoint &#40;PowerPivot and Reporting Services&#41;](../../sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
  This section explains how to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features in a SharePoint environment. It identifies which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features are available given a specific version and edition of SharePoint. It also includes installation procedures for PowerPivot for SharePoint and Reporting Services in SharePoint mode.  
   
- [Installing SQL Server Samples and Sample Databases](http://sqlserversamples.codeplex.com/)  
+ [Installing SQL Server Samples and Sample Databases](https://sqlserversamples.codeplex.com/)  
  Describes how to install and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples and sample databases.  
   
 ## See Also  
  [What's New in SQL Server Installation](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
  [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
-  
   

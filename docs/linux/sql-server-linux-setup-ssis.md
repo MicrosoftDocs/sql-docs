@@ -32,7 +32,7 @@ To install the `mssql-server-is` package on Ubuntu, follow these steps:
 2. Register the Microsoft SQL Server Ubuntu repository.
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
    ```
 
 3. Run the following commands to install SQL Server Integration Services.
@@ -73,7 +73,7 @@ To install the `mssql-server-is` package on RHEL, follow these steps:
 1. Download the Microsoft SQL Server Red Hat repository configuration file.
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
    ```
 
 1. Run the following commands to install SQL Server Integration Services.

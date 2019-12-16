@@ -25,9 +25,9 @@ manager: craigg
     > [!NOTE]  
     >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] is a feature of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in for [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
   
--   To download [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] versions of [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, go to [Adventure Works 2014 Sample Databases](http://msftdbprodsamples.codeplex.com/releases/view/125550) on CodePlex.  
+-   To download [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] versions of [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, go to [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550) on CodePlex.  
   
--   To download [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] versions of [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, go to [Adventure Works for SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) on CodePlex.  
+-   To download [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] versions of [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, go to [Adventure Works for SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330) on CodePlex.  
   
 -   To see a list of [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] tutorials, go to [Tutorials](https://msdn.microsoft.com/library/ms167593.aspx) in MSDN library.  
   
@@ -42,5 +42,4 @@ manager: craigg
 |[Database Engine Tutorials](../relational-databases/database-engine-tutorials.md)|Learn how to connect to an instance of the database engine and then build and run Transact-SQL statements.|  
 |[Replication Tutorials](../relational-databases/replication/replication-tutorials.md)|Learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Enterprise Information Management Tutorials](../../2014/tutorials/enterprise-information-management-tutorials.md)|Learn how to manage information in an enterprise using Microsoft EIM technologies.|  
-  
   

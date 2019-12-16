@@ -1,5 +1,5 @@
 ---
-title: "Hiding Elements and Attributes by Using sql:hide | Microsoft Docs"
+title: "Hiding Elements and Attributes by Using sql:hide"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

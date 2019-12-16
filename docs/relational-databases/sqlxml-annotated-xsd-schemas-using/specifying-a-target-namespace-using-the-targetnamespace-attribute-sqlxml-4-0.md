@@ -1,6 +1,5 @@
 ---
-title: "Specifying a Target Namespace Using the targetNamespace Attribute (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Specify a target namespace with targetNamespace (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -19,6 +18,7 @@ ms.assetid: f3df9877-6672-4444-8245-2670063c9310
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying a Target Namespace Using the targetNamespace Attribute (SQLXML 4.0)

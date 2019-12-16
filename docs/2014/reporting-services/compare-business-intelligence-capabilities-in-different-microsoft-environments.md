@@ -15,7 +15,7 @@ ms.date: "03/06/2017"
 
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence can be deployed in a number of different environments including [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with SharePoint Server, SharePoint Online, and Power BI for Office 365. This topic compares the components and features supported in each environment.  
   
-For more information comparing SharePoint Server and SharePoint Online, see [Compare SharePoint plans and options](http://products.office.com/SharePoint/compare-sharepoint-plans).  
+For more information comparing SharePoint Server and SharePoint Online, see [Compare SharePoint plans and options](https://products.office.com/SharePoint/compare-sharepoint-plans).  
   
 ## Author and manage BI reports and dashboards  
   
@@ -50,7 +50,7 @@ For more information comparing SharePoint Server and SharePoint Online, see [Com
 |Excel workbook with [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] as a data source **<sup>2</sup>**|Yes|No|No|  
 |Ability to use features in different browsers and versions|Yes, for non-Power View visualizations **<sup>3</sup>**|Yes, for workbook file sizes less than 10 MB **<sup>3</sup>**|Yes **<sup>3</sup>**|  
   
- **<sup>1</sup>**  [Microsoft Power BI](http://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  
+ **<sup>1</sup>**  [Microsoft Power BI](https://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  
   
  **<sup>2</sup>**  [PowerPivot Workbooks as a Data Source](http://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
   
@@ -72,4 +72,3 @@ For more information comparing SharePoint Server and SharePoint Online, see [Com
   
 ## Community Content
 
-[Microsoft self-service BI on premise vs cloud](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/).

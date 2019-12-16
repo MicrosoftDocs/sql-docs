@@ -8,9 +8,8 @@ ms.author: maggies
 manager: kfile
 ms.reviewer: ""
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: 12/15/2019
 ---
-
 # Compare Business Intelligence Capabilities In Different Microsoft Environments
 
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence can be deployed in a number of different environments including [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with SharePoint Server, SharePoint Online, and Power BI for Office 365. This topic compares the components and features supported in each environment.  
@@ -33,7 +32,8 @@ For more information comparing SharePoint Server and SharePoint Online, see [Com
 |In-browser dashboard authoring|Yes|No|No|  
 |Usage Monitoring|Yes|No|Yes|  
 |Leverage row based security of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubes|Yes|No|No|  
-  
+|||||
+
  **<sup>1</sup>**  [Understanding the Role of Data Stewards in Data Management](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) and [Video: Power BI Info Management and Data Stewardship](https://www.youtube.com/watch?v=8dHOj68ts7c).  
   
  **<sup>2</sup>**  [Power BI Q&A: Optimize a Power BI workbook (cloud modeling)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/).  
@@ -49,10 +49,11 @@ For more information comparing SharePoint Server and SharePoint Online, see [Com
 |Mobile BI app to access reports and dashboards remotely|No|No|Yes **<sup>1</sup>**|  
 |Excel workbook with [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] as a data source **<sup>2</sup>**|Yes|No|No|  
 |Ability to use features in different browsers and versions|Yes, for non-Power View visualizations **<sup>3</sup>**|Yes, for workbook file sizes less than 10 MB **<sup>3</sup>**|Yes **<sup>3</sup>**|  
-  
+|||||
+
  **<sup>1</sup>**  [Microsoft Power BI](https://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  
   
- **<sup>2</sup>**  [PowerPivot Workbooks as a Data Source](http://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
+ **<sup>2</sup>**  [PowerPivot Workbooks as a Data Source](https://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
   
  **<sup>3</sup>**  [Mobile Support across Business Intelligence (BI) Tools](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) and [Planning for Reporting Services and Power View Browser Support (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx).  
   

@@ -125,6 +125,7 @@ These new features and their usage are described in more detail in Backup and Re
 - Page restore is not supported.
 - Database snapshots are not supported and are ignored while creating both component and non-component VSS snapshots. 
 - Autoclose databases, or databases with shutdown enabled.
+- Linux does not provide a VSS framework and therefore SQL Writer is not available on Linux
 
 The following table lists the kinds of snapshot backups that are supported by the SQL writer/SQL Server working with the VSS framework for all editions of SQL Server.
 

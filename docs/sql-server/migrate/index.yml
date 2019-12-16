@@ -16,7 +16,7 @@ metadata:
 
 
 landingContent:
-  - title: to SQL Server
+  - title: SQL to SQL Server
     linkLists:
     - linkListType: overview
       links:
@@ -32,7 +32,7 @@ landingContent:
         url: https://www.microsoft.com/download/details.aspx?id=54090
 
 
-  - title: non-SQL to SQL Server
+  - title: non-SQL to SQL & Azure
     linkLists:
     - linkListType: overview
       links:
@@ -51,7 +51,7 @@ landingContent:
       - text: From Sybase
         url: ../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
 
-  - title: to Azure SQL
+  - title: SQL to Azure SQL
     linkLists:
     - linkListType: overview
       links:
@@ -96,10 +96,10 @@ landingContent:
         url: ../end-of-support/sql-server-end-of-life-overview.md
       - text: SQL Server 2008
         url: https://www.microsoft.com/cloud-platform/windows-sql-server-2008
-      - text: Extend support with Azure VM
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support
-      - text: Extended support updates (ESU) 
+      - text: Extended Support Updates (ESUs) 
         url: ../end-of-support/sql-server-extended-security-updates.md
+      - text: Free ESUs with Azure VM
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support
     - linkListType: download
       links: 
       - text: Extended security updates datasheet PDF

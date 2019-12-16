@@ -281,7 +281,7 @@ manager: craigg
   
  **Test connections using AMO**  
   
- You can test HTTP access programmatically using AMO, substituting the URL of the endpoint for the server name. For details, see [Forum Post (How to sync SSAS 2008 R2 databases via HTTPS across domain/forest and firewall boundaries)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/c4249d55-914d-4c81-9980-44d0b8df9c3e).  
+ You can test HTTP access programmatically using AMO, substituting the URL of the endpoint for the server name. For details, see [Forum Post (How to sync SSAS 2008 R2 databases via HTTPS across domain/forest and firewall boundaries)](https://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/c4249d55-914d-4c81-9980-44d0b8df9c3e).  
   
  An example connection string illustrating the syntax for HTTP(S) access using Basic authentication:  
   
@@ -292,10 +292,9 @@ manager: craigg
  As a final step, be sure to follow-up with more rigorous testing by using a client computer that runs in the network environment from which the connections will originate.  
   
 ## See Also  
- [Forum post (http access using msmdpump and basic authentication)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
+ [Forum post (http access using msmdpump and basic authentication)](https://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
  [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [Authorizing access to objects and operations &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
  [IIS Authentication Methods](https://go.microsoft.com/fwlink/?LinkdID=208461)   
  [How to Set Up SSL on IIS 7](https://go.microsoft.com/fwlink/?LinkId=207562)  
-  
   

@@ -1,8 +1,7 @@
 ---
-title: "Synchronize Target Server Clocks (SQL Server Management Studio)"
+title: Synchronize Target Server Clocks
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -21,7 +20,7 @@ ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
-# Synchronize Target Server Clocks (SQL Server Management Studio)
+# Synchronize Target Server Clocks
 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 

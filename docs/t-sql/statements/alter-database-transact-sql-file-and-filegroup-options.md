@@ -1,6 +1,8 @@
 ---
-title: "ALTER DATABASE File and Filegroup Options (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER DATABASE File and Filegroups"
+description: Update a database's files and filegroups using Transact-SQL.
+titleSuffix: Transact-SQL
+ms.custom: "seo-lt-2019"
 ms.date: "02/21/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"

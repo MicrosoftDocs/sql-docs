@@ -181,9 +181,9 @@ Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core 
 ## Minimum SQL Server version requirements for Windows 10  
  Before you install SQL Server on a computer that is running Windows 10, you must make sure that you fulfill the following minimum requirements:  
   
--   For SQL Server 2014, you must apply SQL Server 2014 Service Pack 1 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2014](https://support.microsoft.com/en-us/kb/2958069).  
+-   For SQL Server 2014, you must apply SQL Server 2014 Service Pack 1 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2014](https://support.microsoft.com/kb/2958069).  
   
--   For SQL Server 2012, you must apply SQL Server 2012 Service Pack 2 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2012](https://support.microsoft.com/en-us/kb/2755533).  
+-   For SQL Server 2012, you must apply SQL Server 2012 Service Pack 2 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2012](https://support.microsoft.com/kb/2755533).  
   
 -   SQL Server 2008 R2  
     and SQL Server 2008 is not supported on Windows 10.  

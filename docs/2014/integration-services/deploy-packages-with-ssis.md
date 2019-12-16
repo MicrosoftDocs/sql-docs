@@ -44,7 +44,7 @@ manager: craigg
   
  **Source computer.** The computer on which you will create the deployment bundle must have the following components installed:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with the AdventureWorks database. To enhance security, the sample databases are not installed by default. You can download the sample database from [CodePlex](http://msftdbprodsamples.codeplex.com/releases/view/125550).  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with the AdventureWorks database. To enhance security, the sample databases are not installed by default. You can download the sample database from [CodePlex](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
   
 -   You must have permission to create and drop tables in AdventureWorks.  
   
@@ -79,5 +79,4 @@ manager: craigg
  In this lesson, you will copy the deployment bundle to the target computer, install the packages, and then run the packages.  
   
 ![Integration Services icon (small)](media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
-  
   

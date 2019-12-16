@@ -61,7 +61,7 @@ manager: craigg
  To illustrate the potential complexities of solve order, the following series of MDX queries starts with two queries that each individually have no solve order issues. These two queries are then combined into a query that requires solve order.  
   
 > [!NOTE]  
->  You can run these MDX queries against the Adventure Works sample multidimensional database. You can download the [AdventureWorks Multidimensional Models SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) sample from the codeplex site.  
+>  You can run these MDX queries against the Adventure Works sample multidimensional database. You can download the [AdventureWorks Multidimensional Models SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330) sample from the codeplex site.  
   
 ### Query 1-Differences in Income and Expenses  
  For the first MDX query, calculate the difference in sales and costs for each year by constructing a simple MDX query similar to the following example:  
@@ -211,5 +211,4 @@ FROM [Adventure Works]
  [CalculationPassValue &#40;MDX&#41;](/sql/mdx/calculationpassvalue-mdx)   
  [CREATE MEMBER Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
  [Manipulating Data &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
-  
   

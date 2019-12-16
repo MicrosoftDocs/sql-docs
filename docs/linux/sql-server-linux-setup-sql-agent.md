@@ -22,7 +22,12 @@ The [SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agen
 
 Before using the SQL Server Agent on Linux, use the following steps to enable or install it.
 
-1. Add your hostname (with and without domain) in the `/etc/hosts` files.
+1. Add your hostname (with and without domain) in the `/etc/hosts` files. The following lines show an example of the format for these entries:
+
+   ```bash
+   "IP Address" "hostname"
+   "IP Address" "hostname.domain.com"
+   ```
 
 1. Follow the instructions in one of the following sections based on your version of SQL Server:
 

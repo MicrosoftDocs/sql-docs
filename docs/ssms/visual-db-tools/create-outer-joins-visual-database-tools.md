@@ -1,9 +1,9 @@
 ---
-title: "Create Outer Joins (Visual Database Tools)"
+title: Create Outer Joins
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -11,8 +11,10 @@ helpviewer_keywords:
   - "outer joins"
   - "joins [SQL Server], outer"
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Create Outer Joins (Visual Database Tools)

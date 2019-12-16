@@ -1,9 +1,9 @@
 ---
-title: "Clear Query Results (Visual Database Tools)"
+title: Clear Query Results
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -14,8 +14,10 @@ helpviewer_keywords:
   - "Results pane"
   - "clearing query results"
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Clear Query Results (Visual Database Tools)

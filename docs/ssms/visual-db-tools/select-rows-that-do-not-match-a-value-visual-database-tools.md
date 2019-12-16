@@ -1,9 +1,9 @@
 ---
-title: "Select Rows That Do Not Match a Value (Visual Database Tools)"
+title: Select Rows That Do Not Match a Value
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -13,8 +13,10 @@ helpviewer_keywords:
   - "NOT operator [Visual Database Tools]"
   - "search criteria [SQL Server], rows not matching value"
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Select Rows That Do Not Match a Value (Visual Database Tools)
@@ -34,6 +36,6 @@ NOT LIKE 'A%'
 ```  
   
 ## See Also  
-[Rules for Entering Search Values (Visual Database Tools)](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[Specify Search Criteria (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Rules for Entering Search Values(../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
+[Specify Search Criteria(../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

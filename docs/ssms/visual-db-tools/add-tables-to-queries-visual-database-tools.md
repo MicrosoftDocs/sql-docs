@@ -1,9 +1,9 @@
 ---
-title: "Add Tables to Queries (Visual Database Tools)"
+title: Add Tables to Queries
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -12,8 +12,10 @@ helpviewer_keywords:
   - "adding tables"
   - "queries [SQL Server], tables"
 ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Add Tables to Queries (Visual Database Tools)

@@ -1,9 +1,9 @@
 ---
-title: "Combine Conditions When AND Has Precedence (Visual Database Tools)"
+title: Combine Conditions When AND Has Precedence
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -14,8 +14,10 @@ helpviewer_keywords:
   - "combining search conditions"
   - "AND, Criteria pane"
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Combine Conditions When AND Has Precedence (Visual Database Tools)
@@ -54,8 +56,8 @@ For example, imagine that you want to find either employees who have been with t
     ```  
   
 ## See Also  
-[Combine Conditions When OR Has Precedence (Visual Database Tools)](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
-[Conventions for Combining Search Conditions in the Criteria Pane (Visual Database Tools)](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[Rules for Entering Search Values (Visual Database Tools)](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[Specify Search Criteria (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Combine Conditions When OR Has Precedence(../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[Conventions for Combining Search Conditions in the Criteria Pane(../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+[Rules for Entering Search Values(../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
+[Specify Search Criteria(../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

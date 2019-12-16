@@ -1,9 +1,9 @@
 ---
-title: "Add Table Dialog Box (Database Designer) (Visual Database Tools)"
+title: Add Table Dialog Box (Database Designer)
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -11,8 +11,10 @@ f1_keywords:
   - "vdtsql.chm:65555"
   - "vdt.dlgbox.schema.addtable"
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Add Table Dialog Box (Database Designer) (Visual Database Tools)

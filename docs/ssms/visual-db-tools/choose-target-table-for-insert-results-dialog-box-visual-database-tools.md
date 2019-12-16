@@ -1,9 +1,9 @@
 ---
-title: "Choose Target Table for Insert Results Dialog Box"
+title: Choose Target Table for Insert Results Dialog Box
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -11,8 +11,10 @@ f1_keywords:
   - "vdt.dlgbox.choosetableforinsertfrom"
   - "vdtsql.chm:69642"
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Choose Target Table for Insert Results Dialog Box (Visual Database Tools)

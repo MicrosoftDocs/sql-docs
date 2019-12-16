@@ -1,9 +1,9 @@
 ---
-title: "Change the Font Color, Size, and Style in Diagrams"
+title: Change the Font Color, Size, and Style in Diagrams
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -12,8 +12,10 @@ helpviewer_keywords:
   - "text in database diagrams"
   - "appearance of database diagrams"
 ms.assetid: 14de9c19-8bbf-4347-bef5-156499640052
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Change the Font Color, Size, and Style in Diagrams (Visual Database Tools)

@@ -1,9 +1,9 @@
 ---
-title: "Specify Multiple Search Conditions for Multiple Columns"
+title: Specify Multiple Search Conditions for Multiple Columns
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -14,8 +14,10 @@ helpviewer_keywords:
   - "OR operator"
   - "AND, Criteria pane"
 ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Specify Multiple Search Conditions for Multiple Columns (Visual Database Tools)
@@ -72,8 +74,8 @@ To search different data columns using conditions linked with AND, you put all t
 4.  Repeat Steps 2 and 3 for each additional condition you want to add.  
   
 ## See Also  
-[Combine Conditions When AND Has Precedence (Visual Database Tools)](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
-[Combine Conditions When OR Has Precedence (Visual Database Tools)](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
-[Conventions for Combining Search Conditions in the Criteria Pane (Visual Database Tools)](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[Specify Search Criteria (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Combine Conditions When AND Has Precedence(../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
+[Combine Conditions When OR Has Precedence(../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[Conventions for Combining Search Conditions in the Criteria Pane(../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+[Specify Search Criteria(../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

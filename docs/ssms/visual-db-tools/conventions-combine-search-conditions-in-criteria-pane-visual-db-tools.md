@@ -1,9 +1,9 @@
 ---
-title: "Conventions for Combining Search Conditions in the Criteria Pane"
+title: Conventions for Combining Search Conditions in the Criteria Pane
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -17,8 +17,10 @@ helpviewer_keywords:
   - "AND, Criteria pane"
   - "multiple AND clauses"
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Conventions for Combining Search Conditions in the Criteria Pane (Visual Database Tools)

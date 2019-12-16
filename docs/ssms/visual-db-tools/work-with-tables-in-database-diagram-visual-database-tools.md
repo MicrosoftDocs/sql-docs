@@ -1,9 +1,9 @@
 ---
-title: "Work with Tables in Database Diagram (Visual Database Tools)"
+title: Work with Tables in Database Diagram
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -13,8 +13,10 @@ helpviewer_keywords:
   - "tables [SQL Server], database diagrams"
   - "database diagrams [SQL Server], Table Designer"
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Work with Tables in Database Diagram (Visual Database Tools)

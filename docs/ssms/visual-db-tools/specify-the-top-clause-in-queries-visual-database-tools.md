@@ -1,9 +1,9 @@
 ---
-title: "Specify the TOP Clause in Queries (Visual Database Tools)"
+title: Specify the TOP Clause in Queries
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -18,8 +18,10 @@ helpviewer_keywords:
   - "limiting rows returned"
   - "search criteria [SQL Server], TOP clause"
 ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Specify the TOP Clause in Queries (Visual Database Tools)

@@ -1,9 +1,9 @@
 ---
-title: "Post-Save Notifications Dialog Box (Visual Database Tools)"
+title: Post-Save Notifications Dialog Box
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -12,8 +12,10 @@ f1_keywords:
   - "vdt.dlgbox.saveincomplete"
   - "vdtsql.chm:98831"
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Post-Save Notifications Dialog Box (Visual Database Tools)

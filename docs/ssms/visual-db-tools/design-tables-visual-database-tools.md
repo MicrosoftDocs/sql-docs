@@ -1,9 +1,9 @@
 ---
-title: "Create and Update Tables (SSMS)"
+title: Create and Update Tables
 ms.custom: seo-lt-2019
 ms.date: "08/25/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -15,8 +15,10 @@ helpviewer_keywords:
   - "tables [SQL Server], opening"
   - "Table Designer, opening"
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Create and update database tables

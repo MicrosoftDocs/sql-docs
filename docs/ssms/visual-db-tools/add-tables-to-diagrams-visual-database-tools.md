@@ -1,9 +1,9 @@
 ---
-title: "Add Tables to Diagrams (Visual Database Tools)"
+title: Add Tables to Diagrams
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -11,8 +11,10 @@ helpviewer_keywords:
   - "inserting tables"
   - "adding tables"
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Add Tables to Diagrams (Visual Database Tools)
@@ -67,6 +69,6 @@ You can add a table to your database diagram to edit its structure or relate it 
 > Both those tables referenced by a foreign key constraint from the selected table(s) and those referencing the selected table(s) with a foreign key constraint are added to the diagram.  
   
 ## See Also  
-[Work with Database Diagrams (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Work with Tables in Database Diagram (Visual Database Tools)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
+[Work with Database Diagrams(../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Work with Tables in Database Diagram(../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   

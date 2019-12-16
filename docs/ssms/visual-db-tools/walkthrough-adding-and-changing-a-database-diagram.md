@@ -1,9 +1,9 @@
 ---
-title: "Walkthrough: Adding and Changing a Database Diagram"
+title: Adding and Changing a Database Diagram
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -12,8 +12,10 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], designing"
   - "database diagrams [SQL Server], creating"
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Walkthrough: Adding and Changing a Database Diagram

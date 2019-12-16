@@ -1,9 +1,7 @@
 ---
-title: "Group Rows in Query Results (Visual Database Tools)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+title: Group Rows in Query Results
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
@@ -12,11 +10,16 @@ helpviewer_keywords:
   - "grouping rows"
   - "grouping query results"
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
-author: "markingmyname"
-ms.author: "maghan"
-
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
+
 # Group Rows in Query Results (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 If you want to create subtotals or show other summary information for subsets of a table, you create groups using an aggregate query. Each group summarizes the data for all the rows in the table that have the same value.  
   
@@ -66,7 +69,7 @@ The resulting output might look like this:
   
 5.  In the **Group By** grid cell for the column that is going to be aggregated, select the appropriate aggregate function.  
   
-    The Query and View Designer automatically assigns a column alias to the column you are summarizing. You can replace this automatically generated alias with a more meaningful one. For more details, see [Create Column Aliases (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
+    The Query and View Designer automatically assigns a column alias to the column you are summarizing. You can replace this automatically generated alias with a more meaningful one. For more details, see [Create Column Aliases(../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
     ![Adding a column alias to the query result set](../../ssms/visual-db-tools/media/dv3w9e3.gif "Adding a column alias to the query result set")  
   
@@ -79,5 +82,5 @@ The resulting output might look like this:
     ```  
   
 ## See Also  
-[Sort and Group Query Results (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Sort and Group Query Results(../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   

@@ -29,7 +29,7 @@ This tutorial relies on Microsoft SQL Server Data Tools, a set of example packag
   
 * To download all of the lesson packages for this tutorial:
 
-    1.  Navigate to [Integration Services tutorial files](https://www.microsoft.com/en-us/download/details.aspx?id=56827).
+    1.  Navigate to [Integration Services tutorial files](https://www.microsoft.com/download/details.aspx?id=56827).
 
     2.  Select the **DOWNLOAD** button.
 

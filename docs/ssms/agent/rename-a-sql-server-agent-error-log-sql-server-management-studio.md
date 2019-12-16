@@ -1,10 +1,9 @@
 ---
-title: "Rename a SQL Server Agent Error Log (SQL Server Management Studio)"
+title: Rename a SQL Server Agent Error Log
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -19,7 +18,7 @@ ms.manager: jroth
 ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Rename a SQL Server Agent Error Log (SQL Server Management Studio)
+# Rename a SQL Server Agent Error Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

@@ -12,7 +12,7 @@ ms.author: mikeray
 manager: craigg
 ---
 # SQL Server Backup and Restore with Azure Blob Storage Service
-  This topic introduces [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups to and restoring from the [Azure Blob storage service](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). It also provides a summary of the benefits of using the Azure Blob service to store [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups.  
+  This topic introduces [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups to and restoring from the [Azure Blob storage service](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). It also provides a summary of the benefits of using the Azure Blob service to store [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups.  
   
  SQL Server supports storing backups to the Azure Blob storage service in the following ways:  
   
@@ -51,5 +51,4 @@ manager: craigg
  [Back Up and Restore of System Databases &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)   
  [SQL Server Backup to URL](sql-server-backup-to-url.md)  
-  
   

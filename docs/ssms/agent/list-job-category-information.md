@@ -4,7 +4,6 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c

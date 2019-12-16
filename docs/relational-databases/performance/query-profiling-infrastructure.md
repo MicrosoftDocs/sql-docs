@@ -181,7 +181,7 @@ The following table summarizes the actions to enable either standard profiling o
 ## Remarks
 
 > [!IMPORTANT]
-> Due to a possible random AV while executing a monitoring stored procedure that references [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md), ensure [KB 4078596](http://support.microsoft.com/help/4078596) is installed in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+> Due to a possible random AV while executing a monitoring stored procedure that references [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md), ensure [KB 4078596](https://support.microsoft.com/help/4078596) is installed in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 Starting with lightweight profiling v2 and its low overhead, any server that is not already CPU bound can run lightweight profiling **continuously**, and allow database professionals to tap into any running execution at any time, for example using Activity Monitor or directly querying `sys.dm_exec_query_profiles`, and get the query plan with runtime statistics.
 
@@ -203,4 +203,3 @@ For more information on the performance overhead of query profiling, see the blo
  [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [actual execution plan](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice: Query progress - anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004)

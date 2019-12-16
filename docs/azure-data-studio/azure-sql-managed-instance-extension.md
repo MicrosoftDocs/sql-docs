@@ -92,7 +92,6 @@ For more information, see the [Code of Conduct FAQ][conduct-FAQ] or contact [ope
 
 For more information, visit [the GitHub project](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/).
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md

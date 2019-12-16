@@ -1,7 +1,7 @@
 ---
-title: Create a Master Data Manager Web Application
-ms.custom: ""
-ms.date: "03/01/2017"
+title: Create master data manager web application
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
@@ -11,7 +11,7 @@ ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
 ---
-# Create a Master Data Manager Web Application (Master Data Services)
+# Create a master data manager web application (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

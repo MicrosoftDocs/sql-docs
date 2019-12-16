@@ -32,7 +32,7 @@ landingContent:
         url: https://www.microsoft.com/download/details.aspx?id=54090
 
 
-  - title: Third-party to SQL & Azure
+  - title: non-SQL to SQL & Azure
     linkLists:
     - linkListType: overview
       links:

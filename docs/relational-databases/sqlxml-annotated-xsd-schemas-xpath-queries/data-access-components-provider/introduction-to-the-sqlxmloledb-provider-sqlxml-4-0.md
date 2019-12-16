@@ -1,5 +1,5 @@
 ---
-title: "Introduction to the SQLXMLOLEDB Provider (SQLXML 4.0) | Microsoft Docs"
+title: "Introduction to the SQLXMLOLEDB Provider (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

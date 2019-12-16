@@ -1,5 +1,5 @@
 ---
-title: "Creating CDATA Sections Using sql:use-cdata (SQLXML 4.0) | Microsoft Docs"
+title: "Creating CDATA Sections Using sql:use-cdata (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/11/2019
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Applying an XSL Transformation (SQLXML Managed Classes) | Microsoft Docs"
+title: "Applying an XSL Transformation (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

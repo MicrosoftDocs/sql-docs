@@ -1,5 +1,5 @@
 ---
-title: "Executing XPath Queries with Namespaces (SQLXML Managed Classes) | Microsoft Docs"
+title: "Executing XPath Queries with Namespaces (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Executing an Updategram by Using OLE DB (SQLXML 4.0) | Microsoft Docs"
+title: "Executing an Updategram by Using OLE DB (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

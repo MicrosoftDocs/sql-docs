@@ -1,5 +1,5 @@
 ---
-title: "Processing XML on the Client Side (SQLXML Managed Classes) | Microsoft Docs"
+title: "Processing XML on the Client Side (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

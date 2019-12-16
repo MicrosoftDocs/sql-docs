@@ -1,5 +1,5 @@
 ---
-title: "Annotated Schema Security Considerations (SQLXML 4.0) | Microsoft Docs"
+title: "Annotated Schema Security Considerations (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

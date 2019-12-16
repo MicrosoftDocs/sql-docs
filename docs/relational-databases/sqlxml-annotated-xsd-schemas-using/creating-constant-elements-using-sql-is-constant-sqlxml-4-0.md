@@ -1,5 +1,5 @@
 ---
-title: "Creating Constant Elements Using sql:is-constant (SQLXML 4.0) | Microsoft Docs"
+title: "Creating Constant Elements Using sql:is-constant (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/11/2019
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Executing XPath Queries (SQLXML Managed Classes) | Microsoft Docs"
+title: "Executing XPath Queries (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

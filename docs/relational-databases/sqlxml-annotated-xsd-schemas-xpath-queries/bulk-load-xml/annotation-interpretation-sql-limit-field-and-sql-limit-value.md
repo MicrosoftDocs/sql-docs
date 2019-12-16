@@ -1,5 +1,5 @@
 ---
-title: "sql:limit-field and sql:limit-value (SQLXML 4.0) | Microsoft Docs"
+title: "sql:limit-field and sql:limit-value (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

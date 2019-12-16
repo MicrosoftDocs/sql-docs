@@ -1,5 +1,5 @@
 ---
-title: "Annotation Interpretation (SQLXML 4.0) | Microsoft Docs"
+title: "Annotation Interpretation (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

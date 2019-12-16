@@ -1,5 +1,5 @@
 ---
-title: "Handling Database Concurrency Issues in Updategrams (SQLXML 4.0) | Microsoft Docs"
+title: "Handling Database Concurrency Issues in Updategrams (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

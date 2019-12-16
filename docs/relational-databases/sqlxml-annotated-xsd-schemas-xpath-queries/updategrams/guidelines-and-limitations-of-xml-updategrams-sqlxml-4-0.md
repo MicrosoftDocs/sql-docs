@@ -1,5 +1,5 @@
 ---
-title: "Guidelines and Limitations of XML Updategrams (SQLXML 4.0) | Microsoft Docs"
+title: "Guidelines and Limitations of XML Updategrams (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Introduction to XML Bulk Load (SQLXML 4.0) | Microsoft Docs"
+title: "Introduction to XML Bulk Load (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Specifying Relational Operators in XPath Queries (SQLXML 4.0) | Microsoft Docs"
+title: "Specifying Relational Operators in XPath Queries (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Specifying a Node Test in the Location Path (SQLXML 4.0) | Microsoft Docs"
+title: "Specifying a Node Test in the Location Path (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

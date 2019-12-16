@@ -1,5 +1,5 @@
 ---
-title: "Bulk Load Security Considerations (SQLXML 4.0) | Microsoft Docs"
+title: "Bulk Load Security Considerations (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

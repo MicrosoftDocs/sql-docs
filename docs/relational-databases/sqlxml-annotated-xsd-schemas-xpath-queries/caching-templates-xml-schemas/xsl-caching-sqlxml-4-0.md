@@ -1,5 +1,5 @@
 ---
-title: "XSL Caching (SQLXML 4.0) | Microsoft Docs"
+title: "XSL Caching (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

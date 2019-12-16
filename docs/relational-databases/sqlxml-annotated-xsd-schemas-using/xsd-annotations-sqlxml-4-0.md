@@ -1,5 +1,5 @@
 ---
-title: "XSD Annotations (SQLXML 4.0) | Microsoft Docs"
+title: "XSD Annotations (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

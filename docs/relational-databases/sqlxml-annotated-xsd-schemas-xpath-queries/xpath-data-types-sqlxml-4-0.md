@@ -1,5 +1,5 @@
 ---
-title: "XPath Data Types (SQLXML 4.0) | Microsoft Docs"
+title: "XPath Data Types (SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -4272,8 +4272,8 @@ The table contains error message numbers and the description, which is the text 
 |	9463	|	16	|	No	|	XML parsing: line %d, character %d, xml:space has a non-legal value	|
 |	9464	|	16	|	No	|	XML parsing: line %d, character %d, XML namespace prefix 'xml' can only be associated with the URI http://www.w3.org/XML/1998/namespace. This URI cannot be used with other prefixes.	|
 |	9465	|	16	|	No	|	XML parsing: line %d, character %d, XML namespace prefix 'xmlns' is reserved for use by XML.	|
-|	9466	|	16	|	No	|	XML parsing: line %d, character %d, XML namespace xml namespace URI (http://www.w3.org/XML/1998/namespace) must be assigned only to prefix 'xml'.	|
-|	9467	|	16	|	No	|	XML parsing: line %d, character %d, xmlns namespace URI (http://www.w3.org/2000/xmlns/) is reserved and must not be used.	|
+|	9466	|	16	|	No	|	XML parsing: line %d, character %d, XML namespace xml namespace URI (https://www.w3.org/XML/1998/namespace) must be assigned only to prefix 'xml'.	|
+|	9467	|	16	|	No	|	XML parsing: line %d, character %d, xmlns namespace URI (https://www.w3.org/2000/xmlns/) is reserved and must not be used.	|
 |	9480	|	16	|	No	|	XML parsing: line %d, character %d, unsupported xml	|
 |	9500	|	16	|	No	|	The data type '%.*ls' used in the VALUE method is invalid.	|
 |	9501	|	16	|	No	|	XQuery: Unable to resolve sql:variable('%.*ls'). The variable must be declared as a scalar TSQL variable.	|

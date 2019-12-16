@@ -1,6 +1,6 @@
 ---
-title: "Manage Code Formatting | Microsoft Docs"
-ms.custom: ""
+title: Manage Code Formatting
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

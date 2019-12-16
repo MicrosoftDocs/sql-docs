@@ -1,6 +1,6 @@
 ---
-title: "Navigate Code and Text | Microsoft Docs"
-ms.custom: ""
+title: Navigate Code and Text
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

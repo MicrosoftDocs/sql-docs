@@ -1,5 +1,5 @@
 ---
-title: "SqlXmlParameter Object (SQLXML) | Microsoft Docs"
+title: "SqlXmlParameter Object (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

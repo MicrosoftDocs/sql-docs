@@ -1,5 +1,5 @@
 ---
-title: "Execute templates containing XPath Queries (SQLXMLOLEDB) | Microsoft Docs"
+title: "Execute templates containing XPath Queries (SQLXMLOLEDB)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -1,5 +1,5 @@
 ---
-title: "Database concurrency issues in Updategrams (SQLXML) | Microsoft Docs"
+title: "Database concurrency issues in Updategrams (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

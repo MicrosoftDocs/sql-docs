@@ -1,5 +1,5 @@
 ---
-title: "sql:overflow-field (SQLXML) | Microsoft Docs"
+title: "sql:overflow-field (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

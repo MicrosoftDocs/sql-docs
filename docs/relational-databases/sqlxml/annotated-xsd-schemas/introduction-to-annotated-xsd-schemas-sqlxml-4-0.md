@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Annotated XSD Schemas (SQLXML) | Microsoft Docs"
+title: "Introduction to Annotated XSD Schemas (SQLXML)"
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

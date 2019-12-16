@@ -1,5 +1,5 @@
 ---
-title: "Exclude schema elements from XML Doc with sql:mapped | Microsoft Docs"
+title: "Exclude schema elements from XML Doc with sql:mapped"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

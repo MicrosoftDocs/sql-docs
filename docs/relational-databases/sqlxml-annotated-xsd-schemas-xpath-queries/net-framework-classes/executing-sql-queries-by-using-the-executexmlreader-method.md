@@ -1,5 +1,5 @@
 ---
-title: "Run SQL queries with the ExecuteXMLReader method | Microsoft Docs"
+title: "Run SQL queries with the ExecuteXMLReader method"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

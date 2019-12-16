@@ -1,5 +1,5 @@
 ---
-title: "Run template files with the CommandStream Property | Microsoft Docs"
+title: "Run template files with the CommandStream Property"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

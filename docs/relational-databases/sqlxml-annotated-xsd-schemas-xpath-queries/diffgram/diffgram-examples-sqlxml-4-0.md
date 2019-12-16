@@ -1,5 +1,5 @@
 ---
-title: "DiffGram Examples (SQLXML) | Microsoft Docs"
+title: "DiffGram Examples (SQLXML)"
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

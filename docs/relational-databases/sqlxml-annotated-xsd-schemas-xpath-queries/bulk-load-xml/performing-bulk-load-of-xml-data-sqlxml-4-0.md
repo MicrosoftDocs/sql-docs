@@ -1,5 +1,5 @@
 ---
-title: "Performing Bulk Load of XML Data (SQLXML) | Microsoft Docs"
+title: "Performing Bulk Load of XML Data (SQLXML)"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

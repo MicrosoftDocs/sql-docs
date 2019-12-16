@@ -1,5 +1,5 @@
 ---
-title: "Access SQLXML functionality in the .NET environment | Microsoft Docs"
+title: "Access SQLXML functionality in the .NET environment"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

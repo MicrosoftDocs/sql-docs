@@ -1,5 +1,5 @@
 ---
-title: "sql:relationship and the Key Ordering Rule (SQLXML) | Microsoft Docs"
+title: "sql:relationship and the Key Ordering Rule (SQLXML)"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

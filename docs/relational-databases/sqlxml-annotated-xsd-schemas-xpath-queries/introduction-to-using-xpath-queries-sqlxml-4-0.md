@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Using XPath Queries (SQLXML) | Microsoft Docs"
+title: "Introduction to Using XPath Queries (SQLXML)"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

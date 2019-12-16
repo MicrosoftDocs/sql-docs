@@ -1,5 +1,5 @@
 ---
-title: "Introduction to the SQLXMLOLEDB Provider (SQLXML) | Microsoft Docs"
+title: "Introduction to the SQLXMLOLEDB Provider (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

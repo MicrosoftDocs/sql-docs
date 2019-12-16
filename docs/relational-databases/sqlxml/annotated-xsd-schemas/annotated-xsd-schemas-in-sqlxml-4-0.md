@@ -1,5 +1,5 @@
 ---
-title: "Annotated XSD Schemas in SQLXML 4.0 | Microsoft Docs"
+title: "Annotated XSD Schemas in SQLXML 4.0"
 ms.custom: ""
 ms.date: 01/11/2019
 ms.prod: sql

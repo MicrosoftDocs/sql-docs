@@ -1,5 +1,5 @@
 ---
-title: "Set relationships with sql:relationship (SQLXML) | Microsoft Docs"
+title: "Set relationships with sql:relationship (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

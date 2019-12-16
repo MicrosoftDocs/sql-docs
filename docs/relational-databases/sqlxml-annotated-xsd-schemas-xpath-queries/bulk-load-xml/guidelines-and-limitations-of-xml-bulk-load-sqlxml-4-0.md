@@ -1,5 +1,5 @@
 ---
-title: "Guidelines and Limitations of XML Bulk Load (SQLXML) | Microsoft Docs"
+title: "Guidelines and Limitations of XML Bulk Load (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

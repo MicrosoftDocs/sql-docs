@@ -1,5 +1,5 @@
 ---
-title: "Specifying Axes in XPath Queries (SQLXML) | Microsoft Docs"
+title: "Specifying Axes in XPath Queries (SQLXML)"
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

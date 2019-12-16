@@ -1,5 +1,5 @@
 ---
-title: "Processing XML on the Client Side (SQLXML) | Microsoft Docs"
+title: "Processing XML on the Client Side (SQLXML)"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

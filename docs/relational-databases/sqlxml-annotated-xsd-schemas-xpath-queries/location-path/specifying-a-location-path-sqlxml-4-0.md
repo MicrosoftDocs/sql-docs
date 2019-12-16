@@ -1,5 +1,5 @@
 ---
-title: "Specifying a Location Path (SQLXML) | Microsoft Docs"
+title: "Specifying a Location Path (SQLXML)"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

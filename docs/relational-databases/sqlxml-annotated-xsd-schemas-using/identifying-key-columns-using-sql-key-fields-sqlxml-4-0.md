@@ -1,5 +1,5 @@
 ---
-title: "Identify key columns using sql:key-fields (SQLXML) | Microsoft Docs"
+title: "Identify key columns using sql:key-fields (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

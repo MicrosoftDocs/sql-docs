@@ -1,5 +1,5 @@
 ---
-title: "Using ADO to Execute SQLXML 4.0 Queries | Microsoft Docs"
+title: "Using ADO to Execute SQLXML 4.0 Queries"
 ms.custom: ""
 ms.date: 12/15/2019
 ms.prod: sql

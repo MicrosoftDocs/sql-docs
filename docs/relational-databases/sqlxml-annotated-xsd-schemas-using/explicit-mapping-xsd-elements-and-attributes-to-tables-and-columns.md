@@ -1,5 +1,5 @@
 ---
-title: "Custom XSD mappings to tables/columns (SQLXML) | Microsoft Docs"
+title: "Custom XSD mappings to tables/columns (SQLXML)"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

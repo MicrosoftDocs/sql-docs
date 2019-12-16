@@ -1,10 +1,7 @@
 ---
 title: Change the Font Color, Size, and Style in Diagrams
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,22 +13,26 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: 
-
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
+
 # Change the Font Color, Size, and Style in Diagrams (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 You can customize the way text appears in database diagrams by changing the font color, size, and style. The changes are applied to new diagrams and to existing diagrams when they are modified.  
   
-### To change the font color, size, and style in diagrams  
+## To change the font color, size, and style in diagrams  
   
-1.  On the **Tools** menu, click **Options**.  
+1. On the **Tools** menu, click **Options**.  
   
-2.  Expand **Environment**, and then click **Fonts and Colors**.  
+2. Expand **Environment**, and then click **Fonts and Colors**.  
   
-3.  In the **Show settings for** list, select **Table and Database Designers**.  
+3. In the **Show settings for** list, select **Table and Database Designers**.  
   
-4.  Change the font, size, display item, foreground and background colors.  
+4. Change the font, size, display item, foreground and background colors.  
   
-## See Also  
-[Work with Database Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-  
+## See Also
+
+[Work with Database Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)

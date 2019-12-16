@@ -1,10 +1,7 @@
 ---
 title: Add Text Annotations to Diagrams
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,10 +12,14 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: 
-
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
+
 # Add Text Annotations to Diagrams (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 To make notes or comments on a diagram you can add text annotations.  
   
 ### To add text annotations to diagrams  

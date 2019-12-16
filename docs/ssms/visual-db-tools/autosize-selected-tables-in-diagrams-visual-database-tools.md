@@ -1,10 +1,7 @@
 ---
 title: Autosize Selected Tables in Diagrams
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,18 +14,22 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: 
-
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
+
 # Autosize Selected Tables in Diagrams (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 You can quickly fit tables in your diagram to the smallest size that shows all fields.  
   
-### To automatically size selected tables in diagrams  
+## To automatically size selected tables in diagrams  
   
-1.  Select the table(s) you want to resize.  
+1. Select the table(s) you want to resize.  
   
-2.  Right click a selected table and from the shortcut menu choose **Autosize Selected Tables**.  
+2. Right click a selected table and from the shortcut menu choose **Autosize Selected Tables**.  
   
-## See Also  
-[Work with Database Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-  
+## See Also
+
+[Work with Database Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)

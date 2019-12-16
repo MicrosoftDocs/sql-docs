@@ -1,10 +1,7 @@
 ---
 title: Add Tables to Queries
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,9 +13,12 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: 
-
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
+
 # Add Tables to Queries (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 When you create a query, you are retrieving data from a table or other objects structured like tables - views and certain user-defined functions. To work with any of these objects in your query, you add them to the **Diagram Pane**.  
   

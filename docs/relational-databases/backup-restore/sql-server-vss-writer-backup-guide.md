@@ -124,7 +124,7 @@ These new features and their usage are described in more detail in Backup and Re
 - File/Filegroup backup is not supported.
 - Page restore is not supported.
 - Database snapshots are not supported and are ignored while creating both component and non-component VSS snapshots. 
-- Autoclose databases, or databases that ha
+- Autoclose databases, or databases with shutdown enabled.
 
 The following table lists the kinds of snapshot backups that are supported by the SQL writer/SQL Server working with the VSS framework for all editions of SQL Server.
 
@@ -170,7 +170,7 @@ The image shows the dataflow diagram during a component-based snapshot creation/
 
 
 ### Backup Initialization
-During this phase of the backup the requestor (backup application) binds to the snapshot interface **IvssBackupComponents** and initializes it in preparation for the backup. It also calls the VSS API **IVssGatherWriterMetadata    ** to tell the VSS framework to gather metadata from all the writers.
+During this phase of the backup the requestor (backup application) binds to the snapshot interface **IvssBackupComponents** and initializes it in preparation for the backup. It also calls the VSS API **IVssGatherWriterMetadata** to tell the VSS framework to gather metadata from all the writers.
 
 The VSS framework will call each of the registered writers including the SQL writer for the writer metadata using the **OnIdentify** event. The SQL writer will query the SQL Server instances to get the backup metadata information for each database and create the Writer Metadata Document. This phase is also referred to as Metadata Enumeration.
 

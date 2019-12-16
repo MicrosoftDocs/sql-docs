@@ -1,5 +1,5 @@
 ---
-title: "Architecture of Client-side and Server-side XML Formatting (SQLXML) | Microsoft Docs"
+title: "Architecture of client and server-side XML (SQLXML) | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

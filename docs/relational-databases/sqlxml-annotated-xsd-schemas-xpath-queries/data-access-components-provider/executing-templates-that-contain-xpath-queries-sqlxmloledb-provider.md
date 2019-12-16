@@ -1,5 +1,5 @@
 ---
-title: "Executing Templates That Contain XPath Queries (SQLXMLOLEDB Provider) | Microsoft Docs"
+title: "Execute templates containing XPath Queries (SQLXMLOLEDB) | Microsoft Docs"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -17,6 +17,7 @@ helpviewer_keywords:
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Templates That Contain XPath Queries (SQLXMLOLEDB Provider)

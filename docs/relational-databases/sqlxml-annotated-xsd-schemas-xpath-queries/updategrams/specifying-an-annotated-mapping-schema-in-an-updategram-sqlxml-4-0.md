@@ -1,5 +1,5 @@
 ---
-title: "Specifying an Annotated Mapping Schema in an Updategram (SQLXML) | Microsoft Docs"
+title: "Annotated mapping schemas for an Updategram (SQLXML) | Microsoft Docs"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

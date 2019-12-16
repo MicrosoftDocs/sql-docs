@@ -1,5 +1,5 @@
 ---
-title: "Create Valid ID-IDREF-IDREFS Type Attributes - sql:prefix (SQLXML) | Microsoft Docs"
+title: "Valid ID attributes using sql:prefix (SQLXML) | Microsoft Docs"
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

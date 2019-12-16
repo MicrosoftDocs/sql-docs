@@ -1,5 +1,5 @@
 ---
-title: "Executing XPath Queries with Namespaces (SQLXMLOLEDB Provider) | Microsoft Docs"
+title: "Execute XPath queries with namespaces (SQLXMLOLEDB) | Microsoft Docs"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -16,6 +16,7 @@ helpviewer_keywords:
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing XPath Queries with Namespaces (SQLXMLOLEDB Provider)

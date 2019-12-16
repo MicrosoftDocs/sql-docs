@@ -1,5 +1,5 @@
 ---
-title: "Converting Annotated XDR Schemas to Equivalent XSD Schemas (SQLXML) | Microsoft Docs"
+title: "Convert annotated XDR schemas to XSD (SQLXML) | Microsoft Docs"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

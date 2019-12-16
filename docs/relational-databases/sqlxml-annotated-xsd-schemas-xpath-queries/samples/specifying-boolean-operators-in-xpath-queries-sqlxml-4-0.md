@@ -1,5 +1,5 @@
 ---
-title: "Specifying Boolean Operators in XPath Queries (SQLXML) | Microsoft Docs"
+title: "Use Boolean operators in XPath Queries (SQLXML) | Microsoft Docs"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

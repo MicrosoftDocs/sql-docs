@@ -1,5 +1,5 @@
 ---
-title: "Retrieving Unconsumed Data Using the sql:overflow-field (SQLXML) | Microsoft Docs"
+title: "Get unconsumed data with sql:overflow-field (SQLXML) | Microsoft Docs"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

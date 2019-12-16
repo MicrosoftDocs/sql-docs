@@ -1,5 +1,5 @@
 ---
-title: "Specifying the sql:inverse Attribute on sql:relationship (SQLXML) | Microsoft Docs"
+title: "Set sql:inverse attribute on sql:relationship (SQLXML) | Microsoft Docs"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

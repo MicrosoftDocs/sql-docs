@@ -1,5 +1,5 @@
 ---
-title: "Requesting URL References to BLOB Data Using sql:encode (SQLXML) | Microsoft Docs"
+title: "Get URL references to BLOB data with sql:encode (SQLXML) | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

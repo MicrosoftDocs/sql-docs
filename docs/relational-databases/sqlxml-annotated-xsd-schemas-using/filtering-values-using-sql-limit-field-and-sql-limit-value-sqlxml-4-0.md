@@ -1,5 +1,5 @@
 ---
-title: "Filtering Values Using sql:limit-field and sql:limit-value (SQLXML) | Microsoft Docs"
+title: "Filter with sql:limit-field and sql:limit-value (SQLXML) | Microsoft Docs"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

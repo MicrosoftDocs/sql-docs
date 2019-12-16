@@ -1,5 +1,5 @@
 ---
-title: "Sample Annotated XSD Schema for XPath Examples (SQLXML) | Microsoft Docs"
+title: "Sample annotated XSD Schema for XPath (SQLXML) | Microsoft Docs"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

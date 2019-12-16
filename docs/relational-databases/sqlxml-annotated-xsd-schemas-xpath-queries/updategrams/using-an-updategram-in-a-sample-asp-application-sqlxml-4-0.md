@@ -1,5 +1,5 @@
 ---
-title: "Using an Updategram in a Sample ASP Application (SQLXML) | Microsoft Docs"
+title: "Use Updategram in a sample ASP Application (SQLXML) | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

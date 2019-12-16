@@ -1,5 +1,5 @@
 ---
-title: "Specifying a Target Namespace Using the targetNamespace Attribute (SQLXML) | Microsoft Docs"
+title: "Specify a target namespace with targetNamespace (SQLXML) | Microsoft Docs"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

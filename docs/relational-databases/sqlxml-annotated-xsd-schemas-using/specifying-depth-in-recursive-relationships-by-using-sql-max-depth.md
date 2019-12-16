@@ -1,6 +1,5 @@
 ---
-title: "Specifying Depth in Recursive Relationships by Using sql:max-depth | Microsoft Docs"
-ms.custom: ""
+title: "Set recursive depth relationships with sql:max-depth | Microsoft Docs"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -21,6 +20,7 @@ ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Depth in Recursive Relationships by Using sql:max-depth

@@ -1,5 +1,5 @@
 ---
-title: "Data Type Coercions and the sql:datatype Annotation (SQLXML) | Microsoft Docs"
+title: "Convert data types with sql:datatype (SQLXML) | Microsoft Docs"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

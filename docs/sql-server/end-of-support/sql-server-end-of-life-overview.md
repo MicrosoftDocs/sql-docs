@@ -182,7 +182,7 @@ If you'd like to offload maintenance, cost, and never worry about having to upgr
 [Intelligent Insights](/azure/sql-database/sql-database-intelligent-insights)       
 
 Tools:
-- [Data migration assistant](../../dma/dma-overview.md)
+- [Data Migration Assistant](../../dma/dma-overview.md)
 - [Database Migration Service](/azure/dms/dms-overview)
 
 ## Azure SQL Database managed instance
@@ -220,7 +220,7 @@ If you'd like to take advantage of offloading maintenance and cost, but find the
 [Cloud adoption framework](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
 
 Tools:
-- [Data migration Assistant](../../dma/dma-overview.md)
+- [Data Migration Assistant](../../dma/dma-overview.md)
 - [Database Migration Service](/azure/dms/dms-overview)
 
 ## Non-SQL options
@@ -250,7 +250,6 @@ The following table provides an approximation of lifecycle dates for [!INCLUDE[s
 
 > [!IMPORTANT]
 > If any discrepancy exists between this table, and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Lifecycle page, then the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Lifecycle supersedes this table, as this table is meant to be used as an approximate reference.  
-
  
 ## Next Steps  
 [SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)   

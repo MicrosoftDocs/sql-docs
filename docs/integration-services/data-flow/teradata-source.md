@@ -22,7 +22,7 @@ The source uses the Teradata connection manager to connect to the Teradata sourc
 
 ## Troubleshoot the Teradata source
 
-You can log the calls that the Teradata source makes to the Teradata Parallel Transporter API. To do so, enable package logging and then select the **Diagnostic** event at the package level.
+You can log the calls that the Teradata source makes to the Teradata Parallel Transporter (TPT) API. To do so, enable package logging and then select the **Diagnostic** event at the package level.
 
 You can log the Open Database Connectivity (ODBC) calls that the Teradata source makes to the Teradata ODBC driver by enabling the ODBC driver manager trace. For more information, see [How to generate an ODBC trace with the ODBC Data Source Administrator](https://docs.microsoft.com/sql/odbc/admin/setting-tracing-options).
 
@@ -53,7 +53,7 @@ The custom properties of the Teradata source are listed in the following table. 
 |SpoolMode|Varchar|Valid values are: <br>*Spool*: Use the default value *Spool*. <br> *NoSpool*: Do not use *Spool*. This value is valid only if the database server (DBS) supports *NoSpool*. <br>  *NoSpoolOnly*: Do not use *Spool* in any case. The job will be terminated with an error if the DBS does not support *NoSpool*.|
 |SqlCommand|String|The SQL command to be executed when `AccessMode` is set to *SQL Command*.|
 |TableName|String|The name of the table containing the data to be used when `AccessMode` is set to *Table Name*.|
-|TenacityHours|Integer|The number of hours the Teradata Parallel Transporter (TPT) driver attempts to log in when the maximum number of load/export operations are already running. The default value is *4 hours*. This property is in the **Advanced Editor** pane.|
+|TenacityHours|Integer|The number of hours the TPT driver attempts to log in when the maximum number of load/export operations are already running. The default value is *4 hours*. This property is in the **Advanced Editor** pane.|
 |TenacitySleep|Integer|The number of minutes the TPT driver pauses before attempting to log in when the limit is reached. The limit is defined by the `MaxSessions` and `TenacityHours` properties. Default value is 6 minutes. This property is in the **Advanced Editor** pane.|
 |UnicodePassThrough|Boolean|*Off* (default value): Disable Unicode pass-through. <br>*On*: Enable Unicode pass-through.|
 

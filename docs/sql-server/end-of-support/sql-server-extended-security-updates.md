@@ -30,8 +30,8 @@ ESUs are distributed **if and when available**, once a security vulnerability is
 
 ESUs do not include:
 - New features
-- Customer-requested non-security hotfixes
-- Design change requests
+- Functional improvements
+- Customer-requested fixes
 
 ### Support
 
@@ -215,7 +215,7 @@ Extended Security Updates are now available for purchase and can be ordered from
 
 **What do Extended Security Updates include?** 
 
-Extended Security Updates include provision of Security Updates and Bulletins rated **critical** for a maximum of three years after July 9, 2019. Extended Security Updates will be distributed if and when available. Extended Security Updates do not include technical support, but you may use other [!INCLUDE[msCoName](../../includes/msconame-md.md)] support plans to get assistance on your [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] questions on workloads covered by Extended Security Updates. Extended Security Updates do not include new features, customer-requested non-security hotfixes, or design change requests. However, [!INCLUDE[msCoName](../../includes/msconame-md.md)] may include non-security fixes as deemed necessary.
+Extended Security Updates include provision of Security Updates and Bulletins rated **critical** by the [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/), for a maximum of three years after July 9, 2019. Extended Security Updates will be distributed if and when available. Extended Security Updates do not include technical support, but you may use other [!INCLUDE[msCoName](../../includes/msconame-md.md)] support plans to get assistance on your [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] questions on workloads covered by Extended Security Updates. Extended Security Updates do not include new features, functional improvements, nor customer-requested fixes. However, [!INCLUDE[msCoName](../../includes/msconame-md.md)] may include non-security fixes as deemed necessary.
 
 **Why do Extended Security Updates for SQL Server 2008 and 2008 R2 only offer "critical" updates?**
 

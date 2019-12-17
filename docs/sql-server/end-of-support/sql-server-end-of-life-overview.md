@@ -4,7 +4,6 @@ description: Learn about the different options available for the end of support 
 ms.custom: ""
 ms.date: "12/09/2019"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 author: MashaMSFT
@@ -128,7 +127,7 @@ Another option is to migrate your workload to an [Azure Virtual Machine running 
 
 - **Manageability**: You still have to manage both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and operating system software. 
 - **Networking**: You have to configure the virtual machine to integrate with your networking and Active Directory infrastructure, which is an added layer of complexity. 
-- **Shared storage FCI**: Azure virtual machines only support failover cluster instances using Storage Spaces Direct or Premium File Shares, and do not support a failover cluster instance using shared storage. As such, Azure virtual machines only support failover cluster instances when using Windows Server 2016 or greater.
+- **Shared storage FCI**: Azure virtual machines only support failover cluster instances using Storage Spaces Direct or Premium File Shares, and do not support a failover cluster instance using shared storage. As such, Azure virtual machines only support failover cluster instances when using Windows Server 2012 or greater.
 - **Scalability downtime**: There is downtime while changing the CPU and storage resources. 
 - **Size limitation**: Although the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance can support as many databases as needed, the cumulative total of all databases for a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is 256 TB, as opposed to 524 PB for an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 

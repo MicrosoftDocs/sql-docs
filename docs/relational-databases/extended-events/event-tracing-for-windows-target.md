@@ -1,5 +1,5 @@
 ---
-title: "Event Tracing for Windows Target | Microsoft Docs"
+title: "Event Tracing for Windows Target"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql

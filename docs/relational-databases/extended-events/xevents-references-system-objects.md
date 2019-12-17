@@ -1,5 +1,5 @@
 ---
-title: "XEvents related system objects | Microsoft Docs"
+title: "XEvents related system objects"
 ms.custom: ""
 ms.date: 03/24/2019
 ms.prod: sql

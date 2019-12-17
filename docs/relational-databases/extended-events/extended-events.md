@@ -1,5 +1,5 @@
 ---
-title: "XEvents overview - SQL Server | Microsoft Docs"
+title: "XEvents overview - SQL Server"
 ms.custom: ""
 ms.date: "07/23/2019"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: Extended events in SQL Server | Microsoft Docs"
+title: "Quickstart: Extended events in SQL Server"
 ms.custom: ""
 ms.date: "05/28/2019"
 ms.prod: sql

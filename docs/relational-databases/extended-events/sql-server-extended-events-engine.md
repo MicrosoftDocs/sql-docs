@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Extended Events Engine | Microsoft Docs"
+title: "SQL Server Extended Events Engine"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

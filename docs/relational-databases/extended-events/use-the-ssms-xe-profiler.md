@@ -1,5 +1,5 @@
 ---
-title: "Use the SSMS XEvent Profiler | Microsoft Docs"
+title: "Use the SSMS XEvent Profiler"
 ms.custom: ""
 ms.date: 10/02/2016
 ms.prod: sql

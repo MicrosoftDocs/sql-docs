@@ -1,5 +1,5 @@
 ---
-title: "Use the PowerShell Provider for Extended Events | Microsoft Docs"
+title: "Use the PowerShell Provider for Extended Events"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Use the system_health Session | Microsoft Docs"
+title: "Use the system_health Session"
 ms.custom: ""
 ms.date: "11/27/2018"
 ms.prod: sql

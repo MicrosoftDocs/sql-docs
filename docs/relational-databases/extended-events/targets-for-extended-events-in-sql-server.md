@@ -1,5 +1,5 @@
 ---
-title: "Targets for Extended Events in SQL Server | Microsoft Docs"
+title: "Targets for Extended Events in SQL Server"
 ms.custom: ""
 ms.date: "09/07/2018"
 ms.prod: sql

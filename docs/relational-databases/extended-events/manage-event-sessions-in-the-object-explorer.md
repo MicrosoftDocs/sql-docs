@@ -1,5 +1,5 @@
 ---
-title: "Manage Event Sessions in the Object Explorer | Microsoft Docs"
+title: "Manage Event Sessions in the Object Explorer"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

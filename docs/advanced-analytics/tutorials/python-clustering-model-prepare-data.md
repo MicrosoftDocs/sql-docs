@@ -4,7 +4,7 @@ description: In part two of this four-part tutorial series, you'll prepare SQL d
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/30/2019
+ms.date: 12/17/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
@@ -48,12 +48,16 @@ Open a new notebook in Azure Data Studio and enter the following script.
 
 In the connection string, replace connection details as needed.
 
+<!-- Removed/replaced these lines below: 
+import revoscalepy as revoscale 
+conn_str = 'Driver=SQL Server;Server=localhost;Database=tpcxbb_1gb;Trusted_Connection=True;'
+-->
+
 ```python
 # Load packages.
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import revoscalepy as revoscale
 from scipy.spatial import distance as sci_distance
 from sklearn import cluster as sk_cluster
 
@@ -64,7 +68,7 @@ from sklearn import cluster as sk_cluster
 ################################################################################################
 
 # Connection string to connect to SQL Server named instance.
-conn_str = 'Driver=SQL Server;Server=localhost;Database=tpcxbb_1gb;Trusted_Connection=True;'
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
 
 input_query = '''SELECT
 ss_customer_sk AS customer,
@@ -112,12 +116,19 @@ column_info = {
 
 Results from the query are returned to Python using the revoscalepy **RxSqlServerData** function. As part of the process, you'll use the column information you defined in the previous script.
 
+<!-- Replacing this...
 ```python
 data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
                                         connection_string=conn_str)
 revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=False)
 # import data source and convert to pandas dataframe.
 customer_data = pd.DataFrame(revoscale.rx_import(data_source))
+```
+-->
+<!-- ...with this -->
+
+```python
+customer_data = pandas.read_sql(input_query, conn_str)
 ```
 
 Now display the beginning of the data frame to verify it looks correct.

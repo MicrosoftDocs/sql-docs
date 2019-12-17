@@ -4,7 +4,7 @@ description: In this four-part tutorial series, you'll  cluster customers, using
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/30/2019
+ms.date: 12/17/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
@@ -41,27 +41,19 @@ In [part four](python-clustering-model-deploy.md), you'll learn how to create a 
 
 * [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) with the Python language option - Follow the installation instructions in the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fadvanced-analytics%2ftoc.json&view=sql-server-linux-ver15).
 
-* Python IDE - This tutorial uses a Python notebook in [Azure Data Studio](../../azure-data-studio/what-is.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md). You can also use your own Python IDE, such as a Jupyter notebook or [Visual Studio Code](https://code.visualstudio.com/docs) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
+* [Azure Data Studio](../../azure-data-studio/what-is.md). You'll use a notebook in Azure Data Studio for both Python and SQL. For more information about notebooks, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
 
-* [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) package - The **revoscalepy** package is included in SQL Server Machine Learning Services. To use the package on a client computer, see [Set up a data science client for Python development](../python/setup-python-client-tools-sql.md) for options to install this package locally.
+  * Python - You can also use your own Python IDE, such as a Jupyter notebook or [Visual Studio Code](https://code.visualstudio.com/docs) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
+  * SQL - You can also use [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
 
-  If you're using a Python notebook in Azure Data Studio, follow these additional steps to use **revoscalepy**:
+* Additional Python packages - The examples in this tutorial series use Python packages that you may or may not have installed.
 
-  1. Open Azure Data Studio
-  1. From the **File** menu, select **Preferences** and then **Settings**
-  1. Expand **Extensions** and select **Notebook configuration**
-  1. Under **Python Path**, enter the path where you installed the libraries (for example, `C:\path-to-python-for-mls`)
-  1. Make sure **Use Existing Python** is checked
-  1. Restart Azure Data Studio
-
-  If you're using a different Python IDE, follow similar steps for your IDE.
-
-* SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is.md). You can also use [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
-
-* Additional Python packages - The examples in this tutorial series use Python packages that you may or may not have installed. Use the following **pip** commands to install these packages if necessary.
+  Open a **Command Prompt** and change to the installation path for the version of Python you use in Azure Data Studio. For example, `cd %LocalAppData%\Programs\Python\Python37-32`. Then run the following commands to install any packages that are not already installed.
 
   ```console
   pip install matplotlib
+  pip install pandas
+  pip install pyodbc
   pip install scipy
   pip install sklearn
   ```

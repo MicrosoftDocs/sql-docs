@@ -15,41 +15,43 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 # SQL Server end of support options 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-Each version of SQL Server is backed by a minimum of 10 years support, which includes five years in mainstream support, and five years in extended support, including regular security updates. 
+Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is backed by a minimum of 10 years support, which includes five years in mainstream support, and five years in extended support:
+-  **Mainstream support** includes functional, performance, scalability and security updates. 
+-  **Extended support** includes only security updates. 
 
-**End of support** means the end of security updates, which can cause security and compliance issues as well as put applications and their business at risk. Additionally, support options are limited for customers who call into Microsoft Support for a product that has reached the end of its support cycle. 
+**End of support** means the end of the 10-year lifecycle and to all security updates, which can cause security and compliance issues as well as put applications and their business at risk. Additionally, support options are limited for customers who call into Microsoft Support for a product that has reached the end of its support cycle. 
 
-**End of life** means that Microsoft has stopped all development for the product, including security fixes, and the product can no longer be covered by an Extended Security Update subscription. For example, as of 2019, SQL Server 2008 has reached end of support, and SQL Server 2000 has reached end of life. 
+**End of life** means that [!INCLUDE[msCoName](../../includes/msconame-md.md)] has stopped all development for the product, including security fixes, and the product can no longer be covered by an Extended Security Update (ESU) subscription. For example, as of 2019, [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] have reached end of support, and [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] has reached end of life. 
 
-Once your SQL Server has reached the end of its support lifecycle, you can choose to:
-- Upgrade to current version of SQL Server.
+Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of support stage, you can choose to:
+- Upgrade to a current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 - Purchase an [Extended Security Updates subscription](https://www.microsoft.com/en-us/cloud-platform/extended-security-updates). 
-- Migrate your workload to an Azure virtual machine as-is for [free Extended Security Updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support).
+- Migrate your workload to an Azure Virtual Machine as-is for [free Extended Security Updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support).
 - Migrate your workload to an [Azure SQL Database service](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas). 
 
 For more information, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005) and [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008).  
-
 
 ![End of support options](media/sql-server-end-of-life-overview/sql-server-upgrade-paths.png)
 
 ## Upgrade SQL Server
 
-Once your SQL Server has reached the end of support, you can choose to upgrade to a newer and supported version of SQL Server. This gives you environmental consistency, allows you to leverage the latest and greatest feature set, and adopts the new version's support life cycle. 
-
-
+Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of support, you can choose to upgrade to a newer and supported version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This gives you environmental consistency, allows you to use the latest and greatest feature set, and adopts the new version's support lifecycle. 
 
 ### Benefits
-- **Latest technology**: Get the most out of innovation by taking advantage of the latest features and security improvements. 
-- **Control**: You have the most control over features and scalability because you manage both hardware and software.
-- **Familiar environment**: If you're upgrading from an older instance of SQL Server, this is the most similar environment.
-- **Wide applicability**: Applicable for database applications of any kind, including OLTP systems and data warehousing. 
-
+- **Latest technology**: New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions introduce innovations that include performance, scalability, and high-availability features, and improved security. 
+- **Control**: You have the most control over features and scalability, because you manage both hardware and software.
+- **Familiar environment**: If you're upgrading from an older version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this is the most similar environment.
+- **Wide applicability**: Applicable for database applications of any kind, including OLTP systems and data warehousing.
+- **Low risk for database applications**: By maintaining the database compatibility to the same level as the legacy system, existing database applications are protected from functional and performance changes that can have detrimental effects. An application only needs to be fully re-certified when it needs to use features that are gated by a newer database compatibility setting. For more information, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
 
 ### Considerations
 
 - **Costly**: You have to make the biggest up-front investment and provide the most ongoing management, because you have to buy, maintain, and manage your own hardware and software.
-- **Downtime**: There could be downtime, plus the inherent risk of running into issues during an in-place upgrade process.
-- **Potentially risky**: If you're on Windows 2008 or 2008 R2, you will also need to upgrade the OS as the newer versions of SQL may not be supported on Windows 2008 or 2008 R2. There is added risk during the OS upgrade process, so doing a side-by-side migration may be the more prudent, yet more costly, approach. Additionally, in-place OS upgrades are not supported on failover cluster instances.
+- **Downtime**: There could be downtime depending on the upgrade strategy that's used, plus the inherent risk of running into issues during an in-place upgrade process.
+- **Potentially complex**: If you're on Windows Server 2008 or [!INCLUDE[winserver2008r2-md](../../includes/winserver2008r2-md.md)], you will also need to upgrade the OS as the newer versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may not be supported on those Windows versions. There is added risk during the OS upgrade process, so doing a side-by-side migration may be the more prudent, yet more costly, approach. In-place OS upgrades are not supported on failover cluster instances for Windows Server 2008 or [!INCLUDE[winserver2008r2-md](../../includes/winserver2008r2-md.md)]. 
+
+  > [!NOTE]
+  > Cluster OS rolling upgrades are available starting with Windows Server 2016.
 
 ### Resources
 
@@ -57,9 +59,9 @@ Once your SQL Server has reached the end of support, you can choose to upgrade t
 [Upgrade SQL Server using Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 What's new in:
-   - [SQL Server 2016](../what-s-new-in-sql-server-2016.md)
-   - [SQL Server 2017](../what-s-new-in-sql-server-2017.md) 
-   - [SQL Server 2019](/sql-server/what-s-new-in-sql-server-ver15)   
+- [SQL Server 2016](../what-s-new-in-sql-server-2016.md)
+- [SQL Server 2017](../what-s-new-in-sql-server-2017.md) 
+- [SQL Server 2019](/sql-server/what-s-new-in-sql-server-ver15)   
 
 Hardware requirements:
 - [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md)  
@@ -71,11 +73,11 @@ Supported version and edition upgrades:
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
 
 Tools:
-   -  [Database Experimentation Assistant](../../dea/database-experimentation-assistant-overview.md) can help evaluate the target version of SQL Server for a specific workload. 
-   -  [Data Migration Assistant](../../dma/dma-overview.md) can help detect compatibility issues that can impact database functionality in your new version of SQL Server. 
+-  [Database Experimentation Assistant](../../dea/database-experimentation-assistant-overview.md) can help evaluate the target version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for a specific workload. 
+-  [Data Migration Assistant](../../dma/dma-overview.md) can help detect compatibility issues that can impact database functionality in your new version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+-  [Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md) can help to tune workloads that may experience adverse effects when upgrading the database compatibility.
 
-
-The following image provides an example of innovation over the various versions of SQL Server throughout the years: 
+The following image provides an example of innovation over the various versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] throughout the years: 
 
 ![25 years of SQL Server innovation](media/sql-server-end-of-life-overview/sql-server-version-improvements.png)
 
@@ -85,146 +87,141 @@ If you're not ready to upgrade, and you're not ready to move to the cloud, you h
 
 ### Benefits 
 
-- **Application support**: This is the best option if your application has not yet been certified for a newer version of SQL Server. 
+- **Application support**: This is the best option if your application requires re-certification on a newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is common for applications that are not using [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md). 
 - **Consistent infrastructure**: You don't have to change your infrastructure in any way. 
-- **Technical support**: If you have Software Assurance, or another support plan, you can continue receiving technical support from Microsoft on your end-of-support SQL product. This is the only way to get support for SQL Server 2008 and SQL Server 2008 R2 after the end of the support date. 
-- **Time**:  This option is available for three years, giving you extra time to certify your applications. 
+- **Technical support**: If you have Software Assurance, or another support plan, you can continue receiving technical support from [!INCLUDE[msCoName](../../includes/msconame-md.md)] on your end-of-support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product. This is the only way to get support for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]. 
+- **Time**: This option is available for three years, giving you extra time to certify your applications. 
 
 ### Considerations 
-
 
 - **Limited availability**: This option is only available to customers with Software Assurance or subscription licenses. 
 - **Costly**: This option can prove costly, as Extended Security Updates are approximately 75% of the on-premises license cost annually.
 - **Limited timeframe**: This option is only available for three years so you will still need to upgrade or migrate at the end of the three-year period if you want to ensure your security and compliance. 
-- **No bug fixes**: If you encounter a bug with the product, Microsoft will not release a bug-fix for it. 
-- **Limited support**: Extended Security Updates do not include new features, customer-requested non-security hotfixes, or design change requests. 
-
+- **No bug fixes**: If you encounter a non-security bug with the product, [!INCLUDE[msCoName](../../includes/msconame-md.md)] will not release a fix for it. 
+- **Limited support**: Extended Security Updates do not include new features, functional improvements, nor customer-requested fixes. Security fixes are limited to those rated as  Critical by the [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/).
 
 ### Resources
 
-[Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
-<br/> [Detailed ESU frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates)
-<br/> [Extend support for free by migrating as-is to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
-<br/> [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default)
+[Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)       
+[Detailed ESU frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates)       
+[Extend support for free by migrating as-is to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)       
+[Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default)       
 
+## Azure Virtual Machine
 
-## Azure virtual machine
-
-Another option is to migrate your workload to an [Azure virtual machine running SQL Server](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview). You can migrate your system as-is and keep your end-of-support SQL Server, or you can upgrade to a newer version of SQL Server. Best for migrations and applications requiring OS-level access. SQL virtual machines are lift-and-shift ready for existing applications that require fast migration to the cloud with minimal or no changes. 
+Another option is to migrate your workload to an [Azure Virtual Machine running SQL Server](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview). You can migrate your system as-is and keep your end-of-support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or you can upgrade to a newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is best for migrations and applications requiring OS-level access. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] virtual machines are lift-and-shift ready for existing applications that require fast migration to the cloud with minimal or no changes. 
 
 ### Benefits
 
-- **Free Extended Security Updates**: If you choose to keep your SQL Server as-is using SQL Server 2008 or SQL Server 2008 R2, you can get free Extended Security Updates for three years past the end of the support date, without having Software Assurance. 
+- **Free Extended Security Updates**: If you choose to keep your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as-is using [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] or [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)], you can get free Extended Security Updates for three years past the end of support date, even without having Software Assurance. 
 - **Cost-saving**: You save the cost of hardware and server software, only paying for hourly usage. 
-- **Lift-and-shift**: You can lift-and-shift your SQL Server and application infrastructure into the cloud with minimal or no changes. 
+- **Lift-and-shift**: You can lift-and-shift your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and application infrastructure into the cloud with minimal or no changes. 
 - **Hosted environment**: You will get the benefits of a hosted environment, such as offloading hardware, and software maintenance. 
-- **Automation**: If you're on Windows 2008 R2 and greater, you will get the benefit of automated patching, and automated backups. 
-- **OS Control**: You have control over the operating environment, but with the familiar feature set of SQL Server. 
+- **Automation**: If you're on [!INCLUDE[winserver2008r2-md](../../includes/winserver2008r2-md.md)] and greater, you will get the benefit of automated patching, and automated backups. 
+- **OS Control**: You have control over the operating system environment, but with the familiar feature set of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Rapid deployment**: You can quickly deploy from a library of virtual machine images. 
 - **License mobility**: You can bring your license, allowing you to decrease operating cost. 
-- **High availability**: Not only do you benefit from the built-in virtual machine availability by the Azure infrastructure boasting up to 99.99% availability, but you can also take advantage of SQL Server high availability options such as failover cluster instances and Always On availability groups. 
+- **High availability**: Not only do you benefit from the built-in virtual machine availability by the Azure infrastructure boasting up to 99.99% availability, but you can also take advantage of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] high availability options such as failover cluster instances and Always On availability groups. 
+- **Low risk for database applications**: By maintaining the database compatibility to the same level as the legacy databases, existing database applications are protected from functional and performance changes that can have detrimental effects. An application only needs to be fully re-certified when it needs to use features that are gated by a newer database compatibility setting. For more information, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
 
 ### Considerations
 
-- **Manageability**: You still have to manage both SQL Server and operating system software. 
-- **Networking**: You have to configure the virtual machine to integrate with your networking and active directory infrastructure, which is an added layer of complexity. 
-- **Shared storage FCI**: Azure virtual machines only support failover cluster instances using Storage Spaces Direct or Premium File Shares, and do not support a failover cluster instance using shared storage. 
-- **Scalability downtime**: there is downtime while changing the CPU and storage resources. 
-- **Size limitation**: Although the SQL Server instance can support as many databases as needed, the cumulative total of all databases for a single instance of SQL Server is 256 TB, as opposed to 524 PB for an on-premises SQL Server. 
+- **Manageability**: You still have to manage both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and operating system software. 
+- **Networking**: You have to configure the virtual machine to integrate with your networking and Active Directory infrastructure, which is an added layer of complexity. 
+- **Shared storage FCI**: Azure virtual machines only support failover cluster instances using Storage Spaces Direct or Premium File Shares, and do not support a failover cluster instance using shared storage. As such, Azure virtual machines only support failover cluster instances when using Windows Server 2016 or greater.
+- **Scalability downtime**: There is downtime while changing the CPU and storage resources. 
+- **Size limitation**: Although the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance can support as many databases as needed, the cumulative total of all databases for a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is 256 TB, as opposed to 524 PB for an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 ### Resources
 
-[SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)
-<br/> [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
-<br/> [Migrate SQL Server to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
-<br/> [Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
-<br/> [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
-<br/> [Detailed ESU frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates)
-<br/> [SQL virtual machine automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
-<br/> [SQL virtual machine automated backup](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-backup-v2)
-<br/> [SQL virtual machine high availability](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
-<br/> [SQL virtual machine frequently asked questions](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-faq)
-
-
+[SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)       
+[Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)       
+[Migrate SQL Server to an Azure VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)       
+[Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)       
+[Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)       
+[Detailed ESU frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates)       
+[SQL virtual machine automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)       
+[SQL virtual machine automated backup](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-backup-v2)       
+[SQL virtual machine high availability](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)       
+[SQL virtual machine frequently asked questions](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-faq)       
 
 ## Azure SQL Database single database
 
-If you'd like to offload maintenance, cost, and never worry about having to upgrade again, you can move your workload to [Azure SQL Database single database](/azure/sql-database/sql-database-single-database). This option is best for modern cloud applications that want to use the latest stable SQL Server features and have time constraints in development and marketing. 
+If you'd like to offload maintenance, cost, and never worry about having to upgrade again, you can move your workload to [Azure SQL Database single database](/azure/sql-database/sql-database-single-database). This option is best for modern cloud applications that want to use the latest stable [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features and have time constraints in development and marketing. 
 
 ### Benefits
 
-- **Cost**:  Single database can be cost-effective, since hardware, software, and maintenance is offloaded, and you can pay for usage by the second or the hour. 
-- **Flexibility**:  Single database is particularly well suited for cloud-designed applications when developer productivity and fast time-to-market solutions are critical, or that have require external access.  
-- **Common features**: The most commonly used SQL Server features are available, but not as many as for an Azure SQL Database managed instance.  
+- **Cost**: Single database can be cost-effective, since hardware, software, and maintenance is offloaded, and you can pay for usage by the second or the hour. 
+- **Flexibility**: Single database is particularly well suited for cloud-designed applications when developer productivity and fast time-to-market solutions are critical, or that have require external access.  
+- **Common features**: The most commonly used [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features are available, but not as many as for an Azure SQL Database managed instance.  
 - **Rapid deployment**: You can quickly deploy a single database. 
-- **Scalability**: You can quickly and easily scale up and down as is needed for your business, providing additional cost-saving benefits. 
+- **Scalability**: You can quickly and easily scale up and down as needed for your business, providing additional cost-saving benefits. 
 - **Availability**: The cost of the service includes both storage and high availability, with 99.995% availability guaranteed.  
 - **Automation**: Patching and backups happening automatically, saving you valuable maintenance time.  
 - **Intelligent Insights**: Gain insight about the performance of your database with built-in intelligence analytics.  
-- **Versionless**: Azure SQL Database is versionless, meaning you are always on the latest version, and never have to worry about upgrading, or downtime. Plus, you're always on the latest and greatest, with our latest stable features being released to the cloud first.
-
+- **Versionless**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is versionless, meaning you are always on the latest version, and never have to worry about upgrading, or downtime. Plus, you're always on the latest and greatest, with our latest stable features being released to the cloud first.
+- **Low risk for database applications**: By maintaining the database compatibility to the same level as the on-premises database, existing applications are protected from functional and performance changes that can have detrimental effects. An application only needs to be fully re-certified when it needs to use features that are gated by a newer database compatibility setting. For more information, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
 
 ### Considerations
 
-- **Limited migration options**:  You can only migrate a single database at a time, rather than an entire instance.  
-- **Feature limitation**:  Although the most commonly used SQL Server features are available, the feature set for a single database is not as robust as for an Azure SQL Database managed instance, or SQL Server. 
-- **T-SQL differences**:  There are some Transact-SQL (T-SQL) differences between a single database and an on-premises SQL Server.  
-- **Size limitations**:  A single database has a maximum database size of 100 TB, compared to a 524-PB size for SQL Server. 
+- **Limited migration options**:  You can only migrate a single database at a time, rather than an entire instance.   
+- **Feature limitation**:  Although the most commonly used [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features are available, the feature set for a single database is not as complete as for an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+- **[!INCLUDE[tsql](../../includes/tsql-md.md)] differences**:  There are some [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) differences between a single database and an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+- **Size limitations**:  A single database has a maximum database size of 100 TB, compared to a 524 PB size for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Maintenance time**: There is no guarantee for the exact maintenance time, though it's nearly transparent. 
-
 
 ### Resources
 
-[Azure SQL Database overview](/azure/sql-database/sql-database-technical-overview)
-<br/> [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
-<br/> [SQL Database feature comparison](/azure/sql-database/sql-database-features)
-<br/> [Migrate SQL Server to a single database](/azure/sql-database/sql-database-single-database-migrate)
-<br/> [Cloud adoption framework](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
-<br/> [Single database T-SQL differences](/azure/sql-database/sql-database-transact-sql-information)
-<br/> [vCore](/azure/sql-database/sql-database-vcore-resource-limits-single-databases) and [DTU](/azure/sql-database/sql-database-dtu-resource-limits-single-databases) resource limits
-<br/>[Intelligent Insights](/azure/sql-database/sql-database-intelligent-insights)
-<br/> Tools:
-   - [Data migration assistant](../../dma/dma-overview.md)
-   - [Database Migration Service](/azure/dms/dms-overview)
+[Azure SQL Database overview](/azure/sql-database/sql-database-technical-overview)       
+[Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)       
+[SQL Database feature comparison](/azure/sql-database/sql-database-features)       
+[Migrate SQL Server to a single database](/azure/sql-database/sql-database-single-database-migrate)       
+[Cloud adoption framework](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
+[Single database T-SQL differences](/azure/sql-database/sql-database-transact-sql-information)       
+[vCore](/azure/sql-database/sql-database-vcore-resource-limits-single-databases) and [DTU](/azure/sql-database/sql-database-dtu-resource-limits-single-databases) resource limits       
+[Intelligent Insights](/azure/sql-database/sql-database-intelligent-insights)       
+
+Tools:
+- [Data migration assistant](../../dma/dma-overview.md)
+- [Database Migration Service](/azure/dms/dms-overview)
 
 ## Azure SQL Database managed instance
 
-If you'd like to take advantage of offloading maintenance and cost, but find the feature set of an Azure SQL Database single database too limiting, you can move to [Azure SQL Database managed instance](/azure/sql-database/sql-database-managed-instance). A managed instance closely resembles an on-premises SQL Server, without having to worry about such things as hardware failure, or patching.  Managed instance is a collection of system and user databases with a shared set of resources that is lift-and-shift ready, and can be used for most migrations to the cloud. This option is best for new applications or existing on-premises applications that want to use the latest stable SQL Server features and that are migrated to the cloud with minimal changes. 
+If you'd like to take advantage of offloading maintenance and cost, but find the feature set of an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database too limiting, you can move to [Azure SQL Database managed instance](/azure/sql-database/sql-database-managed-instance). A managed instance closely resembles an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], without having to worry about such things as hardware failure, or patching. Managed instance is a collection of system and user databases with a shared set of resources that is lift-and-shift ready, and can be used for most migrations to the cloud. This option is best for new applications or existing on-premises applications that want to use the latest stable [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features and that are migrated to the cloud with minimal changes. 
 
 ### Benefits
 
-
-- **Cost**:   You can save costs by offloading software and hardware maintenance.  
-- **Lift and shift**:  You can lift and shift your entire SQL Server on-premises instance to a managed instance, including all databases with minimal to no database change. 
-- **Features**:  The feature set of a managed instance closely matches that of an on-premises instance of SQL Server, such as cross-database queries, transactional replication publishing and distribution, SQL job scheduling, and CLR support. 
-- **Scalability**:  All databases within a managed instance share resources, and it is possible to scale up and down at any time without downtime.   
-- **Automation**:  Patching and backups happening automatically, saving you valuable maintenance time.  
-- **Availability**:  The cost of the service includes both storage and high availability, with 99.99% availability guaranteed.  
-- **Intelligent Insights**:  Gain insight about the performance of your databases with built-in intelligence analytics.  
-- **Versionless**: Azure SQL Database is versionless, meaning you are always on the latest version, and never have to worry about upgrading, or downtime. Plus, you're always on the latest and greatest, with our latest stable features being released to the cloud first.
+- **Cost**: You can save costs by offloading software and hardware maintenance.  
+- **Lift and shift**: You can lift and shift your entire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on-premises instance to a managed instance, including all databases with minimal to no database change. 
+- **Features**: The feature set of a managed instance closely matches that of an on-premises instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], such as cross-database queries, transactional replication publishing and distribution, SQL job scheduling, and CLR support. 
+- **Scalability**: All databases within a managed instance share resources, and it is possible to scale up and down at any time without downtime.   
+- **Automation**: Patching and backups happening automatically, saving you valuable maintenance time.  
+- **Availability**: The cost of the service includes both storage and high availability, with 99.99% availability guaranteed.  
+- **Intelligent Insights**: Gain insight about the performance of your databases with built-in intelligence analytics.  
+- **Versionless**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is versionless, meaning you are always on the latest version, and never have to worry about upgrading, or downtime. Plus, you're always on the latest and greatest, with our latest stable features being released to the cloud first.
+- **Low risk for database applications**: By maintaining the database compatibility to the same level as the on-premises databases, existing database applications are protected from functional and performance changes that can have detrimental effects. An application only needs to be fully re-certified when it needs to use features that are gated by a newer database compatibility setting. For more information, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
 
 ### Considerations
 
-- **Cost**:  The managed instance option can be more costly than the single database option.  
-- **T-SQL differences**:  There are some Transact-SQL (T-SQL) differences between a single database and an on-premises SQL Server.  
+- **Cost**: The managed instance option can be more costly than the single database option.  
+- **[!INCLUDE[tsql](../../includes/tsql-md.md)] differences**: There are some [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) differences between a single database and an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 - **Deployment**:  Deploying a managed instance can take more time than a single database.  
-- **Feature limitation**:  Although a managed instance shares most features with SQL Server, there are still some features that are unsupported. 
-- **Size limitation**: The combined storage size for all SQL Databases within a managed instance are limited to 8 TB, as opposed to 524 PB for SQL Server on-premises.  
-- **Networking**:  The networking requirements for a managed instance add an extra layer of complexity to your infrastructure, and requires either an Azure ExpressRoute or VPN Gateway.
+- **Feature limitation**: Although a managed instance shares most features with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there are still some features that are unsupported. 
+- **Size limitation**: The combined storage size for all databases within a managed instance are limited to 8 TB, as opposed to 524 PB for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on-premises.  
+- **Networking**: The networking requirements for a managed instance add an extra layer of complexity to your infrastructure, and requires either an Azure ExpressRoute or VPN Gateway.
 - **Maintenance time**: There is no guarantee for the exact maintenance time, though it's nearly transparent. 
-
 
 ### Resources
 
-[Azure SQL Database managed instance overview](/azure/sql-database/sql-database-managed-instance)
-<br/> [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
-<br/> [SQL Database feature comparison](/azure/sql-database/sql-database-features)
-<br/> [Migrate SQL Server to a managed instance](/azure/sql-database/sql-database-managed-instance-migrate)
-<br/> [Cloud adoption framework](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
-<br/> Tools:
-    <br/> - [Data migration Assistant](../../dma/dma-overview.md)
-    <br/> - [Database Migration Service](/azure/dms/dms-overview)
+[Azure SQL Database managed instance overview](/azure/sql-database/sql-database-managed-instance)       
+[Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)       
+[SQL Database feature comparison](/azure/sql-database/sql-database-features)       
+[Migrate SQL Server to a managed instance](/azure/sql-database/sql-database-managed-instance-migrate)       
+[Cloud adoption framework](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
 
+Tools:
+- [Data migration Assistant](../../dma/dma-overview.md)
+- [Database Migration Service](/azure/dms/dms-overview)
 
 ## Non-SQL options
 
@@ -235,10 +232,9 @@ You may also want to consider a non-relational or NoSQL solution for certain dat
 |**Azure Cosmos DB**<br /><br /> Consider this option for modern, scalable, mobile, and web applications that use JSON data and require a combination of robust querying and transactional data processing.<br /><br /> For more info, see [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/).<br /><br /> For info about importing data, see [Import data to Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/import-data/).|Your documents are indexed and you can use familiar SQL syntax to query them.<br /><br /> The database is schema-free.<br /><br /> You can add properties to documents without having to rebuild indexes.<br /><br /> You get JSON and JavaScript support right inside the database engine.<br /><br /> You get native support for geospatial data and integration with other Azure Services including Azure Search, HDInsight, and Data Factory.<br /><br /> You get low latency, high-performance storage with reserved throughput levels.|  
 |**Azure table storage**<br /><br /> Consider this option to store petabytes of semi-structured data in a cost-effective solution.<br /><br /> For more info, see [Table Storage](https://azure.microsoft.com/services/storage/tables/).|You can evolve your apps and your table schema without taking the data offline.<br /><br /> You can scale up without sharding your dataset.<br /><br /> You get geo-redundant storage that replicates data across multiple regions.|  
  
- 
 ## Lifecycle dates
 
-The following table provides an approximation of lifecycle dates for SQL Server products. For greater details and accuracy, see the [Microsoft Lifecycle Policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy) page. 
+The following table provides an approximation of lifecycle dates for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] products. For greater details and accuracy, see the [Microsoft Lifecycle Policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy) page. 
 
 | **Version**     | **Release year** | **Mainstream Support end year** | **Extended Support end year** |
 | :---------------| :--------------- |:------------------------------- |
@@ -252,10 +248,10 @@ The following table provides an approximation of lifecycle dates for SQL Server 
 | [SQL Server 2005](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202005) | 2006 | 2011 | [2016](https://www.microsoft.com/sql-server/sql-server-2005) |
 | [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](https://blogs.technet.microsoft.com/cdnitmanagers/2012/12/06/sql-server-2000-end-of-support-april-2013/) |
 
-  > [!IMPORTANT]
-  > If any discrepancy exists between this table, and the Microsoft Lifecycle page, then the Microsoft Lifecycle supersedes this table, as this table is meant to be used as an approximate reference.  
+> [!IMPORTANT]
+> If any discrepancy exists between this table, and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Lifecycle page, then the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Lifecycle supersedes this table, as this table is meant to be used as an approximate reference.  
 
-  
+ 
 ## Next Steps  
 [SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)   
 [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005)   
@@ -265,6 +261,3 @@ The following table provides an approximation of lifecycle dates for SQL Server 
 [Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)   
 [Azure SQL Database overview](/azure/sql-database/sql-database-technical-overview)    
 
-
-  
-  

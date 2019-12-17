@@ -34,10 +34,9 @@ manager: craigg
   
     ```  
   
--   A third-party Azure explorer tool, such as [Azure Storage Explorer](http://azurestorageexplorer.codeplex.com/).  
+-   A third-party Azure explorer tool, such as [Azure Storage Explorer](https://azurestorageexplorer.codeplex.com/).  
   
  **Next Lesson:**  
   
  [Lesson 3: Create a SQL Server Credential](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
-  
   

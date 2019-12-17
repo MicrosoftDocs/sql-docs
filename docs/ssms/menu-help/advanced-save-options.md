@@ -1,6 +1,6 @@
 ---
-title: "Advanced Save Options | Microsoft Docs"
-ms.custom: ""
+title: "Advanced Save Options"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

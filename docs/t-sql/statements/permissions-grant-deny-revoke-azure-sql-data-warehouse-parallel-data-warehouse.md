@@ -1,6 +1,7 @@
 ---
-title: "GRANT-DENY-REVOKE Perms-Azure SQL Data and Parallel Data Warehouses | Microsoft Docs"
-ms.custom: ""
+title: "GRANT-DENY-REVOKE permissions"
+titleSuffix: "Azure SQL Data Warehouse"
+ms.custom: "seo-lt-2019​"
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw"

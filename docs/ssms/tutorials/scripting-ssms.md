@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Script objects in SQL Server Management Studio"
+title: SSMS Script objects
 description: "A tutorial for scripting out objects in SSMS"
 keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Scripting
 author: MashaMSFT

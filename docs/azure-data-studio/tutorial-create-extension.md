@@ -3,15 +3,14 @@ title: "Tutorial: Create an extension"
 titleSuffix: Azure Data Studio
 description: This tutorial demonstrates how to create an extension to add custom functionality to Azure Data Studio.
 ms.custom: "seodec18"
-ms.date: "09/24/2018"
+ms.date: 12/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
 ms.topic: "tutorial"
-author: "kevcunnane"
-ms.author: "kcunnane"
+author: rothja
+ms.author: jroth
 ---
-
 # Tutorial: Create an Azure Data Studio extension
 
 This tutorial demonstrates how to create a new Azure Data Studio extension. The extension creates familiar SSMS key bindings in Azure Data Studio.

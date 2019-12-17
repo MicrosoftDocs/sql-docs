@@ -1,5 +1,5 @@
 ---
-title: "Visual Database Tools | Microsoft Docs"
+title: "Visual Database Tools"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
@@ -8,7 +8,7 @@ ms.assetid: 1b1921b1-dcb2-47cd-985e-5a264de0bcf5
 author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: ""
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ---
 

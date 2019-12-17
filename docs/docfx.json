@@ -151,7 +151,10 @@
         "sql-server/stretch-database/**/*.md": "SQL Server Stretch Database",
         "master-data-services/**/*.md": "SQL Server Master Data Services",
         "master-data-services/microsoft-excel-add-in/**/*.md": "SQL Server MDS Excel Add-in",
-        "ssdt/**/*.md": "SQL Server Data Tools (SSDT)"
+        "ssdt/**/*.md": "SQL Server Data Tools (SSDT)",
+        "ssms/**/*.md": "SQL Server Management Studio (SSMS)",
+        "ssms/agent/*.md": "SQL Server Agent"
+
       },
 
       "breadcrumb_path": {

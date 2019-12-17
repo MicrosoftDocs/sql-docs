@@ -1,5 +1,5 @@
 ---
-title: "xml Data Type Support in SQLXML 4.0 | Microsoft Docs"
+title: "xml Data Type Support in SQLXML 4.0"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

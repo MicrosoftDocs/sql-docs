@@ -1,7 +1,7 @@
 ---
 title: "[^] Wildcard to exclude characters"
 description: "T-SQL wildcard for characters not to match"
-titleSuffix: Transact-SQL
+titleSuffix: SQL Server (Transact-SQL)
 ms.custom: "seo-lt-2019"
 ms.date: "12/06/2016"
 ms.prod: sql

@@ -90,7 +90,7 @@ ms.author: maggies
   
 1.  From the Windows Start Screen type **sql server** and in the **Apps** search results, click **SQL Server Management Studio**.  
   
-     ![managment studio from windows start screen](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "managment studio from windows start screen")  
+     ![management studio from windows start screen](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "management studio from windows start screen")  
   
      **Or**  
   

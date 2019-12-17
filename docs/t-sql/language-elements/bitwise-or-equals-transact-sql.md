@@ -1,6 +1,6 @@
 ---
 title: "|= (Bitwise OR)"
-titleSuffix: Transact-SQL
+titleSuffix: SQL Server (Transact-SQL)
 ms.custom: "seo-lt-2019"
 ms.date: "01/10/2017"
 ms.prod: sql

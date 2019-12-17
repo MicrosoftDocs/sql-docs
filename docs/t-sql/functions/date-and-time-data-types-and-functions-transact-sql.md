@@ -1,6 +1,8 @@
 ---
-title: "Date and Time Data Types and Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Date and Time Data Types and Functions"
+description: Links to Date and Time data types and functions articles.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "09/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"

@@ -1,6 +1,8 @@
 ---
-title: "DENY XML Schema Collection Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DENY XML Schema Collection Permissions"
+description: Deny permissions on an XML schema collection.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "06/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

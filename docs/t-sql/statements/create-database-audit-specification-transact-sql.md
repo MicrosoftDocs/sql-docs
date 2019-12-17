@@ -1,6 +1,8 @@
 ---
-title: "CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE DATABASE AUDIT SPECIFICATION"
+description: Create a database audit specification object using the SQL Server audit feature.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"

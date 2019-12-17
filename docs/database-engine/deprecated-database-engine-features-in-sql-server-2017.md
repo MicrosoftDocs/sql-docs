@@ -1,7 +1,8 @@
 ---
-title: "Deprecated Database Engine Features in SQL Server 2017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/09/2018"
+title: "Deprecated Database Engine Features | Microsoft Docs"
+titleSuffix: "SQL Server 2019"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""

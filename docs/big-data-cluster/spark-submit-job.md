@@ -1,11 +1,12 @@
 ---
-title: Submit Spark jobs on SQL Server big data clusters in Azure Data Studio 
-titleSuffix: SQL Server big data clusters
+title: "Submit Spark jobs: Azure Data Studio"
+titleSuffix: SQL Server Big Data Clusters
 description: Submit Spark jobs on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Azure Data Studio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

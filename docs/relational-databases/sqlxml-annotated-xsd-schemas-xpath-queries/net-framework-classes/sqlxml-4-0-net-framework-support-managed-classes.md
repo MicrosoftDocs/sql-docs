@@ -1,5 +1,5 @@
 ---
-title: "SQLXML Managed Classes | Microsoft Docs"
+title: "SQLXML Managed Classes"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

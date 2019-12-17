@@ -10,7 +10,7 @@ ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: ">= sql-server-2014 || = sqlallproducts-allversions"
 ---

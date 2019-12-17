@@ -1,5 +1,5 @@
 ---
-title: "Executing a DiffGram by Using SQLXML Managed Classes | Microsoft Docs"
+title: "Executing a DiffGram by Using SQLXML Managed Classes"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

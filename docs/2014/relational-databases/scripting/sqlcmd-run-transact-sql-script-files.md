@@ -1,6 +1,6 @@
 ---
-title: "Run Transact-SQL Script Files Using sqlcmd | Microsoft Docs"
-ms.custom: ""
+title: Run Transact-SQL Script Files Using sqlcmd
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

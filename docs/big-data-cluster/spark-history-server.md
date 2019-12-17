@@ -1,11 +1,12 @@
 ---
-title: Debug/Diagnose Spark Applications 
-titleSuffix: SQL Server big data clusters
+title: Debug & diagnose Spark applications
+titleSuffix: SQL Server Big Data Clusters
 description: Use Spark History Server to debug and diagnose Spark applications running on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

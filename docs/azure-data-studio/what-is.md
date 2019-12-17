@@ -62,7 +62,6 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 - Can execute most administrative tasks via the integrated terminal using sqlcmd or Powershell
 - Have minimal need for wizard experiences
 - Don't need to do deep administrative configuration
-- Want to
 
 **Use SQL Server Management Studio if you:**
 

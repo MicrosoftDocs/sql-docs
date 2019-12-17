@@ -1,6 +1,6 @@
 ---
-title: "Schema Element for Database (DTA) | Microsoft Docs"
-ms.custom: ""
+title: "Schema Element for Database (DTA)"
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

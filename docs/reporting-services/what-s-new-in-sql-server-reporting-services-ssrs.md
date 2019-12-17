@@ -8,7 +8,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 10/30/2019
+ms.date: 12/05/2019
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)
@@ -42,6 +42,10 @@ When authoring reports, you can use tooltips to specify text for each element on
 ### Azure Active Directory Application Proxy support
 
 With Azure Active Directory Application Proxy, you no longer need to manage your own web application proxy in order to allow secure access via the web or mobile apps.
+
+### Custom headers
+
+Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. See [Custom headers](tools/server-properties-advanced-page-reporting-services.md#custom-headers) in the **Server Properties Advanced Page** article for details.
 
 ### Transparent Database Encryption
 

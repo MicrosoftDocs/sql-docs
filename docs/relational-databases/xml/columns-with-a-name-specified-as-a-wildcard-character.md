@@ -1,6 +1,5 @@
 ---
-title: "Columns with a Name Specified as a Wildcard Character | Microsoft Docs"
-ms.custom: "fresh2019may"
+title: "Specify a column with a wildcard character (SQLXML) | Microsoft Docs"
 ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -12,6 +11,7 @@ helpviewer_keywords:
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 ---
 # Columns with a Name Specified as a Wildcard Character
 

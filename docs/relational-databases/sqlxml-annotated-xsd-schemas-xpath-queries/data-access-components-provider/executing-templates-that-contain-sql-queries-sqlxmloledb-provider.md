@@ -1,6 +1,5 @@
 ---
-title: "Executing Templates That Contain SQL Queries (SQLXMLOLEDB Provider) | Microsoft Docs"
-ms.custom: ""
+title: "Execute templates with SQL Queries (SQLXMLOLEDB)"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -16,6 +15,7 @@ helpviewer_keywords:
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Templates That Contain SQL Queries (SQLXMLOLEDB Provider)

@@ -1,11 +1,11 @@
 ---
 title: azdata bdc control status reference
-titleSuffix: SQL Server big data clusters
 description: Reference article for azdata bdc control status commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster

@@ -3,8 +3,7 @@ title: "Create Element (DTA)"
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
@@ -14,6 +13,8 @@ helpviewer_keywords:
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 ---
 # Create Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

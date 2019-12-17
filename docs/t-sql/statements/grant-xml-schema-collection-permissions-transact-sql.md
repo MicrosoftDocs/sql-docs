@@ -1,6 +1,8 @@
 ---
-title: "GRANT XML Schema Collection Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT XML Schema Collection Permissions"
+description: Grants permissions on an XML schema collection.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"

@@ -71,7 +71,7 @@ ms.author: mathoma
  To use an availability group listener to connect to the primary replica for read-write access, the connection string specifies the availability group listener DNS name.  If an availability group primary replica changes to a new replica, existing connections that use an availability group listener's network name are disconnected.  New connections to the availability group listener are then directed to the new primary replica. An example of a basic connection string for the ADO.NET provider (System.Data.SqlClient) is as follows:  
   
 ```  
-Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI  
+Server=tcp: AGListener,1433;Database=MyDB;Integrated Security=SSPI  
 ```  
   
  You can still choose to directly reference the instance of SQL Server name of the primary or secondary replicas instead of using the availability group listener server name, however if you choose to do so you will lose the benefit of new connections being directed automatically to the current primary replica.  You will also lose the benefit of read-only routing.  
@@ -110,7 +110,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  An example of a connection string for the ADO.NET provider (System.Data.SqlClient) that designates read-only application intent is as follows:  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
  In this connection string example, the client is attempting to connect to the AdventureWorks database via an availability group listener named `AGListener` on port 1433 (you may also omit the port if the availability group listener is listening on 1433).  The connection string has the **ApplicationIntent** property set to **ReadOnly**, making this a *read-intent connection string*.  Without this setting, the server would not have attempted a read-only routing of the connection.  
@@ -157,7 +157,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  An example of the ADO.NET provider (System.Data.SqlClient) connection string that enables multi-subnet failover is as follows:  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; MultiSubnetFailover=True  
 ```  
   
  The **MultiSubnetFailover** connection option should be set to **True** even if the availability group only spans a single subnet.  This allows you to preconfigure new clients to support future spanning of subnets without any need for future client connection string changes and also optimizes failover performance for single subnet failovers.  While the **MultiSubnetFailover** connection option is not required, it does provide the benefit of a faster subnet failover.  This is because the client driver will attempt to open up a TCP socket for each IP address in parallel associated with the availability group.  The client driver will wait for the first IP to respond with success and once it does, will then use it for the connection.  

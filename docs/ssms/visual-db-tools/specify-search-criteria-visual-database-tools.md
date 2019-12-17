@@ -1,10 +1,9 @@
 ---
-title: "Specify Search Criteria (Visual Database Tools)"
+title: Specify Search Criteria
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,8 +19,10 @@ helpviewer_keywords:
   - "Visual Database Tools [SQL Server], queries"
   - "limiting rows returned"
 ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Specify Search Criteria (Visual Database Tools)

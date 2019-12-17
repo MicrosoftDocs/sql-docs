@@ -1,21 +1,23 @@
 ---
-title: "Add Table Dialog Box (Query and View Designers) (Visual DB tools)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+title: Add Table Dialog Box (Query and View Designers)
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.query.addtable"
   - "vdtsql.chm:65565"
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
-author: "markingmyname"
-ms.author: "maghan"
-
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
+
 # Add Table Dialog Box (Query and View Designers) (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 This dialog box lets you add tables, views, user-defined functions, or synonyms to a query or view.  
   

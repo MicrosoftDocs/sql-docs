@@ -1,14 +1,14 @@
 ---
-title: "Release notes for SQL Server Management Studio (SSMS)| Microsoft Docs"
+title: Release notes for (SSMS)
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.manager: jroth
+ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 11/04/2019
 ---
@@ -54,6 +54,7 @@ SSMS 18.4 is the latest general availability (GA) release of SSMS. If you need a
 | Data Classification | Added support for custom information protection policy for data classification. |
 | Query Store | Added the *Max Plan per query* value in the dialog properties. |
 | Query Store | Added support for the new Custom Capture Policies. |
+| Query Store | Added **Wait Statistics Capture Mode** to the **Query Store** **Database Properties** options. |
 | SMO/Scripting | Support Script of materialized view in SQL DW. |
 | SMO/Scripting | Added support for *SQL On Demand*. |
 | SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added 50 assessment rules (see details on GitHub). |

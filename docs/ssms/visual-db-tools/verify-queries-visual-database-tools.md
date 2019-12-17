@@ -1,10 +1,9 @@
 ---
-title: "Verify Queries (Visual Database Tools)"
+title: Verify Queries
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
@@ -14,8 +13,10 @@ helpviewer_keywords:
   - "queries [SQL Server], verifying"
   - "checking queries"
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Verify Queries (Visual Database Tools)

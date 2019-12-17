@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Backup Applications - Volume Shadow Copy Service (VSS) and SQL writer"
+title: "SQL Server Back up Applications - Volume Shadow Copy Service (VSS) and SQL writer"
 description: Describes the SQL writer component and its role in the VSS snapshot creation and restore process for SQL Server databases. 
 ms.custom: ""
 ms.date: "07/24/2019"
@@ -11,19 +11,19 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ---
-# SQL Server Backup Applications - Volume Shadow Copy Service (VSS) and SQL Writer
+# SQL Server Back up Applications - Volume Shadow Copy Service (VSS) and SQL Writer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server provides support for Volume Shadow Copy Service (VSS) by providing a writer (the SQL writer) so that a third-party backup application can use the VSS framework to back up database files. This paper describes the SQL writer component and its role in the VSS snapshot creation and restore process for SQL Server databases. It also captures details on how to configure and use the SQL writer to work with backup applications in the VSS framework.
+SQL Server provides support for Volume Shadow Copy Service (VSS) by providing a writer (the SQL writer) so that a third party backup application can use the VSS framework to back up database files. This paper describes the SQL writer component and its role in the VSS snapshot creation and restore process for SQL Server databases. It also captures details on how to configure and use the SQL writer to work with backup applications in the VSS framework.
 
 
 ## Introduction
 
-SQL Server provides support for creating snapshots from SQL Server data using Volume Shadow Copy Service (VSS). This is accomplished by providing a VSS compliant writer (the SQL writer) so that a third-party backup application can use the VSS framework to back up database files. This paper describes the SQL writer component and its role in the VSS snapshot creation and restore process for SQL Server databases. It also captures details on how to configure and use the SQL writer to work with backup applications in the context of the VSS framework.
+SQL Server provides support for creating snapshots from SQL Server data using Volume Shadow Copy Service (VSS). This is accomplished by providing a VSS compliant writer (the SQL writer) so that a third party backup application can use the VSS framework to back up database files. This paper describes the SQL writer component and its role in the VSS snapshot creation and restore process for SQL Server databases. It also captures details on how to configure and use the SQL writer to work with backup applications in the context of the VSS framework.
 
 ## Definition of Terms
 
-- **Virtual Device Interface**: SQL Server provides an application programming interface called Virtual Device Interface (VDI) that helps independent software vendors to integrate SQL Server into their products by providing support for backup and restore operations. These APIs are engineered to provide maximum reliability and performance, and support the full range of SQL Server backup and restore functionality, including the full range of hot and snapshot backup capabilities. For more details, see [SQL Server 2005 Virtual Backup Device Interface Specification](https://www.microsoft.com/download/details.aspx?id=17282). 
+- **Virtual Device Interface**: SQL Server provides an application programming interface called Virtual Device Interface (VDI) that helps independent software vendors to integrate SQL Server into their products by providing support for backup and restore operations. These APIs are engineered to provide maximum reliability and performance, and support the full range of SQL Server backup and restore functionality, including the full range of hot and snapshot backup capabilities. For more information, see [SQL Server 2005 Virtual Backup Device Interface Specification](https://www.microsoft.com/download/details.aspx?id=17282). 
 
 - **Requestor**: A process (either automated or GUI) that requests that one or more snapshot sets be taken of one or more original volumes. In this paper, a requestor is also used to imply a backup application that is creating a snapshot of SQL Server databases.
 
@@ -33,7 +33,7 @@ VSS provides the system infrastructure for running VSS applications on Windows s
 
 - Coordinates activities of providers, writers, and requestors in the creation and use of shadow copies.
 - Furnishes the default system provider.
-- Implements the low-level driver functionality necessary for any provider to work.
+- Implements the low level driver functionality necessary for any provider to work.
 
 The VSS service starts on demand; therefore, for VSS operations to be successful, this service must be enabled.
 
@@ -118,21 +118,21 @@ The rest of this topic assumes that component-based backups are used as part of 
 ## Features Supported by SQL Writer
 
 
-- **Fulltext**: The SQL writer reports full-text catalog containers with recursive file specifications under the database components in the writer's metadata document.  They are automatically included in the backup when the database component is selected
+- **Fulltext**: The SQL writer reports fulltext catalog containers with recursive file specifications under the database components in the writer's metadata document.  They are automatically included in the backup when the database component is selected
 - **Differential Backup/Restore**: The SQL writer supports differential Backup/Restore through two VSS differential mechanisms: Partial File and Differenced File by Last Modify Time.
 - **Partial File**:   The SQL writer uses the VSS Partial File mechanism for reporting changed byte ranges within its database files.  
-- **Differenced File by Last Modify Time**: The SQL writer uses the VSS Differenced File by Last Modify Time mechanism for reporting changed files in full-text catalogs.
-- **Restore with Move**: The SQL writer supports VSS's New Target specification during restore.  VSS's New Target specification allows for a database/log file or full-text catalog container to be re-located as part of the Restore operation.
-- **Database Rename**: A requestor may need to restore an SQL database with a new name, especially if the database is to be restored side by side with the original database. The SQL writer supports renaming a database during the restore operation, as long as the database remains within the original SQL instance.
-- **Copy-Only Backup**: It is sometimes necessary to take a backup that is intended for a special purpose, for example when you need to make a copy of a database for testing purposes.  This backup should not impact the overall backup and restore procedures for the database. Using the COPY_ONLY option specifies that the backup is done "out-of-band" and should not affect the normal sequence of backups. The SQL writer supports the "copy-only" backup type with SQL Server instances.
-- **Autorecovery of Database Snapshot**:   Typically a snapshot of a SQL Server database obtained by using the VSS framework is in a non-recovered state. Data in the snapshot cannot be safely accessed prior to it going through the recovery phase to rollback in-flight transactions and place the database in a consistent state. It is possible for a VSS backup application to request auto-recovery of the snapshots, as part of the snapshot creation process.
+- **Differenced File by Last Modify Time**: The SQL writer uses the VSS Differenced File by Last Modify Time mechanism for reporting changed files in fulltext catalogs.
+- **Restore with Move**: The SQL writer supports VSSs New Target specification during restore.  VSSs New Target specification allows for a database/log file or fulltext catalog container to be relocated as part of the Restore operation.
+- **Database Rename**: A requestor may need to restore a SQL database with a new name, especially if the database is to be restored side by side with the original database. The SQL writer supports renaming a database during the restore operation, as long as the database remains within the original SQL instance.
+- **Copy-Only Backup**: It is sometimes necessary to take a backup that is intended for a special purpose, for example when you need to make a copy of a database for testing purposes.  This back up should not impact the overall backup and restore procedures for the database. Using the COPY_ONLY option specifies that the backup is done "out-of-band" and should not affect the normal sequence of backups. The SQL writer supports the "copy-only" backup type with SQL Server instances.
+- **Autorecovery of Database Snapshot**:   Typically a snapshot of a SQL Server database obtained by using the VSS framework is in a non-recovered state. Data in the snapshot cannot be safely accessed prior to it going through the recovery phase to roll back in-flight transactions and place the database in a consistent state. It is possible for a VSS backup application to request autorecovery of the snapshots, as part of the snapshot creation process.
 
-These new features and their usage are described in more detail in Backup and Restore Option Details in this topic.
+These new features and their usage are described in more detail in Back up and Restore Option Details in this topic.
 
 ### What is Not Supported
 
 - Log backups are not supported by the SQL writer.
-- File/Filegroup backup is not supported.
+- File/Filegroup back up is not supported.
 - Page restore is not supported.
 - Database snapshots are not supported and are ignored while creating both component and non-component VSS snapshots. 
 - Autoclose databases, or databases with shutdown enabled.
@@ -142,7 +142,7 @@ The following table lists the kinds of snapshot backups that are supported by th
 
 | **Backup/Restore Operation**                 | **Component-Based**           | **Noncomponent-Based** |
 |:-------------------------------------------- | :---------------------------- | :--------------------- |
-|Full Data Backup </br> (Including full-text catalog)| Yes                     | Yes                    |
+|Full Data Backup </br> (Including fulltext catalog)| Yes                     | Yes                    |
 |Full Restore                                  | Yes                           | Yes                    |
 |Full Restore (No recovery)                    | Yes                           | No                     |
 |Differential Backup                           | Yes                           | No                     |
@@ -150,7 +150,7 @@ The following table lists the kinds of snapshot backups that are supported by th
 |Restore With Move                             | Yes                           | No                     |
 |Database Rename                               | Yes                           | No                     |
 |Copy Only Backup                              | Yes                           | No                     |
-|AutoRecovered Snapshots                       | Yes                           | No                     |
+|Auto-Recovered Snapshots                       | Yes                           | No                     |
 |Log Backup                                    | No                            | No                     |
 |Database snapshots                            | No                            | No                     |
 |Autoclose databases</br> Databases with shutdown | Yes                        | No                     |
@@ -163,7 +163,7 @@ The following table lists the kinds of snapshot backups that are supported by th
 
 The VSS framework coordinates the activities of a requestor (a backup application) and the SQL writer during the creation of SQL Server snapshots. To enable this coordination, the VSS framework defines requestor and writer interfaces.  These interfaces should be implemented by participating requestor applications and writers. The SQL writer implements the necessary writer interfaces. As part of the snapshot creation process, the SQL writer's interfaces are called by the VSS framework. The SQL writer interacts with SQL Server instances on the system to facilitate snapshot creation.
 
-The VSS framework defines a set of APIs for usage by a requestor/backup application. A backup application developer needs to follow these API calling patterns to work with the VSS framework snapshot creation process. The next sections describe the snapshot creation process from the SQL writer point of view. They also detail some of the internal interactions between the requestor, VSS framework, SQL writer, and SQL Server instances. For more details on these steps and for details of the VSS framework interfaces, refer to the documentation on Volume Shadow Copy Service.    
+The VSS framework defines a set of APIs for usage by a requestor/backup application. A backup application developer needs to follow these API calling patterns to work with the VSS framework snapshot creation process. The next sections describe the snapshot creation process from the SQL writer point of view. They also detail some of the internal interactions between the requestor, VSS framework, SQL writer, and SQL Server instances. For more information on these steps and for details of the VSS framework interfaces, see the documentation on Volume Shadow Copy Service.    
 
   > [!NOTE]
   > It is assumed that the reader is familiar with the VSS framework and backup creation process in general. These sections are provided as supplemental information about how the SQL writer participates in the VSS backup creation process.
@@ -221,7 +221,7 @@ This contains component level specific information provided by the SQL writer.
    - **Name**  - name of the component (database name)
    - **Logical path** – of the server instance (Will be in the form of "server\instance-name" for named instances and "server" for default instance.)
    - **Component Flags**
-   - **VSS_CF_APP_ROLLBACK_RECOVERY** – indicates that SQL Server snapshots always require a "recovery" phase to make the files consistent and useable for non-backup (i.e. app-rollback) scenarios.
+   - **VSS_CF_APP_ROLLBACK_RECOVERY** – indicates that SQL Server snapshots always require a "recovery" phase to make the files consistent and useable for non-backup (that is, app-rollback) scenarios.
    - Selectable - True
    - Selectable for Restore - True 
    - Restore methods supported - VSS_RME_RESTORE_IF_CAN_REPLACE
@@ -257,19 +257,19 @@ This phase involves a series of interactions between the VSS framework and the S
 1. _Thaw_. On this event, the SQL writer will call the SQL Server instances to "thaw" or resume normal I/O operations.
 
 
-The snapshot creation phase is really fast (less than 60 seconds), to prevent blocking of all writes to the database.
+The snapshot creation phase is fast (less than 60 seconds), to prevent blocking of all writes to the database.
 
 **Post-snapshot**
-If auto-recovery is needed for the snapshot, the SQL writer will do the auto-recovery for each database that has been selected to be in the snapshot. For a detailed explanation, see Auto-Recovered Snapshots.
+If autorecovery is needed for the snapshot, the SQL writer will do the autorecovery for each database that has been selected to be in the snapshot. For a detailed explanation, see Auto-Recovered Snapshots.
 
 #### Actual Backup of Files
 
 In this phase, the requestor can move the data to a backup media, if needed. Interactions in this stage are between the requestor and the VSS framework. The SQL writer is not involved.
 
 1. Get writer status. Returns the status of writers. The requestor may need to handle any failures here.
-1. Do backup.
+1. Do back up.
 
-The requestor can move the data to backup media if needed at this time.
+The requestor can move the data to back up media if needed at this time.
 
 #### Backup complete
 
@@ -319,7 +319,7 @@ The Backup Component Document that is generated during the backup operation, is 
 
 #### Prepare for Restore
 
-In preparing for a restore, a requestor uses the stored Backup Components Documentto determine what is to be restored and how.  The requestor will select the components to be restored and set appropriate restore options as needed.
+In preparing for a restore, a requestor uses the stored Backup Components Document to determine what is to be restored and how.  The requestor will select the components to be restored and set appropriate restore options as needed.
 
 If a backup application intends to apply differential or log backups on top of the current restore operation (i.e., "Restore with norecovery" is needed), the following option should be set as part of component creation for each database that is being restored.
 
@@ -337,7 +337,7 @@ This is purely a requestor-specific action. It is the responsibility of the requ
 
 #### Cleanup and Termination
 
-Once all the data is restored to the right places, a call from a requestor notifying that the restore operation has been completed (**IvssBackupComponents::PostRestore**), will let the SQL writer know that Post Restore actions can be started.  The SQL writer at this point will do the Redo phase of crash recovery. If recovery is not requested (i.e., SetAdditionalRestores(true) is not specified by the requestor), the undo phase of the recovery step is also carried out during this phase.
+Once all the data is restored to the right places, a call from a requestor notifying that the restore operation has been completed (**IvssBackupComponents::PostRestore**), will let the SQL writer know that Post Restore actions can be started.  The SQL writer at this point will do the Redo phase of crash recovery. If recovery is not requested (that is, SetAdditionalRestores(true) is not specified by the requestor), the undo phase of the recovery step is also carried out during this phase.
 
 ## Backup and Restore Option Details
 
@@ -361,7 +361,7 @@ In a noncomponent-based backup, the SQL writer implicitly selects databases by u
 
 #### Restore
 
-The requestor restores database(s) that have been backed up in noncomponent-based mode.  Note that such restores cannot be followed up by a rollforward restore, such as log restore or differential restore.
+The requestor restores database(s) that have been backed up in noncomponent-based mode.  Such restores cannot be followed up by a rollforward restore, such as log restore or differential restore.
 
 For noncomponent-based restore operations, the restore must be performed with the SQL Server instance offline or the target databases are dropped/detached to ensure that the files are offline.  The files are copied in place and then the database(s) attached. All this happens outside the scope of the SQL writer.
 
@@ -375,7 +375,7 @@ In a component-based backup, all backing volumes for selected databases should b
 
 #### Full restore without rollforward
 
-A full restore of the database backup is sometimes accomplished without doing any additional  rollforwards. This may be due to the fact that there is no metadata to facilitate the rollforward or, in some cases, rollforwards are not needed. This section covers these two situations briefly.  
+A full restore of the database backup is sometimes accomplished without doing any additional  roll forwards. This may be due to the fact that there is no metadata to facilitate the rollforward or, in some cases, roll forwards are not needed. This section covers these two situations briefly.  
 
 #### No metadata/no rollforward
 
@@ -383,9 +383,9 @@ If no writer metadata (component-based backup metadata) is saved during the back
 
 #### Metadata exist but no additional rollforward is needed
 
-The requestor restores database(s) that have been backed up in component-based mode but no rollforwards are requested. In this case SQL Server will perform crash recovery on the database as part of restore.
+The requestor restores database(s) that have been backed up in component-based mode but no roll forwards are requested. In this case SQL Server will perform crash recovery on the database as part of restore.
 
-Full restore with additional rollforwards
+**Full restore with additional roll forwards**
 The requestor can issue a restore specifying the SetAdditionalRestores(true) option.  This option indicates that the requestor is going to follow up with more rollforward restores (such as log restore, differential restore etc.). This instructs SQL Server not to perform the recovery step at the end of the restore operation.
 
 This is only possible if the writer metadata was saved during the backup and is available to the SQL writer at the time of the restore. The SQL Server service must be running before the requestor directs VSS to perform the restore activity.
@@ -404,7 +404,7 @@ The SQL writer reports full-text catalog containers with recursive file specific
 
 ### Differential Backup/Restore
 
-A differential backup operation backs up only the data that has changed since the most recent base full backup. A differential backup contains only those parts of the database files that have changed. In order to do such a backup, the backup application or requestor would need information about the location of the changes in the database files, so that appropriate sections of the file(s) can be backed up. During a differential backup operation, the SQL writer provides this information in the format as specified by "VSS partial file information." This information can be used to back up only the changed portion of the database files.
+A differential backup operation backs up only the data that has changed since the most recent base full backup. A differential backup contains only those parts of the database files that have changed. In order to do such a backup, the backup application, or requestor would need information about the location of the changes in the database files, so that appropriate sections of the file(s) can be backed up. During a differential backup operation, the SQL writer provides this information in the format as specified by "VSS partial file information." This information can be used to back up only the changed portion of the database files.
 
 ### Backup
 
@@ -423,7 +423,7 @@ For each database being backed up during a differential backup, the SQL writer w
 
 A requestor can determine these files by calling **IVssComponent::GetPartialFileCount** and **IVssComponent::GetPartialFile**.  **IVssComponent::GetPartialFile** will return a path and a filename pointing to the file, and a ranges string indicating what needs to be backed up in the file.
 
-For more details of the partial file information retrieval, see the [VSS documentation](/windows/win32/vss/volume-shadow-copy-service-overview).
+For more information of the partial file information retrieval, see the [VSS documentation](/windows/win32/vss/volume-shadow-copy-service-overview).
 
 ### Back up files
 
@@ -431,7 +431,7 @@ During this phase, the backup application should look at the writer metadata sto
 
 A differential backup will always be with respect to the latest base backup that exists for the database.  At restore time, SQL Server will detect mismatched base and differential backups. So, it is responsibility of the backup application or system administrator to be sure that the differential is relative to the expected full backup.  If some out of band procedure has made another full backup, the backup application may not be able to restore the differential, since it doesn't "own" the base backup.
 
-Currently if the byte-range information (partial file information) is too large (exceeding 64K bytes in buffer size), SQL Server will throw an error instructing the user to perform a full backup.
+Currently if the byte-range information (partial file information) is too large (exceeding 64 K bytes in buffer size), SQL Server will throw an error instructing the user to perform a full backup.
 
 ### Interesting cases during backup
 
@@ -443,7 +443,7 @@ These files are included in the partial specification because every header of th
 
 **Files dropped after base was taken**
 
-After the base was taken,data files could be dropped.  Such files are not included in the Writer Metadata Document during differential backup.  Furthermore, there will not be partial information associated with the dropped file.
+After the base was taken, data files could be dropped.  Such files are not included in the Writer Metadata Document during differential backup.  Furthermore, there will not be partial information associated with the dropped file.
 
 **Files shrunk after the base was taken**
 
@@ -505,7 +505,7 @@ During the post restore events, the SQL writer will perform the normal redo oper
 
 ## Differential Backup/Restore for Full-Text Catalogs
 
-SQL Server full-text catalogs are part of the database resources that need to be backed up or restored together with the rest of the database files.  A differential backup is timestamp based for full-text catalog.  The SQL Server VSS differential backup/restore has a single base backup  In other words, there will not be different bases for different containers.  For VSS full-text catalog backup, this means for all full-text catalog containers, the differential backup will be single-timestamp based, unlike the case of native SQL differential backup, in which there is one timestamp base per full-text catalog container.
+SQL Server full-text catalogs are part of the database resources that need to be backed up or restored together with the rest of the database files.  A differential backup is timestamp based for full-text catalog.  The SQL Server VSS differential backup/restore has a single base backup.  In other words, there will not be different bases for different containers.  For VSS full-text catalog backup, this means for all full-text catalog containers, the differential backup will be single-timestamp based, unlike the case of native SQL differential backup, in which there is one timestamp base per full-text catalog container.
 
 In VSS, this timestamp is expressed as a component-wide property that is set during the full backup, and used during a subsequent differential backup.  
 
@@ -515,7 +515,7 @@ In OnIdentify, the SQL writer calls IVssCreateWriterMetadata::SetBackupSchema() 
 
 ### Setting the base timestamp
 
-The base timestamp is set during a full backup.  In **OnPostSnapshot()**,the writer invokes **IVssComponent::SetBackupStamp()** to store the timestamp with the component in the backup document.
+The base timestamp is set during a full backup.  In **OnPostSnapshot()**, the writer invokes **IVssComponent::SetBackupStamp()** to store the timestamp with the component in the backup document.
 
 ### Differential backup
 
@@ -533,7 +533,7 @@ During a differential restore, the backup application is responsible for:
 - Restoring all files that have been backed up, either by creating a new file if it does not already exist, or by overwriting an existing file if it already exists.
 - Growing the file before laying down the content if the restored file is larger than the existing file.
 - Truncating the file to the same size as that of the restored file if the restored file is smaller than the existing file.
-- Deleting all files that should be deleted; i.e., those files that should not exist as of the point in time of the differential backup.
+- Deleting all files that should be deleted; that is, those files that should not exist as of the point in time of the differential backup.
 
 ### Copy-Only Backup
 
@@ -560,15 +560,15 @@ The SQL writer will take the entire content of New Component Name's value and us
 
 ### Auto-Recovered Snapshots
 
-Typically a snapshot of SQL Server database obtained by using VSS framework is in a non-recovered state. Data in the snapshot cannot be safely accessed prior to going through the recovery phase to rollback in-flight transactions and placing the database in a consistent state. Since the snapshot is in a read-only state, it cannot be recovered by the normal process of attaching the database.
+Typically a snapshot of SQL Server database obtained by using VSS framework is in a non-recovered state. Data in the snapshot cannot be safely accessed prior to going through the recovery phase to roll back in-flight transactions and placing the database in a consistent state. Since the snapshot is in a read-only state, it cannot be recovered by the normal process of attaching the database.
 
-It is possible to auto-recover the snapshots as part of the snapshot creation process. As part of the Writer Metadata Document, the SQL writer will specify the component flag "VSS_CF_APP_ROLLBACK_RECOVERY" to indicate that recovery needs to be performed for the database on snapshot before the database can be accessed When specifying the snapshot set, the requestor can indicate that the snapshot should be an app-rollback snapshot (i.e., all database files in a snapshot are meant to be in a consistent state for application usage) or a backup snapshot (a snapshot used for backing up data to be restored later in case of a system failure).
+It is possible to autorecover the snapshots as part of the snapshot creation process. As part of the Writer Metadata Document, the SQL writer will specify the component flag "VSS_CF_APP_ROLLBACK_RECOVERY" to indicate that recovery needs to be performed for the database on snapshot before the database can be accessed when specifying the snapshot set, the requestor can indicate that the snapshot should be an app-rollback snapshot (that is, all database files in a snapshot are meant to be in a consistent state for application usage) or a backup snapshot (a snapshot used for backing up data to be restored later in case of a system failure).
 
 The requestor should set VSS_VOLSNAP_ATTR_ROLLBACK_RECOVERY to indicate that this component is being backed up for a non-backup purpose.  VSS will then correlate VSS_CF_APP_ROLLBACK_RECOVERY that the SQL writer specified on the selected component with VSS_VOLSNAP_ATTR_ROLLBACK_RECOVERY, and determine that auto recovery is happening.  VSS will make the snapshot writeable for a limited period of time and automatically add the VSS_VOLSNAP_ATTR_AUTORECOVERY bit to the snapshot context.
 
-In case of SQL Server the auto recovery should be applied only to app-rollback snapshots but not for backup snapshots. For app-rollback snapshots, an auto-recovery process is initiated by the SQL writer during the PostSnapShotevent. This process will do the following for each explicitly selected (by the requestor) SQL Server database in the snapshot set:
+In case of SQL Server the auto recovery should be applied only to app-rollback snapshots but not for backup snapshots. For app-rollback snapshots, an autorecovery process is initiated by the SQL writer during the PostSnapShotevent. This process will do the following for each explicitly selected (by the requestor) SQL Server database in the snapshot set:
 
-- Attach the snapshot database to the original SQL Server instance (i.e., the instance to which the original database is attached).
+- Attach the snapshot database to the original SQL Server instance (that is, the instance to which the original database is attached).
 - Recover the database (this happens as part of the "attach" operation).
 - Shrink log files.
 
@@ -585,11 +585,11 @@ Now we have a consistent, recovered snapshot that can be attached for querying.
 
 ### Multi-database transactions
 
-In some cases, the snapshot databases may contain some in-flight multi-database transactions. During recovery operation, the SQL writer will attach the database on the snapshots with the Presumed Abort option. This would roll back any multi-database transaction that is not yet committed (including any transactions that are in a Prepared to Commit state). This may lead to some inconsistencies between databases in the snapshot set. For example, consider two databases A and B. There is a distributed transaction between these two databases and this transaction is in Committed state in database A and in Prepared to Commit state in database B. As part of the auto-recovery process, this transaction will be committed in database A and rolled back in database B. This may lead to some inconsistencies in the snapshot set.
+In some cases, the snapshot databases may contain some in-flight multi-database transactions. During recovery operation, the SQL writer will attach the database on the snapshots with the Presumed Abort option. This would roll back any multi-database transaction that is not yet committed (including any transactions that are in a Prepared to Commit state). This may lead to some inconsistencies between databases in the snapshot set. For example, consider two databases A and B. There is a distributed transaction between these two databases and this transaction is in Committed state in database A and in Prepared to Commit state in database B. As part of the autorecovery process, this transaction will be committed in database A and rolled back in database B. This may lead to some inconsistencies in the snapshot set.
 
 Microsoft Distributed Transaction Coordinator (MS DTC) component to be released in the Longhorn timeframe by the VSS framework will fix this inconsistency problem for transactions spanning databases across SQL Server instances. The next version of SQL Server will fix these inconsistencies for transactions spanning databases within a SQL Server instance.
 
-### Security implications for auto-recovered snapshots
+### Security implications for autorecovered snapshots
 
 For VSS snapshots, after the auto recovery, the files will be secured using Access Control Lists(ACLs) to allow access only to the special builtin group which SQL server account belongs to.  This implies that member of either box admin or that special group will be able to attach the database. The client requesting an attach of the database files on a snapshot either has to be a member of Builtin/Administrators or the SQL Server account.
 
@@ -601,11 +601,11 @@ This section describes some of the special cases encountered during SQL writer-b
 
 For noncomponent-based backups, autoclosing of databases is done, when checking for torn conditions, but the autoclosed databases are not explicitly frozen during backup operations.
 
-The expected scenario here is that many closed databases may exist and we want to minimize the cost of the snapshot.  Auto-closed databases are typically used in low-end configurations where resources are scarce.
+The expected scenario here is that many closed databases may exist and we want to minimize the cost of the snapshot.  Autoclosed databases are typically used in low-end configurations where resources are scarce.
 
 #### File list
 
-The list of files for each database is determined during an enumeration step prior to the Prepare for Backup event.  If the list of database files changes between enumeration and freeze, then the database could be torn, unless the application re-checks the list of files. We don't expect this to be an issue, but it is something that vendors need to be aware of.
+The list of files for each database is determined during an enumeration step prior to the Prepare for Backup event.  If the list of database files changes between enumeration and freeze, then the database could be torn, unless the application rechecks the list of files. We don't expect this to be an issue, but it is something that vendors need to be aware of.
 
 #### Stopped instances
 
@@ -636,7 +636,7 @@ The procedure is as follows:
 
 1. Ensure that the SQL Server instance is stopped.
 1. Perform the restore in two phases.
-    1. Restore the system databases and user databases that should be recovered at the same time (i.e., Simple Recovery mode user databases) via file copy /volume-mount through VSS.
+    1. Restore the system databases and user databases that should be recovered at the same time (that is, Simple Recovery mode user databases) via file copy /volume-mount through VSS.
         1. If the user databases to be rolled forward are not on the same volume as the system databases, then that volume should not be brought back at this time. This scenario requires planning prior to back up.
         1. If the user databases are on the same volume as the system databases, then the user databases need to be hidden from SQL Server.
     1. Start the SQL Server instance using the -f parameter.  (When using the -f startup option, only the master database can be restored.)

@@ -83,6 +83,8 @@ landingContent:
         url: https://azure.microsoft.com/en-us/services/azure-migrate/
       - text: Data migration blog
         url: https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/bg-p/MicrosoftDataMigration
+      - text: PASS session "Modernizing SQL Server the right way"
+        url: https://www.youtube.com/watch?v=5RPkuQHcxxs
     - linkListType: download
       links:
       - text: Microsoft Assessment and Planning (MAP) toolkit

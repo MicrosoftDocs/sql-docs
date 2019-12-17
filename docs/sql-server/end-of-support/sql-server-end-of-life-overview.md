@@ -4,7 +4,6 @@ description: Learn about the different options available for the end of support 
 ms.custom: ""
 ms.date: "12/09/2019"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 author: MashaMSFT

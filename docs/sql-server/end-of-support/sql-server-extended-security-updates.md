@@ -4,7 +4,6 @@ description: Learn how to use the SQL Server registry to get extended security u
 ms.custom: ""
 ms.date: "12/09/2019"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 author: MashaMSFT

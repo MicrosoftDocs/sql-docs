@@ -177,7 +177,7 @@ To create a full-text index on a **varbinary(max)** column, the Full-Text Engine
   
  For more info about indexing and querying on an **xml** column, see [Use Full-Text Search with XML Columns](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
   
-##  <a name="disable"></a> Disable or re-enable tull-text indexing for a table   
+##  <a name="disable"></a> Disable or re-enable full-text indexing for a table   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], all user-created databases are full-text enabled by default. Additionally, an individual table is automatically enabled for full-text indexing as soon as a full-text index is created on it and a column is added to the index. A table is automatically disabled for full-text indexing when the last column is dropped from its full-text index.  
   
  On a table that has a full-text index, you can manually disable or re-enable a table for full-text indexing using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

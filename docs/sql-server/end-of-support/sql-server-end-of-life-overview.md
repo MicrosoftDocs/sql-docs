@@ -25,7 +25,7 @@ Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is bac
 
 Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of support stage, you can choose to:
 - Upgrade to a current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-- Purchase an [Extended Security Updates subscription](https://www.microsoft.com/en-us/cloud-platform/extended-security-updates). 
+- Purchase an [Extended Security Updates subscription](https://www.microsoft.com/cloud-platform/extended-security-updates). 
 - Migrate your workload to an Azure Virtual Machine as-is for [free Extended Security Updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support).
 - Migrate your workload to an [Azure SQL Database service](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas). 
 

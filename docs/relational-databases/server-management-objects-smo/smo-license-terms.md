@@ -1,6 +1,5 @@
 ---
-title: "SQL Server Shared Management Objects (SMO) - License Terms | Microsoft Docs"
-ms.custom: ""
+title: SQL Server Shared Management Objects (SMO) License Terms
 ms.date: 12/15/2019
 ms.prod: sql
 ms.reviewer: ""

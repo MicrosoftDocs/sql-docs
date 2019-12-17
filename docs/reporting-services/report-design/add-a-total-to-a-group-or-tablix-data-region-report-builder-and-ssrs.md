@@ -1,10 +1,10 @@
 ---
-title: "Add a Total to a Group or Tablix Data Region (Report Builder and SSRS) | Microsoft Docs"
-ms.date: 03/07/2017
+title: "Add a Total to a Group or Tablix (Report Builder & SSRS) | Microsoft Docs"
+description: In a SQL Server Reporting Services paginated report, you can add totals in a tablix data region for a group or for the entire data region.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design
-
 
 ms.topic: conceptual
 ms.assetid: cf1b96c3-7f0f-4c94-ad08-5239c77ccfe4

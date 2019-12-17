@@ -1,6 +1,8 @@
 ---
-title: "KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "KILL QUERY NOTIFICATION SUBSCRIPTION"
+description: Remove query notification subscriptions from an instance. This statement can remove a specific subscription or all subscriptions.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "07/27/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"

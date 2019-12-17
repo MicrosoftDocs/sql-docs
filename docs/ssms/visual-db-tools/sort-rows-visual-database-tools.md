@@ -1,18 +1,19 @@
 ---
-title: "Sort Rows (Visual Database Tools)"
+title: Sort Rows
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sorting rows [SQL Server]"
   - "sorting query results [SQL Server]"
 ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Sort Rows (Visual Database Tools)

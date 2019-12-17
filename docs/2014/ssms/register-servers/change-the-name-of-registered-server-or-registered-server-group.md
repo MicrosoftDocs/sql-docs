@@ -1,6 +1,6 @@
 ---
-title: "Change the Name of a Registered Server or Registered Server Group (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: Change the Name of a Registered Server or Server Group
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "renaming registered server or server group"
   - "names [SQL Server], registered server or server group"
 ms.assetid: 10e1546b-9edb-400c-8676-2ea1192d6134
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 ---
 # Change the Name of a Registered Server or Registered Server Group (SQL Server Management Studio)
   This topic describes how to change the name of a registered server or server group in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The name can be changed at any time. Changing the name of a server in Registered Servers only changes how the name is displayed. To connect to a different server, you must edit the connection properties of the registered server.  

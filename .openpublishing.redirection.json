@@ -737,7 +737,7 @@
     },
     {
         "source_path": "docs/lp/load-and-move-data.md",
-        "redirect_url": "/sql/sql-server/migrate/index.yml",
+        "redirect_url": "/sql/sql-server/migrate/",
         "redirect_document_id": true
     },
     {

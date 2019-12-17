@@ -1,6 +1,6 @@
 ---
 title: "SQL Server In-Process Extensions to ADO.NET"
-description: Links to articels about the four main functional extensions to ADO.NET that are specifically for in-process use.
+description: Links to articles about the four main functional extensions to ADO.NET that are specifically for in-process use.
 ms.custom: "seo-lt-2019"
 ms.date: "03/06/2017"
 ms.prod: sql

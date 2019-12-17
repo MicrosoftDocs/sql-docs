@@ -240,9 +240,11 @@ dta -d AdventureWorks2012 ...
  **-ix** _input_XML_file_name_  
  Specifies the name of the XML file containing **dta** input information. This must be a valid XML document conforming to DTASchema.xsd. Conflicting arguments specified from the command prompt for tuning options override the corresponding value in this XML file. The only exception is if a user-specified configuration is entered in the evaluate mode in the XML input file. For example, if a configuration is entered in the **Configuration** element of the XML input file and the **EvaluateConfiguration** element is also specified as one of the tuning options, the tuning options specified in the XML input file will override any tuning options entered from the command prompt.  
 
- **-k** MaxTotalIndexes
-  
+ **-k** MaxTotalIndexes  
+ Maximum number of indexes in the recommendation.  
+
  **-K** MaxTotalIndexes
+ Maximum number of indexes per table.
 
  **-m** _minimum_improvement_  
  Specifies the minimum percentage of improvement that the recommended configuration must satisfy.  
@@ -392,33 +394,32 @@ dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10
 ```  
   
  **D. Tune specific tables listed in a file**  
-  
+
  This example demonstrates the use of *table_list_file* (the **-Tf** argument). The contents of the file table_list.txt are as follows:  
-  
-```  
+
+```
 AdventureWorks2012.Sales.Customer  100000  
 AdventureWorks2012.Sales.Store  
 AdventureWorks2012.Production.Product  2000000  
-```  
+```
+
+The contents of table_list.txt specifies that:  
+
+- Only the **Customer**, **Store**, and **Product** tables in the database should be tuned.  
   
- The contents of table_list.txt specifies that:  
+- The number of rows in the **Customer** and **Product** tables are assumed to be 100,000 and 2,000,000, respectively.  
   
--   Only the **Customer**, **Store**, and **Product** tables in the database should be tuned.  
-  
--   The number of rows in the **Customer** and **Product** tables are assumed to be 100,000 and 2,000,000, respectively.  
-  
--   The number of rows in **Store** are assumed to be the current number of rows in the table.  
-  
- Note that there can be one or more spaces between the number of rows count and the preceding table name in the *table_list_file*.  
-  
- The tuning time is 2 hours (`-A 120`) and the output is written to an XML file (`-ox XMLTune.xml`).  
-  
-```  
+- The number of rows in **Store** are assumed to be the current number of rows in the table.  
+
+    Note that there can be one or more spaces between the number of rows count and the preceding table name in the *table_list_file*.  
+    
+    The tuning time is 2 hours (`-A 120`) and the output is written to an XML file (`-ox XMLTune.xml`).  
+
+``` 
 dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
-```  
-  
-## See Also  
- [Command Prompt Utility Reference &#40;Database Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)   
- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
-  
-  
+``` 
+
+## See Also
+
+- [Command Prompt Utility Reference &#40;Database Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)
+- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)

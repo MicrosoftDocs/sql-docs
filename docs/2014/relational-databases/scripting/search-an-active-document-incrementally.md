@@ -1,6 +1,6 @@
 ---
-title: "Search an Active Document Incrementally | Microsoft Docs"
-ms.custom: ""
+title: Search an Active Document Incrementally
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

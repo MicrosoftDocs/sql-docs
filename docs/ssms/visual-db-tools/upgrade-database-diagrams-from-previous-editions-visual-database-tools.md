@@ -36,6 +36,6 @@ Database diagrams created on previous editions of [!INCLUDE[ssNoVersion](../../i
     This will upgrade diagrams stored on the database.  
   
 ## See Also  
-[Understand Database Diagram Ownership(../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
-[Set Up Database Diagram Designer(../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
+[Understand Database Diagram Ownership](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
+[Set Up Database Diagram Designer](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
   

@@ -33,8 +33,8 @@ You can discard changes made to a query definition prior to saving them. Once th
     The query definition will return to the state it was in at the last save.  
   
 ## See Also  
-[Save Queries(../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
-[Design Queries and Views How-to Topics(../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Perform Basic Operations with Queries(../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[Work with Data in the Results Pane(../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Save Queries](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
+[Design Queries and Views How-to Topics](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Perform Basic Operations with Queries](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Work with Data in the Results Pane](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   

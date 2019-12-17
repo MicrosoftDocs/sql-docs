@@ -73,8 +73,8 @@ To search different data columns using conditions linked with AND, you put all t
 4.  Repeat Steps 2 and 3 for each additional condition you want to add.  
   
 ## See Also  
-[Combine Conditions When AND Has Precedence(../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
-[Combine Conditions When OR Has Precedence(../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
-[Conventions for Combining Search Conditions in the Criteria Pane(../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[Specify Search Criteria(../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Combine Conditions When AND Has Precedence](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
+[Combine Conditions When OR Has Precedence](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[Conventions for Combining Search Conditions in the Criteria Pane](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+[Specify Search Criteria](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

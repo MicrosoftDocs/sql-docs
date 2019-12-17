@@ -49,6 +49,6 @@ In addition to the queries you can create using the graphical panes, you can ent
 When you create queries using SQL statements that cannot be represented in the graphical panes, the Query and View Designer dims those panes to indicate that they do not reflect the query you are creating. However, the dimmed panes are still active and, in many cases, you can make changes to the query in those panes. If the changes you make result in a query that can be represented in the graphical panes, those panes are no longer dimmed.  
   
 ## See Also  
-[Design Queries and Views How-to Topics(../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Types of Queries(../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[Design Queries and Views How-to Topics](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Types of Queries](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

@@ -35,6 +35,6 @@ NOT LIKE 'A%'
 ```  
   
 ## See Also  
-[Rules for Entering Search Values(../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[Specify Search Criteria(../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Rules for Entering Search Values](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
+[Specify Search Criteria](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

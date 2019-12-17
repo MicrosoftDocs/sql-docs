@@ -35,5 +35,5 @@ You can save a specific table or a set of tables if you do not want to save all 
     > The list of tables may contain tables in addition to those selected. For example, if you change the data type of a column that participates in a relationship with another table, both tables will be included in this list.  
   
 ## See Also  
-[Work with Database Diagrams(../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Work with Database Diagrams](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

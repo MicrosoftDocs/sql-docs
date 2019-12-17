@@ -1,7 +1,5 @@
 ---
 title: Work with Tables in Database Diagram
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -16,16 +14,20 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: 
-
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
+
 # Work with Tables in Database Diagram (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can modify and create database tables in either Table Designer or Database Diagram Designer.  
   
 > [!NOTE]  
 > If the table is published for replication, you must make schema changes using the Transact-SQL statement [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) or SQL Server Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
   
-## In This Section  
+## In This Section
+
 [Add Tables to Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
   
 [Add Related Tables to Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-related-tables-to-diagrams-visual-database-tools.md)  
@@ -40,7 +42,8 @@ You can modify and create database tables in either Table Designer or Database D
   
 [Draw Reflexive Relationships &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md)  
   
-## Reference  
-[Add Table Dialog Box &#40;Database Designer&#41; &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)  
-  
-## Related Sections  
+## Reference
+
+[Add Table Dialog Box &#40;Database Designer&#41; &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)
+
+## Related Sections

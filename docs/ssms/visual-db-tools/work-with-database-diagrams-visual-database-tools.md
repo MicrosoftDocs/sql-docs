@@ -40,8 +40,8 @@ You can create a visual diagram of your database using the Database Designer. Th
   
 [Show Diagram Properties &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/show-diagram-properties-visual-database-tools.md)  
   
-## Related Sections  
+## Related Sections
+
 [Work with Tables in Database Diagram &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   
-[Work with Diagram Layout &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
-  
+[Work with Diagram Layout &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)

@@ -67,7 +67,7 @@ The resulting output might look like this:
   
 5.  In the **Group By** grid cell for the column that is going to be aggregated, select the appropriate aggregate function.  
   
-    The Query and View Designer automatically assigns a column alias to the column you are summarizing. You can replace this automatically generated alias with a more meaningful one. For more details, see [Create Column Aliases(../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
+    The Query and View Designer automatically assigns a column alias to the column you are summarizing. You can replace this automatically generated alias with a more meaningful one. For more details, see [Create Column Aliases](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
     ![Adding a column alias to the query result set](../../ssms/visual-db-tools/media/dv3w9e3.gif "Adding a column alias to the query result set")  
   
@@ -80,5 +80,5 @@ The resulting output might look like this:
     ```  
   
 ## See Also  
-[Sort and Group Query Results(../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Sort and Group Query Results](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   

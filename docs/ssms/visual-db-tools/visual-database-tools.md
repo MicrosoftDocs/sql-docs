@@ -24,6 +24,6 @@ Use the following tasks to get started with Visual Database Tools:
   
 |**Description**|**Topic**|  
 |-------------------|-------------|  
-|Describes the database diagram tool.|[Design Database Diagrams(../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)|  
-|Describes the visual table design tool.|[Design Tables(../../ssms/visual-db-tools/design-tables-visual-database-tools.md)|  
-|Describes the visual query designer.|[Design Queries and Views How-to Topics(../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)| 
+|Describes the database diagram tool.|[Design Database Diagrams](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)|  
+|Describes the visual table design tool.|[Design Tables](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)|  
+|Describes the visual query designer.|[Design Queries and Views How-to Topics](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)| 

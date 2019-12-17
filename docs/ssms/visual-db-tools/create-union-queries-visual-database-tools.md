@@ -47,8 +47,7 @@ The UNION keyword enables you to include the results of two SELECT statements in
     Your UNION query is now formatted by Query Designer.  
   
 ## See Also  
-[Supported Query Types(../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
-[Design Queries and Views How-to Topics(../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Perform Basic Operations with Queries(../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[UNION (Transact-SQL)](https://msdn.microsoft.com/607c296f-8a6a-49bc-975a-b8d0c0914df7)  
-  
+[Supported Query Types](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
+[Design Queries and Views How-to Topics](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Perform Basic Operations with Queries](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[UNION (Transact-SQL)](https://msdn.microsoft.com/607c296f-8a6a-49bc-975a-b8d0c0914df7)

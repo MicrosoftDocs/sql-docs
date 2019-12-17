@@ -80,5 +80,5 @@ Shows the column used by Microsoft SQL Server as the table's ROWGUID column. To 
 Provides a drop-down list from which you can choose the filegroup for columns that have text or image data types. If the table is stored using a partition scheme, leave this field blank.  
   
 ## See Also  
-[Design Tables(../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Design Tables](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

@@ -51,7 +51,7 @@ You can create a WHERE clause and HAVING clause involving the same column. To do
   
 ### To specify a WHERE condition in an aggregate query  
   
-1.  Specify the groups for your query. For details, see [Group Rows in Query Results(../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
+1.  Specify the groups for your query. For details, see [Group Rows in Query Results](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
   
 2.  If it is not already in the Criteria pane, add the column on which you want to base the WHERE condition.  
   
@@ -85,6 +85,6 @@ You can create a WHERE clause and HAVING clause involving the same column. To do
     ```  
   
 ## See Also  
-[Sort and Group Query Results(../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
-[Summarize Query Results(../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Sort and Group Query Results](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Summarize Query Results](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

@@ -53,6 +53,6 @@ The sort order of data in your query is determined by the database. Options that
 ## Using Double-Byte Characters  
 You can enter DBCS characters for literals and for database object names such as table and view names or aliases. You can also use DBCS characters for parameter names and parameter marker characters. However, you cannot use DBCS characters in SQL language elements such as function names or SQL keywords.  
   
-## See Also  
-[Design Queries and Views How-to Topics(../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-  
+## See Also
+
+[Design Queries and Views How-to Topics](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)

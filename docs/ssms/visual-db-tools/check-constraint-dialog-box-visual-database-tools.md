@@ -1,7 +1,5 @@
 ---
 title: Check Constraint Dialog Box
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -13,16 +11,21 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: 
-
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
+
 # Check Constraint Dialog Box (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 This dialog box appears when you right-click a table definition grid in Table Designer and click **Check Constraints**. The dialog box contains a set of properties for non-unique constraints attached to the tables in your database. Properties applying to unique constraints appear in the **Indexes/Keys** dialog box.  
   
 > [!NOTE]  
 > If the table is published for replication, you must make schema changes using the Transact-SQL statement [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) or SQL Server Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
   
-## Options  
+## Options
+
 **Selected Check Constraints**  
 Lists available check constraints. To view the properties of a constraint, select it in the list.  
   
@@ -59,7 +62,7 @@ Specify whether the constraint is enforced when data is inserted into or updated
 **Enforce For Replication**  
 Indicates whether to enforce the constraint when a replication agent performs an insert or update on this table.  
   
-## See Also  
-[Working with Constraints(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
-[Indexes - Keys Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
-  
+## See Also
+
+[Working with Constraints](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)
+[Indexes - Keys Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)

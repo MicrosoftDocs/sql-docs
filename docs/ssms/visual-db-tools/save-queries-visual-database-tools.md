@@ -32,10 +32,10 @@ Save your query when you want to work with it later. Note that running your quer
 3.  The query will be saved in the Query folder of the project in Solution Explorer.  
   
 ## See Also  
-[Create Queries(../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
-[Run Queries(../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
-[Discard Changes Made to Queries(../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
-[Design Queries and Views How-to Topics(../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Types of Queries(../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
-[Perform Basic Operations with Queries(../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Create Queries](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
+[Run Queries](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
+[Discard Changes Made to Queries](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
+[Design Queries and Views How-to Topics](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Types of Queries](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[Perform Basic Operations with Queries](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

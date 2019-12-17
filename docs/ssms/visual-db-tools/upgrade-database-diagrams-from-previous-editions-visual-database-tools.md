@@ -23,7 +23,7 @@ ms.reviewer:
 ---
 # Upgrade Database Diagrams from Previous Editions (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Database diagrams created on previous editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases are upgraded automatically when database diagramming is set up on [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more steps for setting up diagramming see [Set Up Database Diagram Designer(../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
+Database diagrams created on previous editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases are upgraded automatically when database diagramming is set up on [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more steps for setting up diagramming see [Set Up Database Diagram Designer](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
   
 ### To upgrade legacy database diagrams  
   

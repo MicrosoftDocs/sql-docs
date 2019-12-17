@@ -2,7 +2,6 @@
 title: DiagnosticInformation Element
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 

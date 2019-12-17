@@ -1,10 +1,9 @@
 ---
-title: "Delete a Database Diagram (Visual Database Tools)"
+title: Delete a Database Diagram
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,8 +12,10 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], deleting"
   - "removing database diagrams"
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Delete a Database Diagram (Visual Database Tools)

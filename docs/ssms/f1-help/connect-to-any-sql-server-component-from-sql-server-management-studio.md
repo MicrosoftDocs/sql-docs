@@ -1,5 +1,5 @@
 ---
-title: "Connect to Any SQL Server Component from SSMS"
+title: Connect to Any SQL Server Component
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql

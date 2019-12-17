@@ -1,10 +1,7 @@
 ---
-title: "dta Utility"
-ms.custom: seo-lt-2019
-ms.date: "01/09/2017"
+title: dta Utility
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,12 +17,19 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 01/09/2017
 ---
+
 # dta Utility
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The **dta** utility is the command prompt version of Database Engine Tuning Advisor. The **dta** utility is designed to allow you to use Database Engine Tuning Advisor functionality in applications and scripts.  
-  
- Like Database Engine Tuning Advisor, the **dta** utility analyzes a workload and recommends physical design structures to improve server performance for that workload. The workload can be a plan cache, a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace file or table, or a [!INCLUDE[tsql](../../includes/tsql-md.md)] script. Physical design structures include indexes, indexed views, and partitioning. After analyzing a workload, the **dta** utility produces a recommendation for the physical design of databases and can generate the necessary script to implement the recommendation. Workloads can be specified from the command prompt with the **-if** or the **-it** argument. You can also specify an XML input file from the command prompt with the **-ix** argument. In that case, the workload is specified in the XML input file.  
+
+The **dta** utility is the command prompt version of Database Engine Tuning Advisor. The **dta** utility is designed to allow you to use Database Engine Tuning Advisor functionality in applications and scripts.  
+
+Like Database Engine Tuning Advisor, the **dta** utility analyzes a workload and recommends physical design structures to improve server performance for that workload. The workload can be a plan cache, a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace file or table, or a [!INCLUDE[tsql](../../includes/tsql-md.md)] script. Physical design structures include indexes, indexed views, and partitioning. After analyzing a workload, the **dta** utility produces a recommendation for the physical design of databases and can generate the necessary script to implement the recommendation. Workloads can be specified from the command prompt with the **-if** or the **-it** argument. You can also specify an XML input file from the command prompt with the **-ix** argument. In that case, the workload is specified in the XML input file.  
   
 ## Syntax  
   
@@ -208,7 +212,7 @@ dta -d AdventureWorks2012 ...
   
  **-ip**  
  Specifies that the plan cache be used as the workload. The top 1,000 plan cache events for explicitly selected databases are analyzed. This value can be changed using the **-n** option.  
- 
+
 **-iq**  
  Specifies that the Query Store be used as the workload. The top 1,000 events from the Query Store for explicitly selected databases are analyzed. This value can be changed using the **-n** option.  See [Query Store](../../relational-databases/performance/how-query-store-collects-data.md) and 
  [Tuning Database Using Workload from Query Store](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) for more information.
@@ -216,7 +220,6 @@ dta -d AdventureWorks2012 ...
 |-|  
 |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.|  
      
-  
  **-if** _workload_file_  
  Specifies the path and name of the workload file to use as input for tuning. The file must be in one of these formats: .trc (SQL Server Profiler trace file), .sql (SQL file), or .log ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace file). Either one workload file or one workload table must be specified.  
   
@@ -236,7 +239,11 @@ dta -d AdventureWorks2012 ...
   
  **-ix** _input_XML_file_name_  
  Specifies the name of the XML file containing **dta** input information. This must be a valid XML document conforming to DTASchema.xsd. Conflicting arguments specified from the command prompt for tuning options override the corresponding value in this XML file. The only exception is if a user-specified configuration is entered in the evaluate mode in the XML input file. For example, if a configuration is entered in the **Configuration** element of the XML input file and the **EvaluateConfiguration** element is also specified as one of the tuning options, the tuning options specified in the XML input file will override any tuning options entered from the command prompt.  
+
+ **-k** MaxTotalIndexes
   
+ **-K** MaxTotalIndexes
+
  **-m** _minimum_improvement_  
  Specifies the minimum percentage of improvement that the recommended configuration must satisfy.  
   

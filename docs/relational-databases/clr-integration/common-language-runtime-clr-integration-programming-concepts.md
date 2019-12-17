@@ -1,6 +1,7 @@
 ---
-title: "Common Language Runtime (CLR) Integration Programming Concepts | Microsoft Docs"
-ms.custom: ""
+title: "Common Language Runtime (CLR) Programming"
+description: Links to Common Language Runtime (CLR) programming articles
+ms.custom: "seo-lt-2019"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""

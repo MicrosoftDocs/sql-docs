@@ -1,8 +1,7 @@
 ---
-title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
+title: "Download SQL Server Management Studio (SSMS)"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 keywords: 
@@ -22,7 +21,7 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 ms.reviewer: sstein, maghan
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 11/04/2019
 ---
 

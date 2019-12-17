@@ -1,6 +1,6 @@
 ---
-title: "Status Bar (Database Engine Query Editor) | Microsoft Docs"
-ms.custom: ""
+title: Status Bar (Database Engine Query Editor)
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

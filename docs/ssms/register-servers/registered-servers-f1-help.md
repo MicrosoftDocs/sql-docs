@@ -1,9 +1,9 @@
 ---
-title: "Registered Servers F1 Help | Microsoft Docs"
-ms.custom: ""
+title: "Registered Servers F1 Help"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: "reference"

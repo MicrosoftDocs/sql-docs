@@ -2,14 +2,14 @@
 title: "UTF-8 Support in OLE DB Driver for SQL Server| Microsoft Docs"
 description: "UTF-8 Support in OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: 04/23/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: reference
-author: v-kaywon
-ms.author: v-kaywon
+ms.reviewer: v-kaywon
+ms.author: jroth
+author: rothja
 ---
 # UTF-8 Support in OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

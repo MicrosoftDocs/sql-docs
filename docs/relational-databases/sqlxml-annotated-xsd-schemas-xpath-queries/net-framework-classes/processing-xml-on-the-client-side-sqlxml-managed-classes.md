@@ -1,6 +1,5 @@
 ---
-title: "Processing XML on the Client Side (SQLXML Managed Classes) | Microsoft Docs"
-ms.custom: ""
+title: "Processing XML on the Client Side (SQLXML)"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -16,6 +15,7 @@ helpviewer_keywords:
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Processing XML on the Client Side (SQLXML Managed Classes)

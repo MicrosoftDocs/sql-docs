@@ -1,6 +1,8 @@
 ---
-title: "[ ] (Wildcard - Character(s) to Match) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "[ ] Wildcard to match characters"
+description: Use a wildcard to match one or more characters.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "12/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

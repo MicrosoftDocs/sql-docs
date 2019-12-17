@@ -33,8 +33,8 @@ ms.author: mikeray
 |**replica_id**|**uniqueidentifier**|Unique identifier of the availability replica.|  
 |**replica_server_name**|**nvarchar(256)**|Name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hosting the replica.|  
 |**group_id**|**uniqueidentifier**|Unique identifier of the availability group.|  
-|**join_state**|**tinyint**|0 = Not joined<br /><br /> 1 = Joined, standalone instance<br /><br /> 2 = Joined, failover cluster instance|  
-|**join_state_desc**|**nvarchar(60)**|NOT_JOINED<br /><br /> JOINED_STANDALONE_INSTANCE<br /><br /> JOINED_FAILOVER_CLUSTER_INSTANCE|  
+|**join_state**|**tinyint**|0 = Not joined<br /><br /> 1 = Joined, standalone<br /><br /> 2 = Joined, failover cluster instance|  
+|**join_state_desc**|**nvarchar(60)**|NOT_JOINED<br /><br /> JOINED_STANDALONE<br /><br /> JOINED_FAILOVER_CLUSTER_INSTANCE|  
   
 ## Security  
   

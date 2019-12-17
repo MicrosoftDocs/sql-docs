@@ -1,7 +1,7 @@
 ---
-title: "Install SQL Server using the Installation media GUI from the setup media"
-ms.custom: ""
-ms.date: 07/26/2019
+title: "Install using graphical user interface"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

@@ -1,13 +1,14 @@
 ---
 title: XML input file samples (DTA)
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 1ed28805-a9ae-43ca-92da-101ba0c0c43a
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ---

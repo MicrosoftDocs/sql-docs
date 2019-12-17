@@ -1,6 +1,5 @@
 ---
-title: "Explicit Mapping XSD Elements and Attributes to Tables and Columns | Microsoft Docs"
-ms.custom: ""
+title: "Custom XSD mappings to tables/columns (SQLXML)"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -28,9 +27,10 @@ ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Explicit Mapping XSD Elements and Attributes to Tables and Columns
+# Custom XSD mappings to tables/columns (SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   When using an XSD schema to provide an XML view of the relational database , the elements and attributes of the schema must be mapped to tables and columns of the database. The rows in the database table/view will map to elements in the XML document. The column values in the database map to attributes or elements.  
   

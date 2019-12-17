@@ -1,6 +1,5 @@
 ---
-title: "Large XML Schema Collections and Out-of-Memory Conditions | Microsoft Docs"
-ms.custom: ""
+title: "Out-of-memory with large XML schema collections | Microsoft Docs"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,6 +12,7 @@ helpviewer_keywords:
 ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 ---
 # Large XML Schema Collections and Out-of-Memory Conditions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

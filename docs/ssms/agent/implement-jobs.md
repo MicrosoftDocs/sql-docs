@@ -1,10 +1,9 @@
 ---
-title: "Implement Jobs | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Implement Jobs"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,8 +12,10 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, about jobs"
   - "jobs [SQL Server Agent], about jobs"
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Implement Jobs

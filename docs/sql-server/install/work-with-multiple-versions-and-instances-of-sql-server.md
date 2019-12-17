@@ -1,7 +1,7 @@
 ---
-title: "Work with Multiple Versions and Instances of SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2017"
+title: "Work with multiple versions and instances"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -20,7 +20,7 @@ ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
 ---
-# Work with Multiple Versions and Instances of SQL Server
+# Work with multiple versions and instances of SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

@@ -237,7 +237,7 @@ You may also want to consider a non-relational or NoSQL solution for certain dat
 The following table provides an approximation of lifecycle dates for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] products. For greater details and accuracy, see the [Microsoft Lifecycle Policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy) page. 
 
 | **Version**     | **Release year** | **Mainstream Support end year** | **Extended Support end year** |
-| :---------------| :--------------- |:------------------------------- |
+| :---------------| :--------------- | :------------------------------ | :---------------------------- |
 | [SQL Server 2019](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202019) | 2019 | 2025 | 2030 |
 | [SQL Server 2017](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017) | 2017 | 2022 | 2027 |
 | [SQL Server 2016](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202016) | 2016 | 2021 | 2026 |

@@ -182,7 +182,7 @@ Refer to [MyAzureVMs.csv](https://github.com/microsoft/sql-server-samples/blob/m
 
 ## Download ESUs
 
-Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances have been registered with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registry service, you can download the Extended Security Update packages using the link found in the Azure portal, if and when they are made available. 
+Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances have been registered with the SQL Server registry service, you can download the Extended Security Update packages using the link found in the Azure portal, if and when they are made available. 
 
 To download ESUs, follow these steps: 
 
@@ -263,7 +263,7 @@ Azure SQL Database Managed Instance is an instance-scoped deployment option in [
 
 **Can customers leverage the Azure Hybrid Benefit for SQL Server 2008 and 2008 R2 versions?**
 
-Yes, customers with active Software Assurance or equivalent Server Subscriptions can leverage the Azure Hybrid Benefit using existing on-premises license investments for discounted pricing on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on Azure SQL Database and Azure Virtual Machines.
+Yes, customers with active Software Assurance or equivalent Server Subscriptions can leverage the Azure Hybrid Benefit using existing on-premises license investments for discounted pricing on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Azure Virtual Machines.
 
 **Can customers get free Extended Security Updates on Azure Government regions?**
 

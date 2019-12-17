@@ -240,10 +240,10 @@ dta -d AdventureWorks2012 ...
  **-ix** _input_XML_file_name_  
  Specifies the name of the XML file containing **dta** input information. This must be a valid XML document conforming to DTASchema.xsd. Conflicting arguments specified from the command prompt for tuning options override the corresponding value in this XML file. The only exception is if a user-specified configuration is entered in the evaluate mode in the XML input file. For example, if a configuration is entered in the **Configuration** element of the XML input file and the **EvaluateConfiguration** element is also specified as one of the tuning options, the tuning options specified in the XML input file will override any tuning options entered from the command prompt.  
 
- **-k** MaxTotalIndexes  
+ **-k** _maxtotalindexes_  
  Maximum number of indexes in the recommendation.  
 
- **-K** MaxTotalIndexes
+ **-K** _maxtotalindexes_  
  Maximum number of indexes per table.
 
  **-m** _minimum_improvement_  

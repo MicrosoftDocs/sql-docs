@@ -3,8 +3,7 @@ title: "TuningOptions Element (DTA)"
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
@@ -14,6 +13,8 @@ helpviewer_keywords:
 ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 ---
 # TuningOptions Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -155,8 +155,8 @@
         "ssdt/**/*.md": "SQL Server Data Tools (SSDT)",
         "ssms/**/*.md": "SQL Server Management Studio (SSMS)",
         "ssms/agent/*.md": "SQL Server Agent",
-        "ssms/visual-db-tools/*.md": "Visual Database Tools"
-
+        "ssms/visual-db-tools/*.md": "Visual Database Tools",
+        "tools/ssbdiagnose/*.md": "ssbdiagnose"
       },
 
       "breadcrumb_path": {

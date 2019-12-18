@@ -229,7 +229,7 @@ WITH RESULT SETS(([Package] NVARCHAR(max)))
 GO
 ```
 
-The list is from `pkg_resources.working_set` in Python and returned as a data frame.
+The list is from `pkg_resources.working_set` in Python and returned to SQL as a data frame.
 
 **Results**
 

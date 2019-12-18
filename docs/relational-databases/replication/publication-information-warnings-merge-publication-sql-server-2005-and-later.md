@@ -1,6 +1,7 @@
 ---
-title: "Publication Information-Warning-Merge Publication-SQL Server 2005+ | Microsoft Docs"
-ms.custom: ""
+title: "Warnings (Merge Publication Information)"
+description: Describes the 'Warnings' tab of the Merge Replication Publication Information page within SQL Server Management Studio on SQL Server 2005 and later. 
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

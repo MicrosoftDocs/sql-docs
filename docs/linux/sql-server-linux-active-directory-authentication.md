@@ -68,7 +68,7 @@ Join your SQL Server Linux host with an Active Directory domain controller. For 
    ```
 
    > [!NOTE]
-   > If you receive an error, `Insufficient access rights`, check with your domain administrator that you have sufficient permissions to set an SPN on this account.
+   > If you receive an error, `Insufficient access rights`, check with your domain administrator that you have sufficient permissions to set an SPN on this account. The account that is used to register an SPN will need the **Write servicePrincipalName** permissions. For more information, see [Register a Service Principal Name for Kerberos Connections](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
    >
    > If you change the TCP port in the future, you must run the **setspn** command again with the new port number. You also need to add the new SPN to the SQL Server service keytab by following the steps in the next section.
 
@@ -96,7 +96,7 @@ Configuring AD authentication for SQL Server on Linux requires an AD account (MS
    > [!NOTE]
    > SPNs can take several minutes to propagate through your domain, especially if the domain is large. If you receive the error, `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM`, please wait a few minutes and try again.</br></br> The above commands will only work if the server has been joined to an AD domain, which was covered in the previous section.
 
-1. Using **ktpass**, add keytab entries for each SPN using the following commands on a Windows machine Command Prompt:
+1. Using [**ktpass**](/windows-server/administration/windows-commands/ktpass), add keytab entries for each SPN using the following commands on a Windows machine Command Prompt:
 
     - `<DomainName>\<UserName>` - Could be an MSA or AD user account
     - `@CONTOSO.COM` - Use your domain name

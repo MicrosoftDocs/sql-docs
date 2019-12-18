@@ -76,12 +76,10 @@ For more information, see [Register a Service Principal Name for Kerberos Connec
 
 ## <a id="configurekeytab"></a> Configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service keytab
 
-There are two different ways to configure the SQL Server service keytab files. The first option is to use a machine account (UPN), while second option uses a Managed Service Account (MSA) in the keytab configuration. Both mechanisms are equally functional, and you can choose the method that works best for your environment.
-
-In both cases, the SPN created in the earlier step is required, and the SPN must be registered in the keytab.
+Configuring AD authentication for SQL Server on Linux requires an AD account (MSA or an AD user account) and the SPN created in the the previous section.
 
 > [!IMPORTANT]
-> If the password for the UPN/MSA is changed or the password for the account that the SPNs are assigned to is changed, you must update the keytab with the new password and Key Version Number (KVNO). Some services might also rotate the passwords automatically. Review any password rotation policies for the accounts in question and align them with scheduled maintenance activities to avoid unexpected downtime.
+> If the password for the AD account is changed or the password for the account that the SPNs are assigned to is changed, you must update the keytab with the new password and Key Version Number (KVNO). Some services might also rotate the passwords automatically. Review any password rotation policies for the accounts in question and align them with scheduled maintenance activities to avoid unexpected downtime.
 
 ### <a id="spn"></a> SPN keytab entries
 
@@ -119,14 +117,10 @@ In both cases, the SPN created in the earlier step is required, and the SPN must
    ktpass /princ <MSA>@<DomainName.com> /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
    ```
 
-1. Write the keytab to a file using the below command, and copy the file over to the SQL Server machine folder `/var/opt/mssql/secrets`.
-
-   ```bash
-   wkt /var/opt/mssql/secrets/mssql.keytab
-   ```
-
    > [!NOTE]
-   > If the account password is changed, KVNO will change, and the keytab must be recreated to account for that change. Regular password rotation is normal, and you will want to account for these changes.
+   > The commands above allow both AES and RC4 encryption ciphers for AD authentication. RC4 is an older encryption cipher and if a higher degree of security is required, you can choose to create the keytab entries with only the AES encryption cipher.
+
+1. After executing the above command, you should have a keytab file named mssql.keytab. Copy the file over to the SQL Server machine under the folder `/var/opt/mssql/secrets`.
 
 1. Secure the keytab file.
 
@@ -137,7 +131,7 @@ In both cases, the SPN created in the earlier step is required, and the SPN must
     sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
     ```
 
-1. The following configuration option needs to be set with the **mssql-conf** tool to specify the account to be used while accessing the keytab file. Ensure the values below are in **/var/opt/mssql/mssql.conf**.
+1. The following configuration option needs to be set with the **mssql-conf** tool to specify the account to be used while accessing the keytab file.
 
    ```bash
    sudo mssql-conf set network.privilegedadaccount <username>
@@ -146,7 +140,7 @@ In both cases, the SPN created in the earlier step is required, and the SPN must
    > [!NOTE]
    > Only include the username and not domainname\username or username@domain. SQL Server internally adds domain name as required along with this username when used.
 
-1. Use following steps to configure the SQL Server to start using the keytab file for Kerberos authentication.
+1. Use the following steps to configure SQL Server to start using the keytab file for Kerberos authentication.
 
     ```bash
     sudo mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab

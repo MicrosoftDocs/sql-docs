@@ -1,6 +1,5 @@
 ---
 title: "Quickstart: Extended events in SQL Server"
-ms.custom: ""
 ms.date: "05/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

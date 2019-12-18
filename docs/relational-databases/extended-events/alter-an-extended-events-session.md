@@ -1,6 +1,5 @@
 ---
 title: "Alter an Extended Events Session"
-ms.custom: ""
 ms.date: "05/24/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

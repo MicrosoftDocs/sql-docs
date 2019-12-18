@@ -1,6 +1,5 @@
 ---
 title: "Convert a SQL Trace script to Extended Events session"
-ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

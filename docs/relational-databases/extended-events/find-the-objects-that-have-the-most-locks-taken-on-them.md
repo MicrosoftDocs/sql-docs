@@ -1,6 +1,5 @@
 ---
 title: "Find objects with the most locks using Extended Events"
-ms.custom: ""
 ms.date: "10/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

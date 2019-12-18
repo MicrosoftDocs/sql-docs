@@ -1,6 +1,5 @@
 ---
 title: "SQL Server Extended Events Engine"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

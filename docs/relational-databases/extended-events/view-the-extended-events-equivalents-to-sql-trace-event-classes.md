@@ -1,6 +1,5 @@
 ---
 title: "Extended events equivalents to SQL Trace Event classes"
-ms.custom: ""
 ms.date: "03/05/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

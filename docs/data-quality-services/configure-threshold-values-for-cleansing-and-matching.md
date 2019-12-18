@@ -1,6 +1,5 @@
 ---
-title: "Configure Threshold Values for Cleansing and Matching | Microsoft Docs"
-ms.custom: ""
+title: "Configure Threshold Values for Cleansing and Matching"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "cleansing threshold values"
   - "matching,threshold value"
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Configure Threshold Values for Cleansing and Matching
 

@@ -1,6 +1,5 @@
 ---
-title: "Install Data Quality Services | Microsoft Docs"
-ms.custom: ""
+title: "Install Data Quality Services"
 ms.date: "09/11/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Install Data Quality Services
 

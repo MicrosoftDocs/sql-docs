@@ -1,26 +1,31 @@
 ---
 title: "End of support options"
-description: Learn about the different options available for the end of support SQL Server products, such as SQL Server 2005, SQL Server 2008, and SQL Server 2008 R2. 
-ms.custom: ""
-ms.date: "12/09/2019"
+description: Learn about the different options available for SQL Server products that have reached end of support, such as SQL Server 2005, SQL Server 2008, and SQL Server 2008 R2. 
+ms.date: "12/18/2019"
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=sql-server-previousversions||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # SQL Server end of support options 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
- 
+
+This article explains your options for addressing SQL Server products that have reached end of support or end of life.
+
+## Understanding the SQL Server lifecycle
+
 Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is backed by a minimum of 10 years support, which includes five years in mainstream support, and five years in extended support:
 -  **Mainstream support** includes functional, performance, scalability and security updates. 
 -  **Extended support** includes only security updates. 
 
-**End of support** means the end of the 10-year lifecycle and to all security updates, which can cause security and compliance issues as well as put applications and their business at risk. Additionally, support options are limited for customers who call into Microsoft Support for a product that has reached the end of its support cycle. 
+**End of support** means the end of the 10-year lifecycle and to all security updates, which can cause security and compliance issues as well as put applications and their business at risk. Additionally, support options are limited for customers who call into Microsoft Support for a product that has reached the end of its support cycle. For example, as of 2019, [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] have reached end of support.
 
-**End of life** means that [!INCLUDE[msCoName](../../includes/msconame-md.md)] has stopped all development for the product, including security fixes, and the product can no longer be covered by an Extended Security Update (ESU) subscription. For example, as of 2019, [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] have reached end of support, and [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] has reached end of life. 
+**End of life** means that [!INCLUDE[msCoName](../../includes/msconame-md.md)] has stopped all development for the product, including security fixes, and the product can no longer be covered by an Extended Security Update (ESU) subscription. For example, [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] has reached end of life.
+
+## Options
 
 Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of support stage, you can choose to:
 - Upgrade to a current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -32,9 +37,11 @@ For more information, guidance, and tools to plan and automate your upgrade or m
 
 ![End of support options](media/sql-server-end-of-life-overview/sql-server-upgrade-paths.png)
 
+The following sections describe the benefits and additional resources for each approach.
+
 ## Upgrade SQL Server
 
-Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of support, you can choose to upgrade to a newer and supported version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This gives you environmental consistency, allows you to use the latest and greatest feature set, and adopts the new version's support lifecycle. 
+Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of support, you can choose to upgrade to a newer and supported version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This gives you environmental consistency, allows you to use the latest feature set, and adopts the new version's support lifecycle.
 
 ### Benefits
 - **Latest technology**: New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions introduce innovations that include performance, scalability, and high-availability features, and improved security. 
@@ -45,9 +52,9 @@ Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached 
 
 ### Considerations
 
-- **Costly**: You have to make the biggest up-front investment and provide the most ongoing management, because you have to buy, maintain, and manage your own hardware and software.
-- **Downtime**: There could be downtime depending on the upgrade strategy that's used, plus the inherent risk of running into issues during an in-place upgrade process.
-- **Potentially complex**: If you're on Windows Server 2008 or [!INCLUDE[winserver2008r2-md](../../includes/winserver2008r2-md.md)], you will also need to upgrade the OS as the newer versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may not be supported on those Windows versions. There is added risk during the OS upgrade process, so doing a side-by-side migration may be the more prudent, yet more costly, approach. In-place OS upgrades are not supported on failover cluster instances for Windows Server 2008 or [!INCLUDE[winserver2008r2-md](../../includes/winserver2008r2-md.md)]. 
+- **Cost**: This approach requires the biggest up-front investment and the most ongoing management. You have to buy, maintain, and manage your own hardware and software.
+- **Downtime**: There could be downtime depending on your upgrade strategy. There is also an inherent risk of running into issues during an in-place upgrade process.
+- **Complexity**: If you're on Windows Server 2008 or [!INCLUDE[winserver2008r2-md](../../includes/winserver2008r2-md.md)], you will also need to upgrade the OS as the newer versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may not be supported on those Windows versions. There is added risk during the OS upgrade process, so doing a side-by-side migration may be the more prudent, yet more costly, approach. In-place OS upgrades are not supported on failover cluster instances for Windows Server 2008 or [!INCLUDE[winserver2008r2-md](../../includes/winserver2008r2-md.md)]. 
 
   > [!NOTE]
   > Cluster OS rolling upgrades are available starting with Windows Server 2016.
@@ -94,10 +101,10 @@ If you're not ready to upgrade, and you're not ready to move to the cloud, you h
 ### Considerations 
 
 - **Limited availability**: This option is only available to customers with Software Assurance or subscription licenses. 
-- **Costly**: This option can prove costly, as Extended Security Updates are approximately 75% of the on-premises license cost annually.
-- **Limited timeframe**: This option is only available for three years so you will still need to upgrade or migrate at the end of the three-year period if you want to ensure your security and compliance. 
+- **Cost**: This option can prove costly, as Extended Security Updates are approximately 75% of the on-premises license cost annually.
+- **Limited time-frame**: This option is only available for three years, so you still need to upgrade or migrate at the end of the three-year period if you want to ensure your security and compliance.
 - **No bug fixes**: If you encounter a non-security bug with the product, [!INCLUDE[msCoName](../../includes/msconame-md.md)] will not release a fix for it. 
-- **Limited support**: Extended Security Updates do not include new features, functional improvements, nor customer-requested fixes. Security fixes are limited to those rated as  Critical by the [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/).
+- **Limited support**: Extended Security Updates do not include new features, functional improvements, or customer-requested fixes. Security fixes are limited to those rated as  Critical by the [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/).
 
 ### Resources
 
@@ -146,7 +153,7 @@ Another option is to migrate your workload to an [Azure Virtual Machine running 
 
 ## Azure SQL Database single database
 
-If you'd like to offload maintenance, cost, and never worry about having to upgrade again, you can move your workload to [Azure SQL Database single database](/azure/sql-database/sql-database-single-database). This option is best for modern cloud applications that want to use the latest stable [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features and have time constraints in development and marketing. 
+If you want to offload maintenance, reduce costs, and eliminate the need to upgrade in the future, you can move your workload to [Azure SQL Database single database](/azure/sql-database/sql-database-single-database). This option is best for modern cloud applications that want to use the latest stable [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features and have time constraints in development and marketing. 
 
 ### Benefits
 
@@ -165,7 +172,7 @@ If you'd like to offload maintenance, cost, and never worry about having to upgr
 
 - **Limited migration options**:  You can only migrate a single database at a time, rather than an entire instance.   
 - **Feature limitation**:  Although the most commonly used [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features are available, the feature set for a single database is not as complete as for an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-- **[!INCLUDE[tsql](../../includes/tsql-md.md)] differences**:  There are some [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) differences between a single database and an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+- **Transact-SQL differences**:  There are some [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) differences between a single database and an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Size limitations**:  A single database has a maximum database size of 100 TB, compared to a 524 PB size for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Maintenance time**: There is no guarantee for the exact maintenance time, though it's nearly transparent. 
 
@@ -203,7 +210,7 @@ If you'd like to take advantage of offloading maintenance and cost, but find the
 ### Considerations
 
 - **Cost**: The managed instance option can be more costly than the single database option.  
-- **[!INCLUDE[tsql](../../includes/tsql-md.md)] differences**: There are some [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) differences between a single database and an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+- **Transact-SQL differences**: There are some [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) differences between a single database and an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 - **Deployment**:  Deploying a managed instance can take more time than a single database.  
 - **Feature limitation**: Although a managed instance shares most features with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there are still some features that are unsupported. 
 - **Size limitation**: The combined storage size for all databases within a managed instance are limited to 8 TB, as opposed to 524 PB for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on-premises.  
@@ -224,12 +231,28 @@ Tools:
 
 ## Non-SQL options
 
-You may also want to consider a non-relational or NoSQL solution for certain data and applications.
+For certain types of applications, you may also want to consider a non-relational or NoSQL solution, such as Azure Cosmos DB or Azure table storage.
 
-|Non-relational solution|Benefits|  
-|------------------------------|--------------|  
-|**Azure Cosmos DB**<br /><br /> Consider this option for modern, scalable, mobile, and web applications that use JSON data and require a combination of robust querying and transactional data processing.<br /><br /> For more info, see [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/).<br /><br /> For info about importing data, see [Import data to Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/import-data/).|Your documents are indexed and you can use familiar SQL syntax to query them.<br /><br /> The database is schema-free.<br /><br /> You can add properties to documents without having to rebuild indexes.<br /><br /> You get JSON and JavaScript support right inside the database engine.<br /><br /> You get native support for geospatial data and integration with other Azure Services including Azure Search, HDInsight, and Data Factory.<br /><br /> You get low latency, high-performance storage with reserved throughput levels.|  
-|**Azure table storage**<br /><br /> Consider this option to store petabytes of semi-structured data in a cost-effective solution.<br /><br /> For more info, see [Table Storage](https://azure.microsoft.com/services/storage/tables/).|You can evolve your apps and your table schema without taking the data offline.<br /><br /> You can scale up without sharding your dataset.<br /><br /> You get geo-redundant storage that replicates data across multiple regions.|   
+### Azure Cosmos DB
+
+Consider Azure Cosmos DB for modern, scalable, mobile, and web applications that use JSON data and require a combination of robust querying and transactional data processing. For more info, see [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/). For info about importing data, see [Import data to Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/import-data/).
+
+Azure Cosmos DB has the following benefits:
+- Your documents are indexed and you can use familiar SQL syntax to query them.
+- The database is schema-free.
+- You can add properties to documents without having to rebuild indexes.
+- You get JSON and JavaScript support right inside the database engine.
+- You get native support for geospatial data and integration with other Azure Services including Azure Search, HDInsight, and Data Factory.
+- You get low latency, high-performance storage with reserved throughput levels.
+
+### Azure table storage
+
+Consider Azure table storage to store petabytes of semi-structured data in a cost-effective solution. For more info, see [Table Storage](https://azure.microsoft.com/services/storage/tables/).
+
+Azure table storage has the following benefits:
+- You can evolve your apps and your table schema without taking the data offline.
+- You can scale up without sharding your dataset.
+- You get geo-redundant storage that replicates data across multiple regions.
 
 ## Next Steps  
 [SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)   

@@ -139,7 +139,7 @@ sp_help_job { [ @job_id = ] job_id
 |**next_run_date**|**int**|Date the job is scheduled to run next.|  
 |**next_run_time**|**int**|Time the job is scheduled to run next.|  
 |**next_run_schedule_id**|**int**|Identification number of the next run schedule.|  
-|**current_execution_status**|**int**|Current execution status.|  
+|**current_execution_status**|**int**|Current execution status:<br /><br /> **1** = Executing<br /><br /> **2** = Waiting For Thread<br /><br /> **3** = Between Retries<br /><br /> **4** = Idle<br /><br /> **5** = Suspended<br /><br /> **6** = Obsolete<br /><br /> **7** = PerformingCompletionActions|  
 |**current_execution_step**|**sysname**|Current execution step in the job.|  
 |**current_retry_attempt**|**int**|If the job is running and the step has been retried, this is the current retry attempt.|  
 |**has_step**|**int**|Number of job steps the job has.|  

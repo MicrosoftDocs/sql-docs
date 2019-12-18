@@ -220,23 +220,16 @@ To see a list of which Python packages are installed, including version, run the
 ```SQL
 EXECUTE sp_execute_external_script @language = N'Python'
     , @script = N'
-import pip
-for i in pip.get_installed_distributions():
-    print(i)
-'
-GO
-
-EXECUTE sp_execute_external_script @language = N'Python'
-    , @script = N'
 import pkg_resources
 import pandas
 dists = [str(d) for d in pkg_resources.working_set]
 OutputDataSet = pandas.DataFrame(dists)
 '
-with result sets(([Package] nvarchar(max)))
+WITH RESULT SETS(([Package] NVARCHAR(max)))
+GO
 ```
 
-The output is from `pkg_resources.working_set` in Python and returned as a data frame.
+The list is from `pkg_resources.working_set` in Python and returned as a data frame.
 
 **Results**
 

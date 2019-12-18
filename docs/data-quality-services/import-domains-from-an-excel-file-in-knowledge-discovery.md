@@ -1,6 +1,5 @@
 ---
-title: "Import Domains from an Excel File in Knowledge Discovery | Microsoft Docs"
-ms.custom: ""
+title: "Import Domains from an Excel File in Knowledge Discovery"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Import Domains from an Excel File in Knowledge Discovery
 

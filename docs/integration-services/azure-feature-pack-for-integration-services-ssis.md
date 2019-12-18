@@ -116,6 +116,7 @@ The following Java builds have been tested.
 
 > [!TIP]
 > If you use Parquet format and hit error saying "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**", you can add an environment variable *`_JAVA_OPTIONS`* to adjust the min/max heap size for JVM.
+>
 >![jvm heap](media/azure-feature-pack-jvm-heap-size.png)
 >
 > Example: set variable *`_JAVA_OPTIONS`* with value *`-Xms256m -Xmx16g`*. The flag Xms specifies the initial memory allocation pool for a Java Virtual Machine (JVM), while Xmx specifies the maximum memory allocation pool. This means that JVM will be started with *`Xms`* amount of memory and will be able to use a maximum of *`Xmx`* amount of memory.

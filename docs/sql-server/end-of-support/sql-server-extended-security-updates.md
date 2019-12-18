@@ -14,14 +14,17 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 # Extended security updates for SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
- 
-Once [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of its support lifecycle, you have the option to sign-up for an Extended Security Update (ESU) subscription for your servers and remain protected for up to three years, until you are ready to upgrade to a newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or migrate to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. This subscription can be purchased for your on-premises servers, or free by migrating on-premises servers to Azure Virtual Machines. You can then use the **SQL Server registry** service in the Azure portal to register your end-of-support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and download updates when they are made available. 
 
 This article provides information for using the SQL Server registry service to receive Extended Security Updates for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]. For more information about other options, see [End of support options](sql-server-end-of-life-overview.md). 
 
-Microsoft recommends applying ESU patches as soon as they are available to keep your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance protected. For detailed information about ESUs, see the [ESU FAQ page](https://www.microsoft.com/cloud-platform/extended-security-updates). 
+## Overview
 
-[Extended support for SQL Server 2008 and SQL Server 2008 R2 ended on July 10, 2019](https://www.microsoft.com/cloud-platform/windows-sql-server-2008). 
+Once [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached the end of its support lifecycle, you have the option to sign-up for an Extended Security Update (ESU) subscription for your servers and remain protected for up to three years, until you are ready to upgrade to a newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or migrate to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. This subscription can be purchased for your on-premises servers, or free by migrating on-premises servers to Azure Virtual Machines. You can then use the **SQL Server registry** service in the Azure portal to register your end-of-support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and download updates when they are made available. 
+
+Microsoft recommends applying ESU patches as soon as they are available to keep your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance protected. For detailed information about ESUs, see the [ESU FAQ page](https://www.microsoft.com/cloud-platform/extended-security-updates).
+
+> [!IMPORTANT]
+> [Extended support for SQL Server 2008 and SQL Server 2008 R2 ended on July 10, 2019](https://www.microsoft.com/cloud-platform/windows-sql-server-2008). For these versions, consider using Extended Security Updates described in this article or other migration options. For more information, see [End of support options](sql-server-end-of-life-overview.md).
 
 ## What are Extended Security Updates
 Extended Security Updates (ESUs) for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] include provision of security updates for customers who have purchased an Extended Support Update subscription. 
@@ -44,7 +47,7 @@ ESUs do not include technical support, but you can use an active support contrac
 
 ESUs are available to customers running their workload in Azure, on-premises, or hosted environments. 
 
-**In Azure**: If you migrate your workloads to Azure Virtual Machines (IaaS), you will have access to Extended Security Updates for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] for up to three years after the End of Support, at **no additional charges** above the cost of running the virtual machine. Customers do not need Software Assurance to receive Extended Security Updates in Azure. 
+**Azure Virtual Machines**: If you migrate your workloads to Azure Virtual Machines (IaaS), you will have access to Extended Security Updates for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] for up to three years after the End of Support, at **no additional charges** above the cost of running the virtual machine. Customers do not need Software Assurance to receive Extended Security Updates in Azure. 
 
 **On-premises or hosted environments**: If you have Software Assurance, you can purchase Extended Security Updates for up to three years after the End of Support date, under an Enterprise Agreement (EA), Enterprise Subscription Agreement (EAS), a Server & Cloud Enrollment (SCE), or an Enrollment for Education Solutions (EES). You can purchase Extended Security Updates only for the servers you need to cover. Extended Security Updates can be purchased directly from Microsoft or a Microsoft licensing partner. 
 

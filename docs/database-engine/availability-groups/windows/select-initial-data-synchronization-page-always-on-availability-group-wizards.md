@@ -1,6 +1,7 @@
 ---
-title: "Select Initial Data Sync Page-Always On Availability Group Wizard | Microsoft Docs"
-ms.custom: ""
+title: "Select Initial Data Sync Page (Availability Group Wizard)"
+description: A description of the 'Select Initial Data Sync Page' of the Always On Availability Group Wizard in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

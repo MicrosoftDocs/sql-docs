@@ -1,7 +1,7 @@
 ---
-title: "Evaluate health of the availability group using group policies"
+title: "Use group policies for availability group health"
 description: "Learn how to view the group system policies that the Always On dashboard uses to provide information about the availability group health."
-ms.custom: "ag-guide, seodec18"
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""

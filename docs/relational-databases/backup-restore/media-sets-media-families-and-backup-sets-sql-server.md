@@ -1,8 +1,8 @@
 ---
-title: "Media Sets, Media Families, and Backup Sets (SQL Server) | Microsoft Docs"
+title: "Media sets, media families, & backup sets"
 ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: sql
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.technology: backup-restore
@@ -24,7 +24,9 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 ---
+
 # Media Sets, Media Families, and Backup Sets (SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **This topic introduces the basic backup-media terminology of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore and is intended for readers who are new to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** 
   

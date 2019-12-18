@@ -1,7 +1,8 @@
 ---
-title: "Back up Multiple Databases to Azure Blob Storage - PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/21/2016"
+title: "Back up multiple databases: Azure Blob Storage"
+titleSuffix: "PowerShell"
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""

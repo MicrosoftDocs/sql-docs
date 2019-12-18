@@ -1,6 +1,5 @@
 ---
 title: "Media sets, media families, & backup sets"
-ms.custom: ""
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod_service: backup-restore

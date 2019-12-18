@@ -1,6 +1,7 @@
 ---
-title: "Windows Server Failover Clustering with SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "Windows Server Failover Cluster with SQL Server"
+description: Learn about using the Windows Server Failover Cluster service with SQL Server and failover cluster instances. 
+ms.custom: seo-lt-2019
 ms.date: "01/18/2017"
 ms.prod: sql
 ms.reviewer: ""

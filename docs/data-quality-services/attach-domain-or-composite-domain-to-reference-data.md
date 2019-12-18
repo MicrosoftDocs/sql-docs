@@ -1,6 +1,5 @@
 ---
-title: "Attach Domain or Composite Domain to Reference Data | Microsoft Docs"
-ms.custom: ""
+title: "Attach Domain or Composite Domain to Reference Data"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -11,8 +10,8 @@ f1_keywords:
   - "sql13.dqs.dm.refdata.f1"
   - "sql13.dqs.dm.refcatalog.f1"
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Attach Domain or Composite Domain to Reference Data
 

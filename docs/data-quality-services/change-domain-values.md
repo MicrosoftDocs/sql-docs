@@ -1,6 +1,5 @@
 ---
-title: "Change Domain Values | Microsoft Docs"
-ms.custom: ""
+title: "Change Domain Values"
 ms.date: "11/08/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -10,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dm.values.f1"
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Change Domain Values
 

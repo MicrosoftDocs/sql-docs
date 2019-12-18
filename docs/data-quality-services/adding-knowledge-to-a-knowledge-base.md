@@ -1,6 +1,5 @@
 ---
-title: "Adding Knowledge to a Knowledge Base | Microsoft Docs"
-ms.custom: ""
+title: "Adding Knowledge to a Knowledge Base"
 ms.date: "06/04/2013"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Adding Knowledge to a Knowledge Base
 

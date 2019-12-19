@@ -86,7 +86,7 @@ To install the `mssql-server-is` package on RHEL, follow these steps:
    ```
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range="= sql-server-linux-2019 || = sql-server-2019 || = sqlallproducts-allversions"
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15 || = sqlallproducts-allversions"
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
    ```

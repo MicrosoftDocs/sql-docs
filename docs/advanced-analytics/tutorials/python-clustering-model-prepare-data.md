@@ -48,11 +48,6 @@ Open a new notebook in Azure Data Studio and enter the following script.
 
 In the connection string, replace connection details as needed.
 
-<!-- Removed/replaced these lines below: 
-import revoscalepy as revoscale 
-conn_str = 'Driver=SQL Server;Server=localhost;Database=tpcxbb_1gb;Trusted_Connection=True;'
--->
-
 ```python
 # Load packages.
 import matplotlib.pyplot as plt
@@ -115,17 +110,6 @@ column_info = {
 ## Load the data into a data frame
 
 Results from the query are returned to Python using the revoscalepy **RxSqlServerData** function. As part of the process, you'll use the column information you defined in the previous script.
-
-<!-- Replacing this...
-```python
-data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
-                                        connection_string=conn_str)
-revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=False)
-# import data source and convert to pandas dataframe.
-customer_data = pd.DataFrame(revoscale.rx_import(data_source))
-```
--->
-<!-- ...with this -->
 
 ```python
 customer_data = pandas.read_sql(input_query, conn_str)

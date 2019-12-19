@@ -1,7 +1,5 @@
 ---
 title: "Index Element (DTA)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,10 +13,15 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # Index Element (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contains information about an index that you want to create or drop for a user-specified configuration.  
+
+Contains information about an index that you want to create or drop for a user-specified configuration.  
   
 ## Syntax  
   

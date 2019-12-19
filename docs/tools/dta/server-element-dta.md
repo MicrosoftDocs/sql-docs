@@ -1,7 +1,5 @@
 ---
 title: "Server Element (DTA)"
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,10 +13,15 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # Server Element (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contains the identifying information for the server on which the databases reside that you want to tune.  
+
+Contains the identifying information for the server on which the databases reside that you want to tune.  
   
 ## Syntax  
   

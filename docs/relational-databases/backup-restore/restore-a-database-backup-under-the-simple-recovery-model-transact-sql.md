@@ -1,7 +1,7 @@
 ---
-title: "Restore a Database Backup Under the Simple Recovery Model (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Restore database: simple recovery model (Transact-SQL)"
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -17,7 +17,8 @@ ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# Restore a Database Backup Under the Simple Recovery Model (Transact-SQL)
+# Restore a database backup under the simple recovery model (Transact-SQL)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic explains how to restore a full database backup.  

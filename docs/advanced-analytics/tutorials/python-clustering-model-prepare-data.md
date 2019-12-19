@@ -50,6 +50,7 @@ In the connection string, replace connection details as needed.
 
 ```python
 # Load packages.
+import pyodbc
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd

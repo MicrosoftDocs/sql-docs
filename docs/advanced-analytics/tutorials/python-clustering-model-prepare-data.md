@@ -109,7 +109,7 @@ column_info = {
 
 ## Load the data into a data frame
 
-Results from the query are returned to Python using the revoscalepy **RxSqlServerData** function. As part of the process, you'll use the column information you defined in the previous script.
+Results from the query are returned to Python using the Pandas **read_sql** function. As part of the process, you'll use the column information you defined in the previous script.
 
 ```python
 customer_data = pandas.read_sql(input_query, conn_str)

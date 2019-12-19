@@ -1,6 +1,6 @@
 ---
-title: "Synchronize Subscription (Windows Synchronization Manager)"
-description: Learn how to synchronize Subscriptions using the Windows Synchronization Manager. 
+title: "Synchronize subscription (Windows Synchronization Manager)"
+description: Learn how to synchronize subscriptions using the Windows Synchronization Manager. 
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

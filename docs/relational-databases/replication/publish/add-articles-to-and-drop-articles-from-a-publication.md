@@ -1,5 +1,5 @@
 ---
-title: "Add & drop Publication articles (SSMS)"
+title: "Add & drop publication articles (SSMS)"
 description: Describes how to add articles to and drop articles from a publication using SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
 ms.date: "03/07/2017"

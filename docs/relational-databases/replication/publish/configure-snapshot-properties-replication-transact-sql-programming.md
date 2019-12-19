@@ -1,5 +1,5 @@
 ---
-title: "Configure Snapshot Properties (Replication SP)"
+title: "Configure snapshot properties (Replication SP)"
 description: Use replication stored procedures to configure snapshot properties for Snapshot or Transactional publications. 
 ms.custom: seo-lt-2019
 ms.date: "03/17/2017"

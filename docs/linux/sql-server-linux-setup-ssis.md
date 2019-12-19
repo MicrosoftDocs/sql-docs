@@ -37,7 +37,7 @@ To install the `mssql-server-is` package on Ubuntu, follow these steps:
    ```
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range="= sql-server-linux-2019 || = sql-server-2019 || = sqlallproducts-allversions"
+::: moniker range="= sql-server-ver15 || = sql-server-ver15 || = sqlallproducts-allversions"
    ```bash
    sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
    ```

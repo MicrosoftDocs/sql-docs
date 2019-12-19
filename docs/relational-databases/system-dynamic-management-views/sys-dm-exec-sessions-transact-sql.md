@@ -68,7 +68,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |ansi_padding|**bit**|ANSI_PADDING setting for the session. Is not nullable.|  
 |ansi_nulls|**bit**|ANSI_NULLS setting for the session. Is not nullable.|  
 |concat_null_yields_null|**bit**|CONCAT_NULL_YIELDS_NULL setting for the session. Is not nullable.|  
-|transaction_isolation_level|**smallint**|Transaction isolation level of the session.<br /><br /> 0 = Unspecified<br /><br /> 1 = ReadUncomitted<br /><br /> 2 = ReadCommitted<br /><br /> 3 = Repeatable<br /><br /> 4 = Serializable<br /><br /> 5 = Snapshot<br /><br /> Is not nullable.|  
+|transaction_isolation_level|**smallint**|Transaction isolation level of the session.<br /><br /> 0 = Unspecified<br /><br /> 1 = ReadUncommitted<br /><br /> 2 = ReadCommitted<br /><br /> 3 = RepeatableRead<br /><br /> 4 = Serializable<br /><br /> 5 = Snapshot<br /><br /> Is not nullable.|  
 |lock_timeout|**int**|LOCK_TIMEOUT setting for the session. The value is in milliseconds. Is not nullable.|  
 |deadlock_priority|**int**|DEADLOCK_PRIORITY setting for the session. Is not nullable.|  
 |row_count|**bigint**|Number of rows returned on the session up to this point. Is not nullable.|  

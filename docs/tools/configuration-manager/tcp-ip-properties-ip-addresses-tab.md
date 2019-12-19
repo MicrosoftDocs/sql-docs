@@ -3,7 +3,7 @@ title: "TCP/IP Properties (IP Addresses Tab)"
 ms.custom: seo-lt-2019
 ms.date: "08/24/2016"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual

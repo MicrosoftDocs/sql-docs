@@ -2,7 +2,7 @@
 title: Complete the post-installation steps
 titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual

@@ -1,7 +1,5 @@
 ---
-title: "Lesson 2: Using Database Engine Tuning Advisor"
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
+title: Using Database Engine Tuning Advisor
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: performance
@@ -13,9 +11,14 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # Lesson 2: Using Database Engine Tuning Advisor
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 Database Engine Tuning Advisor enables you to tune databases, manage tuning sessions, and view tuning recommendations. Users with advanced knowledge of physical design structures can use this tool to perform exploratory database tuning analysis. Database tuning novices can also use the tool to find the best configuration of physical design structures for the workloads they tune. This lesson provides basic practice for database administrators who are new to the Database Engine Tuning Advisor graphical user interface and for system administrators who may not have extensive knowledge of physical design structures.  
 
 ## Prerequisites 

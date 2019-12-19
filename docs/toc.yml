@@ -4619,7 +4619,7 @@
         href: database-engine/configure-windows/server-properties-advanced-page.md
 - name: Migrate & load data
   items:
-  - name: Migration content
+  - name: Migration documentation
     href: sql-server/migrate/index.yml
   - name: SQL Server Integration Services (SSIS) > 
     href: integration-services/index.md

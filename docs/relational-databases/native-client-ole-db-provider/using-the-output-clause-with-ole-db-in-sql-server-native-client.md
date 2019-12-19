@@ -1,5 +1,5 @@
 ---
-title: "Using the OUTPUT Clause with OLE DB in SQL Server Native Client | Microsoft Docs"
+title: "OUTPUT clause, OLE DB, SQL Native Client"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Executing Commands Containing Table-Valued Parameters | Microsoft Docs"
+title: "Commands with Table-Valued Parameters"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

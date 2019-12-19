@@ -1,5 +1,5 @@
 ---
-title: "Service Principal Names (SPNs) in Client Connections (OLE DB) | Microsoft Docs"
+title: "OLE DB Service Principal Names connections"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -48,7 +48,7 @@ In [part four](python-clustering-model-deploy.md), you'll learn how to create a 
 
 * Additional Python packages - The examples in this tutorial series use Python packages that you may or may not have installed.
 
-  Open a **Command Prompt** and change to the installation path for the version of Python you use in Azure Data Studio. For example, `cd %LocalAppData%\Programs\Python\Python37-32`. Then run the following commands to install any packages that are not already installed.
+  Open a **Command Prompt** and change to the installation path for the version of Python you use in Azure Data Studio. For example, `cd %LocalAppData%\Programs\Python\Python37-32`. Then run the following commands to install any of these packages that are not already installed.
 
   ```console
   pip install matplotlib

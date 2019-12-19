@@ -1,7 +1,7 @@
 ---
-title: "ODBC API Support for Enhanced Date and Time Features | Microsoft Docs"
+title: "ODBC API for Date Time"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: 12/18/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

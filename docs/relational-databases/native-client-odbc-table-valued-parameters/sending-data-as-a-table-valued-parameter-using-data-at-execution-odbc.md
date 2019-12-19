@@ -1,5 +1,5 @@
 ---
-title: "Sending Data as a Table-Valued Parameter Using Data-At-Execution (ODBC) | Microsoft Docs"
+title: "Table-Valued Parameter, Data-At-Execution (ODBC)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Prerequisite  
  This procedure assumes that the following [!INCLUDE[tsql](../../includes/tsql-md.md)] has been executed on the server:  
   
-```  
+```sql
 create type TVParam as table(ProdCode integer, Qty integer)  
 create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
             @OrdNo integer output, @OrdDate datetime output)  
@@ -47,7 +47,7 @@ from @Items
   
 1.  Declare the variables for the SQL parameters. The buffers for table-valued parameters do not have to be arrays in this example; the example passes one row at a time.  
   
-    ```  
+    ```cpp
     SQLRETURN r;  
   
     // Variables for SQL parameters:  
@@ -66,7 +66,7 @@ from @Items
   
 2.  Bind the parameters. *ColumnSize* is 1, meaning that at most one row is passed at a time.  
   
-    ```  
+    ```sql
     // Bind parameters for call to TVPOrderEntryByRow.  
     r = SQLBindParameter(hstmt, 1, SQL_C_CHAR, SQL_PARAM_INPUT,SQL_VARCHAR, 5, 0, CustCode, sizeof(CustCode), &cbCustCode);  
   
@@ -93,7 +93,7 @@ from @Items
   
 3.  Bind the columns for the table-valued parameter.  
   
-    ```  
+    ```cpp
     // Bind the table-valued parameter columns.  
     // First set focus on param 2  
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 2, SQL_IS_INTEGER);  
@@ -111,7 +111,7 @@ from @Items
   
 4.  Initialize the parameters. This example sets the size of the table-valued parameter to SQL_DATA_AT_EXEC, rather than to a row count.  
   
-    ```  
+    ```cpp
     // Initialze the TVP for row streaming.  
     cbTVP = SQL_DATA_AT_EXEC;  
   
@@ -121,14 +121,14 @@ from @Items
   
 5.  Call the procedure. SQLExecDirect will return SQL_NEED_DATA because the table-valued parameter is a data-at-execution parameter.  
   
-    ```  
+    ```cpp
     // Call the procedure  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
 6.  Supply data-at-execution parameter data. When SQLParamData returns the *ParameterValuePtr* for a table-valued parameter, the application must prepare the columns for the next row or rows of the table-value. Then the application calls SQLPutData with *DataPtr* set to the number of rows available (in this example, 1) and *StrLen_or_IndPtr* set to 0.  
   
-    ```  
+    ```cpp
     // Check if parameter data is required, and get the first parameter ID token  
     if (r == SQL_NEED_DATA) {  
         r = SQLParamData(hstmt, &ParamId);  
@@ -187,7 +187,7 @@ from @Items
   
  This sample uses the default database. Before running this sample, run the following commands in the database you will use:  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -210,7 +210,7 @@ go
   
 ### Code  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  
@@ -375,7 +375,7 @@ EXIT:
   
  This sample uses the default database. Before running this sample, run the following commands in the database you will use:  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -398,7 +398,7 @@ go
   
 ### Code  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  

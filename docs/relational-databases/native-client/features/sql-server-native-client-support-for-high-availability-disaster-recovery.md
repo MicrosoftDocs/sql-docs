@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Native Client Support for High Availability, Disaster Recovery | Microsoft Docs"
+title: "Native Client, High Availability, Recovery"
 ms.custom: ""
 ms.date: "04/04/2018"
 ms.prod: sql

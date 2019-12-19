@@ -1,4 +1,5 @@
 ---
+title: "Data-at-Execution and Text, ntext, Image"
 title: "Data-at-Execution and Text, ntext, or Image Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

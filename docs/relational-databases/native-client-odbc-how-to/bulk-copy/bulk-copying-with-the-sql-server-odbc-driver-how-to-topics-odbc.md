@@ -1,7 +1,7 @@
 ---
-title: "Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC) | Microsoft Docs"
+title: "Bulk Copying, SQL Server ODBC Driver"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: 12/18/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

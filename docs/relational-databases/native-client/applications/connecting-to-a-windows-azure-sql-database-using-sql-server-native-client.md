@@ -1,5 +1,5 @@
 ---
-title: "Connecting to an Azure SQL Database Using SQL Server Native Client | Microsoft Docs"
+title: "Native Client, connect to Azure SQL DB"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.reviewer: ""

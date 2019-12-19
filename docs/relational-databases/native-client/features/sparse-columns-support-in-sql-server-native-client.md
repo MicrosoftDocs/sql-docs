@@ -1,5 +1,5 @@
 ---
-title: "Sparse Columns Support in SQL Server Native Client | Microsoft Docs"
+title: "Sparse columns support in SQL Native Client"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

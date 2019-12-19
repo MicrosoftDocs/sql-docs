@@ -142,7 +142,7 @@ powershell.exe -file install_openjdk.ps1
 ~~~
 
 > [!TIP]
-> If you use Parquet format and hit error saying "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**", you can command in *`main.cmd`* to adjust the min/max heap size for JVM. Example:
+> If you use Parquet format and hit error saying "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**", you can add command in *`main.cmd`* to adjust the min/max heap size for JVM. Example:
 > ~~~
 > setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
 > ~~~

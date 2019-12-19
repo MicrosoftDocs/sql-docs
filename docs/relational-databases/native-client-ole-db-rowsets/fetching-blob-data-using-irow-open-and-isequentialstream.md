@@ -1,5 +1,5 @@
 ---
-title: "Fetching BLOB Data Using IRow::Open and ISequentialStream | Microsoft Docs"
+title: "BLOB, IRow::Open, ISequentialStream"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  The following function uses **IRow::Open** and **ISequentialStream** to fetch large data.  
   
-```  
+```cpp
 void InitializeAndExecuteCommand()  
 {  
     ULONG iidx;  

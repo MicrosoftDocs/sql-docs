@@ -1,5 +1,5 @@
 ---
-title: "Accessing Diagnostic Information in the Extended Events Log | Microsoft Docs"
+title: "Diagnostic Info in Extended Events log"
 ms.date: 03/14/2017
 ms.reviewer: ""
 ms.prod: sql

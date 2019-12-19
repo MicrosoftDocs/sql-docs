@@ -2,7 +2,7 @@
 title: Administration tool command-line options
 titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual

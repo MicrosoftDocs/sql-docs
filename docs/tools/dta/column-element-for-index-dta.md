@@ -1,7 +1,5 @@
 ---
 title: "Column Element for Index (DTA)"
-ms.custom: seo-lt-2019
-ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,10 +13,15 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/09/2017
 ---
+
 # Column Element for Index (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Specifies the columns on which the index is created for a user-specified configuration.  
+
+Specifies the columns on which the index is created for a user-specified configuration.  
   
 ## Syntax  
   

@@ -1,7 +1,7 @@
 ---
 title: Alias Properties (Alias Tab)
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual

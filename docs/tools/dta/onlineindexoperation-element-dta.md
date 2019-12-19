@@ -1,7 +1,5 @@
 ---
 title: "OnlineIndexOperation Element (DTA)"
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,10 +13,15 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # OnlineIndexOperation Element (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Specifies whether the indexes, indexed views, or partitions that Database Engine Tuning Advisor recommends can be created online.  
+
+Specifies whether the indexes, indexed views, or partitions that Database Engine Tuning Advisor recommends can be created online.  
   
 ## Syntax  
   

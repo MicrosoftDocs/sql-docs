@@ -1,6 +1,7 @@
 ---
-title: "Subscription, Distributor to Subscriber History (Snapshot Subscription) | Microsoft Docs"
-ms.custom: ""
+title: "Distributor to Subscriber History (Snapshot)"
+description: Describes the 'Distributor to Subscriber History' tab of the Replication Monitor for a Snapshot Publication within SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

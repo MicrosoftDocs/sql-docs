@@ -83,7 +83,7 @@ landingContent:
         url: https://azure.microsoft.com/en-us/services/azure-migrate/
       - text: Data migration blog
         url: https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/bg-p/MicrosoftDataMigration
-      - text: PASS session "Modernizing SQL Server the right way"
+      - text: "Modernizing SQL Server" (SQL Pass)
         url: https://www.youtube.com/watch?v=5RPkuQHcxxs
     - linkListType: download
       links:
@@ -96,7 +96,7 @@ landingContent:
       links:
       - text: Overview
         url: ../end-of-support/sql-server-end-of-life-overview.md
-      - text: SQL Server 2008
+      - text: SQL Server 2008 & R2
         url: https://www.microsoft.com/cloud-platform/windows-sql-server-2008
       - text: Extended Support Updates (ESUs) 
         url: ../end-of-support/sql-server-extended-security-updates.md

@@ -83,7 +83,7 @@ landingContent:
         url: https://azure.microsoft.com/en-us/services/azure-migrate/
       - text: Data migration blog
         url: https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/bg-p/MicrosoftDataMigration
-      - text: "Modernizing SQL Server" (SQL Pass)
+      - text: Modernizing SQL Server (SQL Pass)
         url: https://www.youtube.com/watch?v=5RPkuQHcxxs
     - linkListType: download
       links:

@@ -1,7 +1,7 @@
 ---
-title: "Possible Media Errors During Backup and Restore (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
+title: "Media errors: Backup and Restore | Microsoft Docs"
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""

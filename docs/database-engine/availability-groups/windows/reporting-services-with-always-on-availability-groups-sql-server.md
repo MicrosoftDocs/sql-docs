@@ -1,6 +1,7 @@
 ---
-title: "Reporting Services with Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Reporting Services with availability groups"
+description: Learn about configuring SQL Server Reporting Services (SSRS) with Always On availability groups. 
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

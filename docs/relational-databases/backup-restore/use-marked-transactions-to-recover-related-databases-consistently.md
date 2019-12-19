@@ -1,5 +1,5 @@
 ---
-title: "Use Marked Transactions to Recover Related Databases Consistently | Microsoft Docs"
+title: "Restore databases to marked transaction"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -22,6 +22,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Use Marked Transactions to Recover Related Databases Consistently
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic is relevant only for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models.  

@@ -1,7 +1,7 @@
 ---
-title: "SQL Server Backup to URL Best Practices and Troubleshooting | Microsoft Docs"
-ms.custom: ""
-ms.date: 12/12/2019
+title: "Backup to URL best practices & troubleshooting"
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -11,7 +11,8 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# SQL Server Backup to URL Best Practices and Troubleshooting
+# SQL Server backup to URL best practices and troubleshooting
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   This topic includes best practices and troubleshooting tips for SQL Server backup and restores to the Azure Blob service.  

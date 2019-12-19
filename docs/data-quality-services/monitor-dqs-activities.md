@@ -1,6 +1,5 @@
 ---
-title: "Monitor DQS Activities | Microsoft Docs"
-ms.custom: ""
+title: "Monitor DQS Activities"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "monitoring activity"
   - "activity monitoring"
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Monitor DQS Activities
 

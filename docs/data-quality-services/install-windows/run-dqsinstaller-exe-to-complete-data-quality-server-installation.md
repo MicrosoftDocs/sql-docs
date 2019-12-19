@@ -1,6 +1,5 @@
 ---
-title: "Run DQSInstaller.exe to Complete Data Quality Server Installation | Microsoft Docs"
-ms.custom: ""
+title: "Run DQSInstaller.exe to Complete Data Quality Server Installation"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Run DQSInstaller.exe to Complete Data Quality Server Installation
 

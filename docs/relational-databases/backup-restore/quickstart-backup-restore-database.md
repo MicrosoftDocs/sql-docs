@@ -1,13 +1,13 @@
 ---
-title: "Quickstart: Backup and restore a SQL Server database on-premises"
+title: "Quickstart: Back up & restore database"
 titleSuffix: SQL Server
-description: This quickstart shows how to run SQL Server on Linux in the cloud of your choice.
+description: This quickstart shows how to back up and restore a SQL Server database on premises. 
 author: MashaMSFT 
 ms.author: mathoma 
-ms.date: 05/25/2019
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.topic: conceptual
-ms.prod: sql  
-ms.custom: 
+ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid:

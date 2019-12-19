@@ -3,12 +3,13 @@ title: mssql-cli
 description: 'mssql-cli is an interactive command-line query tool for SQL Server that runs on Windows, macOS, or Linux.'
 ms.prod: sql
 ms.prod_service: sql-tools
+ms.technology: tools-other
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein, maghan
 ms.custom: tools|mssql-cli
-ms.date: "02/22/2018"
+ms.date: 02/22/2018
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 

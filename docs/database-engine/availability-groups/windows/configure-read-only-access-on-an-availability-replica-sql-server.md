@@ -1,7 +1,7 @@
 ---
-title: "Configure read-only access to a secondary replica of an availability group"
+title: "Configure read-only access to secondary availability group replica"
 description: "Configure your secondary replica to allow only read access for your Always On availability group. "
-ms.custom: "seodec18"
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

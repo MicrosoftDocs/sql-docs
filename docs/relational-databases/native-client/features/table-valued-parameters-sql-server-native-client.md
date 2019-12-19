@@ -1,5 +1,5 @@
 ---
-title: "Table-Valued Parameters (SQL Server Native Client) | Microsoft Docs"
+title: "Table-Valued Parameters, Native Client SQL"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Using IMultipleResults to Process Multiple Result Sets | Microsoft Docs"
+title: "IMultipleResults, multiple result sets"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -26,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement generates multiple rowsets, some containing row data from the **OrderDetails** table and some containing results of the COMPUTE BY clause:  
   
-```  
+```sql
 SELECT OrderID, FullPrice = (UnitPrice * Quantity), Discount,  
     Discounted = UnitPrice * (1 - Discount) * Quantity  
 FROM OrderDetails  

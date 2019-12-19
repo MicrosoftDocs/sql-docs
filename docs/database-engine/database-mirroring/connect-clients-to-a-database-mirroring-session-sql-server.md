@@ -1,6 +1,7 @@
 ---
-title: "Connect Clients to a Database Mirroring Session (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Connect clients to a database mirror"
+description: Configure clients to connect to a database mirror using Native Client or the .NET Framework Provider for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability

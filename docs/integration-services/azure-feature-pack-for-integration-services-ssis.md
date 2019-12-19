@@ -119,7 +119,7 @@ The following Java builds have been tested.
 >
 >![jvm heap](media/azure-feature-pack-jvm-heap-size.png)
 >
-> Example: set variable *`_JAVA_OPTIONS`* with value *`-Xms256m -Xmx16g`*. The flag Xms specifies the initial memory allocation pool for a Java Virtual Machine (JVM), while Xmx specifies the maximum memory allocation pool. This means that JVM will be started with *`Xms`* amount of memory and will be able to use a maximum of *`Xmx`* amount of memory.
+> Example: set variable *`_JAVA_OPTIONS`* with value *`-Xms256m -Xmx16g`*. The flag Xms specifies the initial memory allocation pool for a Java Virtual Machine (JVM), while Xmx specifies the maximum memory allocation pool. This means that JVM will be started with *`Xms`* amount of memory and will be able to use a maximum of *`Xmx`* amount of memory. The default values are min 64MB and max 1G.
 
 ### Set Up Zulu's OpenJDK on Azure-SSIS Integration Runtime
 
@@ -140,6 +140,13 @@ As the entry point, `main.cmd` triggers execution of the PowerShell script `inst
 ~~~
 powershell.exe -file install_openjdk.ps1
 ~~~
+
+> [!TIP]
+> If you use Parquet format and hit error saying "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**", you can add command in *`main.cmd`* to adjust the min/max heap size for JVM. Example:
+> ~~~
+> setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
+> ~~~
+> The flag Xms specifies the initial memory allocation pool for a Java Virtual Machine (JVM), while Xmx specifies the maximum memory allocation pool. This means that JVM will be started with *`Xms`* amount of memory and will be able to use a maximum of *`Xmx`* amount of memory. The default values are min 64MB and max 1G.
 
 **install_openjdk.ps1**
 

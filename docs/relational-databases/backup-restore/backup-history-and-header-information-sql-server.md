@@ -1,7 +1,7 @@
 ---
-title: "Backup History and Header Information (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
+title: "Backup history & header | Microsoft Docs"
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""

@@ -1,4 +1,4 @@
-## Python/Pip installation
+### Python/Pip installation
 
 You can install `azdata` on Linux or MacOS with yum, upt, zypper, or Homebrew installation package managers. Before these package managers were available, installation required Python and pip.
 

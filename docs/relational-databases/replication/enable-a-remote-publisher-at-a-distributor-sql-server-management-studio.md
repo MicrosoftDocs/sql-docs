@@ -1,6 +1,7 @@
 ---
-title: "Enable a Remote Publisher at a Distributor (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Enable remote Publisher at Distributor (SSMS)"
+description: Learn how to enable a remote Publisher at the Distributor using SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

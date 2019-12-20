@@ -132,7 +132,7 @@ conceptualContent:
           itemType: overview
       footerLink:
         text: See more
-        url: lp/sql-server/load-move-data.md
+        url: sql-server/migrate/index.yml
 
 
 additionalContent: 

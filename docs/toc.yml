@@ -4267,11 +4267,9 @@
     - name: Supported Version & Edition Upgrades SQL Server 2017
       href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Supported Version & Edition Upgrades SQL Server 2016
-      href: database-engine/install-windows/supported-version-and-edition-upgrades.md
+      href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016
     - name: Prepare for upgrade by running Data Migration Assistant
       href: database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
-    - name: Upgrading from SQL 2005, 2008, or 2008 R2
-      href: database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md
     - name: Analysis Services
       href: database-engine/install-windows/upgrade-analysis-services.md
     - name: Data Quality Services
@@ -4305,6 +4303,13 @@
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
       - name: Latest updates for SQL Server
         href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
+  - name: End of support
+    items:
+    - name: Overview
+      href: sql-server/end-of-support/sql-server-end-of-life-overview.md
+      displayName: end of support, end of life
+    - name: Extended security updates
+      href: sql-server/end-of-support/sql-server-extended-security-updates.md
   - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:
@@ -4615,6 +4620,8 @@
         href: database-engine/configure-windows/server-properties-advanced-page.md
 - name: Migrate & load data
   items:
+  - name: Migration documentation
+    href: sql-server/migrate/index.yml
   - name: SQL Server Integration Services (SSIS) > 
     href: integration-services/index.md
   - name: Bulk Copy Utility (bcp)

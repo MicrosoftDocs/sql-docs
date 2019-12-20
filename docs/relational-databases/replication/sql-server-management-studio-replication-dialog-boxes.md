@@ -1,6 +1,7 @@
 ---
-title: "SQL Server Management Studio Replication Dialog Boxes | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server Management Studio Replication Dialog Boxes"
+description: A reference for articles that describe the various dialog boxes for Replication within SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

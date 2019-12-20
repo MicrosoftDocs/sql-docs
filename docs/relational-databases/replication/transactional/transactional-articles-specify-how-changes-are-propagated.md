@@ -1,6 +1,7 @@
 ---
-title: "Specify How Changes Are Propagated for Transactional Articles | Microsoft Docs"
-ms.custom: ""
+title: "Specify how changes are propagated (Transactional)"
+description: Learn how to specify how change are propagated for a Transactional Publication in SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

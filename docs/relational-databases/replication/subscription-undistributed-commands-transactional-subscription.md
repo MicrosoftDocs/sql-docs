@@ -1,6 +1,7 @@
 ---
-title: "Subscription, Undistributed Commands (Transactional Subscription) | Microsoft Docs"
-ms.custom: ""
+title: "Undistributed Commands (Replication Monitor)"
+description: Describes the 'Undistributed Commands' tab of the Replication Monitor in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

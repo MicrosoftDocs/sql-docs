@@ -1,6 +1,7 @@
 ---
-title: "Publication Information, Agents (Transactional Publication) | Microsoft Docs"
-ms.custom: ""
+title: "Agents (Transactional - SSMS)"
+description: Describes the 'Agents' tab for a selected Transactional Publication within SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

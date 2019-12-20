@@ -1,6 +1,7 @@
 ---
-title: "MSpeer_conflictdetectionconfigresponse (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSpeer_conflictdetectionconfigresponse (T-SQL)"
+description: Describes the MSPeer_conflictdetectionconfigureresponse stored procedure used in Peer-to-Peer replication to store each node's response to a topology wide configuration requestion. 
+ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

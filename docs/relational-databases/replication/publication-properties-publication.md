@@ -1,6 +1,7 @@
 ---
-title: "SQL Server Replication 'Publication Properties'  dialog box | Microsoft Docs"
-ms.custom: ""
+title: "Publication Properties - Dialog box"
+description: Describes the pages found within the 'Publication Properties" Dialog Box in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

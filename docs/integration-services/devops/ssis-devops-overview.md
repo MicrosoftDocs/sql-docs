@@ -91,7 +91,7 @@ But whether the specific authentication type is supported depends on destination
 
 | |Microsoft-hosted agent|Self-hosted agent|
 |---------|---------|---------|
-|Self-hosted agent|N/A|Windows Authentication|
+|SQL server on-premises or VM |N/A|Windows Authentication|
 |Azure SQL|SQL Server Authentication <br> Active Directory - Password|<br> SQL Server Authentication <br> Active Directory - Password <br> Active Directory - Integrated|
 
 #### Domain name

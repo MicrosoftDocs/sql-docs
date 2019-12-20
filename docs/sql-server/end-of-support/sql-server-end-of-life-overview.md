@@ -259,7 +259,7 @@ Azure table storage has the following benefits:
 [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005)   
 [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008)   
 [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)   
-[SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)   
 [Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)   
+[SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)   
 [Azure SQL Database overview](/azure/sql-database/sql-database-technical-overview)    
 

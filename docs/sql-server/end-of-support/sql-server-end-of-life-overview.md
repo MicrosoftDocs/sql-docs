@@ -23,7 +23,7 @@ Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is bac
 
 **End of support** means the end of the 10-year lifecycle and to all security updates, which can cause security and compliance issues as well as put applications and their business at risk. Additionally, support options are limited for customers who call into Microsoft Support for a product that has reached the end of its support cycle. For example, as of 2019, [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] have reached end of support.
 
-**End of life** means that [!INCLUDE[msCoName](../../includes/msconame-md.md)] has stopped all development for the product, including security fixes, and the product can no longer be covered by an Extended Security Update (ESU) subscription. For example, [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] has reached end of life.
+**End of life** means that [!INCLUDE[msCoName](../../includes/msconame-md.md)] has stopped all development for the product, including security fixes, and the product can no longer be covered by an Extended Security Update (ESU) subscription. For example, [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] has reached end of life. 
 
 ## Options
 
@@ -37,7 +37,7 @@ For more information, guidance, and tools to plan and automate your upgrade or m
 
 ![End of support options](media/sql-server-end-of-life-overview/sql-server-upgrade-paths.png)
 
-The following sections describe the benefits and additional resources for each approach.
+This article describes the benefits and considerations for each approach, as well as additional resources that can help guide your decision-making process.
 
 ## Upgrade SQL Server
 
@@ -259,7 +259,7 @@ Azure table storage has the following benefits:
 [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005)   
 [SQL Server 2008 end of support](https://www.microsoft.com/cloud-platform/windows-sql-server-2008)   
 [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)   
-[SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)   
 [Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)   
+[SQL Server VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)   
 [Azure SQL Database overview](/azure/sql-database/sql-database-technical-overview)    
 

@@ -4307,6 +4307,7 @@
     items:
     - name: Overview
       href: sql-server/end-of-support/sql-server-end-of-life-overview.md
+      displayName: end of support, end of life
     - name: Extended security updates
       href: sql-server/end-of-support/sql-server-extended-security-updates.md
   - name: Configuration

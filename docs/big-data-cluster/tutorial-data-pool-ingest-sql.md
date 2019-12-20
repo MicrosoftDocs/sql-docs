@@ -73,6 +73,8 @@ The following steps create an external table in the data pool named **web_clicks
       );
    ```
 
+The creation of data pool external table is a blocking operation. Control returns when the specified table has been created on all back-end data pool nodes. If failure occurred during the create operation, an error message is returned to caller.
+
 ## Load data
 
 The following steps ingest sample web clickstream data into the data pool using the external table created in the previous steps.

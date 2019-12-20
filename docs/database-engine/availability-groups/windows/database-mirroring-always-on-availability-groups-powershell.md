@@ -1,7 +1,7 @@
 ---
-title: "Create a database mirroring endpoint for an availability group using PowerShell"
+title: "Powershell: Availability group database mirroring endpoint"
 description: "Describes how to create a database mirroring endpoint for an Always On availability group using PowerShell."
-ms.custom: "seodec18"
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

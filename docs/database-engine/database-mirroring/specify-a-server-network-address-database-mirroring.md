@@ -1,6 +1,7 @@
 ---
-title: "Specify a Server Network Address (Database Mirroring) | Microsoft Docs"
-ms.custom: ""
+title: "Specify a server network address (database mirroring)"
+description: Specify the server network address for a database mirroring endpoint. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability

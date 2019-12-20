@@ -1,11 +1,12 @@
 ---
-title: Deployment configuration file reference
-titleSuffix: SQL Server big data clusters
+title: Deployment configuration file
+titleSuffix: SQL Server Big Data Clusters
 description: Reference for a big data cluster deployment configuration file.
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster

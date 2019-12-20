@@ -1,6 +1,7 @@
 ---
-title: "Frequently Asked Questions for Replication Administrators | Microsoft Docs"
-ms.custom: ""
+title: "Frequently asked questions for replication administrators"
+description: A list of frequently asked questions relevant to replication administrators for SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

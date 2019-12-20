@@ -1,7 +1,7 @@
 ---
-title: "File Locations for Default and Named Instances of SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2017"
+title: "File Locations"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

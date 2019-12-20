@@ -1,7 +1,8 @@
 ---
-title: "FileTable Compatibility with Other SQL Server Features | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
+title: "FileTable Compatibility | Microsoft Docs"
+description: "FileTable compatibility with other SQL Server features"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -13,7 +14,7 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# FileTable Compatibility with Other SQL Server Features
+# FileTable compatibility with other SQL Server features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Describes how FileTables work with other features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

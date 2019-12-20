@@ -1,6 +1,5 @@
 ---
-title: "Manage Event Sessions in the Object Explorer | Microsoft Docs"
-ms.custom: ""
+title: "Manage Event Sessions in the Object Explorer"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

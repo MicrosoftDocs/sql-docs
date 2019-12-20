@@ -1,10 +1,9 @@
 ---
-title: "Include or Exclude Rows (Visual Database Tools)"
+title: Include or Exclude Rows
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -19,8 +18,10 @@ helpviewer_keywords:
   - "row included in search [SQL Server]"
   - "excluding rows"
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Include or Exclude Rows (Visual Database Tools)

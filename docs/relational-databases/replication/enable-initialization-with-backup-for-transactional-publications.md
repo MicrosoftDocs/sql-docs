@@ -1,6 +1,7 @@
 ---
-title: "Enable Initialization with Backup for Transactional Publications | Microsoft Docs"
-ms.custom: ""
+title: "Enable initialization with backup (Transactional)"
+description: Learn how to enable initialization from a backup for a Transactional Publication in SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

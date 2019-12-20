@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (preview) 
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts.
-ms.date: 11/07/2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
 ms.reviewer: jrasnick
@@ -260,7 +260,7 @@ Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Data Wa
 The following example is the simplest form of the COPY command, which loads data from a public storage account. For this example, the COPY statement's defaults match the format of the line item csv file.
 
 ```sql
-COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv’
+COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
 ```
 
 The default values of the COPY command are:
@@ -307,7 +307,7 @@ WITH (
     DATEFORMAT = 'ymd',
 	MAXERRORS = 10,
 	ERRORFILE = '/errorsfolder/',--path starting from the storage container
-	IDENTITY_INSERT = ‘ON’
+	IDENTITY_INSERT = 'ON'
 )
 ```
 
@@ -358,6 +358,46 @@ WITH (
 	FIELDTERMINATOR = '|'
 )
 ```
+
+## FAQ
+
+### What is the performance of the COPY command compared to PolyBase?
+The COPY command will have better performance by the time the feature is generally available. For best loading performance during public preview, consider splitting your input into multiple files when loading CSV. Currently COPY is on par in terms of performance with PolyBase when using INSERT SELECT. 
+
+### What is the file splitting guidance for the COPY command loading CSV files?
+Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. You won’t need to split your non-compressed files when the COPY command is generally available. 
+
+| **DWU** | **#Files** |
+| :-----: | :--------: |
+|   100   |     60     |
+|   200   |     60     |
+|   300   |     60     |
+|   400   |     60     |
+|   500   |     60     |
+|  1,000  |    120     |
+|  1,500  |    180     |
+|  2,000  |    240     |
+|  2,500  |    300     |
+|  3,000  |    360     |
+|  5,000  |    600     |
+|  6,000  |    720     |
+|  7,500  |    900     |
+| 10,000  |    1200    |
+| 15,000  |    1800    |
+| 30,000  |    3600    |
+
+
+### What is the file splitting guidance for the COPY command loading Parquet or ORC files?
+There is no need to split Parquet and ORC files because the COPY command will automatically split files. Parquet and ORC files in the Azure storage account should be 256MB or larger for best performance. 
+
+### When will the COPY command be generally available?
+The COPY command will be generally available early next calendar year (2020). 
+
+### Are there any known issues with the COPY command?
+
+- LOB support such as (n)varchar(max) is not available in the COPY statement. This will be available early next year.
+
+Please send any feedback or issues to the following distribution list: sqldwcopypreview@service.microsoft.com
 
 ## See also  
 

@@ -1,21 +1,24 @@
 ---
-title: "Set the SQL Server Connection for the SQL Server Agent Service"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+title: Set the SQL Server Connection for the SQL Server Agent Service
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, connections"
   - "connections [SQL Server], SQL Server Agent service"
 ms.assetid: 28b6178b-0a9e-4f2c-8562-7a62d2d2a285
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Set the SQL Server Connection for the SQL Server Agent Service (SQL Server Management Studio)
+
+# Set the SQL Server Connection for the SQL Server Agent Service
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

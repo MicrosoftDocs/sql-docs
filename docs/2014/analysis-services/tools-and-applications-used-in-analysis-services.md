@@ -43,6 +43,4 @@ manager: craigg
  You can use PowerShell commands to perform many administrative tasks. See [Analysis Services PowerShell](analysis-services-powershell.md) for more information.  
   
 ### Community and Third-party tools  
- Check the [Analysis Services codeplex page](http://sqlsrvanalysissrvcs.codeplex.com/) for community code samples. [Forums](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) can be helpful when seeking recommendations for third-party tools that support Analysis Services.  
-  
-  
+ Check the [Analysis Services codeplex page](https://sqlsrvanalysissrvcs.codeplex.com/) for community code samples. [Forums](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) can be helpful when seeking recommendations for third-party tools that support Analysis Services.  

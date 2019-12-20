@@ -1,18 +1,19 @@
 ---
-title: "Copy Queries (Visual Database Tools)"
+title: Copy Queries
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "copying queries"
   - "queries [SQL Server], copying"
 ms.assetid: 46cd1557-cf3d-40b8-b489-8446e0984e0f
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Copy Queries (Visual Database Tools)

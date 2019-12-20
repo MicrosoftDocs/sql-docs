@@ -60,7 +60,7 @@ ms.date: 06/13/2017
   
 #### InPrivate browsing feature in Internet Explorer
 
- [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] does not support the InPrivate browsing feature in [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 and Internet Explorer 9. For more information about InPrivate browsing, see [What is InPrivate Browsing?](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] does not support the InPrivate browsing feature in [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 and Internet Explorer 9. For more information about InPrivate browsing, see [What is InPrivate Browsing?](https://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (https://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
   
 ###  <a name="bkmk_powerview_on_ExcelServices"></a> Power View on Excel Services or the Excel Web App on SharePoint Online
 
@@ -195,4 +195,3 @@ ms.date: 06/13/2017
  [Reporting Services Tools](tools/reporting-services-tools.md)
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)
  [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md)
- [URL Access Parameter Reference](url-access-parameter-reference.md)  

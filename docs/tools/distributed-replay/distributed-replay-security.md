@@ -2,7 +2,7 @@
 title: Distributed Replay security
 titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual

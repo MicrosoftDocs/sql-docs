@@ -1,20 +1,23 @@
 ---
-title: "Proxy Account Properties (References Tab)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+title: Proxy Account Properties (References Tab)
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.proxy.references.f1"
 ms.assetid: 52f6b2a7-2274-4c35-86be-0278c27cd418
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
+
 # Proxy Account Properties (References Tab)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

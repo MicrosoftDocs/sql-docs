@@ -1,6 +1,8 @@
 ---
-title: "GRANT Database Principal Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Database Principal Permissions"
+description: Grant permissions on a database user, database role, or application role.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "03/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

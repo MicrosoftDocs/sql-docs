@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Management Studio - Usage and Diagnostic Data (SSMS)"
+title: Usage and Diagnostic Data
 ms.custom: seo-lt-2019
 ms.date: "04/16/2019"
 ms.prod: sql

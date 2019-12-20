@@ -1,6 +1,7 @@
 ---
-title: "Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Create a database mirroring endpoint (Transact-SQL)"
+description: Use Transact-SQL to create a database mirroring endpoint using Windows Authentication.
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability

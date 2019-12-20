@@ -1,6 +1,7 @@
 ---
-title: "Validate Partition Information for a Merge Subscriber | Microsoft Docs"
-ms.custom: ""
+title: "Validate partition information (Merge)"
+description: Describes how to validate partition information for a Merge Subscriber in SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

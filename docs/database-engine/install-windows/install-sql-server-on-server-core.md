@@ -1,5 +1,5 @@
 ---
-title: "Install SQL Server 2016 on Server Core | Microsoft Docs"
+title: "Install SQL Server on Server Core | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
 ms.prod: sql

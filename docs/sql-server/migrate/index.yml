@@ -67,7 +67,7 @@ landingContent:
         url: ../../dma/dma-overview.md
     - linkListType: concept
       links:
-      - text: Cloud adoption framework
+      - text: Broader migration process
         url: /azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration
 
 

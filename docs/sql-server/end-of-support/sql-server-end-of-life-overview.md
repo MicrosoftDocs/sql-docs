@@ -182,7 +182,7 @@ If you want to offload maintenance, reduce costs, and eliminate the need to upgr
 [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)       
 [SQL Database feature comparison](/azure/sql-database/sql-database-features)       
 [Migrate SQL Server to a single database](/azure/sql-database/sql-database-single-database-migrate)       
-[Cloud adoption framework](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
+[Broader migration process](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
 [Single database T-SQL differences](/azure/sql-database/sql-database-transact-sql-information)       
 [vCore](/azure/sql-database/sql-database-vcore-resource-limits-single-databases) and [DTU](/azure/sql-database/sql-database-dtu-resource-limits-single-databases) resource limits       
 [Intelligent Insights](/azure/sql-database/sql-database-intelligent-insights)       
@@ -223,7 +223,7 @@ If you'd like to take advantage of offloading maintenance and cost, but find the
 [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)       
 [SQL Database feature comparison](/azure/sql-database/sql-database-features)       
 [Migrate SQL Server to a managed instance](/azure/sql-database/sql-database-managed-instance-migrate)       
-[Cloud adoption framework](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
+[Broader migration process](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
 
 Tools:
 - [Data Migration Assistant](../../dma/dma-overview.md)

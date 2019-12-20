@@ -17,7 +17,8 @@ For Linux distributions with `yum` there is a package for the `azdata-cli`. The 
 
 - RHEL 7, RHEL 8
 - CentOS 7, CentOS 8
-- Fedora 29+
+
+[!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
 ## Install with yum
 
@@ -35,20 +36,9 @@ For Linux distributions with `yum` there is a package for the `azdata-cli`. The 
    RHEL 7, RHEL 8, CentOS 7, CentOS 8:
 
    ```bash
-   sudo sh -c 'echo -e "[azdata-cli]
-   name=azdata-cli https://packages.microsoft.com/yumrepos/azure-cli
-   baseurl=https://packages.microsoft.com/yum/el/{{!!!!!_WE_STILL_NEED_TO_GET_THIS_URL_!!!!!}}
-   enabled=1
-   gpgcheck=1
-   gpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azdata-cli.repo'
-   ```
-
-   Fedora 29+
-
-   ```bash
-   sudo sh -c 'echo -e "[azdata-cli]
-   name=azdata-cli https://packages.microsoft.com/yumrepos/azure-cli
-   baseurl=https://packages.microsoft.com/yum/fc/{{!!!!!_WE_STILL_NEED_TO_GET_THIS_URL_!!!!!}}
+   sudo sh -c 'echo -e "[azdata-cli] 
+   name=azdata-cli 
+   baseurl=https://packages.microsoft.com/yumrepos/azdata-cli
    enabled=1
    gpgcheck=1
    gpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azdata-cli.repo'
@@ -88,3 +78,7 @@ sudo yum update azdata-cli
    ```bash
    sudo rm /etc/yum.repos.d/azdata-cli.repo
    ```
+
+## Next steps
+
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

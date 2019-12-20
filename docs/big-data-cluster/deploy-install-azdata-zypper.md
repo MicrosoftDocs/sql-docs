@@ -18,6 +18,8 @@ For Linux distributions with `zypper` there is a package for the `azdata-cli`. T
 - openSUSE 42.2 (leap) +
 - SLES 12 SP 2 +
 
+[!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]s
+
 ## Install with zypper
 >[!IMPORTANT]
 >The RPM package of the `azdata-cli` depends on the python3 package. On your system, this may be a Python version which predates the requirement of *Python 3.6.x*. If this poses an issue for you, find a replacement python3 package or follow the manual install instructions that use [`pip`](deploy-install-azdata-pip.md).
@@ -37,7 +39,9 @@ For Linux distributions with `zypper` there is a package for the `azdata-cli`. T
 1. Create local `azdata-cli` repository information
 
    ```bash
-   sudo zypper addrepo --name 'azdata-cli' --check https://packages.microsoft.com/{{!!!!!_WE_STILL_NEED_TO_GET_THIS_URL_!!!!!}}} azdata-cli
+   release=$(lsb_release -rs)
+   echo "deb [arch=amd64] https://packages.microsoft.com/repos/azdata-cli/ $release main" |
+   sudo tee /etc/apt/sources.list.d/azdata-cli.list
    ```
 
 1. Install
@@ -69,3 +73,7 @@ Remove the package from your system
 ```bash
    sudo zypper removerepo azdata-cli
 ```
+
+## Next steps
+
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

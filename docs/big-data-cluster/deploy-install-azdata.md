@@ -25,9 +25,11 @@ To find your installed version and see if you need to update, run `azdata --vers
 * [Install on macOS](deploy-install-azdata-macos.md)
 * Install on Linux or [Windows Subsystem for Linux (WSL)](/windows/wsl/about/)
    * [Install with apt on Debian or Ubuntu](deploy-install-azdata-linux-package.md)
-   * [Install with yum on RHEL, Fedora, or CentOS](deploy-install-azdata-yum.md)
+   * [Install with yum on RHEL, or CentOS](deploy-install-azdata-yum.md)
    * [Install with Zypper on openSUSE or SLE](deploy-install-azdata-zypper.md)
    * [Install from script](deploy-install-azdata-pip.md)
+
+[!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
 ## Next steps
 

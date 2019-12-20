@@ -1,6 +1,7 @@
 ---
-title: "sp_replmonitorsubscriptionpendingcmds (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sp_replmonitorsubscriptionpendingcmds (T-SQL)"
+description: Describes the sp_replmonitorsubscriptionpendingcmds stored procedure which returns information on the number of pending commands for a subscription to a transactional publication. 
+ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

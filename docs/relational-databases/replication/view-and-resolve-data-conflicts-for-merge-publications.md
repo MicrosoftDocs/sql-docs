@@ -1,6 +1,7 @@
 ---
-title: "View and Resolve Data Conflicts for Merge Publications | Microsoft Docs"
-ms.custom: ""
+title: "View & resolve data conflicts (Merge)"
+description: Learn how to view and resolve data conflicts for a Merge Publication for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"

@@ -1,6 +1,7 @@
 ---
-title: "Publishing Stored Procedure Execution in Transactional Replication | Microsoft Docs"
-ms.custom: ""
+title: "Publishing stored procedure execution (Transactional)"
+description: Learn how to include stored procedures that execute at the Publisher and affect published tables in your Transactional publication as stored procedure execution articles. 
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

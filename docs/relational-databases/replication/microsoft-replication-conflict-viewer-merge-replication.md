@@ -1,6 +1,7 @@
 ---
-title: "Microsoft Replication Conflict Viewer (Merge Replication) | Microsoft Docs"
-ms.custom: ""
+title: "Replication Conflict Viewer (Merge)"
+description: Describes the Replication Conflict Viewer used for Merge Replication in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

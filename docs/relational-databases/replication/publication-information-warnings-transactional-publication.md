@@ -1,6 +1,7 @@
 ---
-title: "Publication Information, Warnings (Transactional Publication) | Microsoft Docs"
-ms.custom: ""
+title: "Warnings (Transactional Publication Information)"
+description: Describes the 'Warnings' tab of the Transactional Publication Information dialog box. 
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

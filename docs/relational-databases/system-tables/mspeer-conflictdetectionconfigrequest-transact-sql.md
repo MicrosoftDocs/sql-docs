@@ -1,6 +1,7 @@
 ---
-title: "MSpeer_conflictdetectionconfigrequest (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSpeer_conflictdetectionconfigrequest (T-SQL)"
+description: Describes the  MSPeer_conflictdetectionconfigurerequest  stored procedure used to track topology wide configuration requests for a  Peer-to-Peer Publication. 
+ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

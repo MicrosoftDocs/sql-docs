@@ -1,6 +1,7 @@
 ---
-title: "Publish Execution of Stored Procedure in Transactional Publication | Microsoft Docs"
-ms.custom: ""
+title: "Publish execution of stored procedure (Transactional)"
+description: Learn how to publish the execution of stored procedures using SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

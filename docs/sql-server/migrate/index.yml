@@ -27,7 +27,7 @@ landingContent:
     - linkListType: download
       links:
       - text: Data Migration Assistant (DMA)
-        url: https://www.microsoft.com/en-us/download/details.aspx?id=53595
+        url: https://www.microsoft.com/download/details.aspx?id=53595
       - text: Database Experimentation Assistant
         url: https://www.microsoft.com/download/details.aspx?id=54090
 
@@ -76,11 +76,11 @@ landingContent:
     - linkListType: overview
       links:
       - text: SQL Server Migration Center
-        url: https://azure.microsoft.com/en-us/migration/sql-server/
+        url: https://azure.microsoft.com/migration/sql-server/
       - text: Database migration guide
         url: https://datamigration.microsoft.com/
       - text: Azure Migration Service
-        url: https://azure.microsoft.com/en-us/services/azure-migrate/
+        url: https://azure.microsoft.com/services/azure-migrate/
       - text: Data migration blog
         url: https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/bg-p/MicrosoftDataMigration
       - text: Modernizing SQL Server (SQL Pass)

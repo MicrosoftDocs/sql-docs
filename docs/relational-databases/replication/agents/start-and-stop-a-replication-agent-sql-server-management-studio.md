@@ -1,6 +1,6 @@
 ---
 title: "Start & stop a Replication Agent (SSMS)"
-description: Learn how to start an stop a replication agent in SQL Server Management Studio and Replication Monitor. 
+description: Learn how to start an stop a Replication Agent in SQL Server Management Studio and Replication Monitor. 
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

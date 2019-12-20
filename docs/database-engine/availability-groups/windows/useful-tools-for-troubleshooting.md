@@ -1,6 +1,7 @@
 ---
-title: "Useful tools for troubleshooting (Always On Availability Groups-SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "Availability group troubleshooting tools (content index)"
+description: A reference of articles describing tools that can be used to monitor and troubleshoot issues with availability groups.
+ms.custom: seo-lt-2019
 ms.date: "06/14/2017"
 ms.prod: sql
 ms.reviewer: ""

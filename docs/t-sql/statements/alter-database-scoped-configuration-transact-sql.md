@@ -1,6 +1,8 @@
 ---
-title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER DATABASE SCOPED CONFIGURATION"
+description: Enable several database configuration settings at the individual database level.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

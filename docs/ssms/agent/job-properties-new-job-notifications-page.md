@@ -1,10 +1,9 @@
 ---
-title: "Job Properties - New Job (Notifications Page)"
+title: Job Properties - New Job (Notifications Page)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
@@ -42,5 +41,5 @@ Select this option to delete the job when the job completes. After selecting thi
   
 ## See Also  
 [Implement Jobs](../../ssms/agent/implement-jobs.md)  
-[How to: Configure SQL Server Agent Mail to Use Database Mail (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+[How to: Configure SQL Server Agent Mail to Use Database Mail](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   

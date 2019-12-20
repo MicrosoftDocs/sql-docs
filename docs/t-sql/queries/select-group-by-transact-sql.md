@@ -79,7 +79,7 @@ GROUP BY
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure SQL Data Warehouse 
   
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
@@ -87,8 +87,18 @@ GROUP BY {
     | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
+```
+
 ```  
+-- Syntax for Parallel Data Warehouse  
   
+GROUP BY {
+      column-name [ WITH (DISTRIBUTED_AGG) ]  
+    | column-expression
+} [ ,...n ]
+
+```  
+    
 ## Arguments 
  
 ### *column-expression*  

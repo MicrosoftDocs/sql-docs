@@ -1,5 +1,5 @@
 ---
-title: "Disable SQL Server Managed Backup to Microsoft Azure | Microsoft Docs"
+title: "Disable managed back up to Azure Blob Storage"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

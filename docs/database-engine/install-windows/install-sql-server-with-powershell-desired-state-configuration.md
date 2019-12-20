@@ -1,8 +1,8 @@
 ---
-title: "Install SQL Server with PowerShell Desired State Configuration | Microsoft Docs"
+title: "Install: PowerShell Desired State Configuration"
 description: "Learn how to install SQL Server by using PowerShell Desired State Configuration (DSC)."
-ms.custom: ""
-ms.date: "10/26/2018"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.devlang: PowerShell
 ms.prod: sql
 ms.reviewer: ""

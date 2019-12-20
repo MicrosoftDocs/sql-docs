@@ -1,6 +1,7 @@
 ---
-title: "SQL Server error log (Always On Availability Groups) (SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "SQL Server error log (availability groups)"
+description: A description of the error log events reported by an Always On availability group. 
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""

@@ -1,6 +1,6 @@
 ---
-title: "Policy Evaluation Result Page (Always On Dashboard) | Microsoft Docs"
-description: "A description of the 'Policy Evaluation Result Page' found within the 'Always On Dashboard' in SQL Server Management Studio."
+title: "Policy Evaluation Result Page (Always On Dashboard)"
+description: "A description of the 'Policy Evaluation Result Page' found within the 'Always On Dashboard' in SQL Server Management Studio (SSMS)."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql

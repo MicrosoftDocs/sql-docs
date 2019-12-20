@@ -1,6 +1,8 @@
 ---
-title: "^= (Bitwise Exclusive OR Assignment) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "^= Bitwise Exclusive OR Assignment"
+description: Bitwise exclusive OR operation between two integer values, and sets a value to the result of the operation.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "01/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

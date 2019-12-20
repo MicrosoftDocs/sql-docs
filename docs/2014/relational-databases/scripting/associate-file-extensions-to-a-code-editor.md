@@ -1,6 +1,6 @@
 ---
-title: "Associate File Extensions to a Code Editor | Microsoft Docs"
-ms.custom: ""
+title: Associate File Extensions to a Code Editor
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

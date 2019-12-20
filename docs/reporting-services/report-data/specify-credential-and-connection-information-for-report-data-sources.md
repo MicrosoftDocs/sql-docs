@@ -1,6 +1,7 @@
 ---
-title: "Specify Credential and Connection Information for Report Data Sources | Microsoft Docs"
-ms.date: 08/17/2018
+title: "Set Credential & Connection Information for Report Data Sources | Microsoft Docs"
+description: A report server uses credentials to connect to external data sources that provide content to reports or recipient information to a data-driven subscription. 
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data

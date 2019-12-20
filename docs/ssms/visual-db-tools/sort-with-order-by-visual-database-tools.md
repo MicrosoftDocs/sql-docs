@@ -1,17 +1,18 @@
 ---
-title: "Sort with ORDER BY (Visual Database Tools)"
+title: Sort with ORDER BY
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ORDER BY clause [Visual Database Tools]"
 ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Sort with ORDER BY (Visual Database Tools)

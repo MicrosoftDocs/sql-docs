@@ -1,7 +1,7 @@
 ---
-title: "Use Resource Governor to Limit CPU Usage by Backup Compression (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
+title: "Limit CPU load: Use resource governor for backup compression"
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""

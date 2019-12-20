@@ -37,7 +37,7 @@ The Oracle database is supported on all operating systems and platforms.
 
 ## Installation
 
-If you need to run package in SQL Server, you can get the Microsoft Connector for Oracle Database installation program from [here](https://www.microsoft.com/en-us/download/details.aspx?id=58228). Then follow the directions in the installation wizard.
+If you need to run package in SQL Server, you can get the Microsoft Connector for Oracle Database installation program from [here](https://www.microsoft.com/download/details.aspx?id=58228). Then follow the directions in the installation wizard.
 
 After you install the Connector, you must restart the SQL Server Integration Service to be sure that the Oracle source and destination works correctly.
 
@@ -55,10 +55,10 @@ To design SSIS package targeting SQL Server 2017 and below, you need to install 
 
 **Download links:**
 
-- [SQL Server 2017: Microsoft Connector Version 5.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=55179)
-- [SQL Server 2016: Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=52950)
-- [SQL Server 2014: Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=44582)
-- [SQL Server 2012: Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=29283)
+- [SQL Server 2017: Microsoft Connector Version 5.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
+- [SQL Server 2016: Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
+- [SQL Server 2014: Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
+- [SQL Server 2012: Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
 
 ## Next steps
 

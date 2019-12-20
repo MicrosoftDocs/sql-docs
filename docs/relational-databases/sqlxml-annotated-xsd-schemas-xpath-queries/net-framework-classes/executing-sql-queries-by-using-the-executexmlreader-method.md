@@ -1,6 +1,5 @@
 ---
-title: "Executing SQL Queries by Using the ExecuteXMLReader Method | Microsoft Docs"
-ms.custom: ""
+title: "Run SQL queries with the ExecuteXMLReader method"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -16,6 +15,7 @@ helpviewer_keywords:
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing SQL Queries by Using the ExecuteXMLReader Method

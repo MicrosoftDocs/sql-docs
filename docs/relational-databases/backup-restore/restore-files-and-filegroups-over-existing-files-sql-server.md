@@ -1,5 +1,5 @@
 ---
-title: "Restore Files and Filegroups over Existing Files (SQL Server) | Microsoft Docs"
+title: "Restore files (and filegroups) over existing"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

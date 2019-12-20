@@ -1,6 +1,5 @@
 ---
 title: "Use RAW Mode with FOR XML | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -18,6 +17,7 @@ helpviewer_keywords:
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 ---
 # Use RAW Mode with FOR XML
 
@@ -36,7 +36,7 @@ RAW mode transforms each row in the query result set into an XML element that ha
   
 -   [Example: Specifying XSINIL with the ELEMENTS Directive](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [Example: Requesting Schemas as Results with the XMLDATA and XMLSCHEMA Options](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [Request schemas as results with XMLDATA & XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [Example: Retrieving Binary Data](../../relational-databases/xml/example-retrieving-binary-data.md)  
   

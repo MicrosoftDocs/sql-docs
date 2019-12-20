@@ -18,7 +18,7 @@ For Linux distributions with `zypper` there is a package for the `azdata-cli`. T
 - openSUSE 42.2 (leap) +
 - SLES 12 SP 2 +
 
-[!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]s
+[!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
 ## Install with zypper
 >[!IMPORTANT]

@@ -46,10 +46,14 @@ brew update
 brew upgrade azdata-cli
 ```
 
-###Uninstall
+## Uninstall
 
 Use homebrew to uninstall the `azdata-cli` package.
 
 ```bash
 brew uninstall azdata-cli
 ```
+
+## Next steps
+
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

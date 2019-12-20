@@ -1,6 +1,7 @@
 ---
-title: "SQL Server Replication Distributor Properties dialog box | Microsoft Docs"
-ms.custom: ""
+title: "Distributor Properties dialog box"
+description: Describe the different pages within the 'Distributor Properties' dialog box in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"

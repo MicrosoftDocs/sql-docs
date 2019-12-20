@@ -4,7 +4,7 @@ description: Create and run simple Python scripts in a SQL Server instance with 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/04/2019  
+ms.date: 12/18/2019  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -220,33 +220,20 @@ To see a list of which Python packages are installed, including version, run the
 ```SQL
 EXECUTE sp_execute_external_script @language = N'Python'
     , @script = N'
-import pip
-for i in pip.get_installed_distributions():
-    print(i)
+import pkg_resources
+import pandas
+dists = [str(d) for d in pkg_resources.working_set]
+OutputDataSet = pandas.DataFrame(dists)
 '
+WITH RESULT SETS(([Package] NVARCHAR(max)))
 GO
 ```
 
-The output is from `pip.get_installed_distributions()` in Python and returned as `STDOUT` messages.
+The list is from `pkg_resources.working_set` in Python and returned to SQL as a data frame.
 
 **Results**
 
-```text
-STDOUT message(s) from external script:
-xlwt 1.2.0
-XlsxWriter 0.9.6
-xlrd 1.0.0
-win-unicode-console 0.5
-widgetsnbextension 2.0.0
-wheel 0.29.0
-Werkzeug 0.12.1
-wcwidth 0.1.7
-unicodecsv 0.14.1
-traitlets 4.3.2
-tornado 4.4.2
-toolz 0.8.2
-. . .
-```
+:::image type="content" source="media/python-package-list.png" alt-text="List of installed Python packages":::
 
 ## Next steps
 

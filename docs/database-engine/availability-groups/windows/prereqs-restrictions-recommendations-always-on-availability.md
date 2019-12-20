@@ -1,7 +1,7 @@
 ---
-title: "Prerequisites, Restrictions, and Recommendations for availability groups"
-description: "A description of the prerequisites, restrictions and recommendations for deploying an Always On availability group."
-ms.custom: "seodec18"
+title: "Availability group: Prerequisites, restrictions, & recommendations"
+description: "A description of the prerequisites, restrictions and recommendations for deploying an Always On availability group to SQL Server."
+ms.custom: seo-lt-2019
 ms.date: "03/22/2019"
 ms.prod: sql
 ms.reviewer: ""

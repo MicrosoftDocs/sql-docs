@@ -1,6 +1,7 @@
 ---
-title: "Caching, Refresh, and Replication Monitor Performance | Microsoft Docs"
-ms.custom: ""
+title: "Caching, Refresh, & Replication Monitor performance"
+description: Learn about caching, refreshing, and optimizing Replication Monitor performance in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

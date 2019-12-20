@@ -1,7 +1,7 @@
 ---
-title: "View or Change the Recovery Model of a Database (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/10/2019"
+title: "Set database recovery model"
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""

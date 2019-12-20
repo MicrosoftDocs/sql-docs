@@ -1,7 +1,7 @@
 ---
-title: "Plan and Perform Restore Sequences (Full Recovery Model) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Restore sequences (Full Recovery Model) | Microsoft Docs"
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""

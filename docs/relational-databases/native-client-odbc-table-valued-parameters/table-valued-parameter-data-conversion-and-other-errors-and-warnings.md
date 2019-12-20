@@ -1,5 +1,5 @@
 ---
-title: "Table-Valued Parameter Data Conversion and Other Errors and Warnings | Microsoft Docs"
+title: "Table-Valued Parameter data conversion"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

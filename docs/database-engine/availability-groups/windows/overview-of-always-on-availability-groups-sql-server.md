@@ -1,7 +1,7 @@
 ---
-title: "Overview of Always On Availability Groups"
+title: "What is an Always On availability group?"
 description: "An introduction to the concepts that are central for configuring and managing Always On availability groups." 
-ms.custom: "seodec18"
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

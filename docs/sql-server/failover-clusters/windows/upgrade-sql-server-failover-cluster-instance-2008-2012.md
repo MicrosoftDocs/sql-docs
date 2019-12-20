@@ -1,6 +1,7 @@
 ---
-title: "Upgrade SQL Server instances running on Windows Server 2008/2008 R2/2012 clusters | Microsoft Docs"
-ms.date: 01/25/2018
+title: "Upgrade SQL Server instances: Windows Server 2012 & older clusters"
+description: Describes how to upgrade your SQL Server failover cluster instances running on Windows Server 2008, Windows Server 2008 R2, and Windows Server 2012. 
+ms.custom: seo-lt-2019
 ms.prod: sql  
 ms.technology: high-availability
 ms.topic: conceptual

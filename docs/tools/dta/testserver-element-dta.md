@@ -1,7 +1,5 @@
 ---
 title: "TestServer Element (DTA)"
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,10 +13,15 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # TestServer Element (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Specifies the test server to use when tuning a production server.  
+
+Specifies the test server to use when tuning a production server.  
   
 ## Syntax  
   

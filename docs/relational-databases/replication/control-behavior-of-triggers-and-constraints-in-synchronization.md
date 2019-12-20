@@ -1,6 +1,7 @@
 ---
-title: "Control Behavior of Triggers and Constraints in Synchronization | Microsoft Docs"
-ms.custom: ""
+title: "Control behavior of triggers & constraints in synchronization"
+description: Learn how to prevent triggers from executing or constraints from being enforced during the synchronization of a SQL Server Replication Publication. 
+ms.custom: seo-lt-2019
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

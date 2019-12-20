@@ -2,7 +2,7 @@
 title: Derive a Template from a Trace File or Trace Table
 titleSuffix: SQL Server Profiler
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual

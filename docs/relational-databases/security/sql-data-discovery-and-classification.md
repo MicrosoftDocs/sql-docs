@@ -21,7 +21,7 @@ Discovering and classifying your most sensitive data (business, financial, healt
 * Controlling access to and hardening the security of databases/columns containing highly sensitive data.
 
 > [!NOTE]
-> Data Discovery & Classification is **supported for SQL Server 2008 and later, and can be used with SSMS 17.5 or later**. For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](https://go.microsoft.com/fwlink/?linkid=866265).
+> Data Discovery & Classification is **supported for SQL Server 2012 and later, and can be used with SSMS 17.5 or later**. For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](https://go.microsoft.com/fwlink/?linkid=866265).
 
 ## <a id="subheading-1"></a>Overview
 Data Discovery & Classification introduces a set of advanced services, forming a new SQL Information Protection paradigm aimed at protecting the data, not just the database:
@@ -87,13 +87,35 @@ The classification includes two metadata attributes:
 
 ## <a id="subheading-3"></a>Accessing the classification metadata
 
-The classification metadata for *Information Types* and *Sensitivity Labels* is stored in the following Extended Properties: 
-* sys_information_type_name
-* sys_sensitivity_label_name
+SQL Server 2019 introduces [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) system catalog view. This view returns information types and sensitivity labels. 
 
-The metadata can be accessed using the Extended Properties catalog view [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
+> [!NOTE]
+> This view requires **VIEW ANY SENSITIVITY CLASSIFICATION** permission. For more information, see [Metadata Visibility Configuration](https://docs.microsoft.com/en-us/sql/relational-databases/security/metadata-visibility-configuration?view=sql-server-ver15).
 
-For SQL Server 2017, the following code example returns all classified columns with their corresponding classifications:
+On SQL Server 2019 instances, query `sys.sensitivity_classifications` to review all classified columns with their corresponding classifications. For example: 
+
+```sql
+SELECT 
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+	label
+FROM sys.sensitivity_classifications sc
+    JOIN sys.objects O
+    ON  sc.major_id = O.object_id
+	JOIN sys.columns C 
+    ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
+```
+
+Prior to SQL Server 2019, the classification metadata for information types and sensitivity labels is in the following Extended Properties: 
+
+* `sys_information_type_name`
+* `sys_sensitivity_label_name`
+
+The metadata can be accessed using the Extended Properties catalog view [`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md).
+
+For instances of SQL Server 2017 and prior, the following example returns all classified columns with their corresponding classifications:
 
 ```sql
 SELECT
@@ -135,22 +157,28 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
-On SQL Server 2019:
-```sql
-SELECT 
-    schema_name(O.schema_id) AS schema_name,
-    O.NAME AS table_name,
-    C.NAME AS column_name,
-    information_type,
-	label
-FROM sys.sensitivity_classifications sc
-    JOIN sys.objects O
-    ON  sc.major_id = O.object_id
-	JOIN sys.columns C 
-    ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
-```
+## <a id="subheading-4"></a>Manage classifications
 
-## <a id="subheading-4"></a>Next steps
+# [T-SQL](#tab/azure-t-sql)
+You can use T-SQL to add/remove column classifications, as well as retrieve all classifications for the entire database.
+
+> [!NOTE]
+> When using T-SQL to manage labels, there is no validation that labels added to a column exist in the organizational information protection policy (the set of labels that appear in the portal recommendations). It is therefore up to you to validate this.
+
+- Add/update the classification of one or more columns: [ADD SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
+- Remove the classification from one or more columns: [DROP SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
+
+# [PowerShell Cmdlet](#tab/azure-powelshell)
+You can use PowerShell to get all the recommended columns in an Azure SQL database and in a managed instance.
+
+### PowerShell Cmdlet for Azure SQL database
+- [Get-SqlSensitivityClassification](https://docs.microsoft.com/en-us/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityRecommendations]https://docs.microsoft.com/en-us/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
+- [Set-SqlSensitivityClassification](https://docs.microsoft.com/en-us/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
+- [Remove-SqlSensitivityClassification](https://docs.microsoft.com/en-us/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
+---
+
+## <a id="subheading-5"></a>Next steps
 
 For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](https://go.microsoft.com/fwlink/?linkid=866265).
 
@@ -163,7 +191,8 @@ Consider protecting your sensitive columns by applying column level security mec
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
 [Accessing the classification metadata]: #subheading-3
-[Next Steps]: #subheading-4
+[Manage classifications]: #subheading-4
+[Next Steps]: #subheading-5
 
 <!--Image references-->
 [1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png

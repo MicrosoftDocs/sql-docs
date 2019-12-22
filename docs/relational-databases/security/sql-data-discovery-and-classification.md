@@ -159,23 +159,20 @@ FROM
 
 ## <a id="subheading-4"></a>Manage classifications
 
-# [T-SQL](#tab/azure-t-sql)
+# [T-SQL](#tab/t-sql)
 You can use T-SQL to add/remove column classifications, as well as retrieve all classifications for the entire database.
-
-> [!NOTE]
-> When using T-SQL to manage labels, there is no validation that labels added to a column exist in the organizational information protection policy (the set of labels that appear in the portal recommendations). It is therefore up to you to validate this.
 
 - Add/update the classification of one or more columns: [ADD SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
 - Remove the classification from one or more columns: [DROP SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
 
-# [PowerShell Cmdlet](#tab/azure-powelshell)
-You can use PowerShell to get all the recommended columns in an Azure SQL database and in a managed instance.
+# [PowerShell Cmdlet](#tab/sql-powelshell)
+You can use PowerShell to get all the recommended columns in an SQL Server.
 
-### PowerShell Cmdlet for Azure SQL database
 - [Get-SqlSensitivityClassification](https://docs.microsoft.com/en-us/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
 - [Get-SqlSensitivityRecommendations]https://docs.microsoft.com/en-us/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
 - [Set-SqlSensitivityClassification](https://docs.microsoft.com/en-us/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
 - [Remove-SqlSensitivityClassification](https://docs.microsoft.com/en-us/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
+
 ---
 
 ## <a id="subheading-5"></a>Next steps

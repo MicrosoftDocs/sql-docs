@@ -168,10 +168,10 @@ You can use T-SQL to add/remove column classifications, as well as retrieve all 
 # [PowerShell Cmdlet](#tab/sql-powelshell)
 You can use PowerShell to get all the recommended columns in an SQL Server.
 
-- [Get-SqlSensitivityClassification](https://docs.microsoft.com/en-us/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
-- [Get-SqlSensitivityRecommendations]https://docs.microsoft.com/en-us/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
-- [Set-SqlSensitivityClassification](https://docs.microsoft.com/en-us/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
-- [Remove-SqlSensitivityClassification](https://docs.microsoft.com/en-us/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityRecommendations](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
+- [Set-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
+- [Remove-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
 
 ---
 

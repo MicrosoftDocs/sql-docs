@@ -65,7 +65,7 @@ An Azure resource group is a logical group in which Azure resources are deployed
    az account set --subscription <subscription id>
    ```
 
-1. Identify the Azure region where you want to deploy the cluster and the resources using this command:
+1. Identify the Azure region where you want to deploy the cluster and the resources by using this command:
 
    ```azurecli
    az account list-locations -o table

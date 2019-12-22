@@ -129,6 +129,12 @@ Choose the latest available version for your cluster. Record the version number.
 
    You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to use. This does not include the master Kubernetes node, which is managed behind the scenes by AKS. The previous example only uses a single node for evaluation purposes.
 
+   You can use the following command to pick the appropriate vm-size that is available in your Azure regions and matches your workload requirements:
+
+   ```azurecli
+   az vm list-sizes --location westus2 -o table
+   ```
+
    After several minutes, the command completes and returns JSON-formatted information about the cluster.
 
    > [!TIP]

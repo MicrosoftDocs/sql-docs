@@ -47,7 +47,7 @@ The following table lists common big data cluster tools and how to install them:
 <sup>3</sup> If you are running on Windows 10, `curl` is already in your PATH when running from a cmd prompt. For other versions of Windows, download `curl` using the link and place it in your PATH.
 
 ## Which tools are required?
-
+ 
 The previous table provides all of the common tools that are used with big data clusters. Which tools are required depends on your scenario. But in general, the following tools are most important for managing, connecting to, and querying the cluster:
 
 - `azdata`

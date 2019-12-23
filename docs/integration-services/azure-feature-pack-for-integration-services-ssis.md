@@ -1,7 +1,7 @@
 ---
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/17/2019"
+ms.date: "12/24/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -94,8 +94,8 @@ To use TLS 1.2, add a `REG_DWORD` value named `SchUseStrongCrypto` with data `1`
 
 ## Dependency on Java
 
-Java is required to use ORC/Parquet file formats with Azure Data Lake Store/Flat File connectors.  
-Architecture (32/64-bit) of the Java build should match that of the SSIS runtime to use.
+Java is required to use ORC/Parquet file formats with Azure Data Lake Store/Flexible File connectors.  
+The architecture (32/64-bit) of Java build should match that of the SSIS runtime to use.
 The following Java builds have been tested.
 
 - [Zulu's OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)

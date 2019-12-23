@@ -111,7 +111,7 @@ Information Protection Policy management includes the following functionalities:
 SQL Server 2019 introduces [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) system catalog view. This view returns information types and sensitivity labels. 
 
 > [!NOTE]
-> This view requires **VIEW ANY SENSITIVITY CLASSIFICATION** permission. For more information, see [Metadata Visibility Configuration](https://docs.microsoft.com/en-us/sql/relational-databases/security/metadata-visibility-configuration?view=sql-server-ver15).
+> This view requires **VIEW ANY SENSITIVITY CLASSIFICATION** permission. For more information, see [Metadata Visibility Configuration](https://docs.microsoft.com/sql/relational-databases/security/metadata-visibility-configuration?view=sql-server-ver15).
 
 On SQL Server 2019 instances, query `sys.sensitivity_classifications` to review all classified columns with their corresponding classifications. For example: 
 

@@ -1,5 +1,7 @@
 ---
-title: "Query and Text Editors (SQL Server Management Studio)"
+title: "Query and text editors (SSMS)"
+description: Learn how to use SQL Server Management Studio (SSMS) editors to interactively query, edit, and test files.
+ms.custom: seo-lt-2019 
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -27,7 +29,7 @@ ms.date: "03/14/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-# Query and Text Editors (SQL Server Management Studio)
+# Query and text editors (SQL Server Management Studio)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 

@@ -1,7 +1,7 @@
 ---
-title: Configure RHEL Cluster for SQL Server Availability Group
-titleSuffix: SQL Server
-description: Learn about availability group clusters when running Red Hat Enterprise Linux (RHEL)
+title: "RHEL: Configure availability group for SQL Server in Linux"
+description: Learn to configure an availability group when running Red Hat Enterprise Linux (RHEL) for SQL Server. 
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto

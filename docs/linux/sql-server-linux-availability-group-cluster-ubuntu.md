@@ -1,7 +1,8 @@
 ---
-title: Configure Ubuntu Cluster for SQL Server Availability Group
-titleSuffix: SQL Server
-description: Learn about creating availability group clusters for Ubuntu
+title: Configure Ubuntu Cluster for availability group
+titleSuffix: SQL Server on Linux
+description: Learn to create a three-node cluster on Ubuntu and add a previously created availability group resource to the cluster. 
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto

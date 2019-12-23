@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Use AD authentication for SQL Server on Linux"
 titleSuffix: SQL Server
-description: This tutorial provides the configuration steps for AD authentication for SQL Server on Linux.
+description: This tutorial provides the configuration steps for Active Directory (AD) authentication for SQL Server on Linux.
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto

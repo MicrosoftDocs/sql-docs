@@ -38,8 +38,8 @@ The details for how to configure AD authentication are provided in the tutorial,
 1. [Join a SQL Server host to an Active Directory domain](sql-server-linux-active-directory-join-domain.md).
 1. [Create an AD user for SQL Server and set the ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser).
 1. [Configure the SQL Server service keytab](sql-server-linux-active-directory-authentication.md#configurekeytab).
-1. [Secure the keytab file](sql-server-linux-active-directory-authentication.md#securekeytab).
-1. [Configure SQL Server to use the keytab file for Kerberos authentication](sql-server-linux-active-directory-authentication.md#keytabkerberos).
+1. [Secure the keytab file](sql-server-linux-active-directory-authentication.md#configurekeytab).
+1. [Configure SQL Server to use the keytab file for Kerberos authentication](sql-server-linux-active-directory-authentication.md#configurekeytab).
 1. [Create AD-based SQL Server logins in Transact-SQL](sql-server-linux-active-directory-authentication.md#createsqllogins).
 1. [Connect to SQL Server using AD authentication](sql-server-linux-active-directory-authentication.md#connect).
 

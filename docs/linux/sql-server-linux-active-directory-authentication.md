@@ -232,7 +232,7 @@ Starting with SQL Server 2017 CU14, if SQL Server was joined to an AD domain con
 
 This may be useful for the scenario where you want to manually configure the domain controllers that SQL Server attempts to communicate with. And you use the openldap library mechanism by using the KDC list in **krb5.conf**.
 
-First, set **disablessd** and **enablekdcfromkrb5conf** to true and then restart SQL Server:
+First, set **disablesssd** and **enablekdcfromkrb5conf** to true and then restart SQL Server:
 
 ```bash
 sudo mssql-conf set network.disablesssd true

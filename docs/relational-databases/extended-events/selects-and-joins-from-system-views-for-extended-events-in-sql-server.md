@@ -1,6 +1,5 @@
 ---
-title: "SELECTs and JOINs From System Views for Extended Events in SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "SELECTs and JOINs from system views for extended events"
 ms.date: "08/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -10,6 +9,7 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECTs and JOINs From System Views for Extended Events in SQL Server
@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-This article explains the two sets of system views that relate to extended events in Microsoft SQL Server, and in the Azure SQL Database cloud service. The article illustrates:
+This article explains the two sets of system views that relate to extended events in SQL Server and in Azure SQL Database. The article illustrates:
 
 - How to JOIN various system views.
 - How to SELECT particular kinds of information from the system views.

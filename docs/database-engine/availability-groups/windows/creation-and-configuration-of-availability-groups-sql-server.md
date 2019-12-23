@@ -1,7 +1,7 @@
 ---
-title: "Reference for the creation and configuration of availability groups"
-description: "A reference to links that help  you create and configure Always On availability groups."
-ms.custom: "seodec18"
+title: "Create & configure availability groups (content index)"
+description: "An index of links that help you create and configure Always On availability groups for SQL Server."
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

@@ -1,6 +1,6 @@
 ---
-title: "Generate Scripts (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: Generate Scripts
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

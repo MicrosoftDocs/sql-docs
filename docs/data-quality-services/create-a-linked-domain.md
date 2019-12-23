@@ -1,6 +1,5 @@
 ---
-title: "Create a Linked Domain | Microsoft Docs"
-ms.custom: ""
+title: "Create a Linked Domain"
 ms.date: "11/08/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -10,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.kb.linkeddomain.f1"
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Create a Linked Domain
 

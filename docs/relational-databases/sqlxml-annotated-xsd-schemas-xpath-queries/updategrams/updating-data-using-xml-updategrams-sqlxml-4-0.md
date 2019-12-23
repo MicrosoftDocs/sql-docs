@@ -1,6 +1,5 @@
 ---
-title: "Updating Data Using XML Updategrams (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Updating Data Using XML Updategrams (SQLXML)"
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -26,6 +25,7 @@ helpviewer_keywords:
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updating Data Using XML Updategrams (SQLXML 4.0)

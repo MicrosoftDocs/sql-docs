@@ -1,5 +1,5 @@
 ---
-title: "Using SQLXML Bulk Load in the .NET Environment | Microsoft Docs"
+title: "Using SQLXML Bulk Load in the .NET Environment"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

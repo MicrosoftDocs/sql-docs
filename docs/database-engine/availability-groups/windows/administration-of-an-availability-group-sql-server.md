@@ -1,7 +1,7 @@
 ---
-title: "A reference for the administration of an availability Group"
-description: "A reference page linking you to the basics of administering an Always On availability group, such as altering properties, adding or removing replicas, adding or removing databases, failing over, configuring the listener, etc."
-ms.custom: "seodec18"
+title: "Administration of an availability Group (content index)"
+description: "A reference index linking you to articles describing the basics of administering an Always On availability group, such as altering properties, adding or removing replicas, adding or removing databases, failing over, configuring the listener, etc."
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

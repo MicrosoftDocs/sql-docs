@@ -260,7 +260,7 @@ Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Data Wa
 The following example is the simplest form of the COPY command, which loads data from a public storage account. For this example, the COPY statement's defaults match the format of the line item csv file.
 
 ```sql
-COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv’
+COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
 ```
 
 The default values of the COPY command are:
@@ -307,7 +307,7 @@ WITH (
     DATEFORMAT = 'ymd',
 	MAXERRORS = 10,
 	ERRORFILE = '/errorsfolder/',--path starting from the storage container
-	IDENTITY_INSERT = ‘ON’
+	IDENTITY_INSERT = 'ON'
 )
 ```
 

@@ -1,6 +1,7 @@
 ---
-title: "Tutorial: Prepare SQL Server for replication (publisher, distributor, subscriber) | Microsoft Docs"
-ms.custom: ""
+title: "Tutorial: Prepare for replication"
+description: In this tutorial, learn how to prepare your publisher, distributor, and subscriber for replication by creating Windows accounts, preparing the snapshot folder, and configuring distribution. 
+ms.custom: seo-lt-2019
 ms.date: "04/02/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"

@@ -56,7 +56,7 @@ Each of the following links provides information for all of the applicable produ
 
 ### Additional resources
 
-  - [SQL Customer Advisory Team Site](https://sqlcat.com/)
+  - [SQL Customer Advisory Team Site](https://blogs.msdn.microsoft.com/sqlcat/)
   - [SQL Server DevCenter](https://msdn.microsoft.com/sqlserver/default.aspx)
   - [SQL Server TechCenter](https://technet.microsoft.com/sqlserver/default.aspx)
   - [SQL Server Product Information Center](https://www.microsoft.com/sqlserver/default.aspx)

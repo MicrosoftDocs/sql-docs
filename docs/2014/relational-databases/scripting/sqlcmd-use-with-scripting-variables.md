@@ -1,6 +1,6 @@
 ---
-title: "Use sqlcmd with Scripting Variables | Microsoft Docs"
-ms.custom: ""
+title: Use sqlcmd with Scripting Variables
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

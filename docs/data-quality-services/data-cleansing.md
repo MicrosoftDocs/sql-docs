@@ -1,6 +1,5 @@
 ---
-title: "Data Cleansing | Microsoft Docs"
-ms.custom: ""
+title: "Data Cleansing"
 ms.date: "10/01/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Data Cleansing
 

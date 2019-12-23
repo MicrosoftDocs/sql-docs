@@ -1,6 +1,7 @@
 ---
-title: "Select Databases Page (New Availability Group Wizard and Add Database Wizard) | Microsoft Docs"
-ms.custom: ""
+title: "Select Databases Page (New Availability Group & Add Database Wizard)"
+description: Describes the "Select Databases" page for both the New Availability Group and Add Database Wizards found in SQL Server Management Studio GUI. 
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

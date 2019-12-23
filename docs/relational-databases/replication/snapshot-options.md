@@ -1,6 +1,7 @@
 ---
-title: "Modify Snapshot Initialization Options for SQL Replication | Microsoft Docs"
-ms.custom: ""
+title: "Modify snapshot initialization options"
+description: Modify various Replication snapshot initialization options such as the snapshot format, and the snapshot folder location in SQL Server Management Studio. 
+ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"

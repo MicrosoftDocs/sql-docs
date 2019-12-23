@@ -1,6 +1,6 @@
 ---
-title: "Specify a Breakpoint Filter | Microsoft Docs"
-ms.custom: ""
+title: Specify a Breakpoint Filter
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

@@ -87,12 +87,15 @@ The following steps create an external table in the data pool named **web_clicks
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
+   
 1. Create login for data pools and provide permissions to the user.
    ```sql 
    EXECUTE( ' Use Sales; CREATE LOGIN sample_user  WITH PASSWORD = ''password123!#'' ;') AT  DATA_SOURCE SqlDataPool;
 
    EXECUTE('Use Sales; CREATE USER sample_user; ALTER ROLE [db_datareader] ADD MEMBER sample_user;  ALTER ROLE [db_datawriter] ADD MEMBER sample_user;') AT DATA_SOURCE SqlDataPool;
    ```
+   
+The creation of data pool external table is a blocking operation. Control returns when the specified table has been created on all back-end data pool nodes. If failure occurred during the create operation, an error message is returned to caller.
 
 ## Start a Spark streaming job
 

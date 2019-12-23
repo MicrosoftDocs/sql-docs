@@ -1,10 +1,9 @@
 ---
-title: "Remove Joins (Visual Database Tools)"
+title: Remove Joins
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,8 +11,10 @@ helpviewer_keywords:
   - "joins [SQL Server], removing"
   - "deleting joins"
 ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Remove Joins (Visual Database Tools)

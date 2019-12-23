@@ -1,6 +1,7 @@
 ---
-title: "View Publication and Subscription Status in Replication Monitor | Microsoft Docs"
-ms.custom: ""
+title: "View Publication & Subscription status (Replication Monitor)"
+description: Learn how to view Publication and Subscription status using the Replication Monitor in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

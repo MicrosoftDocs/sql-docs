@@ -1,6 +1,7 @@
 ---
-title: "Define and Modify a Parameterized Row Filter for a Merge Article | Microsoft Docs"
-ms.custom: ""
+title: "Define & modify a parameterized row filter (Merge)"
+description: Learn how to define and modify a parameterized row filter for a Merge Publication article for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

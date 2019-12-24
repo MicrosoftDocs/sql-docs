@@ -8,7 +8,6 @@ ms.reviewer: vanto
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.custom: "mvc"
 ms.technology: linux
 ---
 # Deploy a SQL Server container in Kubernetes with Azure Kubernetes Services (AKS)

@@ -1,6 +1,7 @@
 ---
-title: "Tutorial: Getting Started with Always Encrypted with secure enclaves using SSMS | Microsoft Docs"
-ms.custom: ""
+title: "Tutorial: Always Encrypted with secure enclaves using SSMS"
+description: This tutorial teaches you how to create a basic Always Encrypted with secure enclaves environment, how to encrypt data in-place, and issue rich queries against encrypted columns using SQL Server Management Studio (SSMS). 
+ms.custom: seo-lt-2019
 ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -13,7 +14,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
-# Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS
+# Tutorial: Always Encrypted with secure enclaves using SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:

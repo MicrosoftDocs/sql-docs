@@ -2,7 +2,6 @@
 title: "Configure general properties of Policy-Based Management"
 description: Learn how to configure the properties for Policy-Based Management using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
 ms.custom: seo-lt-2019
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

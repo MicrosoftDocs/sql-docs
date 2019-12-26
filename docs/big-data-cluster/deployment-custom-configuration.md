@@ -463,7 +463,7 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.n
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
 ```
 >[!NOTE]
-> If you plan on assigning these roles to the Kubernetes master node, you'll need to [remove its ``master:NoSchedule`` taint.](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) Be aware that this could overload the master node and inhibit its ability to perform its Kubernetes management duties on larger clusters. It's normal to see some pods scheduled to the master on any deployment: they already tolerate the ``master:NoSchedule`` taint, and they're mostly used to help manage the cluster. 
+> Best practice avoids giving the Kubernetes master any of the above BDC roles. If you plan on assigning these roles to the Kubernetes master node anyway, you'll need to [remove its ``master:NoSchedule`` taint.](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) Be aware that this could overload the master node and inhibit its ability to perform its Kubernetes management duties on larger clusters. It's normal to see some pods scheduled to the master on any deployment: they already tolerate the ``master:NoSchedule`` taint, and they're mostly used to help manage the cluster. 
 
 ## <a id="jsonpatch"></a> Other customizations using JSON patch files
 

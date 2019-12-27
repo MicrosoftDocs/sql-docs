@@ -84,27 +84,25 @@ The classification includes two metadata attributes:
 
     ![Navigation pane][10]
 
-## <a id="subheading-3"></a>Information Protection Policy Management via SSMS
+## <a id="subheading-3"></a>Manage information protection policy with SSMS
 
-You can manage your **Information Protection Policy** using [SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or later:
+You can manage the information protection policy using [SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or later:
 
 1. In SQL Server Management Studio (SSMS) connect to the SQL Server.
 
 2. In the SSMS Object Explorer, right click on one of your databases and choose **Tasks** > **Data Discovery and Classification**.
 
-Information Protection Policy management includes the following functionalities:
+   The following menu options allow you to manage the information protection policy:
 
-* Set Information Protection Policy File: uses the information protection policy as defined in the selected JSON file.
+* **Set Information Protection Policy File**: uses the information protection policy as defined in the selected JSON file.
 
-* Export Information Protection Policy: exports the information protection policy to a JSON file.
+* **Export Information Protection Policy**: exports the information protection policy to a JSON file.
 
-* Reset Information Protection Policy: resets the information protection policy to the default information protection policy.
+* **Reset Information Protection Policy**: resets the information protection policy to the default information protection policy.
 
 > [!IMPORTANT]
-> Information Protection Policy file is not stored in the SQL Server.
-> SSMS will use a default Information Protection Policy. in a case where setting the information protection policy to a customized file fails, SSMS will no longer be able to use the deafult policy. Data classification will then fail to execute. To resolve, **Reset Information Protection Policy** to use the default policy and re-enable Data Classifiction .
-
-![Navigation pane][1]
+> Information protection policy file is not stored in the SQL Server.
+> SSMS uses a default information protection policy. If an information protection policy customized fails, SSMS cannot use the default policy. Data classification fails. To resolve, click **Reset Information Protection Policy** to use the default policy and re-enable data classification.
 
 ## <a id="subheading-4"></a>Accessing the classification metadata
 
@@ -208,7 +206,7 @@ Consider protecting your sensitive columns by applying column level security mec
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Information Protection Policy Management via SSMS]: #subheading-3
+[Manage information protection policy with SSMS]: #subheading-3
 [Accessing the classification metadata]: #subheading-4
 [Manage classifications]: #subheading-5
 [Next Steps]: #subheading-6

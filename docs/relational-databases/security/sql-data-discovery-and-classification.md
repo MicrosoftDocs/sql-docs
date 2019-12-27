@@ -102,7 +102,7 @@ You can manage the information protection policy using [SSMS 18.4](https://docs.
 
 > [!IMPORTANT]
 > Information protection policy file is not stored in the SQL Server.
-> SSMS uses a default information protection policy. If an information protection policy customized fails, SSMS cannot use the default policy. Data classification fails. To resolve, reset information protection policy to use the default policy and re-enable data classification.
+> SSMS uses a default information protection policy. If an information protection policy customized fails, SSMS cannot use the default policy. Data classification fails. To resolve, click **Reset Information Protection Policy** to use the default policy and re-enable data classification.
 
 ## <a id="subheading-4"></a>Accessing the classification metadata
 

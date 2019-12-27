@@ -107,7 +107,7 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 <sup>*</sup> Requires version 1607 (10.0.14393) or later
 
 > [!NOTE]
-> SSMS runs on Windows only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
+> SSMS runs on Windows (AMD or Intel) only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
 
 ## Release notes (SSMS 18.4)
 

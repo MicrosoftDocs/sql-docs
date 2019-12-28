@@ -35,7 +35,7 @@ The component supports the OData v3 and v4 protocols.
 
 The OData source includes support for the following data sources:
 -   Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online
--   SharePoint lists. To see all the lists on a SharePoint server, use the following URL: https://\<server>/_vti_bin/ListData.svc. For more information about SharePoint URL conventions, see [SharePoint Foundation REST Interface](https://msdn.microsoft.com/library/ff521587.aspx).
+-   SharePoint lists. To see all the lists on a SharePoint server, use the following URL: `https://<server>/_vti_bin/ListData.svc`. For more information about SharePoint URL conventions, see [SharePoint Foundation REST Interface](https://msdn.microsoft.com/library/ff521587.aspx).
 
 ## Supported data types
 
@@ -43,7 +43,7 @@ The OData source supports the following simple data types: int, byte[], bool, by
 
 To discover the data types of columns in your data source, check the `https://<OData feed endpoint>/$metadata` page.
 
-For Decimal data type, the Precision and Scale are defined based on the source metadata. If the source metadata does not specify the "Precision" and "Scale" properties, the data may be truncated.
+For the **Decimal** data type, the precision and scale are determined by the source metadata. If the source metadata does not specify the **Precision** and **Scale** properties, the data may be truncated.
 
 > [!IMPORTANT]
 > The OData Source component does not support complex types, such as multiple-choice items, in SharePoint lists.

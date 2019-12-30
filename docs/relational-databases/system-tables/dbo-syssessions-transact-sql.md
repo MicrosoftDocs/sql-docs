@@ -1,9 +1,9 @@
 ---
 title: "dbo.syssessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/30/2019\"
+ms.date: "12/30/2019"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: 
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 

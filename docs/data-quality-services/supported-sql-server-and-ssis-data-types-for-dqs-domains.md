@@ -1,5 +1,5 @@
 ---
-title: "Supported SQL Server and SSIS data types for DQS Domains"
+title: "Supported SQL Server and SSIS data types for DQS domains"
 description: Describes the four data types for Data Quality Services (DQS) domains (Data, Decimal, Integer, and String) in SQL Server. 
 ms.custom: seo-lt-2019
 ms.date: "11/08/2011"
@@ -21,7 +21,7 @@ ms.author: sawinark
 > [!NOTE]  
 >  In .xlsx and .xls files, the data type of the source column is determined by the most prevalent data type in the first eight rows. If a cell does not conform to that data type, it will be given a null value. Similarly, in .csv files, the data type of the source column is determined by the most prevalent data type in the first eight rows.  
   
-##  <a name="SQLServer"></a> Supported SQL Server Data Types  
+##  <a name="SQLServer"></a> Supported SQL Server Data Types 
  The following table provides information about the SQL Server data types supported for each DQS domain data type:  
   
 |DQS Domain Data Type|Supported SQL Server Data Type|  

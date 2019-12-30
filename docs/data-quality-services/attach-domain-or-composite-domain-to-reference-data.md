@@ -1,5 +1,5 @@
 ---
-title: "Attach domain or composite domain to reference Data"
+title: "Attach domain or composite domain to reference data"
 description: Describes how to attach domains or composite domains in a data quality knowledge base with Data Quality Services (DQS) on SQL Server. 
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"

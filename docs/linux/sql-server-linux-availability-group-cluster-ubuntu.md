@@ -1,5 +1,5 @@
 ---
-title: Configure Ubuntu Cluster for availability group
+title: Configure Ubuntu cluster for availability group
 titleSuffix: SQL Server on Linux
 description: Learn to create a three-node cluster on Ubuntu and add a previously created availability group resource to the cluster. 
 ms.custom: seo-lt-2019

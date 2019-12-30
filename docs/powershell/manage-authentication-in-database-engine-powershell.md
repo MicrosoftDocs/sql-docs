@@ -1,5 +1,6 @@
 ---
-title: "PowerShell: Manage authentication to SQL Server"
+title: "PowerShell: Manage authentication"
+titleSuffix: SQL Server on Linux
 description: Learn how to use PowerShell to manage Windows and SQL authentication to SQL Server. 
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

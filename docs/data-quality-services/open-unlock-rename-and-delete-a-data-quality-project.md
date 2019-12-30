@@ -1,5 +1,5 @@
 ---
-title: "Open,unlock, rename, and delete a Data Quality Project"
+title: "Open, unlock, rename, and delete a data quality project"
 description: Learn how to open, unlock, rename, and delete a data quality project using SQL Server Data Quality Services. 
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"

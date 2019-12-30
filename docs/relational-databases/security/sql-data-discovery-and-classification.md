@@ -186,7 +186,7 @@ You can use T-SQL to add/remove column classifications, as well as retrieve all 
 - Remove the classification from one or more columns: [DROP SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
 
 # [PowerShell Cmdlet](#tab/sql-powelshell)
-You can use PowerShell to get all the recommended columns in an SQL Server.
+You can use PowerShell Cmdlet to add/remove column classifications, as well as retrieve all classifications and get recommendations for the entire database.
 
 - [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
 - [Get-SqlSensitivityRecommendations](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)

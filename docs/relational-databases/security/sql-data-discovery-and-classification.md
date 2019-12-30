@@ -214,13 +214,13 @@ Consider protecting your sensitive columns by applying column level security mec
 
 <!--Image references-->
 
-[0]: ./media/sql-data-discovery-and-classification/0_data_classification_explorer.png
-[2]: ./media/sql-data-discovery-and-classification/2_recommendations_notification_box.png
-[3]: ./media/sql-data-discovery-and-classification/3_recommendations_panel.png
-[4]: ./media/sql-data-discovery-and-classification/4_recommendations.png
-[5]: ./media/sql-data-discovery-and-classification/5_accept_recommendations_button.png
-[6]: ./media/sql-data-discovery-and-classification/6_add_classification_button.png
-[7]: ./media/sql-data-discovery-and-classification/7_manual_classification.png
-[8]: ./media/sql-data-discovery-and-classification/8_save.png
-[9]: ./media/sql-data-discovery-and-classification/9_view_report.png
-[10]: ./media/sql-data-discovery-and-classification/10_report.png
+[0]: ./media/sql-data-discovery-and-classification/0-data-classification-explorer.png
+[2]: ./media/sql-data-discovery-and-classification/2-recommendations-notification-box.png
+[3]: ./media/sql-data-discovery-and-classification/3-recommendations-panel.png
+[4]: ./media/sql-data-discovery-and-classification/4-recommendations.png
+[5]: ./media/sql-data-discovery-and-classification/5-accept-recommendations-button.png
+[6]: ./media/sql-data-discovery-and-classification/6-add-classification-button.png
+[7]: ./media/sql-data-discovery-and-classification/7-manual-classification.png
+[8]: ./media/sql-data-discovery-and-classification/8-save.png
+[9]: ./media/sql-data-discovery-and-classification/9-view-report.png
+[10]: ./media/sql-data-discovery-and-classification/10-report.png

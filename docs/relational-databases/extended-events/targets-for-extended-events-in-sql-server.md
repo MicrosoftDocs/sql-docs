@@ -669,7 +669,7 @@ To see the preceding XML, you can issue the following SELECT while the event ses
 
 ```sql
 SELECT
-		CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
+		CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml
 	INTO
 		#XmlAsTable
 	FROM

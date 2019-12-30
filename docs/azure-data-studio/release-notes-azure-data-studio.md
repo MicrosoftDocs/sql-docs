@@ -9,12 +9,23 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
-ms.date: 12/19/2019
+ms.date: 12/26/2019
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## December 2019 (hotfix)
+
+December 26, 2019 &nbsp; / &nbsp; version: 1.14.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Fix bug #8747 OE Expansion fails | [#8747](https://github.com/microsoft/azuredatastudio/issues/8747)  |
+| &nbsp; | &nbsp; |
 
 ## December 2019
 

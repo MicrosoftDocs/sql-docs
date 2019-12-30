@@ -65,17 +65,17 @@
         items:
         - name: Install
           href: big-data-cluster/deploy-install-azdata.md
-        - name: With Windows Installer
-          href: big-data-cluster/deploy-install-azdata-installer.md
-        - name: Homebrew
+        - name: macOS
           href: big-data-cluster/deploy-install-azdata-macos.md
-        - name: apt
+        - name: Windows
+          href: big-data-cluster/deploy-install-azdata-installer.md
+        - name: Linux with apt
           href: big-data-cluster/deploy-install-azdata-linux-package.md
-        - name: yum
+        - name: Linux with yum
           href: big-data-cluster/deploy-install-azdata-yum.md
-        - name: zypper
+        - name: Linux with zypper
           href: big-data-cluster/deploy-install-azdata-zypper.md
-        - name: Script
+        - name: With pip
           href: big-data-cluster/deploy-install-azdata-pip.md
     - name: Deploy
       items:

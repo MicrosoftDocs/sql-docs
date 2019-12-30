@@ -209,7 +209,9 @@ Error code  |Symbol  |Description
 4 | scp_err_NotFound | The specified key or algorithm could not be found by the EKM provider.    
 5 | scp_err_AuthFailure | The authentication has failed with EKM provider.    
 6 | scp_err_InvalidArgument | The provided argument is invalid.    
-7 | scp_err_ProviderError | There is an unspecified error happened in EKM provider that is caught by SQL engine.    
+7 | scp_err_ProviderError | There is an unspecified error happened in EKM provider that is caught by SQL engine.   
+401 | acquireToken | Server responded 401 for the request. Make sure the client Id and secret are correct, and the credential string is a concatenation of AAD client Id and secret without hyphens.
+404 | getKeyByName | The server responded 404, because the key name was not found. Please make sure the key name exists in your vault.
 2049 | scp_err_KeyNameDoesNotFitThumbprint | The key name is too long to fit into SQL engine's thumbprint. The key name must not exceed 26 characters.    
 2050 | scp_err_PasswordTooShort | The secret string that is the concatenation of AAD client ID and secret is shorter than 32 characters.    
 2051 | scp_err_OutOfMemory | SQL engine has run out of memory and failed to allocate memory for EKM provider.    

@@ -145,7 +145,7 @@ Use the following guidelines to develop installation commands that have correct 
 -   /PARAMETER (Example: `/INDICATEPROGRESS`)
 -   /PARAMETER=true/false  (Example: `/SQLSVCINSTANTFILEINIT=True` )
 -   /PARAMETER=1/0 for Boolean types   (Example: `/TCPENABLED=1`)
--   /PARAMETER="value" for all single-value parameters. (Example: `/PID="PID" /SQLSVCSTARTUPTYP="Automatic"`)
+-   /PARAMETER="value" for all single-value parameters. (Example: `/PID="PID" /SQLSVCSTARTUPTYPE="Automatic"`)
     - For a parameter that requires a path: `/INSTANCEDIR=c:\Path` or  `/INSTANCEDIR="c:\Path"` is supported.  
 -   /PARAMETER="value1" "value2" "value3" for all multiple-value parameters. (Example: `/SQLSYSADMINACCOUNTS="Contoso\John" "Contoso\Mary"`)
     - **Exception**: `/FEATURES`, which is a multivalued parameter, but its format is `/FEATURES=AS,RS,IS` without a space, comma-delimited. 

@@ -1,6 +1,7 @@
 ---
-title: "Run Windows PowerShell Steps in SQL Server Agent | Microsoft Docs"
-ms.custom: ""
+title: "Run Windows PowerShell Steps in SQL Server Agent"
+description: Learn how to run Windows PowerShell steps in a SQL Server Agent job. 
+ms.custom: seo-lt-2019
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""

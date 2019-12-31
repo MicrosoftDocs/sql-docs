@@ -1,6 +1,7 @@
 ---
-title: "Extensible Key Management Using Azure Key Vault (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Extensible Key Management using Azure Key Vault"
+description: Use the SQL Server Connector for Extensible Key Management with Azure Key Vault for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "07/22/2016"
 ms.prod: sql
 ms.reviewer: vanto

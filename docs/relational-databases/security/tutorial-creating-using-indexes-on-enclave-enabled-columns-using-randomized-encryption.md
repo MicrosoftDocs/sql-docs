@@ -1,6 +1,7 @@
 ---
-title: "Tutorial: Create and use indexes on enclave-enabled columns using randomized encryption | Microsoft Docs"
-ms.custom: ""
+title: "Indexes on enclave-enabled columns with randomized encryption (Tutorial)"
+description: This tutorial teaches you how to create and use index on enclave-enabled columns using randomized encryption supported in Always Encrypted with secure enclaves for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -1,6 +1,7 @@
 ---
-title: "Configure Always Encrypted using SQL Server Management Studio | Microsoft Docs"
-ms.custom: ""
+title: "Configure Always Encrypted using SSMS"
+description: Describes tasks for configuring and managing Always Encrypted databases with SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.reviewer: vanto

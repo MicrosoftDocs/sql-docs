@@ -43,7 +43,7 @@ The classification includes two metadata attributes:
 
 2. In the SSMS Object Explorer, right click on the database that you would like to classify and choose **Tasks** > **Data Discovery and Classification** > **Classify Data...**.
 
-   ![Navigation pane](./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png)
+   ![Navigation pane][0]
 
 3. The classification engine scans your database for columns containing potentially sensitive data and provides a list of **recommended column classifications**:
 
@@ -214,12 +214,13 @@ Consider protecting your sensitive columns by applying column level security mec
 
 <!--Image references-->
 
-[2]: ./media/sql-data-discovery-and-classification/2_recommendations_notification_box.png
-[3]: ./media/sql-data-discovery-and-classification/3_recommendations_panel.png
-[4]: ./media/sql-data-discovery-and-classification/4_recommendations.png
-[5]: ./media/sql-data-discovery-and-classification/5_accept_recommendations_button.png
-[6]: ./media/sql-data-discovery-and-classification/6_add_classification_button.png
-[7]: ./media/sql-data-discovery-and-classification/7_manual_classification.png
-[8]: ./media/sql-data-discovery-and-classification/8_save.png
-[9]: ./media/sql-data-discovery-and-classification/9_view_report.png
-[10]: ./media/sql-data-discovery-and-classification/10_report.png
+[0]: ./media/sql-data-discovery-and-classification/0-data-classification-explorer.png
+[2]: ./media/sql-data-discovery-and-classification/2-recommendations-notification-box.png
+[3]: ./media/sql-data-discovery-and-classification/3-recommendations-panel.png
+[4]: ./media/sql-data-discovery-and-classification/4-recommendations.png
+[5]: ./media/sql-data-discovery-and-classification/5-accept-recommendations-button.png
+[6]: ./media/sql-data-discovery-and-classification/6-add-classification-button.png
+[7]: ./media/sql-data-discovery-and-classification/7-manual-classification.png
+[8]: ./media/sql-data-discovery-and-classification/8-save.png
+[9]: ./media/sql-data-discovery-and-classification/9-view-report.png
+[10]: ./media/sql-data-discovery-and-classification/10-report.png

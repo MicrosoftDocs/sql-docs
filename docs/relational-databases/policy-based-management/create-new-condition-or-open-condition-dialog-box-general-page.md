@@ -1,6 +1,7 @@
 ---
-title: "Create New Condition or Open Condition Dialog Box, General Page | Microsoft Docs"
-ms.custom: ""
+title: "'General Page of 'Create New Condition' or 'Open Condition' dialog box"
+description: Describes the 'General Page' of the 'Create New Condition' or 'Open Condition" dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

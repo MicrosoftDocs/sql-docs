@@ -1,6 +1,7 @@
 ---
-title: "View the Properties of a Policy-Based Management Facet | Microsoft Docs"
-ms.custom: ""
+title: "View properties of a Policy-Based Management facet"
+description: Learn to view the properties of a Policy-Based Management facet in SQL Server by using SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

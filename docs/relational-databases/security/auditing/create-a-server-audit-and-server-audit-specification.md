@@ -1,6 +1,7 @@
 ---
-title: "Create a Server Audit and Server Audit Specification | Microsoft Docs"
-ms.custom: ""
+title: "Creat Server Audit & Server Audit Specification"
+description: Learn how to create a SQL Server audit and server audit specific using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: "10/16/2019"
 ms.prod: sql
 ms.prod_service: security

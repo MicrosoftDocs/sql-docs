@@ -27,7 +27,9 @@ Transparent Network IP Resolution (TNIR) is a revision of the existing MultiSubn
 |False|True|1|
 |False|False|2|
 
-TransparentNetworkIPResolution is **True** by default. MultiSubnetFailover is **False** by default. For more information about setting these properties, see [Using Connection String Keywords with OLE DB Driver for SQL Server](..\applications\using-connection-string-keywords-with-oledb-driver-for-sql-server.md).
+TransparentNetworkIPResolution is enabled by default. MultiSubnetFailover is disabled by default. See the following pages provide more information about setting these properties: 
+- [Using Connection String Keywords with OLE DB Driver for SQL Server](..\applications\using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
+- [Initialization and Authorization Properties](..\ole-db-data-source-objects\initialization-and-authorization-properties.md)
 
 ## See Also 
 [OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](./oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)

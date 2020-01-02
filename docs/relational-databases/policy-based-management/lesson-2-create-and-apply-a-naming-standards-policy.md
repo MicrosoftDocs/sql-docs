@@ -1,6 +1,7 @@
 ---
-title: "Lesson 2: Create and Apply a Naming Standards Policy | Microsoft Docs"
-ms.custom: ""
+title: "Lesson 2: Create & apply naming standards policy"
+description: This tutorial teaches you to create and apply a naming standards policy for Policy-Based Management in SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: security

@@ -1,6 +1,7 @@
 ---
-title: "Configure Alerts to Notify Policy Administrators of Policy Failures | Microsoft Docs"
-ms.custom: ""
+title: "Configure alerts to notify admins of policy failures"
+description: Learn how to configure alerts to notify policy administrators when a SQL Server fails a policy evaluation.
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

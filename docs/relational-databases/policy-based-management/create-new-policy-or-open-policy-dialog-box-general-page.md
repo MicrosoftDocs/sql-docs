@@ -1,6 +1,7 @@
 ---
-title: "Create New Policy or Open Policy Dialog Box, General Page | Microsoft Docs"
-ms.custom: ""
+title: "'Create New Policy' or 'Open Policy' dialog box, General Page"
+descripton: Describes the 'General Page' of the 'Create New Policy' and 'Open Policy' dialog boxes for Policy-Based Management in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

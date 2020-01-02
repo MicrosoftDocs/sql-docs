@@ -11858,8 +11858,6 @@
         href: relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md
       - name: sys.resource_usage
         href: relational-databases/system-catalog-views/sys-resource-usage-azure-sql-database.md
-      - name: dbo.server_quotas
-        href: relational-databases/system-catalog-views/dbo-server-quotas-azure-sql-database.md
       - name: sys.server_resource_stats
         href: relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md
     - name: Change tracking

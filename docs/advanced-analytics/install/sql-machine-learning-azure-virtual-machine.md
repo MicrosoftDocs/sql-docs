@@ -17,12 +17,12 @@ Learn how to install Python and R with SQL Server Machine Learning Services on a
 
 Follow these steps:
 
-1. Provision SQL Server virtual machine
+1. Provision SQL Server virtual machine in Azure
 1. Unblock the firewall
 1. Enable ODBC callbacks for remote clients
 1. Add network protocols
 
-## Provision SQL Server virtual machine
+## Provision SQL Server virtual machine in Azure
 
 For step by step instructions, see [How to provision a Windows SQL Server virtual machine in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision). 
 

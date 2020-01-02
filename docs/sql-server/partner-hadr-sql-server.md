@@ -35,7 +35,7 @@ To learn more about additional partners, see [monitoring][mon_partners], [manage
 [1]: ./media/partner-hadr-sql-server/Veeam_green_logo.png
 [2]: ./media/partner-hadr-sql-server/dh2i_logo.png
 [3]: ./media/partner-hadr-sql-server/idera_logo.png
-[4]: ./media/partner-hadr-sql-server/hpe_pri_grn_pos_rgb.png
+[4]: ./media/partner-hadr-sql-server/hpe.png
 [5]: ./media/partner-hadr-sql-server/azure_logo.png
 [6]: ./media/partner-hadr-sql-server/portworx_logo.png
 [7]: ./media/partner-hadr-sql-server/nec_logo.png

@@ -28,8 +28,8 @@ To learn more about some of our other partners, see [High availability, and disa
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/dellemc.png
-[2]: ./media/partner-hadr-sql-server/hpe_pri_grn_pos_rgb.png
-[3]: ./media/partner-hadr-sql-server/netapp.png
+[2]: ./media/partner-hadr-sql-server/hpe.png
+[3]: ./media/partner-hadr-sql-server/netapp_logo.png
 [4]: ./media/partner-hadr-sql-server/azure-datalake-analytics.png
 <!--Article links-->
 [hadr_partners]: ./partner-hadr-sql-server.md

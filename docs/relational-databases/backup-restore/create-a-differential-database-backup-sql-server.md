@@ -1,7 +1,7 @@
 ---
-title: "Create a Differential Database Backup (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
+title: "Differential backup"
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""

@@ -1,6 +1,7 @@
 ---
-title: "Publication Information, All Subscriptions (Snapshot Publication) | Microsoft Docs"
-ms.custom: ""
+title: "All Subscriptions (Snapshot - SSMS)"
+description: Describes the 'All Subscriptions' tab for a selected Snapshot Publication in SQL Server Management Studio (SSMS). 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

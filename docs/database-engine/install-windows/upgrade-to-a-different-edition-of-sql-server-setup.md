@@ -1,7 +1,7 @@
 ---
-title: "Upgrade to a Different Edition of SQL Server 2016 (Setup) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/24/2017"
+title: "Upgrade to different edition"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

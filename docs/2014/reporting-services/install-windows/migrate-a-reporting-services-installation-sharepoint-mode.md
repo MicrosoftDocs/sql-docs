@@ -40,7 +40,7 @@ manager: kfile
 ###  <a name="bkmk_content_only_migration"></a> Content Only Migration  
  **Reporting Services Content only migration:** If you want to copy the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] content to a new farm, then you need to use tools such as **rs.exe** to copy the content to the new SharePoint installation. For more information on content only migrations, see the following:  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS scripts:** The Scripts can migrate content and resources between Native mode and SharePoint mode report servers. For more information, see [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) and [Reporting Services RS.exe script that migrates content from one report server to another](http://azuresql.codeplex.com/releases/view/115207).  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS scripts:** The Scripts can migrate content and resources between Native mode and SharePoint mode report servers. For more information, see [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) and [Reporting Services RS.exe script that migrates content from one report server to another](https://azuresql.codeplex.com/releases/view/115207).  
   
 -   **Reporting Services Migration Tool:** The tool can copy your report items from a native mode server to a SharePoint mode server. For more information, see [Reporting Services Migration Tool](https://www.microsoft.com/download/details.aspx?id=29560).  
   
@@ -122,5 +122,4 @@ manager: kfile
 ## See Also  
  [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [Migrate a Reporting Services Installation &#40;Native Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
-  
   

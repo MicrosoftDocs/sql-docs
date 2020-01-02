@@ -1,6 +1,7 @@
 ---
-title: "Bulk load encrypted data to columns using Always Encrypted | Microsoft Docs"
-ms.custom: ""
+title: "Bulk load encrypted data to columns using Always Encrypted"
+description: Learn how to bulk load data to columns using Always Encrypted with SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "11/04/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Managed Backup to Microsoft Azure | Microsoft Docs"
+title: "SQL Server managed backup to Microsoft Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/18/2016"
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# SQL Server Managed Backup to Microsoft Azure
+# SQL Server managed backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] manages and automates SQL Server backups to Microsoft Azure Blob storage. You can choose to allow SQL Server to determine the backup schedule based on the transaction workload of your database. Or you can use advanced options to define a schedule. The retention settings determine how long the backups are stored in Azure Blob storage. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] supports point in time restore for the retention time period specified.  
   
- Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the procedures and underlying behavior of [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has changed. For more information, see [Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
+ Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the procedures and underlying behavior of [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has changed. For more information, see [Migrate SQL Server 2014 managed backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is recommended for SQL Server instances running on Microsoft Azure virtual machines.  
@@ -103,7 +103,7 @@ ms.author: mikeray
  If more than 10 concurrent full database backups are scheduled, a warning is issued through the debug channel of Extended Events. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] then maintains a priority queue for the remaining databases that require a backup until the all backups are scheduled and completed.  
 
 > [!NOTE]
-> SQL Server Managed Backup is not supported with proxy servers.
+> SQL Server managed backup is not supported with proxy servers.
 >
   
 ##  <a name="support_limits"></a> Supportability  
@@ -122,9 +122,9 @@ ms.author: mikeray
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] may have some limitations when it is configured with other technologies supporting backup, high availability, or disaster recovery.  
   
 ## See Also  
-- [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
-- [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
-- [Disable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
+- [Enable SQL Server managed backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
+- [Configure Advanced Options for SQL Server managed backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
+- [Disable SQL Server managed backup to Microsoft Azure](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
 - [Backup and Restore of System Databases](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 - [Backup and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
   

@@ -1,6 +1,7 @@
 ---
-title: "Example: Setting Up Database Mirroring Using Certificates (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Example: Database mirroring with certificates (T-SQL)"
+description: An example of configuring SQL Server database mirroring with certificates using Transact-SQL.
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability

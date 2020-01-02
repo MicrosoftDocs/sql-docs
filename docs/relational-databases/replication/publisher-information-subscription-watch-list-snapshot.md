@@ -1,6 +1,7 @@
 ---
-title: "Publisher Information, Subscription Watch List (Snapshot) | Microsoft Docs"
-ms.custom: ""
+title: "Subscription Watch List (Replication Monitor - Snapshot)"
+description: Describes the 'Subscription Watch List' tab of Replication Monitor for a Snapshot Publication in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

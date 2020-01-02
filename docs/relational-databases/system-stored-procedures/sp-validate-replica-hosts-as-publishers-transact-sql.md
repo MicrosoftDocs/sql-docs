@@ -1,6 +1,7 @@
 ---
-title: "sp_validate_replica_hosts_as_publishers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sp_validate_replica_hosts_as_publishers (T-SQL)"
+description: Describes the sp_validate_replica_hosts_as_publishers stored procedure which allows all secondary replicas to be validated. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

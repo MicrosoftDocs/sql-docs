@@ -1,11 +1,12 @@
 ---
 title: Ingest data with Spark jobs
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: This tutorial demonstrates how to ingest data into the data pool of a SQL Server big data cluster using Spark jobs in Azure Data Studio.
 author: rajmera3 
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.date: 11/19/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -70,7 +71,7 @@ The following steps create an external table in the data pool named **web_clicks
       );
    ```
   
-1. In CTP 3.1, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
+The creation of data pool external table is a blocking operation. Control returns when the specified table has been created on all back-end data pool nodes. If failure occurred during the create operation, an error message is returned to caller.
 
 ## Start a Spark streaming job
 

@@ -1,6 +1,7 @@
 ---
-title: How to configure persistent memory (PMEM) for SQL Server on Linux
+title: Configure persistent memory (PMEM) for SQL Server on Linux
 description: This article provides a walk-through for configuring PMEM on Linux.
+ms.custom: seo-lt-2019
 author: briancarrig 
 ms.author: brcarrig
 ms.reviewer: vanto
@@ -73,7 +74,7 @@ ndctl list
 
   Once the device has been configured with ndctl, formatted and mounted, you can place database files in it. You can also create a new database 
 
-1. Since PMEM devices are O_DIRECT safe, enable trace flag 3979 to disable the forced flush mechanism. This trace flag is a startup trace flag, and as such needs to be enabled using the mssql-conf utility. Please note that this is a server-wide configuration change, and you should not use this trace flag if you have any O_DIRECT non-compliant devices that need the forced flush mechanism to ensure data integrity. For more information see https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
+1. Since PMEM devices are O_DIRECT safe, enable trace flag 3979 to disable the forced flush mechanism. This trace flag is a startup trace flag, and as such needs to be enabled using the mssql-conf utility. Please note that this is a server-wide configuration change, and you should not use this trace flag if you have any O_DIRECT non-compliant devices that need the forced flush mechanism to ensure data integrity. For more information see https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
 
 1. Restart SQL Server.
 

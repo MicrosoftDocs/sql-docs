@@ -1,6 +1,7 @@
 ---
-title: "Troubleshooter: Find errors with SQL Server transactional replication | Microsoft Docs"
-ms.custom: ""
+title: "Find errors with transactional replication"
+description: Describes how to locate and identify errors with Transactional Replication, as well as the troubleshooting methodology for addressing issues with replication.
+ms.custom: seo-lt-2019
 ms.date: "04/27/2018"
 ms.prod: sql
 ms.reviewer: ""

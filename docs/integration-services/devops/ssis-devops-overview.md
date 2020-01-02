@@ -12,7 +12,7 @@ ms.author: chugu
 ---
 # SQL Server Integration Services (SSIS) DevOps Tools (Preview)
 
-**SSIS DevOps Tools** extension is available in **Azure DevOps** marketplace.
+[SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) extension is available in **Azure DevOps** marketplace.
 
 If you do not have an **Azure DevOps** organization, firstly sign up for [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops), then add **SSIS DevOps Tools** extension following [the steps](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension).
 
@@ -91,8 +91,8 @@ But whether the specific authentication type is supported depends on destination
 
 | |Microsoft-hosted agent|Self-hosted agent|
 |---------|---------|---------|
-|Self-hosted agent|N/A|Windows Authentication|
-|Azure SQL|SQL Server Authentication <br> Active Directory - Password|<br> SQL Server Authentication <br> Active Directory - Password <br> Active Directory - Integrated|
+|SQL server on-premises or VM |N/A|Windows Authentication|
+|Azure SQL|SQL Server Authentication <br> Active Directory - Password|SQL Server Authentication <br> Active Directory - Password <br> Active Directory - Integrated|
 
 #### Domain name
 

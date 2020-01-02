@@ -1,5 +1,5 @@
 ---
-title: "Release notes for SQL Server Data Tools (SSDT) | Microsoft Docs"
+title: Release notes for SQL Server Data Tools (SSDT)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -7,9 +7,10 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: markingmyname
 ms.author: maghan
+manager: jroth
 ms.reviewer: ""
-ms.custom: ""
-ms.date: 08/15/2019
+ms.custom: seo-lt-2019
+ms.date: 12/15/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 
@@ -111,7 +112,7 @@ _SSDT for Visual Studio 2017._
 | Integration Services (SSIS) | Add Power Query Source (Preview) for SSIS in ADF 2017. |
 | Integration Services (SSIS) | Add back the support for SQL Server 2012. |
 | Integration Services (SSIS) | Add Oracle source and destination for SQL Server 2019. |
-| Integration Services (SSIS) | Oracle source and destination targeting SQL Server 2019 have already been installed by SSDT. <br/></br> To design package targeting server version 2017 or below, please download the corresponding Oracle connector version from Microsoft download site and install it on the SSDT machine. <br/></br> [Microsoft Connector Version 5.0 for Oracle by Attunity targeting SQL Server 2017 ](https://www.microsoft.com/en-us/download/details.aspx?id=55179 ) <br/></br> [Microsoft Connector Version 4.0 for Oracle by Attunity targeting SQL Server 2016 ](https://www.microsoft.com/en-us/download/details.aspx?id=52950 )<br/></br> [Microsoft Connector Version 3.0 for Oracle by Attunity targeting SQL Server 2014 ](https://www.microsoft.com/en-us/download/details.aspx?id=44582 )<br/></br> [Microsoft Connector Version 2.0 for Oracle by Attunity targeting SQL Server 2012 ](https://www.microsoft.com/en-us/download/details.aspx?id=29283 ) |
+| Integration Services (SSIS) | Oracle source and destination targeting SQL Server 2019 have already been installed by SSDT. <br/></br> To design package targeting server version 2017 or below, please download the corresponding Oracle connector version from Microsoft download site and install it on the SSDT machine. <br/></br> [Microsoft Connector Version 5.0 for Oracle by Attunity targeting SQL Server 2017 ](https://www.microsoft.com/download/details.aspx?id=55179 ) <br/></br> [Microsoft Connector Version 4.0 for Oracle by Attunity targeting SQL Server 2016 ](https://www.microsoft.com/download/details.aspx?id=52950 )<br/></br> [Microsoft Connector Version 3.0 for Oracle by Attunity targeting SQL Server 2014 ](https://www.microsoft.com/download/details.aspx?id=44582 )<br/></br> [Microsoft Connector Version 2.0 for Oracle by Attunity targeting SQL Server 2012 ](https://www.microsoft.com/download/details.aspx?id=29283 ) |
 | Integration Services (SSIS) | Fix an issue that Script Task/Component cannot be loaded when migrating from earlier SSIS versions. |
 | Integration Services (SSIS) | Fix an issue that data viewer doesn't work on Windows 7 SP1 and Windows 8.1. |
 | Integration Services (SSIS) | Fix an issue that, in some cases, saving the package causes Visual Studio to crash. |
@@ -281,7 +282,7 @@ _SSDT for Visual Studio 2017._
 - Fix an issue that some strings in Hadoop connection manager editor are truncated in other languages.
 - Fix an issue that some strings are truncated in OData connection manager editor.
 - Fix an issue that some strings are truncated in Integration Services import project wizard window.
-- Fix an issue with the title in the SSIS tool box information window.
+- Fix an issue with the title: in the SSIS tool box information window.
 - Fix an issue that some strings are truncated in Integration Services Deployment Wizard window. 
 
 **Installer**

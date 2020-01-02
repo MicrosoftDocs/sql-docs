@@ -62,7 +62,7 @@ manager: craigg
 #### Enable and Configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for an Availability Database  
  This tutorial describes the steps to enable and configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for a database (AGTestDB) on computers Node1 and Node2, followed by steps to enable monitoring the [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] health status.  
   
-1.  **Create an Azure storage account:** The backups are stored in the Azure Blob storage service. You must first create an Azure storage account, if you do not already have one. For more information, see [Creating an Azure Storage Account](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/). Make a note of the storage account name, access keys, and URL of the storage account. The storage account name and access key information is used to create a SQL Credential. The SQL Credential is used by [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] during backup operations to authenticate to the storage account.  
+1.  **Create an Azure storage account:** The backups are stored in the Azure Blob storage service. You must first create an Azure storage account, if you do not already have one. For more information, see [Creating an Azure Storage Account](https://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/). Make a note of the storage account name, access keys, and URL of the storage account. The storage account name and access key information is used to create a SQL Credential. The SQL Credential is used by [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] during backup operations to authenticate to the storage account.  
   
 2.  **Create a SQL Credential:** Create a SQL Credential using the name of the storage account as the Identity and the storage access key as the password.  
   
@@ -191,5 +191,4 @@ manager: craigg
   
 > [!WARNING]  
 >  The recoverability of the database in this scenario from backups previous to the change in the Availability Group status is not guaranteed.  
-  
   

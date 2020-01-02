@@ -17,7 +17,7 @@ This article explains different ways to get assistance with your issue, or provi
 
 ## Contact Microsoft Support
 
-Customers with a support plan can [open a ticket](https://support.microsoft.com/en-us/hub/4343728/support-for-business) with Microsoft support.  Review the [support options for businesses](https://support.microsoft.com/en-us/help/4341255/support-for-business) for more information. 
+Customers with a support plan can [open a ticket](https://support.microsoft.com/hub/4343728/support-for-business) with Microsoft support.  Review the [support options for businesses](https://support.microsoft.com/help/4341255/support-for-business) for more information. 
 
 Customers without a support plan can ask the community for help, or submit a bug via UserVoice at [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback).
 

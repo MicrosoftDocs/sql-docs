@@ -1,6 +1,6 @@
 ---
 title: Modify SQL data using RevoScaleR
-description: Tutorial walkthrough on how to query and modify data using the R language on SQL Server.
+description: "RevoScaleR tutorial 3: How to query and modify data using the R language on SQL Server."
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -14,9 +14,9 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Query and modify the SQL Server data (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 3 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-In the previous lesson, you loaded the data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In this step, you can explore and modify data using **RevoScaleR**:
+In the previous tutorial, you loaded the data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In this tutorial, you can explore and modify data using **RevoScaleR**:
 
 > [!div class="checklist"]
 > * Return basic information about the variables

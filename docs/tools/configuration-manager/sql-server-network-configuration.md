@@ -1,9 +1,9 @@
 ---
-title: "SQL Server Network Configuration | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server Network Configuration"
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual

@@ -1,5 +1,5 @@
 ---
-title: "Creating a SQL Server Native Client ODBC Driver Application | Microsoft Docs"
+title: "Create SQL Native Client ODBC app"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

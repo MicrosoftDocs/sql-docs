@@ -1,6 +1,5 @@
 ---
-title: "Run a Matching Project | Microsoft Docs"
-ms.custom: ""
+title: "Run a Matching Project"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -12,8 +11,8 @@ f1_keywords:
   - "sql13.dqs.matchingproject.matching.f1"
   - "sql13.dqs.matchingproject.export.f1"
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Run a Matching Project
 

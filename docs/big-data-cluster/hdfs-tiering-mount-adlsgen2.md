@@ -79,7 +79,7 @@ Open a command-prompt on a client machine that can access your big data cluster.
 You can also mount using access keys which you can get for your ADLS account on the Azure portal.
 
  > [!TIP]
-   > For more information on how to find the access key (`<storage-account-access-key>`) for your storage account, see [View account keys and connection string](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string).
+   > For more information on how to find the access key (`<storage-account-access-key>`) for your storage account, see [View account keys and connection string](/azure/storage/common/storage-account-keys-manage#view-access-keys-and-connection-string).
 
 ### Set environment variable for access key credentials
 
@@ -138,7 +138,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 
 ## Refresh a mount
 
-The following example refreshes the mount. THis refresh will also clear the mount cache.
+The following example refreshes the mount. This refresh will also clear the mount cache.
 
 ```bash
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>

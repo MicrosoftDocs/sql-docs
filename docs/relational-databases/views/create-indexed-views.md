@@ -48,7 +48,7 @@ Evaluating the same expression can produce different results in the [!INCLUDE[ss
 To make sure that the views can be maintained correctly and return consistent results, indexed views require fixed values for several SET options. The SET options in the following table must be set to the values shown in the **Required Value** column whenever the following conditions occur:
 
 - The view and subsequent indexes on the view are created.
-- The base tables referenced in the view at the time the table is created.
+- The base tables referenced in the view at the time the view is created.
 - There is any insert, update, or delete operation performed on any table that participates in the indexed view. This requirement includes operations such as bulk copy, replication, and distributed queries.
 - The indexed view is used by the query optimizer to produce the query plan.
 

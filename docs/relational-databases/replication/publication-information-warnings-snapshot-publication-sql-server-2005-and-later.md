@@ -1,6 +1,7 @@
 ---
-title: "Publication Information-Warnings-Snapshot Publication-SQL Server 2005+ | Microsoft Docs"
-ms.custom: ""
+title: "Warnings (Snapshot - Replication Monitor)"
+decription: Describes the 'Warnings' tab for a Snapshot Publication in the Replication Monitor found in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

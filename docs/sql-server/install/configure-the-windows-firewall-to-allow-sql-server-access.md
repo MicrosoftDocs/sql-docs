@@ -1,7 +1,7 @@
 ---
-title: "Configure the Windows Firewall to Allow SQL Server Access | Microsoft Docs"
-ms.custom: sqlfreshmay19
-ms.date: "05/15/2019"
+title: "Configure Windows Firewall"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

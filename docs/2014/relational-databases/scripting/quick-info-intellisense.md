@@ -1,6 +1,6 @@
 ---
-title: "Quick Info (IntelliSense) | Microsoft Docs"
-ms.custom: ""
+title: Quick Info (IntelliSense)
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

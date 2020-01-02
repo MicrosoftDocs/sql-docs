@@ -1,6 +1,6 @@
 ---
 title: Score data using RevoScaleR
-description: Tutorial walkthrough on how to score data using the R language on SQL Server.
+description: "RevoScaleR tutorial 8: How to score data using the R language on SQL Server."
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -14,9 +14,9 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Score new data (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 8 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-In this step, you use the logistic regression model that you created in the previous lesson to score another data set that uses the same independent variables as inputs.
+In this tutorial, you'll use the logistic regression model that you created in the previous tutorial to score another data set that uses the same independent variables as inputs.
 
 > [!div class="checklist"]
 > * Score new data
@@ -27,7 +27,7 @@ In this step, you use the logistic regression model that you created in the prev
 
 ## Generate and save scores
   
-1. Update the sqlScoreDS data source (created in [lesson two](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)) to use column information created in the previous lesson.
+1. Update the sqlScoreDS data source (created in [tutorial two](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)) to use column information created in the previous tutorial.
   
     ```R
     sqlScoreDS <- RxSqlServerData(

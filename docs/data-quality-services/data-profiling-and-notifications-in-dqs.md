@@ -1,6 +1,5 @@
 ---
-title: "Data Profiling and Notifications in DQS | Microsoft Docs"
-ms.custom: ""
+title: "Data Profiling and Notifications in DQS"
 ms.date: "10/01/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Data Profiling and Notifications in DQS
 

@@ -1,5 +1,5 @@
 ---
-title: "Display Column and Catalog Metadata for Sparse Columns (OLE DB) | Microsoft Docs"
+title: "Metadata for Sparse Columns (OLE DB)"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -22,7 +22,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Example  
  Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
-```  
+```cpp
 #include <stddef.h>  
 #include <comdef.h>  
 #include <msdasc.h>  

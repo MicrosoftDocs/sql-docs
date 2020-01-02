@@ -1,6 +1,6 @@
 ---
-title: "Manage the Editor and View Mode | Microsoft Docs"
-ms.custom: ""
+title: Manage the Editor and View Mode
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

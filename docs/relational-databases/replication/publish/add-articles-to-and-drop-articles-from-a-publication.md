@@ -1,6 +1,7 @@
 ---
-title: "Add Articles to and Drop Articles from a Publication | Microsoft Docs"
-ms.custom: ""
+title: "Add & drop publication articles (SSMS)"
+description: Describes how to add articles to and drop articles from a publication using SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

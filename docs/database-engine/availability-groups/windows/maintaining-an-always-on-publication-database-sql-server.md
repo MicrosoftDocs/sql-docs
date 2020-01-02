@@ -1,6 +1,6 @@
 ---
 title: "Manage a replicated Publisher database as part of an availability group"
-description: "A description for how to manage and maintain a database that is acting as a Publisher in a SQL replication and is also participating in an Always On availability group. "
+description: "A description for how to manage and maintain a database that is acting as a Publisher in a SQL replication and is also participating in an Always On availability group."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql

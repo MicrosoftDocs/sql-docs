@@ -1,6 +1,6 @@
 ---
-title: "Code Outlining | Microsoft Docs"
-ms.custom: ""
+title: Code Outlining
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

@@ -1,5 +1,5 @@
 ---
-title: "Determining the Characteristics of a Result Set (ODBC) | Microsoft Docs"
+title: "Characteristics of a Result Set (ODBC)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

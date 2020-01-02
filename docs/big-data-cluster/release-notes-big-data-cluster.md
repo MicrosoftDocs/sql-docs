@@ -115,6 +115,12 @@ kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisor
 
 - **Workaround**: Modify the query in one of the following ways. Either join the storage pool table to a local table, or insert into the local table first, then read from the local table to insert into the data pool.
 
+### Transparent Data Encryption capabilities can not be used with databases that are part of the availability group in the SQL Server master instance
+
+**Issue and customer impact**: In an HA configuration, databases that have encryption enabled can't be used after a failover since the master key used for encryption is different on each replica. 
+
+**Workaround**: There is no workaround for this issue. We recommend to not enable encryption in this configuration until a fix is in place.
+
 ## Next steps
 
 For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

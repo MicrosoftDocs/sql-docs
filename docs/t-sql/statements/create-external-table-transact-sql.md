@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 12/16/2019
+ms.date: 01/03/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -107,7 +107,7 @@ In this example, if LOCATION='/webdata/', a PolyBase query will return rows from
 To change the default and only read from the root folder, set the attribute \<polybase.recursive.traversal> to 'false' in the core-site.xml configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. For example, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
 DATA_SOURCE = *external_data_source_name*
-Specifies the name of the external data source that contains the location of the external data. This location is either a Hadoop or Azure blob storage. To create an external data source, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+Specifies the name of the external data source that contains the location of the external data. This location is an Hadoop File System (HDFS), an Azure storage blob container, or Azure Data Lake Store. To create an external data source, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 FILE_FORMAT = *external_file_format_name*
 Specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
@@ -154,9 +154,6 @@ This example shows how the three REJECT options interact with each other. For ex
 - PolyBase attempts to load the next 100 rows; this time 25 rows succeed and 75 rows fail.
 - Percent of failed rows is recalculated as 50%. The percentage of failed rows has exceeded the 30% reject value.
 - The PolyBase query fails with 50% rejected rows after attempting to return the first 200 rows. Notice that matching rows have been returned before the PolyBase query detects the reject threshold has been exceeded.
-
-DATA_SOURCE
-An external data source such as data stored in Azure blob storage or a [shard map manager](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).
 
 SCHEMA_NAME
 The SCHEMA_NAME clause provides the ability to map the external table definition to a table in a different schema on the remote database. Use this clause to disambiguate between schemas that exist on both the local and remote databases.
@@ -358,7 +355,7 @@ ON user.user_ip = ms.user_ip
 ;
 ```
 
-### G. Create an external table for a sharded data source
+### G. Create an external table for a shared data source
 
 This example remaps a remote DMV to an external table using the SCHEMA_NAME and OBJECT_NAME clauses.
 
@@ -376,8 +373,7 @@ WITH
 (
   DATA_SOURCE = MyExtSrc,
   SCHEMA_NAME = 'sys',
-  OBJECT_NAME = 'dm_exec_requests',  
-  DISTRIBUTION=  
+  OBJECT_NAME = 'dm_exec_requests'
 );
 ```
 

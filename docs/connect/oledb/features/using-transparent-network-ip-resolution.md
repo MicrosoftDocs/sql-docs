@@ -15,6 +15,7 @@ ms.author: v-chross
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
+## Purpose
 Transparent Network IP Resolution (TNIR) is a revision of the existing MultiSubnetFailover feature. TNIR affects the connection sequence of the driver in the case where the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. TNIR interacts with MultiSubnetFailover to provide the following three connection sequences:<br />
 * 0: One IP is attempted, followed by all IPs in parallel
 * 1: All IPs are attempted in parallel
@@ -27,6 +28,7 @@ Transparent Network IP Resolution (TNIR) is a revision of the existing MultiSubn
 |False|True|1|
 |False|False|2|
 
+## Setting Transparent Network IP Resolution
 TransparentNetworkIPResolution is enabled by default. MultiSubnetFailover is disabled by default. See the following pages provide more information about setting these properties: 
 - [Using Connection String Keywords with OLE DB Driver for SQL Server](..\applications\using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
 - [Initialization and Authorization Properties](..\ole-db-data-source-objects\initialization-and-authorization-properties.md)

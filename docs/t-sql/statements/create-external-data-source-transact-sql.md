@@ -109,7 +109,7 @@ Additional notes and guidance when setting the location:
 
 Specifies additional options when connecting over `ODBC` to an external data source.
 
-The name of the driver is required as a minimum but there are other options such as `APP='<your_application_name>'` or `ApplicationIntent= ReadOnly|ReadWrite` which are also useful to set and can assist with troubleshooting.
+The name of the driver is required as a minimum, but there are other options such as `APP='<your_application_name>'` or `ApplicationIntent= ReadOnly|ReadWrite` that are also useful to set and can assist with troubleshooting.
 
 Refer to the `ODBC` product documentation for a list of permitted [CONNECTION_OPTIONS][connection_options]
 

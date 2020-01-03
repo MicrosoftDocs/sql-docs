@@ -67,7 +67,7 @@ Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached 
 What's new in:
 - [SQL Server 2016](../what-s-new-in-sql-server-2016.md)
 - [SQL Server 2017](../what-s-new-in-sql-server-2017.md) 
-- [SQL Server 2019](/sql-server/what-s-new-in-sql-server-ver15)   
+- [SQL Server 2019](../what-s-new-in-sql-server-ver15.md)   
 
 Hardware requirements:
 - [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md)  

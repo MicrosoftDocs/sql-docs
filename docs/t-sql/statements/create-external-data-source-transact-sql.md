@@ -672,7 +672,7 @@ Location path:
 
 Additional notes and guidance when setting the location:
 
-- The default option is to use enable secure SSL connections when provisioning Azure Data Lake Storage Gen 2. When this is enabled, you must use `abfss` when a secure SSL connection is selected. Note `abfss`works for unsecure SSL connections as well. 
+- The default option is to use `enable secure SSL connections` when provisioning Azure Data Lake Storage Gen 2. When this is enabled, you must use `abfss` when a secure SSL connection is selected. Note `abfss`works for unsecure SSL connections as well. 
 - The SQL Data Warehouse engine doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
 - Use the same external data source for all tables when querying Hadoop to ensure consistent querying semantics.
 - `wasb` is the default protocol for Azure blob storage. `wasbs` is optional but recommended as data will be sent using a secure SSL connection.

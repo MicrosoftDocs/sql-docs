@@ -14,8 +14,6 @@ author: MikeRayMSFT
 To provide high availability and disaster recovery for your SQL Server services, choose from a wide variety of industry-leading tools.  This article highlights Microsoft partner companies with high availability and disaster recovery solutions supporting Microsoft SQL Server.
 
 ## High availability and disaster recovery partners
-<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
--->
 
 | Partner | Description | Links | 
 | --- | --- | --- |
@@ -32,14 +30,14 @@ To provide high availability and disaster recovery for your SQL Server services,
 To learn more about additional partners, see [monitoring][mon_partners], [management partners][management_partners], and [development partners][dev_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/Veeam_green_logo.png
-[2]: ./media/partner-hadr-sql-server/dh2i_logo.png
-[3]: ./media/partner-hadr-sql-server/idera_logo.png
+[1]: ./media/partner-hadr-sql-server/Veeam-green-logo.png
+[2]: ./media/partner-hadr-sql-server/dh2i-logo.png
+[3]: ./media/partner-hadr-sql-server/idera-logo.png
 [4]: ./media/partner-hadr-sql-server/hpe.png
-[5]: ./media/partner-hadr-sql-server/azure_logo.png
-[6]: ./media/partner-hadr-sql-server/portworx_logo.png
-[7]: ./media/partner-hadr-sql-server/nec_logo.png
-[8]: ./media/partner-hadr-sql-server/sios_logo.png
+[5]: ./media/partner-hadr-sql-server/azure-logo.png
+[6]: ./media/partner-hadr-sql-server/portworx-logo.png
+[7]: ./media/partner-hadr-sql-server/nec-logo.png
+[8]: ./media/partner-hadr-sql-server/sios-logo.png
 
 <!--Article links-->
 [mon_partners]: ./partner-monitor-sql-server.md

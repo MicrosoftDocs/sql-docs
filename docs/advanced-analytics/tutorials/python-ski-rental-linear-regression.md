@@ -44,12 +44,19 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
   Open a **Command Prompt** and change to the installation path for the version of Python you use in Azure Data Studio. For example, `cd %LocalAppData%\Programs\Python\Python37-32`. Then run the following commands to install any of these packages that are not already installed.
 
-    ```console
-    pip install pandas
-    pip install pyodbc
-    pip install sklearn
-    pip install pickle
-    ```
+  ```console
+  pip install pandas
+  pip install pyodbc
+  pip install sklearn
+  pip install pickle
+  ```
+
+* Enable external scripts in SQL - Run the following SQL commands:
+
+  ```sql
+  sp_configure 'external scripts enabled', 1;
+  RECONFIGURE WITH override;
+  ```
 
 ## Restore the sample database
 
@@ -64,10 +71,10 @@ The sample database used in this tutorial has been saved to a **.bak** database 
 
 1. You can verify that the restored database exists by querying the **dbo.rental_data** table:
 
-    ```sql
-    USE TutorialDB;
-    SELECT * FROM [dbo].[rental_data];
-    ```
+   ```sql
+   USE TutorialDB;
+   SELECT * FROM [dbo].[rental_data];
+   ```
 
 ## Next steps
 

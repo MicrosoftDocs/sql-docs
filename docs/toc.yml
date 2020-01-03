@@ -2221,13 +2221,13 @@
         href: relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md
       - name: Alter
         href: relational-databases/clr-integration/assemblies/altering-an-assembly.md
-      - name: CreatE
+      - name: Create
         href: relational-databases/clr-integration/assemblies/creating-an-assembly.md
       - name: Drop
         href: relational-databases/clr-integration/assemblies/dropping-an-assembly.md
       - name: Design
         href: relational-databases/clr-integration/assemblies-designing.md
-      - name: Gett Information
+      - name: Get Information
         href: relational-databases/clr-integration/assemblies-getting-information.md
       - name: Implement
         href: relational-databases/clr-integration/assemblies-implementing.md
@@ -10693,6 +10693,8 @@
       href: sql-server/sql-server-docs-contribute.md
   - name: Partners
     items:
+    - name: Big Data Clusters
+      href: sql-server/partner-big-data-cluster.md
     - name: Monitoring
       href: sql-server/partner-monitor-sql-server.md
     - name: High availability & disaster recovery

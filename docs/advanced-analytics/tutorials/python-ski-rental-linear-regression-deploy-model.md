@@ -3,7 +3,7 @@ title: "Python tutorial: Deploy model"
 description: In part four of this four-part tutorial series, you'll deploy a Python model to predict ski rentals into a SQL Server database using Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/03/2019
+ms.date: 01/02/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
@@ -142,9 +142,9 @@ Create a table in the TutorialDB database and then save the model to the table.
     lin_mse = mean_squared_error(lin_predictions, df[target])
     #print(lin_mse)
     
-    predictions_df = pd.DataFrame(lin_predictions)
+    predictions_df = pandas.DataFrame(lin_predictions)
     
-    OutputDataSet = pd.concat([predictions_df, df["RentalCount"], df["Month"], df["Day"], df["WeekDay"], df["Snow"], df["Holiday"], df["Year"]], axis=1)
+    OutputDataSet = pandas.concat([predictions_df, df["RentalCount"], df["Month"], df["Day"], df["WeekDay"], df["Snow"], df["Holiday"], df["Year"]], axis=1)
     '
     , @input_data_1 = N'Select "RentalCount", "Year" ,"Month", "Day", "WeekDay", "Snow", "Holiday"  from rental_data where Year = 2015'
     , @input_data_1_name = N'rental_score_data'

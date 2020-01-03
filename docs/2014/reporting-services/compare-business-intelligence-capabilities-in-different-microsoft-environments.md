@@ -53,7 +53,7 @@ For more information comparing SharePoint Server and SharePoint Online, see [Com
 
  **<sup>1</sup>**  [Microsoft Power BI](https://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  
   
- **<sup>2</sup>**  [PowerPivot Workbooks as a Data Source](https://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
+ **<sup>2</sup>**  [PowerPivot Workbooks as a Data Source](https://support.office.com/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-A9C2C6E2-CC49-4976-A7D7-40896795D045)  
   
  **<sup>3</sup>**  [Mobile Support across Business Intelligence (BI) Tools](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) and [Planning for Reporting Services and Power View Browser Support (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx).  
   

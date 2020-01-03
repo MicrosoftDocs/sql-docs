@@ -715,7 +715,7 @@ WITH
 
 - [Azure SQL Database elastic query overview](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview)
 - [Reporting across scaled-out cloud databases](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
-- [Get started with cross-database queries (vertical partitioning)](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
+- [Get started with cross-database queries (vertical partitioning)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"

@@ -5121,6 +5121,8 @@
       href: ../connect/oledb/features/using-large-value-types.md
     - name: Using Multiple Active Result Sets (MARS)
       href: ../connect/oledb/features/using-multiple-active-result-sets-mars.md
+    - name: Using Transparent Network IP Resolution
+      href: ../connect/oledb/features/using-transparent-network-ip-resolution.md
     - name: Using User-Defined Types
       href: ../connect/oledb/features/using-user-defined-types.md
     - name: Using XML Data Types

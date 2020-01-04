@@ -40,23 +40,18 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
 * SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is.md). You can also use [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
 
-* Additional Python packages - The examples in this tutorial series use Python packages that you may or may not have installed.
+* Additional Python packages - The examples in this tutorial series use the following Python packages that may not be installed by default:
 
-  Open a **Command Prompt** and change to the installation path for the version of Python you use in Azure Data Studio. For example, `cd %LocalAppData%\Programs\Python\Python37-32`. Then run the following commands to install any of these packages that are not already installed.
+  * pandas
+  * pyodbc
+  * sklearn
 
-  ```console
-  pip install pandas
-  pip install pyodbc
-  pip install sklearn
-  pip install pickle
-  ```
+  To install these packages:
+  1. In Azure Data Studio, select **Manage Packages**.
+  2. In the **Manage Packages** pane, select the **Add new** tab.
+  3. For each of the following packages, enter the package name, click **Search**, then click **Install**.
 
-* Enable external scripts in SQL - Run the following SQL commands:
-
-  ```sql
-  sp_configure 'external scripts enabled', 1;
-  RECONFIGURE WITH override;
-  ```
+  As an alternative, you can open a **Command Prompt**, change to the installation path for the version of Python you use in Azure Data Studio (for example, `cd %LocalAppData%\Programs\Python\Python37-32`), then run `pip install` for each package.
 
 ## Restore the sample database
 
@@ -75,6 +70,13 @@ The sample database used in this tutorial has been saved to a **.bak** database 
    USE TutorialDB;
    SELECT * FROM [dbo].[rental_data];
    ```
+
+Enable external scripts by running the following SQL commands:
+
+  ```sql
+  sp_configure 'external scripts enabled', 1;
+  RECONFIGURE WITH override;
+  ```
 
 ## Next steps
 

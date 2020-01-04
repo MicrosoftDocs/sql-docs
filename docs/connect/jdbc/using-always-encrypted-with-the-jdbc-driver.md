@@ -38,7 +38,7 @@ The Microsoft JDBC Driver for SQL Server comes with the following built-in colum
 
 | Class                                                 | Description                                        | Provider (lookup) name  | Is pre-registered? |
 | :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
-| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | A provider for a keystore for the Azure Key Vault. | AZURE_KEY_VAULT         | No                 |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | A provider for a keystore for the Azure Key Vault. | AZURE_KEY_VAULT         | No/Yes (from driver version 7.4.1)                 |
 | **SQLServerColumnEncryptionCertificateStoreProvider** | A provider for the Windows Certificate Store.      | MSSQL_CERTIFICATE_STORE | Yes                |
 | **SQLServerColumnEncryptionJavaKeyStoreProvider**     | A provider for the Java keystore                   | MSSQL_JAVA_KEYSTORE     | Yes                |
 
@@ -71,7 +71,16 @@ WITH VALUES
 )
 ```
 
-To use the Azure Key Vault, client applications need to instantiate the SQLServerColumnEncryptionAzureKeyVaultProvider and register it with the driver.
+Client applications using JDBC driver 7.4.1 or later can configure to use Azure Key Vault by mentioning `keyVaultProviderClientId=<ClientId>;keyVaultProviderClientKey=<ClientKey>` in JDBC connection string 
+
+Here is an example of providing these in the connection string:
+
+```java
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyVaultProviderClientId=<ClientId>;keyVaultProviderClientKey=<ClientKey>";
+```
+The JDBC driver automatically instantiates the SQLServerColumnEncryptionAzureKeyVaultProvider when these credentials are present in connection properties.
+
+To use the Azure Key Vault in client applications using JDBC drivers prior to 7.4.1 version, need to instantiate the SQLServerColumnEncryptionAzureKeyVaultProvider and register it with the driver.
 
 Here is an example of initializing SQLServerColumnEncryptionAzureKeyVaultProvider:  
 

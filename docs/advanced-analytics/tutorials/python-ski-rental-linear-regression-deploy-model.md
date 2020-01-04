@@ -122,7 +122,7 @@ Create a table in the TutorialDB database and then save the model to the table.
    # Import the scikit-learn function to compute error.
    from sklearn.metrics import mean_squared_error
    import pickle
-   import pandas as pd
+   import pandas
    
    rental_model = pickle.loads(py_model)
    

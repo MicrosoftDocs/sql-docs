@@ -186,6 +186,10 @@ Create a table in the TutorialDB database and then save the model to the table.
    SELECT * FROM py_rental_predictions;
    ```
 
+   You should see results similar to the following.
+   
+   :::image type="content" source="media/python-tutorial-prediction-results.png" alt-text="Prediction results from stored procedure":::
+
 You have successfully created, trained, and deployed a model in SQL Server Machine Learning Services. You then used that model in a stored procedure to predict values based on new data.
 
 ## Next steps

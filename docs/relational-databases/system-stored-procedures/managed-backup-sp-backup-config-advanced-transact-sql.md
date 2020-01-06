@@ -30,7 +30,7 @@ ms.author: mikeray
   
 ## Syntax  
   
-```vb  
+```Transact-SQL  
 EXEC managed_backup.sp_backup_config_advanced   
     [@database_name = ] 'database_name'  
     ,[@encryption_algorithm = ] 'name of the encryption algorithm'  
@@ -80,7 +80,7 @@ EXEC managed_backup.sp_backup_config_advanced
 ## Examples  
  The following example sets advanced configuration options for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the instance of SQL Server.  
   
-```  
+```Transact-SQL
 Use msdb;  
 Go  
    EXEC managed_backup.sp_backup_config_advanced  

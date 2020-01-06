@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -54,20 +54,20 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release               | Version       | Release date |
 |-----------------------|---------------|--------------|
-| [CU1](#cu1)           | 15.0.4003.1   | 2019-12-05   |
+| [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
 
 ## How to install updates
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
-## <a id="cu1"></a> CU1 (Dec 2019)
+## <a id="cu1"></a> CU1 (Jan 2020)
 
-Cumulative Update 1 (CU1) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4003.1.
+Cumulative Update 1 (CU1) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4003.23.
 
 |Package version | Image tag |
 |-----|-----|
-|15.0.4003.1|[2019-CU1-ubuntu-16.04]
+|15.0.4003.23|[2019-CU1-ubuntu-16.04]
 
 ## <a id="rtm"></a> GDR1 (Nov 2019)
 

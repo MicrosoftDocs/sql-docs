@@ -32,7 +32,7 @@ If you do not have an **Azure DevOps** organization, firstly sign up for [Azure 
 
 Path of the project folder or file to be built. If a folder path is specified, SSIS Build task will search all dtproj files recursively under this folder and build them all.
 
-### Project configuration
+#### Project configuration
 
 Name of the project configuration to be used for build. If not supplied, it defaults to the first defined project configuration in each dtproj file.
 
@@ -44,7 +44,7 @@ Path of a separate folder to save build results, which can be published as build
 
 - SSIS Build task relies on Visual Studio and SSIS designer, which is mandatory on build agents. Thus, to run SSIS Build task in the pipeline, you must choose **vs2017-win2016** for Microsoft-hosted agents, or install Visual Studio and SSIS designer (either VS2017 + SSDT2017, or VS2019 + SSIS Projects extension) on self-hosted agents.
 
-- To build SSIS projects using any out-of-box components (including SSIS Azure feature pack, and other third-party components), those out-of-box components must be installed on the pipeline agent.  For Microsoft-hosted agent, user can add a [PowerShell Script task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) or [Command Line Script task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) to download and install the components before SSIS Build task  is executed.
+- To build SSIS projects using any out-of-box components (including SSIS Azure feature pack, and other third-party components), those out-of-box components must be installed on the machine where the pipeline agent is running.  For Microsoft-hosted agent, user can add a [PowerShell Script task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) or [Command Line Script task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) to download and install the components before SSIS Build task  is executed.
 
 - Protection level **EncryptSensitiveWithPassword** and **EncryptAllWithPassword** are not supported in SSIS Build task. Please make sure all SSIS projects in codebase are not using these two protection levels, or SSIS Build task will hang and timeout during execution.
 
@@ -73,8 +73,8 @@ Name of destination SQL server. It can be the name of an on-premises SQL Server,
 
 Path of the destination folder where the source file will be deployed to. For example:
 
-- /SSISDB/<folderName>
-- \\<machineName>\<shareFolderName>\<subfolderName>
+- /SSISDB/\<folderName\>
+- \\\\\<machineName\>\\\<shareFolderName\>\\\<optionalSubfolderName\>
 
 SSIS Deploy task will create the folder and sub-folder if they don’t exist.
 
@@ -126,6 +126,14 @@ SSIS Deploy Task doesn’t support the following scenarios currently:
 - Deploy packages to MSDB or SSIS Package Store.
 
 ## Release notes
+
+### Version 0.1.1 Preview
+
+Release Date: January 7, 2020
+
+- Added restriction of minimal agent version requirement. Currently the minimal agent version of this product is 2.144.0.
+- Fixed some incorrect display text for SSIS Deploy Task.
+- Refined some error messages.
 
 ### Version 0.1.0 Preview
 

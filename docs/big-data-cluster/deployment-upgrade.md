@@ -20,6 +20,10 @@ The upgrade path depends on the current version of SQL Server Big Data Cluster (
 - [Upgrade from supported release](#upgrade-from-supported-release)
 - [Update a BDC deployment from CTP or release candidate](#update-a-bdc-deployment-from-ctp-or-release-candidate)
 
+## Upgrade release notes
+
+Before you proceed, check the [upgrade release notes for known issues](release-notes-big-data-cluster.md#known-issues).
+
 ## Upgrade from supported release
 
 This section explains how to upgrade a SQL Server BDC from a supported release to a newer supported release.

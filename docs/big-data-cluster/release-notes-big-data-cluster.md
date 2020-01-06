@@ -83,9 +83,9 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ### Deployment with private repository
 
-**Issue and customer impact**: Upgrade from private repository has specific requirements
+- **Issue and customer impact**: Upgrade from private repository has specific requirements
 
-**Workaround**: If you use a private repository to pre-pull the images for deploying or upgrading BDC, ensure that the current build images as well as the target build images are in the private repository. This enables successful rollback, if necessary. Also, if you changed the credentials of the  private repository since the original deployment, update the corresponding secret in Kubernetes before you upgrade. `azdata` does not support updating the credentials through `AZDATA_PASSWORD` and `AZDATA_USERNAME` environment variables. Update the secret using [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
+- **Workaround**: If you use a private repository to pre-pull the images for deploying or upgrading BDC, ensure that the current build images as well as the target build images are in the private repository. This enables successful rollback, if necessary. Also, if you changed the credentials of the  private repository since the original deployment, update the corresponding secret in Kubernetes before you upgrade. `azdata` does not support updating the credentials through `AZDATA_PASSWORD` and `AZDATA_USERNAME` environment variables. Update the secret using [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
 
 Upgrading using different repositories for current and target builds is not supported.
 
@@ -174,7 +174,7 @@ Upgrading using different repositories for current and target builds is not supp
    - Zookeeper pods, or processes for each zookeeper instance, are restarted a few times.
    - When networking connectivity is unreliable between `sparkhead` pod and Zookeeper pods.
 
-**Workaround**: Restarting both Livy servers.
+- **Workaround**: Restarting both Livy servers.
 
    ```bash
    kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
@@ -203,9 +203,9 @@ Upgrading using different repositories for current and target builds is not supp
 
 ### Transparent Data Encryption capabilities can not be used with databases that are part of the availability group in the SQL Server master instance
 
-**Issue and customer impact**: In an HA configuration, databases that have encryption enabled can't be used after a failover since the master key used for encryption is different on each replica. 
+- **Issue and customer impact**: In an HA configuration, databases that have encryption enabled can't be used after a failover since the master key used for encryption is different on each replica. 
 
-**Workaround**: There is no workaround for this issue. We recommend to not enable encryption in this configuration until a fix is in place.
+- **Workaround**: There is no workaround for this issue. We recommend to not enable encryption in this configuration until a fix is in place.
 
 ## Next steps
 

@@ -20,6 +20,9 @@ The upgrade path depends on the current version of SQL Server Big Data Cluster (
 - [Upgrade from supported release](#upgrade-from-supported-release)
 - [Update a BDC deployment from CTP or release candidate](#update-a-bdc-deployment-from-ctp-or-release-candidate)
 
+>[!NOTE]
+>The first supported release of Big Data Clusters is SQL Server 2019 GDR1.
+
 ## Upgrade release notes
 
 Before you proceed, check the [upgrade release notes for known issues](release-notes-big-data-cluster.md#known-issues).

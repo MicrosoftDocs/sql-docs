@@ -90,6 +90,8 @@ For more information about different locale with previous versions, reference [I
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
+[!INCLUDE[ssms-azure-data-studio-mention](../includes/ssms-azure-data-studio-mention.md)]
+
 ## Next steps
 
 - [Install non-English language versions of SSMS](install-other-languages.md)

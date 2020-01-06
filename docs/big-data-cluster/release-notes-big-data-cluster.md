@@ -123,7 +123,7 @@ Upgrading using different repositories for current and target builds is not supp
 
    The python script below is another way to set the timeout:
 
-```python
+   ```python
    from kubernetes import client, config
    import json
 
@@ -156,6 +156,7 @@ Upgrading using different repositories for current and target builds is not supp
        upgrade_config_map.data["controller-upgrade"] = json.dumps(upgrade_config)
 
        client.CoreV1Api().patch_namespaced_config_map("controller-upgrade-configmap", namespace, upgrade_config_map)
+   ```
 
 ### Livy job submission from Azure Data Studio (ADS) or curl fail with 500 error
 

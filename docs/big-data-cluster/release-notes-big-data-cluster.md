@@ -81,24 +81,108 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ## Known issues
 
+### Deployment with private repository
+
+- **Issue and customer impact**: Upgrade from private repository has specific requirements
+
+- **Workaround**: If you use a private repository to pre-pull the images for deploying or upgrading BDC, ensure that the current build images as well as the target build images are in the private repository. This enables successful rollback, if necessary. Also, if you changed the credentials of the  private repository since the original deployment, update the corresponding secret in Kubernetes before you upgrade. `azdata` does not support updating the credentials through `AZDATA_PASSWORD` and `AZDATA_USERNAME` environment variables. Update the secret using [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
+
+Upgrading using different repositories for current and target builds is not supported.
+
+### Upgrade may fail due to timeout
+
+- **Issue and customer impact**: An upgrade may fail due to timeout.
+
+   The following code shows what the failure might look like:
+
+   ```
+   >azdata.EXE bdc upgrade --name <mssql-cluster>
+   Upgrading cluster to version 15.0.4003
+
+   NOTE: Cluster upgrade can take a significant amount of time depending on
+   configuration, network speed, and the number of nodes in the cluster.
+
+   Upgrading Control Plane.
+   Control plane upgrade failed. Failed to upgrade controller.
+   ```
+
+   This error is more likely to occur when you upgrade BDC in Azure Kubernetes Service (AKS).
+
+- **Workaround**: Increase the timeout for the upgrade. 
+
+   To increase the timeouts for an upgrade, edit the upgrade config map. To edit the upgrade config map:
+
+1. Run the following command:
+
+   ```bash
+   kubectl edit configmap controller-upgrade-configmap
+   ```
+
+2.	Edit the following fields:
+
+    **`controllerUpgradeTimeoutInMinutes`** Designates the number of minutes to wait for the controller or controller db to finish upgrading. Default is 5. Update to at least 20.
+
+    **`totalUpgradeTimeoutInMinutes`**: Designates the combines amount of time for both the controller and controller db to finish upgrading (controller + controllerdb upgrade).Default is 10. Update to at least  40.
+
+    **`componentUpgradeTimeoutInMinutes`**: Designates the amount of time that each subsequent phase of the upgrade has to complete.  Default is 30. Update to 45.
+
+   3.	Save and exit
+
+   The python script below is another way to set the timeout:
+
+   ```python
+   from kubernetes import client, config
+   import json
+
+   def set_upgrade_timeouts(namespace, controller_timeout=20, controller_total_timeout=40, component_timeout=45):
+       """ Set the timeouts for upgrades
+
+       The timeout settings are as follows
+
+       controllerUpgradeTimeoutInMinutes: sets the max amount of time for the controller
+           or controllerdb to finish upgrading
+
+       totalUpgradeTimeoutInMinutes: sets the max amount of time to wait for both the
+           controller and controllerdb to complete their upgrade
+
+       componentUpgradeTimeoutInMinutes: sets the max amount of time allowed for
+           subsequent phases of the upgrade to complete
+       """
+       config.load_kube_config()
+
+       upgrade_config_map = client.CoreV1Api().read_namespaced_config_map("controller-upgrade-configmap", namespace)
+
+       upgrade_config = json.loads(upgrade_config_map.data["controller-upgrade"])
+
+       upgrade_config["controllerUpgradeTimeoutInMinutes"] = controller_timeout
+
+       upgrade_config["totalUpgradeTimeoutInMinutes"] = controller_total_timeout
+
+       upgrade_config["componentUpgradeTimeoutInMinutes"] = component_timeout
+
+       upgrade_config_map.data["controller-upgrade"] = json.dumps(upgrade_config)
+
+       client.CoreV1Api().patch_namespaced_config_map("controller-upgrade-configmap", namespace, upgrade_config_map)
+   ```
+
 ### Livy job submission from Azure Data Studio (ADS) or curl fail with 500 error
 
-**Issue and customer impact**: In an HA configuration, Spark shared resources `sparkhead` are configured with multiple replicas. In this case, you might experience failures with Livy job submission from Azure Data Studio (ADS) or `curl`. To verify, `curl` to any `sparkhead` pod results in refused connection. For example, `curl https://sparkhead-0:8998/` or `curl https://sparkhead-1:8998` returns 500 error.
+- **Issue and customer impact**: In an HA configuration, Spark shared resources `sparkhead` are configured with multiple replicas. In this case, you might experience failures with Livy job submission from Azure Data Studio (ADS) or `curl`. To verify, `curl` to any `sparkhead` pod results in refused connection. For example, `curl https://sparkhead-0:8998/` or `curl https://sparkhead-1:8998` returns 500 error.
 
-This happens in the following scenarios:
+   This happens in the following scenarios:
 
-- Zookeeper pods, or processes for each zookeeper instance, are restarted a few times.
-- When networking connectivity is unreliable between `sparkhead` pod and Zookeeper pods.
+   - Zookeeper pods, or processes for each zookeeper instance, are restarted a few times.
+   - When networking connectivity is unreliable between `sparkhead` pod and Zookeeper pods.
 
-**Workaround**: Restarting both Livy servers.
+- **Workaround**: Restarting both Livy servers.
 
-```bash
-kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
-```
+   ```bash
+   kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
+   ```
 
-```bash
-kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisorctl restart livy
-```
+   ```bash
+   kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisorctl restart livy
+   ```
 
 ### Create memory optimized table when master instance in an availability group
 
@@ -119,9 +203,9 @@ kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisor
 
 ### Transparent Data Encryption capabilities can not be used with databases that are part of the availability group in the SQL Server master instance
 
-**Issue and customer impact**: In an HA configuration, databases that have encryption enabled can't be used after a failover since the master key used for encryption is different on each replica. 
+- **Issue and customer impact**: In an HA configuration, databases that have encryption enabled can't be used after a failover since the master key used for encryption is different on each replica. 
 
-**Workaround**: There is no workaround for this issue. We recommend to not enable encryption in this configuration until a fix is in place.
+- **Workaround**: There is no workaround for this issue. We recommend to not enable encryption in this configuration until a fix is in place.
 
 ## Next steps
 

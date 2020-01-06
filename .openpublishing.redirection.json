@@ -16517,7 +16517,7 @@
     },
     {
       "source_path": "docs/azure-data-studio/download.md",
-      "redirect_url": "/sql/zure-data-studio/download-azure-data-studio",
+      "redirect_url": "/sql/azure-data-studio/download-azure-data-studio",
       "redirect_document_id": true
     }    
   ]

@@ -129,7 +129,7 @@ SSIS Deploy Task doesn’t support the following scenarios currently:
 
 ### Version 0.1.1 Preview
 
-Release Date: January 7, 2020
+Release Date: January 6, 2020
 
 - Added restriction of minimal agent version requirement. Currently the minimal agent version of this product is 2.144.0.
 - Fixed some incorrect display text for SSIS Deploy Task.

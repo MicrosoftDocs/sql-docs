@@ -23,25 +23,25 @@ The following table lists the pods that are typically deployed in a Big Data Clu
 
 |Name  |Count  |Type  |Description  |
 |---------|---------|---------|---------|
-|appproxy-\<*nnnn*\>|1         |         |Application proxy.|
-|compute-\<*#*\>-\<*#*\>|1         |         |Compute.|
+|appproxy-\<*nnnn*\>|1         |         |Application proxy. 1 per app.|
+|compute-\<*#*\>-\<*#*\>|1         |         |Compute for SQL Server.|
 |control-\<*nnnn*\>|1         |         |Kubernetes control.|
 |controldb-\<*#*\>|1         |         |         |
 |controlwd-\<*nnnn*\>|1         |         |         |
-|data-\<*#*\>-\<*#*\>|2         |         |         |
+|data-\<*#*\>-\<*#*\>|2         |         |Used by SQL Server|
 |gateway-\<*#*\>|1         |         |         |
 |logsdb-\<*#*\>|1         |         |         |
 |logsui-\<*nnnn*\>|1         |         |         |
-|master-\<*#*\>|3         |         |Master SQL Server instance. 3 replicas provide HA.|
+|master-\<*#*\>|3         |         |Master SQL Server instance. 3 replicas provide HA with a contained availability group.|
 |metricsdb-\<*#*\>|1         |         |         |
 |metricsdc-\<*nnnn*\>|5         |         |         |
 |metricsui-\<*nnnn*\>|1         |         |         |
 |mgmtproxy-\<*nnnn*\>|1         |         |         |
-|nmnode-\<*#*\>-\<*#*\>|2         |         |         |
+|nmnode-\<*#*\>-\<*#*\>|2         |         |HDFS node. |
 |operator-\<*nnnn*\>|1         |         |         |
-|sparkhead-\<*#*\>|2         |         |         |
-|storage-\<*#*\>-\<*#*\>|3         |         |         |
-|zookeeper-\<*#*\>|3         |         |         |
+|sparkhead-\<*#*\>|2         |         |HDFS spark head. |
+|storage-\<*#*\>-\<*#*\>|3         |         |Storage.|
+|zookeeper-\<*#*\>|3         |         |HDFS|
 
 ## Next steps
 

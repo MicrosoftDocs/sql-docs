@@ -112,17 +112,19 @@ Upgrading using different repositories for current and target builds is not supp
 
    To increase the timeouts for an upgrade, edit the upgrade config map. To edit the upgrade config map:
 
-   1. Run the following command:
+1. Run the following command:
 
-      ```bash
-      kubectl edit configmap controller-upgrade-configmap
-      ```
+   ```bash
+   kubectl edit configmap controller-upgrade-configmap
+   ```
 
-   2.	Edit the following fields:
+2.	Edit the following fields:
 
-      a. `controllerUpgradeTimeoutInMinutes` Designates the number of minutes to wait for the controller or controller db to finish upgrading. Default is 5. Update to at least 20.
-      b. `totalUpgradeTimeoutInMinutes`: Designates the combines amount of time for both the controller and controller db to finish upgrading (controller + controllerdb upgrade).Default is 10. Update to at least  40.
-      c. `componentUpgradeTimeoutInMinutes`: Designates the amount of time that each subsequent phase of the upgrade has to complete.  Default is 30. Update to 45.
+    **`controllerUpgradeTimeoutInMinutes`** Designates the number of minutes to wait for the controller or controller db to finish upgrading. Default is 5. Update to at least 20.
+
+    **`totalUpgradeTimeoutInMinutes`**: Designates the combines amount of time for both the controller and controller db to finish upgrading (controller + controllerdb upgrade).Default is 10. Update to at least  40.
+
+    **`componentUpgradeTimeoutInMinutes`**: Designates the amount of time that each subsequent phase of the upgrade has to complete.  Default is 30. Update to 45.
 
    3.	Save and exit
 

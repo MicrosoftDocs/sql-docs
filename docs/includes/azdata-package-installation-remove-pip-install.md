@@ -1,3 +1,11 @@
+---
+author: MikeRayMSFT
+ms.prod: sql
+ms.topic: include
+ms.date: 01/07/2020
+ms.author: mikeray
+---
+
 ### Python/Pip installation
 
 You can install `azdata` on Linux or MacOS with yum, upt, zypper, or Homebrew installation package managers. Before these package managers were available, installation required Python and pip.

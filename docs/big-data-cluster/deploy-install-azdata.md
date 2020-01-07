@@ -17,9 +17,13 @@ ms.technology: big-data-cluster
 
 `azdata` is a command-line utility written in Python to bootstrap and manage the big data cluster via REST APIs. 
 
-The current version of `azdata` is `15.0.2070.10041`. The list of files for the latest version is always available at [https://aka.ms/azdata](https://aka.ms/azdata).
+## Find latest version
+
+The list of files for the latest version is always available at [https://aka.ms/azdata](https://aka.ms/azdata).
 
 To find your installed version and see if you need to update, run `azdata --version`.
+
+## OS specific instructions
 
 * [Install on Windows](deploy-install-azdata-installer.md)
 * [Install on macOS](deploy-install-azdata-macos.md)

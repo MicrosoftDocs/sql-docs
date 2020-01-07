@@ -78,8 +78,8 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 
    This command creates a SQL Server 2017 container with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1ddata**. This is used to persist the data created by SQL Server.
 
-   > [!NOTE]
-   > The process for running production SQL Server editions in containers is slightly different. For more information, see [Run production container images](sql-server-linux-configure-docker.md#production). If you use the same container names and ports, the rest of this walkthrough still works with production containers.
+   > [!IMPORTANT]
+   > This example uses a data volume container within Docker. If you instead chose to map a host directory, note that there are limitations for this approach on Docker for Mac and Windows. For more information, see [Configure SQL Server container images on Docker](sql-server-linux-configure-docker.md#persist).
 
 1. To view your Docker containers, use the `docker ps` command.
 

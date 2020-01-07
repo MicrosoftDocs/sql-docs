@@ -20,7 +20,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sql
 # STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
-Concatenates the values of string expressions and places separator values between them. The separator is not added at the end of string. Introduced in SQL Server 2017.
+Concatenates the values of string expressions and places separator values between them. The separator is not added at the end of string. 
+
+Introduced in SQL Server 2017.
  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -54,7 +54,7 @@ ms.author: "sstein"
     SELECT * FROM sys.configurations;  
     ```  
   
-2.  Record all hotfixes applied to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the current collation. You must reapply these updates after rebuilding the system databases.  
+2.  Record all hotfixes applied to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the current collation. You must reapply these hotfixes after rebuilding the system databases.  
   
     ```  
     SELECT  

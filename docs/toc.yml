@@ -278,6 +278,7 @@
         - name: bdc status
           href: big-data-cluster/reference-azdata-bdc-status.md
 - name: Business continuity
+  href: lp/sql-server/business-contin
   items:
   - name: Overview
     href: database-engine/sql-server-business-continuity-dr.md
@@ -1195,7 +1196,6 @@
       - name: Log Shipping Monitor Settings
         href: relational-databases/databases/log-shipping-monitor-settings.md
 - name: Database design
-  href: https://docs.microsoft.com/en-us/sql/sql-server/
   items:
   - name: Hierarchical Data
     href: relational-databases/hierarchical-data-sql-server.md
@@ -6517,6 +6517,7 @@
         - name: Tester
           href: ssma/sybase/global-settings-tester-sybasetosql.md
 - name: Manage, monitor, & tune
+  href: lp/sql-server/manage-monitor-tune.yml
   items:
   - name: Manage
     items:
@@ -7472,7 +7473,6 @@
       - name: Update
         href: relational-databases/statistics/update-statistics.md
 - name: Query data
-  href: https://docs.microsoft.com/en-us/sql/sql-server/index.yml
   items:
   - name: Cursors
     href: relational-databases/cursors.md
@@ -10658,7 +10658,7 @@
   - name: Learn
     items:
     - name: Education center
-      href: sql-server/education-center/education-center.yml
+      href: sql-server/education-center.yml
     - name: Microsoft Virtual Academy >>
       href: https://mva.microsoft.com/product-training/sql-server  # TODO: MVA website is being retired in 2019.  (Removed trailing '#!lang=1033'.)
     - name: SQL on Channel 9 >>

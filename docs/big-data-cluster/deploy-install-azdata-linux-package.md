@@ -45,12 +45,12 @@ This article describes how to install `azdata` for SQL Server 2019 Big Data Clus
 
 3. Add the `azdata` repository information.
 
-For Ubuntu 16.04 client run:
+   For Ubuntu 16.04 client run:
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
     ```
 
-For Ubuntu 16.04 client run:
+   For Ubuntu 16.04 client run:
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
     ```

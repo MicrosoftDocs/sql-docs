@@ -95,7 +95,7 @@ After installation, PolyBase must be enabled to access its features. Connect to 
 
 ```sql
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
-RECONFIGURE [WITH OVERRIDE];
+RECONFIGURE WITH OVERRIDE;
 ```
 
 ## Update PolyBase

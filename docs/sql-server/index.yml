@@ -123,6 +123,21 @@ landingContent:
       - text: Transparent Data Encryption (TDE)
         url: ../ssma/sql-server-migration-assistant.md
 
+  - title: Database Design 
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Databases 
+        url: ../dma/dma-overview.md
+      - text: Tables
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Stored Procedures
+        url: ../ssma/sql-server-migration-assistant.md
+      - text: Graph
+        url: ../dma/dma-overview.md
+      - text: Track Changes 
+        url: ../dea/database-experimentation-assistant-overview.md
+
   - title: Manage & monitor 
     linkLists:
     - linkListType: overview
@@ -135,25 +150,13 @@ landingContent:
         url: ../ssma/sql-server-migration-assistant.md
       - text: Extended events
         url: ../dma/dma-overview.md
-      - text: Security Socket Layer (SSL)  
+      - text: Security Socket Layer (SSL)  s
         url: ../dea/database-experimentation-assistant-overview.md
       - text: SQL Diag
         url: ../ssma/sql-server-migration-assistant.md
       - text: SQL Profiler
         url: ../ssma/sql-server-migration-assistant.md
 
-  - title: Query data
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: Scripting 
-        url: ../dma/dma-overview.md
-      - text: Joins
-        url: ../dea/database-experimentation-assistant-overview.md
-      - text: Full-text search
-        url: ../ssma/sql-server-migration-assistant.md
-      - text: Synonyms 
-        url: ../dma/dma-overview.md
 
   - title: Tune
     linkLists:
@@ -176,21 +179,6 @@ landingContent:
       - text: Indexes
         url: ../dma/dma-overview.md
 
-  - title: Database Design 
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: Databases 
-        url: ../dma/dma-overview.md
-      - text: Tables
-        url: ../dea/database-experimentation-assistant-overview.md
-      - text: Stored Procedures
-        url: ../ssma/sql-server-migration-assistant.md
-      - text: Graph
-        url: ../dma/dma-overview.md
-      - text: Track Changes 
-        url: ../dea/database-experimentation-assistant-overview.md
-
 
   - title: Big data & machine learning 
     linkLists:
@@ -206,3 +194,18 @@ landingContent:
         url: ../advanced-analytics/r/sql-server-r-services.md
       - text: Data virtualization with Polybase
         url: ../relational-databases/polybase/polybase-guide.md
+
+
+
+  - title: Query data
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Scripting 
+        url: ../dma/dma-overview.md
+      - text: Joins
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Full-text search
+        url: ../ssma/sql-server-migration-assistant.md
+      - text: Synonyms 
+        url: ../dma/dma-overview.md

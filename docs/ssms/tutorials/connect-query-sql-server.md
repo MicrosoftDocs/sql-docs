@@ -194,9 +194,10 @@ You can change the server that your current query window is connected to by foll
 
 ## Next steps
 
-The best way to get acquainted with SSMS is through hands-on practice. These articles help you with various features available within SSMS.  These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
+The best way to get acquainted with SSMS is through hands-on practice. These articles help you with various features available within SSMS. These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
 * [Scripting](scripting-ssms.md)
 * [Using Templates in SSMS](../template/templates-ssms.md)
 * [SSMS Configuration](ssms-configuration.md)
 * [Additional Tips and Tricks for using SSMS](ssms-tricks.md)
+* [Azure Data Studio](../../azure-data-studio/download.md)

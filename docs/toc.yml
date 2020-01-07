@@ -1195,6 +1195,7 @@
       - name: Log Shipping Monitor Settings
         href: relational-databases/databases/log-shipping-monitor-settings.md
 - name: Database design
+  href: https://docs.microsoft.com/en-us/sql/sql-server/
   items:
   - name: Hierarchical Data
     href: relational-databases/hierarchical-data-sql-server.md
@@ -7471,6 +7472,7 @@
       - name: Update
         href: relational-databases/statistics/update-statistics.md
 - name: Query data
+  href: https://docs.microsoft.com/en-us/sql/sql-server/index.yml
   items:
   - name: Cursors
     href: relational-databases/cursors.md

@@ -1,0 +1,151 @@
+### YamlMime:Landing
+
+title: SQL Server technical documentation
+summary: Technical documentation to help you get started, administer, develop, and work with SQL Server and associated products. 
+
+metadata:
+  title: SQL Server technical documentation 
+  description: Choose the area of SQL Server you are interested in.
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MashaMSFT
+  ms.author: mathoma
+  ms.date: 10/14/2019  
+
+
+landingContent:
+  - title: SQL Server
+    linkLists:
+    - linkListType: whats-new
+      links:
+      - text: SQL Server 2019 
+        url: what-s-new-in-sql-server-ver15.md
+      - text: Azure Data Studio
+        url: ../azure-data-studio/what-is.md
+      - text: SQL Server on Linux
+        url: ../linux/sql-server-linux-overview.md
+    - linkListType: quickstart
+      links:
+      - text: Connect & query (SSMS)
+        url: ../ssms/tutorials/connect-query-sql-server.md
+      - text: Connect & query (Azure Data Studio)
+        url: ../azure-data-studio/quickstart-sql-server.md
+    - linkListType: download
+      links:
+      - text: SQL Server
+        url: https://www.microsoft.com/sql-server/sql-server-downloads
+      - text: SQL Server Management Studio
+        url: ../ssms/download-sql-server-management-studio-ssms.md
+      - text: Azure Data Studio
+        url: ../azure-data-studio/download.md
+    - linkListType: reference
+      links:
+      - text: Transact-SQL 
+        url: ../t-sql/language-reference.md
+      - text: SQL PowerShell
+        url: ../powershell/sql-server-powershell.md
+      - text: Sample databases
+        url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
+      - text: Internals & architecture guides
+        url: https://aka.ms/sqlserverguides
+      - text: SQL Server 2014 docs
+        url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
+      - text: Previous versions 2005-2012
+        url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
+
+
+  - title: SQL on Azure
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Azure SQL Database single database
+        url: /azure/sql-database/sql-database-single-database
+      - text: Azure SQL Database managed instance
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Azure Synapse Analytics (SQL DW)
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+      - text: SQL Server on a Windows VM
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+      - text: SQL Server on a Linux VM
+        url: ../linux/quickstart-install-connect-clouds.md
+
+  - title: Administration
+    linkLists:
+    - linkListType: deploy
+      links:
+      - text: Install SQL Server
+        url: https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server
+      - text: Upgrade SQL Server
+        url: ../database-engine/install-windows/upgrade-sql-server.md
+    - linkListType: overview
+      links:
+      - text: Security
+        url: https://docs.microsoft.com/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
+      - text: Monitor and tune performance
+        url: https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance
+      - text: In-Memory Database
+        url: ..//relational-databases/in-memory-database.md
+      - text: Automatic tuning
+        url: ../relational-databases/automatic-tuning/automatic-tuning.md
+      - text: Intelligent Query Processing 
+        url: https://aka.ms/IQP
+    - linkListType: concept
+      links:
+      - text: Backup & restore
+        url: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
+      - text: Always on availability groups
+        url: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+      - text: Failover cluster instances
+        url: failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+      - text: SQL Server Replication
+        url: ../relational-databases/replication/sql-server-replication.md
+
+  - title: Business Intelligence 
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: SQL Server Reporting Services (SSRS)
+        url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+      - text: SQL Server Analysis Services (SSAS)
+        url: /analysis-services/analysis-services-overview
+      - text: SQL Server Integration Services (SSIS)
+        url: ../integration-services/sql-server-integration-services.md
+      - text: Azure Data Factory
+        url: https://docs.microsoft.com/azure/data-factory/
+
+
+  - title: Migration
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Data Migration Guide
+        url:  https://datamigration.microsoft.com/
+      - text: Database Compatibility Certification
+        url: https://aka.ms/dbcompat
+      - text: Azure Database Migration Service
+        url: https://docs.microsoft.com/azure/dms/dms-overview
+      - text: Data Migration Assistant (DMA)
+        url: ../dma/dma-overview.md
+      - text: Database Experimentation Assistant
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: SQL Server Migration Assistant (SSMA)
+        url: ../ssma/sql-server-migration-assistant.md
+
+  - title: Big data & machine learning 
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: SQL Server Big Data Clusters
+        url: ../big-data-cluster/big-data-cluster-overview.md
+      - text: Analytics Platform System 
+        url: https://www.microsoft.com/sql/analytics-platform-system/
+      - text: Machine Learning with SQL Server
+        url: https://docs.microsoft.com/sql/advanced-analytics/
+      - text: R Services 
+        url: ../advanced-analytics/r/sql-server-r-services.md
+      - text: Data virtualization with Polybase
+        url: ../relational-databases/polybase/polybase-guide.md
+
+
+
+

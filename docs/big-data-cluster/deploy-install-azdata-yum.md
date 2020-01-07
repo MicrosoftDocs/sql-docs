@@ -16,7 +16,7 @@ ms.technology: big-data-cluster
 For Linux distributions with `yum` there is a package for the `azdata-cli`. The CLI package has been tested on Linux versions which use `yum`:
 
 - RHEL 7, RHEL 8
-- CentOS 7, CentOS 8
+
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
@@ -31,18 +31,15 @@ For Linux distributions with `yum` there is a package for the `azdata-cli`. The 
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
 
-1. Create local `azdata-cli` repository information
+1. Create local repository information
 
-   RHEL 7, RHEL 8, CentOS 7, CentOS 8:
+  For a RHEL 7 client run:
 
    ```bash
-   sudo sh -c 'echo -e "[azdata-cli] 
-   name=azdata-cli 
-   baseurl=https://packages.microsoft.com/yumrepos/azdata-cli
-   enabled=1
-   gpgcheck=1
-   gpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azdata-cli.repo'
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
    ```
+  
+  For a RHEL 8 client run:
 
 1. Install with the `yum install` command
 

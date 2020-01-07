@@ -13,6 +13,8 @@ metadata:
   ms.date: 10/14/2019  
 
 
+landingContent:
+
   - title: Migration
     linkLists:
     - linkListType: overview
@@ -49,7 +51,6 @@ metadata:
       - text: Replication
         url: ../ssma/sql-server-migration-assistant.md
 
-landingContent:
   - title: SQL Server
     linkLists:
     - linkListType: whats-new
@@ -88,7 +89,6 @@ landingContent:
         url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
       - text: Previous versions 2005-2012
         url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
-
 
   - title: Security 
     linkLists:
@@ -138,7 +138,7 @@ landingContent:
         url: ../ssma/sql-server-migration-assistant.md
       - text: Synonyms 
         url: ../dma/dma-overview.md
-        
+
   - title: Tune
     linkLists:
     - linkListType: overview

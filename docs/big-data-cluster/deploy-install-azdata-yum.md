@@ -74,7 +74,7 @@ sudo yum update azdata-cli
    sudo yum remove azdata-cli
    ```
 
-1. Remove the repository information if you do not plan to plan to reinstall `azdata-cli`
+1. Remove the repository information if you do not plan to reinstall `azdata-cli`
 
    ```bash
    sudo rm /etc/yum.repos.d/azdata-cli.repo

@@ -15,6 +15,21 @@ metadata:
 
 landingContent:
 
+  - title: SQL on Azure
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Azure SQL Database single database
+        url: /azure/sql-database/sql-database-single-database
+      - text: Azure SQL Database managed instance
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Azure Synapse Analytics (SQL DW)
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+      - text: SQL Server on a Windows VM
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+      - text: SQL Server on a Linux VM
+        url: ../linux/quickstart-install-connect-clouds.md
+
   - title: Migration
     linkLists:
     - linkListType: overview
@@ -30,25 +45,6 @@ landingContent:
       - text: Database Experimentation Assistant
         url: ../dea/database-experimentation-assistant-overview.md
       - text: SQL Server Migration Assistant (SSMA)
-        url: ../ssma/sql-server-migration-assistant.md
-
-  - title: Business continuity 
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: Backup & restore
-        url:  https://datamigration.microsoft.com/
-      - text: Transaction log management
-        url: https://aka.ms/dbcompat
-      - text: Always On availability groups
-        url: https://docs.microsoft.com/azure/dms/dms-overview
-      - text: Always On failover cluster instance
-        url: ../dma/dma-overview.md
-      - text: Database Mirroring 
-        url: ../dea/database-experimentation-assistant-overview.md
-      - text: Log shipping
-        url: ../ssma/sql-server-migration-assistant.md
-      - text: Replication
         url: ../ssma/sql-server-migration-assistant.md
 
   - title: SQL Server
@@ -89,6 +85,26 @@ landingContent:
         url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
       - text: Previous versions 2005-2012
         url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
+
+  - title: Business continuity 
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Backup & restore
+        url:  https://datamigration.microsoft.com/
+      - text: Transaction log management
+        url: https://aka.ms/dbcompat
+      - text: Always On availability groups
+        url: https://docs.microsoft.com/azure/dms/dms-overview
+      - text: Always On failover cluster instance
+        url: ../dma/dma-overview.md
+      - text: Database Mirroring 
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Log shipping
+        url: ../ssma/sql-server-migration-assistant.md
+      - text: Replication
+        url: ../ssma/sql-server-migration-assistant.md
+
 
   - title: Security 
     linkLists:
@@ -176,3 +192,17 @@ landingContent:
         url: ../dea/database-experimentation-assistant-overview.md
 
 
+  - title: Big data & machine learning 
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: SQL Server Big Data Clusters
+        url: ../big-data-cluster/big-data-cluster-overview.md
+      - text: Analytics Platform System 
+        url: https://www.microsoft.com/sql/analytics-platform-system/
+      - text: Machine Learning with SQL Server
+        url: https://docs.microsoft.com/sql/advanced-analytics/
+      - text: R Services 
+        url: ../advanced-analytics/r/sql-server-r-services.md
+      - text: Data virtualization with Polybase
+        url: ../relational-databases/polybase/polybase-guide.md

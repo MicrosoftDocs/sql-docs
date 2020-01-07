@@ -45,7 +45,7 @@ For Linux distributions with `zypper` there is a package for the `azdata-cli`. T
 1. Install
 
    ```bash
-   sudo zypper install --from azdata-cli -y azdata-cli
+   sudo zypper install --from packages-microsoft-com-mssql-server-2019 -y azdata-cli
    ```
 
 ## Verify install

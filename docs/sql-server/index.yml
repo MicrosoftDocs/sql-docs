@@ -13,6 +13,42 @@ metadata:
   ms.date: 10/14/2019  
 
 
+  - title: Migration
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Data Migration Guide
+        url:  https://datamigration.microsoft.com/
+      - text: Database Compatibility Certification
+        url: https://aka.ms/dbcompat
+      - text: Azure Database Migration Service
+        url: https://docs.microsoft.com/azure/dms/dms-overview
+      - text: Data Migration Assistant (DMA)
+        url: ../dma/dma-overview.md
+      - text: Database Experimentation Assistant
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: SQL Server Migration Assistant (SSMA)
+        url: ../ssma/sql-server-migration-assistant.md
+
+  - title: Business continuity 
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Backup & restore
+        url:  https://datamigration.microsoft.com/
+      - text: Transaction log management
+        url: https://aka.ms/dbcompat
+      - text: Always On availability groups
+        url: https://docs.microsoft.com/azure/dms/dms-overview
+      - text: Always On failover cluster instance
+        url: ../dma/dma-overview.md
+      - text: Database Mirroring 
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Log shipping
+        url: ../ssma/sql-server-migration-assistant.md
+      - text: Replication
+        url: ../ssma/sql-server-migration-assistant.md
+
 landingContent:
   - title: SQL Server
     linkLists:
@@ -54,42 +90,6 @@ landingContent:
         url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
 
 
-  - title: Migration
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: Data Migration Guide
-        url:  https://datamigration.microsoft.com/
-      - text: Database Compatibility Certification
-        url: https://aka.ms/dbcompat
-      - text: Azure Database Migration Service
-        url: https://docs.microsoft.com/azure/dms/dms-overview
-      - text: Data Migration Assistant (DMA)
-        url: ../dma/dma-overview.md
-      - text: Database Experimentation Assistant
-        url: ../dea/database-experimentation-assistant-overview.md
-      - text: SQL Server Migration Assistant (SSMA)
-        url: ../ssma/sql-server-migration-assistant.md
-
-  - title: Business continuity 
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: Backup & restore
-        url:  https://datamigration.microsoft.com/
-      - text: Transaction log management
-        url: https://aka.ms/dbcompat
-      - text: Always On availability groups
-        url: https://docs.microsoft.com/azure/dms/dms-overview
-      - text: Always On failover cluster instance
-        url: ../dma/dma-overview.md
-      - text: Database Mirroring 
-        url: ../dea/database-experimentation-assistant-overview.md
-      - text: Log shipping
-        url: ../ssma/sql-server-migration-assistant.md
-      - text: Replication
-        url: ../ssma/sql-server-migration-assistant.md
-
   - title: Security 
     linkLists:
     - linkListType: overview
@@ -126,6 +126,19 @@ landingContent:
       - text: SQL Profiler
         url: ../ssma/sql-server-migration-assistant.md
 
+  - title: Query data
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Scripting 
+        url: ../dma/dma-overview.md
+      - text: Joins
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Full-text search
+        url: ../ssma/sql-server-migration-assistant.md
+      - text: Synonyms 
+        url: ../dma/dma-overview.md
+        
   - title: Tune
     linkLists:
     - linkListType: overview
@@ -162,15 +175,4 @@ landingContent:
       - text: Track Changes 
         url: ../dea/database-experimentation-assistant-overview.md
 
-  - title: Query data
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: Scripting 
-        url: ../dma/dma-overview.md
-      - text: Joins
-        url: ../dea/database-experimentation-assistant-overview.md
-      - text: Full-text search
-        url: ../ssma/sql-server-migration-assistant.md
-      - text: Synonyms 
-        url: ../dma/dma-overview.md
+

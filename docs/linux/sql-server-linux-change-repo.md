@@ -3,7 +3,7 @@ title: Configure Linux repositories for SQL Server 2017 and 2019
 description: Check and configure source repositories for SQL Server 2019 and SQL Server 2017 on Linux. The source repository affects the version of SQL Server that is applied during installation and upgrade.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -167,10 +167,13 @@ If necessary, remove the old repository. Use one of the following commands based
 ::: zone pivot="ld2-rhel"
 Configure the new repository to use for SQL Server installations and upgrades. Use one of the following commands to configure the repository of your choice.
 
+> [!NOTE]
+> The following commands for SQL Server 2019 points to the RHEL 8 repository. To use RHEL 7, change the path to `/rhel/7`.
+
 | Repository | Version | Command |
 |---|---|---|
-| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo` |
-| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
+| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019-gdr.repo` |
 | **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 

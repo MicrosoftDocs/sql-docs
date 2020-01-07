@@ -3,7 +3,7 @@ title: Release notes for SQL Server 2019 on Linux
 description: This article contains the release notes and supported features for SQL Server 2019 running on Linux. Release notes are included for the most recent release and several previous releases.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -22,7 +22,7 @@ The following release notes apply to SQL Server 2019 running on Linux. This arti
 
 | Platform | File System | Installation Guide |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3, 7.4, 7.5, or 7.6 Server | XFS or EXT4 | [Installation guide](quickstart-install-connect-red-hat.md) | 
+| Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, or 8.0 Server | XFS or EXT4 | [Installation guide](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2, SP3, or SP4 | XFS or EXT4 | [Installation guide](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS or EXT4 | [Installation guide](quickstart-install-connect-ubuntu.md) | 
 | Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 

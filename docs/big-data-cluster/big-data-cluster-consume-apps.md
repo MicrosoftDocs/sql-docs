@@ -5,7 +5,7 @@ description: Consume an application deployed on SQL Server Big Data Clusters usi
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 01/07/2020
 ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql

@@ -5,7 +5,7 @@ description: Learn about SQL Server Big Data Clusters that run on Kubernetes and
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -16,6 +16,21 @@ ms.technology: big-data-cluster
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Starting with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers running on Kubernetes. These components are running side by side to enable you to read, write, and process big data from Transact-SQL or Spark, allowing you to easily combine and analyze your high-value relational data with high-volume big data.
+
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduces SQL Server Big Data Clusters.
+
+Use SQL Server Big Data Clusters to:
+
+- [Deploy scalable clusters](../big-data-cluster/deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes. 
+- Read, write, and process big data from Transact-SQL or Spark.
+- Easily combine and analyze high-value relational data with high-volume big data.
+- Query external data sources.
+- Store big data in HDFS managed by SQL Server.
+- Query data from multiple external data sources through the cluster.
+- Use the data for AI, machine learning, and other analysis tasks.
+- [Deploy and run applications](../big-data-cluster/concept-application-deployment.md) in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
+- Virtualize data with [PolyBase](../relational-databases/polybase/polybase-guide.md). Query data from external SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources with external tables.
+- Provide high availability for the SQL Server master instance and all databases by using Always On availability group technology.
 
 For more information about new features and known issues for latest release, see the [release notes](release-notes-big-data-cluster.md).
 

@@ -5,7 +5,7 @@ description: Learn how to install tools used with [!INCLUDE[big-data-clusters-20
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -24,7 +24,7 @@ The following table lists common big data cluster tools and how to install them:
 | Tool | Required | Description | Installation |
 |---|---|---|---|
 | `python` | Yes | Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Many parts of big data clusters for SQL Server use python. | [Install python](#python)|
-| `azdata` | Yes | Command-line tool for installing and managing a big data cluster. | [Install](deploy-install-azdata-installer.md) |
+| `azdata` | Yes | Command-line tool for installing and managing a big data cluster. | [Install](deploy-install-azdata.md) |
 | `kubectl`<sup>1</sup> | Yes | Command-line tool for monitoring the underlying Kubernetes cluster ([More info](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Azure Data Studio** | Yes | Cross-platform graphical tool for querying SQL Server. | [Install](https://aka.ms/getazuredatastudio) |
 | **Data Virtualization extension** | Yes | Extension for Azure Data Studio that provides a Data Virtualization wizard. | [Install](../azure-data-studio/data-virtualization-extension.md) |

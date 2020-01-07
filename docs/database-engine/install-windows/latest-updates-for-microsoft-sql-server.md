@@ -19,7 +19,7 @@ Find and manage updates in one place for your SQL Server Products. Follow the [S
 
 This page tracks the latest updates to all supported versions of SQL Server. For more information about which products are supported please consult the [Microsoft Product Lifecycle Page](https://support.microsoft.com/lifecycle/).
 
-### Latest updates
+## Latest updates
 
 Each of the following links provides information for all of the applicable products and technologies listed in the **Applies To** section of this page.
 

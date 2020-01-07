@@ -36,12 +36,10 @@ For Linux distributions with `zypper` there is a package for the `azdata-cli`. T
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
 
-1. Create local `azdata-cli` repository information
+1. Create local repository information
 
    ```bash
-   release=$(lsb_release -rs)
-   echo "deb [arch=amd64] https://packages.microsoft.com/repos/azdata-cli/ $release main" |
-   sudo tee /etc/apt/sources.list.d/azdata-cli.list
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
    ```
 
 1. Install

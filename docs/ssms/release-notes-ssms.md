@@ -603,12 +603,11 @@ The following issues were fixed this release:
 
 * Fixed an issue with the SQL Designer scrollbar. [Connect ID 3114856](https://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
 
-* Context menu for tables momentarily hangs 
+* Context menu for tables momentarily hangs
 
 * SSMS occasionally throws exceptions in Activity Monitor and crashes. [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
 
 * SSMS 2016 crashes with error "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"
-
 
 ## Uninstall and reinstall SSMS 17.x
 

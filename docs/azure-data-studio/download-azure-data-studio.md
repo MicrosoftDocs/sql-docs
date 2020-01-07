@@ -24,7 +24,7 @@ Download and install the latest release:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2113530)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2113628)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2113529)|December 26,2019|1.14.1|
+|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2113530)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2113628)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2113529)|December 26, 2019|1.14.1|
 |macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2113528)|December 26, 2019|1.14.1|
 |Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2113344)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2113718)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2113627)|December 26, 2019|1.14.1|
 

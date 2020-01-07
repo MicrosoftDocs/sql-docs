@@ -1,7 +1,7 @@
 ---
 title: "Using Always Encrypted with the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "01/05/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -38,9 +38,10 @@ The Microsoft JDBC Driver for SQL Server comes with the following built-in colum
 
 | Class                                                 | Description                                        | Provider (lookup) name  | Is pre-registered? |
 | :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
-| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | A provider for a keystore for the Azure Key Vault. | AZURE_KEY_VAULT         | No                 |
-| **SQLServerColumnEncryptionCertificateStoreProvider** | A provider for the Windows Certificate Store.      | MSSQL_CERTIFICATE_STORE | Yes                |
-| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | A provider for the Java keystore                   | MSSQL_JAVA_KEYSTORE     | Yes                |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | A provider for a keystore for the Azure Key Vault. | AZURE_KEY_VAULT         | _No_ before JDBC driver version 7.4.1, but _yes_ starting with JDBC driver version 7.4.1. |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | A provider for the Windows Certificate Store.      | MSSQL_CERTIFICATE_STORE | _Yes_                |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | A provider for the Java keystore.                  | MSSQL_JAVA_KEYSTORE     | _Yes_                |
+|||||
 
 For the pre-registered keystore providers, you don't need to make any application code changes to use these providers but note the following items:
 
@@ -60,7 +61,7 @@ WITH
 (
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',
     KEY_PATH = N'https://<MyKeyValutName>.vault.azure.net:443/keys/Always-Encrypted-Auto1/c61f01860f37302457fa512bb7e7f4e8'
-)
+);
 
 CREATE COLUMN ENCRYPTION KEY [MyCEK]
 WITH VALUES
@@ -68,12 +69,29 @@ WITH VALUES
     COLUMN_MASTER_KEY = [MyCMK],
     ALGORITHM = 'RSA_OAEP',
     ENCRYPTED_VALUE = 0x01BA000001680074507400700073003A002F002F006400610076006...
-)
+);
 ```
 
-To use the Azure Key Vault, client applications need to instantiate the SQLServerColumnEncryptionAzureKeyVaultProvider and register it with the driver.
+An application that uses the JDBC driver can use the Azure Key Vault. The syntax or statements for this use of Azure Key Vault changed starting with JDBC driver version 7.4.1.
 
-Here is an example of initializing SQLServerColumnEncryptionAzureKeyVaultProvider:  
+#### JDBC driver 7.4.1 or later
+
+This section involves JDBC driver version 7.4.1 or later.
+
+A client application that uses the JDBC driver can configure to use Azure Key Vault by mentioning `keyVaultProviderClientId=<ClientId>;keyVaultProviderClientKey=<ClientKey>` in JDBC connection string.
+
+Here is an example of providing this configuration information in a JDBC connection string.
+
+```java
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyVaultProviderClientId=<ClientId>;keyVaultProviderClientKey=<ClientKey>";
+```
+The JDBC driver automatically instantiates a **SQLServerColumnEncryptionAzureKeyVaultProvider** object when these credentials are present among the connection properties.
+
+#### JDBC driver version prior to 7.4.1
+
+This section involves JDBC driver versions prior to 7.4.1.
+
+A client application that uses the JDBC driver must instantiate a **SQLServerColumnEncryptionAzureKeyVaultProvider** object, and then register the object with the driver.
 
 ```java
 SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey);
@@ -111,7 +129,7 @@ WITH
 (
     KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',
     KEY_PATH = N'CurrentUser/My/A2A91F59C461B559E4D962DA9D2BC6131B32CB91'
-)
+);
 
 CREATE COLUMN ENCRYPTION KEY [MyCEK]
 WITH VALUES
@@ -119,7 +137,7 @@ WITH VALUES
     COLUMN_MASTER_KEY = [MyCMK],
     ALGORITHM = 'RSA_OAEP',
     ENCRYPTED_VALUE = 0x016E000001630075007200720065006E0074007500730065007200...
-)
+);
 ```
 
 > [!IMPORTANT]
@@ -150,23 +168,23 @@ The JDBC driver automatically instantiates the SQLServerColumnEncryptionJavaKeyS
 ### Creating a column master key for the Java Key Store
 The SQLServerColumnEncryptionJavaKeyStoreProvider can be used with JKS or PKCS12 keystore types. To create or import a key to use with this provider use the Java [keytool](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) utility. The key must have the same password as the keystore itself. Here is an example of how to create a public key and its associated private key using the keytool utility:
 
-```
+```console
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks
 ```
 
-This command creates a public key and wraps it in an X.509 self signed certificate, which is stored in the keystore 'keystore.jks' along with its associated private key. This entry in the keystore is identified by the alias 'AlwaysEncryptedKey'.
+This command creates a public key and wraps it in an X.509 self signed certificate, which is stored in the keystore `keystore.jks` along with its associated private key. This entry in the keystore is identified by the alias `AlwaysEncryptedKey`.
 
 Here is an example of the same using a PKCS12 store type:
 
-```
+```console
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.pfx -storepass mypassword -validity 360 -keysize 2048 -storetype pkcs12 -keypass mypassword
 ```
 
-If the keystore is of type PKCS12, the keytool utility doesn't prompt for a key password and the key password needs to be provided with -keypass option as the SQLServerColumnEncryptionJavaKeyStoreProvider requires that the keystore and the key have the same password.
+If the keystore is of type PKCS12, the keytool utility doesn't prompt for a key password and the key password needs to be provided with `-keypass` option as the **SQLServerColumnEncryptionJavaKeyStoreProvider** requires that the keystore and the key have the same password.
 
-You can also export a certificate from the Windows Certificate store in .pfx format and use that with the SQLServerColumnEncryptionJavaKeyStoreProvider. The exported certificate can also be imported to the Java Key Store as a JKS keystore type.
+You can also export a certificate from the Windows Certificate store in .pfx format and use that with the **SQLServerColumnEncryptionJavaKeyStoreProvider**. The exported certificate can also be imported to the Java Key Store as a JKS keystore type.
 
-After creating the keytool entry, create the column master key metadata in the database, which needs the keystore provider name and the key path. For more information on how to create column master key meta data, see [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md). For SQLServerColumnEncryptionJavaKeyStoreProvider, the key path is just the alias of the key and the name of the SQLServerColumnEncryptionJavaKeyStoreProvider is 'MSSQL_JAVA_KEYSTORE'. You can also query this name using the getName() public API of the SQLServerColumnEncryptionJavaKeyStoreProvider class. 
+After creating the keytool entry, create the column master key metadata in the database, which needs the keystore provider name and the key path. For more information on how to create column master key meta data, see [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md). For SQLServerColumnEncryptionJavaKeyStoreProvider, the key path is just the alias of the key and the name of the SQLServerColumnEncryptionJavaKeyStoreProvider is `MSSQL_JAVA_KEYSTORE`. You can also query this name using the getName() public API of the SQLServerColumnEncryptionJavaKeyStoreProvider class. 
 
 The T-SQL syntax for creating the column master key is:
 
@@ -176,7 +194,7 @@ WITH
 (
     KEY_STORE_PROVIDER_NAME = N'MSSQL_JAVA_KEYSTORE',
     KEY_PATH = N'<key_alias>'
-)
+);
 ```
 
 For the 'AlwaysEncryptedKey' created above, the column master key definition would be:
@@ -187,7 +205,7 @@ WITH
 (
     KEY_STORE_PROVIDER_NAME = N'MSSQL_JAVA_KEYSTORE',
     KEY_PATH = N'AlwaysEncryptedKey'
-)
+);
 ```
 
 > [!NOTE]
@@ -397,7 +415,7 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
  ENCRYPTED WITH (ENCRYPTION_TYPE = RANDOMIZED,
  ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256',
  COLUMN_ENCRYPTION_KEY = MyCEK) NOT NULL
- PRIMARY KEY CLUSTERED ([PatientId] ASC) ON [PRIMARY])
+ PRIMARY KEY CLUSTERED ([PatientId] ASC) ON [PRIMARY]);
  GO
 ```
 

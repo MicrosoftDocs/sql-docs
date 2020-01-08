@@ -22,7 +22,7 @@ highlightedContent:
      url: tools/overview-sql-tools.md
    - title: Educational SQL resources 
      itemType: learn
-     url: sql-server/educational-resources.yml
+     url: sql-server/educational-sql-resources.yml
 
 productDirectory:
   items:
@@ -107,9 +107,6 @@ conceptualContent:
         - text: Reporting Services (SSRS)
           url: reporting-services/install-windows/install-reporting-services.md
           itemType: deploy
-      footerLink:
-        text: See more
-        url: lp/sql-server/install-sql-and-services.md
     - title: Migrate
       links:
         - text: Data Migration Guide 
@@ -154,8 +151,10 @@ additionalContent:
             url: connect/homepage-sql-connection-programming.md
           - text: Transact-SQL (T-SQL)
             url: t-sql/language-reference.md
+          - text: SQL PowerShell
+            url: powershell/sql-server-powershell.md
           - text: Database samples
-            url: samples/sql-samples-where-are.mds
+            url: samples/sql-samples-where-are.md
       - title: Reporting & Machine Learning
         links:
           - text: Power BI Report Server

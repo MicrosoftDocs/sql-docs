@@ -75,6 +75,10 @@ landingContent:
         url: ../azure-data-studio/download.md
     - linkListType: reference
       links:
+      - text: SQL Server 2014 docs
+        url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
+      - text: Eductaional SQL resources
+        url: ../sql-server/educational-sql-resources.yml
       - text: Transact-SQL 
         url: ../t-sql/language-reference.md
       - text: SQL PowerShell
@@ -83,8 +87,6 @@ landingContent:
         url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
       - text: Internals & architecture guides
         url: https://aka.ms/sqlserverguides
-      - text: SQL Server 2014 docs
-        url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
       - text: Previous versions 2005-2012
         url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
 
@@ -165,7 +167,7 @@ landingContent:
     - linkListType: overview
       links:
       - text: Intelligent Query Processing
-        url: ../dma/dma-overview.md
+        url: ../relational-databases/performance/intelligent-query-processing.md
       - text: Automatic Tuning
         url: ../dma/dma-overview.md
       - text: Database Tuning Advisor 

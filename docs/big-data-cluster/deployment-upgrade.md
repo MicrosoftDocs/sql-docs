@@ -29,7 +29,7 @@ Before you proceed, check the [upgrade release notes for known issues](release-n
 
 ## Upgrade from supported release
 
-This section explains how to upgrade a SQL Server BDC from a supported release to a newer supported release.
+This section explains how to upgrade a SQL Server BDC from a supported release (startign with SQL Server 2019 GDR1) to a newer supported release.
 
 1. Back up SQL Server master instance.
 2. Back up HDFS.
@@ -69,7 +69,7 @@ This section explains how to upgrade a SQL Server BDC from a supported release t
 >The latest image tags are available at [SQL Server 2019 Big Data Clusters release notes](release-notes-big-data-cluster.md).
 
 >[!IMPORTANT]
->If you use a private repository to pre-pull the images for deploying or upgrading BDC, ensure that the current build images as well as >the target build images are in the private repository. This enables successful rollback, if necessary. Also, if you changed the >credentials of the private repository since the original deployment, update the corresponding secret in Kubernetes before you upgrade. >azdata does not support updating the credentials through AZDATA_PASSWORD and AZDATA_USERNAME environment variables. Update the secret >using [kubectl edit secrets](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). Upgrading using different >private repositories for current and target builds is not supported.
+>If you use a private repository to pre-pull the images for deploying or upgrading BDC, ensure that the current build images as well as >the target build images are in the private repository. This enables successful rollback, if necessary. Also, if you changed the >credentials of the private repository since the original deployment, update the corresponding secret in Kubernetes before you upgrade. >There is no support for updating the credentials through DOCKER_PASSWORD and DOCKER_USERNAME environment variables. Update the secret >using [kubectl edit secrets](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). Upgrading using different >private repositories for current and target builds is not supported.
 
 ### Increase the timeout for the upgrade
 
@@ -108,7 +108,7 @@ In-place upgrade from a CTP or release candidate build of SQL Server Big Data Cl
 
 ### Backup and delete the old cluster
 
-Currently, there is no in place upgrade for big data clusters, the only way to upgrade to a new release is to manually remove and recreate the cluster. Each release has a unique version of `azdata` that is not compatible with the previous version. Also, if an older cluster had to download a container image on a new node, the latest image might not be compatible with the older images on the cluster. The newer image is pulled if you are using the `latest` image tag for in the deployment configuration file for the container settings. By default, each release has a specific image tag corresponding to the SQl Server release version. To upgrade to the latest release, use the following steps:
+There is no in place upgrade for big data clusters deployed before SQL Server 2019 GDR1 release. The only way to upgrade to a new release is to manually remove and recreate the cluster. Each release has a unique version of `azdata` that is not compatible with the previous version. Also, if a newer container image is downloaded on cluster deployed with different older version, the latest image might not be compatible with the older images on the cluster. The newer image is pulled if you are using the `latest` image tag for in the deployment configuration file for the container settings. By default, each release has a specific image tag corresponding to the SQl Server release version. To upgrade to the latest release, use the following steps:
 
 1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use [SQL Server backup and restore](data-ingestion-restore-database.md). For HDFS, you [can copy out the data with `curl`](data-ingestion-curl.md).
 

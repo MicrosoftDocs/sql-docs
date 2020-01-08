@@ -21,7 +21,7 @@ Microsoft Connector for Oracle enables to export data from and load data into Or
 The following Microsoft SQL Server products are supported by Microsoft Connector for Oracle:
 
 - Since SQL Server 2019
-- SQL Server Data Tools (SSDT)
+- SQL Server Data Tools (SSDT) since version 15.9.3
 
 The following Oracle database versions of data source are supported:
 
@@ -41,7 +41,7 @@ To install the connector for Oracle database, download and run the installer fro
 
 After you install the Connector, you must restart the SQL Server Integration Service to be sure that the Oracle source and destination can work correctly.
 
-To design SSIS package targeting SQL Server 2017 and below, you will need to install **Microsoft Connector for Oracle by Attunity** with corresponding version from below links:
+To design SSIS package targeting SQL Server 2017 and below, in addition to **Microsoft Connector for Oracle**, you will need to install **Microsoft Connector for Oracle by Attunity** with corresponding version from below links:
 
 - [SQL Server 2017: Microsoft Connector Version 5.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
 - [SQL Server 2016: Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=52950)

@@ -32,7 +32,7 @@ This article describes how to install `azdata` for SQL Server 2019 Big Data Clus
 
     ```bash
     sudo apt-get update
-    sudo apt-get install gnupg ca-certificates curl apt-transport-https lsb-release -y
+    sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
     ```
 
 2. Download and install the signing key:
@@ -43,12 +43,16 @@ This article describes how to install `azdata` for SQL Server 2019 Big Data Clus
     sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
     ```
 
-3. Add the `azdata` repository information:
+3. Add the `azdata` repository information.
 
+   For Ubuntu 16.04 client run:
     ```bash
-    release=$(lsb_release -rs)
-    echo "deb [arch=amd64] https://packages.microsoft.com/repos/azdata-cli/ $release main" |
-    sudo tee /etc/apt/sources.list.d/azdata-cli.list
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+    ```
+
+   For Ubuntu 18.04 client run:
+    ```bash
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
     ```
 
 4. Update repository information and install `azdata`:

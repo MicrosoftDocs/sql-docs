@@ -16,9 +16,9 @@ ms.author: pelopes
 manager: amitban
 ---
 # Performance Dashboard
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] version 17.2 and later includes the Performance Dashboard. This dashboard was designed to visually provide fast insight into the performance state of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. 
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] version 17.2 and later includes the Performance Dashboard. This dashboard was designed to visually provide fast insight into the performance state of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] Managed Instance. 
 
 The Performance Dashboard helps to quickly identify whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] is experiencing a performance bottleneck. And if a bottleneck is found, easily capture additional diagnostic data that may be necessary to resolve the problem. Some common performance problems which the Performance Dashboard can help identify include:
 -  CPU bottlenecks (and what queries are consuming the most CPU)

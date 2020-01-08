@@ -179,6 +179,19 @@ landingContent:
       - text: Indexes
         url: ../dma/dma-overview.md
 
+  - title: Query data
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Scripting 
+        url: ../dma/dma-overview.md
+      - text: Joins
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Full-text search
+        url: ../ssma/sql-server-migration-assistant.md
+      - text: Synonyms 
+        url: ../dma/dma-overview.md
+
 
   - title: Big data & machine learning 
     linkLists:
@@ -196,15 +209,3 @@ landingContent:
         url: ../relational-databases/polybase/polybase-guide.md
 
 
-  - title: Query data
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: Scripting 
-        url: ../dma/dma-overview.md
-      - text: Joins
-        url: ../dea/database-experimentation-assistant-overview.md
-      - text: Full-text search
-        url: ../ssma/sql-server-migration-assistant.md
-      - text: Synonyms 
-        url: ../dma/dma-overview.md

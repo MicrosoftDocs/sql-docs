@@ -68,6 +68,40 @@ This section explains how to upgrade a SQL Server BDC from a supported release t
 >[!NOTE]
 >The latest image tags are available at [SQL Server 2019 Big Data Clusters release notes](release-notes-big-data-cluster.md).
 
+>[!IMPORTANT]
+>If you use a private repository to pre-pull the images for deploying or upgrading BDC, ensure that the current build images as well as >the target build images are in the private repository. This enables successful rollback, if necessary. Also, if you changed the >credentials of the private repository since the original deployment, update the corresponding secret in Kubernetes before you upgrade. >azdata does not support updating the credentials through AZDATA_PASSWORD and AZDATA_USERNAME environment variables. Update the secret >using [kubectl edit secrets](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). Upgrading using different >private repositories for current and target builds is not supported.
+
+### Increase the timeout for the upgrade
+
+A timeout can occur if certain components are not upgraded in the allocated time. The following code shows what the failure might look like:
+
+   ```
+   >azdata.EXE bdc upgrade --name <mssql-cluster>
+   Upgrading cluster to version 15.0.4003
+
+   NOTE: Cluster upgrade can take a significant amount of time depending on
+   configuration, network speed, and the number of nodes in the cluster.
+
+   Upgrading Control Plane.
+   Control plane upgrade failed. Failed to upgrade controller.
+   ```
+
+To increase the timeouts for an upgrade, edit the upgrade config map. To edit the upgrade config map:
+
+Run the following command:
+
+   ```bash
+   kubectl edit configmap controller-upgrade-configmap
+   ```
+
+Edit the following fields:
+
+   **controllerUpgradeTimeoutInMinutes** Designates the number of minutes to wait for the controller or controller db to finish upgrading. Default is 5. Update to at least 20.
+   **totalUpgradeTimeoutInMinutes**: Designates the combines amount of time for both the controller and controller db to finish upgrading (controller + controllerdb upgrade).Default is 10. Update to at least 40.
+   **componentUpgradeTimeoutInMinutes**: Designates the amount of time that each subsequent phase of the upgrade has to complete. Default is 30. Update to 45.
+
+Save and exit.
+
 ## Update a BDC deployment from CTP or release candidate
 
 In-place upgrade from a CTP or release candidate build of SQL Server Big Data Clusters is not supported. The following section explains how to manually remove and recreate the cluster.

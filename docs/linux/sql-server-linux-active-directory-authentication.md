@@ -190,6 +190,7 @@ Make sure you've installed the [mssql-tools](sql-server-linux-setup-tools.md) pa
 ```bash
 sqlcmd -S mssql-host.contoso.com
 ```
+Different from SQL Windows, Kerberos authentication works for local connection in SQL Linux. However, you still need to provide the FQDN of the SQL Linux host, and AD Authentication will not work if you attempt to connect to '.' ,'localhost','127.0.0.1',etc.
 
 ### SSMS on a domain-joined Windows client
 

@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 07/29/2019
+ms.date: 01/03/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -107,7 +107,7 @@ In this example, if LOCATION='/webdata/', a PolyBase query will return rows from
 To change the default and only read from the root folder, set the attribute \<polybase.recursive.traversal> to 'false' in the core-site.xml configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. For example, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
 DATA_SOURCE = *external_data_source_name*
-Specifies the name of the external data source that contains the location of the external data. This location is either a Hadoop or Azure blob storage. To create an external data source, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+Specifies the name of the external data source that contains the location of the external data. This location is a Hadoop File System (HDFS), an Azure storage blob container, or Azure Data Lake Store. To create an external data source, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 FILE_FORMAT = *external_file_format_name*
 Specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
@@ -154,9 +154,6 @@ This example shows how the three REJECT options interact with each other. For ex
 - PolyBase attempts to load the next 100 rows; this time 25 rows succeed and 75 rows fail.
 - Percent of failed rows is recalculated as 50%. The percentage of failed rows has exceeded the 30% reject value.
 - The PolyBase query fails with 50% rejected rows after attempting to return the first 200 rows. Notice that matching rows have been returned before the PolyBase query detects the reject threshold has been exceeded.
-
-DATA_SOURCE
-An external data source such as data stored in a Hadoop File System, Azure blob storage, or a [shard map manager](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).
 
 SCHEMA_NAME
 The SCHEMA_NAME clause provides the ability to map the external table definition to a table in a different schema on the remote database. Use this clause to disambiguate between schemas that exist on both the local and remote databases.
@@ -376,8 +373,8 @@ WITH
 (
   DATA_SOURCE = MyExtSrc,
   SCHEMA_NAME = 'sys',
-  OBJECT_NAME = 'dm_exec_requests',  
-  DISTRIBUTION=  
+  OBJECT_NAME = 'dm_exec_requests',
+  DISTRIBUTION=ROUND_ROBIN
 );
 ```
 
@@ -632,34 +629,24 @@ The column definitions, including the data types and number of columns, must mat
 
 Sharded external table options
 
-Specifies the external data source (a non-SQL Server data source) and a distribution method for the [Elastic Database query](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
+Specifies the external data source (a non-SQL Server data source) and a distribution method for the [Elastic query](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
 
 DATA_SOURCE
-An external data source such as data stored in a Hadoop File System, Azure blob storage, or a [shard map manager](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).
+The DATA_SOURCE clause defines the external data source (a shard map) that is used for the external table. For an example, see [Create external tables](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
-SCHEMA_NAME
-The SCHEMA_NAME clause provides the ability to map the external table definition to a table in a different schema on the remote database. Use this clause to disambiguate between schemas that exist on both the local and remote databases.
-
-OBJECT_NAME
-The OBJECT_NAME clause provides the ability to map the external table definition to a table with a different name on the remote database. Use this clause to disambiguate between object names that exist on both the local and remote databases.
+SCHEMA_NAME and OBJECT_NAME
+The SCHEMA_NAME and OBJECT_NAME clauses map the external table definition to a table in a different schema. If omitted, the schema of the remote object is assumed to be “dbo” and its name is assumed to be identical to the external table name being defined. This is useful if the name of your remote table is already taken in the database where you want to create the external table. For example, you want to define an external table to get an aggregate view of catalog views or DMVs on your scaled out data tier. Since catalog views and DMVs already exist locally, you cannot use their names for the external table definition. Instead, use a different name and use the catalog view’s or the DMV’s name in the SCHEMA_NAME and/or OBJECT_NAME clauses. For an example, see [Create external tables](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
 DISTRIBUTION
-Optional. This argument is only required for databases of type SHARD_MAP_MANAGER. This argument controls whether a table is treated as a sharded table or a replicated table. With **SHARDED** (*column name*) tables, the data from different tables don't overlap. **REPLICATED** specifies that tables have the same data on every shard. **ROUND_ROBIN** indicates that an application-specific method is used to distribute the data.
+The DISTRIBUTION clause specifies the data distribution used for this table. The query processor utilizes the information provided in the DISTRIBUTION clause to build the most efficient query plans.
+
+- SHARDED means data is horizontally partitioned across the databases. The partitioning key for the data distribution is the <sharding_column_name> parameter.
+- REPLICATED means that identical copies of the table are present on each database. It is your responsibility to ensure that the replicas are identical across the databases.
+- ROUND_ROBIN means that the table is horizontally partitioned using an application-dependent distribution method.
 
 ## Permissions
 
-Requires these user permissions:
-
-- **CREATE TABLE**
-- **ALTER ANY SCHEMA**
-- **ALTER ANY EXTERNAL DATA SOURCE**
-- **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
-
-Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure blob storage.
-
-> [!IMPORTANT]
-> The ALTER ANY EXTERNAL DATA SOURCE permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
+Users with access to the external table automatically gain access to the underlying remote tables under the credential given in the external data source definition. Avoid undesired elevation of privileges through the credential of the external data source. Use GRANT or REVOKE for an external table just as though it were a regular table. Once you have defined your external data source and your external tables, you can now use full T-SQL over your external tables.
 
 ## Error Handling
 
@@ -689,7 +676,7 @@ Constructs and operations not supported:
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
 
-Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, i.e. when used in connjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined to.    
+Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, i.e. when used in conjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined to.
 
 ```sql
   \\ Assuming External.Orders is an external table and Customer is a local table. 
@@ -705,7 +692,7 @@ Only literal predicates defined in a query can be pushed down to the external da
 
 Use of External Tables prevents use of parallelism in the query plan.
 
-External tables are implemented as Remote Query and as such the estimated number of rows returned is generally 1000, there are other rules based on the type of predicate used to filter the external table. They are rules based estimates rather than estimates based on the actual data in the external table. The optimiser doesn't access the remote data source to obtain a more accurate estimate.
+External tables are implemented as Remote Query and as such the estimated number of rows returned is generally 1000, there are other rules based on the type of predicate used to filter the external table. They are rules-based estimates rather than estimates based on the actual data in the external table. The optimizer doesn't access the remote data source to obtain a more accurate estimate.
 
 ## Locking
 
@@ -726,7 +713,9 @@ WITH
 
 ## See Also
 
-[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [Azure SQL Database elastic query overview](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview)
+- [Reporting across scaled-out cloud databases](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
+- [Get started with cross-database queries (vertical partitioning)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"

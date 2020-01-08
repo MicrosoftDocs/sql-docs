@@ -1,6 +1,7 @@
 ---
-title: "REVOKE XML Schema Collection Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE XML Schema Collection Permissions"
+description: Use Transact-SQL to REVOKE XML Schema Collection Permissions.
+ms.custom: "seo-lt-2019"
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "pdw, sql-database"

@@ -49,15 +49,15 @@ Beginning with [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssno
 
 The download location for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] depends on the edition:
 
-* **SQL Server Enterprise, Standard, and Express Editions** are licensed for production use. For the Enterprise and Standard Editions, contact your software vendor for the installation media. You can find purchasing information and a directory of Microsoft partners on the [Microsoft purchasing website](https://www.microsoft.com/en-us/server-cloud/products/sql-server/overview.aspx). 
+* **SQL Server Enterprise, Standard, and Express Editions** are licensed for production use. For the Enterprise and Standard Editions, contact your software vendor for the installation media. You can find purchasing information and a directory of Microsoft partners on the [Microsoft licensing page](https://www.microsoft.com/licensing/product-licensing/sql-server).
 * [Free version - latest](https://www.microsoft.com/sql-server/sql-server-downloads)
-* [Free version - others](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server)
+* [Free version - others](https://www.microsoft.com/evalcenter/evaluate-sql-server)
 
 
 Other SQL Server components can be found here: 
 
 * [All cumulative updates](https://sqlserverbuilds.blogspot.com/)
-* [SQL Server Reporting Services](https://www.microsoft.com/en-us/download/details.aspx?id=100122). 
+* [SQL Server Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122). 
 * [SQL Server Management Studio](https://aka.ms/ssmsfullsetup)
 * [Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2109256)
 

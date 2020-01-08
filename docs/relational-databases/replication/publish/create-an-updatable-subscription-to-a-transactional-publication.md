@@ -1,6 +1,7 @@
 ---
-title: "Create an Updatable Subscription to a Transactional Publication | Microsoft Docs"
-ms.custom: ""
+title: "Create an Updatable Subscription (Transactional)"
+description: Learn how to create an Updatable Subscription to a Transactional Publication for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"

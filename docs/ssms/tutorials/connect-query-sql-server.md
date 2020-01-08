@@ -1,15 +1,15 @@
 ---
-title: Connect to and query a SQL Server instance by using SQL Server Management Studio (SSMS)
+title: Connect to and query a SQL Server instance
 description: A tutorial for connecting to a SQL Server instance by using SQL Server Management Studio and running basic T-SQL queries.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
-ms.reviewer: sstein
+ms.reviewer: sstein; maghan
 ms.topic: quickstart
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ---
 
@@ -194,9 +194,10 @@ You can change the server that your current query window is connected to by foll
 
 ## Next steps
 
-The best way to get acquainted with SSMS is through hands-on practice. These articles help you with various features available within SSMS.  These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
+The best way to get acquainted with SSMS is through hands-on practice. These articles help you with various features available within SSMS. These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
 * [Scripting](scripting-ssms.md)
 * [Using Templates in SSMS](../template/templates-ssms.md)
 * [SSMS Configuration](ssms-configuration.md)
 * [Additional Tips and Tricks for using SSMS](ssms-tricks.md)
+* [Azure Data Studio](../../azure-data-studio/download.md)

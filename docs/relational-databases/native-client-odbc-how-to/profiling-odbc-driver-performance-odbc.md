@@ -1,5 +1,5 @@
 ---
-title: "Profiling ODBC Driver Performance How-to Topics (ODBC) | Microsoft Docs"
+title: "Profiling ODBC Driver Performance"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

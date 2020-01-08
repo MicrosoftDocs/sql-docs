@@ -1,6 +1,7 @@
 ---
-title: "Add Articles to and Drop Articles from Existing Publications | Microsoft Docs"
-ms.custom: ""
+title: "Add & drop articles (existing Publication)"
+description: Learn how to add articles to and drop articles from existing publications for SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

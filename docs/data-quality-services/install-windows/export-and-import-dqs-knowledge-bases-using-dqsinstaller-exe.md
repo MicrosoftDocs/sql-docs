@@ -1,6 +1,7 @@
 ---
-title: "Export and Import DQS Knowledge Bases Using DQSInstaller.exe | Microsoft Docs"
-ms.custom: ""
+title: "Export and import DQS knowledge bases using DQSInstaller.exe"
+description: Learn how to use the DQSInstaller.exe to export and import DQS Knowledge bases for SQL Server Data Quality Services (DQS).
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Export and Import DQS Knowledge Bases Using DQSInstaller.exe
 

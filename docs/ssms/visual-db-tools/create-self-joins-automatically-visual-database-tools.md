@@ -1,10 +1,9 @@
 ---
-title: "Create Self-Joins Automatically (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Create Self-Joins Automatically
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,8 +11,10 @@ helpviewer_keywords:
   - "self-joins"
   - "joins [SQL Server], self"
 ms.assetid: f9ec90e8-3aad-415c-a5c4-8dfa9540e37f
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Create Self-Joins Automatically (Visual Database Tools)

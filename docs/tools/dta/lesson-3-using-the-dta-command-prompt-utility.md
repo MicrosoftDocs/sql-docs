@@ -1,10 +1,9 @@
 ---
-title: "Lesson 3: Using the dta Command Prompt Utility"
+title: Using the dta Command Prompt Utility
 ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,6 +11,8 @@ helpviewer_keywords:
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 ---
 # Lesson 3: Using the dta Command Prompt Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
-title: "Differences between availability modes for an availability group"
+title: "Availability modes for an availability group"
 description: "A description of the different availability modes for an Always On availability group."
-ms.custom: "seodec18"
+ms.custom: seo-lt-2019
 ms.date: "10/16/2017"
 ms.prod: sql
 ms.reviewer: ""

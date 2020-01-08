@@ -1,6 +1,6 @@
 ---
-title: "F1 Help for Server Connections (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: F1 Help for Server Connections
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"

@@ -1,5 +1,5 @@
 ---
-title: "Using the sql:identity and sql:guid Annotations | Microsoft Docs"
+title: "Using the sql:identity and sql:guid Annotations"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

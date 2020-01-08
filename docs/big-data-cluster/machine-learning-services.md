@@ -17,11 +17,11 @@ ms.technology: machine-learning
 You can run Python and R scripts on the master instance of [SQL Server Big Data Clusters](big-data-cluster-overview.md) with [Machine Learning Services](../advanced-analytics/index.yml).
 
 > [!NOTE]
-> You can also run Java code on the master instance with [SQL Server Language Extensions](../language-extensions/language-extensions-overview.md). Follow the steps below will also enable Language Extensions.
+> You can also run Java code on the master instance with [SQL Server Language Extensions](../language-extensions/language-extensions-overview.md). Following the steps below will also enable Language Extensions.
 
 ## Enable Machine Learning Services
 
-Machine Learning Services is installed by default on Big Data Clusters and does require separate installation.
+Machine Learning Services is installed by default on Big Data Clusters and does not require separate installation.
 
 To enable Machine Learning Services, run this statement on the master instance:
 

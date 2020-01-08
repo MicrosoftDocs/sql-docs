@@ -29,7 +29,7 @@ This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can
 > This article specifically focuses on using the mssql-server-linux image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 > [!IMPORTANT]
-> Before choosing to run a SQL Server container for production use cases, please review our [support policy for SQL Server Containers](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server) to ensure that you are running on a supported configuration.
+> Before choosing to run a SQL Server container for production use cases, please review our [support policy for SQL Server Containers](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) to ensure that you are running on a supported configuration.
 
 This 6-minute video provides an introduction into running SQL Server on containers:
 
@@ -256,7 +256,10 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 This technique also enables you to share and view the files on the host outside of Docker.
 
 > [!IMPORTANT]
-> Host volume mapping for Docker on Mac with the SQL Server on Linux image is not supported at this time. Use data volume containers instead. This restriction is specific to the `/var/opt/mssql` directory. Reading from a mounted directory works fine. For example, you can mount a host directory using -v on Mac and restore a backup from a .bak file that resides on the host.
+> Host volume mapping for **Docker on Windows** does not currently support mapping the complete `/var/opt/mssql` directory. However, you can map a subdirectory, such as `/var/opt/mssql/data` to your host machine.
+
+> [!IMPORTANT]
+> Host volume mapping for **Docker on Mac** with the SQL Server on Linux image is not supported at this time. Use data volume containers instead. This restriction is specific to the `/var/opt/mssql` directory. Reading from a mounted directory works fine. For example, you can mount a host directory using -v on Mac and restore a backup from a .bak file that resides on the host.
 
 ### Use data volume containers
 
@@ -614,7 +617,7 @@ Run one of the following commands if SQL Server does not have access to persiste
 Grant the root group permissions to the following directories so that the non-root SQL Server container has access to database files.
 
 ```bash
-chgroup -R 0 <database file dir>
+chgrp -R 0 <database file dir>
 chmod -R g=u <database file dir>
 ```
 

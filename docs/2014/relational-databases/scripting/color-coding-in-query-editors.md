@@ -1,6 +1,6 @@
 ---
-title: "Color Coding in Query Editors | Microsoft Docs"
-ms.custom: ""
+title: Color Coding in Query Editors
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

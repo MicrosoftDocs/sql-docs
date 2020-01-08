@@ -10,7 +10,7 @@ ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -1,6 +1,7 @@
 ---
-title: "Evaluate a Policy-Based Management Policy from That Policy | Microsoft Docs"
-ms.custom: ""
+title: "Evaluate a Policy-Based Management policy from that policy"
+description: Learn to evaluate a policy using that policy in SQL Server by using SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

@@ -1,6 +1,7 @@
 ---
-title: How to use distributed transactions with SQL Server on Docker
-description: This article explains how to use the Microsoft Distributed Transaction Coordinator (MSDTC) for distributed transactions in a SQL Server container on Docker.
+title: Distributed transactions (MSDTC) with SQL Server on Docker
+description: Learn to use the Microsoft Distributed Transaction Coordinator (MSDTC) for distributed transactions in a SQL Server container on Docker.
+ms.custom: seo-lt-2019
 author: VanMSFT 
 ms.author: vanto
 ms.date: 11/04/2019

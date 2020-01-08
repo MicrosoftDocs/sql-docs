@@ -1,7 +1,7 @@
 ---
-title: "Check Parameters for the System Configuration Checker | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/05/2017"
+title: "Check Parameters System Configuration Checker"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

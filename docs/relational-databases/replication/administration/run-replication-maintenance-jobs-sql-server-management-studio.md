@@ -1,6 +1,7 @@
 ---
-title: "Run Replication Maintenance Jobs (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Run replication maintenance jobs (SSMS)"
+description: Learn how to start and stop replication maintenance jobs in SQL Server management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

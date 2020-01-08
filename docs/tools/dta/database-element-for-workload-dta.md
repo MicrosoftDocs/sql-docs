@@ -1,10 +1,7 @@
 ---
 title: "Database Element for Workload (DTA)"
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
@@ -14,10 +11,17 @@ helpviewer_keywords:
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # Database Element for Workload (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Specifies the database where the workload trace table is located.  
+
+Specifies the database where the workload trace table is located.  
   
 ## Syntax  
   

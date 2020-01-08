@@ -1,6 +1,7 @@
 ---
-title: "Always Encrypted with secure enclaves | Microsoft Docs"
-ms.custom: ""
+title: "Always Encrypted with secure enclaves"
+description: Learn about the Always Encrypted with secure enclaves feature for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

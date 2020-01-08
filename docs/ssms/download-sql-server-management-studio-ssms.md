@@ -1,8 +1,7 @@
 ---
-title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
+title: "Download SQL Server Management Studio (SSMS)"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 keywords: 
@@ -22,7 +21,7 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 ms.reviewer: sstein, maghan
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 11/04/2019
 ---
 
@@ -108,7 +107,7 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 <sup>*</sup> Requires version 1607 (10.0.14393) or later
 
 > [!NOTE]
-> SSMS runs on Windows only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
+> SSMS runs on Windows (AMD or Intel) only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
 
 ## Release notes (SSMS 18.4)
 
@@ -126,7 +125,8 @@ For details about this release, see [the SSMS release notes](release-notes-ssms.
 
 - [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [SQL Server Management Studio documentation](sql-server-management-studio-ssms.md)
-- [Additional updates and service packs](https://technet.microsoft.com/sqlserver/ff803383.aspx)
+- [Latest updates](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [Azure Data Architecture Guide](https://docs.microsoft.com/azure/architecture/data-guide/)
 

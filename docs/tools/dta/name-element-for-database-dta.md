@@ -1,10 +1,7 @@
 ---
 title: "Name Element for Database (DTA)"
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
@@ -14,10 +11,17 @@ helpviewer_keywords:
 ms.assetid: e871c4fa-3b57-46cf-b4f8-e3be86f92dc4
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # Name Element for Database (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Specifies the name of a database that you want to tune.  
+
+Specifies the name of a database that you want to tune.  
   
 ## Syntax  
   

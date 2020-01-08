@@ -1,6 +1,7 @@
 ---
-title: Common errors for transparent data encryption with customer-managed keys in Azure Key Vault | Microsoft Docs
-description: Troubleshoot transparent data encryption (TDE) with an Azure Key Vault configuration.
+title: Common errors with customer-managed keys in Azure Key Vault
+description: Troubleshoot common errors with transparent data encryption (TDE) and customer-managed keys in Azure Key Vault.
+ms.custom: seo-lt-2019
 helpviewer_keywords: 
   - "troublshooting, tde akv"
   - "tde akv configuration, troubleshooting"

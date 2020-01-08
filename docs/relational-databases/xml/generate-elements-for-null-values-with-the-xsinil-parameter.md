@@ -1,6 +1,5 @@
 ---
-title: "Generate Elements for NULL Values with the XSINIL Parameter | Microsoft Docs"
-ms.custom: "fresh2019may"
+title: "Generate elements for NULL values with XSINIL | Microsoft Docs"
 ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,6 +14,7 @@ helpviewer_keywords:
 ms.assetid: 2dbc4e48-1cae-4d83-b371-3265da9687cc
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 ---
 # Generate Elements for NULL Values with the XSINIL Parameter
 

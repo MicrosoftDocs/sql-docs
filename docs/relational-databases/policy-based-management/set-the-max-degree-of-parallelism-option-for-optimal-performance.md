@@ -19,7 +19,7 @@ ms.author: vanto
   This rule determines whether the max degree of parallelism (MAXDOP) option for a value greater than 8. Setting this option to a larger value often causes unwanted resource consumption and performance degradation.  
   
 ## Best Practices Recommendations  
- Set the max degree of parallelism option to 8 or less by using sp_configure.  
+ Set the max degree of parallelism option to 8 or less by using sp_configure.  test
   
 ## For More Information  
  [Recommendations and guidelines for the max degree of parallelism configuration option in SQL Server](https://go.microsoft.com/fwlink/?linkid=117786)  

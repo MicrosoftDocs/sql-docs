@@ -46,7 +46,7 @@ The following table lists the release history for SQL Server 2019 releases.
 
 ## <a id="cuinstall"></a> How to install updates
 
-If you have configured the CU repository (mssql-server-2019), then you will get the latest CU of SQL Server packages when you perform new installations. If you require Docker container images, please see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server/). For more information about repository configuration, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
+If you have configured the CU repository (mssql-server-2019), then you will get the latest CU of SQL Server packages when you perform new installations. If you require Docker container images, see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server/). For more information about repository configuration, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
 
 If you are updating existing SQL Server packages, run the appropriate update command for each package to get the latest CU. For specific update instructions for each package, see the following installation guides:
 
@@ -118,7 +118,7 @@ The following sections describe known issues with the General Availability (GA) 
 
 - Only single instance installations are supported.
 
-    - **Resolution**: If you want to have more than one instance on a given host, cgonsider using VMs or Docker containers. 
+    - **Resolution**: If you want to have more than one instance on a given host, consider using VMs or Docker containers. 
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager can't connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux.
 
@@ -128,11 +128,11 @@ The following sections describe known issues with the General Availability (GA) 
 
 - OLEDB provider logs the following warning: `Failed to verify the Authenticode signature of 'C:\binn\msoledbsql.dll'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support.`
 
-   - **Resolution**: No action is required. The OLEDB provider is signed using SHA256. SQL Server Database engine does not validate the signed .dll correctly.
+   - **Resolution**: No action is required. The OLEDB provider is signed using SHA256. SQL Server Database engine doesn't validate the signed .dll correctly.
 
 ### Databases
 
-- The master database cannot be moved with the mssql-conf utility. Other system databases can be moved with mssql-conf.
+- The master database can't be moved with the mssql-conf utility. Other system databases can be moved with mssql-conf.
 
 - When restoring a database that was backed up on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
 
@@ -178,7 +178,7 @@ To work around this issue, do one of the following:
 
 1. Use IPs instead of hostnames to specify the target of the TCP connection.
 
-1. Enable IPv6 in the kernel by removing `ipv6.disable=1` from the boot cmdline. The way to do this depends on the Linux distribution and the bootloader, such as grub. If you do want IPv6 to be disabled, you can still disable it by setting `net.ipv6.conf.all.disable_ipv6 = 1` in the `sysctl` configuration (eg `/etc/sysctl.conf`). This will still prevent the system's network adapter from getting an IPv6 address, but allow the sqlservr features to work.
+1. Enable IPv6 in the kernel by removing `ipv6.disable=1` from the boot cmdline. The way to do this depends on the Linux distribution and the bootloader, such as grub. If you do want IPv6 to be disabled, you can still disable it by setting `net.ipv6.conf.all.disable_ipv6 = 1` in the `sysctl` configuration (for example, `/etc/sysctl.conf`). This will still prevent the system's network adapter from getting an IPv6 address, but allow the sqlservr features to work.
 
 #### Network File System (NFS)
 If you use **Network File System (NFS)** remote shares in production, note the following support requirements:
@@ -195,13 +195,13 @@ If you use **Network File System (NFS)** remote shares in production, note the f
    UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 8: ordinal not in range(128)
    ```
 
-   If you cannot use UTF-8 encoding, run setup using the MSSQL_LCID environment variable to specify your language choice.
+   If you can't use UTF-8 encoding, run setup using the MSSQL_LCID environment variable to specify your language choice.
 
    ```bash
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
 
-- When running mssql-conf setup, and performing a non-English installation of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], incorrect extended characters are displayed after the localized text, "Configuring SQL Server...". Or, for non-Latin based installations, the sentence might be missing completely. The missing sentence should display the following localized string: "The licensing PID was successfully processed. The new edition is [\<Name\> edition]". This string is output for information purposes only, and the next [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cumulative Update will address this for all languages. This does not affect the successful installation of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in any way. 
+- When running mssql-conf setup, and performing a non-English installation of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], incorrect extended characters are displayed after the localized text, "Configuring SQL Server...". Or, for non-Latin based installations, the sentence might be missing completely. The missing sentence should display the following localized string: "The licensing PID was successfully processed. The new edition is [\<Name\> edition]". This string is output for information purposes only, and the next [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cumulative Update will address this for all languages. This doesn't affect the successful installation of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in any way. 
 
 #### Full-Text Search
 
@@ -209,11 +209,11 @@ If you use **Network File System (NFS)** remote shares in production, note the f
 
 ### <a id="ssis"></a> SQL Server Integration Services (SSIS)
 
-- The **mssql-server-is** package is not supported on SUSE in this release. It is currently supported on Ubuntu and on Red Hat Enterprise Linux (RHEL).
+- The **mssql-server-is** package is not supported on SUSE in this release. It's currently supported on Ubuntu and on Red Hat Enterprise Linux (RHEL).
 
 - With [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] on Linux CTP 2.1 Refresh and later, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages can use ODBC connections on Linux. This functionality has been tested with the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
-- The following features are not supported in this release when you run SSIS packages on Linux:
+- The following features aren't supported in this release when you run SSIS packages on Linux:
   - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Catalog database
   - Scheduled package execution by SQL Agent
   - Windows Authentication
@@ -235,13 +235,13 @@ For more info about SSIS on Linux, see the following articles:
 
 The following limitations apply to [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] on Windows connected to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux.
 
-- Maintenance plans are not supported.
+- Maintenance plans aren't supported.
 
-- Management Data Warehouse (MDW) and the data collector in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] are not supported. 
+- Management Data Warehouse (MDW) and the data collector in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] aren't supported. 
 
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] UI components that have Windows Authentication or Windows event log options do not work with Linux. You can still use these features with other options, such as SQL logins. 
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] UI components that have Windows Authentication or Windows event log options don't work with Linux. You can still use these features with other options, such as SQL logins. 
 
-- Number of log files to retain cannot be modified.
+- Number of log files to retain can't be modified.
 
 ## Next steps
 

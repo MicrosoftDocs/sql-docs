@@ -1,6 +1,6 @@
 ---
 title: "Install Report Builder | Microsoft Docs"
-ms.date: 10/29/2019
+ms.date: 01/08/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 

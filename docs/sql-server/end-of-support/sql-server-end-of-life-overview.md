@@ -13,7 +13,7 @@ monikerRange: "=sql-server-previousversions||>=sql-server-2014||=sqlallproducts-
 # SQL Server end of support options 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains your options for addressing SQL Server products that have reached end of support or end of life.
+This article explains your options for addressing SQL Server products that have reached end of support.
 
 ## Understanding the SQL Server lifecycle
 
@@ -21,7 +21,7 @@ Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is bac
 -  **Mainstream support** includes functional, performance, scalability and security updates. 
 -  **Extended support** includes only security updates. 
 
-**End of support** (also sometimes known as **end of life**) indicates that a product has reached the end of its support lifecycle, and servicing and support is no longer available for the product. For more information about the Microsoft Lifecycle, see [Microsoft Lifecycle Policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy).
+**End of support** (also sometimes known as **end of life**) indicates that a product has reached the end of its lifecycle, and servicing and support is no longer available for the product. For more information about the Microsoft Lifecycle, see [Microsoft Lifecycle Policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy).
 
 
 

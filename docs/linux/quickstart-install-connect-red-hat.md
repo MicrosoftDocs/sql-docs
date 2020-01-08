@@ -33,7 +33,19 @@ In this quickstart, you install SQL Server 2019 on Red Hat Enterprise Linux (RHE
 
 ## Prerequisites
 
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
 You must have a RHEL 7.3, 7.4, 7.5, 7.6, or 8 machine with **at least 2 GB** of memory.
+
+::: moniker-end
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+You must have a RHEL 7.3, 7.4, 7.5, or 7.6 machine with **at least 2 GB** of memory.
+
+::: moniker-end
 
 To install Red Hat Enterprise Linux on your own machine, go to [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
 
@@ -58,7 +70,7 @@ To configure SQL Server on RHEL, run the following commands in a terminal to ins
    > If you want to install SQL Server 2019 , you must instead register the SQL Server 2019 repository. Use the following command for SQL Server 2019 installations:
    >
    > ```bash
-   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
    > ```
 
 2. Run the following commands to install SQL Server:

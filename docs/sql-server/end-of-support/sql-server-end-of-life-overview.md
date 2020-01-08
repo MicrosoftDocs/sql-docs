@@ -21,9 +21,9 @@ Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is bac
 -  **Mainstream support** includes functional, performance, scalability and security updates. 
 -  **Extended support** includes only security updates. 
 
-**End of support** means the end of the 10-year lifecycle and to all security updates, which can cause security and compliance issues as well as put applications and their business at risk. Additionally, support options are limited for customers who call into Microsoft Support for a product that has reached the end of its support cycle. For example, as of 2019, [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] have reached end of support.
+**End of support** (also sometimes known as **end of life**) indicates that a product has reached the end of its support lifecycle, and servicing and support is no longer available for the product. For more information about the Microsoft Lifecycle, see [Microsoft Lifecycle Policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy).
 
-**End of life** means that [!INCLUDE[msCoName](../../includes/msconame-md.md)] has stopped all development for the product, including security fixes, and the product can no longer be covered by an Extended Security Update (ESU) subscription. For example, [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] has reached end of life. 
+
 
 ## Options
 

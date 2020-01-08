@@ -53,6 +53,8 @@ landingContent:
       links:
       - text: SQL Server 2019 
         url: what-s-new-in-sql-server-ver15.md
+      - text: SQL Server Big Data Clusters
+        url: ../big-data-cluster/big-data-cluster-overview.md
       - text: Azure Data Studio
         url: ../azure-data-studio/what-is.md
       - text: SQL Server on Linux
@@ -98,7 +100,7 @@ landingContent:
         url: https://docs.microsoft.com/azure/dms/dms-overview
       - text: Always On failover cluster instance
         url: ../dma/dma-overview.md
-      - text: Database Mirroring 
+      - text: Database mirroring 
         url: ../dea/database-experimentation-assistant-overview.md
       - text: Log shipping
         url: ../ssma/sql-server-migration-assistant.md
@@ -150,8 +152,6 @@ landingContent:
         url: ../ssma/sql-server-migration-assistant.md
       - text: Extended events
         url: ../dma/dma-overview.md
-      - text: Security Socket Layer (SSL)  s
-        url: ../dea/database-experimentation-assistant-overview.md
       - text: SQL Diag
         url: ../ssma/sql-server-migration-assistant.md
       - text: SQL Profiler

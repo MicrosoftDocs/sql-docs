@@ -88,4 +88,4 @@ You can also submit general documentation feedback and suggestions at [https://a
 
 - Get started with the [SQL Server technical documentation](index.yml).
 - For more information about submitting feedback for or getting help with SQL Server, see the [Get help](sql-server-get-help.md) page. 
-- To quickly access all the quickstarts and tutorials, go to the [SQL Server Education Center](../lp/sql-server/sql-education-center.md).
+- To quickly access all the quickstarts and tutorials, see [Educational SQL resources](../sql-server/educational-sql-resources.yml).

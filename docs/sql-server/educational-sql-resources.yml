@@ -1,16 +1,16 @@
 ### YamlMime:Landing
 
-title: SQL Server Education Center
+title: Educational SQL Resources
 summary: Tutorials, quickstarts, and other educational resources meant to teach you to work with SQL Server and Azure SQL Database.  
 
 metadata:
-  title: SQL Server Education Center 
+  title: Educational SQL Resources 
   description: A collection of tutorials and quickstarts meant to teach you to use SQL Server and Azure SQL Database. 
   ms.prod: sql
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
-  ms.date: 10/14/2019  
+  ms.date: 01/07/2020  
 
 landingContent:
   - title: SQL Server
@@ -20,10 +20,6 @@ landingContent:
       - text: Upgrade SQL Server
         url: /azure/sql-database/sql-database-single-database
       - text: Use the Query Tuning Assistant
-        url: /azure/sql-database/sql-database-managed-instance
-      - text: Use the Database Experimentation Assistant (DEA)
-        url: /azure/sql-database/sql-database-managed-instance
-      - text: Use Datab Migration Assistant (DMA) 
         url: /azure/sql-database/sql-database-managed-instance
     - linkListType: quickstart
       links:
@@ -45,11 +41,7 @@ landingContent:
         url: /azure/sql-database/sql-database-managed-instance
       - text: Configure merge replication
         url: /azure/sql-database/sql-database-managed-instance
-      - text: Policy-based management
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
       - text: Advanced review of xEvents
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
-      - text: Convert SQL Trace script to session
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
       - text: Create in-memory table
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
@@ -91,9 +83,9 @@ landingContent:
       links:
       - text: Register with resource provider
         url: /azure/sql-database/sql-database-single-database
-      - text: Create FCI using premium file share
-        url: /azure/sql-database/sql-database-managed-instance
       - text: Configure Always On availablity group with Az CLI
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Create FCI using premium file share
         url: /azure/sql-database/sql-database-managed-instance
       - text: Use Azure storage for backup & restore
         url: /azure/sql-database/sql-database-managed-instance

@@ -14,12 +14,47 @@ metadata:
 
 
 landingContent:
+
+  - title: SQL on Azure
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Azure SQL Database single database
+        url: /azure/sql-database/sql-database-single-database
+      - text: Azure SQL Database managed instance
+        url: /azure/sql-database/sql-database-managed-instance
+      - text: Azure Synapse Analytics (SQL DW)
+        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+      - text: SQL Server on a Windows VM
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+      - text: SQL Server on a Linux VM
+        url: ../linux/quickstart-install-connect-clouds.md
+
+  - title: Migration
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Data Migration Guide
+        url:  https://datamigration.microsoft.com/
+      - text: Database Compatibility Certification
+        url: https://aka.ms/dbcompat
+      - text: Azure Database Migration Service
+        url: https://docs.microsoft.com/azure/dms/dms-overview
+      - text: Data Migration Assistant (DMA)
+        url: ../dma/dma-overview.md
+      - text: Database Experimentation Assistant
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: SQL Server Migration Assistant (SSMA)
+        url: ../ssma/sql-server-migration-assistant.md
+
   - title: SQL Server
     linkLists:
     - linkListType: whats-new
       links:
       - text: SQL Server 2019 
         url: what-s-new-in-sql-server-ver15.md
+      - text: SQL Server Big Data Clusters
+        url: ../big-data-cluster/big-data-cluster-overview.md
       - text: Azure Data Studio
         url: ../azure-data-studio/what-is.md
       - text: SQL Server on Linux
@@ -40,6 +75,10 @@ landingContent:
         url: ../azure-data-studio/download.md
     - linkListType: reference
       links:
+      - text: SQL Server 2014 docs
+        url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
+      - text: Educational SQL resources
+        url: ../sql-server/educational-sql-resources.yml
       - text: Transact-SQL 
         url: ../t-sql/language-reference.md
       - text: SQL PowerShell
@@ -48,88 +87,115 @@ landingContent:
         url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
       - text: Internals & architecture guides
         url: https://aka.ms/sqlserverguides
-      - text: SQL Server 2014 docs
-        url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
       - text: Previous versions 2005-2012
         url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
 
-
-  - title: SQL on Azure
+  - title: Business continuity 
     linkLists:
     - linkListType: overview
-      links:
-      - text: Azure SQL Database single database
-        url: /azure/sql-database/sql-database-single-database
-      - text: Azure SQL Database managed instance
-        url: /azure/sql-database/sql-database-managed-instance
-      - text: Azure Synapse Analytics (SQL DW)
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-      - text: SQL Server on a Windows VM
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
-      - text: SQL Server on a Linux VM
-        url: ../linux/quickstart-install-connect-clouds.md
-
-  - title: Administration
-    linkLists:
-    - linkListType: deploy
-      links:
-      - text: Install SQL Server
-        url: https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server
-      - text: Upgrade SQL Server
-        url: ../database-engine/install-windows/upgrade-sql-server.md
-    - linkListType: overview
-      links:
-      - text: Security
-        url: https://docs.microsoft.com/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
-      - text: Monitor and tune performance
-        url: https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance
-      - text: In-Memory Database
-        url: ..//relational-databases/in-memory-database.md
-      - text: Automatic tuning
-        url: ../relational-databases/automatic-tuning/automatic-tuning.md
-      - text: Intelligent Query Processing 
-        url: https://aka.ms/IQP
-    - linkListType: concept
       links:
       - text: Backup & restore
-        url: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
-      - text: Always on availability groups
-        url: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
-      - text: Failover cluster instances
-        url: failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
-      - text: SQL Server Replication
-        url: ../relational-databases/replication/sql-server-replication.md
-
-  - title: Business Intelligence 
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: SQL Server Reporting Services (SSRS)
-        url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-      - text: SQL Server Analysis Services (SSAS)
-        url: /analysis-services/analysis-services-overview
-      - text: SQL Server Integration Services (SSIS)
-        url: ../integration-services/sql-server-integration-services.md
-      - text: Azure Data Factory
-        url: https://docs.microsoft.com/azure/data-factory/
-
-
-  - title: Migration
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: Data Migration Guide
         url:  https://datamigration.microsoft.com/
-      - text: Database Compatibility Certification
+      - text: Transaction log management
         url: https://aka.ms/dbcompat
-      - text: Azure Database Migration Service
+      - text: Always On availability groups
         url: https://docs.microsoft.com/azure/dms/dms-overview
-      - text: Data Migration Assistant (DMA)
+      - text: Always On failover cluster instance
         url: ../dma/dma-overview.md
-      - text: Database Experimentation Assistant
+      - text: Database mirroring 
         url: ../dea/database-experimentation-assistant-overview.md
-      - text: SQL Server Migration Assistant (SSMA)
+      - text: Log shipping
         url: ../ssma/sql-server-migration-assistant.md
+      - text: Replication
+        url: ../ssma/sql-server-migration-assistant.md
+
+
+  - title: Security 
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Access management 
+        url: ../dma/dma-overview.md
+      - text: Always Encrypted  
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Dynamic Data masking
+        url: ../ssma/sql-server-migration-assistant.md
+      - text: Permissions
+        url: ../dma/dma-overview.md
+      - text: Security Socket Layer (SSL)  
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Transparent Data Encryption (TDE)
+        url: ../ssma/sql-server-migration-assistant.md
+
+  - title: Database Design 
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Databases 
+        url: ../dma/dma-overview.md
+      - text: Tables
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Stored Procedures
+        url: ../ssma/sql-server-migration-assistant.md
+      - text: Graph
+        url: ../dma/dma-overview.md
+      - text: Track Changes 
+        url: ../dea/database-experimentation-assistant-overview.md
+
+  - title: Manage & monitor 
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: SQL Server Integration Services (SSIS)
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Maintenance plans
+        url: ../dma/dma-overview.md
+      - text: SQL Server Agent 
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Data Compression
+        url: ../ssma/sql-server-migration-assistant.md
+      - text: Extended events
+        url: ../dma/dma-overview.md
+      - text: SQL Diag
+        url: ../ssma/sql-server-migration-assistant.md
+      - text: SQL Profiler
+        url: ../ssma/sql-server-migration-assistant.md
+
+
+  - title: Tune
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Intelligent Query Processing
+        url: ../relational-databases/performance/intelligent-query-processing.md
+      - text: Automatic Tuning
+        url: ../dma/dma-overview.md
+      - text: Database Tuning Advisor 
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: In-memory OLTP
+        url: ../dma/dma-overview.md
+    - linkListType: concept
+      links:
+      - text: Cardinality Estimation
+        url: ../dma/dma-overview.md
+      - text: Statistics 
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Indexes
+        url: ../dma/dma-overview.md
+
+  - title: Query data
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Scripting 
+        url: ../dma/dma-overview.md
+      - text: Joins
+        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Full-text search
+        url: ../ssma/sql-server-migration-assistant.md
+      - text: Synonyms 
+        url: ../dma/dma-overview.md
+
 
   - title: Big data & machine learning 
     linkLists:
@@ -147,5 +213,15 @@ landingContent:
         url: ../relational-databases/polybase/polybase-guide.md
 
 
-
-
+  - title: Business Intelligence 
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: SQL Server Reporting Services (SSRS)
+        url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+      - text: SQL Server Analysis Services (SSAS)
+        url: /analysis-services/analysis-services-overview
+      - text: SQL Server Integration Services (SSIS)
+        url: ../integration-services/sql-server-integration-services.md
+      - text: Azure Data Factory
+        url: https://docs.microsoft.com/azure/data-factory/

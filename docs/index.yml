@@ -20,9 +20,9 @@ highlightedContent:
    - title: SQL tools
      itemType: overview
      url: tools/overview-sql-tools.md
-   - title: SQL Server Education Center
+   - title: Educational SQL resources 
      itemType: learn
-     url: sql-server/education-center/index.yml
+     url: sql-server/educational-sql-resources.yml
 
 productDirectory:
   items:
@@ -107,9 +107,6 @@ conceptualContent:
         - text: Reporting Services (SSRS)
           url: reporting-services/install-windows/install-reporting-services.md
           itemType: deploy
-      footerLink:
-        text: See more
-        url: lp/sql-server/install-sql-and-services.md
     - title: Migrate
       links:
         - text: Data Migration Guide 
@@ -138,32 +135,6 @@ conceptualContent:
 additionalContent: 
   sections:
     - items:
-      - title: Administration
-        links:
-          - text: Dynamic Management Views (DMVs)
-            url: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
-          - text: System catalog views
-            url: relational-databases/system-catalog-views/catalog-views-transact-sql.md
-          - text: Extended events
-            url: relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
-          - text: Securing SQL Server
-            url: relational-databases/security/securing-sql-server.md
-          - text: SQL PowerShell
-            url: powershell/sql-server-powershell.md         
-          - text: Azure SQL REST API
-            url: https://docs.microsoft.com/rest/api/sql/
-          - text: Azure SQL PowerShell
-            url: https://docs.microsoft.com/powershell/module/az.sql/
-      - title: Security & Privacy
-        links:
-          - text: SQL Server Auditing
-            url: relational-databases/security/auditing/sql-server-audit-database-engine.md
-          - text: Azure SQL Database Auditing
-            url: https://docs.microsoft.com/azure/sql-database/sql-database-auditing
-          - text: Data classification
-            url: relational-databases/security/sql-data-discovery-and-classification.md
-          - text: Always Encrypted
-            url: relational-databases/security/encryption/always-encrypted-database-engine.md
       - title: Development
         links:
           - text: Build an app using SQL Server
@@ -180,6 +151,8 @@ additionalContent:
             url: connect/homepage-sql-connection-programming.md
           - text: Transact-SQL (T-SQL)
             url: t-sql/language-reference.md
+          - text: SQL PowerShell
+            url: powershell/sql-server-powershell.md
           - text: Database samples
             url: samples/sql-samples-where-are.md
       - title: Reporting & Machine Learning
@@ -212,19 +185,4 @@ additionalContent:
             url: https://docs.microsoft.com/analysis-services/analysis-services-overview
           - text: Microsoft Analytics Platform System
             url: analytics-platform-system/index.md
-      - title: Tools
-        links:
-          - text: Azure Data Studio
-            url: azure-data-studio/download.md
-          - text: SQL Server Management Studio (SSMS)
-            url: ssms/download-sql-server-management-studio-ssms.md
-          - text: mssql-cli
-            url: tools/mssql-cli.md
-          - text: Azure SQL CLI
-            url: https://docs.microsoft.com/cli/azure/sql
-          - text: SQL Server Data Tools (SSDT)
-            url: ssdt/download-sql-server-data-tools-ssdt.md
-          - text: Distributed replay
-            url: tools/distributed-replay/sql-server-distributed-replay.md
-          - text: See more tools
-            url: tools/overview-sql-tools.md
+

@@ -1,6 +1,6 @@
 ---
 title: "Editions and supported features of SQL Server 2019 - Linux"
-ms.date: 01/07/2020
+ms.date: 01/08/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual

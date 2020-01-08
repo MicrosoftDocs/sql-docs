@@ -523,8 +523,6 @@ If you use supplementary characters:
 -   Supplementary characters can be used in ordering and comparison operations in collation versions 90 or greater.    
 -   All version 100 collations support linguistic sorting with supplementary characters.    
 -   Supplementary characters aren't supported for use in metadata, such as in names of database objects.    
--   Databases that use collations with supplementary characters (\_SC) can't be enabled for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication. This is because some of the system tables and stored procedures that are created for replication use the legacy **ntext** data type, which doesn't support supplementary characters.  
-
 -   The SC flag can be applied to:    
     -   Version 90 collations    
     -   Version 100 collations    

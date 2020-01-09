@@ -22,7 +22,7 @@ If the cluster is operating in non-Active Directory mode, update the Apache Knox
 
 1. Obtain the controller SQL Server credentials by running the following commands:
 
-   a. Run the following command as a Kubernetes administrator:
+   a. Run this command as a Kubernetes administrator:
 
    ```bash
    kubectl get secret controller-sa-secret -n <cluster name> -o yaml | grep password
@@ -40,7 +40,7 @@ If the cluster is operating in non-Active Directory mode, update the Apache Knox
    kubectl port-forward controldb-0 1433:1433 --address 0.0.0.0 -n <cluster name>
    ```
  
-1. Use the system administrator password that you just obtained to connect to the controller database server from a SQL client tool.
+1. Use the system administrator password, which you just obtained, to connect to the controller database server from a SQL client tool.
 
 1. Generate a new complex password for `AZDATA_USERNAME` to replace the existing `AZDATA_PASSWORD`.
 
@@ -52,11 +52,11 @@ If the cluster is operating in non-Active Directory mode, update the Apache Knox
    SELECT hexsalt FROM [auth].[users] WHERE username = '<username>'
    ```
 
-   `hexsalt` returns a random hex string. For example: `64FC59DF31244FFEE02F457BC0750226`.
+   `hexsalt` returns a random hex string (for example, `64FC59DF31244FFEE02F457BC0750226`).
 
 1. Install the platform-appropriate .NET Core app for [`pbkdf2`](https://helsinki.redmond.corp.microsoft.com/dist/software/pbkdf2/).
 
-   The app is self-contained and doesn't require any prerequisites, such as .NET runtimes.
+   The app is self-contained and requires no prerequisites, such as .NET runtimes.
 
 1. Encrypt the new complex password by using `hexsalt`:
 
@@ -75,9 +75,7 @@ If the cluster is operating in non-Active Directory mode, update the Apache Knox
 
 1. Connect to the master SQL endpoint with any administrator user.
 
-1. Run the following TSQL command:
-
-   Change the password for the login credentials that you defined during deployment in the parameter `AZDATA_USERNAME`.
+1. To change the password for the login credentials that you defined during deployment in the parameter `AZDATA_USERNAME`, run the following TSQL command:
 
    ```sql
    ALTER LOGIN <AZDATA_USERNAME> WITH PASSWORD = 'newPassword'

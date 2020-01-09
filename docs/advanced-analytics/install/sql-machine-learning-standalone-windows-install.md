@@ -194,9 +194,9 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
 4. On an internet connected device, click the cumulative update link for your version of SQL Server.
 
-  + SQL Server 2019 updates *(no updates available yet)*
-  + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
-  + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
+  + [SQL Server 2019 updates](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server?view=sql-server-ver15)
+  + [SQL Server 2017 updates](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server?view=sql-server-ver15)
+  + [SQL Server 2016 updates](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server?view=sql-server-ver15)
 
 5. Download the latest cumulative update. It is an executable file.
 

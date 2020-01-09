@@ -4,7 +4,7 @@ description: Explore different ways of using and interacting with SQL Server 201
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.date: 11/04/2019
+ms.date: 01/08/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -50,20 +50,17 @@ This configuration article provides additional usage scenarios in the following 
 
 ## <a id="rhel"></a> Run RHEL-based container images
 
-The documentation for SQL Server Linux container images points to Ubuntu-based containers. Beginning with SQL Server 2019, you can use containers based on Red Hat Enterprise Linux (RHEL). Change the container repository from **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04** to **mcr.microsoft.com/mssql/rhel/server:2019-RC1** in all of your docker commands.
+The documentation for SQL Server Linux container images points to Ubuntu-based containers. Beginning with SQL Server 2019, you can use containers based on Red Hat Enterprise Linux (RHEL). Change the container repository from **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04** to **mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8** in all of your docker commands.
 
-For example, the following command pulls the latest SQL Server 2019 container that uses RHEL:
+For example, the following command pulls the Cumulative Update 1 for SQL Server 2019 container that uses RHEL 8:
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-RC1
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-RC1
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8
 ```
-
-> [!NOTE]
-> As of the GA release of SQL Server 2019, the latest RHEL container image is still the RC1 version. This version is not meant for production use. This article will be updated when a newer RHEL container image becomes available.
 
 ::: moniker-end
 

@@ -210,8 +210,8 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 | Environment variable | Description |
 |---|---|
-| **ACCEPT_EULA** | Accepts the SQL Server license terms when set to any value such as `Y`.|
-| **SSIS_PID** | Sets the SQL Server edition or product key. Here are the possible values:<ul><li>Evaluation</li><li>Developer</li><li>Express</li><li>Web</li><li>Standard</li><li>Enterprise</li><li>A product key</li></ul><br/>If you specify a product key, it must be in the form `#####-#####-#####-#####-#####`, where `#` is a letter or a digit.  |
+| **ACCEPT_EULA** | Accepts the SQL Server license terms when set to any value like `Y`.|
+| **SSIS_PID** | Sets the SQL Server edition or product key. Here are the possible values:<ul><li>Evaluation</li><li>Developer</li><li>Express</li><li>Web</li><li>Standard</li><li>Enterprise</li><li>A product key</li></ul>If you specify a product key, it must be in the form `#####-#####-#####-#####-#####`, where `#` is a letter or a digit.  |
 | | |
 
 ## Next steps

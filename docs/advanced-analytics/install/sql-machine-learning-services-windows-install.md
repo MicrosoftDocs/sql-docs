@@ -3,10 +3,10 @@ title: Install on Windows
 description: Learn how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/02/2020
+ms.date: 01/09/2020
 ms.topic: conceptual
-author: dphansen
-ms.author: davidph
+author: cawrites
+ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 ---
@@ -26,19 +26,19 @@ Learn how to install SQL Server Machine Learning Services on Windows. You can us
  
 + Do not install Machine Learning Services on a domain controller. The Machine Learning Services portion of setup will fail.
 
-+ Do not install **Shared Features** > **Machine Learning Server (Standalone)** on the same computer running an in-database instance. A standalone server will compete for the same resources, undermining the performance of both installations.
++ Do not install **Shared Features** > **Machine Learning Server (Standalone)** on the same computer running  an installed database instance. A standalone server will compete for the same resources, undermining the performance of both installations.
 
 + Side-by-side installation with other versions of R and Python is supported but not recommended. It's supported because SQL Server instance uses its own copies of the open-source R and Anaconda distributions. But it's not recommended because running code that uses R and Python on the SQL Server computer outside SQL Server can lead to various problems:
     
-  + You use a different library and different executable, and get different results, than you do when you are running in SQL Server.
+  + Using different library and executable files will create inconsistent results, than what you are running in SQL Server.
   + R and Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-+ Machine Learning Services is installed by default on SQL Server Big Data Clusters. If you use a Big Data Clusters, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
++ Machine Learning Services is installed by default on SQL Server Big Data Clusters. You do not need to follow the steps in this article if you use a Big Data Cluster. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 
 > [!IMPORTANT]
-> After setup is complete, be sure to complete the post-configuration steps described in this article. These steps include enabling SQL Server to use external scripts, and adding accounts required for SQL Server to run R and Python jobs on your behalf. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.
+> After setup is complete, be sure to complete the post-configuration steps described in this article. These steps include enabling SQL Server to use external scripts, and adding accounts required for SQL Server to run R and Python jobs in your behalf. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.
 
 ## Get the installation media
 
@@ -251,7 +251,7 @@ Use the following steps to verify that all components used to launch external sc
    | 1|
 
 > [!NOTE]
-> Columns or headings used in the Python script are not returned, by design. To add column names for your output, you must specify the schema for the return data set. Do this by using the WITH RESULTS parameter of the stored procedure, naming the columns and specifying the SQL data type.
+> Columns or headings used in the Python script are not returned, automatically. To add column names for your output, you must specify the schema for the return data set. Do this by using the WITH RESULTS parameter of the stored procedure, naming the columns and specifying the SQL data type.
 > 
 > For example, you can add the following line to generate an arbitrary column name: `WITH RESULT SETS ((Col1 AS int))`
 
@@ -270,7 +270,7 @@ On disconnected servers, extra steps are required. For more information, see [In
 
 1. Start with a baseline instance already installed: SQL Server 2017 initial release
 
-2. Go to the cumulative update list: [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
+2. Go to the cumulative update list: [SQL Server 2017 updates](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server?view=sql-server-ver15)
 
 3. Select the latest cumulative update. An executable is downloaded and extracted automatically.
 
@@ -312,7 +312,7 @@ On the database, you might need the following configuration updates:
 
 ## Suggested optimizations
 
-Now that you have everything working, you might also want to optimize the server to support machine learning, or install pretrained models.
+Now that you have everything working, you might also want to optimize the server to support machine learning, or install an ML model.
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ### Add more worker accounts

@@ -106,7 +106,7 @@ In this section, you create a table in the newly created TutorialDB database. Be
    ![Change database](media/connect-query-sql-server/changedb.png)
 
 2. Paste the following T-SQL code snippet into the query window, select it, and then select **Execute** (or select F5 on your keyboard).  
-   You can either replace the existing text in the query window or append it to the end. To execute everything in the query window, select **Execute**. If you've appended the text, you will want to execute just the portion of the text, so highlight that portion, and then select **Execute**.  
+   You can either replace the existing text in the query window or append it to the end. To execute everything in the query window, select **Execute**. If you've appended the text, you want to execute just the portion of the text, so highlight that portion, and then select **Execute**.  
   
    ```sql
    USE [TutorialDB]
@@ -194,7 +194,7 @@ You can change the server that your current query window is connected to by foll
 
 ## Azure Data Studio
 
-You can also attempt to Connect to and query SQL Server using [Azure Data Studio.](../../azure-data-studio/connect-query-sql-server.md).
+You can also connect and query [SQL Server](../../azure-data-studio/connect-query-sql-server.md), an [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), and [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md) using Azure Data Studio.
 
 ## Next steps
 

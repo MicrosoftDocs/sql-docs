@@ -210,7 +210,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
    + Double-click the .exe to run Setup. When installing a cumulate update on a server with no internet connectivity, you are prompted to select the location of the .cab files for R and Python.
 
-8. Post-install, on a server for which you have enabled operationalization with web nodes and compute nodes, edit **AppSettings.json**, adding an "MMLResourcePath" entry, directly under "MMLNativePath". For example:
+8. Post-install, on a server for which you have enabled automation with web nodes and compute nodes, edit **AppSettings.json**, adding an "MMLResourcePath" entry, directly under "MMLNativePath". For example:
 
     ```json
     "ScorerParameters": {

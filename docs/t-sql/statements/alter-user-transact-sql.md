@@ -659,7 +659,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 ## Syntax
   
 ```
--- Syntax for Azure Synapse Analytics and Analytics Platform System  
+-- Syntax for Azure Synapse  
   
 ALTER USER userName
      WITH <set_item> [ ,...n ]  
@@ -773,7 +773,7 @@ GO
 ## Syntax
 
 ```
--- Syntax for Azure Synapse Analytics and Analytics Platform System 
+-- Syntax for Analytics Platform System 
   
 ALTER USER userName
      WITH <set_item> [ ,...n ]  

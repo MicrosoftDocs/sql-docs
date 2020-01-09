@@ -729,11 +729,11 @@ WITH
 
 ## Overview: Azure Synapse Analytics
 
-In Azure Synapse Analytics, use an external table to:
+In Azure Synapse, use an external table to:
 
 - Query Hadoop or Azure blob storage data with [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
-- Import and store data from Hadoop or Azure blob storage into Azure Synapse Analytics.
-- Import and store data from Azure Data Lake Store into Azure Synapse Analytics.
+- Import and store data from Hadoop or Azure blob storage into Azure Synapse.
+- Import and store data from Azure Data Lake Store into Azure Synapse.
 
 See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).  
 
@@ -768,7 +768,7 @@ column_name <data_type>
 ## Arguments
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
-The one to three-part name of the table to create. For an external table, Azure Synapse Analytics stores only the table metadata along with basic statistics about the file or folder that is referenced in Azure Data Lake, Hadoop, or Azure blob storage. No actual data is moved or stored in Azure Synapse Analytics.
+The one to three-part name of the table to create. For an external table, Azure Synapse stores only the table metadata along with basic statistics about the file or folder that is referenced in Azure Data Lake, Hadoop, or Azure blob storage. No actual data is moved or stored in Azure Synapse.
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
@@ -876,7 +876,7 @@ You can create many external tables that reference the same or different externa
 
 ## Limitations and Restrictions
 
-Since the data for an external table is under the control of Azure Synapse Analytics, and can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
+Since the data for an external table is under the control of Azure Synapse, and can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
 
 You can create multiple external tables that each reference different external data sources.
 

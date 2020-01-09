@@ -653,7 +653,7 @@ WITH
 
 ### data_source_name
 
-Specifies the user-defined name for the data source. The name must be unique within the database in Azure Synapse Analytics.
+Specifies the user-defined name for the data source. The name must be unique within the database in Azure Synapse.
 
 ### LOCATION = *`'<prefix>://<path[:port]>'`*
 
@@ -673,7 +673,7 @@ Location path:
 Additional notes and guidance when setting the location:
 
 - The default option is to use `enable secure SSL connections` when provisioning Azure Data Lake Storage Gen 2. When this is enabled, you must use `abfss` when a secure SSL connection is selected. Note `abfss`works for unsecure SSL connections as well. 
-- The Azure Synapse Analytics engine doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
+- The Azure Synapse engine doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
 - Use the same external data source for all tables when querying Hadoop to ensure consistent querying semantics.
 - `wasb` is the default protocol for Azure blob storage. `wasbs` is optional but recommended as data will be sent using a secure SSL connection.
 
@@ -701,7 +701,7 @@ For an example of using `TYPE` = `HADOOP` to load data from Azure Blob Storage, 
 
 ## Permissions
 
-Requires CONTROL permission on database in Azure Synapse Analytics.
+Requires CONTROL permission on database in Azure Synapse.
 
 ## Locking
 

@@ -623,7 +623,7 @@ You can use catalog views, system functions, and system stored procedures to ret
 
 ## Permissions
 
-To alter a database a login must bei either the server-level principal login (created by the provisioning process), a member of the `dbmanager` database role in master, a member of the `db_owner` database role in the current database, or `dbo` of the database.
+To alter a database a login must be either the server-level principal login (created by the provisioning process), a member of the `dbmanager` database role in master, a member of the `db_owner` database role in the current database, or `dbo` of the database.
 
 ## Examples
 
@@ -847,7 +847,7 @@ ALTER DATABASE WideWorldImporters
 
 ## Overview: Azure Synapse Analytics
 
-In Azure Synapse Analytics, 'ALTER DATABASE' modifies the name, maximum size, or service objective for a database.
+In Azure Synapse, 'ALTER DATABASE' modifies the name, maximum size, or service objective for a database.
 
 Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.
 
@@ -900,7 +900,7 @@ The maximum allowable size for the database. The database cannot grow beyond MAX
 The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE. Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
 
 SERVICE_OBJECTIVE
-Specifies the performance level. For more information about service objectives for Azure Synapse Analytics, see [Data Warehouse Units (DWUs)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
+Specifies the performance level. For more information about service objectives for Azure Synapse, see [Data Warehouse Units (DWUs)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## Permissions
 
@@ -915,7 +915,7 @@ The owner of the database cannot alter the database unless the owner is a member
 
 The current database must be a different database than the one you are altering, therefore **ALTER must be run while connected to the master database**.
 
-Azure Synapse Analytics is set to COMPATIBILITY_LEVEL 130 and cannot be changed. For more details, see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
+Azure Synapse is set to COMPATIBILITY_LEVEL 130 and cannot be changed. For more details, see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
 
 ## Limitations and Restrictions
 

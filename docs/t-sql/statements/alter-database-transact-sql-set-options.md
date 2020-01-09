@@ -3027,13 +3027,13 @@ Controls whether query result is cached in the database.
 RESULT_SET_CACHING {ON | OFF}
 
 ON        
-Specifies that query result sets returned from this database will be cached in Azure Synapse Analytics storage.
+Specifies that query result sets returned from this database will be cached in Azure Synapse storage.
 
 OFF        
-Specifies that query result sets returned from this database will not be cached in Azure Synapse Analytics storage. 
+Specifies that query result sets returned from this database will not be cached in Azure Synapse storage. 
 
 ### Remarks
-This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure Synapse Analytics storage. 
+This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure Synapse storage. 
 
 Run this command to check a database's result set caching configuration.  If result set caching is turned ON, is_result_set_caching_on will return 1.
 

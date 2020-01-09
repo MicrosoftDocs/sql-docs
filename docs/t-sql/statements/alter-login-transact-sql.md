@@ -288,7 +288,7 @@ GO
 ## Syntax
 
 ```
--- Syntax for Azure SQL Database and Azure Synapse Analytics
+-- Syntax for Azure SQL Database
 
 ALTER LOGIN login_name
   {
@@ -716,7 +716,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 ## Syntax
 
 ```
--- Syntax for Azure SQL Database and Azure Synapse Analytics
+-- Syntax for Azure Synapse
 
 ALTER LOGIN login_name
   {

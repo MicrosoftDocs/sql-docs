@@ -67,7 +67,7 @@ ms.author: chugu
  If you use data of mixed data types, by default, the Excel driver will read first 8 rows (configured by TypeGuessRows register key), and based on the 8 rows of data, it will try to guess data type of each column.  For example, your Excel data source has numbers and text in one column, the driver may determine that data is type of integer based on the first 8 rows, but somewhere below in the same column might contain text data. In this case, SSIS will skip text values and import them as NULL into destination.
  For this issue, you can try one of following solutions:
  1. Change the Excel column type to "Text" in the Excel file.
- 2. Add IMEX extended property to the connection string to override the driver's default behavior.By adding the ";IMEX=1" extended property at the end of the connection string, Excel will treat data as text. See the following example:
+ 2. Add IMEX extended property to the connection string to override the driver's default behavior. By adding the ";IMEX=1" extended property at the end of the connection string, Excel will treat data as text. See the following example:
 	```ACE OLEDB connection string:
       Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\ExcelFileName.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES;IMEX=1";
   ```

@@ -64,25 +64,32 @@ ms.author: chugu
  Specify whether the first row of data in the selected worksheet contains column names. The default value of this option is **True**.  
 
 ## Solution to import data with mixed data types from Excel
- If you use data of mixed data types, by default, the Excel driver will read first 8 rows (configured by TypeGuessRows register key), and based on the 8 rows of data, it will try to guess data type of each column.  For example, your Excel data source has numbers and text in one column, the driver may determine that data is type of integer based on the first 8 rows, but somewhere below in the same column might contain text data. In this case, SSIS will skip text values and import them as NULL into destination.
- For this issue, you can try one of following solutions:
- 1. Change the Excel column type to "Text" in the Excel file.
- 2. Add IMEX extended property to the connection string to override the driver's default behavior. By adding the ";IMEX=1" extended property at the end of the connection string, Excel will treat data as text. See the following example:
-	```ACE OLEDB connection string:
-      Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\ExcelFileName.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES;IMEX=1";
+
+If you use data that contains mixed data types, by default, the Excel driver reads the first 8 rows (configured by the **TypeGuessRows** register key). Based on the first 8 rows of data, the Excel driver tries to guess the data type of each column. For example, if your Excel data source has numbers and text in one column, if the first 8 rows contain numbers, the driver might determine based on those first 8 rows that the data in the column is the integer type. In this case, SSIS skips text values and imports them as NULL into the destination.
+
+To resolve this issue, you can try one of following solutions:
+
+* Change the Excel column type to **Text** in the Excel file.
+* Add the IMEX extended property to the connection string to override the driver's default behavior. When you add the ";IMEX=1" extended property to the end of the connection string, Excel treats all data as text. See the following example:
+	
+  ```ACE OLEDB connection string:
+  Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\ExcelFileName.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES;IMEX=1";
   ```
-	For this solution to work reliably, you may also have to modify the registry settings. The main.cmd file is as follows:
-  ```cmd
-      reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\12.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
-	    reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\12.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
-	    reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
-	    reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
-	    reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\15.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
-	    reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
-	    reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
-	    reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
-    ```  
-3. Save the file as CSV and change the SSIS package to support CSV import.
+
+   For this solution to work reliably, you might have to also modify the registry settings. The main.cmd file is as follows:
+  
+   ```cmd
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\12.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\12.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\15.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   ```
+
+* Save the file in CSV format and change the SSIS package to support a CSV import.
 
 ## Related Tasks  
 [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  

@@ -1,21 +1,21 @@
 ---
 title: Connect to and query a SQL Server instance
-description: A tutorial for connecting to a SQL Server instance by using SQL Server Management Studio and running basic T-SQL queries.
-keywords: SQL Server, SSMS, SQL Server Management Studio
+description: A tutorial for connecting to a SQL Server instance using Azure Data Studio and running basic T-SQL queries.
+keywords: SQL Server, Azure Data Studio, Azure Data Studio
 author: markingmyname
 ms.author: maghan
-ms.reviewer: sstein; maghan
-ms.topic: quickstart
+ms.reviewer: sstein; alayu
+ms.topic: tutorial
 ms.prod_service: sql-tools
 ms.prod: sql
-ms.technology: ssms
-ms.custom: seo-lt-2019
-ms.date: 03/13/2018
+ms.technology: azure-data-studio
+ms.custom: ""
+ms.date: 01/10/2020
 ---
 
-# Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio (SSMS)
+# Tutorial: Connect to and query a SQL Server instance using Azure Data Studio
 
-This tutorial teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands. The article demonstrates how to follow the below steps:
+This tutorial teaches you how to use Azure Data Studio (Azure Data Studio) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands. The article demonstrates how to follow the below steps:
 
 > [!div class="checklist"]
 > * Connect to a SQL Server instance
@@ -28,9 +28,9 @@ This tutorial teaches you how to use SQL Server Management Studio (SSMS) to conn
 
 ## Prerequisites
 
-To complete this tutorial, you need SQL Server Management Studio and access to a SQL Server instance. 
+To complete this tutorial, you need Azure Data Studio and access to a SQL Server instance.
 
-* Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Install [Azure Data Studio](download-azure-data-studio.md).
 
 If you don't have access to a SQL Server instance, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
 
@@ -39,28 +39,33 @@ If you don't have access to a SQL Server instance, select your platform from the
 
 ## Connect to a SQL Server instance
 
-1. Start SQL Server Management Studio. The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
+1. Start Azure Data Studio. The first time you run Azure Data Studio, The first time you open Azure Data Studio it shows the welcome page.
 
-    ![The Connect link in Object Explorer](media/connect-query-sql-server/connectobjexp.png)
+    ![Welcome page](media/connect-query-sql-server/welcome-page.png)
 
-2. In the **Connect to Server** window, follow the list below:
+2. On the welcome page select **New connection**, follow the list below:
 
-    * For **Server type**, select **Database Engine** (usually the default option).
-    * For **Server name**, enter the name of your SQL Server instance. (This article uses the instance name SQL2016ST on the hostname NODE5 [NODE5\SQL2016ST].) If you're unsure how to determine your SQL Server instance name, see [Additional tips and tricks for using SSMS](ssms-tricks.md#determine-sql-server-name).
+    !["Server name" field with option of using SQL Server instance](media/connect-query-sql-server/new-connection.png)
 
-    * For **Authentication**, select **Windows Authentication**. This article uses Windows Authentication, but SQL Server login is also supported. If you select **SQL Login**, you're prompted for a username and password. For more information about authentication types, see [Connect to the server (database engine)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
+    * For **Connection type**, select **Microsoft SQL Server** (usually the default option).
 
-    !["Server name" field with option of using SQL Server instance](media/connect-query-sql-server/connection2.png)
+    * For **Server name**, enter the name of your SQL Server instance. (This article uses the default instance - localhost.) *If you're unsure how to determine your SQL Server instance name, see [Additional tips and tricks for using Azure Data Studio](ssms-tricks.md#determine-sql-server-name).*
 
-    You can also modify additional connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
+    * For **Authentication**, select **Windows Authentication**. This article uses Windows Authentication, but SQL Server login (sa) is also supported. If you select **SQL Login**, you're prompted for a username and password. *For more information about authentication types, see [Connect to the server (database engine)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).*
+
+    * For this article the other options are **Default**.
+
+    You can also modify additional connection options by selecting **Advanced...**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
 
 3. After you've completed all the fields, select **Connect**.
 
+    ![Connection Details](media/connect-query-sql-server/connection-details.png)
+
 ### Examples of successful connections
 
-To verify that your SQL Server connection succeeded, expand and explore the objects within **Object Explorer**. These objects are different depending on the type of server you choose to connect. 
+To verify that your SQL Server connection succeeded, expand and explore the objects within **Object Explorer**. These objects are different depending on the type of server you choose to connect.
 
-* Connecting to an on-premises SQL server - in this case NODE5\SQL2016ST: 
+* Connecting to an on-premises SQL server - in this case NODE5\SQL2016ST:
   ![Connecting to an on-premises server](media/connect-query-sql-server/connect-on-prem.png)
 
 * Connecting to SQL Azure DB - in this case msftestserver.database.windows.net:
@@ -192,17 +197,12 @@ You can change the server that your current query window is connected to by foll
     > [!NOTE]
     > This action changes only the server that the query window is connected to, not the server that Object Explorer uses.
 
-## Azure Data Studio
-
-You can also attempt to Connect to and query SQL Server using [Azure Data Studio.](../../azure-data-studio/connect-query-sql-server.md).
-
 ## Next steps
 
-The best way to get acquainted with SSMS is through hands-on practice. These articles help you with various features available within SSMS. These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
+The best way to get acquainted with Azure Data Studio is through hands-on practice. These articles help you with various features available within Azure Data Studio. These articles teach you how to manage the components of Azure Data Studio and how to find the features that you use regularly.
 
-* [Scripting](scripting-ssms.md)
-* [Using Templates in SSMS](../template/templates-ssms.md)
-* [SSMS Configuration](ssms-configuration.md)
-* [Additional Tips and Tricks for using SSMS](ssms-tricks.md)
+* [Scripting](scripting-Azure Data Studio.md)
+* [Using Templates in Azure Data Studio](../template/templates-Azure Data Studio.md)
+* [Azure Data Studio Configuration](Azure Data Studio-configuration.md)
+* [Additional Tips and Tricks for using Azure Data Studio](Azure Data Studio-tricks.md)
 * [Azure Data Studio](../../azure-data-studio/download.md)
-* [Connect and query SQL Server with Azure Data Studio](../../azure-data-studio/connect-query-sql-server.md)

@@ -118,7 +118,7 @@ landingContent:
         url: ../dma/dma-overview.md
       - text: Always Encrypted  
         url: ../dea/database-experimentation-assistant-overview.md
-      - text: Dynamic Data masking
+      - text: Dynamic data masking
         url: ../ssma/sql-server-migration-assistant.md
       - text: Permissions
         url: ../dma/dma-overview.md

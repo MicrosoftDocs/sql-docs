@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 03/12/2019
+ms.date: 01/09/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -158,7 +158,10 @@ To create the availability group resource, use `pcs resource create` command and
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
-``` 
+```
+
+> [!NOTE]
+> With the availability of **RHEL 8**, the create syntax has changed. If you are using **RHEL 8**, the terminology `master` has changed to `promotable`. Use the following create command instead of the above command: `sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

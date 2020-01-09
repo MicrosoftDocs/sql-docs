@@ -473,16 +473,12 @@ When you move data from a server to a client, your server collation might not be
 To use the UTF-8 collations that are available in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], and to improve searching and sorting of some Unicode characters (Windows collations only), you must select UTF-8 encoding-enabled collations(\_UTF8).
  
 -   The UTF8 flag can be applied to:    
-    -   Version 90 collations 
-        > [!NOTE]
-        > Only when supplementary characters (\_SC) or variation-selector-sensitive (\_VSS) aware collations already exist in this version.
-    -   Version 100 collations    
-    -   Version 140 collations   
+    -   Linguistic collations that already support supplementary characters (\_SC) or variation-selector-sensitive (\_VSS) awareness
     -   BIN2<sup>1</sup> binary collation
     
 -   The UTF8 flag can't be applied to:    
-    -   Version 90 collations that don't support supplementary characters (\_SC) or variation-selector-sensitive (\_VSS)    
-    -   The BIN or BIN2<sup>2</sup> binary collations    
+    -   Linguistic collations that don't support supplementary characters (\_SC) or variation-selector-sensitive (\_VSS) awareness
+    -   The BIN or BIN2<sup>2</sup> binary collations
     -   The SQL\_* collations  
     
 <sup>1</sup> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 replaced collation **UTF8_BIN2** with **Latin1_General_100_BIN2_UTF8**.        

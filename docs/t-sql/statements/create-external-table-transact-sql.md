@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/03/2020
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -38,7 +38,7 @@ In the following row, click whichever product name you are interested in. The cl
 
 ||||||
 |---|---|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -579,7 +579,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -722,18 +722,18 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## Overview: Azure SQL Data Warehouse
+## Overview: Azure Synapse Analytics
 
-In Azure SQL Data Warehouse, use an external table to:
+In Azure Synapse, use an external table to:
 
 - Query Hadoop or Azure blob storage data with [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
-- Import and store data from Hadoop or Azure blob storage into Azure SQL Data Warehouse.
-- Import and store data from Azure Data Lake Store into Azure SQL Data Warehouse.
+- Import and store data from Hadoop or Azure blob storage into Azure Synapse.
+- Import and store data from Azure Data Lake Store into Azure Synapse.
 
 See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).  
 
@@ -768,7 +768,7 @@ column_name <data_type>
 ## Arguments
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
-The one to three-part name of the table to create. For an external table, SQL Data Warehouse stores only the table metadata along with basic statistics about the file or folder that is referenced in Azure Data Lake, Hadoop, or Azure blob storage. No actual data is moved or stored in SQL Data Warehouse.
+The one to three-part name of the table to create. For an external table, Azure Synapse stores only the table metadata along with basic statistics about the file or folder that is referenced in Azure Data Lake, Hadoop, or Azure blob storage. No actual data is moved or stored in Azure Synapse.
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
@@ -876,7 +876,7 @@ You can create many external tables that reference the same or different externa
 
 ## Limitations and Restrictions
 
-Since the data for an external table is under the control of SQL Data Warehouse, and can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
+Since the data for an external table is under the control of Azure Synapse, and can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
 
 You can create multiple external tables that each reference different external data sources.
 
@@ -954,14 +954,14 @@ AS SELECT * FROM
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
-- [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+- [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;
@@ -1128,7 +1128,7 @@ Table width limitations:
 
 PolyBase in SQL Server 2016 has a row width limit of 32 KB based on the maximum size of a single valid row by table definition. If the sum of the column schema is greater than 32 KB, PolyBase can't query the data.
 
-In SQL Data Warehouse, this limitation has been raised to 1 MB.
+In Azure Synapse Analytics, this limitation has been raised to 1 MB.
 
 ## Locking
 
@@ -1173,6 +1173,6 @@ FROM ClickStream
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
-- [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+- [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end

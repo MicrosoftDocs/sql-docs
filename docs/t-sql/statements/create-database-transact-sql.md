@@ -1,8 +1,8 @@
 ---
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
-description: Create database syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, and Analytics Platform System
+description: Create database syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, and Analytics Platform System
 ms.custom: ""
-ms.date: 11/04/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -54,7 +54,7 @@ In the following row, click whichever product name you are interested in. The cl
 
 |||||
 |-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+|**_\* SQL Server \*_** &nbsp;| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 |||||
 
 &nbsp;
@@ -861,7 +861,7 @@ GO
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| **_\* SQL Database<br />single database/elastic pool \*_** | [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| **_\* SQL Database<br />single database/elastic pool \*_** | [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1230,7 +1230,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL Database<br />managed instance \*_** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL Database<br />managed instance \*_** | [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1297,14 +1297,14 @@ See [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* Azure Synapse<br />Analytics \*_**| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## Azure SQL Data Warehouse
+## Azure Synapse Analytics
 
 ## Overview
-In Azure SQL Data Warehouse, this statement can be used with an Azure SQL Database server to create a SQL Data Warehouse database. With this statement, you specify the database name, collation, maximum size, edition, and service objective.
+In Azure Synapse, this statement can be used with an Azure SQL Database server to create a SQL Analytics database. With this statement, you specify the database name, collation, maximum size, edition, and service objective.
 
 ## Syntax
 ```
@@ -1353,14 +1353,14 @@ The maximum allowable size for the database. The database cannot grow beyond MAX
 The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE.Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
 
 SERVICE_OBJECTIVE     
-Specifies the performance level. For more information about service objectives for SQL Data Warehouse, see [Data Warehouse Units (DWUs)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
+Specifies the performance level. For more information about service objectives for Azure Synapse, see [Data Warehouse Units (DWUs)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## General Remarks
 Use [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) to see the database properties.
 
-Use [ALTER DATABASE - Azure SQL Data Warehouse](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7) to change the max size, or service objective values later.
+Use [ALTER DATABASE - Azure Synapse Analytics](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7) to change the max size, or service objective values later.
 
-SQL Data Warehouse is set to COMPATIBILITY_LEVEL 130 and cannot be changed. For more details, see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
+Azure Synapse is set to COMPATIBILITY_LEVEL 130 and cannot be changed. For more details, see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
 
 ## Permissions
 Required permissions:
@@ -1400,8 +1400,8 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 ## See Also
 
-- [ALTER DATABASE- Azure SQL Data Warehouse](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7)
-- [CREATE TABLE- Azure SQL Data Warehouse](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)
+- [ALTER DATABASE- Azure Synapse Analytics](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+- [CREATE TABLE- Azure Synapse Analytics](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)
 - [DROP DATABASE - Transact-SQL](../../t-sql/statements/drop-database-transact-sql.md)
 
 ::: moniker-end
@@ -1409,7 +1409,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics Platform<br />System (PDW) \*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics Platform<br />System (PDW) \*_** |
 
 &nbsp;
 
@@ -1463,7 +1463,7 @@ A positive number. The size (in integer or decimal gigabytes) for the transactio
 
 For minimum and maximum *log_size* requirements, see "Minimum and Maximum Values" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
-If AUTOGROW is ON, the log file is permitted to grow beyond this limit. Use the [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) statement to reduce the size of the log files to their original size.
+If AUTOGROW is ON, the log file is permitted to grow beyond this limit. Use the [DBCC SHRINKLOG (Azure Synapse Analytics)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) statement to reduce the size of the log files to their original size.
 
 If AUTOGROW is OFF, an error will be returned to the user for any action that would increase the log size on an individual Compute node beyond *log_size*.
 

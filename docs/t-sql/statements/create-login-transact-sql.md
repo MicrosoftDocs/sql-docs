@@ -1,7 +1,7 @@
 ---
 title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/06/2019"
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-
 ---
 # CREATE LOGIN (Transact-SQL)
 
-Creates a login for SQL Server, SQL Database, SQL Data Warehouse, or Analytics Platform System databases. Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular version.
+Creates a login for SQL Server, SQL Database, Azure Synapse Analytics, or Analytics Platform System databases. Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular version.
 
 CREATE LOGIN participates in transactions. If CREATE LOGIN is executed within a transaction and the transaction is rolled back, then login creation is rolled back. If executed within a transaction, the created login cannot be used until the transaction is committed.
 
@@ -44,7 +44,7 @@ In the following row, click whichever product name you are interested in. The cl
 
 ||||||
 |-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -266,7 +266,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />single database/elastic pool \*_**|[SQL Database<br />managed instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />single database/elastic pool \*_**|[SQL Database<br />managed instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -287,7 +287,7 @@ CREATE LOGIN login_name
 ## Arguments
 
 *login_name*
-Specifies the name of the login that is created. Azure SQL Database single database/elastic pool supports only SQL logins.
+Specifies the name of the login that is created. Azure SQL Database single database/elastic pool supports only SQL logins. To create accounts for Azure Active Directory users, use the [CREATE USER](create-user-transact-sql.md) statement.
 
 PASSWORD **='**password**'*
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
@@ -389,7 +389,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />managed instance \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />managed instance \*_**|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -570,16 +570,16 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_**|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## Azure SQL Data Warehouse
+## Azure Synapse Analytics
 
 ## Syntax
 
 ```
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 CREATE LOGIN login_name
  { WITH <option_list> }
 
@@ -591,7 +591,7 @@ CREATE LOGIN login_name
 ## Arguments
 
 *login_name*
-Specifies the name of the login that is created. Azure SQL Database supports only SQL logins.
+Specifies the name of the login that is created. Azure Synapse supports only SQL logins. To create accounts for Azure Active Directory users, use the [CREATE USER](create-user-transact-sql.md) statement.
 
 PASSWORD **='**password**'*
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.
@@ -599,7 +599,7 @@ Specifies the password for the SQL login that is being created. Use a strong pas
 Passwords are case-sensitive. Passwords should always be at least eight characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
 
  SID = *sid*
- Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Data Warehouse, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+ Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For Azure Synapse, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## Remarks
 
@@ -613,15 +613,15 @@ Passwords are case-sensitive. Passwords should always be at least eight characte
 
 The **CREATE LOGIN** statement must be the only statement in a batch.
 
-In some methods of connecting to SQL Data Warehouse, such as **sqlcmd**, you must append the SQL Data Warehouse server name to the login name in the connection string by using the *\<login>*@*\<server>* notation. For example, if your login is `login1` and the fully qualified name of the SQL Data Warehouse server is `servername.database.windows.net`, the *username* parameter of the connection string should be `login1@servername`. Because the total length of the *username* parameter is 128 characters, *login_name* is limited to 127 characters minus the length of the server name. In the example, `login_name` can only be 117 characters long because `servername` is 10 characters.
+In some methods of connecting to Azure Synapse, such as **sqlcmd**, you must append the SQL Analytics server name to the login name in the connection string by using the *\<login>*@*\<server>* notation. For example, if your login is `login1` and the fully qualified name of the SQL Analytics server is `servername.database.windows.net`, the *username* parameter of the connection string should be `login1@servername`. Because the total length of the *username* parameter is 128 characters, *login_name* is limited to 127 characters minus the length of the server name. In the example, `login_name` can only be 117 characters long because `servername` is 10 characters.
 
-In SQL Data Warehouse, you must be connected to the master database to create a login.
+In Azure Synapse, you must be connected to the master database to create a login.
 
 SQL Server rules allow you create a SQL Server authentication login in the format \<loginname>@\<servername>. If your [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server is **myazureserver** and your login is **myemail@live.com**, then you must supply your login as **myemail@live.com@myazureserver**.
 
-In SQL Data Warehouse, login data required to authenticate a connection and server-level firewall rules is temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
+In Azure Synapse, login data required to authenticate a connection and server-level firewall rules is temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-For more information about SQL Data Warehouse logins, see [Managing Databases and Logins in Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+For more information about Azure Synapse logins, see [Managing Databases and Logins in Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## Permissions
 
@@ -629,7 +629,7 @@ Only the server-level principal login (created by the provisioning process) or m
 
 ## After creating a login
 
-After creating a login, the login can connect to SQL Data Warehouse but only has the permissions granted to the **public** role. Consider performing some of the following activities.
+After creating a login, the login can connect to Azure Synapse but only has the permissions granted to the **public** role. Consider performing some of the following activities.
 
 - To connect to a database, create a database user for the login. For more information, see [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - To grant permissions to a user in a database, use the **ALTER SERVER ROLE** ... **ADD MEMBER** statement to add the user to one of the built-in database roles or a custom role, or grant permissions to the user directly using the [GRANT](grant-transact-sql.md) statement. For more information, see [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Additional server-level administrative roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), and [GRANT](grant-transact-sql.md) statement.
@@ -687,7 +687,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
 
 &nbsp;
 
@@ -757,7 +757,7 @@ Only users with **ALTER ANY LOGIN** permission on the server or membership in th
 
 ## After creating a login
 
-After creating a login, the login can connect to SQL Data Warehouse, but only has the permissions granted to the **public** role. Consider performing some of the following activities.
+After creating a login, the login can connect to Azure Synapse Analytics, but only has the permissions granted to the **public** role. Consider performing some of the following activities.
 
 - To connect to a database, create a database user for the login. For more information, see [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - Create a user-defined server role by using [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md). Use **ALTER SERVER ROLE** ... **ADD MEMBER** to add the new login to the user-defined server role. For more information, see [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).

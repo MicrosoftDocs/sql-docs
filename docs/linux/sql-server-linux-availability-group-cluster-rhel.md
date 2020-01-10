@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 01/09/2020
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -185,8 +185,20 @@ On a pacemaker cluster, you can manipulate the decisions of the cluster with con
 
 To ensure that primary replica and the virtual ip resources run on the same host, define a colocation constraint with a score of INFINITY. To add the colocation constraint, run the following command on one node.
 
+### RHEL 7
+
+When you create the `ag_cluster` resource in RHEL 7, it creates the resource as `ag_cluster-master`. Use the following command for RHEL 7:
+
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
+```
+
+### RHEL 8
+
+When you create the `ag_cluster` resource in RHEL 8, it creates the resource as `ag_cluster-clone`. Use the following command for RHEL 8:
+
+```bash
+sudo pcs constraint colocation add virtualip with master ag_cluster-clone INFINITY with-rsc-role=Master
 ```
 
 ## Add ordering constraint
@@ -207,8 +219,16 @@ To prevent the IP address from temporarily pointing to the node with the pre-fai
 
 To add an ordering constraint, run the following command on one node:
 
+### RHEL 7
+
 ```bash
 sudo pcs constraint order promote ag_cluster-master then start virtualip
+```
+
+### RHEL 8
+
+```bash
+sudo pcs constraint order promote ag_cluster-clone then start virtualip
 ```
 
 >[!IMPORTANT]

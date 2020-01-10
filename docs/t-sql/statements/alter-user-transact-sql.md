@@ -1,7 +1,7 @@
 ---
 title: "ALTER USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/06/2019"
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -40,7 +40,7 @@ In the following row, click whichever product name you are interested in. The cl
 
 ||||||
 |-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -210,7 +210,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />single database/elastic pool \*_**|[SQL Database<br />managed instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />single database/elastic pool \*_**|[SQL Database<br />managed instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -388,7 +388,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />managed instance \*_**|[SQL Data<br />Warehouse](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />managed instance \*_**|[Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -650,16 +650,16 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_**|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## Azure SQL Data Warehouse
+## Azure Synapse Analytics
 
 ## Syntax
   
 ```
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse  
   
 ALTER USER userName
      WITH <set_item> [ ,...n ]  
@@ -764,7 +764,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-user-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
 
 &nbsp;
 
@@ -773,7 +773,7 @@ GO
 ## Syntax
 
 ```
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Analytics Platform System 
   
 ALTER USER userName
      WITH <set_item> [ ,...n ]  

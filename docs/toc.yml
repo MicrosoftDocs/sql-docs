@@ -219,6 +219,8 @@
       items:
       - name: Deployment configuration file
         href: big-data-cluster/reference-deployment-config.md
+      - name: Deployed Resources
+        href: big-data-cluster/concept-architecture-pods.md
     - name: azdata reference
       items:
       - name: azdata

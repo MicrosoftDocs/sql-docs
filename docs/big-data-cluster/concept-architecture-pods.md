@@ -1,5 +1,5 @@
 ---
-title: Deployed pods
+title: Deployed resources
 titleSuffix: SQL Server Big Data Clusters
 description: A description of the pods typically deployed in a SQL Server Big Data Cluster.
 author: mihaelablendea 
@@ -11,26 +11,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Pods deployed with Big Data Cluster
+# Resources deployed with Big Data Cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes the architecture a SQL Server Big Data Cluster deploys.
-
-The applications include:
-
-- SQL Server
-- HDFS
-- Spark
-- Control
-- Gateway
-- App
-
-The applications have various resources. Some of these resources are organized into pools. These resources include: 
-
-- SQL Server master instance
-- Data pool
-- Compute pool
+This article describes the resources a SQL Server Big Data Cluster deploys.
 
 ## SQL Server master instance
 
@@ -70,7 +55,7 @@ The data pool SQL Server instances provide storage and compute.
 - StatefulSet: `compute-0`
 
 - Pod: `compute-0-#`
--
+
 - Containers in each pod:
   - SQL Server instance
   - Fluent Bit

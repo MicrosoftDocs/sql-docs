@@ -194,7 +194,7 @@ You can change the server that your current query window is connected to by foll
 
 ## Azure Data Studio
 
-You can also connect and query [SQL Server](../../azure-data-studio/connect-query-sql-server.md), an [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), and [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md) using Azure Data Studio.
+You can also connect and query [SQL Server](../../azure-data-studio/quickstart-sql-server.md), an [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), and [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md) using Azure Data Studio.
 
 ## Next steps
 
@@ -205,4 +205,3 @@ The best way to get acquainted with SSMS is through hands-on practice. These art
 * [SSMS Configuration](ssms-configuration.md)
 * [Additional Tips and Tricks for using SSMS](ssms-tricks.md)
 * [Azure Data Studio](../../azure-data-studio/download.md)
-* [Connect and query SQL Server with Azure Data Studio](../../azure-data-studio/connect-query-sql-server.md)

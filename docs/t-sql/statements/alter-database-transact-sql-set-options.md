@@ -3098,6 +3098,8 @@ SET QUERY_STORE = ON;
 ### Enable result set caching for a database
 
 ```sql
+-- Run this command when connecting to the MASTER database 
+
 ALTER DATABASE [database_name]
 SET RESULT_SET_CACHING ON;
 ```
@@ -3112,6 +3114,8 @@ FROM sys.databases;
 ### Enable the Read_Committed_Snapshot option for a database
 
 ```sql
+-- Run this command when connecting to the MASTER database 
+
 ALTER DATABASE MyDatabase  
 SET READ_COMMITTED_SNAPSHOT ON
 ```

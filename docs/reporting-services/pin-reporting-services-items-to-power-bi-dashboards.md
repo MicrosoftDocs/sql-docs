@@ -109,7 +109,9 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
 -   **Cannot Pin**: If you attempt to pin an item to a dashboard that is in a read-only state, you will see an error message similar to this one:  
   
         Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
-  
+
+-   **Tiles in Power BI apps show stale data:** The update of tiles in a Power BI app that was created from a Power BI dashboard with a report item pinned to it is not supported. 
+
 ##  <a name="bkmk_subscription_management"></a> Subscription Management  
  In addition to the subscription-related issues described in the troubleshooting section, the following information will help you maintain [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] related subscriptions.
   

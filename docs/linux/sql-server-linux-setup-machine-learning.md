@@ -1,11 +1,11 @@
 ---
 title: Install SQL Server Machine Learning Services (Python, R) on Linux
 description: 'Learn how to install SQL Server Machine Learning Services (Python and R) on Linux: Red Hat, Ubuntu, and SUSE.'
-author: dphansen
-ms.author: davidph
+author: cawrites
+ms.author: chadam
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/04/2019
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
@@ -15,15 +15,19 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article explains how to install [SQL Server Machine Learning Services](../advanced-analytics/index.yml) on Linux. You can use Machine Learning Services to execute Python and R scripts in-database.
+This article will guide you in the installation of [SQL Server Machine Learning Services](../advanced-analytics/index.yml) on Linux.
 
-The following Linux distributions are supported:
+## What are Machine Learning Services
+
+Machine Learning Services is a feature add-on to the database engine. You can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components.
+
+## Prepare Environment
+
+ The following Linux distributions are supported:
 
 - Red Hat Enterprise Linux (RHEL)
 - SUSE Linux Enterprise Server (SLES)
 - Ubuntu
-
-Machine Learning Services are a feature add-on to the database engine. Although you can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
 
 Package location for the Python and R extensions is in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
 
@@ -31,13 +35,15 @@ Machine Learning Services is also supported on Linux containers. We do not provi
 
 Machine Learning Services is installed by default on SQL Server Big Data Clusters, and you do not need to follow the steps in this case. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md).
 
+Python and R scripts can be executed in-database using Machine Learning Services.
+
 ## Uninstall preview release
 
-If you have installed a preview release (Community Technical Preview (CTP) or Release Candidate), we recommend uninstalling this version to remove all previous packages before installing SQL Server 2019. Side-by-side installation of multiple versions is not supported, and the package list has changed over the last several preview (CTP/RC) releases.
+Uninstall the preview release (Community Technical Preview (CTP) or Release Candidate). Uninstalling this version will remove all previous packages before installing SQL Server 2019. Side-by-side installation of multiple versions is not supported, and the package list has changed over the last several preview (CTP/RC) releases.
 
 ### 1. Confirm package installation
 
-You might want to check for the existence of a previous installation as a first step. The following files indicate an existing installation: checkinstallextensibility.sh, exthost, launchpad.
+Confirm the existence of a previous installation as a first step. The following files indicate an existing installation: checkinstallextensibility.sh, exthost, launchpad.
 
 ```bash
 ls /opt/microsoft/mssql/bin
@@ -179,12 +185,12 @@ On an internet-connected device, packages are downloaded and installed independe
 
 ## RedHat commands
 
-You can install language support in whatever combination you require (single or multiple languages). For R and Python, there are two packages to choose from. One provides all available features, characterized as the *full installation*. The alternative choice excludes the pretrained machine learning models and is considered the *minimal installation*.
+Install language support based on your requirements (single or multiple languages). For R and Python, there are two packages to choose from. One provides all available features, characterized as the *full installation* including pre-trained machine learning models. The alternative choice, considered the *minimal installation* excludes the models but still has all of the functionality.
 
 > [!Tip]
 > If possible, run `yum clean all` to refresh packages on the system prior to installation.
 
-### Example 1 -  Full installation 
+### Example 1 -  Full installation
 
 Includes open-source R and Python, extensibility framework, microsoft-openmpi, extensions (R, Python), with machine learning libraries and pre-trained models for R and Python. 
 
@@ -198,7 +204,7 @@ sudo yum install mssql-mlservices-mlm-r-9.4.7*
 
 ### Example 2 - Minimum installation 
 
-Includes open-source R and Python, extensibility framework, microsoft-openmpi, core Revo* libraries, and machine learning libraries for R and Python. Excludes the pre-trained models.
+Includes: open-source R and Python, extensibility framework, microsoft-openmpi, core Revo* libraries, and machine learning libraries for R and Python. Excludes the pre-trained models.
 
 ```bash
 # Install as root or sudo
@@ -212,7 +218,7 @@ sudo yum install mssql-mlservices-packages-r-9.4.7*
 
 ## Ubuntu commands
 
-You can install language support in whatever combination you require (single or multiple languages). For R and Python, there are two packages to choose from. One provides all available features, characterized as the *full installation*. The alternative choice excludes the pretrained machine learning models and is considered the *minimal installation*.
+Install language support based on your requirements (single or multiple languages). For R and Python, there are two packages to choose from. The *full installation* provides all available features, including pre-trained machine learning models. The alternative choice, considered the *minimal installation* excludes the models but still has all of the functionality.
 
 > [!Tip]
 > If possible, run `apt-get update` to refresh packages on the system prior to installation. Additionally, some docker images of Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
@@ -245,7 +251,7 @@ sudo apt-get install mssql-mlservices-packages-r
 
 ## SUSE commands
 
-You can install language support in whatever combination you require (single or multiple languages). For R and Python, there are two packages to choose from. One provides all available features, characterized as the *full installation*. The alternative choice excludes the pretrained machine learning models and is considered the *minimal installation*.
+Install language support based on your requirements (single or multiple languages). For R and Python, there are two packages to choose from. The *full installation* provides all available features, including pre-trained machine learning models. The alternative choice, considered the *minimal installation* excludes the models but still has all of the functionality.
 
 ### Example 1 -  Full installation 
 
@@ -276,13 +282,13 @@ sudo zypper install mssql-mlservices-packages-r-9.4.7*
 Additional configuration is primarily through the [mssql-conf tool](sql-server-linux-configure-mssql-conf.md).
 
 
-1. Add the mssql user account used to run the SQL Server service. This is required if you haven't run the setup previously.
+1. Add the mssql user account used to run the SQL Server service. It is required if you haven't run the setup previously.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-2. Accept the licensing agreements for open-source R and Python. There are several ways to do this. If you previously accepted SQL Server licensing and are now adding the R or Python extensions, the following command is your consent to their terms:
+2. Accept the licensing agreements for open-source R and Python. There are several ways to do complete this step. If you previously accepted SQL Server licensing and are now adding the R or Python extensions, the following command is your consent to their terms:
 
    ```bash
    # Run as SUDO or root
@@ -302,7 +308,7 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
 4. For R feature integration only, set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
 
-   + Edit or create a file named **.bash_profile** in your user home directory, adding the line `export MKL_CBWR="AUTO"` to the file.
+   + Edit or create a file named.bash_profile** in your user home directory, adding the line `export MKL_CBWR="AUTO"` to the file.
 
    + Execute this file by typing `source .bash_profile` at a bash command prompt.
 
@@ -323,13 +329,15 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
 7. Restart the Launchpad service again.
 
-## Verify installation
+## Validate installation
 
 R libraries (MicrosoftML, RevoScaleR, and others) can be found at `/opt/mssql/mlservices/libraries/RServer`.
 
 Python libraries (microsoftml and revoscalepy) can be found at `/opt/mssql/mlservices/libraries/PythonServer`.
 
-To validate installation, run a T-SQL script that executes a system stored procedure invoking R or Python. You will need a query tool for this task. Azure Data Studio is a good choice. Other commonly used tools such as SQL Server Management Studio or PowerShell are Windows-only. If you have a Windows computer with these tools, use it to connect to your Linux installation of the database engine.
+To validate installation:
+
+- Run a T-SQL script that executes a system stored procedure invoking R or Python using a query tool. For Windows use: Azure Data Studio, SQL Server Management Studio or PowerShell. If you have a Windows computer with these tools, use it to connect to your Linux installation of the database engine.
 
 Execute the following SQL command to test R execution in SQL Server. If the script does not run, try a service restart, `sudo systemctl restart mssql-server.service`.
 
@@ -360,11 +368,11 @@ GO
 
 ## Chained "combo" install
 
-You can install and configure the database engine and Machine Learning Services in one procedure by appending R or Python packages and parameters on a command that installs the database engine. 
+Install and configure the database engine and Machine Learning Services. Append R or Python packages and parameters on a command that installs the database engine.
 
 1. For R integration, install [Microsoft R Open](#mro) as a prerequisite. Skip this step if you are not installing the R feature.
 
-2. Provide a command line that includes the database engine, plus language extension features.
+2. Create a command line that includes the database engine, plus language extension features.
 
   You can add a single feature, such as Python integration, to a database engine install.
 
@@ -402,7 +410,7 @@ Recall that Setup or the mssql-conf tool prompts for license agreement acceptanc
 sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 ```
 
-All possible permutations of EULA acceptance are documented in [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
+The complete EULA is documented at [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
 ## Offline installation
 
@@ -414,7 +422,7 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 
 #### Download site
 
-You can download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for R and Python are colocated with database engine package. Base version for the mlservices packages is 9.4.6. Recall that the microsoft-r-open packages are in a [different repository](#mro).
+Download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for R and Python are colocated with database engine package. Base version for the mlservices packages is 9.4.6. Recall that the microsoft-r-open packages are in a [different repository](#mro).
 
 #### RHEL/7 paths
 
@@ -440,7 +448,7 @@ You can download packages from [https://packages.microsoft.com/](https://package
 
 #### Package list
 
-Depending on which extensions you want to use, download the packages necessary for a specific language. Exact filenames include platform information in the suffix, but the file names below should be close enough for you to determine which files to get.
+Select extensions you want to use and download the packages necessary for a specific language. Exact filenames include platform information in the suffix, but the file names below should be close enough for you to determine which files to get.
 
 ```
 # Core packages 
@@ -511,7 +519,7 @@ You can install other R and Python packages and use them in script that executes
 
 ## Run in a container
 
-Follow the steps below to build and run SQL Server Machine Learning Services in a Docker container. For more information, see [Configure SQL Server container images on Docker](sql-server-linux-configure-docker.md).
+Build and run SQL Server Machine Learning Services in a Docker container. For more information, see [Configure SQL Server container images on Docker](sql-server-linux-configure-docker.md).
 
 ### Prerequisites
 

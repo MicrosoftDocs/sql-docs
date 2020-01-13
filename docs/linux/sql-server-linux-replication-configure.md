@@ -1,6 +1,7 @@
 ---
-title: Configure SQL Server Replication on Linux
+title: Configure replication (SSMS)
 description: This article describes how to configure SQL Server replication on Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,6 +10,7 @@ ms.topic: article
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: linux
+titleSuffix: SQL Server on Linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Configure SQL Server Replication on Linux

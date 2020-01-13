@@ -127,6 +127,13 @@ SSIS Deploy Task doesn’t support the following scenarios currently:
 
 ## Release notes
 
+### Version 0.1.2 Preview
+
+Release Date: January 13, 2020
+
+- Added more detailed exception information in SSIS Deploy task log when destination type is SSISDB.
+- Fixed example destination path in the help text of property Destination path of SSIS Deploy task.
+
 ### Version 0.1.1 Preview
 
 Release Date: January 6, 2020

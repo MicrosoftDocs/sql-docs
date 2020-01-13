@@ -55,6 +55,8 @@ sudo apt-get install unixodbc-dev
 sudo apt-get install libgssapi-krb5-2
 ```
 
+Optionally, you can substitute setting the environment variable 'ACCEPT_EULA' with setting the debconf variable 'msodbcsql/ACCEPT_EULA' instead.
+
 ### RedHat Enterprise Server
 ```
 sudo su

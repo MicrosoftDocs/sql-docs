@@ -110,7 +110,7 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
   
         Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
 
--   **Tiles in Power BI apps show stale data:** The update of tiles in a Power BI app that was created from a Power BI dashboard with a report item pinned to it is not supported. 
+-   **Tiles in Power BI apps show stale data:** If you pin a Reporting Services report item to a dashboard, and then distribute that dashboard in an app, the pinned report item in that dashboard won’t update. 
 
 ##  <a name="bkmk_subscription_management"></a> Subscription Management  
  In addition to the subscription-related issues described in the troubleshooting section, the following information will help you maintain [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] related subscriptions.

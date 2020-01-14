@@ -287,7 +287,7 @@ ALTER USER userName
  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
- Suppresses cryptographic metadata checks on the server in bulk copy operations. Thisenables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.
+ Suppresses cryptographic metadata checks on the server in bulk copy operations. This enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.
 
 > [!WARNING]
 > Improper use of this option can lead to data corruption. For more information, see [Migrate Sensitive Data Protected by Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).

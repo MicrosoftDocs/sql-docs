@@ -94,7 +94,7 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
   
 - **Cannot Pin**: When you attempt to pin an item, you see the following error message: See the section [Items You Can Pin](#bkmk_supported_items).  
   
-    Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
+    "Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]."  
   
 -   **Pinned items show stale data** in a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard and it did update for a period of time.  The user credentials token has expired and you need to sign in again.  The user credential registration with Azure and [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] is good for 90 days. In the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], click **My Settings**. For more information, see [My Settings for Power BI Integration &#40;web portal&#41;](my-settings-for-power-bi-integration-web-portal.md).  
   

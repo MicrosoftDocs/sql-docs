@@ -7,4 +7,3 @@ ms.author: mikeray
 ---
 
 <Token>**APPLIES TO:** ![yes](media/yes.png)SQL Server 2014 and later ![no](media/no.png)Azure SQL Database ![no](media/no.png)Azure Synapse Analytics (SQL DW) ![no](media/no.png)Parallel Data Warehouse </Token>
-

@@ -95,7 +95,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |Object Properties||Yes|
 |Table Designer||Yes|
 
-### Query Editor
+### Query editor
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
@@ -114,7 +114,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |Notebooks|Yes||
 |Save Query as snippet|Yes||
 
-### Operating System Support
+### Operating system support
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
@@ -122,7 +122,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |macOS|Yes||
 |Windows|Yes|Yes|
 
-### Data Engineering
+### Data engineering
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
@@ -130,7 +130,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |HDFS Integration|Yes||
 |Notebooks|Yes||
 
-### Database Administration
+### Database administration
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|

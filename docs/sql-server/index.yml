@@ -35,7 +35,7 @@ landingContent:
     - linkListType: overview
       links:
       - text: Migration content
-        url:  /migrate/
+        url:  /migrate/index.yml
       - text: Data Migration Guide
         url:  https://datamigration.microsoft.com/
       - text: Database Compatibility Certification

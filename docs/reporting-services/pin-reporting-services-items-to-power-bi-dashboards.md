@@ -34,7 +34,7 @@ You can pin an on-premises [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md
   
 -   You need to configure reports for stored credentials, if you want the pinned item to refresh.  When you pin an item, a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscription is automatically created to manage the data refresh of the item to the dashboard.  If the report does not use stored credentials, when the  subscription runs you'll see a message similar to  this one on the **My subscriptions** page.  
   
-    "PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential."
+    "Power BI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential."
  
     See the section "Configure stored credentials for a report-specific data source (Native mode)" in [Store Credentials in a Reporting Services Data Source](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
@@ -100,7 +100,7 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
   
 -   **Pinned items show stale data** in a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard and it has not refreshed even once.  The issue is the report is not configured to use stored credentials. A report must use stored credentials because the action of pinning a report item creates a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscription to manage the refresh schedule of the tiles. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions require stored credentials. If you review  the **My Subscriptions** page, you see an error message similar to this one:  
   
-    PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
+    Power BI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
 -   **Expired Power BI credentials:**  You attempt to pin an item and see the following error message. In the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], click **My Settings** and on the My Settings  page, click **Sign in**. See [My Settings for Power BI Integration &#40;web portal&#41;](my-settings-for-power-bi-integration-web-portal.md) for more information.  
   
@@ -117,13 +117,13 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
   
 -   **Item name changed:** If a pinned report item is renamed or deleted, the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] tile will no longer update and you will see an error message similar to the following.  If you rename the item back the original name, the subscription will start working again and the tile will be refreshed on the subscriptions schedule.  
   
-    PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
+    Power BI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
   
-    You could also edit the subscription properties and change the **Report Visual Name** to the appropriate report item name. ![change the visual used for the power bi refresh](../reporting-services/media/ssrs-powerbi-subscription-visual.png "change the visual used for the power bi refresh")  
+    You could also edit the subscription properties and change the **Report Visual Name** to the appropriate report item name. ![change the visual used for the Power BI refresh](../reporting-services/media/ssrs-powerbi-subscription-visual.png "change the visual used for the Power BI refresh")  
   
--   **Delete a tile**. If you delete a tile in [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], the associated subscription is not deleted in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] and on the **My subscriptions**page, you see an error similar to the following. You can delete the subscription.  
+-   **Delete a tile**. If you delete a tile in [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], the associated subscription is not deleted in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] and on the **My subscriptions** page, you see an error similar to the following. You can delete the subscription.  
   
-    PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The item 'Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f' cannot be found.  
+    Power BI Delivery error: dashboard: SSRS items, visual: Image3, error: The item 'Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f' cannot be found.  
 
 ## Video
 

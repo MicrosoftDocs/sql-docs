@@ -1407,27 +1407,27 @@
     },    
     {
       "source_path": "docs/lp/sql-server/business-continuity.md",
-      "redirect_url": "/sql/sql-server/index.yml",
+      "redirect_url": "/sql/sql-server/",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/lp/sql-server/database-design.md",
-      "redirect_url": "/sql/sql-server/index.yml",
+      "redirect_url": "/sql/sql-server/",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/lp/sql-server/manage-monitor-tune.md",
-      "redirect_url": "/sql/sql-server/index.yml",
+      "redirect_url": "/sql/sql-server/",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/lp/sql-server/query-data.md",
-      "redirect_url": "/sql/sql-server/index.yml",
+      "redirect_url": "/sql/sql-server/",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/lp/sql-server/secure-sql-server.md",
-      "redirect_url": "/sql/sql-server/index.yml",
+      "redirect_url": "/sql/sql-server/",
       "redirect_document_id": true
     },
     {

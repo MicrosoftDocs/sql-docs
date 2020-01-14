@@ -142,7 +142,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |Always On||Yes|
 |Always Encrypted||Yes|
 |Copy Data Wizard||Yes|
-|Database Tuning Advisor||Yes|
+|Database Engine Tuning Advisor||Yes|
 |Error Log Viewer||Yes|
 |Maintenance Plans||Yes|
 |Multi-Server Query||Yes|

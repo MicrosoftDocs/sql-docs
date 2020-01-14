@@ -100,15 +100,15 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
   
 -   **Pinned items show stale data** in a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard and it has not refreshed even once.  The issue is the report is not configured to use stored credentials. A report must use stored credentials because the action of pinning a report item creates a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscription to manage the refresh schedule of the tiles. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions require stored credentials. If you review  the **My Subscriptions** page, you see an error message similar to this one:  
   
-    Power BI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
+    "Power BI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)"
   
 -   **Expired Power BI credentials:**  You attempt to pin an item and see the following error message. In the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], click **My Settings** and on the My Settings  page, click **Sign in**. See [My Settings for Power BI Integration &#40;web portal&#41;](my-settings-for-power-bi-integration-web-portal.md) for more information.  
   
-    Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
+    "Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials."  
   
 -   **Cannot Pin**: If you attempt to pin an item to a dashboard that is in a read-only state, you will see an error message similar to this one:  
   
-    Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
+    "Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)"  
 
 -   **Tiles in Power BI apps show stale data:** If you pin a Reporting Services report item to a dashboard, and then distribute that dashboard in an app, the pinned report item in that dashboard won’t update. 
 
@@ -117,13 +117,13 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
   
 -   **Item name changed:** If a pinned report item is renamed or deleted, the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] tile will no longer update and you will see an error message similar to the following.  If you rename the item back the original name, the subscription will start working again and the tile will be refreshed on the subscriptions schedule.  
   
-    Power BI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
+    "Power BI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found."  
   
     You could also edit the subscription properties and change the **Report Visual Name** to the appropriate report item name. ![change the visual used for the Power BI refresh](../reporting-services/media/ssrs-powerbi-subscription-visual.png "change the visual used for the Power BI refresh")  
   
 -   **Delete a tile**. If you delete a tile in [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], the associated subscription is not deleted in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] and on the **My subscriptions** page, you see an error similar to the following. You can delete the subscription.  
   
-    Power BI Delivery error: dashboard: SSRS items, visual: Image3, error: The item 'Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f' cannot be found.  
+    "Power BI Delivery error: dashboard: SSRS items, visual: Image3, error: The item 'Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f' cannot be found."  
 
 ## Video
 

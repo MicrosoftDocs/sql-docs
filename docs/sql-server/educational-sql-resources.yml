@@ -37,17 +37,17 @@ landingContent:
         url: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
     - linkListType: tutorial
       links:
-      - text: Configure availability group 
+      - text: Availability group 
         url: ../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md
-      - text: Configure transactional replication 
+      - text: Transactional replication 
         url: ../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md
-      - text: Configure merge replication
+      - text: Merge replication
         url: ../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md
       - text: Create in-memory table
         url: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
       - text: Sign stored procedure with certificate
         url: ../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
-      - text: Use Azure Blob storage service
+      - text: Azure Blob storage service
         url: ../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
       - text: Database tuning advisor 
         url: ../tools/dta/tutorial-database-engine-tuning-advisor.md
@@ -83,11 +83,11 @@ landingContent:
       links:
       - text: Register with resource provider
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider
-      - text: Configure Always On availability group with Az CLI
+      - text: Configure availability group with Az CLI
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-availability-group-cli
       - text: Create FCI using premium file share
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-create-failover-cluster-premium-file-share
-      - text: Use Azure storage for backup & restore
+      - text: Use Azure Storage for backup & restore
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-use-storage-sql-server-backup-restore
 
   - title: Azure SQL Database single database

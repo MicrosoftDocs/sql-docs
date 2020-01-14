@@ -95,19 +95,17 @@ landingContent:
     - linkListType: overview
       links:
       - text: Backup & restore
-        url:  https://datamigration.microsoft.com/
-      - text: Transaction log management
-        url: https://aka.ms/dbcompat
+        url:  ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
       - text: Always On availability groups
-        url: https://docs.microsoft.com/azure/dms/dms-overview
+        url: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       - text: Always On failover cluster instance
-        url: ../dma/dma-overview.md
+        url: failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
       - text: Database mirroring 
-        url: ../dea/database-experimentation-assistant-overview.md
+        url: ../database-engine/database-mirroring/database-mirroring-sql-server.md
       - text: Log shipping
-        url: ../ssma/sql-server-migration-assistant.md
+        url: ../database-engine/log-shipping/about-log-shipping-sql-server.md
       - text: Replication
-        url: ../ssma/sql-server-migration-assistant.md
+        url: ../relational-databases/replication/sql-server-replication.md
 
 
   - title: Security 
@@ -115,86 +113,88 @@ landingContent:
     - linkListType: overview
       links:
       - text: Access management 
-        url: ../dma/dma-overview.md
+        url: ../relational-databases/security/authentication-access/create-a-login.md
       - text: Always Encrypted  
-        url: ../dea/database-experimentation-assistant-overview.md
+        url: ../relational-databases/security/encryption/always-encrypted-database-engine.md
       - text: Dynamic data masking
-        url: ../ssma/sql-server-migration-assistant.md
+        url: ../relational-databases/security/dynamic-data-masking.md
       - text: Permissions
-        url: ../dma/dma-overview.md
-      - text: Security Socket Layer (SSL)  
-        url: ../dea/database-experimentation-assistant-overview.md
+        url: ../relational-databases/security/permissions-database-engine.md
       - text: Transparent Data Encryption (TDE)
-        url: ../ssma/sql-server-migration-assistant.md
+        url: ../relational-databases/security/encryption/transparent-data-encryption?.md
 
   - title: Database Design 
     linkLists:
     - linkListType: overview
       links:
+      - text: Collation
+        url: ../relational-databases/collations/collation-and-unicode-support.md
       - text: Databases 
-        url: ../dma/dma-overview.md
+        url: ../relational-databases/databases/databases.md
       - text: Tables
-        url: ../dea/database-experimentation-assistant-overview.md
+        url: ../relational-databases/tables/tables.md
       - text: Stored Procedures
-        url: ../ssma/sql-server-migration-assistant.md
+        url: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
       - text: Graph
-        url: ../dma/dma-overview.md
+        url: ../relational-databases/graphs/sql-graph-overview.md
       - text: Track Changes 
-        url: ../dea/database-experimentation-assistant-overview.md
+        url: ../relational-databases/track-changes/track-data-changes-sql-server.md
 
   - title: Manage & monitor 
     linkLists:
     - linkListType: overview
       links:
-      - text: SQL Server Integration Services (SSIS)
-        url: ../dea/database-experimentation-assistant-overview.md
+      - text: Transaction log management
+        url: ../relational-databases/logs/the-transaction-log-sql-server.md
       - text: Maintenance plans
-        url: ../dma/dma-overview.md
+        url: ../relational-databases/maintenance-plans/maintenance-plans.md
       - text: SQL Server Agent 
-        url: ../dea/database-experimentation-assistant-overview.md
+        url: ../ssms/agent/sql-server-agent.md
       - text: Data Compression
-        url: ../ssma/sql-server-migration-assistant.md
+        url: ../relational-databases/data-compression/data-compression.md
       - text: Extended events
-        url: ../dma/dma-overview.md
+        url: ../relational-databases/extended-events/extended-events.md
       - text: SQL Diag
-        url: ../ssma/sql-server-migration-assistant.md
+        url: ../tools/sqldiag-utility.md
       - text: SQL Profiler
-        url: ../ssma/sql-server-migration-assistant.md
+        url: ../tools/sql-server-profiler/sql-server-profiler.md
 
 
   - title: Tune
     linkLists:
     - linkListType: overview
       links:
+      - text: Performance center
+        url: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
       - text: Intelligent Query Processing
-        url: ../relational-databases/performance/intelligent-query-processing.md
+        url: https://aka.ms/IQP
       - text: Automatic Tuning
-        url: ../dma/dma-overview.md
+        url: ../relational-databases/automatic-tuning/automatic-tuning.md
       - text: Database Tuning Advisor 
-        url: ../dea/database-experimentation-assistant-overview.md
+        url: ../relational-databases/performance/database-engine-tuning-advisor.md
       - text: In-memory OLTP
-        url: ../dma/dma-overview.md
+        url: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
     - linkListType: concept
       links:
-      - text: Cardinality Estimation
-        url: ../dma/dma-overview.md
+      - text: Cardinality estimation
+        url: ../relational-databases/performance/cardinality-estimation-sql-server.md
       - text: Statistics 
-        url: ../dea/database-experimentation-assistant-overview.md
+        url: ../relational-databases/statistics/statistics.md
       - text: Indexes
-        url: ../dma/dma-overview.md
+        url: ../relational-databases/indexes/indexes.md
 
   - title: Query data
     linkLists:
     - linkListType: overview
       links:
       - text: Scripting 
-        url: ../dma/dma-overview.md
+        url: ../ssms/scripting/database-engine-scripting.md
       - text: Joins
-        url: ../dea/database-experimentation-assistant-overview.md
+        url: ../relational-databases/performance/joins.md
       - text: Full-text search
-        url: ../ssma/sql-server-migration-assistant.md
+        url: ../relational-databases/search/full-text-search.md
       - text: Synonyms 
-        url: ../dma/dma-overview.md
+        url: ../relational-databases/synonyms/synonyms-database-engine.md
 
 
   - title: Big data & machine learning 

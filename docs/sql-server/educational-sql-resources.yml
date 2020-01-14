@@ -30,7 +30,7 @@ landingContent:
       - text: Writing Transact-SQL (T-SQL)
         url: ../t-sql/tutorial-writing-transact-sql-statements.md
       - text: Extended events 
-        url: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server
+        url: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
       - text: Backup & restore on-premises
         url: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
       - text: Backup & restore to Azure blob storage

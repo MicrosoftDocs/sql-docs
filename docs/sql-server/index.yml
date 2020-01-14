@@ -35,7 +35,7 @@ landingContent:
     - linkListType: overview
       links:
       - text: Migration content
-        url: sql-server/migrate/index.yml
+        url: /sql-server/migrate/
       - text: Data Migration Guide
         url:  https://datamigration.microsoft.com/
       - text: Database Compatibility Certification
@@ -123,7 +123,7 @@ landingContent:
       - text: Permissions
         url: ../relational-databases/security/permissions-database-engine.md
       - text: Transparent Data Encryption (TDE)
-        url: ../relational-databases/security/encryption/transparent-data-encryption?.md
+        url: ../relational-databases/security/encryption/transparent-data-encryption.md
 
   - title: Database Design 
     linkLists:

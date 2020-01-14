@@ -47,6 +47,10 @@ In the current release, the following options are available:
 
 - -E Use trusted connection (integrated authentication.) For more information about making trusted connections that use integrated authentication from a Linux or macOS client, see [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
 
+- -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
+Specifies the input and output code pages. The codepage number is a numeric value that specifies an installed Linux code page.
+(This option has been made available on linux sqlcmd as of the 17.5.1.1 ODBC Driver 17 for SQL Server update)
+
 - -h *number_of_rows*  Specify the number of rows to print between the column headings.  
   
 - -H Specify a workstation name.  
@@ -153,8 +157,6 @@ In the current release, the following commands are available:
 In the current release, the following options are not available:  
 
 - -A  Log in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with a Dedicated Administrator Connection (DAC). For information on how to make a dedicated administrator connection (DAC), see [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md).  
-  
-- -f *code_page* Specify the input and output code pages.  
   
 - -L  List the locally configured server computers, and the names of the server computers that are broadcasting on the network.  
   

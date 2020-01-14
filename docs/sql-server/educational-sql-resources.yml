@@ -18,57 +18,57 @@ landingContent:
     - linkListType: learn
       links:
       - text: Upgrade SQL Server
-        url: /azure/sql-database/sql-database-single-database
+        url: https://docs.microsoft.com/en-us/learn/modules/introduction-upgrading-sql-server/
       - text: Use the Query Tuning Assistant
-        url: /azure/sql-database/sql-database-managed-instance
+        url: https://docs.microsoft.com/en-us/learn/modules/use-sql-server-query-tuning-assistant/
     - linkListType: quickstart
       links:
       - text: Connect & query with Azure Data Studio
-        url: /azure/sql-database/sql-database-single-database
+        url: ../azure-data-studio/quickstart-sql-server.md
       - text: Connect & query with SSMS
-        url: /azure/sql-database/sql-database-managed-instance
+        url: ../ssms/tutorials/connect-query-sql-server.md
+      - text: Writing Transact-SQL (T-SQL)
+        url: ../t-sql/tutorial-writing-transact-sql-statements.md
       - text: Extended events 
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+        url: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
       - text: Backup & restore on-premises
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+        url: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
       - text: Backup & restore to Azure blob storage
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+        url: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
     - linkListType: tutorial
       links:
       - text: Configure availability group 
-        url: /azure/sql-database/sql-database-single-database
+        url: ../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md
       - text: Configure transactional replication 
-        url: /azure/sql-database/sql-database-managed-instance
+        url: ../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md
       - text: Configure merge replication
-        url: /azure/sql-database/sql-database-managed-instance
-      - text: Advanced review of xEvents
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+        url: ../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md
       - text: Create in-memory table
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+        url: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
       - text: Sign stored procedure with certificate
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+        url: ../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
       - text: Use Azure Blob storage service
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+        url: ../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
       - text: Database tuning advisor 
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview 
+        url: ../tools/dta/tutorial-database-engine-tuning-advisor.md
     - linkListType: architecture
       links: 
       - text: Index architecture & design
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+        url: ../relational-databases/sql-server-index-design-guide.md
       - text: Pages & extents architecture
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview         
+        url: ../relational-databases/pages-and-extents-architecture-guide.md
       - text: Post migration validation & optimization
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+        url: ../relational-databases/post-migration-validation-and-optimization-guide.md
       - text: Query processing Architecture
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+        url: ../relational-databases/query-processing-architecture-guide.md
       - text: Thread & task architecture
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+        url: ../relational-databases/thread-and-task-architecture-guide.md
       - text: Transaction log architecture
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+        url: ../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md 
       - text: Transaction locking & row versioning
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+        url: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
       - text: Memory management architecture
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview  
+        url: ../relational-databases/memory-management-architecture-guide.md
 
 
   - title: SQL Server on Azure VM (IaaS)
@@ -76,48 +76,52 @@ landingContent:
     - linkListType: quickstart
       links:
       - text: Create VM with portal
-        url: /azure/sql-database/sql-database-single-database
+        url: /azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal
       - text: Create VM with PowerShell
-        url: /azure/sql-database/sql-database-managed-instance
-    - linkListType: tutorial
+        url: /azure/virtual-machines/windows/sql/quickstart-sql-vm-create-powershell
+    - linkListType: how-to-guide
       links:
       - text: Register with resource provider
-        url: /azure/sql-database/sql-database-single-database
-      - text: Configure Always On availablity group with Az CLI
-        url: /azure/sql-database/sql-database-managed-instance
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider
+      - text: Configure Always On availability group with Az CLI
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-availability-group-cli
       - text: Create FCI using premium file share
-        url: /azure/sql-database/sql-database-managed-instance
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-create-failover-cluster-premium-file-share
       - text: Use Azure storage for backup & restore
-        url: /azure/sql-database/sql-database-managed-instance
+        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-use-storage-sql-server-backup-restore
 
   - title: Azure SQL Database single database
     linkLists:
     - linkListType: learn
       links:
-      - text: Secure your cloud data
-        url: /azure/sql-database/sql-database-single-database
-      - text: Secure your Azure SQL Database
-        url: /azure/sql-database/sql-database-managed-instance
+      - text: Choose data storage approach
+        url: https://docs.microsoft.com/en-us/learn/modules/choose-storage-approach-in-azure/
+      - text: Secure SQL Database
+        url: https://docs.microsoft.com/en-us/learn/modules/secure-your-azure-sql-database/
+      - text: Geographically distributed app
+        url: https://docs.microsoft.com/en-us/learn/modules/design-a-geographically-distributed-application/
+      - text: ASP.NET App to query SQL Database
+        url: https://docs.microsoft.com/en-us/learn/modules/develop-app-that-queries-azure-sql/
     - linkListType: quickstart
       links:
-      - text: Create DB with portal
-        url: /azure/sql-database/sql-database-single-database
+      - text: Create DB with portal or code 
+        url: /azure/sql-database/sql-database-single-database-get-started
       - text: Create DB with template
-        url: /azure/sql-database/sql-database-managed-instance
+        url: /azure/sql-database/sql-database-single-database-get-started-template
       - text: Configure Server-level IP firewall rules
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+        url: /azure/sql-database/sql-database-server-level-firewall-rule
     - linkListType: tutorial
       links:
       - text: Migrate using Azure Database Migration Service
-        url: /azure/sql-database/sql-database-single-database
+        url: /azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/sql-database/toc.json
       - text: Add single DB to a failover group
-        url: /azure/sql-database/sql-database-managed-instance
+        url: /azure/sql-database/sql-database-single-database-failover-group-tutorial
       - text: Add elastic pool to a failover group
-        url: /azure/sql-database/sql-database-managed-instance
+        url: /azure/sql-database/sql-database-elastic-pool-failover-group-tutorial
       - text: Configure active geo-replication
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+        url: /azure/sql-database/sql-database-active-geo-replication-portal
       - text: Configure security
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+        url: /azure/sql-database/sql-database-security-tutorial
 
   - title: Additional resources 
     linkLists:
@@ -139,74 +143,73 @@ landingContent:
     - linkListType: learn
       links:
       - text: Introduction
-        url: /azure/sql-database/sql-database-single-database
+        url: https://docs.microsoft.com/en-us/learn/modules/introduction-sql-server-linux/
       - text: Deploy
-        url: /azure/sql-database/sql-database-managed-instance
+        url: https://docs.microsoft.com/en-us/learn/modules/deploy-sql-server-linux/
       - text: Automatically tune
-        url: /azure/sql-database/sql-database-managed-instance
+        url: https://docs.microsoft.com/en-us/learn/modules/automatically-tune-sql-server-linux/
       - text: Containers  
-        url: /azure/sql-database/sql-database-managed-instance
+        url: https://docs.microsoft.com/en-us/learn/modules/run-sql-server-2017-linux-containers/
     - linkListType: quickstart
       links:
       - text: Red hat
-        url: /azure/sql-database/sql-database-single-database
+        url: ../linux/quickstart-install-connect-red-hat.md
       - text: SUSE
-        url: /azure/sql-database/sql-database-managed-instance
+        url: ../linux/quickstart-install-connect-suse.md
       - text: Ubuntu
-        url: /azure/sql-database/sql-database-managed-instance
+        url: ../linux/quickstart-install-connect-ubuntu.md
       - text: Docker
-        url: /azure/sql-database/sql-database-managed-instance
+        url: ../linux/quickstart-install-connect-docker.md
       - text: On Azure
-        url: /azure/sql-database/sql-database-managed-instance
+        url: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
     - linkListType: tutorial
       links:
       - text: Migrate from Windows
-        url: /azure/sql-database/sql-database-single-database
+        url: ../linux/sql-server-linux-migrate-restore-database.md
       - text: Migrate to docker
-        url: /azure/sql-database/sql-database-managed-instance
+        url: ../linux/tutorial-restore-backup-in-sql-server-container.md
       - text: Create a job
-        url: /azure/sql-database/sql-database-single-database
+        url: ../linux/sql-server-linux-run-sql-server-agent-job.md
       - text: Setup AD authentication 
-        url: /azure/sql-database/sql-database-single-database
-      - text: Create FCI
-        url: /azure/sql-database/sql-database-managed-instance
-      - text: Operate FCI
-        url: /azure/sql-database/sql-database-managed-instance
+        url: ../linux/sql-server-linux-active-directory-authentication.md
+      - text: Configure FCI
+        url: ../linux/sql-server-linux-shared-disk-cluster-configure.md
       - text: Deploy a Pacemaker cluster
-        url: /azure/sql-database/sql-database-managed-instance
+        url: ../linux/sql-server-linux-deploy-pacemaker-cluster.md
       - text: Create & configure availability group
-        url: /azure/sql-database/sql-database-managed-instance
+        url: ../linux/sql-server-linux-create-availability-group.md
       - text: Deploy on Kubernetes
-        url: /azure/sql-database/sql-database-managed-instance
-
+        url: ../linux/tutorial-sql-server-containers-kubernetes.md
+      - text: Configure replication
+        url: ../linux/sql-server-linux-replication-tutorial-tsql.md
 
   - title: Azure SQL Database managed instance 
     linkLists:
     - linkListType: quickstart
       links:
       - text: Create instance with portal
-        url: /azure/sql-database/sql-database-single-database
+        url: /azure/sql-database/sql-database-managed-instance-get-started
       - text: Create instance with PowerShell
-        url: /azure/sql-database/sql-database-managed-instance
+        url: /azure/sql-database/scripts/sql-database-create-configure-managed-instance-powershell
       - text: Create instance pool
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+        url: /azure/sql-database/sql-database-instance-pools-how-to
       - text: Configure public endpoint
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+        url: /azure/sql-database/sql-database-managed-instance-public-endpoint-configure
       - text: Connect a client VM
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+        url: /azure/sql-database/sql-database-managed-instance-configure-vm
       - text: Configure point-to-site connection
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-      - text: Restore databse backup
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+        url: /azure/sql-database/sql-database-managed-instance-configure-p2s
+      - text: Restore database backup
+        url: /azure/sql-database/sql-database-managed-instance-get-started-restore
     - linkListType: tutorial
       links:
       - text: Migrate using Azure Database Migration Service
-        url: /azure/sql-database/sql-database-single-database
+        url: /azure/dms/tutorial-sql-server-to-managed-instance?toc=/azure/sql-database/toc.json
       - text: Configure transactional replication
-        url: /azure/sql-database/sql-database-managed-instance
+        url: /azure/sql-database/sql-database-managed-instance-configure-replication-tutorial
       - text: Add to a failover group
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+        url: /azure/sql-database/sql-database-managed-instance-failover-group-tutorial?tabs=azure-portal
       - text: Migrate on-premises users and groups
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+        url: /azure/sql-database/tutorial-managed-instance-azure-active-directory-migration
       - text: Configure security
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+        url: /azure/sql-database/sql-database-managed-instance-aad-security-tutorial

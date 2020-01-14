@@ -10447,7 +10447,7 @@
         href: linux/sql-server-linux-shared-disk-cluster-configure-nfs.md
       - name: SMB
         href: linux/sql-server-linux-shared-disk-cluster-configure-smb.md
-    - name: Operate failover cluster instance - SQL Server on Linux
+    - name: Operate failover cluster instances
       href: linux/sql-server-linux-shared-disk-cluster-operate.md
     - name: Deploy a Pacemaker cluster
       href: linux/sql-server-linux-deploy-pacemaker-cluster.md

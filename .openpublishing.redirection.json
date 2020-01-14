@@ -1432,7 +1432,7 @@
     },
     {
       "source_path": "docs/lp/sql-server/sql-education-center.md",
-      "redirect_url": "/sql/sql-server/educational-sql-resources.yml",
+      "redirect_url": "/sql/sql-server/educational-sql-resources",
       "redirect_document_id": true
     },
     {

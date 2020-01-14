@@ -1,7 +1,7 @@
 ---
 title: "CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/10/2020
+ms.date: 01/14/2020
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -195,7 +195,7 @@ Creates a workload group. Workload groups are containers for a set of requests a
 ```
 CREATE WORKLOAD GROUP group_name
  WITH
- (        MIN_PERCENTAGE_RESOURCE = valu
+ (        MIN_PERCENTAGE_RESOURCE = value
       ,   CAP_PERCENTAGE_RESOURCE = value
       ,   REQUEST_MIN_RESOURCE_GRANT_PERCENT = value
   [ [ , ] REQUEST_MAX_RESOURCE_GRANT_PERCENT = value ]

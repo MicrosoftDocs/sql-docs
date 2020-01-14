@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Configure replication (T-SQL)"
 description: This tutorial shows how to configure SQL Server snapshot replication on Linux using T-SQL.
-ms.custom: seo-lt-2019
+ms.custom: seo-dt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto

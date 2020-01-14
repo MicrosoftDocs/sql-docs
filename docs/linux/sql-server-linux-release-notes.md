@@ -90,8 +90,8 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ### Added support
 
-- Change Data Capture (CDC) is supported with SQL Server on Linux starting with CU18.
-- Transactional Replication is supported with SQL Server on Linux starting with CU18.
+- Change Data Capture (CDC) is supported with SQL Server 2017 on Linux starting with CU18.
+- Transactional Replication is supported with SQL Server 2017 on Linux starting with CU18.
 
 ### Remarks
 

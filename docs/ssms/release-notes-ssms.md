@@ -324,7 +324,7 @@ Release date: July 25, 2019
 |SSMS is no longer added to the PATH environment variable|Path to SSMS.EXE (and tools in general) isn't added to the path anymore. Users can either manually add it, or if on a modern Windows computer, use on the Start menu.|
 |Package IDs are no longer needed to develop SSMS Extensions| In the past, SSMS was selectively loading only well-known packages, thus requiring developers to register their own package. This is no longer the case.|
 |General SSMS|Exposing AUTOGROW_ALL_FILES config option for Filegroups in SSMS.|
-|General SSMS|Removed risky 'lightweight pooling' and 'priority boost' options from SSMS GUI. For details, see [Priority boost details – and why it’s not recommended](https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/).
+|General SSMS|Removed risky 'lightweight pooling' and 'priority boost' options from SSMS GUI. For details, see [Priority boost details – and why it’s not recommended](https://deep.data.blog/2010/01/26/priority-boost-details-and-why-its-not-recommended/).
 |General SSMS|New menu and key bindings to creates files: **CTRL+ALT+N**. **CTRL+N** continues to create a new query.|
 |General SSMS|**New Firewall Rule** dialog now allows the user to specify a rule name, instead of automatically generating one on behalf of the user.|
 |General SSMS|Improved IntelliSense in Editor especially for v140+ T-SQL.|

@@ -37,11 +37,11 @@ If you don't have access to a SQL Server, select your platform from the followin
 
 3. This article uses *SQL Login*, but *Windows Authentication* is supported. Fill in the fields as follows:
 
-- **Server Name:** - Enter server name here. For example, localhost.
+- **Server Name:** Enter server name here. For example, localhost.
 - **Authentication Type:** SQL Login
 - **User name:** User name for the SQL Server
 - **Password:** Password for the SQL Server
-- **Database Name:** leave this field blank
+- **Database Name:** \<Default\>
 - **Server Group:** \<Default\>
 
    ![New Connection Screen](media/quickstart-sql-server/new-connection-screen.png)

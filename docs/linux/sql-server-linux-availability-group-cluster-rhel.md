@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 03/12/2019
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -158,7 +158,10 @@ To create the availability group resource, use `pcs resource create` command and
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
-``` 
+```
+
+> [!NOTE]
+> With the availability of **RHEL 8**, the create syntax has changed. If you are using **RHEL 8**, the terminology `master` has changed to `promotable`. Use the following create command instead of the above command: `sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
@@ -182,8 +185,20 @@ On a pacemaker cluster, you can manipulate the decisions of the cluster with con
 
 To ensure that primary replica and the virtual ip resources run on the same host, define a colocation constraint with a score of INFINITY. To add the colocation constraint, run the following command on one node.
 
+### RHEL 7
+
+When you create the `ag_cluster` resource in RHEL 7, it creates the resource as `ag_cluster-master`. Use the following command for RHEL 7:
+
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
+```
+
+### RHEL 8
+
+When you create the `ag_cluster` resource in RHEL 8, it creates the resource as `ag_cluster-clone`. Use the following command for RHEL 8:
+
+```bash
+sudo pcs constraint colocation add virtualip with master ag_cluster-clone INFINITY with-rsc-role=Master
 ```
 
 ## Add ordering constraint
@@ -204,8 +219,16 @@ To prevent the IP address from temporarily pointing to the node with the pre-fai
 
 To add an ordering constraint, run the following command on one node:
 
+### RHEL 7
+
 ```bash
 sudo pcs constraint order promote ag_cluster-master then start virtualip
+```
+
+### RHEL 8
+
+```bash
+sudo pcs constraint order promote ag_cluster-clone then start virtualip
 ```
 
 >[!IMPORTANT]

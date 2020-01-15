@@ -66,7 +66,7 @@ ms.author: mikeray
     |Number of CPUs|32-bit computer|64-bit computer|  
     |------------|------------|------------| 
     |\<= 4 processors|256|512|
-    |\> 4 processors and \< 64 processors|256 + ((logical CPU's - 4) * 8)|512 + ((logical CPU's - 4) * 16)|
+    |\> 4 processors and \<= 64 processors|256 + ((logical CPU's - 4) * 8)|512 + ((logical CPU's - 4) * 16)|
     |\> 64 processors|256 + ((logical CPU's - 4) * 32)|512 + ((logical CPU's - 4) * 32)|
   
     > [!NOTE]  

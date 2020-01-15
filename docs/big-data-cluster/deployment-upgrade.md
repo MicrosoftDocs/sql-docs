@@ -47,8 +47,10 @@ This section explains how to upgrade a SQL Server BDC from a supported release (
 3. Update `azdata`.
 
    Follow the instructions for installing `azdata`. 
-   - [Windows installer](/deploy-install-azdata-installer.md#install-azdata-with-the-microsoft-windows-installer)
-   - [Linux package manager](deploy-install-azdata-linux-package.md)
+   - [Windows installer](deploy-install-azdata-installer.md)
+   - [Linux with apt](deploy-install-azdata-linux-package.md)
+   - [Linux with yum](deploy-install-azdata-yum.md)
+   - [Linux with zypper](deploy-install-azdata-zypper.md)
 
    >[!NOTE]
    >If `azdata` was installed with `pip` you need to manually remove it before installing with the Windows installer or the Linux package manager.
@@ -69,7 +71,7 @@ This section explains how to upgrade a SQL Server BDC from a supported release (
 >The latest image tags are available at [SQL Server 2019 Big Data Clusters release notes](release-notes-big-data-cluster.md).
 
 >[!IMPORTANT]
->If you use a private repository to pre-pull the images for deploying or upgrading BDC, ensure that the current build images as well as >the target build images are in the private repository. This enables successful rollback, if necessary. Also, if you changed the >credentials of the private repository since the original deployment, update the corresponding secret in Kubernetes before you upgrade. >azdata does not support updating the credentials through AZDATA_PASSWORD and AZDATA_USERNAME environment variables. Update the secret >using [kubectl edit secrets](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). Upgrading using different >private repositories for current and target builds is not supported.
+>If you use a private repository to pre-pull the images for deploying or upgrading BDC, ensure that the current build images as well as >the target build images are in the private repository. This enables successful rollback, if necessary. Also, if you changed the >credentials of the private repository since the original deployment, update the corresponding secret in Kubernetes before you upgrade. >There is no support for updating the credentials through DOCKER_PASSWORD and DOCKER_USERNAME environment variables. Update the secret >using [kubectl edit secrets](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). Upgrading using different >private repositories for current and target builds is not supported.
 
 ### Increase the timeout for the upgrade
 

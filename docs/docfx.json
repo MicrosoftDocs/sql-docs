@@ -155,6 +155,7 @@
         "master-data-services/microsoft-excel-add-in/**/*.md": "SQL Server MDS Excel Add-in",
         "ssdt/**/*.md": "SQL Server Data Tools (SSDT)",
         "ssms/**/*.md": "SQL Server Management Studio (SSMS)",
+        "azure-data-studio/**/*.md": "Azure Data Studio",        
         "ssms/agent/**/*.md": "SQL Server Agent",
         "ssms/visual-db-tools/**/*.md": "Visual Database Tools",
         "tools/ssbdiagnose/**/*.md": "ssbdiagnose",

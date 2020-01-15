@@ -90,9 +90,9 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |Theming|Yes||
 |Dark Mode|Yes||
 |Azure Resource Explorer|Preview||
-|Generate Scripts Wizard||Yes|
+|Generate Scripts Wizard||Preview|
 |Import/Export DACPAC||Yes|
-|Object Properties||Yes|
+|Object Properties||Preview|
 |Table Designer||Yes|
 
 ### Query editor

@@ -29,7 +29,10 @@ ms.author: maggies
   
 ## Setting a query time-out for an embedded dataset in a report  
  Query time-out values are specified during report authoring when you define an embedded dataset. The time-out value is stored with the report, in the **Timeout** element of the report definition. By default, this value is set to 30 seconds. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
-  
+ 
+ > [!NOTE]  
+ > For **Paginated Reports in Power BI**, the default value is set to **600 seconds**.
+ 
  Users who have permission to modify the properties of a published report can reset this value by editing the report definition file.  
   
  You can also specify a query time-out value for data-driven subscriptions. The query time-out value is specified in the Data-Driven Subscription pages. The value you specify determines how long the report server waits for query processing to complete when retrieving data from the subscriber data source.  

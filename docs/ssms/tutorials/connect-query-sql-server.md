@@ -194,7 +194,7 @@ You can change the server that your current query window is connected to by foll
 
 ## Azure Data Studio
 
-You can also connect and query [SQL Server](../../azure-data-studio/quickstart-sql-server.md), an [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), and [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md) using Azure Data Studio.
+You can also connect and query [SQL Server](../../azure-data-studio/quickstart-sql-server.md), an [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md), and [Azure SQL data  warehouses](../../azure-data-studio/quickstart-sql-dw.md) using Azure Data Studio.
 
 ## Next steps
 

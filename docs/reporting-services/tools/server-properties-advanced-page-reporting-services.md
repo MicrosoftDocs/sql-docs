@@ -105,6 +105,12 @@ Specifies the number of seconds until a report edit session times out. The defau
 ###  EnableClientPrinting  
 Determines whether the RSClientPrint ActiveX control is available for download from the report server. The valid values are **true** and **false**. The default value is **true**. For more information about additional settings that are required for this control, see [Enable and Disable Client-Side Printing for Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
 
+### EnableCDNVisuals 
+
+(Power BI Report Server only)
+
+When enabled Power BI Reports will load the latest certified custom visuals from a content delivery network (CDN) hosted by Microsoft. If your server does not have access to internet resources you can disable this option and custom visuals will be loaded from the report that was published to the server. *Default is True.*  
+
 ### EnableCustomVisuals 
 
 (Power BI Report Server only)

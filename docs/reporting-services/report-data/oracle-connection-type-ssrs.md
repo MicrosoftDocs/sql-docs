@@ -25,15 +25,20 @@ Power BI Report Server and SQL Server Reporting Services 2016 and 2017 all use M
 3. Add ODP.NET Managed Client entries to machine.config:
     C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /productversion:4.122.18.3
 
- > [!NOTE]  
- > Power BI Reports use **Unmanaged ODP.NET**. Follow these steps to register Unmanaged ODP.NET:
- > 1. Register ODP.NET Unmanaged Client to GAC:
- >     C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
- > 2. Add ODP.NET Unmanaged Client entries to machine.config:
- >     C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
- > 
+### Power BI Reports use Unmanaged ODP.NET
 
+Power BI Reports use **Unmanaged ODP.NET**. Follow these steps to register Unmanaged ODP.NET:
+
+1. Register ODP.NET Unmanaged Client to GAC:
+
+   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+
+2. Add ODP.NET Unmanaged Client entries to machine.config:
+
+   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+ 
 ## 32-bit drivers for Report Builder
+
 The following steps are only needed for when using the latest 18x drivers. They assume you've installed the files to c:\oracle32.
 
 1. On the Oracle download site, install the [Oracle 32-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html).
@@ -42,13 +47,17 @@ The following steps are only needed for when using the latest 18x drivers. They 
 3. Add ODP.NET Managed Client entries to machine.config:
     C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /productversion:4.122.18.3
 
- > [!NOTE]  
- > Power BI Reports use **Unmanaged ODP.NET**. Follow these steps to register Unmanaged ODP.NET:
- > 1. Register ODP.NET Unmanaged Client to GAC:
- >     C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
- > 2. Add ODP.NET Unmanaged Client entries to machine.config:
- >     C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
- > 
+### Power BI Reports use Unmanaged ODP.NET  
+
+Power BI Reports use **Unmanaged ODP.NET**. Follow these steps to register Unmanaged ODP.NET:
+
+1. Register ODP.NET Unmanaged Client to GAC:
+
+   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+
+2. Add ODP.NET Unmanaged Client entries to machine.config:
+   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+ 
 
  Use the information in this topic to build a data source. For step-by-step instructions, see [Add and Verify a Data Connection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   

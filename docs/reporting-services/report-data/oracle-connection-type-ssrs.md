@@ -32,7 +32,6 @@ Power BI Reports use **Unmanaged ODP.NET**. Follow these steps to register Unman
 1. Register ODP.NET Unmanaged Client to GAC:
 
    C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
-
 2. Add ODP.NET Unmanaged Client entries to machine.config:
 
    C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
@@ -54,8 +53,8 @@ Power BI Reports use **Unmanaged ODP.NET**. Follow these steps to register Unman
 1. Register ODP.NET Unmanaged Client to GAC:
 
    C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
-
 2. Add ODP.NET Unmanaged Client entries to machine.config:
+
    C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
  
 

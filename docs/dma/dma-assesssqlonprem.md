@@ -2,7 +2,7 @@
 title: "Perform a SQL Server migration assessment"
 titleSuffix: Data Migration Assistant
 description: Learn how to use Data Migration Assistant to assess an on-premises SQL Server before migrating to another SQL Server or to Azure SQL Database
-ms.date: "01/10/2020"
+ms.date: "01/15/2020"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -19,7 +19,7 @@ ms.custom: "seo-lt-2019"
 
 # Perform a SQL Server migration assessment with Data Migration Assistant
 
-The following step-by-step instructions help you perform your first assessment for migrating to on-premises SQL Server, SQL Server running on an Azure VM, or Azure SQL Database, by using Data Migration Assistant.
+The following step-by-step instructions help you perform your first assessment for migrating to on-premises SQL Server, SQL Server running on an Azure VM, or Azure SQL Database by using Data Migration Assistant.
 
    > [!NOTE]
    > Data Migration Assistant v5.0 introduces support for analyzing database connectivity and embedded SQL queries in the application code. For more information, see the blog post [Using Data Migration Assistant to assess an application’s data access layer](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).

@@ -1,6 +1,6 @@
 ---
 title: "Oracle Connection Type (SSRS, Power BI Report Server, and Report Builder) | Microsoft Docs"
-ms.date: 07/26/2019
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data

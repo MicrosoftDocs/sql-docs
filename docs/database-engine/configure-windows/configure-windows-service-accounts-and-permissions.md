@@ -383,7 +383,7 @@ This section describes the permissions that [!INCLUDE[ssNoVersion](../../include
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|Read, Execute, List Folder Contents|  
 |Launchpad|%binn|Read, Execute|
 ||ExtensiblilityData|Full control|
-||Log\ExtensibiltityLog|Full control|
+||Log\ExtensibilityLog|Full control|
   
  \*The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is disabled on instances of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] and [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services.  
   

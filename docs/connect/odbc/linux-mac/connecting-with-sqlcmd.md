@@ -49,7 +49,7 @@ In the current release, the following options are available:
 
 - -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
 Specifies the input and output code pages. The codepage number is a numeric value that specifies an installed Linux code page.
-(This option has been made available on linux sqlcmd as of the 17.5.1.1 ODBC Driver 17 for SQL Server update)
+(available since 17.5.1.1)
 
 - -h *number_of_rows*  Specify the number of rows to print between the column headings.  
   

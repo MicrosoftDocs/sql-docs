@@ -38,4 +38,4 @@ Don't install and run the Data Migration Assistant directly on the SQL Server h
 
     However, if all access involves a secure intranet configuration, encryption might not be required. Enabling encryption slows performance because the extra overhead that is required to encrypt and decrypt packets. For more information, please refer to [Encrypting Connections to SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
     
-- Check for untrusted constraints on both the source database and target database before migrating data.  Then analyze the target database again after the migration to see if any constraints became untrusted as part of the data movement.  Fix untrusted constraints as needed.  Leaving the constraints untrusted can result in poor execution plans and impact performance.
+- Check for untrusted constraints on both the source database and the target database before migrating data. After the migration, analyze the target database again to see if any constraints became untrusted as part of the data movement. Fix untrusted constraints as needed. Leaving the constraints untrusted can result in poor execution plans, and it can affect performance.

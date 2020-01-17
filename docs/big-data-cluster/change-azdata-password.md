@@ -54,11 +54,11 @@ If the cluster is operating in non-Active Directory mode, update the Apache Knox
 
    `hexsalt` returns a random hex string (for example, `64FC59DF31244FFEE02F457BC0750226`).
 
-1. Install the platform-appropriate .NET Core app for [`pbkdf2`](https://helsinki.redmond.corp.microsoft.com/dist/software/pbkdf2/).
-
-   The app is self-contained and requires no prerequisites, such as .NET runtimes.
-
 1. Encrypt the new complex password by using `hexsalt`:
+
+   For your convenience, we provide a pre-built tool `pbkdf2` to encrypt the password. Download the platform-appropriate .NET Core app for [`pbkdf2`](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/security/password-hashing/pbkdf2/prebuilt-binaries).
+
+   The app is self-contained and requires no prerequisites, such as .NET runtimes. To encrypt the password run:
 
    ```bash
    pbkdf2 <password> <hexsalt>
@@ -67,7 +67,7 @@ If the cluster is operating in non-Active Directory mode, update the Apache Knox
 
 1. Update the password in the users table:
 
-   ```bash
+   ```SQL
    UPDATE [auth].[users] SET password = 'J2y4E4dhlgwHOaRr3HKiiVAKBfjuGDyYmzn88VXmrzM=' WHERE username = '<username>'
    ```
 

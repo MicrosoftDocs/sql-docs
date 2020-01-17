@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: MightyPen
+ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
 ---
@@ -175,8 +175,8 @@ Controls the Transparent Network IP Resolution feature, which interacts with Mul
 
 | Keyword Value | Attribute Value| Description |
 |-|-|-|
-|Yes|SQL_IS_ON|(Default) Enables Transparent Network IP Resolution.|
-|No|SQL_IS_OFF|Disables Transparent Network IP Resolution.|
+|Enabled|SQL_IS_ON|(Default) Enables Transparent Network IP Resolution.|
+|Disabled|SQL_IS_OFF|Disables Transparent Network IP Resolution.|
 
 ### UseFMTONLY
 

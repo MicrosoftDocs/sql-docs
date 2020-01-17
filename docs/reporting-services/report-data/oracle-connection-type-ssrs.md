@@ -1,6 +1,6 @@
 ---
 title: "Oracle Connection Type (SSRS, Power BI Report Server, and Report Builder) | Microsoft Docs"
-ms.date: 07/26/2019
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data
@@ -80,7 +80,7 @@ Data Source="Oracle"; Unicode="True"
 ##  <a name="Query"></a> Queries  
  To create a dataset, you can either select a stored procedure from a drop-down list or create an SQL query. To build a query, you must use the text-based query designer. For more information, see [Text-based Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
- You can specify stored procedures that return only one result set. Using cursor-based queries are not supported.  
+ You can specify stored procedures that return only one result set. Using cursor-based queries aren't supported.  
   
 ##  <a name="Parameters"></a> Parameters  
  If the query includes query variables, corresponding report parameters are automatically generated. Named parameters are supported by this extension. For Oracle version 9 or later, multivalue parameters are supported.  
@@ -91,7 +91,7 @@ Data Source="Oracle"; Unicode="True"
 ##  <a name="Remarks"></a> Remarks  
  Before you can connect an Oracle data source, the system administrator must have installed the version of the .NET Data Provider for Oracle that supports retrieving data from the Oracle database. This data provider must be installed on the same computer as Report Builder and also on the report server.  
   
- For more information, see the following:  
+ For more information, see the following articles:  
   
 -   [How to use Reporting Services to configure and to access an Oracle data source](https://support.microsoft.com/kb/834305)  
 -   [How to add permissions for the NETWORK SERVICE security principal](https://support.microsoft.com/kb/870668)  

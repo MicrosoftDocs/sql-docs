@@ -1,16 +1,17 @@
 ---
 title: "Server Properties Advanced Page | Microsoft Docs"
+description: Use the Advanced Server Properties page to set system properties on the report server. This tool provides a graphical user interface so that you can set properties without writing code.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 12/09/2019
+ms.date: 01/16/2020
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 
-# Server Properties Advanced Page - SQL Server Reporting Services
+# Server Properties Advanced Page - Power BI Report Server & Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -100,7 +101,11 @@ The second header in above XML adds `Embed: True` header for URL which contains 
 Specifies the number of data cache entries that can be active in a report edit session. The default number is 5.  
 
 ### EditSessionTimeout
-Specifies the number of seconds until a report edit session times out. The default value is 7200 seconds (two hours).  
+Specifies the number of seconds until a report edit session times out. The default value is 7200 seconds (two hours). 
+
+### EnableCDNVisuals 
+
+When enabled, Power BI reports load the latest certified custom visuals from a content delivery network (CDN) hosted by Microsoft. If your server doesn't have access to internet resources, you can turn off this option. In that case, custom visuals are loaded from the report that was published to the server. Default is **True**.  
 
 ###  EnableClientPrinting  
 Determines whether the RSClientPrint ActiveX control is available for download from the report server. The valid values are **true** and **false**. The default value is **true**. For more information about additional settings that are required for this control, see [Enable and Disable Client-Side Printing for Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  

@@ -1,7 +1,7 @@
 ---
 title: "Release Notes for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/12/2019"
+ms.date: "01/31/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: "v-dapugl, kenvh"
@@ -34,6 +34,24 @@ TO  :  'release-notes-php-sql-driver.md'
 For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
+
+## What's New in Version 5.8
+
+| New item | Details |
+| :------- | :------ |
+| Support for PHP 7.4. | &nbsp; |
+| Dropped support for PHP 7.1. | &nbsp; |
+| Support for Microsoft ODBC Driver 17.4 on all platforms. | &nbsp; |
+| Support for macOS Catalina. | Requires ODBC Driver 17.4 or above. |
+| Support for Alpine 3.11, Debian 10, Red Hat 8, Ubuntu 19.04 and 19.10. | Both require ODBC Driver 17.4 or above. |
+| Dropped support for Linux Ubuntu 18.10. | &nbsp; |
+| Support for Language option when connecting to SQL Server. | &nbsp; |
+| Support for PHP extended string types introduced in PHP 7.2. | &nbsp; |
+| Support for Data Classification sensitivity metadata retrieval. | Requires SQL Server 2019 and ODBC Driver 17.4.2+. |
+| Support for Always Encrypted with secure enclaves. | Requires ODBC Driver 17.4 or above. |
+| Added configurable options for locale settings in Linux and macOS. |
+| Improved performance by caching metadata on fetches. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## What's New in Version 5.6
 

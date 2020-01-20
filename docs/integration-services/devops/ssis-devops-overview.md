@@ -131,7 +131,7 @@ SSIS Deploy Task doesn’t support the following scenarios currently:
 
 Release Date: January 19, 2020
 
-- Fixed an issue that ispac cannot be deployed if its original file name is changed.
+- Fixed an issue that prevented ispac from being deployed if its original file name was changed.
 
 ### Version 0.1.2 Preview
 

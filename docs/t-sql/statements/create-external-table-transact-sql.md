@@ -424,7 +424,7 @@ WITH
       LOCATION='tpch_10.dbo.customer',
       DATA_SOURCE=SqlServerInstance
      );
- ```
+```
 
 ### I. Create an external table for Oracle
 
@@ -470,7 +470,7 @@ WITH
     LOCATION='customer',
     DATA_SOURCE= external_data_source_name
    );
-   ```
+```
 
 ### J. Create an external table for Teradata
 
@@ -612,7 +612,7 @@ column_name <data_type>
         [DISTRIBUTION  = SHARDED(sharding_column_name) | REPLICATED | ROUND_ROBIN]]  
     )  
 [;]  
-```  
+```
 
 ## Arguments
 
@@ -763,7 +763,7 @@ column_name <data_type>
     | REJECTED_ROW_LOCATION = '/REJECT_Directory'
   
 }  
-```  
+```
 
 ## Arguments
 
@@ -841,7 +841,7 @@ This example shows how the three REJECT options interact with each other. For ex
 REJECTED_ROW_LOCATION = *Directory Location*
 
 Specifies the directory within the External Data Source that the rejected rows and the corresponding error file should be written.
-If the specified path doesn't exist, PolyBase will create one on your behalf. A child directory is created with the name "_rejectedrows". The "_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file.
+If the specified path doesn't exist, PolyBase will create one on your behalf. A child directory is created with the name "\_rejectedrows". The "\_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file.
 
 The reason files and the data files both have the queryID associated with the CTAS statement. Because the data and the reason are in separate files, corresponding files have a matching suffix.
 
@@ -969,7 +969,7 @@ AS SELECT * FROM
 ## Overview: Analytics Platform System
 
 Use an external table to:
-  
+
 - Query Hadoop or Azure blob storage data with [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
 - Import and store data from Hadoop or Azure blob storage into Analytics Platform System.
 
@@ -1000,7 +1000,7 @@ column_name <data_type>
     | REJECT_SAMPLE_VALUE = reject_sample_value,
   
 }  
-```  
+```
 
 ## Arguments
 

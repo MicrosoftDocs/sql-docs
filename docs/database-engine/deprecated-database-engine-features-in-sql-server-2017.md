@@ -114,6 +114,7 @@ The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] feature
 |Security|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
 |Security|sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
 |Security|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
+|Security|sp_changedbowner|ALTER AUTHORIZATION|sp_changedbowner|243|
 |Security|sp_changeobjectowner|ALTER SCHEMA or ALTER AUTHORIZATION|sp_changeobjectowner|58|  
 |Security|sp_control_dbmasterkey_password|A master key must exist and password must be correct.|sp_control_dbmasterkey_password|274|  
 |Security|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  

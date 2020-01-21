@@ -7,7 +7,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: "v-chojas"
-author: MightyPen
+author: v-chojas
 ---
 # Using Always Encrypted with the ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -52,6 +52,9 @@ Note that enabling Always Encrypted is not sufficient for encryption or decrypti
 - The application can access the CMK which protects the CEKs for the queried encrypted columns. This is dependent on the keystore provider which stores the CMK. See [Working with Column Master Key Stores](#working-with-column-master-key-stores) for more information.
 
 ### Enabling Always Encrypted with Secure Enclaves
+
+> [!NOTE]
+> On Linux and Mac, OpenSSL version 1.0.1 or later is required to use Always Encrypted with Secure Enclaves.
 
 Beginning with version 17.4, the driver supports Always Encrypted with Secure Enclaves. To enable use of the enclave when connecting to SQL Server 2019 or later, set the `ColumnEncryption` DSN, connection string, or connection attribute to the name of the enclave type and attestation protocol, and associated attestation data, separated by a comma. In version 17.4, only the [Virtualization Based Security](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) enclave type and [Host Guardian Service](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) attestation protocol, denoted by `VBS-HGS`, is supported; to use it, specify the URL of the attestation server, for example:
 

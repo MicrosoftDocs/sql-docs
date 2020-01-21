@@ -202,7 +202,7 @@ To create an external data source that references Oracle, ensure you have a data
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '!MyC0mpl3xP@ssw0rd!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '!MyC0mpl3xP@ssw0rd!'
 ;
 
 -- Create a database scoped credential with Azure storage account key as the secret.

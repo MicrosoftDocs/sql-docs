@@ -68,14 +68,14 @@ The following versions of PHP are supported with the listed version of the Micro
 
 |PHP for SQL Server driver version &#8594;<br />&#8595; PHP version|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |:---:|---|---|---|---|---|---|---|
-|7.4|7.4.0+          |                |                |                |       |        |
-|7.3|7.3.0+          |7.3.0+          |                |                |       |        |
-|7.2|7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>|       |        |
-|7.1|                |7.1.0+          |7.1.0+          |7.1.0+          |       |        |
-|7.0|                |                |7.0.0+          |7.0.0+          |7.0.0+ |        |
-|5.6|                |                |                |                |       |5.6.4+  |
-|5.5|                |                |                |                |       |5.5.16+ |
-|5.4|                |                |                |                |       |5.4.32  |
+|7.4|7.4.0+          |                |                |                |       |        |        |
+|7.3|7.3.0+          |7.3.0+          |                |                |       |        |        |
+|7.2|7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>|       |        |        |
+|7.1|                |7.1.0+          |7.1.0+          |7.1.0+          |7.1.0+ |        |        |
+|7.0|                |                |7.0.0+          |7.0.0+          |7.0.0+ |7.0.0+  |        |
+|5.6|                |                |                |                |       |        |5.6.4+  |
+|5.5|                |                |                |                |       |        |5.5.16+ |
+|5.4|                |                |                |                |       |        |5.4.32  |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 1. Versions 7.2.1 and later are supported on Windows, while versions 7.2.0 and later are supported on Linux and macOS.
@@ -86,6 +86,7 @@ The following Windows operating system versions are supported with the listed ve
 
 |PHP for SQL Server driver version &#8594;<br />&#8595; Operating system|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Windows Server 2019                 |Y  |Y  |   |   |   |   |   |
 |Windows Server 2016                 |Y  |Y  |Y  |Y  |Y  |   |   |
 |Windows Server 2012 R2              |Y  |Y  |Y  |Y  |Y  |Y  |Y  |
 |Windows Server 2012                 |Y  |Y  |Y  |Y  |Y  |Y  |Y  |

@@ -25,21 +25,7 @@ Versions 3.2 and later of the Microsoft PHP Drivers for SQL Server are officiall
 
 ## PHP
 
-For information about how to download and install the latest stable PHP binaries, see [the PHP web site](https://php.net).  The Microsoft Drivers for PHP for SQL Server require the following versions of PHP:
-
-|PHP for SQL Server driver version &#8594;<br />&#8595; PHP version|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
-|:---:|---|---|---|---|---|---|---|
-|7.4|7.4.0+          |                |                |                |       |        |        |
-|7.3|7.3.0+          |7.3.0+          |                |                |       |        |        |
-|7.2|7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>|       |        |        |
-|7.1|                |7.1.0+          |7.1.0+          |7.1.0+          |7.1.0+ |        |        |
-|7.0|                |                |7.0.0+          |7.0.0+          |7.0.0+ |7.0.0+  |        |
-|5.6|                |                |                |                |       |        |5.6.4+  |
-|5.5|                |                |                |                |       |        |5.5.16+ |
-|5.4|                |                |                |                |       |        |5.4.32  |
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-
-1. Versions 7.2.1 and later are supported on Windows, while versions 7.2.0 and later are supported on Linux and macOS.
+For information about how to download and install the latest stable PHP binaries, see [the PHP web site](https://php.net).  The Microsoft Drivers for PHP for SQL Server require the right versions of PHP as detailed in [PHP Version support](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md#php-version-support).
 
 -   The correct version of the driver file must be enabled with its corresponding PHP version. See [Driver Versions](#driver-versions) for information about the different driver files.  To download the drivers, see [Download the Microsoft Drivers for PHP for SQL Server](../../connect/php/download-drivers-php-sql-server.md). For information on configuring the driver for the PHP, see [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md).
 

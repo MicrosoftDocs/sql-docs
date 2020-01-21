@@ -4,7 +4,7 @@ summary: Learn how to use Microsoft SQL Server to address your database needs, b
 brand: sql
 metadata:
    title: Microsoft SQL documentation | Microsoft Docs
-   description: Learn how to use Microsoft SQL Server to manage your database needs, both on-premises and in the cloud.
+   description: Learn how to use Azure SQL Services and SQL Server to manage your database needs, both on-premises and in the cloud.
    ms.topic: hub-page
 
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -27,14 +27,14 @@ highlightedContent:
 productDirectory:
   items:
   - title: SQL on Azure 
-    imageSrc: media/index/azure.png
+    imageSrc: media/index/azure.svg
     links:
       - url: https://docs.microsoft.com/azure/sql-database/
         text: Azure SQL Database
       - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
         text: Azure Synapse Analytics (SQL DW)
   - title: SQL Server on Windows
-    imageSrc: media/index/windows.png
+    imageSrc: media/index/windows.svg
     links:
       - url: sql-server/index.yml
         text: On-premises
@@ -43,7 +43,7 @@ productDirectory:
       - url: https://docs.microsoft.com/previous-versions/sql/
         text: Previous Versions (SQL 2005-2012)
   - title: SQL Server on Linux
-    imageSrc: media/index/linux.png
+    imageSrc: media/index/linux.svg
     links:
       - url: linux/sql-server-linux-overview.md
         text: On-premises
@@ -139,50 +139,47 @@ additionalContent:
         links:
           - text: Build an app using SQL Server
             url: https://www.microsoft.com/sql-server/developer-get-started/
+          - text: SQL Server client connectivity
+            url: connect/homepage-sql-connection-programming.md
           - text: DevOps using SQL Server 
             url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
-          - text: SQL Server security
-            url: https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security
           - text: Azure SQL DB applications
             url: https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview
           - text: Azure SQL DB connectivity libraries
             url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries
-          - text: SQL Server client connectivity
-            url: connect/homepage-sql-connection-programming.md
           - text: Transact-SQL (T-SQL)
             url: t-sql/language-reference.md
           - text: SQL PowerShell
             url: powershell/sql-server-powershell.md
           - text: Database samples
             url: samples/sql-samples-where-are.md
-      - title: Reporting & Machine Learning
-        links:
+
+      - title: Reporting & Analysis
+        links: 
           - text: Power BI Report Server
             url: https://docs.microsoft.com/power-bi/report-server/get-started
           - text: Power BI Service
             url: https://docs.microsoft.com/power-bi/service-get-started
           - text: SQL Server Reporting Services (SSRS)
             url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-          - text: Azure Machine Learning
-            url: https://docs.microsoft.com/azure/machine-learning/
-          - text: SQL Machine Learning Services (R & Python)
-            url: advanced-analytics/index.yml
-          - text: SQL Server R Services
-            url: advanced-analytics/r/sql-server-r-services.md
-      - title: Big data
+          - text: SQL Server Analysis Services (SSAS)
+            url: https://docs.microsoft.com/analysis-services/analysis-services-overview
+          - text: Azure Analysis Services
+            url: https://docs.microsoft.com/azure/analysis-services/
+
+      - title: Big data & machine learning
         links:
-          - text: SQL Server 2019 Big Data Clusters
+          - text: SQL Server Big Data Clusters
             url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
           - text: Data Virtualization with Polybase
             url: relational-databases/polybase/polybase-guide.md
           - text: Azure Synapse Analytics (SQL DW)
             url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
-          - text: Azure SQL Database Hyperscale
-            url: https://docs.microsoft.com/azure/sql-database/sql-database-service-tier-hyperscale
-          - text: Azure Analysis Services
-            url: https://docs.microsoft.com/azure/analysis-services/
-          - text: SQL Server Analysis Services (SSAS)
-            url: https://docs.microsoft.com/analysis-services/analysis-services-overview
           - text: Microsoft Analytics Platform System
             url: analytics-platform-system/index.md
+          - text: SQL Server Machine Learning Services (R & Python)
+            url: advanced-analytics/index.yml
+          - text: Azure Machine Learning
+            url: https://docs.microsoft.com/azure/machine-learning/
+
 

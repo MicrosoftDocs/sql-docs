@@ -84,7 +84,7 @@ conceptualContent:
         - text: Azure Database Migration Service
           url: https://docs.microsoft.com/azure/dms/dms-overview
           itemType: whats-new
-        - text: SQL Machine Learning Services
+        - text: SQL Server Machine Learning Services
           url: advanced-analytics/index.yml
           itemType: whats-new
     - title: Install

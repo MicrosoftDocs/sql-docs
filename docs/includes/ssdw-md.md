@@ -1,1 +1,1 @@
-Azure Synapse SQL Analytics (Formerly SQL Data Warehouse)  
+Synapse SQL Analytics (Formerly SQL Data Warehouse)  

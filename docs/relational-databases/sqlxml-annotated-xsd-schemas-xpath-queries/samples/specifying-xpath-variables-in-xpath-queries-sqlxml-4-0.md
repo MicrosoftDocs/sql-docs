@@ -1,6 +1,5 @@
 ---
-title: "Specifying XPath Variables in XPath Queries (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Specifying XPath Variables in XPath Queries (SQLXML)"
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -13,6 +12,7 @@ helpviewer_keywords:
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying XPath Variables in XPath Queries (SQLXML 4.0)

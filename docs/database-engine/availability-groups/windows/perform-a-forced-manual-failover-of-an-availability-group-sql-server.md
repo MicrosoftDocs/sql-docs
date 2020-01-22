@@ -1,7 +1,7 @@
 ---
-title: "Perform a forced manual failover of an Availability Group"
+title: "Manually force a failover of an availability group"
 description: "This topic describes how to perform a forced failover of an Always On availability group (with possible data loss) by using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-ms.custom: "seodec18"
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

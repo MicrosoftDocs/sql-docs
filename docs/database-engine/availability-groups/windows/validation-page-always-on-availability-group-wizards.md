@@ -1,6 +1,7 @@
 ---
-title: "Validation Page (Always On Availability Group Wizards) | Microsoft Docs"
-ms.custom: ""
+title: "Availability group wizard: Validation Page"
+description: "This topic describes the options found on the Validation page of the Always On availability group wizard."
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

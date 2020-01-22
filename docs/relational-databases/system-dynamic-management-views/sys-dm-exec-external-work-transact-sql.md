@@ -40,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |work_id|`int`|ID of the actual split.|Greater than or equal to 0.|  
 |input_name|`nvarchar(4000)`|Name of the input to be read|File name when using Hadoop.|  
 |read_location|`bigint`|Offset or read location.|Offset of the file to read.|  
-|bytes_processed|`bigint`|Total bytes processed by this worker.|Greater than or equal to 0.|  
+|bytes_processed|`bigint`|Total bytes allocated for processing data by this worker. This may not necessarily represent the total data being returned by the query |Greater than or equal to 0.|  
 |length|`bigint`|Length of the split or HDFS block in case of Hadoop|User-definable. The default is 64M|  
 |status|`nvarchar(32)`|Status of the worker|Pending, Processing, Done, Failed, Aborted|  
 |start_time|`datetime`|Beginning of the work||  

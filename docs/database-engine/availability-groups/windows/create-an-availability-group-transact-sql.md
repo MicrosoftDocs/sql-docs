@@ -1,7 +1,7 @@
 ---
-title: "Create an availability group using Transact-SQL (T-SQL)"
+title: "Create an availability group with Transact-SQL (T-SQL)"
 description: "Steps to creating an Always On availability group using Transact-SQL (T-SQL). "
-ms.custom: "seodec18"
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

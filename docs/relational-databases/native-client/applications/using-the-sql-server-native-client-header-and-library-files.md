@@ -1,5 +1,5 @@
 ---
-title: "Using the SQL Server Native Client Header and Library Files | Microsoft Docs"
+title: "Native Client, header and library files"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

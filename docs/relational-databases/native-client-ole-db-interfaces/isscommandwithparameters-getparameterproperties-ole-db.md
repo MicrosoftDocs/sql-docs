@@ -1,5 +1,5 @@
 ---
-title: "ISSCommandWithParameters::GetParameterProperties (OLE DB) | Microsoft Docs"
+title: "ISSCommandWithParameters::GetParameterProperties (OLE DB)"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -24,8 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
-  
+```cpp
 HRESULT GetParameterProperties(  
       DB_UPARAMS *pcParams,  
       SSPARAMPROPS **prgParamProperties);  
@@ -45,23 +44,22 @@ HRESULT GetParameterProperties(
  **ISSCommandWithParameters::GetParameterProperties** behaves consistently with respect to **GetParameterInfo**. If [ISSCommandWithParameters::SetParameterProperties](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) or **SetParameterInfo** have not been called or have been called with cParams equal to zero, **GetParameterInfo** derives parameter information and returns this. If **ISSCommandWithParameters::SetParameterProperties** or **SetParameterInfo** have been called for at least one parameter, **ISSCommandWithParameters::GetParameterProperties** returns properties only for those parameters for which **ISSCommandWithParameters::SetParameterProperties** has been called. If **ISSCommandWithParameters::SetParameterProperties** is called after **ISSCommandWithParameters::GetParameterProperties** or **GetParameterInfo**, subsequent calls to **ISSCommandWithParameters::GetParameterProperties** return the overridden values for those parameters for which **ISSCommandWithParameters::SetParameterProperties** has been called.  
   
  The SSPARAMPROPS structure is defined as follows:  
-  
- `struct SSPARAMPROPS {`  
-  
- `DBORDINAL iOrdinal;`  
-  
- `ULONG cPropertySets;`  
-  
- `DBPROPSET *rgPropertySets;`  
-  
- `};`  
-  
+
+```cpp
+struct SSPARAMPROPS {
+    DBORDINAL iOrdinal;
+    ULONG cPropertySets;
+    DBPROPSET *rgPropertySets;
+};
+```
+
 |Member|Description|  
 |------------|-----------------|  
 |*iOrdinal*|The ordinal of the passed parameter.|  
 |*cPropertySets*|The number of DBPROPSET structures in *rgPropertySets*.|  
 |*rgPropertySets*|A pointer to memory in which to return an array of DBPROPSET structures.|  
-  
+|||
+
 ## See Also  
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

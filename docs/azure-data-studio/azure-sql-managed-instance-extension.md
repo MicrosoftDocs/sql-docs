@@ -12,6 +12,7 @@ author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: alanyu
 ---
+
 # Azure SQL Database managed instance dashboard for Azure Data Studio (preview)
 
 The Azure SQL Database managed instance extension provides a dashboard for working with an [Azure SQL Database managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). This extension provides the following features:
@@ -92,7 +93,6 @@ For more information, see the [Code of Conduct FAQ][conduct-FAQ] or contact [ope
 
 For more information, visit [the GitHub project](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/).
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md

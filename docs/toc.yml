@@ -63,12 +63,20 @@
         href: big-data-cluster/deploy-big-data-tools.md
       - name: Install azdata
         items:
-        - name: With Windows Installer
-          href: big-data-cluster/deploy-install-azdata-installer.md
-        - name: With Linux package manager
-          href: big-data-cluster/deploy-install-azdata-linux-package.md
-        - name: With pip
+        - name: Install
           href: big-data-cluster/deploy-install-azdata.md
+        - name: macOS
+          href: big-data-cluster/deploy-install-azdata-macos.md
+        - name: Windows
+          href: big-data-cluster/deploy-install-azdata-installer.md
+        - name: Linux with apt
+          href: big-data-cluster/deploy-install-azdata-linux-package.md
+        - name: Linux with yum
+          href: big-data-cluster/deploy-install-azdata-yum.md
+        - name: Linux with zypper
+          href: big-data-cluster/deploy-install-azdata-zypper.md
+        - name: With pip
+          href: big-data-cluster/deploy-install-azdata-pip.md
     - name: Deploy
       items:
       - name: Deployment guidance
@@ -189,6 +197,12 @@
         href: big-data-cluster/manage-notebooks.md
       - name: Manage with controller dashboard
         href: big-data-cluster/manage-with-controller-dashboard.md
+      - name: Security
+        items:
+        - name: Update AZDATA_PASSWORD
+          href: big-data-cluster/change-azdata-password.md
+        - name: Manage user access
+          href: big-data-cluster/manage-user-access.md
     - name: Notebooks
       items:
       - name: Notebooks overview
@@ -943,7 +957,7 @@
         - name: Remove a cluster
           href: sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md
         - name: Upgrade a cluster
-          href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+          href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
         - name: Migrating to Windows Server 2012 & 2016
           href: sql-server/failover-clusters/windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
       - name: Configuration
@@ -980,8 +994,6 @@
       items:
       - name: Configuration
         items:
-        - name: Upgrade
-          href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
         - name: Quorum Modes & Voting
           href: sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
         - name: Multi-Subnet Clustering
@@ -2217,13 +2229,13 @@
         href: relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md
       - name: Alter
         href: relational-databases/clr-integration/assemblies/altering-an-assembly.md
-      - name: CreatE
+      - name: Create
         href: relational-databases/clr-integration/assemblies/creating-an-assembly.md
       - name: Drop
         href: relational-databases/clr-integration/assemblies/dropping-an-assembly.md
       - name: Design
         href: relational-databases/clr-integration/assemblies-designing.md
-      - name: Gett Information
+      - name: Get Information
         href: relational-databases/clr-integration/assemblies-getting-information.md
       - name: Implement
         href: relational-databases/clr-integration/assemblies-implementing.md
@@ -2489,7 +2501,7 @@
     - name: Format Query Results
       href: relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
       items:
-      - name: Format nested output with PATH ode
+      - name: Format nested output with PATH Mode
         href: relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md
       - name: Format with AUTO Mode
         href: relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md
@@ -4206,7 +4218,6 @@
       - name: Local audit for SQL Server
         href: sql-server/usage-and-diagnostic-data-in-local-audit.md
   - name: Install SQL Server
-    href: database-engine/install-windows/installation-for-sql-server.md
     items:
     - name: Overview
       href: database-engine/install-windows/install-sql-server.md
@@ -4264,11 +4275,9 @@
     - name: Supported Version & Edition Upgrades SQL Server 2017
       href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Supported Version & Edition Upgrades SQL Server 2016
-      href: database-engine/install-windows/supported-version-and-edition-upgrades.md
+      href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016
     - name: Prepare for upgrade by running Data Migration Assistant
       href: database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
-    - name: Upgrading from SQL 2005, 2008, or 2008 R2
-      href: database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md
     - name: Analysis Services
       href: database-engine/install-windows/upgrade-analysis-services.md
     - name: Data Quality Services
@@ -4302,6 +4311,13 @@
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
       - name: Latest updates for SQL Server
         href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
+  - name: End of support
+    items:
+    - name: Overview
+      href: sql-server/end-of-support/sql-server-end-of-life-overview.md
+      displayName: end of support, end of life
+    - name: Extended security updates
+      href: sql-server/end-of-support/sql-server-extended-security-updates.md
   - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:
@@ -4612,6 +4628,8 @@
         href: database-engine/configure-windows/server-properties-advanced-page.md
 - name: Migrate & load data
   items:
+  - name: Migration documentation
+    href: sql-server/migrate/index.yml
   - name: SQL Server Integration Services (SSIS) > 
     href: integration-services/index.md
   - name: Bulk Copy Utility (bcp)
@@ -5813,10 +5831,10 @@
     items:
     - name: Workload comparison overview
       href: dea/database-experimentation-assistant-get-started.md
-    - name: Capture trace
-      href: dea/database-experimentation-assistant-capture-trace.md
     - name: Configure replay
       href: dea/database-experimentation-assistant-configure-replay.md
+    - name: Capture trace
+      href: dea/database-experimentation-assistant-capture-trace.md
     - name: Replay trace
       href: dea/database-experimentation-assistant-replay-trace.md
     - name: Create reports
@@ -5834,6 +5852,8 @@
       href: dma/dma-assesssqlonprem.md
     - name: Assess SQL Server Integration Services (SSIS)
       href: dma/dma-assess-ssis.md
+    - name: Save and load assessments
+      href: dma/dma-save-load-assessments.md
     - name: Identify the right Azure SQL Database SKU
       href: dma/dma-sku-recommend-sql-db.md
     - name: Upgrade SQL Server to a later version
@@ -8196,6 +8216,10 @@
                 items:
                   - name: Plan for Host Guardian Service attestation
                     href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
+                  - name: Deploy the Host Guardian Service
+                    href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md
+                  - name: Register computer with Host Guardian Service
+                    href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-register.md
           - name: Manage keys for Always Encrypted with secure enclaves
             items:
               - name: Manage enclave-enabled keys
@@ -8372,13 +8396,14 @@
     - name: Permissions or Securables page
       href: relational-databases/security/permissions-or-securables-page.md
 - name: Tools
-  href: tools/overview-sql-tools.md
   items:
+  - name: Overview
+    href: tools/overview-sql-tools.md
   - name: Azure Data Studio
     href: azure-data-studio/what-is.md
     items:
     - name: Install
-      href: azure-data-studio/download.md
+      href: azure-data-studio/download-azure-data-studio.md
     - name: Release notes
       href: azure-data-studio/release-notes-azure-data-studio.md
     - name: Quickstarts
@@ -10339,8 +10364,12 @@
       href: relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
   - name: Extended Features
     items: 
-      - name: Extended features and tools
-        href: tools/download-sql-feature-packs.md
+    - name: Extended features and tools
+      href: tools/download-sql-feature-packs.md
+  - name: Visual Studio Code
+    items: 
+    - name: T-SQL scripts
+      href: visual-studio-code/sql-server-develop-use-vscode.md
 - name: Tutorials
   items:
   - name: SQL Server
@@ -10674,6 +10703,8 @@
       href: sql-server/sql-server-docs-contribute.md
   - name: Partners
     items:
+    - name: Big Data Clusters
+      href: sql-server/partner-big-data-cluster.md
     - name: Monitoring
       href: sql-server/partner-monitor-sql-server.md
     - name: High availability & disaster recovery
@@ -11831,8 +11862,6 @@
         href: relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md
       - name: sys.resource_usage
         href: relational-databases/system-catalog-views/sys-resource-usage-azure-sql-database.md
-      - name: dbo.server_quotas
-        href: relational-databases/system-catalog-views/dbo-server-quotas-azure-sql-database.md
       - name: sys.server_resource_stats
         href: relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md
     - name: Change tracking
@@ -16231,7 +16260,6 @@
         - name: PUBLISHINGSERVERNAME
           href: t-sql/functions/replication-functions-publishingservername.md
       - name: Rowset
-        href: t-sql/functions/rowset-functions-transact-sql.md
         items:
         - name: OPENDATASOURCE
           href: t-sql/functions/opendatasource-transact-sql.md

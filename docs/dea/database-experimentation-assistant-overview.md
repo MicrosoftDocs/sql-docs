@@ -2,7 +2,7 @@
 title: Overview of the Database Experimentation Assistant 
 description: Overview of Database Experimentation Assistant
 ms.custom: ""
-ms.date: 11/16/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,26 +10,22 @@ ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: HJToland3
-ms.author: jtoland
+ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: "seo-lt-2019"
 ---
 
 # Overview of Database Experimentation Assistant
 
-Database Experimentation Assistant (DEA) is an experimentation solution for SQL Server upgrades. DEA can help you evaluate a targeted version of SQL Server for a specific workload. Customers who are upgrading from earlier SQL Server versions (starting with 2005) to a more recent version of SQL Server can use the analysis metrics that the tool provides.
+Database Experimentation Assistant (DEA) is an experimentation solution for SQL Server upgrades. DEA can help you evaluate a targeted version of SQL Server for a specific workload. Customers upgrading from earlier versions of SQL Server (starting with 2005) to more recent versions of SQL Server can use the analysis metrics that the tool provides.
 
 DEA analysis metrics include:
 
-- Queries that have compatibility errors
-- Degraded queries and query plans
-- Other workload comparison data
+- Queries that have compatibility errors.
+- Degraded queries and query plans.
+- Other workload comparison data.
 
-Comparison data can lead to higher confidence and a successful upgrade experience.
-
-For a 19-minute introduction to DEA and a demonstration, watch the following video:
-
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player?WT.mc_id=dataexposed-c9-niner]
+Comparison data can lead to higher confidence and help ensure a successful upgrade experience.
 
 ## Get DEA
 
@@ -46,47 +42,51 @@ The following diagram shows the solution architecture for a workload comparison.
 Following are some prerequisites for running DEA:
 
 - Minimum hardware requirement: A single-core machine with 3.5 GB of RAM.
-- Ideal hardware requirement: An eight-core CPU (with 3.5 GB of RAM or more). Processors that have more than eight cores don't improve DEA runtimes.
+- Ideal hardware requirement: An eight-core CPU (with 3.5 GB of RAM or more). Processors with more than eight cores don't improve DEA run times.
 - An additional 33% of performance trace size is needed to store A, B, and report analysis databases.
 
 ## Configure DEA
 
-In the prerequisite environment architecture, we recommend that you install DEA *on the same machine as the Distributed Replay controller*. This practice avoids cross-machine calls and simplifies configuration.
+In the prerequisite environment architecture, we recommend that you install DEA *on the same machine as the Distributed Replay controller*. This practice avoids cross-computer calls and simplifies configuration.
 
 ### Required configuration for workload comparison using DEA
 
-DEA connects to database servers by using Windows authentication. Be sure that a user running DEA can connect to database servers (source, target, and analysis) by using Windows authentication.
+DEA connects to database servers using Windows authentication. Be sure that the user running DEA can connect to database servers (source, target, and analysis) using Windows authentication.
 
 **Capture configuration requirements**
 
-Capturing a trace requires that the:
+Capturing a trace requires that the user running DEA:
 
-- User running DEA can connect to the source database server using Windows authentication.
-- User running DEA has sysadmin rights on the source database server.
-- Service account running the source database server has write access to the trace folder path.
+- Can connect to the source database server using Windows authentication.
+- Has sysadmin rights on the source database server.
 
-For more information, see [Frequently asked questions about trace capture](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)
+In addition, the service account running the source database server requires write access to the trace folder path.
+
+For more information, see [Frequently asked questions about trace capture](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture).
 
 **Replay configuration requirements**
 
-Replaying a trace requires that the:
+Replaying a trace requires that the user running DEA:
 
-- User running DEA can connect to the target database server using Windows authentication.
-- User running DEA has sysadmin rights on the target database server.
-- Service account running the target database servers has write access to the trace folder path.
-- Service account running Distributed Replay clients can connect to the target database server using Windows authentication.
+- Can connect to the target database server using Windows authentication.
+- Has sysadmin rights on the target database server.
+
+In addition, replaying a trace requires that:
+
+- The service account running the target database servers has write access to the trace folder path.
+- The service account running Distributed Replay clients can connect to the target database server using Windows authentication.
 - TCP ports are opened for incoming requests on the Distributed Replay controller. DEA communicates with the Distributed Replay controller by using COM interfaces.
 
-For more information, see [Frequently asked questions about trace replay](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)
+For more information, see [Frequently asked questions about trace replay](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay).
 
 **Analysis configuration requirements**
 
-Performing the analysis requires that the:
+Performing the analysis requires that the user running DEA:
 
-- User running DEA can connect to the analysis database server using Windows authentication.
-- User running DEA has sysadmin rights on the source database server.
+- Can connect to the analysis database server using Windows authentication.
+- Has sysadmin rights on the source database server.
 
-For more information, see [Frequently asked questions about analysis reports](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)
+For more information, see [Frequently asked questions about analysis reports](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports).
 
 ## Set up telemetry
 
@@ -111,4 +111,4 @@ DEA is governed by the [Microsoft Privacy Statement](https://aka.ms/dea-privacy)
 
 ## See also
 
-[Overview of the workload comparison process](database-experimentation-assistant-get-started.md), which explains the process involved in comparing workloads in two environments.
+- The article [Overview of the workload comparison process](database-experimentation-assistant-get-started.md), which explains the process involved in comparing workloads in two environments.

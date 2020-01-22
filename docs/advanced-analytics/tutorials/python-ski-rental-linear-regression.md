@@ -1,9 +1,9 @@
 ---
 title: "Python tutorial: Ski rentals"
-description: In this tutorial you will use Python and linear regression in SQL Server Machine Learning Services to predict the number of ski rentals. 
+description: In part three of this four-part tutorial series, you'll build a linear regression model in Python to predict ski rentals in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/03/2019
+ms.date: 01/02/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
@@ -38,32 +38,24 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
     You can also use your own Python IDE, such as a Jupyter notebook or [Visual Studio Code](https://code.visualstudio.com/docs) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql). 
 
-* [revoscalepy](../python/ref-py-revoscalepy.md) package - The **revoscalepy** package is included in SQL Server Machine Learning Services. To use the package on a client computer, see [Set up a data science client for Python development](../python/setup-python-client-tools-sql.md) for options to install this package locally.
-
-    If you're using a Python notebook in Azure Data Studio, follow these additional steps to use **revoscalepy**:
-
-    1. Open Azure Data Studio
-    1. From the **File** menu, select **Preferences** and then **Settings**
-    1. Expand **Extensions** and select **Notebook configuration**
-    1. Under **Python Path**, enter the path where you installed the libraries (for example, `C:\path-to-python-for-mls`)
-    1. Make sure **Use Existing Python** is checked
-    1. Restart Azure Data Studio
-
-    If you're using a different Python IDE, follow similar steps for your IDE.
-
 * SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is.md). You can also use [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
 
-* Additional Python packages - The examples in this tutorial series use Python packages that you may or may not have installed. Use the following **pip** commands to install these packages if necessary.
+* Additional Python packages - The examples in this tutorial series use the following Python packages that may not be installed by default:
 
-    ```console
-    pip install pandas
-    pip install sklearn
-    pip install pickle
-    ```
+  * pandas
+  * pyodbc
+  * sklearn
+
+  To install these packages:
+  1. In Azure Data Studio, select **Manage Packages**.
+  2. In the **Manage Packages** pane, select the **Add new** tab.
+  3. For each of the following packages, enter the package name, click **Search**, then click **Install**.
+
+  As an alternative, you can open a **Command Prompt**, change to the installation path for the version of Python you use in Azure Data Studio (for example, `cd %LocalAppData%\Programs\Python\Python37-32`), then run `pip install` for each package.
 
 ## Restore the sample database
 
-The sample dataset used in this tutorial has been saved to a **.bak** database backup file for you to download and use.
+The sample database used in this tutorial has been saved to a **.bak** database backup file for you to download and use.
 
 1. Download the file [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak).
 
@@ -72,12 +64,19 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
    * Import from the **TutorialDB.bak** file you downloaded
    * Name the target database "TutorialDB"
 
-1. You can verify that the dataset exists after you have restored the database by querying the **dbo.rental_data** table:
+1. You can verify that the restored database exists by querying the **dbo.rental_data** table:
 
-    ```sql
-    USE TutorialDB;
-    SELECT * FROM [dbo].[rental_data];
-    ```
+   ```sql
+   USE TutorialDB;
+   SELECT * FROM [dbo].[rental_data];
+   ```
+
+Enable external scripts by running the following SQL commands:
+
+  ```sql
+  sp_configure 'external scripts enabled', 1;
+  RECONFIGURE WITH override;
+  ```
 
 ## Next steps
 

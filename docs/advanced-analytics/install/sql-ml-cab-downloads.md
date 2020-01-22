@@ -1,32 +1,40 @@
 ---
 title: Download updates for offline install
-description: Download R and Python CAB and package files for SQL Server Machine Learning Services and SQL Server 2016 R Services.
+description: Download Python and R CAB files for SQL Server Machine Learning Services. These CAB files contain updates to the Machine Learning Services (Python and R) feature and are used when installing SQL Server on a server without internet access.
 ms.prod: sql
 ms.technology: machine-learning
-  
-ms.date: 07/30/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# CAB downloads for cumulative updates of SQL Server in-database analytics instances
+# CAB downloads for cumulative updates of SQL Server Machine Learning Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server instances that are configured for in-database analytics include R and Python features. These features ship in CAB files, installed and serviced through SQL Server Setup. On internet-connected devices, CAB updates are typically applied through Windows Update. On disconnected servers, CAB files must be downloaded and applied manually. 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Download Python and R CAB files for SQL Server Machine Learning Services. These CAB files contain updates to the Machine Learning Services (Python and R) feature and are used when installing SQL Server on a server without internet access.
+::: moniker-end
 
-This article provides download links to CAB files for each cumulative update. For more information about offline installs, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md#apply-cu).
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+Download Python and R CAB files for SQL Server 2016 R Services. These CAB files contain updates to the the R Services feature and are used when installing SQL Server on a server without internet access.
+::: moniker-end
+
+Below you will find download links to CAB files for each cumulative update. For more information about offline installs, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md#apply-cu).
 
 ## Prerequisites
 
-Start with a baseline installation.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Start with a baseline installation. On SQL Server Machine Learning Services, the initial release is the baseline installation. 
+::: moniker-end
 
-+ On SQL Server Machine Learning Services, the initial release is the baseline installation. 
-+ On SQL Server 2016 R Services, you can start with the initial release, SP1, or SP2. 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+Start with a baseline installation.  On SQL Server 2016 R Services, you can start with the initial release, SP1, or SP2. 
+::: moniker-end
 
-You can also apply cumulative updates to a standalone server.
+You can also apply cumulative updates.
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
@@ -89,7 +97,7 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 

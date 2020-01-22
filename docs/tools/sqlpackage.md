@@ -1,5 +1,5 @@
 ---
-title: "SqlPackage.exe | Microsoft Docs"
+title: "SqlPackage.exe"
 ms.prod: sql
 ms.technology: ssdt
 ms.date: 06/28/2018

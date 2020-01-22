@@ -1,6 +1,6 @@
 ---
-title: "Use the Properties Window in Management Studio | Microsoft Docs"
-ms.custom: ""
+title: "Use the Properties Window in Management Studio"
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting

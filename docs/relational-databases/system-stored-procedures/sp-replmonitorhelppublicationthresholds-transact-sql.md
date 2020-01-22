@@ -1,6 +1,7 @@
 ---
-title: "sp_replmonitorhelppublicationthresholds (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sp_replmonitorhelppublicationthresholds (T-SQL)"
+description: Describes the sp_replmonitorhelppublicationthresholds stored procedure which returns the threshold metrics set for a monitored publication.
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

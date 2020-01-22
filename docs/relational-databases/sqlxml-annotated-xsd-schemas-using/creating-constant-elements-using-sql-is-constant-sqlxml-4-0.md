@@ -1,6 +1,5 @@
 ---
-title: "Creating Constant Elements Using sql:is-constant (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Make constant elements with sql:is-constant (SQLXML)"
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -18,6 +17,7 @@ ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating Constant Elements Using sql:is-constant (SQLXML 4.0)

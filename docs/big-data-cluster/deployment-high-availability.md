@@ -124,7 +124,7 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 ## <a id="instance-connect"></a> Connect to SQL Server instance
 
-For certain operations like setting server level configurations or manually adding a database to the availability group, you must connect to the SQL Server instance. Operations like `sp_configure`, `RESTORE DATABASE` or any availability groups DDL will require this type of conneciton. By default, big data cluster does not include an endpoint that enables instance connection and you must expose this endpoint manually. 
+For certain operations like setting server level configurations or manually adding a database to the availability group, you must connect to the SQL Server instance. Operations like `sp_configure`, `RESTORE DATABASE` or any availability groups DDL will require this type of connection. By default, big data cluster does not include an endpoint that enables instance connection and you must expose this endpoint manually. 
 
 > [!IMPORTANT]
 > The endpoint exposed for SQL Server instance connections only supports SQL authentication, even in clusters where Active Directory is enabled. By default, during a big data cluster deployment, `sa` login is disabled and a new `sysadmin` login is provisioned based in the values provided at deployment time for `AZDATA_USERNAME` and `AZDATA_PASSWORD` environment variables.
@@ -195,6 +195,7 @@ The known issues and limitations with availability groups for SQL Server master 
 - Databases created as result of workflows other than `CREATE DATABASE` like `RESTORE DATABSE`, `CREATE DATABASE FROM SNAPSHOT` are not automatically added to the availability group. [Connect to the instance](#instance-connect) and add the database to the availability group manually.
 - Certain operations like running server configuration settings with `sp_configure` require a connection to the SQL Server instance `master` database, not the availability group `master`. You cannot use the corresponding primary endpoint. Follow [the instructions](#instance-connect) to expose an endpoint and connect to the SQL Server instance and run `sp_configure`. You can only use SQL authentication when manually exposing the endpoint to connect to the SQL Server instance `master` database.
 - The high availability configuration must be created when big data cluster is deployed. You cannot enable the high availability configuration with availability groups post deployment.
+- While contained msdb database is included in the availability group and the SQL Agent jobs are replicated across, the jobs are not triggered per schedule. The workaround is to [connect to each of the SQL Server instances](#instance-connect) and create the jobs in the instance msdb.
 
 ## Next steps
 

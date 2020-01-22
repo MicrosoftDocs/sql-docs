@@ -1,6 +1,6 @@
 ---
-title: "Percent character (Wildcard - Character(s) to Match) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Wildcard search (%)"
+ms.custom: "seo-lt-2019"
 ms.date: "12/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

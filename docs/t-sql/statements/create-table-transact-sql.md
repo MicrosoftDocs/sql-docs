@@ -1,7 +1,7 @@
 ---
 title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/26/2019
+ms.date: 11/25/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -198,7 +198,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 < table_index > ::=
 {  
     {  
-      INDEX index_name [ CLUSTERED | NONCLUSTERED ]
+      INDEX index_name [ CLUSTERED | NONCLUSTERED ] [ UNIQUE ]
          (column_name [ ASC | DESC ] [ ,... n ] )
     | INDEX index_name CLUSTERED COLUMNSTORE
     | INDEX index_name [ NONCLUSTERED ] COLUMNSTORE (column_name [ ,... n ] )
@@ -814,7 +814,7 @@ FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support `FILETABLE`.
 
-Specifies the name of the collation to be applied to the **Name** column in the FileTable. The collation must be case-insensitive to comply with Windows file naming semantics. If this value is not specified, the database default collation is used. If the database default collation is case-sensitive, an error is raised and the CREATE TABLE operation fails.
+Specifies the name of the collation to be applied to the **Name** column in the FileTable. The collation must be case-insensitive to comply with Windows operating system file naming semantics. If this value is not specified, the database default collation is used. If the database default collation is case-sensitive, an error is raised and the CREATE TABLE operation fails.
 
 *collation_name*
 The name of a case-insensitive collation.
@@ -1593,7 +1593,7 @@ Msg 1750, Level 16, State 1, Line 1
 Could not create constraint or index. See previous errors.
 ```
 
-The problem arises from the fact that while the temp table name is uniquified, the constraint names are not.
+The problem arises from the fact that while the temp table name is unique, the constraint names are not.
 
 ### V. Using global temporary tables in Azure SQL Database
 

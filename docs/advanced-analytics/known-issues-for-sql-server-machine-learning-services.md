@@ -697,7 +697,7 @@ If you have an existing license for Revolution R Enterprise, you must put it on 
 
 Some pre-release versions of [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] included an R development environment for Windows that was created by Revolution Analytics. This tool is no longer provided, and is not supported.
 
-For compatibility with [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)], we recommend that you install Microsoft R Client instead. [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) and [Visual Studio Code](https://code.visualstudio.com/) also supports Microsoft R solutions.
+For compatibility with [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)], we recommend that you install Microsoft R Client instead. [R Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019) and [Visual Studio Code](https://code.visualstudio.com/) also supports Microsoft R solutions.
 
 ### 2. Compatibility issues with SQLite ODBC driver and RevoScaleR
 

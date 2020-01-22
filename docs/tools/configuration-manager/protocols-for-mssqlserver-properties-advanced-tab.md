@@ -1,9 +1,9 @@
 ---
-title: "Protocols for MSSQLSERVER Properties (Advanced Tab) | Microsoft Docs"
-ms.custom: ""
+title: "Protocols for MSSQLSERVER Properties (Advanced Tab)"
+ms.custom: seo-lt-2019
 ms.date: 01/24/2019
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual

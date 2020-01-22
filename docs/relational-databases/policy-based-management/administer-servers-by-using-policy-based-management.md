@@ -1,6 +1,7 @@
 ---
-title: "Administer Servers by Using Policy-Based Management | Microsoft Docs"
-ms.custom: ""
+title: "Administer servers using Policy-Based Management"
+description: Learn how to use Policy-Based Management to manage one or more instances of SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "08/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"

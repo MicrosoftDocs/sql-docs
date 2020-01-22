@@ -1,6 +1,7 @@
 ---
-title: "Using Always Encrypted with the .NET Framework Data Provider for SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "Always Encrypted with .NET Framework Data Provider"
+description: Learn how to develop .NET applications using the Always Encrypted feature for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "10/31/2019"
 ms.prod: sql
 ms.prod_service: "security, sql-database"

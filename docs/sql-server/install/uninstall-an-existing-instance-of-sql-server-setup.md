@@ -1,7 +1,7 @@
 ---
-title: "Uninstall an Existing Instance of SQL Server (Setup) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/11/2019"
+title: "Uninstall existing instanceInstance"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

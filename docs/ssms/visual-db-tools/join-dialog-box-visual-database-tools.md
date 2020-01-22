@@ -1,18 +1,19 @@
 ---
-title: "Join Dialog Box (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Join Dialog Box
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.ppg.joinline"
   - "vdtsql.chm:69638"
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Join Dialog Box (Visual Database Tools)

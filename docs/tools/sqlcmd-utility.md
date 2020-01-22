@@ -1,9 +1,9 @@
 ---
-title: "sqlcmd Utility | Microsoft Docs"
-ms.custom: ""
+title: "sqlcmd Utility"
+ms.custom: seo-lt-2019
 ms.date: "11/27/2018"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual

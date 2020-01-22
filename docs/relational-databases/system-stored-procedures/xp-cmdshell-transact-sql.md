@@ -1,7 +1,7 @@
 ---
 title: "xp_cmdshell (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "12/01/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -91,7 +91,7 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
     > [!NOTE]  
     >  You can also configure this proxy account using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] by right-clicking **Properties** on your server name in Object Explorer, and looking on the **Security** tab for the **Server proxy account** section.  
   
-3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], using the master database, execute the `GRANT exec ON xp_cmdshell TO '<somelogin>'` statement to give specific non-**sysadmin** users the ability to execute **xp_cmdshell**. The specified login must be mapped to a user in the master database.  
+3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], using the master database, execute the `GRANT exec ON xp_cmdshell TO N'<some_user>';` statement to give specific non-**sysadmin** users the ability to execute **xp_cmdshell**. The specified user must exist in the master database.  
   
  Now non-administrators can launch operating system processes with **xp_cmdshell** and those processes run with the permissions of the proxy account that you have configured. Users with CONTROL SERVER permission (members of the **sysadmin** fixed server role) will continue to receive the permissions of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account for child processes that are launched by **xp_cmdshell**.  
   

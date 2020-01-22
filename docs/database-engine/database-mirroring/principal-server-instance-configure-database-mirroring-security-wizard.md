@@ -1,6 +1,7 @@
 ---
-title: "Principal Server Instance (Configure Database Mirroring Security Wizard) | Microsoft Docs"
-ms.custom: ""
+title: "Principal Server Instance (Configure Database Mirroring Security Wizard)"
+description: A description of the 'Principal Server Instance' page of the 'Configure Database Mirroring Security' Wizard in SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: high-availability

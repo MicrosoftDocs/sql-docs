@@ -1,6 +1,7 @@
 ---
-title: "New Peer Initialization (Peer-to-Peer Replication) | Microsoft Docs"
-ms.custom: ""
+title: "New Peer Initialization (Peer-to-Peer) | Microsoft Docs"
+description: Describes the 'New Peer Initialization' used for Peer to Peer Replication in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

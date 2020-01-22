@@ -1,6 +1,7 @@
 ---
-title: How to configure persistent memory (PMEM) for SQL Server on Linux
+title: Configure persistent memory (PMEM) for SQL Server on Linux
 description: This article provides a walk-through for configuring PMEM on Linux.
+ms.custom: seo-lt-2019
 author: briancarrig 
 ms.author: brcarrig
 ms.date: 10/31/2019
@@ -20,7 +21,7 @@ This article describes how to configure the persistent memory (PMEM) for [!INCLU
 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] has a number of in-memory features that use persistent memory. This document covers the steps required to configure persistent memory for SQL Server on Linux.
 
 > [!NOTE]
-> The term _enlightenment_ was introduced to convey the concept of working with a persistent memory aware file system. Direct access to the file system from user-space applications is facilitated using memory mapping (mmap()). When a memory mapping for a file is created the application can issue load/store instructions bypassing the I/O stack completely. This is considered an "enlightened" file access method from the perspective of the host extension application (which is the black box code that allows SQLPAL interact with the Windows or Linux OS).
+> The term _enlightenment_ was introduced to convey the concept of working with a persistent memory aware file system. Direct access to the file system from user-space applications is facilitated using memory mapping (`mmap()`). When a memory mapping for a file is created the application can issue load/store instructions bypassing the I/O stack completely. This is considered an "enlightened" file access method from the perspective of the host extension application (which is the black box code that allows SQLPAL interact with the Windows or Linux OS).
 
 ## Create namespaces for PMEM devices
 
@@ -70,16 +71,16 @@ This article describes how to configure the persistent memory (PMEM) for [!INCLU
     mount -o dax,noatime /dev/pmem0 /mnt/dax
     ```
 
-## Important to note the following
+## Technical considerations
 
     - Block allocation of 2MB for either XFS/EXT4 as described above
-    - Misalignment between block allocation and mmap will result in silent fallback to 4KB
+    - Misalignment between block allocation and `mmap` results in silent fallback to 4KB
     - File sizes should be a multiple of 2MB (modulo 2MB)
-    - Do not disable Transparent Huge Pages (THP) - this is enabled by default on most distros
+    - Do not disable transparent huge pages (THP) - this is enabled by default on most distros
 
-  Once the device has been configured with ndctl, created and mounted, you can place database files in it or create a new database.
+Once the device has been configured with `ndctl`, created, and mounted, you can place database files in it or create a new database.
 
-PMEM devices are O_DIRECT (direct I/O) safe, you can consider enabling trace flag 3979 to disable the forced flush mechanism. For more information see [FUA support](https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Forced unit access internals are covered here [FUA internals](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/).
+PMEM devices are O_DIRECT (direct I/O) safe, you can consider enabling trace flag 3979 to disable the forced flush mechanism. For more information see [FUA support](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Forced unit access internals are covered here [FUA internals](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/).
 
 ## Next steps
 

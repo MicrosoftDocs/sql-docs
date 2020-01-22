@@ -1,5 +1,5 @@
 ---
-title: "Service Principal Names (SPNs) in Client Connections (ODBC) | Microsoft Docs"
+title: "Service Principal Names (SPNs) in ODBC Client"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

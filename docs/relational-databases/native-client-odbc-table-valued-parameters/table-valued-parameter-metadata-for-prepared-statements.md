@@ -1,5 +1,5 @@
 ---
-title: "Table-Valued Parameter Metadata for Prepared Statements | Microsoft Docs"
+title: "TVP metadata for Prepared statements"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

@@ -1,7 +1,7 @@
 ---
-title: "Change the Database Compatibility Level and Use the Query Store | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/06/2019"
+title: "Use Query Store after upgrade"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

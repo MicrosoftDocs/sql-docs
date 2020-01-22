@@ -1,10 +1,9 @@
 ---
-title: "Database Changes Detected Dialog Box (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Database Changes Detected Dialog Box
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
@@ -12,8 +11,10 @@ f1_keywords:
   - "vdtsql.chm:65543"
   - "vdtsql.chm:65554"
 ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Database Changes Detected Dialog Box (Visual Database Tools)

@@ -1,10 +1,9 @@
 ---
 title: Install on Windows
-description: This article explains how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
+description: Learn how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 11/04/2019
+ms.date: 01/02/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -15,7 +14,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
+Learn how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
@@ -79,11 +78,11 @@ For local installations, you must run Setup as an administrator. If you install 
 
    - **Database Engine Services**
      
-     To use R, Python, and Java with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
+     To use R or Python with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
 
    - **Machine Learning Services (In-Database)**
      
-     This option installs the database services that support R, Python, and Java script execution.
+     This option installs the database services that support R and Python script execution.
 
    ::: moniker-end
 
@@ -96,9 +95,7 @@ For local installations, you must run Setup as an administrator. If you install 
      Check this option to add the Microsoft Python packages, the Python 3.5 executable, and select libraries from the Anaconda distribution.
      
    ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-   - **Java**
-     
-     Check this option to install Open JRE included with SQL or provide the location of a different version of a JDK or JRE.
+   For information on installing and using Java, see [Install SQL Server Language Extensions on Windows](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md).
    ::: moniker-end
    
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -106,7 +103,7 @@ For local installations, you must run Setup as an administrator. If you install 
    ::: moniker-end
    
    ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-   ![Feature options for R, Python](media/2019setup-features-page-mls-rpy.png "Setup options for R, Python, and Java")
+   ![Feature options for R and Python](media/2019setup-features-page-mls-rpy.png "Setup options for R and Python")
    ::: moniker-end
    
    > [!NOTE]
@@ -140,16 +137,11 @@ For local installations, you must run Setup as an administrator. If you install 
 
 1. On the **Consent to Install Python** page, select **Accept** and then **Next**. The Python open-source licensing agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
 
-1. On the **Java Install Location** page, you can install the version of Open JRE included with SQL, or you can provide the location of your own installation of JDK or JRE. Then select **Next**.
-
-   > [!NOTE]
-   >  If the computer you are using does not have internet access, you can pause setup at this point to download the installers separately. For more information, see [Install machine learning components without internet access](../install/sql-ml-component-install-without-internet-access.md).
-
 1. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   
    + Database Engine Services
    + Machine Learning Services (In-Database)
-   + R, Python, and/or Java
+   + R and/or Python
 
    Note the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 

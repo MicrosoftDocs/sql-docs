@@ -1,10 +1,9 @@
 ---
-title: "Choose Name Dialog Box (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Choose Name Dialog Box
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
@@ -12,8 +11,10 @@ f1_keywords:
   - "vdt.dlgbox.newdatabaseview"
   - "vdt.dlgbox.newtablename"
 ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Choose Name Dialog Box (Visual Database Tools)

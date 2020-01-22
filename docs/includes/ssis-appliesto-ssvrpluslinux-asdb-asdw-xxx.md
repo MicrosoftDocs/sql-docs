@@ -1,1 +1,1 @@
-<Token>**APPLIES TO:** ![yes](media/yes.png)SQL Server, including on Linux ![yes](media/yes.png)Azure SQL Database ![yes](media/yes.png)Azure Synapse Analytics (SQL DW) ![no](media/no.png)Parallel Data Warehouse</Token>
+<Token>**APPLIES TO:** ![yes](media/yes.png)SQL Server ![yes](media/yes.png)SSIS Integration Runtime in Azure Data Factory</Token> ![yes](media/yes.png)Azure Synapse Analytics (SQL DW)

@@ -4,7 +4,7 @@ description: Learn how to install R packages offline by using the miniCRAN packa
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
@@ -31,7 +31,7 @@ Package repositories are useful in these scenarios:
 
 - **Security**: Many R users are accustomed to downloading and installing new R packages at will, from CRAN or one of its mirror sites. However, for security reasons, production servers running [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] typically do not have internet connectivity.
 
-- **Easier offline installation**: To install a package to an offline server requires that you also download all package dependencies. Using miniCRAN makes it easier to get all dependencies in the correct format. By using miniCRAN, you can avoid package dependency errors when preparing packages to install with the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement.
+- **Easier offline installation**: To install a package to an offline server requires that you also download all package dependencies. Using miniCRAN makes it easier to get all dependencies in the correct format and avoid dependency errors.
 
 - **Improved version management**: In a multi-user environment, there are good reasons to avoid unrestricted installation of multiple package versions on the server. Use a local repository to provide a consistent set of packages for your users.
 
@@ -107,6 +107,11 @@ pdb[, c("Package", "Version", "License")]
 
 After you have a local repository with the packages you need, move the package repository to the SQL Server computer. The following procedure describes how to install the packages using R tools.
 
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> The recommended method for installing packages is using **sqlmlutils**. See [Install new R packages with sqlmlutils](install-additional-r-packages-on-sql-server.md).
+::: moniker-end
+
 1. Copy the folder containing the miniCRAN repository, in its entirety, to the server where you plan to install the packages. The folder typically has this structure: 
 
    `<miniCRAN root>/bin/windows/contrib/version/<all packages>`
@@ -119,7 +124,7 @@ After you have a local repository with the packages you need, move the package r
    - For example, the default file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range"=sql-server-2017||=sqlallproducts-allversions"
    - For example, the file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 

@@ -1,6 +1,8 @@
 ---
-title: "REVOKE Search Property List Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE Search Property List Permissions"
+description: Revoke permissions on a search property list.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"

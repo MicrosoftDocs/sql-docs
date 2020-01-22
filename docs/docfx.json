@@ -128,13 +128,18 @@
         "2014/**/*.md": "SQL Server 2014",
         "2014/integration-services/**/*.md": "SQL Server 2014 Integration Services",
         "2014/relational-database/replication/**/*.md": "SQL Server 2014 Replication",
-        "2014/reporting-services/**/*.md": "SQL Server 2014 Reporting Services",
+        "2014/reporting-services/**/*.md": "SQL Server 2014 Reporting Services (SSRS)",
         "2014/database-engine/availability-groups/windows/**/*.md": "SQL Server 2014 Always On",
         "2014/sql-server/failover-clusters/**/*.md": "SQL Server 2014 Always On",
+        "2014/database-engine/database-mirroring/**/*.md": "SQL Server 2014 Database Mirroring",
+        "2014/database-engine/log-shipping/windows/**/*.md": "SQL Server 2014 Log Shipping",
+        "2014/ssms/**/*.md": "SQL Server Management Studio (SSMS)",
+        "2014/data-quality-services/**/*.md": "Data Quality Services (DQS)",
 
     
         "advanced-analytics/**/*.md": "SQL Server Machine Learning Services",
         "analysis-services/**/*.md": "",
+        "analytics-platform-system/**/*.md": "Parallel Data Warehouse",
         "azure-data-studio/**/*.md": "Azure Data Studio",
         "integration-services/**/*.md": "SQL Server Integration Services (SSIS)",
         "language-extensions/**/*.md": "SQL Server Language Extensions",
@@ -142,10 +147,22 @@
         "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
         "dea/**/*.md": "Database Experimentation Assistant",
         "sql-server/failover-clusters/**/*.md": "SQL Server Always On",
-        "database-engine/availability-groups/windows/**/*.md": "SQL Server Always On",
+        "database-engine/availability-groups/**/*.md": "SQL Server Always On",
+        "database-engine/database-mirroring/**/*.md": "SQL Server Database Mirroring",
+        "database-engine/log-shipping/windows/**/*.md": "SQL Server Log Shipping",
         "sql-server/stretch-database/**/*.md": "SQL Server Stretch Database",
         "master-data-services/**/*.md": "SQL Server Master Data Services",
-        "master-data-services/microsoft-excel-add-in/**/*.md": "SQL Server MDS Excel Add-in"
+        "master-data-services/microsoft-excel-add-in/**/*.md": "SQL Server MDS Excel Add-in",
+        "ssdt/**/*.md": "SQL Server Data Tools (SSDT)",
+        "ssms/**/*.md": "SQL Server Management Studio (SSMS)",
+        "azure-data-studio/**/*.md": "Azure Data Studio",        
+        "ssms/agent/**/*.md": "SQL Server Agent",
+        "ssms/visual-db-tools/**/*.md": "Visual Database Tools",
+        "tools/ssbdiagnose/**/*.md": "ssbdiagnose",
+        "data-quality-services/**/*.md": "Data Quality Services (DQS)"
+
+
+
       },
 
       "breadcrumb_path": {

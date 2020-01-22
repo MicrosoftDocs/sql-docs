@@ -1,7 +1,7 @@
 ---
-title: "Discontinued database engine functionality in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/13/2019"
+title: "Discontinued database engine functionality | Microsoft Docs"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""

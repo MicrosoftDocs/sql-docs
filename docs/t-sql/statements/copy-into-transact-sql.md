@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (preview) 
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts.
-ms.date: 11/07/2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
 ms.reviewer: jrasnick
@@ -59,7 +59,7 @@ WITH
 Is optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* is not specified, and the default schema of the user performing the COPY operation is different from the specified table, COPY will be canceled, and an error message will be returned.  
 
 *table_name*  
-Is the name of the table to COPY data into. The target table can be a temporary table or permanent table.
+Is the name of the table to COPY data into. The target table can be a temporary or permanent table and must already exist in the database. 
 
 *(column_list)*  
 Is an optional list of one or more columns used to map source data fields to target table columns for loading data. *column_list* must be enclosed in parentheses and delimited by commas. The column list is of the following format:
@@ -215,14 +215,13 @@ The COPY command will autodetect the compression type based on the file extensio
 > FIELDQUOTE characters are escaped in string columns where there is a presence of a double FIELDQUOTE (delimiter). 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* Only applies to CSV. Specifies the field terminator that will be used in the CSV file. The
-field terminator can be multi-character. The default field terminator is a (,).
+*FIELDTERMINATOR* Only applies to CSV. Specifies the field terminator that will be used in the CSV file. The field terminator can be specified using hexadecimal notation. The field terminator can be multi-character. The default field terminator is a (,).
 For more information, see [Specify Field and Row Terminators (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017).
 
 ROW TERMINATOR = 'row_terminator'</br>
-*ROW TERMINATOR* Only applies to CSV. Specifies the row terminator that will be used in the CSV file. The row terminator can be multi-character. By default, the row terminator is \r\n. 
+*ROW TERMINATOR* Only applies to CSV. Specifies the row terminator that will be used in the CSV file. The row terminator can be specified using hexadecimal notation. The row terminator can be multi-character. By default, the row terminator is \r\n. 
 
-The COPY command prefixes the \r character when specifying \n (newline) resulting in \r\n. To specify only the \n character, use hexadecimal (0x0A). When specifying multi-character row terminators in hexadecimal, do not specify 0x between each character.
+The COPY command prefixes the \r character when specifying \n (newline) resulting in \r\n. To specify only the \n character, use hexadecimal notation (0x0A). When specifying multi-character row terminators in hexadecimal, do not specify 0x between each character.
 
 Please review the following [documentation](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators) for additional guidance on specifying row terminators.
 
@@ -261,7 +260,7 @@ Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Data Wa
 The following example is the simplest form of the COPY command, which loads data from a public storage account. For this example, the COPY statement's defaults match the format of the line item csv file.
 
 ```sql
-COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv’
+COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
 ```
 
 The default values of the COPY command are:
@@ -308,7 +307,7 @@ WITH (
     DATEFORMAT = 'ymd',
 	MAXERRORS = 10,
 	ERRORFILE = '/errorsfolder/',--path starting from the storage container
-	IDENTITY_INSERT = ‘ON’
+	IDENTITY_INSERT = 'ON'
 )
 ```
 
@@ -359,6 +358,46 @@ WITH (
 	FIELDTERMINATOR = '|'
 )
 ```
+
+## FAQ
+
+### What is the performance of the COPY command compared to PolyBase?
+The COPY command will have better performance by the time the feature is generally available. For best loading performance during public preview, consider splitting your input into multiple files when loading CSV. Currently COPY is on par in terms of performance with PolyBase when using INSERT SELECT. 
+
+### What is the file splitting guidance for the COPY command loading CSV files?
+Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. You won’t need to split your non-compressed files when the COPY command is generally available. 
+
+| **DWU** | **#Files** |
+| :-----: | :--------: |
+|   100   |     60     |
+|   200   |     60     |
+|   300   |     60     |
+|   400   |     60     |
+|   500   |     60     |
+|  1,000  |    120     |
+|  1,500  |    180     |
+|  2,000  |    240     |
+|  2,500  |    300     |
+|  3,000  |    360     |
+|  5,000  |    600     |
+|  6,000  |    720     |
+|  7,500  |    900     |
+| 10,000  |    1200    |
+| 15,000  |    1800    |
+| 30,000  |    3600    |
+
+
+### What is the file splitting guidance for the COPY command loading Parquet or ORC files?
+There is no need to split Parquet and ORC files because the COPY command will automatically split files. Parquet and ORC files in the Azure storage account should be 256MB or larger for best performance. 
+
+### When will the COPY command be generally available?
+The COPY command will be generally available early next calendar year (2020). 
+
+### Are there any known issues with the COPY command?
+
+- LOB support such as (n)varchar(max) is not available in the COPY statement. This will be available early next year.
+
+Please send any feedback or issues to the following distribution list: sqldwcopypreview@service.microsoft.com
 
 ## See also  
 

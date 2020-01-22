@@ -1,9 +1,9 @@
 ---
-title: "Protocols for MSSQLSERVER Properties (Flags Tab) | Microsoft Docs"
-ms.custom: ""
+title: "Protocols for MSSQLSERVER Properties (Flags Tab)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual

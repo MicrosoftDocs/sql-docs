@@ -36,9 +36,9 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
 
 ## What can I do with Machine Learning Services?
 
-You can use Machine Learning Services to build and training machine learning and deep learning models within SQL Server. You can also deploy existing models to Machine Learning Services and use relational data for predictions.
+You can use Machine Learning Services to build and train machine learning and deep learning models within SQL Server. You can also deploy existing models to Machine Learning Services and use relational data for predictions.
 
-Examples of the type of predictions that you can use SQL Server Machine Learning Services for, include:
+Examples of the type of predictions that you can use SQL Server Machine Learning Services for include:
 
 |||
 |-|-|

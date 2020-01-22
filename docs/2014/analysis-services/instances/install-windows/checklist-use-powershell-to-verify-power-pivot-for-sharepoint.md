@@ -400,7 +400,7 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
 ##  <a name="bkmk_more_resources"></a> More Resources  
  [Web Server (IIS) Administration Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/ee790599.aspx).  
   
- [PowerShell to check services, IIS sites and Application Pool status in SharePoint](http://gallery.technet.microsoft.com/office/PowerShell-to-check-a6ed72a0).  
+ [PowerShell to check services, IIS sites and Application Pool status in SharePoint](https://gallery.technet.microsoft.com/office/PowerShell-to-check-a6ed72a0).  
   
  [Windows PowerShell for SharePoint 2013 reference](https://technet.microsoft.com/library/ee890108\(v=office.15\).aspx)  
   
@@ -524,4 +524,3 @@ Get-SPSolution | Select name, status, deployed, DeploymentState, DeployedServers
 $time = Get-Date  
 Write-Host -ForegroundColor DarkGray StartTime $starttime
 Write-Host -ForegroundColor DarkGray EndTime $time
-```

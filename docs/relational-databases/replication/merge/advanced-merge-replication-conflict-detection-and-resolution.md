@@ -1,6 +1,7 @@
 ---
-title: "Advanced Merge Replication Conflict Detection and Resolution | Microsoft Docs"
-ms.custom: ""
+title: "Advanced conflict detection & resolution (Merge)"
+description: Learn advanced methods of conflict detection and resolution with Merge Replication.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

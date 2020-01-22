@@ -5,7 +5,7 @@ description: Learn how to install tools used with [!INCLUDE[big-data-clusters-20
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -53,7 +53,7 @@ The previous table provides all of the common tools that are used with big data 
 - `azdata`
 - `kubectl`
 - **Azure Data Studio**
-- **SQL Server 2019 extension**
+- **Data Virtualization extension**
 
 The remaining tools are only required in certain scenarios. **Azure CLI** can be used to manage Azure services associated with AKS deployments. **mssql-cli** is an optional but useful tool that allows you to connect to the SQL Server master instance in the cluster and run queries from the command line. And **sqlcmd** and `curl` are required if you plan to install sample data with the GitHub script.
 

@@ -1,6 +1,7 @@
 ---
-title: "Security Center for SQL Server Database Engine and Azure SQL Database | Microsoft Docs"
-ms.custom: ""
+title: "Security documentation for SQL Server & Azure SQL Database"
+description: A reference of security and protection-related content for SQL Server and Azure SQL Database. 
+ms.custom: seo-lt-2019
 ms.date: "09/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

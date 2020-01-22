@@ -1,7 +1,8 @@
 ---
-title: "FILESTREAM Compatibility with Other SQL Server Features | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "FILESTREAM compatibility | Microsoft Docs"
+description: "FILESTREAM compatibility with other SQL Server features"
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -14,7 +15,8 @@ ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# FILESTREAM Compatibility with Other SQL Server Features
+# FILESTREAM compatibility with other SQL Server features
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Because FILESTREAM data is in the file system, this topic provides some considerations, guidelines, and limitations for using FILESTREAM with the following features in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   

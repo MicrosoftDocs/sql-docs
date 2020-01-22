@@ -1,7 +1,7 @@
 ---
-title: "Building Applications with SQL Server Native Client | Microsoft Docs"
+title: "Native Client, build SQL apps"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: 12/16/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: native-client

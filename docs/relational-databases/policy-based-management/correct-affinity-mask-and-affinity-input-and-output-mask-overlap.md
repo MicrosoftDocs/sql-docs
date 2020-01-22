@@ -1,6 +1,7 @@
 ---
-title: "Correct Affinity Mask and Affinity Input and Output Mask Overlap | Microsoft Docs"
-ms.custom: ""
+title: "Correct affinity mask & affinity IO mask overlap policy"
+description: Learn how to enable a policy that checks whether an instance of SQL Server has one ore more processors that are assigned to be used with both the affinity mask and the affinity I/O mask options for Policy-Based Management in SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"

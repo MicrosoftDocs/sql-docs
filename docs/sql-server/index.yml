@@ -44,10 +44,7 @@ landingContent:
         url: /azure/dms/dms-overview
       - text: Data Migration Assistant (DMA)
         url: ../dma/dma-overview.md
-      - text: Database Experimentation Assistant
-        url: ../dea/database-experimentation-assistant-overview.md
-      - text: SQL Server Migration Assistant (SSMA)
-        url: ../ssma/sql-server-migration-assistant.md
+
 
   - title: SQL Server
     linkLists:

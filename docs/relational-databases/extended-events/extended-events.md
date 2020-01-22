@@ -1,6 +1,5 @@
 ---
-title: "XEvents overview - SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "XEvents overview - SQL Server"
 ms.date: "07/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -224,8 +224,7 @@ manager: craigg
 ## Client Help on Office.com  
  The following articles are provided on Office.com to help users learn about how Multidimensional Model objects appear in Power View and how to create a sample report:  
   
- [Understanding Multidimensional Model Objects in Power View](http://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
+ [Understanding Multidimensional Model Objects in Power View](https://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
   
- [Explore the Adventure Works Multidimensional Model by using Power View](http://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
-  
+ [Explore the Adventure Works Multidimensional Model by using Power View](https://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   

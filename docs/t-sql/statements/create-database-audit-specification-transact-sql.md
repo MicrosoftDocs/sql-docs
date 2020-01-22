@@ -1,7 +1,9 @@
 ---
-title: "CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
+title: "CREATE DATABASE AUDIT SPECIFICATION"
+description: Create a database audit specification object using the SQL Server audit feature.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
+ms.date: "01/03/2020"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -87,7 +89,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## Examples
 
 ### A. Audit SELECT and INSERT on a table for any database principal 
- The following example creates a server audit called `Payrole_Security_Audit` and then a database audit specification called `Payrole_Security_Audit` that audits `SELECT` and `INSERT` statements by any user (`public`), for the `HumanResources.EmployeePayHistory` table in the `AdventureWorks2012` database.  
+ The following example creates a server audit called `Payrole_Security_Audit` and then a database audit specification called `Payrole_Security_Audit` that audits `SELECT` and `INSERT` statements by the `dbo` user, for the `HumanResources.EmployeePayHistory` table in the `AdventureWorks2012` database.  
   
 ```  
 USE master ;  

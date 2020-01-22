@@ -1,6 +1,7 @@
 ---
-title: "SQL Server Replication Publisher Properties dialog box | Microsoft Docs"
-ms.custom: ""
+title: "Publisher Properties dialog box (SSMS)"
+description: Describes the 'Publisher Properties' dialog box for a specific publication within SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,7 +16,7 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server Replication Publisher Properties dialog box
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

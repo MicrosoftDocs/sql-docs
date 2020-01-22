@@ -1,10 +1,9 @@
 ---
 title: "Poll Servers"
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,8 +13,10 @@ helpviewer_keywords:
   - "master servers [SQL Server], polling"
   - "polling interval [SQL Server]"
 ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Poll Servers

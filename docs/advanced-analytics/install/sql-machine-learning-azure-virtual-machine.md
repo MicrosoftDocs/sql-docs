@@ -1,24 +1,32 @@
 ---
 title: Install on an Azure virtual machine
-description: Run R and Python data science and machine learning solutions on a SQL Server virtual machine in the Azure cloud.
+description: Run Python and R data science and machine learning solutions with SQL Server Machine Learning Services on a virtual machine in the Azure cloud.
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 11/09/2018  
+ms.date: 01/02/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server Machine Learning Services with R and Python on an Azure virtual machine
+# Install SQL Server Machine Learning Services with Python and R on an Azure virtual machine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-You can install R and Python integration with Machine Learning Services on a SQL Server virtual machine in Azure, eliminating installation and configuration tasks. Once the virtual machine is deployed, the features are ready to use.
- 
-For step by step instructions, see [How to provision a Windows SQL Server virtual machine in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision).
+Learn how to install Python and R with SQL Server Machine Learning Services on a virtual machine in Azure. This eliminates the installation and configuration tasks for Machine Learning Services.
 
-The [Configure SQL server settings](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) step is where you add machine learning to your instance.
+Follow these steps:
+
+1. Provision SQL Server virtual machine in Azure
+1. Unblock the firewall
+1. Enable ODBC callbacks for remote clients
+1. Add network protocols
+
+## Provision SQL Server virtual machine in Azure
+
+For step by step instructions, see [How to provision a Windows SQL Server virtual machine in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision). 
+
+The [Configure SQL server settings](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) step is where you add Machine Learning Services to your instance.
 
 <a name="firewall"></a>
 

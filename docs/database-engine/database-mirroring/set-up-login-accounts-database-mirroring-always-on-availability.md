@@ -1,6 +1,7 @@
 ---
-title: "Set Up Login Accounts - Database Mirroring Always On Availability | Microsoft Docs"
-ms.custom: ""
+title: "Set up login accounts (mirroring & availability groups)"
+description: Configure login accounts to access the database mirroring endpoint of a database mirror or an Always On availability group. 
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability

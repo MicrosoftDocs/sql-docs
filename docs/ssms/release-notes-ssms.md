@@ -1,14 +1,14 @@
 ---
-title: "Release notes for SQL Server Management Studio (SSMS)| Microsoft Docs"
+title: Release notes for (SSMS)
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.manager: jroth
+ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 11/04/2019
 ---
@@ -54,6 +54,7 @@ SSMS 18.4 is the latest general availability (GA) release of SSMS. If you need a
 | Data Classification | Added support for custom information protection policy for data classification. |
 | Query Store | Added the *Max Plan per query* value in the dialog properties. |
 | Query Store | Added support for the new Custom Capture Policies. |
+| Query Store | Added **Wait Statistics Capture Mode** to the **Query Store** **Database Properties** options. |
 | SMO/Scripting | Support Script of materialized view in SQL DW. |
 | SMO/Scripting | Added support for *SQL On Demand*. |
 | SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added 50 assessment rules (see details on GitHub). |
@@ -89,7 +90,7 @@ SSMS 18.4 is the latest general availability (GA) release of SSMS. If you need a
 
 * Database Diagram created from SSMS running on machine A cannot be modified from machine B (SSMS crashes). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
 
-* There are redraw issues when switching between multiple query windows. See UserVoice for more details. A workaround for this issue is to disable hardware acceleration under *Tools > Options*.
+* There are redraw issues when switching between multiple query windows. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042) for more details. A workaround for this issue is to disable hardware acceleration under *Tools > Options*.
 
 You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
@@ -323,7 +324,7 @@ Release date: July 25, 2019
 |SSMS is no longer added to the PATH environment variable|Path to SSMS.EXE (and tools in general) isn't added to the path anymore. Users can either manually add it, or if on a modern Windows computer, use on the Start menu.|
 |Package IDs are no longer needed to develop SSMS Extensions| In the past, SSMS was selectively loading only well-known packages, thus requiring developers to register their own package. This is no longer the case.|
 |General SSMS|Exposing AUTOGROW_ALL_FILES config option for Filegroups in SSMS.|
-|General SSMS|Removed risky 'lightweight pooling' and 'priority boost' options from SSMS GUI. For details, see [Priority boost details – and why it’s not recommended](https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/).
+|General SSMS|Removed risky 'lightweight pooling' and 'priority boost' options from SSMS GUI. For details, see [Priority boost details – and why it’s not recommended](https://deep.data.blog/2010/01/26/priority-boost-details-and-why-its-not-recommended/).
 |General SSMS|New menu and key bindings to creates files: **CTRL+ALT+N**. **CTRL+N** continues to create a new query.|
 |General SSMS|**New Firewall Rule** dialog now allows the user to specify a rule name, instead of automatically generating one on behalf of the user.|
 |General SSMS|Improved IntelliSense in Editor especially for v140+ T-SQL.|
@@ -602,12 +603,11 @@ The following issues were fixed this release:
 
 * Fixed an issue with the SQL Designer scrollbar. [Connect ID 3114856](https://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
 
-* Context menu for tables momentarily hangs 
+* Context menu for tables momentarily hangs
 
 * SSMS occasionally throws exceptions in Activity Monitor and crashes. [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
 
 * SSMS 2016 crashes with error "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"
-
 
 ## Uninstall and reinstall SSMS 17.x
 

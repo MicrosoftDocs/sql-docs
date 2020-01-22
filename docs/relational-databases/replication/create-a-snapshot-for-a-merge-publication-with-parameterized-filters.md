@@ -1,6 +1,7 @@
 ---
-title: "Create a Snapshot for a Merge Publication with Parameterized Filters | Microsoft Docs"
-ms.custom: ""
+title: "Create snapshot with parameterized filters (Merge)"
+description: Learn how to create a snapshot for a Merge Publication using parameterized filters. 
+ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"

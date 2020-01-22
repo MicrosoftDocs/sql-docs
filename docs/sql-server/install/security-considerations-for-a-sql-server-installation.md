@@ -1,5 +1,5 @@
 ---
-title: "Security Considerations for a SQL Server Installation | Microsoft Docs"
+title: "Security Considerations"
 ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: sql

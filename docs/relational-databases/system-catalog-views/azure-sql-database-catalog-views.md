@@ -26,6 +26,6 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |[sys.database_connection_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-connection-stats-azure-sql-database.md)|[sys.firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)|  
 |[sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)|[sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)|  
 |[sys.database_usage &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)|[sys.resource_usage &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-usage-azure-sql-database.md)|  
-|[sys.elastic_pool_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)|[dbo.server_quotas &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/dbo-server-quotas-azure-sql-database.md)|  
+|[sys.elastic_pool_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)| |  
   
   

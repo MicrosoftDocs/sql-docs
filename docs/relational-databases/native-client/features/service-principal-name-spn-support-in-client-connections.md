@@ -1,5 +1,5 @@
 ---
-title: "Service Principal Name (SPN) Support in Client Connections | Microsoft Docs"
+title: "Service Principal Name in connections"
 ms.custom: ""
 ms.date: "08/08/2016"
 ms.prod: sql

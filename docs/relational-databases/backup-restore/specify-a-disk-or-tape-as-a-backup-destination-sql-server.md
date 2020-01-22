@@ -1,5 +1,5 @@
 ---
-title: "Specify a Disk or Tape As a Backup Destination (SQL Server) | Microsoft Docs"
+title: "Specify disk or tape backup destination"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# Specify a Disk or Tape As a Backup Destination (SQL Server)
+# Specify a disk or tape backup destination (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic describes how to specify a disk or tape as a backup destination in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

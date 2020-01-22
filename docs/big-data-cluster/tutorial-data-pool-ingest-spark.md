@@ -1,11 +1,12 @@
 ---
 title: Ingest data with Spark jobs
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: This tutorial demonstrates how to ingest data into the data pool of a SQL Server big data cluster using Spark jobs in Azure Data Studio.
 author: rajmera3 
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.date: 11/19/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -45,6 +46,23 @@ The following steps create an external table in the data pool named **web_clicks
 
    ![SQL Server master instance query](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
+1. Create permissions for MSSQL-Spark Connector.
+   ```sql
+   USE Sales
+   CREATE LOGIN sample_user  WITH PASSWORD ='password123!#' 
+   CREATE USER sample_user FROM LOGIN sample_user
+
+   -- To create external tables in data pools
+   GRANT ALTER ANY EXTERNAL DATA SOURCE TO sample_user;
+
+   -- To create external table
+   GRANT CREATE TABLE TO sample_user;
+   GRANT ALTER ANY SCHEMA TO sample_user;
+
+   ALTER ROLE [db_datareader] ADD MEMBER sample_user
+   ALTER ROLE [db_datawriter] ADD MEMBER sample_user
+   ```
+
 1. Create an external data source to the data pool if it does not already exist.
 
    ```sql
@@ -69,8 +87,15 @@ The following steps create an external table in the data pool named **web_clicks
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. In CTP 3.1, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
+   
+1. Create login for data pools and provide permissions to the user.
+   ```sql 
+   EXECUTE( ' Use Sales; CREATE LOGIN sample_user  WITH PASSWORD = ''password123!#'' ;') AT  DATA_SOURCE SqlDataPool;
+
+   EXECUTE('Use Sales; CREATE USER sample_user; ALTER ROLE [db_datareader] ADD MEMBER sample_user;  ALTER ROLE [db_datawriter] ADD MEMBER sample_user;') AT DATA_SOURCE SqlDataPool;
+   ```
+   
+The creation of data pool external table is a blocking operation. Control returns when the specified table has been created on all back-end data pool nodes. If failure occurred during the create operation, an error message is returned to caller.
 
 ## Start a Spark streaming job
 
@@ -127,7 +152,7 @@ The next step is to create a Spark streaming job that loads web clickstream data
 
 The following steps show that the Spark streaming job loaded the data from HDFS into the data pool.
 
-1. Before querying the ingested data, look at the Spark Execution Status including Yarn App ID, Spark UI and Driver Logs.
+1. Before querying the ingested data, look at the Spark Execution Status including Yarn App ID, Spark UI and Driver Logs. This information will be displayed in the notebook when you first start the Spark application.
 
    ![Spark Execution Details](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 

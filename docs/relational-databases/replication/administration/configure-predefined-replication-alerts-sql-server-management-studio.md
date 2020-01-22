@@ -1,6 +1,7 @@
 ---
-title: "Configure Predefined Replication Alerts (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Configure predefined Replication alerts (SSMS)"
+description: Learn how to configure predefined replication alerts using SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Configure Predefined Replication Alerts (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md.md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Replication offers the following predefined alerts, which can be configured to respond to replication events:  
   
 -   **Replication: agent success**  

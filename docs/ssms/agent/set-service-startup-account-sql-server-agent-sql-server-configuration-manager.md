@@ -1,10 +1,7 @@
 ---
-title: "Set the Service Startup Account for SQL Server Agent"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+title: Set the Service Startup Account
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,11 +9,17 @@ helpviewer_keywords:
   - "startup accounts [SQL Server]"
   - "service startup accounts [SQL Server Agent]"
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
+
 # Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

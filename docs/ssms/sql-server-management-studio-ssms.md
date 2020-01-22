@@ -88,6 +88,10 @@ For more information about different locale with previous versions, reference [I
 - Read the original [Modern Lifecycle Policy announcement](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy). For more information, see [Modern Policy FAQs](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
 - For information on diagnostic data collection and feature usage, see the [SQL Server privacy supplement](https://docs.microsoft.com/sql/sql-server/sql-server-privacy).
 
+## Cross-platform tool
+
+[!INCLUDE[ssms-azure-data-studio-mention](../includes/ssms-azure-data-studio-mention.md)]
+
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 ## Next steps

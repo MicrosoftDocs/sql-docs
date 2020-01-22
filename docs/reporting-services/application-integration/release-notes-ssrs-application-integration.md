@@ -1,7 +1,7 @@
 ---
 title: "Release Notes for Report Viewer controls"
 description: The release notes for the Report Viewer controls of WebForms and WinForms, related to Reporting Services.
-ms.date: 09/20/2018
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
@@ -18,6 +18,12 @@ ms.author: rhys
 These are the release notes for the Report Viewer controls of WebForms and WinForms, related to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS).
 
 For the release notes for SSRS, see [Release notes for SQL Server Reporting Services (SSRS) 2017 and later](../release-notes-reporting-services.md).
+
+## 150.1400.0
+| Change description | Details |
+| :----------------- | :------ |
+| Bug Fixes | Fixed an issue where the viewer control would not load in design mode. |
+| &nbsp; | &nbsp; |
 
 ## 150.1358.0
 | Change description | Details |
@@ -39,7 +45,7 @@ For the release notes for SSRS, see [Release notes for SQL Server Reporting Serv
 |            | Accessibility fix for tool bar to narrate only for active items |
 | &nbsp; | &nbsp; |
 
-## 15.900.148
+## 150.900.148
 
 | Change description | Details |
 | :----------------- | :------ |

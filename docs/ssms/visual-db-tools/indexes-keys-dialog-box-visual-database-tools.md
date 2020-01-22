@@ -1,18 +1,19 @@
 ---
-title: "Indexes - Keys Dialog Box (Visual Database Tools)"
+title: Indexes - Keys Dialog Box
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65539"
   - "vdt.ppg.indexeskeys"
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Indexes - Keys Dialog Box (Visual Database Tools)
@@ -110,6 +111,6 @@ Specify whether the underlying [!INCLUDE[ssDE](../../includes/ssde_md.md)] compu
 Specify whether row-level locking is allowed on this index. Allowing or disallowing row-level locking affects database performance. The recommended setting is **Yes**.  
   
 ## See Also  
-[Working with Constraints (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
-[Working with Keys (Visual Database Tools)](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
+[Working with Constraints(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Working with Keys(https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

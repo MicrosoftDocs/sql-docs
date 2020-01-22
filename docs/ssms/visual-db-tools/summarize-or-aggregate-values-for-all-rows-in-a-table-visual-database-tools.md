@@ -1,18 +1,19 @@
 ---
-title: "Summarize or Aggregate Values for All Rows in a Table"
+title: Summarize or Aggregate Values for All Rows in a Table
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "summarizing query results"
   - "aggregate functions [SQL Server], summarizing query results"
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Summarize or Aggregate Values for All Rows in a Table (Visual Database Tools)

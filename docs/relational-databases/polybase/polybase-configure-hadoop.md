@@ -1,6 +1,6 @@
 ---
-title: "Configure PolyBase to access external data in Hadoop"
-ms.date: 04/23/2019
+title: "Access external data: Hadoop - PolyBase"
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Overview of the Database Experimentation Assistant 
 description: Overview of Database Experimentation Assistant
 ms.custom: ""
-ms.date: 11/22/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,7 +10,7 @@ ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: HJToland3
-ms.author: jtoland
+ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: "seo-lt-2019"
 ---

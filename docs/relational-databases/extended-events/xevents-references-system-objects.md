@@ -1,6 +1,5 @@
 ---
-title: "XEvents related system objects | Microsoft Docs"
-ms.custom: ""
+title: "XEvents related system objects"
 ms.date: 03/24/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -1,10 +1,9 @@
 ---
-title: "Results Pane (Visual Database Tools)"
+title: Results Pane
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,8 +19,10 @@ helpviewer_keywords:
   - "queries [SQL Server], results"
   - "Results pane"
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Results Pane (Visual Database Tools)

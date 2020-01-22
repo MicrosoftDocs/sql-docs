@@ -117,7 +117,7 @@ A classification function examines incoming tasks and determines whether the tas
   
 2.  In the classifier function for each resource pool, define the type of statements or incoming requests that should be assigned to the resource pool.
   
-     For example, the following function returns the name of the schema assigned to the user-defined external resource pool if the application that sent the request is either 'Microsoft R Host' or 'RStudio'; otherwise it returns the default resource pool.
+     For example, the following function returns the name of the schema assigned to the user-defined external resource pool if the application that sent the request is either 'Microsoft R Host', 'RStudio', or 'Mashup'; otherwise it returns the default resource pool.
   
     ```sql
     USE master
@@ -127,7 +127,7 @@ A classification function examines incoming tasks and determines whether the tas
     WITH schemabinding
     AS
     BEGIN
-        IF program_name() in ('Microsoft R Host', 'RStudio') RETURN 'ds_wg';
+        IF program_name() in ('Microsoft R Host', 'RStudio', 'Mashup') RETURN 'ds_wg';
         RETURN 'default'
         END;
     GO
@@ -137,7 +137,7 @@ A classification function examines incoming tasks and determines whether the tas
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH  (classifier_function = dbo.is_ds_apps);
-    ALTER RESOURCE GOVERNOR WITH reconfigure;
+    ALTER RESOURCE GOVERNOR RECONFIGURE;
     GO
     ```
 

@@ -64,9 +64,9 @@ For details of how to develop applications using Always Encrypted with particula
 
 ## Remarks
 
-Decryption occurs via the client. This means that some actions that occur only server-side won't work when using Always Encrypted. 
+Encryption and decryption occurs via the client driver. This means that some actions that occur only server-side will not work when using Always Encrypted. Examples include copying data from one columng to another via an UPDATE, BULK INSERT(T-SQL), SELECT INTO, INSERT..SELECT. 
 
-Here's an example of an update that attempts to move data from an encrypted column to an unencrypted column without returning a result set to the client: 
+Here's an example of an UPDATE that attempts to move data from an encrypted column to an unencrypted column without returning a result set to the client: 
 
 ```sql
 update dbo.Patients set testssn = SSN

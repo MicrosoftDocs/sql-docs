@@ -1,10 +1,9 @@
 ---
-title: "Draw Reflexive Relationships (Visual Database Tools)"
+title: Draw Reflexive Relationships
 ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,8 +11,10 @@ helpviewer_keywords:
   - "reflexive relationships"
   - "database diagrams [SQL Server], relationships"
 ms.assetid: e218363f-faec-46d5-9904-a537fbcc994d
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.reviewer: 
 
 ---
 # Draw Reflexive Relationships (Visual Database Tools)

@@ -1,6 +1,7 @@
 ---
-title: "SQL Server Connector Maintenance &amp; Troubleshooting | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server Connector maintenance & troubleshooting"
+description: Learn about maintenance instructions and common troubleshooting steps for the SQL Server Connector. 
+ms.custom: seo-lt-2019
 ms.date: "07/25/2019"
 ms.prod: sql
 ms.reviewer: vanto
@@ -12,7 +13,7 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ---
-# SQL Server Connector Maintenance &amp; Troubleshooting
+# SQL Server Connector Maintenance & Troubleshooting
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Supplemental information about the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector is provided in this topic. For more information about the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connector, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md),  and [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
@@ -209,7 +210,9 @@ Error code  |Symbol  |Description
 4 | scp_err_NotFound | The specified key or algorithm could not be found by the EKM provider.    
 5 | scp_err_AuthFailure | The authentication has failed with EKM provider.    
 6 | scp_err_InvalidArgument | The provided argument is invalid.    
-7 | scp_err_ProviderError | There is an unspecified error happened in EKM provider that is caught by SQL engine.    
+7 | scp_err_ProviderError | There is an unspecified error happened in EKM provider that is caught by SQL engine.   
+401 | acquireToken | Server responded 401 for the request. Make sure the client Id and secret are correct, and the credential string is a concatenation of AAD client Id and secret without hyphens.
+404 | getKeyByName | The server responded 404, because the key name was not found. Please make sure the key name exists in your vault.
 2049 | scp_err_KeyNameDoesNotFitThumbprint | The key name is too long to fit into SQL engine's thumbprint. The key name must not exceed 26 characters.    
 2050 | scp_err_PasswordTooShort | The secret string that is the concatenation of AAD client ID and secret is shorter than 32 characters.    
 2051 | scp_err_OutOfMemory | SQL engine has run out of memory and failed to allocate memory for EKM provider.    

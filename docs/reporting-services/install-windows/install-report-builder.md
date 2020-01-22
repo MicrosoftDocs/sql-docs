@@ -1,6 +1,7 @@
 ---
 title: "Install Report Builder | Microsoft Docs"
-ms.date: 10/29/2019
+description: Report Builder is stand-alone app, installed on your computer by you or an administrator. 
+ms.date: 01/03/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 
@@ -29,9 +30,9 @@ ms.author: maggies
 
 ::: moniker-end
  
-## Install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] with System Center Configuration Manager 
+## Install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] with Microsoft Endpoint Configuration Manager 
   
- An administrator can also use software such as System Center Configuration Manager to push the program to your computer. To learn how to use specific software to install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], consult the documentation for the software. For more information, see the [System Center Configuration Manager site](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).  
+ An administrator can also use software such as Microsoft Endpoint Configuration Manager to push the program to your computer. To learn how to use specific software to install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], consult the documentation for the software. For more information, see [Microsoft Endpoint Configuration Manager documentation](https://docs.microsoft.com/configmgr/).  
   
 > [!IMPORTANT]  
 >  Windows Vista and Windows 7 security features require elevated permissions to run command line operations and will prompt for permission to run the command line. The installation is not silent. To make the installation silent, you need to run the command line as an administrator.  
@@ -59,9 +60,9 @@ ms.author: maggies
   
 ## To install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from a share  
   
-1.  Contact your administrator for the location of ReportBuilder3.msi that you run to install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] on your local computer.  
+1.  Contact your administrator for the location of ReportBuilder.msi that you run to install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] on your local computer.  
   
-2.  Browse to locate ReportBuilder3.msi, the Windows Installer Package (MSI) for [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], and click it.  
+2.  Browse to locate ReportBuilder.msi, the Windows Installer Package (MSI) for [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], and click it.  
   
      This launches the SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Wizard.  
   
@@ -81,11 +82,11 @@ ms.author: maggies
   
 4.  In the **Open** box, type **cmd.**  
   
-5.  In the Command Prompt window, navigate to the folder where you saved ReportBuilder3.msi.  
+5.  In the Command Prompt window, navigate to the folder where you saved ReportBuilder.msi.  
   
 6.  Type a command with the following format:  
   
-     `msiexec/i ReportBuilder3.msi /option [value] [/option [value]]`  
+     `msiexec/i ReportBuilder.msi /option [value] [/option [value]]`  
   
      The two options specific to installing [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] are: RBINSTALLDIR and REPORTSERVERURL. You don't have to include these arguments in the command line. The following is the baseline command:  
   

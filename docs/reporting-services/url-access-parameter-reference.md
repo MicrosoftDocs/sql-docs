@@ -208,9 +208,13 @@ ms.author: maggies
   
     -   **IMAGE**  
   
-    -   **EXCEL**  
+    -   **EXCEL**  (for .xls)
+    
+    -   **EXCELOPENXML** (for .xlsx)
   
-    -   **WORD**  
+    -   **WORD** (for .doc)
+    
+    -   **WORDOPENXML** (for .docx)
   
     -   **CSV**  
   

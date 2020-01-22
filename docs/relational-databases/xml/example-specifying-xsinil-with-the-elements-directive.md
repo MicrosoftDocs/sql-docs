@@ -1,6 +1,5 @@
 ---
-title: "Example: Specifying XSINIL with the ELEMENTS Directive | Microsoft Docs"
-ms.custom: ""
+title: "Specify XSINIL with the ELEMENTS Directive | Microsoft Docs"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -12,6 +11,7 @@ helpviewer_keywords:
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 ---
 # Example: Specifying XSINIL with the ELEMENTS Directive
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

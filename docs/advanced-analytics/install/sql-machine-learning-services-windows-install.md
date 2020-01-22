@@ -312,7 +312,7 @@ On the database, you might need the following configuration updates:
 
 ## Suggested optimizations
 
-Now that you have everything working, you might also want to optimize the server to support machine learning, or install an ML model.
+Now that you have everything working, you might also want to optimize the server to support machine learning, or install a pretrained machine learning model.
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ### Add more worker accounts

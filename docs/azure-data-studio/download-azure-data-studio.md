@@ -52,13 +52,11 @@ The *user installer* is recommended because it does not require administrator pr
 2. Browse to the downloaded file and extract it.
 3. Run `\azuredatastudio-windows\azuredatastudio.exe`
 
-
 ## Get Azure Data Studio for macOS
 
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2113528).
 2. To expand the contents of the zip, double-click it.
 3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
-
 
 ## Get Azure Data Studio for Linux
 
@@ -141,10 +139,12 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 - Windows Server 2008 R2 (64-bit)
 
 ### macOS
+
 - macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
 ### Linux
+
 - Red Hat Enterprise Linux 7.4
 - Red Hat Enterprise Linux 7.3
 - SUSE Linux Enterprise Server v12 SP2
@@ -159,6 +159,7 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 |             |           |            |
 
 ## Check for updates
+
 To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**
 
 ## Supported SQL offerings
@@ -168,9 +169,8 @@ To check for latest updates, click the gear icon on the bottom left of the windo
 ## Upgrade from SQL Operations Studio
 
 If you are still using SQL Operations Studio, you need to upgrade to Azure Data Studio. SQL Operations Studio was the preview name and preview version of Azure Data Studio. In September 2018, we [changed the name to Azure Data Studio](https://cloudblogs.microsoft.com/sqlserver/2018/09/25/azure-data-studio-for-sql-server/) and released the General Availability (GA) version. Because SQL Operations Studio is no longer being updated or supported, we ask all SQL Operations Studio users to download the latest version of Azure Data Studio to get the latest features, security updates, and fixes.
- 
-When upgrading from the old preview to the latest Azure Data Studio, you will lose your current settings and extensions. To move your settings, follow the instructions in the following *Move user settings* section:
 
+When upgrading from the old preview to the latest Azure Data Studio, you will lose your current settings and extensions. To move your settings, follow the instructions in the following *Move user settings* section:
 
 ## Move user settings
 
@@ -198,6 +198,7 @@ If you want to move your custom settings, keyboard shortcuts, or code snippets, 
 ## Next Steps
 
 See one of the following quickstarts to get started:
+
 - [Connect & Query SQL Server](quickstart-sql-server.md)
 - [Connect & Query Azure SQL Database](quickstart-sql-database.md)
 - [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)

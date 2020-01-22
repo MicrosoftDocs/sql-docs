@@ -1,10 +1,9 @@
 ---
-title: "Quickstart: Create Python scripts"
-description: Create and run simple Python scripts in a SQL Server instance with SQL Server Machine Learning Services.
+title: "Quickstart: Run Python scripts"
+description: Run a set of simple Python scripts using SQL Server Machine Learning Services. Learn how to use the stored procedure sp_execute_external_script to execute the script in a SQL Server instance.
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 12/18/2019  
+ms.date: 01/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -13,10 +12,10 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
-# Quickstart: Create and run simple Python scripts with SQL Server Machine Learning Services
+# Quickstart: Run simple Python scripts with SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In this quickstart, you'll create and run a set of simple Python scripts using [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md). You'll learn how to wrap a well-formed Python script in the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) and execute the script in a SQL Server instance.
+In this quickstart, you'll run a set of simple Python scripts using [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
 
 ## Prerequisites
 

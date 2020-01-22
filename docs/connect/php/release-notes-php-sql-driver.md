@@ -41,14 +41,14 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | :------- | :------ |
 | Added support for PHP 7.4. | &nbsp; |
 | Dropped support for PHP 7.1. | &nbsp; |
-| Added support for Microsoft ODBC Driver 17.4 on all platforms. | &nbsp; |
-| Added support for macOS Catalina. | Requires ODBC Driver 17.4 or above. |
-| Added support for Alpine 3.11, Debian 10, Red Hat 8, Ubuntu 19.10. | All require ODBC Driver 17.4 or above. |
+| Added support for Microsoft ODBC Driver 17.5 on all platforms. | &nbsp; |
+| Added support for Debian 10 and Red Hat 8. | Both require ODBC Driver 17.4 or above. |
+| Added support for macOS Catalina, Alpine Linux 3.11 and Ubuntu 19.10. | All require ODBC Driver 17.5 or above. |
 | Dropped support for macOS Sierra and Linux Ubuntu 18.10. | &nbsp; |
 | Support for Language option when connecting to SQL Server. | &nbsp; |
 | Support for PHP extended string types introduced in PHP 7.2. | &nbsp; |
-| Support for Data Classification sensitivity metadata retrieval. | Requires SQL Server 2019 and ODBC Driver 17.4.2+. |
-| Support for Always Encrypted with secure enclaves. | Requires ODBC Driver 17.4 or above. |
+| Support for Data Classification sensitivity metadata retrieval. | Requires SQL Server 2019 and ODBC Driver 17.4 or above. |
+| Support for Always Encrypted with secure enclaves. | Requires ODBC Driver 17.5 or above. |
 | Support configurable options for locale settings in Linux and macOS. |
 | Improved performance by caching metadata on fetches. | &nbsp; |
 | &nbsp; | &nbsp; |

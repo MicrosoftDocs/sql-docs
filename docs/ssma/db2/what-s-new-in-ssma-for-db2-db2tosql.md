@@ -18,7 +18,7 @@ This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each
 
 In addition to a targeted set of fixes designed to improve usability and performance, the v8.6 release of SSMA for DB2 has been enhanced by adding a setting that enables users to omit SSMA extended properties in the converted code.
 
-To leverage this setting, in SQL Server Migration Assistant for DB2, navigate to **Tools** > **Project Settings** > **General** > **Conversion**, and then under **Misc**, update the value of the **Omit Extended Properties** setting to **Yes**.
+To leverage this setting, in SSMA for DB2, navigate to **Tools** > **Project Settings** > **General** > **Conversion**, and then under **Misc**, update the value of the **Omit Extended Properties** setting to **Yes**.
 
 ![Omit Extended Properties setting](../db2/media/ssma-omit-extended-properties.png)
 

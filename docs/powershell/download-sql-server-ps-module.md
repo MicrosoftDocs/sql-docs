@@ -3,7 +3,6 @@ title: "Download SQL Server PowerShell Module | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/23/2020
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: scripting
 ms.topic: conceptual
 keywords: 

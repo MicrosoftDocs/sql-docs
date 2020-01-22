@@ -28,7 +28,7 @@ For information about consolidating migration assessments created by the Data Mi
 
 You can download examples of Power BI reports for consolidated migration assessments from this [GitHub repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant).
 
-The following reports are included: 
+The following reports are included:
 
 - [Dashboard](#dashboard-report)
 
@@ -57,13 +57,13 @@ You can modify these reports to work with your environment by changing the data 
 
    ![Edit Queries menu, Data source settings](../dma/media/DataSourceSettings.png)
 
-1. Select **Change Source...**, and enter the server and database values.
+2. Select **Change Source...**, and enter the server and database values.
 
-   ![Change source, server and database](../dma/media/ChangeSource.png)
+   ![Change source, server, and database](../dma/media/ChangeSource.png)
 
-1. Select **OK**, and then select **Close**.
+3. Select **OK**, and then select **Close**.
 
-1. Refresh your reports.
+4. Refresh your reports.
 
    ![Refresh Power BI report](../dma/media/RefreshReport.png)
 
@@ -77,7 +77,7 @@ To drill down, select the circle with the down arrow at the top-right corner of 
 
 ![Category Drilldown](../dma/media/CategoryDrillDown.png)
 
-The drilldown sequence is set as shown in the following image (under **Axis**). To change the sequence, drag columns to the desired order.
+The drilldown sequence is set as shown in the following image (under **Axis**). To change the sequence, drag columns into the order you want.
 
 ![Visualizations, bar chart axis](../dma/media/VisualizationsAxis.png)
 
@@ -91,7 +91,7 @@ This view becomes even more powerful when you first filter by a specific databas
 
 This report shows a snapshot of how ready your databases are to migrate to a later version of SQL Server. The data in this report comes from the dbo.UpgradeSuccessFactor\_OnPrem view in the DMAReporting database.
 
-Filtering by instance and database name, and using the score cards at the top, you can see which version the database could be migrated too. For example, if you filter by the AdventureWorks 2012 database, you can see that the database is ready to move to all the SQL Server versions listed in the report. This is determined by ensuring there are no breaking changes for that database and compatibility level.
+Filtering by instance and database name, and using the score cards at the top, you can see which version the database could be migrated too. For example, if you filter by the AdventureWorks 2012 database, you can see that the database is ready to move to all the SQL Server versions listed in the report. The version you can migrate to is determined by ensuring there are no breaking changes for that database and compatibility level.
 
 ![Upgrade success factor for AdventureWorks database](../dma/media/UpgradeSuccessFactor.png)
 
@@ -121,7 +121,6 @@ When you select a feature in the funnel chart, the data at the bottom lists the 
 
 ![Always on Availability Group feature](../dma/media/Feature_AlwaysOnAvailability.png)
 
- 
 ### Azure SQL DB unsupported features report
 
 ![Azure SQL DB unsupported features report](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)

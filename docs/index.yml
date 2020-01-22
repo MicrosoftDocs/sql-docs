@@ -87,7 +87,7 @@ conceptualContent:
         - text: SQL Server Machine Learning Services
           url: advanced-analytics/index.yml
           itemType: whats-new
-    - title: Install
+    - title: Install 
       links:
         - text: SQL Server
           url: database-engine/install-windows/install-sql-server.md

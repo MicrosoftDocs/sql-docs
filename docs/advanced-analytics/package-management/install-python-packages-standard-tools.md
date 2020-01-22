@@ -20,21 +20,30 @@ For more information about package location and installation paths, see [Get Pyt
 
 ## Prerequisites
 
-+ [SQL Server Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md) with the Python language option.
++ You must have [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) installed with the Python language option.
+
+### Other considerations
 
 + Packages must be Python 3.5-compliant and run on Windows.
 
-+ Administrative access to the server is required to install packages.
++ The Python package library is located in the Program Files folder of your SQL Server instance and, by default, installing in this folder requires administrator permissions. For more information, see [Package library location](../package-management/python-package-information.md#default-python-library-location).
 
-## Considerations
++ Package installation is per instance. If you have multiple instances of Machine Learning Services, you must add the package to each one.
 
-Before adding packages, consider whether the package is a good fit for the SQL Server environment. Typically a database server is a shared asset accommodating multiple workloads. If you add packages that put too much computational pressure on the server, performance will suffer.
++ Database servers are frequently locked down. In many cases, Internet access is blocked entirely. For packages with a long list of dependencies, you will need to identify these dependencies in advance and be ready to install each one manually.
 
-Additionally, some popular Python packages perform tasks, such as web development, that are better suited for a standalone environment. We recommend that you use Python in-database for tasks that benefit from tight integration with the database engine, such as machine learning,  rather than tasks that simply query the database.
++ Before adding a package, consider whether the package is a good fit for the SQL Server environment.
 
-Database servers are frequently locked down. In many cases, Internet access is blocked entirely. For packages with a long list of dependencies, you will need to identify these dependencies in advance and be willing to install each one manually.
+  + We recommend that you use Python in-database for tasks that benefit from tight integration with the database engine, such as machine learning, rather than tasks that simply query the database.
 
-## Add a new Python package
+  + If you add packages that put too much computational pressure on the server, performance will suffer.
+
+  + On a hardened SQL Server environment, you might want to avoid the following:
+    + Packages that require network access
+    + Packages that require elevated file system access
+    + Packages used for web development or other tasks that don't benefit by running inside SQL Server
+
+## Add a Python package on SQL Server
 
 For this example, we assume that you want to install a new package directly on the SQL Server computer.
 
@@ -46,12 +55,12 @@ The package installed in this example is [CNTK](https://docs.microsoft.com/cogni
 
 If you are installing Python packages on a server with no Internet access, you must download the WHL file from a computer with Internet access and then copy the file to the server.
 
-For example, on a separate computer, you can download the WHL file from this site [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl), and then copy the file `cntk-2.1-cp35-cp35m-win_amd64.whl` to a local folder on the SQL Server computer.
+For example, on an Internet-connected computer you can download the file `cntk-2.1-cp35-cp35m-win_amd64.whl` from this site [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl), and then copy the file to a local folder on the SQL Server computer.
 
 > [!IMPORTANT]
 > Make sure that you get the Windows version of the package. If the file ends in .gz, it's probably not the right version.
 
-For information about downloads for multiple platforms and for multiple Python versions, see [Setup CNTK on your machine](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine).
+For information about downloads for multiple platforms and for multiple Python versions of the CNTK framework, see [Setup CNTK on your machine](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine).
 
 ### Locate the Python library
 
@@ -59,7 +68,7 @@ Locate the default Python library location used by SQL Server. If you have insta
 
 For example, if Machine Learning Services was installed using defaults, and machine learning was enabled on the default instance, the path is as follows:
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
+`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
 > [!TIP]
 > For future debugging and testing, you might want to set up a Python environment specific to the instance library.

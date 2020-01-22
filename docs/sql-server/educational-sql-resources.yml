@@ -21,6 +21,8 @@ landingContent:
         url: https://docs.microsoft.com/en-us/learn/modules/introduction-upgrading-sql-server/
       - text: Use the Query Tuning Assistant
         url: https://docs.microsoft.com/en-us/learn/modules/use-sql-server-query-tuning-assistant/
+      - text: SQL Server workshops
+        url: https://aka.ms/sqlworkshops
     - linkListType: quickstart
       links:
       - text: Connect & query with Azure Data Studio

@@ -49,11 +49,11 @@
   items:
   - name: Python
     items:
-    - name: Create Python scripts
+    - name: Run Python scripts
       href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
-    - name: Handle data structures and objects
+    - name: Data structures and objects
       href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-    - name: Write Python functions
+    - name: Python functions
       href: ../advanced-analytics/tutorials/quickstart-python-functions.md
     - name: Train and score a model
       href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
@@ -245,8 +245,10 @@
       items:
       - name: Get Python package information
         href: ../advanced-analytics/package-management/python-package-information.md
-      - name: Install Python packages
+      - name: Install with sqlmlutils
         href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
+      - name: Install with Python tools
+        href: ../advanced-analytics/package-management/install-python-packages-standard-tools.md
     - name: Install new R packages
       items:
       - name: Get R package information

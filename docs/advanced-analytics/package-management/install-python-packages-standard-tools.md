@@ -53,12 +53,12 @@ The package installed in the following examples is [CNTK](https://docs.microsoft
 
 If you are installing Python packages on a server with no Internet access, you must download the WHL file from a computer with Internet access and then copy the file to the server.
 
-For example, on an Internet-connected computer you can download the file `cntk-2.1-cp35-cp35m-win_amd64.whl` from this site [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl), and then copy the file to a local folder on the SQL Server computer.
+For example, on an Internet-connected computer you can download the file `cntk-2.1-cp35-cp35m-win_amd64.whl` from the site [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl), and then copy the file to a local folder on the SQL Server computer.
 
 > [!IMPORTANT]
 > Make sure that you get the Windows version of the package. If the file ends in .gz, it's probably not the right version.
 
-For information about downloads for multiple platforms and for multiple Python versions of the CNTK framework, see [Setup CNTK on your machine](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine).
+For information about downloads of the CNTK framework for multiple platforms and for multiple Python versions, see [Setup CNTK on your machine](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine).
 
 ### Locate the Python library
 
@@ -80,21 +80,19 @@ Use the **pip** installer to install new packages. You can find `pip.exe` in the
 > [!NOTE]
 > If you're using Visual Studio 2017, or Visual Studio 2015 with the Python extensions, you can run `pip install` from the **Python Environments** window. Click **Packages**, and in the text box, provide the name or location of the package to install. You don't need to type `pip install`; it is filled in for you automatically.
 
-+ If the computer has Internet access, provide the name of the package or the URL of a specific package and version.
++ If the computer has Internet access, provide the name of the package:
 
-  For example:
   ```console
   scripts\pip.exe install cntk
   ```
+  You can also specify the URL of a specific package and version:
 
-  To install the version of CNTK that is supported for Windows and Python 3.5, specify the download URL: 
   ```console
   scripts\pip.exe install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl
   ```
 
-+ If the computer does not have Internet access, specify the WHL file you downloaded.
++ If the computer does not have Internet access, specify the WHL file you downloaded earlier. For example:
 
-  For example:
   ```console
   scripts\pip.exe install C:\Downloads\cntk-2.1-cp35-cp35m-win_amd64.whl
   ```
@@ -113,7 +111,7 @@ EXECUTE sp_execute_external_script
   @language = N'Python', 
   @script = N'
 import cntk
-# Python statements
+# Python statements ...
 '
 ```
 

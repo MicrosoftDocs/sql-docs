@@ -30,7 +30,7 @@ Learn how to install SQL Server Machine Learning Services on Windows. You can us
 
 + Side-by-side installation with other versions of R and Python is supported but not recommended. It's supported because SQL Server instance uses its own copies of the open-source R and Anaconda distributions. But it's not recommended because running code that uses R and Python on the SQL Server computer outside SQL Server can lead to various problems:
     
-  + Using different library and executable files will create inconsistent results, than what you are running in SQL Server.
+  + Using a different library and executable files will create inconsistent results, than what you are running in SQL Server.
   + R and Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"

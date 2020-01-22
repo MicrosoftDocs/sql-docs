@@ -29,6 +29,8 @@ landingContent:
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
       - text: SQL Server on a Linux VM
         url: ../linux/quickstart-install-connect-clouds.md
+      - text: Azure Database Migration Service
+        url: /azure/dms/dms-overview
 
   - title: Migration
     linkLists:
@@ -40,14 +42,11 @@ landingContent:
         url:  https://datamigration.microsoft.com/
       - text: Database Compatibility Certification
         url: https://aka.ms/dbcompat
-      - text: Azure Database Migration Service
-        url: https://docs.microsoft.com/azure/dms/dms-overview
       - text: Data Migration Assistant (DMA)
         url: ../dma/dma-overview.md
-      - text: Database Experimentation Assistant
-        url: ../dea/database-experimentation-assistant-overview.md
       - text: SQL Server Migration Assistant (SSMA)
         url: ../ssma/sql-server-migration-assistant.md
+
 
   - title: SQL Server
     linkLists:
@@ -114,16 +113,20 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
+      - text: SQL Vulnerability Assessment
+        url: ../relational-databases/security/sql-vulnerability-assessment.md
       - text: Access management 
         url: ../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md
       - text: Always Encrypted  
         url: ../relational-databases/security/encryption/always-encrypted-database-engine.md
+      - text: Enclaves
+        url: ../relational-databases/security/encryption/always-encrypted-enclaves.md
       - text: Dynamic data masking
         url: ../relational-databases/security/dynamic-data-masking.md
-      - text: Permissions
-        url: ../relational-databases/security/permissions-database-engine.md
       - text: Transparent Data Encryption (TDE)
         url: ../relational-databases/security/encryption/transparent-data-encryption.md
+      - text: Row-level Security
+        url: ../relational-databases/security/row-level-security.md
 
   - title: Database Design 
     linkLists:
@@ -207,10 +210,8 @@ landingContent:
         url: ../big-data-cluster/big-data-cluster-overview.md
       - text: Analytics Platform System 
         url: https://www.microsoft.com/sql/analytics-platform-system/
-      - text: Machine Learning with SQL Server
+      - text: SQL Server Machine Learning (R & Python)
         url: https://docs.microsoft.com/sql/advanced-analytics/
-      - text: R Services 
-        url: ../advanced-analytics/r/sql-server-r-services.md
       - text: Data virtualization with Polybase
         url: ../relational-databases/polybase/polybase-guide.md
 

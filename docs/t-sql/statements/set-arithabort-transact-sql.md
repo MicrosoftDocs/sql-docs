@@ -64,7 +64,7 @@ If SET ARITHABORT and SET ANSI WARNINGS are OFF and one of these errors occurs, 
 > [!NOTE]  
 >  If neither SET ARITHABORT nor SET ARITHIGNORE is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns NULL and a warning message appears after the query runs.  
   
-Setting ANSI_WARNINGS to ON implicitly sets ARITHABORT to ON when the database compatibility level is set to 90 or higher. If the database compatibility level is set to 80 or earlier, the ARITHABORT option must be explicitly set to ON.  
+When ANSI_WARNINGS has a value of ON and the database compatibility level is set to 90 or higher then ARITHABORT is implicitly ON regardless of it's value setting. If the database compatibility level is set to 80 or earlier, the ARITHABORT option must be explicitly set to ON.  
   
 For expression evaluation, if SET ARITHABORT is OFF and an INSERT, UPDATE, or DELETE statement comes across an arithmetic, overflow, divide-by-zero, or domain error, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inserts or updates a NULL value. If the target column isn't nullable, the insert or update action fails and the user sees an error.  
   

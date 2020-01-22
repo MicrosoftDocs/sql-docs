@@ -76,14 +76,12 @@ landingContent:
         url: ../azure-data-studio/download.md
     - linkListType: reference
       links:
+      - text: Transact-SQL (T-SQL)
+        url: ../t-sql/language-reference.md
       - text: SQL Server 2014 docs
         url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
       - text: Educational SQL resources
         url: ../sql-server/educational-sql-resources.yml
-      - text: Transact-SQL 
-        url: ../t-sql/language-reference.md
-      - text: SQL PowerShell
-        url: ../powershell/sql-server-powershell.md
       - text: Sample databases
         url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
       - text: Internals & architecture guides
@@ -119,6 +117,8 @@ landingContent:
         url: ../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md
       - text: Always Encrypted  
         url: ../relational-databases/security/encryption/always-encrypted-database-engine.md
+      - text: Auditing 
+        url: ../relational-databases/security/auditing/sql-server-audit-database-engine.md
       - text: Enclaves
         url: ../relational-databases/security/encryption/always-encrypted-enclaves.md
       - text: Dynamic data masking
@@ -136,14 +136,19 @@ landingContent:
         url: ../relational-databases/collations/collation-and-unicode-support.md
       - text: Databases 
         url: ../relational-databases/databases/databases.md
+      - text: Graph
+        url: ../relational-databases/graphs/sql-graph-overview.md
+      - text: Indexes
+        url: ../relational-databases/indexes/indexes.md
+      - text: Views 
+        url: ../relational-databases/views/views.md
+      - text: User-defined functions
+        url: ../relational-databases/user-defined-functions/user-defined-functions.md
       - text: Tables
         url: ../relational-databases/tables/tables.md
       - text: Stored procedures
         url: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
-      - text: Graph
-        url: ../relational-databases/graphs/sql-graph-overview.md
-      - text: Track changes 
-        url: ../relational-databases/track-changes/track-data-changes-sql-server.md
+
 
   - title: Manage & monitor 
     linkLists:
@@ -155,6 +160,8 @@ landingContent:
         url: ../relational-databases/maintenance-plans/maintenance-plans.md
       - text: SQL Server Agent 
         url: ../ssms/agent/sql-server-agent.md
+      - text: Track changes 
+        url: ../relational-databases/track-changes/track-data-changes-sql-server.md
       - text: Data compression
         url: ../relational-databases/data-compression/data-compression.md
       - text: Extended Events
@@ -192,6 +199,10 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
+      - text: Transact-SQL (T-SQL)
+        url: ../t-sql/language-reference.md
+      - text: SQL PowerShell
+        url: ../powershell/sql-server-powershell.md
       - text: Scripting 
         url: ../ssms/scripting/database-engine-scripting.md
       - text: Joins

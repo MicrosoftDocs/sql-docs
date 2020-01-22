@@ -58,7 +58,7 @@ For example, on an Internet-connected computer you can download the file `cntk-2
 > [!IMPORTANT]
 > Make sure that you get the Windows version of the package. If the file ends in .gz, it's probably not the right version.
 
-For information about downloads of the CNTK framework for multiple platforms and for multiple Python versions, see [Setup CNTK on your machine](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine).
+For more information about downloads of the CNTK framework for multiple platforms and for multiple versions of Python, see [Setup CNTK on your machine](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine).
 
 ### Locate the Python library
 
@@ -85,7 +85,7 @@ Use the **pip** installer to install new packages. You can find `pip.exe` in the
   ```console
   scripts\pip.exe install cntk
   ```
-  You can also specify the URL of a specific package and version:
+  You can also specify the URL of a specific package and version, for example:
 
   ```console
   scripts\pip.exe install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl
@@ -102,7 +102,7 @@ As the installation progresses, you can see status messages in the command promp
 
 ### Load the package or its functions as part of your script
 
-When installation is complete, you can immediately begin using the package.
+When installation is complete, you can immediately begin using the package in Python scripts in SQL Server.
 
 To use functions from the package in your script, insert the standard `import <package_name>` statement in the initial lines of the script:
 

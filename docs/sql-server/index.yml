@@ -29,6 +29,8 @@ landingContent:
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
       - text: SQL Server on a Linux VM
         url: ../linux/quickstart-install-connect-clouds.md
+      - text: Azure Database Migration Service
+        url: /azure/dms/dms-overview
 
   - title: Migration
     linkLists:
@@ -40,10 +42,10 @@ landingContent:
         url:  https://datamigration.microsoft.com/
       - text: Database Compatibility Certification
         url: https://aka.ms/dbcompat
-      - text: Azure Database Migration Service
-        url: /azure/dms/dms-overview
       - text: Data Migration Assistant (DMA)
         url: ../dma/dma-overview.md
+      - text: SQL Server Migration Assistant (SSMA)
+        url: ../ssma/sql-server-migration-assistant.md
 
 
   - title: SQL Server
@@ -121,8 +123,6 @@ landingContent:
         url: ../relational-databases/security/encryption/always-encrypted-enclaves.md
       - text: Dynamic data masking
         url: ../relational-databases/security/dynamic-data-masking.md
-      - text: Permissions
-        url: ../relational-databases/security/permissions-database-engine.md
       - text: Transparent Data Encryption (TDE)
         url: ../relational-databases/security/encryption/transparent-data-encryption.md
       - text: Row-level Security

@@ -26,7 +26,7 @@ Learn how to install SQL Server Machine Learning Services on Windows. You can us
  
 + Do not install Machine Learning Services on a domain controller. The Machine Learning Services portion of setup will fail.
 
-+ Do not install **Shared Features** > **Machine Learning Server (Standalone)** on the same computer running  an installed database instance. A standalone server will compete for the same resources, undermining the performance of both installations.
++ Do not install **Shared Features** > **Machine Learning Server (Standalone)** on the same computer running a database instance. A standalone server will compete for the same resources, undermining the performance of both installations.
 
 + Side-by-side installation with other versions of R and Python is supported but not recommended. It's supported because SQL Server instance uses its own copies of the open-source R and Anaconda distributions. But it's not recommended because running code that uses R and Python on the SQL Server computer outside SQL Server can lead to various problems:
     

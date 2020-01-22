@@ -42,7 +42,7 @@ Specifies the number of seconds the results of the preflight request can be cach
 ### AllowedResourceExtensionsForUpload
 (Power BI Report Server & Reporting Services 2017 and later only) Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
 
-### Custom Headers 
+### CustomHeaders 
 
 (only in SQL Server 2019 Reporting Services and Power BI Report Server January 2020 and later)
 

@@ -51,9 +51,9 @@
     items:
     - name: Run Python scripts
       href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
-    - name: Handle data structures and objects
+    - name: Data structures and objects
       href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-    - name: Write Python functions
+    - name: Python functions
       href: ../advanced-analytics/tutorials/quickstart-python-functions.md
     - name: Train and score a model
       href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md

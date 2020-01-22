@@ -1,7 +1,7 @@
 ---
 title: "What's New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/04/2019"
+ms.date: "01/22/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: ssma
@@ -13,6 +13,17 @@ ms.author: "Shamikg"
 # What's New in SSMA for SAP ASE (SybaseToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
+
+## SSMA v8.6
+
+In addition to a targeted set of fixes designed to improve usability and performance, the v8.6 release of SSMA for SAP ASE has been enhanced by adding a setting that enables users to omit SSMA extended properties in the converted code.
+
+To leverage this setting, in SQL Server Migration Assistant for SAP ASE, navigate to **Tools** > **Project Settings** > **General** > **Conversion**, and then under **Misc**, update the value of the **Omit Extended Properties** setting to **Yes**.
+
+![Omit Extended Properties setting](../sybase/media/ssma-omit-extended-properties.png)
+
+> [!IMPORTANT]
+> With SSMA v8.5 and later, .Net 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## SSMA v8.5
 
@@ -152,7 +163,7 @@ The v7.1 release of SSMA for Sybase contains the following changes:
 
 * SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and supports schema and data movement to target SQL servers.
 * Support for automatic updates to download the latest version of SSMA as soon as it's available.
-* SSMA installable binaries are now delivered through Windows installer package files (.msi).
+* SSMA installable binaries are now delivered through Windows Installer package files (.msi).
 
 ## May 2016
 

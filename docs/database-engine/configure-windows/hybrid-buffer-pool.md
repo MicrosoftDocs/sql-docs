@@ -27,9 +27,10 @@ Only clean data pages are cached on the device for the Hybrid Buffer Pool. When 
 
 The hybrid buffer pool feature is available for both Windows and Linux. The PMEM device must be formatted with a filesystem that supports DAX (DirectAccess). XFS, EXT4, and NTFS file systems all have support for DAX. SQL Server will automatically detect if data files reside on an appropriately formatted PMEM device and perform memory mapping of database files upon startup, when a new database is attached, restored, or created.
 
-For more on Windows Server support for PMEM, also referred to as Storage Class Memory (SCM) see [deploy persistent memory on Windows Server](/windows-server/storage/storage-spaces/deploy-pmem/).
+For more information, see:
 
-For more on configuring SQL Server on Linux for PMEM devices see [persistent memory configuration for Linux](../../linux/sql-server-linux-configure-pmem.md).
+* [Understand and deploy persistent memory (Windows)](/windows-server/storage/storage-spaces/deploy-pmem/)
+* [Configure persistent memory (PMEM) for SQL Server on Linux](../../linux/sql-server-linux-configure-pmem.md)
 
 
 ## Enable hybrid buffer pool
@@ -60,7 +61,7 @@ The following example disables hybrid buffer pool at the instance level:
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = OFF;
 ```
 
-By default, hybrid buffer pool is disabled at the instance level. In order for this change to take effect, the instance must be restarted. This is to ensure a sufficient number of hash page are allocated for the buffer pool, as PMEM capacity on the server now needs to be accounted for.
+By default, hybrid buffer pool is disabled at the instance level. In order for this change to take effect, the instance must be restarted. This ensures enough hash pages are allocated for the buffer pool, as PMEM capacity on the server now needs to be accounted for.
 
 The following example disables hybrid buffer pool for a specific database.
 

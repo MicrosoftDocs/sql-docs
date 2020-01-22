@@ -1,5 +1,5 @@
 ---
-title: "Add Persisted Log Buffer to a Database | Microsoft Docs"
+title: "Add persisted log buffer to a database"
 ms.custom: ""
 ms.date: "10/30/2019"
 ms.prod: sql
@@ -19,9 +19,11 @@ author: "briancarrig"
 ms.author: "brcarrig"
 manager: amitban
 ---
-# Add Persisted Log Buffer to a Database
+
+# Add persisted log buffer to a database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to add a Persisted Log Buffer to a database in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+
+This topic describes how to add a persisted log buffer to a database in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## Permissions
 
@@ -29,25 +31,39 @@ Requires ALTER permission on the database.
 
 ## Configure persistent memory device (Linux)
 
-To configure a persistent memory device in [Linux](../../linux/sql-server-linux-configure-pmem.md)).
+To configure a persistent memory device in [Linux](../../linux/sql-server-linux-configure-pmem.md).
 
 ## Configure persistent memory device (Windows)
 
 To configure a persistent memory device in [Windows](/windows-server/storage/storage-spaces/deploy-pmem/).
   
 ## Add a persisted log buffer to a database  
-  
-```ALTER DATABASE <MyDB> ADD LOG FILE (NAME = <DAXlog>, FILENAME = '<Filepath to DAX Log File>', SIZE = 20MB);```
+
+The following examples adds a persisted log buffer.
+
+```sql
+ALTER DATABASE <MyDB> 
+  ADD LOG FILE 
+  (
+    NAME = <DAXlog>, 
+    FILENAME = '<Filepath to DAX Log File>', 
+    SIZE = 20MB
+  );
+```
 
 The volume or mount the new log file is placed must be formatted with DAX (NTFS) or mounted with the DAX option (XFS/EXT4).
 
 ## Remove a persisted log buffer
 
-`ALTER DATABASE <MyDB> SET SINGLE_USER;`
-`ALTER DATABASE <MyDB> REMOVE FILE <DAXlog>;`
-`ALTER DATABASE <MyDB> SET MULTI_USER;`
+To safely remove a persisted log buffer, the database must be placed in single user mode in order to drain the persisted log buffer.
 
-Database must be placed in single user mode in order to drain the persisted log buffer and be able to remove it safely.
+The following example places removes a persisted log buffer.
+
+```sql
+ALTER DATABASE <MyDB> SET SINGLE_USER;
+ALTER DATABASE <MyDB> REMOVE FILE <DAXlog>;
+ALTER DATABASE <MyDB> SET MULTI_USER;
+```
 
 ## Limitations
 
@@ -59,7 +75,7 @@ Database must be placed in single user mode in order to drain the persisted log 
 
 Normal restore conditions apply. If persisted log buffer is restored to a DAX volume or mount, it will continue to function, otherwise it can be safely removed.
   
-## See Also
+## Next steps
 
 - [How It Works (It Just Runs Faster): Non-Volatile Memory SQL Server Tail Of Log Caching on NVDIMM](https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/)
 - [Data exposed: Latency and Durability with SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Latency-and-Durability-with-SQL-Server-2016)

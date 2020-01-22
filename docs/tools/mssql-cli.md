@@ -13,7 +13,7 @@ ms.date: 02/22/2018
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 
-# mssql-cli command-line query tool for SQL Server
+# mssql-cli command-line query tool for SQL Server (Preview)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 

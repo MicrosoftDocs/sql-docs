@@ -80,10 +80,6 @@ landingContent:
         url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
       - text: Educational SQL resources
         url: ../sql-server/educational-sql-resources.yml
-      - text: Transact-SQL 
-        url: ../t-sql/language-reference.md
-      - text: SQL PowerShell
-        url: ../powershell/sql-server-powershell.md
       - text: Sample databases
         url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
       - text: Internals & architecture guides
@@ -136,12 +132,18 @@ landingContent:
         url: ../relational-databases/collations/collation-and-unicode-support.md
       - text: Databases 
         url: ../relational-databases/databases/databases.md
+      - text: Graph
+        url: ../relational-databases/graphs/sql-graph-overview.md
+      - text: Indexes
+        url: ../relational-databases/indexes/indexes.md
+      - text: Views 
+        url: ../relational-databases/views/views.md
+      - text: User-defined functions
+        url: ../relational-databases/user-defined-functions/user-defined-functions.md
       - text: Tables
         url: ../relational-databases/tables/tables.md
       - text: Stored procedures
         url: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
-      - text: Graph
-        url: ../relational-databases/graphs/sql-graph-overview.md
       - text: Track changes 
         url: ../relational-databases/track-changes/track-data-changes-sql-server.md
 
@@ -192,6 +194,10 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
+      - text: Transact-SQL (T-SQL)
+        url: ../t-sql/language-reference.md
+      - text: SQL PowerShell
+        url: ../powershell/sql-server-powershell.md
       - text: Scripting 
         url: ../ssms/scripting/database-engine-scripting.md
       - text: Joins

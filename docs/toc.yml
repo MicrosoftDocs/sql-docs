@@ -8403,7 +8403,7 @@
     href: azure-data-studio/what-is.md
     items:
     - name: Install
-      href: azure-data-studio/download.md
+      href: azure-data-studio/download-azure-data-studio.md
     - name: Release notes
       href: azure-data-studio/release-notes-azure-data-studio.md
     - name: Quickstarts

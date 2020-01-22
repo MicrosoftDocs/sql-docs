@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/10/2020
+ms.date: 01/22/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -195,6 +195,9 @@ Currently a SAS token with type `HADOOP` is unsupported. It's only supported wit
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
 ## Examples: SQL Server (2016+)
+
+> [!IMPORTANT]
+> For information on how to install and enable Polybase, see [Install PolyBase on Windows](../../relational-databases/polybase/polybase-installation.md)
 
 ### A. Create external data source in SQL 2019 to reference Oracle
 

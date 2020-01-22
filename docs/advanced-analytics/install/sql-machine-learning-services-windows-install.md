@@ -270,7 +270,7 @@ On disconnected servers, extra steps are required. For more information, see [In
 
 1. Start with a baseline instance already installed: SQL Server 2017 initial release
 
-2. Go to the cumulative update list: [SQL Server 2017 updates](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server?view=sql-server-ver15)
+2. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
 
 3. Select the latest cumulative update. An executable is downloaded and extracted automatically.
 

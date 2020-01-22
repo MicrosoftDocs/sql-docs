@@ -45,11 +45,9 @@ For more information about package location and installation paths, see [Get Pyt
 
 ## Add a Python package on SQL Server
 
-For this example, we assume that you want to install a new package directly on the SQL Server computer.
+To install a new Python package that can be used in a script on SQL Server, you install the package in the instance of Machine Learning Services. If you have multiple instances of Machine Learning Services, you must add the package to each one.
 
-Package installation is per instance. If you have multiple instances of Machine Learning Services, you must add the package to each one.
-
-The package installed in this example is [CNTK](https://docs.microsoft.com/cognitive-toolkit/), a framework for deep learning from Microsoft that supports customization, training, and sharing of different types of neural networks.
+The package installed in the following examples is [CNTK](https://docs.microsoft.com/cognitive-toolkit/), a framework for deep learning from Microsoft that supports customization, training, and sharing of different types of neural networks.
 
 ### For offline install, download the Python package
 
@@ -64,36 +62,42 @@ For information about downloads for multiple platforms and for multiple Python v
 
 ### Locate the Python library
 
-Locate the default Python library location used by SQL Server. If you have installed multiple instances, locate the PYTHON_SERVICES folder for the instance where you want to add the package.
+Locate the default Python library location used by SQL Server. If you have installed multiple instances, locate the `PYTHON_SERVICES` folder for the instance where you want to add the package.
 
-For example, if Machine Learning Services was installed using defaults, and machine learning was enabled on the default instance, the path is as follows:
+For example, if Machine Learning Services was installed using defaults, and machine learning was enabled on the default instance, the path is:
 
-`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
+```console
+cd "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"
+```
 
 > [!TIP]
 > For future debugging and testing, you might want to set up a Python environment specific to the instance library.
 
 ### Install the package using pip
 
-Use the **pip** installer to install new packages. You can find `pip.exe` in the `Scripts` subfolder.
-
-SQL Server Setup does not add the `Scripts` subfolder to the system path, so you must specify the full path or you can add the Scripts folder to the PATH variable in Windows.
+Use the **pip** installer to install new packages. You can find `pip.exe` in the `Scripts` subfolder of the `PYTHON_SERVICES` folder. SQL Server Setup does not add the `Scripts` subfolder to the system path, so you must specify the full path, or you can add the Scripts folder to the PATH variable in Windows.
 
 > [!NOTE]
 > If you're using Visual Studio 2017, or Visual Studio 2015 with the Python extensions, you can run `pip install` from the **Python Environments** window. Click **Packages**, and in the text box, provide the name or location of the package to install. You don't need to type `pip install`; it is filled in for you automatically.
 
 + If the computer has Internet access, provide the name of the package or the URL of a specific package and version.
 
-  For example: 
-  <br>`Scripts\pip.exe install cntk`
+  For example:
+  ```console
+  scripts\pip.exe install cntk
+  ```
 
   To install the version of CNTK that is supported for Windows and Python 3.5, specify the download URL: 
-  <br>`Scripts\pip.exe install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
+  ```console
+  scripts\pip.exe install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl
+  ```
 
 + If the computer does not have Internet access, specify the WHL file you downloaded.
 
   For example:
-  <br>`Scripts\pip.exe install C:\Downloads\cntk-2.1-cp35-cp35m-win_amd64.whl`
+  ```console
+  scripts\pip.exe install C:\Downloads\cntk-2.1-cp35-cp35m-win_amd64.whl
+  ```
 
 You might be prompted to elevate permissions to complete the install.
 As the installation progresses, you can see status messages in the command prompt window.

@@ -251,7 +251,7 @@ Use the following steps to verify that all components used to launch external sc
    | 1|
 
 > [!NOTE]
-> Columns or headings used in the Python script are not returned, automatically. To add column names for your output, you must specify the schema for the return data set. Do this by using the WITH RESULTS parameter of the stored procedure, naming the columns and specifying the SQL data type.
+> Columns or headings used in the Python script are not returned automatically. To add column names for your output, you must specify the schema for the return data set. Do this by using the WITH RESULTS parameter of the stored procedure, naming the columns and specifying the SQL data type.
 > 
 > For example, you can add the following line to generate an arbitrary column name: `WITH RESULT SETS ((Col1 AS int))`
 

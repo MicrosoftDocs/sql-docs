@@ -5,7 +5,7 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 01/10/2020
+ms.date: 01/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
@@ -44,7 +44,7 @@ Python and R scripts can be executed in-database using Machine Learning Services
 *  Uninstall the preview release. (Community Technical Preview (CTP) or Release Candidate) 
 *  No support for side-by-side installation of multiple versions, and the package list has changed over the last several preview (CTP/RC) releases.
 
-The following files indicate an existing installation: checkinstallextensibility.sh, exthost, launchpad.
+The following files indicate an existing installation: setnetbr, checkinstallextensibility.sh, launchpadd.
 
 ```bash
 ls /opt/microsoft/mssql/bin
@@ -363,9 +363,9 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
 5. For R feature integration only, set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
 
-   + Edit or create a file `named .bash_profile` in your user home directory, adding the line `export MKL_CBWR="AUTO"` to the file.
+   + Edit or create a file `named.bash_profile` in your user home directory, adding the line `export MKL_CBWR="AUTO"` to the file.
 
-   + Execute this file by typing `source .bash_profile` at a bash command prompt.
+   + Execute this file by typing `source.bash_profile` at a bash command prompt.
 
 6. Restart the SQL Server Launchpad service and the database engine instance to read the updated values from the INI file. A notification is message displayed when an extensibility-related setting is modified.  
 

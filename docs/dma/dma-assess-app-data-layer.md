@@ -16,7 +16,7 @@ ms.author: rajpo
 ms.custom: "seo-lt-2019"
 ---
 
-# Assess an application's data access layer with Data Migration Assistant
+# Assess an app's data access layer with Data Migration Assistant
 
 Applications typically connect and persist data to a database. The data access layer of the application provides simplified access to this data. Data Migration Assistant (DMA) has enabled users to assess their databases and related objects. The latest version of DMA (v5.0) introduces support for analyzing database connectivity and embedded SQL queries in the application code.
 
@@ -30,7 +30,7 @@ In this case, you can see that the application is using a SQL query to get the n
 
 As an application owner, I need to be able to identify the various databases that the application can connect to and the queries embedded in the application’s data access layer. In addition, I need to identify any changes required to modernize the application to Azure Data services.
 
-## Assess an application with Data Access Migration Toolkit
+## Assess an app with Data Access Migration Toolkit
 
 To enable this assessment, we recently introduced the Data Access Migration Toolkit (DAMT), a Visual Studio Code extension. The latest version of this extension (v 0.2) adds support for .Net applications and T-SQL dialect.
 

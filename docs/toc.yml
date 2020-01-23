@@ -5868,7 +5868,7 @@
       href: dma/dma-bestpractices.md
     - name: Consolidate assessment reports
       href: dma/dma-consolidatereports.md
-    - name: Assess an application's data access layer
+    - name: Assess an app's data access layer
       href: dma/dma-assess-app-data-layer.md
     - name: Run from the command-line
       href: dma/dma-commandline.md

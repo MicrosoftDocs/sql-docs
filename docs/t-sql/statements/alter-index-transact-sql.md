@@ -252,7 +252,7 @@ PARTITION
  REORGANIZE a **rowstore** index  
  For rowstore indexes, REORGANIZE specifies to reorganize the index leaf level. The REORGANIZE operation is:  
   
--   Always performed online. This means long-term blocking table locks are not held and queries or updates to the underlying table can continue during the ALTER INDEX REORGANIZE transaction.  
+-	It locks the object using schema shared locks (Sch-S) and exclusive locks. If another session reads data using NOLOCK hint, it will bypass the REORGANIZE (REBUILD blocks all, including statements with NOLOCK hint). Statements that modify data are always blocked.
 -   Not allowed for a disabled index  
 -   Not allowed when ALLOW_PAGE_LOCKS is set to OFF  
 -   Not rolled back when it is performed within a transaction and the transaction is rolled back.  

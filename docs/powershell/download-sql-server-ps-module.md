@@ -39,6 +39,10 @@ SQL Server Management Studio (SSMS), beginning with version 17.0, does not inclu
 > [!NOTE]
 > “With version 16.x of SSMS, an earlier version of the **SqlServer** module is included with SQL Server Management Studio (SSMS)
 
+## Azure Data Studio
+
+Azure Data Studio does not include either PowerShell module. To use PowerShell with Azure Data Studio, you must install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
+
 ## Installing or updating the SqlServer module
 
 To install the **SqlServer** module from the PowerShell Gallery, start a [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) session as an administrator.

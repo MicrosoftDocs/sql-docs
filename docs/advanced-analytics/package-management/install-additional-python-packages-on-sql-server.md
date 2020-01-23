@@ -4,12 +4,12 @@ description: Learn how to use Python pip to install new Python packages on an in
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/22/2019
+ms.date: 01/21/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
 # Install Python packages with sqlmlutils

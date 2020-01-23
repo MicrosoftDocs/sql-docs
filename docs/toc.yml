@@ -5868,8 +5868,6 @@
       href: dma/dma-bestpractices.md
     - name: Consolidate assessment reports
       href: dma/dma-consolidatereports.md
-    - name: Power BI reports for assessments
-      href: dma/dma-powerbiassesreport.md
     - name: Run from the command-line
       href: dma/dma-commandline.md
     - name: Configure settings

@@ -222,14 +222,15 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 Only manual failover is supported at this time. To manually fail over a distributed availability group:
 
-1. To ensure that no data is lost, set the distributed availability group to synchronous commit.
-1. Wait until the distributed availability group is synchronized.
+1. To ensure that no data is lost, stop all transactions on the global primary, then set the distributed availability group to synchronous commit.
+1. Wait until the distributed availability group is synchronized and has the same last_hardened_lsn. 
 1. On the global primary replica, set the distributed availability group role to `SECONDARY`.
 1. Test failover readiness.
 1. Fail over the primary availability group.
 
 The following Transact-SQL examples demonstrate the detailed steps to fail over the distributed availability group named `distributedag`:
 
+1. Stop all transactions on the global primary in the distributed availability group. 
 1. Set the distributed availability group to synchronous commit by running the following code on *both* the global primary and the forwarder.   
     
       ```sql  
@@ -259,7 +260,8 @@ The following Transact-SQL examples demonstrate the detailed steps to fail over 
    >[!NOTE]
    >In a distributed availability group, the synchronization status between the two availability groups depends on the availability mode of both replicas. For synchronous commit mode, both the current primary availability group, and the current secondary availability group must have `SYNCHRONOUS_COMMIT` availability mode. For this reason, you must run the script above on both the global primary replica, and the forwarder.
 
-1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED`. Run the following query on the global primary, which is the primary replica of the primary availability group. 
+
+1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED`. Run the following query on both the global primary, which is the primary replica of the primary availability group, and the forwarded to check the last_hardened_lsn
     
       ```sql  
       SELECT ag.name
@@ -267,13 +269,13 @@ The following Transact-SQL examples demonstrate the detailed steps to fail over 
              , drs.group_id
              , drs.replica_id
              , drs.synchronization_state_desc
-             , drs.end_of_log_lsn 
+             , drs.last_hardened_lsn  
         FROM sys.dm_hadr_database_replica_states drs,
         sys.availability_groups ag
           WHERE drs.group_id = ag.group_id;      
       ```  
 
-    Proceed after the availability group **synchronization_state_desc** is `SYNCHRONIZED`. If **synchronization_state_desc** is not `SYNCHRONIZED`, run the command every five seconds until it changes. Do not proceed until the **synchronization_state_desc** = `SYNCHRONIZED`. 
+    Proceed after the availability group **synchronization_state_desc** is `SYNCHRONIZED`, and the last_hardened_lsn is the same on both the global primary and forwarder.  If **synchronization_state_desc** is not `SYNCHRONIZED` or last_hardened_lsn is not the same, run the command every five seconds until it changes. Do not proceed until the **synchronization_state_desc** = `SYNCHRONIZED` and last_hardened_lsn is the same. 
 
 1. On the global primary, set the distributed availability group role to `SECONDARY`. 
 
@@ -289,13 +291,19 @@ The following Transact-SQL examples demonstrate the detailed steps to fail over 
     SELECT ag.name, 
         drs.database_id, 
         drs.group_id, 
-        drs.replica_id, 
-        drs.synchronization_state_desc, 
-        drs.end_of_log_lsn 
+        drs.replica_id,
+        drs.last_hardened_lsn
     FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
     WHERE drs.group_id = ag.group_id; 
     ```  
-    The availability group is ready to fail over when the **synchronization_state_desc** is `SYNCHRONIZED` and the **end_of_log_lsn** is the same for both availability groups. 
+
+    The availability group is ready to fail over when the **last_hardened_lsn** is the same for both availability groups. If the last_hardened_lsn is not the same after a period of time, to avoid data loss, fail back over to the global primary with this command: 
+
+    ```sql
+    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+    ```
+
+    Start over from the second step, and set the ROLE to SECONDARY once more. The global primary and replicas should be in synchronized state, and they should have the same last_hardened_lsn. 
 
 1. Fail over from the primary availability group to the secondary availability group. Run the following command on the SQL Server that hosts the primary replica for the secondary availability group. 
 

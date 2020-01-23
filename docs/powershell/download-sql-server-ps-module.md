@@ -45,46 +45,58 @@ Azure Data Studio does not include either PowerShell module. To use PowerShell w
 
 ## Installing or updating the SqlServer module
 
-To install the **SqlServer** module from the PowerShell Gallery, start a [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) session as an administrator.
+To install the **SqlServer** module from the PowerShell Gallery, start a [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) session.
 
 > [!IMPORTANT]
 > If you run into problems installing, see the [Install-Module documentation](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1) and [Install-Module reference](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
 
 ### To install the SqlServer module
 
-Run the following command in your administrator session to install the SqlServer module for all users.
+Run the following command in your PowerShell session to install the SqlServer module for all users.
 
-```Install-Module -Name SqlServer```
+```PowerShell
+Install-Module -Name SqlServer
+```
 
 ### To overwrite a previous version of the SqlServer module
 
 If there are previous versions of the **SqlServer** module on the computer, you may be able to use `Update-Module` (later in this article), or use the `-AllowClobber` parameter:  
 
-```Install-Module -Name SqlServer -AllowClobber```
+```PowerShell
+Install-Module -Name SqlServer -AllowClobber
+```
 
 ### Install for the current user rather than as an administrator
 
 If you are not able to run the PowerShell session as administrator, install for the current user using the following command:
 
-```Install-Module -Name SqlServer -Scope CurrentUser```
+```PowerShell
+Install-Module -Name SqlServer -Scope CurrentUser
+```
 
 ### Update the installed version of the SqlServer module
 
 When updated versions of the **SqlServer** module are available, update the version using the following command:
 
-```Update-Module -Name SqlServer```
+```PowerShell
+Update-Module -Name SqlServer
+```
 
 ### To view the versions of the SqlServer module installed
 
 Execute the following command to see the versions of the SqlServer module that have been installed:
 
-```Get-Module SqlServer -ListAvailable```
+```PowerShell
+Get-Module SqlServer -ListAvailable
+```
 
 ## Using a specific version of the SqlServer module
 
 To use a specific version of the module, import it with a specific version number similar to the following command:
 
-```Import-Module SqlServer -Version 21.1.18080```
+```PowerShell
+Import-Module SqlServer -Version 21.1.18080
+```
 
 ## Using pre-release versions of the SqlServer module
 
@@ -94,10 +106,14 @@ Pre-release (or "preview") versions of the SqlServer module may be available on 
 
 To discover the pre-release (preview) versions of the SqlServer module, run the following command:
 
-```Find-Module SqlServer -AllowPrerelease```
+```PowerShell
+Find-Module SqlServer -AllowPrerelease
+```
 
 ### To install a specific pre-release version of the SqlServer module
 
 To install a specific prerelease/preview version of the module, install it with a specific version number similar to the following:
 
-```Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease```
+```PowerShell
+Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease
+```

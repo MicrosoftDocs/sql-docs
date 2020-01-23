@@ -623,6 +623,27 @@ See [Migrate Sensitive Data Protected by Always Encrypted](../../relational-data
 |-|-|-|
 |`BCPMODIFYENCRYPTED` (21)|FALSE|When TRUE, allows varbinary(max) values to be inserted into an encrypted column. When FALSE, prevents insertion unless correct type and encryption metadata is supplied.|
 
+## Troubleshooting
+
+When encountering difficulties in using Always Encrypted, start by checking the following points:
+
+- The CEK which encrypts the desired column is present and accessible on the server.
+
+- The CMK which encrypts the CEK has accessible metadata on the server and is also accessible from the client.
+
+- `ColumnEncryption` is enabled in the DSN, connection string, or connection attribute, and if using the Secure Enclave, has the correct format.
+
+
+Additionally, when using the Secure Enclave, attestation failures identify the step in the attestation process where the failure occurred, according to the following table:
+
+|Step|Description|
+|----|-----------|
+|0-99| Invalid attestation response, or signature verification error. |
+|100-199| Error retrieving certificates from attestation URL. Ensure `<attestation URL>/v2.0/signingCertificates` is valid and accessible. |
+|200-299| Unexpected or incorrect format of enclave's identity. |
+|300-399| Error establishing secure channel with enclave. |
+
+
 ## See Also
 
 - [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

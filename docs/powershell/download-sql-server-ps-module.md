@@ -100,7 +100,10 @@ Import-Module SqlServer -Version 21.1.18080
 
 ## Using pre-release versions of the SqlServer module
 
-Pre-release (or "preview") versions of the SqlServer module may be available on the PowerShell Gallery. They may be discovered and installed by using the updated *Find-Module* and *Install-Module* cmdlets that are part of the [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet) module by passing the *-AllowPrerelease* switch.
+Pre-release (or "preview") versions of the SqlServer module may be available on the PowerShell Gallery.
+
+> [!IMPORTANT]
+> These versions may be discovered and installed by using the updated *Find-Module* and *Install-Module* cmdlets that are part of the [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet) module by passing the *-AllowPrerelease* switch. To use these cmdlets, install the PowerShellGet module and then open a new session.
 
 ### To discover pre-release versions of the SqlServer module
 

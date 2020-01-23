@@ -34,7 +34,7 @@ As an application owner, I need to be able to identify the various databases tha
 
 To enable this assessment, we recently introduced the Data Access Migration Toolkit (DAMT), a Visual Studio Code extension. The latest version of this extension (v 0.2) adds support for .Net applications and T-SQL dialect.
 
-1. Download and install VS Code from [here](http://code.visualstudio.com/download).
+1. Download and install VS Code from [here](https://code.visualstudio.com/download).
 2. Enable the [Data Access Migration Toolkit extension](https://marketplace.visualstudio.com/items?itemName=ms-databasemigration.data-access-migration-toolkit) from the Extensions Marketplace.
 
    ![Data Access Migration Toolkit extension page](../dma/media/dma-assess-app-data-layer/dma-damt-extension-page.png)

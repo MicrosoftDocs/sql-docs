@@ -79,7 +79,7 @@ A wildcard set can include both single characters and ranges. The following exam
 ```sql
 SELECT [object_id], OBJECT_NAME(object_id) AS [object_name], name, column_id 
 FROM sys.columns 
-WHERE name LIKE '[0-9!@#$.,;_]%'
+WHERE name LIKE '[0-9!@#$.,;_]%';
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  

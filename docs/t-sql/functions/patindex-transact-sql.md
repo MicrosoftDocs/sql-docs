@@ -38,7 +38,10 @@ PATINDEX ( '%pattern%' , expression )
   
 ## Arguments  
  *pattern*  
- Is a character expression that contains the sequence to be found. Wildcard characters can be used; however, the % character must come before and follow *pattern* (except when you search for first or last characters). *pattern* is an expression of the character string data type category. *pattern* is limited to 8000 characters.  
+ Is a character expression that contains the sequence to be found. Wildcard characters can be used; however, the % character must come before and follow *pattern* (except when you search for first or last characters). *pattern* is an expression of the character string data type category. *pattern* is limited to 8000 characters.
+
+ > [!NOTE]
+ > While traditional regular expressions are not natively supported in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], similar complex pattern matching can be achieved by using various wildcard expressions. See the [String Operators](../../t-sql/language-elements/string-operators-transact-sql.md) documentation for more detail on wildcard syntax.
   
  *expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md), typically a column that is searched for the specified pattern. *expression* is of the character string data type category.  
@@ -95,21 +98,35 @@ If you do not restrict the rows to be searched by using a `WHERE` clause, the qu
  The following example uses % and _ wildcards to find the position at which the pattern `'en'`, followed by any one character and `'ure'` starts in the specified string (index starts at 1):  
   
 ```sql  
-SELECT PATINDEX('%en_ure%', 'please ensure the door is locked');  
+SELECT position = PATINDEX('%en_ure%', 'Please ensure the door is locked!');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
------------  
+position
+--------  
 8  
 ```  
   
 `PATINDEX` works just like `LIKE`, so you can use any of the wildcards. You do not have to enclose the pattern between percents. `PATINDEX('a%', 'abc')` returns 1 and `PATINDEX('%a', 'cba')` returns 3.  
   
  Unlike `LIKE`, `PATINDEX` returns a position, similar to what `CHARINDEX` does.  
-  
-### D. Using COLLATE with PATINDEX  
+
+### D. Using complex wildcard expressions with PATINDEX 
+The following example uses the `[^]` [string operator](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md) to find the position of a character that is not a number, letter, or space.
+
+```sql
+SELECT position = PATINDEX('%[^ 0-9A-z]%', 'Please ensure the door is locked!'); 
+```
+[!INCLUDEssResult]
+```
+position
+--------
+33
+```
+
+### E. Using COLLATE with PATINDEX  
  The following example uses the `COLLATE` function to explicitly specify the collation of the expression that is searched.  
   
 ```sql  
@@ -119,7 +136,7 @@ SELECT PATINDEX ( '%ein%', 'Das ist ein Test'  COLLATE Latin1_General_BIN) ;
 GO  
 ```  
   
-### E. Using a variable to specify the pattern  
+### F. Using a variable to specify the pattern  
 The following example uses a variable to pass a value to the *pattern* parameter. This example uses the  [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```sql  

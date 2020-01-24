@@ -25,19 +25,20 @@ There are two SQL Server PowerShell modules:
 - **SqlServer**: The SqlServer module includes new cmdlets to support the latest SQL features. The module also contains updated versions of the cmdlets in **SQLPS**. To download the SqlServer module, go to [SqlServer module in the PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
 - **SQLPS**: The SQLPS module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module.
 
-The versions of the **SqlServer** module in the PowerShell Gallery support versioning and require PowerShell version 5.0 or greater.
+> [!NOTE]
+> The versions of the **SqlServer** module in the PowerShell Gallery support versioning and require PowerShell version 5.0 or greater.
 
 For help topics, go to:
 
-- For help topics for the SQL Server PowerShell cmdlets, go to [SqlServer](https://docs.microsoft.com/powershell/module/sqlserver) cmdlets.
-- For help topics for the SQLPS cmdlets, go to [SQLPS](https://docs.microsoft.com/powershell/module/sqlps) cmdlets.
+- [SqlServer](https://docs.microsoft.com/powershell/module/sqlserver) cmdlets.
+- [SQLPS](https://docs.microsoft.com/powershell/module/sqlps) cmdlets.
 
 ## SQL Server Management Studio
 
 SQL Server Management Studio (SSMS), beginning with version 17.0, does not install either PowerShell module. To use PowerShell with SSMS, install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
 
 > [!NOTE]
-> “With version 16.x of SSMS, an earlier version of the **SqlServer** module is included with SQL Server Management Studio (SSMS)
+> With version 16.x of SSMS, an earlier version of the **SqlServer** module is included with SQL Server Management Studio (SSMS)
 
 ## Azure Data Studio
 
@@ -47,8 +48,9 @@ Azure Data Studio does not install either PowerShell module. To use PowerShell w
 
 To install the **SqlServer** module from the PowerShell Gallery, start a [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) session as an administrator. You also start Azure Data Studio as an administrator and run these commands in a PowerShell session in the integrated terminal.
 
-> [!IMPORTANT]
-> If you run into problems installing, see the [Install-Module documentation](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1) and [Install-Module reference](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
+## Troubleshooting
+
+If you run into problems installing, see the [Install-Module documentation](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1) and [Install-Module reference](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
 
 ### To install the SqlServer module
 
@@ -100,7 +102,7 @@ Import-Module SqlServer -Version 21.1.18080
 
 ## Using pre-release versions of the SqlServer module
 
-Pre-release (or "preview") versions of the SqlServer module may be available on the PowerShell Gallery.
+Pre-release (or "preview") versions of the SqlServer module may be available in the PowerShell Gallery.
 
 > [!IMPORTANT]
 > These versions may be discovered and installed by using the updated *Find-Module* and *Install-Module* cmdlets that are part of the [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet) module by passing the *-AllowPrerelease* switch. To use these cmdlets, install the PowerShellGet module and then open a new session.

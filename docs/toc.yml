@@ -6120,6 +6120,10 @@
           href: ssma/db2/global-settings-output-window-db2tosql.md
         - name: Logging
           href: ssma/db2/global-settings-logging-db2tosql.md
+      - name: Conversion messages
+        items:
+        - name: DB22SS0573
+          href: ssma/db2/messages/db22ss0573.md
     - name: mySQL
       href: ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md
       items:
@@ -6357,6 +6361,10 @@
         href: ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md
       - name: Creating the Server Connection Files
         href: ssma/oracle/creating-the-server-connection-files-oracletosql.md
+      - name: Emulating Oracle Package Variables
+        href: ssma/oracle/emulate-package-variables.md
+      - name: Emulating Records and Collections via CLR UDT
+        href: ssma/oracle/emulate-records-collections-via-clr.md
       - name: Appendix - 1
         href: ssma/oracle/appendix-1-oracletosql.md
       - name: Project Settings
@@ -6385,6 +6393,82 @@
           href: ssma/oracle/global-settings-dialogs-oracletosql.md
         - name: Output Window
           href: ssma/oracle/global-settings-output-window-oracletosql.md
+      - name: Conversion messages
+        items:
+        - name: O2SS0007
+          href: ssma/oracle/messages/o2ss0007.md
+        - name: O2SS0021
+          href: ssma/oracle/messages/o2ss0021.md
+        - name: O2SS0029
+          href: ssma/oracle/messages/o2ss0029.md
+        - name: O2SS0038
+          href: ssma/oracle/messages/o2ss0038.md
+        - name: O2SS0054
+          href: ssma/oracle/messages/o2ss0054.md
+        - name: O2SS0055
+          href: ssma/oracle/messages/o2ss0055.md
+        - name: O2SS0094
+          href: ssma/oracle/messages/o2ss0094.md
+        - name: O2SS0099
+          href: ssma/oracle/messages/o2ss0099.md
+        - name: O2SS0101
+          href: ssma/oracle/messages/o2ss0101.md
+        - name: O2SS0104
+          href: ssma/oracle/messages/o2ss0104.md
+        - name: O2SS0157
+          href: ssma/oracle/messages/o2ss0157.md
+        - name: O2SS0160
+          href: ssma/oracle/messages/o2ss0160.md
+        - name: O2SS0179
+          href: ssma/oracle/messages/o2ss0179.md
+        - name: O2SS0188
+          href: ssma/oracle/messages/o2ss0188.md
+        - name: O2SS0205
+          href: ssma/oracle/messages/o2ss0205.md
+        - name: O2SS0217
+          href: ssma/oracle/messages/o2ss0217.md
+        - name: O2SS0221
+          href: ssma/oracle/messages/o2ss0221.md
+        - name: O2SS0245
+          href: ssma/oracle/messages/o2ss0245.md
+        - name: O2SS0260
+          href: ssma/oracle/messages/o2ss0260.md
+        - name: O2SS0264
+          href: ssma/oracle/messages/o2ss0264.md
+        - name: O2SS0265
+          href: ssma/oracle/messages/o2ss0265.md
+        - name: O2SS0268
+          href: ssma/oracle/messages/o2ss0268.md
+        - name: O2SS0274
+          href: ssma/oracle/messages/o2ss0274.md
+        - name: O2SS0293
+          href: ssma/oracle/messages/o2ss0293.md
+        - name: O2SS0330
+          href: ssma/oracle/messages/o2ss0330.md
+        - name: O2SS0331
+          href: ssma/oracle/messages/o2ss0331.md
+        - name: O2SS0334
+          href: ssma/oracle/messages/o2ss0334.md
+        - name: O2SS0339
+          href: ssma/oracle/messages/o2ss0339.md
+        - name: O2SS0343
+          href: ssma/oracle/messages/o2ss0343.md
+        - name: O2SS0347
+          href: ssma/oracle/messages/o2ss0347.md
+        - name: O2SS0350
+          href: ssma/oracle/messages/o2ss0350.md
+        - name: O2SS0351
+          href: ssma/oracle/messages/o2ss0351.md
+        - name: O2SS0352
+          href: ssma/oracle/messages/o2ss0352.md
+        - name: O2SS0359
+          href: ssma/oracle/messages/o2ss0359.md
+        - name: O2SS0407
+          href: ssma/oracle/messages/o2ss0407.md
+        - name: O2SS0408
+          href: ssma/oracle/messages/o2ss0408.md
+        - name: O2SS0418
+          href: ssma/oracle/messages/o2ss0418.md
     - name: Sybase
       href: ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
       items:

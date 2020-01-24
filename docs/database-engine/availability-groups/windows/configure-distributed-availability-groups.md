@@ -230,8 +230,7 @@ Only manual failover is supported at this time. To manually fail over a distribu
 
 The following Transact-SQL examples demonstrate the detailed steps to fail over the distributed availability group named `distributedag`:
 
-1. Stop all transactions on the global primary in the distributed availability group. 
-1. Set the distributed availability group to synchronous commit by running the following code on *both* the global primary and the forwarder.   
+1. To ensure that no data is lost, stop all transactions on the global primary. Then set the distributed availability group to synchronous commit by running the following code on *both* the global primary and the forwarder.   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 

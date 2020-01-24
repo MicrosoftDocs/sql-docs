@@ -119,7 +119,8 @@ The following example uses the `[^]` [string operator](../../t-sql/language-elem
 ```sql
 SELECT position = PATINDEX('%[^ 0-9A-z]%', 'Please ensure the door is locked!'); 
 ```
-[!INCLUDEssResult]
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
 ```
 position
 --------

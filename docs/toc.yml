@@ -6362,9 +6362,9 @@
       - name: Creating the Server Connection Files
         href: ssma/oracle/creating-the-server-connection-files-oracletosql.md
       - name: Emulating Oracle Package Variables
-        href: ssma/oracle/emulating-package-variables.md
+        href: ssma/oracle/emulate-package-variables.md
       - name: Emulating Records and Collections via CLR UDT
-        href: ssma/oracle/emulating-records-and-collections-via-clr.md
+        href: ssma/oracle/emulate-records-collections-via-clr.md
       - name: Appendix - 1
         href: ssma/oracle/appendix-1-oracletosql.md
       - name: Project Settings

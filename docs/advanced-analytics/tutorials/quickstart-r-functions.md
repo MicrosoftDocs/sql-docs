@@ -1,10 +1,9 @@
 ---
 title: "Quickstart: Write R functions"
-description: In this quickstart, learn how to write an R function for advanced statistical computation with SQL Server Machine Learning Services.
+description: In this quickstart, you'll learn how to use R mathematical and utility functions with SQL Server Machine Learning Services. 
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 10/04/2019  
+ms.date: 01/27/2020  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
@@ -16,7 +15,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Quickstart: Write advanced R functions with SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This quickstart describes how to embed R mathematical and utility functions in a SQL stored procedure with SQL Server Machine Learning Services. Advanced statistical functions that are complicated to implement in T-SQL can be done in R with only a single line of code.
+In this quickstart, you'll learn how to use R mathematical and utility functions with SQL Server Machine Learning Services. Statistical functions are often complicated to implement in T-SQL, but can be done in R with only a few lines of code.
 
 ## Prerequisites
 

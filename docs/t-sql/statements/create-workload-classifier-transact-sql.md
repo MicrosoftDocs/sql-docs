@@ -154,7 +154,7 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
 
 The user `userloginA` is configured for both classifiers.  If userloginA runs a query with a label equal to `salesreport` between 6PM and 7AM UTC, the request will be classified to the wgDashboards workload group with HIGH importance.  The expectation may be to classify the request to wgUserQueries with LOW importance for off-hours reporting, but the weighting of WLM_LABEL is higher than START_TIME/END_TIME.  The weighting of classiferA is 80 (64 for user, plus 16 for WLM_LABEL).  The weighting of classifierB is 68 (64 for user, 4 for START_TIME/END_TIME).  In this case, you can add WLM_LABEL to classiferB.
 
- For more information see, [workload classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence).
+ For more information see, [workload weighting](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting).
 
 ## Permissions
 

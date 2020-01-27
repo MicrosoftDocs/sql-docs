@@ -59,7 +59,7 @@ Error: 823, Severity: 24, State: 2
 2003-09-05 16:51:18.90 spid17 I/O error (torn page) detected during read at offset 0x00000094004000 in file 'F:\SQLData\mydb.MDF'..
 ```
 
-Additional diagnostic information for 823 errors may be written to the SQL Server Errorlog file when you use trace flag 818.
+Additional diagnostic information for 823 errors may be written to the SQL Server error log file when you use trace flag 818.
 For more information, see [KB 826433: Additional SQL Server diagnostics added to detect unreported I/O problems](https://support.microsoft.com/help/826433/sql-server-diagnostics-added-to-detect-unreported-i-o-problems-due-to)
 
 

@@ -133,7 +133,7 @@ A request can match against multiple classifiers.  There is a weighting for the 
 |ROLE                 |8        |
 |WLM_LABEL            |4        |
 |WLM_CONTEXT          |2        |
-|START_TIME/END_TIME  |0        |
+|START_TIME/END_TIME  |1        |
 
 Consider the following classifier configurations.
 

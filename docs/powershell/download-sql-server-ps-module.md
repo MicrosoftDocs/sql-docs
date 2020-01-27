@@ -1,18 +1,16 @@
 ---
-title: "Download SQL Server PowerShell Module | Microsoft Docs"
-ms.custom: ""
-ms.date: 01/23/2020
+title: Download SQL Server PowerShell Module
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
-keywords: 
-  - "install sql server powershell, download sql server powershell"
-ms.assetid: 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
+ms.custom: ""
+ms.date: 01/23/2020
 ---
-# Install SQL Server PowerShell module
+
+# Install the SQL Server PowerShell module
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -23,7 +21,7 @@ This article provides directions for installing the **SqlServer** PowerShell mod
 There are two SQL Server PowerShell modules:
 
 - **SqlServer**: The SqlServer module includes new cmdlets to support the latest SQL features. The module also contains updated versions of the cmdlets in **SQLPS**. To download the SqlServer module, go to [SqlServer module in the PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
-- **SQLPS**: The SQLPS module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module.
+- **SQLPS**: The SQLPS module is included with the SQL Server installation (for backward compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module.
 
 > [!NOTE]
 > The versions of the **SqlServer** module in the PowerShell Gallery support versioning and require PowerShell version 5.0 or greater.
@@ -35,14 +33,16 @@ For help topics, go to:
 
 ## SQL Server Management Studio
 
-SQL Server Management Studio (SSMS), beginning with version 17.0, does not install either PowerShell module. To use PowerShell with SSMS, install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
+SQL Server Management Studio (SSMS), beginning with version 17.0, doesn't install either PowerShell module. To use PowerShell with SSMS, install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
 
 > [!NOTE]
 > With version 16.x of SSMS, an earlier version of the **SqlServer** module is included with SQL Server Management Studio (SSMS)
 
 ## Azure Data Studio
 
-Azure Data Studio does not install either PowerShell module. To use PowerShell with Azure Data Studio, install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
+Azure Data Studio doesn't install either PowerShell modules. To use PowerShell with Azure Data Studio, install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
+
+However, you can use the Azure Data Studio [PowerShell extension, which provides rich PowerShell editor support in Azure Data Studio.
 
 ## Installing or updating the SqlServer module
 
@@ -56,23 +56,23 @@ If you run into problems installing, see the [Install-Module documentation](http
 
 Run the following command in your PowerShell session to install the SqlServer module for all users.
 
-```PowerShell
+```powershell
 Install-Module -Name SqlServer
 ```
 
 ### To overwrite a previous version of the SqlServer module
 
-If there are previous versions of the **SqlServer** module on the computer, you may be able to use `Update-Module` (later in this article), or use the `-AllowClobber` parameter:  
+If there are previous versions of the **SqlServer** module on the computer, you can try to use `Update-Module` (later in this article), or use the `-AllowClobber` parameter:  
 
-```PowerShell
+```powershell
 Install-Module -Name SqlServer -AllowClobber
 ```
 
 ### Install for the current user rather than as an administrator
 
-If you are not able to run the PowerShell session as administrator, install for the current user using the following command:
+If you aren't able to run the PowerShell session as an administrator, install for the current user using the following command:
 
-```PowerShell
+```powershell
 Install-Module -Name SqlServer -Scope CurrentUser
 ```
 
@@ -80,7 +80,7 @@ Install-Module -Name SqlServer -Scope CurrentUser
 
 When updated versions of the **SqlServer** module are available, update the version using the following command:
 
-```PowerShell
+```powershell
 Update-Module -Name SqlServer
 ```
 
@@ -88,7 +88,7 @@ Update-Module -Name SqlServer
 
 Execute the following command to see the versions of the SqlServer module that have been installed:
 
-```PowerShell
+```powershell
 Get-Module SqlServer -ListAvailable
 ```
 
@@ -96,11 +96,11 @@ Get-Module SqlServer -ListAvailable
 
 To use a specific version of the module, import it with a specific version number similar to the following command:
 
-```PowerShell
+```powershell
 Import-Module SqlServer -Version 21.1.18080
 ```
 
-## Using pre-release versions of the SqlServer module
+## Pre-release versions of the SqlServer module
 
 Pre-release (or "preview") versions of the SqlServer module may be available in the PowerShell Gallery.
 
@@ -111,14 +111,34 @@ Pre-release (or "preview") versions of the SqlServer module may be available in 
 
 To discover the pre-release (preview) versions of the SqlServer module, run the following command:
 
-```PowerShell
+```powershell
 Find-Module SqlServer -AllowPrerelease
 ```
 
 ### To install a specific pre-release version of the SqlServer module
 
-To install a specific prerelease/preview version of the module, install it with a specific version number similar to the following:
+To install a specific pre-release version of the module, install it with a specific version number.
 
-```PowerShell
+You can try to use the following command:
+
+```powershell
 Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease
 ```
+
+## Side-by-side version installs
+
+You can install different versions of SQLServer PowerShell modules side by side to allow you the ability to experiment with the latest, yet still have older modules around.
+
+PowerShell always uses the latest module installed.
+
+However, if you don’t want to keep older module versions, then you can use the *Uninstall-Module* command to remove previous versions.
+
+Sample command to remove older versions of SQL Server modules.
+
+```powershell
+Uninstall-module -Name SQLServer -RequiredVersion "<version number>" -Force
+```
+
+## SQl Server PowerShell on Linux
+
+Visit [Manage SQL Server on Linux with PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) to see how to install SQL Server PowerShell on Linux.

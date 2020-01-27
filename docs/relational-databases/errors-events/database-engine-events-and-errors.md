@@ -21,7 +21,7 @@ SELECT message_id AS Error, severity AS Severity,
 [Event Logged] = CASE is_event_logged WHEN 0 THEN 'No' ELSE 'Yes' END,
 text AS [Description]
 FROM sys.messages
-WHERE language_id = 1033
+WHERE language_id = <desired language, such as 1033 for US English>
 ORDER BY message_id
 ```
 

@@ -65,7 +65,7 @@ For more information, see [KB 826433: Additional SQL Server diagnostics added to
 
 
 ## Cause
-The 823 error message usually indicates that there is a problem with underlying storage system or the hardware or a driver that is in the path of the I/O request. You can encounter this error when there are inconsistencies in the file system or if the database file is damaged. In the case of a file read, SQL Server will have already retried the read request four times before it returns 823. If the retry operation succeeds, the query will not fail but message [825](/mssqlserver-825-database-engine-error.md) will be written into the ERRORLOG and Event Log.
+The 823 error message usually indicates that there is a problem with underlying storage system or the hardware or a driver that is in the path of the I/O request. You can encounter this error when there are inconsistencies in the file system or if the database file is damaged. In the case of a file read, SQL Server will have already retried the read request four times before it returns 823. If the retry operation succeeds, the query will not fail but message [825](mssqlserver-825-database-engine-error.md) will be written into the ERRORLOG and Event Log.
 
 ## User Action  
  - Review the [suspect_pages](../system-tables/suspect-pages-transact-sql.md) table in MSDB for other pages that are encountering this problem (in the same database or different databases).

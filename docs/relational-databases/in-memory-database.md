@@ -28,7 +28,7 @@ This page is intended to serve as a reference page for in-memory features and te
 
 It is assumed often, that the performance advantages of an in-memory database system are mostly owing to it being faster to access data that is resident in memory rather than data that sitting on even the fastest available disk subsystems (by several orders of magnitude). However, many SQL Server workloads can fit their entire working set in available memory. Many in-memory database systems can persist data to disk and may not always be able to fit the entire data set in available memory.
 
-A fast volatile cache that fronts a considerably slower but durable media has been predominant for relational database workloads. It necessitates particular approaches to workload management. The opportunities presented by faster memory transfer rates, greater capacity, or even persistent memory facilities the development of new features and technologies that can spur new approaches to relational database workload management.
+A fast volatile cache that fronts a considerably slower but durable media has been predominant for relational database workloads. It necessitates particular approaches to workload management. The opportunities presented by faster memory transfer rates, greater capacity, or even persistent memory facilitates the development of new features and technologies that can spur new approaches to relational database workload management.
 
 ## Hybrid buffer pool
 

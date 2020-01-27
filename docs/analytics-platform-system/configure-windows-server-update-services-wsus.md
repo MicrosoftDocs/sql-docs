@@ -133,11 +133,14 @@ To configure WSUS, you need to:
 8.  Choose products.  
   
     > [!NOTE]  
-    > If you are using an Upstream Server, you may not be able to Choose Products. If this option is not available, skip this step.  
+    > If you are using an Upstream Server, you may not be able to Choose Products. If this option is not available, skip this step.
+
+    > [!WARNING]  
+    > Please exclude any SQL Server 2016 updates.
   
     Unselect all selected updates.  
   
-    Select **Windows Server 2012 R2**, and **System Center 2012 R2 - Virtual Machine Manager**, and then click **Next**.  
+    Select **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**, and **System Center 2012 R2 - Virtual Machine Manager**, and then click **Next**.  
   
 9. Choose classifications.  
   

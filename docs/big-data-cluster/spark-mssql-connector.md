@@ -73,10 +73,10 @@ The connector uses SQL Server Bulk write APIs. Any bulk write parameters can be 
 
 To demonstrate the use of the MSSQL Spark Connector with this data, you can download a sample notebook, open it in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks in SQL Server](notebooks-guidance.md).
 
-1. From a PowerShell or bash command line, run the following command to download the **mssql_spark_connector.ipynb** sample notebook:
+1. From a PowerShell or bash command line, run the following command to download the **mssql_spark_connector_non_ad_pyspark.ipynb** sample notebook:
 
    ```PowerShell
-   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
+   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector_non_ad_pyspark.ipynb"
    ```
 
 1. In Azure Data Studio, open the sample notebook file. Verify that it is connected to your HDFS/Spark Gateway for your big data cluster.

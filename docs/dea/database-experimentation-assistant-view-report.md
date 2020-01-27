@@ -2,7 +2,7 @@
 title: View analysis reports for SQL Server upgrades
 description: View analysis reports in Database Experimentation Assistant
 ms.custom: "seo-lt-2019"
-ms.date: 11/22/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -20,25 +20,25 @@ After you use Database Experimentation Assistant (DEA) to [create an analysis re
 
 ## Select a server
 
-In DEA, select the menu icon. In the expanded menu, select **Analysis Reports** next to the checklist icon to open the Analysis Reports window.
+1. In DEA, select the menu icon. In the expanded menu, select **Analysis Reports** next to the checklist icon to open the Analysis Reports window.
 
-Under **Analysis Reports**, enter the name of a computer running SQL Server that has an analysis database, and then select **Connect**.
+2. Under **Analysis Reports**, enter the name of a computer running SQL Server that has an analysis database, and then select **Connect**.
 
-![Connect to an existing report](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
+   ![Connect to an existing report](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
-If you're missing any dependencies, the **Prerequisites** page prompts you with links to install them. If necessary, install the prerequisites, and then select **Try again**.
+   If you're missing any dependencies, the **Prerequisites** page prompts you with links to install them. If necessary, install the prerequisites, and then select **Try again**.
 
-![Prerequisites page](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
+   ![Prerequisites page](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
 
 ## Select an analysis report to view
 
-In the list of analysis reports, double-click a report to open it.
+1. In the list of analysis reports, double-click a report to open it.
 
-![View existing report](./media/database-experimentation-assistant-view-report/dea-view-report-view-existing.png)
+   ![View existing report](./media/database-experimentation-assistant-view-report/dea-view-report-view-existing.png)
 
-You can get insights into how well your workload is represented, as shown in this example chart:
+   You can get insights into how well your workload is represented, as shown in this example chart:
 
-![Workload Rep Charts](./media/database-experimentation-assistant-view-report/dea-view-report-workload-compare.png)
+   ![Workload Rep Charts](./media/database-experimentation-assistant-view-report/dea-view-report-workload-compare.png)
 
 ## View and understand the analysis report
 
@@ -46,15 +46,15 @@ This section walks you through the analysis report.
 
 ### Query categories
 
-Select different slices of the left pie chart to show only the queries that fall under that category.
+1. Select different slices of the left pie chart to show only the queries that fall under that category.
 
-![Report pie slices](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+   ![Report pie slices](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
 
-- **Degraded queries**: Queries that performed better in A than in B.  
-- **Errors**: Queries that show errors in instance B but not in instance A.  
-- **Improved queries**: Queries that ran better in instance B than in instance A.  
-- **Indeterminate queries**: Queries that had an indeterminate performance change.  
-- **Same**: Queries in which performance stayed the same across instances A and B.
+   - **Degraded queries**: Queries that performed better in A than in B.
+   - **Errors**: Queries that show errors in instance B but not in instance A.
+   - **Improved queries**: Queries that ran better in instance B than in instance A.
+   - **Indeterminate queries**: Queries that had an indeterminate performance change.
+   - **Same**: Queries in which performance stayed the same across instances A and B.
 
 ### Individual query drill-down
 
@@ -62,23 +62,23 @@ You can select the query template links to see more detailed information about s
 
 ![Query drill-down](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
 
-Select a specific query to open a comparison summary for the query.
+- Select a specific query to open the related comparison summary.
 
-![Comparison Summary](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
+   ![Comparison Summary](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
 
-You can see the A and B instances that the query ran on. You can also see a template of what the query might look like. A table displays query information that is specific to instances A and B.
+   You can see the A and B instances on which the query ran. You can also see a template of what the query might look like. A table displays query information that is specific to instances A and B.
 
 ### Error queries
 
 The comparison summary report has expandable **Error Information** and **Query Plan Information** sections. The sections show the errors and plan information for both instances.
 
-Select the error (red) pie to show these types of errors:
+- Select the error (red) pie to show these types of errors:
 
-- **Existing errors**: Errors that were in A.
-- **New errors**: Errors that were in B.
-- **Resolved errors**: Errors that were in A but not in B.
+   - **Existing errors**: Errors that were in A.
+   - **New errors**: Errors that were in B.
+   - **Resolved errors**: Errors that were in A but not in B.
 
-![Error charts](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
+   ![Error charts](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
 
 ## See also
 

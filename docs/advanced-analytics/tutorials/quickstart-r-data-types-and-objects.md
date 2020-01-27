@@ -1,6 +1,6 @@
 ---
-title: "Quickstart: R data structures and data types"
-description: In this quickstart, you'll learn how to use data structures and data types when using R in SQL Server Machine Learning Services. You'll learn about moving data between R and SQL Server, and the common issues that might occur.
+title: "Quickstart: R data structures, data types, and objects"
+description: In this quickstart, you'll learn how to use data structures, data types, and objects when using R in SQL Server Machine Learning Services. You'll learn about moving data between R and SQL Server, and the common issues that might occur.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/27/2019  
@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
-# Quickstart: Handle data structures and data types using R in SQL Server Machine Learning Services
+# Quickstart: Handle data structures, data types, and objects using R in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this quickstart, you'll learn how to use data structures and data types when using R in SQL Server Machine Learning Services. You'll learn about moving data between R and SQL Server, and the common issues that might occur.

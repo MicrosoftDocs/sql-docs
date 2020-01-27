@@ -3,7 +3,7 @@ title: "Quickstart: Python functions"
 description: In this quickstart, you'll learn how to use Python mathematical and utility functions with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2019  
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye

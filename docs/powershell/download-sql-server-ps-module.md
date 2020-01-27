@@ -133,7 +133,13 @@ PowerShell always uses the latest module installed.
 
 However, if you don’t want to keep older module versions, then you can use the *Uninstall-Module* command to remove previous versions.
 
-Sample command to remove older versions of SQL Server modules.
+Sample below to list if more than one version is installed:
+
+```powershell
+Get-Module -ListAvailable -Name "SQLServer"
+```
+
+Sample below to remove older versions of SQL Server modules.
 
 ```powershell
 Uninstall-module -Name SQLServer -RequiredVersion "<version number>" -Force

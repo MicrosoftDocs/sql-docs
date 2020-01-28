@@ -188,7 +188,8 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> You must use `root` user for Knox gateway with the above password. `root` is the only user supported for in this basic authentication (username/password) setup. For SQL Server master, username provisioned to be used with the above password is `sa`.
+> You must use `root` user for Knox gateway with the above password. `root` is the only user supported for in this basic authentication (username/password).
+> To connect to SQL Server with basic authentication, use the same values as the AZDATA_USERNAME and AZDATA_PASSWORD [environment variables](#env). 
 
 
 After setting the environment variables, you must run `azdata bdc create` to trigger the deployment. This example uses the cluster configuration profile created above:

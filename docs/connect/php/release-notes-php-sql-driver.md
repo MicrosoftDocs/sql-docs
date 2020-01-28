@@ -48,9 +48,9 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | Support for Language option when connecting to SQL Server. | &nbsp; |
 | Support for PHP extended string types introduced in PHP 7.2. | &nbsp; |
 | Support for Data Classification sensitivity metadata retrieval. | Requires SQL Server 2019 and ODBC Driver 17.4 or above. |
-| Support for Always Encrypted with secure enclaves. | Requires ODBC Driver 17.5 or above. |
+| Support for Always Encrypted with secure enclaves. | Requires ODBC Driver 17.4 or above. |
 | Support configurable options for locale settings in Linux and macOS. |
-| Improved performance by caching metadata on fetches. | &nbsp; |
+| Improved performance by caching metadata on fetches and omitting redundant calls. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## What's New in Version 5.6

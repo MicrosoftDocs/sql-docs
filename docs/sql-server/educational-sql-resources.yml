@@ -154,7 +154,7 @@ landingContent:
         url: https://docs.microsoft.com/learn/modules/run-sql-server-2017-linux-containers/
     - linkListType: quickstart
       links:
-      - text: Red hat
+      - text: Red Hat
         url: ../linux/quickstart-install-connect-red-hat.md
       - text: SUSE
         url: ../linux/quickstart-install-connect-suse.md
@@ -168,11 +168,11 @@ landingContent:
       links:
       - text: Migrate from Windows
         url: ../linux/sql-server-linux-migrate-restore-database.md
-      - text: Migrate to docker
+      - text: Migrate to Docker
         url: ../linux/tutorial-restore-backup-in-sql-server-container.md
       - text: Create a job
         url: ../linux/sql-server-linux-run-sql-server-agent-job.md
-      - text: Setup AD authentication 
+      - text: Setup Active Directory authentication 
         url: ../linux/sql-server-linux-active-directory-authentication.md
       - text: Configure FCI
         url: ../linux/sql-server-linux-shared-disk-cluster-configure.md

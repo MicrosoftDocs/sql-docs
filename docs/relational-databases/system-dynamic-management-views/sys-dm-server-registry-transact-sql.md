@@ -61,7 +61,7 @@ WHERE registry_key LIKE N'%SQLAgent%';
 ```  
 SELECT registry_key, value_name, value_data  
 FROM sys.dm_server_registry  
-WHERE registry_key = N'CurrentVersion';  
+WHERE value_name = N'CurrentVersion';  
 ```  
   
 ### D. Display the parameters passed to the instance of SQL Server during startup  

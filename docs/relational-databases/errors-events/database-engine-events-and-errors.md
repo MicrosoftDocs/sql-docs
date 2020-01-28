@@ -2187,11 +2187,12 @@ ORDER BY message_id
 |	4863	|	16	|	No	|	Bulk load data conversion error (truncation) for row %d, column %d (%ls).	|
 |	4864	|	16	|	No	|	Bulk load data conversion error (type mismatch or invalid character for the specified codepage) for row %d, column %d (%ls).	|
 |	4865	|	16	|	No	|	Cannot bulk load because the maximum number of errors (%d) was exceeded.	|
-|	4866	|	16	|	No	|	The bulk load failed. The column is too long in the data file for row %d, column %d. Verify that the field terminator and row terminator are specified correctly.	|
+|	4866	|	16	|	No	|	The bulk load failed. The column is too long in the data file for row %d, column %d. Verify that the field terminator and row terminator are specified correctly.	| Bulk load failed due to invalid column value in CSV data file %ls in row %d, column %d | 
 |	4867	|	16	|	No	|	Bulk load data conversion error (overflow) for row %d, column %d (%ls).	|
 |	4868	|	16	|	No	|	The bulk load failed. The codepage "%d" is not installed. Install the codepage and run the command again.	|
 |	4869	|	16	|	No	|	The bulk load failed. Unexpected NULL value in data file row %d, column %d. The destination column (%ls) is defined as NOT NULL.	|
 |	4870	|	16	|	No	|	Cannot bulk load because of an error writing file "%ls". Operating system error code %ls.	|
+|   4879    |   16  |   No  | 
 |	4871	|	16	|	No	|	Bulk load error while attempting to log errors.	|
 |	4872	|	16	|	No	|	Line %d in format file "%ls": duplicate element id "%ls".	|
 |	4873	|	16	|	No	|	Line %d in format file "%ls": referencing non-existing element id "%ls".	|

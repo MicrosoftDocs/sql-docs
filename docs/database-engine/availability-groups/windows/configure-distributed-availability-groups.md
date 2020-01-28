@@ -2,7 +2,7 @@
 title: "Configure a distributed availability group"
 description: "Describes how to create and configure an Always On distributed availability group. " 
 ms.custom: "seodec18"
-ms.date: "08/17/2017"
+ms.date: "01/28/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability

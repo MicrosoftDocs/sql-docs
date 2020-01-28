@@ -1,7 +1,7 @@
 ---
 title: "Database engine events and errors"
 ms.custom: ""
-ms.date: 01/11/2019
+ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability

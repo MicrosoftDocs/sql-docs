@@ -7,9 +7,9 @@ ms.date: 01/26/2020
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-_Original version of product:_ 2008  
-_Original KB date:_ 11/05/2018  
-_Original KB number:_ 2216485
+_Original version of product:_ &nbsp; 2008  
+_Original KB date:_ &nbsp; 11/05/2018  
+_Original KB number:_ &nbsp; 2216485
 
 ## Symptoms
 
@@ -76,7 +76,7 @@ The following are descriptions of the various fields that are used in this messa
 
 - **Memory freed:** This field is how much memory is freed by Resource Monitor for the specified interval. It is measured in kilobytes. If the rate at which the memory is freed does not exceed 2 MB every 5 seconds, the Scheduler Monitor detects this condition as a non-yielding condition.
 
-- **Last wait:** This field is the last wait type for the Resource Monitor thread. You can use this field in combination with the **Approx CPU Used** field. This field combination can identify whether the Resource Monitor thread is running or waiting for a significant part of the interval.
+- **Last wait:** This field is the last wait type for the Resource Monitor thread. You can use this field in combination with the _Approx CPU Used_ field. This field combination can identify whether the Resource Monitor thread is running or waiting for a significant part of the interval.
 
 - **Last clerk:** This field is the type and name of the memory clerk that was trimming its memory when the non-yielding condition occurred.
 
@@ -89,6 +89,6 @@ You can use this message to identify the source of the low memory notification. 
 For more information about how to interpret the RING_BUFFER_RESOURCE MONITOR, see the following MSDN blog:
 - [How It Works: What are the RING_BUFFER_RESOURCE_MONITOR telling me?](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-what-are-the-ring-buffer-resource-monitor-telling/ba-p/315837)
 
-The Resource Monitor task can troubleshoot memory-related performance issues in SQL Server. SQL Server listens and responds to memory notifications. For more information about these items, see the following MSDN blog articles:
+The Resource Monitor task can troubleshoot memory-related performance issues in SQL Server. SQL Server listens for, and responds to, memory notifications. For more information about these items, see the following MSDN blog articles:
 - [The SQL Server Working Set Message](https://techcommunity.microsoft.com/t5/sql-server-support/the-sql-server-working-set-message/ba-p/315418)
 - [Troubleshooting Performance Problems in SQL Server 2008](https://msdn.microsoft.com/library/dd672789%28v=sql.100%29.aspx)

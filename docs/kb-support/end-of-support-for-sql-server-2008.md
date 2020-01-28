@@ -7,9 +7,9 @@ ms.date: 01/26/2020
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-_Original version of product:_ 2008  
-_Original KB date:_ 07/31/2018  
-_Original KB number:_ 4456242
+_Original version of product:_ &nbsp; 2008  
+_Original KB date:_ &nbsp; 07/31/2018  
+_Original KB number:_ &nbsp; 4456242
 
 <!--
 WAS:   https://support.microsoft.com/help/4456242/end-of-support-for-sql-server-2008-and-sql-server-2008-r2
@@ -33,10 +33,10 @@ Customers who use these versions of SQL Server products and services should take
 
 ## More information
 
-The following SQL Server 2008 and SQL Server 2008 R2 products are approaching end of support:
+The following table concerns products for SQL Server 2008 and SQL Server 2008 R2. The table shows the dates on which each product will reach, or has reached, the end of its support by Microsoft:
 
-|**Product**|**End of [Extended Support](https://support.microsoft.com/help/14085)**|
-|---|---|
+| Product | End dates of [Extended Support](https://support.microsoft.com/help/14085) |
+| :------ | :------------------------------------------------------------------------ |
 |Microsoft SQL Server 2008 Developer|7/9/2019|
 |Microsoft SQL Server 2008 Enterprise|7/9/2019|
 |Microsoft SQL Server 2008 Express|7/9/2019|

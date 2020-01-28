@@ -1,0 +1,8 @@
+# - name: KB Support
+#   items:
+
+- name: End of support for SQL Server 2008
+  href: end-of-support-for-sql-server-2008.md
+
+- name: Resource Monitor non-yielding condition
+  href: resource-monitor-non-yielding-condition.md

@@ -129,11 +129,11 @@ A request can match against multiple classifiers.  There is a weighting for the 
 
 |Classifier Parameter |Weight   |
 |---------------------|---------|
-|USER                 |16       |
-|ROLE                 |8        |
-|WLM_LABEL            |4        |
-|WLM_CONTEXT          |2        |
-|START_TIME/END_TIME  |1        |
+|USER                 |64       |
+|ROLE                 |32       |
+|WLM_LABEL            |16       |
+|WLM_CONTEXT          |8        |
+|START_TIME/END_TIME  |4        |
 
 Consider the following classifier configurations.
 
@@ -152,9 +152,9 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
  ,END_TIME       = '07:00' )
 ```
 
-The user `userloginA` is configured for both classifiers.  If userloginA runs a query with a label equal to `salesreport` between 6PM and 7AM UTC, the request will be classified to the wgDashboards workload group with HIGH importance.  The expectation may be to classify the request to wgUserQueries with LOW importance for off-hours reporting, but the weighting of WLM_LABEL is higher than START_TIME/END_TIME.  The weighting of classiferA is 20 (16 for user, plus 4 for WLM_LABEL).  The weighting of classifierB is 16 (16 for user, 0 for START_TIME/END_TIME).  In this case, you can add WLM_LABEL to classiferB.
+The user `userloginA` is configured for both classifiers.  If userloginA runs a query with a label equal to `salesreport` between 6PM and 7AM UTC, the request will be classified to the wgDashboards workload group with HIGH importance.  The expectation may be to classify the request to wgUserQueries with LOW importance for off-hours reporting, but the weighting of WLM_LABEL is higher than START_TIME/END_TIME.  The weighting of classiferA is 80 (64 for user, plus 16 for WLM_LABEL).  The weighting of classifierB is 68 (64 for user, 4 for START_TIME/END_TIME).  In this case, you can add WLM_LABEL to classiferB.
 
- For more information see, [workload classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence).
+ For more information see, [workload weighting](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting).
 
 ## Permissions
 

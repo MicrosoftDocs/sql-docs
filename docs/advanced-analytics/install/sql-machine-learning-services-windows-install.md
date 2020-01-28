@@ -217,7 +217,7 @@ Use the following steps to verify that all components used to launch external sc
     
 2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md). 
    
-3. If Launchpad is running, run simple R and Python scripts to verify that external scripting runtimes can communicate with SQL Server.
+3. If Launchpad is running, you can run simple Python and R scripts to verify that external scripting runtimes can communicate with SQL Server.
 
    Open a new **Query** window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then run a script such as:
    + For R

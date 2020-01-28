@@ -22,29 +22,29 @@ To open this page, start SQL Server Management Studio, connect to a report serve
 ## Options
 
 ### AccessControlAllowCredentials
-(Power BI Report Server & Reporting Services 2017 and later only) Indicates whether the response to the client request can be exposed when the `credentials` flag is set to true. The default value is **false**.
+(Power BI Report Server, Reporting Services 2017 and later only) Indicates whether the response to the client request can be exposed when the `credentials` flag is set to true. The default value is **false**.
 
 ### AccessControlAllowHeaders
-(Power BI Report Server & Reporting Services 2017 and later only) A comma-separated list of headers that the server will allow when a client makes a request. This property can be an empty string, specifying * will allow all headers.
+(Power BI Report Server, Reporting Services 2017 and later only) A comma-separated list of headers that the server will allow when a client makes a request. This property can be an empty string, specifying * will allow all headers.
 
 ### AccessControlAllowMethods
-(Power BI Report Server & Reporting Services 2017 and later only) A comma-separated list of HTTP methods that the server will allow when a client makes a request. The default values are (GET, PUT, POST, PATCH, DELETE), specifying * will allow all methods.
+(Power BI Report Server, Reporting Services 2017 and later only) A comma-separated list of HTTP methods that the server will allow when a client makes a request. The default values are (GET, PUT, POST, PATCH, DELETE), specifying * will allow all methods.
 
 ### AccessControlAllowOrigin
-(Power BI Report Server & Reporting Services 2017 and later only) A comma-separated list of origins that the server will allow when a client makes a request. The default value is blank, which prevents all requests, specifying * will allow all origins when credentials are not set; if credentials are specified an explicit list of origins must be specified.
+(Power BI Report Server, Reporting Services 2017 and later only) A comma-separated list of origins that the server will allow when a client makes a request. The default value is blank, which prevents all requests, specifying * will allow all origins when credentials are not set; if credentials are specified an explicit list of origins must be specified.
 
 ### AccessControlExposeHeaders
-(Power BI Report Server & Reporting Services 2017 and later only) A comma-separated list of headers that the server will expose to clients. The default value is blank.
+(Power BI Report Server, Reporting Services 2017 and later only) A comma-separated list of headers that the server will expose to clients. The default value is blank.
 
 ### AccessControlMaxAge
-(Power BI Report Server & Reporting Services 2017 and later only) Specifies the number of seconds the results of the preflight request can be cached. The default value is 600 (10 minutes).
+(Power BI Report Server, Reporting Services 2017 and later only) Specifies the number of seconds the results of the preflight request can be cached. The default value is 600 (10 minutes).
 
 ### AllowedResourceExtensionsForUpload
-(Power BI Report Server & Reporting Services 2017 and later only) Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
+(Power BI Report Server, Reporting Services 2017 and later only) Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
 
 ### CustomHeaders 
 
-(only in SQL Server 2019 Reporting Services and Power BI Report Server January 2020 and later)
+(Power BI Report Server January 2020, Reporting Services 2019 and later only)
 
 Sets header values for all URLs matching the specified regex pattern. Users can update the CustomHeaders value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default, there are no custom headers and value is blank. 
 
@@ -155,7 +155,7 @@ Set the Execution Log Level. *Default is Normal.*
 Determines the length of time within which an external image file must be retrieved before the connection is timed out. The default is **600** seconds.  
 
 ### InterProcessTimeoutMinutes
-(Power BI Report Server & Reporting Services 2019 only) Set the process timeout in minutes. *Default is 30.*
+(Power BI Report Server, Reporting Services 2019 and later only) Set the process timeout in minutes. *Default is 30.*
 
 ### MaxFileSizeMb
 Set the max file size of the report in MB. *Default is 1000.  Max is 2000.*
@@ -170,7 +170,7 @@ Set the max file size of the report in MB. *Default is 1000.  Max is 2000.*
 The name of the role used when creating security policies on user's My Reports folders. The default value is **My Reports Role**.  
 
 ### OfficeAccessTokenExpirationSeconds 
-(Power BI Report Server & Reporting Services 2019 only) Set for how long you want the office access token to expire in seconds. *Default is 60.*
+(Power BI Report Server, Reporting Services 2019 and later only) Set for how long you want the office access token to expire in seconds. *Default is 60.*
 
 ### OfficeOnlineDiscoveryURL 
 (Power BI Report Server only) Set the address of your Office Online Server instance for viewing Excel Workbooks.
@@ -179,10 +179,10 @@ The name of the role used when creating security policies on user's My Reports f
 RDLX report *(Power View reports in a SharePoint Server)* processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace do not time out during processing. The default value is **1800**.
 
 ### RequireIntune
-(Power BI Report Server & Reporting Services 2017 and later only) Requires Intune to access your organization's reports via the Power BI mobile app. *Default is False.*
+(Power BI Report Server, Reporting Services 2017 and later only) Requires Intune to access your organization's reports via the Power BI mobile app. *Default is False.*
 
 ### RestrictedResourceMimeTypeForUpload
-(Power BI Report Server & Reporting Services 2017 and later only) Set of mime types users aren't allowed to upload content with. Any resources that are already stored with a restricted mime type can only be downloaded as an application/octet-stream instead of being opened/executed by the browser.  By default, there are no restricted items in this list, but we recommended that organizations populate this to provide the most secure experience.
+(Power BI Report Server January 2019, Reporting Services 2017 and later only) Set of mime types users aren't allowed to upload content with. Any resources that are already stored with a restricted mime type can only be downloaded as an application/octet-stream instead of being opened/executed by the browser.  By default, there are no restricted items in this list, but we recommended that organizations populate this to provide the most secure experience.
 
 ### ScheduleRefreshTimeoutMinutes 
 (Power BI Report Server only) Data refresh timeout in minutes for scheduled refresh on Power BI reports with embedded AS models. Default is 120 minutes.
@@ -194,7 +194,7 @@ The length of time, in seconds, that a session remains active. The default value
 This read-only property indicates the server mode. If this value is False, the report server runs in native mode.  
 
 ### ShowDownloadMenu
-(Power BI Report Server & Reporting Services 2017 and later only) Enables the client tools download menu. *Default is true.*
+(Power BI Report Server, Reporting Services 2017 and later only) Enables the client tools download menu. *Default is true.*
 
 ### SiteName
 The name of the report server site displayed in the page title of the web portal. The default value is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. This property can be an empty string. The maximum length is 8,000 characters.  
@@ -215,7 +215,7 @@ Specifies the maximum number of days that a stored parameter can be stored. Vali
 Specifies the maximum number of parameter values that can be stored by the report server. Valid values are **-1**, **+1** through **2,147,483,647**. The default value is **1500**.  
 
 ### SupportedHyperlinkSchemes 
-(Power BI Report Server & Reporting Services 2019 only) Sets a comma separated list of the URI schemes allowed to be defined on Hyperlink actions that are allowed to be rendered or “&ast;” to enable all hyperlink schemes. For example, setting “http,https” would allow hyperlinks to “https://www. contoso.com”, but would remove hyperlinks to “mailto:bill@contoso.com” or “javascript:window.open(‘www.contoso.com’, ‘_blank’)”. Default is “&ast;”.
+(Power BI Report Server January 2019, Reporting Services 2019 and later only) Sets a comma separated list of the URI schemes allowed to be defined on Hyperlink actions that are allowed to be rendered or “&ast;” to enable all hyperlink schemes. For example, setting “http,https” would allow hyperlinks to “https://www. contoso.com”, but would remove hyperlinks to “mailto:bill@contoso.com” or “javascript:window.open(‘www.contoso.com’, ‘_blank’)”. Default is “&ast;”.
 
 ### SystemReportTimeout
 The default report processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace do not time out during processing. The default value is **1800**.  
@@ -224,10 +224,10 @@ The default report processing timeout value, in seconds, for all reports managed
 The maximum number of snapshots that are stored for a report. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, there is no snapshot limit.  
 
 ### TimerInitialDelaySeconds
-(Power BI Report Server & Reporting Services 2017 and later only) Set for how long you want the initial time to be delayed in seconds. *Default is 60.*
+(Power BI Report Server, Reporting Services 2017 and later only) Set for how long you want the initial time to be delayed in seconds. *Default is 60.*
 
 ### TrustedFileFormat
-(Power BI Report Server & Reporting Services 2017 and later only) Set all the external file formats that open within the browser under the Reporting Services portal site. External file formats not listed prompts to download the option in the browser. The default values are jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png.
+(Power BI Report Server, Reporting Services 2017 and later only) Set all the external file formats that open within the browser under the Reporting Services portal site. External file formats not listed prompts to download the option in the browser. The default values are jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png.
 
 ### UseSessionCookies
 Indicates whether the report server should use session cookies when communicating with client browsers. The default value is **true**.  

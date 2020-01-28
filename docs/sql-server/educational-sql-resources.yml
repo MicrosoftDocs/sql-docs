@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Educational SQL Resources
+title: Educational SQL resources
 summary: Tutorials, quickstarts, and other educational resources meant to teach you to work with SQL Server and Azure SQL Database.  
 
 metadata:
-  title: Educational SQL Resources 
+  title: Educational SQL resources 
   description: A collection of tutorials and quickstarts meant to teach you to use SQL Server and Azure SQL Database. 
   ms.prod: sql
   ms.topic: landing-page
@@ -18,9 +18,9 @@ landingContent:
     - linkListType: learn
       links:
       - text: Upgrade SQL Server
-        url: https://docs.microsoft.com/en-us/learn/modules/introduction-upgrading-sql-server/
+        url: https://docs.microsoft.com/learn/modules/introduction-upgrading-sql-server/
       - text: Use the Query Tuning Assistant
-        url: https://docs.microsoft.com/en-us/learn/modules/use-sql-server-query-tuning-assistant/
+        url: https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/
       - text: SQL Server workshops
         url: https://aka.ms/sqlworkshops
     - linkListType: quickstart
@@ -97,13 +97,13 @@ landingContent:
     - linkListType: learn
       links:
       - text: Choose data storage approach
-        url: https://docs.microsoft.com/en-us/learn/modules/choose-storage-approach-in-azure/
+        url: https://docs.microsoft.com/learn/modules/choose-storage-approach-in-azure/
       - text: Secure SQL Database
-        url: https://docs.microsoft.com/en-us/learn/modules/secure-your-azure-sql-database/
+        url: https://docs.microsoft.com/learn/modules/secure-your-azure-sql-database/
       - text: Geographically distributed app
-        url: https://docs.microsoft.com/en-us/learn/modules/design-a-geographically-distributed-application/
+        url: https://docs.microsoft.com/learn/modules/design-a-geographically-distributed-application/
       - text: ASP.NET App to query SQL Database
-        url: https://docs.microsoft.com/en-us/learn/modules/develop-app-that-queries-azure-sql/
+        url: https://docs.microsoft.com/learn/modules/develop-app-that-queries-azure-sql/
     - linkListType: quickstart
       links:
       - text: Create DB with portal or code 
@@ -145,13 +145,13 @@ landingContent:
     - linkListType: learn
       links:
       - text: Introduction
-        url: https://docs.microsoft.com/en-us/learn/modules/introduction-sql-server-linux/
+        url: https://docs.microsoft.com/learn/modules/introduction-sql-server-linux/
       - text: Deploy
-        url: https://docs.microsoft.com/en-us/learn/modules/deploy-sql-server-linux/
+        url: https://docs.microsoft.com/learn/modules/deploy-sql-server-linux/
       - text: Automatically tune
-        url: https://docs.microsoft.com/en-us/learn/modules/automatically-tune-sql-server-linux/
+        url: https://docs.microsoft.com/learn/modules/automatically-tune-sql-server-linux/
       - text: Containers  
-        url: https://docs.microsoft.com/en-us/learn/modules/run-sql-server-2017-linux-containers/
+        url: https://docs.microsoft.com/learn/modules/run-sql-server-2017-linux-containers/
     - linkListType: quickstart
       links:
       - text: Red hat

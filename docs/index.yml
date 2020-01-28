@@ -154,7 +154,7 @@ additionalContent:
           - text: Database samples
             url: samples/sql-samples-where-are.md
 
-      - title: Reporting & Analysis
+      - title: Reporting & analysis
         links: 
           - text: Power BI Report Server
             url: https://docs.microsoft.com/power-bi/report-server/get-started

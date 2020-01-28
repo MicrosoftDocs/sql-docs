@@ -1406,6 +1406,11 @@
       "redirect_document_id": true
     },    
     {
+      "source_path": "docs/lp/sql-server/install-sql-and-services.md",
+      "redirect_url": "/sql/sql-server/",
+      "redirect_document_id": false
+    },    
+    {
       "source_path": "docs/lp/sql-server/business-continuity.md",
       "redirect_url": "/sql/sql-server/",
       "redirect_document_id": false

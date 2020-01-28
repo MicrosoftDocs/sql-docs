@@ -1409,6 +1409,41 @@
       "source_path": "docs/linux/sql-server-linux-shared-disk-cluster-red-hat-7-troubleshoot.md",
       "redirect_url": "/sql/linux/sql-server-linux-shared-disk-cluster-red-hat-7-operate",
       "redirect_document_id": true
+    },    
+    {
+      "source_path": "docs/lp/sql-server/install-sql-and-services.md",
+      "redirect_url": "/sql/sql-server/",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path": "docs/lp/sql-server/business-continuity.md",
+      "redirect_url": "/sql/sql-server/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/lp/sql-server/database-design.md",
+      "redirect_url": "/sql/sql-server/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/lp/sql-server/manage-monitor-tune.md",
+      "redirect_url": "/sql/sql-server/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/lp/sql-server/query-data.md",
+      "redirect_url": "/sql/sql-server/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/lp/sql-server/secure-sql-server.md",
+      "redirect_url": "/sql/sql-server/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/lp/sql-server/sql-education-center.md",
+      "redirect_url": "/sql/sql-server/educational-sql-resources",
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/ado/guide/appendixes/using-ado-with-microsoft-visual-j.md",

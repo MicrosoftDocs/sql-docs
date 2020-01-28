@@ -46,14 +46,14 @@ To open this page, start SQL Server Management Studio, connect to a report serve
 
 (only in SQL Server 2019 Reporting Services and Power BI Report Server January 2020 and later)
 
-Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default, there are no custom headers and value is blank. 
+Sets header values for all URLs matching the specified regex pattern. Users can update the CustomHeaders value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default, there are no custom headers and value is blank. 
 
 > [!NOTE]
 > Too many headers may impact performance. 
 
 We recommend validating the configuration of your topology to ensure the set of headers is compatible with your deployment of Reporting Services. It's possible to choose settings that cause errors in browsers if the browsers don't also have the appropriate settings. For example, you shouldn't add a HSTS configuration if your server isn't configured for https. Incompatible headers may result in browser rendering errors.
 
-#### Custom headers XML format
+#### CustomHeaders XML format
 
 ```xml
 <CustomHeaders>
@@ -65,10 +65,10 @@ We recommend validating the configuration of your topology to ensure the set of 
 </CustomHeaders>
 ```
 
-#### Setting the custom header property
+#### Setting the CustomHeaders property
 
-- You can set it using [SetSystemProperties](https://docs.microsoft.com/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP endpoint passing CustomHeader property as parameter.
-- You can use REST endpoint [UpdateSystemProperties](https://app.swaggerhub.com/apis/microsoft-rs/PBIRS/2.0#/System/UpdateSystemProperties):  `/System/Properties` passing CustomHeader property
+- You can set it using [SetSystemProperties](https://docs.microsoft.com/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP endpoint passing CustomHeaders property as parameter.
+- You can use REST endpoint [UpdateSystemProperties](https://app.swaggerhub.com/apis/microsoft-rs/PBIRS/2.0#/System/UpdateSystemProperties):  `/System/Properties` passing CustomHeaders property
 
 #### Example
 

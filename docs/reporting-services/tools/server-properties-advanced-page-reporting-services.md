@@ -7,7 +7,7 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/16/2020
+ms.date: 01/28/2020
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 
@@ -17,14 +17,12 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 Use this page to set system properties on the report server. There are a number of ways to set system properties. This tool provides a graphical user interface so that you can set properties without having to write code.
 
-To open this page, start SQL Server Management Studio, connect to a report server instance, right-click the report server name, and select **Properties**. Select **Advanced** to open this page.
+To open this page, start SQL Server Management Studio, connect to a report server instance, right-click the report server name, and select **Properties**. Select **Advanced** to open this page. Below are the available properties.
 
-## Options
-
-### AccessControlAllowCredentials
+## AccessControlAllowCredentials
 (Power BI Report Server & Reporting Services 2017 and later only) Indicates whether the response to the client request can be exposed when the `credentials` flag is set to true. The default value is **false**.
 
-### AccessControlAllowHeaders
+## AccessControlAllowHeaders
 (Power BI Report Server & Reporting Services 2017 and later only) A comma-separated list of headers that the server will allow when a client makes a request. This property can be an empty string, specifying * will allow all headers.
 
 ### AccessControlAllowMethods
@@ -39,7 +37,7 @@ To open this page, start SQL Server Management Studio, connect to a report serve
 ### AccessControlMaxAge
 (Power BI Report Server & Reporting Services 2017 and later only) Specifies the number of seconds the results of the preflight request can be cached. The default value is 600 (10 minutes).
 
-### AllowedResourceExtensionsForUpload
+## AllowedResourceExtensionsForUpload
 (Power BI Report Server & Reporting Services 2017 and later only) Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
 
 ### CustomHeaders 
@@ -139,7 +137,7 @@ Indicates whether the My Reports feature is enabled. A value of **true** indicat
 ### EnableRemoteErrors
 Includes external error information (for example, error information about report data sources) with the error messages that are returned for users who request reports from remote computers. Valid values are **true** and **false**. The default value is **false**. For more information, see [Enable Remote Errors &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
 
-### EnableTestConnectionDetailedErrors
+## EnableTestConnectionDetailedErrors
 Indicates whether to send detailed error messages to the client computer when users test data source connections using the report server. The default value is **true**. If the option is set to **false**, only generic error messages are sent.
 
 ###  ExecutionLogDaysKept  

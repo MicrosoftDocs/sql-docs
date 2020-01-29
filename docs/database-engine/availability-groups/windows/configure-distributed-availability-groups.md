@@ -260,7 +260,7 @@ The following Transact-SQL examples demonstrate the detailed steps to fail over 
    >In a distributed availability group, the synchronization status between the two availability groups depends on the availability mode of both replicas. For synchronous commit mode, both the current primary availability group, and the current secondary availability group must have `SYNCHRONOUS_COMMIT` availability mode. For this reason, you must run the script above on both the global primary replica, and the forwarder.
 
 
-1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED` and all replicas have the same last_hardened_lsn (per database_id). Run the following query on both the global primary, which is the primary replica of the primary availability group, and the forwarder to check the synchronization_state_desc and last_hardened_lsn: 
+1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED` and all replicas have the same last_hardened_lsn (per database). Run the following query on both the global primary, which is the primary replica of the primary availability group, and the forwarder to check the synchronization_state_desc and last_hardened_lsn: 
     
       ```sql  
       SELECT ag.name
@@ -275,7 +275,7 @@ The following Transact-SQL examples demonstrate the detailed steps to fail over 
           WHERE drs.group_id = ag.group_id;      
       ```  
 
-    Proceed after the availability group **synchronization_state_desc** is `SYNCHRONIZED`, and the last_hardened_lsn is the same on both the global primary and forwarder per database.  If **synchronization_state_desc** is not `SYNCHRONIZED` or last_hardened_lsn is not the same, run the command every five seconds until it changes. Do not proceed until the **synchronization_state_desc** = `SYNCHRONIZED` and last_hardened_lsn is the same per database. 
+    Proceed after the availability group **synchronization_state_desc** is `SYNCHRONIZED`, and the last_hardened_lsn is the same per datbase on both the global primary and forwarder.  If **synchronization_state_desc** is not `SYNCHRONIZED` or last_hardened_lsn is not the same, run the command every five seconds until it changes. Do not proceed until the **synchronization_state_desc** = `SYNCHRONIZED` and last_hardened_lsn is the same per database. 
 
 1. On the global primary, set the distributed availability group role to `SECONDARY`. 
 

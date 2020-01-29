@@ -16,7 +16,7 @@ The following instructions assume a clean environment and show how to install PH
 
 These instructions install PHP 7.4 by default. Note that some supported Linux distros default to PHP 7.1 or earlier, which is not supported for the latest version of the PHP drivers for SQL Server -- please see the notes at the beginning of each section to install PHP 7.2 or 7.3 instead.
 
-Also included are instructions for installing the PHP FastCGI Process Manager, PHP-FPM, on Ubuntu. You likely need this if you are using the nginx web server.
+Also included are instructions for installing the PHP FastCGI Process Manager, PHP-FPM, on Ubuntu. This is needed if using the nginx web server instead of Apache.
 
 ## Contents of this page:
 
@@ -301,6 +301,48 @@ sudo systemctl restart apache2
 ```
 To test your installation, see [Testing your installation](#testing-your-installation) at the end of this document.
 
+## Installing the drivers on Alpine 3.11
+
+> [!NOTE]
+> The default version of PHP is 7.3. Alternate versions of PHP are not available from other repositories for Alpine 3.11. You can instead compile PHP from source.
+
+### Step 1. Install PHP
+PHP packages for Alpine are found in the `edge/community` repository. Add the following line to `/etc/apt/repositories`, replacing `<mirror>` with the URL of an Alpine repository mirror:
+```
+http://<mirror>/alpine/edge/community
+```
+Then run:
+```
+sudo su
+apk update
+apk add -y php7 php7-dev php7-pear php7-pdo php7-openssl autoconf make g++
+```
+### Step 2. Install prerequisites
+Install the ODBC driver for Debian by following the instructions on the [Linux and macOS installation page](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
+
+### Step 3. Install the PHP drivers for Microsoft SQL Server
+```
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
+sudo su
+echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/pdo_sqlsrv.ini
+echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/sqlsrv.ini
+```
+You may need to define a locale:
+```
+export LC_ALL=C
+```
+### Step 4. Install Apache and configure driver loading
+```
+sudo apk add php7-apache2 apache2
+```
+### Step 5. Restart Apache and test the sample script
+```
+sudo rc-service apache2 restart
+```
+To test your installation, see [Testing your installation](#testing-your-installation) at the end of this document.
+
+
 ## Installing the drivers on macOS High Sierra, Mojave, and Catalina
 
 If you do not already have it, install brew as follows:
@@ -357,7 +399,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 ## Testing Your Installation
 
-To test this sample script, create a file called testsql.php in your system's document root. This is `/var/www/html/` on Ubuntu, Debian, and Redhat, `/srv/www/htdocs` on SUSE, or `/usr/local/var/www` on macOS. Copy the following script to it, replacing the server, database, username, and password as appropriate.
+To test this sample script, create a file called testsql.php in your system's document root. This is `/var/www/html/` on Ubuntu, Debian, and Redhat, `/srv/www/htdocs` on SUSE, `/var/www/localhost/htdocs` on Alpine, or `/usr/local/var/www` on macOS. Copy the following script to it, replacing the server, database, username, and password as appropriate.
 ```
 <?php
 $serverName = "yourServername";

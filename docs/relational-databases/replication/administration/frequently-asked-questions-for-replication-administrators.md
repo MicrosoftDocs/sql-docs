@@ -107,7 +107,10 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ### Does replication work over low bandwidth connections? Does it use compression?  
  Yes, replication does work over low bandwidth connections. For connections over TCP/IP, it uses the compression provided by the protocol but does not provide additional compression. For Web synchronization connections over HTTPS, it uses the compression provided by the protocol and also additional compression of the XML files used to replicate changes.  
-  
+
+### Does replication work with connection with IP address or name other than the actual server name?
+No, replication only work with actual server name. If you are using SSMS, from SSMS 18.0, replication can be configured with the actual server name with port number.
+
 ## Logins and Object Ownership  
   
 ### Are logins and passwords replicated?  

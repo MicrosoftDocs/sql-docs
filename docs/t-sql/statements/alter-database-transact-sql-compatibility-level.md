@@ -147,7 +147,7 @@ For more details, including the recommended workflow for upgrading Database Comp
 ## Differences between Compatibility Levels
 For all installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default compatibility level is associated with the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], as seen in [this table](#supported-dbcompats). For new development work, always plan to certify applications on the latest Database Compatibility Level.
 
-New [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax and reserved keywords is not gated by database compatibility level, except when new syntax can break existing applications by creating a conflict with user [!INCLUDE[tsql](../../includes/tsql-md.md)] code. These exceptions are documented in the next sections of this article that outline the differences between specific compatibility levels.
+New [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax is not gated by database compatibility level, except when they can break existing applications by creating a conflict with user [!INCLUDE[tsql](../../includes/tsql-md.md)] code. These exceptions are documented in the next sections of this article that outline the differences between specific compatibility levels.
 
 Database Compatibility Level also provides backward compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], because databases attached or restored from any earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retain their existing compatibility level (if same or higher than the minimum allowed compatibility level). This was discussed in the [Using compatibility level for backward compatibility](#backwardCompat) section of this article.
 

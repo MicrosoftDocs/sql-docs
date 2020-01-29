@@ -1,13 +1,15 @@
 ---
-title: Resource Monitor non-yielding condition in SQL Server
+title: Resource Monitor nonyielding condition in SQL Server (KB 2216485)
 description: Describes the issue in which the Resource Monitor enters a non-yielding condition on a server that is running SQL Server.
 ms.date: 01/27/2020
 ---
-# Resource Monitor enters a non-yielding condition on a server that is running SQL Server (KB 2216485)
+# Resource Monitor enters a nonyielding condition on a server running SQL Server
 
 _Original version of product:_ &nbsp; 2008  
 _Original KB date:_ &nbsp; 11/05/2018  
 _Original KB number:_ &nbsp; 2216485
+
+This article explains the behavior of the Resource Monitor when nonyielding memory conditions occur in SQL Server.
 
 ## Symptoms
 

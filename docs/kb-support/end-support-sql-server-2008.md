@@ -1,9 +1,9 @@
 ---
-title: End of support for SQL Server 2008 and SQL Server 2008 R2
+title: End of support for SQL Server 2008 and SQL Server 2008 R2 (KB 4456242)
 description: SQL Server 2008 and SQL Server 2008 R2 are approaching the end of their support life cycle.
 ms.date: 01/27/2020
 ---
-# End of support for SQL Server 2008 and SQL Server 2008 R2 (KB 4456242)
+# End of support for SQL Server 2008 and SQL Server 2008 R2
 
 <!--
 GeneMi:  No 'AppliesTo' include in these 'kb-support/' articles...
@@ -14,12 +14,9 @@ _Original version of product:_ &nbsp; 2008
 _Original KB date:_ &nbsp; 07/31/2018  
 _Original KB number:_ &nbsp; 4456242
 
-<!--
-ORIGINAL HTTPS URL WAS...
-https://support.microsoft.com/help/4456242/end-of-support-for-sql-server-2008-and-sql-server-2008-r2
--->
+This article discusses the end of support for SQL Server 2008.
 
-## Summary
+## summary
 
 Microsoft SQL Server 2008 and SQL Server 2008 R2 are approaching the end of [Extended Support](https://support.microsoft.com/lifecycle). As of the dates in the table below, there will be no additional:
 
@@ -88,3 +85,8 @@ The [Azure Migration Center](https://azure.microsoft.com/migration/) has a full 
 - Optimize your Azure usage to best suit your needs.
 
 Microsoft also works with many partners who are available to help you at every step of the journey.
+
+<!--
+ORIGINAL HTTPS URL WAS...
+https://support.microsoft.com/help/4456242/end-of-support-for-sql-server-2008-and-sql-server-2008-r2
+-->

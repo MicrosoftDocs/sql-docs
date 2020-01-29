@@ -230,7 +230,7 @@ Only manual failover is supported at this time. To manually fail over a distribu
 
 The following Transact-SQL examples demonstrate the detailed steps to fail over the distributed availability group named `distributedag`:
 
-1. To ensure that no data is lost, stop all transactions on the global primary databases (taht is, databases of the primary availability group). Then set the distributed availability group to synchronous commit by running the following code on *both* the global primary and the forwarder.   
+1. To ensure that no data is lost, stop all transactions on the global primary databases (that is, databases of the primary availability group). Then set the distributed availability group to synchronous commit by running the following code on *both* the global primary and the forwarder.   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 
@@ -265,6 +265,7 @@ The following Transact-SQL examples demonstrate the detailed steps to fail over 
       ```sql  
       SELECT ag.name
              , drs.database_id
+             , db_name(database_id)
              , drs.group_id
              , drs.replica_id
              , drs.synchronization_state_desc
@@ -302,9 +303,8 @@ The following Transact-SQL examples demonstrate the detailed steps to fail over 
     ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
     ```
 
-    Start over from the second step, and set the ROLE to SECONDARY once more. The global primary and replicas should be in synchronized state, and they should have the same last_hardened_lsn per database. 
 
-1. Fail over from the primary availability group to the secondary availability group. Run the following command on the forwarder, the SQL Server that hosts the primary replica of the secondary availablity group. 
+1. Fail over from the primary availability group to the secondary availability group. Run the following command on the forwarder, the SQL Server that hosts the primary replica of the secondary availability group. 
 
     ```sql
     ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 

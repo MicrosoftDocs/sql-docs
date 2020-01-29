@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4456242
 
 This article discusses the end of support for SQL Server 2008.
 
-## summary
+## Summary
 
 Microsoft SQL Server 2008 and SQL Server 2008 R2 are approaching the end of [Extended Support](https://support.microsoft.com/lifecycle). As of the dates in the table below, there will be no additional:
 

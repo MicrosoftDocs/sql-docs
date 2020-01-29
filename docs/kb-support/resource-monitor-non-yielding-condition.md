@@ -74,7 +74,7 @@ The following are descriptions of the various fields that are used in this messa
 
 - **Memory freed:** This field is how much memory is freed by Resource Monitor for the specified interval. It is measured in kilobytes. If the rate at which the memory is freed does not exceed 2 MB every 5 seconds, the Scheduler Monitor detects this condition as a non-yielding condition.
 
-- **Last wait:** This field is the last wait type for the Resource Monitor thread. You can use this field in combination with the _Approx CPU Used_ field. This field combination can identify whether the Resource Monitor thread is running or waiting for a significant part of the interval.
+- **Last wait:** This field is the last wait type for the Resource Monitor thread. You can use this field in combination with the `Approx CPU Used` field. This field combination can identify whether the Resource Monitor thread is running or waiting for a significant part of the interval.
 
 - **Last clerk:** This field is the type and name of the memory clerk that was trimming its memory when the non-yielding condition occurred.
 

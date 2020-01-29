@@ -40,7 +40,7 @@ SQL Server Management Studio (SSMS), beginning with version 17.0, doesn't instal
 
 ## Azure Data Studio
 
-Azure Data Studio doesn't install either PowerShell modules. To use PowerShell with Azure Data Studio, install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
+Azure Data Studio doesn't install either PowerShell module. To use PowerShell with Azure Data Studio, install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
 
 You can use the [PowerShell extension](../azure-data-studio/powershell-extension.md), which provides rich PowerShell editor support in Azure Data Studio.
 
@@ -53,7 +53,7 @@ To install the **SqlServer** module from the PowerShell Gallery, start a [PowerS
 Run the following command in your PowerShell session to install the SqlServer module for all users:
 
 ```powershell
-Install-Module -Name SqlServer -AllowClobber
+Install-Module -Name SqlServer
 ```
 
 ### To view the versions of the SqlServer module installed

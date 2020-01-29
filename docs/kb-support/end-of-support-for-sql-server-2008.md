@@ -1,18 +1,22 @@
 ---
 title: End of support for SQL Server 2008 and SQL Server 2008 R2
 description: SQL Server 2008 and SQL Server 2008 R2 are approaching the end of their support life cycle.
-ms.date: 01/26/2020
+ms.date: 01/27/2020
 ---
-# End of support for SQL Server 2008 and SQL Server 2008 R2
+# End of support for SQL Server 2008 and SQL Server 2008 R2 (KB 4456242)
 
+<!--
+GeneMi:  No 'AppliesTo' include in these 'kb-support/' articles...
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+-->
 
 _Original version of product:_ &nbsp; 2008  
 _Original KB date:_ &nbsp; 07/31/2018  
 _Original KB number:_ &nbsp; 4456242
 
 <!--
-WAS:   https://support.microsoft.com/help/4456242/end-of-support-for-sql-server-2008-and-sql-server-2008-r2
+ORIGINAL HTTPS URL WAS...
+https://support.microsoft.com/help/4456242/end-of-support-for-sql-server-2008-and-sql-server-2008-r2
 -->
 
 ## Summary
@@ -61,7 +65,15 @@ We recommend that you migrate to Azure SQL DB, or upgrade to the current product
 
 ## Resources
 
+<!--
 [SQL Server 2008 and 2008 R2 EOS Site](https://www.microsoft.com/sql-server/sql-server-2008)
+Gone. Merely redirects to generic Hub page...
+https://docs.microsoft.com/sql/?view=sql-server-ver15
+-->
+
+[Extend support for SQL Server 2008 and SQL Server 2008 R2 with _Azure_](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
+
+[End of _Mainstream_ support for SQL Server 2008 and SQL Server 2008 R2, July 2014](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/end-of-mainstream-support-for-sql-server-2008-and-sql-server-2008-r2)
 
 [SQL Server 2008 R2 documentation](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms130214%28v=sql.105%29)
 

@@ -1,11 +1,9 @@
 ---
 title: Resource Monitor non-yielding condition in SQL Server
 description: Describes the issue in which the Resource Monitor enters a non-yielding condition on a server that is running SQL Server.
-ms.date: 01/26/2020
+ms.date: 01/27/2020
 ---
-# Resource Monitor enters a non-yielding condition on a server that is running SQL Server
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# Resource Monitor enters a non-yielding condition on a server that is running SQL Server (KB 2216485)
 
 _Original version of product:_ &nbsp; 2008  
 _Original KB date:_ &nbsp; 11/05/2018  
@@ -52,7 +50,7 @@ These memory events may be _external_ to SQL Server. External events include not
 
 If certain memory consumers use a large amount of memory, the trimming that the consumers perform may take a long time to prepare.
 
-The Scheduler Monitor task runs every 5 seconds. The Schedule Monitor checks whether the Resource Monitor has moved from one consumer to another during the past 60 seconds. When the Scheduler Monitor detects that the Resource Monitor has not moved past a consumer for 60 seconds, the Schedule Monitor interprets this scenario as the Resource Monitor entering a non-yielding state. This interpretation causes the Schedule Monitor to log the error message that is mentioned in the preceding Symptoms section.
+The Scheduler Monitor task runs every 5 seconds. The Schedule Monitor checks whether the Resource Monitor has moved from one consumer to another during the past 60 seconds. When the Scheduler Monitor detects that the Resource Monitor has not moved past a consumer for 60 seconds, the Schedule Monitor interprets this scenario as the Resource Monitor entering a non-yielding state. This interpretation causes the Schedule Monitor to log the error message that is mentioned in the Symptoms section.
 
 > [!NOTE]
 > Starting with SQL Server 2019, the 60-second interval is increased to 120 seconds. This increase reduces the frequency of these diagnostic notifications. And it reduces the generation of memory dump files.

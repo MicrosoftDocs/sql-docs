@@ -116,11 +116,11 @@
       "manager": {
         "**/*.md": "jroth",
         "advanced-analytics/**/*.md": "cgronlun",
-        "dmx/**/*.md": "kfile",
+        "dmx/**/*.md": "kfollis",
         "kb-support/**/*.md": "ramakoni",
         "language-extensions/**/*.md": "cgronlun",
-        "mdx/**/*.md": "kfile",
-        "reporting-services/**/*.md": "kfile"
+        "mdx/**/*.md": "kfollis",
+        "reporting-services/**/*.md": "kfollis"
       },
 
       "audience": {

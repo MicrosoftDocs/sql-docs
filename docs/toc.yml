@@ -17792,5 +17792,5 @@
         href: xquery/string-search-in-xquery.md
       - name: Handling Namespaces in XQuery
         href: xquery/handling-namespaces-in-xquery.md
-- name: KB Support
+- name: Knowledge Base support
   href: kb-support/toc.yml

@@ -47,7 +47,7 @@ The following examples, one for SQLSRV and one for PDO_SQLSRV, create a table wi
 - Error checking is excluded for clarity. 
 
 What follows is common data for both examples:
-```
+```php
 <?php
 // Data for testing - integer, datetime2, char, nchar, varchar, and nvarchar
 // String data is random, showing that we can match or compare anything
@@ -96,7 +96,7 @@ $encryptQuery = " ALTER TABLE $myTable
 ?>
 ```
 ### SQLSRV
-```
+```php
 <?php
 // Specify Azure Key Vault credentials using the KeyStoreAuthentication, KeyStorePrincipalId, and KeyStoreSecret keywords
 // Otherwise, the local Windows Certificate Store will be used
@@ -229,7 +229,7 @@ function getResults($stmt)
 ```
 
 ### PDO_SQLSRV
-```
+```php
 <?php
 // Specify Azure Key Vault credentials using the KeyStoreAuthentication, KeyStorePrincipalId, and KeyStoreSecret keywords
 // Otherwise, the local Windows Certificate Store will be used

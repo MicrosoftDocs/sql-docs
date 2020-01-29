@@ -176,7 +176,8 @@ Configuring a publisher with a remote distributor is outside the scope of this t
    !["Configure Distribution" command on the shortcut menu](media/tutorial-preparing-the-server-for-replication/configuredistribution.png)
   
    > [!NOTE]  
-   > If you have connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using **localhost** rather than the actual server name, you'll be prompted with a warning that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot connect to **localhost**. Select **OK** in the warning dialog box. In the **Connect to Server** dialog box, change **Server name** from **localhost** to the name of your server. Then select **Connect**.  
+   > If you have connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using **localhost** rather than the actual server name, you'll be prompted with a warning that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot connect to **localhost or IP Address**. Select **OK** in the warning dialog box. In the **Connect to Server** dialog box, change **Server name** from **localhost or IP Address** to the name of your server. Then select **Connect**.  
+   > Currently, SSMS 18.0 – 18.4 has issue, which does not show the error message, so please use the actual server name to connect Object Explorer before configuring a Distributer.
   
    The Distribution Configuration Wizard starts.  
   

@@ -12648,7 +12648,7 @@
       href: relational-databases/system-compatibility-views/sys-systypes-transact-sql.md
     - name: sys.sysusers
       href: relational-databases/system-compatibility-views/sys-sysusers-transact-sql.md
-  - name: System dynamic mangagement views
+  - name: System dynamic management views
     href: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
     items:
     - name: Always On Availability Groups
@@ -17794,3 +17794,5 @@
         href: xquery/string-search-in-xquery.md
       - name: Handling Namespaces in XQuery
         href: xquery/handling-namespaces-in-xquery.md
+- name: Knowledge Base support
+  href: kb-support/toc.yml

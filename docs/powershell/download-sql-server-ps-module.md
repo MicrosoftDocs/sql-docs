@@ -56,6 +56,14 @@ Run the following command in your PowerShell session to install the SqlServer mo
 Install-Module -Name SqlServer -AllowClobber
 ```
 
+### To view the versions of the SqlServer module installed
+
+Execute the following command to see the versions of the SqlServer module that have been installed
+
+```powershell
+Get-Module SqlServer -ListAvailable
+```
+
 ### Install for the current user rather than as an administrator
 
 If you aren't able to run the PowerShell session as an administrator, install for the current user using the following command:
@@ -90,21 +98,13 @@ However, if you don’t want to keep older module versions, then you can use the
 You can use the following command to list if more than one version is installed:
 
 ```powershell
-Get-Module -ListAvailable -Name "SQLServer"
+Get-Module SqlServer -ListAvailable
 ```
 
 You can use the following command to remove older versions:
 
 ```powershell
 Uninstall-module -Name SQLServer -RequiredVersion "<version number>" -AllowClobber
-```
-
-### To view the versions of the SqlServer module installed
-
-Execute the following command to see the versions of the SqlServer module that have been installed
-
-```powershell
-Get-Module SqlServer -ListAvailable
 ```
 
 ### Troubleshooting

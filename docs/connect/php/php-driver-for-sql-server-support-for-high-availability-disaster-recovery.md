@@ -24,16 +24,16 @@ Full details on Always On availability groups can be found at the [High Availabi
 
 ## Transparent Network IP Resolution (TNIR)
 
-Transparent Network IP Resolution (TNIR) is a revision of the existing MultiSubnetFailover feature. It affects the connection sequence of the driver when the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. Together with MultiSubnetFailover they provide the following four connection sequences: 
+Transparent Network IP Resolution (TNIR) is a revision of the existing **MultiSubnetFailover** feature. It affects the connection sequence of the driver when the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. The corresponding connection option is **TransparentNetworkIPResolution**. Together with **MultiSubnetFailover** it provides the following four connection sequences: 
 
-- TNIR Enabled & MultiSubnetFailover Disabled: One IP is attempted, followed by all IPs in parallel
-- TNIR Enabled & MultiSubnetFailover Enabled: All IPs are attempted in parallel
-- TNIR Disabled & MultiSubnetFailover Disabled: All IPs are attempted one after another
-- TNIR Disabled & MultiSubnetFailover Enabled: All IPs are attempted in parallel
+- TNIR Enabled & **MultiSubnetFailover** Disabled: One IP is attempted, followed by all IPs in parallel
+- TNIR Enabled & **MultiSubnetFailover** Enabled: All IPs are attempted in parallel
+- TNIR Disabled & **MultiSubnetFailover** Disabled: All IPs are attempted one after another
+- TNIR Disabled & **MultiSubnetFailover** Enabled: All IPs are attempted in parallel
 
-TNIR is enabled by default, and MultiSubnetFailover is Disabled by default.
+TNIR is enabled by default, and **MultiSubnetFailover** is Disabled by default.
 
-This is an example of enabling both TNIR and MultiSubnetFailover using the PDO_SQLSRV driver:
+This is an example of enabling both TNIR and **MultiSubnetFailover** using the PDO_SQLSRV driver:
 
 ```
 <?php

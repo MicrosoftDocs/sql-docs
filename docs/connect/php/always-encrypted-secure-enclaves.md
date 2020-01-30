@@ -6,8 +6,8 @@ ms.prod_service: connectivity
 ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: v-dapugl
-ms.author: jroth
+ms.reviewer: ""
+ms.author: v-dapugl
 author: rothja
 manager: v-mabarw
 ---
@@ -23,7 +23,7 @@ manager: v-mabarw
 
 ## Enabling Always Encrypted with Secure Enclaves
 
-Support for Always Encrypted with Secure Enclaves is available in the PHP Drivers for SQL Server starting with 5.7.1-preview. Always Encrypted with Secure Enclaves requires SQL Server 2019 or later and version 17.4+ of the ODBC driver. Further details on general requirements for Always Encrypted with the PHP Drivers for SQL Server are available [here](../../connect/php/using-always-encrypted-php-drivers.md).
+Support for Always Encrypted with Secure Enclaves is available in the PHP Drivers for SQL Server starting with 5.8.0. Always Encrypted with Secure Enclaves requires SQL Server 2019 or later and version 17.4+ of the ODBC driver. Further details on general requirements for Always Encrypted with the PHP Drivers for SQL Server are available [here](../../connect/php/using-always-encrypted-php-drivers.md).
 
 Always Encrypted with Secure Enclaves ensures the security of encrypted data by attesting the enclave - that is, verifying the enclave against an external attestation service. To use secure enclaves, the `ColumnEncryption` keyword must identify the attestation type and protocol along with associated attestation data, separated by a comma. Version 17.4 of the ODBC driver supports only Virtualization-Based Security (VBS) and the Host Guardian Service (HGS) protocol for the enclave type and protocol. The associated attestation data is the URL of the attestation server. Thus, the following would be added to the connection string:
 
@@ -43,7 +43,7 @@ The following examples, one for SQLSRV and one for PDO_SQLSRV, create a table wi
 - For pattern matching, the collation must be specified as `Latin1_General_BIN2` using the `COLLATE` clause.
 - When passing the pattern matching string as a parameter for matching char and nchar types, the `SQLSRV_SQLTYPE_*` passed to `sqlsrv_query` or `sqlsrv_prepare` should specify the length of the string to be matched and not the size of the column because char and nchar types pad whitespace on the end of the string. For example, when matching the string `%abc%` against a char(10) column, specify `SQLSRV_SQLTYPE_CHAR(5)`. If you instead specify `SQLSRV_SQLTYPE_CHAR(10)`, the query will match `%abc%     ` (with five spaces appended), and any data in the column with fewer than five spaces appended will not match (so `abcdef` would not match `%abc%` because it has four spaces of padding). For Unicode strings, use the `mb_strlen` or `iconv_strlen` functions to get the number of characters.
 - The PDO interface does not allow specifying the length of a parameter. Instead, specify a length of 0 or `null` in `PDOStatement::bindParam`. If the length is explicitly set to another number, the parameter is treated as an output parameter.
-- Pattern matching does not work against non-string types in AE.
+- Pattern matching does not work against non-string types in Always Encrypted.
 - Error checking is excluded for clarity. 
 
 What follows is common data for both examples:

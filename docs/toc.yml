@@ -323,7 +323,7 @@
             href: relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md
           - name: Disable
             href: relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md
-          - name: Migrate setings from SQL Server 2014
+          - name: Migrate settings from SQL Server 2014
             href: relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md
       - name: Backup On-premises
         items:
@@ -395,13 +395,13 @@
             href: relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md
           - name: Read-only file (Full recovery model)
             href: relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md
-          - name: Read-only file (Simmple recovery model)
+          - name: Read-only file (Simple recovery model)
             href: relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md
       - name: Backup devices
         items:
         - name: Define a device for a disk file
           href: relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md
-        - name: Define a devvice for a tape drive
+        - name: Define a device for a tape drive
           href: relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md
         - name: View contents of a tape or file
           href: relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md
@@ -2710,31 +2710,31 @@
       items:
       - name: Bookmarks
         href: relational-databases/native-client-ole-db-rowsets/bookmarks.md
-      - name: Creating a Rowset with IOpenRowset
+      - name: Create a Rowset with IOpenRowset
         href: relational-databases/native-client-ole-db-rowsets/creating-a-rowset-with-iopenrowset.md
-      - name: "Creating Rowsets with ICommand::Execute"
+      - name: "Create Rowsets with ICommand::Execute"
         href: relational-databases/native-client-ole-db-rowsets/creating-rowsets-with-icommand-execute.md
-      - name: Fetching a Single Row with IRow
+      - name: Fetch a Single Row with IRow
         href: relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md
-      - name: "Fetching BLOB Data Using IRow::GetColumns & ISequentialStream"
+      - name: "Fetch BLOB Data Using IRow::GetColumns & ISequentialStream"
         href: relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md
-      - name: "Fetching BLOB Data Using IRow::Open & ISequentialStream"
+      - name: "Fetch BLOB Data Using IRow::Open & ISequentialStream"
         href: relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-open-and-isequentialstream.md
-      - name: Fetching Rows - Next Fetch Position
+      - name: Fetch Rows - Next Fetch Position
         href: relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md
-      - name: Fetching Rows
+      - name: Fetch Rows
         href: relational-databases/native-client-ole-db-rowsets/fetching-rows.md
       - name: Rowset properties & behaviors
         href: relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md
       - name: Rowsets & cursors
         href: relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md
-      - name: Resynchronizing Rows in a roset
+      - name: Resynchronize Rows in a rowset
         href: relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md
-      - name: Updating data in rowsets
+      - name: Update data in rowsets
         href: relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md
-      - name: Updating data in cursors
+      - name: Update data in cursors
         href: relational-databases/native-client-ole-db-rowsets/updating-data-in-sql-server-cursors.md
-      - name: "Using IRow::GetColumns"
+      - name: "Use IRow::GetColumns"
         href: relational-databases/native-client-ole-db-rowsets/using-irow-getcolumns.md
     - name: BLOBs & OLE Objects
       href: relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md
@@ -2778,7 +2778,7 @@
         href: relational-databases/native-client-ole-db-table-valued-parameters/inserting-data-into-table-valued-parameters.md
       - name: Methods type support
         href: relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md
-      - name: Properites type support
+      - name: Properties type support
         href: relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md
       - name: Parameter type support
         href: relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md
@@ -2907,7 +2907,7 @@
         href: relational-databases/native-client-ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md
       - name: Retrieve data from a FILESTREAM column using ISequentialStream
         href: relational-databases/native-client-ole-db-how-to/filestream/retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md
-      - name: Send data to a FILESTREAM column csing IRowsetFastUpload
+      - name: Send data to a FILESTREAM column using IRowsetFastUpload
         href: relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md
       - name: Send data to FILESTREAM - ISequentialStream bound to ICommandText
         href: relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md
@@ -7148,7 +7148,7 @@
       items:
       - name: Create
         href: master-data-services/create-an-index-master-data-services.md
-      - name: Edit & Delet
+      - name: Edit & Delete
         href: master-data-services/edit-and-delete-an-index-master-data-services.md
     - name: Attributes
       href: master-data-services/attributes-master-data-services.md
@@ -7528,17 +7528,17 @@
             href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
         - name: Rotate Always Encrypted keys
           items:
-          - name: Rotate Always Encrypted keys using SSMS
+          - name: SQL Server Management Studio (SSMS)
             href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md
-          - name: Rotate Always Encrypted keys using PowerShell
+          - name: PowerShell
             href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
         - name: Configure columns using Always Encrypted
           items:
-          - name: Configure column encyption using Always Encrypted Wizard
+          - name: Wizard
             href: relational-databases/security/encryption/always-encrypted-wizard.md
-          - name: Configure column encryption using Always Encrypted with PowerShell
+          - name: PowerShell
             href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
-          - name: Configure column encryption using Always Encrypted with a DAC package
+          - name: DAC package
             href: relational-databases/security/encryption/configure-always-encrypted-using-dacpac.md
         - name: Query columns using Always Encrypted
           items:
@@ -7546,19 +7546,19 @@
             href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
         - name: Migrate sensitive data protected with Always Encrypted
           items:
-          - name: Export and import databases using Always Encrypted
+          - name: Export and import 
             href: relational-databases/security/encryption/always-encrypted-migrate-using-bacpac.md
-          - name: Back up and restore databases using Always Encrypted
+          - name: Back up and restore 
             href: relational-databases/security/encryption/always-encrypted-migrate-using-backup-restore.md
-          - name: Migrate data using Import and Export Wizard
+          - name: Migrate data with Import & Export Wizard
             href: relational-databases/security/encryption/always-encrypted-migrate-using-import-export-wizard.md
-          - name: Bulk load encrypted data to columns using Always Encrypted
+          - name: Bulk load encrypted data to columns
             href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
         - name: Develop applications using Always Encrypted
           items:
           - name: Develop applications using Always Encrypted
             href: relational-databases/security/encryption/always-encrypted-client-development.md
-          - name: Develop aplications with .NET Framework
+          - name: Develop applications with .NET Framework
             href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
       - name: Always Encrypted with secure enclaves
         href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
@@ -10079,7 +10079,7 @@
     items:
     - name: Samples Overview
       href: samples/sql-samples-where-are.md
-    - name: All Github Samples >>
+    - name: All GitHub Samples >>
       href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
     - name: AdventureWorks
       items:

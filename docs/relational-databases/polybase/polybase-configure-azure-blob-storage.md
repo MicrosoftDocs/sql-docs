@@ -70,7 +70,7 @@ To query the data in your Hadoop data source, you must define an external table 
    -- LOCATION:  Azure account storage account name and blob container name.  
    -- CREDENTIAL: The database scoped credential created above.  
    CREATE EXTERNAL DATA SOURCE AzureStorage with (  
-         TYPE = HADOOP,
+         TYPE = BLOB_STORAGE,
          LOCATION ='wasbs://<blob_container_name>@<azure_storage_account_name>.blob.core.windows.net',  
          CREDENTIAL = AzureStorageCredential  
    );  

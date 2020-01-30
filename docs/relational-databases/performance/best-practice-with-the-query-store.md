@@ -68,7 +68,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **Data Flush Interval (Minutes)**: It defines the frequency to persist collected runtime statistics to disk. It's expressed in minutes in the graphical user interface (GUI), but in [!INCLUDE[tsql](../../includes/tsql-md.md)] it's expressed in seconds. The default is 900 seconds, which is 15 minutes in the graphical user interface. Consider using a higher value if your workload doesn't generate a large number of different queries and plans, or if you can withstand longer time to persist data before a database shutdown.
  
 > [!NOTE]
-> Using trace flag 7745 prevents Query Store data from being written to disk in case of a failover or shutdown command. For more information, see the [Use trace flags on mission-critical servers to improve recovery from disaster](#Recovery) section.
+> Using trace flag 7745 prevents Query Store data from being written to disk in case of a failover or shutdown command. For more information, see the [Use trace flags on mission-critical servers](#Recovery) section.
 
 Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] to set a different value for **Data Flush Interval**:  
   
@@ -106,7 +106,10 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 -   **Auto**: Infrequent queries and queries with insignificant compile and execution duration are ignored. Thresholds for execution count, compile, and runtime duration are internally determined. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], this is the default option.
 -   **None**: Query Store stops capturing new queries.  
 -   **Custom**: Allows additional control and the capability to fine-tune the data collection policy. The new custom settings define what happens during the internal capture policy time threshold. This is a time boundary during which the configurable conditions are evaluated and, if any are true, the query is eligible to be captured by Query Store.
-  
+
+> [!IMPORTANT]
+> Cursors, queries inside stored procedures, and natively compiled queries are always captured when Query Store Capture Mode is set to **All**, **Auto**, or **Custom**. To capture natively compiled queries, enable collection of per-query statistics by using [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
+
  The following script sets QUERY_CAPTURE_MODE to AUTO:
   
 ```sql  

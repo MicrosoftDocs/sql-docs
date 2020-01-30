@@ -32,7 +32,9 @@ For JDBC Driver 7.0, the driver is contained in **mssql-jdbc-7.0.0.jre8.jar**, o
 For JDBC Driver 7.2, the driver is contained in **mssql-jdbc-7.2.2.jre8.jar**, or **mssql-jdbc-7.2.2.jre11.jar**.
 
 For JDBC Driver 7.4, the driver is contained in **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar**, or **mssql-jdbc-7.4.1.jre12.jar**.
-  
+
+For JDBC Driver 8.2, the driver is contained in **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar**, or **mssql-jdbc-8.2.0.jre13.jar**.
+
 The class name is used whenever you load the driver with the JDBC DriverManager class, and whenever you specify the class name of the driver in any driver configuration. For example, configuring a data source within a Java EE application server might require you enter the driver class name.  
   
 ## Data sources

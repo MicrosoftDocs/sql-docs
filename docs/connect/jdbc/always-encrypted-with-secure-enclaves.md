@@ -53,7 +53,7 @@ Rich queries will trigger enclave computations:
 		}
 		
 		try (PreparedStatement p = c.prepareStatement("SELECT * FROM Employees WHERE SALARY > ?")) {
-			p.setMoney(1, new BigDecimal(0));
+			((SQLServerPreparedStatement) p).setMoney(1, new BigDecimal(0));
 			try (ResultSet rs = p.executeQuery()) {
 				while (rs.next()) {
 					// Do work with data

@@ -25,7 +25,7 @@ Possible values are:
     * **ActiveDirectoryMSI**
         * Supported since driver version **v7.2**, `authentication=ActiveDirectoryMSI` can be used to connect to an Azure SQL Database/Data Warehouse from inside of an Azure Resource with "Identity" support enabled. Optionally, **msiClientId** can also be specified in the Connection/DataSource properties along with this authentication mode, which must contain the Client ID of a Managed Service Identity to be used to acquire the **accessToken** for establishing the connection.
     * **ActiveDirectoryIntegrated**
-        * Supported since driver version **v6.0**, `authentication=ActiveDirectoryIntegrated` can be used to connect to an Azure SQL Database/Data Warehouse using integrated authentication. To use this authentication mode, you need to federate the on-premise Active Directory Federation Services (ADFS) with Azure Active Directory in the cloud. Once it is set up, you can connect by either adding the native library 'sqljdbc_auth.dll' to the application class path on Windows OS, or setting up a Kerberos ticket for cross-platform authentication support. You will be able to access Azure SQL DB/DW without being prompted for credentials when you're logged in to a domain joined machine.
+        * Supported since driver version **v6.0**, `authentication=ActiveDirectoryIntegrated` can be used to connect to an Azure SQL Database/Data Warehouse using integrated authentication. To use this authentication mode, you need to federate the on-premise Active Directory Federation Services (ADFS) with Azure Active Directory in the cloud. Once it is set up, you can connect by either adding the native library 'mssql-jdbc_auth-<version>-<arch>.dll' to the application class path on Windows OS, or setting up a Kerberos ticket for cross-platform authentication support. You will be able to access Azure SQL DB/DW without being prompted for credentials when you're logged in to a domain joined machine.
     * **ActiveDirectoryPassword**
         * Supported since driver version **v6.0**, `authentication=ActiveDirectoryPassword` can be used to connect to an Azure SQL Database/Data Warehouse using an Azure AD principal name and password.
     * **SqlPassword**
@@ -102,7 +102,7 @@ You have successfully logged on as: <your MSI username>
 
 ## Connecting using ActiveDirectoryIntegrated authentication mode
 With version 6.4, Microsoft JDBC Driver adds support for ActiveDirectoryIntegrated Authentication using a Kerberos ticket on multiple platforms (Windows, Linux, and macOS).
-For more information, see [Set Kerberos ticket on Windows, Linux And Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) for more details. Alternatively, on Windows, sqljdbc_auth.dll can also be used for ActiveDirectoryIntegrated authentication with JDBC Driver.
+For more information, see [Set Kerberos ticket on Windows, Linux And Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) for more details. Alternatively, on Windows, mssql-jdbc_auth-<version>-<arch>.dll can also be used for ActiveDirectoryIntegrated authentication with JDBC Driver.
 
 > [!NOTE]
 >  If you are using an older version of the driver, check this [link](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) for the respective dependencies that are required to use this authentication mode. 

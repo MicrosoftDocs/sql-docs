@@ -54,7 +54,7 @@ SELECT
 From  
   [Association]  
 ```  
-The following example demonstrates how you can use a nested table as input to the prediction function, useing the SHAPE clause. The SHAPE query creates a rowset with customerId as one column and a nested table as a second column, which contains the list of products a customer has already brought. 
+The following example demonstrates how you can use a nested table as input to the prediction function, using the SHAPE clause. The SHAPE query creates a rowset with customerId as one column and a nested table as a second column, which contains the list of products a customer has already brought. 
 
 ~~~~
 SELECT T.[CustomerId], PredictAssociation(MyNestedTable, 5) // returns top 5 associated items

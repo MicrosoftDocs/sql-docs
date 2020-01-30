@@ -5865,7 +5865,7 @@ The table contains error message numbers and the description, which is the text 
 |	14689	|	16	|	No	|	A collection set cannot start if the management data warehouse is not configured. Run the instmdw.sql script to create and configure the management data warehouse.	|
 |	14690	|	16	|	No	|	Cannot perform this procedure when the collector is enabled. Disable the collector and then try again.	|
 |	14691	|	16	|	No	|	The status of the collector cannot be null. This may indicate an internal corruption in the collector configuration data.	|
-|	14692	|	16	|	No	|	Insufficient priveleges to start collection set: '%s'. Only a member of the 'sysadmin' fixed server role can start a collection set without a SQL Server Agent proxy. Attach a SQL Server Agent proxy to the collection set before retrying.	|
+|	14692	|	16	|	No	|	Insufficient privileges to start collection set: '%s'. Only a member of the 'sysadmin' fixed server role can start a collection set without a SQL Server Agent proxy. Attach a SQL Server Agent proxy to the collection set before retrying.	|
 |	14693	|	16	|	No	|	A collection set cannot start without a schedule. Specify a schedule for the collection set.	|
 |	14694	|	16	|	No	|	Cannot upload data on-demand for the collection set '%s' in non-cached mode.	|
 |	14695	|	16	|	No	|	Cannot collect data on-demand for the collection set '%s' in cached mode.	|
@@ -7991,7 +7991,7 @@ The table contains error message numbers and the description, which is the text 
 |	21796	|	16	|	No	|	The property "xactsetjobinterval" must be assigned a value greater than or equal to 0.	|
 |	21797	|	16	|	No	|	Cannot create the agent job. '%s' must be a valid Windows login in the form : 'MACHINE\Login' or 'DOMAIN\Login'. See the documentation for '%s'.	|
 |	21798	|	16	|	No	|	Cannot execute the replication administrative procedure. The '%s' agent job must be added through '%s' before continuing. See the documentation for '%s'.	|
-|	21799	|	16	|	No	|	The %s agent for Publisher (%s), database (%s), publication (%s) cannnot be found. Create the agent with the appropriate procedure: sp_addpublication_snapshot, sp_addlogreader_agent, or sp_addqreader_agent.	|
+|	21799	|	16	|	No	|	The %s agent for Publisher (%s), database (%s), publication (%s) cannot be found. Create the agent with the appropriate procedure: sp_addpublication_snapshot, sp_addlogreader_agent, or sp_addqreader_agent.	|
 |	21800	|	16	|	No	|	The common generation watermark is invalid at this replica since it does not exist or metadata for changes not yet propagated may have been cleaned up.	|
 |	21801	|	16	|	No	|	The stored procedure sp_createagentparameter failed to add one or more parameters to the system table msdb.dbo.MSagentparameterlist. Check for any errors returned by sp_createagentparameter and errors returned by SQL Server during execution of sp_createagentparameter.	|
 |	21802	|	16	|	No	|	The agent profile creation process cannot validate the specified agent parameter value. '%s' is not a valid value for the '%s' parameter. The value must be an integer less than or equal to '%d'. Verify that replication is installed properly.	|

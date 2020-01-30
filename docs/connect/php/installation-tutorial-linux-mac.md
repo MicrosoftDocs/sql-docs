@@ -318,7 +318,7 @@ apk update
 apk add -y php7 php7-dev php7-pear php7-pdo php7-openssl autoconf make g++
 ```
 ### Step 2. Install prerequisites
-Install the ODBC driver for Debian by following the instructions on the [Linux and macOS installation page](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
+Install the ODBC driver for Alpine by following the instructions on the [Linux and macOS installation page](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server
 ```

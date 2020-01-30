@@ -1,6 +1,6 @@
 ---
 title: "Always Encrypted with Secure Enclaves with the PHP Drivers for SQL Server | Microsoft Docs"
-ms.date: 01/12/2020
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
@@ -15,7 +15,7 @@ manager: v-mabarw
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 ## Applicable to
- -   Microsoft Drivers 5.7.1 for PHP for SQL Server
+ -   Microsoft Drivers 5.8.0 for PHP for SQL Server
  
 ## Introduction
 

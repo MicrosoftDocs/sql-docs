@@ -118,7 +118,7 @@ For now, just be aware that you need to check the expected results when coercing
 
 ## Implicit conversion of data objects
 
-Each R data object has its own rules for how values are handled when combined with other data objects if the two data objects have the same number of dimensions, or if any data object contains heterogenous data types.
+Each R data object has its own rules for how values are handled when combined with other data objects if the two data objects have the same number of dimensions, or if any data object contains heterogeneous data types.
 
 First, create a small table of test data.
 

@@ -31,7 +31,7 @@ public void setClientInfo (java.lang.String name,
   
  *value*  
   
- A String that contains the value to set the client infomation property to.  
+ A String that contains the value to set the client information property to.  
   
 ## Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

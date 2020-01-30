@@ -296,7 +296,7 @@ Category    : Data Refresh
 EventID     : 43  
 Level       : High  
 Correlation : 5755879c-7cab-e097-8f80-f27895d44a77  
-Message     : The following error occured when working with the service application, Default PowerPivot Service Application. Skipping the service application..  
+Message     : The following error occurred when working with the service application, Default PowerPivot Service Application. Skipping the service application..  
   
 Timestamp   : 4/14/2014 7:15:02 PM  
 Area        : PowerPivot Service  
@@ -452,7 +452,7 @@ Get-SPExcelServiceApplication | Select typename,  DisplayName, status
 #Write-Host ""  
 Write-Host -ForegroundColor Green "PowerPivot Service Application pool"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-# the following assumes there is only 1 PowerPivot Service Application, and returns that applicaitons pool name.  if you have more than one, use the 2nd version  
+# the following assumes there is only 1 PowerPivot Service Application, and returns that application's pool name.  if you have more than one, use the 2nd version  
 $poolname = [string](Get-PowerPivotServiceApplication | Select -Property applicationpool)  
 $position = $poolname.lastindexof("=")  
 $poolname = $poolname.substring($position+1)  

@@ -323,7 +323,7 @@
             href: relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md
           - name: Disable
             href: relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md
-          - name: Migrate setings from SQL Server 2014
+          - name: Migrate settings from SQL Server 2014
             href: relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md
       - name: Backup On-premises
         items:
@@ -395,13 +395,13 @@
             href: relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md
           - name: Read-only file (Full recovery model)
             href: relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md
-          - name: Read-only file (Simmple recovery model)
+          - name: Read-only file (Simple recovery model)
             href: relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md
       - name: Backup devices
         items:
         - name: Define a device for a disk file
           href: relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md
-        - name: Define a devvice for a tape drive
+        - name: Define a device for a tape drive
           href: relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md
         - name: View contents of a tape or file
           href: relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md
@@ -2710,31 +2710,31 @@
       items:
       - name: Bookmarks
         href: relational-databases/native-client-ole-db-rowsets/bookmarks.md
-      - name: Creating a Rowset with IOpenRowset
+      - name: Create a Rowset with IOpenRowset
         href: relational-databases/native-client-ole-db-rowsets/creating-a-rowset-with-iopenrowset.md
-      - name: "Creating Rowsets with ICommand::Execute"
+      - name: "Create Rowsets with ICommand::Execute"
         href: relational-databases/native-client-ole-db-rowsets/creating-rowsets-with-icommand-execute.md
-      - name: Fetching a Single Row with IRow
+      - name: Fetch a Single Row with IRow
         href: relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md
-      - name: "Fetching BLOB Data Using IRow::GetColumns & ISequentialStream"
+      - name: "Fetch BLOB Data Using IRow::GetColumns & ISequentialStream"
         href: relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md
-      - name: "Fetching BLOB Data Using IRow::Open & ISequentialStream"
+      - name: "Fetch BLOB Data Using IRow::Open & ISequentialStream"
         href: relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-open-and-isequentialstream.md
-      - name: Fetching Rows - Next Fetch Position
+      - name: Fetch Rows - Next Fetch Position
         href: relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md
-      - name: Fetching Rows
+      - name: Fetch Rows
         href: relational-databases/native-client-ole-db-rowsets/fetching-rows.md
       - name: Rowset properties & behaviors
         href: relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md
       - name: Rowsets & cursors
         href: relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md
-      - name: Resynchronizing Rows in a roset
+      - name: Resynchronize Rows in a rowset
         href: relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md
-      - name: Updating data in rowsets
+      - name: Update data in rowsets
         href: relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md
-      - name: Updating data in cursors
+      - name: Update data in cursors
         href: relational-databases/native-client-ole-db-rowsets/updating-data-in-sql-server-cursors.md
-      - name: "Using IRow::GetColumns"
+      - name: "Use IRow::GetColumns"
         href: relational-databases/native-client-ole-db-rowsets/using-irow-getcolumns.md
     - name: BLOBs & OLE Objects
       href: relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md
@@ -2778,7 +2778,7 @@
         href: relational-databases/native-client-ole-db-table-valued-parameters/inserting-data-into-table-valued-parameters.md
       - name: Methods type support
         href: relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md
-      - name: Properites type support
+      - name: Properties type support
         href: relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md
       - name: Parameter type support
         href: relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md
@@ -2907,7 +2907,7 @@
         href: relational-databases/native-client-ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md
       - name: Retrieve data from a FILESTREAM column using ISequentialStream
         href: relational-databases/native-client-ole-db-how-to/filestream/retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md
-      - name: Send data to a FILESTREAM column csing IRowsetFastUpload
+      - name: Send data to a FILESTREAM column using IRowsetFastUpload
         href: relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md
       - name: Send data to FILESTREAM - ISequentialStream bound to ICommandText
         href: relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md
@@ -4343,6 +4343,8 @@
       href: relational-databases/in-memory-database.md
     - name: Hybrid Buffer Pool
       href: database-engine/configure-windows/hybrid-buffer-pool.md
+    - name: Add persisted log buffer
+      href: relational-databases/databases/add-persisted-log-buffer.md
     - name: Change Server Authentication Mode
       href: database-engine/configure-windows/change-server-authentication-mode.md
     - name: SQL Writer Service
@@ -5868,663 +5870,14 @@
       href: dma/dma-bestpractices.md
     - name: Consolidate assessment reports
       href: dma/dma-consolidatereports.md
-    - name: Power BI reports for assessments
-      href: dma/dma-powerbiassesreport.md
+    - name: Assess an app's data access layer
+      href: dma/dma-assess-app-data-layer.md
     - name: Run from the command-line
       href: dma/dma-commandline.md
     - name: Configure settings
       href: dma/dma-configurationsettings.md
   - name: SQL Server Migration Assistant (SSMA)
-    href: ssma/sql-server-migration-assistant.md
-    items:
-    - name: Access
-      href: ssma/access/sql-server-migration-assistant-for-access-accesstosql.md
-      items:
-      - name: Install SSMA
-        href: ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md
-      - name: Getting started
-        href: ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md
-      - name: What's New
-        href: ssma/access/what-s-new-in-ssma-for-access-accesstosql.md
-      - name: Preparing Access Databases
-        href: ssma/access/preparing-access-databases-for-migration-accesstosql.md
-      - name: Incompatible Access Features
-        href: ssma/access/incompatible-access-features-accesstosql.md
-      - name: New GUI Features in SSMA
-        href: ssma/access/new-gui-features-in-ssma-for-access-to-sql.md
-      - name: Access Inventory Schemas
-        href: ssma/access/access-inventory-schemas-accesstosql.md
-      - name: Save Metadata
-        href: ssma/access/save-metadata-accesstosql.md
-      - name: Connecting to SQL Server
-        href: ssma/access/connecting-to-sql-server-accesstosql.md
-      - name: Migrating Access Data into Azure SQL DB
-        href: ssma/access/migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
-      - name: Creating & Managing Project
-        href: ssma/access/creating-and-managing-projects-accesstosql.md
-      - name: Working with SSMA for Access Console
-        href: ssma/access/working-with-ssma-for-access-console-accesstosql.md
-      - name: Adding & Removing Database Files
-        href: ssma/access/adding-and-removing-access-database-files-accesstosql.md
-      - name: Converting Access Database Objects
-        href: ssma/access/converting-access-database-objects-accesstosql.md
-      - name: Legal Notice
-        href: ssma/access/legal-notice-ssma-for-access.md
-      - name: Connect to SQL Server
-        href: ssma/access/connect-to-sql-server-accesstosql.md
-      - name: Global Settings
-        href: ssma/access/global-settings-output-window-accesstosql.md
-      - name: New Project (SSMA)
-        href: ssma/access/new-project-ssma-accesstosql.md
-      - name: Command-Line Options in SSMA Console
-        href: ssma/access/command-line-options-in-ssma-console-accesstosql.md
-      - name: Connect To Azure SQL DB
-        href: ssma/access/connect-to-azure-sql-db-accesstosql.md
-      - name: Assessment Report
-        href: ssma/access/assessment-report-accesstosql.md
-      - name: Mapping Source & Target Data Types
-        href: ssma/access/mapping-source-and-target-data-types-accesstosql.md
-      - name: Managing Passwords
-        href: ssma/access/managing-passwords-accesstosql.md
-      - name: Data Migration Report
-        href: ssma/access/data-migration-report-accesstosql.md
-      - name: User Interface Reference
-        href: ssma/access/user-interface-reference-accesstosql.md
-      - name: Working with the Sample Console Script Files
-        href: ssma/access/working-sample-console-script-filesexecuting-ssma-console-accesstosql.md
-      - name: Generating Reports
-        href: ssma/access/generating-reports-accesstosql.md
-      - name: Executing the SSMA Console
-        href: ssma/access/executing-the-ssma-console-accesstosql.md
-      - name: Assessing Access Database Objects for Conversion
-        href: ssma/access/assessing-access-database-objects-for-conversion-accesstosql.md
-      - name: Creating the Server Connection Files
-        href: ssma/access/creating-the-server-connection-files-accesstosql.md
-      - name: Linking Access Applications to Azure SQL DB
-        href: ssma/access/linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
-      - name: Creating Variable Value Files
-        href: ssma/access/creating-variable-value-files-accesstosql.md
-      - name: Edit Type Mapping
-        href: ssma/access/edit-type-mapping-accesstosql.md
-      - name: Exporting an Access Inventory
-        href: ssma/access/exporting-an-access-inventory-accesstosql.md
-      - name: Migrating Access Databases to Azure SQL DB
-        href: ssma/access/migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
-      - name: Mapping Source & Target Databases
-        href: ssma/access/mapping-source-and-target-databases-accesstosql.md
-      - name: Creating Script Files
-        href: ssma/access/creating-script-files-accesstosql.md
-      - name: Find Databases Wizard (Verify Selection)
-        href: ssma/access/find-databases-wizard-verify-selection-accesstosql.md
-      - name: Migration Wizard
-        href: ssma/access/migration-wizard-accesstosql.md
-      - name: Convert, Load, & Migrate
-        href: ssma/access/convert-load-and-migrate-accesstosql.md
-      - name: Loading Converted Database Objects into SQL Server
-        href: ssma/access/loading-converted-database-objects-into-sql-server-accesstosql.md
-      - name: Advanced Object Selection
-        href: ssma/access/advanced-object-selection-accesstosql.md
-      - name: Getting Started with SQL Server Migration Assistant
-        href: ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md
-      - name: Refresh from Database
-        href: ssma/access/refresh-from-database-accesstosql.md
-      - name: Find Databases Wizard (Select Files)
-        href: ssma/access/find-databases-wizard-select-files-accesstosql.md
-      - name: Shortcut Keys
-        href: ssma/access/shortcut-keys-accesstosql.md
-      - name: Connecting to Azure SQL DB
-        href: ssma/access/connecting-to-azure-sql-db-accesstosql.md
-      - name: Setting Conversion & Migration Options
-        href: ssma/access/setting-conversion-and-migration-options-accesstosql.md
-      - name: Troubleshooting
-        href: ssma/access/troubleshooting-accesstosql.md
-      - name: Menu commands & other shortcut keys
-        href: ssma/access/menu-commands-and-other-shortcut-keys-accesstosql.md
-      - name: Find Databases Wizard (Select Locations)
-        href: ssma/access/find-databases-wizard-select-locations-accesstosql.md
-      - name: Appendix - 1
-        href: ssma/access/appendix-1-accesstosql.md
-      - name: Project Settings
-        items:
-        - name: Migration
-          href: ssma/access/project-settings-migration-accesstosql.md
-        - name: GUI
-          href: ssma/access/project-settings-gui-accesstosql.md
-        - name: Conversion
-          href: ssma/access/project-settings-conversion-accesstosql.md
-        - name: Azure SQL DB
-          href: ssma/access/project-settings-azure-sql-db-accesstosql.md
-        - name: Type-Mapping
-          href: ssma/access/project-settings-type-mapping-accesstosql.md
-        - name: Loading Objects
-          href: ssma/access/project-settings-loading-objects-accesstosql.md
-      - name: Global settings
-        items:
-        - name: Dialogs
-          href: ssma/access/global-settings-dialogs-accesstosql.md
-        - name: Logging
-          href: ssma/access/global-settings-logging-accesstosql.md
-        - name: Editor
-          href: ssma/access/global-settings-editor-accesstosql.md
-    - name: DB2
-      href: ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md
-      items:
-      - name: Installing SSMA
-        href: ssma/db2/installing-ssma-for-db2-db2tosql.md
-      - name: Getting Started
-        href: ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md
-      - name: What's New
-        href: ssma/db2/what-s-new-in-ssma-for-db2-db2tosql.md
-      - name: New GUI features
-        href: ssma/db2/new-gui-features-in-ssma-for-db2-db2tosql.md
-      - name: Installing SSMA for DB2 Client
-        href: ssma/db2/installing-ssma-for-db2-client-db2tosql.md
-      - name: User Interface Reference
-        href: ssma/db2/user-interface-reference-db2tosql.md
-      - name: Edit Type Mapping
-        href: ssma/db2/edit-type-mapping-db2tosql.md
-      - name: Loading Converted Database Objects into SQL Server
-        href: ssma/db2/loading-converted-database-objects-into-sql-server-db2tosql.md
-      - name: Setting Project Options
-        href: ssma/db2/setting-project-options-db2tosql.md
-      - name: Creating Script Files
-        href: ssma/db2/creating-script-files-db2tosql.md
-      - name: Troubleshooting
-        href: ssma/db2/troubleshooting-db2tosql.md
-      - name: Mapping DB2 & SQL Server Data Types
-        href: ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md
-      - name: Legal Notice
-        href: ssma/db2/legal-notice-db2tosql.md
-      - name: Installing SSMA Components on SQL Server
-        href: ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md
-      - name: Executing the SSMA Console
-        href: ssma/db2/executing-the-ssma-console-db2tosql.md
-      - name: Shortcut Keys
-        href: ssma/db2/shortcut-keys-db2tosql.md
-      - name: Advanced Object Selection
-        href: ssma/db2/advanced-object-selection-db2tosql.md
-      - name: Connect to SQL Server
-        href: ssma/db2/connect-to-sql-server-db2tosql.md
-      - name: Connecting to SQL Server
-        href: ssma/db2/connecting-to-sql-server-db2etosql.md
-      - name: Assessment Report
-        href: ssma/db2/assessment-report-db2tosql.md
-      - name: Connect To DB2
-        href: ssma/db2/connect-to-db2-db2tosql.md
-      - name: Save Metadata
-        href: ssma/db2/save-metadata-db2tosql.md
-      - name: Assessing DB2 Schemas for Conversion
-        href: ssma/db2/assessing-db2-schemas-for-conversion-db2tosql.md
-      - name: Converting DB2 Schemas
-        href: ssma/db2/converting-db2-schemas-db2tosql.md
-      - name: SQL Server Migration Assistant
-        href: ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md
-      - name: Generating Reports
-        href: ssma/db2/generating-reports-db2tosql.md
-      - name: Creating the Server Connection Files
-        href: ssma/db2/creating-the-server-connection-files-db2tosql.md
-      - name: New Project
-        href: ssma/db2/new-project-db2tosql.md
-      - name: Refresh from Database
-        href: ssma/db2/refresh-from-database-db2tosql.md
-      - name: Connecting to DB2 Database
-        href: ssma/db2/connecting-to-db2-database-db2tosql.md
-      - name: Working with Sample Console Script Files
-        href: ssma/db2/working-with-the-sample-console-script-files-db2tosql.md
-      - name: Data Migration Settings
-        href: ssma/db2/data-migration-settings-db2tosql.md
-      - name: Managing Passwords
-        href: ssma/db2/managing-passwords-db2tosql.md
-      - name: Removing SSMA for DB2 Components
-        href: ssma/db2/removing-ssma-for-db2-components-db2tosql.md
-      - name: Getting Started with SSMA for DB2
-        href: ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md
-      - name: Data Migration Report
-        href: ssma/db2/data-migration-report-db2tosql.md
-      - name: Working with SSMA for Oracle Console
-        href: ssma/db2/working-with-ssma-for-oracle-console-db2tosql.md
-      - name: Command-Line Options in SSMA Console
-        href: ssma/db2/command-line-options-in-ssma-console-db2tosql.md
-      - name: Migrating DB2 Databases to SQL Server
-        href: ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md
-      - name: Menu commands & other shortcut keys
-        href: ssma/db2/menu-commands-and-other-shortcut-keys-db2tosql.md
-      - name: Creating Variable Value Files
-        href: ssma/db2/creating-variable-value-files-db2tosql.md
-      - name: Working with SSMA Projects
-        href: ssma/db2/working-with-ssma-projects-db2tosql.md
-      - name: Mapping DB2 Schemas to SQL Server Schemas
-        href: ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md
-      - name: Appendix - 1
-        href: ssma/db2/appendix-1-db2tosql.md
-      - name: Project Settings
-        items:
-        - name: Migration
-          href: ssma/db2/project-settings-migration-db2tosql.md
-        - name: Type-Mapping
-          href: ssma/db2/project-settings-type-mapping-db2tosql.md
-        - name: Conversion
-          href: ssma/db2/project-settings-conversion-db2tosql.md
-        - name: Load System objects
-          href: ssma/db2/project-settings-loading-system-objects-db2tosql.md
-        - name: GUI
-          href: ssma/db2/project-settings-gui-db2tosql.md
-        - name: Synchronization
-          href: ssma/db2/project-settings-synchronization-db2tosql.md
-      - name: Global settings
-        href: ssma/db2/global-settings-dialogs-db2tosql.md
-        items:
-        - name: Editor
-          href: ssma/db2/global-settings-editor-db2tosql.md
-        - name: Output Window
-          href: ssma/db2/global-settings-output-window-db2tosql.md
-        - name: Logging
-          href: ssma/db2/global-settings-logging-db2tosql.md
-    - name: mySQL
-      href: ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md
-      items:
-      - name: Installing SSMA
-        href: ssma/mysql/installing-ssma-for-mysql-mysqltosql.md
-      - name: Getting Started with SSMA for MySQL
-        href: ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md
-      - name: Legal Notice
-        href: ssma/mysql/legal-notice-mysqltosql.md
-      - name: Conversion Settings
-        href: ssma/mysql/conversion-settings-mysqltosql.md
-      - name: Installing SSMA for MySQL Client
-        href: ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md
-      - name: Executing the SSMA Console
-        href: ssma/mysql/executing-the-ssma-console-mysqltosql.md
-      - name: Creating the Server Connection Files
-        href: ssma/mysql/creating-the-server-connection-files-mysqltosql.md
-      - name: SQL Modes
-        href: ssma/mysql/sql-modes-mysqltosql.md
-      - name: Connect to SQL Server
-        href: ssma/mysql/connect-to-sql-server-mysqltosql.md
-      - name: Connecting to Azure SQL DB
-        href: ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md
-      - name: Creating Script Files
-        href: ssma/mysql/creating-script-files-mysqltosql.md
-      - name: Loading Converted Database Objects into SQL Server
-        href: ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md
-      - name: Converting MySQL Databases
-        href: ssma/mysql/converting-mysql-databases-mysqltosql.md
-      - name: Migrating into SQL Server - Azure SQL DB
-        href: ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
-      - name: Command-Line Options in SSMA Console
-        href: ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md
-      - name: Working with SSMA Projects
-        href: ssma/mysql/working-with-ssma-projects-mysqltosql.md
-      - name: Data Migration Settings
-        href: ssma/mysql/data-migration-settings-mysqltosql.md
-      - name: Save Metadata
-        href: ssma/mysql/save-metadata-mysqltosql.md
-      - name: Menu commands & other shortcut keys
-        href: ssma/mysql/menu-commands-and-other-shortcut-keys-mysqltosql.md
-      - name: Troubleshooting
-        href: ssma/mysql/troubleshooting-mysqltosql.md
-      - name: Connect to MySQL
-        href: ssma/mysql/connect-to-mysql-mysqltosql.md
-      - name: Removing the SSMA for MySQL Components
-        href: ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md
-      - name: Connect to Azure SQL DB
-        href: ssma/mysql/connect-to-azure-sql-db-mysqltosql.md
-      - name: Migrating MySQL Databases to Azure SQL DB
-        href: ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
-      - name: Working with Sample Console Script Files
-        href: ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md
-      - name: New Project
-        href: ssma/mysql/new-project-ssma-mysqltosql.md
-      - name: Installing SSMA Components on SQL Server
-        href: ssma/mysql/installing-ssma-components-on-sql-server-mysqltosql.md
-      - name: Mapping MySQL Databases to SQL Server Schemas
-        href: ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md
-      - name: Refresh from database
-        href: ssma/mysql/refresh-from-database-mysqltosql.md
-      - name: Shortcut Keys
-        href: ssma/mysql/shortcut-keys-mysqltosql.md
-      - name: Assessment Report
-        href: ssma/mysql/assessment-report-mysqltosql.md
-      - name: Data Migration Report
-        href: ssma/mysql/data-migration-report-mysqltosql.md
-      - name: Managing Passwords
-        href: ssma/mysql/managing-passwords-mysqltosql.md
-      - name: Advanced Object Selection
-        href: ssma/mysql/advanced-object-selection-mysqltosql.md
-      - name: User Interface Reference
-        href: ssma/mysql/user-interface-reference-mysqltosql.md
-      - name: Appendix - 1
-        href: ssma/mysql/appendix-1-mysqltosql.md
-      - name: Assessing MySQL Databases for Conversion
-        href: ssma/mysql/assessing-mysql-databases-for-conversion-mysqltosql.md
-      - name: Working with SSMA for MySQL Console
-        href: ssma/mysql/working-with-ssma-for-mysql-console-mysqltosql.md
-      - name: Getting Started with SSMA for MySQL Console
-        href: ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md
-      - name: Mapping MySQL & SQL Server Character Set
-        href: ssma/mysql/mapping-mysql-and-sql-server-character-set-mysqltosql.md
-      - name: Creating Variable Value Files
-        href: ssma/mysql/creating-variable-value-files-mysqltosql.md
-      - name: Generating Reports
-        href: ssma/mysql/generating-reports-mysqltosql.md
-      - name: Edit Type Mapping
-        href: ssma/mysql/edit-type-mapping-mysqltosql.md
-      - name: Mapping MySQL & SQL Server Data Types
-        href: ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md
-      - name: What's New in SSMA for MySQL
-        href: ssma/mysql/what-s-new-in-ssma-for-mysql-mysqltosql.md
-      - name: New GUI Features in SSMA for MySQL
-        href: ssma/mysql/new-gui-features-in-ssma-for-mysql-mysqltosql.md
-      - name: Setting Project Options
-        href: ssma/mysql/setting-project-options-mysqltosql.md
-      - name: Connecting to MySQL
-        href: ssma/mysql/connecting-to-mysql-mysqltosql.md
-      - name: Connecting to SQL Server
-        href: ssma/mysql/connecting-to-sql-server-mysqltosql.md
-      - name: Project settings
-        items:
-        - name: GUI
-          href: ssma/mysql/project-settings-gui-mysqltosql.md
-        - name: Azure SQL DB
-          href: ssma/mysql/project-settings-azure-sql-db-mysqltosql.md
-        - name: Type-Mapping
-          href: ssma/mysql/project-settings-type-mapping-mysqltosql.md
-        - name: Migration
-          href: ssma/mysql/project-settings-migration-mysqltosql.md
-        - name: Synchronization
-          href: ssma/mysql/project-settings-synchronization-mysqltosql.md
-        - name: Conversion
-          href: ssma/mysql/project-settings-conversion-mysqltosql.md
-      - name: Global settings
-        href: ssma/mysql/global-settings-output-window-mysqltosql.md
-        items:
-        - name: Dialogs
-          href: ssma/mysql/global-settings-dialogs-mysqltosql.md
-        - name: Logging
-          href: ssma/mysql/global-settings-logging-mysqltosql.md
-        - name: Editor
-          href: ssma/mysql/global-settings-editor-mysqltosql.md
-    - name: Oracle
-      href: ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md
-      items:
-      - name: What's New in SSMA
-        href: ssma/oracle/what-s-new-in-ssma-for-oracle-oracletosql.md
-      - name: Installing SSMA
-        href: ssma/oracle/installing-ssma-for-oracle-oracletosql.md
-      - name: Getting Started
-        href: ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md
-      - name: Convert Oracle HR Schema to SQL Server
-        href: ssma/oracle/sql-server-linux-convert-from-oracle.md
-      - name: Legal Notice
-        href: ssma/oracle/legal-notice-ssma-for-oracle.md
-      - name: Installing SSMA for Oracle Client
-        href: ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md
-      - name: New GUI features in SSMA
-        href: ssma/oracle/new-gui-features-in-ssma-for-oracle-oracletosql.md
-      - name: Running Test Cases
-        href: ssma/oracle/running-test-cases-oracletosql.md
-      - name: Menu commands & other shortcut keys
-        href: ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md
-      - name: Using Test Repositories
-        href: ssma/oracle/using-test-repositories-oracletosql.md
-      - name: Creating Variable Value Files
-        href: ssma/oracle/creating-variable-value-files-oracletosql.md
-      - name: Testing Migrated Database Objects
-        href: ssma/oracle/testing-migrated-database-objects-oracletosql.md
-      - name: Working with SSMA Projects
-        href: ssma/oracle/working-with-ssma-projects-oracletosql.md
-      - name: Connecting to Oracle Database
-        href: ssma/oracle/connecting-to-oracle-database-oracletosql.md
-      - name: Migrating Oracle Data into SQL Server
-        href: ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md
-      - name: Converting Oracle Schemas
-        href: ssma/oracle/converting-oracle-schemas-oracletosql.md
-      - name: Data Migration Report
-        href: ssma/oracle/data-migration-report-oracletosql.md
-      - name: Generating Reports
-        href: ssma/oracle/generating-reports-oracletosql.md
-      - name: Advanced Object Selection
-        href: ssma/oracle/advanced-object-selection-oracletosql.md
-      - name: Working with the Sample Console Script Files
-        href: ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md
-      - name: Command-Line Options in SSMA Console
-        href: ssma/oracle/command-line-options-in-ssma-console-oracletosql.md
-      - name: Shortcut Keys
-        href: ssma/oracle/shortcut-keys-oracle-to-sql.md
-      - name: Loading Converted Database Objects into SQL Server
-        href: ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md
-      - name: Setting Project Options
-        href: ssma/oracle/setting-project-options-oracletosql.md
-      - name: Managing Backups
-        href: ssma/oracle/managing-backups-oracletosql.md
-      - name: Save Metadata
-        href: ssma/oracle/save-metadata-oracletosql.md
-      - name: Customizing Calls Order
-        href: ssma/oracle/customizing-calls-order-oracletosql.md
-      - name: Data Migration Settings
-        href: ssma/oracle/data-migration-settings-oracletosql.md
-      - name: Viewing Test Case Reports
-        href: ssma/oracle/viewing-test-case-reports-oracletosql.md
-      - name: Managing Passwords
-        href: ssma/oracle/managing-passwords-oracletosql.md
-      - name: Removing SSMA  for Oracle Components
-        href: ssma/oracle/removing-ssma-for-oracle-components-oracletosql.md
-      - name: Refresh from Database
-        href: ssma/oracle/refresh-from-database-oracletosql.md
-      - name: Executing the SSMA Console
-        href: ssma/oracle/executing-the-ssma-console-oracletosql.md
-      - name: Edit Type Mapping
-        href: ssma/oracle/edit-type-mapping-oracletosql.md
-      - name: Getting Started with SSMA  for Oracle Console
-        href: ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md
-      - name: Creating Script Files
-        href: ssma/oracle/creating-script-files-oracletosql.md
-      - name: Selecting & Configuring Affected Objects
-        href: ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md
-      - name: Connect to SQL Server
-        href: ssma/oracle/connect-to-sql-server-oracletosql.md
-      - name: Working with SSMA for Oracle Console
-        href: ssma/oracle/working-with-ssma-for-oracle-console-oracletosql.md
-      - name: Assessing Oracle Schemas for Conversion
-        href: ssma/oracle/assessing-oracle-schemas-for-conversion-oracletosql.md
-      - name: Initializing Test Cases
-        href: ssma/oracle/initializing-test-cases-oracletosql.md
-      - name: Installing SSMA Components on SQL Server
-        href: ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md
-      - name: Finishing Test Case Preparation
-        href: ssma/oracle/finishing-test-case-preparation-oracletosql.md
-      - name: Selecting & Configuring Objects to Test
-        href: ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md
-      - name: Connect To Oracle
-        href: ssma/oracle/connect-to-oracle-oracletosql.md
-      - name: Creating Test Cases
-        href: ssma/oracle/creating-test-cases-oracletosql.md
-      - name: Troubleshooting
-        href: ssma/oracle/troubleshooting-oracletosql.md
-      - name: Migrating Oracle Databases to SQL Server
-        href: ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md
-      - name: Connecting to SQL Server
-        href: ssma/oracle/connecting-to-sql-server-oracletosql.md
-      - name: Assessment Report
-        href: ssma/oracle/assessment-report-oracletosql.md
-      - name: New Project
-        href: ssma/oracle/new-project-oracletosql.md
-      - name: User Interface Reference
-        href: ssma/oracle/user-interface-reference-oracletosql.md
-      - name: Mapping Oracle Schemas to SQL Server Schemas
-        href: ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md
-      - name: Mapping Oracle & SQL Server Data Types
-        href: ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md
-      - name: Creating the Server Connection Files
-        href: ssma/oracle/creating-the-server-connection-files-oracletosql.md
-      - name: Appendix - 1
-        href: ssma/oracle/appendix-1-oracletosql.md
-      - name: Project Settings
-        items:
-        - name: Conversion
-          href: ssma/oracle/project-settings-conversion-oracletosql.md
-        - name: Loading System objects
-          href: ssma/oracle/project-settings-loading-system-objects-oracletosql.md
-        - name: Synchronization
-          href: ssma/oracle/project-settings-synchronization-oracletosql.md
-        - name: GUI
-          href: ssma/oracle/project-settings-gui-oracletosql.md
-        - name: Type-Mapping
-          href: ssma/oracle/project-settings-type-mapping-oracletosql.md
-        - name: Migration
-          href: ssma/oracle/project-settings-migration-oracletosql.md
-      - name: Global settings
-        items:
-        - name: Tester
-          href: ssma/oracle/global-settings-tester-oracletosql.md
-        - name: Editor
-          href: ssma/oracle/global-settings-editor-oracletosql.md
-        - name: Logging
-          href: ssma/oracle/global-settings-logging-oracletosql.md
-        - name: Dialogs
-          href: ssma/oracle/global-settings-dialogs-oracletosql.md
-        - name: Output Window
-          href: ssma/oracle/global-settings-output-window-oracletosql.md
-    - name: Sybase
-      href: ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
-      items:
-      - name: Installing SSMA
-        href: ssma/sybase/installing-ssma-for-sybase-sybasetosql.md
-      - name: Getting Started with SSMA for Sybase
-        href: ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md
-      - name: Getting Started with SSMA for Sybase Console
-        href: ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md
-      - name: Legal Notice
-        href: ssma/sybase/legal-notice-ssma-for-sybase.md
-      - name: What's New in SSMA
-        href: ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md
-      - name: Installing SSMA for Sybase Client
-        href: ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md
-      - name: New GUI Features in SSMA
-        href: ssma/sybase/new-gui-features-in-ssma-for-sybase-sybasetosql.md
-      - name: New Project
-        href: ssma/sybase/new-project-sybasetosql.md
-      - name: Initializing Test Cases
-        href: ssma/sybase/initializing-test-cases-sybasetosql.md
-      - name: Working with the Sample Console Script Files
-        href: ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md
-      - name: Migrating Sybase ASE Databases to Azure SQL DB
-        href: ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
-      - name: Assessing Sybase ASE Database Objects for Conversion
-        href: ssma/sybase/assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
-      - name: Executing the SSMA Console
-        href: ssma/sybase/executing-the-ssma-console-sybasetosql.md
-      - name: Creating Script Files
-        href: ssma/sybase/creating-script-files-sybasetosql.md
-      - name: Global Settings
-        href: ssma/sybase/global-settings-dialogs-sybasetosql.md
-      - name: Connecting to SQL Server
-        href: ssma/sybase/connecting-to-sql-server-sybasetosql.md
-      - name: Advanced Object Selection
-        href: ssma/sybase/advanced-object-selection-sybasetosql.md
-      - name: Project Settings (GUI)
-        href: ssma/sybase/project-settings-gui-sybasetosql.md
-      - name: Viewing Test Case Reports
-        href: ssma/sybase/viewing-test-case-reports-sybasetosql.md
-      - name: Working with SSMA for Sybase Console
-        href: ssma/sybase/working-with-ssma-for-sybase-console-sybasetosql.md
-      - name: Using Test Repositories
-        href: ssma/sybase/using-test-repositories-sybasetosql.md
-      - name: Data Migration Report
-        href: ssma/sybase/data-migration-report-sybasetosql.md
-      - name: Creating Test Cases
-        href: ssma/sybase/creating-test-cases-sybasetosql.md
-      - name: Save Metadata
-        href: ssma/sybase/save-metadata-sybasetosql.md
-      - name: Assessment Report
-        href: ssma/sybase/assessment-report-sybasetosql.md
-      - name: Removing SSMA for Sybase Components
-        href: ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md
-      - name: Connecting to Sybase ASE
-        href: ssma/sybase/connecting-to-sybase-ase-sybasetosql.md
-      - name: Selecting & Configuring Affected Objects
-        href: ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md
-      - name: Connecting to Azure SQL DB
-        href: ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md
-      - name: Managing Passwords
-        href: ssma/sybase/managing-passwords-sybasetosql.md
-      - name: Setting Project Options
-        href: ssma/sybase/setting-project-options-sybasetosql.md
-      - name: Connect to Azure SQL DB
-        href: ssma/sybase/connect-to-azure-sql-db-sybasetosql.md
-      - name: Data Migration Settings
-        href: ssma/sybase/data-migration-settings-sybasetosql.md
-      - name: Finishing Test Case Preparation
-        href: ssma/sybase/finishing-test-case-preparation-sybasetosql.md
-      - name: Selecting & Configuring Objects to Test
-        href: ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md
-      - name: Troubleshooting
-        href: ssma/sybase/troubleshooting-sybasetosql.md
-      - name: Mapping Sybase ASE & SQL Server Data Types
-        href: ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
-      - name: Installing SSMA Components on SQL Server
-        href: ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md
-      - name: Migrating Sybase ASE Data into Azure SQL DB
-        href: ssma/sybase/migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
-      - name: Connect to Sybase
-        href: ssma/sybase/connect-to-sybase-sybasetosql.md
-      - name: Edit Type Mapping
-        href: ssma/sybase/edit-type-mapping-sybasetosql.md
-      - name: Converting Sybase ASE Database Objects
-        href: ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md
-      - name: Loading Converted Database Objects into SQL Server
-        href: ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md
-      - name: Testing Migrated Database Objects
-        href: ssma/sybase/testing-migrated-database-objects-sybasetosql.md
-      - name: Customizing Calls Order
-        href: ssma/sybase/customizing-calls-order-sybasetosql.md
-      - name: User Interface Reference
-        href: ssma/sybase/user-interface-reference-sybasetosql.md
-      - name: Creating Variable Value Files
-        href: ssma/sybase/creating-variable-value-files-sybasetosql.md
-      - name: Creating the Server Connection Files
-        href: ssma/sybase/creating-the-server-connection-files-sybasetosql.md
-      - name: Command-Line Options in SSMA Console
-        href: ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md
-      - name: Connect to SQL Server
-        href: ssma/sybase/connect-to-sql-server-sybasetosql.md
-      - name: Shortcut Keys
-        href: ssma/sybase/shortcut-keys-sybase-to-sql.md
-      - name: Mapping Sybase ASE Schemas to SQL Server Schemas
-        href: ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md
-      - name: Managing Backups
-        href: ssma/sybase/managing-backups-sybasetosql.md
-      - name: Menu commands & other shortcut keys
-        href: ssma/sybase/menu-commands-and-other-shortcut-keys-sybase-to-sql.md
-      - name: Running Test Cases
-        href: ssma/sybase/running-test-cases-sybasetosql.md
-      - name: Generating Reports
-        href: ssma/sybase/generating-reports-sybasetosql.md
-      - name: Working with SSMA Projects
-        href: ssma/sybase/working-with-ssma-projects-sybasetosql.md
-      - name: Appendix - 1
-        href: ssma/sybase/appendix-1-sybasetosql.md
-      - name: Project Settings
-        items:
-        - name: Conversion
-          href: ssma/sybase/project-settings-conversion-sybasetosql.md
-        - name: Type-Mapping
-          href: ssma/sybase/project-settings-type-mapping-sybasetosql.md
-        - name: Synchronization
-          href: ssma/sybase/project-settings-synchronization-sybasetosql.md
-        - name: Azure SQL DB
-          href: ssma/sybase/project-settings-azure-sql-db-sybasetosql.md
-        - name: (Migration
-          href: ssma/sybase/project-settings-migration-sybasetosql.md
-      - name: Global settings
-        href: ssma/sybase/global-settings-output-window-sybasetosql.md
-        items:
-        - name: Editor
-          href: ssma/sybase/global-settings-editor-sybasetosql.md
-        - name: Logging
-          href: ssma/sybase/global-settings-logging-sybasetosql.md
-        - name: Tester
-          href: ssma/sybase/global-settings-tester-sybasetosql.md
+    href: ssma/toc.yml
 - name: Manage, monitor, & tune
   items:
   - name: Manage
@@ -7795,7 +7148,7 @@
       items:
       - name: Create
         href: master-data-services/create-an-index-master-data-services.md
-      - name: Edit & Delet
+      - name: Edit & Delete
         href: master-data-services/edit-and-delete-an-index-master-data-services.md
     - name: Attributes
       href: master-data-services/attributes-master-data-services.md
@@ -8175,17 +7528,17 @@
             href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
         - name: Rotate Always Encrypted keys
           items:
-          - name: Rotate Always Encrypted keys using SSMS
+          - name: SQL Server Management Studio (SSMS)
             href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md
-          - name: Rotate Always Encrypted keys using PowerShell
+          - name: PowerShell
             href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
         - name: Configure columns using Always Encrypted
           items:
-          - name: Configure column encyption using Always Encrypted Wizard
+          - name: Wizard
             href: relational-databases/security/encryption/always-encrypted-wizard.md
-          - name: Configure column encryption using Always Encrypted with PowerShell
+          - name: PowerShell
             href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
-          - name: Configure column encryption using Always Encrypted with a DAC package
+          - name: DAC package
             href: relational-databases/security/encryption/configure-always-encrypted-using-dacpac.md
         - name: Query columns using Always Encrypted
           items:
@@ -8193,19 +7546,19 @@
             href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
         - name: Migrate sensitive data protected with Always Encrypted
           items:
-          - name: Export and import databases using Always Encrypted
+          - name: Export and import 
             href: relational-databases/security/encryption/always-encrypted-migrate-using-bacpac.md
-          - name: Back up and restore databases using Always Encrypted
+          - name: Back up and restore 
             href: relational-databases/security/encryption/always-encrypted-migrate-using-backup-restore.md
-          - name: Migrate data using Import and Export Wizard
+          - name: Migrate data with Import & Export Wizard
             href: relational-databases/security/encryption/always-encrypted-migrate-using-import-export-wizard.md
-          - name: Bulk load encrypted data to columns using Always Encrypted
+          - name: Bulk load encrypted data to columns
             href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
         - name: Develop applications using Always Encrypted
           items:
           - name: Develop applications using Always Encrypted
             href: relational-databases/security/encryption/always-encrypted-client-development.md
-          - name: Develop aplications with .NET Framework
+          - name: Develop applications with .NET Framework
             href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
       - name: Always Encrypted with secure enclaves
         href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
@@ -8403,7 +7756,7 @@
     href: azure-data-studio/what-is.md
     items:
     - name: Install
-      href: azure-data-studio/download.md
+      href: azure-data-studio/download-azure-data-studio.md
     - name: Release notes
       href: azure-data-studio/release-notes-azure-data-studio.md
     - name: Quickstarts
@@ -10457,7 +9810,7 @@
         href: linux/sql-server-linux-shared-disk-cluster-configure-nfs.md
       - name: SMB
         href: linux/sql-server-linux-shared-disk-cluster-configure-smb.md
-    - name: Operate failover cluster instance - SQL Server on Linux
+    - name: Operate failover cluster instances
       href: linux/sql-server-linux-shared-disk-cluster-operate.md
     - name: Deploy a Pacemaker cluster
       href: linux/sql-server-linux-deploy-pacemaker-cluster.md
@@ -10665,6 +10018,8 @@
   items:
   - name: Learn
     items:
+    - name: Educational resources 
+      href: sql-server/educational-sql-resources.yml
     - name: Microsoft Virtual Academy >>
       href: https://mva.microsoft.com/product-training/sql-server  # TODO: MVA website is being retired in 2019.  (Removed trailing '#!lang=1033'.)
     - name: SQL on Channel 9 >>
@@ -10724,7 +10079,7 @@
     items:
     - name: Samples Overview
       href: samples/sql-samples-where-are.md
-    - name: All Github Samples >>
+    - name: All GitHub Samples >>
       href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
     - name: AdventureWorks
       items:
@@ -12560,7 +11915,7 @@
       href: relational-databases/system-compatibility-views/sys-systypes-transact-sql.md
     - name: sys.sysusers
       href: relational-databases/system-compatibility-views/sys-sysusers-transact-sql.md
-  - name: System dynamic mangagement views
+  - name: System dynamic management views
     href: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
     items:
     - name: Always On Availability Groups
@@ -17706,3 +17061,5 @@
         href: xquery/string-search-in-xquery.md
       - name: Handling Namespaces in XQuery
         href: xquery/handling-namespaces-in-xquery.md
+- name: Knowledge Base support
+  href: kb-support/toc.yml

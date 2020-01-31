@@ -1,7 +1,7 @@
 ---
 title: "Release Notes for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/12/2019"
+ms.date: "01/31/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: "v-dapugl, kenvh"
@@ -34,6 +34,26 @@ TO  :  'release-notes-php-sql-driver.md'
 For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
+
+## What's New in Version 5.8
+
+| New item | Details |
+| :------- | :------ |
+| Added support for PHP 7.4. | &nbsp; |
+| Dropped support for PHP 7.1. | &nbsp; |
+| Added support for Microsoft ODBC Driver 17.5 on all platforms. | &nbsp; |
+| Added support for Debian 10 and Red Hat 8. | Both require ODBC Driver 17.4 or above. |
+| Added support for macOS Catalina, Alpine Linux 3.11<sup>1</sup> and Ubuntu 19.10. | All require ODBC Driver 17.5 or above. |
+| Dropped support for SQL Server 2008 R2, macOS Sierra, Ubuntu 18.10 and Ubuntu 19.04. | &nbsp; |
+| Support for Language option when connecting to SQL Server. | &nbsp; |
+| Support for PHP extended string types introduced in PHP 7.2. | &nbsp; |
+| Support for Data Classification sensitivity metadata retrieval. | Requires SQL Server 2019 and ODBC Driver 17.4.2 or above. |
+| Support for Always Encrypted with secure enclaves. | Requires ODBC Driver 17.4 or above. |
+| Support configurable options for locale settings in Linux and macOS. |
+| Improved performance by caching metadata on fetches and omitting redundant calls. | &nbsp; |
+| &nbsp; | &nbsp; |
+
+<sup>1</sup> Alpine Linux support is experimental for version 5.8.
 
 ## What's New in Version 5.6
 
@@ -73,7 +93,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Support for non-UTF8 locales on Linux and macOS
   - Non-UTF8 locales on Linux and macOS are only supported with Microsoft ODBC Driver 17 and above
 - Support for Azure SQL Data Warehouse
-- Support for Azure SQL Managed Instance (Extended Private Preview)
+- Support for Azure SQL Managed Instance
 
 ## What's New in Version 4.3
 

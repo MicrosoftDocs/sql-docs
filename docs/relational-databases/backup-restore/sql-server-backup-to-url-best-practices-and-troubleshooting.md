@@ -36,7 +36,7 @@ ms.author: mikeray
   
 -   Using the `WITH COMPRESSION` option during backup can minimize your storage costs and storage transaction costs. It can also decrease the time taken to complete the backup process.  
 
-- Set `MAXTRANSFERSIZE` and `BLOCKSIZE` arguments as recomended at [SQL Server Backup to URL](./sql-server-backup-to-url.md).
+- Set `MAXTRANSFERSIZE` and `BLOCKSIZE` arguments as recommended at [SQL Server Backup to URL](./sql-server-backup-to-url.md).
   
 ## Handling Large Files  
   

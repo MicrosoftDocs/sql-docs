@@ -51,7 +51,9 @@ SYSTEM_USER
  If the current user is logged in to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using Windows Authentication, SYSTEM_USER returns the Windows login identification name in the form: *DOMAIN*\\*user_login_name*. However, if the current user is logged in to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using SQL Server Authentication, SYSTEM_USER returns the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login identification name, such as `WillisJo` for a user logged in as `WillisJo`.  
   
  SYSTEM_USER returns the name of the currently executing context. If the EXECUTE AS statement has been used to switch context, SYSTEM_USER returns the name of the impersonated context.  
-  
+
+ You cannot EXECUTE AS a SYSTEM_USER.
+
 ## Examples  
   
 ### A. Using SYSTEM_USER to return the current system user name  

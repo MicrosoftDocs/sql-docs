@@ -48,7 +48,7 @@ ms.author: mikeray
  Buffer pool  
  Also called buffer cache. The buffer pool is a global resource shared by all databases for their cached data pages. The maximum and minimum size of the buffer pool cache is determined during startup or when the instance of SQL server is dynamically reconfigured by using sp_configure. This size determines the maximum number of pages that can be cached in the buffer pool at any time in the running instance.  
   
- The maximum memory that can be comitted by Buffer Pool Extension can be limited by the other applications running on the machine in case those create significant memory pressure.  
+ The maximum memory that can be committed by Buffer Pool Extension can be limited by the other applications running on the machine in case those create significant memory pressure.  
   
  Checkpoint  
  A checkpoint creates a known good point from which the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can start applying changes contained in the transaction log during recovery after an unexpected shutdown or crash. A checkpoint writes the dirty pages and transaction log information from memory to disk and, also, records information about the transaction log. For more information, see [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  

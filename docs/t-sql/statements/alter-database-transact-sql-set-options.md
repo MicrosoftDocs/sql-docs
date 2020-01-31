@@ -2993,6 +2993,9 @@ The default is ON. We recommend that you use the default setting for most databa
 OFF
 Query Optimizer doesn't create statistics on single columns in query predicates when it's compiling queries. Setting this option to OFF can cause suboptimal query plans and degraded query performance.
 
+### Remarks
+This command must be run while connected to the user database.
+
 You can determine this option's status by examining the i`s_auto_create_stats_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `IsAutoCreateStatistics` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
 For more information, see the section "Using the database-wide statistics options" in Statistics.

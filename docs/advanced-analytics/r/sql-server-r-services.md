@@ -52,6 +52,10 @@ There are two ways to execute R scripts in R Services:
 
 <a name="packages"></a>
 
+## Python and R versions
+
+R version 3.2.2 is included in SQL Server 2016 R Services. For newer versions of R, use [Machine Learning Services for SQL Server 2017 and later](../what-is-sql-server-machine-learning.md).
+
 ## R packages
 
 You can use open-source packages and frameworks, in addition to Microsoft's enterprise packages. Most common open-source R packages are pre-installed in R Services. The following R packages from Microsoft are also included:

@@ -55,17 +55,20 @@ There are two ways to execute Python and R scripts in Machine Learning Services:
 
 + You can also use your preferred Python or R client and write scripts that push the execution (referred to as a *remote compute context*) to a remote SQL Server. See how to set up a data science client for [Python development](python/setup-python-client-tools-sql.md) and [R development](r/set-up-a-data-science-client.md) for more information.
 
-<a name="packages"></a>
+<a name="versions"></a>
 
 ## Python and R versions
 
 Which version of Python and R is included in SQL Server Machine Learning Services, depends on which version you use:
 
-| SQL Server version | Python version | R version |
-|-|-|-|
-| 2016 | Not available | 3.2.2 |
-| 2017 | 3.5.2 | 3.3.3 |
-| 2019 | 3.7.3 | 3.5.2 |
+| SQL Server version | Python version | R version | |
+|-|-|-|-|
+| 2017 | 3.5.2 | 3.3.3 | |
+| 2019 | 3.7.3 | 3.5.2 | |
+
+For the R version in SQL Server 2016, see [R Services](r/sql-server-r-services.md).
+
+<a name="packages"></a>
 
 ## Python and R packages
 

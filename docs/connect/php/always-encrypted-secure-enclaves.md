@@ -30,7 +30,7 @@ Always Encrypted with Secure Enclaves ensures the security of encrypted data by 
 ```
 ColumnEncryption=VBS-HGS,http://attestationserver.mydomain/Attestation
 ```
-If the protocol is incorrect, the driver will not recognise it, connection will fail, and an error will be returned. If only the attestation URL is incorrect, connection will succeed and an error will be thrown when an enclave-enabled computation is attempted, but otherwise the behaviour will be identical to the original Always Encrypted behaviour. Setting `ColumnEncryption` to `enabled` will provide regular Always Encrypted functionality, but attempting an enclave-enabled operation will return an error.
+If the protocol is incorrect, the driver will not recognize it, connection will fail, and an error will be returned. If only the attestation URL is incorrect, connection will succeed and an error will be thrown when an enclave-enabled computation is attempted, but otherwise the behavior will be identical to the original Always Encrypted behavior. Setting `ColumnEncryption` to `enabled` will provide regular Always Encrypted functionality, but attempting an enclave-enabled operation will return an error.
 
 Full details for configuring your environment to support Always Encrypted with Secure Enclaves, including setting up the Host Guardian Service and creating the required encryption keys, can be found [here](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md).
 

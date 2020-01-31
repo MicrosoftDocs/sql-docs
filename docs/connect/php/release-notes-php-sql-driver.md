@@ -93,7 +93,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Support for non-UTF8 locales on Linux and macOS
   - Non-UTF8 locales on Linux and macOS are only supported with Microsoft ODBC Driver 17 and above
 - Support for Azure SQL Data Warehouse
-- Support for Azure SQL Managed Instance (Extended Private Preview)
+- Support for Azure SQL Managed Instance
 
 ## What's New in Version 4.3
 

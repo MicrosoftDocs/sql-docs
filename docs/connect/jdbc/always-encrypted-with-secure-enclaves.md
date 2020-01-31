@@ -75,5 +75,4 @@ Toggling encryption on a column will also trigger enclave computations:
 This feature requires the RSASSA-PSA signature algorithm. This algorithm was added in JDK 11, but not back-ported to JDK 8. Users who wish to use this feature with the JDK 8 version of the  [!INCLUDEjdbcNoVersion] must either load their own provider, which supports the RSASSA-PSA signature algorithm, or include the BouncyCastleProvider optional dependency. The dependency will be removed at a later date if JDK 8 backports the signature algorithm or if the support lifecycle of JDK 8 ends.
 
 ## See also
-
 [Using Always Encrypted with the JDBC driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  

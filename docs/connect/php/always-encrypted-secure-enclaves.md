@@ -8,7 +8,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: ""
 ms.author: v-dapugl
-author: v-dapugl
+author: david-puglielli
 manager: v-mabarw
 ---
 # Using Always Encrypted with Secure Enclaves with the PHP Drivers for SQL Server

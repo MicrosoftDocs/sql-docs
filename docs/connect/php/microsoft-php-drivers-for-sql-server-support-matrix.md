@@ -93,8 +93,6 @@ The following Windows operating system versions are supported with the listed ve
 |Windows Server 2008 R2 SP1          |   |   |   |   |   |Y  |Y  |
 |Windows Server 2008 R2              |   |   |   |   |   |   |   |
 |Windows Server 2008 SP2             |   |   |   |   |   |Y  |Y  |
-|Windows Server 2008                 |   |   |   |   |   |   |   |
-|Windows Server 2003 SP1             |   |   |   |   |   |   |   |
 |Windows 10                          |Y  |Y  |Y  |Y  |Y  |Y  |   |
 |Windows 8.1                         |Y  |Y  |Y  |Y  |Y  |Y  |Y  |
 |Windows 8                           |   |   |   |   |Y  |Y  |Y  |

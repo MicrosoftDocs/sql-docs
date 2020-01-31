@@ -1,4 +1,4 @@
-- name: mySQL
+- name: MySQL
   href: sql-server-migration-assistant-for-mysql-mysqltosql.md
 - name: Installing SSMA
   href: installing-ssma-for-mysql-mysqltosql.md

@@ -413,25 +413,25 @@
       href: ../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
     - name: Set processing options
       href: ../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
-  - name: Report Viewer web part on a SharePoint site
-    href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
-    items:
-    - name: Deploy the Report Viewer web part
-      href: ../reporting-services/report-server-sharepoint/deploy-report-viewer-web-part.md
-    - name: Add Report Viewer web part to a web page
-      href: ../reporting-services/report-server-sharepoint/add-report-viewer-web-part-to-page.md
-    - name: Connect Filter or Documents web part
-      href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
-    - name: Customize the Report Viewer web part
-      href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
-    - name: SharePoint site settings for the Report Viewer web part
-      href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
   - name: High availability
     href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
   - name: Enable and disable RDL sandboxing
     href: ../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md
   - name: Configure Reporting Services to use a subject alternative name
     href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
+- name: Report Viewer web part on a SharePoint site
+  href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
+  items:
+  - name: Deploy the Report Viewer web part
+    href: ../reporting-services/report-server-sharepoint/deploy-report-viewer-web-part.md
+  - name: Add Report Viewer web part to a web page
+    href: ../reporting-services/report-server-sharepoint/add-report-viewer-web-part-to-page.md
+  - name: Connect Filter or Documents web part
+    href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
+  - name: Customize the Report Viewer web part
+    href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
+  - name: SharePoint site settings for the Report Viewer web part
+    href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
 - name: Pin to Power BI
   href: ../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md
 - name: Report Builder in Reporting Services (SSRS)

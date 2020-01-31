@@ -1,7 +1,7 @@
 ---
 title: "Release notes for the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "01/29/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -34,7 +34,7 @@ January 29, 2020
 
 Microsoft JDBC Driver 8.2.0 for SQL Server is now compatible with Java Development Kit (JDK) version 13.0 in addition to JDK 11.0 and 1.8.
 
-### Always Encrypted with Secure Enclaves
+### Always Encrypted with secure enclaves
 
 | Always Encrypted change | Details |
 | :--------- | :------ |
@@ -65,7 +65,7 @@ Microsoft JDBC Driver 8.2.0 for SQL Server is now compatible with Java Developme
 
 | Known issues | Details |
 | :----------- | :------ |
-| When using Always Encrypted with Secure Enclaves with Java 8. | Users must include BouncyCastle Provider as a dependency OR map/load a security provider which supports the RSASSA-PSS signature algorithm. |
+| When using Always Encrypted with secure enclaves with Java 8. | Users must include BouncyCastle Provider as a dependency OR map/load a security provider which supports the RSASSA-PSS signature algorithm. |
 | &nbsp; | &nbsp; |
 
 ## 7.4.1

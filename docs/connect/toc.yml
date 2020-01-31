@@ -2635,7 +2635,7 @@
     - name: Using Always Encrypted with the JDBC Driver
       href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
       items:
-      - name: Always Encrypted with Secure Enclaves
+      - name: Always Encrypted with secure enclaves
         href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
     - name: Guide articles
       items:

@@ -51,7 +51,7 @@ The following Microsoft PHP Drivers are no longer supported.
 
 |PHP for SQL Server driver version &#8594;<br />&#8595; SQL Server version|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Azure SQL Managed Instance<br/> (Extended Private Preview)|Y|Y|Y|Y|Y| | |
+|Azure SQL Managed Instance|Y|Y|Y|Y|Y| | |
 |Azure SQL Data Warehouse|Y|Y|Y|Y|Y| | |
 |SQL Server 2019         |Y| | | | | | |
 |SQL Server 2017         |Y|Y|Y|Y|Y| | |
@@ -100,7 +100,6 @@ The following Windows operating system versions are supported with the listed ve
 |Windows 8                           |   |   |   |   |Y  |Y  |Y  |
 |Windows 7 SP1                       |   |   |   |   |   |Y  |Y  |
 |Windows Vista SP2                   |   |   |   |   |   |Y  |Y  |
-|Windows XP SP3                      |   |   |   |   |   |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 The following Linux and Mac operating system versions (64-bit only) are supported with the listed version of the Microsoft PHP Drivers:
@@ -121,13 +120,15 @@ The following Linux and Mac operating system versions (64-bit only) are supporte
 |Red Hat Enterprise Linux 7 (64-bit) |Y  |Y  |Y  |Y  |Y  |Y  |   |
 |Suse Enterprise Linux 15 (64-bit)   |Y  |Y  |   |   |   |   |   |
 |Suse Enterprise Linux 12 (64-bit)   |Y  |Y  |Y  |Y  |   |   |   |
-|Alpine Linux 3.11 (64-bit)          |Y  |   |   |   |   |   |   |
+|Alpine Linux 3.11 (64-bit)<sup>1</sup>|Y  |   |   |   |   |   |   |
 |macOS Catalina (64-bit)             |Y  |   |   |   |   |   |   |
 |macOS Mojave (64-bit)               |Y  |Y  |   |   |   |   |   |
 |macOS High Sierra (64-bit)          |Y  |Y  |Y  |   |   |   |   |
 |macOS Sierra (64-bit)               |   |Y  |Y  |Y  |Y  |   |   |
 |macOS El Capitan (64-bit)           |   |   |Y  |Y  |Y  |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+1. Alpine Linux support is experimental for version 5.8
 
 ## See Also
 

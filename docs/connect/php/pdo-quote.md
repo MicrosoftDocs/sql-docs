@@ -28,7 +28,7 @@ $*string*: The string to quote.
   
 $*parameter_type*: An optional (integer) symbol indicating the data type.  The default is PDO::PARAM_STR.  
 
-New PDO constants were introduced in PHP 7.2 to add support for [binding Unicode and non-Unicode strings](https://wiki.php.net/rfc/extended-string-types-for-pdo). That is, Unicode strings can be surrounded with quotes with an N as a prefix. (i.e. N'string' instead of 'string'.) 
+New PDO constants were introduced in PHP 7.2 to add support for [binding Unicode and non-Unicode strings](https://wiki.php.net/rfc/extended-string-types-for-pdo). Unicode strings can be surrounded with quotes with an N as a prefix (i.e. N'string' instead of 'string').
 
 1. PDO::PARAM_STR_NATL - a new type for Unicode strings, to be applied as a bitwise-OR to PDO::PARAM_STR
 1. PDO::PARAM_STR_CHAR - a new type for non-Unicode strings, to be applied as a bitwise-OR to PDO::PARAM_STR

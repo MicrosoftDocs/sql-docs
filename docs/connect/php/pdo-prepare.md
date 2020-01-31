@@ -134,7 +134,7 @@ print_r($row);
 ```
 
 ## Example
-The examples below show two different snippets how to use PDO::prepare with data targeted for CHAR/VARCHAR columns. Because the default encoding for PDO::prepare is UTF-8, the user can use the option `PDO::SQLSRV_ENCODING_SYSTEM` to avoid implicit conversions.
+The following two snippets show how to use PDO::prepare with data targeted for CHAR/VARCHAR columns. Because the default encoding for PDO::prepare is UTF-8, the user can use the option `PDO::SQLSRV_ENCODING_SYSTEM` to avoid implicit conversions.
 
 **Option 1**
 ```

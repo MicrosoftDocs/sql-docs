@@ -124,7 +124,7 @@ sqlsrv_close($conn);
 
 A new option `DataClassification` is introduced in version 5.8.0 for users to access the [sensitivity data classification metadata](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4) in Microsoft SQL Server 2019 using `sqlsrv_field_metadata`, which requires Microsoft ODBC Driver 17.4.2 or above.
 
-By default, the option `DataClassification` is `false`, but when set to `true`, the array returned by `sqlsrv_field_metadata` will be populated with the sensitivity data classification metadata, if exists. 
+By default, the option `DataClassification` is `false`, but when set to `true`, the array returned by `sqlsrv_field_metadata` will be populated with the sensitivity data classification metadata, if it exists. 
 
 Take a Patients table for example:
 
@@ -207,7 +207,7 @@ Array
 )
 ```
 
-If the user wants to use `sqlsrv_query` instead of `sqlsrv_prepare`, the above snippet can be modified, like this:
+If using `sqlsrv_query` instead of `sqlsrv_prepare`, the above snippet can be modified, like this:
 
 ```
 $tableName = 'Patients';

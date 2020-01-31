@@ -21,7 +21,7 @@ ms.author: genemi
 
 This article lists the components that must be installed on your system to access data in a SQL Server or Azure SQL Database using the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
 
-Versions 3.2 and later of the Microsoft PHP Drivers for SQL Server are officially supported. For full details on support lifecycles and requirements including earlier versions of the PHP drivers, see the [support matrix](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md).
+Versions 3.2 and later of the Microsoft PHP Drivers for SQL Server are officially supported. For full details on support lifecycles and requirements of the PHP drivers, see the [support matrix](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md).
 
 ## PHP
 
@@ -69,7 +69,7 @@ For information about using PHP with Azure SQL Database, see [Connecting to Micr
 
 ## Operating Systems
 
-For details for each version of the driver, see the [supported operating systems](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md#supported-operating-systems).
+See the [supported operating systems](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md#supported-operating-systems) for details on which operating systems are supported.
 
 ## Driver Versions
 

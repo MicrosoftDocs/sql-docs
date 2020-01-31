@@ -43,15 +43,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | Dropped support for PHP 7.1. | &nbsp; |
 | Added support for Microsoft ODBC Driver 17.5 on all platforms. | &nbsp; |
 | Added support for Debian 10 and Red Hat 8. | Both require ODBC Driver 17.4 or above. |
-| Added support for macOS Catalina, Alpine Linux 3.11 and Ubuntu 19.10. | All require ODBC Driver 17.5 or above. |
+| Added support for macOS Catalina, Alpine Linux 3.11<sup>1</sup> and Ubuntu 19.10. | All require ODBC Driver 17.5 or above. |
 | Dropped support for SQL Server 2008 R2, macOS Sierra, Ubuntu 18.10 and Ubuntu 19.04. | &nbsp; |
 | Support for Language option when connecting to SQL Server. | &nbsp; |
 | Support for PHP extended string types introduced in PHP 7.2. | &nbsp; |
-| Support for Data Classification sensitivity metadata retrieval. | Requires SQL Server 2019 and ODBC Driver 17.4 or above. |
+| Support for Data Classification sensitivity metadata retrieval. | Requires SQL Server 2019 and ODBC Driver 17.4.2 or above. |
 | Support for Always Encrypted with secure enclaves. | Requires ODBC Driver 17.4 or above. |
 | Support configurable options for locale settings in Linux and macOS. |
 | Improved performance by caching metadata on fetches and omitting redundant calls. | &nbsp; |
 | &nbsp; | &nbsp; |
+
+1. Alpine Linux support is experimental for version 5.8
 
 ## What's New in Version 5.6
 

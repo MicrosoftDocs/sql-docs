@@ -51,7 +51,7 @@ You can set/remove a bookmark in the following ways:
 -   Use Ctrl+Shift+&lt;0..9&gt; to set numbered bookmark  
   
 ### Bookmark navigation  
-You can walk thru the bookmarks in the following ways:  
+You can walk through the bookmarks in the following ways:  
   
 -   Use buttons Next Bookmark, Previous Bookmark on the top of the SQL window  
   

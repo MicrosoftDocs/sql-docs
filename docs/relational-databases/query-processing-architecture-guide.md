@@ -634,16 +634,16 @@ Additionally, the following query clauses are not parameterized. Note that in th
 
 * The <select_list> of any `SELECT` statement. This includes `SELECT` lists of subqueries and `SELECT` lists inside `INSERT` statements.
 * Subquery `SELECT` statements that appear inside an `IF` statement.
-* The `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO`, or `FOR XM`L clauses of a query.
+* The `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO`, or `FOR XML` clauses of a query.
 * Arguments, either direct or as subexpressions, to `OPENROWSET`, `OPENQUERY`, `OPENDATASOURCE`, `OPENXML`, or any `FULLTEXT` operator.
 * The pattern and escape_character arguments of a `LIKE` clause.
 * The style argument of a `CONVERT` clause.
 * Integer constants inside an `IDENTITY` clause.
 * Constants specified by using ODBC extension syntax.
-* Constant-foldable expressions that are arguments of the +, -, \*, /, and % operators. When considering eligibility for forced parameterization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considers an expression to be constant-foldable when either of the following conditions is true:  
+* Constant-foldable expressions that are arguments of the `+`, `-`, `*`, `/`, and `%` operators. When considering eligibility for forced parameterization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considers an expression to be constant-foldable when either of the following conditions is true:  
   * No columns, variables, or subqueries appear in the expression.  
   * The expression contains a `CASE` clause.  
-* Arguments to query hint clauses. These include the `number_of_rows` argument of the `FAST` query hint, the `number_of_processors` argument of the `MAXDOP` query hint, and the number argument of the `MAXRECURSION` query hint.
+* Arguments to query hint clauses. These include the *number_of_rows* argument of the `FAST` query hint, the *number_of_processors* argument of the `MAXDOP` query hint, and the *number* argument of the `MAXRECURSION` query hint.
 
 Parameterization occurs at the level of individual [!INCLUDE[tsql](../includes/tsql-md.md)] statements. In other words, individual statements in a batch are parameterized. After compiling, a parameterized query is executed in the context of the batch in which it was originally submitted. If an execution plan for a query is cached, you can determine whether the query was parameterized by referencing the sql column of the sys.syscacheobjects dynamic management view. If a query is parameterized, the names and data types of parameters come before the text of the submitted batch in this column, such as (\@1 tinyint).
 

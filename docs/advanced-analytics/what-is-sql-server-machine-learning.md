@@ -63,8 +63,8 @@ Which version of Python and R is included in SQL Server Machine Learning Service
 
 | SQL Server version | Python version | R version | |
 |-|-|-|-|
-| 2017 | 3.5.2 | 3.3.3 | |
-| 2019 | 3.7.3 | 3.5.2 | |
+| SQL Server 2017 | 3.5.2 | 3.3.3 | |
+| SQL Server 2019 | 3.7.3 | 3.5.2 | |
 
 For the R version in SQL Server 2016, see [R Services](r/sql-server-r-services.md).
 

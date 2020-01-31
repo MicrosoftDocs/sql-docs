@@ -362,7 +362,7 @@ bool TestRecover(HDBC hdbc, const char* connectionString)
             rc = testRunner->Commit(*pXid, false, xaStatus);
             if (SQL_SUCCEEDED(xaStatus))
             {
-                std::cout << "TestRecover::Successfully commited recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
+                std::cout << "TestRecover::Successfully committed recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
             }
             else
             {

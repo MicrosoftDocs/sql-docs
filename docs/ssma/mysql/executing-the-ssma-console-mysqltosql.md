@@ -658,7 +658,7 @@ convert-sql-statement
   
 5.  `write-converted-sql-to` specifies the file (or) folder path where the converted T-SQL is to be stored. When a folder path is specified along with the `sql-files` attribute, each source file will have a corresponding target T-SQL file created under the specified folder. When a folder path is specified along with the `sql` attribute, the converted T-SQL is written to a file named Result.out under the specified folder.  
   
-6.  `sql` specifies the MySQL sql statements to be converted, one or more statements can be seperated using a ";"  
+6.  `sql` specifies the MySQL sql statements to be converted, one or more statements can be separated using a ";"  
   
 7.  `sql-files` specifies the path of the sql files which has to be converted to T-SQL code.  
   

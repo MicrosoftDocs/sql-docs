@@ -77,7 +77,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in ProcedureTextX...."<< endl;  
+      cout << "Error occurred in ProcedureTextX...."<< endl;  
    }  
   
    ::CoUninitialize();  

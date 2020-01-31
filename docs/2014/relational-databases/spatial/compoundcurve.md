@@ -35,7 +35,7 @@ manager: craigg
   
 1.  All the instances contained by `CompoundCurve` instance are accepted circular arc segment instances. For more information on accepted circular arc segment instances, see [LineString](linestring.md) and [CircularString](circularstring.md).  
   
-2.  All of the circular arc segments in the `CompoundCurve` instance are connected. The first point for each succeeding circular arc segment is the same as the last point on the preceeding circular arc segment.  
+2.  All of the circular arc segments in the `CompoundCurve` instance are connected. The first point for each succeeding circular arc segment is the same as the last point on the preceding circular arc segment.  
   
     > [!NOTE]  
     >  This includes the Z and M coordinates. So, all four coordinates X, Y, Z, and M must be the same.  

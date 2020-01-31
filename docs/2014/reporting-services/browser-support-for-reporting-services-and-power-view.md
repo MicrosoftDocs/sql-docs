@@ -152,7 +152,7 @@ ms.date: 06/13/2017
 
  The ReportViewer Web server control is used to embed report functionality in an ASP.NET web application. The controls are included with Visual Studio and support different browsers and browser versions than the other components described in this topic. The type of browser used to view the application determines the kind of ReportViewer functionality that you can provide in your application. Use the table provided in this topic to determine which of the supported browsers are subject to report functionality restrictions and the supported platforms.  
   
- Due to differences in the rendering engines of the supported browsers, some advance report features may be displayed differently in differnt browsers.  For example, text rotation.  
+ Due to differences in the rendering engines of the supported browsers, some advance report features may be displayed differently in different browsers.  For example, text rotation.  
   
 ### Scripting Requirements
 

@@ -95,7 +95,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
 ```  
   
- Not all of the **sqlcmd** parameters are needed in a PowerShell environment. For example, Windows PowerShell formats all output from cmdlets, so the **sqlcmd** parameters specifying formatting options are not implemented in **Invoke-Sqlcmd**. The follwoing table shows the relationship between the **Invoke-Sqlcmd** parameters and **sqlcmd** options:  
+ Not all of the **sqlcmd** parameters are needed in a PowerShell environment. For example, Windows PowerShell formats all output from cmdlets, so the **sqlcmd** parameters specifying formatting options are not implemented in **Invoke-Sqlcmd**. The following table shows the relationship between the **Invoke-Sqlcmd** parameters and **sqlcmd** options:  
   
 |Description|sqlcmd option|Invoke-Sqlcmd parameter|  
 |-----------------|-------------------|------------------------------|  

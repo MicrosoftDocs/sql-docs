@@ -1,7 +1,7 @@
 ---
 title: "URL Reservations & Registration (Configuration Manager) | Microsoft Docs"
 description: "URLs for Reporting Services applications are defined as URL reservations in HTTP.SYS."
-ms.date: 12/04/2019
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.custom: seo-lt-2019​, seo-mmd-2019
@@ -79,8 +79,8 @@ ms.author: maggies
   
 |Instance Type|Application|Default URL|Actual URL reservation in HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|Default instance|Report Server Web service|`https://\<servername>/reportserver`|`https://<servername>:80/reportserver`|  
-|Default instance|Web portal|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Default instance|Report Server Web service|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Default instance|Web portal|`https://<servername>/reports`|`https://<servername>:80/reports`|  
 |Named instance|Report Server Web service|`https://<servername>/reportserver_<instancename>`|`https://<servername>:80/reportserver_<instancename>`|  
 |Named instance|Web portal|`https://<servername>/reports_<instancename>`|`https://<servername>:80/reports_<instancename>`|  
 |SQL Server Express|Report Server Web service|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  

@@ -192,11 +192,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
 3. If you enabled operationalization to run as web nodes and compute nodes for web service deployments, back up the **AppSettings.json** file as a precaution. Applying SQL Server 2017 CU13 or later revises this file, so you might want a backup copy to preserve the original version.
 
-4. On an internet connected device, click the cumulative update link for your version of SQL Server.
-
-  + SQL Server 2019 updates *(no updates available yet)*
-  + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
-  + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
+4. On an internet connected machine, download the latest cumulative update for your version from the [Latest updates for Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server).
 
 5. Download the latest cumulative update. It is an executable file.
 
@@ -210,7 +206,7 @@ On disconnected servers, extra steps are required. You must obtain the cumulativ
 
    + Double-click the .exe to run Setup. When installing a cumulate update on a server with no internet connectivity, you are prompted to select the location of the .cab files for R and Python.
 
-8. Post-install, on a server for which you have enabled operationalization with web nodes and compute nodes, edit **AppSettings.json**, adding an "MMLResourcePath" entry, directly under "MMLNativePath". For example:
+8. Post-install, on a server for which you have enabled deployment with web nodes and compute nodes, edit **AppSettings.json**, adding an "MMLResourcePath" entry, directly under "MMLNativePath". For example:
 
     ```json
     "ScorerParameters": {

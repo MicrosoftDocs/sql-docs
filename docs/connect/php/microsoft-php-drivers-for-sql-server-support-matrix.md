@@ -126,7 +126,7 @@ The following Linux and Mac operating system versions (64-bit only) are supporte
 |macOS El Capitan (64-bit)           |   |   |Y  |Y  |Y  |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-1. Alpine Linux support is experimental for version 5.8
+<sup>1</sup> Alpine Linux support is experimental for version 5.8.
 
 ## See Also
 

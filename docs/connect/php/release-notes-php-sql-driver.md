@@ -53,7 +53,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | Improved performance by caching metadata on fetches and omitting redundant calls. | &nbsp; |
 | &nbsp; | &nbsp; |
 
-1. Alpine Linux support is experimental for version 5.8
+<sup>1</sup> Alpine Linux support is experimental for version 5.8.
 
 ## What's New in Version 5.6
 
